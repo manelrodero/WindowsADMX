@@ -250,23 +250,6 @@ Si se deshabilita o no se establece esta configuración de directiva, los IDN se
 Si esta configuración de directiva está habilitada, los IDN se convierten a la forma Nameprep.
 
 Si esta configuración de directiva está deshabilitada o no se establece, los IDN no se convierten a la forma Nameprep.</string>
-      <string id="DNS_Doh">Configurar resolución de nombres DNS por HTTPS (DoH)</string>
-      <string id="DNS_Doh_Disabled">Prohibir DoH</string>
-      <string id="DNS_Doh_Auto">Permitir DoH</string>
-      <string id="DNS_Doh_Force">Requerir DoH</string>
-      <string id="DNS_Doh_Help">Especifica si el cliente DNS realizará la resolución de nombres con DNS por HTTPS (DoH). 
-
-De forma predeterminada, el cliente DNS hará la resolución clásica de nombres DNS (a través de UDP o TCP). Esta configuración puede mejorar el cliente DNS para usar el protocolo DoH para resolver nombres de dominio.
-
-Para usar esta configuración de directiva, haz clic en Habilitado y luego selecciona una de las siguientes opciones de la lista desplegable:
-
-Prohibir DoH: no se realizará ninguna resolución de nombres de DoH.
-
-Permitir DoH: realizar consultas de DoH si los servidores DNS configurados lo admiten. Si no lo admiten, se intenta la resolución de nombre clásica. 
-
- Requerir DoH: permitir solo la resolución de nombre DoH. Si no hay servidores DNS con capacidad para DoH configurados, la resolución de nombre fallará.
-
-Si deshabilitas esta configuración de directiva o si no la configuras, los equipos usarán configuraciones establecidas localmente.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -303,9 +286,6 @@ Si deshabilitas esta configuración de directiva o si no la configuras, los equi
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Nivel de seguridad de la actualización:</dropdownList>
-      </presentation>
-      <presentation id="DNS_Doh">
-        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Configurar opciones de DoH:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -129,13 +129,15 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
 UWAGA: Wyłączenie lub nieskonfigurowanie tego ustawienia zasad i włączenie ustawienia zasad „Użyj funkcji Windows Hello dla firm” wymaga co najmniej jednego kontrolera domeny z systemem Windows Server 2016 w używanym środowisku. W przeciwnym razie uwierzytelnianie za pomocą funkcji Windows Hello dla firm nie powiedzie się.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">To ustawienie zasad umożliwia skonfigurowanie funkcji Windows Hello dla firm w taki sposób, aby używała biletu Kerberos usługi Azure AD na potrzeby uwierzytelniania lokalnego.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">To ustawienie zasad umożliwia skonfigurowanie Windows Hello dla firm do korzystania z protokołu Kerberos usługi Azure AD na potrzeby uwierzytelniania lokalnego.
 
-Jeśli to ustawienie zasad zostanie włączone, funkcja Windows Hello dla firm będzie używać biletu Kerberos pobranego z funkcji uwierzytelniania na platformie Azure na potrzeby uwierzytelniania lokalnego.
+Jeśli to ustawienie zasad zostanie włączone, Windows Hello dla firm będzie używać biletu Protokołu Kerberos pobranego z uwierzytelniania na platformie Azure na potrzeby uwierzytelniania lokalnego.
 
-Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja Windows Hello dla firm będzie używać klucza lub certyfikatu (w zależności od innych ustawień zasad) na potrzeby uwierzytelniania lokalnego.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, Windows Hello dla firm będzie używać klucza lub certyfikatu (w zależności od innych ustawień zasad) do uwierzytelniania lokalnego. 
+ 
+UWAGA: środowisko, które włącza to ustawienie zasad oraz ustawienie zasad "Użyj Windows Hello dla firm", wymaga co najmniej jednego kontrolera domeny systemu Windows Server 2016. W przeciwnym razie uwierzytelnianie Windows Hello dla firm nie powiedzie się.
 
-UWAGA: Włączenie tego ustawienia zasad i ustawienia zasad „Użyj funkcji Windows Hello dla firm” wymaga co najmniej jednego kontrolera domeny z systemem Windows Server 2016 w używanym środowisku. W przeciwnym razie uwierzytelnianie za pomocą funkcji Windows Hello dla firm nie powiedzie się.
+Te zasady są obsługiwane tylko w Windows 10 w wersji 21H2 i nowszych.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Konfiguruj składniki odblokowania urządzenia</string>

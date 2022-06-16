@@ -10,20 +10,23 @@
 
 Följande lista visar de värden som stöds:
 
-0=Endast HTTP, ingen peering.
+0 = Endast HTTP, ingen peering.
 
-1=HTTP blandat med peering bakom samma NAT.
+1 = HTTP blandat med peering bakom samma NAT.
 
-2=HTTP blandat med peering i en privat grupp. Peering sker som standard på enheter på samma Active Directory-plats (om sådan finns) eller samma domän. När detta väljs sker peering mellan olika NAT. Om du vill skapa en egen grupp använder du grupp-ID tillsammans med läge 2.
+2 = HTTP blandat med peering i en privat grupp. Peering sker som standard på enheter på samma Active Directory-plats (om sådan finns) eller samma domän. När detta alternativ väljs sker peering mellan olika NAT. Om du vill skapa en egen grupp använder du grupp-ID tillsammans med läge 2.
 
-3=HTTP blandat med Internet-peering.
+3 = HTTP blandat med Internet-peering.
 
-99=Enkelt nedladdningsläge utan peering. Leveransoptimering gör endast nedladdning med HTTP och försöker inte kontakta molntjänster för Leveransoptimering.</string>
+99 = Enkelt nedladdningsläge utan peering. Leveransoptimering gör endast nedladdning med HTTP och försöker inte kontakta molntjänster för Leveransoptimering.
+
+100 = Förbigå. Använd inte Leveransoptimering utan använd BITS i stället.</string>
       <string id="DownloadMode_CdnOnly">Endast HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Grupp (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Enkel (99)</string>
+      <string id="DownloadMode_Bypass">Förbigå (100)</string>
       <string id="GroupId">Grupp-ID</string>
       <string id="GroupId_Help">Grupp-ID:t måste anges som ett GUID. Den här principen definierar ett godtyckligt grupp-ID som enheten tillhör.
 
@@ -166,19 +169,14 @@ Obs! Om du anger den här principen för att fördröja bakgrundsnedladdning fr�
 
 Obs! Om du anger den här principen för att fördröja förgrundsnedladdning från http tillämpas den först (för att tillåta nedladdning från peers först).</string>
       <string id="RestrictPeerSelectionBy">Välj metod för att begränsa peer-urval</string>
-      <string id="RestrictPeerSelectionBy_Help">Ange den här principen om du vill begränsa peer-urvalet via det valda alternativet.
+      <string id="RestrictPeerSelectionBy_Help">Ange den här principen om du vill begränsa peer-urvalet med det valda alternativet.
 
-Tillgängliga alternativ är:
-0 = NAT.
-1 = nätmask.
-2 = lokal identifiering (DNS-SD).
+Tillgängliga alternativ:
+1 = Nätmask (fler alternativ tillkommer i en framtida version).
 
-Standardvärdet har ändrats från 0 (ingen begränsning) till 1 (begränsa till under nätet).
-
-Dessa alternativ gäller för både nedladdnings läge (LAN) och grupp (2).</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+Alternativ 1 (Nätmask) gäller både nedladdningsläget LAN (1) och Grupp (2).</string>
+      <string id="RestrictPeerSelectionBy_None">Inget</string>
       <string id="RestrictPeerSelectionBy_Subnet">Undernät</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Lokal identifiering</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Ange arbetstiden för att begränsa bandbredden för bakgrundsnedladdning</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Anger den maximala bandbredd för bakgrundsnedladdning som Leveransoptimering kan använda under och efter arbetstid bland all samtidig nedladdning (som en procentandel av den tillgängliga bandbredden för nedladdning).</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Ange arbetstiden för att begränsa bandbredden för förgrundsnedladdning</string>
@@ -305,7 +303,7 @@ Dessa alternativ gäller för både nedladdnings läge (LAN) och grupp (2).</str
         <text>Standardvärdet är 0 (ingen fördröjning)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Begränsa peer-urvalet med:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Begränsa peer-urvalet med:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

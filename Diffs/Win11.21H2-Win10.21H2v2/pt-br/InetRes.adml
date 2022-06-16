@@ -298,6 +298,7 @@ Se você desabilitar essa configuração de política para o aplicativo ou proce
 Se você não definir essa configuração de política, os valores atuais da ação da URL do aplicativo ou processo na lista prevalecerão.</string>
       <string id="FavImportExport">Desabilitar o Assistente de Configurações de Importação/Exportação</string>
       <string id="GeolocationDisable">Desativar a geolocalização do navegador</string>
+      <string id="DisableFlashInIE">Desligar o Adobe Flash no Internet Explorer e impedir que os aplicativos utilizem a tecnologia do Internet Explorer para criar uma instância dos objetos Flash</string>
       <string id="File_NoBrowserClose">Menu Arquivo: Desabilitar fechamento de janelas do navegador e do Explorer</string>
       <string id="File_NoBrowserSaveAs">Menu Arquivo: Desabilitar a opção de menu Salvar como...</string>
       <string id="File_NoBrowserSaveWebComplete">Menu Arquivo: Desabilitar Salvar como Página da Web Completa</string>
@@ -725,6 +726,13 @@ Se você habilitar essa configuração de política, o suporte para geolocaliza�
 Se você desabilitar essa configuração de política, o suporte para geolocalização do navegador será ativado.
 
 Se você não definir essa configuração de política, o suporte para geolocalização do navegador poderá ser ativado ou desativado em Opções da Internet, na guia Privacidade.</string>
+      <string id="IE_ExplainDisableFlashInIE">Essa configuração de política desliga o Adobe Flash no Internet Explorer e impede que os aplicativos utilizem a tecnologia do Internet Explorer para criar uma instância dos objetos Flash.
+
+Se você habilitar essa configuração de política, o Flash será desligado no Internet Explorer e os aplicativos não poderão usar a tecnologia do Internet Explorer para criar uma instância dos objetos Flash. Na caixa de diálogo Gerenciar Complementos, o status do Flash será 'Desabilitado' e os usuários não poderão habilitá-lo. Se você habilitar essa configuração de política, o Internet Explorer ignorará as configurações feitas no Adobe Flash através das configurações de política "Lista de Complementos" e "Negar todos os complementos, exceto quando especificamente permitido na Lista de Complementos".
+
+Se você desabilitar ou não definir essa configuração de política, o Flash será ligado no Internet Explorer e os aplicativos poderão usar a tecnologia do Internet Explorer para criar uma instância dos objetos Flash. Os usuários podem habilitar ou desabilitar o Flash na caixa de diálogo Gerenciar Complementos.
+
+Observe que o Adobe Flash ainda pode ser desabilitado através das configurações de política "Lista de Complementos" e "Negar todos os complementos, exceto quando especificamente permitido na Lista de Complementos", mesmo que esta configuração de política esteja desabilitada ou não tenha sido definida. Porém, se o Adobe Flash foi desabilitado através das configurações de política "Lista de Complementos" e "Negar todos os complementos, exceto quando especificamente permitido na Lista de Complementos", e não por esta configuração de política, todos os aplicativos que usam a tecnologia do Internet Explorer para criar uma instância de objeto Flash ainda poderão fazer isso. Para obter mais informações, consulte "Configurações de Política de Grupo no Internet Explorer 10" na biblioteca do TechNet do Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Impede que os usuários fechem o Microsoft Internet Explorer e o Explorador de Arquivos.
 
 Se você habilitar essa política, o comando Fechar do menu Arquivo aparecerá esmaecido.
@@ -3529,7 +3537,7 @@ Se você habilitar essa configuração de política, o navegador negociará ou n
 
 Se você desabilitar ou não definir essa configuração de política, o usuário poderá selecionar o método de criptografia ao qual o navegador dará suporte.
 
-Observação: o SSL 2.0 está desativado por padrão. O SSL 2.0 é um protocolo de segurança ultrapassado. Ativar o SSL 2.0 diminui o desempenho e a funcionalidade do TLS 1.0.</string>
+Observação: o SSL 2.0 está desativado por padrão e não tem mais suporte no Windows 10 versão 1607. O SSL 2.0 é um protocolo de segurança ultrapassado. Ativar o SSL 2.0 diminui o desempenho e a funcionalidade do TLS 1.0.</string>
       <string id="IE_ExplainNoPrinting">Esta política permite gerenciar o acesso de usuários ao menu Imprimir. A partir do Windows 8, essa configuração de política também permite gerenciar o acesso dos usuários ao menu suspenso Imprimir do Internet Explorer e a qualquer impressora no botão Dispositivos.
 
 Se você habilitar essa configuração de política, o menu Imprimir do Internet Explorer não estará disponível. A partir do Windows 8, o menu suspenso Imprimir do Internet Explorer não está disponível e os usuários não vêm as impressoras no botão Dispositivos.
@@ -3899,7 +3907,7 @@ Se você desabilitar ou não definir essa configuração de política, os usuár
 Se você ativar essa configuração, os usuários podem ver e usar a opção Modo Empresarial a partir do menu Ferramentas. Se você ativar esta configuração, mas não especificar um local de relatório, o Modo Empresarial ainda estará disponível para seus usuários, mas você não obtém nenhum relatório.
 
 Se você desabilitar ou não definir essa configuração de política, a opção de menu não aparecerá e os usuários não conseguirão executar sites no Modo Empresarial.</string>
-      <string id="RestrictInternetExplorer">Envie todos os sites não incluídos na Lista de Sites do Modo Empresarial para o Microsoft Edge</string>
+      <string id="RestrictInternetExplorer">Envie todos os sites não incluídos na Enterprise Mode Site List para o Microsoft Edge.</string>
       <string id="IE_ExplainRestrictInternetExplorer">Essa configuração permite que você decida se deseja abrir todos os sites não incluídos na Enterprise Mode Site List no Microsoft Edge. Se você usar essa configuração, deverá também ativar a configuração de política Modelos Administrativos\Componentes do Windows\Internet Explorer\Usar a lista de sites do Modo Empresarial IE e incluir pelo menos um site na Enterprise Mode Site List.
 
 A habilitação dessa configuração abre automaticamente todos os sites não incluídos na Enterprise Mode Site List no Microsoft Edge.
@@ -3919,19 +3927,19 @@ Se você desabilitar ou não definir essa configuração, o comportamento padrã
 Se o Windows Update da próxima versão do Microsoft Edge* e o canal estável do Microsoft Edge estiverem instalados, os seguintes comportamentos ocorrerão:
 - Se você desabilitar ou não configurar essa política, o canal estável do Microsoft Edge será usado. Esse é o comportamento padrão.
 - Se você habilitar essa política, poderá configurar os sites redirecionados para serem abertos em até três dos seguintes canais, em que:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versão 77 ou posterior
-    3 = Microsoft Edge Dev versão 77 ou posterior
-    4 = Microsoft Edge Canary versão 77 ou posterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versão 77 ou posterior
+ 3 = Microsoft Edge Dev versão 77 ou posterior
+ 4 = Microsoft Edge Canary versão 77 ou posterior
 
 Se o Windows Update da próxima versão do Microsoft Edge* ou o canal estável do Microsoft Edge não estiver instalado, os seguintes comportamentos ocorrerão:
 - Se você desabilitar ou não configurar essa política, o Microsoft Edge versão 45 ou anterior será usado automaticamente. Esse é o comportamento padrão.
 - Se você habilitar essa política, poderá configurar os sites redirecionados para serem abertos em até três dos seguintes canais, em que:
-    0 = Microsoft Edge versão 45 ou anterior
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versão 77 ou posterior
-    3 = Microsoft Edge Dev versão 77 ou posterior
-    4 = Microsoft Edge Canary versão 77 ou posterior
+ 0 = Microsoft Edge versão 45 ou anterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versão 77 ou posterior
+ 3 = Microsoft Edge Dev versão 77 ou posterior
+ 4 = Microsoft Edge Canary versão 77 ou posterior
 
 *Para obter mais informações sobre o Windows Update para a próxima versão do Microsoft Edge, inclusive como desabilitá-lo, consulte https://go.microsoft.com/fwlink/?linkid=2102115. Essa atualização se aplica somente ao Windows 10 versão 1709 e posterior.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3962,6 +3970,16 @@ Se você habilitar essa política, "salvar destino como" aparecerá no menu de c
 Se você desabilitar ou não definir essa configuração de política, "salvar destino como" não será exibido no menu de contexto do modo Internet Explorer.
 
 Para obter mais informações, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Habilitar lista de janelas globais no modo Internet Explorer</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">Esta configuração permite que Internet Explorer modo use a lista global de janelas que habilita o estado de compartilhamento com outros aplicativos.
+A configuração entrará em vigor somente quando Internet Explorer 11 estiver desabilitado como um navegador autônomo.
+
+Se você habilitar essa política, Internet Explorer modo usará a lista de janelas global.
+
+Se você desabilitar ou não configurar esta política, o Internet Explorer continuará a manter uma lista separada de janelas.
+
+Para saber mais sobre o Internet Explorer, consulte https://go.microsoft.com/fwlink/?linkid=2102921
+Para saber mais sobre como desabilitar o Internet Explorer 11 como um navegador autônomo, consulte https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Habilitar chaves de acesso estendidas no modo Internet Explorer</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">Esta configuração de política permite que os administradores habilitem as teclas de acesso estendidas do modo Internet Explorer do Microsoft Edge, como "Ctrl+S" para ter a funcionalidade "Salvar como".
 
@@ -3970,6 +3988,14 @@ Se você habilitar essa política, a funcionalidade de teclas de atalho estendid
 Se você desabilitar ou não configurar essa política, as teclas de atalho estendidas não funcionarão no modo Internet Explorer.
 
 Para obter mais informações, confira https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Redefinir zoom para o padrão para caixas de diálogo HTML Internet Explorer modo</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Essa configuração de política permite que os administradores redefinam o zoom para o padrão para caixas de diálogo HTML Internet Explorer modo.
+
+Se você habilitar essa política, o zoom de uma caixa de diálogo HTML no Internet Explorer não será propagado de sua página pai.
+
+Se você desabilitar ou não configurar esta política, o zoom de uma caixa de diálogo HTML no modo Internet Explorer será definido com base no zoom da página pai.
+
+Para obter mais informações, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Desabilitar o Internet Explorer 11 como um navegador autônomo</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Essa política permite restringir a inicialização do Internet Explorer como um navegador autônomo.
 
@@ -3980,15 +4006,15 @@ Se você habilitar essa política, ela:
  - Substituirá as demais políticas que redirecionam para o Internet Explorer 11.
 
 Se você desabilitar ou não configurar essa política, todos os sites serão abertos usando as configurações atuais do navegador ativo. Observação: o Canal Estável do Microsoft Edge deve ser instalado para que essa política tenha efeito.</string>
+      <string id="DisableIEAppDeprecationNotification">Ocultar notificação de aposentadoria do Internet Explorer 11</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">Esta configuração de política permite que você gerencie se o lembrete da barra de Internet Explorer que está sendo desativado será exibido. Por padrão, a barra de Notificações é exibida Internet Explorer 11.
+
+Se você habilitar essa configuração de política, a barra de Notificações não será exibida Internet Explorer 11.
+
+Se você desabilitar ou não definir essa configuração de política, a barra de Notificações será exibida no Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Nunca</string>
       <string id="NotifyDisableIEOptions_Always">Sempre</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Uma vez por usuário</string>
-      <string id="JScriptReplacement">Substitua o JScript carregando JScript9Legacy no lugar do JScript via MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">Essa configuração de política especifica se JScript ou JScript9Legacy é carregada para invocações baseadas em MSHTML/WebOC.
-      
-Caso habilite essa configuração de política, o JScript9Legacy será carregado em situações em que o JScript é instanciado.
-
-Se você desabilitar essa política ou não a configurar, o JScript será utilizado.</string>
       <string id="VerMgmtDisable">Desativar bloqueio de controles ActiveX desatualizados do Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Essa configuração de política determina se o Internet Explorer bloqueia controles ActiveX desatualizados específicos. Controles ActiveX desatualizados nunca são bloqueados na zona da Intranet.
 

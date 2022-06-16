@@ -6,7 +6,7 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Teslim İyileştirme</string>
       <string id="DownloadMode">İndirme Modu</string>
-      <string id="DownloadMode_Help">Teslim İyileştirme'nin Windows Güncelleştirmeleri, Uygulamalar ve Uygulama Güncelleştirmeleri'nin indirilmesinde kullanabileceği indirme yöntemini belirtir.
+      <string id="DownloadMode_Help">Teslim İyileştirme'nin Windows Güncelleştirmeleri, Uygulama ve Uygulama Güncelleştirmeleri'nin indirilmesinde kullanabileceği indirme yöntemini belirtir.
 
 Aşağıdaki liste desteklenen değerleri gösterir:
 
@@ -18,12 +18,15 @@ Aşağıdaki liste desteklenen değerleri gösterir:
 
 3 = İnternet Eşlemesi ile karışık HTTP.
 
-99 = Eşlemesiz basit indirme modu. Teslim İyileştirme yalnızca HTTP kullanarak indirme yapar ve Teslim İyileştirme bulut hizmetleriyle bağlantı kurmaya çalışmaz.</string>
+99 = Eşlemesiz basit indirme modu. Teslim İyileştirme yalnızca HTTP kullanarak indirme yapar ve Teslim İyileştirme bulut hizmetleriyle bağlantı kurmaya çalışmaz.
+
+100 = Atlama modu. Teslim İyileştirme kullanmayın, bunun yerine BITS kullanın.</string>
       <string id="DownloadMode_CdnOnly">Yalnızca HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Grup (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Basit (99)</string>
+      <string id="DownloadMode_Bypass">Atla (100)</string>
       <string id="GroupId">Grup Kimliği</string>
       <string id="GroupId_Help">Grup Kimliği bir GUID olarak ayarlanmalıdır. Bu ilke, cihazın üyesi olduğu rastgele bir grup kimliği belirler.
 
@@ -166,19 +169,14 @@ Not: İlkeyi http'den arka plan indirmesini geciktirecek şekilde ayarlarsanız 
 
 Not: İlkeyi http'den ön plan indirmesini geciktirecek şekilde ayarlarsanız öncelikle bu geçerli olur (ilk olarak eşlerden indirmeye izin vermek için).</string>
       <string id="RestrictPeerSelectionBy">Eş Seçimini kısıtlamak için bir yöntem seçin</string>
-      <string id="RestrictPeerSelectionBy_Help">Seçili seçenekle eş seçimini kısıtlamak için bu ilkeyi ayarlayın.
+      <string id="RestrictPeerSelectionBy_Help">Belirlenen seçenek üzerinden eş seçimini kısıtlamak için bu ilkeyi ayarlayın.
 
 Kullanılabilir seçenekler şunlardır:
-0 = NAT.
-1 = alt ağ maskesi.
-2 = yerel bulma (DNS-SD).
+1 = Alt ağ maskesi (daha fazla seçenek sonraki bir sürümde eklenecektir).
 
-Varsayılan değer 0 (kısıtlama yok) ' a 1 ' e değişti (alt ağla sınırla).
-
-Bu seçenekler, hem Indirme modu LAN (1) hem de grup (2) için geçerlidir.</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+Seçenek 1 (Alt ağ maskesi), İndirme Modu LAN (1) ve Grup (2) için uygulanır.</string>
+      <string id="RestrictPeerSelectionBy_None">Yok</string>
       <string id="RestrictPeerSelectionBy_Subnet">Alt Ağ</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Yerel bulma</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Arka Planda İndirme Bant Genişliğini Sınırlamak için İş Saatlerini Ayarla</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Teslim İyileştirme'nin tüm eş zamanlı indirme etkinlikleri boyunca iş saatleri içinde ve dışında kullandığı arka planda indirme bant genişliği üst sınırını kullanılabilir indirme bant genişliğinin yüzdesi olarak belirtir.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Ön Planda İndirme Bant Genişliğini Sınırlamak için İş Saatlerini Ayarla</string>
@@ -305,7 +303,7 @@ Bu seçenekler, hem Indirme modu LAN (1) hem de grup (2) için geçerlidir.</str
         <text>Varsayılan değer 0'dır (gecikme yok)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Şuna Göre Eş Seçimini Sınırla:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Şuna Göre Eş Seçimini Sınırla:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

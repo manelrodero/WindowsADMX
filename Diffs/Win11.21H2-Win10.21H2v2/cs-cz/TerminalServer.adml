@@ -6,7 +6,7 @@
   <resources>
     <stringTable>
       <string id="TS_AUTOSUBSCRIPTION_NAME">Povolit automatický odběr</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Řídí seznam adres URL, k jejichž odběru by měl být uživatel automaticky přihlášen</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Řídí seznam adres URL, k jejichž odběru by měl být uživatel automaticky přihlášen</string>      
       <string id="TS_SUPPORTED_Windows10">Minimálně Windows 10 nebo Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Minimálně systém Windows 8 nebo Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Minimálně Windows Server 2012</string>
@@ -28,7 +28,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Minimálně systém Windows XP a pouze systém Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Minimálně systém Windows Server 2008 nebo Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Pouze systém Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 verze 1903, Windows 10 verze 1909 a Windows 10 verze 2004</string>
       <string id="TS_TERMINAL_SERVER">Hostitel relací vzdálené plochy</string>
       <string id="TS_TERMINAL_SERVER_Help">Řídí konfiguraci serveru hostitele relací vzdálené plochy.</string>
       <string id="TS_LICENSE_SERVER">Licencování VP</string>
@@ -147,7 +146,6 @@ Pokud toto nastavení zásad nenakonfigurujete, není přesměrování jednotek 
       <string id="TS_CLIENT_LPT">Nepovolit přesměrování portu LPT</string>
       <string id="TS_CLIENT_PNP">Nepovolit přesměrování podporovaného zařízení plug and play</string>
       <string id="TS_CAMERA_REDIRECTION">Nepovolit přesměrování pro digitalizaci videa</string>
-      <string id="TS_LOCATION_REDIRECTION">Nepovolit přesměrování umístění</string>
       <string id="TS_CLIENT_PRINTER">Nepovolit přesměrování tiskárny klienta</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Nastavení této zásady určuje, zda má být během relace služby Vzdálená plocha zakázáno sdílení obsahu schránky (přesměrování schránky) mezi vzdáleným a klientským počítačem.
 
@@ -212,15 +210,6 @@ Pokud tuto zásadu povolíte, nemůžou uživatelé přesměrovat zařízení pr
 
 Pokud tuto zásadu zakážete nebo nenakonfigurujete, uživatelé můžou zařízení pro digitalizaci videa přesměrovat na vzdálený počítač. Uživatelé můžou zvolit zařízení pro digitalizaci videa, která se mají přesměrovat na vzdálený počítač, a to pomocí možnosti Další na kartě Místní prostředky v okně Připojení ke vzdálené ploše.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Nastavení této zásady umožňuje řídit přesměrování dat umístění do vzdáleného počítače v relaci služby Vzdálená plocha.
-
-Služba Vzdálená plocha ve výchozím nastavení umožňuje přesměrování dat umístění.
-
-Pokud toto nastavení zásad povolíte, nebudou uživatelé moci přesměrovat data jejich umístění do vzdáleného počítače.
-
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, budou moci uživatelé přesměrovat data jejich umístění do vzdáleného počítače.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Nastavení této zásady umožňuje omezit počet monitorů, které může uživatel použít k zobrazení relace služby Vzdálená plocha. Omezením počtu monitorů k zobrazení relace služby Vzdálená plocha lze zlepšit kvalitu zobrazení, a to zejména u pomalých připojení, a snížit zatížení serveru.
 
@@ -433,20 +422,23 @@ Pokud toto nastavení povolíte, tato upozornění se nebudou na serveru hostite
 Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se tato upozornění zobrazovat na serveru hostitele relací VP poté, co se přihlásíte jako místní správce.</string>
       <string id="TS_LICENSING_MODE">Nastavit licenční režim služby Vzdálená plocha</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Nastavení této zásady umožňuje určit typ licence pro klientský přístup k vzdálené ploše (VP CAL), který je vyžadován pro připojení k tomuto serveru hostitele relací VP.
+        Nastavení této zásady umožňuje určit typ licence pro klientský přístup k Vzdálené ploše (licence VP CAL), který je vyžadován pro připojení k tomuto serveru Hostitele relace VP.
 
-        Nastavení této zásady můžete použít k výběru jednoho ze dvou režimů licencování: vázaných na uživatele nebo vázaných na zařízení.
+        Pomocí této zásady můžete vybrat jeden ze tří režimů licencování: Vázaná na uživatele, Vázaná na zařízení a Vázaná na uživatele podle AAD.
 
-        Režim licence vázané na uživatele vyžaduje, aby měl každý uživatelský účet připojující se k tomuto serveru hostitele relací VP licenci VP CAL vázanou na uživatele vydanou na serveru služby Licencování VP.
+        Licencování v režimu Vázaná na uživatele vyžaduje, aby byla pro každý uživatelský účet připojující se k tomuto serveru Hostitele relace VP vystavena licence VP CAL vázaná na uživatele ze serveru Licencování VP.
 
-        Režim licencování vázané na zařízení vyžaduje, aby mělo každé zařízení připojující se k tomuto serveru hostitele relací VP licenci VP CAL vázanou na zařízení vystavenou serverem služby Licencování VP
+        Licencování v režimu Vázaná na zařízení vyžaduje, aby byla pro každé zařízení připojující se k tomuto serveru Hostitele relace VP vystavena licence VP CAL vázaná na zařízení.
 
-        Pokud toto nastavení zásad povolíte, bude licenční server vzdálené plochy a hostitel relací VP určen k zadanému režimu licencování vzdálené plochy.
+        Licencování v režimu Vázaná na uživatele podle AAD vyžaduje, aby měl každý uživatelský účet připojující se k tomuto serveru Hostitele relace VP plán služeb, který podporuje licence na VP přiřazené v AAD.
+        
+        Pokud tuto zásadu povolíte, bude vámi zadaný režim licencování Vzdálené plochy respektován licenčním serverem Vzdálené plochy a Hostitelem relace VP.
 
-        Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, nebude režim licencování určen na úrovni zásad skupiny.
+        Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebude režim licencování určen na úrovni zásad skupiny.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Podle zařízení</string>
       <string id="TS_LICENSING_MODE_PER_USER">Podle uživatele</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Vázaná na uživatele podle AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Nastavení této zásady určuje, zda má být v relaci služby Vzdálená plocha zakázáno přesměrování dat na porty LPT klientů.
 
 Pomocí tohoto nastavení lze uživatelům zabránit v mapování místních portů LPT a přesměrování dat ze vzdáleného počítače na periferní zařízení připojená k místnímu portu LPT. Služba Vzdálená plocha ve výchozím nastavení umožňuje přesměrování na port LPT.
@@ -797,17 +789,6 @@ Pokud nastavení této zásady povolíte, plocha se po připojení klienta ke vz
 Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude možné určit úvodní program, který se bude spouštět ve vzdáleném počítači po připojení klienta. Pokud není určen žádný program, bude po připojení ke vzdálenému počítači vždy zobrazena plocha.
 
 Poznámka:Pokud je nastavení této zásady povoleno, nastavení Při připojení spustit program bude ignorováno.</string>
-      <string id="TS_UIA">Povolit přesměrování automatizace uživatelského rozhraní</string>
-      <string id="TS_UIA_EXPLAIN">Toto nastavení zásad určuje, jestli klientské aplikace automatizace uživatelského rozhraní (UI) spuštěné v místním počítači můžou přistupovat k prvkům uživatelského rozhraní na serveru. 
-
-Automatizace uživatelského rozhraní poskytuje programům přístup k většině prvků uživatelského rozhraní, což vám umožňuje používat produkty s asistenčními technologiemi, jako je Lupa a Předčítání, které potřebují interagovat s uživatelským rozhraním, aby správně fungovaly. Informace o uživatelském rozhraní také umožňují interakci automatických testovacích skriptů s uživatelským rozhraním.
-
-Relace vzdálené plochy aktuálně nepodporují přesměrování automatizace uživatelského rozhraní.
-
-Pokud toto nastavení zásad povolíte nebo nenakonfigurujete, můžou všichni klienti automatizace uživatelského rozhraní ve vašem místním počítači komunikovat se vzdálenými aplikacemi. Můžete například použít Předčítání a Lupu místního počítače k interakci s uživatelským rozhraním na webové stránce, kterou jste otevřeli ve vzdálené relaci.
-
-Pokud toto nastavení zásad zakážete, klienti automatizace uživatelského rozhraní spuštění v místním počítači nebudou moct komunikovat se vzdálenými aplikacemi.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Toto nastavení zásad umožňuje určit, zda se má u vzdálených připojení k serveru hostitele relací VP požadovat ověřování uživatelů na úrovni sítě. Nastavení této zásady zvyšuje zabezpečení tím, že vyžaduje, aby ověřování uživatelů probíhalo dříve v procesu vzdáleného připojení.
 
 Pokud nastavení této zásady povolíte, mohou se k serveru hostitele relací VP připojit pouze klientské počítače podporující ověřování na úrovni sítě.

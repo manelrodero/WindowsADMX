@@ -217,7 +217,7 @@ Selecting "Not Configured", or if you disable or do not configure this policy se
 Note: configuring this policy to "Show" or "Hide" on supported versions of Windows 10 will supercede any policy setting of "Remove frequent programs list from the Start Menu" (which manages same part of Start menu but with fewer options).</string>
       <string id="MFU_NotConfigured">Not Configured</string>
       <string id="MFU_Show">Show</string>
-      <string id="MFU_Hide">Hide</string>        
+      <string id="MFU_Hide">Hide</string>
       <string id="NoFrequentUsedPrograms">Remove frequent programs list from the Start Menu</string>
       <string id="NoFrequentUsedPrograms_Help">If you enable this setting, the frequently used programs list is removed from the Start menu.
 
@@ -643,7 +643,6 @@ If you enable this policy, then invocations of context menus within the Start Me
           <label>Start Layout File</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Reapply layout at every logon</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Choose one of the following sizes</dropdownList>

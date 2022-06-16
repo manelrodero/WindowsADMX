@@ -135,11 +135,11 @@ Aby określić wartość TTL dla rekordów DNS lokalizatora kontrolerów domen, 
 
 Jeśli to ustawienie zasad nie zostanie skonfigurowane, nie będzie stosowane do żadnych kontrolerów domen i kontrolery domen będą używać swojej lokalnej konfiguracji.</string>
       <string id="Netlogon_ExpectedDialupDelay">Określ oczekiwane opóźnienie połączenia telefonicznego podczas logowania</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">To ustawienie zasad określa dodatkowy czas oczekiwania przez komputer na odpowiedź z kontrolera domeny podczas logowania do sieci.
+      <string id="Netlogon_ExpectedDialupDelay_Help">To ustawienie zasad określa dodatkowy czas oczekiwania komputera na odpowiedź kontrolera domeny podczas logowania do sieci.
 
-Aby określić oczekiwane opóźnienie połączenia telefonicznego podczas logowania, kliknij pozycję Włączone, a następnie wprowadź odpowiednią wartość w sekundach (na przykład wartość 60 oznacza 1 minutę).
+Aby określić oczekiwane opóźnienie połączenia telefonicznego podczas logowania, należy kliknąć opcję Włączone i wprowadzić odpowiednią wartość w sekundach (na przykład wartość „60” oznacza jedną minutę).
 
-Jeśli nie skonfigurujesz tego ustawienia zasad, nie będzie ono stosowane do żadnego komputera, a komputery będą używać swoich konfiguracji lokalnych.</string>
+Jeśli to ustawienie zasad nie zostanie skonfigurowane, nie będzie stosowane na żadnych komputerach i komputery będą używać swojej lokalnej konfiguracji.</string>
       <string id="Netlogon_GcSiteCoverage">Określ lokacje uwzględniane przez rekordy DNS SRV lokalizatora wykazów globalnych</string>
       <string id="Netlogon_GcSiteCoverage_Help">To ustawienie zasad określa lokacje, dla których wykazy globalne powinny rejestrować specyficzne dla lokacji rekordy zasobów DNS SRV lokalizatora wykazów globalnych. Te rekordy są rejestrowane dodatkowo do specyficznych dla lokacji rekordów SRV rejestrowanych w lokacji, w której znajduje się wykaz globalny, oraz rekordów zarejestrowanych przez wykaz globalny skonfigurowany do rejestrowania rekordów DNS SRV lokalizatora wykazów globalnych dla najbliższych lokacji bez wykazu globalnego. 
 
@@ -337,22 +337,6 @@ Dopuszczalne wartości tego ustawienia powodują następujące działania:
 Aby określić odpowiednie działanie, należy kliknąć pozycję „Włączone”, a następnie wprowadzić wartość. Zakres wartości wynosi od 1 do 2.
 
 Jeśli to ustawienie zasad nie zostanie skonfigurowane, nie będzie stosowane na żadnych komputerach, a komputery będą używać swojej lokalnej konfiguracji.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Używaj małych liter w nazwach hostów DNS podczas rejestrowania rekordów SRV kontrolerów domeny</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">To ustawienie zasad określa, czy kontrolery domeny, do których to ustawienie jest stosowane, będą małymi literami nazwy hosta DNS podczas rejestrowania rekordów SRV.
-
-Jeśli ta zasada jest włączona, podczas rejestrowania rekordów SRV kontrolera domeny kontrolery domeny będą mieć za małą nazwę hosta DNS. Zostanie podjęta stara próba usunięcia wszystkich zarejestrowanych wcześniej rekordów SRV zawierających nazwy hostów DNS o różnych wielkościach. Aby uzyskać więcej informacji i potencjalnych procedur ręcznego oczyszczania, zobacz poniższy link.
-
-Jeśli ta zasada jest wyłączona, kontrolery domeny będą używać swojej skonfigurowanej nazwy hosta DNS jako nazwy do rejestrowania rekordów SRV kontrolera domeny.
-
-Jeśli to ustawienie nie zostanie skonfigurowane, kontrolery domeny będą domyślnie używać swojej lokalnej konfiguracji.
-
-Domyślna konfiguracja lokalna jest włączona.
-
-Aby zmiany tego ustawienia zaczęły obowiązywać, nie jest wymagany ponowny rozruch.
-
-Więcej informacji jest dostępnych pod adresem https://aka.ms/lowercasehostnamesrvrecord
-      </string>
 
     </stringTable>
     <presentationTable>

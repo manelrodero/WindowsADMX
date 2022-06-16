@@ -231,11 +231,11 @@
         </or>
       </definition>
 
-      <!--At least Windows 10 21H2-->
-      <definition name="SUPPORTED_Windows_10_0_21H2" displayName="$(string.SUPPORTED_Windows_10_0_21H2)">
-          <or>
-              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
-          </or>
+      <!--At least Windows 10 20H1 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_20H1_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_20H1_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="15" maxVersionIndex="15"/>
+        </or>
       </definition>
 
       <!--At least Windows Threshold no ARM-->
@@ -254,20 +254,6 @@
 
       <!--At least Windows Threshold no SERVER Enterprise-->
       <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION)">
-        <or>
-          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
-        </or>
-      </definition>
-
-      <!--At least Windows Threshold no SERVER Enterprise with Microsoft Defender Application Guard in Enterprise mode-->
-      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG)">
-        <or>
-          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
-        </or>
-      </definition>
-
-      <!--At least Windows Threshold no SERVER Enterprise with Microsoft Defender Application Guard in Enterprise mode for Microsoft Edge-->
-      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG_EDGE" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG_EDGE)">
         <or>
           <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
         </or>

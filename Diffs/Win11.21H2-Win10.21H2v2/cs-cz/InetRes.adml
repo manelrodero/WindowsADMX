@@ -298,6 +298,7 @@ Pokud toto nastavení zásad zakážete pro aplikaci nebo proces ze seznamu, nem
 Pokud toto nastavení zásad nenakonfigurujete, budou zachovány současné hodnoty akce adresy URL pro aplikaci nebo proces ze seznamu.</string>
       <string id="FavImportExport">Zakázat průvodce nastavením importu a exportu</string>
       <string id="GeolocationDisable">Vypnout určování geografické polohy v prohlížeči</string>
+      <string id="DisableFlashInIE">Vypnout doplněk Adobe Flash v aplikaci Internet Explorer a zabránit aplikacím používat technologii Internet Explorer k vytváření objektů Flash</string>
       <string id="File_NoBrowserClose">Nabídka Soubor: Deaktivovat možnost zavření prohlížeče a oken programu Průzkumník</string>
       <string id="File_NoBrowserSaveAs">Nabídka Soubor: Zakázat položku Uložit jako...</string>
       <string id="File_NoBrowserSaveWebComplete">Nabídka Soubor: Deaktivovat možnost Uložit jako úplnou webovou stránku</string>
@@ -333,7 +334,7 @@ Pokud toto nastavení zásad zakážete, zobrazí se uživateli při potížích
 Pokud toto nastavení zásad nenakonfigurujete, uživatel může zapnout nebo vypnout zobrazování podrobných chybových zpráv.</string>
       <string id="General_Zooming">Vypnout funkci zvětšení stránky</string>
       <string id="GeneralColors">Obecné barvy</string>
-      <string id="Help_NoFeedback">Nabídka Nápověda: Odebrat položku Váš názor</string>
+      <string id="Help_NoFeedback">Nabídka Nápověda: Odebrat položku Poslat názor</string>
       <string id="Help_NoNetscapeHelp">Nabídka Nápověda: Odebrat položku Pro uživatele aplikací Netscape</string>
       <string id="Help_NoTip">Nabídka Nápověda: Odebrat položku Tip dne</string>
       <string id="Help_NoTutorial">Nabídka Nápověda: Odebrat položku Prohlídka</string>
@@ -725,6 +726,13 @@ Pokud toto nastavení zásad povolíte, bude podpora určování geografické po
 Pokud toto nastavení zakážete, bude podpora určování geografické polohy zapnuta.
 
 Pokud toto nastavení nenakonfigurujete, bude možné podporu určování geografické polohy v prohlížeči zapnout nebo vypnout v dialogovém okně Možnosti Internetu na kartě Osobní údaje.</string>
+      <string id="IE_ExplainDisableFlashInIE">Toto nastavení zásad vypne Adobe Flash v Internet Exploreru a zabrání aplikacím používat technologii Internet Exploreru k vytváření objektů Flash.
+
+Pokud nastavení této zásady povolíte, bude Flash v Internet Exploreru vypnutý a aplikace nebudou moct pomocí technologie Internet Exploreru vytvářet objekty Flash. V dialogovém okně Spravovat doplňky bude Flash ve stavu Zakázáno a uživatelé nebudou moct Flash povolit. Pokud nastavení této zásady povolíte, bude Internet Explorer ignorovat nastavení týkající se doplňku Adobe Flash provedená prostřednictvím nastavení zásad Seznam doplňků a Zakázat všechny doplňky, které nejsou povolené pomocí seznamu doplňků. 
+
+Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude Flash v Internet Exploreru zapnutý a aplikace budou moct používat technologii Internet Exploreru k vytváření objektů Flash. Uživatelé můžou Flash povolit nebo zakázat v dialogovém okně Spravovat doplňky. 
+
+Adobe Flash se dá zakázat i prostřednictvím nastavení zásad Seznam doplňků a Zakázat všechny doplňky, které nejsou povolené pomocí seznamu doplňků, i když je toto nastavení zásad zakázané nebo není nakonfigurované. Pokud se ale Adobe Flash zakáže prostřednictvím nastavení zásad Seznam doplňků a Zakázat všechny doplňky, které nejsou povolené pomocí seznamu doplňků, ale ne tímto nastavením zásad, budou aplikace moct používat technologii Internet Exploreru k vytváření objektů Flash. Další informace najdete v knihovně TechNet Internet Exploreru v článku Nastavení zásad skupiny v Internet Exploreru 10.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Zabraňuje uživatelům v ukončení aplikace Internet Explorer a Průzkumníka souborů.
 
 Pokud toto nastavení povolíte, bude příkaz Zavřít v nabídce Soubor zobrazen šedě.
@@ -780,9 +788,9 @@ Chcete-li určit, jak s ovládacími prvky schválenými správcem pracovat v z�
 Pokud toto nastavení povolíte, nebudou aplikace, které jsou hostitelem modulu rozložení MSHTML, reagovat na příkazy uživatele ke zvětšení či zmenšení zobrazení obsahu.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, nebudou aplikace, které jsou hostitelem modulu rozložení MSHTML, reagovat na příkazy uživatele ke zvětšení či zmenšení zobrazení obsahu.</string>
-      <string id="IE_ExplainHelp_NoFeedback">Zabraňuje uživatelům v odeslání jejich názoru společnosti Microsoft pomocí příkazu Váš názor v nabídce Nápověda.
+      <string id="IE_ExplainHelp_NoFeedback">Zabraňuje uživatelům v odeslání jejich názoru společnosti Microsoft pomocí příkazu Poslat názor v nabídce Nápověda.
 
-Pokud toto nastavení povolíte, bude příkaz Váš názor odebrán z nabídky Nápověda.
+Pokud toto nastavení povolíte, bude příkaz Poslat názor odebrán z nabídky Nápověda.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, budou uživatelé moci vyplnit formulář na Internetu a odeslat názor na produkty společnosti Microsoft.</string>
       <string id="IE_ExplainHelp_NoNetscapeHelp">Zabraňuje uživatelům v zobrazování tipů pro uživatele přecházející z prohlížeče Netscape.
@@ -3895,7 +3903,7 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, uživatelé weby
 Pokud toto nastavení zapnete, uživatelé mohou zobrazit a použít možnost režimu rozlehlé sítě v nabídce Nástroje. Pokud toto nastavení zapnete, ale neurčíte umístění zpráv, režim rozlehlé sítě bude uživatelům stále k dispozici, ale vy nebudete dostávat žádné zprávy.
 
 Pokud toto nastavení zásad vypnete nebo nenakonfigurujete, možnost se v nabídce nezobrazí a uživatelé nebudou moci spustit weby v režimu rozlehlé sítě.</string>
-      <string id="RestrictInternetExplorer">Posílat do Microsoft Edge všechny weby, které nejsou v seznamu webů podnikového režimu.</string>
+      <string id="RestrictInternetExplorer">Posílat do Microsoft Edge všechny weby, které nejsou v seznamu webů podnikového režimu</string>
       <string id="IE_ExplainRestrictInternetExplorer">Toto nastavení umožňuje rozhodnout, jestli se v prohlížeči Microsoft Edge mají otevírat všechny weby, které nejsou v seznamu webů podnikového režimu. Když toto nastavení použijete, musíte zároveň zapnout nastavení zásady Šablony pro správu\Součásti systému Windows\Internet Explorer\Použít seznam webů pro režim rozlehlé sítě aplikace Internet Explorer a přidat do seznamu webů podnikového režimu aspoň jeden web.
 
 Při povolení tohoto nastavení se v prohlížeči Microsoft Edge automaticky otevřou všechny weby, které nejsou v seznamu webů podnikového režimu.
@@ -3915,19 +3923,19 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se aplikace chova
 Pokud je nainstalována aktualizace Windows Update pro další verzi Microsoft Edge* i stabilní kanál Microsoft Edge, stane se toto:
 - Pokud tuto zásadu zakážete nebo nenakonfigurujete, použije se stabilní kanál Microsoft Edge. To je výchozí chování.
 - Pokud tuto zásadu povolíte, můžete přesměrované weby nakonfigurovat tak, aby se otevíraly až ve 3 následujících kanálech:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta verze 77 nebo novější
-    3 = Microsoft Edge Dev verze 77 nebo novější
-    4 = Microsoft Edge Canary verze 77 nebo novější
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta verze 77 nebo novější
+ 3 = Microsoft Edge Dev verze 77 nebo novější
+ 4 = Microsoft Edge Canary verze 77 nebo novější
 
 Pokud aktualizace Windows Update pro další verzi Microsoft Edge* nebo stabilní kanál Microsoft Edge není nainstalována, stane se toto:
 - Pokud tuto zásadu zakážete nebo nenakonfigurujete, automaticky se použije Microsoft Edge verze 45 nebo starší. To je výchozí chování.
 - Pokud tuto zásadu povolíte, můžete přesměrované weby nakonfigurovat tak, aby se otevíraly až ve 3 následujících kanálech:
-    0 = Microsoft Edge verze 45 nebo starší
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta verze 77 nebo novější
-    3 = Microsoft Edge Dev verze 77 nebo novější
-    4 = Microsoft Edge Canary verze 77 nebo novější
+ 0 = Microsoft Edge verze 45 nebo starší
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta verze 77 nebo novější
+ 3 = Microsoft Edge Dev verze 77 nebo novější
+ 4 = Microsoft Edge Canary verze 77 nebo novější
 
 *Další informace o aktualizaci Windows pro další verzi Microsoft Edge, včetně pokynů, jak ji zakázat, najdete na stránce https://go.microsoft.com/fwlink/?linkid=2102115. Tato aktualizace platí jen pro Windows 10 verze 1709 a novější.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3966,16 @@ Pokud toto nastavení povolíte, bude příkaz Uložit cíl jako zobrazen v mís
 Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, příkaz Uložit cíl jako nebude zobrazen v místní nabídce režimu aplikace Internet Explorer.
 
 Další informace naleznete v tématu https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Povolit globální seznam oken v režimu Internet Explorer</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">Toto nastavení umožňuje Internet Explorer režimu používat globální seznam oken, který umožňuje sdílení stavu s jinými aplikacemi.
+Nastavení se projeví pouze v případě, že je Internet Explorer 11 zakázán jako samostatný prohlížeč.
+
+Pokud tuto zásadu povolíte, režim Internet Explorer použije globální seznam oken.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, režim Internet Explorer bude i nadále udržovat samostatný seznam oken.
+
+Další informace o režimu Internet Explorer najdete v https://go.microsoft.com/fwlink/?linkid=2102921
+Další informace o zakázání Internet Explorer 11 jako samostatného prohlížeče najdete https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Povolit rozšířené klávesové zkratky v režimu aplikace Internet Explorer</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">Toto nastavení zásad umožňuje správcům povolit rozšířené klávesové zkratky pro režim prohlížeče Internet Explorer v Microsoft Edge, jako je například Ctrl+S pro funkci Uložit jako.
 
@@ -3966,6 +3984,14 @@ Pokud tuto zásadu povolíte, bude funkce rozšířených klávesových zkratek 
 Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebudou rozšířené klávesové zkratky v režimu prohlížeče Internet Explorer fungovat.
 
 Další informace najdete tady: https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Obnovit výchozí přiblížení dialogů HTML v režimu Internet Explorer</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Toto nastavení zásad umožňuje správcům obnovit výchozí nastavení přiblížení dialogů HTML v režimu Internet Explorer.
+
+Pokud toto nastavení povolíte, nebude lupa dialogového okna HTML v režimu Internet Explorer šířená z nadřazené stránky.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, přiblížení dialogového okna HTML v režimu Internet Explorer se nastaví na základě přiblížení nadřazené stránky.
+
+Další informace najdete v https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Zakázat Internet Explorer 11 jako samostatný prohlížeč</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Tato zásada umožňuje omezit spouštění Internet Exploreru jako samostatného prohlížeče.
 
@@ -3976,15 +4002,15 @@ Pokud tuto zásadu povolíte:
 – Přepíše všechny ostatní zásady, které provádí přesměrování na Internet Explorer 11.
 
 Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou se všechny weby otevírat pomocí aktuálního aktivního nastavení prohlížeče. Poznámka: Tato zásada bude platit, jen pokud je nainstalovaný stabilní kanál Microsoft Edge.</string>
+      <string id="DisableIEAppDeprecationNotification">Skrýt oznámení o vyřazení Internet Exploreru 11</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">Toto nastavení zásad umožňuje určit, zda bude zobrazeno připomenutí v oznamovacím pruhu, že Internet Explorer je vyřazován z provozu. Ve výchozím nastavení se oznamovací pruh zobrazuje v Internet Explorer 11.
+
+Pokud toto nastavení zásad povolíte, oznamovací pruh se v Internet Explorer 11 nezobrazí.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, oznamovací pruh se zobrazí v Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Nikdy</string>
       <string id="NotifyDisableIEOptions_Always">Vždy</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Jedenkrát na uživatele</string>
-      <string id="JScriptReplacement">Nahradit JScript načtením JScript9Legacy místo jazyka JScript přes MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">Toto nastavení zásad určuje, zda bude pro volání přes MSHTML/WebOC načtený JScript nebo JScript9Legacy.
-      
-Pokud povolíte toto nastavení zásad, JScript9Legacy se načte, když se vytvoří instance skriptu JScript.
-
-Pokud tuto zásadu zakážete nebo nenakonfigurujete, využije se JScript.</string>
       <string id="VerMgmtDisable">Vypnout blokování zastaralých ovládacích prvků ActiveX pro Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Nastavení této zásady určuje, jestli bude Internet Explorer blokovat určité zastaralé ovládací prvky ActiveX. Zastaralé ovládací prvky ActiveX v zóně Intranet se nikdy neblokují.
 

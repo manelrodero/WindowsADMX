@@ -21,7 +21,7 @@ A opção "Habilitado com bloqueio UEFI" garante que a Proteção Baseada em Vir
  
 A opção "Habilitado sem bloqueio" permite que a Proteção Baseada em Virtualização da Integridade do Código seja desabilitada remotamente usando a Política de Grupo.
 
-A opção "Não Configurado" deixa a configuração de política indefinida. A Política de Grupo não grava a configuração de política no registro e, portanto, não afeta computadores ou usuários. Se houver uma configuração atual no Registro, ele não será modificado..
+A opção "Não Configurado" deixa a configuração de política indefinida. A Política de Grupo não grava a configuração de política no registro e, portanto, não afeta computadores ou usuários. Se houver uma configuração atual no Registro, ele não será modificado.
 
 A opção "Exigir a Tabela de Atributos de Memória UEFI" só habilitará a Proteção Baseada em Virtualização da Integridade do Código em dispositivos com suporte de firmware UEFI para a tabela atributos de memória. Dispositivos sem a tabela atributos de memória UEFI podem ter firmware que é incompatível com a proteção baseada em virtualização de integridade de código que em alguns casos pode levar a falhas ou perda de dados ou incompatibilidade com determinados cartões plug-in. Se não definir esta opção, os dispositivos de destino deverão ser testados para garantir a compatibilidade.
 
@@ -29,7 +29,7 @@ Aviso: todos os drivers do sistema devem ser compatíveis com este recurso ou o 
 
 Credential Guard
 
-Essa configuração permite que os usuários ativem a proteção de credenciais com Segurança Baseada em Virtualização para ajudar a proteger credenciais
+Essa configuração permite que os usuários ativem a proteção de credenciais com Segurança Baseada em Virtualização para ajudar a proteger credenciais.
 
 A opção "Desabilitado" desativa a proteção de credenciais remotamente se ele foi ativado anteriormente com a opção "habilitado sem bloqueio".
 
@@ -38,10 +38,10 @@ A opção "Habilitado com bloqueio UEFI" garante que o protetor de credenciais n
 A opção "Habilitado sem bloqueio" permite que o guarda de credenciais seja desabilitado remotamente usando a Política de Grupo. Os dispositivos que usam essa configuração devem estar executando pelo menos o Windows 10 (versão 1511).
 
 A opção "Não Configurado" deixa a configuração de política indefinida. A Política de Grupo não grava a configuração de política no registro e, portanto, não tem impacto em computadores ou usuários. Se houver uma configuração atual no registro, ele não será modificado.
- 
+      
 Inicialização Segura
 
-Essa configuração define a configuração da Inicialização Segura para proteger a cadeia de inicialização
+Essa configuração define a configuração da Inicialização Segura para proteger a cadeia de inicialização.
 
 A configuração "Não Configurado" é o padrão e permite a configuração do recurso por usuários administrativos.
 

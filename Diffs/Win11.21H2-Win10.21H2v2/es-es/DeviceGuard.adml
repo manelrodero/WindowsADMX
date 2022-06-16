@@ -7,29 +7,29 @@
     <stringTable>
       <string id="DeviceGuard">Device Guard</string>
       <string id="VirtualizationBasedSecurity">Activar la seguridad basada en la virtualización</string>
-      <string id="VirtualizationBasedSecurityHelp">Especifica si la seguridad basada en virtualización está activada.
+      <string id="VirtualizationBasedSecurityHelp">Especifica si la seguridad basada en la virtualización está activada.
 
-La seguridad basada en virtualización utiliza el hipervisor de Windows para proporcionar compatibilidad con los servicios de seguridad. La seguridad basada en virtualización requiere un arranque seguro y, opcionalmente, puede habilitarse con el uso de protecciones DMA. Las protecciones DMA requieren compatibilidad con el hardware y solo se habilitarán en dispositivos que estén configurados correctamente.
+La seguridad basada en la virtualización utiliza el hipervisor de Windows para proporcionar compatibilidad con los servicios de seguridad. La seguridad basada en la virtualización requiere un arranque seguro y, opcionalmente, puede habilitarse con el uso de protecciones DMA. Las protecciones DMA requieren compatibilidad con el hardware y solo se habilitarán en dispositivos que estén configurados correctamente.
 
-Protección basada en virtualización de la integridad del código
+Protección basada en la virtualización de la integridad del código
 
-Esta configuración habilita la protección basada en virtualización de la integridad del código del modo kernel. Cuando está habilitada, se aplican las protecciones de memoria de modo kernel y la ruta de validación de integridad del código se protege con la característica de seguridad basada en virtualización.
+Esta configuración habilita la protección basada en la virtualización de la integridad del código del modo kernel. Cuando está habilitada, se aplican las protecciones de memoria de modo kernel y la ruta de validación de integridad del código se protege con la característica de seguridad basada en la virtualización.
 
-La opción "Deshabilitada" desactiva la protección basada en virtualización de la integridad del código de forma remota si se ha activó previamente con la opción "Habilitar sin bloqueo".
+La opción "Deshabilitada" desactiva la protección basada en la virtualización de la integridad del código de forma remota si se ha activó previamente con la opción "Habilitar sin bloqueo".
  
-La opción "Habilitar con el bloqueo UEFI" garantiza que la protección basada en virtualización de la integridad del código no se pueda deshabilitar de forma remota. Para deshabilitar la característica, debes establecer la directiva de grupo en "Deshabilitada", así como quitar la funcionalidad de seguridad de cada equipo, con un usuario físicamente presente, con el fin de borrar la configuración que persiste en UEFI.
+La opción "Habilitar con el bloqueo UEFI" garantiza que la protección basada en la virtualización de la integridad del código no se pueda deshabilitar de forma remota. Para deshabilitar la característica, debes establecer la directiva de grupo en "Deshabilitada", así como quitar la funcionalidad de seguridad de cada equipo, con un usuario físicamente presente, con el fin de borrar la configuración que persiste en UEFI.
  
-La opción "Habilitar sin bloqueo" permite que la protección basada en virtualización de la integridad del código se deshabilite de forma remota mediante la directiva de grupo. 
+La opción "Habilitar sin bloqueo" permite que la protección basada en la virtualización de la integridad del código se deshabilite de forma remota mediante la directiva de grupo. 
 
 La opción "No configurada" deja la configuración de directiva sin definir. La directiva de grupo no escribe la configuración de directiva en el registro y, por lo tanto, no tiene ningún impacto en los equipos ni en los usuarios. Si hay una configuración actual en el registro, esta no se modificará.
 
-La opción "Necesita la tabla de los atributos de memoria UEFI" solo habilitará la protección basada en virtualización de la integridad del código en dispositivos compatibles con el firmware UEFI para la tabla de los atributos de memoria. Los dispositivos sin la tabla de los atributos de memoria UEFI pueden tener firmware incompatible con la protección basada en virtualización de la integridad del código, que en algunos casos puede provocar bloqueos, pérdida de datos o incompatibilidad con ciertas tarjetas de complemento. Si no se configura esta opción, los dispositivos de destino deben probarse para garantizar la compatibilidad.
+La opción "Necesita la tabla de los atributos de memoria UEFI" solo habilitará la protección basada en la virtualización de la integridad del código en dispositivos compatibles con el firmware UEFI para la tabla de los atributos de memoria. Los dispositivos sin la tabla de los atributos de memoria UEFI pueden tener firmware incompatible con la protección basada en la virtualización de la integridad del código, que en algunos casos puede provocar bloqueos, pérdida de datos o incompatibilidad con ciertas tarjetas de complemento. Si no se configura esta opción, los dispositivos de destino deben probarse para garantizar la compatibilidad.
 
 Advertencia: Todos los controladores del sistema deben ser compatibles con esta característica. De lo contrario, el sistema podría bloquearse. Asegúrate de que esta configuración de directiva solo se implemente en equipos que se sepa que son compatibles. 
 
 Credential Guard
 
-Esta opción permite a los usuarios activar Credential Guard con seguridad basada en virtualización para ayudar a proteger las credenciales.
+Esta opción permite a los usuarios activar Credential Guard con seguridad basada en la virtualización para ayudar a proteger las credenciales.
 
 La opción "Deshabilitada" desactiva Credential Guard de forma remota si se activó previamente con la opción "Habilitar sin bloqueo".
 
@@ -38,7 +38,7 @@ La opción "Habilitar con el bloqueo UEFI" garantiza que Credential Guard no pue
 La opción "Habilitar sin bloqueo" permite que Credential Guard se deshabilite de forma remota mediante la directiva de grupo. Los dispositivos que utilicen esta configuración deben ejecutar como mínimo Windows 10 (versión 1511).
 
 La opción "No configurada" deja la configuración de directiva sin definir. La directiva de grupo no escribe la configuración de directiva en el registro y, por lo tanto, no tiene ningún impacto en los equipos ni en los usuarios. Si hay una configuración actual en el registro, esta no se modificará.
-
+      
 Inicio seguro
 
 Esta configuración establece la configuración del inicio seguro para proteger la cadena de arranque.

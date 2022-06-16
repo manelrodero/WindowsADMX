@@ -250,23 +250,6 @@ Bu ilke ayarı devre dışı bırakılırsa veya yapılandırılmazsa, Bilgisaya
 Bu ilke ayarı etkinleştirilirse IDN'ler Nameprep biçimine dönüştürülür.
 
 Bu ilke ayarı devre dışı bırakılırsa veya yapılandırılmazsa, IDN'ler Nameprep biçimine dönüştürülmez.</string>
-      <string id="DNS_Doh">HTTPS üzerinden DNS (DoH) ad çözümlemesini yapılandır</string>
-      <string id="DNS_Doh_Disabled">DoH’yi engelle</string>
-      <string id="DNS_Doh_Auto">DoH’ye izin ver</string>
-      <string id="DNS_Doh_Force">DoH’yi gerekli kıl</string>
-      <string id="DNS_Doh_Help">DNS istemcisinin HTTPS üzerinden DNS (DoH) aracılığıyla ad çözümlemesi gerçekleştirip gerçekleştirmeyeceğini belirtir.
-
-Varsayılan olarak, DNS istemcisi klasik DNS ad çözümlemesini (UDP veya TCP üzerinden) yerine getirir. Bu ayar, DNS istemcisinin etki alana adlarını çözümlemek için DoH protokolünü kullanmasını sağlayabilir.
-
-Bu ilke ayarını kullanmak için, Etkin seçeneğine tıklayın ve ardından açılan listeden aşağıdaki seçeneklerden birini belirleyin:
-
-DoH’yi engelle: Hiçbir DoH ad çözümlemesi gerçekleştirilmez.
-
-DoH’ye izin ver: Yapılandırılmış DNS sunucuları destekliyorsa, DoH sorgularını gerçekleştirin. Desteklemiyorsa, klasik ad çözümlemesini deneyin.
-
-DoH’yi gerekli kıl: Yalnızca DoH ad çözümlemesine izin verin. Yapılandırılmış hiçbir DoH uyumlu DNS sunucusu yoksa, ad çözümlemesi başarısız olur.
-
-Bu ilke ayarını devre dışı bırakırsanız veya bu ilke ayarını yapılandırmazsanız, bilgisayarlar yerel olarak yapılandırılmış ayarları kullanır.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -303,9 +286,6 @@ Bu ilke ayarını devre dışı bırakırsanız veya bu ilke ayarını yapıland
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Güvenlik düzeyini güncelleştir:</dropdownList>
-      </presentation>
-      <presentation id="DNS_Doh">
-        <dropdownList refId="DNS_Doh_Box" defaultItem="1">DoH seçeneklerini yapılandır:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

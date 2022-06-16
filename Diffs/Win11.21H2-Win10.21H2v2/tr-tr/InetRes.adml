@@ -298,6 +298,7 @@ Listedeki bir uygulama veya işlem için bu ilke ayarını devre dışı bırak�
 Bu ilke ayarını yapılandırmazsanız listedeki uygulama veya işlem için URL eyleminin geçerli değerleri korunur.</string>
       <string id="FavImportExport">Ayarları Alma/Verme sihirbazını devre dışı bırak</string>
       <string id="GeolocationDisable">Tarayıcı coğrafi konum özelliğini kapat</string>
+      <string id="DisableFlashInIE">Internet Explorer'da Adobe Flash'ı kapat ve uygulamaların Flash nesnelerinin örneğini oluşturmak için Internet Explorer teknolojisini kullanmasını engelle</string>
       <string id="File_NoBrowserClose">Dosya menüsü: Tarayıcı ve Explorer pencerelerini kapatmayı devre dışı bırak</string>
       <string id="File_NoBrowserSaveAs">Dosya menüsü: Farklı Kaydet... menü seçeneğini devre dışı bırak</string>
       <string id="File_NoBrowserSaveWebComplete">Dosya menüsü: Web Sayfası Olarak Tamamını Kaydet'i devre dışı bırak</string>
@@ -333,7 +334,7 @@ Bu ilke ayarını devre dışı bırakırsanız, Internet sunucusuyla bağlantı
 Bu ilke ayarını yapılandırmazsanız kullanıcı bu hata iletilerinde ayrıntıları açıp kapatabilir.</string>
       <string id="General_Zooming">Sayfa yakınlaştırma işlevselliğini kapat</string>
       <string id="GeneralColors">Genel Renkler</string>
-      <string id="Help_NoFeedback">Yardım menüsü: Yorum Gönder' menü seçeneğini kaldır</string>
+      <string id="Help_NoFeedback">Yardım menüsü: ‘Yorum Gönder' menü seçeneğini kaldır</string>
       <string id="Help_NoNetscapeHelp">Yardım menüsü: Netscape Kullanıcıları İçin' menü seçeneğini kaldır</string>
       <string id="Help_NoTip">Yardım menüsü: Günün İpucu' menü seçeneğini kaldır</string>
       <string id="Help_NoTutorial">Yardım menüsü: Tur' menü seçeneğini kaldır</string>
@@ -725,6 +726,13 @@ Bu ilke ayarını etkinleştirirseniz tarayıcı coğrafi konum desteği kapatı
 Bu ilke ayarını devre dışı bırakırsanız, tarayıcı coğrafi konum desteği açılır.
 
 Bu ilke ayarını yapılandırmazsanız tarayıcı coğrafi konum desteği Internet Seçenekleri'nin Gizlilik sekmesinde açılıp kapatılabilir.</string>
+      <string id="IE_ExplainDisableFlashInIE">Bu ilke ayarı Internet Explorer'da Adobe Flash'ı kapatır ve uygulamaların Flash nesnelerinin örneğini oluşturmak için Internet Explorer teknolojisini kullanmasını engeller.
+
+Bu ilke ayarını etkinleştirirseniz Internet Explorer için Flash kapatılır ve uygulamalar Flash nesnelerinin örneğini oluşturmak için Internet Explorer teknolojisini kullanamaz. Eklentileri Yönet iletişim kutusunda, Flash durumu 'Devre dışı' olur ve kullanıcılar Flash özelliğini etkinleştiremez. Bu ilke ayarını etkinleştirirseniz, Internet Explorer "Eklenti Listesi" ve "Eklenti Listesi'nde özellikle izin verilmedikçe tüm eklentileri reddet" ilke ayarlarıyla Adobe Flash için yapılan ayarları yoksayar.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, Internet Explorer için Flash açılır ve uygulamalar Flash nesnelerinin örneğini oluşturmak için Internet Explorer teknolojisini kullanabilir. Kullanıcılar Flash özelliğini Eklentileri Yönet iletişim kutusundan etkinleştirebilir veya devre dışı bırakabilir.
+
+Bu ilke ayarı devre dışı bırakılsa veya yapılandırmasa bile, "Eklenti Listesi" ve "Eklenti Listesinde özellikle izin verilmedikçe tüm eklentileri reddet" ilke ayarlarından Adobe Flash devre dışı bırakılabilir. Ancak, Adobe Flash bu ilke ayarıyla değil de "Eklenti Listesi" ve "Eklenti Listesinde özellikle izin verilmedikçe tüm eklentileri reddet" ilke ayarlarıyla devre dışı bırakılırsa, tüm uygulamalar Flash nesnesinin örneğini oluşturmak için Internet Explorer teknolojisini kullanmaya devam edebilir. Daha fazla bilgi için Internet Explorer TechNet kitaplığında "Internet Explorer 10'da Grup İlkesi Ayarları" bölümüne bakın.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Kullanıcıların Microsoft Internet Explorer ve Dosya Gezgini pencerelerini kapatmalarını önler.
 
 Bu ilkeyi etkinleştirirseniz, Dosya menüsündeki Kapat komutu sönük görünür.
@@ -784,7 +792,7 @@ Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız MSHTM
 
 Bu ilkeyi etkinleştirirseniz Geri Bildirim Gönder komutu Yardım menüsünden kaldırılır.
 
-Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız kullanıcılar, Microsoft ürünleri hakkındaki geri bildirimlerini göndermek için bir Internet formu doldurabilir.</string>
+Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız kullanıcılar, Microsoft ürünleri hakkındaki geri bildirimlerini göndermek için bir İnternet formu doldurabilir.</string>
       <string id="IE_ExplainHelp_NoNetscapeHelp">Netscape'den geçiş yapan kullanıcıların ipuçlarını görüntülemesine engel olur
 
 Bu ilkeyi etkinleştirirseniz Netscape Kullanıcıları İçin komutu Yardım menüsünden kaldırılır.
@@ -1478,9 +1486,9 @@ Bu ilke ayarını etkinleştirirseniz kullanıcı bilgisayarlarında arama sağl
 Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız kullanıcı kendi arama sağlayıcıları listesini yapılandırabilir.</string>
       <string id="IE_ExplainSQM_DisableCEIP">Bu ilke ayarı, kullanıcının Müşteri Deneyimini Geliştirme Programı'na (CEIP) katılmasını engeller.
 
-Bu ilke ayarını etkinleştirirseniz kullanıcı CEIP'e katılamaz ve Yardım menüsünde Müşteri Görüş Seçenekleri komutu gösterilmez.
+Bu ilke ayarını etkinleştirirseniz kullanıcı CEIP'e katılamaz ve Yardım menüsünde Müşteri Geri Bildirim Seçenekleri komutu gösterilmez.
 
-Bu ilke ayarını devre dışı bırakırsanız, kullanıcının CEIP'e katılması gerekir ve Yardım menüsünde Müşteri Görüş Seçenekleri komutu gösterilmez.
+Bu ilke ayarını devre dışı bırakırsanız, kullanıcının CEIP'e katılması gerekir ve Yardım menüsünde Müşteri Geri Bildirim Seçenekleri komutu gösterilmez.
 
 Bu ilke ayarını yapılandırmazsanız kullanıcı CEIP'e katılıp katılmamayı seçebilir.</string>
       <string id="IE_ExplainSurvey">Microsoft Survey Control'u yönetici onaylı denetim olarak belirtir.
@@ -3156,8 +3164,8 @@ Bu ilke ayarını yapılandırmazsanız Internet Explorer üzerinden Microsoft E
       <string id="SUPPORTED_IE11WIN8">En az Windows 8.1'de Internet Explorer 11.0</string>
       <string id="SUPPORTED_IE11WIN8ONLY">Yalnızca Windows 8.1'de yer alan Internet Explorer 11.0</string>
       <string id="SUPPORTED_IE11WIN10">En az Windows 10'da yer alan Internet Explorer 11.0</string>
-      <string id="SUPPORTED_IE11WIN10_1607">En az Windows 10, sürüm 1607 veya üzerinde Internet Explorer 11.0</string>
-      <string id="SUPPORTED_IE11WIN10_1703">En az Windows 10, sürüm 1703 veya üzerinde Internet Explorer 11.0</string>
+      <string id="SUPPORTED_IE11WIN10_1607">En az Windows 10 sürüm 1607 veya üzerinde Internet Explorer 11.0</string>
+      <string id="SUPPORTED_IE11WIN10_1703">En az Windows 10 sürüm 1703 veya üzerinde Internet Explorer 11.0</string>
       <string id="SUPPORTED_IE11">En az Internet Explorer 11.0</string>
       <string id="SUPPORTED_IE7_NONVISTA">En az Internet Explorer 7.0 Windows Vista'da desteklenmiyor</string>
       <string id="SUPPORTED_IE7VISTA">En az Internet Explorer 7,0</string>
@@ -3895,7 +3903,7 @@ Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, kull
 Bu ayarı açarsanız, kullanıcılar Araçlar menüsünde Kuruluş Modu seçeneğini görebilir ve kullanabilir. Bu ayarı açar ancak rapor konumu belirtmezseniz, kullanıcılar yine Kuruluş Modu'nu kullanabilir ancak siz hiçbir ileti almazsınız.
 
 Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, menü seçeneği gösterilmez ve kullanıcılar web sitelerini Kuruluş Modu'nda çalıştıramaz.</string>
-      <string id="RestrictInternetExplorer">Kurumsal Mod Site Listesi'nde yer almayan tüm siteleri Microsoft Edge'e gönder</string>
+      <string id="RestrictInternetExplorer">Kurumsal Mod Site Listesi'nde yer almayan tüm siteleri Microsoft Edge'e gönder.</string>
       <string id="IE_ExplainRestrictInternetExplorer">Bu ayar, Kurumsal Mod Site Listesi'nde yer almayan tüm sitelerin Microsoft Edge'de açılıp açılamayacağına karar vermenizi sağlar. Bu ayarı kullanırsanız, Yönetim Şablonları\Windows Bileşenleri\Internet Explorer\Kurumsal Mod IE web site listesini kullan ilke ayarını da açık hale getirmeniz ve Kurumsal Mod Site Listesi'ne en az bir site eklemeniz gerekir.
 
 Bu ayarı etkinleştirirseniz, Kurumsal Mod Site Liste'sinde yer almayan tüm siteler otomatik olarak Microsoft Edge'de açılır.
@@ -3915,19 +3923,19 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, varsayılan uygula
 Hem sonraki Microsoft Edge* sürümü için Windows Update hem de Microsoft Edge Kararlı kanalı yüklüyse aşağıdaki davranışlar gerçekleşir:
 - Bu ilkeyi devre dışı bırakırsanız veya yapılandırmazsanız Microsoft Edge Kararlı kanalı kullanılır. Bu varsayılan davranıştır.
 - Bu ilkeyi etkinleştirirseniz yeniden yönlendirilen siteleri, aşağıdaki kanalların en fazla üçünde açılacak şekilde yapılandırabilirsiniz:
-    1 = Microsoft Edge Kararlı
-    2 = Microsoft Edge Beta sürüm 77 veya sonrası
-    3 = Microsoft Edge Dev sürüm 77 veya sonrası
-    4 = Microsoft Edge Canary sürüm 77 veya sonrası
+ 1 = Microsoft Edge Kararlı
+ 2 = Microsoft Edge Beta sürüm 77 veya sonrası
+ 3 = Microsoft Edge Dev sürüm 77 veya sonrası
+ 4 = Microsoft Edge Canary sürüm 77 veya sonrası
 
-Sonraki Microsoft Edge* sürümü için Windows Update veya Microsoft Edge Stable kanalı yüklü değilse aşağıdaki davranışlar gerçekleşir:
+Sonraki Microsoft Edge* sürümü için Windows Update veya Microsoft Edge Kararlı kanalı yüklü değilse aşağıdaki davranışlar gerçekleşir:
 - Bu ilkeyi devre dışı bırakırsanız veya yapılandırmazsanız Microsoft Edge sürüm 45 veya önceki sürümleri otomatik olarak kullanılır. Bu varsayılan davranıştır.
 - Bu ilkeyi etkinleştirirseniz yeniden yönlendirilen siteleri, aşağıdaki kanalların en fazla üçünde açılacak şekilde yapılandırabilirsiniz:
-    0 = Microsoft Edge sürüm 45 veya öncesi
-    1 = Microsoft Edge Kararlı
-    2 = Microsoft Edge Beta sürüm 77 veya sonrası
-    3 = Microsoft Edge Dev sürüm 77 veya sonrası
-    4 = Microsoft Edge Canary sürüm 77 veya sonrası
+ 0 = Microsoft Edge sürüm 45 veya öncesi
+ 1 = Microsoft Edge Kararlı
+ 2 = Microsoft Edge Beta sürüm 77 veya sonrası
+ 3 = Microsoft Edge Dev sürüm 77 veya sonrası
+ 4 = Microsoft Edge Canary sürüm 77 veya sonrası
 
 *Sonraki Microsoft Edge sürümüne yönelik Windows güncelleştirmesi ve nasıl devre dışı bırakılacağı hakkında daha fazla bilgi için https://go.microsoft.com/fwlink/?linkid=2102115 adresine bakın. Bu güncelleştirme yalnızca Windows 10 sürüm 1709 ve üzeri sürümler için geçerlidir.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3951,19 +3959,37 @@ Bu ilkenin, ‘Tüm intranet sitelerini Internet Explorer'a gönder’ (‘SendI
 
 Kuruluşunuzda uygun yapılandırmayı oluşturmak üzere bu ilkenin diğer ilgili ilkelerle birlikte nasıl kullanılacağı hakkında daha fazla bilgi edinmek için bk. https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="AllowSaveTargetAsInIEMode">Internet Explorer modunda "hedefi farklı kaydet" izni ver</string>
-      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Bu ilke ayarı, yöneticilerin Internet Explorer modunda "hedefi farklı kaydet" içerik menüsünü etkinleştirmesine olanak tanır.
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Bu ilke ayarı, yöneticilerin Internet Explorer modunda "hedefi farklı kaydet" bağlam menüsünü etkinleştirmesini sağlar.
 
-Bu ilkeyi etkinleştirirseniz "hedefi farklı kaydet" ayarı Internet Explorer mod bağlam menüsünde görünür ve Internet Explorer ile aynı şekilde çalışır.
+Bu ilkeyi etkinleştirirseniz "hedefi farklı kaydet" ayarı, Internet Explorer mod bağlam menüsünde görünür ve Internet Explorer ile aynı şekilde çalışır.
 
-Bu ilke ayarını devre dışı bırakırsanız ya da yapılandırmazsanız "hedefi farklı kaydet" ayarı Internet Explorer mod bağlam menüsünde gösterilmez.
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız "hedefi farklı kaydet" ayarı, Internet Explorer mod bağlam menüsünde gösterilmez.
 
 Daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Genel pencere listesini Internet Explorer modunda etkinleştir</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">Bu ayar, Internet Explorer modun diğer uygulamalarla paylaşım durumunu etkinleştiren genel pencere listesini kullanmasına olanak sağlar.
+Bu ayar yalnızca 11 Internet Explorer tek başına tarayıcı olarak devre dışı bırakıldığında etkili olur.
+
+Bu ilkeyi etkinleştirirseniz Internet Explorer modu genel pencere listesini kullanacak.
+
+Bu ilkeyi devre dışı bırakırsanız veya yapılandırmazsanız Internet Explorer modu ayrı bir pencere listesini korumaya devam eder.
+
+Bu mod hakkında daha fazla Internet Explorer için bkz. https://go.microsoft.com/fwlink/?linkid=2102921
+Internet Explorer 11'i tek başına tarayıcı olarak devre dışı bırakma hakkında daha fazla bilgi edinmek için https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Internet Explorer modunda genişletilmiş kısayol tuşlarını etkinleştirin</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">Bu ilke ayarı, yöneticilerin genişletilmiş Microsoft Edge Internet Explorer modu kısayol tuşlarının "Ctrl+S" gibi "farklı kaydet" işlevlerini etkinleştirmesine olanak tanır.
 
 Bu ilkeyi etkinleştirirseniz genişletilmiş kısayol tuşu işlevselliği Internet Explorer modunda etkinleştirilir ve Internet Explorer ile aynı şekilde çalışır.
 
 Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, genişletilmiş kısayol tuşları Internet Explorer modunda çalışmaz.
+
+Daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Internet Explorer modunda HTML iletişim kutuları için büyütmeyi varsayılana sıfırla</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Bu ilke ayarı, yöneticilerin varsayılan modda HTML iletişim kutuları için yakınlaştırmayı Internet Explorer sağlar.
+
+Bu ilkeyi etkinleştirirseniz html iletişim kutusunun Internet Explorer sayfasından yayılmaz.
+
+Bu ilkeyi devre dışı bırakırsanız veya yapılandırmazsanız html iletişim kutusunun üst Internet Explorer yakınlaştırması temel alınarak, bu modda html iletişim kutusunun yakınlaştırması ayarlanır.
 
 Daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Internet Explorer 11 ' i bağımsız tarayıcı olarak devre dışı bırak</string>
@@ -3976,15 +4002,15 @@ Bu ilkeyi etkinleştirirseniz,
 -Internet Explorer 11'e yönlendiren diğer tüm ilkeleri geçersiz kılar.
 
 Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, tüm siteler geçerli etkin tarayıcı ayarları kullanılarak açılır. Not: Bu ilkenin geçerlilik kazanması için Microsoft Edge Kararlı Kanalı'nın yüklenmesi gerekir.</string>
+      <string id="DisableIEAppDeprecationNotification">Internet Explorer 11 kullanımdan kaldırma bildirimini gizle</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">Bu ilke ayarı, devre dışı bırakılacak bildirim çubuğu anımsatıcısının Internet Explorer görüntülenip görüntülenmeyeceklerini yönetmenizi sağlar. Varsayılan olarak, Bildirim çubuğu 11 Internet Explorer görüntülenir.
+
+Bu ilke ayarını etkinleştirirseniz Bildirim çubuğu 11'de Internet Explorer görüntülenmez.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Bildirim çubuğu 11'de Internet Explorer görüntülenir.</string>
       <string id="NotifyDisableIEOptions_Never">Hiçbir zaman</string>
       <string id="NotifyDisableIEOptions_Always">Her zaman</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Kullanıcı başına bir kez</string>
-      <string id="JScriptReplacement">MSHTML/WebOC üzerinden JScript yerine JScript9Legacy'yi yükleyerek JScript'i değiştirin.</string>
-      <string id="IE_ExplainJScriptReplacement">Bu ilke ayarı, MSHTML/WebOC tabanlı etkinleştirmeleri için JScript veya JScript9Legacy 'in yüklenip yüklenmediğini belirtir.
-      
-Bu ilke ayarını etkinleştirirseniz JScript 'in örneklendiği durumlarda JScript9Legacy yüklenir.
-
-Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, JScript kullanılır.</string>
       <string id="VerMgmtDisable">Internet Explorer için tarihi geçmiş ActiveX denetimlerinin engellenmesini kapat</string>
       <string id="IE_ExplainVerMgmtDisable">Bu ilke ayarı, Internet Explorer'ın tarihi geçmiş ActiveX denetimlerini engelleyip engellemeyeceğini belirler. Tarihi geçmiş ActiveX denetimleri, Intranet Bölgesi'nde hiçbir zaman engellenmez.
 
@@ -4127,7 +4153,7 @@ Bu ilke ayarını etkinleştirirseniz Internet Explorer'ın otomatik yükseltilm
 
 Bu ilke ayarını devre dışı bırakırsanız, Internet Explorer'ın otomatik yükseltilmesi kapatılır.
 
-Bu ilkeyi yapılandırmazsanız Internet Explorer Hakkında iletişim kutusunda otomatik yükseltmeleri açıp kapatabilir.
+Bu ilkeyi yapılandırmazsanız kullanıcılar Internet Explorer Hakkında iletişim kutusunda otomatik yükseltmeleri açıp kapatabilir.
 
 Not: Bu ilke, Windows 10 sürüm 1703'ten itibaren kullanım dışıdır.</string>
       <string id="TurnOffFormatDetectionPhone">Telefon numarası algılamayı kapat</string>

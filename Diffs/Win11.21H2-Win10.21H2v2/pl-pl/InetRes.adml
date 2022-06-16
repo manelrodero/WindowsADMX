@@ -298,6 +298,7 @@ Jeśli to ustawienie zasad zostanie wyłączone dla aplikacji lub procesu na li�
 Jeśli to ustawienie zasad pozostanie nieskonfigurowane, obowiązywać będą bieżące wartości ustawienia akcji URL dla aplikacji lub procesu na liście.</string>
       <string id="FavImportExport">Wyłącz kreatora importowania/eksportowania ustawień</string>
       <string id="GeolocationDisable">Wyłącz geolokalizację przeglądarki</string>
+      <string id="DisableFlashInIE">Wyłącz program Adobe Flash w przeglądarce Internet Explorer i uniemożliwiaj aplikacjom tworzenie wystąpień obiektów Flash za pomocą technologii programu Internet Explorer</string>
       <string id="File_NoBrowserClose">Menu Plik: wyłącz zamykanie okien przeglądarki i Eksploratora</string>
       <string id="File_NoBrowserSaveAs">Menu Plik: wyłącz opcję menu Zapisz jako...</string>
       <string id="File_NoBrowserSaveWebComplete">Menu Plik: wyłącz opcję menu Zapisz jako stronę sieci Web</string>
@@ -725,6 +726,13 @@ Jeśli to ustawienie zasad zostanie włączone, obsługa geolokalizacji przeglą
 Jeśli to ustawienie zasad zostanie wyłączone, obsługa geolokalizacji przeglądarki będzie włączona.
 
 Jeśli to ustawienie nie zostanie skonfigurowane, można będzie włączać lub wyłączać obsługę geolokalizacji przeglądarki w oknie Opcje internetowe na karcie Prywatność.</string>
+      <string id="IE_ExplainDisableFlashInIE">To ustawienie zasad umożliwia wyłączenie programu Adobe Flash w przeglądarce Internet Explorer i uniemożliwia aplikacjom tworzenie wystąpień obiektów Flash za pomocą technologii programu Internet Explorer.
+
+Jeśli to ustawienie zasad zostanie włączone, program Flash będzie wyłączony dla przeglądarki Internet Explorer i aplikacje nie będą mogły używać technologii tego programu do tworzenia wystąpień obiektów Flash. W oknie dialogowym Zarządzanie dodatkami program Flash będzie miał stan „Wyłączone” i użytkownicy nie będą mogli włączyć tego programu. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer zignoruje ustawienia dotyczące programu Adobe Flash wprowadzone za pomocą ustawień zasad „Lista dodatków” oraz „Odrzuć wszystkie dodatki, jeśli nie są specjalnie dozwolone na liście dodatków”.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, program Flash będzie włączony dla przeglądarki Internet Explorer i aplikacje będą mogły używać technologii tej przeglądarki do tworzenia wystąpień obiektów Flash. Użytkownicy mogą włączyć lub wyłączyć program Flash w oknie dialogowym Zarządzanie dodatkami.
+
+Program Adobe Flash można wyłączyć za pomocą ustawień zasad „Lista dodatków” oraz „Odrzuć wszystkie dodatki, jeśli nie są specjalnie dozwolone na liście dodatków” nawet wtedy, gdy to ustawienie zasad jest wyłączone lub nie jest skonfigurowane. Jeśli jednak program Adobe Flash zostanie wyłączony za pomocą ustawień zasad „Lista dodatków” oraz „Odrzuć wszystkie dodatki, jeśli nie są specjalnie dozwolone na liście dodatków”, a nie przy użyciu tego ustawienia zasad, wszystkie aplikacje, które tworzą wystąpienia obiektów Flash za pomocą technologii programu Internet Explorer, nadal mogą to robić. Więcej informacji można znaleźć w artykule na temat ustawień zasad grupy w programie Internet Explorer 10 w bibliotece TechNet programu Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Uniemożliwia użytkownikom zamykanie programu Microsoft Internet Explorer i Eksploratora plików.
 
 Włączenie tej zasady spowoduje, że polecenie Zamknij w menu Plik będzie wyświetlane jako wygaszone.
@@ -3915,19 +3923,19 @@ Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, aplik
 Jeśli będzie zainstalowana zarówno aktualizacja z usługi Windows Update dla następnej wersji przeglądarki Microsoft Edge*, jak i stabilny kanał Microsoft Edge, system będzie zachowywał się w następujący sposób:
 - Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, będzie używany stabilny kanał Microsoft Edge. Jest to zachowanie domyślne.
 - Jeśli włączysz tę zasadę, będziesz mieć możliwość określenia, że przekierowane witryny będą otwierane w maksymalnie trzech z wymienionych poniżej kanałów, gdzie:
-    1 = Stabilny kanał Microsoft Edge
-    2 = Microsoft Edge Beta w wersji 77 lub nowszej
-    3 = Microsoft Edge Dev w wersji 77 lub nowszej
-    4 = Microsoft Edge Canary w wersji 77 lub nowszej
+ 1 = Stabilny kanał Microsoft Edge
+ 2 = Microsoft Edge Beta w wersji 77 lub nowszej
+ 3 = Microsoft Edge Dev w wersji 77 lub nowszej
+ 4 = Microsoft Edge Canary w wersji 77 lub nowszej
 
 Jeśli nie będzie zainstalowana aktualizacja z usługi Windows Update dla następnej wersji przeglądarki Microsoft Edge* lub stabilny kanał Microsoft Edge, system będzie zachowywał się w następujący sposób:
 - Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, automatycznie będzie używana przeglądarka Microsoft Edge w wersji 45. Jest to zachowanie domyślne.
 - Jeśli włączysz tę zasadę, będziesz mieć możliwość określenia, że przekierowane witryny będą otwierane w maksymalnie trzech z wymienionych poniżej kanałów, gdzie:
-    0 = Microsoft Edge w wersji 45 lub nowszej
-    1 = Stabilny kanał Microsoft Edge
-    2 = Microsoft Edge Beta w wersji 77 lub nowszej
-    3 = Microsoft Edge Dev w wersji 77 lub nowszej
-    4 = Microsoft Edge Canary w wersji 77 lub nowszej
+ 0 = Microsoft Edge w wersji 45 lub nowszej
+ 1 = Stabilny kanał Microsoft Edge
+ 2 = Microsoft Edge Beta w wersji 77 lub nowszej
+ 3 = Microsoft Edge Dev w wersji 77 lub nowszej
+ 4 = Microsoft Edge Canary w wersji 77 lub nowszej
 
 *Aby uzyskać więcej informacji dotyczących aktualizacji systemu Windows dla następnej wersji przeglądarki Microsoft Edge, w tym jak ją wyłączyć, zobacz https://go.microsoft.com/fwlink/?linkid=2102115. Ta aktualizacja dotyczy tylko systemu Windows 10 w wersji 1709 i nowszych.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3950,7 +3958,7 @@ Powiązane zasady:
 - Wysyłaj wszystkie witryny spoza listy witryn trybu przedsiębiorstwa do programu Microsoft Edge (RestrictIE)
 
 Aby uzyskać więcej informacji dotyczących sposobu używania tej zasady wraz z innymi powiązanymi zasadami w celu utworzenia optymalnej konfiguracji dla swojej organizacji, zobacz https://go.microsoft.com/fwlink/?linkid=2094210.</string>
-      <string id="AllowSaveTargetAsInIEMode">Zezwalaj na opcję „Zapisz element docelowy jako” w trybie przeglądarki Internet Explorer</string>
+      <string id="AllowSaveTargetAsInIEMode">Zezwalaj na opcję „Zapisz element docelowy jako” w trybie programu Internet Explorer</string>
       <string id="IE_ExplainAllowSaveTargetAsInIEMode">To ustawienie zasad umożliwia administratorom Włączanie menu kontekstowego Zapisz element docelowy jako w trybie programu Internet Explorer.
 
 Jeśli ta zasada zostanie włączona, polecenie Zapisz element docelowy jako zostanie wyświetlone w menu kontekstowym trybu programu Internet Explorer i będzie działało tak samo jak w programie Internet Explorer.
@@ -3958,6 +3966,16 @@ Jeśli ta zasada zostanie włączona, polecenie Zapisz element docelowy jako zos
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, polecenie "Zapisz element docelowy jako" nie będzie wyświetlane w menu kontekstowym trybu programu Internet Explorer.
 
 Aby uzyskać więcej informacji, zobacz https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Włącz globalną listę okien w trybie programu Internet Explorer</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">To ustawienie umożliwia trybowi Internet Explorer używanie globalnej listy okien, która umożliwia udostępnianie stanu innym aplikacjom.
+Ustawienie zacznie obowiązywać tylko wtedy, gdy Internet Explorer 11 będzie wyłączona jako autonomiczna przeglądarka.
+
+Jeśli ta zasada zostanie włączona, tryb Internet Explorer będzie używać globalnej listy okien.
+
+Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, tryb Internet Explorer będzie nadal obsługiwać osobną listę okien.
+
+Aby dowiedzieć się więcej o trybie Internet Explorer, zobacz https://go.microsoft.com/fwlink/?linkid=2102921
+Aby dowiedzieć się więcej na temat wyłączania Internet Explorer 11 jako autonomicznej przeglądarki, zobacz https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Włącz funkcję rozszerzone klawisze dostępu w trybie Internet Explorer</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">To ustawienie zasad umożliwia administratorom włączenie rozszerzonych skrótów trybu przeglądarki Internet Explorer w przeglądarce Microsoft Edge, takich jak „Ctrl+S”, w celu aktywowania funkcji „Zapisz jako”.
 
@@ -3966,6 +3984,14 @@ Jeśli ta zasada zostanie włączona, funkcje rozszerzonych klawiszy dostępu b�
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja rozszerzonych klawiszy dostępu nie będzie obsługiwana w trybie przeglądarki Internet Explorer.
 
 Aby uzyskać więcej informacji, odwiedź https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Resetuj powiększenie do wartości domyślnej dla okien dialogowych HTML w trybie programu Internet Explorer</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">To ustawienie zasad umożliwia administratorom zresetowanie powiększenia do wartości domyślnej dla okien dialogowych HTML w trybie Internet Explorer.
+
+Jeśli ta zasada zostanie włączona, powiększenie okna dialogowego HTML w trybie Internet Explorer nie będzie propagowane ze strony nadrzędnej.
+
+Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, powiększenie okna dialogowego HTML w trybie Internet Explorer będzie ustawiane na podstawie powiększenia strony nadrzędnej.
+
+Aby uzyskać więcej informacji, zobacz https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Wyłącz program Internet Explorer 11 jako autonomiczną przeglądarkę</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Te zasady umożliwiają ograniczenie uruchamiania programu Internet Explorer jako samodzielnej przeglądarki.
 
@@ -3976,15 +4002,15 @@ Jeśli te zasady zostaną włączone, spowoduje to:
 - Zastąpienie wszelkich innych zasad przekierowujących do programu Internet Explorer 11.
 
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, wszystkie witryny będą otwierane przy użyciu bieżących ustawień aktywnej przeglądarki. Uwaga: aby te zasady zaczęły obowiązywać, musi być zainstalowana przeglądarka Microsoft Edge z kanału stabilnego.</string>
+      <string id="DisableIEAppDeprecationNotification">Ukryj powiadomienie o wycofaniu programu Internet Explorer 11</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">To ustawienie zasad umożliwia określenie, czy ma być wyświetlane przypomnienie paska powiadomień, które Internet Explorer jest wycofywane. Domyślnie pasek powiadomień jest wyświetlany w Internet Explorer 11.
+
+Jeśli to ustawienie zasad zostanie włączone, pasek powiadomień nie będzie wyświetlany w Internet Explorer 11.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub pozostanie nieskonfigurowane, pasek powiadomień będzie wyświetlany w Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Nigdy</string>
       <string id="NotifyDisableIEOptions_Always">Zawsze</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Raz na użytkownika</string>
-      <string id="JScriptReplacement">Zamień język JScript przez załadowanie języka JScript9Legacy zamiast języka JScript za pośrednictwem funkcji MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">To ustawienie zasad określa, czy w wywołaniach opartych na funkcjach MSHTML/WebOC jest ładowany język JScript, czy język JScript9Legacy.
-      
-Jeśli to ustawienie zasad zostanie włączone, język JScript9Legacy będzie ładowany w sytuacjach, gdy zostanie utworzone wystąpienie języka JScript.
-
-Jeśli te zasady zostaną wyłączone lub nie zostaną skonfigurowane, będzie używany język JScript.</string>
       <string id="VerMgmtDisable">Wyłącz blokowanie nieaktualnych kontrolek ActiveX w programie Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">To ustawienie zasad określa, czy program Internet Explorer ma blokować określone nieaktualne kontrolki ActiveX. Nieaktualne kontrolki ActiveX nie są nigdy blokowane w strefie intranetu.
 

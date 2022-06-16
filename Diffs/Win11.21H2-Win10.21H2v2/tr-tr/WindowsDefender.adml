@@ -30,28 +30,6 @@ Bu ayarı etkinleştirir veya yapılandırmazsanız, kötü amaçlı yazılımda
 
 Bu ayarı devre dışı bırakırsanız, kötü amaçlı yazılımdan koruma hizmeti düşük önceliğe sahip bir görev gibi yüklenir.</string>
 
-    <string id="MeteredConnectionUpdates">Microsoft Defender Virüsten Koruma’nın tarifeli bağlantı üzerinden güncellenmesine ve iletişim kurmasına izin verir.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    Devre dışı (varsayılan): 
-    Tarifeli bağlantılar üzerinden güncelleştirmelere ve iletişime izin verilmez.
-
-Etkinleştirilmeyeceğini 
-    Yönetilen cihazların tarifeli bağlantılar üzerinden güncelleştirilmesine izin ver. Veri ücretleri uygulanabilir.</string>
-    <string id="AllowNetworkProtectionOnWinServer">Bu ayarlar, Ağ Koruması’nın Windows Server üzerinde engelleme veya denetleme moduna yapılandırılmasına izin verilip verilmeyeceğini denetler.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    Devre dışı (varsayılan): 
-    Yapılandırılmazsa veya devre dışı bırakılırsa, ağ korumasının Windows Server 'da blok halinde veya denetleme modunda yapılandırılmasına izin verilmez.
-
-Etkinleştirilmeyeceğini 
-    Etkinleştirilirse, yöneticiler ağ korumasının Windows Server 'da engelleme veya denetleme modu olarak yapılandırılmasına izin verilip verilmeyeceğini denetleyebilir.
-    Bu yapılandırmanın EnableNetworkProtection yapılandırmasına bağlı olduğunu unutmayın. Bu yapılandırma yanlışsa, EnableNetworkProtection gözardı edilir, aksi takdirde ağ koruması, EnableNetworkProtection 'ın değerine bağlı olarak Windows Server 'da başlatılır.</string>
-    <string id="DisableDatagramProcessing">Bu ayar ağ koruması için veri birimi işlemeyi denetler.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    Etkin (varsayılan): 
-    Yapılandırılmazsa veya devre dışı bırakılmışsa, ağ koruması için datagram işleme etkinleştirilir.
-
-Etkinleştirilmeyeceğini 
-    Etkinleştirilirse, ağ koruması için datagram işleme devre dışı bırakılır.</string>
     <string id="DisableAutoExclusions">Otomatik Dışlamaları kapat</string>
     <string id="DisableAutoExclusions_Explain">
         Bir yöneticinin Sunucu SKU'lar için Otomatik Dışlamalar özelliğinin kapatılıp kapatılmayacağını belirlemesine izin verin.
@@ -83,11 +61,11 @@ Bu ilke ayarını devre dışı bırakırsanız ya da yapılandırmazsanız vars
 
     Bu ilkenin etkinleştirilmesi veya devre dışı bırakılması, beklenmeyen veya desteklenmeyen davranışlara neden olabilir. Bu ilke ayarını yapılandırılmamış olarak bırakmanız önerilir.</string>
     <string id="DisableLocalAdminMerge">Listeler için yerel yöneticinizin birleştirme davranışını yapılandır</string>
-    <string id="DisableLocalAdminMerge_Explain">Bu ilke ayarı, yerel bir yönetici tarafından yapılandırılan karmaşık liste ayarlarının Grup İlke ayarlarıyla birleştirilme durumunu denetler. Bu ayar, tehditler ve Dışlamalar gibi listelerde uygulanır.
+    <string id="DisableLocalAdminMerge_Explain">Bu ilke ayarı, yerel bir yönetici tarafından yapılandırılan karmaşık liste ayarlarının Grup İlke ayarlarıyla birleştirilip birleştirilmeyeceğini denetler. Bu ayar, tehditler ve Dışlamalar gibi listelerde uygulanır.
 
-    Bu ayarı etkinleştirmez veya yapılandırmazsanız Grup İlkesi'nde ve yerel yönetici tarafından yapılandırılan tercih ayarlarında tanımlanan benzersiz öğeler, geçerli sonuç ilkesiyle birleştirilir. Çakışma söz konusu ise Grup ilkesi Ayarları, tercih ayarlarını geçersiz kılar.
+Bu ayarı etkinleştirir veya yapılandırmazsanız, Grup İlkesi'nde ve yerel yönetici tarafından yapılandırılan tercih ayarlarında tanımlanan benzersiz öğeler, geçerli sonuç ilkesiyle birleştirilir. Çakışma söz konusu olduğunda, Grup ilkesi Ayarları tercih ayarlarını geçersiz kılar.
 
-    Bu ayarı etkinleştirirseniz yalnızca Grup İlkesi tarafından tanımlanan öğeler geçerli sonuç ilkesinde kullanılır. Grup İlkesi ayarları, yerel yönetici tarafından yapılandırılan tercih ayarlarını geçersiz kılar.</string>
+Bu ayarı devre dışı bırakırsanız, yalnızca Grup İlkesi tarafından tanımlanan öğeler geçerli sonuç ilkesinde kullanılır. Grup İlkesi ayarları, yerel yönetici tarafından yapılandırılan tercih ayarlarını geçersiz kılar.</string>
     <string id="DisableRoutinelyTakingAction">Rutin düzeltmeyi kapat</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Bu ilke ayarı Microsoft Defender Virüsten Koruma'nın algılanan tüm tehditlere karşı otomatik olarak önlem alıp almayacağını yapılandırmanızı sağlar. Belirli bir tehditte alınacak önlem ilke tarafından tanımlanan, kullanıcı tarafından tanımlanan ve imza tarafından tanımlanan önlemlerin bir bileşimiyle saptanır.
@@ -132,15 +110,11 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, belirtilen adresle
       Bu ayarı devre dışı bırakır veya yapılandırmazsanız proxy, yukarıda belirtilen sırayla bu geri dönüş adımını atlar.
     </string>
     <string id="RandomizeScheduleTaskTimes">Zamanlanmış görev sürelerini rastgele ayarla</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Bu ilke ayarı, zamanlanmış taramanın ve zamanlanmış güvenlik bilgileri güncelleştirmesinin başlangıç zamanını saat cinsinden yapılandırma olanağı tanır.
+    <string id="RandomizeScheduleTaskTimes_Explain">Bu ilke ayarı, zamanlanmış tarama başlangıç zamanının ve zamanlanmış güvenlik bilgileri güncelleştirme başlangıç zamanının rasgele seçimini etkinleştirmenize veya devre dışı bırakmanıza olanak sağlar. Bu ayar, taramanın kaynak etkisini dağıtmak için kullanılır. Örneğin, bir ana bilgisayarı paylaşan konuk sanal makinelerde, birden çok konuk sanal makinenin yoğun disk kullanımına neden olan bir işlemi aynı anda üstlenmelerini önlemek için kullanılabilir.
 
-    Bu ayarı devre dışı bırakır veya yapılandırmazsanız, zamanlanmış görevler Görev Zamanlayıcı’da belirtilen saatten sonraki 4 saat içinde rastgele bir zamanda başlar.
-    Bu ayarı etkinleştirirseniz, rasgele başlama için bu zaman aralığını kısaltabilir veya uzatabilirsiniz. Rasgele başlama için 1 ile 23 saat arasında bir zaman aralığı belirtin.</string>
-    <string id="SchedulerRandomizationTime">Zamanlanan görev süreleri rastgele seçim penceresini yapılandır</string>
-    <string id="SchedulerRandomizationTime_Explain">Bu ilke ayarı, zamanlanmış taramanın ve zamanlanmış güvenlik bilgileri güncelleştirmesinin başlangıç zamanını saat cinsinden yapılandırma olanağı tanır.
+    Bu ayarı etkinleştirirseniz veya yapılandırmazsanız, zamanlanmış görevler belirtilen başlangıç saatinden 30 dakika öncesi ile sonrası arasında rastgele bir zamanda başlatılır.
 
-    Bu ayarı devre dışı bırakır veya yapılandırmazsanız, zamanlanmış görevler belirtilen başlama saatinden sonraki 4 saat içinde rastgele bir zamanda başlar.
-    Bu ayarı etkinleştirirseniz, rasgele başlama için bir zaman aralığını seçmeniz gerekir. Rasgele başlama için seçebileceğiniz zaman aralığı 1 ile 23 saat arasındadır.</string>
+    Bu ayarı devre dışı bırakırsanız, zamanlanmış görevler belirtilen başlangıç saatinde başlatılır.</string>
     <string id="ServiceKeepAlive">Kötü amaçlı yazılımdan koruma hizmetinin her zaman çalışmaya devam etmesine izin ver</string>
     <string id="ServiceKeepAlive_Explain">Bu ilke ayarı, virüsten koruma ve casus yazılım önleme güvenlik bilgileri devre dışı bırakıldığında kötü amaçlı yazılımdan koruma hizmetinin çalışıp çalışmayacağını yapılandırmanıza olanak sağlar. Bu ayarın devre dışı kalması önerilir.
 
@@ -162,20 +136,12 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, belirtilen adresle
         Yapılandırılmadı:
         Devre dışı bırakıldı ile aynı.
     </string>
-    <string id="SupportLogLocation">Destek günlük dosyalarını kopyalamak için dizin yolunu tanımlayın</string>
-    <string id="SupportLogLocation_Explain">Bu ilke ayarı, destek günlük dosyalarının kopyalanacağı dizin yolunu yapılandırmanızı sağlar. Bu ayarın değeri geçerli bir dizin yolu olmalıdır.
-
-Bu ayarı etkinleştirirseniz destek günlüğü dosyaları belirtilen destek günlüğü konumu yoluna kopyalanır.
-
-Bu ayarı devre dışı bırakır veya yapılandırmazsanız, destek günlükleri dosyaları herhangi bir konuma kopyalanmaz.</string>
     <string id="Exclusions_Extensions">Uzantı Dışlamaları</string>
     <string id="Exclusions_Extensions_Explain">Bu ilke ayarı; zamanlanmış, özel ve gerçek zamanlı taramalardan dışarıda tutulması gereken dosya türlerinin listesini belirlemenizi sağlar. Dosya türlerinin bu ayarın Seçenekleri altına eklenmesi gerekir. Her bir girdi, bir ad/değer çifti olarak listelenmelidir; burada ad, dosya türü uzantısının dize gösterimi biçiminde ("obj" veya "lib" gibi) olmalıdır. Değer kullanılmaz ve bu değerin 0 olarak ayarlanması önerilir.</string>
     <string id="Exclusions_Paths">Yol Dışlamaları</string>
     <string id="Exclusions_Paths_Explain">Bu ilke ayarı, belirtilen yolların altındaki dosyalar veya belirtilen tam olarak nitelenmiş kaynaklar için zamanlanmış ve gerçek zamanlı taramaları devre dışı bırakmanızı sağlar. Yolların bu ayarın Seçenekleri altına eklenmesi gerekir. Her bir girdi, bir ad/değer çifti olarak listelenmelidir; burada ad, bir yolun dize gösterimi veya tam olarak nitelenmiş kaynak adı biçiminde olmalıdır. Örneğin, bu dizindeki tüm dosyaları dışarıda bırakmak için yol şu şekilde tanımlanabilir: "c:\Windows". Tam olarak nitelenmiş kaynak adı şu şekilde tanımlanmalıdır: "C:\Windows\App.exe". Değer kullanılmaz ve bu değerin 0 olarak ayarlanması önerilir.</string>
     <string id="Exclusions_Processes">İşlem Dışlamaları</string>
-    <string id="Exclusions_Processes_Explain">Bu ilke ayarı, belirtilen işlemlerin herhangi biri tarafından açılan herhangi bir dosya için gerçek zamanlı taramayı devre dışı bırakmanıza olanak tanır. Bu ilke zamanlanmış taramalara uygulanmaz. İşlemin kendisi dışlanmaz. İşlemi dışlamak için yol dışlamasını kullanın. İşlemler bu ayar için seçenekler altına eklenmelidir. Her girdi, işlem görüntüsü yolunun dize gösterimi olması gereken ad değeri çifti olarak listelenmelidir. Yalnızca yürütülebilir dosyaların dışlanacağını unutmayın. Örneğin, bir işlem şu şekilde tanımlanabilir: "c:\windows\app.exe". Değer kullanılmaz ve 0 olarak ayarlanmalıdır.</string>
-    <string id="Exclusions_IpAddresses">Ip Adresi Dışlamaları</string>
-    <string id="Exclusions_IpAddresses_Explain">Yöneticinin, wdnisdrv tarafından belirli bir IP adresi kümesinde yapılan ağ paketi incelemesini açık bir şekilde devre dışı bırakmasına olanak verir.</string>
+    <string id="Exclusions_Processes_Explain">Bu ilke ayarı, belirtilen işlemlerden herhangi bir tanesi tarafından açılan bir dosya için zamanlanmış ve gerçek zamanlı taramaları devre dışı bırakmanızı sağlar. İşlemin kendi dışarıda bırakılmaz. İşlemi dışarıda bırakmak için Yol dışlamasını kullanın. İşlemlerin bu ayarın Seçenekleri altına eklenmesi gerekir. Her bir girdi, bir ad/değer çifti olarak listelenmelidir; burada ad, işlem görüntüsü yolunun dize gösterimi biçiminde olmalıdır. Yalnızca yürütülebilir dosyaların dışarıda bırakıldığını unutmayın. Örneğin, bir işlem şu şekilde tanımlanabilir: "c:\windows\app.exe". Değer kullanılmaz ve bu değerin 0 olarak ayarlanması önerilir.</string>
     <string id="Nis_DisableProtocolRecognition">Protokol tanımayı aç</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Bu ilke ayarı, bilinen güvenlik açıklarından yararlanmalara karşı ağ koruması için protokol tanımayı yapılandırmanızı sağlar.
 
@@ -202,14 +168,6 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Grup İlkesi yerel
 Bu ayarı etkinleştirirseniz, öğeler belirtilen sayıda gün geçtikten sonra Karantina klasöründen kaldırılır.
 
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, öğeler süresiz olarak karantina klasöründe tutulur ve otomatik olarak kaldırılmaz.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">Kod taramasını aç</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">Bu ilke ayarı, betik taramayı yapılandırmanızı sağlar.
-
-Bu ayarı etkinleştirir veya yapılandırmazsanız, komut dosyası taraması etkinleştirilir.
-
-Bu ayarı devre dışı bırakırsanız, komut dosyası taraması devre dışı bırakılır.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Davranış izlemeyi aç</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Bu ilke ayarı, davranış izlemeyi yapılandırmanızı sağlar.
 
@@ -443,6 +401,12 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, e-posta taraması 
 Bu ayarı etkinleştirir veya yapılandırmazsanız, buluşsal yöntemler etkinleştirilir.
 
 Bu ayarı devre dışı bırakırsanız, buluşsal yöntemler devre dışı bırakılır.</string>
+    <string id="Scan_DisablePackedExeScanning">Tarama paketli yürütülebilir dosyalar</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">Bu ilke ayarı, paketli yürütülebilir dosyalar için tarama yapılandırmanızı sağlar. Bu tür bir taramanın etkinleştirilmiş olarak kalması önerilir.
+
+Bu ayarı etkinleştirirseniz veya yapılandırmazsanız, paketli yürütülebilir dosyalar taranır.
+
+Bu ayarı devre dışı bırakırsanız, paketli yürütülebilir dosyalar taranmaz.</string>
     <string id="Scan_DisableRemovableDriveScanning">Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Grup İlkesi yerel tercih ayarından öncelikli hale gelirÇıkarılabilir sürücüleri tara</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Bu ilke ayarı, tam tarama çalıştırırken USB flash sürücü gibi çıkarılabilir sürücülerin içeriğinde kötü amaçlı ve istenmeyen yazılımların taranıp taranmayacağını yönetmenize olanak tanır.
 
@@ -510,11 +474,11 @@ Bu ayarı etkinleştirirseniz, belirtilen gün sonra öğeler tarama geçmişi k
 
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, öğeler varsayılan gün kadar tarama geçmişi klasöründe tutulur.</string>
     <string id="Scan_QuickScanInterval">Günde çalıştırılacak hızlı tarama aralığını belirt</string>
-    <string id="Scan_QuickScanInterval_Explain">Bu ilke ayarı, hızlı tarama gerçekleştirme aralığını belirtmenizi sağlar. Saat değeri, hızlı taramalar arasındaki saat sayısını temsil eder. Geçerli değerler 1 (her saat) ile 24 (günde bir kez) arasındadır. Sıfıra ayarlanırsa hızlı tarama aralığı oluşmaz. Bu ayarın varsayılan değeri 0'dır.
+    <string id="Scan_QuickScanInterval_Explain">Bu ilke ayarı, hızlı tarama gerçekleştirme aralığını belirtmenizi sağlar. Saat değeri, hızlı taramalar arasındaki saat sayısını temsil eder. Geçerli değerler 1 (her saat) ile 24 (günde bir kez) arasındadır. Sıfıra ayarlanırsa, hızlı tarama aralığı oluşmaz. Varsayılan değer olarak bu ayar 0'dır.
 
-    Bu ayarı etkinleştirirseniz belirtilen aralıkta hızlı tarama çalıştırılır.
+Bu ayarı etkinleştirirseniz, belirtilen aralıkta hızlı tarama çalıştırılır.
 
-    Bu ayarı devre dışı bırakır veya yapılandırmazsanız bu yapılandırmanın kontrol ettiği hızlı tarama çalışmaz.</string>
+Bu ayarı devre dışı bırakır veya yapılandırmazsanız, hızlı tarama varsayılan saatte çalışır.</string>
     <string id="Scan_ScanOnlyIfIdle">Zamanlanmış taramayı yalnızca bilgisayar açık ancak kullanımda değilken başlat</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Bu ilke ayarı, zamanlanmış taramaların yalnızca bilgisayarınız açık ancak kullanılmıyorken başlayacak şekilde yapılandırılmasını sağlar.
 
@@ -558,11 +522,11 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, zamanlanmış tara
     <string id="Scan_ScheduleDay_7">Cuma</string>
     <string id="Scan_ScheduleDay_8">Cumartesi</string>
     <string id="Scan_ScheduleQuickScantime">Günlük hızlı tarama saatini belirt</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Bu ilke ayarı, günlük hızlı taramanın günün hangi saatinde gerçekleştirileceğini belirtmenizi sağlar. Saat değeri, gece yarısından (00:00) sonraki dakika sayısını temsil eder.  Örneğin, 120 (0x78), saat 02:00'ye eşittir. Varsayılan olarak bu ayar devre dışıdır. Zamanlama işlemi, taramanın yürütüleceği bilgisayarın yerel saatini temel alır.
+    <string id="Scan_ScheduleQuickScantime_Explain">Bu ilke ayarı, günlük hızlı taramanın günün hangi saatinde gerçekleştirileceğini belirtmenizi sağlar. Saat değeri, gece yarısından (00:00) sonraki dakika sayısını temsil eder.  Örneğin, 120 (0x78), saat 02:00'a eşittir. Varsayılan değer olarak bu ayar, 02:00 saat değerine ayarlanır. Zamanlama işlemi, taramanın yürütüleceği bilgisayarın yerel saatini temel alır.
 
-    Bu ayarı etkinleştirirseniz günün belirtilen saatinde günlük hızlı tarama çalıştırılır.
+Bu ayarı etkinleştirirseniz, günün belirtilen saatinde günlük hızlı tarama çalıştırılır.
 
-    Bu ayarı devre dışı bırakır veya yapılandırmazsanız bu yapılandırmanın kontrol ettiği günlük hızlı tarama çalışmaz.</string>
+Bu ayarı devre dışı bırakır veya yapılandırmazsanız, günlük hızlı tarama varsayılan saatte çalışır.</string>
     <string id="Scan_ScheduleTime">Zamanlanmış tarama çalıştırmak için günün saatini belirt</string>
     <string id="Scan_ScheduleTime_Explain">Bu ilke ayarı, zamanlanmış taramanın günün hangi saatinde gerçekleştirileceğini belirtmenizi sağlar. Saat değeri, gece yarısından (00:00) sonraki dakika sayısını temsil eder.  Örneğin, 120 (0x78), saat 02:00'a eşittir. Varsayılan değer olarak bu ayar, 02:00 saat değerine ayarlanır. Zamanlama işlemi, taramanın yürütüleceği bilgisayarın yerel saatini temel alır.
 
@@ -585,17 +549,17 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, zamanlanmış tara
         Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız zamanlanmış taramalar için CPU önceliğinde herhangi bir değişiklik yapılmaz.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Casus yazılım güvenlik bilgilerinin süresi geçmiş olarak kabul edilmesi için gereken gün sayısını belirt</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Bu ilke ayarı, casus yazılım güvenlik bilgileri güncel değil kabul edilmeden önce geçmesi gereken gün sayısını tanımlamanızı sağlar. Güvenlik bilgileri süresinin eski olduğu belirlenirse, bu durum alternatif bir güncelleştirme kaynağına geri dönmek veya Kullanıcı arabiriminde bir uyarı simgesi görüntülemek gibi birkaç ek işlemi tetikleyebilir. Varsayılan olarak, bu değer 7 güne ayarlıdır.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Bu ilke ayarı, casus yazılım güvenlik bilgileri süresi geçmiş olarak kabul edilmeden önce geçmesi gereken gün sayısını tanımlamanıza olanak sağlar. Güvenlik bilgilerinin süresinin geçtiğine karar verilirse, bu durum alternatif bir güncelleştirme kaynağına geri dönmek veya kullanıcı arayüzünde bir uyarı simgesi görüntülemek dahil çeşitli ek eylemleri tetikleyebilir. Varsayılan olarak bu değer 14 güne ayarlanmıştır.
 
-Bu ayarı etkinleştirirseniz, güncelleştirme olmadan belirtilen sayıda gün geçtikten sonra casus yazılım güvenlik bilgileri süresi geçmiş olarak kabul edilir.
+    Bu ayarı etkinleştirirseniz, güncelleştirme olmadan belirtilen sayıda gün geçtikten sonra casus yazılım güvenlik bilgileri süresi geçmiş olarak kabul edilir.
 
-Bu ayarı devre dışı bırakır veya yapılandırmazsanız, güncelleştirme olmadan varsayılan sayıda gün geçtikten sonra casus yazılım güvenlik bilgileri süresi geçmiş olarak kabul edilir.</string>
+    Bu ayarı devre dışı bırakır veya yapılandırmazsanız, güncelleştirme olmadan varsayılan sayıda gün geçtikten sonra casus yazılım güvenlik bilgileri süresi geçmiş olarak kabul edilir.</string>
     <string id="SignatureUpdate_AVSignatureDue">Virüs güvenlik bilgileri süresi geçmiş olarak kabul edilmeden önce geçecek gün sayısını tanımla</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Bu ilke ayarı, virüsten güvenlik bilgileri güncel değil olarak değerlendirilmeden önce geçmesi gereken gün sayısını tanımlamanızı sağlar. Güvenlik bilgileri süresinin eski olduğu belirlenirse, bu durum alternatif bir güncelleştirme kaynağına geri dönmek veya Kullanıcı arabiriminde bir uyarı simgesi görüntülemek gibi birkaç ek işlemi tetikleyebilir. Varsayılan olarak, bu değer 7 güne ayarlıdır.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Bu ilke ayarı, virüs güvenlik bilgileri süresi geçmiş olarak kabul edilmeden önce geçmesi gereken gün sayısını tanımlamanıza olanak sağlar. Güvenlik bilgilerinin süresinin geçtiğine karar verilirse, bu durum alternatif bir güncelleştirme kaynağına geri dönmek veya kullanıcı arayüzünde bir uyarı simgesi görüntülemek dahil çeşitli ek eylemleri tetikleyebilir. Varsayılan olarak bu değer 14 güne ayarlanmıştır.
 
-Bu ayarı etkinleştirirseniz, güncelleştirme olmadan belirtilen sayıda gün geçtikten sonra virüs güvenlik bilgileri süresi geçmiş olarak kabul edilir.
+    Bu ayarı etkinleştirirseniz, güncelleştirme olmadan belirtilen sayıda gün geçtikten sonra virüs yazılım güvenlik bilgileri süresi geçmiş olarak kabul edilir.
 
-Bu ayarı devre dışı bırakır veya yapılandırmazsanız, güncelleştirme olmadan varsayılan sayıda gün geçtikten sonra virüs güvenliği yönetim bilgileri süresi geçmiş kabul edilir.</string>
+    Bu ayarı devre dışı bırakır veya yapılandırmazsanız, güncelleştirme olmadan varsayılan sayıda gün geçtikten sonra virüs yazılım güvenlik bilgileri süresi geçmiş olarak kabul edilir.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Güvenlik bilgileri güncelleştirmelerini indirmek için dosya paylaşımları tanımla</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Bu ilke ayarı, güvenlik bilgileri güncelleştirmelerini indirmek için UNC dosya paylaşım kaynakları yapılandırmanıza olanak sağlar. Kaynaklara belirtilen sırada başvurulur. Bu ayarın değeri, güvenlik bilgileri güncelleştirme kaynaklarını sıralayan dikey çizgi ile ayrılmış bir dize olarak girilmelidir. Örneğin: "{\\unc1 | \\unc2 }". Varsayılan değer olarak bu liste boştur.
 
@@ -740,24 +704,24 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Grup İlkesi yerel
     <string id="SubmitSamplesConsent_Send_All">Tüm örnekleri gönder</string>
 
     <string id="SpynetReporting">Microsoft MAPS'a katıl</string>
-    <string id="SpynetReporting_Explain">Bu ilke ayarı, Microsoft MAPS'a katılmanızı sağlar. Microsoft MAPS, olası tehditlere nasıl yanıt verileceğini seçmenize yardımcı olan çevrimiçi topluluktur. Topluluk ayrıca yeni kötü amaçlı yazılımların yayılmasını durdurmaya da yardımcı olur.
+    <string id="SpynetReporting_Explain">Bu ilke ayarı, Microsoft MAPS'a katılmanızı sağlar. Microsoft MAPS, olası tehditlere nasıl yanıt verileceğini seçmenize yardımcı olan çevrimiçi bir topluluktur. Topluluk ayrıca yeni kötü amaçlı yazılımların yayılmasını durdurmaya da yardımcı olur.
 
-    Algılanan yazılımlarla ilgili temel veya ek bilgileri göndermeyi seçebilirsiniz. Ek bilgiler, Microsoft'un yeni güvenlik bilgileri oluşturmasına ve bunların bilgisayarınızı korumasına yardımcı olur. Bu bilgiler, zararlı bir yazılım kaldırıldığında bilgisayarınızdaki algılanan öğelerin konumu gibi bilgileri içerebilir. Bilgiler otomatik olarak toplanıp gönderilir. Bazı durumlarda, kişisel bilgiler istemeden Microsoft'a gönderilebilir. Ancak Microsoft, bu bilgileri kimliğinizi tespit etmek veya sizinle iletişim kurmak için kullanmaz.
+ Algılanan yazılımlarla ilgili temel veya ek bilgileri göndermeyi seçebilirsiniz. Ek bilgiler, Microsoft'un yeni güvenlik zekası oluşturmasına ve bilgisayarınızı korumasına yardımcı olur. Bu bilgiler, zararlı bir yazılım kaldırıldığında bilgisayarınızdaki algılanan öğelerin konumu gibi bilgileri içerebilir. Bilgiler otomatik olarak toplanıp gönderilir. Bazı durumlarda, kişisel bilgiler istenmeden Microsoft'a gönderilebilir. Ancak Microsoft, bu bilgileri kimliğinizi tespit etmek veya sizinle iletişim kurmak için kullanmaz.
 
-    Olası seçenekler şunlardır:
-    (0x0) Devre Dışı (varsayılan)
-    (0x1) Temel üyelik
-    (0x2) Gelişmiş üyelik
+ Olası seçenekler şunlardır:
+ (0x0) Devre Dışı (varsayılan)
+ (0x1) Temel üyelik
+ (0x2) Gelişmiş üyelik
 
-    Temel üyelik, Microsoft'a, yazılımın nereden geldiği, sizin uyguladığınız veya otomatik olarak uygulanan eylemler ve bu eylemlerin başarılı olup olmadığı dahil, algılanan yazılımlarla ilgili temel bilgileri gönderir.
+ Temel üyelik, Microsoft'a, yazılımın nereden geldiği, sizin uyguladığınız veya otomatik olarak uygulanan eylemler ve bu eylemlerin başarılı olup olmadığı dahil, algılanan yazılımlarla ilgili temel bilgileri gönderir.
 
-    Gelişmiş üyelik, temel bilgilere ek olarak, yazılımın konumu, dosya adları, yazılımın nasıl çalıştığı ve bilgisayarınızı nasıl etkilediği gibi bilgiler de dahil olmak üzere, kötü amaçlı yazılımlar, casus yazılımlar ve olası istenmeyen yazılımlar hakkında Microsoft'a daha fazla bilgi gönderir.
+ Gelişmiş üyelik, temel bilgilere ek olarak, yazılımın konumu, dosya adları, yazılımın nasıl çalıştığı ve bilgisayarınızı nasıl etkilediği gibi bilgiler de dahil olmak üzere, kötü amaçlı yazılımlar, casus yazılımlar ve olası istenmeyen yazılımlar hakkında Microsoft'a daha fazla bilgi gönderir.
 
-    Bu ayarı etkinleştirirseniz, belirtilen üyelikle Microsoft MAPS'a katılırsınız.
+ Bu ayarı etkinleştirirseniz, belirtilen üyelikle Microsoft MAPS'a katılırsınız.
 
-    Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Microsoft MAPS'a katılmazsınız.
-  
-    Windows 10' da Temel üyelik artık kullanılmamaktadır, bu nedenle değeri 1 veya 2 olarak belirlediğinizde cihaz Gelişmiş üyelik seçeneğine kaydedilir.</string>
+ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Microsoft MAPS'a katılmazsınız.
+ 
+ Windows 10'da Temel üyelik artık kullanılmamaktadır, bu nedenle değeri 1 veya 2 olarak belirlediğinizde cihaz Gelişmiş üyelik seçeneğine kaydedilir.</string>
     <string id="SpynetReporting_Disabled">Devre Dışı</string>
     <string id="SpynetReporting_Basic">Temel MAPS</string>
     <string id="SpynetReporting_Advanced">Gelişmiş MAPS</string>
@@ -884,31 +848,25 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
     </string>
     <string id="ExploitGuard_ASR_Rules">Attack Surface Azaltma kurallarını yapılandır</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Her Saldırı Yüzeyini Azaltma (ASR) kuralı için durumu ayarlayın.
+    Her Attack Surface Azaltma (ASR) kuralı için durumu ayarlayın.
 
-    Bu ayarı etkinleştirdikten sonra Seçenekler bölümünde her kuralı aşağıdaki şekilde ayarlayabilirsiniz:
+    Bu ayarı etkinleştirdikten sonra her kuralı Seçenekler bölümünde aşağıdaki şekilde ayarlayabilirsiniz:
     - Engelle: Kural uygulanır
-    - Denetim Modu: Kural normalde bir olaya neden olacaksa kaydedilir (ancak kural gerçekten uygulanmaz)
+    - Denetle Modu: Kural normalde bir olaya neden olacaksa kaydedilir (ancak kural gerçekten uygulanmaz)
     - Kapalı: Kural uygulanmaz
-    - Yapılandırılmadı: Kural varsayılan değerlerle etkinleştirilir
-    - Uyarı: Kural uygulanır ve son kullanıcıya engeli atlama seçeneği sağlanır
-
-    ASR kuralı devre dışı bırakılmadığı sürece, ASR kuralları için denetim olaylarının bir alt örneği toplanır ve Yapılandırılmadı değerinde olur.
 
     Etkinleştirildi:
-    Bu ayarın Seçenekler bölümünde her ASR kuralının durumunu ayarlayın.
-    Her kuralı bir ad-değer çifti olarak yeni bir satıra girin:
+    Seçenekler bölümünde bu ayar için her ASR kuralının durumunu ayarlayın.
+    Her kuralı bir ad-değer çifti olarak yeni bir satıra yazın:
     - Ad sütunu: Geçerli bir ASR kuralı kimliği girin
     - Değer sütunu: İlişkili kural için belirlemek istediğiniz durumla ilgili durum kimliğini girin
 
-    Durum sütununda aşağıdaki durum kimliklerinin kullanılmasına izin verilir:
+    Aşağıdaki durum kimliklerine değer sütunu altında izin verilir:
     - 1 (Engelle)
     - 0 (Kapalı)
     - 2 (Denetle)
-    - 5 (Yapılandırılmadı)
-    - 6 (Uyarı)
-
     
+
     Örnek:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
@@ -918,9 +876,9 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
     ASR kuralları yapılandırılmaz.
 
     Yapılandırılmadı:
-    Devre dışı bırakıldı ayarıyla aynıdır.
+    Devre dışı bırakıldı ile aynı.
 
-    ""Dosyaları ve yolları Saldırı Yüzeyini Azaltma Kurallarından dışla"" GP ayarında klasörleri veya dosyaları dışlayabilirsiniz.
+    ""Klasörleri veya dosyaları ve kaynakları dışla"" GP ayarında klasörleri veya dosyaları ve kaynakları dışlayabilirsiniz.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Denetlenen klasör erişimini yapılandır</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -1022,11 +980,11 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
 
     Microsoft Defender Virüsten Koruma, hangi uygulamalara güvenilebileceğini otomatik olarak belirler. İzin verilen uygulamaları yapılandır GP ayarında ek güvenilir uygulamalar ekleyebilirsiniz.
     </string>
-    <string id="DeviceControl_PolicyGroups">Aygıt Denetim ilkesi grupları tanımlama</string>
+    <string id="DeviceControl_PolicyGroups">Aygıt denetim ilkesi grupları tanımlama</string>
     <string id="DeviceControl_PolicyGroups_Explain">
         İlke grubu verilerini doldurmak için lütfen aygıt denetim ilkesi grupları xml şemasını izleyin.
     </string>
-    <string id="DeviceControl_PolicyRules">Aygıt Denetim ilkesi kuralları tanımlama</string>
+    <string id="DeviceControl_PolicyRules">Aygıt denetim ilkesi kuralları tanımlama</string>
     <string id="DeviceControl_PolicyRules_Explain">
         İlke kuralları verilerini doldurmak için lütfen aygıt denetim ilkesi kuralları xml şemasını izleyin.
     </string>
@@ -1047,11 +1005,6 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
         <label>Ağa bağlanmak için proxy sunucusunu tanımla</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>Destek günlük dosyalarını kopyalamak için dizin yolunu tanımlayın</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Uzantı Dışlamaları</listBox>
     </presentation>
@@ -1060,9 +1013,6 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">İşlem Dışlamaları</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">IP Adresi Dışlamaları</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Ağ trafiği incelemesi için ek tanım kümeleri belirt</listBox>
@@ -1131,10 +1081,10 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Zamanlanmış tarama çalıştırmak için günün saatini belirt</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Casus yazılım güvenlik bilgilerinin süresi geçmiş olarak kabul edilmesi için gereken gün sayısını belirt</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Casus yazılım güvenlik bilgilerinin süresi geçmiş olarak kabul edilmesi için gereken gün sayısını belirt</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Virüs güvenlik bilgileri süresi geçmiş olarak kabul edilmeden önce geçecek gün sayısını tanımla</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Virüs güvenlik bilgileri süresi geçmiş olarak kabul edilmeden önce geçecek gün sayısını tanımla</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1212,16 +1162,13 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
     </presentation>
     <presentation id="DeviceControl_PolicyGroups">
     <textBox refId="DeviceControl_PolicyGroups">
-        <label>İlke gruplarını buradan belirleyin</label>
+        <label>İlke gruplarını buradan tanımlayın</label>
     </textBox>
     </presentation>
     <presentation id="DeviceControl_PolicyRules">
     <textBox refId="DeviceControl_PolicyRules">
         <label>İlke kurallarını buradan tanımlayın</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Zamanlayıcı rastgele seçim penceresini saat olarak belirtin.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

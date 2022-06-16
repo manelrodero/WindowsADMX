@@ -5,7 +5,7 @@
   <description>itt adja meg a leírást</description>
   <resources>
     <stringTable>
-      <string id="SUPPORTED_Win7UntilThreshold">Legalább Windows Server 2008 R2 vagy Windows 7. Nem támogatott Windows 10 vagy újabb rendszerben</string>
+      <string id="SUPPORTED_Win7UntilThreshold">Legalább Windows Server 2008 R2 vagy Windows 7. Nem támogatott Windows 10 vagy újabb rendszeren.</string>
       <string id="SUPPORTED_Win7AndRedstone2">Windows 7 és Windows 10</string>
       <string id="ClearRecentProgForNewUserInStartMenu">A legutóbbi programok listájának törlése új felhasználók esetében</string>
       <string id="ClearRecentProgForNewUserInStartMenu_Help">Ha engedélyezi ezt a házirend-beállítást, a Start menü legutóbbi programokat tartalmazó listája minden új felhasználó esetében üres lesz.
@@ -210,16 +210,16 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Keresés hiv
       <string id="ShowOrHideMostUsedApps">A „Leggyakrabban használt“ lista megjelenítése vagy elrejtése a Start menüben</string>
       <string id="ShowOrHideMostUsedApps_Help">Ha engedélyezi ezt a házirend-beállítást, a Start menü segítségével megjelenítheti vagy elrejtheti a felhasználó által legtöbbet használt alkalmazások listáját a felhasználói beállításoktól függetlenül.
 
-Ha a "Megjelenítés" lehetőséget választja, a rendszer a „Leggyakrabban használt“ lista megjelenítését, és a felhasználó nem módosíthatja a Beállítások alkalmazással az elrejtését.
+Ha a „Megjelenítés” lehetőséget választja, a rendszer a „Leggyakrabban használt“ lista megjelenítését, és a felhasználó nem módosíthatja a Beállítások alkalmazással az elrejtését.
 
-Ha az "Elrejtés" lehetőséget választja, a rendszer elrejti a „Leggyakrabban használt“ listát, és a felhasználó nem módosíthatja a Beállítások alkalmazással a megjelenítését.
+Ha az „Elrejtés” lehetőséget választja, a rendszer elrejti a „Leggyakrabban használt“ listát, és a felhasználó nem módosíthatja a Beállítások alkalmazással a megjelenítését.
 
-A "Nincs beállítva" lehetőséget választja, vagy ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, lehetővé teszi a „Leggyakrabban használt“ lista ki-/bekapcsolását a Beállítások alkalmazásban a felhasználók számára. Ez az alapértelmezett eljárás.
+A „Nincs beállítva” lehetőséget választja, vagy ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, lehetővé teszi a „Leggyakrabban használt“ lista ki-/bekapcsolását a Beállítások alkalmazásban a felhasználók számára. Ez az alapértelmezett eljárás.
 
-Megjegyzés: ha konfigurálja ezt a házirendet a Windows 10 támogatott verzióin, a "Megjelenítés" vagy az "Elrejtés" beállítás felülírja a "Gyakran használt programok listájának eltávolítása a Start menüből" beállítását (amely a Start menü ugyanazon részét befolyásolja, viszont kevesebb lehetőség áll rendelkezésre).</string>
+Megjegyzés: ha konfigurálja ezt a házirendet a Windows 10 támogatott verzióin, a „Megjelenítés” vagy az „Elrejtés” beállítás felülírja a „Gyakran használt programok listájának eltávolítása a Start menüből” beállítását (amely a Start menü ugyanazon részét befolyásolja, viszont kevesebb lehetőség áll rendelkezésre).</string>
       <string id="MFU_NotConfigured">Nem konfigurált</string>
       <string id="MFU_Show">Megjelenítés</string>
-      <string id="MFU_Hide">Elrejtés</string>        
+      <string id="MFU_Hide">Elrejtés</string>
       <string id="NoFrequentUsedPrograms">A gyakran használt programok listájának eltávolítása a Start menüből</string>
       <string id="NoFrequentUsedPrograms_Help">Ha engedélyezi a beállítást, a Start menüben nem jelenik meg a gyakran használt programok listája.
 
@@ -645,7 +645,6 @@ Ha engedélyezi ezt a házirendet, a rendszer figyelmen kívül hagyja a helyi m
           <label>Kezdőképernyő-elrendezés fájlja</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Elrendezés újraalkalmazása minden bejelentkezéskor</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Méret kiválasztása</dropdownList>

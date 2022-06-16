@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7、Windows Server 2008 R2、Windows Vista、Windows Server 2003、Windows XP SP2、Windows XP SP1、Windows 2000 SP4、Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Windows XP Professional Service Pack 1 或 Windows 2000 Service Pack 3 及以上版本，不包括 Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Windows Server 2003 操作系统或 Windows XP Professional SP1 及以上版本，不包括 Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Windows XP Professional Service Pack 1 或 Windows 2000 Service Pack 3 到 Windows 8.1 或具有最新 Service Pack 的 Windows Server 2012 R2 或更高版本。不支持Windows 10及更高版本。</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Windows Vista 至 Windows 8.1 或 Windows Server 2012 R2 以及最新 Service Pack。不支持Windows 10及更高版本。</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Windows XP Professional Service Pack 1 或 Windows 2000 Service Pack 3 到 Windows 8.1 或具有最新 Service Pack 的 Windows Server 2012 R2 或更高版本。在Windows 10及更高版本上不受支持。</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Windows Vista 至 Windows 8.1 或 Windows Server 2012 R2 以及最新 Service Pack。在Windows 10及更高版本上不受支持。</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 或者 Windows 2000 Service Pack 3 及以上版本
 选项 7 仅在 Windows Server 2016 及以上版本的服务器上受支持</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Windows Server 2022 或 Windows 10 版本 2004 及以上版本</string>
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 到 Windows Server 2022 或 Windows 10</string>
       <string id="AUDontShowUasHelp">此策略设置允许你管理“安装更新并关机”选项是否在“关闭 Windows”对话框中显示。
 
@@ -65,29 +66,29 @@
 
 此设置允许你指定是否在此计算机上启用自动更新。如果启用该服务，则必须在组策略设置中选择四个选项之一:
 
-        2 = 在下载和安装任何更新之前通知。
+ 2 = 在下载和安装任何更新之前通知。
 
-        当 Windows 找到适用于此计算机的更新时，系统将通知用户更新已准备好下载。转到 Windows 更新后，用户可以下载并安装任何可用更新。
+ 当 Windows 找到适用于此计算机的更新时，系统将通知用户更新已准备好下载。转到 Windows 更新后，用户可以下载并安装任何可用更新。
 
-        3 = (默认设置)自动下载更新并在准备好安装时通知
+ 3 = (默认设置)自动下载更新并在准备好安装时通知
 
-        Windows 查找适用于该计算机的更新，并在后台下载它们(在此过程中，用户不会收到通知或被打扰)。下载完成后，将通知用户更新已准备好进行安装。在转到 Windows 更新后，用户可以安装它们。
+ Windows 查找适用于该计算机的更新，并在后台下载它们(在此过程中，用户不会收到通知或被打扰)。下载完成后，将通知用户更新已准备好进行安装。在转到 Windows 更新后，用户可以安装它们。
 
-        4 = 自动下载更新并按下面指定的计划进行安装。
+ 4 = 自动下载更新并按下面指定的计划进行安装。
 
-        选择“自动”作为计划的安装时间时，Windows 将自动检查、下载和安装更新。除非通过组策略进行配置，否则，设备将按照 Windows 默认设置重新启动。(适用于 Windows 10 版本 1809 及更高版本)
+ 选择“自动”作为计划的安装时间时，Windows 将自动检查、下载和安装更新。除非通过组策略进行配置，否则，设备将按照 Windows 默认设置重新启动。(适用于 Windows 10 版本 1809 及更高版本)
 
-        使用组策略设置中的选项指定计划。对于版本 1709 及更高版本，还可以选择将更新限制为每周、每两周或每月一次。如果未指定任何计划，则所有安装的默认计划都将是每天凌晨的 3:00。如果有任何更新需要重启才能完成安装，Windows 将自动重启计算机。(如果用户在 Windows 准备重启时已登录到计算机，则用户将收到通知，并可以选择延迟重启。)
+ 使用组策略设置中的选项指定计划。对于版本 1709 及更高版本，还可以选择将更新限制为每周、每两周或每月一次。如果未指定任何计划，则所有安装的默认计划都将是每天凌晨的 3:00。如果有任何更新需要重启才能完成安装，Windows 将自动重启计算机。(如果用户在 Windows 准备重启时已登录到计算机，则用户将收到通知，并可以选择延迟重启。)
 
-        在 Windows 8 和更高版本中，可以将更新设置为在自动维护期间安装，而不是按特定计划安装。自动维护将在计算机未使用时安装更新，并在计算机使用电池电源运行时避免这样做。如果自动维护无法在 2 天内安装更新，Windows 更新将立即安装更新。随后，将会通知用户即将重启，并且只有在数据不会意外丢失的情况下，才会进行重启。
+ 在 Windows 8 和更高版本中，可以将更新设置为在自动维护期间安装，而不是按特定计划安装。自动维护将在计算机未使用时安装更新，并在计算机使用电池电源运行时避免这样做。如果自动维护无法在 2 天内安装更新，Windows 更新将立即安装更新。随后，将会通知用户即将重启，并且只有在数据不会意外丢失的情况下，才会进行重启。
 
-        5 = 允许本地管理员选择自动更新应通知并安装更新的配置模式。(此选项尚未传递到任何 Win 10 版本)
+ 5 = 允许本地管理员选择自动更新应通知并安装更新的配置模式。(此选项尚未传递到任何 Win 10 版本)
 
-        如果选择此选项，则本地管理员将可以使用 Windows 更新控制面板选择所选的配置选项。本地管理员将无法禁用自动更新的配置。
+ 如果选择此选项，则本地管理员将可以使用 Windows 更新控制面板选择所选的配置选项。本地管理员将无法禁用自动更新的配置。
 
-        7 = 安装任何更新之前通知并在重启之前通知。(仅限 Windows Server)
+ 7 = 安装任何更新之前通知并在重启之前通知。(仅限 Windows Server)
 
-        如果选择 Windows Server 2016 中的此选项(仅适用于服务器 SKU 设备)，则将允许本地管理员使用 Windows 更新继续手动进行安装或重新启动。
+ 如果选择 Windows Server 2016 中的此选项(仅适用于服务器 SKU 设备)，则将允许本地管理员使用 Windows 更新继续手动进行安装或重新启动。
 
 如果将此策略的状态设置为“已禁用”，则必须手动下载并安装 Windows 更新中可用的任何更新。若要执行此操作，请使用“开始”搜索 Windows 更新。
 
@@ -139,7 +140,7 @@
 
         若要使用此设置，必须设置两个服务器名称值: 自动更新客户端从中检测和下载更新的服务器，以及更新的工作站将统计信息上载到其中的服务器。可以将两个值设为同一台服务器。可以指定一个可选的服务器名称值，以便将 Windows 更新代理配置为从备用下载服务器而不是 Intranet 更新服务下载更新。
 
-        如果状态设置为“已启用”，自动更新客户端会连接到指定的 Intranet Microsoft 更新服务(或备用下载服务器)而不是 Windows 更新，以搜索和下载更新。如果启用此设置，你组织内的最终用户将不必通过防火墙获得更新，并允许你在部署更新前对其进行测试。
+        如果状态设置为“已启用”，自动更新客户端会连接到指定的 Intranet Microsoft 更新服务（或备用下载服务器）而不是 Windows 更新，以搜索和下载更新。如果启用此设置，你组织内的最终用户将不必通过防火墙获得更新，并允许你在部署更新前对其进行测试。
 
         如果将状态设置为“已禁用”或“未配置”，并且策略或用户首选项未禁用自动更新，则自动更新客户端将直接连接到 Internet 上的 Windows 更新站点。
 
@@ -162,7 +163,7 @@
         当需要用户代理作为回退并且未配置备用代理行为时，针对 Intranet 服务器的更新检测将失败。</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">仅使用系统代理检测 (默认的更新)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">当使用系统代理进行检测时，允许将用户代理用作回退</string>
-      <string id="UpdateClassPolicySource_Title">指定特定 Windows 更新类的源服务</string>
+      <string id="UpdateClassPolicySource_Title">为特定的 Windows 更新类指定源服务</string>
       <string id="UpdateClassPolicySource_Help">启用此策略后，设备将接收从指定的更新源中所列出类的 Windows 更新：Windows Update 或 Windows Server Update Service。
 
 注意：若要从 Windows Server 更新服务接收任何更新，必须通过 “指定 Intranet Microsoft 更新服务位置“ 策略正确配置 Intranet Microsoft 更新服务位置。
@@ -315,12 +316,6 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
 注意: 在 Windows RT 上不支持此策略。设置此策略对 Windows RT 电脑没有任何影响。</string>
       <string id="TargetGroup_Title">允许客户端目标设置</string>
       <string id="WindowsUpdateCat">Windows 更新</string>
-      <!--Category sub-folders-->
-      <string id="WindowsUpdateOffering">管理从 Windows 更新提供的更新</string>
-      <string id="WSUSOffering">管理 Windows Server Update Service 提供的更新</string>
-      <string id="WindowsUpdateExperience">管理最终用户体验</string>
-      <string id="PreSV">旧策略</string>
-
       <string id="TrustedPublisher_Title">允许来自 Intranet Microsoft 更新服务位置的签名更新  </string>
       <string id="TrustedPublisher_Help">使用此策略设置可管理: 在更新来自 Intranet Microsoft 更新服务位置时，自动更新是否接受 Microsoft 以外实体签名的更新。
 
@@ -336,30 +331,48 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
 启用此策略将禁用该功能，并且可能会导致 Windows 应用商店等公共服务连接中断。
 
 注意：只有当配置此电脑使用“指定 Intranet Microsoft 更新服务位置”策略连接 Intranet 更新服务时才适用此策略。</string>
+      <string id="DeferUpdateCat">适用于企业的 Windows 更新</string>
       <string id="ManagePreviewBuilds_Title">管理预览版</string>
-      <string id="ManagePreviewBuilds_Help">启用此策略可管理发布更新之前接收的更新。
+      <string id="ManagePreviewBuilds_Help">选择“禁用预览构建”将防止预览版本安装在设备上。通过设置 -&gt; 更新和安全， 这将防止用户选择进入 Windows 内部程序。
 
-开发人员频道
-非常适合高度技术性的用户。开发人员频道中的内部人员将从开发周期中最早的活跃开发分支接收内部版本。这些版本未与特定的 Windows 10 版本匹配。
+选择“一旦下一版本公开，则禁用预览构建”将在下一个 Windows 发布公开时，阻止预览构建安装于设备。当您的设备被设置为安装预览，并且您希望优雅地退出该设备进行飞行时，该选项有用。此选项将提供预览构建，直到设备获得下一个公共发布版本。
 
-Beta 频道
-非常适合想要查看即将面世的 Windows 10 功能的功能浏览者。在这里，你的反馈非常重要，因为它将帮助我们的工程师确保重要问题在主要版本发布之前已修复。
-
-发布预览频道（默认值）
-在发布之前，发布预览频道中的预览体验成员将有权访问即将发布的 Windows 10。这些内部版本由 Microsoft 支持。我们建议公司在发布预览频道中预览和验证即将发布的 Windows 10 版本，然后再在组织内进行广泛部署。
-
-注意：预览内部版本注册需要遥测级别设置为 2 或更高，并且要求你的域在 insider.windows.com 上注册。有关预览内部版本的其他信息，请参阅： https://aka.ms/wipforbiz
-
-如果禁用或未配置此策略，Windows 更新将不会为你提供任何预发布更新，你将在其发布后收到此类内容。禁用此策略将导致所有当前处于预发布版本的设备退出并在发布后保持最新的功能更新。</string>
-      <string id="DevChannel">开发人员频道</string>
-      <string id="BetaChannel">Beta 频道</string>
-      <string id="ReleasePreviewChannel">发布预览频道</string>
+选择“启用预览构建”将使设备上安装预览构建。用户可以通过设置 -&gt; 更新和安全 -&gt; Windows 内幕程序来下载并安装 Windows 预览版本。管理员也可以使用其他策略来管理用户设置该值的飞行设置。</string>
+      <string id="DisablePreviewBuilds">禁用预览版</string>
+      <string id="DisablePreviewBuildsAndOptOut">下个发行版本上市后禁用预览版</string>
+      <string id="EnablePreviewBuilds">启用预览版</string>
+      <string id="PreviewBuildFastFeatureUpdates">预览版 - 快</string>
+      <string id="PreviewBuildSlowFeatureUpdates">预览版 - 慢</string>
+      <string id="ReleasePreviewBranchFeatureUpdates">版本预览</string>
+      <string id="SemiAnnualChannelFeatureUpdates">半年频道</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">适用于 1809 及以下版本的半年频道(已弃用)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">适用于 1809 及以下版本的半年频道(定向)(已弃用)</string>
       <string id="DeferFeatureUpdates_Title">选择何时接收预览版和功能更新</string>
-      <string id="DeferFeatureUpdates_Help">启用此策略以指定何时接收功能更新。
+      <string id="DeferFeatureUpdates_Help">启用此策略可指定要接收的预览版或功能更新的级别以及接收时间。
 
-推迟更新 | 此策略使设备可以推迟进行下一次频道内的功能更新，对于所有预发布频道，最长为 14 天，对于半年频道，最长为 365 天。或者，如果设备在“半年频道”进行更新，则可以指定该设备要移动到和/或要保留的版本，直到策略更新或设备终止服务。请注意：如果同时设置两个策略，则指定的版本将具有优先权，并且延迟将不生效。请参阅 Windows 版本信息页面以获取操作系统版本信息。
+* 预览版 - 快: 设置为该级别的设备将最先收到新的 Windows 内部版本，其中包含尚未面向公众发布的功能。选择“快”可参与识别问题并向 Microsoft 报告问题，并提供有关新功能的建议。
+* 预览版 - 慢: 设置为该级别的设备将在新的 Windows 内部版本面向公众发布之前收到这些新版本，但是比设置为“快”的设备的节奏更慢，且会收到对早期内部版本的更改和修补程序。
+* Release Preview: 在 Microsoft 面向公众发布 Windows 内部版本之前接收这些版本。
+* 半年频道: 在功能更新面向公众发布之后收到功能更新。
 
-暂停更新 | 为了防止在预定时间收到功能更新，可以暂时暂停功能更新。暂停将持续 35 天(从指定的开始日期开始)，或者持续至清除该字段为止(仍然会提供质量更新)。</string>
+以下 Windows 就绪级别已弃用，仅适用于 1809 及以下版本:
+* 适用于 1809 及以下的半年频道(定向): 功能更新已发布。
+* 适用于 1809 及以下版本的半年频道: 功能更新已声明为“半年频道”，表明版本已准备就绪，可用于广泛部署。
+请查看 http://aka.ms/ReleaseInformationPage 中的版本信息页面以获得半年频道(定向)和半年频道的发布日期。
+
+当选择预览版时:
+    - 最多可以延迟接收预览版 14 天。
+    - 若要防止按计划时间接收预览版，可以将其暂停。暂停将从提供的起始时间起生效，并持续 35 天。
+    - 若要恢复接收已暂停的功能更新，请清除开始日期字段。
+
+预览版注册要求遥测级别设置为 2 或更高，并且你的域已在 insider.windows.com 上注册。有关预览版的其他信息，请参阅: https://aka.ms/wipforbiz
+
+当选择半年频道时:
+    - 你可以延迟接收功能更新最多 365 天。
+    - 若要避免按计划时间接收功能更新，可以将其暂停。暂停将从提供的起始时间起生效，并持续 35 天。
+    - 若要恢复接收已暂停的功能更新，请清除开始日期字段。
+
+如果禁用或未配置此策略，则 Windows 更新不会改变其行为。</string>
       <string id="DeferQualityUpdates_Title">选择何时接收质量更新</string>
       <string id="DeferQualityUpdates_Help">启用此策略可指定何时接收质量更新。
 
@@ -705,7 +718,7 @@ Beta 频道
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">选择 Windows 更新客户端用于检测更新的代理行为：</dropdownList>
       </presentation>
       <presentation id="UpdateClassPolicySource_Title">
-        <text>指定以下 Windows 更新类的源服务：</text>
+        <text>为以下 Windows 更新类指定源服务：</text>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">功能更新</dropdownList>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">质量更新</dropdownList>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">驱动程序更新</dropdownList>
@@ -716,11 +729,13 @@ Beta 频道
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">间隔（小时）：  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>请等待以下时间段，然后再次提示</text>
+        <text>在再次提示计划重新启动</text>
+        <text>前等待</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">的时间（分钟）：  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>请先等待以下一段时间，然后再继续进行计划</text>
+        <text>在继续执行计划重新启动</text>
+        <text>前等待</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">的时间（分钟）：  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -732,8 +747,14 @@ Beta 频道
           <label>此计算机的目标组名称</label>
         </textBox>
       </presentation>
+      <presentation id="IdleShutdownTimerDuration_Title">
+        <text>在再次提示计划重新启动</text>
+        <text>关闭服务前处于空闲状态</text>
+        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">的时间（分钟）：  </decimalTextBox>
+      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>重启计时器将给用户这些时间以保存其</text>
+        <text>重新启动计时器将为用户预留</text>
+        <text>足够时间保存其</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">工作（分钟）：  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
@@ -745,10 +766,11 @@ Beta 频道
         </textBox>
       </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">选择要接收更新的 Windows 就绪级别:</dropdownList>
+        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">设置接收预览版的行为:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">在功能更新发布后和设备可更新之前，你想推迟更新几天？</decimalTextBox>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">选择要接收更新的 Windows 就绪级别:</dropdownList>
+        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">在预览版或功能更新发布后，延迟以下天数后再予以接收:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>开始暂停预览版或功能更新:</label>
         </textBox>

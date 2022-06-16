@@ -135,9 +135,9 @@ Chcete-li určit hodnotu TTL pro záznamy služby DNS lokátoru řadičů domén
 
 Pokud toto nastavení zásad nenakonfigurujete, neuplatní se v žádném řadiči domény a řadiče domény použijí svou místní konfiguraci.</string>
       <string id="Netlogon_ExpectedDialupDelay">Určit očekávané zpoždění při přihlašování telefonickým připojením</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">Nastavení této zásady určuje, jak dlouho má počítač při přihlašování k síti čekat na odpověď řadiče domény.
+      <string id="Netlogon_ExpectedDialupDelay_Help">Toto nastavení zásad určuje, jak dlouho má počítač při přihlašování k síti čekat na odpověď řadiče domény.
 
-Pokud chcete určit hodnotu očekávaného zpoždění při přihlašování telefonickým připojením, klikněte na přepínač Povoleno a zadejte požadovanou hodnotu v sekundách (hodnota 60 například představuje 1 minutu).
+Chcete-li určit hodnotu očekávaného zpoždění při přihlašování telefonickým připojením, klikněte na přepínač Povoleno a zadejte požadovanou hodnotu v sekundách (hodnota 60 například představuje 1 minutu).
 
 Pokud toto nastavení zásad nenakonfigurujete, neuplatní se v žádném počítači a počítače použijí svou místní konfiguraci.</string>
       <string id="Netlogon_GcSiteCoverage">Určit lokality pokryté záznamy DNS SRV lokátoru řadičů domény</string>
@@ -337,22 +337,6 @@ Přípustné hodnoty tohoto nastavení vedou k následujícím možným chován�
 Chcete-li zadat toto chování, klikněte na možnost Povoleno a zadejte hodnotu. Rozsah hodnot je 1 až 2.
 
 Pokud toto nastavení zásad nenakonfigurujete, neuplatní se v žádném počítači a počítače použijí svou místní konfiguraci.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Při registraci záznamů SRV řadiče domény použít v názvu hostitele DNS malá písmena</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Tato zásada určuje, jestli řadiče domény, na které se toto nastavení vztahuje, mají při registraci záznamů SRV měnit svůj název hostitele DNS na malá písmena.
-
-Pokud je tato zásada povolena, budou řadiče domény při registraci svých záznamů SRV měnit svůj název hostitele DNS na malá písmena. Zároveň proběhne pokus o co nejdůkladnější odstranění dříve zaregistrovaných záznamů SRV, které obsahují název hostitele DNS s kombinací malých a velkých písmen. Další informace a potenciální postupy ručního čištění najdete pod níže uvedeným odkazem.
-
-Pokud je tato zásada zakázána, použijí řadiče domény při registraci záznamů SRV svůj nakonfigurovaný název hostitele DNS v aktuální podobě.
-
-Pokud toto nastavení není nakonfigurováno, uplatní řadiče domény ve výchozím nastavení svou místní konfiguraci.
-
-Je povolena výchozí místní konfigurace.
-
-Změny tohoto nastavení se projeví až po restartování počítače.
-
-Další informace najdete na stránce https://aka.ms/lowercasehostnamesrvrecord.
-      </string>
 
     </stringTable>
     <presentationTable>

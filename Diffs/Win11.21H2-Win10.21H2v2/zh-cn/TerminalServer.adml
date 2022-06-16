@@ -6,7 +6,7 @@
   <resources>
     <stringTable>
       <string id="TS_AUTOSUBSCRIPTION_NAME">启用自动订阅</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">控制用户应自动订阅的 URL 的列表</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">控制用户应自动订阅的 URL 的列表</string>      
       <string id="TS_SUPPORTED_Windows10">至少为 Windows 10 或 Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Windows 8 或 Windows RT 及以上版本</string>
       <string id="TS_SUPPORTED_Windows8_Server">至少为 Windows Server 2012</string>
@@ -28,7 +28,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">仅限 Windows XP 和 Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Windows Server 2008 或 Windows 7 及以上版本</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  仅限 Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 版本1903、Windows 10 版本1909和 Windows 10 版本2004</string>
       <string id="TS_TERMINAL_SERVER">远程桌面会话主机</string>
       <string id="TS_TERMINAL_SERVER_Help">控制远程桌面会话主机服务器的配置</string>
       <string id="TS_LICENSE_SERVER">RD 授权</string>
@@ -147,7 +146,6 @@
       <string id="TS_CLIENT_LPT">不允许 LPT 端口重定向</string>
       <string id="TS_CLIENT_PNP">不允许受支持的即插即用设备重定向</string>
       <string id="TS_CAMERA_REDIRECTION">不允许视频捕获重定向</string>
-      <string id="TS_LOCATION_REDIRECTION">不允许位置重定向</string>
       <string id="TS_CLIENT_PRINTER">不允许客户端打印机重定向</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">此策略设置指定是否在远程桌面服务会话期间阻止远程计算机与客户端计算机之间的剪贴板内容共享(剪贴板重定向)。
 
@@ -212,15 +210,6 @@ c.	客户端请求的值
 
 如果禁用或不配置此策略设置，用户可以将视频捕获设备重定向到远程计算机。用户可使用“远程桌面连接”的“本地资源”选项卡上的“更多”选项选择要重定向到远程计算机的视频捕获设备。
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">此策略设置让你能够控制在远程桌面服务会话中将位置数据重定向到远程计算机。
-
-默认情况下，远程桌面服务允许重定向位置数据。
-
-如果启用此策略设置，则用户无法将其位置数据重定向到远程计算机。
-
-如果禁用或未配置此策略设置，则用户可以将其位置数据重定向到远程计算机。
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">使用此策略设置，可以限制用户可用于显示远程桌面服务会话的监视器数目。通过限制用于显示远程桌面服务会话的监视器数目，可以提高连接性能(尤其对于慢速链接)，还可以降低服务器负载。
 
@@ -433,20 +422,23 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 如果禁用或未配置此策略设置，则以本地管理员身份登录之后，将在 RD 会话主机服务器上显示这些通知。</string>
       <string id="TS_LICENSING_MODE">设置远程桌面授权模式</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        通过使用此策略设置，可以指定连接到此 RD 会话主机服务器所需的远程桌面服务客户端访问许可证 (RDS CAL) 的类型。
+        使用此策略设置，可以指定连接到此 RD 会话主机服务器所需的远程桌面服务客户端访问许可证(RDS CAL)的类型。
 
-        可以使用此策略设置选择以下两种授权模式之一:“每用户”或“每设备”。
+        可以使用此策略设置选择以下三种授权模式之一:“每用户”、“每设备”或“每用户 AAD”。
 
-        “每用户”授权模式要求连接到此 RD 会话主机服务器的每个用户帐户都有一个从 RD 授权服务器颁发的 RDS 每用户 CAL。
+        每用户授权模式要求连接到此 RD 会话主机服务器的每个用户帐户都有一个从 RD 授权服务器发放的 RDS - 每用户 CAL。
 
-        “每设备”授权模式要求连接到此 RD 会话主机服务器的每个设备都有一个从 RD 授权服务器颁发的 RDS 每设备 CAL。
+        每设备授权模式要求连接到此 RD 会话主机服务器的每个设备都有一个从 RD 授权服务器发放的 RDS - 每设备 CAL。
 
-        如果启用此策略设置，则远程桌面授权服务器和 RD 会话主机将遵守指定的远程桌面授权模式。
+        每用户 AAD 授权模式要求连接到此 RD 会话主机服务器的每个用户帐户都有一项支持在 AAD 中分配的 RDS 许可证的服务计划。
+        
+        如果启用此策略设置，则远程桌面授权服务器和 RD 会话主机将遵循指定的远程桌面授权模式。
 
-        如果禁用或未配置此策略设置，则在“组策略”级别上不指定授权模式。
+        如果禁用或未配置此策略设置，则在“组策略”级别不指定授权模式。
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">按设备</string>
       <string id="TS_LICENSING_MODE_PER_USER">按用户</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">基于每个用户的 AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">此策略设置指定是否阻止在远程桌面服务会话期间将数据重定向到客户端 LPT 端口。
 
 使用此设置可以阻止用户映射本地 LPT 端口，并且可以阻止将数据从远程计算机重定向到本地 LPT 端口外设。默认情况下，远程桌面服务允许 LPT 端口重定向。
@@ -799,17 +791,6 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 如果禁用或未配置此策略设置，则可以指定在客户端连接到远程计算机后在远程计算机上运行的初始程序。如果未指定初始程序，则在客户端连接到远程计算机后总是在远程计算机上显示桌面。
 
 注意: 如果启用此策略设置，则将忽略“连接时启动程序”策略设置。</string>
-      <string id="TS_UIA">允许 AI 自动化重定向</string>
-      <string id="TS_UIA_EXPLAIN">此策略设置确定在本地计算机上运行的 (UI) 的用户界面是否可以访问服务器上的 UI 元素。
-
-UI 自动化使程序可以访问大多数 UI 元素，这使您可以使用需要与 UI 交互的辅助技术产品（如放大镜和讲述人）才能正常工作。UI 信息还允许自动测试脚本与 UI 交互。
-
-远程桌面会话当前不支持 UI 自动化重定向。
-
-如果启用或未配置此策略设置，则本地计算机上的任何 UI 自动化客户端都可以与远程应用进行交互。例如，可以使用本地计算机的 "讲述人" 和 "放大镜" 客户端与您在远程会话中打开的网页上的 UI 交互。
-
-如果禁用此策略设置，则在本地计算机上运行的 UI 自动化客户端无法与远程应用交互。
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">使用此策略设置，可以指定是否要求使用网络级别的身份验证对与 RD 会话主机服务器进行远程连接的用户进行身份验证。此策略设置通过要求在远程连接过程的前期对用户进行身份验证来增强安全性。
 
 如果启用此策略设置，则只有支持网络级别身份验证的客户端计算机才能连接到 RD 会话主机服务器。

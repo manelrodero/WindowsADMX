@@ -6,24 +6,27 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Otimização da Entrega</string>
       <string id="DownloadMode">Modo de Transferência</string>
-      <string id="DownloadMode_Help">Especifica o método de descarregamento que a Otimização de Entregas pode utilizar nos downloads de atualizações do Windows Updates, Apps e App.
+      <string id="DownloadMode_Help">Especifica o método de transferência que a Otimização da Entrega pode utilizar em transferências de Atualizações do Windows, Aplicações e Atualizações de aplicações.
 
-A lista que se segue mostra os valores suportados:
+A lista seguinte apresenta os valores suportados:
 
-0 = apenas HTTP, sem espreitar.
+0 = HTTP apenas, sem peering.
 
-1 = HTTP misturado com o olhar atrás do mesmo NAT.
+1 = HTTP combinado com peering atrás do mesmo NAT.
 
-2 = HTTP misturado com o lpeering através de um grupo privado. O olhar ocorre em dispositivos no mesmo Site de Active Directory (se existir) ou no mesmo domínio por padrão. Quando esta opção for selecionada, o peering irá cruzar NATs. Para criar um grupo personalizado use o ID do grupo em combinação com o Modo 2.
+2 = HTTP combinado com peering num grupo privado. Por predefinição, o peering ocorre em dispositivos no mesmo Site do Active Directory (se existente) ou no mesmo domínio. Quando esta opção é selecionada, o peering cruza com NATs. Para criar um grupo personalizado, utilize o ID de Grupo em combinação com o Modo 2.
 
-3 = HTTP misturado com Internet Peering.
+3 = HTTP combinado com Peering de Internet.
 
-99 = Modo simples de descarregamento sem espreitar. A Otimização da Entrega descarrega usando apenas HTTP e não tenta contactar os serviços de cloud de otimização de entrega.</string>
+99 = Modo de transferência simples sem peering. A Otimização da Entrega efetua as transferências utilizando HTTP apenas e não tenta contactar os serviços cloud de Otimização da Entrega.
+
+100 = Modo de ignorar. Não utilize a Otimização da Entrega; em alternativa, utilize BITS.</string>
       <string id="DownloadMode_CdnOnly">Apenas HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Grupo (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Simples (99)</string>
+      <string id="DownloadMode_Bypass">Ignorar (100)</string>
       <string id="GroupId">ID do Grupo</string>
       <string id="GroupId_Help">O ID de Grupo tem de ser definido como um GUID. Esta Política especifica um ID de grupo arbitrário ao qual o dispositivo pertence.
 
@@ -166,19 +169,14 @@ Nota: se definir a política para atrasar a transferência em segundo plano a pa
 
 Nota: se definir a política para atrasar a transferência em primeiro plano a partir de http, será aplicada primeiro (para permitir transferências a partir de elementos em primeiro lugar).</string>
       <string id="RestrictPeerSelectionBy">Selecione um método para limitar a Seleção de Elemento da Rede</string>
-      <string id="RestrictPeerSelectionBy_Help">Desdefinir esta política para restringir a seleção de pares através de opção selecionada.
+      <string id="RestrictPeerSelectionBy_Help">Defina esta política para limitar a seleção do elemento da rede através da opção selecionada.
 
 As opções disponíveis são:
-0 = NAT.
-1 = Máscara subnet.
-2 = Descoberta local (DNS-SD).
+1 = Máscara de sub-rede (serão adicionadas mais opções numa versão futura).
 
-O valor predefinido passou de 0 (sem restrição) para 1 (restrição à sub-rede).
-
-Estas opções aplicam-se tanto ao Modo de Descarregamento LAN (1) como ao Grupo (2).</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+A opção 1 (Máscara de sub-rede) aplica-se à LAN (1) e ao Grupo (2) do Modo de Transferência.</string>
+      <string id="RestrictPeerSelectionBy_None">Nenhum</string>
       <string id="RestrictPeerSelectionBy_Subnet">Sub-rede</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Descoberta local</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Defina o Horário Comercial para Limitar a Largura de Banda de Transferência em Segundo Plano</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Especifica a largura de banda máxima para transferência em segundo plano que a Otimização da Entrega utiliza durante e fora das horas comerciais em todas as atividades de transferência simultâneas sob a forma de percentagem da largura de banda de transferência disponível.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Defina o Horário Comercial para Limitar a Largura de Banda de Transferência em Primeiro Plano</string>
@@ -305,7 +303,7 @@ Estas opções aplicam-se tanto ao Modo de Descarregamento LAN (1) como ao Grupo
         <text>O valor predefinido é 0 (sem atraso)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Limitar a Seleção de Elementos de Rede Por:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Limitar a Seleção de Elementos de Rede Por:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

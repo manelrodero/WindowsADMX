@@ -44,24 +44,24 @@ Obs!
           Se også innstillingen Aktiver Internett-utskrift i denne mappen for innstillinger og innstillingen Bla gjennom felles webområde for å finne skrivere i Brukerkonfigurasjon\Administrative maler\Kontrollpanel\Skrivere.
 
           Webvisningen berøres av innstillingene Aktiver standardskall og Ikke tillat at Mappealternativer åpnes fra Alternativer-knappen i kategorien Vis på båndet i Brukerkonfigurasjon\Administrative maler\Windows-komponenter\Windows Utforsker og innstillingen Aktiver Active Desktop i Brukerkonfigurasjon\Administrative maler\Skrivebord\Aktivt skrivebord.</string>
-      <string id="DomainDisplayPrinters_Help">Hvis du aktiverer denne policyinnstillingen, angis maksimalt antall skrivere (av hver type) som veiviseren for skriver skal vise på en datamaskin på et administrert nettverk (når datamaskinen kan nå en domenekontroller, for eksempel en domenetilknyttet bærbar maskin på et firmanettverk.)
+      <string id="DomainDisplayPrinters_Help">Hvis du aktiverer denne policyinnstillingen, angis maksimalt antall skrivere (av hver type) som veiviseren for skriverinstallasjon skal vise på en datamaskin på et administrert nettverk (når datamaskinen kan nå en domenekontroller, for eksempel en domenetilknyttet bærbar maskin på et firmanettverk.)
 
-          Hvis denne policyinnstillingen deaktiveres, vises ikke søkesiden for nettverk.
+ Hvis denne policyinnstillingen deaktiveres, vises ikke søkesiden for nettverk.
 
-          Hvis denne policyinnstillingen ikke konfigureres, viser veiviseren for skrivere standardantallet skrivere av hver type:
-          Katalogskrivere: 20
-          TCP/IP-skrivere: 0
-          Nettjenesteskrivere: 0
-          Bluetooth-skrivere: 10
-          Delte skrivere: 0
+ Hvis denne policyinnstillingen ikke konfigureres, viser veiviseren for skriverinstallasjon standardantallet skrivere av hver type:
+ Katalogskrivere: 20
+ TCP/IP-skrivere: 0
+ Nettjenesteskrivere: 0
+ Bluetooth-skrivere: 10
+ Delte skrivere: 0
 
-          Hvis du vil vise tilgjengelige webtjenesteskrivere på nettverket, kontrollerer du at nettverksgjenkjenning er aktivert. Hvis du vil aktivere nettverksgjenkjenning, klikker du Start, Kontrollpanel og deretter Nettverk og Internett. Klikk Nettverks- og delingssenter på siden Nettverk og Internett. Klikk Endre innstillinger for avansert deling på siden Nettverks- og delingssenter. Klikk pilen ved siden av Domene på siden Innstillinger for avansert deling, og klikk deretter Aktiver nettverksgjenkjenning og Lagre endringer.
+ Hvis du vil vise tilgjengelige nettjenesteskrivere på nettverket, kontrollerer du at nettverksgjenkjenning er aktivert. Hvis du vil aktivere nettverksgjenkjenning, klikker du på Start, Kontrollpanel og deretter Nettverk og Internett. Klikk på Nettverks- og delingssenter på siden Nettverk og Internett. Klikk på Endre innstillinger for avansert deling på siden Nettverks- og delingssenter. Klikk på pilen ved siden av Domene på siden Innstillinger for avansert deling, og klikk deretter på Aktiver nettverksgjenkjenning og Lagre endringer.
 
-          Hvis du vil ikke vise skrivere av en bestemt type, aktiverer du denne policyen og angir antallet skrivere som skal vises, til 0.
+ Hvis du ikke vil vise skrivere av en bestemt type, aktiverer du denne policyen og angir antallet skrivere som skal vises, til 0.
 
-          I Windows 10 og senere kan bare TCP/IP-skrivere vises i veiviseren. Hvis du aktiverer denne policyinnstillingen, gjelder bare grensene for TCP/IP-skrivere. Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen i Windows 10, brukes standardgrensen.
-          
-          I Windows 8 og senere vises ikke Bluetooth-skrivere, og grensen for dem gjelder derfor ikke for disse versjonene av Windows.
+ I Windows 10 og senere kan bare TCP/IP-skrivere vises i veiviseren. Hvis du aktiverer denne policyinnstillingen, gjelder bare grensene for TCP/IP-skrivere. Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen i Windows 10, brukes standardgrensen.
+ 
+ I Windows 8 og senere vises ikke Bluetooth-skrivere, og grensen for dem gjelder derfor ikke for disse versjonene av Windows.
       </string>
       <string id="DomainPrinters">Veiviser for skriver – søkeside for nettverk (administrert nettverk)</string>
       <string id="DownlevelBrowse">Søk på nettverket etter skrivere</string>
@@ -134,20 +134,20 @@ Obs!  Hvis du aktiverer denne policyen, deaktiveres eksisterende kjernemodusdriv
           Denne policyen hindrer ikke brukere fra å kjøre andre programmer for å slette en skriver.
 
           Hvis denne policyen er deaktivert eller ikke konfigurert, kan brukere slette skrivere ved bruk av metodene som er beskrevet ovenfor.</string>
-      <string id="NonDomainDisplayPrinters_Help">Denne policyen angir maksimalt antall skrivere (av hver type) som veiviseren for skrivere viser på en datamaskin på et uadministrert nettverk (når datamaskinen ikke kan nå en domenekontroller, f.eks. en domenetilknyttet bærbar datamaskin på et hjemmenettverk.)
+      <string id="NonDomainDisplayPrinters_Help">Denne policyen angir maksimalt antall skrivere (av hver type) som veiviseren for skriverinstallasjon viser på en datamaskin på et uadministrert nettverk (når datamaskinen ikke kan nå en domenekontroller, for eksempel en domenetilknyttet bærbar datamaskin på et hjemmenettverk.)
 
 Hvis denne innstillingen deaktiveres, vises ikke søkesiden for nettverk.
 
-Hvis denne innstillingen ikke konfigureres, viser veiviseren for skrivere standardantallet skrivere av hver type:
+Hvis denne innstillingen ikke konfigureres, viser veiviseren for skriverinstallasjon standardantallet skrivere av hver type:
 TCP/IP-skrivere: 50
 Nettjenesteskrivere: 50
 Bluetooth-skrivere: 10
 Delte skrivere: 50
 
-Hvis du vil ikke vise skrivere av en bestemt type, aktiverer du denne policyen og angir antallet skrivere som skal vises, til 0.
+Hvis du ikke vil vise skrivere av en bestemt type, aktiverer du denne policyen og angir antallet skrivere som skal vises, til 0.
 
 I Windows 10 og senere kan bare TCP/IP-skrivere vises i veiviseren. Hvis du aktiverer denne policyinnstillingen, gjelder bare grensene for TCP/IP-skrivere. Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen i Windows 10, brukes standardgrensen.
-          
+ 
 I Windows 8 og senere vises ikke Bluetooth-skrivere, og grensen for dem gjelder derfor ikke for disse versjonene av Windows.</string>
       <string id="NonDomainPrinters">Veiviser for skriver – søkeside for nettverk (uadministrert nettverk)</string>
       <string id="PackagePointAndPrintOnly">Bare bruk pakkepek og skriv ut</string>
@@ -278,11 +278,11 @@ Som standard vil lagerenheter på Windows Ultimate, Professional og Home fortset
 
         Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, tillates det at alle installerte skriverutvidelser kjører.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Endre standard utdataformat for Microsoft XPS-dokumentskriver (MXDW) til det eldre formatet Microsoft XPS (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS-dokumentskriver (MXDW) genererer OpenXPS (*. oxps)-filer som standard i Windows 10, Windows 10 og Windows Server 2022.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS-dokumentskriver (MXDW) genererer OpenXPS-filer (filtypen OXPS) som standard i Windows 10 og Windows Server 2019.
 
-Hvis du aktiverer denne gruppe policy innstillingen, er standard MXDW output format den eldre Microsoft XPS (*. XPS).
+ Hvis du aktiverer denne gruppepolicyinnstillingen, blir det eldre formatet Microsoft XPS (filtypen XPS) standard MXDW-utdataformat.
 
-Hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen, er standard MXDW output format OpenXPS (*. oxps).</string>
+ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, blir OpenXPS (filtypen OXPS) standard MXDW-utdataformat.</string>
       <string id="SetDefaultPrinterMRUModeOff">Deaktiver administrasjon av standardskriver i Windows</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Med denne innstillingen kan du endre administrasjon av standardskriver.
 
@@ -293,13 +293,13 @@ Hvis du deaktiverer innstillingen, vil Windows administrere standardskriveren.
 Hvis du ikke konfigurerer denne innstillingen, endres ikke administrasjonen av standardskriver. </string>
       <string id="EnableDeviceControl">Aktiver utskriftsbegrensninger for enhetskontroll</string>
       <string id="EnableDeviceControl_Help">
-          Fastslår om utskriftsrestriksjoner for enhetskontroll håndheves for utskrift på denne datamaskinen.
+          Bestemmer om utskrifts begrensninger for enhets kontroll skal håndheves for utskrift på denne data maskinen.
 
-          Som standard er det ingen begrensninger for å skrive ut basert på tilkoblingstype eller skriverprodusent/-modell.
+Som standard er det ingen begrensninger for utskrift, basert på koblings type eller skrive ren gjør/modell.
 
-          Hvis du aktiverer denne innstillingen, begrenser datamaskinen utskrift til skrivertilkoblingene på bedriftsnettverket eller godkjente USB-tilkoblede skrivere.
+Hvis du aktiverer denne innstillingen, vil data maskinen begrense utskrift til skrivertilkoblinger på firma nettverket eller godkjente USB-tilkoblede skrivere.
 
-          Hvis du deaktiverer denne innstillingen eller ikke konfigurerer den, er det ingen begrensninger for å skrive ut basert på tilkoblingstype eller skriverprodusent/-modell.</string>
+Hvis du deaktiverer denne innstillingen eller lar være å konfigurere den, er det ingen begrensninger for utskrift basert på koblings type eller skrive ren gjør/modell.</string>
         <string id="ApprovedUsbPrintDevices">Liste over godkjente USB-tilkoblede utskriftenheter</string>
         <string id="ApprovedUsbPrintDevices_Help">
 
@@ -308,6 +308,16 @@ Hvis du ikke konfigurerer denne innstillingen, endres ikke administrasjonen av s
 Når kontroll av enhets kontroll er aktivert, bruker systemet den angitte listen med vid/PID-verdier til å avgjøre om gjeldende USB-tilkoblede skriver godkjennes for lokal utskrift.
 
 Skriv inn alle godkjente vid/PID-kombinasjonene (atskilt med komma) som tilsvarer godkjente USB-skrivermodeller. Når en bruker prøver å skrive ut til en USB-skriverkø, sammenlignes enhets-og PID-listen med den godkjente listen.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Begrenser installasjon av skriverdriver til administratorer</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Angir om brukere som ikke er administratorer, kan installere skriverdrivere på denne datamaskinen.
+
+Brukere som ikke er administratorer, kan som standard ikke installere skriverdrivere på denne datamaskinen.
+
+Hvis du aktiverer eller ikke konfigurerer denne innstillingen, begrenser systemet installasjon av skriverdrivere til administratorer på denne datamaskinen.
+
+Hvis du deaktiverer denne innstillingen, begrenser ikke systemet installasjon av skriverdrivere til denne datamaskinen.
         </string>
     </stringTable>
     <presentationTable>

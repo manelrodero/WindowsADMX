@@ -15,7 +15,7 @@ Inoltre, se si seleziona la casella di controllo "Includi contenuti da Contenuti
 
 Se si disabilita questa impostazione dei criteri, Contenuti in evidenza di Windows sarà disattivato e gli utenti non potranno più selezionare questa opzione per la schermata di blocco. Gli utenti visualizzeranno l'immagine predefinita per la schermata di blocco e potranno selezionare un'altra immagine, a meno che non sia stato abilitato il criterio "Impedisci modifica dell'immagine della schermata di blocco".
 
-Se non si configura questa impostazione dei criteri, Contenuti in evidenza di Windows sarà disponibile nella schermata di blocco e sarà selezionato per impostazione predefinita, a meno che non sia stata configurata un'altra immagine predefinita della schermata di blocco usando il criterio "Imponi immagine specifica per la schermata di blocco e di accesso predefinita".
+Se non si configura questa impostazione dei criteri, Contenuti in evidenza di Windows sarà disponibile nella schermata di blocco e sarà selezionato per impostazione predefinita, a meno che non sia stata configurata un'altra immagine predefinita della schermata di blocco usando il criterio "Imponi immagine specifica per la schermata di blocco predefinita".
 
 Nota: questo criterio è disponibile solo per le SKU Enterprise</string>
       <string id="DisableWindowsSpotlightFeatures">Disattiva tutte le funzionalità di Contenuti in evidenza di Windows</string>
@@ -49,11 +49,11 @@ Se si disabilita o non si configura questa impostazione dei criteri, gli utenti 
       <string id="DisableSoftLanding">Non mostrare i suggerimenti di Windows</string>
       <string id="DisableSoftLanding_Help">Questa impostazione dei criteri impedisce la visualizzazione dei suggerimenti di Windows agli utenti.
 
-Se abiliti questa impostazione dei criteri, agli utenti non vengono più visualizzati i suggerimenti di Windows.
+Se si abilita questa impostazione dei criteri, agli utenti non vengono più visualizzati i suggerimenti di Windows.
 
-Se disabiliti o non configuri questa impostazione dei criteri, gli utenti possono vedere popup contestuali che spiegano come usare Windows. Microsoft usa i dati di diagnostica per determinare quali suggerimenti visualizzare.
+Se si disabilita o non si configura questa impostazione dei criteri, gli utenti possono vedere popup contestuali che spiegano come usare Windows. Microsoft usa i dati di diagnostica e sull'uso per determinare quali suggerimenti visualizzare.
 
-Nota: se disabiliti o non configuri questa impostazione dei criteri, ma abiliti l'impostazione dei criteri "Configurazione computer\Modelli amministrativi\Componenti di Windows\Raccolta dati e versioni di anteprima\Consenti telemetria" con un livello "Di base" o inferiore, gli utenti possono vedere un set limitato di suggerimenti.
+Nota: se si disabilita o non si configura questa impostazione dei criteri, ma si abilita l'impostazione dei criteri "Configurazione computer\Modelli amministrativi\Componenti di Windows\Raccolta dati e build di anteprima\Consenti telemetria" con un livello "Di base" o inferiore, gli utenti possono vedere un set limitato di suggerimenti.
 Inoltre, questa impostazione si applica solo agli SKU Enterprise ed Education.</string>
       <string id="DisableThirdPartySuggestions">Non suggerire contenuti di terze parti in Contenuti in evidenza di Windows</string>
       <string id="DisableThirdPartySuggestions_Help">Se abiliti questo criterio, le funzionalità di Contenuti in evidenza di Windows, come i contenuti in evidenza nella schermata di blocco, le app consigliate nel menu Start o i suggerimenti per Windows, non proporranno più suggerimenti per app e contenuti da autori di software terze parti. Gli utenti possono comunque visualizzare consigli e suggerimenti per essere più produttivi con le funzionalità e le app Microsoft.
@@ -70,20 +70,8 @@ Se disabiliti o non configuri questo criterio, verrà avviato Configurazione e p
 
 Se si Abilita questo criterio, le esperienze di Windows che utilizzano il componente client del contenuto ottimizzato per il cloud, verranno eseguite come contenuto di fallback predefinito.
 
-Se si disabilita o non si configura questa impostazione dei criteri, le esperienze di Windows potranno utilizzare contenuto ottimizzato per il cloud.</string>
-      <string id="DisableSpotlightCollectionOnDesktop">Disattiva Raccolta di contenuti in evidenza nel desktop</string>
-      <string id="DisableSpotlightCollectionOnDesktop_Help">Questa impostazione dei criteri rimuove l'impostazione della raccolta di contenuti in evidenza in Personalizzazione, non consentendo all'utente di selezionare l’opzione e conseguentemente di scaricare le immagini giornaliere da Microsoft sul desktop.
-
-Se abiliti questo criterio, "Raccolta di contenuti in evidenza" non sarà disponibile come opzione nelle impostazioni di Personalizzazione.
-
-Se disabiliti o non configuri questo criterio, "Raccolta di contenuti in evidenza" sarà disponibile nelle impostazioni di Personalizzazione, consentendo all'utente di selezionare l’opzione come provider desktop e di visualizzare le immagini giornaliere da Microsoft sul desktop.</string>
-      <string id="DisableConsumerAccountStateContent">Disattiva il contenuto dell'account utente cloud</string>
-      <string id="DisableConsumerAccountStateContent_Help">Questa impostazione dei criteri ti consente di disattivare il contenuto dello stato dell'account consumer cloud in tutte le esperienze di Windows.
-
-Se abiliti questo criterio, le esperienze di Windows che utilizzano il componente client del contenuto dello stato dell'account consumer del cloud, verranno invece presenti il contenuto di fallback predefinito.
-
-Se si disabilita o non si configura questa impostazione dei criteri, le esperienze di Windows potranno utilizzare il contenuto dello stato dell'account consumer del cloud.
-        </string>
+Se si disabilita o non si configura questa impostazione dei criteri, le esperienze di Windows potranno utilizzare il contenuto ottimizzato per il cloud.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

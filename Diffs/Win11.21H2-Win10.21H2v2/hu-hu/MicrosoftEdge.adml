@@ -8,13 +8,13 @@
       <!-- Product -->
       <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Csak a Microsoft Edge 1.0-s verziója</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge Windows 10 vagy újabb rendszeren</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge 1511-es verziójú Windows 10 vagy újabb rendszeren</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge a Windows 10 1511-es vagy újabb verzióján</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge a Windows 10 1607-es vagy újabb verzióján</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge a Windows 10 1703-as vagy újabb verzióján</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge a Windows 10 1709-es vagy újabb verzióján</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge a Windows 10 1708-as vagy újabb verzióján</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge a Windows 10 1803-as vagy újabb verzióján</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge a Windows 10, 1809-es vagy újabb verzióban</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge a Windows 10, 1809-es vagy újabb verzióján</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge-kategória</string>
 
@@ -167,11 +167,11 @@ Ha a házirend-beállítás le van tiltva, akkor nincs engedélyezve a nem ellen
 
 Számítógép konfigurációja &gt; Felügyeleti sablonok &gt; Windows-összetevők &gt; Alkalmazáscsomag telepítése
 
-Támogatott verziók: Microsoft Edge a Windows 10, 1809-es verzióban
+Támogatott verziók: Microsoft Edge a Windows 10 1809-es verzióján
 Alapértelmezett beállítás: Letiltva vagy Nincs konfigurálva
 Kapcsolódó házirendek:
 – Microsoft Store-beli alkalmazások fejlesztésének és integrált fejlesztőkörnyezetből (IDE) való telepítésének engedélyezése
-– Minden megbízható alkalmazás telepítésének engedélyezése</string>
+– Minden megbízható alkalmazás telepítésének engedélyezése​</string>
       <string id="AllowSmartScreen">A Windows Defender SmartScreen konfigurálása</string>
       <string id="AllowSmartScreen_Explain">Ezzel a házirend-beállítással konfigurálható a Windows Defender SmartScreen bekapcsolása. A Windows Defender SmartScreen figyelmeztető üzenetekkel óvja az alkalmazottakat a gyanítható adathalász támadásoktól és a kártevő szoftverektől. A Windows Defender SmartScreen alapértelmezés szerint be van kapcsolva.
 
@@ -518,9 +518,14 @@ Ha a házirendhez a 0 értéket állítja be, a Microsoft Edge nem használja az
 Ha letiltja vagy nem konfigurálja a beállítást, az alapértelmezett érték 5 perc.
 
 Ha nem dedikált hozzáféréssel konfigurálja a Microsoft Edge-et, akkor ez a házirend nem lép érvénybe.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Az Edge elévülési értesítés megjelenítésének felfüggesztése</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">Beállíthatja, hogy a Microsoft Edge felfüggessze annak az értesítésnek a megjelenítését, amely tájékoztatja a felhasználókat arról, hogy a Microsoft Edge ezen verziójának támogatása a 2021. március 9-én véget ért. Ha engedélyezve van, az értesítés nem jelenik meg.
 
+Ha letiltja vagy nem konfigurálja a beállítást, a rendszer minden alkalommal megjeleníti az értesítést, amikor az Edge elindul. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

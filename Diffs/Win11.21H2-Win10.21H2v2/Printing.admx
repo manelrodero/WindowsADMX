@@ -810,5 +810,22 @@
             />
       </elements>
     </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.RestrictDriverInstallationToAdministrators)"
+        explainText="$(string.RestrictDriverInstallationToAdministrators_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\PointAndPrint"
+        name="RestrictDriverInstallationToAdministrators"
+        valueName="RestrictDriverInstallationToAdministrators"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows7"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>

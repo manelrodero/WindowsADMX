@@ -46,28 +46,28 @@ Anmärkningar:
           Webbvyn påverkas av inställningarna Aktivera klassiskt gränssnitt och Tillåt inte Mappalternativ att öppnas från knappen Alternativ på fliken Visa i menyfliksområdet i Användarkonfiguration\Administrativa mallar\Windows-komponenter\Utforskaren och inställningen Aktivera Active Desktop i Användarkonfiguration\Administrativa mallar\Skrivbord\Active Desktop.</string>
       <string id="DomainDisplayPrinters_Help">Om du aktiverar den här principinställningen anger den maximalt antal skrivare (av varje typ) som guiden Lägg till skrivare ska visa på en dator i ett hanterat nätverk (när datorn kan kontakta en domänkontrollant, t.ex. en domänansluten bärbar dator i ett företagsnätverk).
 
-          Om du inaktiverar den här principinställningen visas inte sidan för nätverkssökning.
+ Om du inaktiverar den här principinställningen visas inte sidan för nätverkssökning.
 
-          Om du inte konfigurerar den här principinställningen visar guiden Lägg till skrivare standardantalet skrivare av varje typ:
-          Katalogskrivare: 20
-          TCP/IP-skrivare: 0
-          Webbtjänstskrivare: 0
-          Bluetooth-skrivare: 10
-          Delade skrivare: 0
+ Om du inte konfigurerar den här principinställningen visar guiden Lägg till skrivare standardantalet skrivare av varje typ:
+ Katalogskrivare: 20
+ TCP/IP-skrivare: 0
+ Webbtjänstskrivare: 0
+ Bluetooth-skrivare: 10
+ Delade skrivare: 0
 
-          Aktivera nätverksidentifiering om du vill visa tillgängliga webbtjänstskrivare i nätverket. Om du vill aktivera nätverksidentifiering klickar du på Start och Kontrollpanelen. Sedan klickar du på Nätverk och Internet. På sidan Nätverk och Internet klickar du på Nätverks- och delningscenter. På sidan Nätverks- och delningscenter klickar du på Ändra avancerade delningsinställningar. På sidan Avancerade delningsinställningar klickar du på pilen bredvid pilen Domän, sedan på Aktivera nätverksidentifiering och sist på Spara ändringar.
+ Aktivera nätverksidentifiering om du vill visa tillgängliga webbtjänstskrivare i nätverket. Om du vill aktivera nätverksidentifiering klickar du på Start och Kontrollpanelen. Sedan klickar du på Nätverk och Internet. På sidan Nätverk och Internet klickar du på Nätverks- och delningscenter. På sidan Nätverks- och delningscenter klickar du på Ändra avancerade delningsinställningar. På sidan Avancerade delningsinställningar klickar du på pilen bredvid pilen Domän, sedan på Aktivera nätverksidentifiering och sist på Spara ändringar.
 
-          Om du inte vill visa en viss typ av skrivare aktiverar du principen och ställer in antalet skrivare till 0.
+ Om du inte vill visa en viss typ av skrivare aktiverar du principen och ställer in antalet skrivare till 0.
 
-          I Windows 10 och senare går det endast att visa TCP/IP-skrivare i den här guiden. Om du aktiverar den här principinställningen tillämpas endast gränsen för antalet TCP/IP-skrivare. Om du inaktiverar eller låter bli att konfigurera principinställningen i Windows 10 tillämpas standardgränsen.
-          
-          I Windows 8 och senare visas inte Bluetooth-skrivare så dess maxgräns tillämpas inte för de versionerna av Windows.
+ I Windows 10 och senare går det endast att visa TCP/IP-skrivare i den här guiden. Om du aktiverar den här principinställningen tillämpas endast gränsen för antalet TCP/IP-skrivare. Om du inaktiverar eller låter bli att konfigurera principinställningen i Windows 10 tillämpas standardgränsen.
+ 
+ I Windows 8 och senare visas inte Bluetooth-skrivare så dess maxgräns tillämpas inte för de versionerna av Windows.
       </string>
       <string id="DomainPrinters">Guiden Lägg till skrivare - sidan för nätverkssökning (hanterat nätverk)</string>
       <string id="DownlevelBrowse">Bläddra i nätverket för att hitta skrivare</string>
       <string id="DownlevelBrowse_Help">Ger användarna möjlighet att söka igenom nätverket efter delade skrivare med guiden Lägg till skrivare.
 
-Om du aktiverar den här inställningen eller väljer att inte konfigurera den, kommer guiden Lägg till skrivare att visa en lista med delade skrivare i nätverket och användaren får möjlighet att välja en skrivare från listan, under följande förutsättningar: användare väljer att lägga till en nätverksskrivare genom att markera alternativknappen "En nätverksskrivare eller skrivare som är ansluten till en annan dator" på sidan 2 i guiden Lägg till skrivare, markerar dessutom alternativknappen "Anslut till den här skrivaren (välj detta alternativ och klicka på Nästa om du vill bläddra)" på sidan 3 i guiden och anger inte något skrivarnamn i textrutan "Namn".
+Om du aktiverar eller låter bli att konfigurera den här inställningen visar guiden Lägg till skrivare en lista med delade skrivare i nätverket och låter användaren välja en skrivare i den, under följande förutsättningar:Användaren väljer att lägga till en nätverksskrivare genom att markera alternativknappen "En nätverksskrivare eller skrivare som är ansluten till en annan dator" på den andra sidan i guiden Lägg till skrivare, markerar dessutom alternativknappen "Anslut till den här skrivaren (välj detta alternativ och klicka på Nästa om du vill bläddra)" på den tredje sidan i guiden och anger inte något skrivarnamn i textrutan "Namn".
 
 Om du inaktiverar den här inställningen, tas sidan där det är möjligt att bläddra efter nätverksskrivare bort från guiden Lägg till skrivare och användarna kan inte söka igenom nätverket, utan måste ange skrivarens namn.
 
@@ -147,7 +147,7 @@ Delade skrivare: 50
 Om du inte vill visa skrivare av en viss typ aktiverar du den här principen och anger antalet skrivare som ska visas till 0.
 
 I Windows 10 och senare går det endast att visa TCP/IP-skrivare i den här guiden. Om du aktiverar den här principinställningen tillämpas endast gränsen för antalet TCP/IP-skrivare. Om du inaktiverar eller låter bli att konfigurera principinställningen i Windows 10 tillämpas standardgränsen.
-          
+ 
 I Windows 8 och senare visas inte Bluetooth-skrivare så dess maxgräns tillämpas inte för de versionerna av Windows.</string>
       <string id="NonDomainPrinters">Guiden Lägg till skrivare - sidan för nätverkssökning (ohanterat nätverk)</string>
       <string id="PackagePointAndPrintOnly">Använd endast paketering av Peka och skriv ut</string>
@@ -278,7 +278,7 @@ Som standard fortsätter Windows Ultimate, Professional och Home att söka efter
 
         Om du inaktiverar eller låter bli att konfigurera den här principinställningen får alla tillägg för skrivare som installerats lov att köras.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Ändra formatet för standardutdata i MXDW (Microsoft XPS Document Writer) så att det överensstämmer med det äldre Microsoft XPS-formatet (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">MXDW (Microsoft XPS Document Writer) genererar OpenXPS-filer (*.oxps) som standard i Windows 10, Windows 10 Server och Windows Server 2022.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">MXDW (Microsoft XPS Document Writer) genererar OpenXPS-filer (*.oxps) som standard i Windows 10, Windows 10 Server och Windows Server 2019.
 
  Om du aktiverar den här grupprincipinställningen används det äldre Microsoft XPS-formatet (*.xps) som standard för utdata i MXDW.
 
@@ -308,6 +308,16 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen finns
 När enhets kontrolls utskrift är aktiverat använder systemet den angivna listan med vid/PID-värden för att avgöra om den aktuella USB-anslutna skrivaren är godkänd för lokal utskrift.
 
 Ange alla kombinationer av godkänd vid/PID (avgränsade med kommatecken) som motsvarar godkända USB-skrivardrivrutiner. När en användare försöker skriva ut till en USB-skrivarkö kommer enheten vid/PID att jämföras med den godkända listan.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Begränsar installationen av skrivardrivrutiner till administratörer</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Anger om användare som inte är administratörer kan installera skrivardrivrutiner på den här datorn.
+
+Som standard kan användare som inte är administratörer inte installera skrivardrivrutiner på den här datorn.
+
+Om du aktiverar eller låter bli att konfigurera den här inställningen begränsas installationen av skrivardrivrutiner till administratörer på den här datorn.
+
+Om du inaktiverar den här inställningen begränsas inte installationen av skrivardrivrutiner på den här datorn.
         </string>
     </stringTable>
     <presentationTable>
@@ -371,7 +381,7 @@ Ange alla kombinationer av godkänd vid/PID (avgränsade med kommatecken) som mo
       </presentation>
       <presentation id="ApprovedUsbPrintDevices">
         <text>Ange listan över godkända USB-anslutna skrivarenheter.</text>
-        <text>Listan är en kommaseparerad lista över USB vid / pid-värden. Exempel: 0351 / 0872,135E / 2179</text>
+        <text>Listan är en kommaseparerad lista över USB vid/pid-värden. Exempel: 0351/0872,135E/2179</text>
         <textBox refId="ApprovedUsbPrintDevices_List">
           <label>vid/pid</label>
         </textBox>

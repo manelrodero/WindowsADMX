@@ -137,7 +137,7 @@ Si vous ne configurez pas ce paramètre de stratégie, il n’est appliqué à a
       <string id="Netlogon_ExpectedDialupDelay">Spécifier le retard de numérotation attendu à la connexion</string>
       <string id="Netlogon_ExpectedDialupDelay_Help">Ce paramètre de stratégie spécifie la durée supplémentaire pendant laquelle l’ordinateur doit attendre la réponse du contrôleur de domaine lors de la connexion au réseau.
 
-Pour spécifier le retard de numérotation attendu à la connexion, cliquez sur Activé, puis entrez la valeur souhaitée en secondes (par exemple, la valeur 60 correspond à 1 minute).
+Pour spécifier le retard de numérotation attendu à la connexion, cliquez sur Activer, puis entrez la valeur souhaitée en secondes (par exemple, la valeur 60 correspond à 1 minute).
 
 Si vous ne configurez pas ce paramètre de stratégie, il n’est appliqué à aucun ordinateur et les ordinateurs utilisent leur configuration locale.</string>
       <string id="Netlogon_GcSiteCoverage">Spécifier les sites couverts par les enregistrements DNS SRV du localisateur GC</string>
@@ -337,22 +337,6 @@ Les valeurs autorisées pour ce paramètre entraînent les comportements suivant
 Pour spécifier ce comportement, cliquez sur Activé et entrez une valeur. La plage des valeurs est comprise entre 1 et 2.
 
 Si vous ne configurez pas ce paramètre de stratégie, il n’est appliqué à aucun ordinateur et les ordinateurs utilisent leur configuration locale.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Utiliser des noms d’hôtes DNS en minuscules lors de l’inscription d’enregistrements SRV de contrôleur de domaine</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Ce paramètre de stratégie détermine si les contrôleurs de domaine auxquels ce paramètre est appliqué affichent en minuscules leur nom d’hôte DNS lors de l’inscription des enregistrements SRV.
-
-Si cette option est activée, les contrôleurs de domaine affichent en minuscules leur nom d’hôte DNS lors de l’inscription des enregistrements SRV du contrôleur de domaine. Une tentative de meilleur effort sera effectuée pour supprimer les enregistrements SRV précédemment inscrits qui contiennent des noms d’hôtes DNS à casse mixte. Pour plus d’informations et des procédures de nettoyage manuel potentielles, voir le lien ci-dessous.
-
-Si cette option est désactivée, les contrôleurs de domaine utilisent tel quel le nom d’hôte DNS configuré lors de l’inscription des enregistrements SRV du contrôleur de domaine.
-
-Si cette option n’est pas configurée, les contrôleurs de domaine utilisent par défaut leur configuration locale.
-
-La configuration locale par défaut est activée.
-
-Aucun redémarrage n’est nécessaire pour que les modifications apportées à ce paramètre soient prises en compte.
-
-Des informations supplémentaires sont disponibles sur https://aka.ms/lowercasehostnamesrvrecord
-      </string>
 
     </stringTable>
     <presentationTable>

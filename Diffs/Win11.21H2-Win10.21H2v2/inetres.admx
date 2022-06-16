@@ -2760,6 +2760,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="DisableFlashInIE" class="Both" displayName="$(string.DisableFlashInIE)" explainText="$(string.IE_ExplainDisableFlashInIE)" key="Software\Policies\Microsoft\Internet Explorer" valueName="DisableFlashInIE">
+      <parentCategory ref="IESF_AddOnManagement" />
+      <supportedOn ref="SUPPORTED_IE10WIN8" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="General_Zooming" class="Both" displayName="$(string.General_Zooming)" explainText="$(string.IE_ExplainGeneral_Zooming)" key="Software\Policies\Microsoft\Internet Explorer\ZOOM" valueName="ZoomDisabled">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE7" />
@@ -35454,7 +35464,27 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="EnableGlobalWindowListInIEMode" class="Both" displayName="$(string.EnableGlobalWindowListInIEMode)" explainText="$(string.IE_ExplainEnableGlobalWindowListInIEMode)" key="Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" valueName="EnableGlobalWindowListInIEMode">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="EnableExtendedIEModeHotkeys" class="Both" displayName="$(string.EnableExtendedIEModeHotkeys)" explainText="$(string.IE_ExplainEnableExtendedIEModeHotkeys)" key="Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" valueName="EnableExtendedIEModeHotkeys">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="ResetZoomForDialogInIEMode" class="Both" displayName="$(string.ResetZoomForDialogInIEMode)" explainText="$(string.IE_ExplainResetZoomForDialogInIEMode)" key="Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" valueName="ResetZoomForDialogInIEMode">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE11" />
       <enabledValue>
@@ -35466,7 +35496,7 @@
     </policy>
     <policy name="DisableInternetExplorerApp" class="Both" displayName="$(string.DisableInternetExplorerApp)" explainText="$(string.IE_ExplainDisableInternetExplorerApp)" presentation="$(presentation.NotifyDisableIEOptions)" key="Software\Policies\Microsoft\Internet Explorer\Main">
       <parentCategory ref="InternetExplorer" />
-      <supportedOn ref="SUPPORTED_IE11WIN10" />
+      <supportedOn ref="SUPPORTED_IE11" />
       <elements>
         <enum id="NotifyDisableIEOptions" valueName="NotifyDisableIEOptions"  required="true">
           <item displayName="$(string.NotifyDisableIEOptions_Never)">
@@ -35487,7 +35517,7 @@
         </enum>
       </elements>
     </policy>
-    <policy name="JScriptReplacement" class="Both" displayName="$(string.JScriptReplacement)" explainText="$(string.IE_ExplainJScriptReplacement)" key="Software\Policies\Microsoft\Internet Explorer\Main" valueName="JScriptReplacement">
+    <policy name="DisableIEAppDeprecationNotification" class="Both" displayName="$(string.DisableIEAppDeprecationNotification)" explainText="$(string.IE_ExplainDisableIEAppDeprecationNotification)" key="Software\Policies\Microsoft\Internet Explorer\Main" valueName="DisableIEAppNotificationPolicy">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE11" />
       <enabledValue>

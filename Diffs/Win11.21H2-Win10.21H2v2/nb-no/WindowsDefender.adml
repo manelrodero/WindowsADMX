@@ -30,28 +30,6 @@
 
     Hvis du deaktiverer denne innstillingen, lastes tjenesten for beskyttelse mot skadelig programvare som en oppgave med lav prioritet.</string>
 
-    <string id="MeteredConnectionUpdates">Gjør at Microsoft Defender antivirus kan oppdatere og kommunisere via en forbruks målt tilkobling.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    Deaktivert (standard): 
-    Oppdateringer og kommunikasjon er ikke tillatt over forbruks målte tilkoblinger.
-
-Angitt 
-    Tillat administrerte enheter å oppdatere via forbruks målte tilkoblinger. Data kostnader kan påløpe.</string>
-    <string id="AllowNetworkProtectionOnWinServer">Denne innstillingen styrer om nettverks beskyttelse kan konfigureres til blokkerings-eller overvåkings modus på Windows Server.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    Deaktivert (standard): 
-    Hvis den ikke er konfigurert eller deaktivert, kan ikke nettverks beskyttelse konfigureres til blokkerings-eller overvåkings modus på Windows Server.
-
-Angitt 
-    Hvis den er aktivert, kan administratorer kontrollere om nettverks beskyttelse kan konfigureres i blokkerings-eller overvåkings modus på Windows Server.
-    Vær oppmerksom på at denne konfigurasjonen er avhengig av EnableNetworkProtection-konfigurasjonen. Hvis denne konfigurasjonen er USANN, vil EnableNetworkProtection ignoreres, ellers starter nettverks beskyttelsen på Windows Server, avhengig av verdien av EnableNetworkProtection.</string>
-    <string id="DisableDatagramProcessing">Denne innstillingen styrer data gram behandling for nettverks beskyttelse.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    Aktivert (standard): 
-    Hvis den ikke er konfigurert eller deaktivert, aktiveres datagram-behandling for nettverks beskyttelse.
-
-Angitt 
-    Hvis aktivert, blir datagram deaktivert for nettverks beskyttelse.</string>
     <string id="DisableAutoExclusions">Slå av automatiske utelatelser</string>
     <string id="DisableAutoExclusions_Explain">
         Lar en administrator angi om funksjonen for automatiske utelatelser for lagerstyringsenheter (SKU) for server skal deaktiveres.
@@ -83,11 +61,11 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, er Endpoi
 
     Hvis du aktiverer eller deaktiverer denne policyen, kan det føre til en uventet eller ustøttet virkemåte. Det anbefales at du lar denne policyinnstillingen være ukonfigurert.</string>
     <string id="DisableLocalAdminMerge">Konfigurere sammenslåingsvirkemåte for lokal administrator for lister</string>
-    <string id="DisableLocalAdminMerge_Explain">Denne policy innstillingen styrer om avanserte liste innstillinger som er konfigurert av en lokal administrator, er slått sammen med innstillinger for gruppe policy. Denne innstillingen gjelder for lister, for eksempel trusler og utelatelser.
+    <string id="DisableLocalAdminMerge_Explain">Denne policyinnstillingen kontrollerer om avanserte listeinnstillinger som er konfigurert av en lokal administrator, er slått sammen med innstillinger for Gruppepolicy eller ikke. Denne innstillingen gjelder for lister, for eksempel trusler og utelatelser.
 
-Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, slås unike elementer som er definert i gruppe policy og i innstillinger som er konfigurert av den lokale administratoren, til den resulterende effektive policyen. Hvis det oppstår konflikter, overstyrer gruppe policy innstillingene innstillingene.
+Hvis du aktiverer eller ikke konfigurerer denne innstillingen, blir unike elementer som er definert i Gruppepolicy og i systeminnstillingene som er konfigurert av den lokale administratoren, slått sammen i den endelige policyen. Hvis det oppstår konflikter, overstyrer innstillingene for Gruppepolicy systeminnstillingene.
 
-Hvis du aktiverer denne policy innstillingen, brukes bare elementer som er definert av gruppe policy, i den resulterende effektive policyen. Gruppe policy innstillingene overstyrer innstillingene som er konfigurert av den lokale administratoren.</string>
+Hvis du deaktiverer denne innstillingen, brukes bare elementer som er definert av Gruppepolicy, i den endelige policyen. Innstillinger for Gruppepolicy overstyrer systeminnstillinger som er konfigurert av den lokale administratoren.</string>
     <string id="DisableRoutinelyTakingAction">Deaktiver rutinemessig utbedring</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Med denne policyinnstillingen kan du angi om Microsoft Defender Antivirus skal foreta seg noe automatisk ved alle oppdagede trusler. Handlingen som skal utføres ved en bestemt trussel, bestemmes av kombinasjonen av den policydefinerte handlingen, den brukerdefinerte handlingen og den signaturdefinerte handlingen.
@@ -132,15 +110,11 @@ Hvis du aktiverer denne policy innstillingen, brukes bare elementer som er defin
       Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, hopper proxyen over denne reserverekkefølgen i henhold til rekkefølgen som er angitt ovenfor.
     </string>
     <string id="RandomizeScheduleTaskTimes">Tilfeldig planlagte oppgavetidspunkter</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Med denne policyinnstillingen kan du konfigurere den planlagte skanningen og den planlagte oppdateringen for sikkerhetsintelligens, starttidspunktvindu i timer.
+    <string id="RandomizeScheduleTaskTimes_Explain">Med denne policyinnstillingen kan du aktivere eller deaktivere tilfeldig planlegging av skanningsstarttidspunkt og planlagt starttidspunkt for sikkerhetsintelligensoppdatering. Denne innstillingen brukes til å distribuere ressurspåvirkningen av skanning. Innstillingen kan for eksempel brukes i virtuelle gjestemaskiner som deler en vert, slik at ikke flere virtuelle gjestemaskiner utfører en diskintensiv operasjon samtidig.
 
-    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, begynner planlagte oppgaver på et tilfeldig tidspunkt innen fire timer etter tidspunktet som er angitt i Oppgaveplanlegging.
-    Hvis du aktiverer denne innstillingen, kan du gjøre denne randomiseringsperioden bredere eller smalere. Angi et randomiseringsvindu mellom 1 og 23 timer.</string>
-    <string id="SchedulerRandomizationTime">Konfigurer planlagte oppgavetider for randomiseringsvindu</string>
-    <string id="SchedulerRandomizationTime_Explain">Med denne policyinnstillingen kan du konfigurere den planlagte skannestarttiden og den planlagte oppdateringen for sikkerhetsintelligens, starttidspunktvindu i timer.
+    Hvis du aktiverer eller ikke konfigurerer denne innstillingen, begynner planlagte oppgaver på et tilfeldig tidspunkt med et intervall på 30 minutter før og etter det angitte starttidspunktet.
 
-    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, begynner planlagte oppgaver på et tilfeldig tidspunkt innen et intervall på fire timer etter angitt starttid.
-    Hvis du aktiverer denne innstillingen, må du velge et randomiseringsvindu i timer. Det mulige randomiseringsvinduintervallet er mellom 1 og 23 timer.</string>
+    Hvis du deaktiverer denne innstillingen, begynner planlagte oppgaver på det angitte starttidspunktet.</string>
     <string id="ServiceKeepAlive">Tillate at tjenesten for beskyttelse mot skadelig programvare alltid kjører</string>
     <string id="ServiceKeepAlive_Explain">Med denne policyinnstillingen kan du konfigurere om tjenesten for beskyttelse mot skadelig programvare kjører eller ikke når sikkerhetsintelligensen for antivirus og antispionvare deaktiveres. Det anbefales at denne innstillingen forblir deaktivert.
 
@@ -162,20 +136,12 @@ Hvis du aktiverer denne policy innstillingen, brukes bare elementer som er defin
         Ikke konfigurert:
         Samme som deaktivert.
     </string>
-    <string id="SupportLogLocation">Definer katalogbanen for å kopiere støtteloggfiler</string>
-    <string id="SupportLogLocation_Explain">Med denne policy innstillingen kan du konfigurere mappe banen som filene for støtte loggen skal kopieres til. Verdien for denne innstillingen må være en gyldig mappe bane.
-
-Hvis du aktiverer denne innstillingen, blir logg filene for støtte kopiert til den angitte banen for støtte Logg plassering.
-
-Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, kopieres ikke filene for støtte logger til noen plassering.</string>
     <string id="Exclusions_Extensions">Utvidelsesutelatelser</string>
     <string id="Exclusions_Extensions_Explain">Med denne policyinnstillingen kan du angi en liste over filtyper som skal utelates fra planlagt skanning, tilpasset skanning og sanntidsskanning. Filtyper må legges til under Alternativer for denne innstillingen. Hver oppføring må være oppført som et navn/verdi-par, der navnet må være en strengrepresentasjon av filtypen (for eksempel "obj" eller "lib"). Verdien er ikke i bruk, og det anbefales at den settes til 0.</string>
     <string id="Exclusions_Paths">Baneutelatelser</string>
     <string id="Exclusions_Paths_Explain">Med denne policyinnstillingen kan du deaktivere planlagt skanning og sanntidsskanning for filer i de angitte banene eller for de fullstendige ressursene som er angitt. Baner må legges til under Alternativer for denne innstillingen. Hver oppføring må være oppført som et navn/verdi-par, der navnet må være en strengrepresentasjon av banen eller det fullstendige ressursnavnet. En bane kan for eksempel defineres som c:\Windows for å ekskludere alle filene i denne katalogen. Et fullstendig ressursnavn kan defineres som C:\Windows\App.exe. Verdien er ikke i bruk, og det anbefales at den settes til 0.</string>
     <string id="Exclusions_Processes">Prosessutelatelser</string>
-    <string id="Exclusions_Processes_Explain">Med denne policy innstillingen kan du deaktivere sann tids skanning for alle filer som er åpnet av en hvilken som helst av de angitte prosessene. Denne policyen gjelder ikke for planlagte skanninger. Selve prosessen vil ikke bli utelatt. Hvis du vil utelate prosessen, bruker du bane utelukkelsen. Prosesser må legges til under Alternativer for denne innstillingen. Hver oppføring må være oppført som et navn verdi par, der navnet skal være en streng representasjon av banen til prosess bildet. Vær oppmerksom på at bare kjørbare filer kan utelates. Det kan for eksempel være definert en prosess som: "c:\windows\app.exe". Verdien brukes ikke, og det anbefales at denne settes til 0.</string>
-    <string id="Exclusions_IpAddresses">Ekskluderte Ip-adresser</string>
-    <string id="Exclusions_IpAddresses_Explain">Lar en administrator eksplisitt deaktivere nettverks pakke inspeksjon utført av wdnisdrv på et bestemt sett med IP-adresser.</string>
+    <string id="Exclusions_Processes_Explain">Med denne policyinnstillingen kan du deaktivere planlagt skanning og sanntidsskanning for alle filer som er åpnet av noen av de angitte prosessene. Selve prosessen blir ikke ekskludert. Bruk baneutelatelsen til å ekskludere prosessen. Prosesser må legges til under Alternativer for denne innstillingen. Hver oppføring må være oppført som et navn/verdi-par, der navnet må være en strengrepresentasjon av banen til prosessavbildningen. Vær oppmerksom på at bare kjørbare filer kan ekskluderes. En prosess kan for eksempel defineres som c:\windows\app.exe. Verdien er ikke i bruk, og det anbefales at den settes til 0.</string>
     <string id="Nis_DisableProtocolRecognition">Aktivere protokollgjenkjenning</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Med denne policyinnstillingen kan du konfigurere protokollgjenkjenning for nettverksbeskyttelse mot utnyttelser av kjente sårbarheter.
 
@@ -202,14 +168,6 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, kopieres ikke f
     Hvis du aktiverer denne innstillingen, blir elementer fjernet fra karantenemappen etter det angitte antallet dager.
 
     Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, blir elementer beholdt i karantenemappen på ubestemt tid, og de blir ikke fjernet automatisk.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">Aktiver feilsøkingsskanning for skript</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">Med denne policy innstillingen kan du konfigurere skript skanning.
-
-Hvis du aktiverer eller ikke konfigurerer denne innstillingen, blir skript skanning aktivert.
-
-Hvis du deaktiverer denne innstillingen, blir skript skanning deaktivert.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Aktivere overvåking av virkemåte</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Denne policyinnstillingen tillater konfigurasjon av overvåking av virkemåte.
 
@@ -443,6 +401,12 @@ Hvis du deaktiverer denne innstillingen, blir skript skanning deaktivert.</strin
     Hvis du aktiverer eller ikke konfigurerer denne innstillingen, aktiveres heuristikk.
 
     Hvis du deaktiverer denne innstillingen, deaktiveres heuristikk.</string>
+    <string id="Scan_DisablePackedExeScanning">Skanne pakkede kjørbare filer</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">Med denne policyinnstillingen kan du konfigurere skanning av pakkede kjørbare filer. Det anbefales at denne typen skanning forblir aktivert.
+
+    Hvis du aktiverer eller ikke konfigurerer denne innstillingen, skannes pakkede kjørbare filer.
+
+    Hvis du deaktiverer innstillingen, skannes ikke pakkede kjørbare filer.</string>
     <string id="Scan_DisableRemovableDriveScanning">Skanne flyttbare stasjoner</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Med denne policyinnstillingen kan du angi om du skal søke etter skadelig programvare og uønsket programvare eller ikke i innholdet på flyttbare stasjoner, for eksempel USB-flash-enheter, når du kjører et fullstendig søk.
 
@@ -510,11 +474,11 @@ Hvis du deaktiverer denne innstillingen, blir skript skanning deaktivert.</strin
 
     Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, beholdes elementene i skanningsloggmappen i standard antallet dager.</string>
     <string id="Scan_QuickScanInterval">Angi intervallet for hurtigskanninger per dag</string>
-    <string id="Scan_QuickScanInterval_Explain">Med denne policy innstillingen kan du angi et intervall for å utføre en hurtig skanning. Tids verdien representeres som antallet timer mellom hurtig skanninger. Gyldige verdier varierer fra 1 (hver time) til 24 (én gang daglig). Hvis verdien er satt til null, vil hurtig skanninger for intervallet ikke forekomme. Som standard er denne innstillingen satt til 0.
+    <string id="Scan_QuickScanInterval_Explain">Med denne policyinnstillingen kan du angi intervallet for hurtigskanninger. Tidsverdien representeres som antallet timer mellom hurtigskanninger. Gyldige verdier varierer fra 1 (hver time) til 24 (én gang daglig). Hvis innstillingen er satt til 0, finnes det ikke noe intervall for hurtigskanninger. Som standard er denne innstillingen satt til 0.
 
-Hvis du aktiverer denne innstillingen, kjøres en hurtig skanning med det angitte intervallet.
+    Hvis du aktiverer denne innstillingen, kjøres en hurtigskanning med det angitte intervallet.
 
-Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, vil hurtig skanning kontrollert av denne konfigurasjonen ikke kjøres.</string>
+    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, kjører en hurtigskanning på standardtidspunktet.</string>
     <string id="Scan_ScanOnlyIfIdle">Starte den planlagte skanningen bare når datamaskinen er slått på, men ikke er i bruk</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Med denne policyinnstillingen kan du konfigurere at planlagte skanninger starter bare når datamaskinen er på, men ikke er i bruk.
 
@@ -558,11 +522,11 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, vil hurtig skan
     <string id="Scan_ScheduleDay_7">Fredag</string>
     <string id="Scan_ScheduleDay_8">Lørdag</string>
     <string id="Scan_ScheduleQuickScantime">Angi tidspunktet for en daglig hurtigskanning</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Med denne policy innstillingen kan du angi når på dagen en daglig hurtig skanning skal utføres. Tids verdien representeres som antallet minutter etter midnatt (00:00).  120 (0 x 78) tilsvarer for eksempel 02:00 AM. Som standard er denne innstillingen satt til deaktivert. Tids planen er basert på lokal tid på data maskinen der skanningen utføres.
+    <string id="Scan_ScheduleQuickScantime_Explain">Med denne policyinnstillingen kan du angi når på dagen en daglig hurtigskanning skal kjøres. Tidsverdien representeres som antallet minutter etter midnatt (00:00).  120 (0 x 78) tilsvarer for eksempel 02:00. Som standard er denne innstillingen satt til klokkeslettverdien 02:00. Planen er basert på lokal tid på datamaskinen der skanningen utføres.
 
-Hvis du aktiverer denne innstillingen, kjører en daglig hurtig skanning på det angitte tidspunktet.
+    Hvis du aktiverer denne innstillingen, kjører en daglig hurtigskanning på det angitte tidspunktet.
 
-Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, kjøres ikke daglig hurtig skanning, som er kontrollert av denne konfigurasjonen.</string>
+    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, kjører en daglig hurtigskanning på standardtidspunktet.</string>
     <string id="Scan_ScheduleTime">Angi når på dagen en planlagt skanning skal kjøres</string>
     <string id="Scan_ScheduleTime_Explain">Med denne policyinnstillingen kan du angi når på dagen en planlagt skanning skal kjøres. Tidsverdien representeres som antallet minutter etter midnatt (00:00).  120 (0 x 78) tilsvarer for eksempel 02:00. Som standard er denne innstillingen satt til klokkeslettverdien 02:00. Planen er basert på lokal tid på datamaskinen der skanningen utføres.
 
@@ -585,17 +549,17 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, kjøres ikke da
         Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, blir det ikke gjort endringer i CPU-prioritet for planlagte søk.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definer antall dager før sikkerhetsintelligens for spionprogram anses som utdatert</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Med denne policy innstillingen kan du definere antallet dager som må gå før sikkerhets intelligensen for spion programmer anses som utdatert. Hvis sikkerhets intelligensen er utdatert, kan denne tilstanden utløse flere handlinger, inkludert gå tilbake til en alternativ oppdaterings kilde eller visning av et advarsels ikon i bruker grensesnittet. Som standard er denne verdien satt til 7 dager.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Med denne policyinnstillingen kan du definere antallet dager som må forløpe før sikkerhetsintelligensen for spionprogram anses som utdatert. Hvis sikkerhetsintelligensen anses å være utdatert, kan det hende denne tilstanden utløser flere handlinger, inkludert et tilbakefall til en alternativ oppdateringskilde eller visning av et advarselsikon i brukergrensesnittet. Som standard er verdien satt til 14 dager.
 
-Hvis du aktiverer denne innstillingen, anses sikkerhets intelligensen for spion programmer som utdatert etter at antallet dager som er angitt, har forløpt uten at en oppdatering er fullført.
+    Hvis du aktiverer denne innstillingen, anses sikkerhetsintelligensen for spionprogram som utdatert etter at antallet dager som er angitt, har forløpt uten at en oppdatering er gjennomført.
 
-Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses sikkerhets intelligensen for spion programmer som utdatert etter at standard antallet dager har forløpt uten at en oppdatering er fullført.</string>
+    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses sikkerhetsintelligensen for spionprogram som utdatert etter at standard antallet dager har forløpt uten at en oppdatering er gjennomført.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definer antall dager før virussikkerhetsintelligens anses som utdatert</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Med denne policy innstillingen kan du definere hvor mange dager sikkerhets intelligensen må gå før virus sikkerhets intelligens anses som utdatert. Hvis sikkerhets intelligensen er utdatert, kan denne tilstanden utløse flere handlinger, inkludert gå tilbake til en alternativ oppdaterings kilde eller visning av et advarsels ikon i bruker grensesnittet. Som standard er denne verdien satt til 7 dager.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Med denne policyinnstillingen kan du definere antallet dager som må forløpe før virussikkerhetsintelligensen anses som utdatert. Hvis sikkerhetsintelligensen anses å være utdatert, kan det hende denne tilstanden utløser flere handlinger, inkludert et tilbakefall til en alternativ oppdateringskilde eller visning av et advarselsikon i brukergrensesnittet. Som standard er verdien satt til 14 dager.
 
-Hvis du aktiverer denne innstillingen, anses virus sikkerhets intelligens som utdatert etter at antallet dager som er angitt, har forløpt uten at en oppdatering er fullført.
+    Hvis du aktiverer denne innstillingen, anses virussikkerhetsintelligensen som utdatert etter at antallet dager som er angitt, har forløpt uten at en oppdatering er gjennomført.
 
-Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virus sikkerhets intelligensen som utdatert etter at standard antallet dager har forløpt uten at en oppdatering er fullført.</string>
+    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virussikkerhetsintelligens som utdatert etter at standard antallet dager har forløpt uten at en oppdatering er gjennomført.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definer delte filressurser for nedlasting av sikkerhetsintelligensoppdateringer</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Med denne innstillingen kan du konfigurere UNC-fildelingskilder for nedlasting av sikkerhetsintelligensoppdateringer. Kilder blir kontaktet i den angitte rekkefølgen. Verdien for denne innstillingen bør angis som en datakanalatskilt streng som nummererer kildene for en sikkerhetsintelligensoppdatering. Eksempel: {\\unc1 | \\unc2 }. Listen er som standard tom.
 
@@ -742,22 +706,22 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virus sik
     <string id="SpynetReporting">Bli med i Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Med denne policyinnstillingen kan du bli med i Microsoft MAPS. Microsoft MAPS er et Internett-basert fellesskap som hjelper deg å velge hvordan du skal svare på potensielle trusler. Fellesskapet hjelper også til med å stanse spredning av nye infeksjoner fra skadelig programvare.
 
-    Du kan velge å sende grunnleggende informasjon eller tilleggsinformasjon om identifisert programvare. Mer informasjon hjelper Microsoft med å opprette ny sikkerhetsintelligens og bidrar til å beskytte datamaskinen. Denne informasjonen kan inneholde opplysninger om for eksempel hvor identifiserte elementer befinner seg på datamaskinen hvis skadelig programvare ble fjernet. Informasjonen samles inn og sendes automatisk. I noen tilfeller kan det hende at personlige opplysninger sendes til Microsoft utilsiktet. Microsoft vil imidlertid ikke bruke denne informasjonen til å identifisere deg eller kontakte deg.
+ Du kan velge å sende grunnleggende informasjon eller tilleggsinformasjon om identifisert programvare. Mer informasjon hjelper Microsoft med å opprette ny sikkerhetsinnsikt og bidrar til å beskytte datamaskinen. Denne informasjonen kan inneholde opplysninger om for eksempel hvor identifiserte elementer ble funnet på datamaskinen hvis skadelig programvare ble fjernet. Informasjonen samles inn og sendes automatisk. I noen tilfeller kan det hende at personlige opplysninger sendes til Microsoft utilsiktet. Microsoft vil imidlertid ikke bruke denne informasjonen til å identifisere deg eller kontakte deg.
 
-    Følgende alternativer finnes:
-    (0x0) Deaktivert (standard)
-    (0x1) Grunnleggende medlemskap
-    (0x2) Avansert medlemskap
+ Følgende alternativer finnes:
+ (0x0) Deaktivert (standard)
+ (0x1) Grunnleggende medlemskap
+ (0x2) Avansert medlemskap
 
-    Grunnleggende medlemskap sender grunnleggende informasjon til Microsoft om programvare som har blitt oppdaget, inkludert hvor programvaren kom fra, handlingene du bruker eller som trer i kraft automatisk, og om handlingene var vellykkede.
+ Grunnleggende medlemskap sender grunnleggende informasjon til Microsoft om programvare som har blitt oppdaget, inkludert hvor programvaren kom fra, handlingene du bruker eller som trer i kraft automatisk, og om handlingene var vellykket.
 
-    I tillegg til grunnleggende informasjon sender Avansert medlemskap mer informasjon til Microsoft om skadelig programvare, spionprogram og potensielt uønsket programvare, inkludert plasseringen av programvaren, filnavn, hvordan programvaren fungerer, og hvordan den har påvirket datamaskinen.
+ I tillegg til grunnleggende informasjon sender Avansert medlemskap mer informasjon til Microsoft om skadelig programvare, spionprogrammer og potensielt uønsket programvare, inkludert plasseringen til programvaren, filnavn, hvordan programvaren fungerer, og hvordan den har påvirket datamaskinen.
 
-    Hvis du aktiverer denne innstillingen, blir du med i Microsoft MAPS med det angitte medlemskapet.
+ Hvis du aktiverer denne innstillingen, blir du med i Microsoft MAPS med det angitte medlemskapet.
 
-    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, blir du ikke med i Microsoft MAPS.
-  
-    I Windows 10 er ikke grunnleggende medlemskap lenger tilgjengelig, og enheten registreres derfor med avansert medlemskap hvis verdien settes til 1 eller 2.</string>
+ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, blir du ikke med i Microsoft MAPS.
+ 
+ I Windows 10 er ikke grunnleggende medlemskap lenger tilgjengelig, og enheten registreres derfor med avansert medlemskap hvis verdien settes til 1 eller 2.</string>
     <string id="SpynetReporting_Disabled">Deaktivert</string>
     <string id="SpynetReporting_Basic">Grunnleggende MAPS</string>
     <string id="SpynetReporting_Advanced">Avansert MAPS</string>
@@ -884,43 +848,36 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virus sik
     </string>
     <string id="ExploitGuard_ASR_Rules">Konfigurer Attack Surface Reduction-regler</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Angi tilstand for hver ASR-regel (Attack Surface Reduction).
+    Angi statusen for hver ASR-regel (Attack Surface Reduction).
 
- Etter at du har aktivert denne innstillingen, kan du angi hver regel til følgende i alternativer-delen:
- - Blokker: regelen vil bli brukt
-  - Overvåkingsmodus: Hvis regelen vanligvis fører til en hendelse, den vil bli tatt opp (selv om regelen ikke vil bli brukt)
- - Av: regelen vil ikke bli aktivert
- - Ikke konfigurert: regelen aktiveres med standardverdier
- - Advarsel: regelen vil bli brukt, og sluttbrukeren vil ha mulighet til å omgå blokkeringen
+        Når du har aktivert denne innstillingen, kan du angi hver regel for følgende i Alternativer-delen:
+    – Blokker: Regelen blir tatt i bruk
+        – Overvåk: Hvis regelen normalt forårsaker en hendelse, blir den registrert (selv om regelen faktisk ikke blir tatt i bruk)
+        – Av: Regelen blir ikke tatt i bruk
 
- Med mindre ASR-regelen er deaktivert blir et undereksempel på overvåkingshendelser hentet for ASR-regler der verdien ikke er konfigurert.
+        Aktivert:
+        Angi statusen for hver ASR-regel under Alternativer-delen for denne innstillingen.
+        Angi hver regel på en ny linje som et navn-verdi-par:
+        – Navn-kolonne: Angi en gyldig ID for ASR-regel
+        – Verdi-kolonne: Angi status-ID-en som er knyttet til statusen du vil angi for den tilknyttede regelen
 
- Aktivert:
-  Angi statusen for hver ASR-regel under Alternativer-delen for denne innstillingen.
- Skriv inn alle reglene på en ny linje som navn/verdi-par:
- - Navnekolonne: Skriv inn en gyldig ASR-regel-ID
-- Verdikolonne: Skriv inn status-ID-en som er forbundet med statusen du vil angi for den tilknyttede regelen
+        Følgende status-ID-er er tillatt under verdi-kolonnen:
+        – 1 (Blokker)
+        – 0 (Av)
+        – 2 (Overvåk)
 
- Følgende status-ID-er tillates under Verdikolonnen:
- - 1 (Blokkere)
- - 0 (Av)
- - 2 (Revisjon)
- - 5 (Ikke konfigurert)
- - 6 (Advarsel)
+    Eksempel:
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
+    Deaktivert:
+    Ingen ASR-regler blir konfigurert.
 
- Eksempel :
- XXXXXXXX-xxxx-xxxx-xxxx-xxxxxxxxxxxx 0
- XXXXXXXX-xxxx-xxxx-xxxx-xxxxxxxxxxxx 1
- XXXXXXXX-xxxx-xxxx-xxxx-xxxxxxxxxxxx 2
+        Ikke konfigurert:
+        Samme som Deaktivert.
 
- Deaktivert:
- Ingen ASR-regler vil bli konfigurert.
-
- Ikke konfigurert:
- Samme som deaktivert.
-
- Du kan utelate mapper eller filer i GP-innstillingen “”Ekskludere filer og baner fra angrepsoverflate””.
+        Du kan utelate mapper eller filer og ressurser i gruppepolicyinnstillingen Utelat mapper eller filer og ressurser.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Konfigurer kontrollert mappetilgang</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -1047,11 +1004,6 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virus sik
         <label>Definere proxy-server for tilkobling til nettverket</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>Definer katalogbanen for å kopiere støtteloggfiler</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Utvidelsesutelatelser</listBox>
     </presentation>
@@ -1060,9 +1012,6 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virus sik
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Prosessutelatelser</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">Ekskluderte IP-adresser</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Angi flere definisjonssett for undersøkelse av nettverkstrafikk</listBox>
@@ -1131,10 +1080,10 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virus sik
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Angi når på dagen en planlagt skanning skal kjøres</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definer antall dager før sikkerhetsintelligens for spionprogram anses som utdatert</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definer antall dager før sikkerhetsintelligens for spionprogram anses som utdatert</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definer antall dager før virussikkerhetsintelligens anses som utdatert</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definer antall dager før virussikkerhetsintelligens anses som utdatert</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1219,9 +1168,6 @@ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, anses virus sik
     <textBox refId="DeviceControl_PolicyRules">
         <label>Definer policyreglene her</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Angi vinduet for randomisering av planlegger i antall timer.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

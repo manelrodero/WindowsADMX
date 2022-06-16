@@ -298,6 +298,7 @@ Si deshabilita esta configuración de directiva para una aplicación o un proces
 Si no establece esta configuración de directiva, se usan los valores actuales de la acción de direcciones URL del proceso o aplicación de la lista.</string>
       <string id="FavImportExport">Deshabilitar el asistente para importar y exportar configuraciones</string>
       <string id="GeolocationDisable">Desactivar geoubicación del explorador</string>
+      <string id="DisableFlashInIE">Desactivar Adobe Flash en Internet Explorer e impedir que las aplicaciones utilicen la tecnología de Internet Explorer para crear instancias de objetos Flash</string>
       <string id="File_NoBrowserClose">Menú Archivo: deshabilitar el cierre de ventanas del explorador web y del Explorador de Windows</string>
       <string id="File_NoBrowserSaveAs">Menú Archivo: deshabilitar la opción de menú Guardar como</string>
       <string id="File_NoBrowserSaveWebComplete">Menú Archivo: deshabilitar Guardar como página web completa</string>
@@ -722,6 +723,13 @@ Si habilita esta configuración de directiva, se desactiva la compatibilidad con
 Si deshabilita esta configuración de directiva, se activa la compatibilidad con geoubicación del explorador.
 
 Si no establece esta configuración de directiva, la compatibilidad con geoubicación del explorador puede activarse o desactivarse en la pestaña Privacidad de Opciones de Internet.</string>
+      <string id="IE_ExplainDisableFlashInIE">Esta configuración de directiva desactiva Adobe Flash en Internet Explorer e impide que las aplicaciones usen la tecnología de Internet Explorer para crear instancias de objetos Flash.
+
+Si habilitas esta configuración de directiva, se desactiva Flash para Internet Explorer y las aplicaciones no pueden usar la tecnología de Internet Explorer para crear instancias de objetos Flash. En el cuadro de diálogo Administrar complementos, el estado de Flash será 'Deshabilitado' y los usuarios no podrán habilitar Flash. Si habilitas esta configuración de directiva, Internet Explorer ignorará las configuraciones que se realicen para Adobe Flash a través de las configuraciones de directiva "Lista de complementos" y "Denegar complementos a menos que se permitan específicamente en la Lista de complementos".
+
+Si deshabilitas esta configuración de directiva o no la estableces, se activa Flash para Internet Explorer y las aplicaciones pueden usar la tecnología de Internet Explorer para crear instancias de objetos Flash. Los usuarios pueden habilitar o deshabilitar Flash en el cuadro de diálogo Administrar complementos.
+
+Ten en cuenta que aún se podría deshabilitar Adobe Flash a través de las configuraciones de directiva "Lista de complementos" y "Denegar complementos a menos que se permitan específicamente en la Lista de complementos", incluso si esta configuración de directiva no se ha establecido o se ha deshabilitado. Sin embargo, si se deshabilita Adobe Flash a través de las configuraciones de directiva "Lista de complementos" y "Denegar complementos a menos que se permitan específicamente en la Lista de complementos" en lugar de hacerlo a través de esta configuración de directiva, todas las aplicaciones que usen la tecnología de Internet Explorer para crear instancias de objetos Flash podrán seguir haciéndolas. Para obtener más información, consulta las "Configuraciones de directiva de grupo en Internet Explorer 10" en la biblioteca de TechNet de Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Impide que el usuario cierre Microsoft Internet Explorer y el Explorador de archivos.
 
 Si habilita esta directiva, el comando Cerrar del menú Archivo aparecerá atenuado.
@@ -3889,7 +3897,7 @@ Si deshabilita o no establece esta configuración de directiva, los usuarios pue
 Si activa esta configuración, los usuarios podrán ver y usar la opción del modo de empresa desde el menú Herramientas. Si activa esta configuración pero no indica una ubicación para los informes, el modo de empresa seguirá estando disponible para los usuarios, pero usted no recibirá ningún informe.
 
 Si deshabilita esta configuración de directiva o no la define, la opción de menú no aparecerá y los usuarios no podrán ejecutar los sitios web en el modo de empresa.</string>
-      <string id="RestrictInternetExplorer">Enviar todos los sitios que no están incluidos en la lista de sitios del modo de empresa a Microsoft Edge.</string>
+      <string id="RestrictInternetExplorer">Enviar todos los sitios que no está incluidos en la lista de sitios del modo de empresa a Microsoft Edge.</string>
       <string id="IE_ExplainRestrictInternetExplorer">Esta configuración permite decidir si se deben abrir todos los sitios que no están incluidos en la lista de sitios de modo de empresa en Microsoft Edge. Si usas esta configuración, también debes activar la configuración de directiva Plantillas administrativas\Componentes de Windows\Internet Explorer\Usar la lista de sitios web de IE del modo de empresa y debes incluir al menos un sitio en la lista de sitios del modo de empresa.
 
 Si habilitas esta configuración, se abren automáticamente todos los sitios que no están incluidos en la lista de sitios del modo de empresa en Microsoft Edge.
@@ -3909,19 +3917,19 @@ Si deshabilitas o no configuras esta opción, se aplicará el comportamiento pre
 Si tanto la actualización de Windows Update para la siguiente versión de Microsoft Edge* como el canal estable Microsoft Edge están instalados, se producen los comportamientos siguientes:
 - Si deshabilitas o no configuras esta directiva, se usa el canal estable Microsoft Edge. Este es el comportamiento predeterminado.
 - Si habilitas esta directiva, puedes especificar en la configuración que los sitios redirigidos se abran en un máximo de tres de los canales siguientes, donde:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versión 77 o posterior
-    3 = Microsoft Edge Dev versión 77 o posterior
-    4 = Microsoft Edge Canary versión 77 o posterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versión 77 o posterior
+ 3 = Microsoft Edge Dev versión 77 o posterior
+ 4 = Microsoft Edge Canary versión 77 o posterior
 
 Si la actualización de Windows Update para la siguiente versión de Microsoft Edge* o el canal estable Microsoft Edge no están instalados, se producen los comportamientos siguientes:
 - Si deshabilitas o no configuras esta directiva, se usará Microsoft Edge versión 45 o una versión anterior automáticamente. Este es el comportamiento predeterminado.
 - Si habilitas esta directiva, puedes especificar en la configuración que los sitios redirigidos se abran en un máximo de tres de los canales siguientes, donde:
-    0 = Microsoft Edge versión 45 o anterior
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versión 77 o posterior
-    3 = Microsoft Edge Dev versión 77 o posterior
-    4 = Microsoft Edge Canary versión 77 o posterior
+ 0 = Microsoft Edge versión 45 o anterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versión 77 o posterior
+ 3 = Microsoft Edge Dev versión 77 o posterior
+ 4 = Microsoft Edge Canary versión 77 o posterior
 
 *Para obtener más información acerca de la actualización de Windows Update para la siguiente versión de Microsoft Edge; p. ej., cómo deshabilitarla, consulta https://go.microsoft.com/fwlink/?linkid=2102115. Esta actualización solo se aplica a Windows 10 versión 1709 o superior.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3952,12 +3960,30 @@ Si habilita esta Directiva, "Guardar destino como" se mostrará en el menú cont
 Si deshabilita o no establece esta configuración de Directiva, "Guardar destino como" no se mostrará en el menú contextual del modo de Internet Explorer.
 
 Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Habilitar lista de ventanas globales en modo Internet Explorer</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">Esta configuración permite que Internet Explorer modo use la lista global de ventanas que permite compartir el estado con otras aplicaciones.
+La configuración solo surtirá efecto cuando Internet Explorer 11 esté deshabilitado como explorador independiente.
+
+Si habilita esta directiva, Internet Explorer modo usará la lista de ventanas globales.
+
+Si deshabilita o no configura esta directiva, Internet Explorer modo seguirá manteniendo una lista de ventanas independiente.
+
+Para obtener más información sobre Internet Explorer modo, consulte https://go.microsoft.com/fwlink/?linkid=2102921
+Para obtener más información sobre cómo deshabilitar Internet Explorer 11 como explorador independiente, consulte https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Habilitar teclas de acceso rápido extendidas en el modo de Internet Explorer</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">Esta configuración de directiva permite a los administradores habilitar las teclas de acceso rápido extendidas del modo de Microsoft Edge Internet Explorer, como "Ctrl+S" para tener la funcionalidad "Guardar como".
 
 Si habilita esta directiva, la funcionalidad de teclas de acceso rápido extendidas se habilitará en el modo de Internet Explorer y funcionará del mismo modo que Internet Explorer.
 
 Si deshabilita o no configura esta directiva, las teclas de acceso rápido extendidas no funcionarán en el modo de Internet Explorer.
+
+Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Restablecer zoom predeterminado para cuadros de diálogo HTML en modo Internet Explorer</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Esta configuración de directiva permite a los administradores restablecer el zoom a los valores predeterminados para los cuadros de diálogo HTML en modo Internet Explorer.
+
+Si habilita esta directiva, el zoom de un cuadro de diálogo HTML en Internet Explorer modo no se propagará desde su página principal.
+
+Si deshabilita o no configura esta directiva, el zoom de un cuadro de diálogo HTML en Internet Explorer modo se establecerá en función del zoom de su página principal.
 
 Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Deshabilitar Internet Explorer 11 como un explorador independiente</string>
@@ -3970,15 +3996,15 @@ Si habilitas esta directiva:
 - Invalida cualquier otra directiva que redirija a Internet Explorer 11.
 
 Si deshabilitas o no configuras esta directiva, todos los sitios se abrirán con la configuración actual del explorador activo. Nota: para que esta directiva surta efecto, es necesario instalar el Canal estable de Microsoft Edge.</string>
+      <string id="DisableIEAppDeprecationNotification">Ocultar notificación de retirada de Internet Explorer 11</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">Esta configuración de directiva le permite administrar si se muestra el aviso de la barra de notificación que indica que Internet Explorer se va a retirar. De forma predeterminada, la barra de notificación se muestra en Internet Explorer 11.
+
+Si habilita esta configuración de directiva, la barra de notificación no se mostrará en Internet Explorer 11.
+
+Si deshabilita o no establece esta configuración de directiva, la barra de notificación se mostrará en Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Nunca</string>
       <string id="NotifyDisableIEOptions_Always">Siempre</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Una vez por usuario</string>
-      <string id="JScriptReplacement">Reemplace JScript cargando JScript9Legacy en lugar de JScript a través de MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">Esta configuración de Directiva especifica si se cargan JScript o JScript9Legacy para invocaciones basadas en MSHTML/WebOC.
-      
-Si habilita esta configuración de Directiva, JScript9Legacy se cargará en situaciones en las que se cree una instancia de JScript.
-
-Si deshabilita esta Directiva o no la configura, se utilizará JScript.</string>
       <string id="VerMgmtDisable">Desactivar el bloqueo de controles ActiveX obsoletos para Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Esta configuración de directiva determina si Internet Explorer bloquea determinados controles ActiveX obsoletos. Nunca se bloquean los controles ActiveX obsoletos en la zona de Intranet.
 

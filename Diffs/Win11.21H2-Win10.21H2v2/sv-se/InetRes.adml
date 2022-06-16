@@ -270,7 +270,7 @@ Om du aktiverar den här principinställningen kan du ange en lista med webbplat
 
 Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan du inte skapa en standardundantagslista för blockering av popup-fönster.
 
-Obs! Du kan hindra användaren från att lägga till eller ta bort webbplatser i undantagslistan genom att aktivera principen Inaktivera hantering av listan över tillåtna popup-fönster.</string>
+Obs! Du kan hindra användaren från att lägga till eller ta bort webbplatser i undantagslistan genom att aktivera principen Inaktivera listan för hantering av tillåtna popup-fönster.</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">Med den här principinställningen kan du inaktivera meddelanden när ett skript som körs i en process på datorn försöker utföra en åtgärd som involverar Urklipp (ta bort, kopiera eller klistra in).
 
 Om du aktiverar den här principinställningen visas inget meddelande för användaren när ett skript som körs i en process på datorn utför en åtgärd som involverar Urklipp. Det betyder att om inställningen Fråga har aktiverats för zonens beteende så kringgås inställningen när principinställningen aktiveras.
@@ -298,6 +298,7 @@ Om du inaktiverar den här principinställningen för ett program eller en proce
 Om du inte konfigurerar den här principinställningen tillämpas de aktuella värdena för URL-åtgärden för ett program eller en process i listan.</string>
       <string id="FavImportExport">Inaktivera guiden Importera/exportera inställningar</string>
       <string id="GeolocationDisable">Inaktivera geolokalisering i webbläsaren</string>
+      <string id="DisableFlashInIE">Inaktivera Adobe Flash i Internet Explorer och hindra program från att använda tekniken i Internet Explorer för att instantiera Flash-objekt</string>
       <string id="File_NoBrowserClose">Arkiv-menyn: Inaktivera stängning av fönster för webbläsaren och Utforskaren</string>
       <string id="File_NoBrowserSaveAs">Arkiv-menyn: Inaktivera menyalternativet Spara som</string>
       <string id="File_NoBrowserSaveWebComplete">Arkiv-menyn: Inaktivera Spara som hel webbsida</string>
@@ -725,6 +726,13 @@ Om du aktiverar den här principinställningen, inaktiveras stöd för geolokali
 Om du inaktiverar den här principinställningen, aktiveras stöd för geolokalisering i webbläsaren.
 
 Om du inte konfigurerar den här principinställningen kan användaren aktivera eller inaktivera stöd för geolokalisering i webbläsaren på fliken Sekretess under Internetalternativ.</string>
+      <string id="IE_ExplainDisableFlashInIE">Med den här principinställningen inaktiveras Adobe Flash i Internet Explorer och program hindras från att använda tekniken i Internet Explorer för att instantiera Flash-objekt.
+
+Om du aktiverar den här principinställningen inaktiveras Flash i Internet Explorer och program hindras från att använda tekniken i Internet Explorer för att instantiera Flash-objekt. I dialogrutan Hantera tillägg är statusen för Flash Inaktiverat och användarna kan inte aktivera Flash. Om du aktiverar den här principinställningen ignoreras inställningarna för Adobe Flash i Internet Explorer via principinställningarna Lista över tillägg och Blockera alla tillägg förutom de som uttryckligen anges i Lista över tillägg.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen aktiveras Flash i Internet Explorer och program kan använda tekniken i Internet Explorer för att instantiera Flash-objekt. Användarna kan aktivera eller inaktivera Flash i dialogrutan Hantera tillägg.
+
+Observera att Adobe Flash fortfarande kan inaktiveras via principinställningarna Lista över tillägg och Blockera alla tillägg förutom de som uttryckligen anges i Lista över tillägg även om den här principinställningen är inaktiverad eller inte konfigurerad. Men om Adobe Flash inaktiveras via principinställningarna Lista över tillägg och Blockera alla tillägg förutom de som uttryckligen anges i Lista över tillägg och inte via den här principinställningen kan alla program som använder tekniken i Internet Explorer för att instantiera Flash-objekt göra det. Mer information finns i avsnittet Grupprincipinställningar i Internet Explorer 10 i TechNet-biblioteket om Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Hindrar användaren från att stänga Internet Explorer och Utforskaren.
 
 Om du aktiverar den här principen är kommandot Stäng på Arkiv-menyn nedtonat.
@@ -3919,19 +3927,19 @@ Om du inaktiverar eller låter bli att konfigurera inställningen visas ingen ex
 Om både Windows Update för nästa version av Microsoft Edge* och Microsoft Edge Stable-kanalen är installerade sker följande:
 - Om du inaktiverar eller låter bli att konfigurera principen så används Microsoft Edge Stable-kanalen. Detta sker som standard.
 - Om du aktiverar principen kan du ställa in att omdirigerade webbplatser ska öppnas i upp till tre av följande kanaler:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta version 77 eller senare
-    3 = Microsoft Edge Dev version 77 eller senare
-    4 = Microsoft Edge Canary version 77 eller senare
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta version 77 eller senare
+ 3 = Microsoft Edge Dev version 77 eller senare
+ 4 = Microsoft Edge Canary version 77 eller senare
 
 Om Windows Update för nästa version av Microsoft Edge* eller Microsoft Edge Stable-kanalen inte är installerade sker följande:
 - Om du inaktiverar eller låter bli att konfigurera principen så används Microsoft Edge version 45 eller tidigare automatiskt. Detta sker som standard.
 - Om du aktiverar principen kan du ställa in att omdirigerade webbplatser ska öppnas i upp till tre av följande kanaler:
-    0 = Microsoft Edge version 45 eller tidigare
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta version 77 eller senare
-    3 = Microsoft Edge Dev version 77 eller senare
-    4 = Microsoft Edge Canary version 77 eller senare
+ 0 = Microsoft Edge version 45 eller tidigare
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta version 77 eller senare
+ 3 = Microsoft Edge Dev version 77 eller senare
+ 4 = Microsoft Edge Canary version 77 eller senare
 
 *Mer information om Windows Update för nästa version av Microsoft Edge samt hur du inaktiverar det hittar du i https://go.microsoft.com/fwlink/?linkid=2102115. Den här uppdateringen gäller endast Windows 10 version 1709 och senare.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3957,17 +3965,35 @@ Mer information om hur du använder den här principen ihop med andra relaterade
       <string id="AllowSaveTargetAsInIEMode">Tillåt "Spara mål som" i Internet Explorer-läge</string>
       <string id="IE_ExplainAllowSaveTargetAsInIEMode">Med den här princip inställningen kan administratörer aktivera snabb menyn "Spara mål som" i Internet Explorer-läge.
 
-Om du aktiverar den här principen visas "Spara mål som" i snabb menyn för Internet Explorer och fungerar på samma sätt som i Internet Explorer.
+Om du aktiverar den här principen visas "Spara mål som" i snabb menyn i Internet Explorer och fungerar på samma sätt som i Internet Explorer.
 
-Om du inaktiverar eller låter bli att konfigurera den här princip inställningen visas inte "Spara mål som" i snabb menyn för Internet Explorer-läge.
+Om du inaktiverar eller låter bli att konfigurera den här princip inställningen visas inte Spara mål som i Internet Explorer-lägets snabb meny.
 
 Mer information finns i https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Aktivera global fönsterlista i Internet Explorer-läge</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">Med den här inställningen kan Internet Explorer läge använda den globala fönsterlistan som aktiverar delningstillstånd med andra program.
+Inställningen börjar bara gälla när Internet Explorer 11 är inaktiverad som fristående webbläsare.
+
+Om du aktiverar den här principen används den globala fönsterlistan i Internet Explorer läge.
+
+Om du inaktiverar eller låter bli att konfigurera den här principen fortsätter Internet Explorer läget att behålla en separat fönsterlista.
+
+Mer information om Internet Explorer läge finns i https://go.microsoft.com/fwlink/?linkid=2102921
+Mer information om hur du inaktiverar Internet Explorer 11 som fristående webbläsare finns i https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Aktivera utökade snabbtangenter i Internet Explorer-läge</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">Med den här principinställningen kan administratörer aktivera utökade snabbtangenter för Internet Explorer-läget i Microsoft Edge, till exempel funktioner som "Ctrl + S" för att få "Spara som".
 
 Om du aktiverar den här principen aktiveras utökade funktioner för snabbtangenter i Internet Explorer-läge och fungerar på samma sätt som Internet Explorer.
 
 Om du inaktiverar eller inte konfigurerar den här principen fungerar inte utökade snabbtangenter i Internet Explorer-läge.
+
+Mer information finns i https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Återställ zoomning till standard för HTML-dialogrutor i Internet Explorer läge</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Med den här principinställningen kan administratörer återställa zoomning till standard för HTML-dialogrutor i Internet Explorer läge.
+
+Om du aktiverar den här principen sprids inte zoomningen av en HTML-dialogruta i Internet Explorer-läge från den överordnade sidan.
+
+Om du inaktiverar eller låter bli att konfigurera den här principen anges zoomningen av en HTML-dialogruta i Internet Explorer läge baserat på zoomningen på den överordnade sidan.
 
 Mer information finns i https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Inaktivera Internet Explorer 11 som fristående webbläsare</string>
@@ -3980,15 +4006,15 @@ Om du aktiverar den här principen:
 – Åsidosätter den alla andra principer som omdirigerar till Internet Explorer 11.
 
 Om du inaktiverar eller låter bli att konfigurera principen öppnas alla webbplatser med befintliga aktiva webbläsarinställningar. Obs! Microsoft Edge Stable Channel måste installeras för att den här principen ska börja gälla.</string>
+      <string id="DisableIEAppDeprecationNotification">Dölj meddelande om att Internet Explorer 11 tas ur bruk</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">Med den här principinställningen kan du ange om påminnelsen i meddelandefältet om att Internet Explorer tas ur bruk visas. Meddelandefältet visas som standard i Internet Explorer 11.
+
+Om du aktiverar den här principinställningen visas inte meddelandefältet i Internet Explorer 11.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen visas meddelandefältet i Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Aldrig</string>
       <string id="NotifyDisableIEOptions_Always">Alltid</string>
       <string id="NotifyDisableIEOptions_OncePerUser">En gång per användare</string>
-      <string id="JScriptReplacement">Ersätt JScript genom att läsa in JScript9Legacy i stället för JScript via MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">Den här principinställningen anger om JScript eller JScript9Legacy läses in för MSHTML/WebOC-baserade anrop.
-      
-Om du aktiverar den här principinställningen kommer JScript9Legacy att läsas in i situationer där JScript har initierats.
-
-Om du inaktiverar den här principen eller låter bli att konfigurera den används JScript.</string>
       <string id="VerMgmtDisable">Inaktivera blockering av inaktuella ActiveX-kontroller för Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Den här principinställningen anger om Internet Explorer blockerar specifika inaktuella ActiveX-kontroller. Inaktuella ActiveX-kontroller blockeras aldrig i zonen Intranät.
 

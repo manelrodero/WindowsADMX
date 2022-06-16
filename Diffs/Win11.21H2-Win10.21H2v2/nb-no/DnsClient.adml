@@ -250,17 +250,6 @@ Hvis denne policyinnstillingen er deaktivert eller ikke er konfigurert, konverte
 Hvis denne policyinnstillingen er aktivert, konverteres IDNer til Nameprep-formen.
 
 Hvis denne policyinnstillingen er deaktivert eller ikke er konfigurert, konverteres ikke IDNer til Nameprep-formen.</string>
-      <string id="DNS_Doh">Konfigurer DNS over HTTPS (DoH) navneløsing</string>
-      <string id="DNS_Doh_Disabled">Forhindre DoH</string>
-      <string id="DNS_Doh_Auto">Tillat DoH</string>
-      <string id="DNS_Doh_Force">Krev DoH</string>
-      <string id="DNS_Doh_Help">Angir om DNS-klienten skal utføre navne løsing over DNS over HTTPS (håpløs). 
- # B1 som standard vil DNS-klienten gjøre Classic DNS-navneløsing (over UDP eller TCP). Denne innstillingen kan forbedre DNS-klienten for å bruke håpløs-protokollen til å løse domene navn. 
- # B3 hvis du vil bruke denne policy innstillingen, klikker du aktivert og velger deretter ett av følgende alternativer fra rulle gardin listen: 
- # B5 forby håpløs: ingen håpløs navne løsning utføres. 
- # B7 Tillat håpløs: Utfør håpløs-spørringer hvis de konfigurerte DNS-serverne støtter det. Hvis de ikke støtter dette, kan du prøve med standard navne løsing. 
- # B9 krever håpløs: Tillat bare håpløs navne løsing. Hvis det ikke er konfigurert noen håpløs-kompatible DNS-servere, vil navne løsingen mislykkes. 
- # b11 hvis du deaktiverer denne policy innstillingen, eller hvis du ikke konfigurerer denne policy innstillingen, bruker data maskiner lokalt konfigurerte innstillinger.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -297,9 +286,6 @@ Hvis denne policyinnstillingen er deaktivert eller ikke er konfigurert, konverte
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Oppdater sikkerhetsnivå:</dropdownList>
-      </presentation>
-      <presentation id="DNS_Doh">
-        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Konfigurer alternativer for DoH:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

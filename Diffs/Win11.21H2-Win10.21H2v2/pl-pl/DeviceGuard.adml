@@ -11,19 +11,19 @@
 
 Zabezpieczenia oparte na wirtualizacji używają funkcji hypervisor systemu Windows, aby zapewnić obsługę usług zabezpieczeń. Zabezpieczenia oparte na wirtualizacji wymagają bezpiecznego rozruchu i opcjonalnie mogą być włączane przy użyciu ochrony DMA. Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na odpowiednio skonfigurowanych urządzeniach.
 
-Ochrona integralności kodu oparta na wirtualizacji.
+Ochrona integralności kodu oparta na wirtualizacji
 
 To ustawienie włącza opartą na wirtualizacji ochronę integralności kodu trybu jądra. Jeśli to ustawienie zostanie włączone, będzie wymuszana ochrona pamięci trybu jądra, a ścieżka weryfikacji integralności będzie chroniona przez funkcję zabezpieczeń opartych na wirtualizacji.
 
-Ustawienie opcji “Wyłączone” powoduje zdalne wyłączenie ochrony integralności kodu opartej na wirtualizacji, jeśli została ona wcześniej włączona za pomocą opcji “Włączone bez blokady”.
+Ustawienie opcji „Wyłączone” powoduje zdalne wyłączenie ochrony integralności kodu opartej na wirtualizacji, jeśli została ona wcześniej włączona za pomocą opcji „Włączone bez blokady”.
  
-Opcja “Włączone z blokadą UEFI” uniemożliwia zdalne wyłączenie ochrony integralności kodu opartej na wirtualizacji. Aby wyłączyć tę funkcję, musisz ustawić opcję “Wyłączone” dla zasad grupy, a także usunąć funkcję zabezpieczeń z każdego komputera, gdy użytkownik znajduje się fizycznie przy komputerze, w celu wyczyszczenia konfiguracji utrwalonej w interfejsie UEFI.
+Opcja „Włączone z blokadą UEFI” uniemożliwia zdalne wyłączenie ochrony integralności kodu opartej na wirtualizacji. Aby wyłączyć tę funkcję, musisz ustawić opcję „Wyłączone” dla zasad grupy, a także usunąć funkcję zabezpieczeń z każdego komputera, gdy użytkownik znajduje się fizycznie przy komputerze, w celu wyczyszczenia konfiguracji utrwalonej w interfejsie UEFI.
  
-Opcja “Włączone bez blokady” umożliwia zdalne wyłączenie ochrony integralności kodu opartej na wirtualizacji za pomocą zasad grupy. 
+Opcja „Włączone bez blokady” umożliwia zdalne wyłączenie ochrony integralności kodu opartej na wirtualizacji za pomocą zasad grupy. 
 
-Opcja “Nie skonfigurowano” powoduje pozostawienie tego ustawienia zasad w stanie niezdefiniowanym. Zasady grupy nie zapisują tego ustawienia zasad w rejestrze, więc nie ma ono wpływu na komputery i użytkowników. Jeśli istnieje bieżące ustawienie w rejestrze, nie zostanie ono zmodyfikowane.
+Opcja „Nie skonfigurowano” powoduje pozostawienie tego ustawienia zasad w stanie niezdefiniowanym. Zasady grupy nie zapisują tego ustawienia zasad w rejestrze, więc nie ma ono wpływu na komputery i użytkowników. Jeśli istnieje bieżące ustawienie w rejestrze, nie zostanie ono zmodyfikowane.
 
-Opcja “Wymagaj tabeli atrybutów pamięci UEFI” będzie włączać ochronę integralności kodu opartą na wirtualizacji tylko na urządzeniach zawierających oprogramowanie układowe UEFI obsługujące tabelę atrybutów pamięci. Urządzenia bez tabeli atrybutów pamięci UEFI mogą mieć oprogramowanie układowe niezgodne z ochroną integralności kodu opartą na wirtualizacji, co w pewnych sytuacjach może powodować awarie lub utratę danych albo brak zgodności z niektórymi wkładanymi kartami. Jeśli ta opcja nie zostanie ustawiona, należy przetestować urządzenia docelowe pod kątem zgodności.
+Opcja „Wymagaj tabeli atrybutów pamięci UEFI” będzie włączać ochronę integralności kodu opartą na wirtualizacji tylko na urządzeniach zawierających oprogramowanie układowe UEFI obsługujące tabelę atrybutów pamięci. Urządzenia bez tabeli atrybutów pamięci UEFI mogą mieć oprogramowanie układowe niezgodne z ochroną integralności kodu opartą na wirtualizacji, co w pewnych sytuacjach może powodować awarie lub utratę danych albo brak zgodności z niektórymi wkładanymi kartami. Jeśli ta opcja nie zostanie ustawiona, należy przetestować urządzenia docelowe pod kątem zgodności.
 
 Ostrzeżenie: Wszystkie sterowniki w systemie muszą być zgodne z tą funkcją. W przeciwnym razie system może ulec awarii. Upewnij się, że to ustawienie zasad jest wdrażane tylko na zgodnych komputerach. 
 
@@ -31,23 +31,23 @@ Credential Guard
 
 To ustawienie umożliwia użytkownikom włączanie funkcji Credential Guard z zabezpieczeniami opartymi na wirtualizacji w celu lepszej ochrony poświadczeń.
 
-Ustawienie opcji “Wyłączone” powoduje zdalne wyłączenie funkcji Credential Guard, jeśli została ona wcześniej włączona za pomocą opcji “Włączone bez blokady”.
+Ustawienie opcji „Wyłączone” powoduje zdalne wyłączenie funkcji Credential Guard, jeśli została ona wcześniej włączona za pomocą opcji „Włączone bez blokady”.
 
-Opcja “Włączone z blokadą UEFI” uniemożliwia zdalne wyłączenie funkcji Credential Guard. Aby wyłączyć tę funkcję, musisz ustawić opcję “Wyłączone” dla zasad grupy, a także usunąć funkcję zabezpieczeń z każdego komputera, gdy użytkownik znajduje się fizycznie przy komputerze, w celu wyczyszczenia konfiguracji utrwalonej w interfejsie UEFI.
+Opcja „Włączone z blokadą UEFI” uniemożliwia zdalne wyłączenie funkcji Credential Guard. Aby wyłączyć tę funkcję, musisz ustawić opcję „Wyłączone” dla zasad grupy, a także usunąć funkcję zabezpieczeń z każdego komputera, gdy użytkownik znajduje się fizycznie przy komputerze, w celu wyczyszczenia konfiguracji utrwalonej w interfejsie UEFI.
 
-Opcja “Włączone bez blokady” umożliwia zdalne wyłączenie funkcji Credential Guard za pomocą zasad grupy. Tego ustawienia można używać wyłącznie na urządzeniach z systemem Windows 10 (wersja 1511) lub nowszym.
+Opcja „Włączone bez blokady” umożliwia zdalne wyłączenie funkcji Credential Guard za pomocą zasad grupy. Tego ustawienia można używać wyłącznie na urządzeniach z systemem Windows 10 (wersja 1511) lub nowszym.
 
-Opcja “Nie skonfigurowano” powoduje pozostawienie tego ustawienia zasad w stanie niezdefiniowanym. Zasady grupy nie zapisują tego ustawienia zasad w rejestrze, więc nie ma ono wpływu na komputery i użytkowników. Jeśli istnieje bieżące ustawienie w rejestrze, nie zostanie ono zmodyfikowane.
+Opcja „Nie skonfigurowano” powoduje pozostawienie tego ustawienia zasad w stanie niezdefiniowanym. Zasady grupy nie zapisują tego ustawienia zasad w rejestrze, więc nie ma ono wpływu na komputery i użytkowników. Jeśli istnieje bieżące ustawienie w rejestrze, nie zostanie ono zmodyfikowane.
       
 Bezpieczne uruchomienie
 
 To ustawienie konfiguruje funkcję Bezpieczne uruchomienie do zabezpieczania łańcucha rozruchu.
 
-Domyślne ustawienie “Nie skonfigurowano” umożliwia konfigurowanie tej funkcji przez użytkowników administracyjnych.
+Domyślne ustawienie „Nie skonfigurowano” umożliwia konfigurowanie tej funkcji przez użytkowników administracyjnych.
 
-Opcja “Włączone” powoduje włączenie funkcji Bezpieczne uruchomienie na obsługiwanym sprzęcie.
+Opcja „Włączone” powoduje włączenie funkcji Bezpieczne uruchomienie na obsługiwanym sprzęcie.
 
-Opcja “Wyłączone” powoduje wyłączenie funkcji Bezpieczne uruchomienie, niezależnie od obsługi sprzętowej.
+Opcja „Wyłączone” powoduje wyłączenie funkcji Bezpieczne uruchomienie, niezależnie od obsługi sprzętowej.
       </string>
       <string id="SecureBoot">Bezpieczny rozruch</string>
       <string id="SecureBootAndDmaProtection">Bezpieczny rozruch i ochrona DMA</string>

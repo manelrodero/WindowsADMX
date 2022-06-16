@@ -250,23 +250,6 @@ Pokud je toto nastavení zásad zakázáno nebo není nakonfigurováno, jsou ná
 Pokud je toto nastavení zásad povoleno, jsou názvy IDN převáděny do formátu Nameprep.
 
 Pokud je toto nastavení zásad zakázáno nebo není nakonfigurováno, nejsou názvy IDN převáděny do formátu Nameprep.</string>
-      <string id="DNS_Doh">Konfigurovat překlad adres IP přes protokol DoH (DNS over HTTPS)</string>
-      <string id="DNS_Doh_Disabled">Zakázat DoH</string>
-      <string id="DNS_Doh_Auto">Povolit DoH</string>
-      <string id="DNS_Doh_Force">Vyžadovat DoH</string>
-      <string id="DNS_Doh_Help">Určuje, jestli bude klient DNS bude provádět překlad adres IP přes protokol DoH (DNS over HTTPS).
-
-Ve výchozím nastavení bude klient DNS používat klasický překlad adres IP přes DNS (přes protokol UDP nebo TCP). Toto nastavení může rozšířit možnosti klienta DNS tím, že k překladu názvů domén může používat i protokol DoH.
-
-Pokud chcete použít tuto zásadu, klikněte na Povoleno a v rozevíracím seznamu vyberte jednu z následujících možností:
-
-Zakázat DoH: Překlad adres IP přes protokol DoH se provádět nebude.
-
-Povolit DoH: Pokud to podporují nakonfigurované servery DNS, budou se požadavky přes protokol DoH provádět. Pokud to nepodporují, proběhne pokus o klasický překlad IP adres.
-
-Vyžadovat DoH: Povolí jen překlad adres IP přes protokol DoH. Pokud nejsou nakonfigurované žádné servery DNS podporující protokol DoH, překlad selže.
-
-Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou počítače používat místně nakonfigurované nastavení.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -303,9 +286,6 @@ Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou počítače použív
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Aktualizovat úroveň zabezpečení:</dropdownList>
-      </presentation>
-      <presentation id="DNS_Doh">
-        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Nakonfigurovat možnosti pro DoH:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

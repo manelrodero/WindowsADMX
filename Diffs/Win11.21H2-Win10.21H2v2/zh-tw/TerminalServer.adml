@@ -6,7 +6,7 @@
   <resources>
     <stringTable>
       <string id="TS_AUTOSUBSCRIPTION_NAME">啟用自動訂閱</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">控制使用者應自動訂閱的 URL 清單</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">控制使用者應自動訂閱的 URL 清單</string>      
       <string id="TS_SUPPORTED_Windows10">至少需要 Windows 10 或 Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">至少需要 Windows 8 或 Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">至少需要 Windows Server 2012</string>
@@ -28,7 +28,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">至少需要 Windows XP 和僅 Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">至少需要 Windows Server 2008 或 Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  僅限 Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 版本1903、Windows 10 版本1909與 Windows 10 版本2004</string>
       <string id="TS_TERMINAL_SERVER">遠端桌面工作階段主機</string>
       <string id="TS_TERMINAL_SERVER_Help">控制遠端桌面工作階段主機伺服器的設定</string>
       <string id="TS_LICENSE_SERVER">RD 授權</string>
@@ -147,7 +146,6 @@
       <string id="TS_CLIENT_LPT">不允許 LPT 連接埠重新導向</string>
       <string id="TS_CLIENT_PNP">不允許支援的隨插即用裝置重新導向</string>
       <string id="TS_CAMERA_REDIRECTION">不允許視訊擷取重新導向</string>
-      <string id="TS_LOCATION_REDIRECTION">不允許位置重新導向</string>
       <string id="TS_CLIENT_PRINTER">不允許用戶端印表機重新導向</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">這個原則設定指定在遠端桌面服務工作階段期間，是否要防止在遠端電腦及用戶端電腦間共用剪貼簿內容 (剪貼簿重新導向)。
 
@@ -212,15 +210,6 @@ c.	用戶端要求的值
 
 如果停用或不設定這項原則設定，使用者即可將他們的視訊擷取裝置重新導向到遠端電腦。使用者可以使用遠端桌面連線 [本機資源] 索引標籤上的 [更多] 選項，來選擇要重新導向到遠端電腦的視訊擷取裝置。
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">這個原則設定可讓您控制在遠端桌面服務會話中，將位置資料重新導向到遠端電腦的功能。
-
-根據預設，遠端桌面服務允許重新導向位置資料。
-
-如果您啟用這個原則設定，使用者將無法將其位置資料重新導向到遠端電腦。
-
-如果您停用或未設定這個原則設定，使用者可以將其位置資料重新導向到遠端電腦。
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">這個原則設定可讓您限制使用者可用來顯示遠端桌面服務工作階段的監視器數目。限制用來顯示遠端桌面服務工作階段的監視器數目可以改善連線的效能 (特別是在低速連結上)，並減少伺服器的負載。
 
@@ -435,20 +424,21 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
       <string id="TS_LICENSING_MODE_EXPLAIN">
         此原則設定可讓您指定連線至此 RD 工作階段主機伺服器時，所需的遠端桌面服務用戶端存取權授權 (RDS CAL) 類型。
 
-        您可以使用此原則設定來選取兩種授權模式之一：每一使用者或每一裝置。
+        您可以使用此原則設定來選取三種授權模式之一: 每一使用者、每一裝置和每一使用者 AAD。
 
         每一使用者授權模式需要連線至此 RD 工作階段主機伺服器的每一使用者帳戶都具有 RD 授權伺服器發行的 RDS 每一使用者 CAL。
 
         每一裝置授權模式需要連線至此 RD 工作階段主機伺服器的每一裝置都具有 RD 授權伺服器發行的 RDS 每一裝置 CAL。
 
-        每一裝置授權模式需要連線至此 RD 工作階段主機伺服器的每一裝置都具有 RD 授權伺服器發行的 RDS 每一裝置 CAL。
-
+        每一使用者 AAD 授權模式需要連線至此 RD 工作階段主機伺服器的每一使用者帳戶都具有支援 AAD 中所指派 RDS 授權的服務方案。
+        
         若您啟用此原則設定，則遠端桌面授權伺服器和 RD 工作階段主機會接受您指定的遠端桌面授權模式。
 
         若您停用或未設定此原則設定，則不會在群組原則層級指定授權模式。
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">每個裝置</string>
       <string id="TS_LICENSING_MODE_PER_USER">每位使用者</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">每個使用者的 AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">這個原則設定指定在遠端桌面服務工作階段期間，是否要防止將資料重新導向到用戶端 LPT 連接埠。
 
 您可以使用這個設定防止使用者對應本機 LPT 連接埠，並將來自遠端電腦的資料重新導向到本機的 LPT 連接埠週邊設備。根據預設，遠端桌面服務允許 LPT 連接埠重新導向。
@@ -799,17 +789,6 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
 如果您停用或未設定這個原則設定，則可指定用戶端連線到遠端電腦後，要在遠端電腦上執行的初始程式。如果未指定初始程式，用戶端連線到遠端電腦後，將會在遠端電腦上顯示桌面。
 
 注意: 如果啟用這個原則設定，則會略過 [連線時啟動程式] 原則設定。</string>
-      <string id="TS_UIA">允許 UI 自動化重新導向</string>
-      <string id="TS_UIA_EXPLAIN">此原則設定可決定在本機電腦上執行的使用者 (介面) 自動化用戶端應用程式是否能存取伺服器上的 UI 元素。
-
-UI 自動化會讓程式存取大部分的 UI 元素，讓您使用需要與 UI 互動的輔助技術產品（例如，放大鏡與朗讀程式）才能正常運作。UI 資訊也允許自動測試腳本與 UI 互動。
-
-遠端桌面會話目前不支援 UI 自動化重新導向。
-
-如果您啟用或未設定這個原則設定，本機電腦上的任何 UI 自動化用戶端都可以與遠端應用程式互動。例如，您可以使用您的本機電腦的朗讀程式和放大鏡用戶端，與您在遠端會話中開啟的網頁上的 UI 互動。
-
-如果您停用這個原則設定，在您的本機電腦上執行的 UI 自動化用戶端無法與遠端應用程式互動。
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">這個原則設定可以讓您指定是否要使用網路層級驗證來對連至 RD 工作階段主機伺服器的遠端連線要求使用者驗證。這個原則設定要求使用者驗證在遠端連線處理程序初期執行，以增強安全性。
 
 如果您啟用這個原則設定，只有支援網路層級驗證的用戶端電腦能夠連線到 RD 工作階段主機伺服器。

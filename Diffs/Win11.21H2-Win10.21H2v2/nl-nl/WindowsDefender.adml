@@ -30,28 +30,6 @@
 
     Als u deze instelling uitschakelt, wordt de antimalwareservice als taak met een lage prioriteit geladen.</string>
 
-    <string id="MeteredConnectionUpdates">Hiermee kan Microsoft Defender Antivirus via een verbinding met een datalimiet updates uitvoeren en communiceren.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    Uitgeschakeld (standaard): 
-    Updates en communicatie zijn niet toegestaan op verbindingen met een datalimiet.
-
-    Ingeschakeld: 
-    Toestaan dat beheerde apparaten worden bijgewerkt via verbindingen met een datalimiet. Er kunnen kosten in rekening worden gebracht.</string>
-    <string id="AllowNetworkProtectionOnWinServer">Met deze instellingen wordt bepaald of Netwerkbeveiliging in Windows Server mag worden geconfigureerd in de blokkeringsmodus of de controlemodus.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    Uitgeschakeld (standaardinstelling): 
-    Als deze Niet is geconfigureerd of is Uitgeschakeld, mag de netwerkbeveiliging niet in de blokkeringsmodus of in de controlemodus van Windows Server worden geconfigureerd.
-
-Ingeschakeld: 
-    Als deze instelling is ingeschakeld, kunnen beheerders bepalen of netwerkbeveiliging op een Windows-Server in de blokkerings- of controlemodus mag worden geconfigureerd.
-    Let op: deze configuratie is afhankelijk van de EnableNetworkProtection-configuratie. Als deze configuratie onwaar is, wordt EnableNetworkProtection genegeerd, anders wordt netwerkbeveiliging op Windows Server gestart, afhankelijk van de waarde van EnableNetworkProtection.</string>
-    <string id="DisableDatagramProcessing">Met deze instelling wordt de verwerking van datagrammen beheerd voor netwerkbeveiliging.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    Ingeschakeld (standaardinstelling): 
-    Als dit niet is geconfigureerd of is uitgeschakeld, wordt verwerking van datagrammen ingeschakeld voor netwerkbeveiliging.
-
-Mogelijkheid 
-    Als deze instelling is ingeschakeld, wordt verwerking van data grams uitgeschakeld voor netwerkbeveiliging.</string>
     <string id="DisableAutoExclusions">Automatische uitsluitingen uitschakelen</string>
     <string id="DisableAutoExclusions_Explain">
         Hiermee kan een systeembeheerder opgeven of de functie Automatische uitsluitingen voor Server-SKU's moet worden uitgeschakeld.
@@ -83,11 +61,11 @@ Mogelijkheid
 
     Het inschakelen of uitschakelen van dit beleid kan leiden tot onverwachte of niet-ondersteunde gedragingen. U wordt aangeraden deze beleidsinstelling niet-geconfigureerd te laten.</string>
     <string id="DisableLocalAdminMerge">Samenvoeggedrag voor lijsten van lokale beheerder configureren</string>
-    <string id="DisableLocalAdminMerge_Explain">Met deze beleidsinstelling kunt u bepalen of complexe lijst instellingen die door een lokale beheerder zijn geconfigureerd, worden samengevoegd met de groepsbeleidsinstellingen. Deze instelling is van toepassing op lijsten zoals bedreigingen en uitsluitingen.
+    <string id="DisableLocalAdminMerge_Explain">Deze beleidsinstelling bepaalt of complexe lijstinstellingen van een lokale beheerder al dan niet worden samengevoegd met de instellingen voor Groepsbeleid. Deze instelling is van toepassing op lijsten zoals bedreigingen en uitsluitingen.
 
-Als u deze instelling uitschakelt of niet configureert, worden unieke items die zijn gedefinieerd in Groepsbeleid en in voorkeursinstellingen die door de lokale beheerder zijn geconfigureerd, samengevoegd in het resulterende effectieve beleid. In geval van conflicten worden de voorkeursinstellingen overschreven door de groepsbeleidsinstellingen.
+    Als u deze instelling inschakelt of niet configureert, worden unieke items die onder Groepsbeleid zijn gedefinieerd en ook door de lokale beheerder in de voorkeursinstellingen zijn geconfigureerd, samengevoegd in het resulterende effectieve beleid. In geval van conflicten krijgen de instellingen van Groepsbeleid voorrang boven de voorkeursinstellingen.
 
-Als u deze instelling inschakelt, worden alleen items die zijn gedefinieerd door Groepsbeleid gebruikt in het resulterende effectieve beleid. De instellingen voor de groepsbeleidsinstellingen overschrijven de voorkeursinstellingen die door de lokale beheerder zijn geconfigureerd.</string>
+    Als u deze instelling uitschakelt, worden alleen items die in Groepsbeleid zijn gedefinieerd, in het resulterende effectieve beleid gebruikt. De instellingen van Groepsbeleid hebben voorrang boven de door lokale beheerder geconfigureerde voorkeursinstellingen.</string>
     <string id="DisableRoutinelyTakingAction">Routineherstel uitschakelen</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Met deze beleidsinstelling kunt u aangeven of Microsoft Defender Antivirus automatisch actie moet ondernemen voor alle waargenomen bedreigingen. De uit te voeren actie voor een bepaalde bedreiging is afhankelijk van de combinatie van de beleidsmatig gedefinieerde actie, de door de gebruiker gedefinieerde actie en de door de handtekening gedefinieerde actie.
@@ -132,15 +110,11 @@ Als u deze instelling inschakelt, worden alleen items die zijn gedefinieerd door
       Als u deze instelling uitschakelt of niet configureert, worden de stappen in de vermelde volgorde overgeslagen.
     </string>
     <string id="RandomizeScheduleTaskTimes">Geplande taaktijden randomiseren</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Met deze beleidsinstelling kunt u de geplande scan en de geplande update van beveiligingsinformatie in uren configureren.
+    <string id="RandomizeScheduleTaskTimes_Explain">Met deze beleidsinstelling kunt u het randomiseren van de geplande starttijd voor het scannen en de geplande starttijd voor de update van Security Intelligence in- of uitschakelen. Deze instelling wordt gebruikt om de impact van scans op de systeembronnen te spreiden. De instelling kan bijvoorbeeld worden gebruikt voor virtuele gastmachines die een host delen om te voortkomen dat meerdere virtuele gastmachines op hetzelfde moment een intensieve schijfbewerking uitvoeren.
 
- Als u deze instelling uitschakelt of niet configureert, beginnen geplande taken op een willekeurig tijdstip binnen vier uur na de tijd die is opgegeven in Taakplanner.
- Als u deze instelling inschakelt, kunt u deze randomiseringsperiode verbreden of verkleinen. Specificeer een randomiseringsvenster tussen 1 en 23 uur.</string>
-    <string id="SchedulerRandomizationTime">Venster voor willekeurig instellen van geplande taaktijden configureren</string>
-    <string id="SchedulerRandomizationTime_Explain">Met deze beleidsinstelling kunt u de geplande starttijd van de scan en de geplande starttijd van de update van beveiligingsinformatie in uren configureren.
+    Als u deze instelling inschakelt of niet configureert, starten geplande taken op een willekeurig tijdstip binnen een interval van 30 minuten voor en na de opgegeven starttijd.
 
-    Als u deze instelling uitschakelt of niet configureert, beginnen geplande taken op een willekeurig tijdstip binnen een interval van 4 uur na de opgegeven starttijd.
-    Als u deze instelling inschakelt, moet u een randomisatievenster in uren kiezen. Het mogelijke interval van het randomiseringsvenster ligt tussen 1 en 23 uur.</string>
+    Als u deze instelling uitschakelt, starten geplande taken op de opgegeven starttijd.</string>
     <string id="ServiceKeepAlive">Toestaan dat de antimalwareservice altijd actief blijft</string>
     <string id="ServiceKeepAlive_Explain">Met deze beleidsinstelling u instellen of de antimalware-service actief blijft wanneer Security Intelligence voor antivirus en antispyware is uitgeschakeld. Het wordt aanbevolen om deze instelling uitgeschakeld te laten.
 
@@ -162,20 +136,12 @@ Als u deze instelling inschakelt, worden alleen items die zijn gedefinieerd door
         Niet geconfigureerd:
         Hetzelfde als Uitgeschakeld.
     </string>
-    <string id="SupportLogLocation">Pad naar map definiëren voor het kopiëren van ondersteuningslogboekbestanden</string>
-    <string id="SupportLogLocation_Explain">Met deze beleidsinstelling kunt u het mappad configureren waarnaar de ondersteuningslogboek bestanden moeten worden gekopieerd. De waarde van deze instelling moet een geldig mappad zijn.
-
-Als u deze instelling inschakelt, worden de ondersteuningslogboek bestanden gekopieerd naar het opgegeven pad naar de locatie van het ondersteuningslogboek.
-
-Als u deze instelling uitschakelt of niet configureert, worden de ondersteuningslogboek bestanden niet naar een andere locatie gekopieerd.</string>
     <string id="Exclusions_Extensions">Uitsluitingen op basis van bestandsextensie</string>
     <string id="Exclusions_Extensions_Explain">Met deze beleidsinstelling kunt u een lijst opgeven met bestandstypen die moeten worden uitgesloten van geplande, aangepaste en realtime scans. De bestandstypen moeten worden toegevoegd onder de Opties voor deze instelling. Elke vermelding moet worden opgenomen als naam-/waardepaar, waarbij de naam een reeks moet zijn die de bestandsextensie vertegenwoordigt (zoals OBJ of LIB). De waarde wordt niet gebruikt; aanbevolen wordt om deze in te stellen op 0.</string>
     <string id="Exclusions_Paths">Uitsluitingen op basis van pad</string>
     <string id="Exclusions_Paths_Explain">Met deze beleidsinstelling kunt u geplande en realtime scans uitschakelen voor bestanden onder de opgegeven paden of voor de opgegeven volledig gekwalificeerde bronnen. De paden moeten worden toegevoegd onder de Opties voor deze instelling. Elke vermelding moet worden opgenomen als naam-/waardepaar, waarbij de naam een reeks moet zijn die een pad of een volledig gekwalificeerde bronnaam vertegenwoordigt. Een pad kan bijvoorbeeld worden gedefinieerd als "c:\Windows" als u alle bestanden in deze directory wilt uitsluiten. Een volledig gekwalificeerde bronnaam zou kunnen worden gedefinieerd als: "C:\Windows\App.exe". De waarde wordt niet gebruikt; aanbevolen wordt om deze in te stellen op 0.</string>
     <string id="Exclusions_Processes">Uitsluitingen op basis van proces</string>
-    <string id="Exclusions_Processes_Explain">Met deze beleidsinstelling kunt u tijdens realtime scannen uitschakelen voor alle bestanden die door een van de opgegeven processen worden geopend. Dit beleid is niet van toepassing op geplande scans. Het proces zelf wordt niet uitgesloten. Als u het proces wilt uitsluiten, gebruikt u het pad dat is uitgesloten. Er moeten processen worden toegevoegd onder de opties voor deze instelling. Elke vermelding moet worden vermeld als een naam waarde-paar, waarbij de naam een tekenreeksweergave is van het pad naar de proces afbeelding. Let op: alleen uitvoerbare bestanden kunnen worden uitgesloten. Een proces kan bijvoorbeeld zijn gedefinieerd als: "c:\windows\app.exe". De waarde wordt niet gebruikt en u wordt aangeraden deze in te stellen op 0.</string>
-    <string id="Exclusions_IpAddresses">Uitsluitingen van IP-adressen</string>
-    <string id="Exclusions_IpAddresses_Explain">Hiermee kan een beheerder netwerkpakketinspecties die zijn gemaakt door wdnisdrv op een bepaalde set IP-adressen, expliciet uitschakelen.</string>
+    <string id="Exclusions_Processes_Explain">Met deze beleidsinstelling kunt u geplande en realtime scans uitsluiten voor elk bestand dat door een van de opgegeven processen wordt geopend. Het proces zelf wordt niet uitgesloten. Als u het proces wilt uitsluiten, gebruikt u de uitsluiting op basis van het pad. De processen moeten worden toegevoegd onder de Opties voor deze instelling. Elke vermelding moet worden opgenomen als naam-/waardepaar, waarbij de naam een reeks moet zijn die het pad naar de procesafbeelding vertegenwoordigt. Let op: alleen uitvoerbare bestanden kunnen worden uitgesloten. Een proces kan bijvoorbeeld worden gedefinieerd als: "c:\windows\app.exe". De waarde wordt niet gebruikt; aanbevolen wordt om deze in te stellen op 0.</string>
     <string id="Nis_DisableProtocolRecognition">Protocolherkenning inschakelen</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Met deze beleidsinstelling kunt u protocolherkenning configureren om het netwerk te beschermen tegen vatbaarheid voor aanvallen.
 
@@ -202,14 +168,6 @@ Als u deze instelling uitschakelt, wordt protocolherkenning uitgeschakeld.</stri
     Als u deze instelling inschakelt, worden items na het opgegeven aantal dagen uit de map Quarantaine verwijderd.
 
     Als u deze beleidsinstelling uitschakelt of niet configureert, blijven items oneindig in de map Quarantaine aanwezig en worden ze niet automatisch verwijderd.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">Scannen in scripts uitschakelen</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">Met deze beleidsinstelling kunt u het scannen van scripts configureren.
-
-Als u deze instelling inschakelt of niet configureert, wordt het scannen van scripts ingeschakeld.
-
-Als u deze instelling uitschakelt, wordt het scannen van scripts uitgeschakeld.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Gedragbewaking inschakelen</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Met deze beleidsinstelling kunt u gedragbewaking configureren.
 
@@ -443,6 +401,12 @@ Let op: deze configuratie is alleen mogelijk bij NTFS-volumes. Bij andere bestan
     Als u deze instelling inschakelt of niet configureert, wordt heuristiek ingeschakeld.
 
     Als u deze beleidsinstelling uitschakelt, wordt heuristiek uitgeschakeld.</string>
+    <string id="Scan_DisablePackedExeScanning">Gecomprimeerde uitvoerbare bestanden scannen</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">Met deze beleidsinstelling kunt u het scannen van gecomprimeerde uitvoerbare bestanden configureren. Aanbevolen wordt om dit type scan in te schakelen.
+
+    Als u deze instelling inschakelt of niet configureert, worden gecomprimeerde uitvoerbare bestanden gescand.
+
+    Als u deze instelling uitschakelt, worden gecomprimeerde uitvoerbare bestanden niet gescand.</string>
     <string id="Scan_DisableRemovableDriveScanning">Verwisselbare stations scannen</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Met deze beleidsinstelling kunt u bepalen of er al of niet op kwaadwillende en ongewenste software moet worden gescand in de inhoud van verwisselbare stations, zoals USB-flashstations, wanneer er een volledige scan wordt uitgevoerd.
 
@@ -514,7 +478,7 @@ Let op: deze configuratie is alleen mogelijk bij NTFS-volumes. Bij andere bestan
 
     Als u deze instelling inschakelt, wordt er een snelle scan uitgevoerd met het opgegeven interval.
 
-    Als u deze instelling uitschakelt of niet configureert, wordt de snelle scan, die wordt bepaald door deze configuratie, niet uitgevoerd.</string>
+    Als u deze instelling uitschakelt of niet configureert, wordt er een snelle scan uitgevoerd op het standaardtijdstip.</string>
     <string id="Scan_ScanOnlyIfIdle">De geplande scan alleen starten wanneer de computer is ingeschakeld maar niet wordt gebruikt</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Met deze beleidsinstelling kunt u geplande scans configureren die alleen moeten worden gestart wanneer uw computer is ingeschakeld maar niet wordt gebruikt.
 
@@ -558,11 +522,11 @@ Let op: deze configuratie is alleen mogelijk bij NTFS-volumes. Bij andere bestan
     <string id="Scan_ScheduleDay_7">Vrijdag</string>
     <string id="Scan_ScheduleDay_8">Zaterdag</string>
     <string id="Scan_ScheduleQuickScantime">Het tijdstip voor een dagelijkse snelle scan opgeven</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Met deze beleidsinstelling kunt u het tijdstip van de dag opgeven waarop er een dagelijkse snelle scan moet worden uitgevoerd. De tijdswaarde wordt uitgedrukt als het aantal minuten na middernacht (00:00).  Bijvoorbeeld: 120 (0x78) is gelijk aan 02:00 AM. Deze instelling is standaard ingesteld uitgeschakeld. De planning is gebaseerd op de lokale tijd op de computer waarop de scan wordt uitgevoerd.
+    <string id="Scan_ScheduleQuickScantime_Explain">Met deze beleidsinstelling kunt u het tijdstip van de dag opgeven waarop er een dagelijkse snelle scan moet worden uitgevoerd. De tijdswaarde wordt uitgedrukt als het aantal minuten na middernacht (00:00).  Bijvoorbeeld: 120 (0x78) is gelijk aan 02:00 AM. Deze instelling is standaard ingesteld op 2:00 AM. De planning is gebaseerd op de lokale tijd op de computer waarop de scan wordt uitgevoerd.
 
     Als u deze instelling inschakelt, wordt er op het opgegeven tijdstip van de dag een dagelijkse snelle scan uitgevoerd.
 
-    Als u deze instelling uitschakelt of niet configureert, wordt de snelle scan, die wordt bepaald door deze configuratie, niet uitgevoerd.</string>
+    Als u deze instelling uitschakelt of niet configureert, wordt er een dagelijkse snelle scan op het standaardtijdstip uitgevoerd.</string>
     <string id="Scan_ScheduleTime">Het tijdstip van de dag opgeven waarop een geplande scan moet worden uitgevoerd</string>
     <string id="Scan_ScheduleTime_Explain">Met deze beleidsinstelling kunt u het tijdstip van de dag opgeven waarop er een geplande scan moet worden uitgevoerd. De tijdswaarde wordt uitgedrukt als het aantal minuten na middernacht (00:00).  Bijvoorbeeld: 120 (0x78) is gelijk aan 02:00 AM. Deze instelling is standaard ingesteld op 2:00 AM. De planning is gebaseerd op de lokale tijd op de computer waarop de scan wordt uitgevoerd.
 
@@ -585,17 +549,17 @@ Let op: deze configuratie is alleen mogelijk bij NTFS-volumes. Bij andere bestan
         Als u deze instelling uitschakelt of niet configureert, worden er geen wijzigingen gemaakt in de CPU-prioriteit voor geplande scans.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Het aantal dagen bepalen voordat Security Intelligence voor spyware wordt beschouwd als verouderd</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Met deze beleidsinstelling kunt u het aantal dagen definiëren dat moet verstrijken voordat spyware Security Intelligence als verouderd wordt aangemerkt. Als Security Intelligence wordt vastgesteld als verouderd, kan deze status verschillende aanvullende acties veroorzaken, zoals het terugvallen op een alternatieve updatebron of het weergeven van een waarschuwingspictogram in de gebruikersinterface. Standaard is deze waarde ingesteld op 7 dagen.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Met deze beleidsinstelling kunt u het aantal dagen definiëren dat voorbij moet gaan voordat Security Intelligence voor spyware wordt beschouwd als verouderd. Als Security Intelligence wordt beschouwd als verouderd, kan deze status een aantal extra acties teweegbrengen, waaronder het gebruik van een alternatieve updatebron of het weergeven van een waarschuwingspictogram in de gebruikersinterface. Deze waarde is standaard ingesteld op 14 dagen.
 
-Als u deze instelling inschakelt, wordt de beveiliging van spyware als verouderd aangemerkt nadat het opgegeven aantal dagen is verstreken zonder Update.
+    Als u deze instelling inschakelt, wordt Security Intelligence voor spyware als verouderd beschouwd nadat het opgegeven aantal dagen zonder update is verstreken.
 
-Als u deze instelling uitschakelt of niet configureert, wordt de beveiliging van spyware Security als verouderd aangemerkt nadat het standaardaantal dagen is verstreken zonder Update.</string>
+    Als u deze instelling uitschakelt of niet configureert, wordt Security Intelligence voor spyware als verouderd beschouwd nadat het standaard aantal dagen zonder update is verstreken.</string>
     <string id="SignatureUpdate_AVSignatureDue">Het aantal dagen bepalen voordat Security Intelligence voor virussen wordt beschouwd als verouderd</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Met deze beleidsinstelling kunt u het aantal dagen definiëren dat moet verstrijken voordat virusbeveiliging wordt aangemerkt als verouderd. Als Security Intelligence wordt vastgesteld als verouderd, kan deze status verschillende aanvullende acties veroorzaken, zoals het terugvallen op een alternatieve updatebron of het weergeven van een waarschuwingspictogram in de gebruikersinterface. Standaard is deze waarde ingesteld op 7 dagen.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Met deze beleidsinstelling kunt u het aantal dagen definiëren dat voorbij moet gaan voordat Security Intelligence voor virussen wordt beschouwd als verouderd. Als Security Intelligence wordt beschouwd als verouderd, kan deze status een aantal extra acties teweegbrengen, waaronder het gebruik van een alternatieve updatebron of het weergeven van een waarschuwingspictogram in de gebruikersinterface. Deze waarde is standaard ingesteld op 14 dagen.
 
-Als u deze instelling inschakelt, wordt de beveiliging van virussen als verouderd aangemerkt nadat het opgegeven aantal dagen is verstreken zonder Update.
+    Als u deze instelling inschakelt, wordt Security Intelligence voor virussen als verouderd beschouwd nadat het opgegeven aantal dagen zonder update is verstreken.
 
-Als u deze instelling uitschakelt of niet configureert, wordt de beveiliging van virussen als verouderd aangemerkt nadat het standaardaantal dagen is verstreken zonder Update.</string>
+    Als u deze instelling uitschakelt of niet configureert, wordt Security Intelligence voor virussen als verouderd beschouwd nadat het standaard aantal dagen zonder update is verstreken.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Bestandsshares definiëren voor het downloaden van updates van Security Intelligence</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Met deze beleidsinstelling kunt u UNC-bestandssharebronnen configureren voor het downloaden van updates voor Security Intelligence. Bronnen zullen worden gecontacteerd in de aangegeven volgorde. De waarde van deze instelling moet worden ingevoerd als een door pijp gescheiden tekenreeks, waarin de bronnen voor de update van Security Intelligence worden opgesomd. Bijvoorbeeld: "{\\unc1 | \\unc2 }". De lijst is standaard leeg.
 
@@ -740,24 +704,24 @@ Als u deze instelling uitschakelt of niet configureert, wordt de beveiliging van
     <string id="SubmitSamplesConsent_Send_All">Alle voorbeelden verzenden</string>
 
     <string id="SpynetReporting">Aan Microsoft MAPS toevoegen</string>
-    <string id="SpynetReporting_Explain">Met deze beleidsinstelling kunt u deelnemen aan Microsoft MAPS. Microsoft MAPS is de onlinecommunity die u helpt te bepalen hoe u moet reageren op mogelijke bedreigingen. De community helpt ook bij het tegengaan van de verspreiding van infecties door nieuwe schadelijke software.
+    <string id="SpynetReporting_Explain">Met deze beleidsinstelling kunt u deelnemen aan Microsoft MAPS. Microsoft MAPS is de onlinecommunity die u helpt te bepalen hoe u moet reageren op mogelijke bedreigingen. De community helpt ook bij het tegengaan van de verspreiding van infecties door nieuwe malware.
 
-    U kunt kiezen of u basisinformatie of uitgebreide informatie over gedetecteerde software wilt verzenden. Als u uitgebreide informatie verzendt, kan deze door Microsoft worden gebruikt om nieuwe Security Intelligence te maken, zodat uw computer beter kan worden beveiligd. Deze informatie kan bijvoorbeeld aspecten bevatten zoals de locatie van gedetecteerde items op uw computer als er schadelijke software is verwijderd. De informatie wordt automatisch verzameld en verzonden. In sommige gevallen kunnen onbedoeld persoonlijke gegevens naar Microsoft worden verzonden. Microsoft zal deze gegevens echter niet gebruiken om u te identificeren of contact met u op te nemen.
+ U kunt kiezen of u basisinformatie of uitgebreide informatie over gedetecteerde software wilt verzenden. Als u uitgebreide informatie verzendt, kan deze door Microsoft worden gebruikt om nieuwe Security Intelligence te maken, zodat uw computer beter kan worden beveiligd. Deze informatie kan bijvoorbeeld aspecten bevatten zoals de locatie van gedetecteerde items op uw computer als er schadelijke software is verwijderd. De informatie wordt automatisch verzameld en verzonden. In sommige gevallen kunnen onbedoeld persoonlijke gegevens naar Microsoft worden verzonden. Microsoft zal deze gegevens echter niet gebruiken om u te identificeren of contact met u op te nemen.
 
-    Mogelijke opties zijn:
-    (0x0) Uitgeschakeld (standaard)
-    (0x1) Basislidmaatschap
-    (0x2) Uitgebreid lidmaatschap
+ Mogelijke opties zijn:
+ (0x0) Uitgeschakeld (standaard)
+ (0x1) Basislidmaatschap
+ (0x2) Uitgebreid lidmaatschap
 
-    Met het basislidmaatschap worden er basisgegevens naar Microsoft verzonden over software die is gedetecteerd, zoals waar de software vandaan kwam, de acties die u toepast, of die automatisch worden toegepast en of die acties succesvol waren.
+ Met het basislidmaatschap worden er basisgegevens naar Microsoft verzonden over software die is gedetecteerd, zoals waar de software vandaan kwam, de acties die u toepast, of die automatisch worden toegepast en of die acties succesvol waren.
 
-    Met het uitgebreide lidmaatschap worden er naast basisgegevens meer gegevens naar Microsoft verzonden over schadelijke software, spyware en mogelijk ongewenste software, zoals de locatie van de software, bestandsnamen, hoe de software werkt, en hoe deze invloed heeft gehad op uw computer.
+ Met het uitgebreide lidmaatschap worden er naast basisgegevens meer gegevens naar Microsoft verzonden over malware, spyware en mogelijk ongewenste software, zoals de locatie van de software, bestandsnamen, hoe de software werkt, en hoe deze invloed heeft gehad op uw computer.
 
-    Als u deze instelling inschakelt, wordt u lid van Microsoft MAPS met het opgegeven lidmaatschap.
+ Als u deze instelling inschakelt, wordt u lid van Microsoft MAPS met het opgegeven lidmaatschap.
 
-    Als u deze instelling uitschakelt of niet configureert, wordt u geen lid van Microsoft MAPS.
-  
-    Het basislidmaatschap is niet meer beschikbaar in Windows 10. Dit betekent dat de waarde 1 of 2 automatisch betekent dat u kiest voor het uitgebreide lidmaatschap.</string>
+ Als u deze instelling uitschakelt of niet configureert, wordt u geen lid van Microsoft MAPS.
+ 
+ Het basislidmaatschap is niet meer beschikbaar in Windows 10. Dit betekent dat de waarde 1 of 2 automatisch betekent dat u kiest voor het uitgebreide lidmaatschap.</string>
     <string id="SpynetReporting_Disabled">Uitgeschakeld</string>
     <string id="SpynetReporting_Basic">Basislidmaatschap MAPS</string>
     <string id="SpynetReporting_Advanced">Geavanceerd lidmaatschap MAPS</string>
@@ -884,16 +848,12 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
     </string>
     <string id="ExploitGuard_ASR_Rules">Regels om beveiligingsrisico voor aanvallen te beperken</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    De status instellen voor elke ASR-regel (Attack Surface Reduction, kwetsbaarheid voor aanvallen verminderen).
+    De status instellen voor elke ASR-regel (Attack Surface Reduction, beveiligingsrisico voor aanvallen beperken).
 
     Nadat u deze instelling hebt ingeschakeld, kunt u elke regel onder Opties instellen:
     - Blokkeren: de regel wordt toegepast.
-    - Controlemodus: als de regel normaal gesproken een gebeurtenis zou veroorzaken, wordt deze geregistreerd (hoewel de regel feitelijk niet wordt toegepast)
+    - Controlemodus: als de regel normaal gesproken een gebeurtenis zou veroorzaken, wordt deze geregistreerd (hoewel de regel feitelijk niet wordt toegepast).
     - Uit: de regel wordt niet toegepast.
-    - Niet geconfigureerd: de regel is ingeschakeld met standaardwaarden
-    - Waarschuwing: de regel wordt toegepast en de eindgebruiker heeft de mogelijkheid om de blokkering te omzeilen
-
-    Tenzij de ASR-regel is uitgeschakeld, wordt een deelsteekproef van controlegebeurtenissen verzameld voor ASR-regels met de waarde van niet-geconfigureerd.
 
     Ingeschakeld:
     Geef de status op voor elke ASR-regel in het gedeelte Opties voor deze instelling.
@@ -905,9 +865,6 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
     - 1 (Blokkeren)
     - 0 (Uit)
     - 2 (Controle)
-    - 5 (Niet geconfigureerd)
-    - 6 (Waarschuwing)
-
     
     Voorbeeld:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -920,7 +877,7 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
     Niet geconfigureerd:
     Hetzelfde als Uitgeschakeld.
 
-    U kunt mappen of bestanden en bronnen uitsluiten bij de groepsbeleidsinstelling "Bestanden en paden uitsluiten van regel voor het verminderen van de kwetsbaarheid voor aanvallen".
+    U kunt mappen of bestanden en bronnen uitsluiten bij de groepsbeleidsinstelling Exclude files and paths from Attack Surface Reduction Rules.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Gecontroleerde mappentoegang configureren</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -1022,13 +979,13 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
 
     Met Microsoft Defender Antivirus wordt automatisch bepaald welke toepassingen kunnen worden vertrouwd. In de GP-instelling Toegestane toepassingen configureren kunt u aanvullende vertrouwde toepassingen toevoegen.
     </string>
-    <string id="DeviceControl_PolicyGroups">Beleidsgroepen voor apparaatbeheer definiëren</string>
+    <string id="DeviceControl_PolicyGroups">Beleidsgroepen voor apparaatbesturing definiëren</string>
     <string id="DeviceControl_PolicyGroups_Explain">
-        Volg het XML-schema van de beleidsgroepen voor apparaatbeheer om de gegevens van de beleidsgroepen in te vullen.
+        Volg het XML-schema van de beleidsgroepen voor apparaatbesturing om de gegevens van de beleidsgroepen in te vullen.
     </string>
-    <string id="DeviceControl_PolicyRules">Beleidsregels voor apparaatbeheer definiëren</string>
+    <string id="DeviceControl_PolicyRules">Beleidsregels voor apparaatbesturing definiëren</string>
     <string id="DeviceControl_PolicyRules_Explain">
-        Volg het XML-schema van de beleidsregels voor apparaatbeheer om de gegevens van de beleidsregels in te vullen.
+        Volg het XML-schema van de beleidsregels voor apparaatbesturing om de gegevens van de beleidsregels in te vullen.
     </string>
     </stringTable>
     <presentationTable>
@@ -1047,11 +1004,6 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
         <label>Proxyserver definiëren voor verbinding met het netwerk</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>Pad naar map definiëren voor het kopiëren van ondersteuningslogboekbestanden</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Uitsluitingen op basis van bestandsextensie</listBox>
     </presentation>
@@ -1060,9 +1012,6 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Uitsluitingen op basis van proces</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">Uitsluitingen van IP-adressen</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Extra definitiereeksen opgeven voor inspectie van netwerkverkeer</listBox>
@@ -1131,10 +1080,10 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Het tijdstip van de dag opgeven waarop een geplande scan moet worden uitgevoerd</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Het aantal dagen bepalen voordat Security Intelligence voor spyware wordt beschouwd als verouderd</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Het aantal dagen bepalen voordat Security Intelligence voor spyware wordt beschouwd als verouderd</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Het aantal dagen bepalen voordat Security Intelligence voor virussen wordt beschouwd als verouderd</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Het aantal dagen bepalen voordat Security Intelligence voor virussen wordt beschouwd als verouderd</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1219,9 +1168,6 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
     <textBox refId="DeviceControl_PolicyRules">
         <label>Definieer de beleidsregels hier</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Venster voor willekeurig instellen van planner in uren opgeven.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

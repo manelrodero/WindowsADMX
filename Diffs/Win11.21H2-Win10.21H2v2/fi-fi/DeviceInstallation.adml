@@ -35,13 +35,13 @@ Jos otat tämän käytäntöasetuksen käyttöön etätyöpöytäpalvelimessa, k
 
 Jos poistat käytäntöasetuksen käytöstä tai et määritä sitä, eikä laitteelle ole määritetty muuta käytäntöasetusta, Estä niiden laitteiden asentaminen, joille ei ole määritetty muuta käytäntöasetusta -käytäntöasetus määrittää, voiko laitteen asentaa.</string>
       <string id="DeviceInstall_Classes_Deny">Estä laitteiden asennus näitä laiteasennusluokkia vastaavien ohjainten avulla</string>
-      <string id="DeviceInstall_Classes_Deny_Help">Tämän käytäntö asetuksen avulla voit määrittää luettelon laite asennus luokan GUID-tunnuksista ohjain paketeista, joita Windowsin ei voi asentaa. Tämä käytäntö asetus on oletus arvon mukaan etusijalla kaikkien muiden käytäntö asetusten mukaan, jotka sallivat Windowsin asentaa laitteen.
+      <string id="DeviceInstall_Classes_Deny_Help">Tämän käytäntöasetuksen avulla voit määrittää luettelon laiteasennusluokan GUID-tunnuksista ohjainpaketeista, joita Windowsin ei sallita asentaa. Tämä käytäntöasetus on oletusarvoisesti etusijalla kaikkiin muihin käytäntöasetuksiin nähden, jotka sallivat Windowsin asentaa laitteen.
 
-Huomautus: Jos haluat ottaa käyttöön salli sellaisten laitteiden asennuksen, jotka vastaavat jotakin näistä laite tunnuksista-ja salli sellaisten laitteiden asennus, jotka vastaavat jotakin näistä laite-esiintymä tunnuksista-käytäntö asetus supersede tämän käytäntö asetuksen käytöstä, ota käyttöön salli arviointi järjestyksen salliminen ja estä laitteiden asennus käytännöt kaikissa laitteen vastaavuuden ehdoilla-käytäntö asetusta.
+HUOMAUTUS: Jos haluat sallia Sellaisten laitteiden asennuksen, jotka vastaavat jotakin näistä laitetunnuksista- ja Salli sellaisten laitteiden asennus, jotka vastaavat jotakin näistä laite-esiintymätunnuksista -käytäntöasetukset korvaavat tämän käytäntöasetuksen soveltuville laitteille, ota käyttöön Käytä kerrostettu arviointijärjestys laitteen asennuskäytäntöjen sallimiseen tai estämiseen kaikissa laitteen vastaavuusehdoissa -käytäntöasetusta.
  
-Jos otat tämän käytäntö asetuksen käyttöön, Windows ei voi asentaa tai päivittää ohjain paketteja, joiden laitteen asennus luokan GUID-toiminto näkyy luomasi luettelossa. Jos otat tämän käytäntö asetuksen käyttöön etätyöpöytäpalveluiden, käytäntö asetus vaikuttaa määritettyjen laitteiden uudelleenohjausta etätyöpöytäyhteyden Etätyöpöytä-palvelimeen.
+Jos otat tämän käytäntöasetuksen käyttöön, Windowsia estetään asentamasta tai päivittämästä ohjainpaketteja, joiden laiteasennusluokan GUID-tunnukset näkyvät luomassasi luettelossa. Jos otat tämän käytäntöasetuksen käyttöön etätyöpöytäpalvelimessa, käytäntöasetus vaikuttaa määritettyjen laitteiden uudelleenohjaukseen etätyöpöytäasiakkaasta etätyöpöytäpalvelimeen.
 
-Jos poistat tämän käytäntö asetuksen käytöstä tai et määritä sitä, Windows voi asentaa ja päivittää laitteita, jos muut käytäntö asetukset ovat sallittuja.</string>
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows voi asentaa ja päivittää laitteita muiden käytäntöasetusten sallimalla tai estämällä tavalla.</string>
       <string id="DeviceInstall_Help">Laitteiden asennusta ohjaavat käytäntöasetukset.</string>
       <string id="DeviceInstall_IDs_Allow">Salli sellaisten laitteiden asennus, jotka vastaavat jotakin näistä laitetunnuksista</string>
       <string id="DeviceInstall_IDs_Allow_Help">Tämän käytäntöasetuksen avulla voit määrittää luettelon Plug and Play -laitteistotunnuksista ja -yhteensopivuustunnuksista laitteille, joita Windows saa asentaa. Tätä käytäntöasetusta on tarkoitus käyttää vain silloin, kun Käytä kerrostettua arviointijärjestystä laitteen asennuskäytäntöjen sallimiseen tai estämiseen kaikissa laitteen vastaavuusehdoissa -käytäntöasetus on otettu käyttöön. Sitä voi kuitenkin käyttää myös yhdessä vanhojen käytäntömääritysten Estä niiden laitteiden asentaminen, jolle ei ole määritetty muuta käytäntöasetusta -käytäntöasetuksen kanssa.
@@ -61,9 +61,9 @@ Jos poistat käytäntöasetuksen käytöstä tai et määritä sitä, eikä lait
       <string id="DeviceInstall_IDs_Deny">Estä näitä laitetunnuksia vastaavien laitteiden asennus</string>
       <string id="DeviceInstall_IDs_Deny_Help">Tämän käytäntöasetuksen avulla voit määrittää luettelon Plug and Play -laitteistotunnuksista ja -yhteensopivuustunnuksista laitteille, joita Windowsin ei sallita asentaa. Tämä käytäntöasetus on oletusarvoisesti etusijalla suhteessa kaikkiin muihin sellaisiin käytäntöasetuksiin, jotka sallivat Windowsin asentaa laitteen.
 
-HUOMAUTUS: jotta voit antaa Salli sellaisten laitteiden asennus, jotka vastaavat jotakin näistä laite-esiintymän tunnuksista -käytäntöasetuksen syrjäyttää tämän käytäntöasetuksen asiaankuuluvissa laitteissa, ota käyttöön Käytä kerrostettua arviointijärjestystä laitteen asennuskäytäntöjen sallimiseen tai estämiseen kaikissa laitteen vastaavuusehdoissa -käytäntöasetus.
+HUOMAUTUS: Jotta voit antaa Salli sellaisten laitteiden asennus, jotka vastaavat jotakin näistä laite-esiintymän tunnuksista -käytäntöasetuksen syrjäyttää tämän käytäntöasetuksen asiaankuuluvissa laitteissa, ota käyttöön Käytä kerrostettua arviointijärjestystä laitteen asennuskäytäntöjen sallimiseen tai estämiseen kaikissa laitteen vastaavuusehdoissa -käytäntöasetus.
 
-Jos otat tämän käytäntöasetuksen käyttöön, Windowsia estetään asentamasta laitetta, jonka laitteistotunnus tai yhteensopiva tunnus on luomassasi luettelossa. Jos otat tämän käytäntöasetuksen käyttöön etätyöpöytäpalvelimelle, käytäntöasetus vaikuttaa määritettyjen laitteiden uudelleenohjaukseen etätyöpöytäasiakkaasta etätyöpöytäpalvelimeen.
+Jos otat tämän käytäntöasetuksen käyttöön, Windowsia estetään asentamasta laitetta, jonka laitteistotunnus tai yhteensopivuustunnus on luomassasi luettelossa. Jos otat tämän käytäntöasetuksen käyttöön etätyöpöytäpalvelimelle, käytäntöasetus vaikuttaa määritettyjen laitteiden uudelleenohjaukseen etätyöpöytäasiakkaasta etätyöpöytäpalvelimeen.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, laitteita voi asentaa ja päivittää, jos muut käytäntöasetukset sen sallivat.</string>
       <string id="DeviceInstall_Instance_IDs_Allow">Salli sellaisten laitteiden asennus, jotka vastaavat jotakin näistä laitteiden esiintymätunnuksista</string>
@@ -123,9 +123,9 @@ Jos otat tämän käytäntöasetuksen käyttöön, Windows ei voi asentaa tai p�
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows voi asentaa tai päivittää sellaisen laitteen ohjainpaketin, jolle ei ole määritetty Estä näitä laitetunnuksia vastaavien laitteiden asennus-, Estä näiden laiteluokkien laitteiden asennus-, Estä näitä laitteiden esiintymätunnuksia vastaavien laitteiden asennus- tai Estä siirrettävien laitteiden asennus -käytäntöasetusta.</string>
       <string id="DeviceInstall_Allow_Deny_Layered">Ota käyttöön kerrostettu arviointijärjestys, joka sallii ja estää laitteiden asennuskäytäntöjä kaikissa laitteen vastaavuuden ehdoissa</string>
-      <string id="DeviceInstall_Allow_Deny_Layered_Help">Tämä käytäntöasetus muuttaa arviointijärjestystä, joka sallii ja estää käytäntöasetusten käyttämisen, kun useampi kuin yksi asennuksen käytäntöasetus on käytettävissä tietyssä laitteessa. Ota tämä käytäntöasetus käyttöön, jotta voit varmistaa, että päällekkäiset laitteen vastaavuusehdot otetaan käyttöön määritetyssä hierarkiassa, jossa tietyt vastaavuusehdot ohittavat vähemmän toisiaan vastaavat ehdot. Niiden käytäntöasetusten arviointijärjestys, jotka määrittävät laitteen vastaavuusehdot ovat seuraavat:
+      <string id="DeviceInstall_Allow_Deny_Layered_Help">Tämä käytäntöasetus muuttaa arviointijärjestystä, joka sallii ja estää käytäntöasetusten käyttämisen, kun useampi kuin yksi asennuksen käytäntöasetus on käytettävissä tietyssä laitteessa. Ota tämä käytäntöasetus käyttöön, jotta voit varmistaa, että päällekkäiset laitteen vastaavuusehdot otetaan käyttöön määritetyssä hierarkiassa, jossa tarkat vastaavuusehdot ohittavat vähemmän tarkat ehdot. Niiden käytäntöasetusten arviointijärjestys, jotka määrittävät laitteen vastaavuusehdot ovat seuraavat:
 
-Laite esiintymätunnukset &gt; laitetunnukset &gt; laitteen asennusluokka &gt; siirrettävät laitteet
+Laite-esiintymätunnukset &gt; laitetunnukset &gt; laitteen asennusluokka &gt; siirrettävät laitteet
 
 Laite- esiintymätunnukset
 1. Estä laitteiden asennus käyttämällä näitä laite-esiintymätunnuksia vastaavia ohjaimia
@@ -142,9 +142,9 @@ Laitteen asennusluokka
 Siirrettävät laitteet
 7. Estä Siirrettävien laitteiden asennus
 
-Huomautus: Tämä käytäntöasetus antaa hajautetumman hallinnan kuin "Estä sellaisten laitteiden asennus, joita ei ole kuvattu muissa käytäntöasetuksissa" -käytäntö asetuksessa. Jos nämä ristiriitaiset käytäntöasetukset ovat käytössä samalla kertaa, "Ota käyttöön kerrostettu arviointijärjestys Salli ja estä laitteiden -asennuskäytännöille kaikissa laitevastaavuuden ehdoissa" -käytäntöasetus otetaan käyttöön ja muut käytäntöasetukset ohitetaan.
+HUOMAUTUS: Tämä käytäntöasetus antaa hajautetumman hallinnan kuin käytäntöasetuksessa Estä sellaisten laitteiden asennus, joita ei ole kuvattu muissa käytäntöasetuksissa. Jos nämä ristiriitaiset käytäntöasetukset ovat käytössä samalla kertaa, Ota käyttöön kerrostettu arviointijärjestys laitteiden asennuksen sallimisen ja estämisen asennuskäytännöille kaikissa laitevastaavuuden ehdoissa -käytäntöasetus otetaan käyttöön ja muut käytäntöasetukset ohitetaan.
 
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käytetään oletusarviointia. Oletusarvoisesti kaikki "Estä asennus..." -käytäntöasetukset ovat etusijalla kaikkien muiden käytäntöasetusten ohi, jotka sallivat Windowsin asentaa laitteen.</string>
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käytetään oletusarviointia. Oletusarvoisesti kaikki Estä asennus... -käytäntöasetukset ovat etusijalla suhteessa muihin käytäntöasetuksiin, jotka sallivat Windowsin asentaa laitteen.</string>
       <string id="DeviceInstall_DeniedPolicy_SimpleText">Näytä mukautettu sanomaotsikko, kun käytäntöasetus estää laiteasennuksen</string>
       <string id="DeviceInstall_DeniedPolicy_SimpleText_Help">Tämän käytäntöasetuksen avulla voit määrittää, että mukautettu viestin otsikko näytetään ilmoituksessa, kun laitteen asennusta yritetään ja käytäntöasetus estää asennuksen.
 
@@ -159,9 +159,9 @@ Jos otat tämän käytäntöasetuksen käyttöön, Windows näyttää tietojen t
 Jos poistat tämän asetuksen käytöstä tai et määritä sitä, Windows näyttää oletussanoman, kun käytäntöasetus estää laitteen asennuksen.</string>
       <string id="DriverInstall_Category">Ohjaimen asennus</string>
       <string id="DriverInstall_Classes_AllowUser">Salli muiden kuin järjestelmänvalvojien asentaa näiden laiteasennusluokkien ohjaimia</string>
-      <string id="DriverInstall_Classes_AllowUser_Help">Tämä käytäntöasetus määrittää sellaisia ohjainpaketteja vastaavien GUID-tunnusten luettelon, joita Käyttäjät-ryhmän muutkin kuin järjestelmänvalvojajäsenet voivat asentaa järjestelmään.
+      <string id="DriverInstall_Classes_AllowUser_Help">Tämä käytäntöasetus määrittää laiteasennusluokan GUID-tunnuksien luettelon, joka kuvaa sellaisia ohjainpaketteja, joita käyttäjien oletusryhmän muutkin kuin järjestelmänvalvojajäsenet voivat asentaa järjestelmään.
 
-Jos otat tämän käytäntöasetuksen käyttöön, Käyttäjät-ryhmän jäsenet voivat asentaa uusia ohjaimia määritettyjä laiteluokkia vastaaville laitteille. Ohjainten on oltava allekirjoitettuja Windowsin ohjaimen allekirjoituskäytännön mukaisesti tai julkaisijan jo TrustedPublisher-säilössä allekirjoittamia.
+Jos otat tämän käytäntöasetuksen käyttöön, Käyttäjät-ryhmän jäsenet voivat asentaa uusia ohjaimia laiteasennusluokkiin. Ohjainten on oltava allekirjoitettuja Windowsin ohjaimen allekirjoituskäytännön mukaisesti tai julkaisijan jo luotettujen julkaisijoiden säilössä allekirjoittamia.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, vain Järjestelmänvalvojat-ryhmät jäsenet saavat asentaa uusia ohjainpaketteja järjestelmään.</string>
       <string id="DriverInstall_Help">Käytäntöasetukset, jotka ohjaavat ohjainpakettien asennusta järjestelmään.</string>

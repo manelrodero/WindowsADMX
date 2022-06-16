@@ -137,9 +137,9 @@ Se você não definir essa configuração de política, ela não será aplicada 
       <string id="Netlogon_ExpectedDialupDelay">Especificar o atraso de discagem esperado para logon</string>
       <string id="Netlogon_ExpectedDialupDelay_Help">Essa configuração de política especifica o tempo adicional que o computador deve aguardar pela resposta do DC (controlador de domínio) ao fazer logon na rede.
 
-Para especificar o atraso de discagem esperado no logon, clique em Habilitado e insira o valor desejado em segundos (por exemplo, o valor "60" corresponde a 1 minuto).
+Para especificar o atraso de discagem esperado no logon, clique em Habilitado e digite o valor desejado em segundos (por exemplo, o valor "60" corresponde a 1 minuto).
 
-Se você não definir essa configuração de política, ela não será aplicada a nenhum computador, e os computadores usarão a configuração local.</string>
+Se você não definir essa configuração de política, ela não será aplicada a nenhum computador e os computadores usarão sua configuração local.</string>
       <string id="Netlogon_GcSiteCoverage">Especificar sites incluídos nos registros SRV DNS do localizador de GC</string>
       <string id="Netlogon_GcSiteCoverage_Help">Essa configuração de política especifica os sites nos quais os GCs (catálogos globais) devem gravar os registros de recurso de serviços DNS do localizador de GC específicos do site. Esses registros são gravados juntamente com os registros SRV específicos do site, que são registrados para o site no qual o GC reside, e os registros gravados por um GC configurado para gravar registros SRV DNS do localizador de GC para os sites sem GC que estão mais próximos a ele. 
 
@@ -337,22 +337,6 @@ Os valores permitidos para essa configuração resultam nos seguintes comportame
 Para especificar esse comportamento, clique em Habilitado e insira um valor. O intervalo de valores é de 1 a 2.
 
 Se você não definir essa configuração de política, ela não será aplicada a nenhum computador, e os computadores usarão suas configurações locais.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Usar nomes de host DNS em minúsculas ao registrar registros SRV de controlador de domínio</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Essa configuração de política define se os controladores de domínio aos quais essa configuração é aplicada irá abformar o nome de host DNS em minúsculas ao registrar Registros SRV.
-
-Se habilitada, os controladores de domínio terão o nome do host DNS em minúscula ao registrar os registros SRV do controlador de domínio. Será feita uma tentativa de melhor esforço para excluir todos os registros SRV registrados anteriormente que contenham nomes de host DNS de maiúsculas e minúsculas. Para obter mais informações e possíveis procedimentos de limpeza manual, consulte o link abaixo.
-
-Se desabilitado, os controladores de domínio usarão o nome de host DNS configurado como está ao registrar os registros SRV do controlador de domínio.
-
-Se não estiver configurado, os controladores de domínio usarão a configuração local.
-
-A configuração local padrão está habilitada.
-
-Não é necessária uma reinicialização para que as alterações desta configuração entrem em vigor.
-
-Mais informações estão disponíveis em https://aka.ms/lowercasehostnamesrvrecord
-      </string>
 
     </stringTable>
     <presentationTable>

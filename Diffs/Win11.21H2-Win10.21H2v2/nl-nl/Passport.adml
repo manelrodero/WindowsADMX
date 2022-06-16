@@ -120,22 +120,24 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, maakt Windows gee
 OPMERKING: dit beleid geldt alleen voor apparaten die zijn geregistreerd bij Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Gebruik deze beleidsinstelling om Windows hello voor bedrijven te configureren voor het inschrijven van een aanmeldingscertificaat voor on-premises authenticatie.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Gebruik deze beleidsinstelling om Windows Hello voor Bedrijven te configureren voor het inschrijven van een aanmeldingscertificaat dat wordt gebruikt voor on-premises verificatie.
 
-Als u deze beleidsinstelling inschakelt, registreert Windows hello voor bedrijven een aanmeldcertificaat dat wordt gebruikt voor on-premises authenticatie.
+Als u deze beleidsinstelling inschakelt, wordt Windows Hello voor Bedrijven een aanmeldingscertificaat geregistreerd dat wordt gebruikt voor on-premises verificatie.
 
-Als u deze beleidsinstelling uitschakelt of niet configureert, wordt in Windows hello voor bedrijven een sleutel of een Kerberos-ticket (afhankelijk van andere beleidsinstellingen) gebruikt voor on-premises authenticatie.
+Als u deze beleidsinstelling uitschakelt of niet configureert, gebruikt Windows Hello voor Bedrijven een sleutel of een Kerberos-ticket (afhankelijk van andere beleidsinstellingen) voor on-premises verificatie.
 
-Opmerking: als u deze beleidsinstelling uitschakelt of niet configureert en de beleidsinstelling ' Windows hello voor bedrijven gebruiken ' inschakelt, moet de omgeving een of meer Windows Server 2016-domeincontrollers hebben om te voorkomen dat de verificatie van Windows hello voor bedrijven wordt afgebroken.
+OPMERKING: als u deze beleidsinstelling uitschakelt of niet configureert en de beleidsinstelling 'Windows Hello voor Bedrijven gebruiken' inschakelt, moet de omgeving beschikken over een of meer Windows Server 2016-domeincontrollers om te voorkomen dat Windows Hello voor Bedrijven authenticatie mislukt.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Gebruik deze beleidsinstelling om Windows hello voor bedrijven te configureren voor het gebruik van Azure AD Kerberos voor on-premises authenticatie.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Gebruik deze beleidsinstelling om Windows Hello voor Bedrijven te configureren voor het gebruik van Azure AD Kerberos voor on-premises verificatie.
 
-Als u deze beleidsinstelling inschakelt, gebruikt Windows hello voor bedrijven een Kerberos-ticket dat wordt opgehaald van verificatie naar Azure voor on-premises authenticatie.
+Als u deze beleidsinstelling inschakelt, gebruikt Windows Hello voor Bedrijven een Kerberos-ticket dat is opgehaald uit verificatie naar Azure voor on-premises verificatie.
 
-Als u deze beleidsinstelling uitschakelt of niet configureert, zal Windows hello voor bedrijven een sleutel of certificaat gebruiken (afhankelijk van andere beleidsinstellingen) voor on-premises authenticatie. 
+Als u deze beleidsinstelling uitschakelt of niet configureert, gebruikt Windows Hello voor Bedrijven een sleutel of certificaat (afhankelijk van andere beleidsinstellingen) voor on-premises verificatie. 
  
-Opmerking: een omgeving waarin deze beleidsinstelling is ingeschakeld en de beleidsinstelling ' Windows hello voor bedrijven gebruiken ' vereist een of meer Windows Server 2016-domeincontrollers. Als dit niet het geval is, mislukt de verificatie van Windows hello voor bedrijven.
+OPMERKING: voor een omgeving die zowel deze beleidsinstelling als de beleidsinstelling 'Windows Hello voor Bedrijven gebruiken' inschakelt, zijn een of meer Windows Server 2016-domeincontrollers vereist. Anders mislukt Windows Hello voor Bedrijven verificatie.
+
+Dit beleid wordt alleen ondersteund op Windows 10 versie 21H2 en hoger.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Apparaatontgrendelingsfactoren configureren</string>

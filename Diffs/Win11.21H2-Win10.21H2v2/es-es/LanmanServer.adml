@@ -61,16 +61,14 @@ Versión de hash admitida:
       <string id="Pol_CipherSuiteOrder_Name">Orden de conjuntos de cifrado</string>
       <string id="Pol_CipherSuiteOrder_Help">Esta configuración de directiva determina los conjuntos de cifrado usados por el servidor SMB.
 
-Si habilita esta configuración de directiva, los conjuntos de cifrado se ordenarán por prioridad de la forma especificada.
+Si habilitas esta configuración de directiva, los conjuntos de cifrado se ordenarán por prioridad de la forma especificada.
 
-Si habilita esta configuración de directiva y no especifica como mínimo un conjunto de cifrado compatible, o si deshabilita o no establece esta configuración de directiva, se usará el orden de conjuntos de cifrado predeterminado.
+Si habilitas esta configuración de directiva y no especificas como mínimo un conjunto de cifrado compatible o si deshabilitas o no estableces esta configuración de directiva, se usará el orden de conjuntos de cifrado predeterminado.
 
 Conjuntos de cifrado de SMB 3.11:
 
 AES_128_GCM
 AES_128_CCM
-AES_256_GCM
-AES_256_CCM
 
 Conjuntos de cifrado de SMB 3.0 y 3.02:
 
@@ -78,9 +76,9 @@ AES_128_CCM
 
 Cómo modificar esta configuración:
 
-Organice los conjuntos de cifrado deseados en el cuadro de edición: un conjunto de cifrado por línea, en orden de preferencia, con el conjunto de cifrado de mayor preferencia en la parte superior. Elimine los conjuntos de cifrado que no quiera usar.
+Organiza los conjuntos de cifrado deseados en el cuadro de edición: un conjunto de cifrado por línea, en orden de preferencia, con el conjunto de cifrado de mayor preferencia en la parte superior. Elimina los conjuntos de cifrado que no quieras usar.
 
-Nota: Al establecer esta configuración de seguridad, no se aplicarán los cambios hasta que reinicie Windows.</string>
+Nota: Al establecer esta configuración de seguridad, no se aplicarán los cambios hasta que reinicies Windows.</string>
       <string id="HonorCipherSuiteOrder_Name">Respetar el orden de conjuntos de cifrado</string>
       <string id="HonorCipherSuiteOrder_Help">Esta configuración de directiva determina cómo el servidor SMB selecciona un conjunto de cifrado al negociar una nueva conexión con un cliente SMB.
 

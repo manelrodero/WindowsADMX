@@ -35,13 +35,13 @@ Hvis du aktiverer denne policyinnstillingen på en server for eksternt skrivebor
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, og ingen andre policyinnstillinger beskriver enheten, bestemmer policyinnstillingen «Forhindre installasjon av enheter som ikke er beskrevet av andre policyinnstillinger», om enheten kan installeres.</string>
       <string id="DeviceInstall_Classes_Deny">Forhindre installasjon av enheter med drivere for disse enhetsklassene</string>
-      <string id="DeviceInstall_Classes_Deny_Help">Med denne policy innstillingen kan du angi en liste over guider for enhets oppsetts klassen for driver pakker som Windows ikke kan installere. Som standard tar denne policy innstillingen foran alle andre policy innstillinger som tillater Windows å installere en enhet.
+      <string id="DeviceInstall_Classes_Deny_Help">Med denne policyinnstillingen kan du angi en liste over GUIDer for enhetsoppsettsklassen for driverpakker som Windows ikke kan installere. Som standard overstyrer denne policyinnstillingen alle andre policyinnstillinger som tillater Windows å installere en enhet.
 
-Obs! hvis du vil aktivere policy innstillingene "Tillat installasjon av enheter som Sams varer med disse enhets-IDene" og "Tillat installasjon av enheter som Sams varer med disse ID-ene for enhets forekomst", til å erstatte denne policy innstillingen for gjeldende enheter, aktiverer du policy innstillingen bruk lagvis rekkefølge for å tillate og forhindre enhets installasjons policyer på tvers av alle vilkårene for enhets samsvar
+Obs! Hvis du vil aktivere policyinnstillingene Tillat installasjon av enheter som samsvarer med disse enhets-ID-ene og Tillat installasjon av enheter som samsvarer med disse enhetsforekomst-ID-ene, for å erstatte denne policyinnstillingen for gjeldende enheter, aktiverer du policyinnstillingen «Bruk lagdelt evalueringsrekkefølge for policyer som tillater eller forhindrer enhetsinstallasjon på tvers av alle treffvilkår for enheter».
  
-Hvis du aktiverer denne policy innstillingen, forhindres Windows fra å installere eller oppdatere driver pakker der GUID-er for enhets installasjons klassen vises i listen du oppretter. Hvis du aktiverer denne policy innstillingen på en eksternt skrivebord-server, virker policy innstillingen inn på omdirigering av de angitte enhetene fra en ekstern skrive bords klient til serveren for eksternt skrive bord.
+Hvis du aktiverer denne policyinnstillingen, kan ikke Windows installere eller oppdatere driverpakker der GUIDene for enhetsoppsettsklassen vises i listen du oppretter. Hvis du aktiverer denne policyinnstillingen på en ekstern skrivebordsserver, påvirker policyinnstillingen omadressering av de angitte enhetene fra en ekstern skrivebordsklient til eksternt skrivebord-serveren.
 
-Hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen, kan Windows installere og oppdatere enheter som tillatt eller blokkert av andre policy innstillinger.</string>
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan Windows installere og oppdatere enheter som tillatt eller forhindret av andre policyinnstillinger.</string>
       <string id="DeviceInstall_Help">Policyinnstillinger som styrer installasjon av enheter.</string>
       <string id="DeviceInstall_IDs_Allow">Tillat installasjon av enheter som samsvarer med disse enhets-IDene</string>
       <string id="DeviceInstall_IDs_Allow_Help">Med denne policyinnstillingen kan du angi en liste over maskinvare-ID-er og kompatible ID-er for Plug and Play for enheter som Windows kan installere. Denne policyinnstillingen skal bare brukes når policyinnstillingen «Bruk lagdelt evalueringsrekkefølge for policyer som tillater eller forhindrer installasjon på enheter, på tvers av alle treffvilkår for enheter» er aktivert, men den kan også brukes sammen med policyinnstillingen «Forhindre installasjon av enheter som ikke er beskrevet av andre policyinnstillinger» for eldre policydefinisjoner.
@@ -164,7 +164,7 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, vises en 
 Hvis du aktiverer denne policyinnstillingen, kan medlemmer i Brukere-gruppen installere nye drivere for de angitte enhetsinstallasjonsklassene. Driverne må være signert i henhold til driversigneringspolicyen for Windows eller av programvareutgivere som allerede finnes i lageret Klarerte utgivere.
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan bare medlemmer av Administratorer-gruppen installere nye driverpakker på systemet.</string>
-      <string id="DriverInstall_Help">Policy innstillinger som styrer installasjon av driver pakker på systemet.</string>
+      <string id="DriverInstall_Help">Policyinnstillinger som kontrollerer installasjon av driverpakker på systemet.</string>
       <string id="DriverSign_Block">Blokker</string>
       <string id="DriverSign_None">Ignorer</string>
       <string id="DriverSign_Warn">Varsle</string>

@@ -32,12 +32,13 @@
 Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de instelling van de lokale host gebruikt.
 
 Als u deze beleidsinstelling inschakelt, kunt u ISATAP met een van de volgende instellingen configureren:
-
-Standaard beleidstatus: er zijn geen ISATAP-interfaces beschikbaar op de host.
+Standaard beleidstatus: als de naam van de ISATAP-router kan worden omgezet, heeft de host ISATAP geconfigureerd met een link-local adres en wordt er via automatische adresconfiguratie een stateless adres voor elk voorvoegsel ontvangen van de ISATAP-router. Als de naam van de ISATAP-router niet kan worden omgezet, is er geen ISATAP-connectiviteit beschikbaar op de host die het corresponderende IPv4-adres gebruikt.
 
 Ingeschakelde status: als de naam van de ISATAP-router kan worden omgezet, heeft de host ISATAP geconfigureerd met een link-local adres en wordt er via automatische adresconfiguratie een stateless adres voor elk voorvoegsel ontvangen van de ISATAP-router. Als de naam van de ISATAP-router niet kan worden omgezet, beschikt de host over een ISATAP-interface die is geconfigureerd met een link-local adres.
 
 Uitgeschakelde status: er zijn geen ISATAP-interfaces beschikbaar op de host.
+
+
 
 </string>
 
@@ -57,12 +58,13 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de instelli
 Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de instelling van de lokale host gebruikt.
 
 Als u deze beleidsinstelling inschakelt, kunt u 6to4 met een van de volgende instellingen configureren:
-
-Standaard beleidstatus: 6to4 is uitgeschakeld en connectiviteit met 6to4 is niet beschikbaar.
+Standaard beleidstatus: 6to4 is beschikbaar als de host alleen link-local IPv6-connectiviteit en een openbaar IPv4-adres heeft. Als er geen globaal IPv6-adres aanwezig is en evenmin een globaal IPv4-adres, beschikt de host niet over een 6to4-interface. Als er geen globaal IPv6-adres bestaat maar wel een globaal IPv4-adres, beschikt de host over een 6to4-interface.Ingeschakelde status:
 
 Ingeschakelde status: als er een globaal IPv4-adres aanwezig is, beschikt de host over een 6to4-interface. Als er geen globaal IPv4-adres aanwezig is, beschikt de host niet over een 6to4-interface.
 
 Uitgeschakelde status: 6to4 is uitgeschakeld en er is geen connectiviteit via 6to4 beschikbaar.
+
+
 
 </string>
 

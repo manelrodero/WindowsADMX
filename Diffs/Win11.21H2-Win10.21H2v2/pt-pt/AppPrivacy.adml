@@ -99,36 +99,6 @@ Se desativar esta definição de política ou não a configurar, os funcionário
 
 Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for aplicado a um dispositivo, os funcionários têm de reiniciar a aplicação ou o dispositivo para que as alterações de política sejam aplicadas à aplicação.
       </string>
-      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">Permitir as aplicações Windows tirar fotografias de várias janelas ou ecrãs</string>
-      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">Esta definição de política especifica se as aplicações do Windows podem efetuar capturas de ecrã de várias janelas ou ecrãs.
-
-Pode especificar uma predefinição para todas as aplicações ou uma definição por aplicação, especificando um Nome de Família de Pacotes. Pode obter o Nome de Família do Pacotes para uma aplicação através do cmdlet Get-AppPackage do Windows PowerShell. Uma definição por aplicação substituirá a definição padrão.
-
-Se escolher a opção "O controlo está a cargo do utilizador", os colaboradores da sua organização podem decidir se as aplicações do Windows podem efetuar as capturas de ecrã em várias janelas ou ecrãs, através das Definições e Privacidade no dispositivo.
-
-Se escolher a opção "Forçar Permissão", as aplicações do Windows podem efetuar capturas de ecrã em várias janelas ou ecrãs, e os funcionários da sua organização não podem alterá-la.
-
-Se escolher a opção "Forçar Negação", as aplicações do Windows não estarão autorizadas a efetuar capturas de ecrã de várias janelas ou ecrãs, e os funcionários da sua organização não podem alterá-la.
-
-Se desativar ou não configurar esta definição de política, os colaboradores da sua organização podem decidir se as aplicações do Windows podem efetuar capturas de ecrã de várias janelas ou ecrãs, através das Definições e Privacidade no dispositivo.
-
-Se uma aplicação estiver aberta quando este objeto de Política de Grupo for aplicado num dispositivo, os colaboradores devem reiniciar a aplicação ou dispositivo para que as alterações de política sejam refletidas na aplicação.
-      </string>
-      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">Permitir as aplicações Windows desligarem a moldura de captura de ecrã</string>
-      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">Esta definição de política especifica se as aplicações do Windows podem desligar o limite de captura de ecrã.
-
-Pode especificar uma predefinição para todas as aplicações ou uma definição por aplicação, especificando um Nome de Família de Pacote. Pode obter o Nome de Família do Pacote para uma aplicação utilizando o cmdlet Get-AppPackage Windows PowerShell. Uma definição por aplicação sobrepõe-se à definição padrão.
-
-Se escolher a opção "Utilizador está no controlo", os colaboradores da sua organização podem decidir se as aplicações do Windows podem desligar o limite de captura de ecrã utilizando Definições &gt; Privacidade no dispositivo.
-
-Se escolher a opção "Forçar Permissão", as aplicações do Windows podem desligar o limite de captura de ecrã e os funcionários da sua organização não podem alterá-la.
-
-Se escolher a opção "Forçar Negação", as aplicações do Windows não estarão autorizadas a desligar o limite de captura de ecrã e os funcionários da sua organização não podem alterá-la.
-
-Se desativar ou não configurar esta definição de política, os colaboradores da sua organização podem decidir se as aplicações do Windows podem desligar o limite de captura de ecrã utilizando Definições &gt; Privacidade no dispositivo.
-
-Se uma aplicação estiver aberta quando este objeto de Política de Grupo for aplicado num dispositivo, os colaboradores devem reiniciar a aplicação ou dispositivo para que as alterações de política sejam aplicadas à aplicação da aplicação.
-      </string>
       <string id="LetAppsAccessLocation_Name">Permitir que as aplicações do Windows acedam à localização</string>
       <string id="LetAppsAccessLocation_Explain">Esta definição de política especifica se as aplicações do Windows podem aceder à localização.
 
@@ -422,24 +392,6 @@ Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for 
         <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
       </presentation>
-      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
-        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">Predefinição para todas as aplicações:</dropdownList>
-        <text>Dar ao utilizador o controlo destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
-        <text>Forçar a permissão destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
-        <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
-      </presentation>
-      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
-        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">Predefinição para todas as aplicações:</dropdownList>
-        <text>Dar ao utilizador o controlo destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
-        <text>Forçar a permissão destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
-        <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
-      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Predefinição para todas as aplicações:</dropdownList>
         <text>Dar ao utilizador o controlo destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
@@ -554,7 +506,7 @@ Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for 
         <multiTextBox refId="LetAppsAccessGazeInput_UserInControlOfTheseApps_List"/>
         <text>Forçar a permissão destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
-        <text>Forçar negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
+        <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsActivateWithVoice">
@@ -569,7 +521,7 @@ Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for 
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
         <text>Forçar a permissão destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Forçar negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
+        <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

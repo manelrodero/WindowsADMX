@@ -250,17 +250,6 @@ LLMNR 是辅助名称解析协议。使用 LLMNR，查询从一个客户端计�
 如果启用此策略设置，则 IDN 会转换成 Nameprep 格式。
 
 如果禁用或未配置此策略设置，则 IDN 不会转换成 Nameprep 格式。</string>
-      <string id="DNS_Doh">配置通过 HTTPS 实现的 DNS (DoH) 的名称解析</string>
-      <string id="DNS_Doh_Disabled">禁止 DoH</string>
-      <string id="DNS_Doh_Auto">允许 DoH</string>
-      <string id="DNS_Doh_Force">需要 DoH</string>
-      <string id="DNS_Doh_Help">指定 DNS 客户端是否将通过 DNS 通过 HTTPS (囧) 执行名称解析。 
- # B1 默认情况下，DNS 客户端将通过 UDP 或 TCP) 进行传统的 DNS 名称解析 (。此设置可以增强 DNS 客户端的使用囧协议来解析域名。 
- # B3 若要使用此策略设置，请单击 "已启用"，然后从下拉列表中选择以下选项之一： 
- # B5 禁止囧：不会执行囧名称解析。 
- # B7 允许囧：在配置的 DNS 服务器支持时执行囧查询。如果不支持传统名称，请尝试经典名称解析。 
- # B9 需要囧：仅允许囧名称解析。如果未配置囧支持的 DNS 服务器，名称解析将失败。 
- # B11 如果禁用或未配置此策略设置，则计算机将使用本地配置的设置。</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -297,9 +286,6 @@ LLMNR 是辅助名称解析协议。使用 LLMNR，查询从一个客户端计�
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">更新安全等级:</dropdownList>
-      </presentation>
-      <presentation id="DNS_Doh">
-        <dropdownList refId="DNS_Doh_Box" defaultItem="1">配置 DoH 选项:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

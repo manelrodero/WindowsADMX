@@ -98,7 +98,7 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bliv
       <string id="EnableLegacyBalloonNotifications">Deaktiver visning af ballonmeddelelser som toasts.</string>
       <string id="EnableLegacyBalloonNotifications_Help">Denne politik deaktiverer den funktion, der konverterer balloner til toastmeddelelser. 
 
-Hvis du aktiverer denne politikindstilling, gengives system- og programmeddelelser som balloner i stedet for toastmeddelelser. 
+Hvis du aktiverer denne politikindstilling, gengives system- og programmeddelelser som balloner i stedet for toastmeddelelser.   
 
 Aktivér denne indstilling, hvis den bestemte app eller systemkomponent, der bruger ballonmeddelelser, har kompatibilitetsproblemer med toastmeddelelser. 
 
@@ -154,7 +154,7 @@ Hvis denne indstilling er aktiveret, vises meddelelser og Løsningscenter ikke i
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vises meddelelser og Løsningscenter på proceslinjen. 
 
 Der kræves en genstart for at aktivere denne politikindstilling.</string>
-      <string id="NoPinningStoreToTaskbar">Tillad ikke, at Store-appen fastgøres til proceslinjen</string>
+      <string id="NoPinningStoreToTaskbar">Tillad ikke, at Store-appen fastgøres til proceslinjen</string> 
       <string id="NoPinningStoreToTaskbar_Help">
 Denne politikindstilling gør det muligt at styre fastgørelse af Store-appen til proceslinjen.
 
@@ -171,30 +171,10 @@ Hvis du deaktiverer denne politikindstilling, kan brugere ikke få vist en ekstr
 Hvis du ikke konfigurerer denne politikindstilling, vil kalenderen blive indstillet i henhold til standardlogikken.</string>
       <string id="ConfigureTaskbarCalendar_SimplifiedChinese">Forenklet kinesisk (månekalender)</string>
       <string id="ConfigureTaskbarCalendar_TraditionalChinese">Traditionelt kinesisk (månekalender)</string>
-      <string id="Chat">Chat</string>
-      <string id="ConfigureChatIcon">Konfigurerer chatikonet på proceslinjen</string>
-      <string id="ConfigureChatIcon_Help">Med denne politikindstilling kan du konfigurere chatikonet på proceslinjen.
-
-Hvis du aktiverer denne politikindstilling og angiver den til Vis, vises chatikonet som standard på proceslinjen. Brugerne kan vise eller skjule den i Indstillinger.
-
-Hvis du aktiverer denne politikindstilling og angiver den til Skjul, skjules chatikonet som standard. Brugerne kan vise eller skjule den i Indstillinger.
-
-Hvis du aktiverer denne politikindstilling og angiver den til Deaktiveret, vises chatikonet ikke, og brugerne kan ikke vise eller skjule det i Indstillinger.
-
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, konfigureres chatikonet i overensstemmelse med standardindstillingerne for din Udgave af Windows.</string>
-      <string id="ChatEnum_Show">Vis</string>
-      <string id="ChatEnum_Hide">Skjul</string>
-      <string id="ChatEnum_Disabled">Deaktiveret</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureTaskbarCalendar">
         <dropdownList refId="ConfigureTaskbarCalendar_Dropdown" defaultItem="0">Kalender:</dropdownList>
-      </presentation>
-      <presentation id="ConfigureChatIcon">
-          <text>Konfigurer indstillingen for chatikonet</text>
-          <text> </text>
-          <dropdownList refId="ConfigureChatIcon_Action" noSort="true" defaultItem="1">Stat: </dropdownList>
-          <text> </text>
       </presentation>
     </presentationTable>
   </resources>

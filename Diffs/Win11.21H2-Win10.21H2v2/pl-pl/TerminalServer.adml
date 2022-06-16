@@ -6,7 +6,7 @@
   <resources>
     <stringTable>
       <string id="TS_AUTOSUBSCRIPTION_NAME">Włącz automatyczną subskrypcję</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Określa listę adresów URL, do których użytkownik powinien mieć automatycznie przypisaną subskrypcję</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Określa listę adresów URL, do których użytkownik powinien mieć automatycznie przypisaną subskrypcję</string>      
       <string id="TS_SUPPORTED_Windows10">Co najmniej Windows 10 lub Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Co najmniej system Windows 8 lub Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Co najmniej Windows Server 2012</string>
@@ -28,7 +28,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Co najmniej system Windows XP i tylko Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Co najmniej system Windows Server 2008 lub Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Tylko system Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 w wersji 1903, Windows 10 w wersji 1909 i Windows 10 w wersji 2004</string>
       <string id="TS_TERMINAL_SERVER">Host sesji pulpitu zdalnego</string>
       <string id="TS_TERMINAL_SERVER_Help">Steruje konfiguracją serwera hosta sesji pulpitu zdalnego</string>
       <string id="TS_LICENSE_SERVER">Licencjonowanie usług pulpitu zdalnego</string>
@@ -147,7 +146,6 @@ Jeśli to ustawienie zasad nie zostanie skonfigurowane, przekierowywanie dysków
       <string id="TS_CLIENT_LPT">Nie zezwalaj na przekierowywanie portu LPT</string>
       <string id="TS_CLIENT_PNP">Nie zezwalaj na przekierowywanie obsługiwanego urządzenia Plug and Play</string>
       <string id="TS_CAMERA_REDIRECTION">Nie zezwalaj na przekierowywanie przechwytywania wideo</string>
-      <string id="TS_LOCATION_REDIRECTION">Nie zezwalaj na przekierowywanie lokalizacji</string>
       <string id="TS_CLIENT_PRINTER">Nie zezwalaj na przekierowywanie drukarek klienta</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">To ustawienie zasad określa, czy należy zapobiegać udostępnianiu zawartości schowka (przekierowywaniu schowka) między komputerem zdalnym a komputerem klienckim w trakcie sesji usług pulpitu zdalnego.
 
@@ -212,15 +210,6 @@ Jeśli włączysz to ustawienie zasad, użytkownicy nie będą mogli przekierowy
 
 Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, użytkownicy będą mogli przekierowywać swoje urządzenia przechwytywania wideo do komputera zdalnego. Użytkownicy mogą użyć przycisku Więcej opcji na karcie Zasoby lokalne w oknie Podłączanie pulpitu zdalnego, aby wybrać urządzenia przechwytywania wideo, które będą przekierowywane do komputera zdalnego.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">To ustawienie zasad umożliwia sterowanie przekierowywaniem danych lokalizacji do komputera zdalnego w sesji usług pulpitu zdalnego.
-
-Domyślnie usługi pulpitu zdalnego zezwalają na przekierowywanie danych lokalizacji.
-
-Jeśli to ustawienie zasad zostanie włączone, użytkownicy nie będą mogli przekierowywać swoich danych lokalizacji do komputera zdalnego.
-
-Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą mogli przekierowywać swoje dane lokalizacji do komputera zdalnego.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">To ustawienie zasad umożliwia ograniczenie liczby monitorów, na których użytkownik może wyświetlać sesję usług pulpitu zdalnego. Ograniczenie liczby monitorów używanych do wyświetlania sesji usług pulpitu zdalnego umożliwia zwiększenie wydajności połączenia, zwłaszcza w przypadku powolnych łączy, i zmniejszenie obciążenia serwera.
 
@@ -433,20 +422,23 @@ Jeżeli to ustawienie zasad zostanie włączone, te powiadomienia nie będą wy�
 Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, te powiadomienia będą wyświetlane na serwerze hosta sesji pulpitu zdalnego po zalogowaniu się administratora lokalnego.</string>
       <string id="TS_LICENSING_MODE">Ustaw tryb licencjonowania usług pulpitu zdalnego</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        To ustawienie zasad umożliwia określenie typu licencji CAL usług pulpitu zdalnego potrzebnej do nawiązania połączenia z tym serwerem hosta sesji usług pulpitu zdalnego.
+        To ustawienie zasad umożliwia określenie typu licencji dostępu klienta usług pulpitu zdalnego (RDS CAL) potrzebnej do nawiązania połączenia z tym serwerem hosta sesji usług pulpitu zdalnego.
 
-          Za pomocą tego ustawienia zasad można wybrać jeden z dwóch trybów licencjonowania: na użytkownika lub na urządzenie.
+        Za pomocą tego ustawienia zasad możesz wybrać jeden z trzech trybów licencjonowania: Na użytkownika, Na urządzenie i Usługa AAD na użytkownika.
 
-          W trybie licencjonowania na użytkownika dla każdego konta użytkownika łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana Licencja RDS CAL na użytkownika wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
+        W trybie licencjonowania Na użytkownika dla każdego konta użytkownika łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana licencja RDS CAL na użytkownika wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
 
-          W trybie licencjonowania na urządzenie dla każdego urządzenia łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana Licencja RDS CAL na urządzenie wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
+        W trybie licencjonowania Na urządzenie dla każdego urządzenia łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana licencja RDS CAL na urządzenie wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
 
-          Jeśli to ustawienie zasad zostanie włączone, określony tryb licencjonowania usług pulpitu zdalnego będzie uznawany przez serwer licencji usług pulpitu zdalnego i hosta sesji usług pulpitu zdalnego.
+        W trybie licencjonowania Usługa AAD na użytkownika dla każdego konta użytkownika łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagany plan usług obsługujący licencje usług pulpitu zdalnego, który został przypisany w usłudze AAD.
+        
+        Jeśli włączysz to ustawienie zasad, określony tryb licencjonowania usług pulpitu zdalnego będzie uznawany przez serwer licencji usług pulpitu zdalnego i hosta sesji usług pulpitu zdalnego.
 
-          Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, tryb licencjonowania nie będzie określony na poziomie zasad grupy.
+        Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, tryb licencjonowania nie będzie określany na poziomie zasad grupy.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Na urządzenie</string>
       <string id="TS_LICENSING_MODE_PER_USER">Na użytkownika</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Usługa AAD na użytkownika</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">To ustawienie zasad określa, czy uniemożliwiać przekierowywanie danych do portów LPT klienta w czasie sesji usług pulpitu zdalnego.
 
 Za pomocą tego ustawienia można uniemożliwić użytkownikom mapowanie lokalnych portów LPT i przekierowywanie danych z komputera zdalnego do urządzeń peryferyjnych podłączonych do lokalnych portów LPT. Domyślnie w usługach pulpitu zdalnego jest możliwe przekierowywanie portów LPT.
@@ -797,17 +789,6 @@ Jeżeli to ustawienie zasad zostanie włączone, pulpit zawsze będzie wyświetl
 Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, będzie można określić program początkowy uruchamiany na komputerze zdalnym po połączeniu klienta z komputerem zdalnym. Jeżeli program początkowy nie zostanie określony, pulpit zawsze będzie wyświetlany na komputerze zdalnym po połączeniu klienta z komputerem zdalnym.
 
 Uwaga: jeśli to ustawienie zasad zostanie włączone, ustawienie zasad Uruchom program przy połączeniu będzie ignorowane.</string>
-      <string id="TS_UIA">Zezwalaj na przekierowywanie automatyzacji interfejsu użytkownika</string>
-      <string id="TS_UIA_EXPLAIN">To ustawienie zasad określa, czy aplikacje klienckie automatyzacji interfejsu użytkownika wykonywane na komputerze lokalnym mogą uzyskiwać dostęp do elementów interfejsu użytkownika na serwerze.
-
-Automatyzacja interfejsu użytkownika zapewnia programom dostęp do większości elementów interfejsu użytkownika, dzięki czemu można używać produktów technologii pomocniczych, takich jak Lupa i narrator, w celu poprawnego działania. Informacje o interfejsie użytkownika umożliwiają również zautomatyzowanym skryptom testowym interakcję z interfejsem użytkownika.
-
-Sesje pulpitu zdalnego nie obsługują obecnie przekierowywania automatyzacji interfejsu użytkownika.
-
-Jeśli to ustawienie zasad zostanie włączone lub nie zostanie skonfigurowane, wszyscy klienci automatyzacji interfejsu użytkownika na komputerze lokalnym będą mogli interakcyjnie korzystać z aplikacji zdalnych. Na przykład do interakcji z interfejsem użytkownika na stronie sieci Web otwieranej podczas sesji zdalnej można użyć narratora i klientów lupy komputera lokalnego.
-
-Jeśli to ustawienie zasad zostanie wyłączone, klienci automatyzacji interfejsu użytkownika działający na tym komputerze lokalnym nie będą mogli interakcyjnie ze zdalnymi aplikacjami.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">To ustawienie zasad umożliwia określenie, czy na potrzeby nawiązywania połączeń zdalnych z serwerem hosta sesji usług pulpitu zdalnego ma być wymagane uwierzytelnianie użytkownika przy użyciu uwierzytelniania na poziomie sieci. To ustawienie zasad zwiększa bezpieczeństwo, wprowadzając wymaganie uwierzytelniania użytkownika we wcześniejszym etapie procesu nawiązywania połączenia zdalnego.
 
 Jeżeli to ustawienie zasad zostanie włączone, tylko komputery klienckie obsługujące uwierzytelnianie na poziomie sieci będą mogły łączyć się z serwerem hosta sesji usług pulpitu zdalnego.

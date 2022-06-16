@@ -5,20 +5,20 @@
   <description>indtast beskrivelsen her</description>
   <resources>
     <stringTable>
-      <string id="AllowTelemetry">Tillad diagnosticeringsdata</string>
-      <string id="AllowTelemetry_0">Diagnosticeringsdata fra (ikke anbefalet)</string>
-      <string id="AllowTelemetry_1">Send obligatoriske diagnosticeringsdata</string>
-      <string id="AllowTelemetry_3">Send valgfri diagnosticeringsdata</string>
-      <string id="AllowTelemetry_Explain">Ved at konfigurere denne politikindstilling kan du tilpasse, hvilke diagnosticeringsdata indsamles fra Windows. Denne politikindstilling forhindrer også brugeren i at øge mængden af indsamlede diagnosticeringsdata via Indstillinger-appen. De diagnosticeringsdata, der indsamles under denne politik, påvirker operativsystemet og apps, der betragtes som en del af Windows, og gælder ikke nogen andre apps, der er installeret af din organisation.
+      <string id="AllowTelemetry">Tillad telemetri</string>
+      <string id="AllowTelemetry_0">0 - Sikkerhed [Kun Enterprise]</string>
+      <string id="AllowTelemetry_1">1 - Obligatorisk</string>
+      <string id="AllowTelemetry_2">2 - Forbedret</string>
+      <string id="AllowTelemetry_3">3 - Valgfri</string>
+      <string id="AllowTelemetry_Explain">Ved at konfigurere denne indstilling i Windows 10 kan slutbrugere ikke vælge et højere niveau af telemetrisamlinger end det niveau, du har angivet for organisationen. Denne begrænsning gælder kun for Windows-operativsystemet og- apps, der leveres sammen med Windows, og gælder ikke for tredjepartsprogrammer, der kører på Windows 10.
 
-    - Slå diagnosticeringsdata fra (anbefales ikke). Med denne værdi sendes ingen diagnosticeringsdata fra enheden. Denne værdi understøttes kun på udgaverne Enterprise, Education og Server.
-    - Send nødvendige diagnosticeringsdata. Dette er de minimalt nødvendige diagnosticeringsdata for at holde Windows sikker, opdateret og præstere som forventet. Med denne værdi deaktiveres kontrolelementet "Valgfrie diagnosticeringsdata" i Indstillinger-appen.
-    - Send valgfrie diagnosticeringsdata. Der indsamles yderligere diagnosticeringsdata, som hjælper os med at detektere, diagnosticere og rette problemer samt foretage produktforbedringer. Nødvendige diagnosticeringsdata vil altid medtages, når du vælger at sende valgfrie diagnosticeringsdata. Valgfrie diagnosticeringsdata kan også omfatte diagnostiske logfiler og crashdumps. Brug politikkerne "Begræns indsamling af dump" og "Begræns indsamling af diagnostiske logfiler" for mere findelt kontrol af, hvilke valgfrie diagnosticeringsdata sendes.
+Diagnosticeringsdata kategoriseres i fire niveauer som følger:
+  - 0 (Sikkerhed). Oplysninger, der er nødvendige for at hjælpe med at beskytte Windows, Windows Server og System Center, herunder data om indstillingerne for komponenten Tilsluttede brugeroplevelser og telemetri, Værktøj til fjernelse af skadelig software og Windows Defender.
+  - 1 (Påkrævet). Grundlæggende enhedsoplysninger, herunder: kvalitetsrelaterede data, appkompatibilitet og data fra sikkerhedsniveauet.
+  - 2 (Udvidet). Yderligere indsigt, herunder: hvordan Windows, Windows Server, System Center og apps bruges, hvordan de fungerer, avancerede overvågningsdata og data fra både det udvidede niveau og sikkerhedsniveauet.
+  - 3 (Valgfri). Alle de data, der er nødvendige for at identificere og hjælpe med at løse problemer, plus data fra niveauerne Sikkerhed, Påkrævet og Udvidet.
 
-Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vil enheden sende valgfrie diagnosticeringsdata, og slutbrugeren kan vælge, om der skal sendes valgfrie diagnosticeringsdata fra Indstillinger-appen.
-
-Bemærk:
-Gruppepolitikken "Konfigurer indstillinger for tilmelding til diagnosticeringsdata i brugergrænsefladen" kan bruges til at forhindre slutbrugere i at ændre deres indstillinger for dataindsamling.
+De indstillinger, der er tilgængelige for brugere i appen Indstillinger, ændres ved at konfigurere denne indstilling, og selvom de ikke er angivet, kan de påvirkes af andre gruppepolitikindstillinger. Bemærk, at hvis denne politik er konfigureret til at tillade en telemetriindstilling af Sikkerhed eller Grundlæggende, kan slutbrugere ikke vælge et højere niveau.
       </string>
 
       <string id="TelemetryProxy">Konfigurer Tilsluttede brugeroplevelser og telemetri</string>
@@ -30,9 +30,9 @@ Formatet af denne indstilling er &lt;server&gt;:&lt;port&gt;
       </string>
 
       <string id="CommercialId">Konfigurer det kommercielle id</string>
-      <string id="CommercialId_Explain">Denne politikindstilling definerer det id, der bruges til entydigt at knytte denne enheds diagnosticeringsdata til dem, der hører til en bestemt organisation. Hvis din organisation deltager i et program, der kræver, at denne enhed identificeres som tilhørende din organisation, skal du bruge denne indstilling til at angive dette id. Værdien for denne indstilling vil blive angivet af Microsoft som en del af programmets Onboarding-proces. 
+      <string id="CommercialId_Explain">Denne politikindstilling definerer det id, der bruges til entydigt at tilknytte denne enheds telemetridata som tilhørende en given organisation. Hvis din organisation deltager i et program, der kræver, at denne enhed skal identificeres som tilhørende din organisation, kan du bruge denne indstilling til at levere dette id. Værdien til denne indstilling leveres af Microsoft som en del af programmets onboardingproces. 
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan Microsoft ikke bruge dette id til at knytte denne computer og de tilhørende diagnosticeringsdata data til din organisation.
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Microsoft ikke kunne bruge dette id til at knytte denne computer og dens telemetridata til din organisation.
       </string>
 
       <string id="DisableEnterpriseAuthProxy">Konfigurer brugen af godkendt proxy for tjenesten Tilsluttet brugeroplevelse og telemetri</string>
@@ -40,20 +40,21 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan 
       <string id="DisableEnterpriseAuthProxy_2">Deaktiver brug af godkendt proxy</string>
       <string id="DisableEnterpriseAuthProxy_Explain">Denne politikindstilling forhindrer tjenesten Tilsluttet brugeroplevelse og telemetri i automatisk at bruge en godkendt proxy til at sende data tilbage til Microsoft på Windows 10. Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger tjenesten Tilsluttet brugeroplevelse og telemetri automatisk en godkendt proxy til at sende data tilbage til Microsoft. Hvis du aktiverer denne politik, forhindres tjenesten Tilsluttet brugeroplevelse og telemetri i automatisk at bruge en godkendt proxy.</string>
 
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Begræns valgfrie diagnosticeringsdata til Desktop Analytics</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Aktiver Desktop Analytics-samling</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Deaktiver Desktop Analytics-samling</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Med denne politikindstilling sammen med politikindstillingen "Tillad diagnostiske data" kan organisationer sende de minimum data, der kræves af desktop Analytics.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Begræns udvidede diagnosticeringsdata til det minimum, der kræves af Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Aktivér Windows Analytics-samling</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Deaktiver Windows Analytics-samling</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Denne politikindstilling vil kombineret med politikindstillingen Tillad telemetri give organisationer lov til at sende et bestemt sæt af diagnosticeringsdata til Microsoft til it-indsigt via Windows Analytics-tjenester.
 
-Hvis du vil aktivere denne funktionsmåde, skal du udføre følgende trin:
-    1. Aktivér denne politikindstilling.
-    2. Angiv politikken "Tillad diagnosticeringsdata" for at "sende valgfri diagnosticeringsdata".
-    3. Aktivér politikindstillingen "Begræns dump samling".
-    4. Aktivér politikindstillingen "Begræns indsamling af diagnosticeringslogfiler".
+Du kan aktivere denne funktionalitet ved at fuldføre to trin:
 
-Når disse politikker er konfigureret, indsamler Microsoft kun de påkrævede diagnosticeringsdata og de hændelser, der kræves af desktop Analytics, som du kan få vist på https://go.microsoft.com/fwlink/?linkid=2116020.
+    1. Aktivér denne politikindstilling
+    2. Indstil Tillad telemetri til niveau 2 (Udvidet)
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bestemmes indsamling af diagnosticeringsdata af politikindstillingen "Tillad diagnostiske data" eller af slutbrugeren i appen indstillinger.
+Denne indstilling påvirker enheder, der er konfigurerer til at sende sikkerhedsdata eller påkrævede diagnosticeringsdata til Microsoft. 
+
+Når disse politikker er konfigureret, begrænses indsamling af diagnosticeringsdata til påkrævede diagnosticeringsdata og hændelser krævet af Desktop Analytics. Disse hændelser kan ses på https://go.microsoft.com/fwlink/?linkid=2116020.
+
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vil det niveau af diagnosticeringsdata, der sendes til Microsoft, være bestemt af politikindstillingen Tillad telemetri, hvis den er konfigureret (hvis du f.eks. aktiverer udvidede diagnosticeringsdata ved hjælp af politikindstillingen Tillad telemetri, men ikke konfigurerer denne politikindstilling, sender du de påkrævede hændelser for Windows Analytics samt alle yderligere diagnosticeringsdata på udvidet niveau til Microsoft).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Tillad, at enhedsnavnet sendes i diagnostiske Windows-data</string>
@@ -62,63 +63,65 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, best
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bliver enhedsnavn ikke sendt til Microsoft som en del af diagnostiske Windows-data.
       </string>
 
-      <string id="ConfigureTelemetryOptInSettingsUx">Konfigurer indstillinger for tilmelding til diagnosticeringsdata i brugergrænsefladen.</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_1">Deaktiver Indstillinger for tilmelding til diagnosticeringsdata</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_2">Aktivér indstillinger for tilmelding til diagnosticeringsdata</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Denne politikindstilling bestemmer, om en slutbruger kan ændre diagnosticeringsdata-indstillinger niveauer i appen Indstillinger.
+      <string id="ConfigureTelemetryOptInSettingsUx">Konfigurer tilmeldingsindstillinger for telemetri i brugergrænsefladen.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Deaktiver tilmeldingsindstillinger for telemetri</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Aktivér tilmeldingsindstillinger for telemetri</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Denne politikindstilling bestemmer, om en slutbruger kan ændre telemetriniveauer i Indstillinger.
 
-Hvis du angiver denne politikindstilling til "Deaktiver indstillinger for tilvalg af diagnosticeringsdata", deaktiveres diagnosticeringsdata niveauer i indstillinger, og slutbrugerne kan ikke ændre dem.
+Hvis du angiver denne politikindstilling til "Deaktiver tilvalgsindstillinger for telemetri", deaktiveres telemetriniveauer i Indstillinger, og slutbrugerne kan ikke ændre dem.
 
-Hvis du undlader at konfigurere denne politikindstilling, eller hvis du angiver den til "Aktivér indstillinger for tilvalg til diagnosticeringsdata", kan slutbrugere ændre niveauet for enhedens diagnosticeringsdata i appen indstillinger.
+Hvis du undlader at konfigurere denne politikindstilling, eller hvis du angiver den til "Aktivér tilvalgsindstillinger for telemetri", kan slutbrugerne ændre niveauet for enhedstelemetri i appen Indstillinger.
 
-Bemærk:
-Hvis du vil angive en grænse for niveauet af diagnosticeringsdata, der sendes til Microsoft af din organisation, skal du bruge politikindstillingen "Tillad diagnostiske data".
+Bemærk
+Hvis du vil angive en grænse for niveauet af diagnosticeringsdata, der sendes til Microsoft af din organisation, skal du bruge politikindstillingen Tillad telemetri.
       </string>
 
-      <string id="ConfigureTelemetryOptInChangeNotification">Konfigurer meddelelser om ændring af tilmelding til diagnosticeringsdata.</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_1">Deaktiver meddelelser om ændring af diagnosticeringsdata</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_2">Aktivér meddelelser om ændring af diagnosticeringsdata</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_Explain">Denne politikindstilling styrer, om der vises meddelelser efter en ændring i indstillingerne for tilmelding til diagnosticeringsdata ved første logon, og når ændringerne udføres i Indstillinger.
-
-Hvis du angiver denne politikindstilling til at deaktivere meddelelser om ændring af diagnose data, vises der ingen ændringer af diagnose data.
-
-hvis du indstiller denne politikindstilling til "Deaktiver meddelelser om ændring af diagnosticeringsdata", eller undlader at konfigurere denne politikindstilling, vises meddelelser om ændring i tilmelding til diagnosticeringsdata ved første logon, og når ændringerne udføres i Indstillinger.
+      <string id="ConfigureTelemetryOptInChangeNotification">Konfigurer ændringer i tilmeldingsmeddelelser for telemetri.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Deaktiver meddelelser om ændringer for telemetri</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Aktivér meddelelser om ændringer for telemetri</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
+          Denne politikindstilling kontrollerer, om en enhed viser meddelelser om telemetri niveauer til personer ved første logon, eller når der sker ændringer i indstillinger. 
+          Hvis du angiver denne politikindstilling til "Deaktiver meddelelser om telemetri ændringer", stopper meddelelser om telemetri niveau med at blive vist.
+          Hvis du angiver denne politikindstilling til "Aktivér meddelelser om telemetri ændringer" eller ikke konfigurerer denne politikindstilling, vises telemetri meddelelser ved første logon, og når der sker ændringer i indstillinger.
       </string>
 
-      <string id="DisableDeviceDelete">Deaktiver sletning af diagnosticeringsdata</string>
-      <string id="DisableDeviceDelete_Explain">Denne politikindstilling kontrollerer, om knappen Slet diagnosticeringsdata er aktiveret i siden Indstillinger for diagnosticering og feedback.
+      <string id="DisableDeviceDelete">Deaktiver sletning af diagnosticeringsdata </string>
+      <string id="DisableDeviceDelete_Explain">
+          Denne politikindstilling kontrollerer, om knappen Slet diagnosticeringsdata er aktiveret i siden Indstillinger for diagnosticering og feedback.
           Hvis du aktiverer denne politikindstilling, deaktiveres knappen Slet diagnosticeringsdata på siden Indstillinger, hvilket forhindrer sletning af diagnosticeringsdata, der er indsamlet af Microsoft fra enheden. 
           Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, aktiveres knappen Slet diagnosticeringsdata på siden Indstillinger, som gør det muligt for brugerne at slette alle diagnosedata, der er indsamlet af Microsoft fra den pågældende enhed.
       </string>
 
-      <string id="DisableDiagnosticDataViewer">Deaktiver Diagnostisk Datafremviser.</string>
-      <string id="DisableDiagnosticDataViewer_Explain">Denne politikindstilling kontrollerer, om brugere kan aktivere og starte Diagnostisk Datafremviser fra siden Indstillinger for diagnosticering og feedback.
+      <string id="DisableDiagnosticDataViewer">Deaktiver Diagnostisk Datafremviser. </string>
+      <string id="DisableDiagnosticDataViewer_Explain">
+          Denne politikindstilling kontrollerer, om brugere kan aktivere og starte Diagnostisk Datafremviser fra siden Indstillinger for diagnosticering og feedback.
           Hvis du aktiverer denne politikindstilling, aktiveres Diagnostisk Datafremviser ikke på siden Indstillinger, og den forhindrer fremviseren i at vise diagnosticeringsdata, der er indsamlet af Microsoft, fra enheden.  
           Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, aktiveres Diagnostisk Datafremviser på siden Indstillinger.
       </string>
 
       <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurer slutpunkt for upload af diagnosticeringsdata for Desktop Analytics</string>
-      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">Denne politik angiver slutpunktet for upload for denne enheds diagnosticeringsdata som en del af Desktop Analytics-programmet.
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
+          Denne politik angiver slutpunktet for upload for denne enheds diagnosticeringsdata som en del af Desktop Analytics-programmet.
           Hvis din organisation deltager i programmet og er blevet bedt om at konfigurere et brugerdefineret slutpunkt for upload, skal du bruge denne indstilling til at angive slutpunktet.
           Værdien for denne indstilling vil blive angivet af Microsoft som del af programmets Onboarding-proces. 
       </string>
-      
+
       <string id="AllowUpdateComplianceProcessing">Tillad opdatering af overholdelsesbehandling</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-          Gør det muligt for IT-administratorer at aktivere diagnosticeringsdata fra denne enhed for at blive behandlet af overholdelse af opdateringer. 
+          Tillad IT-administratorer at gøre det muligt, at diagnosticeringsdata fra denne enhed behandles af Opdateringsoverholdelse. 
             Følgende liste viser de understøttede værdier:  
-              0 (standard) – diagnosticeringsdata behandles ikke af opdaterings overholdelse. 
-              16 – diagnostiske data kan behandles af overholdelse af opdateringer. 
-            Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil diagnosticeringsdata fra denne enhed ikke blive behandlet af overholdelse af opdateringer.
+              0 (standard)– Diagnosticeringsdata behandles ikke af Opdateringsoverholdelse. 
+              16 – Det tillades ikke, at overholdelsesdata behandles af Opdateringsoverholdelse. 
+            Hvis du slår denne politikindstilling fra eller ikke konfigurerer den, behandles diagnosticeringsdata ikke af Opdateringsoverholdelse.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Tillad behandling af skrivebordsanalyse</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-          Gør det muligt for IT-administratorer at aktivere diagnosticeringsdata fra denne enhed for at blive behandlet af desktop Analytics. 
+          Tillad IT-administratorer at gøre det muligt, at diagnosticeringsdata fra denne enhed behandles af Desktop Analytics. 
             Følgende liste viser de understøttede værdier:  
-              0 (standard) – diagnosticeringsdata behandles ikke af desktop Analytics. 
-              2 – diagnosticeringsdata kan behandles af desktop Analytics. 
-          Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil diagnosticeringsdata fra denne enhed ikke blive behandlet af desktop Analytics. 
+              0 (standard)– Diagnosticeringsdata behandles ikke af Desktop Analytics. 
+              2 – Det tillades ikke, at overholdelsesdata behandles af Desktop Analytics. 
+            Hvis du slår denne politikindstilling fra eller ikke konfigurerer den, behandles diagnosticeringsdata ikke af Desktop Analytics. 
       </string>
 
       <string id="AllowWUfBCloudProcessing">Tillad behandling af WUfB-Sky</string>
@@ -131,29 +134,10 @@ hvis du indstiller denne politikindstilling til "Deaktiver meddelelser om ændri
       </string>
 
       <string id="AllowCommercialDataPipeline">Tillad erhvervsmæssig datapipeline</string>
-      <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline kontrollerer, om Microsoft er en databehandler eller dataansvarlig med hensyn til Windows-diagnosticeringsdata, der er indsamlet fra denne enhed.
-
-Hvis du aktiverer denne politik, vil Microsoft være databehandleren for Windows-diagnosticeringsdata, der er indsamlet fra Windows-enheden, og kunden bliver den dataansvarlige. Enheden skal være registreret i Azure AD, for at denne politik kan gennemføres.
-
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Microsoft være den dataansvarlige for Windows-diagnosticeringsdata, der er indsamlet fra denne enhed.
-
-Denne politikindstilling kontrollerer kun, om Microsoft er en databehandler for Windows diagnosticeringsdata fra denne enhed. Hvis du konfigurerer denne indstilling, ændres det ikke, uanset om diagnosticeringsdata indsamles, eller hvordan brugeren kan ændre niveauet. Hvis du vil konfigurere indsamlingsniveauet, skal du bruge politikken "Tillad diagnosticeringsdata" og for at begrænse brugerne på denne enhed fra at ændre dataniveauet for diagnosticeringsdata. Brug politikken "Konfigurer brugergrænseflade for tilvalg af diagnosticeringsdata".
-      </string>
-
-      <string id="LimitDiagnosticLogCollection">Begræns indsamling af diagnosticeringslogfil</string>
-      <string id="LimitDiagnosticLogCollection_Explain">Denne politikindstilling styrer, om der indsamles yderligere diagnostiske logfiler, når der er behov for flere oplysninger for at løse et problem på enheden. Diagnostiske logfiler sendes kun, når enheden er konfigureret til at sende valgfri diagnosticeringsdata.
-
-Når du aktiverer denne politikindstilling, indsamles der ikke diagnostiske logfiler.
-
-Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, kan vi af og til indsamle diagnostiske logfiler, hvis enheden er konfigureret til at sende valgfri diagnosticeringsdata.
-      </string>
-
-      <string id="LimitDumpCollection">Begræns dump-indsamling</string>
-      <string id="LimitDumpCollection_Explain">Denne politikindstilling begrænser typen af dumps, der kan indsamles, når der er behov for flere oplysninger for at løse et problem.  Dumps logfiler sendes kun, når enheden er konfigureret til at sende valgfri diagnosticeringsdata.
-
-Når du aktiverer denne indstilling, bliver Windows Fejlrapportering begrænset til at sende kerne-mini-dumps og triage-dumps i brugertilstand.
-
-Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, kan vi af og til indsamle fuld eller dynge-dumps, hvis brugeren har valgt at sende valgfri diagnosticeringsdata.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline styrer, om Microsoft er databehandler eller dataansvarlig for diagnostiske Windows-data, der indsamles fra denne enhed.
+           Hvis du aktiverer denne politik, vil Microsoft være databehandler for diagnostiske Windows-data, der indsamles fra Windows-enheden, og kunden bliver dataansvarlig. Enheden skal være registreret i Azure AD, for at denne politik kan gennemføres.
+          Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, bliver Microsoft den dataansvarlige for diagnostiske Windows-data, der indsamles fra denne enhed.
+          Denne politik styrer kun, om Microsoft er databehandler for diagnostiske Windows-data fra denne enhed. Konfigureringen af denne indstilling ændrer ikke på, om diagnostiske Windows-data indsamles, eller om brugeren kan ændre niveauet. For at konfigurere indsamlingsniveauet skal du bruge politikken "Tillad diagnostiske data". For at forhindre brugere på denne enhed i at ændre det diagnostiske dataniveau bedes du bruge politikken "Konfigurer brugergrænseflade til valgfrie indstillinger for diagnosticeringsdata".
       </string>
 
       <string id="EnableOneSettingsAuditing">Aktivér OneSettings-overvågning</string>

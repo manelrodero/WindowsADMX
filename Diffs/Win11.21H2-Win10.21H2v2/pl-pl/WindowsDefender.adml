@@ -30,28 +30,6 @@
 
     Jeśli wyłączysz to ustawienie, usługa ochrony przed złośliwym kodem będzie ładowana jako zadanie z niskim priorytetem.</string>
 
-    <string id="MeteredConnectionUpdates">Umożliwia programowi antywirusowemu Microsoft Defender aktualizowanie i komunikowanie się za pośrednictwem połączeń taryfowych.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    Wyłączone (domyślnie): 
-    Aktualizacje i komunikacja nie są dozwolone za pośrednictwem połączeń taryfowych.
-
-    Włączone: 
-    Zezwolenie urządzeniom zarządzanym na aktualizowanie za pośrednictwem połączeń taryfowych. Mogą być naliczane opłaty z tytułu transmisji danych.</string>
-    <string id="AllowNetworkProtectionOnWinServer">To ustawienie określa, czy ochrona sieci może być skonfigurowana w trybie blokowania lub inspekcji w systemie Windows Server.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    Wyłączone (wartość domyślna): 
-    Jeśli to połączenie nie zostanie skonfigurowane lub zostanie wyłączone, ochrona sieci nie będzie mogła być skonfigurowana w trybie blokowania ani inspekcji w systemie Windows Server.
-
-Włączonego 
-    Jeśli ta zasada zostanie włączona, administratorzy będą mogli decydować o tym, czy ochrona sieci będzie mogła być skonfigurowana w trybie blokowania lub inspekcji w systemie Windows Server.
-    Zauważ, że ta konfiguracja jest zależna od konfiguracji EnableNetworkProtection. Jeśli ta konfiguracja ma wartość false, EnableNetworkProtection będzie ignorowane, w przeciwnym razie ochrona sieci będzie rozpoczynać się w systemie Windows Server w zależności od wartości EnableNetworkProtection.</string>
-    <string id="DisableDatagramProcessing">To ustawienie kontroluje przetwarzanie datagramów w celu zapewnienia ochrony sieci.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    Włączone (domyślnie): 
-    Jeśli to ustawienie nie jest skonfigurowane lub wyłączone, przetwarzanie datagramów zostanie włączone w celu zapewnienia ochrony sieci.
-
-    Włączone: 
-    Jeśli jest włączone, przetwarzanie datagramów zostanie wyłączone w celu zapewnienia ochrony sieci.</string>
     <string id="DisableAutoExclusions">Wyłącz automatyczne wykluczenia</string>
     <string id="DisableAutoExclusions_Explain">
         Umożliwia administratorowi określenie, czy należy wyłączyć funkcję automatycznych wykluczeń dla wersji serwera.
@@ -85,9 +63,9 @@ Włączonego
     <string id="DisableLocalAdminMerge">Konfiguruj zachowanie scalania dotyczące administratora lokalnego dla list</string>
     <string id="DisableLocalAdminMerge_Explain">To ustawienie zasad określa, czy ustawienia list złożonych skonfigurowane przez administratora lokalnego mają być scalane z ustawieniami zasad grupy. To ustawienie dotyczy list takich jak zagrożenia i wykluczenia.
 
-Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, unikatowe elementy zdefiniowane w zasadach grupy i w ustawieniach preferencji skonfigurowanych przez administratora lokalnego zostaną scalone w obowiązujące zasady. W przypadku konfliktów ustawienia zasad grupy zastąpią ustawienia preferencji.
+    Jeśli włączysz to ustawienie lub go nie skonfigurujesz, unikatowe elementy zdefiniowane w zasadach grupy i w ustawieniach preferencji skonfigurowanych przez administratora lokalnego zostaną scalone w obowiązujące zasady. W przypadku występowania konfliktów ustawienia zasad grupy zastępują ustawienia preferencji.
 
-Jeśli to ustawienie zostanie włączone, w wynikających z niej zasadach będą używane tylko elementy zdefiniowane przez zasady grupy. Ustawienia zasad grupy zastąpią ustawienia preferencji skonfigurowane przez administratora lokalnego.</string>
+    Jeśli wyłączysz to ustawienie, w obowiązujących zasadach będą używane tylko elementy zdefiniowane przez zasady grupy. Ustawienia zasad grupy zastępują ustawienia preferencji skonfigurowane przez administratora lokalnego.</string>
     <string id="DisableRoutinelyTakingAction">Wyłącz korygowanie procedur</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     To ustawienie zasad umożliwia określenie, czy Program antywirusowy Microsoft Defender ma automatycznie podejmować akcje w przypadku wszystkich wykrytych zagrożeń. Akcja podejmowana w przypadku określonego zagrożenia jest ustalana na podstawie kombinacji akcji zdefiniowanej przez zasady, akcji zdefiniowanej przez użytkownika i akcji zdefiniowanej przez sygnaturę.
@@ -132,15 +110,11 @@ Jeśli to ustawienie zostanie włączone, w wynikających z niej zasadach będą
       Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, serwer proxy pominie ten krok rezerwowy zgodnie z określoną powyżej kolejnością.
     </string>
     <string id="RandomizeScheduleTaskTimes">Losowy czas zaplanowanych zadań</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">To ustawienie zasad umożliwia skonfigurowanie zaplanowanego skanowania i zaplanowanej aktualizacji analizy zabezpieczeń (okno czasu rozpoczęcia w godzinach).
+    <string id="RandomizeScheduleTaskTimes_Explain">To ustawienie zasad umożliwia włączenie lub wyłączenie losowego ustawiania godziny rozpoczęcia zaplanowanego skanowania i godziny rozpoczęcia zaplanowanej aktualizacji analiz zabezpieczeń. To ustawienie służy do rozkładania wpływu skanowania na zasoby. Można go na przykład używać na maszynach wirtualnych gościa współużytkujących hosta w celu uniemożliwienia jednoczesnego wykonywania operacji, która znacznie obciąża dysk, przez wiele maszyn wirtualnych gościa.
 
-    Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, zaplanowane zadania będą rozpoczynać się w losowym czasie w ciągu 4 godzin po upływie czasu określonego w harmonogramie zadań.
-    Jeśli to ustawienie zostanie włączone, będzie można rozszerzyć lub zawęzić ten okres randomizacji. Należy określić okno randomizacji z przedziału od 1 do 23 godzin.</string>
-    <string id="SchedulerRandomizationTime">Skonfiguruj okno randomizacji czasu zaplanowanych zadań</string>
-    <string id="SchedulerRandomizationTime_Explain">To ustawienie zasad umożliwia skonfigurowanie czasu rozpoczęcia zaplanowanego skanowania oraz okna czasu rozpoczęcia zaplanowanej aktualizacji analizy zabezpieczeń (w godzinach).
+    Jeśli włączysz to ustawienie albo go nie skonfigurujesz, zaplanowane zadania będą rozpoczynać się o losowo wybranej godzinie w odstępie 30 minut przed określoną godziną rozpoczęcia i po niej.
 
-    Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, zaplanowane zadania będą rozpoczynać się w losowym czasie w ciągu 4 godzin po upływie określonego czasu rozpoczęcia.
-    Jeśli to ustawienie zostanie włączone, należy wybrać okno randomizacji (w godzinach). Interwał okna randomizacji może należeć do przedziału od 1 do 23 godzin.</string>
+    Jeśli wyłączysz to ustawienie, zaplanowane zadania będą rozpoczynać się o określonej godzinie.</string>
     <string id="ServiceKeepAlive">Zawsze zezwalaj na działanie usługi ochrony przed złośliwym kodem</string>
     <string id="ServiceKeepAlive_Explain">To ustawienie zasad umożliwia określenie, czy usługa ochrony przed złośliwym kodem ma pozostać uruchomiona, gdy analizy zabezpieczeń oprogramowania antywirusowego i antyszpiegowskiego są wyłączone. Zalecane jest pozostawienie tego ustawienia wyłączonego.
 
@@ -162,20 +136,12 @@ Jeśli to ustawienie zostanie włączone, w wynikających z niej zasadach będą
         Nieskonfigurowane:
         takie samo działanie jak w przypadku wartości Wyłączone.
     </string>
-    <string id="SupportLogLocation">Określ ścieżkę katalogu, do którego mają być kopiowane pliki dziennika pomocy technicznej</string>
-    <string id="SupportLogLocation_Explain">To ustawienie zasad umożliwia skonfigurowanie ścieżki katalogu, do której mają zostać skopiowane pliki dziennika pomocniczego. Wartość tego ustawienia powinna być prawidłową ścieżką katalogu.
-
-Jeśli to ustawienie zostanie włączone, pliki dziennika pomocy technicznej zostaną skopiowane do określonej ścieżki lokalizacji dziennika pomocy technicznej.
-
-Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, pliki dzienników obsługi nie zostaną skopiowane do żadnej lokalizacji.</string>
     <string id="Exclusions_Extensions">Wykluczenia rozszerzeń</string>
     <string id="Exclusions_Extensions_Explain">To ustawienie zasad umożliwia określenie listy typów plików, które mają zostać wykluczone z zaplanowanego lub niestandardowego skanowania albo skanowania w czasie rzeczywistym. Typy plików można dodać w obszarze Opcje tego ustawienia. Każdy wpis musi mieć postać pary nazwa-wartość, w której nazwa powinna być reprezentacją ciągu rozszerzenia typu pliku (np. „obj” lub „lib”). Wartość nie jest używana i zaleca się ustawienie wartości 0.</string>
     <string id="Exclusions_Paths">Wykluczenia ścieżek</string>
     <string id="Exclusions_Paths_Explain">To ustawienie zasad umożliwia wyłączenie zaplanowanego skanowania i skanowania w czasie rzeczywistym plików w określonych ścieżkach lub określonych w pełni kwalifikowanych zasobów. Ścieżki można dodać w obszarze Opcje tego ustawienia. Każdy wpis musi mieć postać pary nazwa-wartość, w której nazwa powinna być reprezentacją ciągu ścieżki lub w pełni kwalifikowanej nazwy zasobu. Na przykład ścieżka może mieć postać „c:\Windows”. W takim przypadku zostaną wykluczone wszystkie pliki w tym katalogu. W pełni kwalifikowana nazwa zasobu może mieć postać „C:\Windows\Aplikacja.exe”. Wartość nie jest używana i zaleca się ustawienie wartości 0.</string>
     <string id="Exclusions_Processes">Wykluczenia procesów</string>
-    <string id="Exclusions_Processes_Explain">To ustawienie zasad umożliwia wyłączenie skanowania w czasie rzeczywistym każdego pliku otwartego przez dowolny z określonych procesów. Te zasady nie mają zastosowania w przypadku zaplanowanego skanowania. Sam proces nie zostanie wykluczony. Aby wykluczyć proces, użyj wykluczenia ścieżki. Procesy można dodać w obszarze Opcje dla tego ustawienia. Każdy wpis musi występować na liście w postaci pary nazwa-wartość, w której nazwa powinna być reprezentacją ciągu ścieżki do obrazu procesu. Pamiętaj, że wykluczyć można tylko pliki wykonywalne. Proces może mieć na przykład postać „c:\windows\app.exe”. Ta wartość nie jest używana i zaleca się jej ustawienie na wartość 0.</string>
-    <string id="Exclusions_IpAddresses">Wykluczenia adresów IP</string>
-    <string id="Exclusions_IpAddresses_Explain">Umożliwia administratorowi stanowcze wyłączenie inspekcji pakietów sieciowych dokonywanej przez wdnisdrv na określonym zestawie adresów IP.</string>
+    <string id="Exclusions_Processes_Explain">To ustawienie zasad umożliwia wyłączenie zaplanowanego skanowania i skanowania w czasie rzeczywistym każdego pliku otwartego przez dowolny z określonych procesów. Sam proces nie zostanie wykluczony. Aby wykluczyć proces, użyj wykluczenia ścieżki. Procesy można dodać w obszarze Opcje tego ustawienia. Każdy wpis musi mieć postać pary nazwa-wartość, w której nazwa powinna być reprezentacją ciągu ścieżki do obrazu procesu. Wykluczyć można tylko pliki wykonywalne. Proces może mieć na przykład postać „c:\windows\aplikacja.exe”. Wartość nie jest używana i zaleca się ustawienie wartości 0.</string>
     <string id="Nis_DisableProtocolRecognition">Włącz rozpoznawanie protokołu</string>
     <string id="Nis_DisableProtocolRecognition_Explain">To ustawienie zasad umożliwia skonfigurowanie rozpoznawania protokołu na potrzeby ochrony sieci przed znanymi zagrożeniami.
 
@@ -202,14 +168,6 @@ Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, pliki
     Jeśli włączysz to ustawienie, elementy będą usuwane z folderu kwarantanny po określonej liczbie dni.
 
     Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, elementy będą przechowywane w folderze kwarantanny przez nieokreślony czas i nie będą automatycznie usuwane.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">Włącz skanowanie skryptu</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">To ustawienie zasad umożliwia skonfigurowanie skanowania skryptów.
-
-Jeśli włączysz to ustawienie lub go nie skonfigurujesz, skanowanie skryptów będzie włączone.
-
-Jeśli wyłączysz to ustawienie, skanowanie skryptów będzie wyłączone.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Włącz monitorowanie zachowania</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">To ustawienie zasad umożliwia skonfigurowanie monitorowania zachowania.
 
@@ -443,6 +401,12 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, skanowanie poczty e-
 Jeśli włączysz to ustawienie lub go nie skonfigurujesz, algorytm heurystyczny zostanie włączony.
 
 Jeśli wyłączysz to ustawienie, algorytm heurystyczny zostanie wyłączony.</string>
+    <string id="Scan_DisablePackedExeScanning">Skanuj spakowane pliki wykonywalne</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">To ustawienie zasad umożliwia skonfigurowanie skanowania spakowanych plików wykonywalnych. Zaleca się pozostawienie tego typu skanowania włączonego.
+
+Jeśli włączysz to ustawienie lub go nie skonfigurujesz, spakowane pliki wykonywalne będą skanowane.
+
+Jeśli wyłączysz to ustawienie, spakowane pliki wykonywalne nie będą skanowane.</string>
     <string id="Scan_DisableRemovableDriveScanning">Skanuj dyski wymienne</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">To ustawienie zasad umożliwia określenie, czy podczas przeprowadzania pełnego skanowania ma być przeprowadzane skanowanie w poszukiwaniu złośliwego i niechcianego oprogramowania w zawartości dysków wymiennych, takich jak dyski flash USB.
 
@@ -514,7 +478,7 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, elementy będą prze
 
 Jeśli włączysz to ustawienie, szybkie skanowanie będzie przeprowadzane zgodnie z określonym interwałem.
 
-Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, szybkie skanowanie kontrolowane przez tę konfigurację nie zostanie uruchomione.</string>
+Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, szybkie skanowanie będzie przeprowadzane w domyślnym czasie.</string>
     <string id="Scan_ScanOnlyIfIdle">Rozpocznij zaplanowane skanowanie tylko wtedy, gdy komputer jest włączony, ale nie jest używany</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">To ustawienie zasad umożliwia skonfigurowanie zaplanowanego skanowania tak, aby było przeprowadzane tylko wtedy, gdy komputer jest włączony, ale nie jest używany.
 
@@ -558,11 +522,11 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, zaplanowane skanowan
     <string id="Scan_ScheduleDay_7">Piątek</string>
     <string id="Scan_ScheduleDay_8">Sobota</string>
     <string id="Scan_ScheduleQuickScantime">Określ godzinę codziennego szybkiego skanowania</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">To ustawienie zasad umożliwia określenie godziny, o której ma być przeprowadzane codzienne szybkie skanowanie. Wartość godziny ma postać liczby minut po północy (00:00).  Na przykład wartość 120 (0x78) odpowiada godzinie 02:00. Domyślnie to ustawienie jest określone jako wyłączone. Harmonogram jest oparty na czasie lokalnym komputera, na którym jest przeprowadzane skanowanie.
+    <string id="Scan_ScheduleQuickScantime_Explain">To ustawienie zasad umożliwia określenie godziny, o której ma być przeprowadzane codzienne szybkie skanowanie. Wartość godziny ma postać liczby minut po północy (00:00).  Na przykład wartość 120 (0x78) odpowiada godzinie 02:00. Wartość domyślna to godzina 2:00. Harmonogram jest oparty na czasie lokalnym komputera, na którym jest przeprowadzane skanowanie.
 
 Jeśli włączysz to ustawienie, codzienne szybkie skanowanie będzie przeprowadzane o określonej godzinie.
 
-Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, codzienne szybkie skanowanie kontrolowane przez tę konfigurację nie zostanie uruchomione.</string>
+Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, codzienne szybkie skanowanie będzie przeprowadzane o domyślnej godzinie.</string>
     <string id="Scan_ScheduleTime">Określ godzinę, o której ma być przeprowadzane zaplanowane skanowanie</string>
     <string id="Scan_ScheduleTime_Explain">To ustawienie zasad umożliwia określenie godziny, o której ma być przeprowadzane zaplanowane skanowanie. Wartość godziny ma postać liczby minut po północy (00:00).  Na przykład wartość 120 (0x78) odpowiada godzinie 02:00. Wartość domyślna to godzina 2:00. Harmonogram jest oparty na czasie lokalnym komputera, na którym jest przeprowadzane skanowanie.
 
@@ -585,13 +549,13 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, zaplanowane skanowan
         Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, nie zostaną wprowadzone zmiany priorytetu procesora CPU dla zaplanowanych skanowań.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Zdefiniuj liczbę dni, po upływie której analizy zabezpieczeń dotyczące programów szpiegujących będą uznawane za nieaktualne</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">To ustawienie zasad umożliwia zdefiniowanie liczby dni, po upływie której analizy zabezpieczeń dotyczące programów szpiegujących będą uznawane za nieaktualne. Uznanie analizy zabezpieczeń za nieaktualną może wyzwolić kilka dodatkowych akcji, w tym powrót do alternatywnego źródła aktualizacji lub wyświetlenie ikony ostrzeżenia w interfejsie użytkownika. Domyślna wartość tego ustawienia to 7 dni.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">To ustawienie zasad umożliwia zdefiniowanie liczby dni, po upływie której analizy zabezpieczeń dotyczące programów szpiegujących będą uznawane za nieaktualne. Uznanie analizy zabezpieczeń za nieaktualną może wyzwolić dodatkowe akcje, łącznie z powrotem do alternatywnego źródła aktualizacji lub wyświetleniem ikony ostrzeżenia w interfejsie użytkownika. Domyślna wartość tego ustawienia to 14 dni.
 
     Jeśli włączysz to ustawienie, analizy zabezpieczeń dotyczące programów szpiegujących będą uznawane za nieaktualne po upływie określonej liczby dni bez aktualizacji.
 
     Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, analizy zabezpieczeń dotyczące programów szpiegujących będą uznawane za nieaktualne po upływie domyślnej liczby dni bez aktualizacji.</string>
     <string id="SignatureUpdate_AVSignatureDue">Zdefiniuj liczbę dni, po upływie których analiza zabezpieczeń dotycząca wirusów będzie uznawana za nieaktualną</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">To ustawienie zasad umożliwia zdefiniowanie liczby dni, po upływie której analizy zabezpieczeń dotyczące wirusów będą uznawane za nieaktualne. Uznanie analizy zabezpieczeń za nieaktualną może wyzwolić kilka dodatkowych akcji, w tym powrót do alternatywnego źródła aktualizacji lub wyświetlenie ikony ostrzeżenia w interfejsie użytkownika. Domyślna wartość tego ustawienia to 7 dni.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">To ustawienie zasad umożliwia zdefiniowanie liczby dni, po upływie której analizy zabezpieczeń dotyczące wirusów będą uznawane za nieaktualne. Uznanie analizy zabezpieczeń za nieaktualną może wyzwolić dodatkowe akcje, łącznie z powrotem do alternatywnego źródła aktualizacji lub wyświetleniem ikony ostrzeżenia w interfejsie użytkownika. Domyślna wartość tego ustawienia to 14 dni.
 
     Jeśli włączysz to ustawienie, analizy zabezpieczeń dotyczące wirusów będą uznawane za nieaktualne po upływie określonej liczby dni bez aktualizacji.
 
@@ -742,22 +706,22 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, zasady grupy będą 
     <string id="SpynetReporting">Dołącz do społeczności Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">To ustawienie zasad umożliwia dołączenie do społeczności Microsoft MAPS. Microsoft MAPS to społeczność online pomagająca wybierać odpowiednie reakcje na potencjalne zagrożenia. Ta społeczność pomaga też w powstrzymywaniu rozprzestrzeniania się nowych infekcji złośliwym oprogramowaniem.
 
-    Możesz określić, czy chcesz wysyłać informacje podstawowe, czy informacje dodatkowe o wykrytym oprogramowaniu. Informacje dodatkowe umożliwiają firmie Microsoft tworzenie nowych analiz zabezpieczeń i pomagają chronić Twój komputer. Te informacje mogą zawierać na przykład lokalizację wykrytych elementów na komputerze, jeśli szkodliwe oprogramowanie zostało usunięte. Ta informacje będą automatycznie zbierane i wysyłane. Czasami do firmy Microsoft mogą zostać przypadkowo wysłane dane osobowe. Firma Microsoft nie będzie ich jednak używać w celu zidentyfikowania Cię lub skontaktowania się z Tobą.
+ Możesz określić, czy chcesz wysyłać informacje podstawowe, czy informacje dodatkowe o wykrytym oprogramowaniu. Informacje dodatkowe umożliwiają firmie Microsoft tworzenie nowych analiz zabezpieczeń i pomagają chronić Twój komputer. Te informacje mogą zawierać na przykład lokalizację wykrytych elementów na komputerze, jeśli szkodliwe oprogramowanie zostało usunięte. Ta informacje będą automatycznie zbierane i wysyłane. Czasami do firmy Microsoft mogą zostać przypadkowo wysłane dane osobowe. Firma Microsoft nie będzie ich jednak używać w celu zidentyfikowania Cię lub skontaktowania się z Tobą.
 
-    Możliwe opcje:
-    (0x0) Wyłączone (wartość domyślna)
-    (0x1) Członkostwo podstawowe
-    (0x2) Członkostwo zaawansowane
+ Możliwe opcje:
+ (0x0) Wyłączone (wartość domyślna)
+ (0x1) Członkostwo podstawowe
+ (0x2) Członkostwo zaawansowane
 
-    W ramach członkostwa podstawowego do firmy Microsoft są wysyłane podstawowe informacje dotyczące wykrytego oprogramowania, łącznie z pochodzeniem oprogramowania, akcjami stosowanymi przez Ciebie lub stosowanymi automatycznie oraz informacjami o powodzeniu akcji.
+ W ramach członkostwa podstawowego do firmy Microsoft są wysyłane podstawowe informacje dotyczące wykrytego oprogramowania, łącznie z pochodzeniem oprogramowania, akcjami stosowanymi przez Ciebie lub stosowanymi automatycznie oraz informacjami o powodzeniu akcji.
 
-    W ramach członkostwa zaawansowanego oprócz informacji podstawowych do firmy Microsoft są wysyłane dodatkowe informacje na temat złośliwego oprogramowania, programów szpiegujących i innego potencjalnie niechcianego oprogramowania, takie jak lokalizacja oprogramowania, nazwy plików, sposób działania oprogramowania oraz jego wpływ na pracę komputera.
+ W ramach członkostwa zaawansowanego oprócz informacji podstawowych do firmy Microsoft są wysyłane dodatkowe informacje na temat złośliwego oprogramowania, programów szpiegujących i innego potencjalnie niechcianego oprogramowania, takie jak lokalizacja oprogramowania, nazwy plików, sposób działania oprogramowania oraz jego wpływ na pracę komputera.
 
-    Jeśli włączysz to ustawienie, dołączysz do społeczności Microsoft MAPS w ramach określonego członkostwa.
+ Jeśli włączysz to ustawienie, dołączysz do społeczności Microsoft MAPS w ramach określonego członkostwa.
 
-    Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, nie dołączysz do społeczności Microsoft MAPS.
-  
-    W systemie Windows 10 członkostwo podstawowe nie jest już dostępne, więc ustawienie wartości 1 lub 2 powoduje zarejestrowanie urządzenia z zastosowaniem członkostwa zaawansowanego.</string>
+ Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, nie dołączysz do społeczności Microsoft MAPS.
+ 
+ W systemie Windows 10 członkostwo podstawowe nie jest już dostępne, więc ustawienie wartości 1 lub 2 powoduje zarejestrowanie urządzenia z zastosowaniem członkostwa zaawansowanego.</string>
     <string id="SpynetReporting_Disabled">Wyłączone</string>
     <string id="SpynetReporting_Basic">MAPS — członkostwo podstawowe</string>
     <string id="SpynetReporting_Advanced">MAPS — członkostwo zaawansowane</string>
@@ -884,43 +848,31 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, dodatkowy tekst nie 
     </string>
     <string id="ExploitGuard_ASR_Rules">Konfiguruj reguły funkcji Zmniejszanie obszaru ataków</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Ustaw stan każdej reguły funkcji Zmniejszanie obszaru podatnego na ataki (ASR).
+    Ustaw stan każdej reguły funkcji Zmniejszanie obszaru ataków (ASR).
 
-   Po włączeniu tego ustawienia w sekcji Opcje możesz ustawić dla każdej reguły jeden z poniższych stanów:
-    – Blokuj: reguła będzie stosowana.
-    – Tryb inspekcji: jeśli reguła normalnie spowodowałaby powstanie zdarzenia, zostanie ono zarejestrowane (mimo że reguła nie zostanie w rzeczywistości zastosowana).
-    – Wyłączona: reguła nie zostanie zastosowana.
-     – Nieskonfigurowana: reguła jest włączona z domyślnymi wartościami.
-     – Ostrzeżenie: reguła zostanie zastosowana i użytkownik końcowy będzie miał możliwość obejścia blokady.
+        Po włączeniu tego ustawienia w sekcji Opcje możesz ustawić dla każdej reguły jeden z poniższych stanów:
+        - Blokuj: reguła będzie stosowana.
+        - Inspekcja: jeśli reguła normalnie spowodowałaby powstanie zdarzenia, zostanie ono zarejestrowane (mimo że reguła nie zostanie w rzeczywistości zastosowana).
+        - Wyłączona: reguła nie zostanie zastosowana.
 
-W przypadku reguł funkcji ASR z wartością Nieskonfigurowana gromadzona jest podpróba zdarzeń z inspekcji, chyba że reguła funkcji ASR jest wyłączona.
+        Włączone:
+        Określ stan każdej reguły funkcji ASR w sekcji Opcje tego ustawienia.
+        Wprowadź każdą regułę w nowym wierszu jako parę nazwa-wartość:
+        - Kolumna nazw: wprowadź prawidłowy identyfikator reguły funkcji ASR.
+        - Kolumna wartości: wprowadź identyfikator stanu, który chcesz określić dla skojarzonej reguły.
 
-    Włączona:
-      Określ stan każdej reguły funkcji ASR w sekcji Opcje tego ustawienia.
-       Wprowadź każdą regułę w nowym wierszu jako parę nazwa-wartość:
-     – Kolumna nazw: wprowadź prawidłowy identyfikator reguły funkcji ASR.
-     – Kolumna wartości: wprowadź identyfikator stanu, który chcesz określić dla skojarzonej reguły.
+        W kolumnie wartości można używać następujących identyfikatorów stanu:
+        - XXXXX (Blokuj)
+        - YYYYY (Wyłączona)
+        - ZZZZZ (Inspekcja)
 
-    W kolumnie wartości można używać następujących identyfikatorów stanu:
-   – 1 (Blokuj)
-;      – 0 (Wyłączona)
-;     – 2 (Inspekcja)
-;     – 5 (Nieskonfigurowana)
-;    – 6 (Ostrzeżenie)
+        Wyłączone:
+        Nie będą konfigurowane reguły funkcji ASR.
 
-    
-    Przykład:
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
+        Nieskonfigurowane:
+        Takie samo działanie jak w przypadku wartości Wyłączone.
 
-      Wyłączona:
-     Brak skonfigurowanych reguły funkcji ASR
-
-        Nieskonfigurowana:
-    Takie samo działanie jak w przypadku wartości Wyłączona.
-
-    Foldery lub pliki i zasoby można wykluczać w ustawieniu zasad grupy „Wyklucz pliki i ścieżki z reguły zmniejszania obszaru podatnego na ataki“.
+        Foldery lub pliki i zasoby można wykluczać w ustawieniu zasad grupy Wyklucz foldery lub pliki i zasoby.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Konfiguruj kontrolowany dostęp do folderu</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -1024,7 +976,7 @@ W przypadku reguł funkcji ASR z wartością Nieskonfigurowana gromadzona jest p
     </string>
     <string id="DeviceControl_PolicyGroups">Zdefiniuj grupy zasad sterowania urządzeniami</string>
     <string id="DeviceControl_PolicyGroups_Explain">
-        Aby wypełnić dane grup zasad, użyj schematu XML grup zasad sterowania urządzeniami.
+        Aby wypełnić dane grup zasad, przejdź do schematu XML grup zasad sterowania urządzeniami.
     </string>
     <string id="DeviceControl_PolicyRules">Zdefiniuj reguły zasad sterowania urządzeniami</string>
     <string id="DeviceControl_PolicyRules_Explain">
@@ -1047,11 +999,6 @@ W przypadku reguł funkcji ASR z wartością Nieskonfigurowana gromadzona jest p
         <label>Zdefiniuj serwer proxy na potrzeby połączenia z siecią</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>Określ ścieżkę katalogu, do którego mają być kopiowane pliki dziennika pomocy technicznej</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Wykluczenia rozszerzeń</listBox>
     </presentation>
@@ -1060,9 +1007,6 @@ W przypadku reguł funkcji ASR z wartością Nieskonfigurowana gromadzona jest p
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Wykluczenia procesów</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">Wykluczenia adresów IP</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Określ dodatkowe zestawy definicji na potrzeby inspekcji ruchu sieciowego</listBox>
@@ -1131,10 +1075,10 @@ W przypadku reguł funkcji ASR z wartością Nieskonfigurowana gromadzona jest p
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Określ godzinę, o której ma być przeprowadzane zaplanowane skanowanie</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Zdefiniuj liczbę dni, po upływie której analizy zabezpieczeń dotyczące programów szpiegujących będą uznawane za nieaktualne</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Zdefiniuj liczbę dni, po upływie której analizy zabezpieczeń dotyczące programów szpiegujących będą uznawane za nieaktualne</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Zdefiniuj liczbę dni, po upływie których analiza zabezpieczeń dotycząca wirusów będzie uznawana za nieaktualną</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Zdefiniuj liczbę dni, po upływie których analiza zabezpieczeń dotycząca wirusów będzie uznawana za nieaktualną</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1219,9 +1163,6 @@ W przypadku reguł funkcji ASR z wartością Nieskonfigurowana gromadzona jest p
     <textBox refId="DeviceControl_PolicyRules">
         <label>Tutaj zdefiniuj reguły zasad</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Określ okno randomizacji harmonogramu w godzinach.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

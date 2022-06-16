@@ -208,18 +208,18 @@ Den här principinställningen påverkar endast angivna element i användargrän
 
 Om du inaktiverar eller låter bli att konfigurera den här principinställningen är söklänken tillgänglig på Start-menyn.</string>
       <string id="ShowOrHideMostUsedApps">Visa eller dölj listan “mest använda” från Start-menyn</string>
-      <string id="ShowOrHideMostUsedApps_Help">Om du aktiverar den här principinställningen kan du konfigurera Start-menyn för att visa eller dölja listan över användarens mest använda appar, oavsett användarinställningar.
+      <string id="ShowOrHideMostUsedApps_Help">Om du aktiverar den här principinställningen kan du konfigurera Start-menyn att visa eller dölja listan över användarnas mest använda appar, oavsett användarinställningar.
 
-Om du väljer “Visa” tvingas listan över “mest använda” att visas och användaren kan inte ändra den så att den döljas i appens inställningar.
+Om du väljer Visa kommer listan Mest använda att visas och användaren kan inte ändra den för att dölja den med appen Inställningar.
 
-Om du väljer “Dölj” visas den “mest använda” listan som dold och användaren kan inte ändra den så att den visas i appens inställningar.
+Om du väljer Dölj måste listan Mest använda döljas och användaren kan inte ändra den med appen Inställningar.
 
-Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan användarna aktivera eller inaktivera visningen av listan över “mest använda” i appens inställningar. Det här är standard beteendet.
+Om du väljer Inte konfigurerat, eller om du inaktiverar eller låter bli att konfigurera den här principinställningen kan användarna aktivera eller inaktivera visningen av listan Mest använda med appen Inställningar. Detta är standardbeteendet.
 
-Obs! Om du konfigurerar den här principen till “Visa” eller “Dölj” i versioner av Windows 10 som stöds kommer denna inställning att ersätta alla principinställningar för “Ta bort listan över vanliga program från Start-menyn” (som hanterar samma del av Start-menyn men med färre alternativ).</string>
+Obs! Om du ställer in den här principen på Visa eller Dölj i Windows 10 som stöds ersätts alla principinställningar för Ta bort listan över vanliga program från Start-menyn (som hanterar samma del av Start-menyn men med färre alternativ).</string>
       <string id="MFU_NotConfigured">Inte konfigurerad</string>
       <string id="MFU_Show">Visa</string>
-      <string id="MFU_Hide">Dölj</string>        
+      <string id="MFU_Hide">Dölj</string>
       <string id="NoFrequentUsedPrograms">Ta bort listan över vanliga program från Start-menyn</string>
       <string id="NoFrequentUsedPrograms_Help">Om den här inställningen aktiveras tas listan över vanliga program bort från Start-menyn.
 
@@ -645,7 +645,6 @@ Om du aktiverar principen går det inte att öppna snabbmenyer på Start-menyn.<
           <label>Layoutfil för Start</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Använd layout igen vid varje inloggning</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Välj en av följande storlekar</dropdownList>

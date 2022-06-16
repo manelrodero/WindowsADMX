@@ -6,7 +6,7 @@
   <resources>
     <stringTable>
       <string id="TS_AUTOSUBSCRIPTION_NAME">자동 구독 활성화</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">사용자가 자동 구독해야 하는 URL 목록을 제어합니다.</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">사용자가 자동 구독해야 하는 URL 목록을 제어합니다.</string>      
       <string id="TS_SUPPORTED_Windows10">Windows 10 또는 Windows Server 2016 이상</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Windows 8 또는 Windows RT 이상</string>
       <string id="TS_SUPPORTED_Windows8_Server">Windows Server 2012 이상</string>
@@ -28,7 +28,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Windows XP 또는 Windows Server 2003 이상 전용</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Windows Server 2008 또는 Windows 7 이상</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Windows Server 2008 R2 전용</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 버전 1903, Windows 10 버전 1909 및 Windows 10 버전 2004</string>
       <string id="TS_TERMINAL_SERVER">원격 데스크톱 세션 호스트</string>
       <string id="TS_TERMINAL_SERVER_Help">원격 데스크톱 세션 호스트 서버의 구성 제어</string>
       <string id="TS_LICENSE_SERVER">TS 라이선스</string>
@@ -147,7 +146,6 @@ Windows Server 2008 R2를 실행하는 컴퓨터에 연결할 경우 기본적�
       <string id="TS_CLIENT_LPT">LPT 포트 리디렉션을 허용하지 않음</string>
       <string id="TS_CLIENT_PNP">지원되는 플러그 앤 플레이 장치 리디렉션 허용 안 함</string>
       <string id="TS_CAMERA_REDIRECTION">비디오 캡처 리디렉션 허용 안 함</string>
-      <string id="TS_LOCATION_REDIRECTION">위치 리디렉션을 허용하지 않음</string>
       <string id="TS_CLIENT_PRINTER">클라이언트 프린터의 리디렉션을 허용하지 않음</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">이 정책 설정은 원격 데스크톱 서비스 세션 중에 원격 컴퓨터와 클라이언트 컴퓨터 간에 클립보드 내용을 공유(클립보드 리디렉션)하지 않도록 할지 여부를 지정합니다.
 
@@ -212,15 +210,6 @@ c.	클라이언트가 요구하는 값
 
 이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자가 비디오 캡처 장치를 원격 컴퓨터로 리디렉션할 수 있습니다. 사용자는 원격 데스크톱 연결의 로컬 리소스 탭에 있는 추가 옵션을 사용하여 원격 컴퓨터로 리디렉션할 비디오 캡처 장치를 선택할 수 있습니다.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">이 정책 설정을 통해 원격 데스크톱 서비스 세션에서 원격 컴퓨터로 위치 데이터를 리디렉션할 수 있습니다.
-
-기본적으로 원격 데스크톱 서비스는 위치 데이터의 리디렉션을 허용하지 않습니다.
-
-이 정책 설정을 사용하면 사용자가 위치 데이터를 원격 컴퓨터로 리디렉션할 수 없습니다.
-
-이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자가 해당 위치 데이터를 원격 컴퓨터로 리디렉션할 수 있습니다.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">이 정책 설정으로 사용자가 원격 데스크톱 서비스 세션을 표시하는 데 사용할 수 있는 모니터의 수를 제한할 수 있습니다. 원격 데스크톱 서비스 세션을 표시하는 모니터의 수를 제한하면 특히 연결 속도가 느릴 경우 연결 성능을 높일 수 있으며 서버 부하를 줄일 수 있습니다.
 
@@ -433,18 +422,21 @@ RDS 끝점 서버 그룹은 기본적으로 비어 있습니다.
       <string id="TS_LICENSING_MODE_EXPLAIN">
         이 정책 설정으로 이 RD 세션 호스트 서버에 연결하는 데 필요한 RDS CAL(원격 데스크톱 서비스 클라이언트 액세스 라이선스) 유형을 지정할 수 있습니다.
 
-이 정책 설정을 사용하여 사용자 단위 또는 장치 단위로 두 가지 라이선스 모드 중 하나를 선택할 수 있습니다.
+        이 정책 설정을 통해 사용자 단위 또는 장치 단위의 두 가지 라이선스 모드 중 하나를 선택할 수 있습니다.
 
-사용자 단위 라이선스 모드를 사용하려면 이 RD 세션 호스트 서버에 연결하는 각 사용자 계정에 RD 라이선싱 서버에서 발급한 RDS 사용자 단위 CAL이 있어야 합니다.
+        사용자 단위 라이선스 모드를 사용하려면 이 RD 세션 호스트 서버에 연결하는 각 사용자 계정에 RD 라이선싱 서버에서 발급한 RDS 사용자 단위 CAL이 있어야 합니다.
 
-장치 단위 라이선스 모드를 사용하려면 이 RD 세션 호스트 서버에 연결하는 각 장치에 RD 라이선싱 서버에서 발급한 RDS 장치 단위 CAL이 있어야 합니다.
+        장치 단위 라이선스 모드를 사용하려면 이 RD 세션 호스트 서버에 연결하는 각 장치에 RD 라이선싱 서버에서 발급한 RDS 장치 단위 CAL이 있어야 합니다.
 
-이 정책 설정을 사용하면 지정하는 원격 데스크톱 라이선싱 모드가 원격 데스크톱 라이선스 서버 및 RD 세션 호스트에서 허용됩니다.
+        AAD 사용자 단위 라이선스 모드를 사용하려면 이 RD 세션 호스트 서버에 연결하는 각 사용자 계정에 AAD에 할당된 RDS 라이선스를 지원하는 서비스 계획이 있어야 합니다.
+        
+        이 정책 설정을 사용하면 지정한 원격 데스크톱 라이선싱 모드가 원격 데스크톱 라이선스 서버에서 허용됩니다.
 
-이 정책 설정을 사용하지 않거나 구성하지 않으면 그룹 정책 수준에서 라이선스 모드가 지정되지 않습니다.
+        이 정책 설정을 사용하지 않거나 구성하지 않으면 그룹 정책 수준에서 라이선스 모드가 지정되지 않습니다.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">장치 단위</string>
       <string id="TS_LICENSING_MODE_PER_USER">사용자 단위</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">사용자 단위 AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">이 정책 설정은 원격 데스크톱 서비스 세션 중에 데이터를 클라이언트 LPT 포트로 리디렉션할 수 없도록 할지 여부를 지정합니다.
 
 이 설정을 사용하면 사용자가 로컬 LPT 포트를 매핑할 수 없으며 원격 컴퓨터에서 로컬 LPT 포트 주변 장치로 데이터를 리디렉션할 수 없습니다. 기본적으로 원격 데스크톱 서비스에서는 LPT 포트 리디렉션을 허용합니다.
@@ -795,17 +787,6 @@ RDS 끝점 서버 그룹은 기본적으로 비어 있습니다.
 이 정책 설정을 사용하지 않거나 구성하지 않으면 클라이언트가 원격 컴퓨터에 연결한 후 원격 컴퓨터에서 실행되는 시작 프로그램을 지정할 수 있습니다. 시작 프로그램을 지정하지 않으면 클라이언트가 원격 컴퓨터에 연결한 후에 원격 컴퓨터의 바탕 화면이 항상 표시됩니다.
 
 참고: 이 정책 설정을 사용하면 "연결 시 프로그램 시작" 정책 설정이 무시됩니다.</string>
-      <string id="TS_UIA">UI 자동화 리디렉션 허용</string>
-      <string id="TS_UIA_EXPLAIN">이 정책 설정은 로컬 컴퓨터에서 실행 중인 UI(사용자 인터페이스) 자동화 클라이언트 응용 프로그램이 서버에서 UI 요소에 액세스할 수 있는지 여부를 결정합니다.
-
-UI 자동화를 사용하면 프로그램이 대부분의 UI 요소에 액세스할 수 있습니다. 일반적인 UI가 제대로 작동하려면 마그레이터 및 내레이터 와 같은 보조 기술 제품을 사용할 수 있습니다. UI 정보는 자동화된 스크립트가 UI와 상호 작용할 수 있습니다.
-
-원격 데스크톱 세션이 현재 UI 자동화 리디렉션을 지원하지 않습니다.
-
-이 정책 설정을 사용하거나 구성하지 않으면 로컬 컴퓨터의 어떤 UI 자동화 클라이언트가 원격 앱과 상호 작용할 수 있습니다. 예를 들어 로컬 컴퓨터의 내레이터 및 돋보기 클라이언트를 사용하여 원격 세션에 열리는 웹 페이지의 UI와 상호 작용할 수 있습니다.
-
-이 정책 설정을 사용하지 않으면 로컬 컴퓨터에서 실행 중인 UI 자동화 클라이언트는 원격 앱과 상호 작용할 수 없습니다.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">이 정책 설정으로 RD 세션 호스트 서버에 대한 원격 연결에 대해 네트워크 수준 인증을 사용하여 사용자 인증을 요구할지 여부를 지정할 수 있습니다. 이 정책 설정은 사용자 인증을 원격 연결 프로세스 초기에 수행해야 하므로 보안이 향상됩니다.
 
 이 정책 설정을 사용하면 네트워크 수준 인증을 지원하는 클라이언트 컴퓨터만 RD 세션 호스트 서버에 연결할 수 있습니다.

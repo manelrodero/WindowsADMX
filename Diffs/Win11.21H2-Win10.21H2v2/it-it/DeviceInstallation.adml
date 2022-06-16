@@ -35,13 +35,13 @@ Se si abilita questa impostazione dei criteri in un server desktop remoto, l'imp
 
 Se si disabilita o non si configura questa impostazione dei criteri e nessuna altra impostazione dei criteri descrive il dispositivo, l'impostazione dei criteri "Impedire l'installazione di dispositivi non descritti da altre impostazioni dei criteri" determina se il dispositivo può essere installato.</string>
       <string id="DeviceInstall_Classes_Deny">Impedisci l'installazione di dispositivi utilizzando driver che corrispondono a queste classi di installazione dispositivi</string>
-      <string id="DeviceInstall_Classes_Deny_Help">Questa impostazione dei criteri consente di specificare un elenco di identificatori univoci globali (GUID) della classe di configurazione dei dispositivi per i pacchetti dei driver che Windows non è in grado di installare. Per impostazione predefinita, questa impostazione dei criteri ha la precedenza rispetto a qualsiasi altra impostazione dei criteri che consente a Windows di installare un dispositivo.
+      <string id="DeviceInstall_Classes_Deny_Help">Questa impostazione dei criteri consente di specificare un elenco di GUID (Globally Unique Identifier) della classe di installazione del dispositivo per i pacchetti driver di cui non è consentita l'installazione in Windows. Per impostazione predefinita, questa impostazione dei criteri ha la precedenza su qualsiasi altra impostazione dei criteri che consente a Windows di installare un dispositivo.
 
-NOTA: per consentire alle impostazioni dei criteri "Consenti l'installazione di dispositivi corrispondenti a uno di questi ID dispositivo" e "Consenti l'installazione di dispositivi che corrispondono a una di queste impostazioni degli ID istanza del dispositivo" di sostituire queste impostazione dei criteri per i dispositivi applicabili, abilitare l'impostazione dei criteri "Applica l'ordine di valutazione a più livelli per Consenti e Impedisci l'installazione dei dispositivi in tutti i criteri di corrispondenza dei dispositivi".
+NOTA: per abilitare le impostazioni dei criteri "Consenti l'installazione di dispositivi che corrispondono a uno di questi ID dispositivo" e "Consenti l'installazione di dispositivi che corrispondono a uno di questi ID istanza del dispositivo" per sostituire questa impostazione dei criteri per i dispositivi applicabili, abilitare l'impostazione dei criteri "Applica ordine di valutazione a più livelli per Consenti e Impedisci l'installazione dei dispositivi in tutti i criteri di corrispondenza dei dispositivi".
  
-Se si abilita questa impostazione dei criteri, Windows impedisce l'installazione o l'aggiornamento di pacchetti dei driver i cui GUID della classe di configurazione dei dispositivi vengono visualizzati nell'elenco creato. Se si abilita questa impostazione dei criteri in un server desktop remoto, l'impostazione dei criteri influisce sul reindirizzamento dei dispositivi specificati da un client desktop remoto a un server desktop remoto.
+Se si abilita questa impostazione dei criteri, in Windows verrà impedita l'installazione o l'aggiornamento dei pacchetti driver i cui GUID delle classi di installazione del dispositivo sono visualizzati nell'elenco creato. Se si abilita questa impostazione dei criteri in un server desktop remoto, l'impostazione dei criteri influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto.
 
-Se si disabilita o non si configura questa impostazione dei criteri, Windows può installare e aggiornare i dispositivi nel modo consentito o non consentito da altre impostazioni dei criteri.</string>
+Se si disabilita o non si configura questa impostazione dei criteri, Windows potrà installare e aggiornare i dispositivi in base a quanto consentito o impedito da altre impostazioni dei criteri.</string>
       <string id="DeviceInstall_Help">Impostazioni dei criteri che controllano l'installazione di dispositivi.</string>
       <string id="DeviceInstall_IDs_Allow">Consenti l'installazione dei dispositivi che corrispondono a uno di questi ID</string>
       <string id="DeviceInstall_IDs_Allow_Help">Questa impostazione dei criteri consente di specificare un elenco di ID hardware Plug and Play e di ID compatibili per i dispositivi che Windows è autorizzato a installare. Questa impostazione dei criteri è stata usata solo quando è abilitata l'impostazione dei criteri "Applica l'ordine di valutazione a più livelli per i criteri Consenti e Impedisci installazione dei dispositivi in tutti i criteri di corrispondenza dei dispositivi", tuttavia può essere usata anche con l'impostazione dei criteri "Impedisci installazione di dispositivi non descritti da altre impostazioni dei criteri" per le definizioni dei criteri legacy.
@@ -164,7 +164,7 @@ Se si disabilita o non si configura questa impostazione dei criteri, in Windows 
 Se si abilita questa impostazione dei criteri, i membri del gruppo Users potranno installare nuovi driver per le classi di installazione dispositivi specificate. I driver devono essere firmati secondo il criterio della firma del driver di Windows oppure da autori già presenti nell'archivio autori attendibili.
 
 Se si disabilita o non si configura questa impostazione dei criteri, l'installazione di nuovi pacchetti di driver nel sistema sarà consentita solo ai membri del gruppo Administrators.</string>
-      <string id="DriverInstall_Help">Impostazioni dei criteri per il controllo dell'installazione dei pacchetti driver nel sistema.</string>
+      <string id="DriverInstall_Help">Impostazioni dei criteri che controllano l'installazione dei pacchetti driver nel sistema.</string>
       <string id="DriverSign_Block">Blocca</string>
       <string id="DriverSign_None">Ignora</string>
       <string id="DriverSign_Warn">Avvisa</string>
@@ -250,7 +250,7 @@ Nota: se non viene forzato il riavvio, il diritto di restrizione per l'installaz
         </textBox>
       </presentation>
       <presentation id="DriverInstall_Classes_AllowUser">
-        <listBox refId="DriverInstall_Classes_AllowUser_List">Consenti agli utenti di installare i pacchetti driver per queste classi:</listBox>
+        <listBox refId="DriverInstall_Classes_AllowUser_List">Consenti agli utenti di installare pacchetti driver per queste classi:</listBox>
         <text>Per creare un elenco di classi di dispositivi, fare clic su Mostra. Nella colonna Valore della finestra di dialogo Mostra contenuto</text>
         <text>digitare un GUID che rappresenta una classe di installazione dispositivi</text>
         <text>(ad esempio, {25DBCE51-6C8F-4A72-8A6D-B54C2B4FC835}).</text>

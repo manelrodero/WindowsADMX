@@ -35,13 +35,13 @@
 
 如果禁用或未配置此策略设置，并且没有其他策略设置描述该设备，则由“阻止安装未由其他策略设置描述的设备”策略设置确定是否可以安装该设备。</string>
       <string id="DeviceInstall_Classes_Deny">阻止使用与下列设备安装程序类相匹配的驱动程序安装设备</string>
-      <string id="DeviceInstall_Classes_Deny_Help">通过此策略设置，您可以指定 Windows 阻止安装 Windows 的驱动程序包的设备安装程序类全局唯一标识符 (Guid 的列表)。默认情况下，此策略设置优先于任何其他允许 Windows 安装设备的策略设置。
+      <string id="DeviceInstall_Classes_Deny_Help">使用此策略设置，可以为阻止 Windows 安装的驱动程序包指定设备安装程序类全局唯一标识符(GUID)列表。默认情况下，此策略设置优先于允许 Windows 安装设备的任何其他策略设置。
 
-注意：若要在适用的设备上启用 "允许安装与下列设备 Id 相匹配的设备" 和 "允许安装与下列任何设备实例 Id 相匹配的设备" 策略设置，请启用 "对所有设备匹配条件应用分层的评估顺序" 和 "阻止设备安装策略" 策略设置。
+注意： 若要启用"允许安装与下列任何设备 ID 匹配的设备"和"允许安装与下列任何设备实例 ID 相匹配的设备"策略设置，以取代适用设备的此策略设置，请启用"在所有设备匹配条件中应用允许和阻止设备安装策略的分层评估顺序"策略设置。
  
-如果启用此策略设置，则会阻止 Windows 安装或更新其设备安装程序类 Guid 显示在所创建的列表中的驱动程序包。如果在远程桌面服务器上启用此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。
+如果启用此策略设置，则会阻止 Windows 安装或更新设备安装程序类 GUID 出现在你创建的列表中的驱动程序包。如果在远程桌面服务器上启用此策略设置，则此策略设置会影响指定设备从远程桌面客户端到远程桌面服务器的重定向。
 
-如果禁用或未配置此策略设置，则 Windows 可以根据其他策略设置允许或阻止安装和更新设备。</string>
+如果禁用或未配置此策略设置，则 Windows 可以根据其他策略设置允许或阻止的方式安装和更新设备。</string>
       <string id="DeviceInstall_Help">控制设备安装的策略设置。</string>
       <string id="DeviceInstall_IDs_Allow">允许安装与下列设备 ID 相匹配的设备</string>
       <string id="DeviceInstall_IDs_Allow_Help">通过此策略设置，可以为允许 Windows 安装的设备指定即插即用硬件 ID 和兼容 ID 列表。此策略设置仅适用于启用 “在所有设备匹配条件下对允许和阻止设备安装策略应用分层评估顺序”策略设置的情况，但它还可以与旧版策略定义的“阻止安装未由其他策略设置描述的设备”策略设置一起使用。
@@ -164,7 +164,7 @@
 如果启用此策略设置，则用户组成员可以为指定设备安装类别安装新驱动程序。驱动程序必须根据 Windows 驱动程序签名策略签名，或者由已位于 TrustedPublisher 存储中的发布者签名。
 
 如果禁用或未配置此策略设置，则只允许管理员组成员在系统中安装新的驱动程序包。</string>
-      <string id="DriverInstall_Help">控制系统上驱动程序包的安装的策略设置。</string>
+      <string id="DriverInstall_Help">控制系统上驱动程序包安装的策略设置。</string>
       <string id="DriverSign_Block">阻止</string>
       <string id="DriverSign_None">忽略</string>
       <string id="DriverSign_Warn">警告</string>

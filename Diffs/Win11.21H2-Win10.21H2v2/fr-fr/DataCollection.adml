@@ -5,20 +5,20 @@
   <description>entrer la description ici</description>
   <resources>
     <stringTable>
-      <string id="AllowTelemetry">Autoriser les données de diagnostic</string>
-      <string id="AllowTelemetry_0">Données de diagnostic désactivées (non recommandé)</string>
-      <string id="AllowTelemetry_1">Envoyer les données de diagnostic requises</string>
-      <string id="AllowTelemetry_3">Envoyer des données de diagnostic facultatives</string>
-      <string id="AllowTelemetry_Explain">La configuration de ce paramètre de stratégie vous permet de modifier les données de diagnostic collectées à partir de Windows. Ce paramètre de stratégie empêche également l’utilisateur d’augmenter la quantité de collecte de données de diagnostic via l’application des paramètres. Les données de diagnostic collectées dans le cadre de cette stratégie ont un impact sur le système d’exploitation et les applications considérées comme faisant partie de Windows et ne s’appliquent pas aux applications supplémentaires installées par votre organisation.
+      <string id="AllowTelemetry">Autoriser la télémétrie</string>
+      <string id="AllowTelemetry_0">0 - Désactivé [Enterprise uniquement]</string>
+      <string id="AllowTelemetry_1">1 – Obligatoire</string>
+      <string id="AllowTelemetry_2">2 - Améliorée</string>
+      <string id="AllowTelemetry_3">3 – Facultatif</string>
+      <string id="AllowTelemetry_Explain">Lorsqu’ils configurent ce paramètres dans Windows 10, les utilisateurs finaux ne peuvent pas définir un niveau de collecte de télémétrie plus élevé que celui que vous avez défini pour votre organisation.  Cette limite concerne uniquement le système d’exploitation Windows et les applications incluses avec Windows, pas les applications tierces s’exécutant dans Windows 10.
 
-    – Données de diagnostic désactivées (non recommandé). Cette valeur permet de ne pas envoyer de données de diagnostic à partir de l'appareil. Cette valeur est prise en charge uniquement pour les éditions Entreprise, Éducation et Server.
-    – Envoyer des données de diagnostic requises. Il s’agit des données de diagnostic minimales nécessaires pour assurer la sécurité, la mise à jour et l’exécution de Windows comme prévu. L’utilisation de cette valeur désactive le contrôle « données de diagnostic facultatives » dans l’application paramètres.
-    – Envoyer des données de diagnostic facultatives. Des données de diagnostic supplémentaires sont collectées pour nous permettre de détecter, diagnostiquer et de résoudre les problèmes, ainsi que d’améliorer les produits. Les données de diagnostic requises sont toujours incluses lorsque vous choisissez d’envoyer des données de diagnostic facultatives.  Les données de diagnostic facultatives peuvent également inclure des fichiers journaux de diagnostic et des vidages sur incident. Utiliser les stratégies « limiter la collection de vidage » et « limiter la collecte de journaux de diagnostic » pour un contrôle plus granulaire des données de diagnostic facultatives qui sont envoyées.
+Les données de diagnostics sont réparties en quatre niveaux, comme suit :
+  – 0 (Sécurité). Informations indispensables à la sécurité de Windows, Windows Server et System Center. Il s’agit de données concernant les paramètres des composants Expériences des utilisateurs connectés et télémétrie, l’Outil de suppression de logiciels malveillants et Windows Defender.
+  – 1 (obligatoire). Informations basiques sur les appareils, notamment : données relatives à la qualité, compatibilité des applications et données provenant du niveau Sécurité.
+  – 2 (Amélioré). Informations complémentaires, notamment : mode d’utilisation de Windows, Windows Server, System Center et des applications, données de performances, données de fiabilité avancées et données provenant des niveaux Obligatoire et Sécurité.
+  – 3 (facultatif). Toutes les données nécessaires pour identifier et aider à résoudre les problèmes, ainsi que données provenant des niveaux Obligatoire, Sécurité et Amélioré.
 
-Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l’appareil envoie les données de diagnostic requises et l’utilisateur final peut choisir d’envoyer des données de diagnostic facultatives à partir de l’application paramètres.
-
-Remarque :
-La stratégie de groupe « Configurer l'interface utilisateur des paramètres d’acceptation de données de diagnostic » peut être utilisée pour empêcher les utilisateurs finaux de modifier leurs paramètres de collection de données.
+Les options disponibles pour les utilisateurs dans l’application Paramètres peuvent être modifiées grâce à ce paramètre. Même si ces options ne sont pas définies, elles peuvent être affectées par d’autres paramètres de stratégie de groupe. Notez que si cette stratégie n’est pas configurée pour autoriser un paramètres de télémétrie de niveau Sécurité ou Basique les utilisateurs finaux ne pourront pas sélectionner un niveau plus élevé.
       </string>
 
       <string id="TelemetryProxy">Configurer Expériences des utilisateurs connectés et télémétrie</string>
@@ -30,9 +30,9 @@ Format de ce paramètre : &lt;serveur&gt;:&lt;port&gt;
       </string>
 
       <string id="CommercialId">Configurer l’ID commercial</string>
-      <string id="CommercialId_Explain">Ce paramètre de stratégie définit l’identificateur utilisé pour associer de façon unique les données de diagnostic de cet appareil à une organisation donnée. Si votre organisation participe à un programme qui nécessite l’identification de cet appareil comme appartenant à votre organisation, utilisez ce paramètre pour fournir cette identification. La valeur de ce paramètre est fournie par Microsoft dans le cadre du processus d’intégration au programme. 
+      <string id="CommercialId_Explain">Ce paramètre de stratégie définit l’identificateur utilisé pour associer de façon unique les données de télémétrie de cet appareil à une organisation donnée. Si votre organisation participe à un programme qui nécessite l’identification de cet appareil comme appartenant à votre organisation, utilisez ce paramètre pour fournir cette identification. La valeur de ce paramètre est fournie par Microsoft dans le cadre du processus d’intégration au programme. 
 
-Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Microsoft ne peut pas utiliser cet identificateur pour associer cet ordinateur et ses données de diagnostic à votre organisation.
+Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Microsoft ne sera pas en mesure d’utiliser cet identificateur pour associer cet ordinateur et ses données de télémétrie à votre organisation.
       </string>
 
       <string id="DisableEnterpriseAuthProxy">Configurer l’utilisation du proxy authentifié pour le service Expériences des utilisateurs connectés et télémétrie</string>
@@ -40,20 +40,21 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <string id="DisableEnterpriseAuthProxy_2">Désactiver l’utilisation du proxy authentifié</string>
       <string id="DisableEnterpriseAuthProxy_Explain">Ce paramètre de stratégie empêche le service Expériences des utilisateurs connectés et télémétrie d’utiliser automatiquement un proxy authentifié pour renvoyer des données à Microsoft sur Windows 10. Si vous désactivez ou que vous ne configurez pas ce paramètre de stratégie, le service Expériences des utilisateurs connectés et télémétrie utilise automatiquement un proxy authentifié pour renvoyer des données à Microsoft. L’activation de cette stratégie empêche le service Expériences des utilisateurs connectés et télémétrie d’utiliser automatiquement un proxy authentifié.</string>
 
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Limiter les données de diagnostic facultatives pour Analyses du bureau</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Activer la collection d’Analyses du bureau</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Désactiver la collection d’Analyses du bureau</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Combiné au paramètre de stratégie « Autoriser les données de diagnostic », ce paramètre de stratégie permet aux organisations d’envoyer le minimum de données requis par l’analyse du bureau.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Limiter les données de diagnostic de niveau Amélioré au minimum requis par Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Activer la collection Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Désactiver la collection Windows Analytics</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Ce paramètre de stratégie, en association avec le paramètre de stratégie Autoriser la télémétrie, permet aux organisations d’envoyer à Microsoft un jeu spécifique de données de diagnostic pour information du service informatique via les services Windows Analytics.
 
-Pour activer le comportement décrit ci-dessus, vous devez effectuer les étapes suivantes :
-    -1. Activer ce paramètre de stratégie
-    -2. Définissez la stratégie « Autoriser les données de diagnostic » sur « Envoyer des données de diagnostic facultatives »
-    -3. Activez la stratégie « Limiter la collecte du journal de dumps »
-    -4. Activez la stratégie « Limiter la collecte de journaux de diagnostic »
+Pour activer ce comportement, procédez comme suit :
 
-Lorsque ces stratégies sont configurées, Microsoft collecte uniquement les données de diagnostic requises et les événements requis par l’analyse de bureau, qui peuvent être consultés sur https://go.microsoft.com/fwlink/?linkid=2116020
+    1. Activer ce paramètre de stratégie
+    2. Définir Autoriser la télémétrie sur le niveau 2 (Amélioré)
 
-Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la collecte des données de diagnostic est déterminée par le paramètre de stratégie « Autoriser les données de diagnostic » ou par l’utilisateur final à partir de l’application paramètres.
+Ce paramètre n’a aucune incidence sur les appareils configurés pour envoyer des données de diagnostic de niveau Sécurité ou Obligatoire à Microsoft. 
+
+Lorsque ces stratégies sont configurées, la collection de données de diagnostic est limitée aux données de diagnostic obligatoire et aux événements exigés par Desktop Analytics. Ces événements peuvent être consultés ici : https://go.microsoft.com/fwlink/?linkid=2116020.
+
+Si vous désactivez ou si vous ne configurez pas ce paramètre de stratégie, le niveau de données de diagnostic envoyé à Microsoft est alors déterminé par le paramètre de stratégie Autoriser la télémétrie s’il est configuré (par exemple, si vous activez les données de diagnostic améliorées via le paramètre de stratégie Autoriser la télémétrie, mais que vous ne configurez pas ce paramètre de stratégie, vous envoyez les événements obligatoires pour Windows Analytics, ainsi que toute donnée supplémentaire de diagnostic de niveau Amélioré à Microsoft).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Autoriser l'envoi du nom de l'appareil dans les données de diagnostic Windows</string>
@@ -62,54 +63,56 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le nom de l'appareil n'est pas envoyé à Microsoft dans le cadre des données de diagnostic Windows.
       </string>
 
-      <string id="ConfigureTelemetryOptInSettingsUx">Configurer l’interface utilisateur des paramètres d'acceptation des données de diagnostic</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_1">Désactiver les paramètres d'acceptation des données de diagnostic</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_2">Activer les paramètres d’acceptation des données de diagnostic</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Ce paramètre de stratégie détermine si un utilisateur final peut modifier les paramètres de données de diagnostic dans l’application Paramètres.
+      <string id="ConfigureTelemetryOptInSettingsUx">Configurez l'interface utilisateur de l'activation de la télémétrie.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Désactiver les paramètres d'activation de la télémétrie</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Activer les paramètres d'activation de la télémétrie</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Ce paramètre de stratégie détermine si un utilisateur peut modifier ses propres niveaux de télémétrie dans les paramètres.
 
-Si vous définissez ce paramètre de stratégie sur « Désactiver les paramètres d’abonnement aux données de diagnostic », les paramètres de données de diagnostic sont désactivés dans l’application Paramètres.
+Si vous définissez ce paramètre de stratégie sur « Désactiver les paramètres d’activation de la télémétrie », les niveaux de télémétrie sont désactivés dans les paramètres, ce qui empêche les utilisateurs de les modifier.
 
-Si vous ne configurez pas ce paramètre de stratégie ou si vous le définissez sur « Activer les paramètres d’abonnement des données de diagnostic », les utilisateurs finaux peuvent modifier les paramètres de données de diagnostic de l’appareil dans l’application Paramètres.
+Si vous ne définissez pas ce paramètre de stratégie, ou si vous le définissez sur « Activer les paramètres d’activation de la télémétrie », les utilisateurs peuvent modifier le niveau de télémétrie de l’appareil dans l’application Paramètres.
 
 Remarque :
-Pour définir une limite du niveau de données de diagnostic envoyées à Microsoft par votre organisation, utilisez le paramètre de stratégie « Autoriser les données de diagnostic ».
+Pour définir une limite du niveau de données de diagnostic envoyées à Microsoft par votre organisation, utilisez le paramètre de stratégie Autoriser la télémétrie.
       </string>
 
-      <string id="ConfigureTelemetryOptInChangeNotification">Configurer les notifications de modification d'acceptation des données de diagnostic</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_1">Désactiver les notifications de modification des données de diagnostic</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_2">Activer les notifications de modification des données de diagnostic</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_Explain">Ce paramètre de stratégie contrôle si les notifications sont affichées, à la suite d'une modification des paramètres d'acceptation des données de diagnostic, lors de la première connexion et lorsque les modifications sont apportées aux paramètres.
-
-Si vous définissez ce paramètre de stratégie sur « Désactiver les notifications de modification des données de diagnostic », les notifications de modification d'acceptation des données de diagnostic n'apparaissent pas.
-
-Si vous définissez ce paramètre de stratégie sur « Activer les notifications de modification des données de diagnostic » ou si vous ne configurez pas ce paramètre de stratégie, les notifications de modification d'acceptation des données de diagnostic apparaissent à la première connexion et lorsque les modifications se produisent dans les paramètres.
+      <string id="ConfigureTelemetryOptInChangeNotification">Configurez les notifications d'activation de la télémétrie.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Désactiver les notifications de modification de la télémétrie</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Activer les notifications de modification de la télémétrie</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
+          Ce paramètre de stratégie contrôle si un appareil affiche des notifications sur les niveaux de télémétrie aux utilisateurs lors de la première ouverture de session ou lorsque des modifications sont effectuées dans les paramètres. 
+          Si vous définissez ce paramètre de stratégie sur « Désactiver les notifications de modification de la télémétrie », les notifications de niveau de télémétrie ne s'affichent plus.
+          Si vous définissez ce paramètre de stratégie sur « Activer les notifications de modification de la télémétrie » ou que vous ne configurez pas ce paramètre de stratégie, les notifications de télémétrie s'affichent lors de la première ouverture de session et lorsque des modifications sont effectuées dans les paramètres.
       </string>
 
-      <string id="DisableDeviceDelete">Désactiver la suppression des données de diagnostic</string>
-      <string id="DisableDeviceDelete_Explain">Ce paramètre de stratégie contrôle si le bouton Supprimer des données de diagnostic est activé sur la page Diagnostics et paramètres de commentaires.
+      <string id="DisableDeviceDelete">Désactiver la suppression des données de diagnostic </string>
+      <string id="DisableDeviceDelete_Explain">
+          Ce paramètre de stratégie contrôle si le bouton Supprimer des données de diagnostic est activé sur la page Diagnostics et paramètres de commentaires.
           Si vous activez ce paramètre de stratégie, le bouton Supprimer des données de diagnostic est désactivé sur la page Paramètres, ce qui empêche la suppression des données de diagnostic collectées par Microsoft sur l'appareil. 
           Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le bouton Supprimer des données de diagnostic est activé sur la page Paramètres, ce qui permet aux utilisateurs d'effacer toutes les données de diagnostic collectées par Microsoft sur cet appareil.
       </string>
 
-      <string id="DisableDiagnosticDataViewer">Désactiver la visionneuse de données de diagnostic</string>
-      <string id="DisableDiagnosticDataViewer_Explain">Ce paramètre de stratégie contrôle si les utilisateurs peuvent activer et lancer la Visionneuse de données de diagnostic à partir de la page Diagnostics et paramètres de commentaires.
+      <string id="DisableDiagnosticDataViewer">Désactivez la Visionneuse de données de diagnostic. </string>
+      <string id="DisableDiagnosticDataViewer_Explain">
+          Ce paramètre de stratégie contrôle si les utilisateurs peuvent activer et lancer la Visionneuse de données de diagnostic à partir de la page Diagnostics et paramètres de commentaires.
           Si vous activez ce paramètre de stratégie, la Visionneuse de données de diagnostic n'est pas activée sur la page Paramètres et il empêche la visionneuse d'afficher les données de diagnostic collectées par Microsoft sur l'appareil.  
           Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la Visionneuse de données de diagnostic est activée sur la page Paramètres.
       </string>
 
       <string id="ConfigureMicrosoft365UploadEndpoint">Configurer le point de terminaison de chargement de données de diagnostic pour les Analyses du bureau</string>
-      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">Cette stratégie définit le point de terminaison du chargement pour les données de diagnostic de cet appareil dans le cadre du programme Analyses du bureau.
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
+          Cette stratégie définit le point de terminaison du chargement pour les données de diagnostic de cet appareil dans le cadre du programme Analyses du bureau.
           Si votre organisation participe au programme et a reçu l'instruction de configurer un point de terminaison de chargement personnalisé, utilisez ce paramètre pour définir ce point de terminaison.
           La valeur de ce paramètre sera fournie par Microsoft dans le cadre du processus d'intégration du programme. 
       </string>
-      
+
       <string id="AllowUpdateComplianceProcessing">Autoriser le traitement de la conformité des mises à jour</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-          Permet aux administrateurs informatiques d’activer les données de diagnostic de cet appareil pour qu’elles soient traitées par la conformité des mises à jour. 
+          Permet aux administrateurs informatiques d’autoriser Update Compliance à traiter le diagnostic des données de cet appareil.
             La liste suivante indique les valeurs prises en charge :  
-              0 (par défaut)-les données de diagnostic ne sont pas traitées par la conformité des mises à jour. 
-              16 – les données de diagnostic peuvent être traitées par la conformité des mises à jour. 
-            Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les données de diagnostic de cet appareil ne sont pas traitées par la conformité des mises à jour.
+              0 (par défaut) : le diagnostic des données n’est pas traité par Update Compliance.
+              16 : le diagnostic des données peut être traité par Update Compliance.
+          Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le diagnostic des donnée de cet appareil n’est pas traité par Update Compliance.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Autoriser le traitement Analyses du bureau</string>
@@ -131,29 +134,10 @@ Si vous définissez ce paramètre de stratégie sur « Activer les notifications
       </string>
 
       <string id="AllowCommercialDataPipeline">Autoriser le pipeline de données commerciales</string>
-      <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline contrôle si Microsoft est un processeur ou un contrôleur pour les données de diagnostic Windows collectées à partir de cet appareil.
-
-Si vous activez cette stratégie, Microsoft sera le processeur des données de diagnostic Windows collectées à partir de l’appareil Windows et le client sera le contrôleur. L’appareil doit être inscrit dans Azure Active Directory pour que cette stratégie réussisse.
-
-Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Microsoft sera le contrôleur des données de diagnostic Windows collectées à partir de cet appareil.
-
-Cette stratégie contrôle uniquement si Microsoft est un processeur pour la collecte des données de diagnostic Windows de cet appareil. La configuration de ce paramètre n’affecte pas les données de diagnostic ou la possibilité pour l’utilisateur de modifier le niveau. Pour configurer le niveau de la collection, utilisez la stratégie « Autoriser les données de diagnostic » et pour empêcher les utilisateurs de cet appareil de modifier le niveau des données de diagnostic, veuillez utiliser la stratégie d’interface utilisateur « Configurer les paramètres d’activation des données de diagnostic ».
-      </string>
-
-      <string id="LimitDiagnosticLogCollection">Limiter la collecte des journaux de diagnostic</string>
-      <string id="LimitDiagnosticLogCollection_Explain">Ce paramètre de stratégie contrôle si d’autres journaux de diagnostic sont collectés lorsque des informations supplémentaires sont nécessaires pour résoudre un problème sur l’appareil. Les journaux de diagnostic sont envoyés uniquement lorsque l’appareil a été configuré pour envoyer des données de diagnostic facultatives.
-
-En activant ce paramètre de stratégie, les journaux de diagnostic ne sont pas collectés.
-
-Si vous désactivez ou ne configurez pas ce paramètre de stratégie, nous pouvons ponctuellement collecter des journaux de diagnostic si l’appareil a été configuré pour envoyer des données de diagnostic facultatives.
-      </string>
-
-      <string id="LimitDumpCollection">Limiter la collecte de vidages sur incident</string>
-      <string id="LimitDumpCollection_Explain">Ce paramètre de stratégie limite le type de dumps pouvant être collecté lorsque des informations supplémentaires sont nécessaires pour résoudre un problème. Les dumps sont envoyés uniquement lorsque l’appareil a été configuré pour envoyer des données de diagnostic facultatives.
-
-En activant ce paramètre, le Rapport d’erreur Windows se limite à l’envoi d’un noyau de mini-dumps et des dumps de triage en mode utilisateur.
-
-Si vous désactivez ou ne configurez pas ce paramètre de stratégie, nous pouvons ponctuellement collecter des dumps entiers ou avec tas si l’utilisateur a configuré l’envoi des données de diagnostic facultatives.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline contrôle si Microsoft est un processeur ou un contrôleur pour les données de diagnostic Windows collectées depuis cet appareil.
+          Si vous activez cette stratégie, Microsoft sera le processeur des données de diagnostic Windows collectées depuis l’appareil Windows et le client sera le contrôleur. Vous devez avoir inscrit l’appareil dans Azure Active Directory pour que cette stratégie réussisse.
+          Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Microsoft sera le contrôleur des données de diagnostic Windows collectées depuis cet appareil.
+          Cette stratégie contrôle uniquement si Microsoft est un processeur pour la collecte des données de diagnostic Windows depuis cet appareil. La configuration de ce paramètre n’affecte pas les données de diagnostic ou la possibilité pour l’utilisateur de modifier le niveau. Pour configurer le niveau de la collection, utilisez la stratégie « Autoriser les données de diagnostic » et pour empêcher les utilisateurs de cet appareil de modifier le niveau des données de diagnostic, veuillez utiliser la stratégie d’interface utilisateur « Configurer les paramètres d’activation des données de diagnostic ».
       </string>
 
       <string id="EnableOneSettingsAuditing">Activer l’audit OneSettings</string>

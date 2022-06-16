@@ -298,6 +298,7 @@
 如果未配置此策略设置，则列表中应用程序或进程的 URL 操作的当前值将起作用。</string>
       <string id="FavImportExport">禁用导入/导出设置向导</string>
       <string id="GeolocationDisable">关闭浏览器地理位置</string>
+      <string id="DisableFlashInIE">关闭 Internet Explorer 中的 Adobe Flash 并阻止应用程序使用 Internet Explorer 技术来实例化 Flash 对象</string>
       <string id="File_NoBrowserClose">“文件”菜单: 禁用关闭浏览器和资源管理器窗口</string>
       <string id="File_NoBrowserSaveAs">“文件”菜单: 禁用“另存为…”菜单选项</string>
       <string id="File_NoBrowserSaveWebComplete">“文件”菜单: 禁用另存为“网页，全部”格式</string>
@@ -333,7 +334,7 @@
 如果未配置此策略设置，则用户可以启用或关闭这些错误消息中的详细信息。</string>
       <string id="General_Zooming">关闭页面缩放功能</string>
       <string id="GeneralColors">常规颜色</string>
-      <string id="Help_NoFeedback">“帮助”菜单: 删除“发送反馈意见”菜单选项</string>
+      <string id="Help_NoFeedback">“帮助”菜单: 删除“发送反馈”菜单选项</string>
       <string id="Help_NoNetscapeHelp">“帮助”菜单: 删除“Netscape 用户”菜单选项</string>
       <string id="Help_NoTip">“帮助”菜单: 删除“每日提示”菜单选项</string>
       <string id="Help_NoTutorial">“帮助”菜单: 删除“教程”菜单选项</string>
@@ -725,6 +726,13 @@ Microsoft Agent 是一个软件服务集，支持软件代理作为交互式个�
 如果禁用此策略设置，则启用浏览器地理位置支持。
 
 如果未配置此策略设置，则可以在“隐私”选项卡上的“Internet 选项”中启用或关闭浏览器地理位置支持。</string>
+      <string id="IE_ExplainDisableFlashInIE">此策略设置关闭 Internet Explorer 中的 Adobe Flash 并阻止应用程序使用 Internet Explorer 技术来实例化 Flash 对象。
+
+如果启用此策略设置，会为 Internet Explorer 关闭 Flash，且应用程序不可使用 Internet Explorer 技术来实例化 Flash 对象。在“管理加载项”对话框中，Flash 状态将为“禁用”，且用户无法启用 Flash。如果启用此策略设置，Internet Explorer 将忽略通过“加载项列表”和“除非在加载项列表中特别指定，否则拒绝所有加载项”这两个策略设置为 Adobe Flash 所做的设置。 
+
+如果禁用或未配置此策略设置，会为 Internet Explorer 关闭 Flash，且应用程序可以使用 Internet Explorer 技术来实例化 Flash 对象。用户可在“管理加载项”对话框中启用或禁用 Flash。
+
+请注意，即使禁用或未配置此策略设置，也仍可通过“加载项列表”和“除非在加载项列表中特别指定，否则拒绝所有加载项”这两个策略设置来禁用 Adobe Flash。然而，如果通过“加载项列表”和“除非在加载项列表中特别指定，否则拒绝所有加载项”策略设置禁用 Adobe Flash，而不通过此策略设置禁用它，则所有使用 Internet Explorer 技术来实例化 Flash 对象的应用程序仍然可以实现这种实例化。有关详细信息，请参阅 Internet Explorer TechNet 库中的“Internet Explorer 10 组策略设置”。</string>
       <string id="IE_ExplainFile_NoBrowserClose">阻止用户关闭 Microsoft Internet Explorer 和文件资源管理器。
 
 如果启用此策略，“文件”菜单上的“关闭”命令将灰显。
@@ -3895,7 +3903,7 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果启用此设置，用户可以从“工具”菜单查看和使用“企业模式”选项。如果启用此设置但未指定报告位置，“企业模式”仍将可供用户使用，但你不会收到任何报告。
 
 如果禁用或未配置此策略设置，则不会显示该菜单选项，用户将无法在企业模式下运行网站。</string>
-      <string id="RestrictInternetExplorer">将未包含在企业模式站点列表中的所有站点发送到 Microsoft Edge</string>
+      <string id="RestrictInternetExplorer">将企业模式站点列表中不包含的所有站点发送到 Microsoft Edge。</string>
       <string id="IE_ExplainRestrictInternetExplorer">此设置可以让你决定是否要在 Microsoft Edge 中打开企业模式站点列表中不包含的所有站点。如果使用此设置，还必须启用“管理模板\Windows 组件\Internet Explorer\使用企业模式 IE 网站列表”策略设置，并且必须在企业模式站点列表中至少包含一个站点。
 
 启用此设置将在 Microsoft Edge 中自动打开企业模式站点列表中不包含的所有站点。
@@ -3915,19 +3923,19 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果同时安装了适用于下一版本 Microsoft Edge* 的 Windows 更新和 Microsoft Edge 稳定渠道，则会发生以下行为:
 - 如果禁用或未配置此策略，则使用 Microsoft Edge 稳定渠道。这是默认行为。
 - 如果启用此策略，则可以将重定向的站点配置为最多在以下三个渠道中打开，其中:
-    1 = Microsoft Edge 稳定渠道
-    2 = Microsoft Edge 测试版本 77 或更高版本
-    3 = Microsoft Edge Dev 版本 77 或更高版本
-    4 = Microsoft Edge Canary 版本 77 或更高版本
+ 1 = Microsoft Edge 稳定渠道
+ 2 = Microsoft Edge 测试版本 77 或更高版本
+ 3 = Microsoft Edge Dev 版本 77 或更高版本
+ 4 = Microsoft Edge Canary 版本 77 或更高版本
 
 如果未安装适用于下一版本 Microsoft Edge* 的 Windows 更新或 Microsoft Edge 稳定渠道，则会发生以下行为:
 - 如果禁用或未配置此策略，则会自动使用 Microsoft Edge 45 或更早版本。这是默认行为。
 - 如果启用此策略，则可以将重定向的站点配置为最多在以下三个渠道中打开，其中:
-    0 = Microsoft Edge 版本 45 或更早版本
-    1 = Microsoft Edge 稳定渠道
-    2 = Microsoft Edge 测试版本 77 或更高版本
-    3 = Microsoft Edge Dev 版本 77 或更高版本
-    4 = Microsoft Edge Canary 版本 77 或更高版本
+ 0 = Microsoft Edge 版本 45 或更早版本
+ 1 = Microsoft Edge 稳定渠道
+ 2 = Microsoft Edge 测试版本 77 或更高版本
+ 3 = Microsoft Edge Dev 版本 77 或更高版本
+ 4 = Microsoft Edge Canary 版本 77 或更高版本
 
 *有关适用于下一版本 Microsoft Edge 的 Windows 更新的详细信息(包括如何禁用)，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115。此更新仅适用于 Windows 10 版本 1709 及更高版本。</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3966,16 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果禁用或未配置此策略设置，则不会在 Internet Explorer 模式上下文菜单中显示 "目标另存为"。
 
 有关详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">在Internet Explorer模式下启用全局窗口列表</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">此设置允许Internet Explorer模式使用启用与其他应用程序共享状态的全局窗口列表。
+仅当Internet Explorer 11 被禁用为独立浏览器时，设置才会生效。
+
+如果启用此策略，则Internet Explorer模式将使用全局窗口列表。
+
+如果禁用或未配置此策略，Internet Explorer模式将继续维护单独的窗口列表。
+
+若要了解有关Internet Explorer模式的详细信息，请参阅https://go.microsoft.com/fwlink/?linkid=2102921
+若要详细了解如何将 11 Internet Explorer禁用为独立浏览器，请参阅https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">在 Internet Explorer 模式下启用扩展热键</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">此策略设置让管理员可以启用扩展的 Microsoft Edge Internet Explorer 模式热键，例如“Ctrl+S”具有“另存为”功能。
 
@@ -3966,6 +3984,14 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果禁用或未配置此策略，则在 Internet Explorer 模式下扩展热键将无法工作。
 
 有关详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">在 Internet Explorer 模式下将 HTML 对话框的缩放重置为默认值</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">此策略设置允许管理员在Internet Explorer模式下将 HTML 对话框的缩放重置为默认值。
+
+如果启用此策略，则不会从其父页传播处于Internet Explorer模式的 HTML 对话框的缩放。
+
+如果禁用或未配置此策略，则将根据其父页的缩放设置Internet Explorer模式下 HTML 对话框的缩放。
+
+有关详细信息，请参阅https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">将 Internet Explorer 11 作为独立浏览器禁用</string>
       <string id="IE_ExplainDisableInternetExplorerApp">通过此策略，你可以限制 Internet Explorer 作为独立浏览器的启动。
 
@@ -3976,15 +4002,15 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 - 替代任何其他重定向到 Internet Explorer 11 的策略。
 
 如果禁用或未配置此策略，则将使用当前活动的浏览器设置打开所有站点。注意: 必须安装 Microsoft Edge 稳定渠道，此策略才能生效。</string>
+      <string id="DisableIEAppDeprecationNotification">隐藏 Internet Explorer 11 停用通知</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">使用此策略设置，可以管理是否显示Internet Explorer即将停用的通知栏提醒。默认情况下，通知栏显示在 Internet Explorer 11 中。
+
+如果启用此策略设置，则通知栏将不会显示在Internet Explorer 11 中。
+
+如果禁用或未配置此策略设置，则通知栏将在Internet Explorer 11 中显示。</string>
       <string id="NotifyDisableIEOptions_Never">从不</string>
       <string id="NotifyDisableIEOptions_Always">始终</string>
       <string id="NotifyDisableIEOptions_OncePerUser">每个用户配置一次</string>
-      <string id="JScriptReplacement">借助加载 JScript9Legacy 通过 MSHTML/WebOC 代替 JScript 来取代 JScript。</string>
-      <string id="IE_ExplainJScriptReplacement">此策略设置指定是否为基于 MSHTML/WebOC 的调用加载 JScript 或 JScript9Legacy。
-      
-如果启用此策略设置，则在实例化 JScript 的情况下将加载 JScript9Legacy。
-
-如果禁用或未配置此策略，则将使用 JScript。</string>
       <string id="VerMgmtDisable">关闭 Internet explorer 的过时 ActiveX 控件的阻止功能</string>
       <string id="IE_ExplainVerMgmtDisable">此策略设置可确定 Internet Explorer 是否会阻止特定的过时 ActiveX 控件。过时的 ActiveX 控件在 Intranet 区域中不受阻止。
 

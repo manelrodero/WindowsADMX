@@ -250,23 +250,6 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werde
 Wenn diese Richtlinieneinstellung aktiviert ist, werden IDNs in das Nameprep-Format umgewandelt.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden IDNs nicht in das Nameprep-Format umgewandelt.</string>
-      <string id="DNS_Doh">Namensauflösung von DNS über HTTPS (DoH) konfigurieren</string>
-      <string id="DNS_Doh_Disabled">DoH verbieten</string>
-      <string id="DNS_Doh_Auto">DoH zulassen</string>
-      <string id="DNS_Doh_Force">DoH erforderlich</string>
-      <string id="DNS_Doh_Help">Gibt an, ob der DNS-Client die Namensauflösung gegenüber DNS über HTTPS (DoH) ausführt.
-
-Standardmäßig wird vom DNS-Client die klassische DNS-Namensauflösung (über UDP oder TCP) durchführen. Diese Einstellung kann den DNS-Client erweitern, um das DoH-Protokoll zum Auflösen von Domänennamen zu verwenden.
-
-Um diese Richtlinieneinstellung zu verwenden, klicken Sie auf Aktiviert, und wählen Sie dann in der Dropdownliste eine der folgenden Optionen aus:
-
-DoH verbieten: Es wird keine DoH-Namensauflösung durchgeführt.
-
-DoH zulassen: führen Sie DoH-Abfragen aus, die von den konfigurierten DNS-Servern unterstützt werden. Wenn Sie dies nicht unterstützen, versuchen Sie es mit klassische Namensauflösung.
-
-DoH anfordern: nur die DoH-Namensauflösung zulassen. Wenn keine DoH-fähigen DNS-Server konfiguriert sind, kann die Namensauflösung nicht ausgeführt werden.
-
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwenden Computer lokal konfigurierte Einstellungen.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -303,9 +286,6 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder wenn Sie diese Richtlini
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Sicherheitsstufe aktualisieren:</dropdownList>
-      </presentation>
-      <presentation id="DNS_Doh">
-        <dropdownList refId="DNS_Doh_Box" defaultItem="1">DoH Optionen konfigurieren:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

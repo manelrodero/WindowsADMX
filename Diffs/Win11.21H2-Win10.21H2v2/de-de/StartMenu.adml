@@ -5,7 +5,7 @@
   <description>Beschreibung hier eingeben</description>
   <resources>
     <stringTable>
-      <string id="SUPPORTED_Win7UntilThreshold">Mindestens Windows Server 2008 R2 oder Windows 7. Wird für Windows 10 oder höher nicht unterstützt.</string>
+      <string id="SUPPORTED_Win7UntilThreshold">Mindestens Windows Server 2008 R2 oder Windows 7. Nicht unterstützt unter Windows 10 oder höher.</string>
       <string id="SUPPORTED_Win7AndRedstone2">Windows 7 und Windows 10</string>
       <string id="ClearRecentProgForNewUserInStartMenu">Liste kürzlich verwendeter Programm für neue Benutzer löschen</string>
       <string id="ClearRecentProgForNewUserInStartMenu_Help">Wenn Sie diese Richtlinieneinstellung aktivieren, ist die Liste der zuletzt ausgeführten Programme im Startmenü für jeden neuen Benutzer leer.
@@ -210,16 +210,14 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ist
       <string id="ShowOrHideMostUsedApps">Liste „am häufigsten verwendet“ im Startmenü ein- oder ausblenden</string>
       <string id="ShowOrHideMostUsedApps_Help">Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie das Startmenü so konfigurieren, dass die Liste der vom Benutzer am häufigsten verwendeten Apps ein- oder ausgeblendet wird, unabhängig von den Benutzereinstellungen.
 
-Wenn Sie „Einblenden“ auswählen, wird die Liste „Am häufigsten verwendet“ angezeigt, und der Nutzer kann sie nicht über die Einstellungen ausblenden.
+Wenn Sie „Einblenden“ auswählen, wird die Liste „Am häufigsten verwendet“ angezeigt, und der Nutzer kann sie nicht mithilfe der Einstellungs-App ausblenden.„„
+Wenn Sie „Ausblenden“ auswählen, wird die Liste „Am häufigsten verwendet“ ausgeblendet, und der Benutzer kann sie nicht mithilfe der Einstellungs-App einblenden.
+„„Indem Sie „Nicht konfiguriert“ auswählen oder diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ermöglichen Sie es dem Benutzer, die Liste „Am häufigsten verwendet“ mithilfe der Einstellungs-App ein- oder auszublenden. Dabei handelt es sich um das Standardverhalten.
 
-Wenn Sie „Ausblenden“ auswählen, wird die Liste „Am häufigsten verwendet“ ausgeblendet, und der Benutzer kann sie nicht über die Einstellungen einblenden.
-
-Indem Sie „Nicht konfiguriert“ auswählen, oder diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ermöglichen Sie es dem Benutzer, die Liste „Am häufigsten verwendet“ in den Einstellungen ein- oder auszublenden. Dabei handelt es sich um das Standardverhalten.
-
-Hinweis: Die Konfiguration dieser Richtlinie zu „Einblenden“ oder „Ausblenden“ in unterstützten Windows 10-Versionen ersetzt sämtliche Einstellungen der Richtlinie „Liste häufig verwendeter Programme aus dem Startmenü entfernen“ (welche denselben Teil des Startmenüs verwaltet, jedoch weniger Optionen bietet).</string>
+Hinweis: Wenn Sie diese Richtlinie in unterstützten Windows 10-Versionen auf „Einblenden“ oder „Ausblenden“ festlegen, ersetzt dies sämtliche Einstellungen der Richtlinie „Liste häufig verwendeter Programme aus dem Startmenü entfernen“ (welche denselben Teil des Startmenüs verwaltet, jedoch weniger Optionen bietet).</string>
       <string id="MFU_NotConfigured">Nicht konfiguriert</string>
       <string id="MFU_Show">Anzeigen</string>
-      <string id="MFU_Hide">Ausblenden</string>        
+      <string id="MFU_Hide">Ausblenden</string>
       <string id="NoFrequentUsedPrograms">Liste häufig verwendeter Programme aus dem Startmenü entfernen</string>
       <string id="NoFrequentUsedPrograms_Help">Wenn Sie diese Einstellung aktivieren, wird die Liste häufig verwendeter Programme aus dem Startmenü entfernt.
 
@@ -645,7 +643,6 @@ Wenn Sie die Richtlinie aktivieren, werden Aufrufe der Kontextmenüs innerhalb d
           <label>Startlayoutdatei</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Layout bei jeder Anmeldung erneut anwenden</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Eine der folgenden Größen auswählen</dropdownList>

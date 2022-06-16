@@ -120,22 +120,24 @@ Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Windo
 NOT: Bu ilke yalnızca Azure Active Directory’ye kayıt olan cihazlar için geçerlidir.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Şirket içi kimlik doğrulamasında kullanılacak bir oturum açma sertifikası kaydetmek üzere Iş için Windows Hello 'Yu yapılandırmak için bu ilke ayarını kullanın.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Şirket içi kimlik doğrulaması için İş İçin Windows Hello oturum açma sertifikasını kaydetmek üzere yapılandırmak üzere bu ilke ayarını kullanın.
 
-Bu ilke ayarını etkinleştirirseniz, Iş için Windows Hello, şirket içi kimlik doğrulaması için kullanılan bir oturum açma sertifikası kaydeder.
+Bu ilke ayarını etkinleştirirseniz İş İçin Windows Hello kimlik doğrulaması için kullanılan bir oturum açma sertifikasını kaydettirin.
 
-Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Iş için Windows Hello şirket içi kimlik doğrulaması için anahtar veya Kerberos bileti (diğer ilke ayarlarına bağlı olarak) kullanır.
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız İş İçin Windows Hello şirket içi kimlik doğrulaması için anahtar veya Kerberos anahtarı (diğer ilke ayarlarına bağlı olarak) kullanır.
 
-Not: Bu ilke ayarını devre dışı bırakma veya yapılandırma ve "Iş için Windows Hello" ilke ayarının etkinleştirilmesi, Windows Hello 'nun Iş kimlik doğrulamasının başarısız olmasını engellemek için ortamın bir veya daha fazla Windows Server 2016 etki alanı denetleyicisine sahip olmasını gerektirir.
+NOT: Bu ilke ayarını devre dışı bırakma veya yapılandırmama ve "İş İçin Windows Hello Kullan" ilke ayarının etkinleştirilmesi, kimlik doğrulamasının başarısız İş İçin Windows Hello için ortamın bir veya daha fazla Windows Server 2016 etki alanı denetleyicisine sahip olması gerekir.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Şirket içi kimlik doğrulaması için Azure AD Kerberos kullanmak üzere Iş için Windows Hello 'Yu yapılandırmak için bu ilke ayarını kullanın.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Şirket içi kimlik doğrulaması için İş İçin Windows Hello Azure AD Kerberos'u kullanmak üzere yapılandırmak üzere bu ilke ayarını kullanın.
 
-Bu ilke ayarını etkinleştirirseniz Iş için Windows Hello, şirket içi kimlik doğrulama için Azure 'a kimlik doğrulaması işleminden alınan Kerberos anahtarını kullanır.
+Bu ilke ayarını etkinleştirirseniz İş İçin Windows Hello kimlik doğrulaması için Azure'a kimlik doğrulamasından alınan bir Kerberos anahtarı kullanılır.
 
-Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Iş için Windows Hello, şirket içi kimlik doğrulaması için bir anahtar veya sertifika (diğer ilke ayarlarına bağlı olarak) kullanır. 
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız İş İçin Windows Hello kimlik doğrulaması için bir anahtar veya sertifika (diğer ilke ayarlarına bağlı olarak) kullanır. 
  
-Not: Bu ilke ayarını ve "Iş için Windows Hello 'Yu kullan" ilke ayarının her ikisini de sağlayan bir ortam, bir veya daha fazla Windows Server 2016 etki alanı denetleyicisi gerektirir. Aksi halde, Iş için Windows Hello kimlik doğrulaması başarısız olur.
+NOT: Hem bu ilke ayarını hem de "İş İçin Windows Hello kullan" ilke ayarını etkinleştiren bir ortam, bir veya daha fazla Windows Server 2016 etki alanı denetleyicisi gerektirir. Aksi halde, İş İçin Windows Hello kimlik doğrulaması başarısız olur.
+
+Bu ilke yalnızca 21H2 Windows 10 sonraki sürümler için desteklenir.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Cihaz kilit açma faktörlerini yapılandır</string>

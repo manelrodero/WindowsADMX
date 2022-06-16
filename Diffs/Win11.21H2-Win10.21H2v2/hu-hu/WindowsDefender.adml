@@ -30,28 +30,6 @@ Ha engedélyezi vagy nem konfigurálja ezt a beállítást, a kártevőirtó szo
 
 Ha letiltja a beállítást, a kártevőirtó szolgáltatás alacsony prioritású feladatként töltődik be.</string>
 
-    <string id="MeteredConnectionUpdates">Lehetővé teheti, hogy a Microsoft Defender víruskereső forgalmi díjas kapcsolaton keresztül is frissítse magát, és kommunikáljon.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    Letiltva (alapértelmezés): 
-    A frissítés és a kommunikáció forgalmi díjas kapcsolaton keresztül nem engedélyezett.
-
-    Engedélyezve: 
-    A felügyelt eszközök forgalmi díjas kapcsolaton keresztül is frissíthetők. Adatforgalmi költségek merülhetnek fel.</string>
-    <string id="AllowNetworkProtectionOnWinServer">Ez a beállítás szabályozza, hogy a hálózati védelem beállítható-e letiltási vagy vizsgálati üzemmódra a Windows Serveren.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    Letiltva (alapértelmezés): 
-    Ha nincs konfigurálva, vagy le van tiltva, a hálózati védelem nem állítható be letiltási vagy vizsgálati üzemmódra a Windows Serveren.
-
-    Engedélyezve: 
-    Ha a beállítás engedélyezve van, a rendszergazdák szabályozhatják, hogy a hálózati védelem beállítható-e letiltási vagy vizsgálati üzemmódra a Windows Serveren.
-    Megjegyzés: Ez a konfiguráció az EnableNetworkProtection konfigurációtól függ. Ha ez a konfiguráció hamis értékű, a rendszer figyelmen kívül hagyja az EnableNetworkProtection konfigurációt, ellenkező esetben a hálózati védelem az EnableNetworkProtection értékétől függően indul el a Windows Serveren.</string>
-    <string id="DisableDatagramProcessing">Ez a beállítás szabályozza a datagramok feldolgozását a hálózati védelemhez.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    Letiltva (alapértelmezés): 
-    Ha nincs konfigurálva, vagy le van tiltva, a rendszer engedélyezi a datagramok feldolgozását a hálózati védelemhez.
-
-    Engedélyezve: 
-    Ha a beállítás engedélyezve van, a rendszer letiltja a datagramok feldolgozását a hálózati védelemhez.</string>
     <string id="DisableAutoExclusions">Automatikus kizárások kikapcsolása</string>
     <string id="DisableAutoExclusions_Explain">
         Lehetővé teszi, hogy a rendszergazdák megadják, ki kell-e kapcsolni az Automatikus kizárások funkciót a Server termékváltozatokban.
@@ -85,9 +63,9 @@ Ha letiltja a beállítást, a kártevőirtó szolgáltatás alacsony prioritás
     <string id="DisableLocalAdminMerge">A helyi rendszergazda által megadott listabeállítások és a csoportházirend egyesítése</string>
     <string id="DisableLocalAdminMerge_Explain">Ez a házirend-beállítás a helyi rendszergazda által megadott összetett listabeállítások és a csoportházirend-beállítások egyesítését szabályozza. Ez a beállítás többek között a veszélyforrások és a kizárások listáját érinti.
 
-    Ha letiltja vagy nem konfigurálja ezt a beállítást, a csoportházirendben és a helyi rendszergazda által konfigurált beállításokban definiált egyedi elemek egyesítve lesznek az érvényes eredő házirendben. Ütközés esetén a csoportházirend-beállítások felülírják a rendszergazdai beállításokat.
+Ha engedélyezi vagy nem konfigurálja ezt a beállítást, a csoportházirendben és a helyi rendszergazda által konfigurált beállításokban definiált egyedi elemek egyesítve lesznek az érvényes eredő házirendben. Ütközés esetén a csoportházirend-beállítások felülírják a rendszergazdai beállításokat.
 
-    Ha engedélyezi a beállítást, az érvényes eredő házirend csak a csoportházirendben definiált elemeket fogja használni. A csoportházirend-beállítások felülírják a helyi rendszergazda által konfigurált beállításokat.</string>
+Ha letiltja a beállítást, az érvényes eredő házirend csak a csoportházirendben definiált elemeket fogja használni. A csoportházirend-beállítások felülírják a helyi rendszergazda által konfigurált beállításokat.</string>
     <string id="DisableRoutinelyTakingAction">A rutinszerű szervizelés kikapcsolása</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Ezzel a házirend-beállítással konfigurálhatja, hogy a Microsoft Defender víruskereső automatikusan intézkedjen-e az összes észlelt veszélyforrással szemben. Az adott veszélyforrással kapcsolatban elvégzendő művelet a házirend, a felhasználó és az aláírás által definiált művelettől függ.
@@ -132,15 +110,11 @@ Ha letiltja vagy nem konfigurálja a beállítást, a szolgáltatás a megadott 
       Ha letiltja vagy nem konfigurálja a beállítást, a proxy a fenti sorrendnek megfelelően kihagyja ezt a visszatérési lépést.
     </string>
     <string id="RandomizeScheduleTaskTimes">Véletlenszerű feladat-végrehajtási időpontok</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Ezzel a házirend-beállítással konfigurálhatja az ütemezett vizsgálat, valamint a biztonsági intelligencia ütemezett frissítés kezdési időpontjának időszakát órában.
+    <string id="RandomizeScheduleTaskTimes_Explain">Ezzel a házirend-beállítással engedélyezheti vagy letilthatja az ütemezett ellenőrzések és biztonságiintelligencia-frissítések véletlenszerű időpontokban való indítását. Ez a beállítás az ellenőrzéssel járó erőforrás-terhelés elosztására szolgál. Ezzel a beállítással például az egyazon gazdagépen futtatott vendég virtuális gépek esetében megakadályozhatja, hogy több vendég virtuális gép egyszerre hajtson végre intenzív lemezhasználatot igénylő műveleteket.
 
-     Ha letiltja vagy nem konfigurálja ezt a beállítást, az ütemezett feladatok a Feladatütemező által meghatározott időpontot követően 4 órán belül, egy véletlenszerűen kiválasztott időpontban kezdődnek.
-    Ha engedélyezi ezt a beállítást, a véletlenszerű időszakot bővítheti vagy szűkítheti. A véletlenszerű időszakot 1 és 23 óra között adhatja meg.</string>
-    <string id="SchedulerRandomizationTime">Az ütemezett feladatok időpontjára vonatkozó véletlenszerűsítési tartomány konfigurálása</string>
-    <string id="SchedulerRandomizationTime_Explain">Ezzel a házirend-beállítással konfigurálhatja az ütemezett vizsgálat kezdési időpontjának, valamint a biztonsági intelligencia ütemezett frissítése kezdési időpontjának időablakát órában.
+    Ha engedélyezi vagy nem konfigurálja ezt a beállítást, az ütemezett feladatok végrehajtása véletlenszerűen kiválasztott időpontban kezdődik a megadott kezdési időpont előtti és utáni 30 perces időtartamon belül.
 
-    Ha letiltja vagy nem konfigurálja ezt a beállítást, az ütemezett feladatok a megadott kezdési időpontot követő 4 órán belül, egy véletlenszerűen kiválasztott időpontban kezdődnek.
-    Ha engedélyezi ezt a beállítást, ki kell választania egy órában megadott időablakot a véletlenszerű kezdéshez. A véletlenszerű kezdési időablak hossza 1 és 23 óra között lehet.</string>
+    Ha letiltja a beállítást, az ütemezett feladatok végrehajtása a megadott időpontban kezdődik.</string>
     <string id="ServiceKeepAlive">A kártevőírtó szolgáltatás mindig fut</string>
     <string id="ServiceKeepAlive_Explain">Ezzel a házirend-beállítással konfigurálhatja, hogy a kártevőirtó szolgáltatás továbbra is fusson-e, ha a víruskereső és a kémprogram-elhárító biztonsági intelligencia le van tiltva. Javasoljuk, hogy hagyja letiltva ezt a beállítást.
 
@@ -162,20 +136,12 @@ Ha letiltja vagy nem konfigurálja a beállítást, a szolgáltatás a megadott 
         Nincs konfigurálva:
         A letiltott állapottal azonos.
     </string>
-    <string id="SupportLogLocation">Könyvtári elérési út meghatározása a támogatási naplófájlok másolásához</string>
-    <string id="SupportLogLocation_Explain">Ezzel a házirend-beállítással konfigurálhatja azt a könyvtári elérési utat, ahova a támogatási naplófájlokat másolni szeretné. A beállítás értékének érvényes könyvtári elérési útnak kell lennie.
-
-    Ha engedélyezi ezt a beállítást, a rendszer a támogatási napló megadott elérési útja által kijelölt helyre másolja a támogatási naplófájlokat.
-
-    Ha letiltja vagy nem konfigurálja ezt a beállítást, a rendszer sehova sem másolja a támogatási naplófájlokat.</string>
     <string id="Exclusions_Extensions">Kiterjesztéskizárások</string>
     <string id="Exclusions_Extensions_Explain">Ezzel a házirend-beállítással megadhatja az ütemezett, egyéni és valós idejű ellenőrzésekből kizárandó fájltípusok listáját. A fájltípusokat a beállítás szerkesztésére szolgáló párbeszédpanel Beállítások területén kell hozzáadni. Minden bejegyzést név–érték párként kell megadni, ahol a névnek egy adott fájltípus-kiterjesztést (például „obj” vagy „lib”) azonosító karakterláncnak kell lennie. Az értéket nem használja a rendszer, ezért célszerű nullára állítani.</string>
     <string id="Exclusions_Paths">Elérésiút-kizárások</string>
     <string id="Exclusions_Paths_Explain">Ez a házirend-beállítás lehetővé teszi, hogy a megadott elérési utakon található fájlok vagy az abszolút elérési úttal megadott erőforrások esetében letiltsa az ütemezett és a valós idejű ellenőrzést. Az elérési utakat a beállítás szerkesztésére szolgáló párbeszédpanel Beállítások területén kell hozzáadni. Minden bejegyzést név–érték párként kell megadni, ahol a névnek egy adott elérési utat vagy teljes erőforrásnevet azonosító karakterláncnak kell lennie. A „C:\Windows” elérési út megadásával például az ebben a könyvtárban lévő összes fájlt kizárhatja. Teljes erőforrásnév például a „C:\Windows\App.exe”. Az értéket nem használja a rendszer, ezért célszerű nullára állítani.</string>
     <string id="Exclusions_Processes">Folyamatkizárások</string>
-    <string id="Exclusions_Processes_Explain">Ez a házirend-beállítás lehetővé teszi, hogy letiltsa a megadott folyamatok bármelyike által megnyitott bármely fájl valós idejű ellenőrzését. Ez a házirend nem vonatkozik az ütemezett vizsgálatokra. Ezzel magát a folyamatot nem zárja ki. A folyamatot elérési út kizárásával zárhatja ki. A folyamatokat a beállításhoz tartozó Beállítások területen kell megadni. Minden bejegyzést név–érték párként kell megadni, ahol a névnek egy adott folyamatkép elérési útját jelölő karakterláncnak kell lennie. Csak végrehajtható fájlokat lehet kizárni. Egy folyamat megadható például a következőképpen: „C:\windows\app.exe”. A párban szereplő értéket nem használja a rendszer, ezért azt célszerű 0-ra beállítani.</string>
-    <string id="Exclusions_IpAddresses">IP-címek kizárása</string>
-    <string id="Exclusions_IpAddresses_Explain">Lehetővé teszi, hogy egy rendszergazda kifejezetten letiltsa a hálózati csomagok wdnisdrv meghajtó általi vizsgálatát IP-címek bizonyos halmaza esetében.</string>
+    <string id="Exclusions_Processes_Explain">Ez a házirend-beállítás lehetővé teszi, hogy letiltsa a megadott folyamatok bármelyike által megnyitott bármely fájl ütemezett és valós idejű ellenőrzését. Ezzel magát a folyamatot nem zárja ki. A folyamatot elérésiút-kizárással zárhatja ki. A folyamatokat a beállítás szerkesztésére szolgáló párbeszédpanel Beállítások területén kell hozzáadni. Minden bejegyzést név–érték párként kell megadni, ahol a névnek egy adott folyamatkép elérési útját azonosító karakterláncnak kell lennie. Csak végrehajtható fájlokat lehet kizárni. A „C:\windows\app.exe” fájl például megadható folyamatként. Az értéket nem használja a rendszer, ezért célszerű nullára állítani.</string>
     <string id="Nis_DisableProtocolRecognition">A protokollfelismerés bekapcsolása</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Ez a házirend-beállítás lehetővé teszi az ismert biztonsági rések kihasználása elleni hálózatvédelem protokollfelismerési funkciójának konfigurálását.
 
@@ -202,14 +168,6 @@ Ha letiltja vagy nem konfigurálja a beállítást, a csoportházirend felülbí
 Ha engedélyezi ezt a beállítást, a rendszer a megadott számú nap után letelte után eltávolítja az elemeket a Quarantine mappából.
 
 Ha letiltja vagy nem konfigurálja a beállítást, az elemek meghatározatlan ideig a Quarantine mappában maradnak, és nem lesznek automatikusan eltávolítva.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">Parancsfájlok vizsgálatának bekapcsolása</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">Ezzel a házirend-beállítással konfigurálhatja a parancsfájlok vizsgálatát.
-
-    Ha engedélyezi vagy nem konfigurálja ezt a beállítást, a parancsfájlok vizsgálata engedélyezve lesz.
-
-    Ha letiltja ezt a beállítást, a parancsfájlok vizsgálata le lesz tiltva.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">A viselkedésfigyelés bekapcsolása</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Ezzel a házirend-beállítással a viselkedésfigyelést konfigurálhatja.
 
@@ -443,6 +401,12 @@ Ha letiltja vagy nem konfigurálja a beállítást, az e-mail ellenőrzés ki le
 Ha engedélyezi vagy nem konfigurálja ezt a beállítást, a heurisztika be lesz kapcsolva.
 
 Ha letiltja a beállítást, a heurisztika ki lesz kapcsolva.</string>
+    <string id="Scan_DisablePackedExeScanning">Becsomagolt végrehajtható fájlok ellenőrzése</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">Ezzel a házirend-beállítással a becsomagolt végrehajtható fájlok ellenőrzését konfigurálhatja. Azt javasoljuk, hogy hagyja bekapcsolva ezt az ellenőrzéstípust.
+
+Ha engedélyezi vagy nem konfigurálja a beállítást, az ellenőrzés a becsomagolt végrehajtható fájlokra is kiterjed.
+
+Ha letiltja a beállítást, az ellenőrzés nem terjed ki a becsomagolt végrehajtható fájlokra.</string>
     <string id="Scan_DisableRemovableDriveScanning">Cserélhető adathordozók ellenőrzése.</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Ezzel a házirend-beállítással azt szabályozhatja, hogy teljes ellenőrzés futtatásakor a védelmi modul keressen-e kártevő vagy nemkívánatos szoftvert a cserélhető – például USB flash – meghajtók tartalmában.
 
@@ -510,11 +474,11 @@ Ha engedélyezi ezt a beállítást, a rendszer a megadott számú nap után let
 
 Ha letiltja vagy nem konfigurálja a beállítást, az elemek az alapértelmezett értéknek megfelelő ideig maradnak az ellenőrzési előzmények mappájában.</string>
     <string id="Scan_QuickScanInterval">A naponta futtatandó gyors ellenőrzések időközének megadása</string>
-    <string id="Scan_QuickScanInterval_Explain">Ezzel a házirend-beállítással megadhatja, hogy milyen időközönként kíván gyors ellenőrzést futtatni. Az időértéket az éjfél után eltelt órák számával kell megadni. 1 (minden órában) és 24 (naponta egyszer) közötti érték adható meg. Nulla megadása esetén a gyors ellenőrzés nem történik meg. Az alapértelmezett érték 0.
+    <string id="Scan_QuickScanInterval_Explain">Ezzel a házirend-beállítással megadhatja, hogy milyen időközönként kíván gyors ellenőrzést futtatni. Az időértéket az éjfél után eltelt percek számával (00:00) kell megadni. 1 (minden órában) és 24 (naponta egyszer) közötti érték adható meg. Nulla megadása esetén a gyors ellenőrzés nem ismétlődik. Az alapértelmezett érték 0.
 
-    Ha engedélyezi ezt a beállítást, a rendszer a megadott időközönként futtatja a gyors ellenőrzéseket.
+Ha engedélyezi ezt a beállítást, a rendszer a megadott időközönként futtatja a gyors ellenőrzéseket.
 
-    Ha letiltja vagy nem konfigurálja a beállítást, a konfigurációval vezérelt gyors ellenőrzéseket a rendszer nem futtatja.</string>
+Ha letiltja vagy nem konfigurálja a beállítást, a rendszer az alapértelmezett gyakorisággal futtatja a gyors ellenőrzéseket.</string>
     <string id="Scan_ScanOnlyIfIdle">Ütemezett ellenőrzés futtatása csak akkor, ha a számítógép be van kapcsolva, de nincs használatban</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Ezzel a házirend-beállítással megadhatja, hogy a rendszer csak akkor indítsa el az ütemezett ellenőrzéseket, ha a számítógép be van kapcsolva, de nincs használatban.
 
@@ -558,11 +522,11 @@ Ha letiltja vagy nem konfigurálja a beállítást, a rendszer az alapértelmeze
     <string id="Scan_ScheduleDay_7">Péntek</string>
     <string id="Scan_ScheduleDay_8">Szombat</string>
     <string id="Scan_ScheduleQuickScantime">Napi ütemezésű gyors ellenőrzés időpontjának megadása</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Ezzel a házirend-beállítással megadhatja, hogy naponta mely időpontban kíván gyors ellenőrzést futtatni. Az időértéket az éjfél után eltelt percek számával (00:00) kell megadni.  A 120 (0x78) érték például a de. 02:00 időpontnak felel meg. A beállítás alapértelmezett értéke: letiltva. Az ütemezés az ellenőrzést futtató számítógép helyi idején alapul.
+    <string id="Scan_ScheduleQuickScantime_Explain">Ezzel a házirend-beállítással megadhatja, hogy naponta mely időpontban kíván gyors ellenőrzést futtatni. Az időértéket az éjfél után eltelt percek számával (00:00) kell megadni.  A 120 (0x78) érték például a 02:00 de. időpontnak felel meg. A beállítás alapértelmezett értéke 2:00 de. Az ütemezés az ellenőrzést futtató számítógép helyi idején alapul.
 
-    Ha engedélyezi ezt a beállítást, a rendszer a megadott időpontban futtatja a napi ütemezésű gyors ellenőrzéseket.
+Ha engedélyezi ezt a beállítást, a rendszer a megadott időpontban futtatja a napi ütemezésű gyors ellenőrzéseket.
 
-    Ha letiltja vagy nem konfigurálja a beállítást, a konfigurációval vezérelt gyors napi ellenőrzéseket a rendszer nem futtatja.</string>
+Ha letiltja vagy nem konfigurálja a beállítást, a rendszer az alapértelmezett időpontban futtatja a gyors ellenőrzéseket.</string>
     <string id="Scan_ScheduleTime">Napi ütemezésű ellenőrzés időpontjának megadása</string>
     <string id="Scan_ScheduleTime_Explain">Ezzel a házirend-beállítással megadhatja, hogy naponta mely időpontban kíván ütemezett ellenőrzést futtatni. Az időértéket az éjfél után eltelt percek számával (00:00) kell megadni.  A 120 (0x78) érték például a 02:00 de. időpontnak felel meg. A beállítás alapértelmezett értéke 2:00 de. Az ütemezés az ellenőrzést futtató számítógép helyi idején alapul.
 
@@ -585,13 +549,13 @@ Ha letiltja vagy nem konfigurálja a beállítást, a rendszer az alapértelmeze
         Ha letiltja vagy nem konfigurálja ezt a beállítást, nem módosul az ütemezett ellenőrzésekhez megadott CPU-prioritás.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Kémprogramokra vonatkozó biztonsági intelligencia elavulási idejének megadása napban kifejezve</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Ezzel a házirend-beállítással megadhatja, hogy a kémprogramokra vonatkozó biztonsági intelligenciát hány nap után kell elavultnak tekinteni. A biztonsági intelligencia elavult állapota számos további művelet kiváltója lehet, beleértve a másodlagos frissítési forrásra való visszalépést vagy egy figyelmeztető ikon megjelenítését a felhasználói felületen. Az alapértelmezett érték 7 nap.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Ezzel a házirend-beállítással megadhatja, hogy a kémprogramokra vonatkozó biztonsági intelligenciát hány nap után kell elavultnak tekinteni. A biztonsági intelligencia elavult állapota számos további művelet kiváltója lehet, beleértve a másodlagos frissítési forrásra való visszalépést vagy egy figyelmeztető ikon megjelenítését a felhasználói felületen. Az alapértelmezett érték 14 nap.
 
     Ha engedélyezi ezt a beállítást, a rendszer a megadott számú, frissítés nélkül eltelt nap után elavultnak tekinti a kémprogramokra vonatkozó biztonsági intelligenciát.
 
     Ha letiltja vagy nem konfigurálja a beállítást, a rendszer az alapértelmezett számú, frissítés nélkül eltelt nap után elavultnak tekinti a kémprogramokra vonatkozó biztonsági intelligenciát.</string>
     <string id="SignatureUpdate_AVSignatureDue">Vírusokra vonatkozó biztonsági intelligencia elavulási idejének megadása napban kifejezve</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Ezzel a házirend-beállítással megadhatja, hogy a vírusokra vonatkozó biztonsági intelligenciát hány nap után kell elavultnak tekinteni. A biztonsági intelligencia elavult állapota számos további művelet kiváltója lehet, beleértve a másodlagos frissítési forrásra való visszalépést vagy egy figyelmeztető ikon megjelenítését a felhasználói felületen. Az alapértelmezett érték 7 nap.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Ezzel a házirend-beállítással megadhatja, hogy a vírusokra vonatkozó biztonsági intelligenciát hány nap után kell elavultnak tekinteni. A biztonsági intelligencia elavult állapota számos további művelet kiváltója lehet, beleértve a másodlagos frissítési forrásra való visszalépést vagy egy figyelmeztető ikon megjelenítését a felhasználói felületen. Az alapértelmezett érték 14 nap.
 
     Ha engedélyezi ezt a beállítást, a rendszer a megadott számú, frissítés nélkül eltelt nap után elavultnak tekinti a vírusokra vonatkozó biztonsági intelligenciát.
 
@@ -742,22 +706,22 @@ Ha letiltja vagy nem konfigurálja a beállítást, a csoportházirend felülbí
     <string id="SpynetReporting">Csatlakozás a Microsoft MAPS közösséghez</string>
     <string id="SpynetReporting_Explain">Ez a házirend-beállítás lehetővé teszi a Microsoft MAPS közösséghez való csatlakozást. A Microsoft MAPS egy online közösség, amely segítséget nyújt annak eldöntésében, hogy miként reagáljon egy adott fenyegetésre. A közösség emellett az új kártevő szoftverek terjedését is segít meggátolni.
 
-    Megadhatja, hogy az észlelt szoftverekről alapszintű vagy kiegészítő információkat kíván-e küldeni. A kiegészítő információk segítséget nyújtanak a Microsoftnak abban, hogy új biztonsági intelligencia létrehozásával fokozza a számítógépek védelmét. Ezek az információk tartalmazhatják például az észlelt elemek helyét a számítógépen, ha kártékony szoftvert távolított el a gépről. Ezeket az információkat a rendszer automatikusan gyűjti össze és küldi el. Bizonyos esetekben a rendszer véletlenül személyes információkat is küldhet a Microsoftnak. A Microsoft azonban ezeket nem használja fel azonosításra és kapcsolatfelvételre.
+ Megadhatja, hogy az észlelt szoftverekről alapszintű vagy kiegészítő információkat kíván-e küldeni. A kiegészítő információk segítséget nyújtanak a Microsoftnak abban, hogy új biztonsági intelligencia létrehozásával fokozza a számítógépek védelmét. Ezek az információk tartalmazhatják például az észlelt elemek helyét a számítógépen, ha kártékony szoftvert távolított el a gépről. Ezeket az információkat a rendszer automatikusan gyűjti össze és küldi el. Bizonyos esetekben a rendszer véletlenül személyes információkat is küldhet a Microsoftnak. A Microsoft azonban ezeket nem használja fel azonosításra és kapcsolatfelvételre.
 
-    Az alábbi értékeket adhatja meg:
-    (0x0) Letiltva (alapértelmezett)
-    (0x1) Alapszintű tagság
-    (0x2) Kiemelt tagság
+ Az alábbi értékeket adhatja meg:
+ (0x0) Letiltva (alapértelmezett)
+ (0x1) Alapszintű tagság
+ (0x2) Kiemelt tagság
 
-    Alapszintű tagság esetén a rendszer alapvető adatokat küld a Microsoftnak az észlelt szoftverről, például arról, hogy honnan származik a szoftver, milyen műveleteket hajtott végre a felhasználó vagy a rendszer, és sikeresek voltak-e a műveletek.
+ Alapszintű tagság esetén a rendszer alapvető adatokat küld a Microsoftnak az észlelt szoftverről, például arról, hogy honnan származik a szoftver, milyen műveleteket hajtott végre a felhasználó vagy a rendszer, és sikeresek voltak-e a műveletek.
 
-    Kiemelt tagság esetén a rendszer az alapvető adatok mellett további információkat is küld a Microsoftnak a kártevő szoftverekről, a kémprogramokról és a potenciálisan nemkívánatos szoftverekről, beleértve a szoftverek helyét és működési módját, a számítógépre gyakorolt hatásukat, valamint a fájlneveket.
+ Kiemelt tagság esetén a rendszer az alapvető adatok mellett további információkat is küld a Microsoftnak a kártevő szoftverekről, a kémprogramokról és a potenciálisan nemkívánatos szoftverekről, beleértve a szoftverek helyét és működési módját, a számítógépre gyakorolt hatásukat, valamint a fájlneveket.
 
-    Ha engedélyezi a beállítást, a megadott tagsági szinten csatlakozni fog a Microsoft MAPS közösséghez.
+ Ha engedélyezi a beállítást, a megadott tagsági szinten csatlakozni fog a Microsoft MAPS közösséghez.
 
-    Ha letiltja vagy nem konfigurálja a beállítást, nem fog csatlakozni a Microsoft MAPS közösséghez.
-  
-    A Windows 10-ben már nem érhető el az alapszintű tagság, ezért az 1 vagy a 2 érték megadásakor is a kiemelt tagság lép érvénybe az eszközön.</string>
+ Ha letiltja vagy nem konfigurálja a beállítást, nem fog csatlakozni a Microsoft MAPS közösséghez.
+ 
+ A Windows 10-ben már nem érhető el az alapszintű tagság, ezért az 1 vagy a 2 érték megadásakor is a kiemelt tagság lép érvénybe az eszközön.</string>
     <string id="SpynetReporting_Disabled">Letiltva</string>
     <string id="SpynetReporting_Basic">Basic MAPS-tagság</string>
     <string id="SpynetReporting_Advanced">Kiemelt MAPS-tagság</string>
@@ -884,20 +848,16 @@ Nincs konfigurálva:
     </string>
     <string id="ExploitGuard_ASR_Rules">A támadási felület csökkentésére szolgáló szabályok konfigurálása</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Beállíthatja a támadásifelület-csökkentési (ASR) szabályok állapotát.
+    Beállítja a támadási felület csökkentésére szolgáló (ASR-) szabályok állapotát.
 
     A beállítás engedélyezése után a következő állapotokat adhatja meg az egyes szabályokhoz a Beállítások szakaszban:
     – Letiltás: a rendszer alkalmazza a szabályt.
-    – Naplózás: ha a szabály normális esetben eseményt váltana ki, akkor a rendszer rögzíti az eseményt (de nem alkalmazza ténylegesen a szabályt).
+    – Naplózási mód: ha a szabály normális esetben eseményt váltana ki, akkor a rendszer rögzíti az eseményt (de nem alkalmazza ténylegesen a szabályt).
     – Kikapcsolva: a rendszer nem alkalmazza a szabályt.
-    – Nem konfigurálva: a szabály engedélyezve lesz alapértelmezett értékekkel.
-    – Figyelmeztetés: a rendszer alkalmazza a szabályt, és a végfelhasználónak lehetősége lesz a letiltás megkerülésére.
 
-    Ha az ASR-szabály nincs letiltva, a rendszer gyűjti a nem konfigurált értékű ASR-szabályok naplózási eseményeinek részhalmazát.
-
-    Engedélyezve:
+        Engedélyezve:
     Ehhez a beállításhoz adja meg mindegyik ASR-szabály állapotát a Beállítások szakaszban.
-    Mindegyik szabályt új sorban adja meg név-érték párként:
+        Mindegyik szabályt új sorban adja meg név-érték párként:
     – Név oszlop: Adja meg egy ASR-szabály érvényes azonosítóját.
     – Érték oszlop: Adja meg a társított szabályhoz megadni kívánt állapothoz tartozó állapotazonosítót.
 
@@ -905,9 +865,6 @@ Nincs konfigurálva:
     – 1 (Letiltás)
     – 0 (Kikapcsolva)
     – 2 (Naplózás)
-    – 5 (Nem konfigurálva)
-    – 6 (Figyelmeztetés)
-
     
     Példa:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -917,10 +874,10 @@ Nincs konfigurálva:
     Letiltva:
     Nem lesznek konfigurálva ASR-szabályok.
 
-    Nem konfigurálva:
+        Nincs konfigurálva:
     Ugyanaz, mint a Letiltva beállítás.
 
-    Kizárhat mappákat vagy fájlokat a „Fájlok és elérési utak kizárása a támadásifelület-csökkentési szabályok alól” csoportházirend-beállításban.
+    Kizárhat mappákat vagy fájlokat a „Fájlok és elérési utak kizárása a támadási felület csökkentésére szolgáló szabályok alól” csoportházirend-beállításban.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Mappákhoz való hozzáférés szabályozásának konfigurálása</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -1046,11 +1003,6 @@ Nincs konfigurálva:
         <label>Proxykiszolgáló definiálása a hálózathoz való csatlakozáshoz</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>Könyvtári elérési út meghatározása a támogatási naplófájlok másolásához</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Kiterjesztéskizárások</listBox>
     </presentation>
@@ -1059,9 +1011,6 @@ Nincs konfigurálva:
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Folyamatkizárások</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">IP-címek kizárása</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">További definíciókészletek megadása a hálózati forgalom vizsgálatához</listBox>
@@ -1130,10 +1079,10 @@ Nincs konfigurálva:
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Napi ütemezésű ellenőrzés időpontjának megadása</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Kémprogramokra vonatkozó biztonsági intelligencia elavulási idejének megadása napban kifejezve</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Kémprogramokra vonatkozó biztonsági intelligencia elavulási idejének megadása napban kifejezve</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Vírusokra vonatkozó biztonsági intelligencia elavulási idejének megadása napban kifejezve</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Vírusokra vonatkozó biztonsági intelligencia elavulási idejének megadása napban kifejezve</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1218,9 +1167,6 @@ Nincs konfigurálva:
     <textBox refId="DeviceControl_PolicyRules">
         <label>Itt határozhatja meg a házirendszabályokat</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Az ütemező véletlenszerűsítési tartományának megadása órában.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

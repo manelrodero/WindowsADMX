@@ -13,7 +13,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge sur Windows 10, version 1703 ou ultérieure</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge sur Windows 10, version 1709 ou ultérieure</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge sur Windows 10, version 1708 ou ultérieure</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge sur Windows 10, version 1803 ou ultérieure</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge sur Windows 10, version 1803 ou ultérieure</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge sur Windows 10, version 1809 ou ultérieure</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Catégorie Microsoft Edge</string>
@@ -163,13 +163,13 @@ Si vous ne configurez pas ce paramètre, les employés peuvent décider si les s
 
 Si cette option est activée ou n'est pas configurée, le chargement d'une version test d'extensions non vérifiées dans Microsoft Edge est autorisé.
 
-Si cette option est désactivée, le chargement d'une version test d'extensions non vérifiées dans Microsoft Edge n'est pas autorisé. Les extensions peuvent être installées uniquement via le Microsoft Store (notamment le Microsoft Store pour Entreprises), une vitrine d'entreprise (telle que Company Portal) ou PowerShell (à l'aide d'Add-AppxPackage). Si elle est désactivée, cette stratégie n'empêche pas le chargement d'une version test des extensions à l'aide d'Add-AppxPackage via PowerShell. Pour éviter cela, dans l'éditeur de stratégie de groupe, activez l'option Autorise le développement d'applications du Microsoft Store et leur installation depuis un environnement de développement intégré, qui se trouve à l'emplacement suivant :
+Si cette option est désactivée, le chargement d'une version test d'extensions non vérifiées dans Microsoft Edge n'est pas autorisé. Les extensions peuvent être installées uniquement via le Microsoft Store (notamment le Microsoft Store pour Entreprises), une vitrine d'entreprise (telle que Company Portal) ou PowerShell (à l'aide d'Add-AppxPackage). Si elle est désactivée, cette stratégie n'empêche pas le chargement d'une version test des extensions à l'aide d'Add-AppxPackage via PowerShell. Pour éviter cela, dans l'éditeur de stratégie de groupe, activez l'option Autorise le développement d'applications du Microsoft Store et leur installation depuis un environnement de développement intégré, qui se trouve à l'emplacement suivant :
 
 Configuration ordinateur &gt; Modèles d'administration &gt; Composants Windows &gt; Déploiement de packages d'applications
 
-Versions prises en charge : Microsoft Edge sous Windows 10, version 1809
-Paramètre par défaut : désactivé ou non configuré
-Stratégies liées :
+Versions prises en charge : Microsoft Edge sous Windows 10, version 1809
+Paramètre par défaut : désactivé ou non configuré
+Stratégies liées :
 - Autorise le développement d'applications du Microsoft Store et leur installation depuis un environnement de développement intégré
 - Autoriser l'installation des applications approuvées​</string>
       <string id="AllowSmartScreen">Configurer Windows Defender SmartScreen</string>
@@ -518,9 +518,14 @@ Si vous définissez cette stratégie sur 0, Microsoft Edge n'utilise pas de min
 Si elle est désactivée ou non configurée, la valeur par défaut est de 5 minutes.
 
 Si vous ne configurez pas Microsoft Edge dans l'accès assigné, cette stratégie n'est pas appliquée.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Supprimer l’affichage de la notification de désapprobation Microsoft Edge</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">Vous pouvez configurer Microsoft Edge pour supprimer l’affichage de la notification qui informe les utilisateurs que la prise en charge de cette version de Microsoft Edge a pris fin le 9 mars 2021. Si cette option est activée, la notification ne s’affiche pas.
 
+Si elle est désactivée ou n’est pas configurée, la notification s’affiche lors de chaque ouverture de Microsoft Edge. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

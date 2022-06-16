@@ -129,13 +129,15 @@ Se desativar ou não configurar esta definição de política, o Windows Hello p
 Nota: desativar ou não configurar esta definição de política e ativar a definição de política "utilizar o Windows Hello para empresas" requer que o ambiente tenha um ou mais controladores de domínio do Windows Server 2016 para impedir que a autenticação do Windows Hello para empresas tenha falhado.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Utilize esta configuração de política para configurar o Windows Hello para Empresas para utilizar Kerberos do Azure Active Directory para autenticação no local.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Utilize esta configuração de política para configurar o Windows Hello para Empresas para utilizar Kerberos do Azure AD para autenticação no local.
 
 Se ativar esta definição de política, o Windows Hello para Empresas utilizará um pedido de Kerberos obtido ao autenticar o Azure para autenticação no local.
 
 Se desativar ou não configurar esta configuração de política, o Windows Hello para Empresas utilizará uma chave ou certificado (dependendo de outras definições de política) para autenticação no local.
 
-NOTA: um ambiente que ative esta definição de política e a definição de política "Utilizar o Windows Hello para Empresas" requer um ou mais controladores de domínio Windows Server 2016, caso contrário, a autenticação do Windows Hello para Empresas falhará.
+NOTA: um ambiente que ative esta definição de política e a definição de política "Utilizar o Windows Hello para Empresas" requer um ou mais controladores de domínio Windows Server 2016, caso contrário, a autenticação do Windows Hello para Empresas falhará. 
+
+Esta política só é suportada no Windows 10, versão 21H2 e posterior.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configurar fatores de desbloqueio de dispositivos</string>

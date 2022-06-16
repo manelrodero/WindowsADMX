@@ -298,6 +298,7 @@ Se si disabilita questa impostazione dei criteri per un'applicazione o un proces
 Se non si configura questa impostazione dei criteri, i valori correnti dell'azione URL per un'applicazione o un processo in elenco avranno la priorità.</string>
       <string id="FavImportExport">Disabilita Importazione/Esportazione impostazioni</string>
       <string id="GeolocationDisable">Disattiva georilevazione nel browser</string>
+      <string id="DisableFlashInIE">Disattiva Adobe Flash in Internet Explorer e impedisci alle applicazioni di utilizzare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash</string>
       <string id="File_NoBrowserClose">Menu File: disabilita la chiusura delle finestre del browser e di Esplora risorse</string>
       <string id="File_NoBrowserSaveAs">Menu File: disabilita l'opzione di menu Salva con nome</string>
       <string id="File_NoBrowserSaveWebComplete">Menu File: disabilita il salvataggio della pagina Web completa</string>
@@ -333,7 +334,7 @@ Se si disabilita questa impostazione dei criteri, quando si verifica un problema
 Se non si configura questa impostazione dei criteri, l'utente potrà attivare o disattivare i dettagli in questi messaggi di errore.</string>
       <string id="General_Zooming">Disattiva la funzionalità di zoom sulla pagina</string>
       <string id="GeneralColors">Impostazioni generali colori</string>
-      <string id="Help_NoFeedback">Menu ?: rimuove l'opzione di menu Commenti e suggerimenti</string>
+      <string id="Help_NoFeedback">Menu ?: rimuove l'opzione di menu Feedback e suggerimenti</string>
       <string id="Help_NoNetscapeHelp">Menu ?: rimuove l'opzione di menu Per utenti Netscape</string>
       <string id="Help_NoTip">Menu ?: rimuove l'opzione di menu Suggerimenti utili</string>
       <string id="Help_NoTutorial">Menu ?: rimuove l'opzione di menu Esercitazione</string>
@@ -725,6 +726,13 @@ Se si abilita questa impostazione dei criteri, il supporto per la georilevazione
 Se si disabilita questa impostazione dei criteri, il supporto per la georilevazione nel browser sarà attivato.
 
 Se non si configura questa impostazione dei criteri, il supporto per la georilevazione nel browser potrà essere attivato o disattivato dalla scheda Privacy in Opzioni Internet.</string>
+      <string id="IE_ExplainDisableFlashInIE">Questa impostazione dei criteri disattiva Adobe Flash in Internet Explorer e impedisce alle applicazioni di usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash.
+
+Se si abilita questa impostazione dei criteri, Flash verrà disattivato per Internet Explorer e le applicazioni non saranno in grado di usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash. Nella finestra di dialogo Gestione componenti aggiuntivi lo stato di Flash sarà 'Disabilitato' e gli utenti non potranno abilitarlo. Se si abilita questa impostazione dei criteri, in Internet Explorer verranno ignorate le impostazioni specificate per Adobe Flash tramite le impostazioni dei criteri "Elenco componenti aggiuntivi" e "Impedisci tutti i componenti aggiuntivi a meno che siano esplicitamente consentiti nell'Elenco componenti aggiuntivi".
+
+Se si disabilita o non si configura questa impostazione dei criteri, Flash verrà attivato per Internet Explorer e le applicazioni saranno in grado di usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash. Gli utenti potranno abilitare o disabilitare Flash nella finestra di dialogo Gestione componenti aggiuntivi.
+
+È comunque possibile disabilitare Adobe Flash tramite le impostazioni dei criteri "Elenco componenti aggiuntivi" e "Impedisci tutti i componenti aggiuntivi a meno che siano esplicitamente consentiti nell'Elenco componenti aggiuntivi" anche se questa impostazione dei criteri è disabilitata o non è configurata. Se tuttavia Adobe Flash è disabilitato tramite le impostazioni dei criteri "Elenco componenti aggiuntivi" e "Impedisci tutti i componenti aggiuntivi a meno che siano esplicitamente consentiti nell'Elenco componenti aggiuntivi" e non tramite questa impostazione dei criteri, tutte le applicazioni potranno continuare a usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash. Per altre informazioni, vedi "Impostazioni di Criteri di gruppo in Internet Explorer 10" nella libreria TechNet di Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Impedisce agli utenti di chiudere Microsoft Internet Explorer ed Esplora file.
 
 Se si abilita questo criterio, il comando Chiudi del menu File verrà visualizzato in grigio.
@@ -780,11 +788,11 @@ Per specificare la modalità di gestione dei controlli autorizzati dall'amminist
 Se si abilita questa impostazione dei criteri, le applicazioni contenenti MSHTML non risponderanno all'input dell'utente che richiede un nuovo rendering del contenuto con una diversa dimensione.
 
 Se si disabilita o non si configura questa impostazione dei criteri, le applicazioni contenenti MSHTML risponderanno all'input dell'utente che richiede un nuovo rendering del contenuto con una diversa dimensione.</string>
-      <string id="IE_ExplainHelp_NoFeedback">Impedisce agli utenti di inviare commenti e suggerimenti a Microsoft scegliendo Commenti e suggerimenti dal menu ?.
+      <string id="IE_ExplainHelp_NoFeedback">Impedisce agli utenti di inviare feedback e suggerimenti a Microsoft scegliendo Feedback e suggerimenti dal menu ?.
 
-Se si abilita questo criterio, il comando Commenti e suggerimenti verrà rimosso dal menu ?.
+Se si abilita questo criterio, il comando Feedback e suggerimenti verrà rimosso dal menu ?.
 
-Se si disabilita o non si configura questo criterio, gli utenti potranno compilare un modulo Internet per inviare commenti e suggerimenti su prodotti Microsoft.</string>
+Se si disabilita o non si configura questo criterio, gli utenti potranno compilare un modulo Internet per inviare feedback e suggerimenti su prodotti Microsoft.</string>
       <string id="IE_ExplainHelp_NoNetscapeHelp">Impedisce agli utenti di visualizzare i suggerimenti per il passaggio da Netscape a Internet Explorer.
 
 Se si abilita questo criterio, il comando Per utenti Netscape verrà rimosso dal menu ?.
@@ -1478,9 +1486,9 @@ Se si abilita questa impostazione dei criteri, l'utente non potrà configurare l
 Se si disabilita o non si configura questa impostazione dei criteri, l'utente potrà configurare l'elenco dei provider di ricerca.</string>
       <string id="IE_ExplainSQM_DisableCEIP">Questa impostazione dei criteri impedisce all'utente di partecipare al programma Analisi utilizzo software.
 
-Se si abilita questa impostazione dei criteri, l'utente non potrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni suggerimenti clienti.
+Se si abilita questa impostazione dei criteri, l'utente non potrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni feedback clienti.
 
-Se si disabilita questa impostazione dei criteri, l'utente dovrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni suggerimenti clienti.
+Se si disabilita questa impostazione dei criteri, l'utente dovrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni feedback clienti.
 
 Se non si configura questa impostazione dei criteri, l'utente potrà scegliere di partecipare al programma Analisi utilizzo software.</string>
       <string id="IE_ExplainSurvey">Designa il controllo Microsoft Survey come autorizzato dall'amministratore.
@@ -3895,7 +3903,7 @@ Se si disabilita o non si configura questa impostazione dei criteri, gli utenti 
 Se si attiva questa impostazione, gli utenti potranno visualizzare e utilizzare l'opzione Modalità Enterprise dal menu Strumenti. Se si attiva questa impostazione ma non si specifica un percorso per i rapporti, la modalità Enterprise sarà comunque disponibile per gli utenti ma non si riceveranno i rapporti.
 
 Se si disabilita o non si configura questa impostazione, l'opzione di menu non verrà visualizzata e gli utenti non saranno in grado di eseguire siti Web in modalità Enterprise.</string>
-      <string id="RestrictInternetExplorer">Invia a Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise</string>
+      <string id="RestrictInternetExplorer">Invia a Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise.</string>
       <string id="IE_ExplainRestrictInternetExplorer">Questa impostazione consente di decidere se aprire in Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise. Se si usa questa impostazione, è necessario attivare anche l'impostazione dei criteri Modelli amministrativi\Componenti di Windows\Internet Explorer\Usa elenco siti Web di Internet Explorer modalità Enterprise e includere almeno un sito nell'elenco siti modalità Enterprise.
 
 Se si abilita questa impostazione, vengono aperti automaticamente in Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise.
@@ -3915,19 +3923,19 @@ Se si disabilita o non si configura questa impostazione, viene applicato il comp
 Se Windows Update è installato per la versione successiva del canale Microsoft Edge* e canale stabile Microsoft Edge, si verificano i seguenti comportamenti:
 - Se disabiliti o non configuri questi criteri, viene utilizzato il canale stabile Microsoft Edge. Questo è il comportamento predefinito.
 - Se abiliti questi criteri, puoi configurare l'apertura dei siti reindirizzati in un massimo di tre dei seguenti canali:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta 77 o versione successiva
-    3 = Microsoft Edge Dev 77 o versione successiva
-    4 = Microsoft Edge Canary 77 o versione successiva
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta 77 o versione successiva
+ 3 = Microsoft Edge Dev 77 o versione successiva
+ 4 = Microsoft Edge Canary 77 o versione successiva
 
 Se Windows Update non è installato per la versione successiva del canale Microsoft Edge* o canale stabile Microsoft Edge, si verificano i seguenti comportamenti:
 - Se disabiliti o non configuri questi criteri, viene automaticamente utilizzato Microsoft Edge 45 o versione precedente. Questo è il comportamento predefinito.
 - Se abiliti questi criteri, puoi configurare l'apertura dei siti reindirizzati in un massimo di tre dei seguenti canali:
-    0 = Microsoft Edge 45 o versione precedente
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta 77 o versione successiva
-    3 = Microsoft Edge Dev 77 o versione successiva
-    4 = Microsoft Edge Canary 77 o versione successiva
+ 0 = Microsoft Edge 45 o versione precedente
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta 77 o versione successiva
+ 3 = Microsoft Edge Dev 77 o versione successiva
+ 4 = Microsoft Edge Canary 77 o versione successiva
 
 *Per ulteriori informazioni sull'aggiornamento di Windows per la versione successiva di Microsoft Edge, incluse quelle per disabilitarlo, vedi https://go.microsoft.com/fwlink/?linkid=2102115. Questo aggiornamento si applica solo a Windows 10 1709 e versione successiva.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,12 +3966,30 @@ Se si Abilita questo criterio, l'impostazione "Salva destinazione con nome" verr
 Se si disattiva o non si configura questa impostazione di criterio, "Salva destinazione con nome" non verrà visualizzato nel menu di scelta rapida della modalità di Internet Explorer.
 
 Per altre informazioni, Vedi https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Abilita l'elenco delle finestre globali in modalità Internet Explorer</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">Questa impostazione consente Internet Explorer modalità di utilizzare l'elenco delle finestre globale che consente la condivisione dello stato con altre applicazioni.
+L'impostazione avrà effetto solo quando Internet Explorer 11 è disabilitato come browser autonomo.
+
+Se si abilita questo criterio, Internet Explorer modalità utilizzerà l'elenco delle finestre globali.
+
+Se si disabilita o non si configura questo criterio, Internet Explorer modalità continuerà a mantenere un elenco di finestre separato.
+
+Per altre informazioni sulla modalità Internet Explorer, vedere https://go.microsoft.com/fwlink/?linkid=2102921
+Per altre informazioni sulla disabilitazione di Internet Explorer 11 come browser autonomo, vedere https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Abilita tasti di scelta rapida estesi nella modalità Internet Explorer</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">Questa impostazione dei criteri consente agli amministratori di abilitare la modalità estesa per i tasti di scelta rapida di Microsoft Edge Internet Explorer, ad esempio "CTRL+S" per la funzionalità "Salva con nome".
 
 Se si abilita questo criterio, la funzionalità per i tasti di scelta rapida estesa sarà abilitata in modalità Internet Explorer e funzionerà come Internet Explorer.
 
 Se si disabilita o non si configura questa impostazione dei criteri, i tasti di scelta rapida estesi non funzioneranno in modalità Internet Explorer.
+
+Per altre informazioni, vedere https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Ripristinare il valore predefinito dello zoom per le finestre di dialogo HTML in modalità Internet Explorer</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Questa impostazione dei criteri consente agli amministratori di reimpostare lo zoom predefinito per le finestre di dialogo HTML in modalità Internet Explorer.
+
+Se si abilita questo criterio, lo zoom di una finestra di dialogo HTML in modalità Internet Explorer non verrà propagato dalla relativa pagina padre.
+
+Se si disabilita o non si configura questo criterio, lo zoom di una finestra di dialogo HTML in modalità Internet Explorer verrà impostato in base allo zoom della pagina padre.
 
 Per altre informazioni, vedere https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Disabilita Internet Explorer 11 come browser autonomo</string>
@@ -3976,15 +4002,15 @@ Attivandolo, questo criterio:
 - Sostituisce qualsiasi altro criterio che reindirizza a Internet Explorer 11.
 
 Se disattivi o non configuri questo criterio, tutti i siti verranno aperti utilizzando le impostazioni correnti del browser attivo. Nota: per rendere effettivo questo criterio, è necessario installare il canale stabile Microsoft Edge.</string>
+      <string id="DisableIEAppDeprecationNotification">Nascondi notifica di ritiro di Internet Explorer 11</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">Questa impostazione dei criteri consente di gestire la visualizzazione del promemoria della barra di notifica che Internet Explorer viene ritirato. Per impostazione predefinita, la barra di notifica viene visualizzata in Internet Explorer 11.
+
+Se si abilita questa impostazione dei criteri, la barra di notifica non verrà visualizzata in Internet Explorer 11.
+
+Se si disabilita o non si configura questa impostazione dei criteri, la barra di notifica verrà visualizzata in Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Mai</string>
       <string id="NotifyDisableIEOptions_Always">Sempre</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Una volta per utente</string>
-      <string id="JScriptReplacement">Sostituisci JScript caricando JScript9Legacy al posto di JScript tramite MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">Questa impostazione dei criteri specifica se JScript o JScript9Legacy viene caricato per le chiamate basate su MSHTML/WebOC.
-      
-Se si abilita questa impostazione dei criteri, JScript9Legacy verrà caricato nelle situazioni in cui JScript è stata creata un'istanza.
-
-Se si disabilita o non si configura questo criterio, verrà utilizzato il JScript.</string>
       <string id="VerMgmtDisable">Disattiva blocco dei controlli ActiveX obsoleti per Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Questa impostazione dei criteri determina se Internet Explorer blocca specifici controlli ActiveX obsoleti. I controlli ActiveX obsoleti non vengono mai bloccati nell'area Intranet.
 

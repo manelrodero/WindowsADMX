@@ -18,12 +18,15 @@ Na poniższej liście pokazano obsługiwane wartości:
 
 3 = protokół HTTP plus internetowa komunikacja równorzędna.
 
-99 = Prosty tryb pobierania bez komunikacji równorzędnej. Usługa Optymalizacja dostarczania będzie pobierać pliki tylko przy użyciu protokołu HTTP i nie będzie podejmować prób kontaktu z usługami w chmurze, które działają wraz z usługą Optymalizacja dostarczania.</string>
+99 = Prosty tryb pobierania bez komunikacji równorzędnej. Usługa Optymalizacja dostarczania będzie pobierać pliki tylko przy użyciu protokołu HTTP i nie będzie podejmować prób kontaktu z usługami w chmurze, które działają wraz z usługą Optymalizacja dostarczania.
+
+100 = Tryb obejścia. Zamiast usługi Optymalizacja dostarczania będzie używana usługa BITS.</string>
       <string id="DownloadMode_CdnOnly">Tylko HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Grupa (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Proste (99)</string>
+      <string id="DownloadMode_Bypass">Pomiń (100)</string>
       <string id="GroupId">Identyfikator grupy</string>
       <string id="GroupId_Help">Identyfikator grupy musi zostać ustawiony jako identyfikator GUID. Ta zasada określa dowolnie wybrany identyfikator grupy, do której należy urządzenie.
 
@@ -166,19 +169,14 @@ Uwaga: jeśli ustawisz tę zasadę w celu opóźnienia pobierania w tle ze źró
 
 Uwaga: jeśli ustawisz tę zasadę w celu opóźnienia pobierania na pierwszym planie ze źródła HTTP, zostanie ona zastosowana jako pierwsza (aby umożliwić pobieranie najpierw z elementów równorzędnych).</string>
       <string id="RestrictPeerSelectionBy">Wybierz metodę ograniczania wyboru węzła równorzędnego</string>
-      <string id="RestrictPeerSelectionBy_Help">Skonfiguruj tę zasadę, aby ograniczyć możliwość wyboru elementów równorzędnych za pomocą wybranej opcji.
+      <string id="RestrictPeerSelectionBy_Help">Ustaw tę zasadę, aby ograniczyć możliwość wyboru węzła równorzędnego za pośrednictwem wybranej opcji.
 
 Dostępne opcje:
-0 = TRANSLATOR ADRESÓW SIECIOWYCH (NAT).
-1 = maska podsieci.
-2 = lokalne odnajdowanie (DNS-SD).
+1 = Maska podsieci (kolejne opcje zostaną dodane w przyszłym wydaniu).
 
-Wartość domyślna została zmieniona z 0 (brak ograniczeń) na 1 (Ogranicz do podsieci).
-
-Te opcje dotyczą zarówno trybu pobierania, jak i sieci LAN (1) i grupy (2).</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+Opcja 1 (Maska podsieci) dotyczy zarówno trybu pobierania Sieć LAN (1), jak i Grupa (2).</string>
+      <string id="RestrictPeerSelectionBy_None">Brak</string>
       <string id="RestrictPeerSelectionBy_Subnet">Podsieć</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Wykrywanie lokalne</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Ustaw godziny pracy, aby ograniczyć przepustowość pobierania w tle</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Określa maksymalną przepustowość pobierania w tle używaną przez usługę Optymalizacja dostarczania w trakcie i poza godzinami pracy dla wszystkich równoczesnych operacji pobierania jako procent dostępnej przepustowości pobierania.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Ustaw godziny pracy, aby ograniczyć przepustowość pobierania na pierwszym planie</string>
@@ -305,7 +303,7 @@ Te opcje dotyczą zarówno trybu pobierania, jak i sieci LAN (1) i grupy (2).</s
         <text>Wartość domyślna to 0 (brak opóźnienia)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Ogranicz wybór węzłów równorzędnych według:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Ogranicz wybór węzłów równorzędnych według:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>
