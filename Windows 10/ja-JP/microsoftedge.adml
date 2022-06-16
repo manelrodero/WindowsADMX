@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Javascript などのスクリプトを実行できるようにする</string>
+      <string id="AllowActiveScripting_Explain">この設定では、JavaScript などのスクリプトを実行できるようにするかどうかを指定できます。この設定は既定で有効になります。
+
+この設定を有効にした場合、ご使用のすべてのコンピューターでスクリプトの実行が有効になります。
+
+この設定を無効にした場合、スクリプトは実行できません。</string>
+      <string id="AllowAutofill">Web サイトでオートフィルを使用できるようにする</string>
+      <string id="AllowAutofill_Explain">この設定では、Web サイトでオートフィルを使用できるかどうかを指定できます。この設定は既定で有効になります。
+
+この設定を有効にした場合、Web サイトでオートフィルを使用できるようになり、ローカルに情報がキャッシュされます。
+
+この設定を無効にした場合、オートフィルは使用できません。</string>
+      <string id="AllowDoNotTrack">トラッキング拒否ヘッダーの送信を許可する</string>
+      <string id="AllowDoNotTrack_Explain">この設定では、トラッキング拒否ヘッダーを送信できるようにするかどうかを指定できます。この設定は既定で無効になります。
+
+この設定を有効にした場合、組織内の任意のコンピューターからトラッキング拒否ヘッダーを送信することができます。
+
+この設定を無効にした場合、トラッキング拒否ヘッダーは送信できません。</string>
+      <string id="AllowPasswordManager">パスワード マネージャーの構成を許可する</string>
+      <string id="AllowPasswordManager_Explain">この設定では、パスワードをローカル コンピューター上に保存できるかどうかを指定できます。この設定は既定で有効になります。
+
+この設定を有効にした場合、パスワード マネージャーが有効になり、パスワードをローカル コンピューターに保存できるようになります。
+
+この設定を無効にした場合、パスワード マネージャーが無効になり、パスワードをローカルに保存することはできません。</string>
+      <string id="AllowPopups">ポップアップの実行を許可する</string>
+      <string id="AllowPopups_Explain">この設定では、ポップアップを許可するかどうかを指定できます。この設定は既定で無効になります。
+
+この設定を有効にした場合、組織のすべてのコンピューターでポップアップを実行できます。
+
+この設定を無効にした場合、ポップアップは実行できません。</string>
+      <string id="AllowSearchSuggestionsinAddressBar">アドレス バーに検索候補が表示されないようにする</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">この設定では、アドレス バーに検索候補を表示するかどうかを指定できます。この設定は既定で有効になります。
+
+この設定を有効にした場合、アドレス バーに検索候補が表示されます。
+
+この設定を無効にした場合、アドレス バーに検索結果が表示されません。</string>
+      <string id="AllowSmartScreen">SmartScreen の構成を許可する</string>
+      <string id="AllowSmartScreen_Explain">この設定では、SmartScreen を有効にするかどうかを指定できます。この設定は既定で有効になります。
+
+この設定を有効にした場合、SmartScreen がすべてのコンピューターで有効になります。
+
+この設定を無効にした場合、SmartScreen が無効になります。</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">ブロックしない</string>
+      <string id="CookiesList_Block_ThirdParty">サード パーティの Cookie のみをブロックする</string>
+      <string id="CookiesList_Block_All">すべての Cookie をブロックする</string>
+      <string id="EnterpriseModeSiteList">エンタープライズ サイト一覧の構成を許可する</string>
+      <string id="EnterpriseModeSiteList_Explain">この設定では、互換性を確保するために、エンタープライズ サイト一覧を設定して使用するかどうかを指定できます。
+
+この設定を有効にした場合、さらに次の 2 つの選択肢があります。
+  • 未構成。エンタープライズ サイト一覧は使用できません。
+  • エンタープライズ モードのサイト一覧を使用する。エンタープライズ サイト一覧を使用できます。こちらを選んだ場合、XML サイト一覧の {URI} ボックスに場所を追加することができます。これが既定値です。</string>
+      <string id="HomePage">ホーム ページの構成を許可する</string>
+      <string id="HomePage_Explain">この設定では、組織のホーム ページを設定することができます。既定では、この設定は構成されず、アプリの設定が代わりに使用されます。
+
+この設定を有効にした場合は、該当する Web サイトの場所を {URI} ボックスに追加する必要があります。</string>
+      <string id="ItemNameDisable">無効</string>
+      <string id="ItemNameEnable">有効</string>
+      <string id="SendIntranetTraffictoInternetExplorer">すべてのイントラネット トラフィックを Internet Explorer に送る</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>エンタープライズ モード IE の Web サイト一覧の場所 (URL) を入力してください</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>ホーム ページの Web サイトの場所 (URL) を入力してください</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Cookies 設定の構成</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

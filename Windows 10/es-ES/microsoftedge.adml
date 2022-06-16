@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Permite ejecutar scripts, como JavaScript</string>
+      <string id="AllowActiveScripting_Explain">Esta opción permite decidir si las personas podrán ejecutar scripts, como JavaScript, y está habilitada de manera predeterminada.
+
+Si habilita esta opción, los scripts estarán activados para todos los PC.
+
+Si deshabilita esta opción, no se podrán ejecutar scripts.</string>
+      <string id="AllowAutofill">Permite establecer si las personas pueden usar la característica Autorrellenar en los sitios web</string>
+      <string id="AllowAutofill_Explain">Esta opción permite decidir si las personas pueden usar la característica Autorrellenar en los sitios web y está habilitada de manera predeterminada.
+
+Si habilita esta opción, las personas pueden usar Autorrellenar en los sitios web y la información se almacenará en la memoria caché local.
+
+Si deshabilita esta opción, las personas no pueden usar Autorrellenar.</string>
+      <string id="AllowDoNotTrack">Permitir que las personas puedan enviar encabezados No realizar seguimiento</string>
+      <string id="AllowDoNotTrack_Explain">Esta opción permite decidir si las personas pueden enviar encabezados No realizar seguimiento y está deshabilitada de manera predeterminada.
+
+Si habilita esta opción, las personas pueden enviar encabezados No realizar seguimiento desde cualquier PC de la organización.
+
+Si deshabilita esta opción, las personas no pueden enviar encabezados No realizar seguimiento.</string>
+      <string id="AllowPasswordManager">Permite configurar el administrador de contraseñas</string>
+      <string id="AllowPasswordManager_Explain">Esta opción permite decidir si las personas pueden guardar las contraseñas localmente en sus PC y está habilitada de manera predeterminada.
+
+Si habilita esta opción, se activará el administrador de contraseñas y las personas podrán guardar localmente las contraseñas en sus PC.
+
+Si deshabilita esta opción, se desactivará el administrador de contraseñas y las personas no podrán guardar localmente las contraseñas.</string>
+      <string id="AllowPopups">Permite ejecutar elementos emergentes</string>
+      <string id="AllowPopups_Explain">Esta opción permite decidir si se activan los elementos emergentes y está deshabilitada de manera predeterminada.
+
+Si habilita esta opción, se pueden ejecutar elementos emergentes en todos los PC de la organización.
+
+Si deshabilita esta opción, no se pueden ejecutar elementos emergentes.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Impide que la barra de direcciones se muestre en las sugerencias de búsqueda</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Esta opción permite decidir si la barra de direcciones debe mostrar sugerencias de búsqueda y está habilitada de manera predeterminada.
+
+Si habilita esta opción, las personas pueden ver las sugerencias de búsqueda en la barra de direcciones.
+
+Si deshabilita esta opción, los resultados de búsqueda no aparecen en la barra de direcciones.</string>
+      <string id="AllowSmartScreen">Permite configurar SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Esta opción permite decidir si se debe activar SmartScreen y está habilitada de manera predeterminada.
+
+Si habilita esta opción, se activa SmartScreen para todos los PC.
+
+Si deshabilita esta opción, se desactiva SmartScreen.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">No bloquear</string>
+      <string id="CookiesList_Block_ThirdParty">Bloquear solo cookies de terceros</string>
+      <string id="CookiesList_Block_All">Bloquear todas las cookies</string>
+      <string id="EnterpriseModeSiteList">Permite configurar la lista de sitios empresariales</string>
+      <string id="EnterpriseModeSiteList_Explain">Esta opción permite decidir si hay que configurar y usar la lista de sitios empresariales para la compatibilidad.
+
+Si habilita esta opción, dispondrá de dos opciones adicionales:
+  • No configurado: no puede usar la lista de sitios empresariales.
+  • UseEnterpriseModeSiteList: permite usar la lista de sitios empresariales. Si usa esta opción, también debe incluir la ubicación de la lista de sitios en XML en el cuadro {URI}. Este es el valor predeterminado.</string>
+      <string id="HomePage">Permite configurar la página principal</string>
+      <string id="HomePage_Explain">Esta opción permite configurar la página principal de la organización. De manera predeterminada, esta opción no está configurada y se usa la configuración de la aplicación en su lugar.
+
+Si habilita esta opción, también debe incluir la ubicación del sitio web en el cuadro {URI}.</string>
+      <string id="ItemNameDisable">Deshabilitar</string>
+      <string id="ItemNameEnable">Habilitar</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Envía todo el tráfico de la intranet a Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Escriba la ubicación (dirección URL) de su lista de sitios web de IE en el modo de empresa</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Escriba la ubicación (dirección URL) de su sitio web de página principal</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Configurar opción de cookies</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

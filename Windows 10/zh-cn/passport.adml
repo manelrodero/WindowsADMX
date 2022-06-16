@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Passport for Work</displayName>
+  <description>Microsoft Passport for Work 的配置</description>
+  <resources>
+    <stringTable>
+        <string id="MSPassportForWorkCategory">Microsoft Passport for Work</string>
+        <string id="MSPassportForWorkPINComplexityCategory">PIN 复杂性</string>
+        <string id="MSPassport_UsePassportForWork">使用 Microsoft Passport for Work</string>
+        <!-- DropdownList Button strings -->
+        <string id="ButtonTextAllow">允许</string>
+        <string id="ButtonTextDisallow">不允许</string>
+        <string id="ButtonTextRequired">必需</string>
+        <string id="MSPassport_UsePassportForWorkExplain">Microsoft Passport for Work 是使用 Active Directory 或 Azure Active Directory 帐户登录到 Windows 的替代方法，可以取代密码、智能卡和虚拟智能卡。
+
+如果你启用此策略设置或未对其进行配置，则设备将为所有用户预配 Microsoft Passport for Work。
+
+如果你禁用此策略设置，则设备将不会为任何用户预配 Microsoft Passport for Work。</string>
+        <string id="MSPassport_RequireSecurityDevice">使用硬件安全设备</string>
+        <string id="MSPassport_RequireSecurityDeviceExplain">与软件相比，受信任的平台模块(TPM)具有额外的安全优势，因为存储在其内部的数据无法在其他设备上使用。
+
+如果你启用此策略设置，则只有配有可用 TPM 的设备才预配 Microsoft Passport for Work。
+
+如果你禁用此策略设置，则所有设备都使用软件来预配 Microsoft Passport for Work，即使有可用的 TPM。
+
+如果你未配置此策略设置，则当 TPM 无法正常工作或不可用时，所有设备都使用软件来预配 Microsoft Passport for Work。
+        </string>
+        <string id="MSPassport_MinimumPINLength">最小 PIN 长度</string>
+        <string id="MSPassport_MinimumPINLengthExplain">最小 PIN 长度配置工作 PIN 所需的最小字符数。可以为此策略设置配置的最小数字是 4。可以配置的最大数字必须小于最大 PIN 长度策略设置中配置的数字或数字 127 (取两者中最小的)。
+
+如果配置了此策略设置，则工作 PIN 长度必须大于或等于该数字。
+
+如果禁用或未配置此策略设置，则工作 PIN 长度必须大于或等于 4。
+
+注意: 如果不满足上述指定的最小 PIN 长度的条件，则最大和最小 PIN 长度将使用默认值。
+        </string>
+        <string id="MSPassport_MaximumPINLength">最大 PIN 长度</string>
+        <string id="MSPassport_MaximumPINLengthExplain">最大 PIN 长度配置工作 PIN 所允许的最大字符数。可以为此策略设置配置的最大数字是 127。可以配置的最小数字必须大于最小 PIN 长度策略设置中配置的数字或数字 4 (取两者中较大的)。
+
+如果配置了此策略设置，则工作 PIN 长度必须小于或等于该数字。
+
+如果禁用或未配置此策略设置，则工作 PIN 长度必须小于或等于 127。
+
+注意: 如果不满足上述指定的最大 PIN 长度的条件，则最大和最小 PIN 长度将使用默认值。
+        </string>
+        <string id="MSPassport_UppercaseLetters">使用大写字母</string>
+        <string id="MSPassport_UppercaseLettersExplain">使用此策略设置可在 Microsoft Passport for work PIN 中配置大写字母的使用。
+
+如果你将此策略设置配置为“允许”，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用大写字母。
+
+如果你将此策略设置配置为“不允许”，Microsoft Passport for Work 将阻止用户在其工作 PIN 中使用大写字母。
+
+如果你将此策略设置配置为“必需”，Microsoft Passport for Work 将要求用户在其工作 PIN 中至少包含一个大写字母。
+
+如果你禁用或未配置此策略设置，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用大写字母。
+                </string>
+        <string id="MSPassport_LowercaseLetters">使用小写字母</string>
+        <string id="MSPassport_LowercaseLettersExplain">使用此策略设置可在 Microsoft Passport for work PIN 中配置小写字母的使用。
+
+如果你将此策略设置配置为“允许”，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用小写字母。
+
+如果你将此策略设置配置为“不允许”，Microsoft Passport for Work 将阻止用户在其工作 PIN 中使用小写字母。
+
+如果你将此策略设置配置为“必需”，Microsoft Passport for Work 将要求用户在其工作 PIN 中至少包含一个小写字母。
+
+如果你禁用或未配置此策略设置，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用小写字母。
+                </string>
+        <string id="MSPassport_SpecialCharacters">使用特殊字符</string>
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[使用此策略设置可在 Microsoft Passport for work PIN 手势中配置特殊字符的使用。Microsoft Passport for work PIN 手势的有效特殊字符包括: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ 。
+
+如果你将此策略设置配置为“允许”，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用特殊字符。
+
+如果你将此策略设置配置为“不允许”，Microsoft Passport for Work 将阻止用户在其工作 PIN 中使用特殊字符。
+
+如果你将此策略设置配置为“必需”，Microsoft Passport for Work 将要求用户在其工作 PIN 中至少包含一个特殊字符。
+
+如果你禁用或未配置此策略设置，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用特殊字符。
+                ]]></string>
+        <string id="MSPassport_Digits">使用数字</string>
+        <string id="MSPassport_DigitsExplain">使用此策略设置可在 Microsoft Passport for work PIN 中配置数字的使用。
+
+如果你将此策略设置配置为“允许”，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用数字。
+
+如果你将此策略设置配置为“不允许”，Microsoft Passport for Work 将阻止用户在其工作 PIN 中使用数字。
+
+如果你将此策略设置配置为“必需”，Microsoft Passport for Work 将要求用户在其工作 PIN 中至少包含一个数字。
+
+如果禁用或未配置此策略设置，Microsoft Passport for Work 将允许用户在其工作 PIN 中使用数字。
+
+        </string>
+        <string id="MSPassport_UseBiometrics">使用生物特征</string>
+        <string id="MSPassport_UseBiometricsExplain">Microsoft Passport for Work 允许用户使用生物特征手势(如脸和指纹)作为 PIN 手势的替代。但是，用户仍然必须配置工作 PIN 以便在发生故障时使用。
+
+如果你启用此策略设置，Microsoft Passport for Work 将允许使用生物特征手势。
+
+如果你禁用此策略设置，Microsoft Passport for Work 将阻止使用生物特征手势。
+
+如果你未配置此策略设置，Microsoft Passport for Work 将允许使用生物特征手势。
+
+注意: 禁用此策略将在所有帐户类型的设备上阻止使用生物特征手势。
+        </string>
+    </stringTable>
+    <presentationTable>
+        <presentation id="MSPassport_MinimumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="4">最小 PIN 长度</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_MaximumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MaximumPINLengthDataType" spin="true" spinStep="1" defaultvalue="127">最大 PIN 长度</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_UppercaseLettersControl">
+            <dropdownList refId="MSPassport_UppercaseLettersChoices" defaultItem="0">大写字母:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_LowercaseLettersControl">
+            <dropdownList refId="MSPassport_LowercaseLettersChoices" defaultItem="0">小写字母:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_SpecialCharactersControl">
+            <dropdownList refId="MSPassport_SpecialCharactersChoices" defaultItem="0">特殊字符:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_DigitsControl">
+            <dropdownList refId="MSPassport_DigitsChoices" defaultItem="0">数字:</dropdownList>
+        </presentation>
+
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

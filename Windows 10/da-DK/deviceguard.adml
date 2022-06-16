@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Windows Enhedssikring</displayName>
+  <description>Windows Device Guard Security</description>
+  <resources>
+    <stringTable>
+      <string id="DeviceGuard">Enhedssikring</string>
+      <string id="VirtualizationBasedSecurity">Aktivér virtualiseringsbaseret sikkerhed</string>
+      <string id="VirtualizationBasedSecurityHelp">Angiver, om Virtualiseringsbaseret sikkerhed er aktiveret.
+
+Virtualiseringsbaseret sikkerhed bruger Windows Hypervisor til at yde understøttelse til sikkerhedstjenester. Virtualiseringsbaseret sikkerhed kræver Sikker bootstart og kan aktiveres ved hjælp af DMA-beskyttelser. DMA-beskyttelser kræver hardwareunderstøttelser og bliver kun aktiveret på de enheder, der er konfigureret i øjeblikket.
+
+Virtualiseringsbaseret beskyttelse af kodeintegritet
+
+Denne indstilling giver mulighed for virtualiseringsbaseret beskyttelse af Kernel Mode Code Integrity. Når den indstilling er aktiveret, gennemtvinges beskyttelser af kernetilstandshukommelsen, og valideringsstien til kodeintegriteten beskyttes af den virtualiseringsbaserede sikkerhedsfunktion.
+
+Advarsel! Alle driverne i systemet skal være kompatible med denne funktion, eller også kan systemet gå ned. Sørg for, at denne politikindstilling kun implementeres på computere, hvor du ved, at de er kompatible. 
+
+Beskyttelse af legitimationsoplysninger
+
+Denne indstilling gør det muligt at beslutte, om brugerne kan aktivere beskyttelse af legitimationsoplysninger ved hjælp af virtualiseringsbaseret sikkerhed for at beskytte legitimationsoplysningerne.
+ 
+Hvis disse indstillinger deaktiveres, fjernes funktionen ikke fra computeren. I stedet skal du også fjerne sikkerhedsfunktionen fra hver enkelt computer, hvor en bruger fysisk er til stede, for at rydde den konfiguration, der er bevaret i sikker bootstart.
+
+Se i dokumentationen for at få et fuldt sæt krav til, hvordan denne funktion konfigureres på en sikker måde.
+      </string>
+      <string id="SecureBoot">Sikker bootstart</string>
+      <string id="SecureBootAndDmaProtection">Sikker bootstart og DMA-beskyttelse</string>
+      <string id="Disabled">Deaktiveret</string>
+      <string id="Enabled">Aktiveret</string>
+      <string id="ConfigCIPolicy">Implementer politik for kodeintegritet</string>
+      <string id="ConfigCIPolicyHelp">Implementer politik for kodeintegritet
+
+Denne indstilling gør det muligt at implementere en politik for kodeintegritet på en maskine for at styre, hvad der er tilladt at køre på den maskine.
+
+Hvis du implementerer en politik for kodeintegritet, begrænser Windows, hvad der kan køres både i kernetilstanden og på Windows-skrivebordet ud fra den politik. Hvis du vil aktivere denne politik, skal maskinen genstartes. 
+
+Filstien skal enten være en UNC-sti (f.eks. \\Servernavn\Sharenavn\SIPolicy.p7b) eller en lokal sti, der er gyldig (f.eks. C:\Mappenavn\SIPolicy.p7b). Den lokale maskinkonto (LOCAL SYSTEM) skal have adgangstilladelse til politikfilen.
+ 
+Hvis der bruges en signeret eller beskyttet politik, så vil en deaktivering af denne politikindstilling ikke fjerne funktionen fra computeren. I stedet skal du enten:
+
+   1) først opdatere politikken til en ikkebeskyttet politik og derefter deaktivere indstillingen eller
+   2) deaktivere indstillingen og derefter fjerne politikken fra hver enkelt computer, hvor brugeren fysisk er til stede.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="VirtualizationBasedSecurity">
+        <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Vælg sikkerhedsniveau for platform:</dropdownList>
+        <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Aktivér virtualiseringsbaseret beskyttelse af kodeintegritet</checkBox>
+        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Aktivér beskyttelse af legitimationsoplysninger</checkBox>
+      </presentation>
+      <presentation id="ConfigCIPolicy">
+        <textBox refId="ConfigCIPolicyFilePathText">
+          <label>Filsti til politik for kodeintegritet:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

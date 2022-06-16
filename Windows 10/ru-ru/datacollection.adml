@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>введите отображаемое имя</displayName>
+  <description>введите описание здесь</description>
+  <resources>
+    <stringTable>
+      <string id="AllowTelemetry">Разрешить телеметрию</string>
+      <string id="AllowTelemetry_0">0 – Откл. [только для предприятий]</string>
+      <string id="AllowTelemetry_1">1 – Базовая настройка</string>
+      <string id="AllowTelemetry_2">2 – Расширенные данные</string>
+      <string id="AllowTelemetry_3">3 – Полные данные</string>
+      <string id="AllowTelemetry_Explain">Этот параметр политики определяет объем данных о диагностике и использовании, отправляемых в Майкрософт. Значение "0" означает, что данные телеметрии компонентов ОС не отправляются в Майкрософт. Значение "0" применимо только к корпоративным и серверным устройствам. При установке этого значения для других устройств оно приравнивается к значению "1". Значение "1" определяет отправку только ограниченного объема данных о диагностике и использовании (основных сведений). Следует учесть, что установка значения "0" или "1" приведет к понижению показателей работы устройства. Значение "2" определяет отправку расширенных данных о диагностике и использовании. Значение "3" задает отправку тех же данных, что и при значении "2", плюс дополнительных диагностических данных, например сведений о состоянии системы во время зависания или сбоя, а также файлов и содержимого, которые могли вызвать проблему.
+
+Если вы выключите или не настроите этот параметр политики, пользователи смогут задать уровень данных телеметрии в настройках.
+
+</string>
+      <string id="EnableExperimentation">Отключение компонентов и параметров предварительных версий</string>
+      <string id="EnableExperimentation_1">Только параметры устройства</string>
+      <string id="EnableExperimentation_2">Полное экспериментирование</string>
+      <string id="EnableExperimentation_Explain">Этот параметр политики определяет уровень экспериментирования с продуктами, выполняемого Майкрософт для изучения предпочтений пользователя или поведения устройства. Значение "1" позволяет Майкрософт настраивать только параметры устройства. Значение "2" позволяет Майкрософт проводить полное экспериментирование.
+
+Если отключить этот параметр политики, возможность экспериментирования будет выключена.
+
+Если не настроить этот параметр политики, пользователь сможет сам включить или выключить параметр "Разрешить Майкрософт экспериментировать с компонентами этой сборки" в разделе "Параметры".
+</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AllowTelemetry">
+        <dropdownList refId="AllowTelemetry" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="EnableExperimentation">
+        <dropdownList refId="EnableExperimentation" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

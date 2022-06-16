@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">允許您執行指令碼，例如 Javascript</string>
+      <string id="AllowActiveScripting_Explain">這個設定可讓您決定是否要讓使用者執行指令碼，例如 Javascript。這個設定預設為啟用。
+
+如果您啟用這個設定，將會在您所有的電腦上開啟指令碼處理。
+
+如果您停用這個設定，指令碼將無法執行。</string>
+      <string id="AllowAutofill">允許您讓使用者在網站上使用自動填滿</string>
+      <string id="AllowAutofill_Explain">這個設定可讓您決定是否要讓使用者能夠在網站上使用自動填滿。這個設定預設為啟用。
+
+如果您啟用這個設定，使用者將可在網站上使用自動填滿，並在本機快取資訊。
+
+如果您停用這個設定，使用者將無法使用自動填滿。</string>
+      <string id="AllowDoNotTrack">允許您讓使用者傳送「不要追蹤」標頭</string>
+      <string id="AllowDoNotTrack_Explain">這個設定可讓您決定是否要讓使用者傳送「不要追蹤」標頭。這個設定預設為停用。
+
+如果您啟用這個設定，使用者將可從您組織中的任何電腦傳送「不要追蹤」標頭。
+
+如果您停用這個設定，使用者將無法傳送「不要追蹤」標頭。</string>
+      <string id="AllowPasswordManager">允許您設定密碼管理員</string>
+      <string id="AllowPasswordManager_Explain">這個設定可讓您決定使用者能否在他們的電腦本機儲存密碼。這個設定預設為啟用。
+
+如果您啟用這個設定，密碼管理員將啟動，且使用者將可以在他們的電腦本機儲存密碼。
+
+如果您停用這個設定，密碼管理員將關閉，且使用者將無法在本機儲存密碼。</string>
+      <string id="AllowPopups">允許您執行快顯視窗</string>
+      <string id="AllowPopups_Explain">這個設定可讓您決定是否要允許快顯視窗。這個設定預設為停用。
+
+如果您啟用這個設定，快顯視窗將可在您組織中的所有電腦上執行。
+
+如果您停用這個設定，快顯視窗將無法執行。</string>
+      <string id="AllowSearchSuggestionsinAddressBar">停止網址列顯示搜尋建議</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">這個設定可讓您決定網址列是否應顯示搜尋建議。這個設定預設為啟用。
+
+如果您啟用這個設定，使用者將可在網址列中看見搜尋建議。
+
+如果您停用這個設定，網址列中將不會顯示搜尋結果。</string>
+      <string id="AllowSmartScreen">允許您設定 SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">這個設定可讓您決定是否要開啟 SmartScreen。這個設定預設為啟用。
+
+如果您啟用這個設定，就會在您所有的電腦上開啟 SmartScreen。
+
+如果您停用這個設定，則會關閉 SmartScreen。</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">不封鎖</string>
+      <string id="CookiesList_Block_ThirdParty">僅封鎖第三方 Cookie</string>
+      <string id="CookiesList_Block_All">封鎖所有 Cookie</string>
+      <string id="EnterpriseModeSiteList">允許您設定企業網站清單</string>
+      <string id="EnterpriseModeSiteList_Explain">這個設定可讓您決定是否要針對相容性來設定及使用企業網站清單。
+
+如果您啟用這個設定，您將有 2 個額外選項:
+  • 未設定。您將無法使用企業網站清單。
+  • UseEnterpriseModeSiteList。可讓您使用企業網站清單。如果您使用此選項，您必須也在 {URI} 方塊中將位置納入您的 XML 網站清單中。此為預設值。</string>
+      <string id="HomePage">允許您設定您的首頁</string>
+      <string id="HomePage_Explain">這個設定可讓您設定您組織的首頁。依照預設，這個設定並未設定，而是使用應用程式設定。
+
+如果您啟用這個設定，您必須也在 {URI} 方塊中包含您的網站位置。</string>
+      <string id="ItemNameDisable">停用</string>
+      <string id="ItemNameEnable">啟用</string>
+      <string id="SendIntranetTraffictoInternetExplorer">將所有內部網路流量傳送到 Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>輸入企業模式 IE 網站清單的位置 (URL)</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>輸入您首頁網站的位置 (URL)</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">設定 Cookie 設定</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

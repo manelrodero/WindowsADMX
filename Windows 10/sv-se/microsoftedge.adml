@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Tillåt att skript körs, t.ex. JavaScript</string>
+      <string id="AllowActiveScripting_Explain">Med den här principinställningen kan du ange om användarna får köra skript som JavaScript. Inställningen är aktiverad som standard.
+
+Om du aktiverar inställningen kan skript köras på alla dina datorer. 
+
+Om du inaktiverar inställningen kan skript inte köras.</string>
+      <string id="AllowAutofill">Låt användare använda autoifyllning på webbplatser</string>
+      <string id="AllowAutofill_Explain">Med den här principinställningen anger du om användarna kan använda autoifyllning på webbplatser. Inställningen är aktiverad som standard.
+
+Om du aktiverar inställningen kan användarna använda autoifyllning på webbplatser, med cachelagring av information lokalt.
+
+Om du inaktiverar inställningen kan användarna inte använda autoifyllning.</string>
+      <string id="AllowDoNotTrack">Låt användare skicka Do Not Track-huvuden</string>
+      <string id="AllowDoNotTrack_Explain">Med den här principinställningen kan du ange om användarna får skicka Do Not Track-huvuden. Inställningen är inaktiverad som standard.
+
+Om du aktiverar inställningen kan användare skicka Do Not Track-huvuden från alla datorer i din organisation. 
+
+Om du inaktiverar inställningen kan användare inte skicka Do Not Track-huvuden.</string>
+      <string id="AllowPasswordManager">Aktivera lösenordshanteraren</string>
+      <string id="AllowPasswordManager_Explain">Med den här principinställningen kan du ange om användarna får spara lösenord lokalt på sina datorer. Inställningen är aktiverad som standard.
+
+Om du aktiverar inställningen aktiveras lösenordshanteraren och användarna kan spara lösenord lokalt på sina datorer.
+
+Om du inaktiverar inställningen inaktiveras lösenordshanteraren och användarna kan inte spara lösenord lokalt.</string>
+      <string id="AllowPopups">Tillåt att popup-fönster körs</string>
+      <string id="AllowPopups_Explain">Med den här principinställningen kan du ange om du vill tillåta popup-fönster. Inställningen är inaktiverad som standard.
+
+Om du aktiverar inställningen kan popup-fönster köras på alla datorer i organisationen.
+
+Om du inaktiverar inställningen kan popup-fönster inte köras.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Visa sökförslag i adressfältet</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Med den här principinställningen kan du ange om sökförslag ska visas i adressfältet. Inställningen är aktiverad som standard.
+
+Om du aktiverar inställningen kan användare se sökförslag i adressfältet.
+
+Om du inaktiverar inställningen visas inte sökförslag i adressfältet.</string>
+      <string id="AllowSmartScreen">Aktivera SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Med den här principinställningen kan du ange om SmartScreen ska aktiveras. Inställningen är aktiverad som standard.
+
+Om du aktiverar inställningen aktiveras SmartScreen för alla dina datorer. 
+
+Om du inaktiverar inställningen inaktiveras SmartScreen.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Blockera inte</string>
+      <string id="CookiesList_Block_ThirdParty">Blockera endast cookies från tredje part</string>
+      <string id="CookiesList_Block_All">Blockera alla cookies</string>
+      <string id="EnterpriseModeSiteList">Konfigurera listan över webbplatser i företagsläge</string>
+      <string id="EnterpriseModeSiteList_Explain">Med den här principinställningen kan du konfigurera och använda listan över webbplatser i företagsläge för kompatibilitet.
+
+Om du aktiverar inställningen har du två alternativ:
+  • Inte konfigurerad. Gör att du inte kan använda listan över webbplatser i företagsläge.
+  • UseEnterpriseModeSiteList. Gör att du kan använda listan över webbplatser i företagsläge. Om du använder det här alternativet måste du även inkludera sökvägen till XML-webbplatslistan i {URI}-rutan. Det här alternativet används som standard.</string>
+      <string id="HomePage">Konfigurera startsidan</string>
+      <string id="HomePage_Explain">Med den här principinställningen kan du ange startsidan för din organisation. Den här inställningen är som standard inte konfigurerad, utan appinställningar används i stället.
+
+Om du aktiverar den här inställningen måste du även inkludera sökvägen till webbplatsen i {URI}-rutan.</string>
+      <string id="ItemNameDisable">Inaktivera</string>
+      <string id="ItemNameEnable">Aktivera</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Skicka all intranättrafik till Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Ange platsen (URL:en) till din lista över webbplatser som ska öppnas i företagsläget</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Ange platsen (URL:en) till din startsida</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Konfigurera cookiesinställning</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

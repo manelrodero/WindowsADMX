@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Passport για εργασία</displayName>
+  <description>Ρύθμιση παραμέτρων Microsoft Passport για εργασία</description>
+  <resources>
+    <stringTable>
+        <string id="MSPassportForWorkCategory">Microsoft Passport για εργασία</string>
+        <string id="MSPassportForWorkPINComplexityCategory">Πολυπλοκότητα PIN</string>
+        <string id="MSPassport_UsePassportForWork">Χρήση Microsoft Passport για εργασία</string>
+        <!-- DropdownList Button strings -->
+        <string id="ButtonTextAllow">Αποδοχή</string>
+        <string id="ButtonTextDisallow">Απόρριψη</string>
+        <string id="ButtonTextRequired">Απαιτείται</string>
+        <string id="MSPassport_UsePassportForWorkExplain">Το Microsoft Passport για εργασία είναι μια εναλλακτική μέθοδος για είσοδο στα Windows με χρήση του λογαριασμού της υπηρεσίας καταλόγου Active Directory ή Azure Active Directory η οποία μπορεί να αντικαταστήσει κωδικούς πρόσβασης, έξυπνες κάρτες, και εικονικές έξυπνες κάρτες.
+
+Αν ενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, η συσκευή παρέχει το Microsoft Passport για εργασία για όλους τους χρήστες.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, η συσκευή δεν παρέχει το Microsoft Passport για εργασία για κανένα χρήστη.</string>
+        <string id="MSPassport_RequireSecurityDevice">Χρήση συσκευής ασφάλειας υλικού</string>
+        <string id="MSPassport_RequireSecurityDeviceExplain">Μια Μονάδα αξιόπιστης πλατφόρμας (TPM) παρέχει πρόσθετα πλεονεκτήματα ασφάλειας σε σχέση με το λογισμικό, επειδή τα δεδομένα που είναι αποθηκευμένα σε αυτή δεν μπορούν να χρησιμοποιηθούν σε άλλες συσκευές.
+
+Αν ενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, μόνο οι συσκευές με TPM που μπορεί να χρησιμοποιηθεί παρέχουν Microsoft Passport για εργασία.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, όλες οι συσκευές παρέχουν Microsoft Passport για εργασία χρησιμοποιώντας λογισμικό, ακόμα και αν υπάρχει TPM που μπορεί να χρησιμοποιηθεί.
+
+Αν δεν ρυθμίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής, όλες οι συσκευές θα παρέχουν Microsoft Passport για εργασία χρησιμοποιώντας λογισμικό, αν η TPM δεν είναι λειτουργική ή διαθέσιμη.
+        </string>
+        <string id="MSPassport_MinimumPINLength">Ελάχιστο μέγεθος PIN</string>
+        <string id="MSPassport_MinimumPINLengthExplain">Το ελάχιστο μέγεθος PIN ρυθμίζει τον ελάχιστο αριθμό χαρακτήρων που απαιτούνται για το PIN εργασίας. Ο μικρότερος αριθμός που μπορείτε να ρυθμίσετε για αυτήν τη ρύθμιση πολιτικής είναι 4. Ο μεγαλύτερος αριθμός που μπορείτε να ορίσετε πρέπει να είναι μικρότερος από τον αριθμό που έχει ρυθμιστεί στη ρύθμιση πολιτικής μέγιστου μεγέθους PIN ή τον αριθμό 127, ανάλογα με το ποιος είναι μικρότερος.
+
+Αν ρυθμίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής, το μέγεθος του PIN εργασίας πρέπει να είναι μεγαλύτερο ή ίσο με αυτόν τον αριθμό.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το μέγεθος του PIN εργασίας πρέπει να είναι μεγαλύτερο ή ίσο με 4.
+
+ΣΗΜΕΙΩΣΗ: Αν οι συνθήκες που καθορίζονται παραπάνω για το ελάχιστο μέγεθος PIN δεν πληρούνται, θα χρησιμοποιούνται οι προεπιλεγμένες τιμές τόσο για το μέγιστο όσο και για το ελάχιστο μέγεθος PIN.
+        </string>
+        <string id="MSPassport_MaximumPINLength">Μέγιστο μέγεθος PIN</string>
+        <string id="MSPassport_MaximumPINLengthExplain">Το μέγιστο μέγεθος PIN ρυθμίζει τον μέγιστο αριθμό χαρακτήρων που απαιτούνται για το PIN εργασίας. Ο μεγαλύτερος αριθμός που μπορείτε να ρυθμίσετε για αυτήν τη ρύθμιση πολιτικής είναι 127. Ο μικρότερος αριθμός που μπορείτε να ορίσετε πρέπει να είναι μεγαλύτερος από τον αριθμό που έχει ρυθμιστεί στη ρύθμιση πολιτικής ελάχιστου μεγέθους PIN ή τον αριθμό 4, ανάλογα με το ποιος είναι μεγαλύτερος.
+
+Αν ρυθμίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής, το μέγεθος του PIN εργασίας πρέπει να είναι μικρότερο ή ίσο με αυτόν τον αριθμό.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το μέγεθος του PIN εργασίας πρέπει να είναι μικρότερο ή ίσο με 127.
+
+ΣΗΜΕΙΩΣΗ: Αν οι συνθήκες που καθορίζονται παραπάνω για το μέγιστο μέγεθος PIN δεν πληρούνται, θα χρησιμοποιούνται οι προεπιλεγμένες τιμές τόσο για το μέγιστο όσο και για το ελάχιστο μέγεθος PIN.
+        </string>
+        <string id="MSPassport_UppercaseLetters">Χρήση κεφαλαίων</string>
+        <string id="MSPassport_UppercaseLettersExplain">Χρησιμοποιήστε αυτήν τη ρύθμιση πολιτικής, για να ρυθμίσετε τις παραμέτρους χρήσης κεφαλαίων στο PIN του Microsoft Passport για εργασία.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Αποδοχή”, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν κεφαλαία στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απόρριψη”, το Microsoft Passport για εργασία αποτρέπει τους χρήστες από τη χρήση κεφαλαίων στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απαιτείται”, το Microsoft Passport για εργασία απαιτεί από τους χρήστες να περιλαμβάνουν τουλάχιστον ένα κεφαλαίο γράμμα στο PIN εργασίας τους.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν κεφαλαία στο PIN εργασίας τους.
+                </string>
+        <string id="MSPassport_LowercaseLetters">Χρήση πεζών</string>
+        <string id="MSPassport_LowercaseLettersExplain">Χρησιμοποιήστε αυτήν τη ρύθμιση πολιτικής, για να ρυθμίσετε τις παραμέτρους χρήσης πεζών στο PIN του Microsoft Passport για εργασία.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Αποδοχή”, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν πεζά στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απόρριψη”, το Microsoft Passport για εργασία αποτρέπει τους χρήστες από τη χρήση πεζών στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απαιτείται”, το Microsoft Passport για εργασία απαιτεί από τους χρήστες να περιλαμβάνουν τουλάχιστον ένα πεζό γράμμα στο PIN εργασίας τους.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν πεζά στο PIN εργασίας τους.
+                </string>
+        <string id="MSPassport_SpecialCharacters">Χρήση ειδικών χαρακτήρων</string>
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Χρησιμοποιήστε αυτήν τη ρύθμιση πολιτικής, για να ρυθμίσετε τις παραμέτρους χρήσης ειδικών χαρακτήρων στην κίνηση PIN του Microsoft Passport για εργασία. Στους έγκυρους ειδικούς χαρακτήρες για τις κινήσεις PIN του Microsoft Passport για εργασία περιλαμβάνονται οι εξής: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Αποδοχή”, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν ειδικούς χαρακτήρες στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απόρριψη”, το Microsoft Passport για εργασία αποτρέπει τους χρήστες από τη χρήση ειδικών χαρακτήρων στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απαιτείται”, το Microsoft Passport για εργασία απαιτεί από τους χρήστες να περιλαμβάνουν τουλάχιστον έναν ειδικό χαρακτήρα στο PIN εργασίας τους.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν ειδικούς χαρακτήρες στο PIN εργασίας τους.
+                ]]></string>
+        <string id="MSPassport_Digits">Χρήση ψηφίων</string>
+        <string id="MSPassport_DigitsExplain">Χρησιμοποιήστε αυτήν τη ρύθμιση πολιτικής, για να ρυθμίσετε τις παραμέτρους χρήσης ψηφίων στο PIN του Microsoft Passport για εργασία.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Αποδοχή”, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν ψηφία στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απόρριψη”, το Microsoft Passport για εργασία αποτρέπει τους χρήστες από τη χρήση ψηφίων στο PIN εργασίας τους.
+
+Αν ορίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής στην επιλογή “Απαιτείται”, το Microsoft Passport για εργασία απαιτεί από τους χρήστες να περιλαμβάνουν τουλάχιστον ένα ψηφίο στο PIN εργασίας τους.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν ψηφία στο PIN εργασίας τους.
+
+        </string>
+        <string id="MSPassport_UseBiometrics">Χρήση βιομετρικής</string>
+        <string id="MSPassport_UseBiometricsExplain">Το Microsoft Passport για εργασία επιτρέπει στους χρήστες να χρησιμοποιούν βιομετρικές κινήσεις όπως το πρόσωπο και τα δακτυλικά αποτυπώματα ως εναλλακτικές της κίνησης PIN. Ωστόσο, οι χρήστες πρέπει παρ' όλα αυτά να ρυθμίσουν τις παραμέτρους ενός PIN εργασίας για χρήση σε περίπτωση αποτυχιών.
+
+Αν ενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, το Microsoft Passport για εργασία επιτρέπει τη χρήση βιομετρικών κινήσεων.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, το Microsoft Passport για εργασία αποτρέπει τη χρήση βιομετρικών κινήσεων.
+
+Αν δεν ρυθμίσετε τις παραμέτρους αυτής της ρύθμισης πολιτικής, το Microsoft Passport για εργασία επιτρέπει τη χρήση βιομετρικών κινήσεων.
+
+ΣΗΜΕΙΩΣΗ: Η απενεργοποίηση αυτής της πολιτικής αποτρέπει τη χρήση βιομετρικών κινήσεων στη συσκευή για όλους τους τύπους λογαριασμών.
+        </string>
+    </stringTable>
+    <presentationTable>
+        <presentation id="MSPassport_MinimumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="4">Ελάχιστο μέγεθος PIN</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_MaximumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MaximumPINLengthDataType" spin="true" spinStep="1" defaultvalue="127">Μέγιστο μέγεθος PIN</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_UppercaseLettersControl">
+            <dropdownList refId="MSPassport_UppercaseLettersChoices" defaultItem="0">Κεφαλαία:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_LowercaseLettersControl">
+            <dropdownList refId="MSPassport_LowercaseLettersChoices" defaultItem="0">Πεζά:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_SpecialCharactersControl">
+            <dropdownList refId="MSPassport_SpecialCharactersChoices" defaultItem="0">Ειδικοί χαρακτήρες:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_DigitsControl">
+            <dropdownList refId="MSPassport_DigitsChoices" defaultItem="0">ψηφία:</dropdownList>
+        </presentation>
+
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

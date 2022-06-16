@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>itt adja meg a megjelenítendő nevet</displayName>
+  <description>itt adja meg a leírást</description>
+  <resources>
+    <stringTable>
+      <string id="Cat_LanmanWorkstation">Lanman-munkaállomás</string>
+      <string id="Pol_CipherSuiteOrder_Name">Titkosítócsomagok sorrendje</string>
+      <string id="Pol_CipherSuiteOrder_Help">Ezzel a házirend-beállítással határozhatja meg, hogy az SMB-ügyfél mely titkosítócsomagokat használja.
+
+Ha engedélyezi ezt a házirend-beállítást, a rendszer a megadott sorrend alapján rangsorolja a titkosítócsomagokat.
+
+Ha engedélyezi a házirend-beállítást, de nem ad meg legalább egy támogatott titkosítócsomagot, illetve ha letiltja vagy nem konfigurálja a házirend-beállítást, a rendszer az alapértelmezett titkosítócsomag-sorrendet használja.
+
+SMB 3.11-es titkosítócsomagok:
+
+AES_128_GCM
+AES_128_CCM
+
+SMB 3.0-s  és 3.02-es titkosítócsomagok:
+
+AES_128_CCM
+
+A beállítás módosítása:
+
+A beviteli mezőben adja meg a titkosítócsomagok kívánt sorrendjét. A titkosítócsomagokat külön sorban, rangsor szerint csökkenő sorrendben adja meg. Távolítson el minden olyan csomagot, amelyet nem kíván használni.
+
+Megjegyzés: E biztonsági beállítás módosításai a Windows újraindítása után lépnek érvénybe.</string>
+      </stringTable>
+    <presentationTable>
+      <presentation id="Pol_CipherSuiteOrder">
+        <text>Titkosítócsomagok:</text>
+        <multiTextBox refId="MultiText_CipherSuiteOrder"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

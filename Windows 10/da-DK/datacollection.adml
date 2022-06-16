@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>indtast det viste navn her</displayName>
+  <description>indtast beskrivelsen her</description>
+  <resources>
+    <stringTable>
+      <string id="AllowTelemetry">Tillad telemetri</string>
+      <string id="AllowTelemetry_0">0 - Fra [Kun Enterprise]</string>
+      <string id="AllowTelemetry_1">1 – Standard</string>
+      <string id="AllowTelemetry_2">2 - Forbedret</string>
+      <string id="AllowTelemetry_3">3 - Fuld</string>
+      <string id="AllowTelemetry_Explain">Denne politikindstilling bestemmer den mængde diagnosticerings- og forbrugsdata, der rapporteres til Microsoft. En værdi på 0 betyder, at der ikke sendes telemetridata fra OS-komponenter til Microsoft. Indstilling af en værdi på 0 gælder kun for enterprise- og serverenheder. Indstilling af en værdi på 0 for andre enheder svarer til at vælge en værdi på 1. En værdi på 1 sender kun en begrænset eller standardmængde diagnosticerings- og forbrugsdata. Bemærk, at indstillingsværdierne på 0 eller 1 forringer visse anvendelsestyper på enheden. En værdi på 2 sender forbedrede diagnosticerings- og forbrugsdata. En værdi på 3 sender de samme data som værdien 2 plus yderligere diagnosticeringsdata som f.eks. systemtilstanden på det tidspunkt, hvor systemet hænger eller er gået ned, og de filer og det indhold, der kan have forårsaget problemet.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan brugerne konfigurere telemetriniveauet under Indstillinger.
+
+</string>
+      <string id="EnableExperimentation">Deaktiver foreløbige funktioner eller indstillinger</string>
+      <string id="EnableExperimentation_1">Kun enhedsindstillinger</string>
+      <string id="EnableExperimentation_2">Fulde eksperimenter</string>
+      <string id="EnableExperimentation_Explain">Denne politikindstilling bestemmer, hvilket niveau Microsoft kan eksperimentere med produktet på for at undersøge brugerens indstillinger eller enhedens virkemåde. En værdi på 1 betyder, at Microsoft kun kan konfigurere enhedsindstillinger. En værdi på 2 betyder, at Microsoft kan udføre fulde eksperimenter.
+
+Hvis du deaktiverer denne politikindstilling, slås alle eksperimenter fra.
+
+Hvis du undlader at konfigurere denne indstilling, kan brugeren konfigurere indstillingen "Lad Microsoft prøve funktioner på dette build" under Indstillinger.
+</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AllowTelemetry">
+        <dropdownList refId="AllowTelemetry" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+      <presentation id="EnableExperimentation">
+        <dropdownList refId="EnableExperimentation" noSort="true" defaultItem="1"></dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

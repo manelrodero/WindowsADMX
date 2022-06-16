@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Passport for Work</displayName>
+  <description>Configuratie voor Microsoft Passport for Work</description>
+  <resources>
+    <stringTable>
+        <string id="MSPassportForWorkCategory">Microsoft Passport for Work</string>
+        <string id="MSPassportForWorkPINComplexityCategory">Complexiteit pincode</string>
+        <string id="MSPassport_UsePassportForWork">Microsoft Passport for Work gebruiken</string>
+        <!-- DropdownList Button strings -->
+        <string id="ButtonTextAllow">Toestaan</string>
+        <string id="ButtonTextDisallow">Niet toestaan</string>
+        <string id="ButtonTextRequired">Vereist</string>
+        <string id="MSPassport_UsePassportForWorkExplain">Microsoft Passport for Work biedt een alternatieve methode voor aanmelding bij Windows met uw Active Directory- of Azure Active Directory-account ter vervanging van wachtwoorden, smartcards en virtuele smartcards.
+
+Als u deze beleidsinstelling inschakelt of niet configureert, wordt Microsoft Passport for Work door het apparaat ingericht voor alle gebruikers.
+
+Als u de beleidsinstelling uitschakelt, wordt Microsoft Passport for Work voor geen enkele gebruiker ingericht.</string>
+        <string id="MSPassport_RequireSecurityDevice">Een apparaat voor hardwarebeveiliging gebruiken</string>
+        <string id="MSPassport_RequireSecurityDeviceExplain">Een Trusted Platform Module (TPM) biedt extra beveiligingsvoordelen in vergelijking met software omdat in de TPM opgeslagen gegevens niet op andere apparaten kunnen worden gebruikt.
+
+Als u deze beleidsinstelling inschakelt, wordt Microsoft Passport for Work alleen ingericht door apparaten met een bruikbare TPM.
+
+Als u de beleidsinstelling uitschakelt, wordt Microsoft Passport for Work ingericht door alle apparaten  met behulp van software, ook als er een bruikbare TPM is.
+
+Als u de beleidsinstelling niet configureert, wordt Microsoft Passport for Work ingericht door alle apparaten met behulp van software als de TPM niet werkt of niet beschikbaar is.
+        </string>
+        <string id="MSPassport_MinimumPINLength">Minimale lengte pincode</string>
+        <string id="MSPassport_MinimumPINLengthExplain">Met Minimale lengte pincode configureert u het minimum aantal tekens dat vereist is voor de werkpincode. Het kleinste aantal dat u voor deze beleidsinstelling kunt configureren, is 4. Het grootste aantal dat u kunt configureren, moet kleiner zijn dan het aantal dat is geconfigureerd in de beleidsinstelling Minimale lengte pincode of kleiner zijn dan 127, afhankelijk van welke waarde lager is.
+
+Als u deze beleidsinstelling configureert, moet de lengte van de werkpincode groter zijn dan of gelijk zijn aan dit aantal.
+
+Als u de beleidsinstelling uitschakelt of niet configureert, moet de lengte van de werkpincode groter zijn dan of gelijk zijn aan 4.
+
+OPMERKING: als niet wordt voldaan aan de hierboven beschreven voorwaarden voor de minimale lengte van de pincode, worden er standaardwaarden gebruikt voor zowel de maximale als de minimale lengte van de pincode.
+        </string>
+        <string id="MSPassport_MaximumPINLength">Maximale lengte pincode</string>
+        <string id="MSPassport_MaximumPINLengthExplain">Met Maximale lengte pincode configureert u het maximum aantal tekens dat vereist is voor de werkpincode. Het grootste aantal dat u voor deze beleidsinstelling kunt configureren, is 127. Het kleinste aantal dat u kunt configureren, moet groter zijn dan het aantal dat is geconfigureerd in de beleidsinstelling Minimale lengte pincode of kleiner dan 4, afhankelijk van welke waarde hoger is.
+
+Als u deze beleidsinstelling configureert, moet de lengte van de werkpincode kleiner zijn dan of gelijk zijn aan dit aantal.
+
+Als u de beleidsinstelling uitschakelt of niet configureert, moet de lengte van de werkpincode kleiner zijn dan of gelijk zijn aan 127.
+
+OPMERKING: als niet wordt voldaan aan de hierboven beschreven voorwaarden voor de maximale lengte van de pincode, worden er standaardwaarden gebruikt voor zowel de maximale als de minimale lengte van de pincode.
+        </string>
+        <string id="MSPassport_UppercaseLetters">Hoofdletters gebruiken</string>
+        <string id="MSPassport_UppercaseLettersExplain">Gebruik deze beleidsinstelling om het gebruik van hoofdletters in de pincode voor Microsoft Passport for Work te configureren.
+
+Als u deze beleidsinstelling configureert als Toestaan, kunnen gebruikers in Microsoft Passport for Work gebruikmaken van hoofdletters in hun werkpincode.
+
+Als u de beleidsinstelling configureert als Niet toestaan, kunnen gebruikers in Microsoft Passport for Work geen hoofdletters in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling configureert als Vereist, moeten gebruikers in Microsoft Passport for Work ten minste één hoofdletter in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers in Microsoft Passport for Work hoofdletters in hun werkpincode gebruiken.
+                </string>
+        <string id="MSPassport_LowercaseLetters">Kleine letters gebruiken</string>
+        <string id="MSPassport_LowercaseLettersExplain">Gebruik deze beleidsinstelling om het gebruik van kleine letters in de pincode voor Microsoft Passport for Work te configureren.
+
+Als u deze beleidsinstelling configureert als Toestaan, kunnen gebruikers in Microsoft Passport for Work gebruikmaken van kleine letters in hun werkpincode.
+
+Als u de beleidsinstelling configureert als Niet toestaan, kunnen gebruikers in Microsoft Passport for Work geen kleine letters in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling configureert als Vereist, moeten gebruikers in Microsoft Passport for Work ten minste één kleine letter in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers in Microsoft Passport for Work kleine letters in hun werkpincode gebruiken.
+                </string>
+        <string id="MSPassport_SpecialCharacters">Speciale tekens gebruiken</string>
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Gebruik deze beleidsinstelling om het gebruik van speciale tekens in de pincode voor Microsoft Passport for Work te configureren. Geldige speciale tekens zijn: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
+
+Als u deze beleidsinstelling configureert als Toestaan, kunnen gebruikers in Microsoft Passport for Work gebruikmaken van speciale tekens in hun werkpincode.
+
+Als u de beleidsinstelling configureert als Niet toestaan, kunnen gebruikers in Microsoft Passport for Work geen speciale tekens in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling configureert als Vereist, moeten gebruikers in Microsoft Passport for Work ten minste één speciaal teken in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers in Microsoft Passport for Work speciale tekens in hun werkpincode gebruiken.
+                ]]></string>
+        <string id="MSPassport_Digits">Cijfers gebruiken</string>
+        <string id="MSPassport_DigitsExplain">Gebruik deze beleidsinstelling om het gebruik van cijfers in de pincode voor Microsoft Passport for Work te configureren.
+
+Als u deze beleidsinstelling configureert als Toestaan, kunnen gebruikers in Microsoft Passport for Work gebruikmaken van cijfers in hun werkpincode.
+
+Als u de beleidsinstelling configureert als Niet toestaan, kunnen gebruikers in Microsoft Passport for Work geen cijfers in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling configureert als Vereist, moeten gebruikers in Microsoft Passport for Work ten minste één cijfer in hun werkpincode gebruiken.
+
+Als u de beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers in Microsoft Passport for Work cijfers in hun werkpincode gebruiken.
+
+        </string>
+        <string id="MSPassport_UseBiometrics">Biometrische functies gebruiken</string>
+        <string id="MSPassport_UseBiometricsExplain">Gebruikers kunnen in Microsoft Passport for Work gebruikmaken van biometrische gebaren, zoals gezichten en vingerafdrukken, als alternatief voor de pincode. Gebruikers moeten echter nog wel een werkpincode configureren, die ze kunnen gebruiken als er problemen zijn.
+
+Als u deze beleidsinstelling inschakelt, laat Microsoft Passport for Work het gebruik van biometrische gebaren toe.
+
+Als u de beleidsinstelling uitschakelt, verhindert Microsoft Passport for Work het gebruik van biometrische gebaren.
+
+Als u de beleidsinstelling niet configureert, laat Microsoft Passport for Work het gebruik van biometrische gebaren toe.
+
+OPMERKING: als u deze beleidsinstelling uitschakelt, kunnen er voor geen enkel accounttype biometrische gebaren worden gebruikt op het apparaat.
+        </string>
+    </stringTable>
+    <presentationTable>
+        <presentation id="MSPassport_MinimumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="4">Minimale lengte pincode</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_MaximumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MaximumPINLengthDataType" spin="true" spinStep="1" defaultvalue="127">Maximale lengte pincode</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_UppercaseLettersControl">
+            <dropdownList refId="MSPassport_UppercaseLettersChoices" defaultItem="0">Hoofdletters:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_LowercaseLettersControl">
+            <dropdownList refId="MSPassport_LowercaseLettersChoices" defaultItem="0">Kleine letters:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_SpecialCharactersControl">
+            <dropdownList refId="MSPassport_SpecialCharactersChoices" defaultItem="0">Speciale tekens:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_DigitsControl">
+            <dropdownList refId="MSPassport_DigitsChoices" defaultItem="0">cijfers:</dropdownList>
+        </presentation>
+
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

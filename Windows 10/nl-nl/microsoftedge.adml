@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Hiermee kunt u scripts, zoals Javascript, uitvoeren</string>
+      <string id="AllowActiveScripting_Explain">Met deze instelling kunt u bepalen of mensen scripts, zoals JavaScript, kunnen uitvoeren. De instelling is standaard ingeschakeld.
+
+Als u deze instelling inschakelt, wordt het uitvoeren van scripts voor al uw computers ingeschakeld. 
+
+Als u de instelling uitschakelt, kunnen er geen scripts worden uitgevoerd.</string>
+      <string id="AllowAutofill">Hiermee kunt u mensen Automatisch invullen op websites laten gebruiken</string>
+      <string id="AllowAutofill_Explain">Met deze instelling kunt u bepalen of mensen Automatisch invullen op websites kunnen gebruiken. Deze instelling is standaard ingeschakeld.
+
+Als u deze instelling inschakelt, kunnen mensen de functie Automatisch invullen op websites gebruiken, waarbij de informatie lokaal in het cachegeheugen wordt opgeslagen.
+
+Als u de instelling uitschakelt, kunnen mensen Automatisch invullen niet gebruiken.</string>
+      <string id="AllowDoNotTrack">Hiermee kunt u instellen dat mensen Do Not Track-headers kunnen verzenden</string>
+      <string id="AllowDoNotTrack_Explain">Met deze instelling kunt u bepalen of mensen Do Not Track-headers kunnen verzenden. De instelling is standaard uitgeschakeld.
+
+Als u deze instelling inschakelt, kunnen mensen Do Not Track-headers vanaf elke computer in uw organisatie verzenden.
+
+Als u de instelling uitschakelt, kunnen mensen geen Do Not Track-headers verzenden.</string>
+      <string id="AllowPasswordManager">Hiermee kunt u Wachtwoordbeheer configureren</string>
+      <string id="AllowPasswordManager_Explain">Met deze instelling kunt u bepalen of mensen wachtwoorden lokaal op hun computer kunnen opslaan. Deze instelling is standaard ingeschakeld.
+
+Als u deze instelling inschakelt, wordt Wachtwoordbeheer ingeschakeld en kunnen mensen wachtwoorden lokaal op hun computer opslaan.
+
+Als u deze instelling uitschakelt, wordt Wachtwoordbeheer uitgeschakeld en kunnen mensen wachtwoorden niet lokaal opslaan.</string>
+      <string id="AllowPopups">Hiermee kunt u pop-ups uitvoeren</string>
+      <string id="AllowPopups_Explain">Met deze instelling kunt u bepalen of het gebruik van pop-ups is toegestaan. Deze instelling is standaard uitgeschakeld.
+
+Als u deze instelling inschakelt, kunnen op alle computers van uw organisatie pop-ups worden uitgevoerd.
+
+Als u de instelling uitschakelt, kunnen er geen pop-ups worden uitgevoerd.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Hiermee wordt de weergave van zoeksuggesties op de adresbalk stopgezet</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Met deze instelling kunt u bepalen of op de adresbalk zoeksuggesties moeten worden weergegeven. Deze instelling is standaard ingeschakeld.
+
+Als u deze instelling inschakelt, worden er zoeksuggesties op de adresbalk weergegeven.
+
+Als u deze instelling uitschakelt, worden er geen zoekresultaten op de adresbalk weergegeven.</string>
+      <string id="AllowSmartScreen">Hiermee kunt u SmartScreen configureren</string>
+      <string id="AllowSmartScreen_Explain">Met deze instelling kunt u bepalen of u SmartScreen wilt inschakelen. Deze instelling is standaard ingeschakeld.
+
+Als u deze instelling inschakelt, wordt SmartScreen ingeschakeld voor al uw computers. 
+
+Als u de instelling uitschakelt, wordt SmartScreen uitgeschakeld.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Niet blokkeren</string>
+      <string id="CookiesList_Block_ThirdParty">Alleen cookies van derden blokkeren</string>
+      <string id="CookiesList_Block_All">Alle cookies blokkeren</string>
+      <string id="EnterpriseModeSiteList">Hiermee kunt u de lijst van Enterprise-sites configureren</string>
+      <string id="EnterpriseModeSiteList_Explain">Met deze instelling kunt u bepalen of u de lijst van Enterprise-sites wilt instellen en gebruiken om compatibiliteitsredenen.
+
+Als u deze instelling inschakelt, zijn er twee opties:
+  • Niet geconfigureerd. U kunt de lijst van Enterprise-sites niet gebruiken.
+  • UseEnterpriseModeSiteList. Hiermee kunt u de lijst van Enterprise-sites gebruiken. Als u deze optie gebruikt, moet u tevens de locatie voor uw lijst van XML-sites opgeven in het {URI}-vak. Dit is de standaardwaarde.</string>
+      <string id="HomePage">Hiermee kunt u uw startpagina configureren</string>
+      <string id="HomePage_Explain">Met deze instelling kunt u de startpagina voor uw organisatie instellen. Deze instelling is standaard niet geconfigureerd en in plaats daarvan worden de App-instellingen gebruikt.
+
+Als u deze instelling inschakelt, moet u tevens de locatie van uw website opnemen in het {URI}-vak.</string>
+      <string id="ItemNameDisable">Uitschakelen</string>
+      <string id="ItemNameEnable">Inschakelen</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Hiermee wordt alle intranetverkeer doorgestuurd naar Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Geef de locatie (URL) op van uw lijst van websites voor de ondernemingsmodus van IE</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Typ de locatie (URL) voor de website van uw startpagina</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Instellingen voor cookies configureren</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

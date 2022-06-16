@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Anzeigename hier eingeben</displayName>
+  <description>Beschreibung hier eingeben</description>
+  <resources>
+    <stringTable>
+      <string id="Cat_LanmanWorkstation">LanMan-Arbeitsstation</string>
+      <string id="Pol_CipherSuiteOrder_Name">Reihenfolge der Verschlüsselungssammlungen</string>
+      <string id="Pol_CipherSuiteOrder_Help">Diese Richtlinieneinstellung legt die vom SMB-Client verwendeten Verschlüsselungssammlungen fest.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, werden die Verschlüsselungssammlungen in der angegebenen Reihenfolge priorisiert.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren und nicht mindestens eine unterstützte Verschlüsselungssammlung angeben, oder wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Standardreihenfolge der Verschlüsselungssammlungen verwendet.
+
+Verschlüsselungssammlungen von SMB 3.11:
+
+AES_128_GCM
+AES_128_CCM
+
+Verschlüsselungssammlungen von SMB 3.0 und 3.02:
+
+AES_128_CCM
+
+Ändern der Einstellung:
+
+Ordnen Sie die gewünschten Verschlüsselungssammlungen im Bearbeitungsfeld zeilenweise von der am meisten bis zu der am wenigsten bevorzugten Sammlung an. Die am meisten bevorzugte Verschlüsselungssammlung steht ganz oben. Entfernen Sie alle nicht verwendeten Verschlüsselungssammlungen.
+
+Hinweis: Wenn Sie diese Sicherheitseinstellung konfigurieren, werden die Änderungen erst beim Neustart von Windows wirksam.</string>
+      </stringTable>
+    <presentationTable>
+      <presentation id="Pol_CipherSuiteOrder">
+        <text>Verschlüsselungssammlungen:</text>
+        <multiTextBox refId="MultiText_CipherSuiteOrder"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

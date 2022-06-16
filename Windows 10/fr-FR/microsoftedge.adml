@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Permet d'exécuter des scripts comme Javascript</string>
+      <string id="AllowActiveScripting_Explain">Ce paramètre vous permet de décider si les utilisateurs sont autorisés à exécuter des scripts comme JavaScript. Ce paramètre est activé par défaut.
+
+Si vous activez ce paramètre, les scripts sont activés pour tous vos ordinateurs. 
+
+Si vous désactivez ce paramètre, des scripts ne peuvent pas être exécutés.</string>
+      <string id="AllowAutofill">Permet d'autoriser les utilisateurs à utiliser la saisie automatique sur les sites web</string>
+      <string id="AllowAutofill_Explain">Ce paramètre vous permet de décider si les utilisateurs peuvent utiliser la saisie automatique sur les sites web. Ce paramètre est activé par défaut.
+
+Si vous activez ce paramètre, les utilisateurs peuvent utiliser la saisie automatique sur les sites web, avec une mise en cache locale des informations.
+
+Si vous désactivez ce paramètre, les utilisateurs ne peuvent pas utiliser la saisie automatique.</string>
+      <string id="AllowDoNotTrack">Permet d'autoriser les utilisateurs à envoyer des en-têtes Ne pas suivre</string>
+      <string id="AllowDoNotTrack_Explain">Ce paramètre vous permet de décider si les utilisateurs sont autorisés à envoyer des en-têtes Ne pas suivre. Ce paramètre est désactivé par défaut.
+
+Si vous activez ce paramètre, les utilisateurs peuvent envoyer des en-têtes Ne pas suivre à partir de n'importe quel ordinateur de votre organisation.
+
+Si vous désactivez ce paramètre, les utilisateurs ne peuvent pas envoyer d'en-têtes Ne pas suivre.</string>
+      <string id="AllowPasswordManager">Permet de configurer un gestionnaire de mots de passe</string>
+      <string id="AllowPasswordManager_Explain">Ce paramètre vous permet de décider si les utilisateurs peuvent enregistrer des mots de passe localement sur leurs ordinateurs. Ce paramètre est activé par défaut.
+
+Si vous activez ce paramètre, le Gestionnaire de mots de passe est activé et les utilisateurs peuvent enregistrer des mots de passe localement sur leurs ordinateurs.
+
+Si vous désactivez ce paramètre, le Gestionnaire de mots de passe est désactivé et les utilisateurs ne peuvent pas enregistrer des mots de passe localement.</string>
+      <string id="AllowPopups">Permet d'exécuter des fenêtres contextuelles</string>
+      <string id="AllowPopups_Explain">Ce paramètre vous permet de décider d'autoriser les fenêtres contextuelles. Ce paramètre est désactivé par défaut.
+
+Si vous activez ce paramètre, les fenêtres contextuelles peuvent être exécutées sur tous les ordinateurs de votre organisation.
+
+Si vous désactivez ce paramètre, les fenêtres contextuelles ne peuvent pas être exécutées.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Arrête l'affichage de suggestions de recherche dans la barre d'adresse</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Ce paramètre vous permet de décider si la barre d'adresse doit afficher des suggestions de recherche. Ce paramètre est activé par défaut.
+
+Si vous activez ce paramètre, les utilisateurs peuvent voir des suggestions de recherche dans la barre d'adresse.
+
+Si vous désactivez ce paramètre, les résultats de la recherche n'apparaissent pas dans la barre d'adresse.</string>
+      <string id="AllowSmartScreen">Permet de configurer SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Ce paramètre vous permet de décider d'activer SmartScreen. Ce paramètre est activé par défaut.
+
+Si vous activez ce paramètre, SmartScreen est activé sur tous vos ordinateurs. 
+
+Si vous désactivez ce paramètre, SmartScreen est désactivé.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Ne pas bloquer</string>
+      <string id="CookiesList_Block_ThirdParty">Bloquer tous les cookies tiers</string>
+      <string id="CookiesList_Block_All">Bloquer tous les cookies</string>
+      <string id="EnterpriseModeSiteList">Permet de configurer la liste Enterprise Site</string>
+      <string id="EnterpriseModeSiteList_Explain">Ce paramètre vous permet de décider de configurer et d'utiliser la liste Enterprise Site à des fins de compatibilité.
+
+Si vous activez ce paramètre, 2 autres options vous sont proposées :
+  • Non configuré. Vous ne pouvez pas utiliser la liste Enterprise Site.
+  • UseEnterpriseModeSiteList. Vous permet d'utiliser la liste Enterprise Site. Si vous utilisez cette option, vous devez également inclure l'emplacement de votre liste de sites XML dans la zone {URI}. Il s'agit de la valeur par défaut.</string>
+      <string id="HomePage">Permet de configurer votre page d'accueil</string>
+      <string id="HomePage_Explain">Ce paramètre vous permet de configurer la page d'accueil de votre organisation. Par défaut, ce paramètre n'est pas configuré et les paramètres de l'application sont utilisés à la place.
+
+Si vous activez ce paramètre, vous devez également inclure l'emplacement de votre site web dans la zone {URI}.</string>
+      <string id="ItemNameDisable">Désactiver</string>
+      <string id="ItemNameEnable">Activer</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Envoie tout le trafic intranet vers Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Taper l'emplacement (URL) de votre liste des sites web Internet Explorer en mode Entreprise</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Taper l'emplacement (URL) du site web de votre page d'accueil</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Configurer le paramètre des cookies</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

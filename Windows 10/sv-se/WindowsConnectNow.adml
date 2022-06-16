@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>ange visningsnamn här</displayName>
+  <description>ange beskrivning här</description>
+  <resources>
+    <stringTable>
+      <string id="WCN_Category">Anslut nu i Windows</string>
+      <string id="WCN_DisableWcnUi">Förhindra åtkomst till Windows-guiderna för Anslut nu</string>
+      <string id="WCN_DisableWcnUi_Help">Den här principinställningen förhindrar åtkomst till Windows-guiderna Anslut nu. 
+
+Om du aktiverar den här principinställningen inaktiveras guiderna och användarna kan inte använda några funktioner i dem. Samtliga konfigureringsaktiviteter inaktiveras, t.ex. Konfigurera en trådlös router eller åtkomstpunkt och Lägg till en trådlös enhet. 
+
+Om du inaktiverar eller inte konfigurerar den här principinställningen kommer användarna åt guidefunktionerna, t.ex. Konfigurera en trådlös router eller åtkomstpunkt och Lägg till en trådlös enhet. Som standard medger principinställningen åtkomst till alla Anslut nu-guider.</string>
+      <string id="WCN_EnableRegistrar">Konfiguration av inställningar för trådlöst nätverk med Anslut nu</string>
+      <string id="WCN_EnableRegistrar_Help">This policy setting allows the configuration of wireless settings using Windows Connect Now (WCN). The WCN Registrar enables the discovery and configuration of devices over Ethernet (UPnP), over In-band 802.11 WLAN, through the Windows Portable Device API (WPD), and via USB Flash drives.
+
+Additional options are available to allow discovery and configuration over a specific medium. 
+
+If you enable this policy setting, additional choices are available to turn off the operations over a specific medium. 
+
+If you disable this policy setting, operations are disabled over all media. 
+
+If you do not configure this policy setting, operations are enabled over all media. 
+
+The default for this policy setting allows operations over all media.</string>
+      <string id="WCN_Higher_Precedence_Registrar_UPnP">WCN över Ethernet (UPnP)</string>
+      <string id="WCN_Higher_Precedence_Registrar_InBand802DOT11">WCN over In-band 802.11 WLAN</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="WCN_EnableRegistrar">
+        <checkBox refId="WCN_EnableRegistrar_DisableUPnP">Inaktivera konfigurering med Anslut nu via Ethernet (UPnP)</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableInBand802DOT11">Turn off ability to configure using WCN over In-band 802.11 WLAN</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableFlashConfig">Inaktivera konfigurering med USB-flash-enheter</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableWPD">Inaktivera konfigurering av WPD (Windows Portable Device)</checkBox>
+        <decimalTextBox refId="WCN_EnableRegistrar_MaxWCNDeviceNumber" defaultValue="500">Största tillåtna antal Anslut nu-enheter:</decimalTextBox>
+        <dropdownList refId="WCN_Higher_Precedence_Registrar" noSort="true" defaultItem="0">Ett medium för enheter med högre prioritet har upptäckts:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

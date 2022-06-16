@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Definições de Política de Grupo do Gestor de Ligações do Windows</displayName>
+  <description>Definições de Política de Grupo do Gestor de Ligações do Windows</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Gestor de Ligações do Windows</string>
+      <string id="WCM_BlockNonDomain">Proibir a ligação a redes que não pertençam a um domínio quando ligado a uma rede autenticada de domínio</string>
+      <string id="WCM_BlockNonDomain_Help">Esta definição de política impede que computadores liguem em simultâneo a uma rede baseada num domínio e a uma rede não baseada num domínio.
+      
+      Se esta definição de política for ativada, o computador responderá a tentativas de ligação de rede automática e manual com base nas seguintes circunstâncias:
+      
+      Tentativas de ligação automática
+      - Quando o computador já estiver ligado a uma rede baseada num domínio, todas as tentativas de ligação automática a redes que não pertençam a um domínio serão bloqueadas.
+      - Quando o computador já estiver ligado a uma rede não baseada num domínio, as tentativas de ligação automática a redes baseadas num domínio serão bloqueadas.
+      
+      Tentativas de ligação manual
+      - Quando o computador já estiver ligado a uma rede não baseada num domínio ou a uma rede baseada num domínio através de outro suporte que não Ethernet, e se um utilizador tentar criar uma ligação manual a uma rede adicional, violando esta definição de política, a ligação de rede existente será desligada e a ligação manual será permitida.
+      - Quando o computador já estiver ligado a uma rede não baseada num domínio ou a uma rede baseada num domínio através de Ethernet, e se um utilizador tentar criar uma ligação manual a uma rede adicional, violando esta definição de política, a ligação Ethernet existente será mantida e a tentativa de ligação manual será bloqueada.
+
+      Se esta definição de política não for configurada ou for desativada, os computadores terão permissão para ligar em simultâneo a redes de domínio e a redes que não pertençam a um domínio.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Proibir ligação a redes de Banda Larga Móvel de roaming</string>
+      <string id="WCM_DisableRoaming_Help">Esta definição de política impede que o cliente ligue a redes de Banda Larga Móvel quando está registado numa rede de fornecedor de roaming. 
+
+      Se esta definição de política for ativada, todas as tentativas de ligação automática e manual a redes de fornecedor de roaming serão bloqueadas até o cliente se registar numa rede de fornecedor doméstico.
+      
+      Se esta definição de política não for configurada ou for desativada, os clientes terão permissão para ligar a redes de Banda Larga Móvel de fornecedor de roaming.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Minimizar o número de ligações simultâneas à Internet ou a um Domínio Windows</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Desativar a gestão de energia em modo de espera ligado</string>
+      <string id="WCM_DisablePowerManagement_Help">Esta definição de política especifica que a gestão de energia deverá ser desativada quando o computador entrar em modo de espera ligado. 
+
+      Se esta definição de política for ativada, o Gestor de Ligações do Windows não fará a gestão de transmissores de rádio de adaptadores para reduzir o consumo de energia quando o computador entrar em modo de espera ligado.
+
+      Se esta definição de política não for configurada ou for desativada, a gestão de energia será ativada quando o computador entrar em modo de espera ligado.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

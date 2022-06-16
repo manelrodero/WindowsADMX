@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Windows 接続マネージャーのグループ ポリシーの設定</displayName>
+  <description>Windows 接続マネージャーのグループ ポリシーの設定</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Windows 接続マネージャー</string>
+      <string id="WCM_BlockNonDomain">ドメイン認証されたネットワークに接続しているときに非ドメイン ネットワークへの接続を禁止する</string>
+      <string id="WCM_BlockNonDomain_Help">このポリシー設定は、コンピューターがドメイン ベースのネットワークと非ドメイン ベースのネットワークに同時に接続することを禁止します。
+      
+      このポリシー設定を有効にした場合、コンピューターは次の状況で自動または手動のネットワーク接続試行に応答します。
+      
+      自動接続試行
+      - コンピューターがドメイン ベースのネットワークに既に接続している場合は、非ドメイン ネットワークへの自動接続試行がすべてブロックされます。
+      - コンピューターが非ドメイン ベースのネットワークに既に接続している場合は、ドメイン ネットワークへの自動接続試行がブロックされます。
+      
+      手動接続試行
+      - コンピューターがイーサネット以外のメディアを介して非ドメイン ベースのネットワークまたはドメイン ベースのネットワークに接続しているときに、ユーザーがこのポリシー設定に違反して他のネットワークへの手動接続を作成しようとした場合は、既存のネットワーク接続が切断され、手動接続が許可されます。
+      - コンピューターがイーサネットを介して非ドメイン ベースのネットワークまたはドメイン ベースのネットワークに接続しているときに、ユーザーがこのポリシー設定に違反して他のネットワークへの手動接続を作成しようとした場合は、既存のイーサネット接続が保持され、手動接続試行がブロックされます。
+
+      このポリシー設定を構成しなかった場合、または無効にした場合、コンピューターはドメイン ネットワークと非ドメイン ネットワークの両方に同時に接続できます。
+      
+      </string>
+      <string id="WCM_DisableRoaming">ローミング モバイル ブロードバンド ネットワークへの接続を禁止する</string>
+      <string id="WCM_DisableRoaming_Help">このポリシー設定は、クライアントがローミング プロバイダー ネットワークに登録されているときにモバイル ブロードバンド ネットワークに接続することを禁止します。
+
+      このポリシー設定を有効にした場合、クライアントがホーム プロバイダー ネットワークに登録されるまで、ローミング プロバイダー ネットワークへの自動および手動の接続試行がすべてブロックされます。
+      
+      このポリシー設定を構成しなかった場合、または無効にした場合、クライアントはローミング プロバイダーのモバイル ブロードバンド ネットワークに接続できます。
+      
+      </string>
+      <string id="WCM_MinimizeConnections">インターネットまたは Windows ドメインへの同時接続の数を最小化する</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">コネクト スタンバイ モードでの電源管理を無効にする</string>
+      <string id="WCM_DisablePowerManagement_Help">このポリシー設定は、コンピューターがコネクト スタンバイ モードになったときに電源管理が無効になるように指定します。
+
+      このポリシー設定を有効にした場合、Windows 接続マネージャーは、コンピューターがコネクト スタンバイ モードになったときに、電力消費を減らすためのアダプター ラジオの管理を行いません。
+
+      このポリシー設定を構成しなかった場合、または無効にした場合、コンピューターがコネクト スタンバイ モードになると電源管理が有効になります。
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

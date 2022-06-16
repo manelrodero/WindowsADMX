@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Gruppenrichtlinieneinstellungen für den Windows-Verbindungs-Manager</displayName>
+  <description>Gruppenrichtlinieneinstellungen für den Windows-Verbindungs-Manager</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Windows-Verbindungs-Manager</string>
+      <string id="WCM_BlockNonDomain">Verbindung mit Nicht-Domänennetzwerken bei vorhandener Verbindung mit domänenauthentifiziertem Netzwerk nicht zulassen</string>
+      <string id="WCM_BlockNonDomain_Help">Durch diese Richtlinieneinstellung wird verhindert, dass Computer eine gleichzeitige Verbindung mit einem domänenbasierten Netzwerk und einem nicht domänenbasierten Netzwerk herstellen.
+      
+      Wenn diese Richtlinieneinstellung aktiviert wird, reagiert der Computer basierend auf den folgenden Umständen auf automatische und manuelle Netzwerkverbindungsversuche:
+      
+      Automatische Verbindungsversuche
+      - Wenn der Computer bereits mit einem domänenbasierten Netzwerk verbunden ist, werden alle automatischen Verbindungsversuche mit nicht domänenbasierten Netzwerken blockiert.
+      - Wenn der Computer bereits mit einem nicht domänenbasierten Netzwerk verbunden ist, werden automatische Verbindungsversuche mit domänenbasierten Netzwerken blockiert.
+      
+      Manuelle Verbindungsversuche
+      - Wenn der Computer bereits über ein anderes Medium als Ethernet mit einem nicht domänenbasierten Netzwerk oder einem domänenbasierten Netzwerk verbunden ist und ein Benutzer unter Verstoß gegen diese Richtlinieneinstellung versucht, eine manuelle Verbindung mit einem zusätzlichen Netzwerk herzustellen, wird die vorhandene Netzwerkverbindung getrennt und die manuelle Verbindung zugelassen.
+      - Wenn der Computer bereits über Ethernet mit einem nicht domänenbasierten Netzwerk oder einem domänenbasierten Netzwerk verbunden ist und ein Benutzer unter Verstoß gegen diese Richtlinieneinstellung versucht, eine manuelle Verbindung mit einem zusätzlichen Netzwerk herzustellen, wird die vorhandene Ethernet-Verbindung beibehalten und der manuelle Verbindungsversuch blockiert.
+
+      Wenn diese Richtlinienstellung nicht konfiguriert oder deaktiviert wird, ist für Computer das Herstellen einer gleichzeitigen Verbindung mit Domänen- und Nicht-Domänennetzwerken zulässig.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Verbindung mit mobilen Roaming-Breitbandnetzwerken nicht zulassen</string>
+      <string id="WCM_DisableRoaming_Help">Durch diese Richtlinieneinstellung wird verhindert, dass Clients eine Verbindung mit mobilen Breitbandnetzwerken herstellen, wenn sie im Netzwerk eines Roaminganbieters registriert sind. 
+
+      Wenn diese Richtlinieneinstellung aktiviert wird, werden alle automatischen und manuellen Verbindungsversuche mit Netzwerken von Roaminganbietern blockiert, bis sich der Client im Netzwerk des Heimanbieters registriert.
+      
+      Wenn diese Richtlinieneinstellung nicht konfiguriert oder deaktiviert wird, ist für Clients das Herstellen von Verbindungen mit mobilen Breitbandnetzwerken von Roaminganbietern zulässig.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Anzahl gleichzeitiger Verbindungen mit dem Internet oder einer Windows-Domäne minimieren</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Energieverwaltung im verbundenen Standbymodus deaktivieren</string>
+      <string id="WCM_DisablePowerManagement_Help">Mithilfe dieser Richtlinieneinstellung wird angegeben, dass die Energieverwaltung deaktiviert wird, wenn der Computer in den verbundenen Standbymodus wechselt. 
+
+      Sofern diese Richtlinieneinstellung aktiviert wird, erfolgt keine Verwaltung der Funkadapter durch den Windows-Verbindungs-Manager zur Reduzierung des Energieverbrauchs, wenn der Computer in den verbundenen Standbymodus wechselt.
+
+      Wenn diese Richtlinieneinstellung nicht konfiguriert oder deaktiviert wird, erfolgt eine Aktivierung der Energieverwaltung, sobald der Computer in den verbundenen Standbymodus wechselt.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

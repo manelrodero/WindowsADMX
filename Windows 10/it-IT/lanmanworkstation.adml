@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>immettere qui il nome visualizzato</displayName>
+  <description>immettere qui la descrizione</description>
+  <resources>
+    <stringTable>
+      <string id="Cat_LanmanWorkstation">Workstation LANMAN</string>
+      <string id="Pol_CipherSuiteOrder_Name">Ordine dei pacchetti di crittografia</string>
+      <string id="Pol_CipherSuiteOrder_Help">Questa impostazione dei criteri determina i pacchetti di crittografia utilizzati dal client SMB.
+
+Se si abilita questa impostazione dei criteri, ai pacchetti di crittografia viene assegnata una priorità in base all'ordine specificato.
+
+Se si abilita questa impostazione dei criteri e non si specifica almeno un pacchetto di crittografia supportato oppure se si disabilita o non si configura questa impostazione dei criteri, verrà utilizzato l'ordine dei pacchetti di crittografia predefinito.
+
+Pacchetti di crittografia SMB 3.11:
+
+AES_128_GCM
+AES_128_CCM
+
+Pacchetti di crittografia SMB 3.0 e 3.02:
+
+AES_128_CCM
+
+Come modificare questa impostazione:
+
+Disporre i pacchetti di crittografia desiderati nella casella di modifica, un pacchetto di crittografia per riga, in ordine di preferenza decrescente, con il pacchetto di crittografia preferito all'inizio. Rimuovere gli eventuali pacchetti di crittografia che non si desidera utilizzare.
+
+Nota: quando si configura questa impostazione di sicurezza, le modifiche diventeranno effettive solo dopo il riavvio di Windows.</string>
+      </stringTable>
+    <presentationTable>
+      <presentation id="Pol_CipherSuiteOrder">
+        <text>Pacchetti di crittografia:</text>
+        <multiTextBox refId="MultiText_CipherSuiteOrder"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Paramètres de stratégie de groupe du Gestionnaire de connexions Windows</displayName>
+  <description>Paramètres de stratégie de groupe du Gestionnaire de connexions Windows</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Gestionnaire de connexions Windows</string>
+      <string id="WCM_BlockNonDomain">Interdire la connexion à des réseaux sans domaine en cas de connexion à un réseau authentifié par son domaine</string>
+      <string id="WCM_BlockNonDomain_Help">Ce paramètre de stratégie empêche les ordinateurs de se connecter simultanément à un réseau avec domaine et à un réseau sans domaine.
+      
+      Si ce paramètre de stratégie est activé, l’ordinateur répond aux tentatives de connexion automatique et manuelle au réseau en fonction des circonstances :
+      
+      Tentatives de connexion automatique
+      - Lorsque l’ordinateur est déjà connecté à un réseau avec domaine, toutes les tentatives de connexion automatique aux réseaux sans domaine sont bloquées.
+      - Lorsque l’ordinateur est déjà connecté à un réseau sans domaine, les tentatives de connexion automatique aux réseaux avec domaine sont bloquées
+      
+      Tentatives de connexion manuelle
+      - Lorsque l’ordinateur est déjà connecté à un réseau sans domaine ou à un réseau avec domaine via un média autre qu’Ethernet et qu’un utilisateur tente de créer une connexion manuelle à un réseau supplémentaire, allant ainsi à l’encontre de ce paramètre de stratégie, la connexion réseau existante est déconnectée et la connexion manuelle est autorisée.
+      - Lorsque l’ordinateur est déjà connecté à un réseau sans domaine ou à un réseau avec domaine via Ethernet et qu’un utilisateur tente de créer une connexion manuelle à un réseau supplémentaire, allant ainsi à l’encontre de ce paramètre de stratégie, la connexion Ethernet existante est maintenue et la tentative de connexion manuelle est bloquée.
+
+      Si ce paramètre de stratégie est désactivé ou n’est pas configuré, les ordinateurs sont autorisés à se connecter simultanément aux réseaux avec domaine et sans domaine.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Interdire la connexion aux réseaux haut débit mobiles itinérants</string>
+      <string id="WCM_DisableRoaming_Help">Ce paramètre de stratégie empêche les clients de se connecter à des réseaux haut débit mobiles lorsque le client est inscrit sur un réseau de fournisseur d’itinérance. 
+
+      Si ce paramètre de stratégie est activé, toutes les tentatives de connexion automatique et manuelle aux réseaux de fournisseurs d’itinérance sont bloquées jusqu’à ce que le client s’inscrive sur le réseau du fournisseur local.
+      
+      Si ce paramètre de stratégie est désactivé ou n’est pas configuré, les clients sont autorisés à se connecter aux réseaux haut débit mobiles du fournisseur d’itinérance.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Minimiser le nombre de connexions simultanées à Internet ou à un domaine Windows</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Désactiver la gestion de l’alimentation en mode veille connectée</string>
+      <string id="WCM_DisablePowerManagement_Help">Ce paramètre de stratégie spécifie que la gestion de l’alimentation est désactivée lorsque l’ordinateur passe en mode veille connectée. 
+
+      Si ce paramètre de stratégie est activé, le Gestionnaire de connexions Windows ne gère pas la consommation électrique lorsque l’ordinateur passe en mode veille connectée.
+
+      Si ce paramètre de stratégie est désactivé ou n’est pas configuré, la gestion de l’alimentation est activée lorsque l’ordinateur passe en mode veille connectée.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

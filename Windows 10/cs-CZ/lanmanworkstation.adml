@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Sem zadejte zobrazovaný název.</displayName>
+  <description>Sem zadejte popis.</description>
+  <resources>
+    <stringTable>
+      <string id="Cat_LanmanWorkstation">Pracovní stanice Lanman</string>
+      <string id="Pol_CipherSuiteOrder_Name">Pořadí sad šifer</string>
+      <string id="Pol_CipherSuiteOrder_Help">Nastavení této zásady určuje sady šifrování používané klientem SMB.
+
+Pokud nastavení této zásady povolíte, budou se sady šifer prioritizovat v uvedeném pořadí.
+
+Pokud nastavení této zásady povolíte a nezadáte minimálně jednu podporovanou sadu šifer nebo pokud nastavení této zásady zakážete nebo nenakonfigurujete, použije se výchozí pořadí sad šifer.
+
+Sady šifer protokolu SMB 3.11:
+
+AES_128_GCM
+AES_128_CCM
+
+Sady šifer protokolu SMB 3.0 a 3.02:
+
+AES_128_CCM
+
+Jak změnit toto nastavení:
+
+Uspořádejte požadované sady šifer v textovém poli (jedna sada šifer na řádek) v pořadí od nejvíce po nejméně upřednostňovanou, přičemž nejvíce upřednostňovaná sada šifrování bude nahoře. Odeberte všechny sady šifer, které nechcete používat.
+
+Poznámka: Pokud nakonfigurujete toto nastavení zabezpečení, změny se projeví až po restartování systému Windows.</string>
+      </stringTable>
+    <presentationTable>
+      <presentation id="Pol_CipherSuiteOrder">
+        <text>Sady šifer:</text>
+        <multiTextBox refId="MultiText_CipherSuiteOrder"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

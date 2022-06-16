@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Passport for Work</displayName>
+  <description>Configuración de Microsoft Passport for Work</description>
+  <resources>
+    <stringTable>
+        <string id="MSPassportForWorkCategory">Microsoft Passport for Work</string>
+        <string id="MSPassportForWorkPINComplexityCategory">Complejidad de PIN</string>
+        <string id="MSPassport_UsePassportForWork">Usar Microsoft Passport for Work</string>
+        <!-- DropdownList Button strings -->
+        <string id="ButtonTextAllow">Permitir</string>
+        <string id="ButtonTextDisallow">No permitir</string>
+        <string id="ButtonTextRequired">Obligatorio</string>
+        <string id="MSPassport_UsePassportForWorkExplain">Microsoft Passport for Work es un método alternativo para iniciar sesión en Windows mediante su cuenta de Active Directory o Azure Active Directory que puede reemplazar las contraseñas, las tarjetas inteligentes y las tarjetas inteligentes virtuales.
+
+Si habilita o no establece esta configuración de directiva, el dispositivo aprovisiona Microsoft Passport for Work para todos los usuarios.
+
+Si deshabilita esta configuración de directiva, el dispositivo no aprovisiona Microsoft Passport for Work para cualquier usuario.</string>
+        <string id="MSPassport_RequireSecurityDevice">Usar un dispositivo de seguridad de hardware</string>
+        <string id="MSPassport_RequireSecurityDeviceExplain">Un Módulo de plataforma segura (TPM) ofrece ventajas adicionales de seguridad en comparación con software porque los datos que se almacenan en él no se pueden usar en otros dispositivos.
+
+Si habilita esta configuración de seguridad, solo los dispositivos con TPM utilizable pueden aprovisionar Microsoft Passport for Work.
+
+Si deshabilita esta configuración de seguridad, todos los dispositivos aprovisionan Microsoft Passport for Work con software, incluso si hay un TPM utilizable.
+
+Si no establece esta configuración de directiva, todos los dispositivos aprovisionan Microsoft Passport for Work con software si el TPM no funciona o no está disponible.
+        </string>
+        <string id="MSPassport_MinimumPINLength">Longitud mínima del PIN</string>
+        <string id="MSPassport_MinimumPINLengthExplain">La longitud mínima del PIN permite configurar el número mínimo de caracteres que se necesitan para el PIN del trabajo. El número más bajo que se puede establecer para esta configuración de directiva es 4. El número más alto que se puede establecer debe ser menor que el número configurado en la configuración de directiva Longitud máxima del PIN o 127, el que sea más bajo.
+
+Si establece esta configuración de directiva, la longitud del PIN del trabajo debe ser mayor o igual que este número.
+
+Si deshabilita esta configuración de directiva, la longitud del PIN del trabajo debe ser mayor o igual que 4.
+
+NOTA: Si no se satisfacen las condiciones especificadas arriba en relación con la longitud mínima del PIN, se usarán los valores predeterminados tanto para la longitud máxima como la longitud mínimo del PIN.
+        </string>
+        <string id="MSPassport_MaximumPINLength">Longitud máxima del PIN</string>
+        <string id="MSPassport_MaximumPINLengthExplain">La longitud máxima del PIN permite configurar el número máximo de caracteres que se permiten para el PIN del trabajo. El número más alto que se puede establecer para esta configuración de directiva es 127. El número más bajo que se puede establecer debe ser mayor que el número configurado en la configuración de directiva Longitud mínima del PIN o 4, el que sea más alto.
+
+Si establece esta configuración de directiva, la longitud del PIN del trabajo debe ser menor o igual que este número.
+
+Si deshabilita esta configuración de directiva, la longitud del PIN del trabajo debe ser menor o igual que 127.
+
+NOTA: Si no se satisfacen las condiciones especificadas arriba en relación con la longitud máxima del PIN, se usarán los valores predeterminados tanto para la longitud máxima como la longitud mínimo del PIN.
+        </string>
+        <string id="MSPassport_UppercaseLetters">Usar mayúsculas</string>
+        <string id="MSPassport_UppercaseLettersExplain">Use esta configuración de directiva para establecer el uso de mayúsculas en el PIN de Microsoft Passport for Work
+
+Si establece esta configuración de directiva en "Permitir", Microsoft Passport for Work permite a los usuarios usar mayúsculas en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "No permitir", Microsoft Passport for Work impide que los usuarios usen mayúsculas en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "Obligatorio", Microsoft Passport for Work exige que los usuarios incluyan al menos una letra en mayúscula en su PIN del trabajo.
+
+Si deshabilita o no establece esta configuración de directiva, Microsoft Passport for Work permite que los usuarios usen mayúsculas en su PIN del trabajo.
+                </string>
+        <string id="MSPassport_LowercaseLetters">Usar minúsculas</string>
+        <string id="MSPassport_LowercaseLettersExplain">Use esta configuración de directiva para establecer el uso de minúsculas en el PIN de Microsoft Passport for Work
+
+Si establece esta configuración de directiva en "Permitir", Microsoft Passport for Work permite a los usuarios usar minúsculas en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "No permitir", Microsoft Passport for Work impide que los usuarios usen minúsculas en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "Obligatorio", Microsoft Passport for Work exige que los usuarios incluyan al menos una letra en minúsculas en su PIN del trabajo.
+
+Si deshabilita o no establece esta configuración de directiva, Microsoft Passport for Work permite que los usuarios usen minúsculas en su PIN del trabajo.
+                </string>
+        <string id="MSPassport_SpecialCharacters">Usar caracteres especiales</string>
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Use esta configuración de directiva para establecer el uso de caracteres especiales en el gesto del PIN de Microsoft Passport for Work. Entre los caracteres especiales válidos para los gestos de PIN de Microsoft Passport for Work se incluyen: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
+
+Si establece esta configuración de directiva en "Permitir", Microsoft Passport for Work permite a los usuarios usar caracteres especiales en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "No permitir", Microsoft Passport for Work impide que los usuarios usen caracteres especiales en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "Obligatorio", Microsoft Passport for Work exige que los usuarios incluyan al menos un carácter especial en su PIN del trabajo.
+
+Si deshabilita o no establece esta configuración de directiva, Microsoft Passport for Work permite que los usuarios usen caracteres especiales en su PIN del trabajo.
+                ]]></string>
+        <string id="MSPassport_Digits">Usar dígitos</string>
+        <string id="MSPassport_DigitsExplain">Use esta configuración de directiva para establecer el uso de dígitos en el PIN de Microsoft Passport for Work
+
+Si establece esta configuración de directiva en "Permitir", Microsoft Passport for Work permite a los usuarios usar dígitos en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "No permitir", Microsoft Passport for Work impide que los usuarios usen dígitos en su PIN del trabajo.
+
+Si establece esta configuración de directiva en "Obligatorio", Microsoft Passport for Work exige que los usuarios incluyan al menos una letra en dígitos en su PIN del trabajo.
+
+Si deshabilita o no establece esta configuración de directiva, Microsoft Passport for Work permite que los usuarios usen dígitos en su PIN del trabajo.
+
+        </string>
+        <string id="MSPassport_UseBiometrics">Usar biometría</string>
+        <string id="MSPassport_UseBiometricsExplain">Microsoft Passport for Work permite a los usuarios usar gestos de biometría, tales como la cara y las huellas digitales, como método alternativo a los gestos de PIN. Sin embargo, los usuarios aún deben configurar un PIN del trabajo que se debe usar en caso de errores.
+
+Si habilita esta configuración de directiva, Microsoft Passport for Work permite activar el uso de gestos de biometría.
+
+Si deshabilita esta configuración de directiva, Microsoft Passport for Work impide el uso de gestos de biometría.
+
+Si no establece esta configuración de directiva, Microsoft Passport for Work permite el uso de gestos de biometría.
+
+NOTA: Si deshabilita esta directiva, el usuario no podrá usar gestos de biometría en el dispositivo para ningún tipo de cuenta.
+        </string>
+    </stringTable>
+    <presentationTable>
+        <presentation id="MSPassport_MinimumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="4">Longitud mínima del PIN</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_MaximumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MaximumPINLengthDataType" spin="true" spinStep="1" defaultvalue="127">Longitud máxima del PIN</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_UppercaseLettersControl">
+            <dropdownList refId="MSPassport_UppercaseLettersChoices" defaultItem="0">Mayúsculas:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_LowercaseLettersControl">
+            <dropdownList refId="MSPassport_LowercaseLettersChoices" defaultItem="0">Minúsculas:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_SpecialCharactersControl">
+            <dropdownList refId="MSPassport_SpecialCharactersChoices" defaultItem="0">Caracteres especiales:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_DigitsControl">
+            <dropdownList refId="MSPassport_DigitsChoices" defaultItem="0">dígitos:</dropdownList>
+        </presentation>
+
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

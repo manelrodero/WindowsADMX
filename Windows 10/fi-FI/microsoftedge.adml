@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Sallii sinun suorittaa komentosarjoja, kuten JavaScripitä</string>
+      <string id="AllowActiveScripting_Explain">Tämä asetus antaa sinun määrittää, voivatko käyttäjät suorittaa komentosarjoja, kuten JavaScriptiä. Tämä asetus on käytössä oletusarvon mukaan.
+
+Jos otat tämän asetuksen käyttöön, komentosarjojen käyttö on käytössä kaikille tietokoneillesi.
+
+Jos poistat tämän asetuksen käytöstä, komentosarjoja ei voi suorittaa.</string>
+      <string id="AllowAutofill">Tämän avulla voit antaa käyttäjien käyttää automaattista täyttöä sivustoissa</string>
+      <string id="AllowAutofill_Explain">Tämä asetus antaa sinun määrittää, voivatko käyttäjät käyttää automaattista täyttöä sivustoissa. Tämä asetus on käytössä oletusarvon mukaan.
+
+Jos otat tämän asetuksen käyttöön, käyttäjät voivat käyttää automaattista täyttöä sivustoissa tallentaen tiedot välimuistiin paikallisesti.
+
+Jos poistat tämän asetuksen käytöstä, käyttäjät eivät voi käyttää automaattista täyttöä.</string>
+      <string id="AllowDoNotTrack">Tämän avulla voit antaa käyttäjien lähettää Do Not Track -otsikoita</string>
+      <string id="AllowDoNotTrack_Explain">Tämä asetus antaa sinun määrittää, voivatko käyttäjät lähettää Do Not Track -otsikoita. Tämä asetus on pois käytöstä oletusarvon mukaan.
+
+Jos otat tämän asetuksen käyttöön, käyttäjät voivat lähettää Do Not Track -otsikoita mistä tahansa organisaatiosi tietokoneesta.
+
+Jos poistat tämän asetuksen käytöstä, käyttäjät eivät voi lähettää Do Not Track -otsikoita.</string>
+      <string id="AllowPasswordManager">Tämän avulla voit määrittää salasanojen hallinnan</string>
+      <string id="AllowPasswordManager_Explain">Tämä asetus antaa sinun määrittää, voivatko käyttäjät tallentaa salasanoja paikallisesti tietokoneisiinsa. Tämä asetus on käytössä oletusarvon mukaan.
+
+Jos otat tämän asetuksen käyttöön, salasanojen hallinta otetaan käyttöön ja käyttäjät voivat tallentaa salasanoja paikallisesti tietokoneisiinsa.
+
+Jos poistat tämän asetuksen käytöstä, salasanojen hallinta on poistettu käytöstä, eivätkä käyttäjät voi tallentaa salasanoja paikallisesti.</string>
+      <string id="AllowPopups">Tämän avulla voit näyttää ponnahdusikkunat</string>
+      <string id="AllowPopups_Explain">Tämä asetus antaa sinun määrittää, sallitaanko ponnahdusikkunat. Tämä asetus on pois käytöstä oletusarvon mukaan.
+
+Jos otat tämän asetuksen käyttöön, ponnahdusikkunoita voidaan näyttää kaikissa organisaatiosi tietokoneissa.
+
+Jos poistat tämän asetuksen käytöstä, ponnahdusikkunoita ei voi näyttää.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Estää osoiteriviä näyttämästä hakuehdotuksia</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Tämä asetus antaa sinun määrittää, tuleeko osoiterivin näyttää hakuehdotuksia. Tämä asetus on käytössä oletusarvon mukaan.
+
+Jos otat tämän asetuksen käyttöön, käyttäjät voivat nähdä hakuehdotuksia osoiterivillä.
+
+Jos poistat tämän asetuksen käytöstä, hakuehdotukset eivät näy osoiterivillä.</string>
+      <string id="AllowSmartScreen">Tämän avulla voit määrittää SmartScreenin</string>
+      <string id="AllowSmartScreen_Explain">Tämä asetus antaa sinun määrittää, otetaanko SmartScreen käyttöön. Tämä asetus on käytössä oletusarvon mukaan.
+
+Jos otat tämän asetuksen käyttöön, SmartScreen on käytössä kaikille tietokoneillesi.
+
+Jos poistat tämän asetuksen käytöstä, SmartScreen on poistettu käytöstä.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Älä estä</string>
+      <string id="CookiesList_Block_ThirdParty">Estä vain kolmannen osapuolen evästeet</string>
+      <string id="CookiesList_Block_All">Estä kaikki evästeet</string>
+      <string id="EnterpriseModeSiteList">Tämän avulla voit määrittää yrityksen sivustoluettelon</string>
+      <string id="EnterpriseModeSiteList_Explain">Tämän asetuksen avulla voit määrittää, määritetäänkö yrityksen sivustoluettelo ja käytetäänkö sitä yhteensopivuustarkoituksiin.
+
+Jos otat tämän asetuksen käyttöön, sinulla on kaksi lisäasetusta:
+  • Ei määritetty. Et voi käyttää yrityksen sivustoluetteloa.
+  • UseEnterpriseModeSiteList. Tämän avulla voit käyttää yrityksen sivustoluetteloa. Jos käytät tätä asetusta, sinun on myös sisällytettävä XML-sivustoluettelosi sijainti {URI}-ruutuun. Tämä on oletusarvo.</string>
+      <string id="HomePage">Tämän avulla voit määrittää kotisivusi</string>
+      <string id="HomePage_Explain">Tämän asetuksen avulla voit määrittää organisaatiosi kotisivun. Oletusarvon mukaan tätä asetusta ei ole määritetty, vaan sovellusasetuksia käytetään sen sijaan.
+
+Jos otat tämän asetuksen käyttöön, sinun on myös sisällytettävä sivustosi sijainti {URI}-ruutuun.</string>
+      <string id="ItemNameDisable">Poista käytöstä</string>
+      <string id="ItemNameEnable">Ota käyttöön</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Lähettää kaiken intranet-tietoliikenteen Internet Exploreriin</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Kirjoita IE:n yritystilan sivustoluettelon sijainti (URL)</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Kirjoita kotisivusi sivuston sijainti (URL-osoite)</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Määritä evästeasetus</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

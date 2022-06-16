@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Ermöglicht die Skriptausführung, z. B. Javascript.</string>
+      <string id="AllowActiveScripting_Explain">Mit dieser Einstellung legen Sie fest, ob Benutzer Skripts, z. B. JavaScript, ausführen dürfen. Die Einstellung ist standardmäßig aktiviert.
+
+Wenn Sie diese Einstellung aktivieren, wird die Skriptausführung für alle Computer eingeschaltet. 
+
+Wenn Sie diese Einstellung deaktivieren, kann kein Skript ausgeführt werden.</string>
+      <string id="AllowAutofill">Ermöglicht Ihnen, Benutzern die Verwendung von AutoAusfüllen auf Websites zu erlauben.</string>
+      <string id="AllowAutofill_Explain">Mit dieser Einstellung legen Sie fest, ob Benutzer AutoAusfüllen auf Websites verwenden dürfen. Die Einstellung ist standardmäßig aktiviert.
+
+Wenn Sie diese Einstellung aktivieren, können Benutzer AutoAusfüllen auf Websites verwenden und Informationen lokal zwischenspeichern.
+
+Wenn Sie diese Einstellung deaktivieren, können die Benutzer AutoAusfüllen nicht verwenden.</string>
+      <string id="AllowDoNotTrack">Ermöglicht Ihnen, Benutzern das Senden DNT-Kopfzeilen zu erlauben.</string>
+      <string id="AllowDoNotTrack_Explain">Mit dieser Einstellung legen Sie fest, ob Benutzer DNT-Kopfzeilen senden dürfen. Die Einstellung ist standardmäßig deaktiviert.
+
+Wenn Sie diese Einstellung aktivieren, können Benutzer DNT-Kopfzeilen von jedem Computer der Organisation senden.
+
+Wenn Sie diese Einstellung deaktivieren, können Benutzer keine DNT-Kopfzeilen senden.</string>
+      <string id="AllowPasswordManager">Ermöglicht das Konfigurieren des Kennwort-Managers.</string>
+      <string id="AllowPasswordManager_Explain">Mit dieser Einstellung legen Sie fest, ob Benutzer Kennwörter lokal auf ihren Computern speichern können. Die Einstellung ist standardmäßig aktiviert.
+
+Wenn Sie diese Einstellung aktivieren, ist der Kennwort-Manager eingeschaltet, und Benutzer können Kennwörter lokal auf ihren Computern speichern.
+
+Wenn Sie diese Einstellung deaktivieren, ist der Kennwort-Manager ausgeschaltet, und die Benutzer können Kennwörter nicht lokal speichern.</string>
+      <string id="AllowPopups">Ermöglicht das Ausführen von Popups.</string>
+      <string id="AllowPopups_Explain">Mit dieser Einstellung legen Sie fest, ob Popups erlaubt sind. Die Einstellung ist standardmäßig deaktiviert.
+
+Wenn Sie diese Einstellung aktivieren, können Popups auf allen Computern der Organisation ausgeführt werden.
+
+Wenn Sie diese Einstellung deaktivieren, können keine Popups ausgeführt werden.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Blockiert die Anzeige von Suchvorschlägen auf der Adressleiste.</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Mit dieser Einstellung legen Sie fest, ob Suchvorschläge auf der Adressleiste angezeigt werden. Die Einstellung ist standardmäßig aktiviert.
+
+Wenn Sie diese Einstellung aktivieren, werden den Benutzern Suchvorschläge in der Adressleiste angezeigt.
+
+Wenn Sie diese Einstellung deaktivieren, werden in der Adressleiste keine Suchergebnisse angezeigt.</string>
+      <string id="AllowSmartScreen">Ermöglicht die SmartScreen-Konfiguration.</string>
+      <string id="AllowSmartScreen_Explain">Mit dieser Einstellung legen Sie fest, ob SmartScreen eingeschaltet wird. Die Einstellung ist standardmäßig aktiviert.
+
+Wenn Sie diese Einstellung aktivieren, ist SmartScreen für alle Computer eingeschaltet. 
+
+Wenn Sie diese Einstellung deaktivieren, ist SmartScreen ausgeschaltet.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Nicht blockieren</string>
+      <string id="CookiesList_Block_ThirdParty">Nur Cookies von Drittanbietern blockieren</string>
+      <string id="CookiesList_Block_All">Alle Cookies blockieren</string>
+      <string id="EnterpriseModeSiteList">Ermöglicht das Konfigurieren der Websiteliste für den Unternehmensmodus.</string>
+      <string id="EnterpriseModeSiteList_Explain">Mit dieser Einstellung legen Sie fest, ob die Websiteliste für den Unternehmensmodus aus Kompatibilitätsgründen eingerichtet und verwendet wird.
+
+Wenn Sie diese Einstellung aktivieren, haben Sie zwei zusätzliche Optionen:
+  • Nicht konfiguriert. Die Websiteliste für den Unternehmensmodus kann nicht verwendet werden.
+  • UseEnterpriseModeSiteList. Die Websiteliste für den Unternehmensmodus kann verwendet werden. Wenn Sie diese Option verwenden, müssen Sie der XML-Websiteliste im {URI}-Feld auch den Pfad hinzufügen. Dies ist der Standardwert.</string>
+      <string id="HomePage">Ermöglicht das Konfigurieren der Homepage.</string>
+      <string id="HomePage_Explain">Diese Einstellung ermöglicht Ihnen, die Homepage für Ihre Organisation einzurichten. Diese Einstellung ist standardmäßig nicht konfiguriert, stattdessen werden App-Einstellungen verwendet.
+
+Wenn Sie diese Einstellung aktivieren, müssen Sie dem {URI}-Feld auch den Pfad Ihrer Website hinzufügen.</string>
+      <string id="ItemNameDisable">Deaktivieren</string>
+      <string id="ItemNameEnable">Aktivieren</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Sendet den gesamten Intranetdatenverkehr an Internet Explorer.</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Geben Sie den Speicherort (die URL) der IE-Websiteliste für den Unternehmensmodus ein.</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Geben Sie den Speicherort (die URL) der Homepage-Website ein.</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Cookieeinstellung konfigurieren</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

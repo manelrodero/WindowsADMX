@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>itt adja meg a megjelenítendő nevet</displayName>
+  <description>itt adja meg a leírást</description>
+  <resources>
+    <stringTable>
+      <string id="WCN_Category">Windows azonnali csatlakozás</string>
+      <string id="WCN_DisableWcnUi">A Windows azonnali csatlakozási varázslók hozzáférésének tiltása</string>
+      <string id="WCN_DisableWcnUi_Help">Ez a házirend-beállítás letiltja a Windows azonnali csatlakozás (WCN) varázslók hozzáférését. 
+
+Ha engedélyezi ezt a házirend-beállítást, azzal kikapcsolja a varázslókat, és a felhasználók nem tudnak hozzáférni a varázslókkal végezhető feladatokhoz. A konfigurációval kapcsolatos összes feladat, beleértve a „Vezeték nélküli útválasztó vagy elérési pont beállítása” és a „Vezeték nélküli eszköz hozzáadása” parancsokat, le van tiltva. 
+
+Ha letiltja vagy nem konfigurálja ezt a házirendet, a felhasználók hozzáférhetnek a varázslók feladataihoz, beleértve a „Vezeték nélküli útválasztó vagy elérési pont beállítása” és a „Vezeték nélküli eszköz hozzáadása” feladatot. Ezen házirend-beállítás alapértelmezett állapotában a felhasználók elérhetnek minden WCN varázslót.</string>
+      <string id="WCN_EnableRegistrar">A Windows azonnali csatlakozást használó vezeték nélküli beállítások konfigurálása</string>
+      <string id="WCN_EnableRegistrar_Help">This policy setting allows the configuration of wireless settings using Windows Connect Now (WCN). The WCN Registrar enables the discovery and configuration of devices over Ethernet (UPnP), over In-band 802.11 WLAN, through the Windows Portable Device API (WPD), and via USB Flash drives.
+
+Additional options are available to allow discovery and configuration over a specific medium. 
+
+If you enable this policy setting, additional choices are available to turn off the operations over a specific medium. 
+
+If you disable this policy setting, operations are disabled over all media. 
+
+If you do not configure this policy setting, operations are enabled over all media. 
+
+The default for this policy setting allows operations over all media.</string>
+      <string id="WCN_Higher_Precedence_Registrar_UPnP">WCN Etherneten (UPnP) keresztül</string>
+      <string id="WCN_Higher_Precedence_Registrar_InBand802DOT11">WCN over In-band 802.11 WLAN</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="WCN_EnableRegistrar">
+        <checkBox refId="WCN_EnableRegistrar_DisableUPnP">Az Etherneten (UPnP) keresztül WCN használatával történő konfigurálás kikapcsolása</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableInBand802DOT11">Turn off ability to configure using WCN over In-band 802.11 WLAN</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableFlashConfig">Az USB flash meghajtóval való konfigurálás kikapcsolása</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableWPD">A Windows Hordozható eszköz (WPD) konfigurálhatóságának kikapcsolása</checkBox>
+        <decimalTextBox refId="WCN_EnableRegistrar_MaxWCNDeviceNumber" defaultValue="500">A maximálisan megengedett WCN-eszközök száma:</decimalTextBox>
+        <dropdownList refId="WCN_Higher_Precedence_Registrar" noSort="true" defaultItem="0">Magasabb prioritású médium a több médium által észlelt eszközökhöz:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

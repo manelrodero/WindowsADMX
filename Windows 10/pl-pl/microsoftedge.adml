@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Umożliwia uruchamianie skryptów, takich jak skrypty Javascript</string>
+      <string id="AllowActiveScripting_Explain">To ustawienie pozwala określić, czy umożliwić użytkownikom uruchamianie skryptów, takich jak skrypty JavaScript. To ustawienie jest domyślnie włączone.
+
+Jeśli to ustawienie zostanie włączone, skrypty zostaną włączone na wszystkich komputerach. 
+
+Jeśli to ustawienie zostanie wyłączone, nie będzie można uruchamiać skryptów.</string>
+      <string id="AllowAutofill">Umożliwia zezwalanie użytkownikom na korzystanie z autowypełniania w witrynach internetowych</string>
+      <string id="AllowAutofill_Explain">To ustawienie pozwala określić, czy użytkownicy mogą korzystać z autowypełniania w witrynach internetowych. To ustawienie jest domyślnie włączone.
+
+Jeśli to ustawienie zostanie włączone, użytkownicy będą mogli korzystać z autowypełniania w witrynach internetowych, a informacje będą zapisywane lokalnie w pamięci podręcznej.
+
+Jeśli to ustawienie zostanie wyłączone, użytkownicy nie będą mogli korzystać z autowypełniania.</string>
+      <string id="AllowDoNotTrack">Umożliwia zezwalanie użytkownikom na wysyłanie nagłówków Nie śledź</string>
+      <string id="AllowDoNotTrack_Explain">To ustawienie pozwala określić, czy użytkownicy mogą wysyłać nagłówki Nie śledź. To ustawienie jest domyślnie wyłączone.
+
+Jeśli to ustawienie zostanie włączone, użytkownicy będą mogli wysyłać nagłówki Nie śledź z dowolnego komputera w organizacji.
+
+Jeśli to ustawienie zostanie wyłączone, użytkownicy nie będą mogli wysyłać nagłówków Nie śledź.</string>
+      <string id="AllowPasswordManager">Umożliwia skonfigurowanie menedżera haseł</string>
+      <string id="AllowPasswordManager_Explain">To ustawienie pozwala określić, czy użytkownicy mogą zapisywać hasła lokalnie na swoich komputerach. To ustawienie jest domyślnie włączone.
+
+Jeśli to ustawienie zostanie włączone, menedżer haseł zostanie włączony i użytkownicy będą mogli zapisywać hasła lokalnie na swoich komputerach.
+
+Jeśli to ustawienie zostanie wyłączone, menedżer haseł zostanie wyłączony i użytkownicy nie będą mogli zapisywać haseł lokalnie.</string>
+      <string id="AllowPopups">Umożliwia uruchamianie wyskakujących okienek</string>
+      <string id="AllowPopups_Explain">To ustawienie pozwala określić, czy zezwalać na wyskakujące okienka. To ustawienie jest domyślnie wyłączone.
+
+Jeśli to ustawienie zostanie włączone, będzie można uruchamiać wyskakujące okienka na wszystkich komputerach organizacji.
+
+Jeśli to ustawienie zostanie wyłączone, nie będzie można uruchamiać wyskakujących okienek.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Wyłącza wyświetlanie sugestii wyszukiwania na pasku adresu</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">To ustawienie pozwala określić, czy na pasku adresu mają być wyświetlane sugestie wyszukiwania. To ustawienie jest domyślnie włączone.
+
+Jeśli to ustawienie zostanie włączone, sugestie wyszukiwania będą wyświetlane na pasku adresu.
+
+Jeśli to ustawienie zostanie wyłączone, wyniki wyszukiwania nie będą wyświetlane na pasku adresu.</string>
+      <string id="AllowSmartScreen">Umożliwia skonfigurowanie filtru SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">To ustawienie pozwala określić, czy filtr SmartScreen ma być włączony, takich jak skrypty JavaScript. To ustawienie jest domyślnie włączone.
+
+Jeśli to ustawienie zostanie włączone, filtr SmartScreen zostanie włączony na wszystkich komputerach. 
+
+Jeśli to ustawienie zostanie wyłączone, filtr SmartScreen zostanie wyłączony.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Nie blokuj</string>
+      <string id="CookiesList_Block_ThirdParty">Blokuj tylko pliki cookie innych firm</string>
+      <string id="CookiesList_Block_All">Blokuj wszystkie pliki cookie</string>
+      <string id="EnterpriseModeSiteList">Umożliwia skonfigurowanie listy witryn przedsiębiorstwa</string>
+      <string id="EnterpriseModeSiteList_Explain">To ustawienie pozwala określić, czy można skonfigurować listę witryn przedsiębiorstwa i używać jej w celu zachowania zgodności.
+
+Jeśli to ustawienie zostanie włączone, będą dostępne 2 dodatkowe opcje:
+  • Nie skonfigurowano. Nie można używać listy witryn przedsiębiorstwa.
+  • Użyj listy witryn trybu przedsiębiorstwa. Umożliwia używanie listy witryn przedsiębiorstwa. W przypadku użycia tej opcji należy też dołączyć lokalizację do listy witryn XML w polu {URI}. Jest to wartość domyślna.</string>
+      <string id="HomePage">Umożliwia skonfigurowanie strony głównej</string>
+      <string id="HomePage_Explain">To ustawienie pozwala skonfigurować stronę główną organizacji. Domyślnie to ustawienie nie jest skonfigurowane i są używane ustawienia aplikacji.
+
+W przypadku włączenia tego ustawienia należy też dołączyć lokalizację witryny w polu {URI}.</string>
+      <string id="ItemNameDisable">Wyłącz</string>
+      <string id="ItemNameEnable">Włącz</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Wysyła cały ruch intranetowy do programu Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Wpisz lokalizację (adres URL) listy witryn internetowych programu IE w trybie przedsiębiorstwa</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Wpisz lokalizację (adres URL) witryny strony głównej</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Konfiguruj ustawienie plików cookie</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

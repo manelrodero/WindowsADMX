@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Windows 연결 관리자 그룹 정책 설정</displayName>
+  <description>Windows 연결 관리자 그룹 정책 설정</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Windows 연결 관리자</string>
+      <string id="WCM_BlockNonDomain">도메인 인증 네트워크에 연결된 경우 도메인이 아닌 네트워크에 연결 금지</string>
+      <string id="WCM_BlockNonDomain_Help">이 정책 설정은 컴퓨터를 도메인 기반 네트워크와 도메인 기반이 아닌 네트워크에 동시에 연결하지 못하도록 합니다.
+      
+      이 정책 설정을 사용하면 컴퓨터가 다음 상황에 따라 자동 및 수동 네트워크 연결 시도에 응답합니다.
+      
+      자동 연결 시도
+      - 컴퓨터가 이미 도메인 기반 네트워크에 연결된 경우 도메인이 아닌 네트워크로 자동 연결 시도가 모두 차단됩니다.
+      - 컴퓨터가 이미 도메인 기반이 아닌 네트워크에 연결된 경우 도메인 기반 네트워크로 자동 연결 시도가 차단됩니다.
+      
+      수동 연결 시도
+      - 컴퓨터가 이더넷이 아닌 다른 매체를 통해 도메인 기반이 아닌 네트워크나 도메인 기반 네트워크에 이미 연결되어 있으며 사용자가 추가 네트워크와의 수동 연결을 시도하여 이 정책 설정에 위배되는 경우에는 기존 네트워크 연결이 끊어지고 수동 연결이 허용됩니다.
+      - 컴퓨터가 이더넷을 통해 도메인 기반이 아닌 네트워크나 도메인 기반 네트워크에 이미 연결되어 있으며 사용자가 추가 네트워크와의 수동 연결을 시도하여 이 정책 설정에 위배되는 경우에는 기존 이더넷 연결이 유지되고 수동 연결 시도가 차단됩니다.
+
+      이 정책 설정을 구성하지 않거나 사용하지 않으면 컴퓨터가 도메인 네트워크와 도메인이 아닌 네트워크에 동시에 연결할 수 있습니다.
+      
+      </string>
+      <string id="WCM_DisableRoaming">로밍 모바일 광대역 네트워크에 연결 금지</string>
+      <string id="WCM_DisableRoaming_Help">이 정책 설정은 로밍 공급자 네트워크에 등록되어 있는 클라이언트가 모바일 광대역 네트워크에 연결하지 못하도록 합니다. 
+
+      이 정책 설정을 사용하면 클라이언트가 홈 공급자 네트워크에 등록할 때까지 로밍 공급자 네트워크에 대한 모든 자동 및 수동 연결 시도가 차단됩니다.
+      
+      이 정책 설정을 구성하지 않거나 사용하지 않으면 클라이언트가 컴퓨터가 로밍 공급자 모바일 광대역 네트워크에 연결할 수 있습니다.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">인터넷 또는 Windows 도메인에 대한 동시 연결 수 최소화</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">연결된 대기 모드에서 전원 관리 사용 안 함</string>
+      <string id="WCM_DisablePowerManagement_Help">이 정책 설정은 컴퓨터가 연결된 대기 모드로 전환될 때 전원 관리 기능을 사용할 수 없도록 지정합니다. 
+
+      이 정책 설정을 사용하면 컴퓨터가 연결된 대기 모드로 전환될 때 Windows 연결 관리자에서 전원 소비량을 낮추기 위해 어댑터 송수신 장치를 관리하지 않습니다.
+
+      이 정책 설정을 구성하지 않거나 사용하지 않으면 컴퓨터가 연결된 대기 모드로 전환될 때 전원 관리 기능을 사용할 수 있습니다.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

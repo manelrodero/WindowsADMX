@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Passport for Work</displayName>
+  <description>Konfigurace přihlašovací metody Microsoft Passport for Work</description>
+  <resources>
+    <stringTable>
+        <string id="MSPassportForWorkCategory">Microsoft Passport for Work</string>
+        <string id="MSPassportForWorkPINComplexityCategory">Složitost PIN kódu</string>
+        <string id="MSPassport_UsePassportForWork">Používat přihlašovací metodu Microsoft Passport for Work</string>
+        <!-- DropdownList Button strings -->
+        <string id="ButtonTextAllow">Povolit</string>
+        <string id="ButtonTextDisallow">Zakázat</string>
+        <string id="ButtonTextRequired">Požadováno</string>
+        <string id="MSPassport_UsePassportForWorkExplain">Microsoft Passport for Work je alternativní metoda pro přihlašování do Windows pomocí účtu Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty.
+
+Pokud toto nastavení zásad povolíte nebo nenakonfigurujete, zřídí zařízení Microsoft Passport for Work pro všechny uživatele.
+
+Pokud toto nastavení zásad zakážete, zařízení Microsoft Passport for Work nezřídí pro žádného uživatele.</string>
+        <string id="MSPassport_RequireSecurityDevice">Používat zařízení hardwarového zabezpečení</string>
+        <string id="MSPassport_RequireSecurityDeviceExplain">Čip TPM (Trusted Platform Module) nabízí další výhody zabezpečení nad rámec softwarového zabezpečení, protože data, která jsou v něm uložená, nejde používat na jiných zařízeních.
+
+Pokud toto nastavení zásad povolíte, zřídí Microsoft Passport for Work jenom zařízení s použitelným čipem TPM.
+
+Pokud toto nastavení zásad zakážete, všechna zařízení zřídí Microsoft Passport for Work pomocí softwaru, a to i v případě, že je k dispozici použitelný čip TPM.
+
+Pokud toto nastavení zásad nenakonfigurujete, všechna zařízení zřídí Microsoft Passport for Work pomocí softwaru v případě, že bude čip TPM nefunkční nebo nedostupný.
+        </string>
+        <string id="MSPassport_MinimumPINLength">Minimální délka PIN kódu</string>
+        <string id="MSPassport_MinimumPINLengthExplain">Minimální délka PIN kódu nakonfiguruje minimální počet znaků požadovaných pro pracovní PIN kód. Nejmenší počet znaků, který můžete pro toto nastavení zásad nakonfigurovat, je 4. Největší počet, který můžete nakonfigurovat, musí být menší než počet znaků nakonfigurovaný v nastavení zásad Maximální délka PIN kódu, nebo 127, podle toho, co je nižší.
+
+Pokud toto nastavení zásad nakonfigurujete, musí být délka pracovního PIN kódu větší nebo rovna tomuto počtu znaků.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, musí být délka pracovního PIN kódu větší než nebo rovna 4.
+
+POZNÁMKA: Pokud nejsou výše uvedené podmínky pro minimální délku PIN kódu splněné, použijí se jak pro maximální, tak pro minimální délku PIN kódu výchozí hodnoty.
+        </string>
+        <string id="MSPassport_MaximumPINLength">Maximální délka PIN kódu</string>
+        <string id="MSPassport_MaximumPINLengthExplain">Maximální délka PIN kódu nakonfiguruje maximální počet znaků povolených pro pracovní PIN kód. Největší počet znaků, který můžete pro toto nastavení zásad nakonfigurovat, je 127. Nejmenší počet znaků, který můžete nakonfigurovat, musí být větší než počet znaků nakonfigurovaný v nastavení zásad Minimální délka PIN kódu, nebo 4, podle toho, co je větší.
+
+Pokud toto nastavení zásad nakonfigurujete, musí být délka pracovního PIN kódu menší nebo rovna tomuto počtu znaků.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, musí být délka pracovního PIN kódu menší než nebo rovna 127.
+
+POZNÁMKA: Pokud nejsou výše uvedené podmínky pro maximální délku PIN kódu splněné, použijí se jak pro maximální, tak pro minimální délku PIN kódu výchozí hodnoty.
+        </string>
+        <string id="MSPassport_UppercaseLetters">Používat velká písmena</string>
+        <string id="MSPassport_UppercaseLettersExplain">Pomocí tohoto nastavení zásad můžete nakonfigurovat používání velkých písmen v pracovním PIN kódu pro Microsoft Passport for Work.
+
+Pokud toto nastavení zásad nakonfigurujete na Povolit, umožní Microsoft Passport for Work uživatelům používat v pracovním PIN kódu velká písmena.
+
+Pokud toto nastavení zásad nakonfigurujete na Zakázat, Microsoft Passport for Work bude uživatelům bránit v používání velkých písmen v pracovních PIN kódech.
+
+Pokud toto nastavení zásad nakonfigurujete na Požadováno, Microsoft Passport for Work bude vyžadovat, aby uživatelé měli v pracovním PIN kódu minimálně jedno velké písmeno.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, povolí Microsoft Passport for Work uživatelům používání velkých písmen v pracovních PIN kódech.
+                </string>
+        <string id="MSPassport_LowercaseLetters">Používat malá písmena</string>
+        <string id="MSPassport_LowercaseLettersExplain">Pomocí tohoto nastavení zásad můžete nakonfigurovat používání malých písmen v pracovním PIN kódu pro Microsoft Passport for Work.
+
+Pokud toto nastavení zásad nakonfigurujete na Povolit, umožní Microsoft Passport for Work uživatelům používat v pracovním PIN kódu malá písmena.
+
+Pokud toto nastavení zásad nakonfigurujete na Zakázat, Microsoft Passport for Work bude uživatelům bránit v používání malých písmen v pracovních PIN kódech.
+
+Pokud toto nastavení zásad nakonfigurujete na Požadováno, Microsoft Passport for Work bude vyžadovat, aby uživatelé měli v pracovním PIN kódu minimálně jedno malé písmeno.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, povolí Microsoft Passport for Work uživatelům používání malých písmen v pracovních PIN kódech.
+                </string>
+        <string id="MSPassport_SpecialCharacters">Používat speciální znaky</string>
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Pomocí tohoto nastavení zásad můžete nakonfigurovat použití speciálních znaků v gestech pracovních PIN kódů pro Microsoft Passport for Work. Příklady platných speciálních znaků pro gesta pracovních PIN kódů pro Microsoft Passport for Work: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
+
+Pokud toto nastavení zásad nakonfigurujete na Povolit, umožní Microsoft Passport for Work uživatelům používat speciální znaky v pracovních PIN kódech.
+
+Pokud toto nastavení zásad nakonfigurujete na Zakázat, zabrání Microsoft Passport for Work uživatelům v používání speciálních znaků v pracovních PIN kódech.
+
+Pokud toto nastavení zásad nakonfigurujete na Požadováno, bude Microsoft Passport for Work vyžadovat, aby uživatelé v pracovních PIN kódech měli aspoň jeden speciální znak.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Microsoft Passport for Work umožní uživatelům používání speciálních znaků v pracovních PIN kódech.
+                ]]></string>
+        <string id="MSPassport_Digits">Používat číslice</string>
+        <string id="MSPassport_DigitsExplain">Pomocí tohoto nastavení zásad můžete nakonfigurovat použití číslic v pracovních PIN kódech pro Microsoft Passport for Work.
+
+Pokud toto nastavení zásad nakonfigurujete na Povolit, umožní Microsoft Passport for Work uživatelům používat číslice v pracovních PIN kódech.
+
+Pokud toto nastavení zásad nakonfigurujete na Zakázat, zabrání Microsoft Passport for Work uživatelům v používání číslic v pracovních PIN kódech.
+
+Pokud toto nastavení zásad nakonfigurujete na Požadováno, bude Microsoft Passport for Work vyžadovat, aby uživatelé v pracovních PIN kódech měli aspoň jednu číslici.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Microsoft Passport for Work umožní uživatelům používání číslic v pracovních PIN kódech.
+
+        </string>
+        <string id="MSPassport_UseBiometrics">Používat biometrii</string>
+        <string id="MSPassport_UseBiometricsExplain">Microsoft Passport for Work umožňuje uživatelům používat biometrická gesta, například obličej a otisky prstů, jako alternativu k gestu PIN. Uživatelé si ale i tak musí ještě nakonfigurovat pracovní PIN kód, který se bude používat v případě selhání.
+
+Pokud toto nastavení zásad povolíte, Microsoft Passport for Work umožní používání biometrických gest.
+
+Pokud toto nastavení zásad zakážete, Microsoft Passport for Work používání biometrických gest zakáže.
+
+Pokud toto nastavení zásad nenakonfigurujete, Microsoft Passport for Work bude používání biometrických gest umožňovat.
+
+POZNÁMKA: Pokud se tato zásada zakáže, nebudou moct uživatelé na zařízení používat biometrická gesta pro žádné typy účtů.
+        </string>
+    </stringTable>
+    <presentationTable>
+        <presentation id="MSPassport_MinimumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="4">Minimální délka PIN kódu</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_MaximumPINLengthControl">
+            <decimalTextBox refId="MSPassport_MaximumPINLengthDataType" spin="true" spinStep="1" defaultvalue="127">Maximální délka PIN kódu</decimalTextBox>
+        </presentation>
+        <presentation id="MSPassport_UppercaseLettersControl">
+            <dropdownList refId="MSPassport_UppercaseLettersChoices" defaultItem="0">Velká písmena:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_LowercaseLettersControl">
+            <dropdownList refId="MSPassport_LowercaseLettersChoices" defaultItem="0">Malá písmena:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_SpecialCharactersControl">
+            <dropdownList refId="MSPassport_SpecialCharactersChoices" defaultItem="0">Speciální znaky:</dropdownList>
+        </presentation>
+        <presentation id="MSPassport_DigitsControl">
+            <dropdownList refId="MSPassport_DigitsChoices" defaultItem="0">číslice:</dropdownList>
+        </presentation>
+
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

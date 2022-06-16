@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Groepsbeleidinstellingen voor Windows verbindingsbeheer</displayName>
+  <description>Groepsbeleidinstellingen voor Windows verbindingsbeheer</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Windows verbindingsbeheer</string>
+      <string id="WCM_BlockNonDomain">Verbied verbinding met niet-domeinnetwerken wanneer verbonden met door domein geverifieerde netwerkcommunicatie</string>
+      <string id="WCM_BlockNonDomain_Help">Deze beleidsinstelling voorkomt dat computers op hetzelfde moment verbinding maken met zowel een op een domeinnaam gebaseerd netwerk, en een niet-domein netwerk.
+      
+      Als deze beleidsinstelling is ingeschakeld, reageert de computer op automatische en handmatige pogingen voor netwerkverbinding op basis van de volgende omstandigheden:
+      
+      Pogingen voor automatische verbinding
+      - Wanneer de computer al verbonden is met een domeingebaseerd netwerk, worden alle pogingen voor automatische verbinding met niet-domeinnetwerken geblokkeerd.
+      - Wanneer de computer al is verbonden met niet-domeingebaseerd netwerk, worden pogingen voor automatische verbinding voor domein-gebaseerde netwerken geblokkeerd.
+      
+      Pogingen voor handmatige verbinding
+      - Wanneer de computer al is aangesloten op een niet-domeingebaseerd netwerk, of een domeinnetwerk op basis van andere media dan Ethernet, en een gebruiker probeert een handmatige verbinding te maken die in strijd is met deze beleidsinstelling, wordt de bestaande netwerkverbinding verbroken en wordt de handmatige verbinding toegestaan.
+      - Wanneer de computer al is aangesloten op een niet-domeingebaseerd netwerk, of een domeinnetwerk via Ethernet, en een gebruiker probeert een handmatige verbinding te maken die in strijd is met deze beleidsinstelling, wordt de bestaande Ethernet-verbinding verbroken en wordt de handmatige verbinding geblokkeerd.
+
+      Als deze beleidsinstelling niet is geconfigureerd of uitgeschakeld, hebben computers toestemming om tegelijk verbinding te maken met zowel domein- als niet-domeinnetwerken.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Verbieden verbinding met zwervende netwerken voor mobiel breedband</string>
+      <string id="WCM_DisableRoaming_Help">Deze beleidsinstelling voorkomt dat klanten verbinding maken met netwerken voor mobiele breedband als de cliënt is geregistreerd op een netwerk van een zwervende aanbieder. 
+
+      Als dit beleid is ingeschakeld, worden alle pogingen voor automatische en handmatige verbinding op de netwerken van de zwervende aanbieder geblokkeerd, totdat de klant zich registreert voor het netwerk van de thuisaanbieder.
+      
+      Als deze beleidsinstelling niet is geconfigureerd of uitgeschakeld, hebben cliënten toestemming om verbinding te maken met netwerken van zwervende aanbieders.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Minimaliseren van het aantal gelijktijdige verbindingen met het internet of een Windows-domein</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Schakel energiebeheer uit in verbonden stand-bymodus</string>
+      <string id="WCM_DisablePowerManagement_Help">Deze beleidsinstelling geeft aan dat energiebeheer wordt uitgeschakeld wanneer de machine de verbonden stand-bymodus ingaat. 
+
+      Als deze beleidsinstelling is ingeschakeld, beheert Windows Verbindingsbeheer geen adapter radio's om het energieverbruik te beperken wanneer de machine de verbonden stand-bymodus ingaat.
+
+      Als deze beleidsinstelling niet is geconfigureerd of is uitgeschakeld, wordt energiebeheer ingeschakeld als de machine de verbonden stand-bymodus ingaat.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

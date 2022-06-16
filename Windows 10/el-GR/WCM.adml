@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Ρυθμίσεις πολιτικής ομάδας της Διαχείρισης συνδέσεων των Windows</displayName>
+  <description>Ρυθμίσεις πολιτικής ομάδας της Διαχείρισης συνδέσεων των Windows</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Διαχείριση συνδέσεων των Windows</string>
+      <string id="WCM_BlockNonDomain">Απαγόρευση σύνδεσης σε δίκτυα που δεν ανήκουν στον τομέα κατά τη διάρκεια σύνδεσης σε δίκτυο τομέα με έλεγχο ταυτότητας</string>
+      <string id="WCM_BlockNonDomain_Help">Αυτή η ρύθμιση πολιτικής αποτρέπει τους υπολογιστές από τη σύνδεση τόσο σε δίκτυο που βασίζεται σε τομέα όσο και σε δίκτυο που δεν βασίζεται σε τομέα ταυτόχρονα.
+      
+      Αν ενεργοποιηθεί αυτή η ρύθμιση πολιτικής, ο υπολογιστής αποκρίνεται σε αυτόματες και μη αυτόματες απόπειρες σύνδεσης σε δίκτυο με βάση τις εξής συνθήκες:
+      
+      Αυτόματες απόπειρες σύνδεσης
+      - Όταν ο υπολογιστής είναι ήδη συνδεδεμένος σε δίκτυο που βασίζεται σε τομέα, όλες οι αυτόματες απόπειρες σύνδεσης σε δίκτυα που δεν ανήκουν στον τομέα αποκλείονται.
+      - Όταν ο υπολογιστής είναι ήδη συνδεδεμένος σε δίκτυο που δεν βασίζεται στον τομέα, οι αυτόματες απόπειρες σύνδεσης σε δίκτυα που βασίζονται σε τομέα αποκλείονται.
+      
+      Μη αυτόματες απόπειρες σύνδεσης
+      - Όταν ο υπολογιστής είναι ήδη συνδεδεμένος σε δίκτυο που δεν βασίζεται στον τομέα ή σε δίκτυο που βασίζεται σε τομέα μέσω άλλων μέσων εκτός Ethernet και ένας χρήστης επιχειρεί να δημιουργήσει μια μη αυτόματη σύνδεση σε ένα πρόσθετο δίκτυο η οποία παραβιάζει αυτήν τη ρύθμιση πολιτικής, η υπάρχουσα σύνδεση δικτύου αποσυνδέεται και η μη αυτόματη σύνδεση επιτρέπεται.
+      - Όταν ο υπολογιστής είναι ήδη συνδεδεμένος σε δίκτυο που δεν βασίζεται στον τομέα ή σε δίκτυο που βασίζεται σε τομέα μέσω Ethernet και ένας χρήστης επιχειρεί να δημιουργήσει μια μη αυτόματη σύνδεση σε ένα πρόσθετο δίκτυο η οποία παραβιάζει αυτήν τη ρύθμιση πολιτικής, η υπάρχουσα σύνδεση Ethernet διατηρείται και η μη αυτόματη απόπειρα σύνδεσης αποκλείεται.
+
+      Αν δεν ρυθμιστούν οι παράμετροι αυτής της ρύθμισης πολιτικής ή αν αυτή απενεργοποιηθεί, επιτρέπεται στους υπολογιστές να συνδέονται ταυτόχρονα τόσο σε δίκτυα τομέα όσο και σε δίκτυα που δεν ανήκουν στον τομέα.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Απαγόρευση σύνδεσης σε δίκτυα περιαγωγής κινητού Internet ευρείας ζώνης</string>
+      <string id="WCM_DisableRoaming_Help">Αυτή η ρύθμιση πολιτικής αποτρέπει τις συσκευές-πελάτες από τη σύνδεση σε δίκτυα κινητού Internet ευρείας ζώνης, όταν η συσκευή-πελάτης εγγράφεται σε δίκτυο υπηρεσίας παροχής περιαγωγής. 
+
+      Αν ενεργοποιηθεί αυτή η ρύθμιση πολιτικής, όλες οι απόπειρες αυτόματης και μη αυτόματης σύνδεσης σε δίκτυα υπηρεσιών παροχής περιαγωγής αποκλείονται έως ότου η συσκευή-πελάτης εγγραφεί στο δίκτυο της οικείας υπηρεσίας παροχής.
+      
+      Αν δεν ρυθμιστούν οι παράμετροι αυτής της ρύθμισης πολιτικής ή αν αυτή απενεργοποιηθεί, επιτρέπεται στις συσκευές-πελάτες να συνδέονται σε δίκτυα υπηρεσιών παροχής περιαγωγής κινητού Internet ευρείας ζώνης.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Ελαχιστοποίηση του αριθμού ταυτόχρονων συνδέσεων στο Internet ή σε τομέα των Windows</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Απενεργοποίηση διαχείρισης ενέργειας σε κατάσταση λειτουργίας αναμονής με σύνδεση</string>
+      <string id="WCM_DisablePowerManagement_Help">Αυτή η ρύθμιση πολιτικής καθορίζει ότι η διαχείριση ενέργειας απενεργοποιείται όταν ο υπολογιστής μπαίνει σε κατάσταση λειτουργίας αναμονής με σύνδεση. 
+
+      Αν ενεργοποιηθεί αυτή η ρύθμιση πολιτικής, η Διαχείριση συνδέσεων των Windows δεν διαχειρίζεται τους ασύρματους δέκτες των προσαρμογέων προκειμένου να μειωθεί η κατανάλωση ενέργειας όταν ο υπολογιστής μπαίνει σε κατάσταση λειτουργίας αναμονής με σύνδεση.
+
+      Αν δεν ρυθμιστούν οι παράμετροι αυτής της ρύθμισης πολιτικής ή αν αυτή είναι απενεργοποιημένη, η διαχείριση ενέργειας ενεργοποιείται, όταν ο υπολογιστής μπαίνει σε κατάσταση λειτουργίας αναμονής με σύνδεση.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

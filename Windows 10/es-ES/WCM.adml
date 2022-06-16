@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Configuración de directiva de grupo del Administrador de conexiones de Windows</displayName>
+  <description>Configuración de directiva de grupo del Administrador de conexiones de Windows</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Administrador de conexiones de Windows
+</string>
+      <string id="WCM_BlockNonDomain">Prohibir la conexión a redes sin dominio cuando esté conectado a una red con dominio autenticado</string>
+      <string id="WCM_BlockNonDomain_Help">Esta configuración de directiva evita que los equipos se conecten a una red basada en dominio y a una red no basada en dominio al mismo tiempo.
+      
+      Si esta configuración de directiva está habilitada, el equipo responde a intentos de conexión manual y automática a redes de acuerdo con las siguientes circunstancias:
+      
+      Intentos de conexión automática
+      - Si el equipo ya está conectado a una red basada en dominio, se bloquean todos los intentos de conexión automática a redes no basadas en dominio.
+      - Si el equipo ya está conectado a una red no basada en dominio, se bloquean los intentos de conexión automática a redes basadas en dominio.
+      
+      Intentos de conexión manual
+      - Si el equipo ya está conectado a una red no basada en dominio o a una red basada en dominio a través de medios diferentes de Ethernet y un usuario intenta crear una conexión manual a una red adicional infringiendo esta configuración de directiva, la conexión de red existente se desconecta y se permite realizar la conexión manual.
+      - Si el equipo ya está conectado a una red no basada en dominio o a una red basada en dominio a través de Ethernet y un usuario intenta crear una conexión manual a una red adicional infringiendo esta configuración de directiva, la conexión Ethernet se mantiene y se bloquea el intento de conexión manual.
+
+      Si esta configuración de directiva está deshabilitada o no se establece, los equipos pueden conectarse de manera simultánea a ambos tipos de red: basada en dominio y no basada en dominio.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Prohibir la conexión a redes de banda ancha móvil de proveedores móviles</string>
+      <string id="WCM_DisableRoaming_Help">Esta configuración de directiva impide que los clientes se conecten a redes de banda ancha móvil cuando el cliente está registrado en una red de proveedores móviles. 
+
+      Si esta configuración de directiva está habilitada, se bloquean todos los intentos de conexión manual y automática a redes de proveedores móviles hasta que el cliente se registre en la red del proveedor doméstico.
+      
+      Si esta configuración de directiva está deshabilitada o no se establece, los clientes pueden conectarse a redes de banda ancha móvil de proveedores móviles.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Minimizar la cantidad de conexiones simultáneas a Internet o a un dominio de Windows</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Deshabilitar la administración de energía en el modo de espera conectado</string>
+      <string id="WCM_DisablePowerManagement_Help">Esta configuración de directiva especifica que la administración de energía está deshabilitada cuando el equipo entra en modo de espera conectado. 
+
+      Si esta configuración de directiva está habilitada, el Administrador de conexiones de Windows no administra adaptadores de radio para reducir el consumo de energía cuando el equipo entra en modo de espera conectado.
+
+      Si esta configuración de directiva está deshabilitada o no se establece, la administración de energía está habilitada cuando el equipo entra en modo de espera conectado.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

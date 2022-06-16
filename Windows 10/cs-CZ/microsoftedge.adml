@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Umožňuje spouštět skripty, například Javascript.</string>
+      <string id="AllowActiveScripting_Explain">Toto nastavení vám umožňuje rozhodnout, jestli chcete, aby mohli lidé spouštět skripty, například JavaScript. Toto nastavení je ve výchozím nastavení povolené.
+
+Pokud toto nastavení povolíte, bude skriptování pro všechny vaše počítače zapnuté.
+
+Pokud toto nastavení zakážete, nebude možné skripty spouštět.</string>
+      <string id="AllowAutofill">Umožňuje vám povolit lidem používat na webech automatické vyplňování.</string>
+      <string id="AllowAutofill_Explain">Toto nastavení vám umožňuje rozhodnout, jestli lidé budou moct na webech používat automatické vyplňování. Toto nastavení je ve výchozím nastavení povolené.
+
+Pokud toto nastavení povolíte, budou moct lidé na webech používat automatické vyplňování, přičemž informace se budou ukládat místně do mezipaměti.
+
+Pokud toto nastavení zakážete, nebudou moct lidé automatické vyplňování používat.</string>
+      <string id="AllowDoNotTrack">Umožňuje vám povolit lidem posílání hlaviček DNT (Do Not Track).</string>
+      <string id="AllowDoNotTrack_Explain">Toto nastavení vám umožňuje rozhodnout, jestli chcete, aby lidé mohli posílat hlavičky DNT (Do Not Track). Toto nastavení je ve výchozím nastavení zakázané.
+
+Pokud toto nastavení povolíte, budou moct lidé posílat hlavičky DNT ze všech počítačů ve vaší organizaci.
+
+Pokud toto nastavení zakážete, nebudou moct lidé posílat hlavičky DNT.</string>
+      <string id="AllowPasswordManager">Umožňuje nakonfigurovat správce hesel.</string>
+      <string id="AllowPasswordManager_Explain">Toto nastavení vám umožňuje rozhodnout, jestli si lidé budou moct ukládat hesla místně na svých počítačích. Toto nastavení je ve výchozím nastavení povolené.
+
+Pokud toto nastavení povolíte, zapne se Správce hesel a lidé si budou moct ukládat hesla místně na svých počítačích.
+
+Pokud toto nastavení zakážete, bude Správce hesel vypnutý a lidé nebudou moct ukládat hesla místně.</string>
+      <string id="AllowPopups">Umožní vám otevírat automaticky otevíraná okna.</string>
+      <string id="AllowPopups_Explain">Toto nastavení vám umožní rozhodnout, jestli se mají povolit automaticky otevíraná okna. Toto nastavení je ve výchozím nastavení zakázané.
+
+Pokud toto nastavení povolíte, budou se moct automaticky otevíraná okna otevírat na všech počítačích vaší organizace.
+
+Pokud toto nastavení zakážete, automaticky otevíraná okna se nebudou moct otevírat.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Přestane na panelu Adresa zobrazovat návrhy hledání.</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Toto nastavení vám umožňuje rozhodnout, jestli se mají na panelu Adresa zobrazovat návrhy hledání. Toto nastavení je ve výchozím nastavení povolené.
+
+Pokud toto nastavení povolíte, budou se lidem na panelu Adresa zobrazovat návrhy hledání.
+
+Pokud toto nastavení zakážete, výsledky hledání se na panelu Adresa zobrazovat nebudou.</string>
+      <string id="AllowSmartScreen">Umožní vám nakonfigurovat filtr SmartScreen.</string>
+      <string id="AllowSmartScreen_Explain">Toto nastavení vám umožňuje rozhodnout, jestli se má zapnout filtr SmartScreen. Toto nastavení je ve výchozím nastavení povolené.
+
+Pokud toto nastavení povolíte, bude filtr SmartScreen pro všechny vaše počítače zapnutý.
+
+Pokud toto nastavení zakážete, bude filtr SmartScreen vypnutý.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Neblokovat</string>
+      <string id="CookiesList_Block_ThirdParty">Blokovat jenom soubory cookie třetích stran</string>
+      <string id="CookiesList_Block_All">Blokovat všechny soubory cookie</string>
+      <string id="EnterpriseModeSiteList">Umožní vám nakonfigurovat seznam webů podnikového režimu</string>
+      <string id="EnterpriseModeSiteList_Explain">Toto nastavení vám umožňuje rozhodnout, jestli se má kvůli kompatibilitě nastavit a používat seznam webů podnikového režimu.
+
+Pokud toto nastavení povolíte, budete mít další 2 možnosti:
+  • Není nakonfigurované. Nebudete moct používat seznam webů podnikového režimu.
+  • Používat seznam webů podnikového režimu (UseEnterpriseModeSiteList). Umožní vám používat seznam webů podnikového režimu. Pokud použijete tuto možnost, musíte taky uvést umístění svého seznamu webů ve formátu XML v poli {URI}. Toto je výchozí hodnota.</string>
+      <string id="HomePage">Umožní vám nakonfigurovat si domovskou stránku.</string>
+      <string id="HomePage_Explain">Toto nastavení vám umožňuje nastavit domovskou stránku pro vaši organizaci. Ve výchozím nastavení není toto nastavení nakonfigurované a místo něj se používá nastavení pro aplikace.
+
+Pokud toto nastavení povolíte, musíte taky uvést umístění vašeho webu do pole {URI}.</string>
+      <string id="ItemNameDisable">Zakázat</string>
+      <string id="ItemNameEnable">Povolit</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Pro veškerý intranetový přenos používat Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Zadejte umístění (adresu URL) vašeho seznamu webů pro podnikový režim Internet Exploreru.</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Zadejte umístění (adresu URL) svého webu domovské stránky.</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Nakonfigurovat nastavení souborů cookie</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

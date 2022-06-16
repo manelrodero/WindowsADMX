@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">允许你运行脚本(如 JavaScript)</string>
+      <string id="AllowActiveScripting_Explain">此设置让你决定是否让用户运行脚本(如 JavaScript)。此设置在默认情况下处于启用状态。
+
+如果你启用此设置，则将在所有计算机上启用脚本。
+
+如果禁用此设置，则脚本不能运行。</string>
+      <string id="AllowAutofill">允许你让用户在网站上使用自动填充</string>
+      <string id="AllowAutofill_Explain">此设置让你决定用户是否可以在网站上使用自动填充。此设置在默认情况下处于启用状态。
+
+如果你启用此设置，则用户可以在网站上使用自动填充，并在本地缓存信息。
+
+如果禁用此设置，则用户无法使用自动填充。</string>
+      <string id="AllowDoNotTrack">允许你让用户发送 Do Not Track 标头</string>
+      <string id="AllowDoNotTrack_Explain">此设置让你决定是否让用户发送 Do Not Track 标头。此设置在默认情况下处于禁用状态。
+
+如果你启用此设置，则用户可以从你组织中的任何计算机发送 Do Not Track 标头。
+
+如果禁用此设置，则用户无法发送 Do Not Track 标头。</string>
+      <string id="AllowPasswordManager">允许你配置密码管理器</string>
+      <string id="AllowPasswordManager_Explain">此设置让你决定用户是否可以在其计算机上本地保存密码。此设置在默认情况下处于启用状态。
+
+如果你启用此设置，则密码管理器处于启用状态，用户可以在其计算机上本地保存密码。
+
+如果你禁用此设置，则密码管理器处于关闭状态，用户无法在本地保存密码。</string>
+      <string id="AllowPopups">允许你运行弹出窗口</string>
+      <string id="AllowPopups_Explain">此设置让你决定是否允许弹出窗口。此设置在默认情况下处于禁用状态。
+
+如果你启用此设置，则弹出窗口可以在你组织的所有计算机上运行。
+
+如果你禁用此设置，则弹出窗口不能运行。</string>
+      <string id="AllowSearchSuggestionsinAddressBar">禁止地址栏显示搜索建议</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">此设置让你决定地址栏是否应显示搜索建议。此设置在默认情况下处于启用状态。
+
+如果你启用此设置，则用户可以在地址栏中看到搜索建议。
+
+如果你禁用此设置，则搜索结果不会显示在地址栏中。</string>
+      <string id="AllowSmartScreen">允许你配置 SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">此设置让你决定是否要启用 SmartScreen。此设置在默认情况下处于启用状态。
+
+如果你启用此设置，则所有计算机的 SmartScreen 都将处于启用状态。
+
+如果你禁用此设置，则 SmartScreen 将处于关闭状态。</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">不阻止</string>
+      <string id="CookiesList_Block_ThirdParty">仅阻止第三方 Cookie</string>
+      <string id="CookiesList_Block_All">阻止所有 Cookie</string>
+      <string id="EnterpriseModeSiteList">允许你配置企业站点列表</string>
+      <string id="EnterpriseModeSiteList_Explain">此设置让你决定是否要设置并使用企业站点列表来实现兼容性。
+
+如果你启用此设置，则将显示 2 个附加选项:
+  • 未配置。你不能使用企业站点列表。
+  • UseEnterpriseModeSiteList。让你使用企业站点列表。如果你使用此选项，则还必须在 {URI} 框中包括 XML 站点列表的位置。这是默认值。</string>
+      <string id="HomePage">允许你配置主页</string>
+      <string id="HomePage_Explain">此设置允许你为你的组织设置主页。默认情况下未配置此设置，而是使用应用设置。
+
+如果你启用此设置，则还必须在 {URI} 框中包括你的网站的位置。</string>
+      <string id="ItemNameDisable">禁用</string>
+      <string id="ItemNameEnable">启用</string>
+      <string id="SendIntranetTraffictoInternetExplorer">将所有 Intranet 流量发送到 Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>键入企业模式 IE 网站列表的位置(URL)</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>键入你的主页网站的位置(URL)</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">配置 Cookie 设置</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

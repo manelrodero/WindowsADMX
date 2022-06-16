@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>introduza o nome a apresentar aqui</displayName>
+  <description>introduza a descrição aqui</description>
+  <resources>
+    <stringTable>
+      <string id="Cat_LanmanWorkstation">Estação de trabalho Lanman</string>
+      <string id="Pol_CipherSuiteOrder_Name">Ordem do conjunto de cifras</string>
+      <string id="Pol_CipherSuiteOrder_Help">Esta definição de política determina os conjuntos de cifras utilizados pelo cliente SMB.
+
+Se ativar esta definição de política, os conjuntos de cifras são priorizados na ordem especificada.
+
+Se ativar esta definição de política e não especificar pelo menos um conjunto de cifras suportado ou se desativar ou não configurar esta definição de política, a ordem do conjunto de cifras predefinida é utilizada.
+
+Conjunto de cifras SMB 3.11:
+
+AES_128_GCM
+AES_128_CCM
+
+Conjuntos de cifras SMB 3.0 e 3.02:
+
+AES_128_CCM
+
+Como modificar esta definição:
+
+Organize os conjuntos de cifras desejados na caixa de edição, um conjunto de cifras por linha, na ordem decrescente de preferência, com o conjunto de cifras mais preferido no topo. Retire quaisquer conjuntos de cifras que não pretenda utilizar.
+
+Nota: ao configurar esta definição de segurança, as alterações só entrarão em vigor quando reiniciar o Windows.</string>
+      </stringTable>
+    <presentationTable>
+      <presentation id="Pol_CipherSuiteOrder">
+        <text>Conjuntos de cifras:</text>
+        <multiTextBox refId="MultiText_CipherSuiteOrder"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

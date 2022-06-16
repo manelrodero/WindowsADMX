@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Lar deg kjøre skript, for eksempel Javascript</string>
+      <string id="AllowActiveScripting_Explain">Denne innstillingen lar deg bestemme om brukere kan kjøre skript, for eksempel JavaScript. Denne innstillingen er aktivert som standard.
+
+Hvis du aktiverer denne innstillingen, blir skripting aktivert for alle datamaskinene. 
+
+Hvis du deaktiverer denne innstillingen, kan ikke skript kjøre.</string>
+      <string id="AllowAutofill">Lar deg tillate at brukere kan bruke autofyll på nettsteder</string>
+      <string id="AllowAutofill_Explain">Denne innstillingen lar deg bestemme om brukere kan bruke autofyll på nettsteder. Denne innstillingen er aktivert som standard.
+
+Hvis du aktiverer denne innstillingen, kan brukere bruke autofyll på nettsteder og hurtigbufre informasjonen lokalt.
+
+Hvis du deaktiverer denne innstillingen, kan ikke brukere bruke autofyll.</string>
+      <string id="AllowDoNotTrack">Lar deg tillate at brukere sender Do Not Track-overskrifter</string>
+      <string id="AllowDoNotTrack_Explain">Denne innstillingen lar deg bestemme om brukere kan sende Do Not Track-overskrifter. Denne innstillingen er aktivert som standard.
+
+Hvis du aktiverer denne innstillingen, kan brukere sende Do Not Track-overskrifter fra alle datamaskiner i organisasjonen.
+
+Hvis du deaktiverer denne innstillingen, kan ikke brukere sende Do Not Track-overskrifter.</string>
+      <string id="AllowPasswordManager">Lar deg konfigurere passordbehandling</string>
+      <string id="AllowPasswordManager_Explain">Denne innstillingen lar deg bestemme om brukere kan lagre passord lokalt på datamaskinen. Denne innstillingen er aktivert som standard.
+
+Hvis du aktiverer denne innstillingen, blir passordbehandling aktivert og brukere kan lagre passord lokalt på datamaskinen.
+
+Hvis du deaktiverer denne innstillingen, blir passordbehandling deaktivert og brukere kan ikke lagre passord lokalt.</string>
+      <string id="AllowPopups">Lar deg kjøre popup-vinduer</string>
+      <string id="AllowPopups_Explain">Denne innstillingen lar deg bestemme om du vil tillate popup-vinduer. Denne innstillingen er deaktivert som standard.
+
+Hvis du aktiverer denne innstillingen, kan popup-vinduer kjøre på alle datamaskinene i organisasjonen. 
+
+Hvis du deaktiverer denne innstillingen, kan ikke popup-vinduer kjøre.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Hindre visning av søkeforslag på adresselinjen</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Denne innstillingen lar deg bestemme om søkeforslag skal vises på adresselinjen. Denne innstillingen er aktivert som standard.
+
+Hvis du aktiverer denne innstillingen, kan brukere se søkeforslag på adresselinjen.
+
+Hvis du deaktiverer denne innstillingen, vises ikke søkeresultater på adresselinjen.</string>
+      <string id="AllowSmartScreen">Lar deg konfigurer SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Denne innstillingen lar deg aktivere SmartScreen. Denne innstillingen er aktivert som standard.
+
+Hvis du aktiverer denne innstillingen, blir SmartScreen aktivert for alle datamaskinene. 
+
+Hvis du deaktiverer denne innstillingen, blir SmartScreen deaktivert.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Ikke blokker</string>
+      <string id="CookiesList_Block_ThirdParty">Blokker bare informasjonskapsler fra tredjepart</string>
+      <string id="CookiesList_Block_All">Blokker alle informasjonskapsler</string>
+      <string id="EnterpriseModeSiteList">Lar deg konfigurer nettstedslisten for organisasjonen</string>
+      <string id="EnterpriseModeSiteList_Explain">Denne innstillingen lar deg bestemme om du vil konfigurere og bruke nettstedsliste for organisasjonen for kompatibilitet.
+
+Hvis du aktiverer denne innstillingen, har du to tilleggsalternativer:
+  • Ikke konfigurert. Du kan ikke bruke nettstedslisten for organisasjonen.
+  • UseEnterpriseModeSiteList. Lar deg bruke nettstedslisten for organisasjonen. Hvis du bruker dette alternativet, må du også ta med plasseringen for XML-nettstedslisten i {URI}-boksen. Dette er standardverdien.</string>
+      <string id="HomePage">Lar deg konfigurere hjemmesiden</string>
+      <string id="HomePage_Explain">Denne innstillingen lar deg konfigurere hjemmesiden for organisasjonen. Denne er ikke konfigurert som standard, og appinnstillingene brukes i stedet.
+
+Hvis du aktiverer denne innstillingen, må du også ta med plasseringen for nettstedet i {URI}-boksen.</string>
+      <string id="ItemNameDisable">Deaktiver</string>
+      <string id="ItemNameEnable">Aktiver</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Sender all trafikk til Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Skriv inn plasseringen (URL-adressen) til nettstedslisten for organisasjonsmodus i IE</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Skriv inn plasseringen (nettadressen) til hjemmesiden for nettstedet</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Konfigurer innstillinger for informasjonskapsler</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

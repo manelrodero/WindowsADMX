@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Javascript와 같은 스크립트 실행 허용</string>
+      <string id="AllowActiveScripting_Explain">이 설정을 통해 사용자가 JavaScript와 같은 스크립트를 실행할 수 있는지 여부를 결정할 수 있습니다. 이 설정은 기본적으로 사용하도록 설정되어 있습니다.
+
+이 설정을 사용하면 모든 컴퓨터에 대해 스크립팅이 켜집니다. 
+
+이 설정을 사용하지 않으면 스크립트를 실행할 수 없습니다.</string>
+      <string id="AllowAutofill">웹 사이트에서 사용자가 자동 채우기를 사용할 수 있도록 허용</string>
+      <string id="AllowAutofill_Explain">이 설정을 통해 사용자가 웹 사이트에서 자동 채우기를 사용할 수 있는지 여부를 결정합니다. 이 설정은 기본적으로 사용하도록 설정되어 있습니다.
+
+이 설정을 사용하면 사용자가 로컬에서 정보를 캐싱하여 웹 사이트에서 자동 채우기를 사용할 수 있습니다.
+
+이 설정을 사용하지 않으면 사용자가 자동 채우기를 사용할 수 없습니다.</string>
+      <string id="AllowDoNotTrack">사용자가 Do Not Track 헤더를 전송할 수 있도록 허용</string>
+      <string id="AllowDoNotTrack_Explain">이 설정을 통해 사용자가 Do Not Track 헤더를 전송할 수 있는지 여부를 결정합니다. 이 설정은 기본적으로 사용하지 않도록 설정되어 있습니다.
+
+이 설정을 사용하면 사용자가 조직의 임의 컴퓨터에서 Do Not Track 헤더를 전송할 수 있습니다.
+
+이 설정을 사용하지 않으면 사용자가 Do Not Track 헤더를 전송할 수 없습니다.</string>
+      <string id="AllowPasswordManager">암호 관리자 구성 허용</string>
+      <string id="AllowPasswordManager_Explain">이 설정을 통해 사용자가 컴퓨터에서 로컬로 암호를 저장할 수 있는지 여부를 결정합니다. 이 설정은 기본적으로 사용하도록 설정되어 있습니다.
+
+이 설정을 사용하면 암호 관리자가 켜지고 사용자가 컴퓨터에서 로컬로 암호를 저장할 수 있습니다.
+
+이 설정을 사용하지 않으면 암호 관리자가 꺼지고 사용자가 로컬로 암호를 저장할 수 없습니다.</string>
+      <string id="AllowPopups">팝업 실행 허용</string>
+      <string id="AllowPopups_Explain">이 설정을 통해 팝업 허용 여부를 결정합니다. 이 설정은 기본적으로 사용하지 않도록 설정되어 있습니다.
+
+이 설정을 사용하면 조직의 모든 컴퓨터에서 팝업을 실행할 수 있습니다.
+
+이 설정을 사용하지 않으면 팝업을 실행할 수 없습니다.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">주소 표시줄 검색 제안 표시 중지</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">이 설정을 통해 주소 표시줄에 검색 제안을 표시할지 여부를 결정합니다. 이 설정은 기본적으로 사용하도록 설정되어 있습니다.
+
+이 설정을 사용하면 주소 표시줄에 검색 제안이 표시됩니다.
+
+이 설정을 사용하지 않으면 주소 표시줄에 검색 결과가 표시되지 않습니다.</string>
+      <string id="AllowSmartScreen">SmartScreen 구성 허용</string>
+      <string id="AllowSmartScreen_Explain">이 설정을 통해 SmartScreen을 켤지 여부를 결정합니다. 이 설정은 기본적으로 사용하도록 설정되어 있습니다.
+
+이 설정을 사용하면 모든 컴퓨터에서 SmartScreen이 켜집니다.
+
+이 설정을 사용하지 않으면 SmartScreen이 꺼집니다.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">차단하지 않음</string>
+      <string id="CookiesList_Block_ThirdParty">제3자 쿠키만 차단</string>
+      <string id="CookiesList_Block_All">모든 쿠키 차단</string>
+      <string id="EnterpriseModeSiteList">엔터프라이즈 사이트 목록 구성 허용</string>
+      <string id="EnterpriseModeSiteList_Explain">이 설정을 통해 호환성을 위한 엔터프라이즈 사이트 목록을 설정하고 사용할지 여부를 결정합니다.
+
+이 설정을 사용하면 다음 두 가지 추가 옵션이 제공됩니다.
+  • 구성되지 않음. 엔터프라이즈 사이트 목록을 사용할 수 없습니다.
+  • 엔터프라이즈 모드 사이트 목록 사용. 엔터프라이즈 사이트 목록을 사용할 수 있습니다. 이 옵션을 사용하는 경우 {URI} 상자에 XML 사이트 목록 위치도 포함해야 합니다. 기본값입니다.</string>
+      <string id="HomePage">홈페이지 구성 허용</string>
+      <string id="HomePage_Explain">이 설정을 통해 조직의 홈페이지를 설정할 수 있습니다. 기본적으로 이 설정은 구성되지 않으며 앱 설정이 대신 사용됩니다.
+
+이 설정을 사용하면 {URI} 상자에 웹 사이트 위치도 포함해야 합니다.</string>
+      <string id="ItemNameDisable">사용 안 함</string>
+      <string id="ItemNameEnable">사용</string>
+      <string id="SendIntranetTraffictoInternetExplorer">모든 인트라넷 트래픽을 Internet Explorer로 전송</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>엔터프라이즈 모드 IE 웹 사이트 목록의 위치(URL) 입력</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>홈페이지 웹 사이트의 위치(URL) 입력</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">쿠키 설정 구성</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

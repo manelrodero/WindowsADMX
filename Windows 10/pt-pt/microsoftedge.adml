@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Permite-lhe executar scripts como o Javascript</string>
+      <string id="AllowActiveScripting_Explain">Esta definição permite-lhe decidir se outros podem executar scripts como o JavaScript. Esta definição está ativada por defeito.
+
+Se ativar esta definição, o processamento de scripts será ativado em todos os seus computadores.
+
+Se desativar esta definição, não poderão ser executados scripts.</string>
+      <string id="AllowAutofill">Permite-lhe autorizar outros a utilizar o preenchimento automático em sites</string>
+      <string id="AllowAutofill_Explain">Esta definição permite-lhe decidir se outros podem utilizar o preenchimento automático em sites. Esta definição está ativada por defeito.
+
+Se ativar esta definição, outros podem utilizar o preenchimento automático em Web sites, através da colocação local de informações em cache.
+
+Se desativar esta definição, o preenchimento automático não estará disponível para outros.</string>
+      <string id="AllowDoNotTrack">Permite-lhe autorizar outros a enviar cabeçalhos Do Not Track</string>
+      <string id="AllowDoNotTrack_Explain">Esta definição permite-lhe decidir se autoriza outros a enviar cabeçalhos Do Not Track. Esta definição está desativada por defeito.
+
+Se ativar esta definição, os cabeçalhos Do Not Track poderão ser enviados por outros a partir de qualquer computador na sua organização.
+
+Se desativar esta definição, os cabeçalhos Do Not Track não poderão ser enviados por outros.</string>
+      <string id="AllowPasswordManager">Permite-lhe configurar o gestor de palavras-passe</string>
+      <string id="AllowPasswordManager_Explain">Esta definição permite-lhe decidir se outros podem guardar palavras-passe localmente nos respetivos computadores. Esta definição está ativada por defeito.
+
+Se ativar esta definição, o Gestor de Palavras-passe é ativado e as pessoas podem guardar as palavras-passe localmente nos seus computadores.
+
+Se desativar esta definição, o Gestor de Palavras-passe é desativado e as pessoas não podem guardar as palavras-passe localmente.</string>
+      <string id="AllowPopups">Permite-lhe executar janelas de pop-up</string>
+      <string id="AllowPopups_Explain">Esta definição permite-lhe decidir se permite janelas de pop-up. Esta definição está desativada por defeito.
+
+Se ativar esta definição, as janelas de pop-up poderão ser executadas em todos os computadores da sua organização.
+
+Se desativar esta definição, as janelas de pop-up não poderão ser executadas.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Impede a barra de endereço de apresentar as sugestões de pesquisa</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Esta definição permite-lhe decidir se a barra de endereço deverá apresentar sugestões de pesquisa. Esta definição está ativada por defeito.
+
+Se ativar esta definição, outros poderão ver sugestões de pesquisa na barra de endereço.
+
+Se desativar esta definição, os resultados da pesquisa não serão apresentados na barra de endereço.</string>
+      <string id="AllowSmartScreen">Permite-lhe configurar o SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Esta definição permite-lhe decidir se ativa o SmartScreen. Esta definição está ativada por defeito.
+
+Se ativar esta definição, o SmartScreen será ativado em todos os seus computadores.
+
+Se desativar esta definição, o SmartScreen será desativado.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Não bloquear</string>
+      <string id="CookiesList_Block_ThirdParty">Bloquear apenas cookies de terceiros</string>
+      <string id="CookiesList_Block_All">Bloquear todos os cookies</string>
+      <string id="EnterpriseModeSiteList">Permite-lhe configurar a lista de Sites da Empresa</string>
+      <string id="EnterpriseModeSiteList_Explain">Esta definição permite-lhe decidir se configura e utiliza a Lista de Sites da Empresa para questões de compatibilidade.
+
+Se ativar esta definição, terá 2 opções adicionais:
+  • Não configurado. Poderá utilizar a Lista de Sites da Empresa.
+  • UseEnterpriseModeSiteList. Permite-lhe utilizar a Lista de Sites da Empresa. Se utilizar esta opção, deverá também incluir a localização da sua lista de sites XML na caixa {URI}. Este é o valor predefinido.</string>
+      <string id="HomePage">Permite-lhe configurar a sua página inicial</string>
+      <string id="HomePage_Explain">Esta definição permite-lhe configurar a página inicial da sua organização. Por defeito, esta definição não está configurada e são utilizadas, em vez disso, as definições da Aplicação.
+
+Se ativar esta definição, deverá também incluir a localização do seu site na caixa {URI}.</string>
+      <string id="ItemNameDisable">Desativar</string>
+      <string id="ItemNameEnable">Ativar</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Envia todo o tráfego de intranet para o Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Introduza a localização (URL) da sua lista de sites do IE do Modo Empresarial</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Introduza a localização (URL) da Página Inicial do seu site</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Configurar Definição de Cookies</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

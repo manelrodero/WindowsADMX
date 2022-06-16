@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Nastavení zásad skupiny pro službu Správce připojení systému Windows</displayName>
+  <description>Nastavení zásad skupiny pro službu Správce připojení systému Windows</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Správce připojení systému Windows</string>
+      <string id="WCM_BlockNonDomain">Při připojení k síti ověřované pomocí domény zakázat připojení k sítím, které nejsou založeny na doméně</string>
+      <string id="WCM_BlockNonDomain_Help">Toto nastavení zásad brání počítačům v současném připojení jak k síti založené na doméně, tak k síti, která není založena na doméně.
+      
+      Je-li toto nastavení zásad povoleno, počítač reaguje na pokusy o automatické a ruční připojení k síti na základě následujících okolností:
+      
+      Pokusy o automatické připojení
+      - Pokud již je počítač připojen do sítě založené na doméně, jsou blokovány všechny pokusy o automatické připojení k sítím, které nejsou založeny na doméně.
+      - Pokud již je počítač připojen k síti, která není založena na doméně, jsou blokovány pokusy o automatické připojení k sítím založeným na doméně.
+      
+      Pokusy o ruční připojení
+      - Pokud již je počítač připojen k síti, která není založena na doméně, nebo k síti, která je založena na doméně prostřednictvím jiného média, než je síť Ethernet, a uživatel se pokusí vytvořit ruční připojení k další síti porušující toto nastavení zásad, je existující připojení k síti odpojeno a je povoleno ruční připojení.
+      - Pokud již je počítač připojen prostřednictvím sítě Ethernet k síti, která není založena na doméně, nebo k síti, která je založena na doméně, a uživatel se pokusí vytvořit ruční připojení k další síti porušující toto nastavení zásad, bude existující ethernetové připojení zachováno a budou blokovány pokusy o ruční připojení.
+
+      Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, počítače se mohou současně připojit jak k sítím založeným na doméně, tak i k sítím, které nejsou založeny na doméně.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Zakázat připojení k mobilním širokopásmovým sítím při roamingu</string>
+      <string id="WCM_DisableRoaming_Help">Toto nastavení zásad klientům brání v připojení k mobilním širokopásmovým sítím, když je klient registrován v síti roamingového operátora. 
+
+      Pokud toto nastavení zásad povolíte, všechny pokusy o automatické a ruční připojení k sítím roamingových operátorů jsou blokovány, dokud se klient nezaregistruje do sítě domovského operátora.
+      
+      Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, klienti se mohou připojovat k mobilním širokopásmovým sítím roamingových operátorů.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Minimalizovat počet současných připojení k Internetu nebo doméně systému Windows</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Zakázat řízení spotřeby v pohotovostním režimu s připojením</string>
+      <string id="WCM_DisablePowerManagement_Help">Toto nastavení zásad určuje, že při přechodu počítače do pohotovostního režimu s připojením bude zakázáno řízení spotřeby. 
+
+      Pokud toto nastavení zásad povolíte, Správce připojení systému Windows při přechodu počítače do pohotovostního režimu s připojením neřídí radiové moduly adaptéru, aby snížily spotřebu energie.
+
+      Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude při přechodu počítače do pohotovostního režimu povoleno řízení spotřeby.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

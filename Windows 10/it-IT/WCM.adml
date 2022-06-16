@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Impostazioni di Criteri di gruppo per Windows Connection Manager</displayName>
+  <description>Impostazioni di Criteri di gruppo per Windows Connection Manager</description>
+  <resources>
+    <stringTable>
+      <string id="WCM_Category">Windows Connection Manager</string>
+      <string id="WCM_BlockNonDomain">Proibisci connessione a reti non di dominio in caso di connessione a una rete di dominio autenticata</string>
+      <string id="WCM_BlockNonDomain_Help">Questa impostazione dei criteri impedisce ai computer di connettersi contemporaneamente sia a una rete di dominio che a una rete non di dominio.
+      
+      Se si abilita questa impostazione dei criteri, il computer risponderà ai tentativi di connessione automatica e manuale a una rete in base alle circostanze seguenti:
+      
+      Tentativi di connessione automatica
+      - Quando il computer è già connesso a una rete di dominio, tutti i tentativi di connessione automatica a reti non di dominio vengono bloccati.
+      - Quando il computer è già connesso a una rete non di dominio, i tentativi di connessione automatica a reti di dominio vengono bloccati.
+      
+      Tentativi di connessione manuale
+      - Quando il computer è già connesso a una rete di dominio o a una rete non di dominio su supporti diversi da Ethernet e un utente tenta di creare una connessione manuale a una rete aggiuntiva in violazione di questa impostazione dei criteri, la connessione di rete esistente viene disconnessa e viene consentita la connessione manuale.
+      - Quando il computer è già connesso a una rete di dominio o a una rete non di dominio su Ethernet e un utente tenta di creare una connessione manuale a una rete aggiuntiva in violazione di questa impostazione dei criteri, la connessione Ethernet esistente viene mantenuta e il tentativo di connessione manuale viene bloccato.
+
+      Se si disabilita o non si configura questa impostazione dei criteri, ai computer verrà consentito di connettersi contemporaneamente a reti sia di dominio che non di dominio.
+      
+      </string>
+      <string id="WCM_DisableRoaming">Proibisci connessione a reti Mobile Broadband di provider di roaming</string>
+      <string id="WCM_DisableRoaming_Help">Questa impostazione dei criteri impedisce ai client di connettersi a reti Mobile Broadband quando il client è registrato su una rete di un provider di roaming. 
+
+      Se si abilita questa impostazione dei criteri, tutti i tentativi di connessione automatica e manuale a reti di provider di roaming verranno bloccati finché il client non si registra con la rete del provider principale.
+      
+      Se si disabilita o non si configura questa impostazione dei criteri, ai client verrà consentito di connettersi a reti Mobile Broadband di provider di roaming.
+      
+      </string>
+      <string id="WCM_MinimizeConnections">Riduci al minimo il numero di connessioni simultanee a Internet o a un dominio Windows</string>
+      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      
+      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      
+      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+
+      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+
+      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      </string>
+      <string id="WCM_DisablePowerManagement">Disabilita risparmio energia in modalità di standby connesso</string>
+      <string id="WCM_DisablePowerManagement_Help">Questa impostazione dei criteri specifica la disabilitazione del risparmio energia quando il computer entra in modalità di standby connesso. 
+
+      Se si abilita questa impostazione dei criteri, Windows Connection Manager non gestirà i radio adattatori per ridurre il consumo energetico quando il computer entra in modalità di standby connesso.
+
+      Se si disabilita o non si configura questa impostazione dei criteri, il risparmio energia verrà abilitato quando il computer entra in modalità di standby connesso.
+      
+      </string>      
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

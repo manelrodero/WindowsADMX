@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Parancsprogramok (például a JavaScript) futtatásának engedélyezése</string>
+      <string id="AllowActiveScripting_Explain">Ezzel a beállítással engedélyezhető a felhasználóknak a parancsprogramok (köztük a JavaScript) futtatása. A beállítás alapértelmezés szerint engedélyezve van.
+
+Ha engedélyezi a beállítást, minden számítógépen engedélyezett lesz a parancsprogramok használata.
+
+A beállítás letiltásával kikapcsolható a parancsprogramok futtatása.</string>
+      <string id="AllowAutofill">Automatikus webhelymező-kitöltés engedélyezése</string>
+      <string id="AllowAutofill_Explain">Ezzel a beállítással engedélyezhető a felhasználóknak, hogy igénybe vegyék a webhelyek mezőit automatikusan kitöltő funkciót. A beállítás alapértelmezés szerint engedélyezve van.
+
+Ha engedélyezi a beállítást, a felhasználók igénybe vehetik a webhelyeken az automatikus mezőkitöltést, és az adatok a helyi gyorsítótárba kerülnek.
+
+Ha letiltja a beállítást, nem használható az automatikus kitöltés.</string>
+      <string id="AllowDoNotTrack">„Do Not Track” (Követés letiltása) fejlécek küldésének engedélyezése</string>
+      <string id="AllowDoNotTrack_Explain">Ezzel a beállítással szabályozható, hogy a felhasználók küldhetnek-e „Do Not Track” (Követés letiltása) fejléceket. A beállítás alapértelmezés szerint le van tiltva.
+
+Ha engedélyezi a beállítást, a felhasználók a munkahely vagy az intézmény bármely számítógépéről küldhetnek ilyen fejléceket.
+
+Ha letiltja a beállítást, nem engedélyezett az ilyen fejlécek küldése.</string>
+      <string id="AllowPasswordManager">A jelszókezelő konfigurálásának engedélyezése</string>
+      <string id="AllowPasswordManager_Explain">Ezzel a beállítással szabályozható, hogy a felhasználók menthetnek-e jelszavakat helyileg a számítógépeikre. A beállítás alapértelmezés szerint engedélyezve van.
+
+Ha engedélyezi a beállítást, bekapcsol a jelszókezelő, és a felhasználók menthetik a jelszavakat helyileg a számítógépeikre.
+
+Ha letiltja a beállítást, kikapcsol a jelszókezelő, és a felhasználók nem menthetnek jelszavakat helyileg.</string>
+      <string id="AllowPopups">Előugró ablakok engedélyezése</string>
+      <string id="AllowPopups_Explain">Ezzel a beállítással szabályozható, hogy engedélyezettek-e az előugró ablakok. A beállítás alapértelmezés szerint le van tiltva.
+
+Ha engedélyezi a beállítást, a munkahely vagy az intézmény összes számítógépén engedélyezettek lesznek az előugró ablakok.
+
+A beállítás letiltásával kikapcsolhatók az előugró ablakok.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Keresési javaslatok címsorbeli megjelenítésének kikapcsolása</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Ezzel a beállítással szabályozható, hogy megjelenjenek-e a címsorban a keresési javaslatok. A beállítás alapértelmezés szerint engedélyezve van.
+
+Ha engedélyezi a beállítást, megjelennek a címsorban a keresési javaslatok.
+
+A beállítás letiltásával kikapcsolható a keresési javaslatok címsorban való megjelenítése.</string>
+      <string id="AllowSmartScreen">A SmartScreen konfigurálásának engedélyezése</string>
+      <string id="AllowSmartScreen_Explain">Ezzel a beállítással szabályozható, hogy bekapcsoljon-e a SmartScreen funkció. A beállítás alapértelmezés szerint engedélyezve van.
+
+Ha engedélyezi a beállítást, a SmartScreen minden számítógépen bekapcsol.
+
+A beállítás letiltásával kikapcsolható a SmartScreen.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Blokkolás mellőzése</string>
+      <string id="CookiesList_Block_ThirdParty">Csak a harmadik felek cookie-jainak blokkolása</string>
+      <string id="CookiesList_Block_All">Az összes cookie blokkolása</string>
+      <string id="EnterpriseModeSiteList">A vállalati webhelylista konfigurálásának engedélyezése</string>
+      <string id="EnterpriseModeSiteList_Explain">Ezzel a beállítással szabályozható, hogy kompatibilitási célból be kell-e állítani és használni kell-e a vállalati webhelylistát.
+
+Ha engedélyezi a beállítást, további két lehetőség közül választhat:
+  • Nem konfigurált. Ezt az értéket választva nem használható a vállalati webhelylista.
+  • UseEnterpriseModeSiteList. Ezt az értéket választva használható a vállalati webhelylista. Ha ez utóbbi értéket választja, akkor az {URI} mezőben meg kell adnia az XML-alapú webhelylista helyét. Ez az alapértelmezett érték.</string>
+      <string id="HomePage">A saját kezdőlap konfigurálásának engedélyezése</string>
+      <string id="HomePage_Explain">Ezzel a beállítással adható meg a munkahely vagy az intézmény kezdőlapja. A beállítás alapértelmezés szerint nincs konfigurálva, helyette az alkalmazásbeállításokat használja a Windows.
+
+Ha engedélyezi a beállítást, akkor az {URI} mezőben meg kell adnia a webhelyet tároló helyet.</string>
+      <string id="ItemNameDisable">Letiltás</string>
+      <string id="ItemNameEnable">Engedélyezés</string>
+      <string id="SendIntranetTraffictoInternetExplorer">A teljes intranetes adatforgalom elküldése az Internet Explorernek</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Adja meg a vállalati mód webhelylistájának helyét (URL-címét; Internet Explorer)</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Adja meg a kezdőlapot tároló webhely helyét (URL-címét)</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Cookie-k beállításainak konfigurálása</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

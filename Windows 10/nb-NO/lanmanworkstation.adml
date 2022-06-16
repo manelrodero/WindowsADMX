@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>skriv inn visningsnavn her</displayName>
+  <description>skriv inn beskrivelse her</description>
+  <resources>
+    <stringTable>
+      <string id="Cat_LanmanWorkstation">Lanman-arbeidsstasjon</string>
+      <string id="Pol_CipherSuiteOrder_Name">Rekkefølge for chiffreringssamling</string>
+      <string id="Pol_CipherSuiteOrder_Help">Denne policyen fastslår chiffreringssamlingene som brukes av SMB-klienten.
+
+Hvis du aktiverer denne policyinnstillingen, prioriteres chiffreringssamlingene i den angitte rekkefølgen.
+
+Hvis du aktiverer denne policyinnstillingen og ikke angir minst én støttet chiffreringssamling, eller du deaktiverer eller ikke konfigurerer denne policyinnstillingen, brukes standardrekkefølgen for chiffreringssamlingen.
+
+Chiffreringssamlinger for SMB 3.11:
+
+AES_128_GCM
+AES_128_CCM
+
+Chiffreringssamlinger for SMB 3.0 og 3.02:
+
+AES_128_CCM
+
+Endre denne innstillingen:
+
+Ordne de ønskede chiffreringssamlingene i redigeringsboksen med én chiffreringssamling per linje, i rekkefølgen fra mest til minst foretrukket, og med den mest foretrukkede chiffreringssamlingen øverst. Fjern alle chiffreringssamlinger du ikke vil bruke.
+
+Obs! Når du konfigurerer denne sikkerhetsinnstillingen, trer ikke endringer i kraft før du starter Windows på nytt.</string>
+      </stringTable>
+    <presentationTable>
+      <presentation id="Pol_CipherSuiteOrder">
+        <text>Chiffreringssamlinger:</text>
+        <multiTextBox refId="MultiText_CipherSuiteOrder"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

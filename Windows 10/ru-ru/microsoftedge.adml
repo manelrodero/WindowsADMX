@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Microsoft Edge Group Policies</displayName>
+  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <resources>
+    <stringTable>
+      <!-- Product -->
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      
+      <!-- Categories -->
+
+      <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
+      <!-- Policies -->
+      <string id="AllowActiveScripting">Позволяет запускать сценарии, например Javascript</string>
+      <string id="AllowActiveScripting_Explain">Этот параметр позволяет разрешить или запретить пользователям запускать сценарии, например JavaScript. По умолчанию данный параметр включен.
+
+Если включить этот параметр, запуск сценариев для всех ваших компьютеров будет разрешен.
+
+Если отключить этот параметр, сценарии запускаться не будут.</string>
+      <string id="AllowAutofill">Позволяет разрешать пользователям использовать функцию автозаполнения на веб-сайтах</string>
+      <string id="AllowAutofill_Explain">Этот параметр позволяет разрешить или запретить пользователям использовать функцию автозаполнения на веб-сайтах. По умолчанию данный параметр выключен.
+
+Если включить этот параметр, пользователи смогут использовать функцию автозаполнения на веб-сайтах с локальным кешированием информации.
+
+Если отключить этот параметр, пользователи не смогут использовать функцию автозаполнения.</string>
+      <string id="AllowDoNotTrack">Позволяет разрешать пользователям отправлять заголовки "Не отслеживать"</string>
+      <string id="AllowDoNotTrack_Explain">Этот параметр позволяет разрешить или запретить пользователям отправлять заголовки "Не отслеживать". По умолчанию данный параметр выключен.
+
+Если включить этот параметр, пользователи смогут отправлять заголовки "Не отслеживать" с любого компьютера в вашей организации.
+
+Если отключить этот параметр, пользователи не смогут отправлять заголовки "Не отслеживать".</string>
+      <string id="AllowPasswordManager">Позволяет настраивать диспетчер паролей</string>
+      <string id="AllowPasswordManager_Explain">Этот параметр позволяет разрешить или запретить пользователям локально сохранять пароли на своих компьютерах. По умолчанию данный параметр включен.
+
+Если включить этот параметр, будет использоваться диспетчер паролей, и пользователи смогут локально сохранять пароли на своих компьютерах.
+
+Если отключить этот параметр, диспетчер паролей использоваться не будет, и пользователи не смогут локально сохранять пароли на своих компьютерах.</string>
+      <string id="AllowPopups">Позволяет запускать всплывающие элементы</string>
+      <string id="AllowPopups_Explain">Этот параметр позволяет разрешить или запретить запускать всплывающие элементы. По умолчанию данный параметр выключен.
+
+Если включить этот параметр, запуск всплывающих элементов на всех компьютерах вашей организации будет разрешен.
+
+Если отключить этот параметр, всплывающие элементы запускаться не будут.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Запрет отображения вариантов поиска в адресной строке</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Этот параметр позволяет разрешить или запретить отображение вариантов поиска в адресной строке. По умолчанию данный параметр включен.
+
+Если включить этот параметр, пользователи будут видеть варианты поиска в адресной строке.
+
+Если отключить этот параметр, варианты поиска в адресной строке отображаться не будут.</string>
+      <string id="AllowSmartScreen">Позволяет настраивать SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Этот параметр позволяет включить или выключить SmartScreen. По умолчанию данный параметр включен.
+
+Если включить этот параметр, SmartScreen будет работать на всех ваших компьютерах.
+
+Если отключить этот параметр, SmartScreen работать не будет.</string>
+      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
+      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+
+If you enable this setting, you have 3 additional options:
+  • Don’t block. Cookies can download from all websites. This is the default value.
+  • Block only third-party cookies. Stops third-party cookies from downloading.
+  • Block all cookies. Stops all cookies from downloading.</string>
+      <string id="CookiesList_Block_None">Не блокировать</string>
+      <string id="CookiesList_Block_ThirdParty">Блокировать только сторонние файлы cookie</string>
+      <string id="CookiesList_Block_All">Блокировать все файлы cookie</string>
+      <string id="EnterpriseModeSiteList">Позволяет настраивать список веб-сайтов предприятия</string>
+      <string id="EnterpriseModeSiteList_Explain">Этот параметр позволяет настраивать и использовать список веб-сайтов предприятия для обеспечения совместимости.
+
+При включении этого параметра становятся доступными 2 дополнительные варианта настройки.
+  • Не настроено. Список веб-сайтов предприятия не доступен для использования.
+  • UseEnterpriseModeSiteList. Позволяет использовать список веб-сайтов предприятия. При использовании этого варианта необходимо также указать расположение списка сайтов XML в поле {URI}. Это значение используется по умолчанию.</string>
+      <string id="HomePage">Позволяет настраивать домашнюю страницу</string>
+      <string id="HomePage_Explain">Этот параметр позволяет настроить домашнюю страницу вашей организации. По умолчанию этот параметр не настроен и вместо него используются параметры приложений.
+
+При включении этого параметра необходимо также указать расположение веб-сайта в поле {URI}.</string>
+      <string id="ItemNameDisable">Отключить</string>
+      <string id="ItemNameEnable">Включить</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Отправляет весь трафик интрасети в Internet Explorer</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+
+If you enable this setting, your intranet websites automatically open in Internet Explorer.
+
+If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+    </stringTable>
+    
+    <!-- Presentation -->
+    <presentationTable>
+      <presentation id="EnterpriseModeSiteList_Presentation">
+        <textBox refId="EnterSiteListPrompt">
+          <label>Введите расположение (URL-адрес) своего списка веб-сайтов IE в режиме предприятия</label>
+        </textBox>
+      </presentation>
+      <presentation id="HomePageSite_Presentation">
+        <textBox refId="HomePageSitePrompt">
+          <label>Введите расположение (URL-адрес) веб-сайта своей домашней страницы</label>
+        </textBox>
+      </presentation>
+      <presentation id="Cookies">
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Настройка параметров файлов cookie</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
