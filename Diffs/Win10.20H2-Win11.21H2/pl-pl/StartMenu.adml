@@ -207,6 +207,19 @@ W Eksploratorze plików element Wyszukaj jest nadal widoczny na pasku narzędzi 
 To ustawienie dotyczy tylko określonych elementów interfejsu użytkownika. Nie dotyczy ono programu Internet Explorer ani nie uniemożliwia użytkownikom używania innych metod wyszukiwania.
 
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, łącze Wyszukaj będzie dostępne w menu Start.</string>
+      <string id="ShowOrHideMostUsedApps">Pokaż lub ukryj listę „Najczęściej używane” w menu Start</string>
+      <string id="ShowOrHideMostUsedApps_Help">Jeśli to ustawienie zasad zostanie włączone, będzie można skonfigurować menu Start do wyświetlania lub ukrywania listy najczęściej używanych aplikacji użytkownika, niezależnie od ustawień użytkownika.
+
+Wybranie opcji Pokaż spowoduje wymuszenie pokazania listy najczęściej używanych elementów, a użytkownik nie będzie mógł jej zmienić przy użyciu aplikacji ustawienia.
+
+Wybranie opcji "Ukryj" spowoduje ukrycie listy "najczęściej używane", a użytkownik nie będzie mógł jej zmienić, używając aplikacji ustawienia.
+
+Wybranie opcji "nie skonfigurowano" lub wyłączenie lub Nieskonfigurowanie tego ustawienia zasad spowoduje, że użytkownicy będą mogli włączać i wyłączać wyświetlanie listy najczęściej używanych elementów przy użyciu aplikacji ustawienia. To jest zachowanie domyślne.
+
+Uwaga: skonfigurowanie tej zasady w celu określenia "Pokaż" lub "Ukryj" w obsługiwanych wersjach systemu Windows 10 spowoduje zamienienie każdego ustawienia zasad "Usuń listę często używanych programów z menu Start" (która zarządza tą samą częścią menu Start, ale z mniejszą liczbą opcji).</string>
+      <string id="MFU_NotConfigured">Nie skonfigurowano</string>
+      <string id="MFU_Show">Pokaż</string>
+      <string id="MFU_Hide">Ukryj</string>        
       <string id="NoFrequentUsedPrograms">Usuń listę często używanych programów z menu Start</string>
       <string id="NoFrequentUsedPrograms_Help">Jeśli to ustawienie zostanie włączone, lista najczęściej używanych programów zostanie usunięta z menu Start.
 
@@ -632,10 +645,14 @@ Jeśli włączysz tę zasadę, wywołania menu kontekstowych w menu Start będą
           <label>Plik układu ekranu startowego</label>
           <defaultValue></defaultValue>
         </textBox>
+        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Zastosuj ponownie układ przy każdym logowaniu</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Wybierz jeden z następujących rozmiarów</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Wybierz jedną z następujących akcji</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

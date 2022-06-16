@@ -250,6 +250,23 @@ Se esta configuração de política for desabilitada ou não definida, os IDNs s
 Se esta configuração de política for habilitada, os IDNs serão convertidos na forma Nameprep.
 
 Se esta configuração de política for desabilitada ou se não for definida, os IDNs serão convertidos no formato Nameprep.</string>
+      <string id="DNS_Doh">Configurar a resolução de nomes DNS sobre HTTPS (OPA)</string>
+      <string id="DNS_Doh_Disabled">Proibir OPA</string>
+      <string id="DNS_Doh_Auto">Permitir OPA</string>
+      <string id="DNS_Doh_Force">Exigir OPA</string>
+      <string id="DNS_Doh_Help">Especifica se o cliente DNS executará a resolução de nomes sobre o DNS via HTTPS (OPA). 
+
+ Por padrão, o cliente DNS fará a resolução de nome DNS clássica (via UDP ou TCP). Esta configuração pode melhorar o cliente DNS para usar o protocolo OPA para resolver nomes de domínio.
+
+ Para usar essa configuração de política, clique em Habilitado e selecione uma das opções a seguir na lista suspensa:
+
+Proibir OPA: nenhuma resolução de nome OPA será realizada.
+
+Permitir OPA: executam consultas OPA se os servidores DNS configurados oferecerem suporte. Se eles não oferecerem suporte, experimente a resolução de nome clássico.
+
+ Exigir OPA: permitem apenas a resolução de nomes OPA. Se não houver servidores DNS compatíveis com OPA configurados, a resolução de nomes falhará. 
+
+ Se você desabilitar ou não definir configuração de política, os computadores usarão configurações definidas localmente.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +303,9 @@ Se esta configuração de política for desabilitada ou se não for definida, os
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Atualizar nível de segurança:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Configurar opções de OPA:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

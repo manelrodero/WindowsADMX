@@ -298,7 +298,6 @@ Windows Vista、Windows 7、Internet Explorer 7、および Internet Explorer 8 
 このポリシー設定を構成しない場合は、一覧のアプリケーションまたはプロセスに対する URL 動作の現在の値が使用されます。</string>
       <string id="FavImportExport">設定のインポート/エクスポート ウィザードを無効にする</string>
       <string id="GeolocationDisable">ブラウザーの地理位置情報を無効にする</string>
-      <string id="DisableFlashInIE">Internet Explorer で Adobe Flash をオフにし、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できないようにする</string>
       <string id="File_NoBrowserClose">[ファイル] メニュー: ブラウザー ウィンドウおよびエクスプローラー ウィンドウの [閉じる] コマンドの使用を許可しない</string>
       <string id="File_NoBrowserSaveAs">[ファイル] メニュー: [名前を付けて保存] コマンドの使用を許可しない</string>
       <string id="File_NoBrowserSaveWebComplete">[ファイル] メニュー: [名前を付けて保存] で [Web ページ、完全] 形式の保存を許可しない</string>
@@ -413,7 +412,7 @@ Windows Vista、Windows 7、Internet Explorer 7、および Internet Explorer 8 
 このポリシー設定を構成しない場合、ユーザーは、メニュー バーとナビゲーション バーの位置を入れ替えることができます。</string>
       <string id="IE_Explain_DisableManagingPhishingFilter">このポリシー設定は、"フィッシング" を通じて個人情報を不正に収集することがわかっている Web サイトにユーザーがアクセスしようとしたときに警告するフィルターを管理できないようにします。
 
-このポリシー設定を有効にすると、ユーザーには、フィッシング フィルターを有効にするためのダイアログは表示されません。このポリシー設定を有効にすると、ユーザーには、フィッシング フィルターを有効にするためのダイアログは表示されません。
+このポリシー設定を有効にすると、ユーザーには、フィッシング フィルターを有効にするためのダイアログは表示されません。フィッシング フィルターで使用するモード (手動、自動、またはオフ) を指定する必要があります。
 
 手動モードを選択すると、フィッシング フィルターはローカル解析のみを実行して、ユーザーには、Microsoft にデータを送信することを許可するかどうかたずねるダイアログが表示されます。この機能を完全に有効にすると、フィルターの許可リストに含まれない Web サイトのアドレスはすべて Microsoft に自動的に送信され、ユーザーにはダイアログは表示されません。
 
@@ -724,13 +723,6 @@ Microsoft エージェントとは、Microsoft Windows のインターフェイ�
 このポリシー設定を無効にすると、ブラウザーの地理位置情報のサポートは有効になります。
 
 このポリシー設定を構成しない場合、[インターネット オプション] の [プライバシー] タブでブラウザーの地理位置情報のサポートを有効または無効にできます。</string>
-      <string id="IE_ExplainDisableFlashInIE">このポリシー設定は、Internet Explorer 上で Adobe Flash をオフにし、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できないようにします。
-
-このポリシー設定を有効にすると、Internet Explorer で Flash がオフになり、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できなくなります。[アドオンの管理] ダイアログ ボックスで、Flash のステータスは [無効] になり、ユーザーは Flash を有効にできません。このポリシー設定を有効にすると、[アドオンの一覧] ポリシー設定および [アドオンの一覧で許可されたものを除き、アドオンはすべて拒否する] ポリシー設定を通じた Adobe Flash に対する設定を Internet Explorer は無視します。
-
-このポリシー設定を無効にした場合、または構成しなかった場合、Internet Explorer で Flash がオンになり、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できます。ユーザーは [アドオンの管理] ダイアログ ボックスで、Flash を有効または無効にできます。
-
-このポリシー設定を無効にした場合、または構成しなかった場合でも、[アドオンの一覧] ポリシー設定および [アドオンの一覧で許可されたものを除き、アドオンはすべて拒否する] ポリシー設定を通じて Adobe Flash を無効にできます。ただし、このポリシー設定ではなく、[アドオンの一覧] ポリシー設定および [アドオンの一覧で許可されたものを除き、アドオンはすべて拒否する] ポリシー設定を通じて Adobe Flash を無効にした場合は、Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化するすべてのアプリケーションでそれまでと同じくインスタンス化できます。詳細については、Internet Explorer TechNet ライブラリの Internet Explorer 10 のグループ ポリシー設定に関するページを参照してください。</string>
       <string id="IE_ExplainFile_NoBrowserClose">Microsoft Internet Explorer およびエクスプローラーを閉じることができないようにします。
 
 このポリシーを有効にすると、ユーザーは、[ファイル] メニューの [閉じる] コマンドが使用できなくなります。
@@ -3905,7 +3897,7 @@ InPrivate フィルターを使用すると、ユーザーが訪れた Web サ�
 このポリシー設定を有効にした場合、[ツール] メニューにエンタープライズ モードが表示され、ユーザーはエンタープライズ モードを有効にできます。この設定を有効にしてもレポートの場所を指定しなかった場合、ユーザーはエンタープライズ モードを使用できますが、レポートは通知されません。
 
 このポリシー設定を無効にした場合、または構成しなかった場合、メニュー オプションは表示されず、ユーザーが Web サイトをエンタープライズ モードで実行することはできません。</string>
-      <string id="RestrictInternetExplorer">エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します。</string>
+      <string id="RestrictInternetExplorer">エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します</string>
       <string id="IE_ExplainRestrictInternetExplorer">この設定では、Microsoft Edge でエンタープライズ モード サイト一覧に含まれていないすべてのサイトを開くかどうかを決定できます。この設定を使用する場合は、"管理用テンプレート\Windows コンポーネント\Internet Explorer\エンタープライズ モード IE の Web サイト一覧を使用する" ポリシー設定を有効にし、エンタープライズ モード サイト一覧に少なくとも 1 つのサイトを含める必要もあります。
 
 この設定を有効にすると、エンタープライズ モード サイト一覧に含まれていないすべてのサイトが Microsoft Edge で自動的に開かれます。
@@ -3960,6 +3952,41 @@ Microsoft Edge* の次期バージョンの Windows Update がインストール
 - エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します ('RestrictIE')
 
 このポリシーを他の関連するポリシーと共に使用して、組織に最適な構成を作成する方法の詳細については、https://go.microsoft.com/fwlink/?linkid=2094210 を参照してください。</string>
+      <string id="AllowSaveTargetAsInIEMode">Internet Explorer モードで "対象をファイルに保存" を許可する</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">このポリシー設定を使用すると、管理者は Internet Explorer モードの [対象をファイルに保存] コンテキストメニューを有効にすることができます。
+
+このポリシーを有効にした場合、[対象をファイルとして保存] は Internet Explorer モードのショートカットメニューに表示され、Internet Explorer と同じように作業できます。
+
+このポリシー設定を無効にした場合、または構成しなかった場合、[対象をファイルに保存] は Internet Explorer モードのショートカットメニューに表示されません。
+
+詳細については、https://go.microsoft.com/fwlink/?linkid=2102115 を参照してください。</string>
+      <string id="EnableExtendedIEModeHotkeys">Internet Explorer モードで拡張ホットキーを有効にする</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">このポリシー設定を使用すると、管理者は "Ctrl+S" のように "名前を付けて保存" 機能を使用して、Microsoft Edge Internet Explorer の拡張モード ホットキーを有効にすることができます。
+
+このポリシーを有効にした場合、 Internet Explorer モードで拡張ホットキー機能が有効になり、Internet Explorer と同様の作業ができます。
+
+このポリシーを無効にした場合、または構成しなかった場合は、Internet Explorer モードでは拡張ホットキーは動作しません。
+
+詳細については、「https://go.microsoft.com/fwlink/?linkid=2102115」を参照してください。</string>
+      <string id="DisableInternetExplorerApp">Internet Explorer 11 をスタンドアロンブラウザーとして無効にする</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">このポリシーを使用すると、Internet Explorer をスタンドアロン ブラウザーとして起動することを制限できます。
+
+このポリシーを有効にすると、次のポリシーが有効になります。
+- Internet Explorer 11 がスタンドアロン ブラウザーとして起動されないようにする。
+- Internet Explorer の使用を Microsoft Edge のネイティブの Internet Explorer モードに制限する。
+- Internet Explorer 11 の起動が試みられた場合、それをすべて Microsoft Edge 安定チャネル ブラウザーにリダイレクトする。
+- Internet Explorer 11 にリダイレクトするその他のポリシーがある場合、それらを上書きする。
+
+このポリシーを無効にした場合、または構成しなかった場合は、すべてのサイトが現在のアクティブなブラウザーの設定を使用して開かれます。注: このポリシーを有効にするには、Microsoft Edge 安定チャネルがインストールされている必要があります。</string>
+      <string id="NotifyDisableIEOptions_Never">しない</string>
+      <string id="NotifyDisableIEOptions_Always">常時</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">ユーザーごとに 1 回</string>
+      <string id="JScriptReplacement">JScript9Legacy を MSHTML/WebOC 経由で JScript の代わりに読み込み、JScript を置換します。</string>
+      <string id="IE_ExplainJScriptReplacement">このポリシー設定では、JScript または JScript9Legacy を使用して MSHTML/WebOC ベースの呼び出しを読み込むかどうかを指定します。
+      
+このポリシー設定を有効にした場合、JScript9Legacy は JScript がインスタンス化される場合に読み込まれます。
+
+このポリシーを無効にするか、または構成しない場合は、JScript が使用されます。</string>
       <string id="VerMgmtDisable">Internet Explorer の古い ActiveX コントロールのブロックを無効する</string>
       <string id="IE_ExplainVerMgmtDisable">このポリシー設定では、Internet Explorer で特定の古い ActiveX コントロールをブロックするかどうかを決定します。イントラネット ゾーンでは、古い ActiveX コントロールがブロックされません。
 
@@ -4836,6 +4863,9 @@ LOBApp.contoso.com</string>
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">最初の選択</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">2 番目の選択</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">3 番目の選択</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Internet Explorer 11 ブラウザーが無効になっていることを通知する</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

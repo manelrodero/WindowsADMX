@@ -13,6 +13,14 @@
 Hvis du aktiverer denne politikindstilling, kan du installere en hvilken som helst LOB- eller udviklersigneret Windows Store-app (som skal være signeret med en certifikatkæde, som kan godkendes af den lokale computer).
 
 Hvis du deaktiverer denne politikindstilling eller undlader at konfigurere den, kan du ikke installere LOB- eller udviklersignerede Windows Store-apps.</string>
+      <string id="AllowAutomaticAppArchiving">Arkivér sjældent brugte apps</string>
+      <string id="AllowAutomaticAppArchivingExplanation">Denne politikindstilling styrer, om systemet kan arkivere sjældent anvendte apps.
+
+Hvis du aktiverer denne politikindstilling, vil systemet jævnligt søge efter og arkivere sjældent anvendte apps.
+
+Hvis du deaktiverer denne politikindstilling, vil systemet ikke arkivere nogen apps.
+
+Hvis du undlader at konfigurere denne politikindstilling (standard), følger systemet standardfunktionsmåden, som jævnligt søger efter og arkiverer sjældent brugte apps, og brugeren kan selv konfigurere denne indstilling.</string>
       <string id="AllowDeploymentInSpecialProfiles">Tillade installationshandlinger i særlige profiler</string>
       <string id="AllowDeploymentInSpecialProfilesExplanation">Du kan bruge denne politikindstilling til at administrere installationen af Windows Store-apps, når brugeren er logget på med en særlig profil. Særlige profiler er følgende brugerprofiler, hvor ændringer slettes, når brugeren har logget af:
 
@@ -30,11 +38,11 @@ Hvis du aktiverer denne politikindstilling, tillader gruppepolitikken installati
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, blokerer gruppepolitikken for installationshandlinger på Windows Store-apps, når der anvendes en særlig profil.</string>
       <string id="AllowDevelopmentWithoutDevLicense">Tillad udvikling af Windows Store-apps og installation af dem fra et IDE (integrated development environment)</string>
       <string id="AllowDevelopmentWithoutDevLicenseExplanation">
-        Tillader eller afviser udvikling af Microsoft Store-programmer og installation af dem direkte fra et IDE.
+        Tillader eller afviser udvikling af Microsoft store-programmer og installation af dem direkte fra en IDE.
 
-        Hvis du aktiverer denne indstilling og aktiverer gruppepolitikken "Tillad alle apps, der er tillid til, at installere", kan du udvikle Microsoft Store-apps og installere dem direkte fra et IDE.
+ Hvis du aktiverer denne indstilling og aktiverer gruppepolitikken »Tillad installering af alle de apps, der er tillid til«, kan du udvikle Microsoft Store-apps og installere dem direkte fra en IDE.
 
-        Hvis du deaktiverer eller undlader at konfigurere denne indstilling, kan du ikke udvikle Microsoft Store-apps eller installere dem direkte fra et IDE.
+ Hvis du deaktiverer eller ikke konfigurerer denne indstilling, kan du ikke udvikle Microsoft store-apps eller installere dem direkte fra en IDE.
       </string>
       <string id="DisableDeploymentToNonSystemVolumes">Deaktiver installation af Windows-apps på drev, som ikke er systemdrev</string>
       <string id="DisableDeploymentToNonSystemVolumesExplanation">
@@ -65,6 +73,24 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, blok
         Hvis du aktiverer denne politik, vil ikke-administratorer ikke kunne starte installationen af Windows-app-pakker. Administratorer, der ønsker at installere en app, skal gøre det fra en administratorkontekst (f.eks. et administratorvindue i PowerShell). Alle brugere vil stadig kunne installere Windows-app-pakker via Microsoft Store, hvis det er tilladt i andre politikker.
 
         Hvis du deaktiverer eller undlader at konfigurere denne politik, kan alle brugere starte installationen af Windows-app-pakker.
+      </string>
+      <string id="DisableBackgroundAutoUpdates">Tillad ikke, at sideindlæste apps opdateres automatisk i baggrunden</string>
+      <string id="DisableBackgroundAutoUpdatesExplanation">Administrerer en side indlæst-apps mulighed for automatisk opdatering i baggrunden. 
+
+Hvis du aktiverer denne politik, opdateres side indlæst apps ikke automatisk i baggrunden.
+
+Hvis du deaktiverer denne politik, vil side indlæst-apps automatisk blive opdateret i baggrunden.
+
+Standard er ' deaktiveret ' (nøglen er ikke til stede).
+      </string>
+      <string id="DisableMeteredNetworkBackgroundAutoUpdates">Tillad ikke, at sideindlæste apps opdateres automatisk i baggrunden på et netværk efter forbrug</string>
+      <string id="DisableMeteredNetworkBackgroundAutoUpdatesExplanation">Administrerer en side indlæst-apps for automatisk opdatering i baggrunden på et forbrugsbaseret netværk. 
+
+Hvis du aktiverer denne politik, opdateres side indlæst apps ikke automatisk i baggrunden på et forbrugsbaseret netværk.
+
+Hvis du deaktiverer denne politik, opdateres side indlæst apps automatisk i baggrunden på et forbrugsbaseret netværk.
+
+Standard er ' deaktiveret ' (nøglen er ikke til stede).
       </string>
     </stringTable>
   </resources>

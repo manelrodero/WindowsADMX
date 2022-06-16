@@ -5,20 +5,20 @@
   <description>여기에 설명 입력</description>
   <resources>
     <stringTable>
-      <string id="AllowTelemetry">원격 분석 허용</string>
-      <string id="AllowTelemetry_0">0 - 보안[엔터프라이즈 전용]</string>
-      <string id="AllowTelemetry_1">1 - 필수</string>
-      <string id="AllowTelemetry_2">2 - 확장</string>
-      <string id="AllowTelemetry_3">3 - 선택</string>
-      <string id="AllowTelemetry_Explain">Windows 10에서 이 설정을 구성하면 최종 사용자가 조직에 설정된 수준보다 더 높은 수준의 원격 분석 모음을 선택할 수 없습니다. 이 제한 사항은 Windows 운영 체제 및 Windows에 포함된 앱에만 적용이 되며 Windows 10에서 실행 중인 타사 앱에는 적용되지 않습니다.
+      <string id="AllowTelemetry">진단 데이터 허용하기</string>
+      <string id="AllowTelemetry_0">진단 데이터 끄기(권장되지 않음)</string>
+      <string id="AllowTelemetry_1">필수 진단 데이터 보내기</string>
+      <string id="AllowTelemetry_3">추가 진단 데이터 보내기</string>
+      <string id="AllowTelemetry_Explain">이 정책 설정을 구성하여 Windows에서 수집되는 진단 데이터를 조정할 수 있습니다. 이 정책 설정을 사용하여 사용자가 설정 앱을 통해 진단 데이터를 수집하는 양을 늘리지 못하도록 제한할 수도 있습니다. 이 정책에서 수집되는 진단 데이터는 Windows의 일부로 간주되는 운영 체제 및 앱에 영향을 주고 조직에서 설치한 추가 앱에는 적용되지 않습니다.
 
-진단 데이터는 다음과 같이 네 개의 수준으로 분류됩니다.
- - 0(보안). 연결된 사용자 환경 및 원격 측정 구성 요소 설정, 악성 소프트웨어 제거 도구 및 Windows Defender에 대한 데이터를 포함하여 Windows, Windows Server 및 System 센터의 보안을 유지하는 데 필요한 정보입니다.
- - 1(필수). 품질 관련 데이터, 앱 호환성 및 보안 수준의 데이터를 포함한 기본 장치 정보입니다.
- - 2 (개선). Windows, Windows Server, System 센터, 앱이 사용되는 방법, 수행 수준, 고급 안정성 데이터와 필수 수준 및 보안 수준에서의 데이터를 포함한 추가 정보를 제공합니다.
- - 3(선택). 문제를 식별하고 해결하는 데 필요한 모든 데이터와 보안, 필수 및 개선된 수준의 데이터를 제공합니다.
+    - 진단 데이터 해제(권장되지 않음). 이 값을 사용하는 경우에는 진단 데이터가 디바이스에서 전송되지 않습니다. 이 값은 엔터프라이즈, 교육 및 서버 버전에서만 지원됩니다.
+    - 필요한 진단 데이터를 보냅니다. Windows가 안전하고 최신 상태가 되도록 유지하며 예상대로 수행하는 데 필요한 최소 진단 데이터입니다. 이 값을 사용하면 설정 앱에서 "선택적 진단 데이터" 컨트롤을 사용할 수 없습니다.
+    - 선택적 진단 데이터를 보냅니다. 문제를 검색, 진단 및 해결하고 제품을 개선하는 데 도움이 되는 추가 진단 데이터가 수집됩니다. 선택적 진단 데이터를 보내도록 선택하면 항상 필수 진단 데이터가 포함됩니다. 선택적 진단 데이터에 진단 로그 파일 및 손상 덤프가 포함될 수도 있습니다. 전송되는 선택적 진단 데이터를 더 세밀하게 제어하기 위해 "덤프 수집 제한" 및 "진단 로그 수집 제한" 정책을 사용합니다.
 
- 설정 앱에서 사용자가 사용할 수 있는 옵션은 이 설정을 구성하여 변경되며 설정되지 않은 경우에도 다른 그룹 정책 설정의 영향을 받을 수 있습니다. 보안 또는 기본 원격 분석 설정을 허용하도록 이 정책을 구성하면 최종 사용자가 더 높은 수준을 선택할 수 없음을 참고합니다.
+이 정책 설정을 사용하지 않거나 구성하지 않는 경우 디바이스에서 필수 진단 데이터를 전송하고 최종 사용자가 설정 앱에서 선택적 진단 데이터를 보낼지 여부를 선택할 수 있습니다.
+
+참고:
+"진단 데이터 옵트인 설정 구성 사용자 인터페이스" 그룹 정책을 최종 사용자가 데이터 수집 설정을 변경하는 것을 방지하는 데 사용할 수 있습니다.
       </string>
 
       <string id="TelemetryProxy">연결된 사용자 환경 및 원격 분석 구성</string>
@@ -30,9 +30,9 @@
       </string>
 
       <string id="CommercialId">상업용 ID 구성</string>
-      <string id="CommercialId_Explain">이 정책 설정은 이 디바이스의 원격 분석 데이터를 지정된 조직에 속한 것으로 고유하게 연결하는 데 사용되는 식별자를 정의합니다. 이 디바이스가 조직에 속한 것으로 식별되어야 하는 프로그램에 조직이 참여하고 있는 경우 이 설정을 사용하여 해당 ID를 제공하세요. 이 설정의 값은 프로그램에 대한 온보딩 프로세스의 일부로 Microsoft에서 제공됩니다. 
+      <string id="CommercialId_Explain">이 정책 설정은 이 디바이스의 진단 데이터를 지정된 조직에 속한 것으로 고유하게 연결하는 데 사용되는 식별자를 정의합니다. 이 디바이스가 조직에 속한 것으로 식별되어야 하는 프로그램에 조직이 참여하고 있는 경우 이 설정을 사용하여 해당 ID를 제공하세요. 이 설정의 값은 프로그램에 대한 온보딩 프로세스의 일부로 Microsoft에서 제공됩니다. 
 
-이 정책 설정을 사용하지 않거나 구성하지 않으면 Microsoft에서 이 식별자를 사용하여 이 컴퓨터와 원격 분석 데이터를 조직과 연결할 수 없습니다.
+이 정책 설정을 사용하지 않거나 구성하지 않으면 Microsoft에서 이 식별자를 사용하여 이 컴퓨터와 진단 데이터를 조직과 연결할 수 없습니다.
       </string>
 
       <string id="DisableEnterpriseAuthProxy">연결된 사용자 환경 및 원격 분석 서비스에 대해 인증된 프록시 사용 구성</string>
@@ -40,21 +40,20 @@
       <string id="DisableEnterpriseAuthProxy_2">인증된 프록시 사용 해제</string>
       <string id="DisableEnterpriseAuthProxy_Explain">이 정책 설정은 Windows 10에서 연결된 사용자 환경 및 원격 분석 서비스가 자동으로 인증된 프록시를 사용하여 Microsoft에 데이터를 다시 보내지 않도록 차단합니다. 이 정책 설정을 사용하지 않거나 구성하지 않으면 연결된 사용자 환경 및 원격 분석 서비스가 자동으로 인증된 프록시를 사용하여 Microsoft에 데이터를 다시 보냅니다. 이 정책을 사용하면 연결된 사용자 환경 및 원격 분석 서비스가 자동으로 인증된 프록시를 사용하지 않도록 차단됩니다.</string>
 
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">고급 진단 데이터를 Windows Analytics에서 요구하는 최소 수준으로 제한</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Desktop Analytics의 추가 진단 데이터 제한하기</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics 컬렉션 사용</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Windows Analytics 컬렉션 사용 안 함</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">이 정책 설정은 원격 분석 허용 정책 설정과 함께 조직이 Windows Analytics 서비스를 통해 TI 정보에 대한 진단 데이터의 특정 집합을 Microsoft에 전송할 수 있도록 합니다.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">이 정책 설정은 "진단 데이터 허용" 정책 설정과 함께 조직에서 Desktop Analytics에 필요한 최소 데이터를 보낼 수 있도록 합니다.
 
- 이 동작을 사용하려면 다음 두 단계를 완료해야 합니다.
+앞에서 설명한 동작을 사용하려면 다음 단계를 완료하세요.
+1. 이 정책 설정을 사용하도록 설정합니다.
+2. "진단 데이터 허용" 정책을 "선택적 진단 데이터 보내기"로 설정합니다.
+3. "덤프 수집 제한" 정책 설정을 사용하도록 설정합니다.
+4. "진단 로그 수집 제한" 정책 설정을 사용하도록 설정합니다.
 
-    1. 이 정책 설정을 활성화
-   2. 원격 분석 허용을 수준 2(개선)로 설정 
+이러한 정책이 구성되면 Microsoft는 https://go.microsoft.com/fwlink/?linkid=2116020에서 볼 수 있는 Desktop Analytics에 필요한 필수 진단 데이터 및 이벤트만 수집합니다.
 
-이 설정은 Microsoft에 보안 혹은 필수 진단 데이터를 전송하기 위해 구성된 장치에 어떠한 영향도 미치지 않습니다. 
-
-이 정책을 구성하는 경우, 진단 데이터 수집이 필수 진단 데이터와 Desktop Analytics에 필요한 이벤트로 제한됩니다. 이러한 이벤트는 https://go.microsoft.com/fwlink/?linkid=2116020에서 볼 수 있습니다.
-
-이 정책 설정을 비활성화하거나 구성하지 않는 경우 Microsoft에 전송되는 진단 데이터의 수준은 (구성된 경우) 원격 분석 허용 정책에 의해 결정됩니다(원격 분석 허용 정책 설정을 통해 개선된 진단 데이터를 활성화하고 이 정책 설정을 구성하지 않는 경우, Windows Analytics에 필요한 이벤트와 추가로 개선된 수준의 진단 데이터를 Microsoft에 보내게 됩니다).
+정책 설정을 사용하지 않거나 구성하지 않으면, 진단 데이터 수집은 "진단 데이터 허용" 정책 설정 또는 설정 앱에서 최종 사용자에 의해 결정됩니다.
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Windows 진단 데이터에서 장치 이름 전송 허용</string>
@@ -63,65 +62,63 @@
 이 정책 설정을 사용하지 않거나 구성하지 않으면 장치 이름 Windows 진단 데이터의 일부로 Microsoft에 전송되지 않습니다.
       </string>
 
-      <string id="ConfigureTelemetryOptInSettingsUx">원격 분석 옵트인 설정 사용자 인터페이스를 구성합니다.</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_1">원격 분석 옵트인 설정 사용 안 함</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_2">원격 분석 옵트인 설정 사용</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_Explain">이 정책 설정은 최종 사용자가 설정에서 원격 분석 수준을 변경할 수 있는지 여부를 결정합니다.
+      <string id="ConfigureTelemetryOptInSettingsUx">진단 데이터 옵트인 설정 사용자 인터페이스를 구성합니다.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">진단 데이터 옵트인 설정 사용 안 함</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">진단 데이터 옵트인 설정 사용함</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">이 정책 설정은 최종 사용자가 설정 앱에서 진단 데이터 설정을 변경할 수 있는지 여부를 결정합니다.
 
-이 정책 설정을 "원격 분석 옵션 설정 사용 안 함"으로 설정하면 설정에서 원격 분석 수준이 사용되지 않으며, 최종 사용자가 이를 변경할 수 없습니다.
+이 정책 설정을 "진단 데이터 옵트인 설정 사용 안 함"으로 설정하면, 설정 앱에서 진단 데이터 설정을 사용할 수 없습니다.
 
-이 정책 설정을 구성하지 않거나 "원격 분석 옵션 설정 사용"으로 설정하면 최종 사용자가 설정 앱에서 장치 원격 분석 수준을 변경할 수 있습니다.
+이 정책 설정을 구성하지 않거나 "진단 데이터 옵트인 설정 사용함"으로 설정하면, 최종 사용자가 설정 앱에서 장치 진단 설정을 변경할 수 있습니다.
 
 참고:
-조직에서 Microsoft로 보내는 진단 데이터의 수준을 제한하려면 원격 측정 정책 설정 허용을 사용하십시오.
+조직에서 Microsoft로 보내는 진단 데이터의 크기에 대한 제한을 설정하려면 "진단 데이터 허용" 정책 설정을 사용합니다.
       </string>
 
-      <string id="ConfigureTelemetryOptInChangeNotification">원격 분석 옵트인 변경 알림을 구성합니다.</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_1">원격 분석 변경 알림 사용 안 함</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_2">원격 분석 변경 알림 사용</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
-          이 정책 설정은 장치에 처음 로그온할 때 또는 설정에서 변경 사항이 발생할 경우 사용자에게 원격 분석 수준에 대한 알림을 표시할지 여부를 제어합니다. 
-          이 정책 설정을 "원격 분석 변경 알림 사용 안 함"으로 설정하면 원격 분석 수준 알림이 나타나지 않습니다.
-          이 정책 설정을 "원격 분석 변경 알림 사용"으로 설정하거나 이 정책 설정을 구성하지 않으면 처음 로그온 할 때와 설정에서 변경 사항이 발생할 경우에 원격 분석 알림이 나타납니다.
+      <string id="ConfigureTelemetryOptInChangeNotification">진단 데이터 옵트인 변경 알림을 구성합니다.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">진단 데이터 변경 알림 사용 안 함</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">진단 데이터 변경 알림 사용함</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">이 정책 설정은 처음 로그온할 때와 설정이 변경될 때 진단 데이터 옵트인 설정의 변경에 따라 알림을 표시할지를 제어합니다.
+
+이 정책 설정을 "진단 데이터 변경 알림 사용 안 함"으로 설정하는 경우 진단 데이터 옵트인 변경 알림이 표시되지 않습니다.
+
+이 정책 설정을 "진단 데이터 변경 알림 사용"으로 설정하거나 이 정책 설정을 구성하지 않는 경우에는 처음 로그온할 때와 설정이 변경될 때 진단 데이터 옵트인 변경 알림이 표시됩니다.
       </string>
 
-      <string id="DisableDeviceDelete">진단 데이터 삭제 사용 안 함 </string>
-      <string id="DisableDeviceDelete_Explain">
-          이 정책 설정은 진단 및 피드백 설정 페이지에서 진단 데이터 삭제 단추를 사용할 수 있는지 여부를 제어합니다.
+      <string id="DisableDeviceDelete">진단 데이터 삭제 사용 안 함</string>
+      <string id="DisableDeviceDelete_Explain">이 정책 설정은 진단 및 피드백 설정 페이지에서 진단 데이터 삭제 단추를 사용할 수 있는지 여부를 제어합니다.
           이 정책 설정을 사용하면 설정 페이지에서 진단 데이터 삭제 단추를 사용할 수 없도록 설정되어 Microsoft가 수집한 진단 데이터를 장치에서 삭제하지 못합니다. 
           이 정책 설정을 사용하지 않거나 구성하지 않으면 설정 페이지에서 진단 데이터 삭제 단추를 사용할 수 있도록 설정되어 해당 장치에서 Microsoft가 수집한 모든 진단 데이터를 사용자들이 지울 수 있게 됩니다.
       </string>
 
-      <string id="DisableDiagnosticDataViewer">진단 데이터 뷰어를 사용하지 않도록 설정합니다. </string>
-      <string id="DisableDiagnosticDataViewer_Explain">
-          이 정책 설정은 사용자가 진단 및 피드백 설정 페이지에서 진단 데이터 뷰어를 사용하고 실행할 수 있는지 여부를 제어합니다.
+      <string id="DisableDiagnosticDataViewer">진단 데이터 뷰어를 사용하지 않도록 설정합니다.</string>
+      <string id="DisableDiagnosticDataViewer_Explain">이 정책 설정은 사용자가 진단 및 피드백 설정 페이지에서 진단 데이터 뷰어를 사용하고 실행할 수 있는지 여부를 제어합니다.
           이 정책 설정을 사용하면 설정 페이지에서 진단 데이터 뷰어를 사용할 수 없어 장치에서 Microsoft가 수집한 진단 데이터가 표시되지 않습니다.  
           이 정책 설정을 사용하지 않거나 구성하지 않으면 설정 페이지에서 진단 데이터 뷰어를 사용할 수 있습니다.
       </string>
 
       <string id="ConfigureMicrosoft365UploadEndpoint">Desktop Analytics에 대한 진단 데이터 업로드 엔드포인트 구성</string>
-      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          이 정책은 Desktop Analytics 프로그램의 일부로 이 장치의 진단 데이터에 대한 업로드 엔드포인트를 설정합니다.
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">이 정책은 Desktop Analytics 프로그램의 일부로 이 장치의 진단 데이터에 대한 업로드 엔드포인트를 설정합니다.
           조직이 프로그램에 참여하고 있으며 사용자 지정 업로드 엔드포인트를 구성하라는 지시를 받은 경우에는 이 설정을 사용하여 해당 엔드포인트를 정의합니다.
           이 설정의 값은 프로그램에 대한 온보딩 프로세스의 일부로 Microsoft에서 제공합니다. 
       </string>
-
+      
       <string id="AllowUpdateComplianceProcessing">업데이트 준수 처리 허용</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-          IT 관리자가 이 장치의 진단 데이터를 규정 준수 업데이트를 통해 처리하도록 할 수 있습니다. 
- 다음 목록에는 지원되는 값이 표시됩니다. 
- 0 (기본값) – 규정 준수 업데이트를 통해 진단 데이터가 처리되지 않습니다. 
- 16 – 규정 준수 업데이트를 통해 진단 데이터를 처리할 수 있습니다. 
-이 정책 설정을 사용하지 않거나 구성하지 않으면 이 장치의 진단 데이터가 규정 준수 업데이트를 통해 처리되지 않습니다.
+          IT 관리자가 업데이트 준수를 통해이 장치의 진단 데이터를 처리할 수 있도록 허용 합니다. 
+            다음 목록은 지원 되는 값을 보여 줍니다.  
+              0 (기본값) – 업데이트 준수에 의해 진단 데이터가 처리 되지 않습니다. 
+              16 – 업데이트 준수를 통해 진단 데이터를 처리할 수 있습니다. 
+            이 정책 설정을 사용 하지 않거나 구성 하지 않으면이 장치의 진단 데이터가 업데이트 준수에 의해 처리 되지 않습니다.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">데스크톱 분석 처리 허용</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-          IT 관리자가 이 장치의 진단 데이터를 데스크톱 분석을 통해 처리하도록 할 수 있습니다. 
- 다음 목록에는 지원되는 값이 표시됩니다. 
- 0 (기본값) – 데스크톱 분석을 통해 진단 데이터가 처리되지 않습니다. 
- 2 – 데스크톱 분석을 통해 진단 데이터를 처리할 수 있습니다. 
-이 정책 설정을 사용하지 않거나 구성하지 않으면 이 장치의 진단 데이터가 데스크톱 분석을 통해 처리되지 않습니다. 
+          IT 관리자가이 장치에서 진단 데이터를 데스크톱 분석에 의해 처리 되도록 설정할 수 있도록 허용 합니다. 
+            다음 목록은 지원 되는 값을 보여 줍니다.  
+              0 (기본값) – 데스크톱 분석에서 진단 데이터를 처리 하지 않습니다. 
+              2 – 데스크톱 분석을 통해 진단 데이터를 처리할 수 있습니다. 
+          이 정책 설정을 사용 하지 않거나 구성 하지 않으면이 장치의 진단 데이터가 데스크톱 분석에 의해 처리 되지 않습니다. 
       </string>
 
       <string id="AllowWUfBCloudProcessing">WUfB 클라우드 처리 허용</string>
@@ -134,11 +131,45 @@
       </string>
 
       <string id="AllowCommercialDataPipeline">상업용 데이터 파이프라인 허용</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline은 장치를 Windows 기업 데이터 파이프라인에 포함시킵니다.
-          이 설정을 사용하면 장치에서 수집한 데이터가 Windows 기업 데이터 파이프라인에 선택됩니다.
-          이 설정을 사용하지 않거나 구성하지 않으면 Windows 표준 데이터 파이프라인의 정책에 따라 장치의 모든 데이터가 수집되고 처리됩니다.
-          이 설정을 원격 분석 수집 수준이나 사용자가 수준을 변경할 수 있는 기능은 변경되지 않습니다. 이 설정은 Windows 운영 체제 및 Windows에 포함된 앱에만 적용되며 Windows 10에서 실행되는 타사 앱이나 서비스에는 적용되지 않습니다.
+      <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline은 Microsoft가 이 장치에서 수집된 Windows 진단 데이터에 대한 프로세서인지 또는 컨트롤러인지 여부를 제어합니다.
+
+이 정책을 사용하면 Microsoft는 Windows 장치에서 수집된 Windows 진단 데이터의 프로세서가 되고 고객은 컨트롤러가 됩니다. 장치가 이 정책에 대해 Azure AD에 등록되어 있어야 합니다.
+
+이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft는 이 장치에서 수집된 Windows 진단 데이터의 컨트롤러가 됩니다.
+
+이 정책은 Microsoft가 이 장치에서 Windows 진단 데이터에 대한 프로세서인 경우에만 제어합니다. 이 설정의 구성은 진단 데이터의 수집 여부나 사용자의 수준 변경 능력 여부를 변경하지 않습니다. 수집 수준을 구성하려면 "진단 데이터 허용" 정책을 사용하고 진단 데이터 수준의 변경에서 이 장치의 사용자를 제한하려면 “진단 데이터 옵트인 설정 사용자 인터페이스 구성” 정책을 사용하세요.
+      </string>
+
+      <string id="LimitDiagnosticLogCollection">진단 로그 컬렉션 제한하기</string>
+      <string id="LimitDiagnosticLogCollection_Explain">이 정책 설정은 장치의 문제를 해결하는 데 더 많은 정보가 필요할 때 추가 진단 로그를 수집할지 여부를 제어합니다. 진단 로그는 장치에서 선택적 진단 데이터를 보내도록 구성한 경우에만 전송됩니다.
+
+이 정책 설정을 사용하면 진단 로그가 수집되지 않습니다.
+
+이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 장치에서 선택적 진단 데이터를 보내도록 구성한 경우 진단 로그가 수집될 수 있습니다.
+      </string>
+
+      <string id="LimitDumpCollection">덤프 컬렉션 제한하기</string>
+      <string id="LimitDumpCollection_Explain">이 정책 설정은 문제를 해결하는 데 더 많은 정보가 필요할 때 수집할 수 있는 덤프 유형을 제한합니다. 덤프는 디바이스에서 선택적 진단 데이터를 보내도록 구성한 경우에만 전송됩니다.
+
+이 설정을 사용하면 Windows 오류 보고는 커널 미니 덤프와 사용자 모드 심사 덤프 보내기로 제한됩니다.
+
+이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않는 경우 사용자가 선택적 진단 데이터를 보내도록 선택한 경우 때때로 전체 또는 힙 덤프를 수집할 수 있습니다.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">OneSettings 감사 사용</string>
+      <string id="EnableOneSettingsAuditing_Explain">이 정책 설정은 Windows가 OneSettings 서비스의 EventLog 연결 시도를 기록할지 여부를 컨트롤합니다.
+
+이 정책을 사용하면 Windows가 OneSettings 서비스를 Microsoft\Windows\Privacy-Auditing\Operational EventLog 채널에 연결하려는 시도를 기록합니다.
+
+이 정책 설정을 사용하지 않거나 구성하지 않을 경우 Windows가 OneSettings 서비스를 EventLog에 연결하려는 시도를 기록하지 않습니다.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">OneSettings 다운로드 사용 안 함</string>
+      <string id="DisableOneSettingsDownloads_Explain">이 정책 설정은 Windows가 OneSettings 서비스에 연결 시도를 할지 여부를 제어합니다.
+
+이 정책을 사용하면 Windows가 OneSettings 서비스에 연결을 시도하지 않습니다.
+
+이 정책 설정을 사용하지 않거나 구성하지 않으면 Windows가 정기적으로 OneSettings 서비스에 연결을 시도하여 구성 설정을 다운로드합니다.
       </string>
     </stringTable>
     <presentationTable>

@@ -250,6 +250,23 @@ Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane
 Jeżeli to ustawienie zasad zostanie włączone, nazwy IDN będą konwertowane na format Nameprep.
 
 Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, nazwy IDN nie będą konwertowane na format Nameprep.</string>
+      <string id="DNS_Doh">Konfiguracja DNS przez rozpoznawanie nazw w protokole HTTPS (DoH)</string>
+      <string id="DNS_Doh_Disabled">Nie zezwalaj na DoH</string>
+      <string id="DNS_Doh_Auto">Zezwalaj na DoH</string>
+      <string id="DNS_Doh_Force">Wymagaj DoH</string>
+      <string id="DNS_Doh_Help">Określa, czy klient DNS przeprowadzi rozpoznawanie nazw w systemie DNS w protokole HTTPS (DoH).
+
+Domyślnie klient DNS przeprowadzi klasyczne rozpoznawanie nazw w DNS (za pośrednictwem protokołu UDP lub TCP). To ustawienie umożliwia ulepszenie działania klienta DNS poprzez użycie protokołu DoH w celu rozpoznania nazw domen.
+
+Aby skorzystać z tego ustawienia zasad, kliknij opcję Włączone, a następnie wybierz z listy rozwijanej jedną z następujących opcji:
+
+Nie zezwalaj na DoH: żadne rozpoznawanie nazw nie zostanie przeprowadzone w protokole DoH.
+
+Zezwalaj na DoH: wyślij zapytania w protokole DoH, jeśli jest on obsługiwany przez skonfigurowane serwery DNS. W przeciwnym razie spróbuj rozpoznać nazwy metodą klasyczną.
+
+Wymagaj DoH: zezwalaj tylko na rozpoznawanie nazw w protokole DoH. Jeśli nie skonfigurowano żadnych serwerów DNS obsługujących protokół DoH, rozpoznawanie nazw nie powiedzie się.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, komputery użyją ustawień skonfigurowanych lokalnie.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +303,9 @@ Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Poziom zabezpieczeń aktualizacji:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Konfiguruj opcje DoH:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

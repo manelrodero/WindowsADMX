@@ -10,23 +10,20 @@
 
 A választható értékek a következők:
 
-0 = csak HTTP (nincs társviszony).
+0 = Csak HTTP (nincs társviszony).
 
 1 = Társviszonnyal kevert HTTP ugyanazon NAT mögött.
 
-2 = Társviszonnyal kevert HTTP privát csoporton átívelve. Alapértelmezés szerint az egyazon Active Directory-helyen (ha van ilyen hely) működő vagy az egyazon tartományban lévő eszközök között létesül társviszony. Ha ezt a lehetőséget választja, a társviszony-létesítés átível a NAT-okon. Amennyiben egyéni csoportot szeretne létrehozni, használjon csoportazonosítót a 2-es lehetőséggel együtt.
+2 = Társviszonnyal kevert HTTP privát csoporton átívelve. Alapértelmezés szerint az egyazon Active Directory-helyen (ha van ilyen hely) működő vagy az egyazon tartományban lévő eszközök között létesül társviszony. Ha ezt a lehetőséget választja, a társviszony-létesítés átível a NAT-okon. Amennyiben egyéni csoportot szeretne létrehozni, használjon csoportazonosítót a 2-es móddal együtt.
 
 3 = Internetes társviszonnyal kevert HTTP.
 
-99 = Egyszerű letöltési mód társviszony nélkül. A Kézbesítésoptimalizálás csak HTTP-kapcsolattal végzi a letöltéseket, és nem próbál meg csatlakozni a Kézbesítésoptimalizálás felhőszolgáltatásaihoz.
-
-100 = Megkerülő mód. A BITS használata a Kézbesítésoptimalizálás helyett.</string>
+99 = Egyszerű letöltési mód társviszony nélkül. A Kézbesítésoptimalizálás csak HTTP-kapcsolattal végzi a letöltéseket, és nem próbál meg csatlakozni a Kézbesítésoptimalizálás felhőszolgáltatásaihoz.</string>
       <string id="DownloadMode_CdnOnly">Csak HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Csoport (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Egyszerű (99)</string>
-      <string id="DownloadMode_Bypass">Megkerülés (100)</string>
       <string id="GroupId">Csoportazonosító</string>
       <string id="GroupId_Help">A csoportazonosítót GUID azonosítóként kell beállítani. Ezzel a házirenddel tetszés szerinti csoportazonosító rendelhető ahhoz a csoporthoz, amelyhez az eszköz tartozik.
 
@@ -171,12 +168,17 @@ Megjegyzés: Ha beállítja a HTTP-ről érkező előtérbeli letöltések késl
       <string id="RestrictPeerSelectionBy">A társkiválasztás korlátozási módjának megadása</string>
       <string id="RestrictPeerSelectionBy_Help">Állítsa be ezt a házirendet, ha a kiválasztott lehetőséggel korlátozni szeretné a társválasztást.
 
-Az elérhető lehetőségek a következők:
-1 = Alhálózati maszk (egy következő kiadásban további lehetőségek is elérhetővé válnak majd).
+A rendelkezésre álló lehetőségek a következők:
+0 = NAT.
+1 = Alhálózati maszk.
+2 = Helyi felderítés (DNS-SD).
 
-Az 1. lehetőség (Alhálózati maszk) a LAN (1) és a Csoport (2) letöltési módra is vonatkozik.</string>
-      <string id="RestrictPeerSelectionBy_None">Nincs</string>
+Az alapértelmezett érték 0-ról (nincs korlátozás) 1-re (korlátozás az alhálózatra) változott.
+
+Ezek a beállítások a LAN (1) és a Csoport (2) letöltési módra egyaránt vonatkoznak.</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Alhálózat</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Helyi felderítés</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Munkaidő megadása a háttérbeli letöltési sávszélesség korlátozására</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">A rendelkezésre álló letöltési sávszélesség százalékos arányában megadhatja, hogy a Kézbesítésoptimalizálás maximálisan mekkora háttérbeli letöltési sávszélességet használhat munkaidő alatt, illetve munkaidőn kívül az összes egyidejű letöltési tevékenység során.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Munkaidő megadása az előtérbeli letöltési sávszélesség korlátozására</string>
@@ -303,7 +305,7 @@ Az 1. lehetőség (Alhálózati maszk) a LAN (1) és a Csoport (2) letöltési m
         <text>Az alapértelmezett érték 0 (nincs késleltetés).</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Társkiválasztás korlátozása:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Társkiválasztás korlátozása:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

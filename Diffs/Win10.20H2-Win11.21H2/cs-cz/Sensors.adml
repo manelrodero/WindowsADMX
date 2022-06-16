@@ -36,6 +36,34 @@
       
       </string>
       <string id="LocationAndSensors">Umístění a lokátory</string>
+      <string id="HumanPresence">Přítomnost člověka</string>
+      <string id="ForceInstantWake_DisplayName">Vynutit okamžité probuzení</string>
+      <string id="ForceInstantWake_ExplainText">Určuje, jestli zásada MDM vynucuje vypnutí nebo zapnutí probuzení při příchodu. Uživatel nebude moct toto nastavení změnit a posuvník bude v uživatelském rozhraní neaktivní.</string>
+      <string id="ForceInstantWake_0">Přechod do výchozí volby uživatele</string>
+      <string id="ForceInstantWake_1">Vynucené zapnutí</string>
+      <string id="ForceInstantWake_2">Vynucené vypnutí</string>
+      <string id="ForceInstantLock_DisplayName">Vynutit okamžité uzamčení </string>
+      <string id="ForceInstantLock_ExplainText">Určuje, jestli zásada MDM vynucuje vypnutí nebo zapnutí funkce Zamkni na odchodu. Uživatel nebude moct toto nastavení změnit a posuvník bude v uživatelském rozhraní neaktivní.</string>
+      <string id="ForceInstantLock_0">Přechod do výchozí volby uživatele</string>
+      <string id="ForceInstantLock_1">Vynucené zapnutí</string>
+      <string id="ForceInstantLock_2">Vynucené vypnutí</string>
+      <string id="ForceLockTimeout_DisplayName">Časový limit zámku</string>
+      <string id="ForceLockTimeout_ExplainText">Určuje prodlevu na aktivaci funkce Zamkni na odchodu vynucenou zásadou MDM. Uživatel nebude moct toto nastavení změnit a posuvník bude v uživatelském rozhraní neaktivní.</string>
+      <string id="ForceLockTimeout_0">Výchozí volba pro uživatele</string>
+      <string id="ForceLockTimeout_1">10 sekund</string>
+      <string id="ForceLockTimeout_2">30 sekund</string>
+      <string id="ForceLockTimeout_3">2 minuty</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Zvolit jednu z následujících akcí</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Zvolit jednu z následujících akcí</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Zvolte jeden z následujících časových limitů</dropdownList>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>

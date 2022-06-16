@@ -270,7 +270,7 @@ Se ativar esta definição de política, poderá especificar uma lista de sites 
 
 Se desativar ou não configurar esta definição de política, não poderá fornecer uma lista de exceções predefinida do Bloqueador de Janelas de Pop-up.
 
-Notas: poderá impedir que os utilizadores adicionem ou removam Web sites da lista de exceções se ativar a política "Desativar Gestão da Lista de Autorizados de Pop-up".</string>
+Notas: poderá impedir que os utilizadores adicionem ou removam Web sites da lista de exceções se ativar a política "Desativar Gestão da lista de permissões de janelas de pop-up".</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">Esta definição de política permite ignorar pedidos quando um script em execução em qualquer processo do computador tenta efetuar uma operação da Área de Transferência (eliminar, copiar ou colar).
 
 Se ativar esta definição de política, não será feito qualquer pedido ao utilizador quando um script em execução em qualquer processo do computador efetuar uma operação da Área de Transferência. Isto significa que se o comportamento da zona estiver definido atualmente para fazer o pedido, o mesmo será ignorado e ativado.
@@ -298,7 +298,6 @@ Se desativar esta definição de política para uma aplicação ou processo da l
 Se não configurar esta definição de política, os valores atuais da ação de URL para uma aplicação ou processo da lista irão prevalecer.</string>
       <string id="FavImportExport">Desativar assistente de Importação/Exportação de Definições</string>
       <string id="GeolocationDisable">Desativar a geolocalização do browser</string>
-      <string id="DisableFlashInIE">Desativar o Adobe Flash no Internet Explorer e impedir que as aplicações utilizem a tecnologia do Internet Explorer para instanciar objetos Flash</string>
       <string id="File_NoBrowserClose">Menu Ficheiro: Desativar fecho das janelas do browser e do Explorador</string>
       <string id="File_NoBrowserSaveAs">Menu Ficheiro: Desativar a opção de menu Guardar Como </string>
       <string id="File_NoBrowserSaveWebComplete">Menu Ficheiro: Desativar Guardar Como Página Web Completa</string>
@@ -726,13 +725,6 @@ Se ativar esta definição de política, o suporte de geolocalização do browse
 Se desativar esta definição de política, o suporte de geolocalização do browser será ativado.
 
 Se não configurar esta definição de política, o suporte de geolocalização do browser pode ser ativado ou desativado em Opções da Internet no separador Privacidade.</string>
-      <string id="IE_ExplainDisableFlashInIE">Esta definição de política desativa o Adobe Flash no Internet Explorer e impede que as aplicações utilizem a tecnologia do Internet Explorer para instanciar objetos Flash.
-
-Se ativar esta definição de política, o Flash é desativado no Internet Explorer e as aplicações não poderão utilizar a tecnologia do Internet Explorer para instanciar objetos Flash. Na caixa de diálogo Gerir Suplementos, o estado de Flash será 'Desativado', pelo que os utilizadores não conseguirão ativar o Flash. Se ativar esta definição de política, o Internet Explorer irá ignorar as definições feitas para o Adobe Flash através das definições de política "Lista de Suplementos" e "Negar todos os suplementos exceto os especificamente permitidos na Lista de Suplementos".
-
-Se desativar ou não configurar esta definição de política, o Flash é ativado no Internet Explorer e as aplicações podem utilizar a tecnologia do Internet Explorer para instanciar objetos Flash. Os utilizadores podem ativar ou desativar o Flash na caixa de diálogo Gerir Suplementos.
-
-Note-se que o Adobe Flash ainda pode ser desativado através das definições de política "Lista de Suplementos" e "Negar todos os suplementos exceto os especificamente permitidos na Lista de Suplementos", mesmo que esta definição de política esteja desativada ou não esteja configurada. No entanto, se o Adobe Flash for desativado através das definições de política "Lista de Suplementos" e "Negar todos os suplementos exceto os especificamente permitidos na Lista de Suplementos" e não através desta política de definição, todas as aplicações que utilizam a tecnologia do Internet Explorer para instanciar objetos Flash continuam a poder fazê-lo. Para obter mais informações, consulte "Definições de Política de Grupo no Internet Explorer 10", na biblioteca TechNet do Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Impede os utilizadores de fechar o Microsoft Internet Explorer e o Explorador de Ficheiros.
 
 Se ativar esta política, o comando Fechar no menu Ficheiro aparecerá desativado.
@@ -3015,7 +3007,7 @@ Esta funcionalidade só é aplicável às versões do Internet Explorer que vão
       <string id="Persistence_FileLimits4">Limites de tamanho de ficheiro para a zona Sites Restritos</string>
       <string id="PhishingOff">Desativar</string>
       <string id="PhishingOn">Ativar</string>
-      <string id="PopupBlocker_AllowList">Lista de autorizados de pop-up</string>
+      <string id="PopupBlocker_AllowList">Lista de permissões de janelas de pop-up</string>
       <string id="Printing">A imprimir</string>
       <string id="Printing_Explain">Esta definição de política especifica se o Internet Explorer imprime as imagens e cores de fundo quando o utilizador imprime uma página Web. A inclusão de imagens e cores de fundo poderá reduzir a velocidade com que uma página é impressa e a qualidade da impressão, consoante as capacidades da impressora.
 
@@ -3904,7 +3896,7 @@ Se desativar ou não configurar esta definição de política, os utilizadores p
 Se ativar esta definição, os utilizadores podem ver e utilizar a opção de Modo Empresarial a partir do menu Ferramentas. Se ativar esta definição, mas não especificar uma localização de relatório, o Modo Empresarial continuará disponível para os seus utilizadores, mas não receberá relatórios.
 
 Se desativar ou não configurar a definição de política, a opção de menu não aparecerá e os utilizadores não poderão executar Web sites no Modo Empresarial.</string>
-      <string id="RestrictInternetExplorer">Enviar todos os sites não incluídos na Lista de Sites do Modo Empresarial para o Microsoft Edge.</string>
+      <string id="RestrictInternetExplorer">Enviar todos os sites não incluídos na Lista de Sites do Modo Empresarial para o Microsoft Edge</string>
       <string id="IE_ExplainRestrictInternetExplorer">Esta definição permite-lhe decidir se pretende abrir todos os sites não incluídos na Lista de Sites do Modo Empresarial no Microsoft Edge. Se utilizar esta definição, deve também ativar a definição de política de Modelos Administrativos\Componentes do Windows\Internet Explorer\Utilizar a lista de Web sites do IE de Modo Empresarial e deve incluir, pelo menos, um site na Lista de Sites do Modo Empresarial.
 
 A ativação desta definição abre automaticamente todos os sites não incluídos na Lista de Sites do Modo Empresarial no Microsoft Edge.
@@ -3959,6 +3951,41 @@ Políticas relacionadas:
 - Enviar todos os sites não incluídos na Lista de Sites do Modo de Empresa para o Microsoft Edge ("RestrictIE")
 
 Para obter mais informações sobre como utilizar esta política juntamente com outras políticas relacionadas para criar a configuração ideal para a sua empresa, consulte https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Permitir que "guardar destino como" no modo do Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Esta definição de política permite aos administradores ativar o menu de contexto "guardar destino como" no modo de Internet Explorer.
+
+Se ativar esta política, "guardar destino como" será apresentado no menu de contexto do modo do Internet Explorer e funcionar o mesmo como o Internet Explorer.
+
+Se desativar ou não configurar esta definição de política, "guardar destino como" não será apresentado no menu de contexto do modo de Internet Explorer.
+
+Para mais informações, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Ative teclas de atalho alargadas no modo Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Esta configuração de política concede aos administradores permitir que as teclas de atalho de modo estendido do Microsoft Edge Internet Explorer, tais como "Ctrl+S" tenham a funcionalidade "Guardar como".
+
+Se ativar esta política, a funcionalidade estendida da tecla de atalho é ativada no modo Internet Explorer e funciona da mesma forma que o Internet Explorer.
+
+Se desativar, ou não configurar esta política, as teclas de atalho alargadas não funcionarão no modo Internet Explorer.
+
+Para mais informações, veja https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Desativar o Internet Explorer 11 como um browser autónomo</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Esta política permite-lhe restringir o início do Internet Explorer como browser autónomo.
+
+Se ativar a política, esta:
+– Impede que o Internet Explorer 11 seja iniciado como um browser autónomo.
+– Restringe a utilização do Internet Explorer ao "modo Internet Explorer" do Microsoft Edge
+– Redireciona todas as tentativas de iniciar o Internet Explorer 11 para o browser de canal estável Microsoft Edge.
+– Substitui todas as outras políticas que redirecionem para o Internet Explorer 11.
+
+Se desativar ou não configurar esta política, todos os sites serão abertos com as definições atuais do browser. Nota: o canal estável Microsoft Edge tem de estar instalado para que esta política tenha efeito.</string>
+      <string id="NotifyDisableIEOptions_Never">Nunca</string>
+      <string id="NotifyDisableIEOptions_Always">Sempre</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Uma vez por utilizador</string>
+      <string id="JScriptReplacement">Substitua JScript ao carregar JScript9Legacy em vez de JScript através de MSHTML/WebOC.</string>
+      <string id="IE_ExplainJScriptReplacement">Esta definição de política especifica se é carregado JScript ou JScript9Legacy para invocações com base em MSHTML/WebOC.
+      
+Se ativar esta definição de política, o JScript9Legacy será carregado em situações em que JScript seja instanciado.
+
+Se desativar ou não configurar esta política, a opção JScript será utilizada.</string>
       <string id="VerMgmtDisable">Desativar bloqueio de controlos ActiveX desatualizados para Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Esta definição de política determina se o Internet Explorer bloqueia controlos ActiveX desatualizados específicos. Controlos ActiveX desatualizados nunca são bloqueados na Zona da Intranet.
 
@@ -4163,7 +4190,7 @@ Para obter mais informações, consulte "Bloqueio de controlo do ActiveX desatua
     </stringTable>
     <presentationTable>
       <presentation id="VerMgmtDomainAllowlist_1">
-        <listBox refId="DomainList">Lista de domínios autorizados</listBox>
+        <listBox refId="DomainList">Lista de permissões de domínios</listBox>
       </presentation>
       <presentation id="AddonManagement_AddOnList_1">
         <listBox refId="AddOnList">Lista de Suplementos</listBox>
@@ -4834,6 +4861,9 @@ Para obter mais informações, consulte "Bloqueio de controlo do ActiveX desatua
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Primeira escolha</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Segunda escolha</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Terceira escolha</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notificar que o navegador Internet Explorer 11 está desactivado</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

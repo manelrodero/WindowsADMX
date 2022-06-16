@@ -61,7 +61,7 @@ Desteklenen karma sürümü:
       <string id="Pol_CipherSuiteOrder_Name">Şifre paketi sıralaması</string>
       <string id="Pol_CipherSuiteOrder_Help">Bu ilke ayarı, SMB sunucusu tarafından kullanılan şifre paketlerini belirler.
 
-Bu ilke ayarını etkinleştirirseniz, belirtilen sıralamada şifre paketleri önceliklendirilir.
+Bu ilke ayarını etkinleştirirseniz, şifre paketleri belirtilen sıralamada önceliklendirilir.
 
 Bu ilke ayarını etkinleştirirseniz ve en az bir desteklenen şifre paketi belirtmezseniz veya ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, varsayılan şifre paketi sıralaması kullanılır.
 
@@ -69,6 +69,8 @@ SMB 3.11 şifre paketleri:
 
 AES_128_GCM
 AES_128_CCM
+AES_256_GCM
+AES_256_CCM
 
 SMB 3.0 ve 3.02 şifre paketleri:
 
@@ -78,7 +80,7 @@ Bu ayarı değiştirmek için:
 
 İstenen şifre paketlerini düzenleme kutusunda her satıra bir şifre paketi ve en çok tercih edilenden en az tercih edilene doğru, en üste en çok tercih edilen şifre paket gelecek şekilde düzenleyin. Kullanmak istemediğiniz şifre paketlerini kaldırın.
 
-Not: Bu güvenlik ayarını yapılandırırken, Windows'u yeniden başlatmadıkça değişiklikler uygulanmaz.</string>
+Not: Bu güvenlik ayarını yapılandırırken, Windows’u yeniden başlatmadıkça değişiklikler uygulanmaz.</string>
       <string id="HonorCipherSuiteOrder_Name">Şifre paketi sıralamasını kabul et</string>
       <string id="HonorCipherSuiteOrder_Help">Bu ilke ayarı, SMB sunucusunun, bir SMB istemcisiyle yeni bir bağlantı anlaşması yaparken şifre paketini nasıl seçeceğini belirler.
 

@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Undantag</string>
+    <string id="DeviceControl">Enhetskontroll</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Minskning av attackytan</string>
     <string id="ExploitGuard_ControlledFolderAccess">Reglerad mappåtkomst</string>
@@ -29,6 +30,28 @@ Om du aktiverar eller låter bli att konfigurera den här inställningen läses 
 
 Om du inaktiverar den här inställningen läses tjänsten för program mot skadlig kod in som en aktivitet med låg prioritet.</string>
 
+    <string id="MeteredConnectionUpdates">Tillåter Microsoft Defender Antivirus att uppdatera och kommunicera via en anslutning med rörlig kostnad för datatrafik.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Inaktive rad (standard): 
+    Uppdateringar och kommunikationer tillåts inte via anslutningar med datapriser.
+
+Aktiverad 
+    Tillåt att hanterade enheter uppdaterar via anslutningar med datapriser. Data avgifter kan tillkomma.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Den här inställningen styr om nätverks skydd får konfigureras till att blockeras eller granskas på Windows Server.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Inaktiverad (standard): 
+    Om inställningen inte är konfigurerad eller inaktiverad kan nätverksskydd inte konfigureras som block- eller granskningsläge på Windows Server.
+
+Aktiverad 
+    Om inställningen är aktiverad kan administratörer kontrollera om nätverksskydd tillåts konfigureras i block- eller granskningsläge på Windows Server.
+    Observera att den här konfigurationen är beroende av EnableNetworkProtection konfiguration. Om den här konfigurationen är falsk kommer EnableNetworkProtection att ignoreras, annars kommer nätverksskyddet att starta på Windows Server beroende på värdet på EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Den här inställningen styr datagram-bearbetning för nätverks skydd.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Aktive rad (standard): 
+    Om inställningen inte är konfigurerad eller inaktiverad aktiveras datagram-behandling för nätverksskydd.
+
+Aktiverad 
+    Om du aktiverar detta inaktiveras datagram-bearbetning för nätverksskydd.</string>
     <string id="DisableAutoExclusions">Inaktivera automatiska undantag</string>
     <string id="DisableAutoExclusions_Explain">
         Tillåter att en administratör kan ange om automatiska undantag för server-SKU:er ska inaktiveras.
@@ -62,7 +85,7 @@ Om du inaktiverar eller inte konfigurerar den här principinställningen körs E
     <string id="DisableLocalAdminMerge">Konfigurera lokal administratörs sammanslagningsbeteende för listor</string>
     <string id="DisableLocalAdminMerge_Explain">Den här principinställningen styr om komplexa listinställningar som har konfigurerats av en lokal administratör ska slås samman med grupprincipinställningar. Inställningen gäller till exempel listor med hot och undantag.
 
-Om du aktiverar eller låter bli att konfigurera den här inställningen kommer unika objekt som definieras i grupprincipen och i prioritetsinställningar som konfigurerats av den lokala administratören att slås ihop till den resulterande gällande principen. Vid konflikter åsidosätter grupprincipinställningarna prioritetsinställningarna.
+Om du inaktiverar eller låter bli att konfigurera den här inställningen kommer unika objekt som definieras i grupprincipen och i prioritetsinställningar som konfigurerats av den lokala administratören att slås ihop till den resulterande gällande principen. Vid konflikter åsidosätter grupprincipinställningarna prioritetsinställningarna.
 
 Om du inaktiverar den här inställningen används bara objekt som har definierats i grupprincipen i den resulterande gällande principen. Grupprincipinställningarna åsidosätter prioritetsinställningarna som har konfigurerats av den lokala administratören.</string>
     <string id="DisableRoutinelyTakingAction">Inaktivera rutinreparation</string>
@@ -109,11 +132,15 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen kring
       Om du inaktiverar eller låter bli att konfigurera den här inställningen hoppar proxyn över det här steget.
     </string>
     <string id="RandomizeScheduleTaskTimes">Slumpgenerera tider för schemalagda aktiviteter</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Med den här principinställningen kan du aktivera och inaktivera slumpgenerering av starttiden för den schemalagda genomsökningen och starttiden för den schemalagda uppdateringen av säkerhetsinsikter. Den här inställningen används för att fördela genomsökningens resursinverkan. Den kan till exempel användas i virtuella gästdatorer som har samma värddator för att förhindra att flera virtuella gästdatorer samtidigt utför diskkrävande åtgärder.
+    <string id="RandomizeScheduleTaskTimes_Explain">Med den här principinställningen kan du konfigurera schemalagda genomsökningar och det schemalagda starttidsfönstret för uppdatering av säkerhetsinsikter i timmar.
 
-    Om du aktiverar eller låter bli att konfigurera den här inställningen startar schemalagda aktiviteter vid slumpmässiga tidpunkter inom ett intervall på 30 minuter före eller efter den angivna starttiden.
+Om du inaktiverar eller låter bli att konfigurera den här inställningen startar schemalagda aktiviteter vid en slumpmässig tid inom 4 timmar efter den angivna tiden i Schemaläggaren.
+    Om du aktiverar den här inställningen kan du bredda eller minska den slumpmässiga perioden. Ange ett slumpmässigt fönster mellan 1 och 23 timmar.</string>
+    <string id="SchedulerRandomizationTime">Konfigurera randomiseringsfönstret för schemalagda aktivitetstider</string>
+    <string id="SchedulerRandomizationTime_Explain">Med den här principinställningen kan du konfigurera starttiden för schemalagda genomsökningar och det schemalagda starttidsfönstret för uppdatering av säkerhetsinsikter i timmar.
 
-    Om du inaktiverar inställningen startar schemalagda aktiviteter på den angivna starttiden.</string>
+Om du inaktiverar eller låter bli att konfigurera den här inställningen startar schemalagda aktiviteter vid en slumpmässig tid inom ett intervall på 4 timmar efter den angivna starttiden.
+    Om du aktiverar den här inställningen måste du välja ett slumpmässigt fönster i timmar. Det möjliga intervallet för slumpmässigheten är mellan 1 och 23 timmar.</string>
     <string id="ServiceKeepAlive">Tillåt att tjänsten för program mot skadlig kod alltid körs</string>
     <string id="ServiceKeepAlive_Explain">Med den här principinställningen kan du ange om tjänsten för program mot skadlig kod ska fortsätta köra när säkerhetsinsikter för antivirus- och antispionprogram inaktiveras. Vi rekommenderar att du låter inställningen vara inaktiverad.
 
@@ -135,12 +162,20 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen kring
         inte konfigurerad:
         Samma som Inaktiverad.
     </string>
+    <string id="SupportLogLocation">Ange sökvägen till katalogen för att kopiera supportfiler</string>
+    <string id="SupportLogLocation_Explain">Med den här princip inställningen kan du konfigurera katalog Sök vägen där supportfiler för support skulle kopieras till. Värdet för den här inställningen ska vara en giltig katalog Sök väg.
+
+Om du aktiverar den här inställningen kopieras support logg filen till den angivna sökvägen till support loggen.
+
+Om du inaktiverar eller låter bli att konfigurera den här inställningen kopieras inte support loggarna till någon plats.</string>
     <string id="Exclusions_Extensions">Undantag för tillägg</string>
     <string id="Exclusions_Extensions_Explain">Du kan använda den här principinställningen för att ange en lista med filtyper som ska undantas från schemalagd och anpassad genomsökning samt genomsökning i realtid. Filtyper ska läggas till under Alternativ för den här inställningen. Varje post måste listas som ett par med namn och värde, där namnet ska vara en strängrepresentation av filnamnstillägget (exempelvis "obj" eller "lib"). Värdet används inte och du rekommenderas att ange det som 0.</string>
     <string id="Exclusions_Paths">Undantag för sökvägar</string>
     <string id="Exclusions_Paths_Explain">Med den här principinställningen kan du inaktivera schemalagd genomsökning och genomsökning i realtid för filer i de angivna sökvägarna eller för fullständigt kvalificerade resurser som anges. Sökvägarna ska läggas till under Alternativ för den här inställningen. Varje post måste listas som ett par med namn och värde, där namnet ska vara en strängrepresentation av en sökväg eller ett fullständigt kvalificerat resursnamn. En sökväg kan till exempel definieras som: "c:\Windows" för att undanta alla filer i den här katalogen. Ett fullständigt kvalificerat resursnamn kan definieras som: "C:\Windows\App.exe". Värdet används inte och du rekommenderas att ange det som 0.</string>
     <string id="Exclusions_Processes">Undantag för processer</string>
-    <string id="Exclusions_Processes_Explain">Med den här principinställningen kan du inaktivera schemalagd genomsökning och genomsökning i realtid för alla filer som har öppnats av någon av de angivna processerna. Själva processen undantas inte. Om du vill göra undantag för processen använder du Undantag för sökväg. Processer ska läggas till under Alternativ för den här inställningen. Varje post måste listas som ett par med namn och värde, där namnet ska vara en strängrepresentation av sökvägen till processens avbildning. Observera att bara körbara filer kan undantas. En process kan till exempel definieras som: "c:\windows\app.exe". Värdet används inte och du rekommenderas att ange det som 0.</string>
+    <string id="Exclusions_Processes_Explain">Med den här principinställningen kan du inaktivera genomsökning i realtid för alla filer som har öppnats av någon av de angivna processerna. Den här principen gäller inte för schemalagda genomsökningar. Själva processen undantas inte. Om du vill göra undantag för processen använder du Sökvägsundantag. Processer ska läggas till under Alternativ för den här inställningen. Varje post måste listas som ett par med namn och värde, där namnet ska vara en strängrepresentation av sökvägen till processens bild. Observera att bara körbara filer kan undantas. En process kan till exempel definieras som: "c:\windows\app.exe". Värdet används inte och det är inte rekommenderat att ange det som 0.</string>
+    <string id="Exclusions_IpAddresses">IP-adressundantag</string>
+    <string id="Exclusions_IpAddresses_Explain">Tillåter en administratör att explicit inaktivera kontroll av nätverkspaket som görs av wdnisdrv för en viss uppsättning IP-adresser.</string>
     <string id="Nis_DisableProtocolRecognition">Aktivera protokolligenkänning</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Med den här principinställningen kan du konfigurera protokolligenkänning för nätverksskydd mot kända säkerhetsrisker.
 
@@ -167,6 +202,14 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen får 
 Om du aktiverar inställningen tas objekt bort från mappen Karantän efter det angivna antalet dagar.
 
 Om du inaktiverar eller låter bli att konfigurera den här inställningen behålls objekten i karantänmappen på obestämd tid och tas inte bort automatiskt.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Aktivera skriptsökning</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Den här principinställningen används för att konfigurera beteendeövervakning.
+
+    Om du aktiverar eller låter bli att konfigurera den här inställningen aktiveras beteendeövervakning.
+
+    Om du inaktiverar den här inställningen inaktiveras beteendeövervakningen.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Aktivera beteendeövervakning</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Den här principinställningen används för att konfigurera beteendeövervakning.
 
@@ -400,12 +443,6 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen inakt
 Om du aktiverar eller låter bli att konfigurera den här inställningen aktiveras heuristik.
 
 Om du inaktiverar den här principinställningen inaktiveras heuristik.</string>
-    <string id="Scan_DisablePackedExeScanning">Genomsök packade körbara filer</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Med den här principinställningen kan du konfigurera genomsökningen för packade körbara filer. Du rekommenderas att låta den här typen av genomsökning vara aktiverad.
-
-Om du aktiverar eller låter bli att konfigurera den här inställningen genomsöks packade körbara filer.
-
-Om du inaktiverar inställningen genomsöks inte packade körbara filer.</string>
     <string id="Scan_DisableRemovableDriveScanning">Sök igenom flyttbara enheter</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Med den här principinställningen kan du styra om innehållet på flyttbara enheter, till exempel USB-flashminnen, ska genomsökas efter skadliga eller oönskade program när en fullständig genomsökning körs.
 
@@ -473,11 +510,11 @@ Om du aktiverar inställningen tas objekt bort från mappen med genomsökningshi
 
 Om du inaktiverar eller låter bli att konfigurera den här inställningen behålls objekt i mappen med genomsökningshistorik i det antal dagar som är standard.</string>
     <string id="Scan_QuickScanInterval">Ange intervallet för körning av snabbsökningar per dag</string>
-    <string id="Scan_QuickScanInterval_Explain">Med den här principinställningen kan du ange ett intervall som en snabbsökning görs med. Tidsvärdet representeras som antalet minuter mellan snabbsökningar. Giltiga värdeintervall är från 1 (varje timme) till 24 (en gång per dygn). Om du anger värdet noll görs inga snabbsökningar med intervall. Som standard är inställningen 0.
+    <string id="Scan_QuickScanInterval_Explain">Med den här principinställning kan du ange ett intervall som en snabbsökning gör med. Tidsvärdet representeras som antalet timmar mellan snabbsökningar. Giltiga intervallvärden går från 1 (varje timme) till 24 (en gång per dag). Om du anger värdet noll görs inga snabbsökningar med intervall. Som standard är den här inställningen 0.
 
-Om du aktiverar den här inställningen körs en snabbsökning med det angivna intervallet.
+    Om du aktiverar den här inställningen körs en snabbsökning med det angivna intervallet.
 
-Om du inaktiverar eller låter bli att konfigurera den här inställningen körs en snabbsökning vid en standardtidpunkt.</string>
+    Om du inaktiverar eller låter bli att konfigurera den här inställningen kommer inte en snabbsökning kontrollerad av den här konfigurationen att köras.</string>
     <string id="Scan_ScanOnlyIfIdle">Starta bara den schemalagda genomsökningen när datorn är på men inte används</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Med den här principinställningen kan du konfigurera schemalagda genomsökningar så att de bara startar när datorn är på men inte används.
 
@@ -521,11 +558,11 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen körs
     <string id="Scan_ScheduleDay_7">Fredag</string>
     <string id="Scan_ScheduleDay_8">Lördag</string>
     <string id="Scan_ScheduleQuickScantime">Ange tidpunkten för en daglig snabbsökning</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Med den här principinställningen kan du ange den tid på dagen då en daglig snabbsökning ska göras. Tidsvärdet representeras som antalet minuter efter midnatt (00:00).  Exempelvis är 120 (0x78) lika med 02:00. Standardvärdet för inställningen är tidsvärdet 2:00. Schemat baseras på den lokala tiden i datorn där genomsökningen körs.
+    <string id="Scan_ScheduleQuickScantime_Explain">Med den här principinställning kan du ange den tid på dagen då en daglig snabbsökning ska genomföras. Tidsvärdet representeras som antalet minuter efter midnatt (00:00), till exempel är 120 (0x78) lika med 02:00. Den här inställningen är inaktiverad som standard. Schemat baseras på den lokala tiden i datorn där genomsökningen körs.
 
-Om du aktiverar den här inställningen körs en daglig snabbsökning vid den angivna tiden på dagen.
+    Om du aktiverar den här inställningen körs en daglig snabbsökning vid den angivna tiden på dagen.
 
-Om du inaktiverar eller låter bli att konfigurera den här inställningen körs en daglig snabbsökning vid en standardtidpunkt.</string>
+    Om du inaktiverar eller låter bli att konfigurera den här inställningen kommer inte dagliga snabbsökningar kontrollerad av den här konfigurationen att köras.</string>
     <string id="Scan_ScheduleTime">Ange den tid på dagen då en schemalagd genomsökning ska köras</string>
     <string id="Scan_ScheduleTime_Explain">Med den här principinställningen kan du ange den tid på dagen då en schemalagd genomsökning ska göras. Tidsvärdet representeras som antalet minuter efter midnatt (00:00).  Exempelvis är 120 (0x78) lika med 02:00. Standardvärdet för inställningen är tidsvärdet 2:00. Schemat baseras på den lokala tiden i datorn där genomsökningen körs.
 
@@ -548,17 +585,17 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen körs
         Om du inaktiverar eller låter bli att konfigurera inställningen görs ingen ändring av CPU-prioriteten för schemalagda sökningar.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definiera antalet dagar innan säkerhetsinsikter för spionprogram anses vara inaktuella</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Med den här principinställningen kan du definiera antalet dagar som måste passera innan säkerhetsinsikter för spionprogram anses vara inaktuella. Om säkerhetsinsikterna anses vara inaktuella kan det utlösa flera ytterligare åtgärder, som att använda en alternativ uppdateringskälla eller att visa en varningsikon i användargränssnittet. Som standard anges värdet till 14 dagar.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Med den här princip inställningen kan du definiera antalet dagar som måste passera innan säkerhets information för spionprogram anses vara inaktuell. Om säkerhets insikten anses vara inaktuell kan det här tillståndet utlösa flera ytterligare åtgärder, till exempel att återgå till en alternativ uppdaterings källa eller att visa en varnings ikon i användar gränssnittet. Som standard anges värdet till 7 dagar.
 
-    Om du aktiverar inställningen anses säkerhetsinsikterna för spionprogram vara inaktuella när det antal dagar som har angetts har passerat utan en uppdatering.
+Om den här inställningen aktive ras anses säkerhets insikter för spionprogram vara inaktuella när det antal dagar som har angetts har passerat utan en uppdatering.
 
-    Om du inaktiverar eller låter bli att konfigurera den här inställningen anses säkerhetsinsikterna för spionprogram vara inaktuella när standardantalet dagar har passerat utan en uppdatering.</string>
+Om du inaktiverar eller låter bli att konfigurera den här inställningen anses säkerhets insikterna för spionprogram vara inaktuella när standard antalet dagar har passerat utan en uppdatering.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definiera antalet dagar innan säkerhetsinsikter för virus anses vara inaktuella</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Med den här principinställningen kan du definiera antalet dagar som måste passera innan säkerhetsinsikter för virus anses vara inaktuella. Om säkerhetsinsikterna anses vara inaktuella kan det utlösa flera ytterligare åtgärder, som att använda en alternativ uppdateringskälla eller att visa en varningsikon i användargränssnittet. Som standard anges värdet till 14 dagar.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Med den här princip inställningen kan du definiera antalet dagar som måste passera innan säkerhets insikten för virus anses vara inaktuell. Om säkerhets insikten anses vara inaktuell kan det här tillståndet utlösa flera ytterligare åtgärder, till exempel att återgå till en alternativ uppdaterings källa eller att visa en varnings ikon i användar gränssnittet. Som standard anges värdet till 7 dagar.
 
-    Om du aktiverar inställningen anses säkerhetsinsikterna för virus vara inaktuella när det antal dagar som har angetts har passerat utan en uppdatering.
+Om den här inställningen aktive ras anses säkerhets insikter för virus vara inaktuella när det antal dagar som har angetts har passerat utan en uppdatering.
 
-    Om du inaktiverar eller låter bli att konfigurera den här inställningen anses säkerhetsinsikterna för virus vara inaktuella när standardantalet dagar har passerat utan en uppdatering.</string>
+Om du inaktiverar eller låter bli att konfigurera den här inställningen anses säkerhets insikterna för virus vara inaktuella när standard antalet dagar har passerat utan en uppdatering.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definiera filresurser för nedladdning av uppdateringar för säkerhetsinsikter</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Med den här principinställningen kan du konfigurera UNC-filresurskällor för nedladdning av uppdateringar för säkerhetsinsikter. Källorna kontaktas i den ordning som anges. Värdet på inställningen ska anges som en pipe-avgränsad sträng som räknar upp uppdateringskällorna för säkerhetsinsikter. Exempel: "{\\unc1 | \\unc2 }". Listan är tom som standard.
 
@@ -850,20 +887,27 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
     Ange tillståndet för varje regel för minskning av attackytan (ASR-regel).
 
     När du aktiverar den här inställningen kan du sätta varje regel till följande lägen i avsnittet Alternativ:
-    - Blockera: Regeln tillämpas.
-    - Granska: Regeln tillämpas inte, men en händelse loggas i de fall då regeln skulle ha tillämpats med läget Blockera.
-    - Av: Regeln tillämpas inte.
+    – Blockera: Regeln tillämpas.
+    – Granska: Regeln tillämpas inte, men en händelse loggas i de fall då regeln skulle ha tillämpats med läget Blockera.
+    – Av: Regeln tillämpas inte.
+    – Inte konfigurerad: regel är aktiverad med standardvärden
+    – Varna: regel är applicerad och slutanvändaren kommer att ha möjlighet att kringgå blockeringen
+
+    Så vida inte ASR-regeln är inaktiverad samlas ett underprov av granskningshändelse in för ASR-regler kommer inte att vara konfigurerad.
 
     Aktiverad:
     Ange tillståndet för varje ASR-regel under avsnittet Alternativ för den här inställningen.
     Ange varje regel på en ny rad i form av ett namn/värde-par:
-    - Kolumnen Namn: Ange ett giltigt ID för ASR-regeln.
-    - Kolumnen Värde: Ange status-ID:t som relaterar till tillståndet du vill specificera för den associerade regeln.
+    – Kolumnen Namn: Ange ett giltigt ID för ASR-regeln.
+    – Kolumnen Värde: Ange status-ID:t som relaterar till tillståndet du vill specificera för den associerade regeln
 
     Följande status-ID:n kan användas i kolumnen Värde:
-    - 1 (Blockera)
-    - 0 (Av)
-    - 2 (Granska)
+    – 1 (Blockera)
+    – 0 (Av)
+    – 2 (Granska)
+    -5(Inte konfigurerad)
+    -6(Varna)
+
     
     Exempel:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -978,6 +1022,14 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
 
     Microsoft Defender Antivirus fastställer automatiskt vilka program som är betrodda. Du kan lägga till ytterligare betrodda program i grupprincipinställningen Konfigurera tillåtna program.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definiera principgrupper för enhetskontroll</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Följ XML-schemat för principgrupper för enhetskontroll om du vill fylla i principgruppsdata.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definiera principregler för enhetskontroll</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Följ XML-schemat för regler för enhets kontroll om du vill fylla i princip regel data.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
         <label>Konfigurera proxyserver för anslutning till nätverket</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Ange sökvägen till katalogen för att kopiera supportfiler</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Undantag för tillägg</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Undantag för processer</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">IP-adress undantag</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Ange ytterligare definitionsuppsättningar för inspektion av nätverkstrafik</listBox>
@@ -1071,10 +1131,10 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Ange den tid på dagen då en schemalagd genomsökning ska köras</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definiera antalet dagar innan säkerhetsinsikter för spionprogram anses vara inaktuella</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definiera antalet dagar innan säkerhetsinsikter för spionprogram anses vara inaktuella</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definiera antalet dagar innan säkerhetsinsikter för virus anses vara inaktuella</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definiera antalet dagar innan säkerhetsinsikter för virus anses vara inaktuella</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definiera principgrupper här</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definiera principregler här</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Ange randomiseringsfönstret för schemaläggaren i timmar.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

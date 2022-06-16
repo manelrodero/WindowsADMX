@@ -207,6 +207,19 @@ Etsi-linkki näkyy yhä Resurssienhallinnan vakiotyökalurivillä, mutta järjes
 Tämä käytäntöasetus vaikuttaa vain määritettyihin käyttöliittymän osiin. Se ei vaikuta Internet Exploreriin tai estä käyttäjää käyttämästä muita hakutapoja.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Etsi-linkki on käytettävissä Käynnistä-valikossa.</string>
+      <string id="ShowOrHideMostUsedApps">Näytä tai piilota aloitusvalikon Eniten käytetty -luettelo</string>
+      <string id="ShowOrHideMostUsedApps_Help">Jos otat tämän käytäntöasetuksen käyttöön, voit määrittää, näytetäänkö aloitusvalikossa käyttäjän useimmiten käyttämät sovellukset käyttäjäasetuksista huolimatta.
+
+Näytä-valinta pakottaa Eniten käytetyt -luettelon näkyviin, eikä käyttäjä voi piilottaa sitä Asetukset-sovelluksella.
+
+Piilota-valinta pakottaa Eniten käytetyt -luettelon pois näkyvistä, eikä käyttäjä voi tuoda sitä näkyviin Asetukset-sovelluksella.
+
+Jos valitset Ei määritetty -valinnan tai jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttäjät voivat ottaa Eniten käytetyt -luettelon esiin tai piilottaa sen Asetukset-sovelluksella. Tämä on oletusarvoinen toiminta.
+
+Huomautus: Jos määrität tämän käytäntöasetuksen arvoksi Näytä tai Piilota, Windows 10:n tuetut versiot ohittavat kaikki ”Poista usein käytetyt ohjelmat Käynnistä-valikosta”-käytäntöasetukset. (Tämä valinta hallinnoi samaa aloitusvalikkoa, mutta siinä on vähemmän vaihtoehtoja.)</string>
+      <string id="MFU_NotConfigured">Ei määritetty</string>
+      <string id="MFU_Show">Näytä</string>
+      <string id="MFU_Hide">Piilota</string>        
       <string id="NoFrequentUsedPrograms">Poista usein käytetyt ohjelmat Käynnistä-valikosta</string>
       <string id="NoFrequentUsedPrograms_Help">Jos otat tämän asetuksen käyttöön, viimeksi käytettyjen ohjelmien luettelo poistetaan Käynnistä-valikosta.
 
@@ -632,10 +645,14 @@ Jos otat tämän käytännön käyttöön, aloitusvalikon pikavalikoiden kutsut 
           <label>Aloitusnäytön asettelutiedosto</label>
           <defaultValue></defaultValue>
         </textBox>
+        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Ota asettelu uudelleen käyttöön jokaisen kirjautumisen yhteydessä</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Valitse jokin seuraavista kokovaihtoehdoista</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Valitse jokin seuraavista toiminnoista</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

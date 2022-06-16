@@ -36,6 +36,34 @@
       
       </string>
       <string id="LocationAndSensors">場所とセンサー</string>
+      <string id="HumanPresence">人の存在</string>
+      <string id="ForceInstantWake_DisplayName">Instant Wake を強制する</string>
+      <string id="ForceInstantWake_ExplainText">MDM ポリシーで Wake On Arrival を強制的にオン/オフにするかどうかを決定します。ユーザーはこの設定を変更することはできません。また、UI の切り替えはグレー表示されます。</string>
+      <string id="ForceInstantWake_0">既定値はユーザーの選択です</string>
+      <string id="ForceInstantWake_1">強制的にオン</string>
+      <string id="ForceInstantWake_2">強制的にオフ</string>
+      <string id="ForceInstantLock_DisplayName">Instant Lock を強制する</string>
+      <string id="ForceInstantLock_ExplainText">MDM ポリシーで Lock on Leave を強制的にオン/オフにするかどうかを決定します。ユーザーはこの設定を変更することはできません。また、UI の切り替えはグレー表示されます。</string>
+      <string id="ForceInstantLock_0">既定値はユーザーの選択です</string>
+      <string id="ForceInstantLock_1">強制的にオン</string>
+      <string id="ForceInstantLock_2">強制的にオフ</string>
+      <string id="ForceLockTimeout_DisplayName">ロックのタイムアウト</string>
+      <string id="ForceLockTimeout_ExplainText">MDM ポリシーによって強制される Lock on Leave のタイムアウトを決定します。ユーザーはこの設定を変更することはできません。また、UI の切り替えはグレー表示されます。</string>
+      <string id="ForceLockTimeout_0">既定値はユーザーの選択です</string>
+      <string id="ForceLockTimeout_1">10 秒</string>
+      <string id="ForceLockTimeout_2">30 秒</string>
+      <string id="ForceLockTimeout_3">2 分</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">次の操作から 1 つ選択してください</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">次の操作から 1 つ選択してください</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">次のタイムアウトから 1 つ選択してください</dropdownList>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>

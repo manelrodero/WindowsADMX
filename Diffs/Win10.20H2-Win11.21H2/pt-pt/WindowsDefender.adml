@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivírus do Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusões</string>
+    <string id="DeviceControl">Controlo de Dispositivos</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Redução de Superfície de Ataque</string>
     <string id="ExploitGuard_ControlledFolderAccess">Acesso Controlado a Pastas</string>
@@ -29,6 +30,28 @@ Se ativar ou não configurar esta definição, o serviço antimalware será carr
 
 Se desativar esta definição, o serviço antimalware será carregado como uma tarefa de baixa prioridade.</string>
 
+    <string id="MeteredConnectionUpdates">Permite ao Antivírus do Microsoft Defender atualizar e comunicar através de uma ligação com tráfego limitado.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Desativado (predefinição): 
+    As atualizações e as comunicações não são permitidas em ligações com tráfego limitado.
+
+Ativada 
+    Permitir que os dispositivos geridos atualizem através de ligações com tráfego limitado. Poderão ser aplicáveis custos de dados.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Esta definições controla se a proteção de rede tem permissão para ser configurada para o modo de bloqueio ou auditoria no Windows Server.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Desativado (predefinição): 
+    Se não for configurada ou estiver desativada, a proteção de rede não pode ser configurada para bloquear ou modo de auditoria no Windows Server.
+
+Ativada 
+    Se estiver ativada, os administradores poderão controlar se a proteção da rede tem permissão para ser configurada em modo de bloqueio ou auditoria no Windows Server.
+    Tenha em atenção que esta configuração depende da configuração EnableNetworkProtection. Se esta configuração for falsa, o EnableNetworkProtection será ignorado, caso contrário, a proteção da rede será iniciada no Windows Server, dependendo do valor EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Esta definição controla o processamento de datagramas da proteção da rede.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Ativado (Predefinição): 
+    Se Não Estiver Configurado ou estiver Desativado, o processamento de datagramas será ativado para proteção da rede.
+
+    Enabled: 
+    Se estiver Ativado, o processamento de datagramas será desativado para a proteção da rede.</string>
     <string id="DisableAutoExclusions">Desativar Exclusões Automáticas</string>
     <string id="DisableAutoExclusions_Explain">
         Permite que um administrador especifique se a funcionalidade de Exclusões Automáticas para SKUs de Servidor deve ser desativada.
@@ -62,9 +85,9 @@ Se desativar esta definição, o serviço antimalware será carregado como uma t
     <string id="DisableLocalAdminMerge">Configurar comportamento de intercalação de listas do administrador local</string>
     <string id="DisableLocalAdminMerge_Explain">Esta definição de política controla se as definições de listas complexas configuradas por um administrador local são ou não intercaladas com as definições da Política de Grupo. Esta definição é aplicável a listas tais como ameaças e exclusões.
 
-Se ativar ou não configurar esta definição, os itens exclusivos definidos na Política de Grupo e nas definições de preferências configuradas pelo administrador local serão intercalados com a política efetivamente resultante. Em caso de conflito, as definições da Política de Grupo prevalecem sobre as definições de preferências.
+    Se ativar ou não configurar esta definição, os itens exclusivos definidos na Política de Grupo e nas definições de preferências configuradas pelo administrador local serão intercalados com a política efetivamente resultante. Em caso de conflito, as definições da Política de Grupo prevalecem sobre as definições de preferências.
 
-Se desativar esta definição, os itens definidos pela Política de Grupo serão utilizados na política efetivamente resultante. As definições da Política de Grupo prevalecem sobre as definições de preferências configuradas pelo administrador local.</string>
+    Se desativar esta definição, os itens definidos pela Política de Grupo serão utilizados na política efetivamente resultante. As definições da Política de Grupo prevalecem sobre as definições de preferências configuradas pelo administrador local.</string>
     <string id="DisableRoutinelyTakingAction">Desativar a remediação de rotina</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Esta definição de política permite-lhe configurar se o Antivírus do Microsoft Defender toma automaticamente medidas contra todas as ameaças detetadas. A ação a efetuar numa determinada ameaça é determinada pela combinação da ação definida pela política, da ação definida pelo utilizador e da ação definida pela assinatura.
@@ -109,11 +132,15 @@ Se desativar ou não configurar esta definição, o servidor proxy não será ig
       Se desativar ou não configurar esta definição, o proxy ignora este passo de contingência de acordo com a ordem especificada acima.
     </string>
     <string id="RandomizeScheduleTaskTimes">Aleatorizar horário das tarefas agendadas</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Esta definição de política permite-lhe ativar ou desativar a aleatoriedade da hora de início da análise programada e da hora de início da atualização das informações de segurança programada. Esta definição é utilizada para distribuir o impacto de recursos de análise. Por exemplo, pode ser utilizada em máquinas virtuais convidadas que partilham um anfitrião, para impedir que várias máquinas virtuais convidadas realizem uma operação que exija uma utilização excessiva do disco ao mesmo tempo.
+    <string id="RandomizeScheduleTaskTimes_Explain">Esta definição da política permite configurar a análise agendada e a janela da hora de início da atualização da informação de segurança agendada em horas.
 
-    Se ativar ou não configurar esta definição, as tarefas agendadas serão iniciadas a uma hora aleatória, num intervalo de 30 minutos antes e depois da hora de início especificada.
+    Se desativar ou não configurar esta definição, as tarefas programadas começarão a uma hora aleatória dentro de 4 horas após a hora especificada no Programador de Tarefas.
+     Se ativar esta definição, poderá alargar ou estreitar este período de aleatorização. Especifique uma janela de aleatorização de entre 1 e 23 horas.</string>
+    <string id="SchedulerRandomizationTime">Configurar horas de tarefas agendadas da janela aleatoriedade</string>
+    <string id="SchedulerRandomizationTime_Explain">Esta definição da política permite configurar a hora de início da análise agendada e a janela da hora de início da atualização da informação de segurança agendada em horas.
 
-    Se desativar esta definição, as tarefas agendadas começarão à hora de início especificada.</string>
+    Se desativar ou não configurar esta definição, as tarefas programadas começarão a uma hora aleatória dentro de um intervalo de 4 horas após a hora de início especificada.
+     Se ativar esta definição, deverá escolher uma janela de aleatorização em horas. O intervalo possível da janela de aleatorização é entre 1 e 23 horas.</string>
     <string id="ServiceKeepAlive">Permitir que o serviço antimalware esteja sempre em execução</string>
     <string id="ServiceKeepAlive_Explain">Esta definição de política permite configurar se o serviço antimalware se manterá ou não em execução quando as informações de segurança de antivírus e antispyware estiverem desativadas. É recomendado manter esta definição desativada.
 
@@ -135,12 +162,20 @@ Se desativar ou não configurar esta definição, o servidor proxy não será ig
         Não configurado:
         O mesmo que Desativado.
     </string>
+    <string id="SupportLogLocation">Definir o caminho do diretório para copiar ficheiros de registo de suporte</string>
+    <string id="SupportLogLocation_Explain">Esta definição de política permite configurar o caminho de diretório onde os ficheiros de registo de suporte serão copiados. O valor desta definição deve ser um caminho de diretório válido.
+
+Se ativar esta definição, os ficheiros de registo de suporte serão copiados para o caminho de localização de registo de suporte especificado.
+
+Se desativar ou não configurar esta definição, os ficheiros de suporte de registos não serão copiados para qualquer localização.</string>
     <string id="Exclusions_Extensions">Exclusões de Extensões</string>
     <string id="Exclusions_Extensions_Explain">Esta definição de política permite especificar uma lista de tipos de ficheiros a excluir de análises agendadas, personalizadas e em tempo real. Os tipos de ficheiros para esta definição deverão ser adicionados nas Opções. Cada entrada deverá ser listada como um par nome-valor, em que o nome deverá ser uma representação de cadeia da extensão de tipo de ficheiro (tal como "obj" ou "lib"). O valor não é utilizado, sendo recomendado defini-lo como 0.</string>
     <string id="Exclusions_Paths">Exclusões de Caminhos</string>
     <string id="Exclusions_Paths_Explain">Esta definição de política permite desativar a análise agendada e em tempo real dos ficheiros nos caminhos especificados ou dos recursos completamente qualificados especificados. Os caminhos para esta definição deverão ser adicionados nas Opções. Cada entrada deverá ser listada como um par nome-valor, em que o nome deverá ser uma representação de cadeia de um caminho ou nome de recurso completamente qualificado. Como exemplo, um caminho poderá ser definido como: "c:\Windows" para excluir todos os ficheiros deste diretório. Um nome de recurso completamente qualificado poderá ser definido como: "C:\Windows\App.exe". O valor não é utilizado, sendo recomendado defini-lo como 0.</string>
     <string id="Exclusions_Processes">Exclusões de Processos</string>
-    <string id="Exclusions_Processes_Explain">Esta definição de política permite desativar a análise agendada e em tempo real de qualquer ficheiro aberto por qualquer dos processos especificados. O próprio processo não será excluído. Para excluir o processo, utilize a Exclusão de caminho. Os processos para esta definição deverão ser adicionados nas Opções. Cada entrada deverá ser listada como um par nome-valor, em que o nome deverá ser uma representação de cadeia do caminho para a imagem do processo. Tenha em atenção que só é possível excluir ficheiros executáveis. Por exemplo, um processo poderá ser definido como: "c:\windows\app.exe". O valor não é utilizado, sendo recomendado defini-lo como 0.</string>
+    <string id="Exclusions_Processes_Explain">Esta definição de política permite desativar a análise em tempo real de qualquer ficheiro aberto por qualquer dos processos especificados. Esta política não se aplica a análises agendadas. O próprio processo não será excluído. Para excluir o processo, utilize a Exclusão de caminho. Os processos deverão ser adicionados nas Opções desta definição. Cada entrada deverá ser listada como um par nome-valor, em que o nome deverá ser uma representação de cadeia do caminho para a imagem do processo. Tenha em atenção que só é possível excluir ficheiros executáveis. Por exemplo, um processo poderá ser definido como: "c:\windows\app.exe". O valor não é utilizado, sendo recomendado defini-lo como 0.</string>
+    <string id="Exclusions_IpAddresses">Exclusões de Endereços Ip</string>
+    <string id="Exclusions_IpAddresses_Explain">Permite que um administrador desative explicitamente a inspeção de pacotes de rede efetuadas por wdnisdrv num conjunto específico de endereços IP.</string>
     <string id="Nis_DisableProtocolRecognition">Ativar reconhecimento de protocolos</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Esta definição de política permite configurar o reconhecimento de protocolos para proteção da rede contra exploits de vulnerabilidades conhecidas.
 
@@ -167,6 +202,14 @@ Se desativar ou não configurar esta definição, a Política de Grupo terá pri
 Se ativar esta definição, os itens serão removidos da pasta Quarentena após o número de dias especificado.
 
 Se desativar ou não configurar esta definição, os itens serão indefinidamente mantidos na pasta Quarentena, não sendo automaticamente removidos.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Ativar análise de scripts</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Esta definição de política permite configurar a análise de scripts.
+
+Se ativar ou não configurar esta definição, a análise de scripts será ativada.
+
+Se desativar esta definição, a análise de scripts será desativada.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Ativar monitorização de comportamento</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Esta definição de política permite configurar a monitorização de comportamento.
 
@@ -400,12 +443,6 @@ Se desativar ou não configurar esta definição, a análise de correio eletrón
 Se ativar ou não configurar esta definição, a heurística será ativada.
 
 Se desativar esta definição, a heurística será desativada.</string>
-    <string id="Scan_DisablePackedExeScanning">Analisar ficheiros executáveis comprimidos</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Esta definição de política permite configurar a análise de ficheiros executáveis comprimidos. É recomendado manter este tipo de análise ativada.
-
-Se ativar ou não configurar esta definição, os ficheiros executáveis comprimidos serão analisados.
-
-Se desativar esta definição, os ficheiros executáveis comprimidos não serão analisados.</string>
     <string id="Scan_DisableRemovableDriveScanning">Analisar unidades amovíveis</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Esta definição de política permite gerir se o conteúdo de unidades amovíveis, tais como unidades flash USB, será ou não analisado quanto a software malicioso ou indesejável ao executar uma análise completa.
 
@@ -475,9 +512,9 @@ Se desativar ou não configurar esta definição, os itens serão mantidos na pa
     <string id="Scan_QuickScanInterval">Especificar o intervalo de execução de análises rápidas por dia</string>
     <string id="Scan_QuickScanInterval_Explain">Esta definição de política permite especificar um intervalo em que executar uma análise rápida. O valor da hora é representado como o número de horas entre análises rápidas. Os valores válidos variam entre 1 (de hora em hora) e 24 (uma vez por dia). Se definido como zero, as análises rápidas não ocorrerão com intervalos. Por predefinição, o valor é definido como 0.
 
-Se ativar esta definição, será executada uma análise rápida no intervalo especificado.
+    Se ativar esta definição, será executada uma análise rápida no intervalo especificado.
 
-Se desativar ou não configurar esta definição, será executada uma análise rápida à hora predefinida.</string>
+    Se desativar ou não configurar esta definição, não será executada uma análise rápida controlada por esta configuração.</string>
     <string id="Scan_ScanOnlyIfIdle">Iniciar a análise agendada apenas quando o computador estiver ligado mas não em utilização</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Esta definição de política permite configurar o início de análises agendadas apenas quando o computador estiver ligado mas não em utilização.
 
@@ -521,11 +558,11 @@ Se desativar ou não configurar esta definição, será executada uma análise a
     <string id="Scan_ScheduleDay_7">Sexta-feira</string>
     <string id="Scan_ScheduleDay_8">Sábado</string>
     <string id="Scan_ScheduleQuickScantime">Especificar a hora de uma análise rápida diária</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Esta definição de política permite especificar a hora de execução de uma análise rápida diária. O valor da hora é representado como o número de minutos após a meia-noite (00:00).  Por exemplo, 120 (0x78) é equivalente às 2:00 h. Por predefinição, esta definição é configurada para o valor horário das 2:00 h. O horário é baseado na hora local do computador em que a análise é executada.
+    <string id="Scan_ScheduleQuickScantime_Explain">Esta definição de política permite-lhe especificar a hora do dia em que deve efetuar uma análise rápida diária. O valor de tempo é representado como o número de minutos após a meia-noite (00:00).  Por exemplo, 120 (0x78) é equivalente a 02:00. Por predefinição, esta definição está desativada. A agenda baseia-se na hora local no computador onde a análise está a ser executada.
 
-Se ativar esta definição, será executada uma análise rápida diária à hora especificada.
+Se ativar esta definição, será executada uma análise rápida diária na hora do dia especificada.
 
-Se desativar ou não configurar esta definição, será executada uma análise rápida diária à hora predefinida.</string>
+Se desativar ou não configurar esta definição, a análise rápida diária controlada por esta configuração não será executada.</string>
     <string id="Scan_ScheduleTime">Especificar a hora de execução de uma análise agendada</string>
     <string id="Scan_ScheduleTime_Explain">Esta definição de política permite especificar a hora de execução de uma análise agendada. O valor da hora é representado como o número de minutos após a meia-noite (00:00).  Por exemplo, 120 (0x78) é equivalente às 2:00 h. Por predefinição, esta definição é configurada para o valor horário das 2:00 h. O horário é baseado na hora local do computador em que a análise é executada.
 
@@ -548,17 +585,17 @@ Se desativar ou não configurar esta definição, será executada uma análise a
         Se desativar ou não configurar esta definição, não serão realizadas alterações à prioridade da CPU durante análises agendadas.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definir o número de dias até que as informações de segurança de spyware sejam consideradas desatualizadas</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as informações de segurança de spyware sejam consideradas desatualizadas. Se as informações de segurança forem consideradas desatualizadas, este estado poderá acionar diversas ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido como 14 dias.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as informações de segurança de spyware sejam consideradas desatualizadas. Se as informações de segurança forem consideradas desatualizadas, este estado poderá acionar várias ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido para 7 dias.
 
-    Se ativar esta definição, as informações de segurança de spyware serão consideradas desatualizadas após ter passado o número de dias especificado sem atualizações.
+Se ativar esta definição, as informações de segurança de spyware serão consideradas desatualizadas após ter passado o número de dias especificado sem uma atualização.
 
-    Se desativar ou não configurar esta definição, as informações de segurança de spyware serão consideradas desatualizadas após ter passado o número de dias predefinido sem atualizações.</string>
+Se desativar ou não configurar esta definição, as informações de segurança de spyware serão consideradas desatualizadas após ter passado o número de dias predefinido sem uma atualização.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definir o número de dias até que as informações de segurança de vírus sejam consideradas desatualizadas</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as informações de segurança de vírus sejam consideradas desatualizadas. Se as informações de segurança forem consideradas desatualizadas, este estado poderá acionar diversas ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido como 14 dias.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as informações de segurança de vírus sejam consideradas desatualizadas. Se as informações de segurança forem consideradas desatualizadas, este estado poderá acionar várias ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido para 7 dias.
 
-    Se ativar esta definição, as informações de segurança de vírus serão consideradas desatualizadas após ter passado o número de dias especificado sem atualizações.
+Se ativar esta definição, as informações de segurança de vírus serão consideradas desatualizadas após ter passado o número de dias especificado sem uma atualização.
 
-    Se desativar ou não configurar esta definição, as informações de segurança de vírus serão consideradas desatualizadas após ter passado o número de dias predefinido sem atualizações.</string>
+Se desativar ou não configurar esta definição, as informações de segurança de vírus serão consideradas desatualizadas após ter passado o número de dias predefinido sem uma atualização.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definir partilhas de ficheiros para transferência das atualizações de informações de segurança</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Esta definição de política permite configurar as origens de partilha de ficheiros UNC para transferência de atualizações de informações de segurança. As origens serão contactadas pela ordem especificada. O valor desta definição deverá ser introduzido como uma cadeia separada por pipes que enumere as origens de atualização de informações de segurança. Por exemplo: "{\\unc1 | \\unc2 }". Por predefinição, a lista encontra-se vazia.
 
@@ -849,34 +886,41 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
     <string id="ExploitGuard_ASR_Rules_Explain">
     Defina o estado para cada regra de Attack Surface Reduction (ASR).
 
-    Depois de ativar esta definição, pode definir cada regra para o seguinte estado na secção Opções:
-    - Bloquear: a regra será aplicada
-    - Modo de Auditoria: se, normalmente, a regra originasse um evento, este seria registado (apesar de a regra não ser realmente aplicada)
+    Depois de ativar esta definição, pode definir cada regra para o seguinte estado na secção Opções: 
+   - Bloquear: a regra será aplicada
+   - Modo de Auditoria: se, normalmente, a regra originasse um evento, este seria registado (apesar de a regra não ser realmente aplicada)
     - Desligado: a regra não será aplicada
+    - Não configurado: a regra é ativada com valores predefinidos
+    - Avisar: a regra será aplicada e o utilizador final terá a opção de contornar o bloqueio
 
-    Ativado:
-    Especifique o estado para cada regra de ASR na secção Opções para esta definição.
-    Introduza cada regra numa linha nova como um par nome-valor:
-    - Coluna do nome: introduza um ID de regra de ASR válido
+   A menos que a regra ASR esteja desativada, é recolhida uma subamostra dos eventos de auditoria para as regras ASR com o valor não configurado.
+
+       Ativado: 
+   Especifique o estado de cada regra ASR na secção de Opções desta definição.
+   Introduza cada regra numa linha nova como um par nome-valor:
+    - Coluna do nome: introduza um ID de regra ASR válido
     - Coluna do valor: introduza o ID de estado relativo ao estado que pretende especificar para a regra associada
 
     Os IDs de estado que se seguem são permitidos na coluna do valor:
     - 1 (Bloquear)
     - 0 (Desligado)
     - 2 (Auditoria)
+    - 5 (Não configurado)
+    - 6 (Avisar)
+
     
     Exemplo:
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx       0
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx       1
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx       2
 
-    Desativado:
+     Desativado:
     Não serão configuradas regras de ASR.
 
     Não configurado:
     O mesmo que Desativado.
 
-    Pode excluir pastas ou ficheiros e recursos na definição de GP ""Excluir pastas e caminhos das Regras do Attack Surface Reduction"".
+    Pode excluir pastas ou ficheiros na definição de GP ""Excluir ficheiros e caminhos das Regras do Attack Surface Reduction"".
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Configurar Acesso controlado a pastas</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
 
     O Antivírus do Microsoft Defender determina automaticamente que aplicações podem ser consideradas fidedignas. Pode adicionar aplicações fidedignas na definição de GP de configuração de aplicações permitidas.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definir grupos de políticas de controlo de dispositivos</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Siga o esquema XML dos grupos de políticas de controlo de dispositivos para preencher os dados dos grupos de políticas.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definir regras de política de controlo de dispositivo</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Siga o esquema XML das regras de política de controlo de dispositivos para preencher os dados das regras de política.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
         <label>Definir o servidor proxy para ligação à rede</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Definir o caminho do diretório para copiar ficheiros de registo de suporte</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Exclusões de Extensões</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Exclusões de Processos</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">Exclusões de Endereços IP</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Especificar conjuntos adicionais de definições para a inspeção de tráfego de rede</listBox>
@@ -1071,10 +1131,10 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Especificar a hora de execução de uma análise agendada</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definir o número de dias até que as informações de segurança de spyware sejam consideradas desatualizadas</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definir o número de dias até que as informações de segurança de spyware sejam consideradas desatualizadas</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definir o número de dias até que as informações de segurança de vírus sejam consideradas desatualizadas</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definir o número de dias até que as informações de segurança de vírus sejam consideradas desatualizadas</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definir os grupos de políticas aqui</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definir as regras de política aqui</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Especifique a janela aleatoriedade do programador em horas.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

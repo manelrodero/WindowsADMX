@@ -278,11 +278,11 @@ De standaardinstelling is dat computers met Windows Ultimate, Professional en Ho
 
         Als u deze beleidsinstelling uitschakelt of niet configureert, mogen alle geïnstalleerde printerextensies uitgevoerd worden.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">De standaard Microsoft XPS Document Writer (MXDW) uitvoerindeling wijzigen naar de oude Microsoft XPS-indeling (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Met Microsoft XPS Document Writer (MXDW) worden standaard OpenXPS-bestanden (*.oxps) gegenereerd in Windows 10, Windows 10 en Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Met Microsoft XPS Document Writer (MXDW) worden standaard OpenXPS-bestanden (*.oxps) gegenereerd in Windows 10, Windows 10 en Windows Server 2022.
 
-          Als u deze groepsbeleidsinstelling inschakelt, wordt de oudere Microsoft XPS-indeling (*.xps) gebruikt als standaard-MXDW-uitvoerindeling.
+ Als u deze groepsbeleidsinstelling inschakelt, wordt de oudere Microsoft XPS-indeling (*.xps) gebruikt als standaard-MXDW-uitvoerindeling.
 
-          Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de OpenXPS-indeling (*.oxps) gebruikt als standaard-MXDW-uitvoerindeling.</string>
+ Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de OpenXPS-indeling (*.oxps) gebruikt als standaard-MXDW-uitvoerindeling.</string>
       <string id="SetDefaultPrinterMRUModeOff">Standaardprinterbeheer van Windows uitschakelen</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Met deze voorkeur kunt u aanpassen hoe de standaardprinter wordt beheerd.
 
@@ -291,6 +291,24 @@ Als u deze instelling inschakelt, wordt de standaardprinter niet beheerd door Wi
 Als u deze instelling uitschakelt, zorgt Windows voor het beheer van de standaardprinter.
 
 Als u deze instelling niet configureert, blijft de instelling voor het standaardprinterbeheer ongewijzigd. </string>
+      <string id="EnableDeviceControl">Afdrukbeperkingen voor apparaatbesturing inschakelen</string>
+      <string id="EnableDeviceControl_Help">
+          Hiermee wordt bepaald of afdruk beperkingen voor het apparaat worden afgedwongen om op deze computer te kunnen afdrukken.
+
+Standaard zijn er geen beperkingen voor afdrukken op basis van het verbindingstype of het merk/model van de printer.
+
+Als u deze instelling inschakelt, wordt het afdrukken op printerverbindingen in het bedrijfsnetwerk of goedgekeurde printers met USB-verbindingen door de computer beperkt.
+
+Als u deze instelling uitschakelt of niet configureert, zijn er geen beperkingen voor het afdrukken op basis van het verbindingstype of het merk/model van de printer.</string>
+        <string id="ApprovedUsbPrintDevices">Lijst met goedgekeurde afdrukapparaten met USB-aansluiting</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Deze instelling is een onderdeel van de afdruk beperkingen van het apparaat bepalen. Als u deze instelling wilt gebruiken, schakelt u het afdrukken van apparaatbesturing in door de instelling afdruk beperkingen van het besturingselement apparaat inschakelen in te schakelen.
+
+Wanneer het afdrukken van apparaatbesturing is ingeschakeld, gebruikt het systeem de opgegeven lijst met vid/PID-waarden om te bepalen of de huidige met USB aangesloten printer is goedgekeurd voor lokaal afdrukken.
+
+Typ alle goedgekeurde vid/PID-combinaties (gescheiden door komma's) die overeenkomen met de goedgekeurde USB-printermodellen. Wanneer een gebruiker probeert af te drukken naar een USB-printerwachtrij, wordt het apparaat vid/PID vergeleken met de goedgekeurde lijst.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -327,7 +345,7 @@ Als u deze instelling niet configureert, blijft de instelling voor het standaard
       </presentation>
       <presentation id="PhysicalLocation">
         <text>Geef de locatie van deze computer op, </text>
-        <text>bijvoorbeeld: Stad/Gebouw 2/Verdieping 1/Kantoor 1800</text>
+        <text>Bijvoorbeeld: Stad/Gebouw 2/Verdieping 1/Kantoor 1800</text>
         <textBox refId="PhysicalLocation_Name">
           <label>Locatie</label>
         </textBox>
@@ -350,6 +368,13 @@ Als u deze instelling niet configureert, blijft de instelling voor het standaard
           <label>Standaardpad in Active Directory</label>
         </textBox>
         <text>voorbeeld --&gt; LDAP://DC=Domein1,DC=MijnBedrijf,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Geef de lijst met goedgekeurde afdrukapparaten met USB-aansluiting op.</text>
+        <text>De lijst is een door komma's gescheiden lijst met USB vid/PID-waarden. Voorbeeld: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

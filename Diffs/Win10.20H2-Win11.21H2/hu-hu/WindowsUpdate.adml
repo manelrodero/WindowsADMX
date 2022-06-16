@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Legalább Windows XP Professional SP1 vagy Windows 2000 SP3, kivéve a Windows RT rendszert</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Legalább Windows Server 2003 operációs rendszerek vagy Windows XP Professional SP1, kivéve a Windows RT rendszert</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Legalább Windows XP Professional Service Pack 1, illetve legalább a Windows 2000 Service Pack 3 és a Windows 8.1 vagy a legújabb szervizcsomaggal frissített Windows Server 2012 R2 között megjelent rendszerek egyike</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Legalább a Windows Vista és a Windows 8.1 vagy a legújabb szervizcsomaggal frissített Windows Server 2012 R2 között megjelent rendszerek egyike</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Legalább Windows XP Professional Service Pack 1 vagy legalább Windows 2000 Service Pack 3-tól Windows 8.1-ig vagy Windows Server 2012 R2 a legfrissebb szervizcsomaggal. A Windows 10 és újabb verziók nem támogatottak.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Legalább Windows Vista és Windows 8.1 vagy Windows Server 2012 R2 a legfrissebb szervizcsomaggal. A Windows 10 és újabb verziók nem támogatottak.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 vagy legalább Windows 2000 Service Pack 3
 A 7-es változat csak a Windows Server 2016 Edition rendszerű kiszolgálókon támogatott</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016-tól Windows Server 2022-ig, vagy Windows 10​ </string>
       <string id="AUDontShowUasHelp">Ezzel a házirend-beállítással kezelhető a „Frissítések telepítése és leállítás” beállítás megjelenése A Windows leállítása párbeszédpanelen.
 
 Ha engedélyezi ezt a beállítást, a „Frissítések telepítése és leállítás” beállítás akkor sem jelenik meg A Windows leállítása párbeszédpanelen, ha rendelkezésre állnak telepíthető frissítések, amikor a felhasználó a Start menü leállítás gombjára kattint.
@@ -132,37 +133,45 @@ Ha a Nincs konfigurálva állapot van megadva, az Automatikus frissítések szol
       <string id="AutoUpdateSchTimeAuto">Automatikus</string>
       <string id="CorpWuURL">Az intranetes Microsoft Update szolgáltatás helyének megadása</string>
       <string id="CorpWuURL_Help">
-        Itt adhat meg egy, a Microsoft Update frissítéseit tároló intranetes kiszolgálót. Ezt követően ezzel a frissítési szolgáltatással automatikusan frissítheti a hálózaton lévő számítógépeket.
+        Itt megadhat egy, a Microsoft Update frissítéseit tároló intranetes kiszolgálót. Ezt követően ezzel a frissítési szolgáltatással automatikusan frissítheti a hálózaton levő számítógépeket.
 
-        Ezzel a beállítással adhat meg a hálózaton található, belső frissítési szolgáltatásként működő kiszolgálót. Az Automatikus frissítések ügyfele ebben a szolgáltatásban fog a hálózaton lévő számítógépekre vonatkozó frissítéseket keresni.
+        Ezzel a beállítással megadhat egy, a hálózaton található, belső frissítési szolgáltatásként működő kiszolgálót. Az Automatikus frissítések ügyfele ennél a szolgáltatásnál fog a hálózaton levő számítógépekre alkalmazható frissítéseket keresni.
 
-        A beállítás használatához két kiszolgálónevet kell megadni: azt, amelyiken az Automatikus frissítések ügyfele megkeresi és letölti a frissítéseket, és azt, amelyre a frissített munkaállomások feltöltik a statisztikáikat. Ugyanaz a kiszolgáló is megadható mindkét célra. Nem kötelező jelleggel megadható egy másik kiszolgáló is, amelyről a Windows Update-ügynök letölti a frissítéseket az intranetes frissítési szolgáltatás helyett.
+        A beállítás használatához két kiszolgálónevet kell megadnia: azt a kiszolgálót, amelyen az Automatikus frissítések ügyfele megkeresi, illetve amelyről letölti a frissítéseket, valamint azt, amelyre a frissített munkaállomások feltöltik a statisztikáikat. Ugyanaz a kiszolgáló is beállítható mindkét értéknél. Választható módon megadhat egy további kiszolgálót is, amellyel a Windows Update-ügynök úgy konfigurálható, hogy az intranetes frissítési szolgáltatás helyett erről a másodlagos letöltési kiszolgálóról töltse le a frissítéseket.
 
-        Ha engedélyezi ezt a beállítást, az Automatikus frissítések ügyfele a Windows Update webhely helyett a megadott intranetes frissítési szolgáltatáson (vagy a másik letöltési kiszolgálón) fogja megkeresni és onnan letölteni a frissítéseket. A beállítás engedélyezése révén a szervezet végfelhasználói a tűzfalon való áthaladás nélkül hozzájuthatnak a frissítésekhez, emellett lehetőség nyílik a frissítések telepítés előtti tesztelésére is.
+        Ha engedélyezi ezt a beállítást, az Automatikus frissítések ügyfele a Windows Update helyett a megadott intranetes Microsoft Update szolgáltatáshoz (vagy a másodlagos letöltési kiszolgálóhoz) fog kapcsolódni, hogy megkeresse és letöltse a frissítéseket. A beállítás engedélyezése révén a szervezet végfelhasználói a tűzfalon való áthaladás nélkül juthatnak hozzá a frissítésekhez, emellett lehetővé válik a frissítések rendszerbe állítás előtti tesztelése is.
 
-        Ha letiltja vagy nem konfigurálja a beállítást, és az Automatikus frissítés szolgáltatást nem tiltja le semmilyen házirend vagy egyéni felhasználói beállítás, akkor az Automatikus frissítések ügyfele közvetlenül az internetes Windows Update webhelyre csatlakozik.
+        Ha letiltja vagy nem konfigurálja a beállítást, és sem házirend, sem egyéni felhasználói beállítás nem tiltja le az Automatikus frissítések funkciót, akkor az Automatikus frissítések ügyfele közvetlenül az internetes Windows Update webhelyhez kapcsolódik.
 
-        A Másik letöltési kiszolgáló beállítás hatására a Windows Update-ügynök másik kiszolgálóról tölti le a frissítéseket az intranetes frissítési szolgáltatás helyett.
+        A másodlagos letöltési kiszolgáló beállításával úgy konfigurálja a Windows Update-ügynököt, hogy az az intranetes frissítési szolgáltatás helyett a másodlagos letöltési kiszolgálóról töltse le a frissítéseket.
 
-        A hiányzó URL-című fájlok letöltésére vonatkozó beállítás lehetővé teszi tartalmak letöltését a másik letöltési kiszolgálóról, ha a fájlokhoz nem tartoznak letöltési URL-címek a frissítési metaadatok között. Ez a beállítás csak akkor használható, ha az intranetes frissítési szolgáltatás nem biztosít letöltési URL-címeket a frissítési metaadatok között azokhoz a fájlokhoz, amelyek jelen vannak a másik letöltési kiszolgálón.
+        A hiányzó URL-című fájlok letöltésére vonatkozó beállítás lehetővé teszi tartalmak letöltését a másodlagos letöltési kiszolgálóról, ha a fájlokhoz nem tartoznak letöltési URL-címek a frissítési metaadatok között. Ezt a beállítást csak akkor szabad használni, ha az intranetes frissítési szolgáltatás nem ad meg letöltési URL-címeket a frissítési metaadatokban olyan fájlokhoz, amelyek megtalálhatók a másodlagos letöltési kiszolgálón.
 
-        Megjegyzés: Ha „Az automatikus frissítés konfigurálása” házirend le van tiltva, akkor ez a házirend hatástalan.
+        Megjegyzés: Ha „Az automatikus frissítések konfigurálása” házirend le van tiltva, akkor ez a házirend hatástalan.
 
-        Megjegyzés: Ha a „Másik letöltési kiszolgáló” beállítás nincs megadva, a rendszer alapértelmezés szerint az intranetes frissítési szolgáltatást használja a frissítések letöltéséhez.
+        Megjegyzés: Ha a „Másodlagos letöltési kiszolgáló” érték nincs beállítva, a rendszer alapértelmezés szerint az intranetes frissítési szolgáltatást használja a frissítések letöltéséhez.
 
-        Megjegyzés: A „Fájlok letöltése URL-cím nélkül...” csak akkor használható, ha a „Másik letöltési kiszolgáló” beállítás meg van adva.
+        Megjegyzés: A „Fájlok letöltése URL-cím nélkül...” beállítás csak akkor használható, ha be van állítva a „Másodlagos letöltési kiszolgáló” érték.
 
-        Megjegyzés: Ez a házirend Windows RT rendszerben nem támogatott. A házirend beállítása Windows RT rendszerű gépeken nincs semmilyen hatással.
+        Megjegyzés: Ez a házirend Windows RT rendszeren nem támogatott. A házirend Windows RT rendszerű PC-ken való beállítása hatástalan lesz.
 
-        Proxykkal kapcsolatos megjegyzés: A legmagasabb szintű biztonság biztosítása érdekében a Microsoft javasolja a WSUS TLS/SSL protokollal történő biztosítását, és ezáltal a HTTPS-alapú intranetes kiszolgálók használatát a rendszer biztonságának megőrzéséhez. Ha proxy szükséges, akkor javasoljuk a rendszerproxy konfigurálását.
+        A legmagasabb szintű biztonság érdekében a Microsoft azt javasolja, hogy a TLS/SSL protokollal tegye biztonságossá a WSUS működését, és ennek megfelelően HTTPS-alapú intranetes kiszolgálók használatával őrizze meg a rendszerek biztonságát. Ha proxy szükséges, akkor javasoljuk a rendszerproxy konfigurálását. A legmagasabb szintű biztonság érdekében emellett használja ki a WSUS TLS-tanúsítványainak rögzítésével járó előnyöket az összes eszközön.
 
-        Egy proxyviselkedés kiválasztása nem fogja befolyásolni a HTTPS-alapú intranet kiszolgálókat a frissítések észlelésében. 
+        Az ügyfelek eredendő biztonságának megőrzése érdekében többé nem engedélyezzük az intranetes kiszolgálók számára, hogy alapértelmezés szerint felhasználói proxyt használjanak a frissítések észleléséhez. Ha felhasználói proxyt kell használnia a frissítések észleléséhez egy intranetes kiszolgáló használata során, az ezzel járó potenciális biztonsági rések ellenére, akkor „A felhasználói proxy helyettesítőként való használatának engedélyezése, ha a rendszerproxyt használó észlelés nem működik” értékre kell konfigurálnia a proxyviselkedést.
 
-        Az ügyfelek természetes biztonságának megőrzése érdekében többé nem engedélyezzük a HTTP-alapú intranetes kiszolgálók számára, hogy alapértelmezés szerint használják a felhasználói proxyt a frissítések észlelésére. Ha a felhasználói proxyt kell használnia a frissítések észlelésére egy HTTP-alapú intranetes kiszolgáló használata során, a kiszolgáló által jelentett sebezhetőségek ellenére, akkor a proxyviselkedést „A felhasználói proxy helyettesítőként való használatának engedélyezése, ha a rendszerproxyt használó észlelés nem működik“ értékre kell konfigurálnia.
-
-        A frissítések észlelése nem működik, ha a HTTP-alapú intranetes kiszolgálókat egy konfigurált rendszerproxy nélkül használják, ha nincs konfigurálva az alternatív proxyviselkedés használatára vonatkozó házirend.</string>
+        A frissítések intranetes kiszolgálókon való észlelése nem működik, ha egy felhasználói proxy szükséges helyettesítőként, és nincs konfigurálva az alternatív proxyviselkedés.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Csak a rendszerproxy használata frissítések észlelésére (alapértelmezett)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">A felhasználói proxy helyettesítőként való használatának engedélyezése, ha a rendszerproxyt használó észlelés nem működik</string>
+      <string id="UpdateClassPolicySource_Title">Forrásszolgáltatás megadása a Windows-frissítések adott osztályaihoz</string>
+      <string id="UpdateClassPolicySource_Help">Ha ez a házirend engedélyezve van, az eszközök a megadott frissítési forrásból (vagy a Windows Update, vagy a Windows Server Update Service szolgáltatásból) megkapják a felsorolt osztályokkal kapcsolatos Windows-frissítéseket. 
+
+        Megjegyzés: Ha a Windows Server frissítési szolgáltatásból szeretne frissítéseket kapni, a Microsoft intranetes frissítési szolgáltatásának helyét megfelelően konfigurálnia kell „A Microsoft intranetes frissítési szolgáltatás helyének megadása“ házirenden keresztül.
+
+        Ha ez a házirend nincs konfigurálva vagy le van tiltva, az eszköz továbbra is a többi házirend-konfigurációban megadott frissítéseket észleli. 
+
+        Megjegyzés: Ha jelenleg a „Ne engedélyezze a halasztásos házirendeket a Windows Update-ben való kereséshez“ beállítást használja annak érdekében, hogy az eszközök csak a megadott kiszolgálóval végezzenek bizonyos vizsgálatot, javasoljuk, hogy konfigurálja ezt a házirendet a másik helyett, vagy azzal együtt.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Az az óraszám, amely alapján a Windows rendszer meghatározza, hogy meddig várjon a frissítések keresése előtt. A pontos várakozási idő a konkrét értékek összege és egy véletlenszerű, 0–4 óra közötti változó. 
 
         Ha az állapot Engedélyezett, a Windows a megadott időközönként keres frissítéseket.
@@ -306,6 +315,12 @@ Megjegyzés: Ez a házirend csak akkor érvényes, ha az intraneten található 
 Megjegyzés: Ez a házirend Windows RT rendszerben nem támogatott. A házirend beállítása Windows RT rendszerű számítógépeken nincs semmilyen hatással.</string>
       <string id="TargetGroup_Title">Ügyféloldali célcsoport-meghatározás engedélyezése</string>
       <string id="WindowsUpdateCat">Windows Update</string>
+      <!--Category sub-folders-->
+      <string id="WindowsUpdateOffering">Az Windows Update által kínált frissítések kezelése</string>
+      <string id="WSUSOffering">A Windows Server Update Service által kínált frissítések kezelése</string>
+      <string id="WindowsUpdateExperience">Végfelhasználói élmény kezelése</string>
+      <string id="PreSV">Örökölt házirendek</string>
+
       <string id="TrustedPublisher_Title">Az intraneten futó Microsoft frissítési szolgáltatás helyéről származó aláírt frissítések engedélyezése  </string>
       <string id="TrustedPublisher_Help">Ezzel a házirend-beállítással megadhatja, hogy az Automatikus frissítések szolgáltatás elfogadja-e a Microsofttól eltérő entitások által aláírt frissítéseket, ha azok a Microsoft frissítési szolgáltatásának valamely intranetes helyén találhatók.
 
@@ -321,48 +336,30 @@ Megjegyzés: Ez a házirend nem használható Windows RT rendszerben, Windows RT
 Ha engedélyezi a házirendet, letiltja ezt a funkciót, és a továbbiakban nem lehet kapcsolódni a Windows Áruház és egyéb nyilvános szolgáltatásokhoz.
 
 Megjegyzés: a házirendnek csak akkor van hatása, ha a számítógép úgy van beállítva, hogy kapcsolódjon egy intranetes frissítési szolgáltatáshoz „Az intranetes Microsoft Update szolgáltatás helyének megadása” házirend használatával.</string>
-      <string id="DeferUpdateCat">Vállalati Windows Update</string>
       <string id="ManagePreviewBuilds_Title">Előzetes buildek kezelése</string>
-      <string id="ManagePreviewBuilds_Help">Az „Előzetes buildek letiltása” lehetőség választásával megakadályozza az előzetes buildek telepítését az eszközre. Ebben az esetben a felhasználók nem regisztrálhatják magukat a Windows Insider Programban való részvételre a Gépház –&gt; Frissítés és biztonság lapon.
+      <string id="ManagePreviewBuilds_Help">Ezt a házirendet engedélyezve kezelheti, hogy melyik frissítéseket kapja meg a rendszer azok mindenki számára történő kiadása előtt.
 
-Az „Előzetes buildek letiltása a következő kiadás megjelenésekor” lehetőség választásával megakadályozza az előzetes buildek telepítését, amikor a Windows következő kiadása nyilvánossá válik. Ez a lehetőség akkor hasznos, ha az eszköz az előzetesek telepítésére van beállítva, és Ön szabályosan ki szeretné vonni az eszközt a tesztelésből. Ez a beállítás mindaddig biztosítja az előzetes buildeket, amíg az eszköz el nem éri a következő nyilvános kiadást. 
+Fejlesztői csatorna
+Ideális a magas technikai tudású felhasználók számára. A fejlesztői csatorna tagjai a fejlesztési ciklus legkorábbi szakaszában részt vevő fejlesztői ágon keresztül kapják a buildeket. Ezek a buildek nem specifikusak egyetlen Windows 10 kiadásra sem.
 
-Az „Előzetes buildek engedélyezése” lehetőség választásával engedélyezi az előzetes buildek telepítését az eszközre. A felhasználók letölthetik és telepíthetik a Windows előzetes buildjeit eszközeiken, ha regisztrálják magukat a Gépház –&gt; Frissítés és biztonság –&gt; Windows Insider Program lapon. Amikor ez az érték be van állítva, a rendszergazdák egyéb házirendeket is használhatnak a tesztelési beállítások kezelésére a felhasználók nevében.</string>
-      <string id="DisablePreviewBuilds">Előzetes buildek letiltása</string>
-      <string id="DisablePreviewBuildsAndOptOut">Előzetes buildek letiltása a következő kiadás megjelenésekor</string>
-      <string id="EnablePreviewBuilds">Előzetes buildek engedélyezése</string>
-      <string id="PreviewBuildFastFeatureUpdates">Előzetes build – gyors</string>
-      <string id="PreviewBuildSlowFeatureUpdates">Előzetes build – lassú</string>
-      <string id="ReleasePreviewBranchFeatureUpdates">Kiadás előzetese</string>
-      <string id="SemiAnnualChannelFeatureUpdates">Féléves csatorna</string>
-      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Féléves csatorna – 1809-es és régebbi verziókhoz (elavult)</string>
-      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Féléves csatorna (célzott) – 1809 és alatta (elavult)</string>
+Béta csatorna
+Ideális azoknak a funkcióvadászoknak, akik a közelgő Windows 10-es szolgáltatásokat szeretnék látni. A visszajelzése itt nagyon fontos, mert a mérnökeink ezáltal kijavíthatják a kulcsfontosságú a nagyobb kiadások előtt.
+
+Kibocsátási előnézet csatorna (alapértelmezett)
+A Kibocsátási előnézet csatorna tagjai a széles körű kiadás előtt megkapják a Windows 10 közelgő frissítéseit. Ezeket a buildeket a Microsoft támogatja. Azt ajánljuk, hogy a vállalati ügyfelek ezt a csatornát használva tekintsék meg és validálják a Windows 10 közelgő kiadásait, mielőtt azokat a szervezetükön belül széles körben üzembe helyezik.
+
+Megjegyzés: az előzetes buildek igényléséhez 2-es vagy újabb verziójú telemetria-szint beállítás, és a tartomány regisztrációja az insider.windows.com oldalon. További információ az előzetes buildekről: https://aka.ms/wipforbiz
+
+Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update nem ajánlja fel az előzetes frissítéseket, és az ilyen tartalmakat akkor fogja megkapni, amikor széles körben kiadásra kerülnek. Ha letiltja ezt a házirendet, minden olyan eszköz, amely jelenleg egy előzetes buildet futtat, a következő Funkciófrissítésnél elutasítja az előzetes buildet és marad a legújabb aktuális verzión.</string>
+      <string id="DevChannel">Fejlesztői csatorna</string>
+      <string id="BetaChannel">Béta csatorna</string>
+      <string id="ReleasePreviewChannel">Kibocsátási előnézet csatorna</string>
       <string id="DeferFeatureUpdates_Title">Előzetes buildek és funkciófrissítések fogadási idejének megadása</string>
-      <string id="DeferFeatureUpdates_Help">A házirend engedélyezésével meghatározhatja a fogadni kívánt előzetes buildek vagy funkciófrissítések szintjét és idejét.
+      <string id="DeferFeatureUpdates_Help">A házirend engedélyezésével megadhatja, hogy mikor fogadjon Funkciófrissítéseket.
 
-* Előzetes build – Gyors: Az erre a szintre beállított eszközök elsőként kapják meg a Windows új buildjeit, amelyek a nagyközönség számára még nem elérhető szolgáltatásokat tartalmaznak. A Gyors lehetőség választása esetén részt vehet a hibák azonosításában és a Microsoftnak történő bejelentésében, valamint javaslatokat tehet az új funkciókra vonatkozóan.
-* Előzetes Build – Lassú: Az erre a szintre beállított eszközök azelőtt kapják meg a Windows új buildjeit, hogy azok elérhetővé válnának a nagyközönség számára, de lassabb ütemben, mint a Gyors értékre beállított eszközök, és az új buildek tartalmazzák a korábbi buildekben elvégzett módosításokat és javításokat.
-* Kiadás előtti előzetes: A Windows buildjeinek fogadása, mielőtt a Microsoft kiadja azokat a nagyközönség számára.
-* Féléves csatorna: A funkciófrissítések fogadása, amikor kiadják azokat a nagyközönség számára.
+Frissítések elhalasztása | Ez a beállítás lehetővé teszi az eszközök számára, hogy elhalasszák a csatorna számára elérhető következő Funkciófrissítést, az összes előzetes csatorna esetében legfeljebb 14 nappal, a Féléves csatorna esetében pedig legfeljebb 365 nappal. Illetve, ha az eszköz a Féléves csatornán keresztül frissül meg lehet határozni, hogy az eszköz egy másik verzióra frissítsen és/vagy maradjon, amíg a házirendet frissítik vagy az eszköz eléri a szolgáltatási időszaka végét. Megjegyzés: Ha mindkét házirendet beállítja, a megadott verzió elsőbbséget élvez, és a halasztások nem lépnek életbe. A Windows kibocsátási információs lapján tekintse meg az operációs rendszer verzióinformációit.
 
-Az alábbi Windows-készültségi szintek elavultak, és csak az 1809-es és a korábbi verziók esetén állnak rendelkezésre:
-*Féléves csatorna (célzott) – 1809 és alatta: A funkciófrissítéseket kiadták..
-* Féléves csatorna – 1809 és alatta: A funkciófrissítések megkapták a Féléves csatorna készültségi szintet, amely azt jelzi, hogy kiadás készen áll a széles körben történő üzembe helyezésre.
-A Féléves csatorna (célzott) és a Féléves csatorna kiadási dátumait a kiadási információs oldalon tekintheti meg: http://aka.ms/ReleaseInformationPage.
-
-Az Előzetes build lehetőségek egyikének kiválasztása esetén:
-    – Legfeljebb 14 napig elhalaszthatja az előzetes buildek fogadását.
-    – Ha meg szeretné akadályozni az előzetes buildek ütemezett időpontban való fogadását, ideiglenesen felfüggesztheti őket. A felfüggesztés a megadott kezdési időponttól számított 35 napig marad érvényben.
-    – Ha folytatni szeretné a felfüggesztett funkciófrissítések fogadását, törölje a kezdő dátum mezőjében szereplő értéket.
-
-Az előzetes buildekre való jelentkezéshez 2-es vagy magasabb telemetriaszint-beállítás szükséges, és a tartományának regisztrálva kell lennie az insider.windows.com webhelyen. További információ az előzetes buildekről: https://aka.ms/wipforbiz
-
-A Féléves csatorna lehetőség kiválasztása esetén:
-    – Legfeljebb 365 napig elhalaszthatja a funkciófrissítések fogadását.
-    – Ha meg szeretné akadályozni a funkciófrissítések ütemezett időpontban való fogadását, ideiglenesen felfüggesztheti őket. A felfüggesztés a megadott kezdési időponttól számított 35 napig marad érvényben.
-    – Ha folytatni szeretné a felfüggesztett funkciófrissítések fogadását, törölje a kezdő dátum mezőjében szereplő értéket.
-
-Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése nem módosul.</string>
+Frissítések szüneteltetése | Ahhoz, hogy megakadályozza a Funkciófrissítések ütemezett időpontban való fogadását, ideiglenesen felfüggesztheti a Funkciófrissítéseket. A szüneteltetés a megadott kezdési dátumtól 35 napig vagy a mező törléséig marad érvényben (a minőségi frissítések továbbra is felajánlásra kerülnek).</string>
       <string id="DeferQualityUpdates_Title">Minőségi frissítések fogadási idejének megadása</string>
       <string id="DeferQualityUpdates_Help">A házirend engedélyezésével meghatározhatja a minőségi frissítések fogadásának idejét.
 
@@ -374,9 +371,19 @@ Ha folytatni szeretné a felfüggesztett minőségi frissítések fogadását, t
 
 Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése nem módosul.</string>
       <string id="TargetReleaseVersion_Title">A funkciófrissítés célverziójának kiválasztása</string>
-      <string id="TargetReleaseVersion_Help">A házirend engedélyezésével meghatározhatja, hogy a rendszer a funkciófrissítés mely verzióját kérje a későbbi vizsgálatok során.
+      <string id="TargetReleaseVersion_Help">Adja meg a terméket és a verziót a Windows Update célverzió lapján felsoroltak szerint:
 
-Adja meg a verziót a Windows-kiadások információs lapján leírtak szerint: aka.ms/ReleaseInformationPage</string>
+aka.ms/WindowsTargetVersioninfo
+
+Az eszköz kérni fogja, hogy a Windows frissítse a terméket és a verziót a későbbi vizsgálatok során.
+
+Ha megad egy célterméket, és az OK vagy az Alkalmaz gombra kattint, az a következőt jelenti: Elfogadom az aka.ms/WindowsTargetVersioninfo webhelyen található Microsoft szoftverlicenc-szerződést. Ha egy szervezet licenceli a szoftvert, jogosult vagyok a szervezet kötésére.
+
+Ha érvénytelen értéket ad meg, a jelenlegi verzió marad, amíg ki nem javítja az értékeket egy támogatott termékre és verzióra.</string>
+      <string id="DisableWUfBSafeguards">A funkciófrissítések védelmének letiltása</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Akkor engedélyezze ezt a beállítást, ha a funkciófrissítéseket a védelmi visszatartások letiltása nélkül rendszerbe szeretné állítani az eszközökön.  A védelmi visszatartások ismert kompatibilitási problémákat okoznak, és megakadályozzák a frissítés rendszerbe állítását az érintett eszközökön, amíg el nem hárítják a problémát. Ennek a házirendnek az engedélyezése lehetővé teszi, hogy a szervezetek rendszerbe állítsák a funkciófrissítést az eszközökön tesztelési célból, illetve hogy a védelmi visszatartások letiltása nélkül állítsák rendszerbe a funkciófrissítést.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Illesztőprogramok kihagyása a Windows-frissítésekből</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Ezt a házirendet engedélyezve kihagyhatók az illesztők a Windows minőségi frissítéseiből.
 
@@ -614,19 +621,21 @@ Fontos: Ha azt választja, hogy nem kér frissítési értesítéseket, és más
       <string id="ExcludingRebootWarnings">1 – az összes értesítés letiltása az újraindítási figyelmeztetések kivételével</string>
       <string id="IncludingRebootWarnings">2 – az összes értesítés letiltása az újraindítási figyelmeztetésekkel együtt</string>
       <string id="ComplianceDeadline_Title">Határidők megadása az automatikus frissítések és újraindítások számára</string>
-      <string id="ComplianceDeadline_Help">Ezzel a házirenddel megadhatja, hogy hány nap áll a felhasználó rendelkezésére a minőségi és funkciófrissítések eszközökön való automatikus telepítése előtt, továbbá megadhat egy türelmi időszakot, amely után a rendszer automatikusan újraindítja az eszközt.  A frissítésekre és az újraindításokra az aktív időszaktól függetlenül kerül sor, és a felhasználó nem tudja átütemezni a műveleteket.
+      <string id="ComplianceDeadline_Help">Ezzel a házirenddel megadhatja, hogy a minőségi és funkciófrissítések hány nap után legyenek automatikusan telepítve az eszközökön, továbbá megadhat egy türelmi időszakot, amelynek letelte után a szükséges újraindítások automatikusan megtörténnek.
 
-A funkciófrissítések és a minőségi frissítések határideje legfeljebb 30 nap lehet. Az automatikus újraindításra vonatkozó türelmi időszak 0-tól 7 napig tarthat.
+Beállíthat határidőket a funkciófrissítésekhez és a minőségi frissítésekhez, hogy teljesíthesse a megfelelőségi céljait. A rendszer az eszköznek való felajánlásuk után azonnal letölti és telepíti a frissítéseket, és megpróbálja elvégezni az automatikus újraindításokat az aktív időszakon kívül. A határidő letelte után a rendszer már nem veszi figyelembe az aktív időszakot az újraindításhoz, és a felhasználók nem ütemezhetik át az újraindításokat. Ha 0 napra állítja be a határidőt, a frissítés a felajánlásakor azonnal telepítve lesz, de előfordulhat, hogy az eszköz rendelkezésre állása és hálózati kapcsolata miatt a folyamat nem fejeződik be aznap.
 
-Az automatikus újraindításra vonatkozó türelmi időszak végéig letilthatja az automatikus újraindításokat.
+Beállíthat egy türelmi időszakot a funkciófrissítésekhez és a minőségi frissítésekhez a felhasználók számára, ezzel egy minimális időt garantálva nekik az újraindítások kezelésére a frissítések telepítése után. A felhasználók a türelmi időszak során beütemezhetik az újraindításokat, és a Windows továbbra is automatikusan újraindulhat az aktív időszakon kívül, ha a felhasználók nem ütemezik be az újraindításokat. A határidők konfigurációjától függően előfordulhat, hogy a türelmi időszak nem lép érvénybe, ha a felhasználóknak már a türelmi időszakként beállított számú napnál hosszabb idő állt rendelkezésére az újraindítás kezelésére.
 
-Ha letiltja vagy nem konfigurálja ezt a házirendet, az eszközök az alapértelmezett ütemezés szerint kapnak frissítéseket és indulnak újra.
+Beállíthatja az eszközt úgy, hogy addig késleltesse az újraindítást, amíg a határidő és a türelmi időszak is lejár.
 
-Ez a házirend felülírja a következő házirendeket:
-1.  A frissítések telepítéséhez kapcsolódó automatikus újraindítás határidejének megadása
-2.  Aktív időszakbeli újraindításba való átmenet és frissítésértesítési ütemezés megadása
-3.  Automatikus újraindítás az ütemezett időpontban
-4.  Az automatikus újraindítás letiltása a bejelentkezett felhasználók számára ütemezett automatikus frissítések telepítésekor
+Ha letiltja vagy nem konfigurálja ezt a házirendet, az eszközök az alapértelmezett ütemezés szerint kapnak frissítéseket, és indulnak újra.
+
+Ez a házirend felülbírálja a következő házirendeket:
+1. A frissítések telepítéséhez kapcsolódó automatikus újraindítás határidejének megadása
+2. Aktív időszakbeli újraindításba való átmenet és frissítés-értesítési ütemezés megadása
+3. Automatikus újraindítás az ütemezett időpontban
+4. Az Automatikus frissítések konfigurálása
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,20 +701,26 @@ Ez a házirend felülírja a következő házirendeket:
         </textBox>
         <text>(példa: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Fájlok letöltése a metaadatokban megadott URL-cím nélkül, ha a másik letöltési kiszolgáló meg van adva.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Válassza ki a Windows Update-ügyfél proxyviselkedését a frissítéseket észlelésére nem TLS-alapú (HTTP) szolgáltatással:</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Ne kényszerítse a TLS-tanúsítványok rögzítését a frissítések észleléséhez a Windows Update-ügyfél számára.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Válassza ki hogyan viselkedjen a proxy amikor frissítéseket észlel a Windows Update-ügyfél számára:</dropdownList>
+      </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Adja meg a forrásszolgáltatást a Windows-frissítések következő osztályai számára:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Funkciófrissítések</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Minőségi frissítések</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Illesztőprogram-frissítések</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Más frissítések</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Frissítések keresésének</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">gyakorisága (óra):  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Várja meg a következő időszakot mielőtt</text>
-        <text>újra rákérdez az ütemezett újraindításra</text>
+        <text>Az ismételt rákérdezés előtt várja meg a következő időszakot</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">újraindításnál (perc):  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Várja meg a következő időszakot mielőtt</text>
-        <text>végrehajtja az ütemezett újraindítást</text>
+        <text>Az ütemezés folytatása előtt várja meg a következő időszakot</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">újraindításnál (perc):  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -717,27 +732,23 @@ Ez a házirend felülírja a következő házirendeket:
           <label>Célcsoport neve ehhez a számítógéphez</label>
         </textBox>
       </presentation>
-      <presentation id="IdleShutdownTimerDuration_Title">
-        <text>Várja meg a következő időszakot mielőtt</text>
-        <text>leállítaná a szolgáltatást</text>
-        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">tétlenség esetén (perc):  </decimalTextBox>
-      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>Az újraindítási időzítő ennyi időt biztosít a felhasználóknak</text>
-        <text>munkájuk mentéséhez</text>
+        <text>Az újraindítási időzítő ennyi időt ad a felhasználóknak a mentéshez</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">(perc):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Melyik Windows-termékverzióhoz szeretne funkciófrissítéseket kapni? például Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Funkciófrissítések célverziója</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">A működés beállítása az előzetes buildek fogadására:</dropdownList>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">A fogadni kívánt frissítések Windows készültségi szintjének kiválasztása:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">A fogadni kívánt frissítések Windows készültségi szintjének kiválasztása:</dropdownList>
-        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Kiadása után ennyi nappal történjen az előzetes build vagy a funkciófrissítés fogadása:</decimalTextBox>
+       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Egy funkciófrissítés megjelenése után hány nappal szeretné elhalasztani a frissítés felajánlását az eszköz számára?</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Előzetes buildek vagy funkciófrissítések felfüggesztésének kezdete:</label>
         </textBox>
@@ -797,12 +808,13 @@ Ez a házirend felülírja a következő házirendeket:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Adja meg a frissítési értesítésekre vonatkozó megjelenítési beállításokat:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Adja meg, hogy hány nap áll a felhasználó rendelkezésére (legfeljebb 30 nap lehet) a frissítések automatikus futtatásáig, az aktív időszaktól függetlenül. A műveletet nem lehet átütemezni.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Minőségi frissítések (napok)</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Funkciófrissítések (nap):</dropdownList>
+        <text>Minőségi frissítések</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Határidő (nap):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Türelmi idő (nap):</dropdownList>
         <text></text>
-        <text>Adja meg az automatikus újraindításra vonatkozó türelmi időszakot (0–7 nap) attól az időponttól kezdve, amikor az újraindítás szükségessé válik, addig az időpontig, amíg az eszköz automatikusan újraindul. Az eszközök az aktív időszaktól függetlenül újraindulnak. A műveletet nem lehet átütemezni.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Türelmi idő (nap)</dropdownList>
+        <text>Funkciófrissítések</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Határidő (nap):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Türelmi idő (nap):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Automatikus újraindítás mellőzése a türelmi időszak végéig</checkBox>
       </presentation>

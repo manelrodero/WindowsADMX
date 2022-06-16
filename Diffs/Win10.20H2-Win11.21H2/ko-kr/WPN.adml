@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">알림</string>
+      <string id="WnsEndpoint">WNS FQDN에 대해 그룹 정책을 사용하도록 설정합니다.</string>
+      <string id="WnsEndpointExplain">이 정책은 특정 환경을 위한 특수 WNS FQDN을 설정합니다.</string>
       <string id="NoTileNotification">타일 알림 끄기</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">자정 이후 시간(분):</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>WNS의 FQDN</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

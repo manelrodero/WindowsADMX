@@ -13,19 +13,19 @@ Sanallaştırma Tabanlı Güvenlik, güvenlik hizmetleri için destek sağlamak 
 
 Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma
 
-Bu ayar, Çekirdek Modu Kod Bütünlüğü’nün sanallaştırma tabanlı korumasını etkinleştirir. Bu etkinleştirildiğinde çekirdek modu bellek korumaları uygulanır ve Kod Bütünlüğü doğrulaması yolu Sanallaştırma Tabanlı Güvenlik özelliği tarafından korunur.
+Bu ayar, Çekirdek Modu Kod Bütünlüğü’nün sanallaştırma tabanlı korumasını etkinleştirir. Bu etkinleştirildiğinde çekirdek modu bellek korumaları uygulanır ve Kod Bütünlüğü doğrulama yolu Sanallaştırma Tabanlı Güvenlik özelliği tarafından korunur.
 
 "Devre Dışı" seçeneği, Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma özelliği "Kilitsiz etkinleştirildi" seçeneğiyle önceden açıldıysa bu özelliği uzaktan kapatır.
- 
-"UEFI kilidiyle etkinleştirildi" seçeneği, Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma özelliğinin uzaktan devre dışı bırakılamamasını sağlar. Bu özelliği devre dışı bırakmak için Grup İlkesi’ni “Devre Dışı” olarak ayarlamanız ve UEFI’de kalan yapılandırmayı temizlemek için fiziksel olarak kullanıcı tarafından her bilgisayardan güvenlik işlevselliğinin kaldırılmasını sağlamanız gerekir.
- 
-"Kilitsiz etkinleştirildi" seçeneği, Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma özelliğinin Grup İlkesi kullanılarak uzaktan devre dışı bırakılmasına olanak sağlar. 
 
-"Yapılandırılmadı" seçeneği ilke ayarını tanımsız bırakır. Grup İlkesi kayıt defterine ilke ayarını yazmaz, dolayısıyla bu seçeneğin bilgisayarlar veya kullanıcılar üzerinde bir etkisi yoktur. Kayıt defterinde geçerli bir ayar varsa değiştirilmez.
+"UEFI kilidiyle etkinleştirildi" seçeneği, Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma özelliğinin uzaktan devre dışı bırakılamamasını sağlar. Bu özelliği devre dışı bırakmak için Grup İlkesi’ni “Devre Dışı” olarak ayarlamanız ve UEFI’de kalan yapılandırmayı temizlemek için fiziksel olarak kullanıcı tarafından her bilgisayardan güvenlik işlevselliğinin kaldırılmasını sağlamanız gerekir.
+
+"Kilitsiz etkinleştirildi" seçeneği, Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma özelliğinin Grup İlkesi kullanılarak uzaktan devre dışı bırakılmasına olanak sağlar.
+
+ "Yapılandırılmadı" seçeneği ilke ayarını tanımsız bırakır. Grup İlkesi kayıt defterine ilke ayarını yazmaz, dolayısıyla bu seçeneğin bilgisayarlar veya kullanıcılar üzerinde bir etkisi yoktur. Kayıt defterinde geçerli bir ayar varsa değiştirilmez.
 
 "UEFI Bellek Öznitelik Tablosu İste" seçeneği, Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma özelliğini yalnızca Bellek Öznitelik Tablosu için UEFI üretici yazılımı desteği olan cihazlarda etkinleştirir. UEFI Bellek Öznitelik Tablosu olmayan cihazlar Kod Bütünlüğü için Sanallaştırma Tabanlı Koruma ile uyumsuz bir üretici yazılımına sahip olabilir; bu da, bazı durumlarda kilitlenmelere, veri kaybına veya belirli eklenti kartlarla uyumsuzluğa yol açabilir. Bu seçenek ayarlanmazsa uyumluluğun sağlanması için hedef cihazların test edilmesi gerekir.
 
-Uyarı: Sistemdeki tüm sürücülerin bu özellikle uyumlu olması gerekir, aksi hâlde sistem kilitlenebilir. Bu ilke ayarının yalnızca uyumlu olduğu bilinen bilgisayarlara dağıtıldığından emin olun. 
+Uyarı: Sistemdeki tüm sürücülerin bu özellikle uyumlu olması gerekir, aksi hâlde sistem kilitlenebilir. Bu ilke ayarının yalnızca uyumlu olduğu bilinen bilgisayarlara dağıtıldığından emin olun.
 
 Credential Guard
 
@@ -38,7 +38,7 @@ Bu ayar, kimlik bilgilerinin korunmasına yardımcı olmak için kullanıcılar�
 "Kilitsiz etkinleştirildi" seçeneği, Credential Guard’ın Grup İlkesi kullanılarak uzaktan devre dışı bırakılmasına olanak sağlar. Bu ayarı kullanan cihazların en az Windows 10 (Sürüm 1511) çalıştırıyor olması gerekir.
 
 "Yapılandırılmadı" seçeneği ilke ayarını tanımsız bırakır. Grup İlkesi kayıt defterine ilke ayarını yazmaz, dolayısıyla bu seçeneğin bilgisayarlar veya kullanıcılar üzerinde bir etkisi yoktur. Kayıt defterinde geçerli bir ayar varsa değiştirilmez.
-      
+
 Güvenli Başlatma
 
 Bu ayar, önyükleme zincirinin güvenliğini sağlamak için Güvenli Başlatma yapılandırmasını ayarlar.

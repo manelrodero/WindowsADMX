@@ -298,7 +298,6 @@ Si deshabilita esta configuración de directiva para una aplicación o un proces
 Si no establece esta configuración de directiva, se usan los valores actuales de la acción de direcciones URL del proceso o aplicación de la lista.</string>
       <string id="FavImportExport">Deshabilitar el asistente para importar y exportar configuraciones</string>
       <string id="GeolocationDisable">Desactivar geoubicación del explorador</string>
-      <string id="DisableFlashInIE">Desactivar Adobe Flash en Internet Explorer e impedir que las aplicaciones utilicen la tecnología de Internet Explorer para crear instancias de objetos Flash</string>
       <string id="File_NoBrowserClose">Menú Archivo: deshabilitar el cierre de ventanas del explorador web y del Explorador de Windows</string>
       <string id="File_NoBrowserSaveAs">Menú Archivo: deshabilitar la opción de menú Guardar como</string>
       <string id="File_NoBrowserSaveWebComplete">Menú Archivo: deshabilitar Guardar como página web completa</string>
@@ -415,17 +414,17 @@ Si no establece esta directiva de configuración, el usuario puede intercambiar 
 
 Si habilita esta configuración de directiva, no se solicitará al usuario que habilite el filtro de suplantación de identidad. Debe especificar qué modo usa el filtro de suplantación de identidad: manual, automático o desactivado.
 
-Si selecciona el modo manual, el filtro de suplantación de identidad realiza solo análisis locales, y se pide al usuario que permita que se envíen datos a Microsoft. Si la función está totalmente habilitada, todas las direcciones de los sitios web que no se encuentren en la lista de sitios web permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
+Si selecciona el modo manual, el filtro de suplantación de identidad realiza solo análisis locales, y se pide al usuario que permita que se envíen datos a Microsoft. Si la función está totalmente habilitada, todas las direcciones de los sitios web que no se encuentren en la lista de permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
 
 Si deshabilita o no establece esta configuración de directiva, se pide al usuario que decida el modo de funcionamiento del filtro de suplantación de identidad.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">Esta configuración de directiva permite al usuario habilitar el filtro SmartScreen, que le advierte de si el sitio web que está visitando es conocido por haber realizado intentos fraudulentos de reunir información personal a través de suplantación de identidad, o si se sabe que contiene malware.
 
-Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Debe especificar qué modo usa el filtro SmartScreen: activado o desactivado. Todas las direcciones de los sitios web que no se encuentren en la lista de sitios web permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
+Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Debe especificar qué modo usa el filtro SmartScreen: activado o desactivado. Todas las direcciones de los sitios web que no se encuentren en la lista de permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
 
 Si deshabilita o no establece esta configuración de directiva, se pide al usuario que decida si desea activar el filtro SmartScreen durante la primera ejecución.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">Esta configuración de directiva impide que el usuario administre el filtro SmartScreen, que le advierte de si el sitio web que está visitando es conocido por haber realizado intentos fraudulentos de reunir información personal a través de suplantación de identidad, o si se sabe que contiene malware.
 
-Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Todas las direcciones de los sitios web que no se encuentren en la lista de sitios web permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
+Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Todas las direcciones de los sitios web que no se encuentren en la lista de permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
 
 Si deshabilita o no establece esta configuración de directiva, se pide al usuario que decida si desea activar el filtro SmartScreen durante la primera ejecución.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Esta configuración de directiva desactiva la característica de comprobación de la configuración de seguridad, que comprueba la configuración de seguridad de Internet Explorer para determinar cuándo la configuración pone en peligro a Internet Explorer.
@@ -723,13 +722,6 @@ Si habilita esta configuración de directiva, se desactiva la compatibilidad con
 Si deshabilita esta configuración de directiva, se activa la compatibilidad con geoubicación del explorador.
 
 Si no establece esta configuración de directiva, la compatibilidad con geoubicación del explorador puede activarse o desactivarse en la pestaña Privacidad de Opciones de Internet.</string>
-      <string id="IE_ExplainDisableFlashInIE">Esta configuración de directiva desactiva Adobe Flash en Internet Explorer e impide que las aplicaciones usen la tecnología de Internet Explorer para crear instancias de objetos Flash.
-
-Si habilitas esta configuración de directiva, se desactiva Flash para Internet Explorer y las aplicaciones no pueden usar la tecnología de Internet Explorer para crear instancias de objetos Flash. En el cuadro de diálogo Administrar complementos, el estado de Flash será 'Deshabilitado' y los usuarios no podrán habilitar Flash. Si habilitas esta configuración de directiva, Internet Explorer ignorará las configuraciones que se realicen para Adobe Flash a través de las configuraciones de directiva "Lista de complementos" y "Denegar complementos a menos que se permitan específicamente en la Lista de complementos".
-
-Si deshabilitas esta configuración de directiva o no la estableces, se activa Flash para Internet Explorer y las aplicaciones pueden usar la tecnología de Internet Explorer para crear instancias de objetos Flash. Los usuarios pueden habilitar o deshabilitar Flash en el cuadro de diálogo Administrar complementos.
-
-Ten en cuenta que aún se podría deshabilitar Adobe Flash a través de las configuraciones de directiva "Lista de complementos" y "Denegar complementos a menos que se permitan específicamente en la Lista de complementos", incluso si esta configuración de directiva no se ha establecido o se ha deshabilitado. Sin embargo, si se deshabilita Adobe Flash a través de las configuraciones de directiva "Lista de complementos" y "Denegar complementos a menos que se permitan específicamente en la Lista de complementos" en lugar de hacerlo a través de esta configuración de directiva, todas las aplicaciones que usen la tecnología de Internet Explorer para crear instancias de objetos Flash podrán seguir haciéndolas. Para obtener más información, consulta las "Configuraciones de directiva de grupo en Internet Explorer 10" en la biblioteca de TechNet de Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Impide que el usuario cierre Microsoft Internet Explorer y el Explorador de archivos.
 
 Si habilita esta directiva, el comando Cerrar del menú Archivo aparecerá atenuado.
@@ -3897,7 +3889,7 @@ Si deshabilita o no establece esta configuración de directiva, los usuarios pue
 Si activa esta configuración, los usuarios podrán ver y usar la opción del modo de empresa desde el menú Herramientas. Si activa esta configuración pero no indica una ubicación para los informes, el modo de empresa seguirá estando disponible para los usuarios, pero usted no recibirá ningún informe.
 
 Si deshabilita esta configuración de directiva o no la define, la opción de menú no aparecerá y los usuarios no podrán ejecutar los sitios web en el modo de empresa.</string>
-      <string id="RestrictInternetExplorer">Enviar todos los sitios que no está incluidos en la lista de sitios del modo de empresa a Microsoft Edge.</string>
+      <string id="RestrictInternetExplorer">Enviar todos los sitios que no están incluidos en la lista de sitios del modo de empresa a Microsoft Edge.</string>
       <string id="IE_ExplainRestrictInternetExplorer">Esta configuración permite decidir si se deben abrir todos los sitios que no están incluidos en la lista de sitios de modo de empresa en Microsoft Edge. Si usas esta configuración, también debes activar la configuración de directiva Plantillas administrativas\Componentes de Windows\Internet Explorer\Usar la lista de sitios web de IE del modo de empresa y debes incluir al menos un sitio en la lista de sitios del modo de empresa.
 
 Si habilitas esta configuración, se abren automáticamente todos los sitios que no están incluidos en la lista de sitios del modo de empresa en Microsoft Edge.
@@ -3952,6 +3944,41 @@ Directivas relacionadas:
 - Enviar todos los sitios que no están incluidos en la lista de sitios del modo de empresa a Microsoft Edge ("RestrictIE")
 
  Para obtener más información sobre cómo usar esta directiva junto con otras directivas relacionadas para crear la configuración óptima para la organización, consulta https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Permitir "Guardar destino como" en el modo de Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Esta configuración de directiva permite a los administradores habilitar el menú contextual "Guardar destino como" en el modo de Internet Explorer.
+
+Si habilita esta Directiva, "Guardar destino como" se mostrará en el menú contextual del modo de Internet Explorer y funcionará del mismo modo que Internet Explorer.
+
+Si deshabilita o no establece esta configuración de Directiva, "Guardar destino como" no se mostrará en el menú contextual del modo de Internet Explorer.
+
+Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Habilitar teclas de acceso rápido extendidas en el modo de Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Esta configuración de directiva permite a los administradores habilitar las teclas de acceso rápido extendidas del modo de Microsoft Edge Internet Explorer, como "Ctrl+S" para tener la funcionalidad "Guardar como".
+
+Si habilita esta directiva, la funcionalidad de teclas de acceso rápido extendidas se habilitará en el modo de Internet Explorer y funcionará del mismo modo que Internet Explorer.
+
+Si deshabilita o no configura esta directiva, las teclas de acceso rápido extendidas no funcionarán en el modo de Internet Explorer.
+
+Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Deshabilitar Internet Explorer 11 como un explorador independiente</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Esta directiva te permite restringir el inicio de Internet Explorer como un explorador independiente.
+
+Si habilitas esta directiva:
+- Impide que Internet Explorer 11 se inicie como un explorador independiente.
+- Restringe el uso de Internet Explorer al modo nativo 'Internet Explorer' de Microsoft Edge.
+- Redirige todos los intentos de inicio de Internet Explorer 11 al navegador del canal estable de Microsoft Edge.
+- Invalida cualquier otra directiva que redirija a Internet Explorer 11.
+
+Si deshabilitas o no configuras esta directiva, todos los sitios se abrirán con la configuración actual del explorador activo. Nota: para que esta directiva surta efecto, es necesario instalar el Canal estable de Microsoft Edge.</string>
+      <string id="NotifyDisableIEOptions_Never">Nunca</string>
+      <string id="NotifyDisableIEOptions_Always">Siempre</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Una vez por usuario</string>
+      <string id="JScriptReplacement">Reemplace JScript cargando JScript9Legacy en lugar de JScript a través de MSHTML/WebOC.</string>
+      <string id="IE_ExplainJScriptReplacement">Esta configuración de Directiva especifica si se cargan JScript o JScript9Legacy para invocaciones basadas en MSHTML/WebOC.
+      
+Si habilita esta configuración de Directiva, JScript9Legacy se cargará en situaciones en las que se cree una instancia de JScript.
+
+Si deshabilita esta Directiva o no la configura, se utilizará JScript.</string>
       <string id="VerMgmtDisable">Desactivar el bloqueo de controles ActiveX obsoletos para Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Esta configuración de directiva determina si Internet Explorer bloquea determinados controles ActiveX obsoletos. Nunca se bloquean los controles ActiveX obsoletos en la zona de Intranet.
 
@@ -4827,6 +4854,9 @@ Para obtener más información, consulta "Bloqueo de controles ActiveX obsoletos
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Primera opción</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Segunda opción</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Tercera opción</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notificar que el explorador Internet Explorer 11 está deshabilitado</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

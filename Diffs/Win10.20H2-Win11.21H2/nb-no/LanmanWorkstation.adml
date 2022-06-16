@@ -16,17 +16,20 @@ Hvis du aktiverer denne policyinnstillingen og ikke angir minst én støttet chi
 Chiffreringssamlinger for SMB 3.11:
 
 AES_128_GCM
+
 AES_128_CCM
+AES_256_GCM
+AES_256_CCM
 
 Chiffreringssamlinger for SMB 3.0 og 3.02:
 
 AES_128_CCM
 
-Endre denne innstillingen:
+Slik endrer du denne innstillingen:
 
 Ordne de ønskede chiffreringssamlingene i redigeringsboksen med én chiffreringssamling per linje, i rekkefølgen fra mest til minst foretrukket, og med den mest foretrukkede chiffreringssamlingen øverst. Fjern alle chiffreringssamlinger du ikke vil bruke.
 
-Obs! Når du konfigurerer denne sikkerhetsinnstillingen, trer ikke endringer i kraft før du starter Windows på nytt.</string>
+Obs! Når du konfigurerer denne sikkerhetsinnstillingen, trer ikke endringene i kraft før du starter Windows på nytt.</string>
       <string id="Pol_EnableInsecureGuestLogons_Name">Aktiver usikker gjestepålogging</string>
       <string id="Pol_EnableInsecureGuestLogons_Help">Denne policyinnstillingen bestemmer om SMB-klienten tillater pålogging av gjester som er usikre, til en SMB-server.
 

@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Powiadomienia</string>
+      <string id="WnsEndpoint">Włącza zasady grupy dla w pełni kwalifikowanej nazwy domeny dla usługi powiadomień WNS</string>
+      <string id="WnsEndpointExplain">Te zasady ustawia specjalną w pełni kwalifikowaną nazwę domeny dla usługi powiadomień WNS na potrzeby określonych środowisk.</string>
       <string id="NoTileNotification">Wyłącz powiadomienia na kafelkach</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Liczba minut po północy:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>FQDN dla WNS</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

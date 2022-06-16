@@ -250,6 +250,17 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, worden IDN's geco
 Als u deze beleidsinstelling inschakelt, worden IDN's geconverteerd naar de Nameprep-vorm.
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, worden IDN's niet geconverteerd naar de Nameprep-vorm.</string>
+      <string id="DNS_Doh">Configureer DNS via HTTPS (DoH) naamomzetting</string>
+      <string id="DNS_Doh_Disabled">DoH verbieden</string>
+      <string id="DNS_Doh_Auto">DoH toestaan</string>
+      <string id="DNS_Doh_Force">DoH vereisen</string>
+      <string id="DNS_Doh_Help">Hiermee geeft u op of de DNS-clientnaam omzetting moet uitvoeren via DNS via HTTPS (DoH). 
+ # B1 de DNS-client zal standaard een klassieke DNS-naamomzetting uitvoeren (via UDP of TCP). Met deze instelling kan de DNS-client het DoH-protocol gebruiken om domeinnamen om te zetten. 
+ # B3 als u deze beleidsinstelling wilt gebruiken, klikt u op inschakelen en selecteert u een van de volgende opties in de vervolgkeuzelijst: 
+ # B5 DoH: geen DoH-naamomzetting. 
+ # B7 allow DoH: Voer DoH query's uit als de geconfigureerde DNS-servers dit ondersteunen. Als ze dit niet ondersteunen, kun je de klassieke naamomzetting proberen. 
+ # B9 vereisen DoH: alleen DoH naamomzetting toestaan. Als er geen met DoH geschikte DNS-servers zijn geconfigureerd, mislukt de naamomzetting. 
+ # B11 als u deze beleidsinstelling uitschakelt of niet configureert, zullen computers de lokaal geconfigureerde instellingen gebruiken.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +297,9 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, worden IDN's niet
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Beveiligingsniveau bijwerken:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Opties voor DoH configureren:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

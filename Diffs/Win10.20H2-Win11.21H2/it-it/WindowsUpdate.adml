@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Almeno Windows XP Professional Service Pack 1 o Windows 2000 Service Pack 3, escluso Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Almeno i sistemi operativi Windows Server 2003 o Windows XP Professional con SP1, escluso Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Almeno Windows XP Professional Service Pack 1 o almeno da Windows 2000 Service Pack 3 a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Almeno da Windows Vista a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Almeno Windows XP Professional Service Pack 1 o Almeno Windows 2000 Service Pack 3 fino a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente. Non supportato in Windows 10 e versioni successive.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Almeno Da Windows Vista a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente. Non supportato in Windows 10 e versioni successive.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 o almeno Windows 2000 Service Pack 3
 L'opzione 7 è supportata solo su server con almeno Windows Server 2016 Edition</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">da Windows Server 2016 a Windows Server 2022 o Windows 10</string>
       <string id="AUDontShowUasHelp">Questa impostazione dei criteri consente di gestire la visualizzazione dell'opzione Installa aggiornamenti e spegni nella finestra di dialogo Fine della sessione di lavoro.
 
 Se si abilita questa impostazione dei criteri, l'opzione Installa aggiornamenti e spegni non verrà visualizzata nella finestra di dialogo Fine della sessione di lavoro, anche se sono disponibili aggiornamenti per l'installazione quando l'utente fa clic sul pulsante Start e quindi sceglie Chiudi sessione.
@@ -132,19 +133,19 @@ Se lo stato di questa impostazione dei criteri è impostato su Disabilitato, sar
       <string id="AutoUpdateSchTimeAuto">Automatico</string>
       <string id="CorpWuURL">Specifica il percorso del servizio di aggiornamento Microsoft nella rete Intranet</string>
       <string id="CorpWuURL_Help">
-        Specifica un server Intranet che ospita gli aggiornamenti provenienti da Microsoft Update. Potrai quindi usare questo servizio per aggiornare automaticamente i computer presenti nella rete.
+        Indica un server Intranet che ospita gli aggiornamenti da Microsoft Update. Potrai quindi usare questo servizio di aggiornamento per aggiornare automaticamente i computer presenti nella rete.
 
-        Questa impostazione consente di specificare un server della rete da usare come servizio di aggiornamento interno. Il client Aggiornamenti automatici eseguirà una ricerca di aggiornamenti applicabili ai computer presenti sulla rete in questo servizio.
+        Questa impostazione consente di specificare un server della rete da usare come servizio di aggiornamento interno. Il client per gli Aggiornamenti automatici eseguirà una ricerca di aggiornamenti applicabili ai computer della rete in questo servizio.
 
-        Per usare questa impostazione, devi impostare due valori relativi al nome server, ovvero il server da cui il client Aggiornamenti automatici scarica gli aggiornamenti e il server in cui le workstation aggiornate caricano le statistiche. Puoi impostare lo stesso valore per entrambi i server. Può essere specificato un valore per il nome di un server facoltativo per configurare l'agente di Windows Update in modo da scaricare gli aggiornamenti da un server di download alternativo anziché dal servizio di aggiornamento nella rete Intranet.
+        Per usare questa impostazione, devi impostare due valori relativi al nome server, ossia il server da cui il client per gli Aggiornamenti automatici rileva e scarica gli aggiornamenti e il server in cui le postazioni di lavoro aggiornate caricano le statistiche. Puoi impostare lo stesso valore per entrambi i server. È possibile specificare un valore per il nome di un server facoltativo per configurare l'agente di Windows Update in modo da scaricare gli aggiornamenti da un server di download alternativo anziché dal servizio di aggiornamento nella rete Intranet.
 
-        Se lo stato è impostato su Abilitato, per eseguire la ricerca e il download degli aggiornamenti il client Aggiornamenti automatici si connetterà al servizio di aggiornamento Microsoft nella rete Intranet (o al server di download alternativo) anziché a Windows Update. Se abiliti questa impostazione, gli utenti finali dell'organizzazione non dovranno passare attraverso un firewall per ottenere gli aggiornamenti e potrai inoltre testare gli aggiornamenti prima di distribuirli.
+        Se lo stato è impostato su Abilitato, per eseguire la ricerca e il download degli aggiornamenti il client per gli Aggiornamenti automatici si connetterà al servizio di aggiornamento Microsoft nella rete Intranet specificato (o al server di download alternativo) anziché a Windows Update. Se abiliti questa impostazione, gli utenti finali dell'organizzazione non dovranno passare attraverso un firewall per ottenere gli aggiornamenti e potrai inoltre testare gli aggiornamenti prima di distribuirli.
 
-        Se lo stato è impostato su Disabilitato o Non configurato e se Aggiornamenti automatici non è disabilitato in base a un criterio specifico o a preferenze dell'utente, il client Aggiornamenti automatici si connetterà al sito Windows Update su Internet.
+        Se lo stato è impostato su Disabilitato o Non configurato e se la funzionalità Aggiornamenti automatici non è disabilitata in base a un criterio specifico o alle preferenze dell'utente, il client per gli Aggiornamenti automatici si connetterà direttamente al sito Windows Update su Internet.
 
-        Il server di download alternativo configura l'agente di Windows Update in modo da scaricare i file da un server di download anziché dal servizio di aggiornamento nella rete Intranet.
+        Il server di download alternativo configura l'agente di Windows Update per scaricare i file da un server di download alternativo anziché dal servizio di aggiornamento nella rete Intranet.
 
-        L'opzione per scaricare i file con URL mancanti consente di scaricare il contenuto dal server di download alternativo quando non sono disponibili URL di download per file nei metadati di aggiornamento. È consigliabile utilizzare questa opzione solo quando il servizio di aggiornamento nella rete Intranet non fornisce URL di download nei metadati di aggiornamento per file che sono presenti nel server di download alternativo.
+        L'opzione per scaricare i file con URL mancanti consente di scaricare il contenuto dal server di download alternativo quando non sono disponibili URL di download per file nei metadati di aggiornamento. È consigliabile utilizzare questa opzione solo quando il servizio di aggiornamento nella rete Intranet non fornisce URL di download nei metadati di aggiornamento per i file presenti nel server di download alternativo.
 
         Nota: se il criterio "Configura Aggiornamenti automatici" è disabilitato, questa impostazione non ha alcun effetto.
 
@@ -152,17 +153,25 @@ Se lo stato di questa impostazione dei criteri è impostato su Disabilitato, sar
 
         Nota: l'opzione "Scarica file senza URL..." viene utilizzata solo se è impostato il "server di download alternativo".
 
-        Nota: questo criterio non è supportato in Windows RT. L'impostazione di questo criterio non ha effetto sui PC in cui è installato Windows RT.
+        Nota: questo criterio non è supportato in Windows RT. L'impostazione di questo criterio non ha effetto sui PC che eseguono Windows RT.
 
-        Nota sui proxy: per garantire il massimo livello di sicurezza, Microsoft consiglia di proteggere WSUS con il protocollo TLS/SSL, in modo da usare i server Intranet basati su HTTPS per proteggere i sistemi. Se è necessario un proxy, è consigliabile configurare un proxy di sistema..
+        Per garantire il massimo livello di sicurezza, Microsoft consiglia di proteggere WSUS con il protocollo TLS/SSL, in modo da usare i server Intranet basati su HTTPS per proteggere i sistemi. Se è necessario un proxy, è consigliabile configurare un proxy di sistema. Per garantire i livelli di sicurezza più elevati, è possibile usare inoltre l’associazione del certificato TLS WSUS su tutti i dispositivi.
 
-        La selezione di un comportamento proxy non avrà alcun effetto sui client che usano server Intranet basati su HTTPS per rilevare gli aggiornamenti. 
+        Per mantenere i client internamente protetti, non consentiamo più ai server Intranet di utilizzare per impostazione predefinita il proxy utente per rilevare gli aggiornamenti. Se è necessario sfruttare il proxy utente per rilevare gli aggiornamenti quando si utilizza un server Intranet nonostante le vulnerabilità che presenta, devi configurare il comportamento "Consenti l’utilizzo del proxy utente come fallback se il rilevamento tramite proxy di sistema non riesce".
 
-        Per mantenere i client intrinsecamente sicuri, non consentiamo più ai server Intranet basati su HTTP di utilizzare per impostazione predefinita il proxy utente per rilevare gli aggiornamenti. Se è necessario sfruttare il proxy utente per rilevare gli aggiornamenti quando si utilizza un server Intranet basato su HTTP nonostante le vulnerabilità che presenta, è necessario configurare il comportamento "Consenti utilizzo del proxy utente come fallback se il rilevamento tramite proxy di sistema non riesce".
-
-        Quando si utilizzano i server intranet basati su HTTP senza un proxy di sistema configurato, se non è configurato il criterio per l'utilizzo di un comportamento proxy alternativo, il rilevamento degli aggiornamenti avrà esito negativo.</string>
+        Il rilevamento degli aggiornamenti nei server intranet avrà esisto negativo quando è necessario un proxy utente come fallback e il comportamento proxy alternativo non è configurato.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Utilizza solo proxy di sistema per il rilevamento degli aggiornamenti (impostazione predefinita)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Consenti l’utilizzo del proxy utente come fallback se il rilevamento tramite proxy di sistema non è possibile</string>
+      <string id="UpdateClassPolicySource_Title">Specificare il servizio di origine per le classi specifiche di aggiornamenti di Windows</string>
+      <string id="UpdateClassPolicySource_Help">Se questo criterio è attivato, i dispositivi riceveranno gli aggiornamenti di Windows per le classi elencate dall'origine di aggiornamento specificata: Windows Update o Windows Server Update Service. 
+
+Nota: per ricevere gli aggiornamenti dal servizio Windows Server Update, è necessario che sia stato configurato correttamente un percorso del servizio di aggiornamento Microsoft nella rete Intranet tramite il criterio "Specifica percorso del servizio di aggiornamento Microsoft nella rete Intranet".
+
+Se questo criterio non è configurato o è disabilitato, il dispositivo continuerà a rilevare gli aggiornamenti per le altre configurazioni di criteri. 
+
+Nota: se si utilizza "non consentire ai criteri di differimento di eseguire scansioni sulle analisi su Windows Update", per garantire l'analisi solo dei dispositivi sul server specificato, è consigliabile configurare questo criterio o in aggiunta.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Specifica la frequenza di rilevamento di eventuali aggiornamenti disponibili. L'intervallo esatto è determinato dalla somma del valore specifico e una variante casuale di 0-4 ore.
 
         Se lo stato è impostato su Abilitato, Windows controllerà la disponibilità di aggiornamenti in base all'intervallo specificato.
@@ -306,6 +315,12 @@ Nota: questo criterio si applica solo quando il servizio di aggiornamento Micros
 Nota: questo criterio non è supportato in Windows RT. L'impostazione di questo criterio non ha effetto sui PC in cui è installato Windows RT.</string>
       <string id="TargetGroup_Title">Abilita appartenenza gruppo destinazione</string>
       <string id="WindowsUpdateCat">Windows Update</string>
+      <!--Category sub-folders-->
+      <string id="WindowsUpdateOffering">Gestisci gli aggiornamenti offerti da Windows Update</string>
+      <string id="WSUSOffering">Gestisci gli aggiornamenti offerti da Windows Server Update Service</string>
+      <string id="WindowsUpdateExperience">Gestisci l'esperienza dell'utente finale</string>
+      <string id="PreSV">Criteri legacy</string>
+
       <string id="TrustedPublisher_Title">Consenti aggiornamenti firmati da un percorso del servizio di aggiornamento Microsoft nella rete Intranet  </string>
       <string id="TrustedPublisher_Help">Questa impostazione dei criteri consente di specificare se Aggiornamenti automatici deve accettare aggiornamenti firmati da entità diverse da Microsoft se provenienti da un percorso del servizio di aggiornamento Microsoft nella rete Intranet.
 
@@ -321,48 +336,30 @@ Nota: questo criterio non è supportato in Windows RT. L'impostazione di questo 
 Abilitando questo criterio, si disabilita tale funzionalità, pertanto la connessione a servizi pubblici come Windows Store potrebbe smettere di funzionare.
 
 Nota: questo criterio si applica solo quando il computer è configurato per la connessione a un servizio di aggiornamento Intranet mediante il criterio "Specifica il percorso del servizio di aggiornamento Microsoft nella rete Intranet".</string>
-      <string id="DeferUpdateCat">Windows Update per le aziende</string>
       <string id="ManagePreviewBuilds_Title">Gestisci versioni di anteprima</string>
-      <string id="ManagePreviewBuilds_Help">La selezione di "Disabilita versioni di anteprima" impedisce l'installazione delle versioni di anteprima sul dispositivo. Ciò impedirà agli utenti di scegliere il Programma Windows Insider selezionando Impostazioni -&gt; Aggiornamento e sicurezza.
+      <string id="ManagePreviewBuilds_Help">Abilita questo criterio per gestire quali aggiornamenti riceverai prima del rilascio globale dell’aggiornamento.
 
-La selezione di "Disabilita versioni di anteprima una volta pubblica la prossima versione" impedisce l'installazione delle versioni di anteprima quando la successiva versione di Windows è pubblica. Questa opzione è utile quando il dispositivo è configurato per installare l'anteprima e vuoi disattivare il dispositivo per il flighting. Questa opzione fornirà le versioni di anteprima quando i dispositivi non raggiungono la successiva versione pubblica.
+Canale Dev
+Ideale per gli utenti con elevata competenza tecnica. I partecipanti al Canale Dev riceveranno le build dal ramo di sviluppo attivo che è il primo ramo nel ciclo di sviluppo. Queste build non corrispondono a una versione di Windows 10 specifica.
 
-La selezione di "Abilita versioni di anteprima" consente l'installazione delle versioni di anteprima sul dispositivo. Gli utenti possono scaricare e installare le versioni di anteprima di Windows sui propri dispositivi scegliendo Impostazioni -&gt; Aggiornamento e sicurezza &gt; Programma Windows Insider. Gli amministratori possono anche utilizzare altri criteri per gestire le impostazioni di flighting per conto degli utenti se il valore è impostato.</string>
-      <string id="DisablePreviewBuilds">Disabilita versioni di anteprima</string>
-      <string id="DisablePreviewBuildsAndOptOut">Disabilita versioni di anteprima una volta pubblica la prossima versione</string>
-      <string id="EnablePreviewBuilds">Abilita versioni di anteprima</string>
-      <string id="PreviewBuildFastFeatureUpdates">Versione di anteprima - Rapido</string>
-      <string id="PreviewBuildSlowFeatureUpdates">Versione di anteprima - Lento</string>
-      <string id="ReleasePreviewBranchFeatureUpdates">Versione di anteprima</string>
-      <string id="SemiAnnualChannelFeatureUpdates">Canale semestrale</string>
-      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Canale semestrale per 1809 e versioni precedenti (deprecato)</string>
-      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Canale semestrale (destinazione) per 1809 e versioni precedenti (deprecato)</string>
+Canale beta
+Ideale per gli utenti interessati a scoprire le funzionalità di Windows 10 in arrivo. Il feedback di questi utenti è particolarmente importante, in quanto consente ai nostri tecnici di risolvere i problemi essenziali prima del rilascio della versione principale.
+
+Canale Release Preview (impostazione predefinita)
+I partecipanti al Canale Release Preview avranno accesso alla versione di Windows 10 in arrivo prima del suo rilascio globale. Queste build sono supportate da Microsoft. Il Canale Release Preview è quello che consigliamo alle società per vedere in anteprima e convalidare le versioni in arrivo di Windows 10 prima della distribuzione generale all'interno dell'organizzazione.
+
+Nota: la registrazione alla versione di anteprima richiede un'impostazione del livello di telemetria pari 2 o superiore e il dominio deve essere registrato su insider.windows.com. Per ulteriori informazioni sulle versioni di anteprima, vedere: https://aka.ms/wipforbiz
+
+Se si disabilita o non si configura questo criterio, Windows Update non offrirà alcun aggiornamento in versione preliminare e sarà possibile ricevere questi contenuti solo al momento del rilascio globale. Disattivando questo criterio, i dispositivi che attualmente hanno una build in versione preliminare verranno esclusi dall’aggiornamento delle funzionalità e riceveranno l’aggiornamento al momento del rilascio.</string>
+      <string id="DevChannel">Canale Dev</string>
+      <string id="BetaChannel">Canale beta</string>
+      <string id="ReleasePreviewChannel">Canale Release Preview</string>
       <string id="DeferFeatureUpdates_Title">Seleziona il momento per la ricezione delle versioni di anteprima e degli aggiornamenti delle funzionalità</string>
-      <string id="DeferFeatureUpdates_Help">Abilita questo criterio per specificare il livello di versione di anteprima o aggiornamento delle funzionalità da ricevere, nonché il momento della ricezione.
+      <string id="DeferFeatureUpdates_Help">Abilita questo criterio per specificare quando ricevere gli aggiornamenti delle funzionalità.
 
-* Versione di anteprima - Veloce: i dispositivi impostati su questo livello saranno i primi a ricevere le nuove versioni di Windows con funzionalità non ancora disponibili per il pubblico. Seleziona Veloce per partecipare all'identificazione e segnalazione dei problemi a Microsoft e fornire suggerimenti sulle nuove funzionalità.
-* Versione di anteprima - Lenta: i dispositivi impostati su questo livello ricevono le nuove versioni di Windows prima che siano disponibili per il pubblico, ma con una cadenza più lenta rispetto ai dispositivi impostati su Veloce e con le modifiche e le correzioni identificate nelle versioni precedenti.
-* Versione di anteprima: ricevono le versioni di Windows appena prima che Microsoft le rilasci per il pubblico.
-* Canale semestrale: le funzionalità vengono ricevute quando rilasciate per il pubblico.
+Rinvia aggiornamenti | Ciò consente ai dispositivi di rimandare il prossimo aggiornamento delle funzionalità disponibile per il tuo canale per un massimo di 14 giorni per tutti i canali in versione preliminare e fino a 365 giorni per il canale semestrale. In alternativa, se il dispositivo è in aggiornamento dal canale semestrale, è possibile specificare una versione in cui spostare o far restare il dispositivo finché il criterio non viene aggiornato o il dispositivo non raggiunge la fine del servizio. Nota: se si impostano entrambi i criteri, la versione specificata avrà la priorità e i rinvii non saranno effettivi. Per informazioni sulla versione del sistema operativo, vedere la pagina Informazioni sulle versioni di Windows.
 
-I seguenti livelli di idoneità Windows sono deprecati e sono applicabili solo alla versione 1809 e precedenti:
-* Canale semestrale (destinazione) per la versione 1809 e precedenti: gli aggiornamenti delle funzionalità sono stati rilasciati.
-* Canale semestrale per la versione 1809 e precedenti: gli aggiornamenti delle funzionalità sono stati dichiarati Canale semestrale, a indicare che la versione è pronta per l'ampia distribuzione.
-Rivedi la pagina delle informazioni sulla versione in http://aka.ms/ReleaseInformationPage per le date di rilascio del canale semestrale (destinazione) e del canale semestrale.
-
-Durante la selezione di una versione di anteprima:
-    - Puoi posticipare il ricevimento delle versioni di anteprima per un massimo di 14 giorni.
-    - Per evitare di ricevere le versioni di anteprima alla data pianificata, puoi metterle temporaneamente in pausa. La pausa rimarrà valida per 35 giorni dalla data di inizio specificata.
-    - Per ricominciare a ricevere gli aggiornamenti delle funzionalità messi in pausa, cancella il campo relativo alla data di inizio.
-
-L'iscrizione alle versioni di anteprima richiede l'impostazione del livello di telemetria su 2 o valore superiore e il tuo dominio deve essere registrato su insider.windows.com. Per altre informazioni sulle versioni di anteprima, vedi: https://aka.ms/wipforbiz
-
-Durante la selezione di Canale semestrale:
-    - Puoi posticipare il ricevimento degli aggiornamenti delle funzionalità per un massimo di 365 giorni.
-    - Per evitare di ricevere gli aggiornamenti delle funzionalità alla data prevista puoi metterli temporaneamente in pausa. La pausa rimarrà valida per 35 giorni dalla data di inizio specificata.
-    - Per ricominciare a ricevere gli aggiornamenti delle funzionalità messi in pausa, cancella il campo relativo alla data di inizio.
-
-Se disabiliti o non configuri questi criteri, Windows Update non modificherà il suo comportamento.</string>
+Sospendi aggiornamenti | Per evitare che gli aggiornamenti delle funzionalità vengano ricevuti all'orario pianificato, puoi sospendere temporaneamente gli aggiornamenti delle funzionalità. La sospensione si applicherà per 35 giorni dalla data di inizio specificata o finché il campo non verrà cancellato (gli aggiornamenti qualitativi saranno comunque disponibili).</string>
       <string id="DeferQualityUpdates_Title">Seleziona il momento per la ricezione degli aggiornamenti qualitativi</string>
       <string id="DeferQualityUpdates_Help">Abilita questo criterio per specificare quando ricevere gli aggiornamenti qualitativi.
 
@@ -374,9 +371,19 @@ Per riprendere la ricezione degli aggiornamenti qualitativi sospesi, deseleziona
 
 Se disabiliti o non configuri questo criterio, il funzionamento di Windows Update non verrà modificato.</string>
       <string id="TargetReleaseVersion_Title">Seleziona la versione di aggiornamento delle funzionalità di destinazione</string>
-      <string id="TargetReleaseVersion_Help">Abilita questo criterio per specificare una versione di aggiornamento delle funzionalità da richiedere nelle analisi successive.
+      <string id="TargetReleaseVersion_Help">Immettere il prodotto e la versione elencati nella pagina Windows Update versione di destinazione:
 
-Immetti la versione come riportata nella pagina delle informazioni sul rilascio di Windows aka.ms/ReleaseInformationPage</string>
+aka.ms/WindowsTargetVersioninfo
+
+Il dispositivo richiederà il prodotto Windows Update e la versione nelle analisi successive.
+
+Se si immette un prodotto di destinazione e si fa clic su OK o Applica, si accettano le Condizioni di licenza software Microsoft disponibili in aka.ms/WindowsTargetVersioninfo. Se un'organizzazione sta concedendo in licenza il software, sono autorizzato a vincolare l'organizzazione.
+
+Se si immette un valore non valido, si rimarrà nella versione corrente fino a quando i valori non verranno corretti per un prodotto e una versione supportati.</string>
+      <string id="DisableWUfBSafeguards">Disabilita le misure di sicurezza per gli aggiornamenti delle funzionalità</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Abilita questa opzione quando gli aggiornamenti delle funzionalità devono essere distribuiti nei dispositivi senza bloccare alcun blocco di sicurezza. I blocchi di sicurezza sono problemi di compatibilità noti che impediscono la distribuzione dell'aggiornamento ai dispositivi interessati fino alla risoluzione del problema. L'abilitazione di questo criterio può consentire a un'organizzazione di distribuire l'aggiornamento delle funzionalità ai dispositivi per i test o di distribuire l'aggiornamento delle funzionalità senza bloccare i blocchi di sicurezza.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Non includere i driver con gli aggiornamenti di Windows</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Abilita questo criterio per non includere i driver con gli aggiornamenti qualitativi di Windows.
 
@@ -614,19 +621,21 @@ Importante: se scegli di non ricevere le notifiche di aggiornamento e definisci 
       <string id="ExcludingRebootWarnings">1 = Disabilita tutte le notifiche, esclusi gli avvisi di riavvio</string>
       <string id="IncludingRebootWarnings">2 = Disabilita tutte le notifiche, inclusi gli avvisi di riavvio</string>
       <string id="ComplianceDeadline_Title">Specifica le scadenze per gli aggiornamenti automatici e i riavvii</string>
-      <string id="ComplianceDeadline_Help">Questo criterio consente di specificare il numero di giorni a disposizione di un utente prima che gli aggiornamenti qualitativi e delle funzionalità vengano installati automaticamente nei suoi dispositivi e un periodo di tolleranza dopo il quale i riavvii necessari verranno eseguiti automaticamente.  Gli aggiornamenti e i riavvii verranno eseguiti indipendentemente dall'orario di attività e l'utente non potrà modificare la pianificazione.
+      <string id="ComplianceDeadline_Help">Questo criterio consente di specificare il numero di giorni prima che gli aggiornamenti di qualità e delle funzionalità vengano installati automaticamente sui dispositivi e un periodo di prova dopo il quale i riavvii richiesti si verificano automaticamente. 
 
-Le scadenze degli aggiornamenti delle funzionalità e degli aggiornamenti qualitativi possono arrivare a 30 giorni.  Il periodo di tolleranza per il riavvio automatico può essere compreso tra 0 e 7 giorni.
+Imposta le scadenze per gli aggiornamenti delle funzionalità e gli aggiornamenti di qualità per soddisfare gli obiettivi di conformità. Gli aggiornamenti verranno scaricati e installati non appena vengono offerti e verranno tentati riavvii automatici al di fuori dell'orario di attività. Una volta che la scadenza è passata, i riavvii verranno effettuati indipendentemente dalle ore di attività e gli utenti non potranno riprogrammarli. Se la scadenza è impostata su 0 giorni, l'aggiornamento verrà installato immediatamente al momento dell'offerta, ma potrebbe non terminare entro la giornata a causa della disponibilità del dispositivo e della connettività di rete. 
 
-È anche possibile disabilitare i riavvi automatici fino alla fine del periodo di tolleranza per il riavvio automatico.
+Imposta un periodo di prova per gli aggiornamenti delle funzionalità e gli aggiornamenti di qualità per garantire agli utenti un tempo minimo per gestire i riavvii una volta installati gli aggiornamenti. Gli utenti potranno pianificare i riavvii durante il periodo di prova e Windows può comunque riavviarsi automaticamente al di fuori dell'orario di attività se gli utenti scelgono di non pianificare i riavvii. Il periodo di prova potrebbe non avere effetto se gli utenti hanno già impostato un numero di giorni maggiore come periodo di prova per gestire il riavvio, in base alle configurazioni della scadenza.
 
-Se disabiliti o non configuri questo criterio, i dispositivi riceveranno gli aggiornamenti e verranno riavviati in base alla pianificazione predefinita.
+ È possibile impostare il dispositivo per ritardare il riavvio fino alla scadenza del periodo di prova e alla scadenza stessa.
 
-Questo criterio sostituirà i criteri seguenti:
-1.  Specifica la scadenza prima del riavvio automatico per l'installazione degli aggiornamenti
-2.  Specifica la transizione del riavvio in caso di Occupato e la pianificazione delle notifiche per gli aggiornamenti
-3.  Esegui sempre il riavvio automatico all'orario pianificato
-4.  Escludi riavvio automatico per installazioni pianificate di Aggiornamenti automatici con gli utenti non connessi
+ Se disabiliti o non configuri questo criterio, i dispositivi riceveranno gli aggiornamenti e si riavvieranno in base alla pianificazione predefinita.
+
+ Questo criterio sovrascriverà i seguenti criteri:
+1.  Specifica la scadenza prima del riavvio automatico per l'installazione dell'aggiornamento
+2.  Specifica la transizione di Riavvio in caso di occupato e la pianificazione delle notifiche per gli aggiornamenti
+3.  Riavvia sempre automaticamente all'ora pianificata
+4.  Configura Aggiornamenti automatici
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,20 +701,26 @@ Questo criterio sostituirà i criteri seguenti:
         </textBox>
         <text>(esempio: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Scarica file senza URL nei metadati se è impostato il server di download alternativo.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selezionare il comportamento del proxy per il client Windows Update per il rilevamento degli aggiornamenti con il servizio basato su TLS (HTTP):</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Non applicare l'associazione del certificato TLS per il client di Windows Update per il rilevamento degli aggiornamenti.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selezionare il comportamento del proxy per il client Windows Update per il rilevamento degli aggiornamenti:</dropdownList>
+      </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Specificare il servizio di origine per le classi seguenti di aggiornamenti di Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Aggiornamenti delle funzionalità</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Aggiornamenti qualitativi</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Aggiornamenti dei driver</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Altri aggiornamenti</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Verifica aggiornamenti a</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervalli di (ore):  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Attendi per il seguente intervallo prima</text>
-        <text>di richiedere un nuovo riavvio</text>
+        <text>Attendi il periodo seguente prima di richiedere di nuovo una pianificazione</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">pianificato (minuti):  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Attendi per il seguente intervallo prima</text>
-        <text>di eseguire un nuovo riavvio</text>
+        <text>Attendi il periodo di tempo seguente prima di procedere con una pianificazione</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">pianificato (minuti):  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -717,27 +732,23 @@ Questo criterio sostituirà i criteri seguenti:
           <label>Nome gruppo di destinazione del computer</label>
         </textBox>
       </presentation>
-      <presentation id="IdleShutdownTimerDuration_Title">
-        <text>Attendi il periodo di tempo seguente prima</text>
-        <text>di arrestare il servizio in caso di</text>
-        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">inattività (minuti):  </decimalTextBox>
-      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>Il timer di riavvio lascerà agli utenti</text>
-        <text>questo intervallo di tempo per salvare il</text>
+        <text>Il time di riavvio darà agli utenti questo tempo per salvare i loro</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">lavoro (minuti):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Per quale versione del prodotto Windows vuoi ricevere gli aggiornamenti delle funzionalità? Ad esempio, Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Versione di destinazione per gli aggiornamenti delle funzionalità</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Imposta il comportamento per ricevere versioni di anteprima:</dropdownList>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Seleziona il livello di disponibilità di Windows per gli aggiornamenti che vuoi ricevere:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Seleziona il livello di disponibilità di Windows per gli aggiornamenti che vuoi ricevere:</dropdownList>
-        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Dopo il rilascio di una versione di anteprima o aggiornamento delle funzionalità, rinvia la ricezione per il numero di giorni seguente:</decimalTextBox>
+       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Quanti giorni dopo il rilascio di un aggiornamento delle funzionalità vuoi posticipare l'aggiornamento prima che venga offerto al dispositivo?</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Sospendi l'avvio delle versioni di anteprima o degli aggiornamenti delle funzionalità:</label>
         </textBox>
@@ -797,12 +808,13 @@ Questo criterio sostituirà i criteri seguenti:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Specifica le opzioni di visualizzazione delle notifiche di aggiornamento:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Specifica il numero di giorni (fino a 30) a disposizione di un utente prima dell'esecuzione automatica degli aggiornamenti, indipendentemente dall'orario di attività, senza possibilità di modificare la pianificazione.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Aggiornamenti qualitativi (giorni):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Aggiornamenti delle funzionalità (giorni):</dropdownList>
+        <text>Aggiornamenti qualitativi</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Scadenza (giorni):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Periodo di prova (giorni):</dropdownList>
         <text></text>
-        <text>Specifica un periodo di tolleranza per il riavvio automatico (da 0 a 7 giorni), dal momento in cui è necessario riavviare il sistema.  I dispositivi verranno riavviati indipendentemente dall'orario di attività, senza possibilità di modificare la pianificazione.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Periodo di tolleranza (giorni)</dropdownList>
+        <text>Aggiornamenti delle funzionalità</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Scadenza (giorni):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Periodo di prova (giorni):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Non riavviare automaticamente fino alla fine del periodo di tolleranza</checkBox>
       </presentation>

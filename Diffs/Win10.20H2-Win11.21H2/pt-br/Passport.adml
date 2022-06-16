@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Usar o Windows Hello para Empresas</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Usar certificado para autenticação local</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Use a confiança na nuvem para autenticações no local</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">O Windows Hello para Empresas é um método alternativo para entrar no Windows usando sua conta do Active Directory ou do Azure Active Directory que pode substituir senhas, Cartões Inteligentes e Cartões Inteligentes Virtuais.
 
@@ -118,13 +120,22 @@ Se você desabilitar ou não definir esta configuração de política, o Windows
 OBSERVAÇÃO: esta política é aplicável somente a dispositivos registrados no Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Use essa configuração de política para configurar o Windows Hello para Empresas para registrar um certificado de acesso para autenticação local.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Use esta configuração de política para configurar o Windows Hello para empresas para registrar um certificado de entrada usado para a autenticação local.
 
-Se você habilitar essa configuração de política, o Windows Hello para Empresas registrará um certificado de acesso que é usado para autenticação local.
+Se você habilitar essa configuração de política, o Windows Hello para empresas registrará um certificado de entrada que é usado para autenticação local.
 
-Se você desabilitar ou não definir essa configuração de política, o Windows Hello para Empresas registrará uma chave que é usada para autenticação local.
+Se você desabilitar ou não definir essa configuração de política, o Windows Hello para empresas usará uma chave ou um tíquete Kerberos (dependendo das outras configurações de política) para a autenticação local.
 
-OBSERVAÇÃO: desabilitar ou não configurar esta política e habilitar a configuração de política "Usar o Windows Hello para Empresas" requer que o ambiente tenha um ou mais controladores de domínio do Windows Server 2016 para impedir a falha da autenticação do Windows Hello para Empresas.
+Observação: desabilitar ou não definir essa configuração de política e habilitar a configuração de política "usar o Windows Hello para empresas" requer que o ambiente tenha um ou mais controladores de domínio do Windows Server 2016 para impedir a falha da autenticação do Windows Hello para empresas.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Use esta configuração de política para configurar o Windows Hello para empresas para usar o Kerberos do Azure AD para autenticação local.
+
+Se você habilitar essa configuração de política, o Windows Hello para empresas usará um tíquete Kerberos recuperado da autenticação no Azure para a autenticação local.
+
+Se você desabilitar ou não definir essa configuração de política, o Windows Hello para empresas usará uma chave ou certificado (dependendo de outras configurações de política) para autenticação local. 
+ 
+Observação: um ambiente que habilita essa configuração de política e a configuração de política "usar o Windows Hello para empresas" requer um ou mais controladores de domínio do Windows Server 2016. Caso contrário, a autenticação do Windows Hello para empresas irá falhar.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configurar fatores de desbloqueio do dispositivo</string>

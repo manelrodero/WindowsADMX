@@ -246,13 +246,13 @@ Cuando esta directiva no está habilitada o configurada, Windows Search controla
 
 Cuando esta directiva no está habilitada o configurada, la configuración predeterminada se establecerá a .bmp;.emf;.gif;.jpg;.jpeg;.png;.wmf;.wrn;.txt;.err;.xml;.cpp;.c;.h;.cxx;.hxx;.idl;.cs;.vb;.idl;.xsd;.doc;.docx;.xls;.xlsx;.ppt;.pptx;.vsd;.xlsb;.xltx;.dot;.rtf</string>
       <string id="PreventUnwantedAddins">Impedir iFilters no deseados y controladores de protocolo</string>
-      <string id="PreventUnwantedAddins_Explain">La habilitación de esta directiva previene a Windows Search del uso de iFilters y controladores de protocolo a menos que estén especificados en la lista de admitidos. Sin embargo, esta directiva no impide que estos iFilters o controladores de protocolo se instalen ni que sean usados por otras aplicaciones o servicios. 
-Además, puede especificar una lista de complementos admitidos si proporciona la cadena classID o ProgId. Por ejemplo, si piensa implementar iFilter, asegúrese de que este iFilter se encuentra en la lista de admitidos, ya sea un GUID como {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (incluya las llaves) o un ProgID como VisFilter.CFilter.1.
+      <string id="PreventUnwantedAddins_Explain">La habilitación de esta directiva previene a Windows Search del uso de iFilters y controladores de protocolo a menos que estén especificados en la lista de permitidos. Sin embargo, esta directiva no impide que estos iFilters o controladores de protocolo se instalen ni que sean usados por otras aplicaciones o servicios. 
+Además, puede especificar una lista de complementos permitidos si proporciona la cadena classID o ProgId. Por ejemplo, si piensa implementar iFilter, asegúrese de que este iFilter se encuentra en la lista de permitidos, ya sea un GUID como {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (incluya las llaves) o un ProgID como VisFilter.CFilter.1.
 
 Si mantiene el entorno de escritorio bloqueado, esta configuración será redundante, ya que los usuarios que no son administradores no tienen permiso para instalar componentes nuevos. Si los usuarios tienen los permisos del administrador o pueden instalar software, esta directiva les impide usar específicamente componentes de búsqueda relacionados con Windows Search.
 
-Nota: Debido a la limitación en el editor de la directiva de grupo, debe agregar al menos una entrada en la lista de admitidos, incluso si desea habilitar esta directiva sin una lista de admitidos. Cree una entrada en la lista colocando un espacio en el campo valor y, a continuación, guárdela. Esto creará una entrada de marcador de posición que el programa ignorará.</string>
-      <string id="PreventUnwantedAddins_AllowList">Lista de admitidos</string>
+Nota: Debido a la limitación en el editor de la directiva de grupo, debe agregar al menos una entrada en la lista de permitidos, incluso si desea habilitar esta directiva sin una lista de permitidos. Cree una entrada en la lista colocando un espacio en el campo valor y, a continuación, guárdela. Esto creará una entrada de marcador de posición que el programa ignorará.</string>
+      <string id="PreventUnwantedAddins_AllowList">Lista de permitidos</string>
       <string id="ExcludedExtensionsMultiline">Impedir la indización de algunos tipos de archivo</string>
       <string id="ExcludedExtensionsMultiline_Explain">La habilitación de esta directiva permite editar la lista de tipos de archivos para excluir de la indización. El usuario final no puede modificar esta lista. Debe separar cada tipo de extensión con un punto y coma.
 
@@ -333,7 +333,7 @@ Si habilitas esta opción, las búsquedas y Cortana podrán acceder a la informa
         <decimalTextBox refId="LimitEnableThrottlingOnlineMailboxes" defaultValue="120">Número de artículos por minuto</decimalTextBox>
       </presentation>
       <presentation id="PreventUnwantedAddins">
-        <listBox refId="PreventUnwantedAddins_AllowList">Lista de admitidos</listBox>
+        <listBox refId="PreventUnwantedAddins_AllowList">Lista de permitidos</listBox>
       </presentation>
       <presentation id="PreventIndexingCertainPaths_1">
         <listBox refId="PreventIndexingCertainPaths">Impedir indización de algunas rutas</listBox>

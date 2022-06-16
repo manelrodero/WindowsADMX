@@ -99,6 +99,36 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a dolgozók sa
 
 Ha egy alkalmazás meg van nyitva, amikor a csoportházirend-objektumot az eszközre alkalmazzák, a dolgozóknak a házirend-módosítás életbe lépéséhez újra kell indítaniuk az alkalmazást vagy az eszközt.
       </string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">A Windows-alkalmazások képernyőképeket készíthetnek különböző ablakokról és megjelenítésekről</string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">Ez a házirend-beállítás azt határozza meg, hogy a Windows-alkalmazások készíthetnek-e képernyőképet különböző ablakokról vagy megjelenített tartalomról.
+
+Megadhat egy minden alkalmazásra vonatkozó alapértelmezett beállítást, illetve egy csomagcsalád nevének beírásával megadhat alkalmazásonkénti beállítást. Egy alkalmazáshoz tartozó csomagcsaládnevet a Get-AppPackage Windows PowerShell-parancsmaggal kérdezhet le. Az alkalmazásonkénti beállítás felülbírálja az alapértelmezett beállítást.
+
+Ha „A felhasználó döntheti el“ lehetőséget választja, a szervezet alkalmazottai a Gépház &gt; Adatvédelem párbeszédpanelen eldönthetik, hogy a Windows-alkalmazások készíthetnek-e az eszközön a képernyőképet különböző ablakokról vagy megjelenített tartalomról.
+
+Ha az „Engedélyezés kényszerítése“ lehetőséget választja, a Windows-alkalmazások készíthetnek képernyőképet különböző ablakokról vagy megjelenített tartalomról, és a szervezet alkalmazottai nem változtathatják meg ezt a beállítást.
+
+Ha a „Tiltás kényszerítése“ lehetőséget választja, a Windows-alkalmazások nem készíthetnek képernyőképet különböző ablakokról vagy megjelenített tartalomról, és a szervezet alkalmazottai nem változtathatják meg ezt a beállítást.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a szervezet alkalmazottai dönthetik el az eszközön a Gépház &gt; Adatvédelem párbeszédpanel használatával, hogy a Windows-alkalmazások készíthetnek-e képernyőképet különböző ablakokról vagy megjelenített tartalomról.
+
+Ha egy alkalmazás meg van nyitva, amikor alkalmazzák ezt a csoportházirend-objektumot egy eszközön, az alkalmazottaknak újra kell indítaniuk az alkalmazást vagy az eszközt ahhoz, hogy az alkalmazásra vonatkozóan érvénybe lépjenek a házirend-módosítások.
+      </string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">A Windows-alkalmazások kikapcsolhatják a képernyőképszegélyt</string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">Ez a házirend-beállítás azt határozza meg, hogy a Windows-alkalmazások ki tudják-e kapcsolni a képernyőkép szegélyét.
+
+Megadhatja, hogy az összes alkalmazás vagy egy alkalmazás alapértelmezett beállítása egy csomagcsalád-név megadásával történjen-e. Az AppPackage a Windows PowerShell-parancsmag használatával is megszerezheti egy-egy alkalmazáscsomag nevét. A per-app beállítás felülbírálja az alapértelmezett beállítást.
+
+Ha a "Felhasználói felügyelet" lehetőséget választja, a szervezet alkalmazottai eldönthetik, hogy a Windows-alkalmazások kikapcsolják-e a képernyőkép &gt; szegélyét az eszközön az adatvédelmi beállításokkal.
+
+Az „Engedélyezés kényszerítése“ lehetőséget választva a Windows-alkalmazások kikapcsolják a képernyőkép szegélyét, és a szervezet alkalmazottai nem változtathatják meg.
+
+Ha a "Megtagadás kényszerítése" lehetőséget választja, a Windows-alkalmazások nem tudják letiltani a képernyőfelvétel szegélyét, és a szervezet alkalmazottai nem változtathatják meg.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a szervezet alkalmazottai eldönthetik, hogy a Windows-alkalmazások kikapcsolják-e a &gt; képernyőkép szegélyét az eszközön az adatvédelmi beállításokkal.
+
+Ha egy alkalmazás akkor nyílik meg, ha egy eszközön alkalmazza ezt a csoportházirend-objektumot, az alkalmazottaknak újra kell indítaniuk az alkalmazást vagy eszközt ahhoz, hogy érvénybe lépjenek az alkalmazásra vonatkozó házirend-módosítások.
+      </string>
       <string id="LetAppsAccessLocation_Name">A Windows-alkalmazások hozzáférhetnek a tartózkodási helyhez</string>
       <string id="LetAppsAccessLocation_Explain">Ezzel a házirend-beállítással megadhatja, hogy a Windows-alkalmazások hozzáférhetnek-e a tartózkodási helyhez.
 
@@ -392,6 +422,24 @@ Ha egy alkalmazás meg van nyitva, amikor ezt a csoportházirend-objektumot az e
         <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">Az összes alkalmazásra vonatkozó alapértelmezett beállítás:</dropdownList>
+        <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
+        <text>Engedélyezés kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
+        <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
+        <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
+        <text>Engedélyezés kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
+        <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
         <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
@@ -519,9 +567,9 @@ Ha egy alkalmazás meg van nyitva, amikor ezt a csoportházirend-objektumot az e
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
         <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>Engedélyezés kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <text>Engedélyezés kényszerítése a következő alkalmazásoknál (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <text>Tiltás kényszerítése a következő alkalmazásoknál (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

@@ -278,9 +278,9 @@ Per impostazione predefinita, nelle SKU Windows Ultimate, Professional e Home il
 
         Se si disabilita o non si configura questa impostazione dei criteri, sarà consentita l'esecuzione di tutte le estensioni di stampanti installate.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Cambia formato di output predefinito MXDW (Microsoft XPS Document Writer) con il formato legacy Microsoft XPS (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">MXDW (Microsoft XPS Document Writer) genera file OpenXPS (*. oxps) per impostazione predefinita in Windows 10, Windows 10 e Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">MXDW (Microsoft XPS Document Writer) genera file OpenXPS (*.oxps) per impostazione predefinita in Windows 10, Windows 10 e Windows Server 2022.
 
-          Se abiliti questa impostazione dei criteri di gruppo, il formato di output predefinito MXDW è Microsoft XPS (*.xps) legacy.
+       Se abiliti questa impostazione dei criteri di gruppo, il formato di output predefinito MXDW è Microsoft XPS (*.xps) legacy.
 
           Se disabiliti o non configuri questa impostazione dei criteri, il formato di output predefinito di MXDW è OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Disattiva la gestione della stampante predefinita da parte di Windows</string>
@@ -291,6 +291,24 @@ Se si abilita questa impostazione, la stampante predefinita non verrà gestita d
 Se si disabilita questa impostazione, la stampante predefinita verrà gestita da Windows.
 
 Se non si configura questa impostazione, non verranno apportate modifiche alla gestione della stampante predefinita. </string>
+      <string id="EnableDeviceControl">Abilita restrizioni stampa controllo dispositivo</string>
+      <string id="EnableDeviceControl_Help">
+          Determina se le restrizioni sulla stampa per il controllo del dispositivo sono applicate su questo computer.
+
+          Per impostazione predefinita, non vengono applicate restrizioni di stampa in base al tipo di connessione o al produttore/modello della stampante.
+
+          Se si abilita questa impostazione, il computer limiterà la stampa alle connessioni della stampante alla rete aziendale o alle stampanti con connessione USB approvate.
+
+          Se si disabilita o non si configura questa impostazione, non verranno applicate restrizioni alla stampa in base al tipo di connessione o al produttore/modello della stampante.</string>
+        <string id="ApprovedUsbPrintDevices">Elenco di dispositivi di stampa connessi a USB approvati</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Questa impostazione è un componente di restrizioni di stampa controllo dispositivo. Per utilizzare questa impostazione, abilitare la stampa tramite controllo dispositivo abilitando l'impostazione "Abilita restrizioni stampa controllo dispositivo".
+
+Quando è abilitata la stampa controllo dispositivo, nel sistema viene utilizzato l'elenco di valori VID/PID specificato per determinare se la stampante connessa USB corrente è approvata per la stampa locale.
+
+Digitare tutte le combinazioni di VID/PID approvate (separate da virgole) corrispondenti ai modelli di stampanti USB approvati. Quando un utente tenta di stampare su una coda di stampa USB, l'VID/PID del dispositivo verrà confrontato nell'elenco approvato.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Se non si configura questa impostazione, non verranno apportate modifiche alla g
           <label>Percorso predefinito Active Directory</label>
         </textBox>
         <text>Esempio --&gt; LDAP://DC=Dominio1,DC=Società,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Specificare l'elenco di dispositivi di stampante connessa a USB approvati.</text>
+        <text>L'elenco è un elenco separato da virgole di valori VID/PID USB. Esempio: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

@@ -6,27 +6,24 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Toimituksen optimointi</string>
       <string id="DownloadMode">Lataustila</string>
-      <string id="DownloadMode_Help">Määrittää lataustavan, jota Toimituksen optimointi voi käyttää Windows Update -päivitysten, sovellusten ja sovelluspäivitysten latauksissa.
+      <string id="DownloadMode_Help">Määrittää lataus tavan, jota toimituksen optimointi voi käyttää Windows-päivitysten, sovellusten ja sovellus päivitysten lataamiseen.
 
-Tuettuja arvoja ovat seuraavat:
+Seuraavassa luettelossa näkyvät Tuetut arvot:
 
 0 = vain HTTP, ei vertaistoimintoja.
 
-1 = HTTP yhdistettynä vertaistoimintoihin samassa NAT-toiminnossa.
+1 = HTTP-yhdistettynä ja vertaistoimintoja saman NAT-kohteen takana.
 
-2 = HTTP yhdistettynä vertaistoimintoihin yksityisessä ryhmässä. Vertaistoimintoja käytetään laitteissa, jotka ovat oletusarvon mukaan samassa Active Directory -palvelimessa (jos sellainen on) tai samalla toimialueella. Kun tämä vaihtoehto on valittuna, vertaistoimintoja käytetään NAT-toimintojen välisesti. Jos haluat luoda mukautetun ryhmän, käytä ryhmätunnusta yhdessä tilan 2 kanssa.
+2 = HTTP-yhdistettynä ja vertaistoimintoja yksityisessä ryhmässä. Vertaistoimintoja tapahtuu saman Active Directory-sivuston laitteissa (jos olemassa) tai sama toimi alue oletusarvoisesti. Kun tämä vaihto ehto on valittuna, vertaistoimintoja toimii välisesti. Jos haluat luoda mukautetun ryhmän käyttämään ryhmä tunnusta, jossa on tila 2.
 
-3 = HTTP yhdistettynä Internet-vertaistoimintoihin.
+3 = HTTP-yhdistettynä Internet-Vertaistoimintoja.
 
-99 = yksinkertainen lataustapa ilman vertaistoimintoja. Toimituksen optimointi lataa tiedostot käyttämällä vain HTTP-protokollaa eikä yritä muodostaa yhteyttä Toimituksen optimoinnin pilvipalveluihin.
-
-100 = ohitustila. Toimituksen optimointia ei käytetä, vaan sen sijaan käytetään BITS-siirtoa.</string>
+99 = yksinkertainen lataus tila ilman vertaistoimintoja. Toimituksen optimointi lataukset käyttävät vain HTTP-protokollaa, eikä se yritä muodostaa yhteyttä toimituksen optimoinnin pilvi palveluihin.</string>
       <string id="DownloadMode_CdnOnly">Vain HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Ryhmä (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Yksinkertainen (99)</string>
-      <string id="DownloadMode_Bypass">Ohitus (100)</string>
       <string id="GroupId">Ryhmätunnus</string>
       <string id="GroupId_Help">Ryhmän tunnus on määritettävä GUID-tunnukseksi. Tämä käytäntö määrittää satunnaisen ryhmätunnuksen, johon laite kuuluu.
 
@@ -169,14 +166,19 @@ Huomautus: Jos määrität käytäntöasetuksen viivästyttämään taustalataus
 
 Huomautus: Jos määrität käytäntöasetuksen viivästyttämään edustalatausta HTTP-lähteestä, tätä asetusta sovelletaan ensisijaisesti (jotta lataukset vertaislähteistä sallitaan ensin).</string>
       <string id="RestrictPeerSelectionBy">Valitse menetelmä, jolla rajoitetaan vertaisjärjestelmän valintaa</string>
-      <string id="RestrictPeerSelectionBy_Help">Määritä tämä käytäntö, jotta voit rajoittaa vertaisjärjestelmän valintaa valittua vaihtoehtoa käyttäen.
+      <string id="RestrictPeerSelectionBy_Help">Määritä tämä käytäntö, jotta vertaisjärjestelmän valintaa voi rajoittaa valitun asetuksen kautta.
 
-Käytettävissä olevat asetukset ovat seuraavat:
-1 = Aliverkon peite (Lisää vaihtoehtoja lisätään tulevissa versioissa.)
+Käytettävissä olevat vaihto ehdot ovat:
+0 = NAT.
+1 = aliverkon peite.
+2 = paikallinen etsintä (DNS-SD).
 
-Asetus 1 (Aliverkon peite) koskee sekä lataustilan lähiverkkoa (1) että ryhmää (2).</string>
-      <string id="RestrictPeerSelectionBy_None">Ei mitään</string>
+Oletus arvo on muuttunut 0 (ei rajoitusta) 1 (rajoita aliverkkoa).
+
+Nämä asetukset koskevat sekä lataus tilaa LAN (1) ja ryhmä (2).</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Aliverkko</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Paikallinen etsintä</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Määritä työaika taustalatauksiin käytettävän kaistanleveyden rajoittamista varten</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Määrittää taustalatauksen enimmäiskaistanleveyden, jota Toimituksen optimointi käyttää kaikkiin samanaikaisiin lataustoimintoihin työaikana sekä työajan ulkopuolella. Tämä määritetään prosenttiosuutena latausta varten käytettävissä olevasta kaistanleveydestä.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Määritä työaika edustalatauksiin käytettävän kaistanleveyden rajoittamista varten</string>
@@ -303,7 +305,7 @@ Asetus 1 (Aliverkon peite) koskee sekä lataustilan lähiverkkoa (1) että ryhm�
         <text>Oletusarvo on 0 (ei viivettä)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Rajoita vertaisjärjestelmän valintaa:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Rajoita vertaisjärjestelmän valintaa:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

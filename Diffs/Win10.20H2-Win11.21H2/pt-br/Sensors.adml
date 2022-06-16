@@ -36,6 +36,34 @@
       
       </string>
       <string id="LocationAndSensors">Local e sensores</string>
+      <string id="HumanPresence">Presença Humana</string>
+      <string id="ForceInstantWake_DisplayName">Forçar o Despertar Instantâneo</string>
+      <string id="ForceInstantWake_ExplainText">Determina se a opção Despertar ao Entrar forçado está ligada/desligada pela política MDM. O usuário não poderá alterar essa configuração e o alternador na interface do usuário será acinzentado.</string>
+      <string id="ForceInstantWake_0">Padrão para a escolha do usuário</string>
+      <string id="ForceInstantWake_1">Forçado Ligado</string>
+      <string id="ForceInstantWake_2">Forçado Desligado</string>
+      <string id="ForceInstantLock_DisplayName">Forçar o bloqueio instantâneo</string>
+      <string id="ForceInstantLock_ExplainText">Determina se a opção Bloquear ao Sair será forçada a permanecer ligada/desligada pela política MDM. O usuário não poderá alterar essa configuração e o alternador na interface do usuário será ficará esmaecido.</string>
+      <string id="ForceInstantLock_0">Padrão para a escolha do usuário</string>
+      <string id="ForceInstantLock_1">Forçado Ligado</string>
+      <string id="ForceInstantLock_2">Forçado Desligado</string>
+      <string id="ForceLockTimeout_DisplayName">Tempo limite do Bloqueio</string>
+      <string id="ForceLockTimeout_ExplainText">Determina o tempo limite para Bloquear ao Sair forçado pela política MDM. O usuário não poderá alterar essa configuração e o alternador na interface do usuário ficará esmaecido.</string>
+      <string id="ForceLockTimeout_0">Padrão para a escolha do usuário</string>
+      <string id="ForceLockTimeout_1">10 segundos</string>
+      <string id="ForceLockTimeout_2">30 segundos</string>
+      <string id="ForceLockTimeout_3">2 minutos</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Escolha um dos seguintes limites de tempo</dropdownList>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>

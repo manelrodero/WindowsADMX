@@ -59,16 +59,18 @@ Versão de hash com suporte:
 
 - Para dar suporte a informações de conteúdo V1 e V2, configure "Versão de hash com suporte" com o valor 3.</string>
       <string id="Pol_CipherSuiteOrder_Name">Ordem do pacote de codificação</string>
-      <string id="Pol_CipherSuiteOrder_Help">Essa configuração de política determina o pacote de criptografia usado pelo servidor SMB.
+      <string id="Pol_CipherSuiteOrder_Help">Essa configuração de política determina os pacotes de criptografia usados pelo servidor SMB.
 
-Se você habilitar essa configuração de política, os pacotes de codificação serão priorizados na ordem especificada.
+Se você habilitar essa configuração de política, os pacotes de criptografia serão priorizados na ordem especificada.
 
-Se você habilitar essa configuração de política e não especificar pelo menos um pacote de criptografia com suporte, ou se você desabilitar ou não definir essa configuração de política, a ordem do pacote de codificação padrão será usada.
+Se você habilitar essa configuração de política e não especificar pelo menos um pacote de criptografia com suporte, ou se você desabilitar ou não definir essa configuração de política, a ordem do pacote de criptografia padrão será usada.
 
-Pacote de criptografia SMB 3.11:
+Pacotes de criptografia SMB 3.11:
 
 AES_128_GCM
 AES_128_CCM
+AES_256_GCM
+AES_256_CCM
 
 Pacotes de criptografia SMB 3.0 e 3.02:
 
@@ -76,9 +78,9 @@ AES_128_CCM
 
 Como modificar essa configuração:
 
-Organize os pacotes de codificação desejados na caixa de edição, um pacote de codificação por linha, do mais ao menos preferencial, com o pacote de codificação preferencial na parte superior. Remova qualquer pacote de criptografia que você não deseja usar.
+Organize os pacotes de criptografia desejados na caixa de edição, um pacote de criptografia por linha, do mais ao menos preferencial, com o pacote de codificação preferencial na parte superior. Remova qualquer pacote de criptografia que você não deseja usar.
 
-Observação: ao definir esta configuração de segurança, as alterações só terão efeito depois que você reiniciar o Windows.</string>
+Observação: Ao definir esta configuração de segurança, as alterações só terão efeito depois que você reiniciar o Windows.</string>
       <string id="HonorCipherSuiteOrder_Name">Obedecer ordem do pacote de codificação</string>
       <string id="HonorCipherSuiteOrder_Help">Essa configuração de política determina como o servidor SMB seleciona um pacote de codificação ao negociar uma nova conexão com um cliente SMB.
 

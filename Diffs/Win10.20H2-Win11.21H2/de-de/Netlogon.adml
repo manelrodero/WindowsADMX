@@ -338,6 +338,24 @@ Zum Festlegen dieses Verhaltens klicken Sie auf "Aktiviert", und geben Sie einen
 
 Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird sie nicht auf die Computer angewendet und die Computer verwenden ihre lokale Konfiguration.</string>
 
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Beim Registrieren von SRV-Einträgen von Domänencontrollern kleingeschriebene DNS-Hostnamen verwenden</string>
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Diese Richtlinieneinstellung konfiguriert, ob der DNS-Hostname der Domänencontroller, auf die diese Einstellung angewendet wird, beim Registrieren der SRV-Einträge kleingeschrieben werden.
+
+Wenn diese Einstellung aktiviert ist, schreiben Domänencontroller beim Registrieren von SRV-Einträgen für Domänencontroller den DNS-Hostnamen in Kleinbuchstaben. Es wird so gut wie möglich versucht, alle zuvor registrierten SRV-Einträge zu löschen, die DNS-Hostnamen in gemischter Schreibweise enthalten. Weitere Informationen und mögliche manuelle Bereinigungsverfahren finden Sie unter dem folgenden Link.
+
+Wenn diese Richtlinieneinstellung aktiviert ist, werden die DNS-Hostnamen von Domänencontroller beim Registrieren der SRV-Einträge der Domänencontroller kleingeschrieben.
+
+Wenn sie deaktiviert ist, verwenden die Domänencontroller ihren konfigurierten DNS-Hostnamen beim Registrieren der SRV-Einträge der Domänencontroller unverändert.
+
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwenden die Domänencontroller standardmäßig ihre lokale Konfiguration.
+
+Die lokale Standardkonfiguration ist „aktiviert”.
+
+Ein Neustart ist nicht erforderlich, damit Änderungen an dieser Einstellung wirksam werden.
+
+Weitere Informationen finden Sie unter "https://aka.ms/lowercasehostnamesrvrecord".
+      </string>
+
     </stringTable>
     <presentationTable>
       <presentation id="Netlogon_BackgroundRetryInitialPeriod">

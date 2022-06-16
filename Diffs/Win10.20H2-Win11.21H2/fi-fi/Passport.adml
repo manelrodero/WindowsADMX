@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Windows Hello yrityksille -ominaisuuden käyttäminen</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Käytä paikallisen todentamisen varmennetta</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Käytä pilvipalvelun luottamusta paikallisessa todennuksessa</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello yrityksille on vaihtoehtoinen tapa kirjautua sisään Windowsiin käyttäen Active Directory- tai Azure Active Directory -tiliä. Se voi korvata salasanat, älykortit ja virtuaaliälykortit.
 
@@ -118,13 +120,22 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Wi
 HUOMAUTUS: Tämä käytäntö koskee vain Azure Active Directoryyn rekisteröityjä laitteita.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Tämän käytäntöasetuksen avulla voit määrittää, että Windows Hello yrityksille rekisteröi paikalliseen todentamiseen käytettävän kirjautumisvarmenteen.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Tämän käytäntö asetuksen avulla voit määrittää, että Windows Hello yrityksille rekisteröi paikalliseen todentamiseen käytettävän kirjautumisvarmenteen.
 
-Jos otat tämän käytäntöasetuksen käyttöön, Windows Hello yrityksille rekisteröi kirjautumisvarmenteen, jota käytetään paikalliseen todentamiseen.
+Jos otat tämän käytäntö asetuksen käyttöön, Windows Hello yrityksille rekisteröi sisäänkirjautumisen varmenteen, jota käytetään paikallisessa todennuksessa.
 
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows Hello yrityksille rekisteröi paikalliseen todentamiseen käytettävän avaimen.
+Jos poistat tämän käytäntö asetuksen käytöstä tai et määritä sitä, Windows Hello yrityksille käyttää avainta tai Kerberos-lippua (muiden käytäntö asetusten mukaan) paikallisessa todennuksessa.
 
-HUOMAUTUS: Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä ja otat käyttöön Käytä Windows Hello yrityksille -ominaisuutta -käytäntöasetuksen, ympäristössä on oltava vähintään yksi Windows Server 2016 -toimialueen ohjauskone, jotta Windows Hello yrityksille -todennus onnistuu.
+Huomautus: tämän käytäntö asetuksen poistaminen käytöstä tai sitä ei määritetä ja se ottaa käyttöön Windows Hello yrityksille-käytäntö asetuksen käyttö edellyttää, että ympäristössä on vähintään yksi Windows Server 2016-toimi alueen ohjaus koneet, jotta Windows Hello yrityksille-todennus epäonnistuu.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Tämän käytäntö asetuksen avulla voit määrittää, että Windows Hello yrityksille käyttää Azure AD Kerberos-todennusta paikallisessa todennuksessa.
+
+Jos otat tämän käytäntö asetuksen käyttöön, Windows Hello yrityksille käyttää Kerberos-lippua, joka on noudettu Azure-todennuksessa paikallisesti.
+
+Jos poistat tämän käytäntö asetuksen käytöstä tai et määritä sitä, Windows Hello yrityksille käyttää avainta tai varmennetta (muiden käytäntö asetusten mukaisesti) paikallisessa todennuksessa. 
+ 
+Huomautus: ympäristö, joka ottaa sekä tämän käytäntö asetuksen käyttöön, ja käytä Windows Hello yrityksille-käytäntö asetusta, jos käytössä on vähintään yksi Windows Server 2016-toimi alueen ohjaus kone. Muussa tapa uksessa Windows Hello yrityksille-todennus epäonnistuu.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Määritä laitteen avaamistekijät</string>

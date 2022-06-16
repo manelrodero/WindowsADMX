@@ -5,6 +5,8 @@
   <description>buraya açıklamayı girin</description>
   <resources>
     <stringTable>
+      <string id="TS_AUTOSUBSCRIPTION_NAME">Otomatik aboneliği etkinleştir</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Kullanıcının otomatik olarak abone olması gereken URL'lerin listesini denetler</string>
       <string id="TS_SUPPORTED_Windows10">En azından Windows 10 veya Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">En az Windows 8 veya Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">En az Windows Server 2012</string>
@@ -26,6 +28,7 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Yalnızca en azından Microsoft Windows XP ve Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">En az Windows Server 2008 veya Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Yalnızca Windows Server 2008 R2</string>
+      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 sürüm 1903, Windows 10 sürüm 1909 ve Windows 10 sürüm 2004</string>
       <string id="TS_TERMINAL_SERVER">Uzak Masaüstü Oturumu Ana Bilgisayarı</string>
       <string id="TS_TERMINAL_SERVER_Help">Bir Uzak Masaüstü Oturumu Ana Bilgisayar sunucusunun yapılandırmasını denetler</string>
       <string id="TS_LICENSE_SERVER">RD Lisanslama</string>
@@ -144,6 +147,7 @@ Bu ilke ayarını yapılandırmazsanız, Grup İlkesi düzeyinde istemci sürüc
       <string id="TS_CLIENT_LPT">LPT bağlantı noktası yeniden yönlendirmesine izin verme</string>
       <string id="TS_CLIENT_PNP">Desteklenen Tak ve Kullan cihazların yeniden yönlendirmesine izin verme</string>
       <string id="TS_CAMERA_REDIRECTION">Video yakalama yönlendirmesine izin verme</string>
+      <string id="TS_LOCATION_REDIRECTION">Konum yeniden yönlendirmesi izin verme</string>
       <string id="TS_CLIENT_PRINTER">İstemci yazıcısı yeniden yönlendirmesine izin verme</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Bu ilke ayarı, Uzak Masaüstü Hizmetleri oturumu sırasında uzak bir bilgisayarla istemci bilgisayar arasında Pano içeriklerinin paylaşılmasının (Pano yeniden yönlendirme) engellenip engellenmeyeceğini belirtir.
 
@@ -208,6 +212,15 @@ Bu ilke ayarını etkinleştirirseniz kullanıcılar, kendi video yakalama cihaz
 
 Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız kullanıcılar, kendi video yakalama cihazlarını uzak bilgisayara yeniden yönlendirebilirler. Kullanıcılar, uzak bilgisayara yeniden yönlendirilecek video yakalama cihazlarını seçmek için Uzak Masaüstü Bağlantısı'nın Yerel Kaynaklar sekmesindeki Diğer seçeneğini kullanabilirler.
 
+</string>
+      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Bu ilke ayarı, Uzak Masaüstü Hizmetleri oturumunda konum verilerinin uzak bilgisayara yeniden yönlendirilmesini denetlemenize olanak sağlar.
+
+Varsayılan olarak, Uzak Masaüstü Hizmetleri konum verilerinin yeniden yönlendirilmesine izin verir.
+
+Bu ilke ayarını etkinleştirirseniz kullanıcılar, konum verilerini uzak bilgisayara yeniden yönlendiremezler.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız kullanıcılar kendi konum verilerini uzak bilgisayara yeniden yönlendirebilirler.
+          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Bu ilke ayarı, bir kullanıcının bir Uzak Masaüstü Hizmetleri oturumunu göstermek için kullanabileceği monitörlerin sayısını sınırlamak için kullanılır. Uzak Masaüstü Hizmetleri oturumu göstermek için kullanılacak monitörlerin sayısını sınırlamak, özellikle yavaş bağlantılarda performansı iyileştirebilir ve sunucu yükünü azaltabilir.
 
@@ -418,23 +431,20 @@ Bu ilke ayarını etkinleştirirseniz bu bildirimler RD Oturumu Ana Bilgisayarı
 Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız bu bildirimler RD Oturumu Ana Bilgisayarı sunucusunda yerel yönetici olarak oturum açtıktan sonra görüntülenir.</string>
       <string id="TS_LICENSING_MODE">Uzak Masaüstü lisans modunu ayarla</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Bu ilke ayarı, bu Uzak Masaüstü Oturumu Ana Bilgisayarı sunucusuna bağlanmak için gerekli olan Uzak Masaüstü Hizmetleri istemci erişim lisansı (RDS CAL) türünü belirtmenize olanak tanır.
+        Bu ilke ayarı, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanmak için gerekli olan Uzak Masaüstü Hizmetleri istemci erişim lisansı (RDS CAL) türünü belirtmenize olanak tanır.
 
-        Bu ilke ayarını üç lisans modundan birini seçmek için kullanabilirsiniz: Kullanıcı başına, Cihaz başına ve Kullanıcı başına AAD.
+        Bu ilke ayarını iki lisans modundan birini seçmek için kullanabilirsiniz: Kullanıcı Başına veya Cihaz Başına.
 
-        Kullanıcı Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her kullanıcı hesabının bir RD lisans sunucusundan alınan RDS Kullanıcı Başına CAL'ye sahip olmasını gerektirir.
+        Kullanıcı Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her kullanıcı hesabının bir RD Lisansı sunucusundan alınan RDS Kullanıcı Başına CAL'ye sahip olmasını gerektirir.
 
-        Cihaz Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her cihazın RD lisans sunucusundan alınan RDS Cihaz Başına CAL'ye sahip olmasını gerektirir.
+        Cihaz Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her cihazın bir RD lisansı sunucusundan alınan RDS Cihaz Başına CAL'ye sahip olmasını gerektirir.
 
-        Kullanıcı Başına AAD lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her kullanıcı hesabının AAD içinde atanan RDS lisanslarını destekleyen bir hizmet planına sahip olmasını gerektirir.
-        
         Bu ilke ayarını etkinleştirirseniz belirttiğiniz Uzak Masaüstü lisans modu, Uzak Masaüstü lisans sunucusu ve RD Oturumu Ana Bilgisayarı tarafından kabul edilir.
 
-        Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, lisans modu, Grup İlkesi düzeyinde belirtilmez.
+        Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız lisans modu, Grup İlkesi düzeyinde belirtilmez.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Cihaz Başına</string>
       <string id="TS_LICENSING_MODE_PER_USER">Kullanıcı Başına</string>
-      <string id="TS_LICENSING_MODE_AAD_PER_USER">Kullanıcı Başına AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Bu ilke ayarı, Uzak Masaüstü Hizmetleri oturumu sırasında verilerin istemci LPT bağlantı noktalarına yeniden yönlendirilmesinin engellenip engellenmeyeceğini belirtir.
 
 Kullanıcıların yerel LPT bağlantı noktalarını eşlemesini ve verileri uzak bilgisayardan yerel LPT bağlantı noktası çevre birimlerine yeniden yönlendirmesini engellemek için bu ayarı kullanabilirsiniz. Varsayılan olarak, Uzak Masaüstü Hizmetleri LPT bağlantı noktası yeniden yönlendirmesine izin verir.
@@ -785,6 +795,17 @@ Bu ilke ayarını etkinleştirirseniz istemci uzak bilgisayara bağlandığında
 Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız istemci uzak bilgisayara bağlandıktan sonra uzak bilgisayar üzerinde çalışan bir başlangıç programı belirtilebilir. Bir başlangıç programı belirtilmemişse, istemci uzak bilgisayara bağlandıktan sonra masaüstü her zaman uzak bilgisayarda görüntülenir.
 
 Not: Bu ilke ayarı etkinleştirilirse "Bağlantı sağlandığında bir program çalıştır" ilke ayarı yoksayılır.</string>
+      <string id="TS_UIA">UI Otomasyonu yeniden yönlendirmesine izin ver</string>
+      <string id="TS_UIA_EXPLAIN">Bu ilke ayarı yerel bilgisayarda çalıştırılan Kullanıcı Arabirimi (UI) Otomasyonu istemci uygulamalarının sunucudaki UI öğelerine erişip erişemeyeceğini belirler.
+
+UI Otomasyonu programların kullanıcı arabirimi öğelerinin çoğuna erişmesini sağlar ve bu sayede düzgün çalışması için kullanıcı arabirimiyle etkileşim kurması gereken Büyüteç ve Ekran Okuyucusu gibi yardımcı teknoloji ürünlerini kullanabilirsiniz. Kullanıcı arabirimi bilgileri, otomatik test betiklerinin de kullanıcı arabirimiyle etkileşim kurmasına olanak tanır.
+
+Uzak Masaüstü oturumları şu anda UI Otomasyonu yeniden yönlendirmesini desteklememektedir.
+
+Bu ilke ayarını etkinleştirirseniz veya yapılandırmazsanız, yerel bilgisayarınızdaki tüm UI Otomasyonu kullanıcıları uzak uygulamalarla etkileşim kurabilir. Örneğin uzak oturumda açtığınız web sayfasındaki kullanıcı arabirimiyle etkileşim kurmak için yerel bilgisayarınızın Ekran Okuyucusu ve Büyüteç istemcilerini kullanabilirsiniz.
+
+Bu ilke ayarını devre dışı bırakırsanız, yerel bilgisayarınızda çalıştırılan UI Otomasyonu istemcileri uzak uygulamalarla etkileşim kuramaz.
+</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Bu ilke ayarı, RD Oturumu Ana Bilgisayarı sunucusuna yapılan uzak bağlantılarda Ağ Düzeyi Kimlik Doğrulaması kullanarak kullanıcı kimlik doğrulamasının istenip istenmeyeceğini belirtmenize olanak sağlar. Bu ilke ayarı, kullanıcı kimlik doğrulamasının uzak bağlantı işleminden önce gerçekleşmesini isteyerek güvenliği geliştirir.
 
 Bu ayarı etkinleştirirseniz RD Oturumu Ana Bilgisayarı sunucusuna yalnızca Ağ Düzeyi Kimlik Doğrulaması'nı destekleyen istemci bilgisayarlar bağlanabilir.

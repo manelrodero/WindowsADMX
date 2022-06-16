@@ -298,7 +298,6 @@ Hvis du deaktiverer denne policyinnstillingen for et program eller en prosess i 
 Hvis du ikke konfigurerer denne policyinnstillingen, vil gjeldende verdier for URL-handlingen for et program eller en prosess i listen bli brukt.</string>
       <string id="FavImportExport">Deaktiver veiviseren for import eller eksport</string>
       <string id="GeolocationDisable">Deaktiver geoplassering for nettleser</string>
-      <string id="DisableFlashInIE">Deaktiver Adobe Flash i Internet Explorer og ikke la programmer bruke Internet Explorer-teknologi til å opprette en forekomst for Flash-objekter</string>
       <string id="File_NoBrowserClose">Fil-menyen: Deaktiver lukking av leser og Explorer-vinduer</string>
       <string id="File_NoBrowserSaveAs">Fil-menyen: Deaktiver menyalternativet Lagre som...</string>
       <string id="File_NoBrowserSaveWebComplete">Fil-menyen: Deaktiver fullstendig Lagre som webside</string>
@@ -726,13 +725,6 @@ Hvis du aktiverer denne policyinnstillingen, deaktiveres støtte for geoplasseri
 Hvis du deaktiverer denne policyinnstillingen, aktiveres støtte for geoplassering for nettleseren.
 
 Hvis du ikke konfigurerer denne policyinnstillingen, kan støtte for geoplassering for nettleseren aktiveres og deaktiveres under Alternativer for Internett i kategorien Personvern.</string>
-      <string id="IE_ExplainDisableFlashInIE">Denne policyinnstillingen deaktiverer Adobe Flash i Internet Explorer og forhindrer at programmer bruker Internet Explorer-teknologi til å opprette en forekomst for Flash-objekter.
-
-Hvis du aktiverer denne policyinnstillingen, deaktiveres Flash for Internet Explorer, og programmer kan ikke bruke Internet Explorer-teknologi til å opprette en forekomst for Flash-objekter. I dialogboksen Administrer tillegg vil status for Flash være Deaktivert, og brukerne kan ikke aktivere Flash. Hvis du aktiverer denne policyinnstillingen, vil Internet Explorer overse innstillinger som er gjort for Adobe Flash via policyinnstillingene Liste over tillegg og Blokker alle tillegg som ikke er angitt som tillatt i listen over tillegg.
-
-Hvis du deaktiverer denne policyinnstillingen eller ikke konfigurerer den, aktiveres Flash for Internet Explorer, og programmer kan bruke Internet Explorer-teknologi til å opprette en forekomst for Flash-objekter. Brukerne kan aktivere eller deaktivere Flash i dialogboksen Administrer tillegg.
-
-Vær oppmerksom på at Adobe Flash fremdeles kan deaktiveres via policyinnstillingene Liste over tillegg og Blokker alle tillegg som ikke er angitt som tillatt i listen over tillegg, selv om denne policyinnstillingen er deaktivert, eller ikke konfigurert. Hvis imidlertid Adobe Flash er deaktivert via policyinnstillingene "Liste over tillegg" og "Blokker alle tillegg som ikke er angitt som tillatt i listen over tillegg" og ikke via denne policyinnstillingen, kan alle programmer som bruker Internet Explorer-teknologi til å opprette en forekomst for Flash-objekter, fremdeles gjøre det. Hvis du vil ha mer informasjon, kan du se Gruppepolicyinnstillinger i Internet Explorer 10 i TechNet-biblioteket til Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Hindrer at brukerne lukker Microsoft Internet Explorer og Filutforsker.
 
 Hvis du aktiverer denne policyen, nedtones kommandoen Lukk på Fil-menyen.
@@ -874,23 +866,23 @@ Hvis du vil angi hvordan administratorgodkjente kontroller behandles for hver si
 
 4. I området Kjør ActiveX-kontroller og plugin-moduler klikker du Godkjent av administrator.</string>
       <string id="IE_ExplainMenusCategory">Inneholder innstillinger for å vise eller skjule menyer og menyalternativer i Internet Explorer.</string>
-      <string id="IE_ExplainMicrosoft_Chat">Angir ActiveX-kontrollen for Microsoft Chat som administratorgodkjent.
+      <string id="IE_ExplainMicrosoft_Chat">Angir ActiveX-kontrollen for Microsoft-chat som administratorgodkjent.
 
-Denne kontrollen brukes av webutviklere til å bygge tekst- og grafikkbaserte chattemiljøer for sanntidskommunikasjon på weben.
+Denne kontrollen brukes av nettutviklere til å bygge tekst- og grafikkbaserte chattemiljøer for sanntidskommunikasjon på nettet.
 
 Hvis du aktiverer denne policyen, kan kontrollen kjøres i sikkerhetssoner der du angir at administratorgodkjente kontroller kan kjøres.
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyen, angis ikke kontrollen som administratorgodkjent.
 
-Hvis du vil angi hvordan administratorgodkjente kontroller behandles for hver sikkerhetssone, utfører du følgende trinn:
+Hvis du vil angi hvordan administratorgodkjente kontroller behandles, for hver sikkerhetssone, gjør du følgende:
 
-1. Klikk Gruppepolicy, Brukerkonfigurasjon, Vedlikehold av Internet Explorer og deretter Sikkerhet.
+1. Klikk på Brukerkonfigurasjon i Gruppepolicy, klikk på Internet Explorer-vedlikehold, og klikk deretter på Sikkerhet.
 
-2. Dobbeltklikk Sikkerhetssoner og Innholdssensur, klikk Importer gjeldende innstillinger for sikkerhetssoner, og klikk deretter Endre innstillinger.
+2. Dobbeltklikk på Sikkerhetssoner og innholdsklassifisering, klikk på Importer gjeldende innstillinger for sikkerhetssoner, og klikk deretter på Endre innstillinger.
 
-3. Merk innholdssonen du vil behandle ActiveX-kontroller i, og klikk deretter Egendefinert nivå.
+3. Velg innholdssonen du vil behandle ActiveX-kontroller i, og klikk deretter på Egendefinert nivå.
 
-4. I området Kjør ActiveX-kontroller og plugin-moduler klikker du Godkjent av administrator.</string>
+4. Klikk på Godkjent av administrator i området Kjør ActiveX-kontroller og plugin-moduler.</string>
       <string id="IE_ExplainMSNBC">Angir et sett med MSNBC-kontroller som administratorgodkjent.
 
 Med disse kontrollene kan du utføre avanserte søk etter nyhetsrapporter på MSNBCs webområde.
@@ -3903,7 +3895,7 @@ Hvis du deaktiverer denne policyinnstillingen eller ikke konfigurerer den, kan b
 Hvis du aktiverer denne innstillingen, kan brukerne se og bruke organisasjonsmodusalternativet fra Verktøy-menyen. Hvis du aktiverer denne innstillingen, men ikke angir en rapportplassering, vil organisasjonsmodus fremdeles være tilgjengelig for brukerne, men du vil ikke motta noen rapporter.
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, vil menyalternativet vises, og brukerne vil ikke kunne kjøre nettsteder i organisasjonsmodus.</string>
-      <string id="RestrictInternetExplorer">Send alle områder som ikke er inkludert i listen over nettstedsplasseringer for Organisasjonsmodus, til Microsoft Edge.</string>
+      <string id="RestrictInternetExplorer">Send alle nettsteder som ikke er inkludert i listen over nettstedsplasseringer for Organisasjonsmodus, til Microsoft Edge</string>
       <string id="IE_ExplainRestrictInternetExplorer">Med denne innstillingen kan du bestemme om du vil åpne alle områder som ikke er inkludert i listen over nettstedsplasseringer for Organisasjonsmodus i Microsoft Edge. Hvis du bruker denne innstillingen, må du også aktivere policyinnstillingen Administrative maler\Windows-komponenter\Internet Explorer\Bruk nettstedslisten i organisasjonsmodus i IE, og du må inkludere minst ett område i listen over nettstedsplasseringer for Organisasjonsmodus.
 
 Hvis du aktiverer denne innstillingen, åpnes automatisk alle områder som ikke er inkludert i listen over nettstedsplasseringer for Organisasjonsmodus, i Microsoft Edge.
@@ -3958,6 +3950,41 @@ Tilknyttede policyer:
 – Send alle områder som ikke er inkludert i listen over nettstedsplasseringer for Organisasjonsmodus, til Microsoft Edge (RestrictIE)
 
 Hvis du vil ha mer informasjon om bruk av denne policyen sammen med andre tilknyttede policyer for å opprette den optimale konfigurasjonen for organisasjonen, kan du se https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Tillat "Lagre mål som" i Internet Explorer-modus</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Denne policy innstillingen lar administratorer aktivere hurtig menyen Lagre mål som i Internet Explorer-modus.
+
+Hvis du aktiverer denne policyen, vil lagre mål som vises i hurtig menyen for Internet Explorer-modus og arbeide med samme som Internet Explorer.
+
+Hvis du deaktiverer denne policy innstillingen eller ikke konfigurerer den, vil ikke lagre mål som vises i hurtig menyen for Internet Explorer-modus.
+
+Hvis du vil ha mer informasjon, se https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Aktiver utvidede hurtig taster i Internet Explorer-modus</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Denne policy innstillingen lar administratorer aktivere utvidede hurtigtaster for Microsoft Edge Internet Explorer-modus, for eksempel “Ctrl+S” for å få “Lagre som”-funksjonalitet.
+
+Hvis du aktiverer denne policyen, aktiveres utvidet hurtigtast funksjonalitet i Internet Explorer-modus og fungerer på samme måte som Internet Explorer.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil ikke utvidede hurtigtaster fungere i Internet Explorer-modus.
+
+Hvis du vil ha mer informasjon, se https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Deaktiver Internet Explorer 11 som en fritt stående leser</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Med denne policyen kan du begrense start av Internet Explorer som frittstående nettleser.
+
+Hvis du aktiverer denne policyen, kan den:
+– hindre at Internet Explorer 11 startes som frittstående nettleser.
+– begrense bruken av Internet Explorer til Microsoft Edges opprinnelige Internet Explorer-modus.
+– omadressere alle forsøk på oppstart av Internet Explorer 11 til nettleseren Microsoft Edge Stable Channel.
+– overstyre eventuelle andre policyer som omdiriger til Internet Explorer 11.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyen, åpnes alle nettsteder med gjeldende aktive innstillinger for nettleser. Obs! Du må ha installert Microsoft Edge Stable Channel for at denne policyen skal tre i kraft.</string>
+      <string id="NotifyDisableIEOptions_Never">Aldri</string>
+      <string id="NotifyDisableIEOptions_Always">Alltid</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Én gang per bruker</string>
+      <string id="JScriptReplacement">Erstatt JScript ved å laste inn JScript9Legacy i stedet for JScript via MSHTML/WebOC.</string>
+      <string id="IE_ExplainJScriptReplacement">Denne policy innstillingen angir om JScript eller JScript9Legacy er lastet for MSHTML/WebOC-baserte anrop.
+      
+Hvis du aktiverer denne policy innstillingen, blir JScript9Legacy lastet inn i situasjoner der JScript startes.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyen, brukes JScript.</string>
       <string id="VerMgmtDisable">Deaktiver blokkering av utdaterte ActiveX-kontroller for Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Denne policyinnstillingen fastslår om Internet Explorer blokkerer angitte, utdaterte ActiveX-kontroller. Utdaterte ActiveX-kontroller blir aldri blokkert i det lokale intranettet.
 
@@ -4833,6 +4860,9 @@ Hvis du vil ha mer informasjon, kan du se Out-of-date ActiveX control blocking (
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Førstevalg</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Andrevalg</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Tredjevalg</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Varsle om at Internet Explorer 11-leseren er deaktivert</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

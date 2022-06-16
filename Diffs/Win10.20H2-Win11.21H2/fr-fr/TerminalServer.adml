@@ -5,6 +5,8 @@
   <description>entrer la description ici</description>
   <resources>
     <stringTable>
+      <string id="TS_AUTOSUBSCRIPTION_NAME">Activer l’abonnement automatique</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Contrôle la liste des URL auxquelles l'utilisateur doit s'abonner automatiquement</string>
       <string id="TS_SUPPORTED_Windows10">Au moins Windows 10 ou Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Au minimum Windows 8 ou Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Au minimum Windows Server 2012</string>
@@ -26,6 +28,7 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Au minimum Windows XP et Windows Server 2003 uniquement</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Au minimum Windows Server 2008 ou Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Windows Server 2008 R2 uniquement</string>
+      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 version 1903, Windows 10 version 1909 et Windows 10 version 2004</string>
       <string id="TS_TERMINAL_SERVER">Hôte de la session Bureau à distance</string>
       <string id="TS_TERMINAL_SERVER_Help">Contrôle la configuration d'un serveur Hôte de la session Bureau à distance</string>
       <string id="TS_LICENSE_SERVER">Gestionnaire de licences des services Bureau à distance</string>
@@ -144,6 +147,7 @@ Si vous ne configurez pas ce paramètre de stratégie, la redirection des lecteu
       <string id="TS_CLIENT_LPT">Ne pas autoriser la redirection de port LPT</string>
       <string id="TS_CLIENT_PNP">Ne pas autoriser la redirection de périphérique Plug-and-Play</string>
       <string id="TS_CAMERA_REDIRECTION">Ne pas autoriser la redirection de capture vidéo</string>
+      <string id="TS_LOCATION_REDIRECTION">Ne pas autoriser la redirection de la localisation</string>
       <string id="TS_CLIENT_PRINTER">Ne pas autoriser la redirection de l'imprimante client</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Ce paramètre de stratégie spécifie s’il faut empêcher le partage du contenu du Presse-papiers (redirection du Presse-papiers) entre un ordinateur distant et un ordinateur client au cours d’une session de services Bureau à distance.
 
@@ -208,6 +212,15 @@ Si vous activez ce paramètre de stratégie, les utilisateurs ne peuvent pas red
 
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent rediriger leurs appareils de capture vidéo vers l’ordinateur distant. Les utilisateurs peuvent utiliser l’option Plus sous l’onglet Ressources locales de la Connexion Bureau à distance pour choisir les appareils de capture vidéo à rediriger vers l’ordinateur distant.
 
+</string>
+      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Ce paramètre de stratégie vous permet de contrôler la redirection des données d’emplacement vers l’ordinateur distant dans une session de services Bureau à distance.
+
+Par défaut, les services Bureau à distance autorisent la redirection des données d’emplacement.
+
+Si vous activez ce paramètre de stratégie, les utilisateurs ne peuvent pas rediriger leurs données de localisation vers l’ordinateur distant.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent rediriger leurs données de localisation vers l’ordinateur distant.
+          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Ce paramètre de stratégie vous permet de limiter le nombre de moniteurs qu’un utilisateur peut utiliser pour afficher une session de services Bureau à distance. La limitation du nombre de moniteurs permettant d’afficher une session de services Bureau à distance peut améliorer les performances de connexion, en particulier en présence de liaisons lentes, et réduire la charge du serveur.
 
@@ -420,23 +433,20 @@ Si vous activez ce paramètre de stratégie, ces notifications ne s’affichent 
 Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, ces notifications s’affichent sur le serveur Hôte de la session Bureau à distance une fois que vous avez ouvert une session en tant qu’administrateur local.</string>
       <string id="TS_LICENSING_MODE">Définir le mode de concession de licences des services Bureau à distance</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Ce paramètre de stratégie vous permet de spécifier le type de licence d'accès client aux services Bureau à distance, nécessaire à la connexion à ce serveur hôte de session Bureau à distance.
+        Ce paramètre de stratégie permet de spécifier le type de licence d’accès client aux services Bureau à distance nécessaire à la connexion à ce serveur Hôte de session Bureau à distance.
 
-        Vous pouvez utiliser ce paramètre de stratégie pour sélectionner l'un des trois modes de licence : par utilisateur, par périphérique et AAD par utilisateur.
+        Vous pouvez utiliser ce paramètre de stratégie pour sélectionner un des deux modes de licence : Par utilisateur ou Par appareil.
 
-        Le mode de licence par utilisateur exige que chaque compte d'utilisateur se connectant à ce serveur hôte de session Bureau à distance dispose d'une licence d'accès client aux services Bureau à distance par utilisateur émise par un serveur de licences des services Bureau.
+        Le mode de licence Par utilisateur exige que chaque compte d’utilisateur qui se connecte à ce serveur Hôte de session Bureau à distance dispose d’une licence d’accès client aux services Bureau à distance par utilisateur émise par un serveur de licences des services Bureau à distance.
 
-        Le mode de licence par périphérique nécessite que chaque appareil se connectant à ce serveur hôte de session Bureau à distance dispose d'une licence d'accès client aux services Bureau à distance par périphérique émise par un serveur de licences des services Bureau.
+        Le mode de licence Par appareil exige que chaque appareil qui se connecte à ce serveur Hôte de session Bureau à distance dispose d’une licence d’accès client aux services Bureau à distance par appareil émise par un serveur de licences des services Bureau à distance.
 
-        Le mode de licence AAD par utilisateur exige que chaque compte d'utilisateur qui se connecte à ce serveur hôte de session Bureau à distance dispose d'un plan de service qui prend en charge les licences RDS attribuées dans AAD.
-        
-        Si vous activez ce paramètre de stratégie, le mode de licence des services Bureau à distance que vous spécifiez est honoré par le serveur de licences des services Bureau à distance et l'hôte de la session Bureau à distance.
+        Si vous activez ce paramètre de stratégie, le mode de licence des services Bureau à distance que vous spécifiez est honoré par le serveur de licences des services Bureau à distance et l'Hôte de session Bureau à distance.
 
-        Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, le mode de licence n'est pas spécifié au niveau de la stratégie de groupe.
+        Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le mode de licence n’est pas spécifié au niveau de la stratégie de groupe.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Par périphérique</string>
       <string id="TS_LICENSING_MODE_PER_USER">Par utilisateur</string>
-      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD par utilisateur</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Ce paramètre de stratégie indique s’il faut ou non empêcher la redirection de données vers les ports LPT client lors d’une session de services Bureau à distance.
 
 Vous pouvez utiliser ce paramètre pour empêcher les utilisateurs de mapper les ports LPT locaux et de rediriger les données à partir de l’ordinateur distant vers les périphériques de port LPT locaux. Par défaut, les services Bureau à distance autorisent la redirection du port LPT.
@@ -787,6 +797,17 @@ Si vous activez ce paramètre de stratégie, le Bureau s’affiche toujours lors
 Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, un programme initial peut être spécifié pour s’exécuter sur l’ordinateur distant après la connexion du client à ce dernier. Si aucun programme initial n’est spécifié, le Bureau est toujours affiché sur l’ordinateur distant après la connexion du client à cet ordinateur.
 
 Remarque : si ce paramètre de stratégie est activé, le paramètre de stratégie « Démarrer un programme à la connexion » est ignoré.</string>
+      <string id="TS_UIA">Autoriser la redirection de l’interface utilisateur d’automatisation</string>
+      <string id="TS_UIA_EXPLAIN">Ce paramètre de stratégie détermine si les applications clientes Automation de l’interface utilisateur s’exécutant sur l’ordinateur local peuvent accéder aux éléments d’interface utilisateur du serveur.
+
+UI Automation permet aux programmes d’accéder à la plupart des éléments de l’interface utilisateur, ce qui vous permet d’utiliser des produits de technologie d’assistance tels que la loupe et le narrateur qui doivent interagir avec l’interface utilisateur pour fonctionner correctement. Les informations d’interface utilisateur permettent également aux scripts de test automatisés d’interagir avec l’interface utilisateur.
+
+Les sessions Bureau à distance ne prennent pas en charge la redirection UI Automation pour le moment.
+
+Si vous activez ce paramètre de stratégie ou si vous ne le configurez pas, les clients UI Automation sur votre ordinateur local peuvent interagir avec les applications distantes. Par exemple, vous pouvez utiliser les clients narrateur et loupe de votre ordinateur local pour interagir avec l’interface utilisateur sur une page Web que vous avez ouverte dans une session à distance.
+
+Si vous désactivez ce paramètre de stratégie, les clients UI Automation qui s’exécutent sur votre ordinateur local ne peuvent pas interagir avec les applications distantes.
+</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Ce paramètre de stratégie permet de spécifier s’il faut requérir l’authentification utilisateur pour les connexions à distance au serveur Hôte de session Bureau à distance en utilisant l’authentification au niveau du réseau. Ce paramètre de stratégie renforce la sécurité en imposant l’authentification utilisateur plus tôt dans le processus de connexion à distance.
 
 Si vous activez ce paramètre de stratégie, seuls les ordinateurs client qui prennent en charge l’authentification au niveau du réseau peuvent se connecter au serveur Hôte de session Bureau à distance.

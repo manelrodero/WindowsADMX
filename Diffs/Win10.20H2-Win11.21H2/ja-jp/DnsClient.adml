@@ -248,6 +248,23 @@ LLMNR は補助的な名前解決プロトコルです。LLMNR を使用する�
 このポリシー設定を有効にした場合、IDN は Nameprep 形式に変換されません。
 
 このポリシー設定を無効にした場合、または構成しなかった場合、IDN は Nameprep 形式に変換されません。</string>
+      <string id="DNS_Doh">HTTPS (DoH) の名前解決による DNS を構成する</string>
+      <string id="DNS_Doh_Disabled">DoH の禁止</string>
+      <string id="DNS_Doh_Auto">DoH を許可する</string>
+      <string id="DNS_Doh_Force">DoH の必要性</string>
+      <string id="DNS_Doh_Help">DNS クライアントが DNS による HTTPS(DoH) を介して名前解決を実行するかどうかを指定します。
+
+既定では、DNS クライアントは、従来の DNS 名前解決 (UDP または TCP)を実行します。この設定は、ドメイン名を解決するために DoH プロトコルを使って、DNS クライアントを強化することができます。
+
+このポリシー設定を使用するには、有効にするをクリックし、ドロップダウンリストから次のオプションのいずれかを選択します。
+
+DoHの禁止:  名前解決は実行されていません。
+
+DoH の許可: 構成済みの DNS サーバーがサポートしている場合は、DoH クエリを実行してください。Doh のサポートされていない場合は、従来の名前解決をお試しください。
+
+DoHの必要性: DoH 名前解決のみを許可します。DoH 対応の DNS サーバーが構成されていない場合、名前解決は失敗します。
+
+このポリシー設定を無効にした場合、または構成しなかった場合、コンピューターではローカルで構成された設定が使用されます。</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -284,6 +301,9 @@ LLMNR は補助的な名前解決プロトコルです。LLMNR を使用する�
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">セキュリティ レベルを更新する:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">DoH オプションを構成する:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

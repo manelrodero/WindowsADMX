@@ -67,7 +67,7 @@ Megjegyzések:
       <string id="DownlevelBrowse">Nyomtatók keresése a hálózatban</string>
       <string id="DownlevelBrowse_Help">Ez a beállítás lehetővé teszi, hogy a felhasználók a Nyomtató hozzáadása varázslóval megosztott nyomtatókat keressenek a hálózatban.
 
-Ha engedélyezi vagy nem konfigurálja ezt a beállítást, és a felhasználók hálózati nyomtatót vesznek fel a „Hálózati vagy egy másik számítógéphez csatlakoztatott nyomtató” választógombra kattintva a Nyomtató hozzáadása varázsló 2. oldalán, és a „Kapcsolódás a következő nyomtatóhoz (vagy nyomtató kereséséhez válassza ezt a lehetőséget, és kattintson a Következő gombra)” választógombot is bejelölik a Nyomtató hozzáadása varázsló 3. oldalán, valamint nem adnak meg nyomtatónevet a közvetlenül a beállítás mellett található „Név” szerkesztőmezőben, akkor a Nyomtató hozzáadása varázsló megjeleníti a hálózatban található megosztott nyomtatók listáját, és a kívánt nyomtató kiválasztását kéri a megjelenített listából.
+Ha engedélyezi vagy nem konfigurálja ezt a beállítást, és a felhasználók hálózati nyomtatót vesznek fel a „Hálózati vagy egy másik számítógéphez csatlakoztatott nyomtató” választógombra kattintva a Nyomtató hozzáadása varázsló 2. oldalán, és a „Kapcsolódás a következő nyomtatóhoz (vagy nyomtató kereséséhez válassza ezt a lehetőséget, és kattintson a Tovább gombra)” választógombot is bejelölik a Nyomtató hozzáadása varázsló 3. oldalán, valamint nem adnak meg nyomtatónevet a közvetlenül a beállítás mellett található „Név” szerkesztőmezőben, akkor a Nyomtató hozzáadása varázsló megjeleníti a hálózatban található megosztott nyomtatók listáját, és a kívánt nyomtató kiválasztását kéri a megjelenített listából.
 
 E beállítás letiltásával eltávolítja a hálózati nyomtató keresésére szolgáló oldalt a Nyomtató hozzáadása varázslóból, így a felhasználók nem kereshetnek a hálózatban, hanem be kell írniuk egy nyomtatónevet.
 
@@ -278,7 +278,7 @@ Alapértelmezés szerint a Windows Ultimate, Professional és Home termékválto
 
         Ha letiltja vagy nem konfigurálja a házirend-beállítást, minden telepített nyomtatóbővítmény futtatható lesz.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">A Microsoft XPS-dokumentumíró (MXDW) alapértelmezett kimeneti formátuma az örökölt Microsoft XPS formátum (*.xps) legyen</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">A Microsoft XPS-dokumentumíró (MXDW) alapértelmezés szerint OpenXPS-fájlokat (*.oxps) hoz létre a Windows 10 és a Windows Server 2019 rendszerben.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">A Microsoft XPS-dokumentumíró (MXDW) alapértelmezés szerint OpenXPS-fájlokat (*.oxps) hoz létre a Windows 10 és a Windows Server 2022 rendszerben.
 
           Ha engedélyezi ezt a csoportházirend-beállítást, az alapértelmezett kimeneti MXDW-formátum az örökölt Microsoft XPS (*.xps) lesz.
 
@@ -291,6 +291,24 @@ Ha engedélyezi ezt a beállítást, nem a Windows fogja felügyelni az alapért
 Ha letiltja a beállítást, a Windows végzi az alapértelmezett nyomtató felügyeletét.
 
 Ha nem konfigurálja a beállítást, változatlan marad az alapértelmezett nyomtató felügyeletének módja. </string>
+      <string id="EnableDeviceControl">Eszközvezérlő nyomtatás korlátozásainak engedélyezése</string>
+      <string id="EnableDeviceControl_Help">
+          Ez a beállítás határozza meg az eszközvezérlő nyomtatási korlátozásait a számítógépen való nyomtatáshoz.
+
+          Alapértelmezés szerint nincsenek a kapcsolat típusán vagy a nyomtató márkáján/típusán alapuló, a nyomtatásra vonatkozó korlátozások.
+
+          Ha engedélyezi ezt a beállítást, a számítógép a vállalati hálózaton lévő nyomtatókapcsolatokra vagy a jóváhagyott USB-s nyomtatókra korlátozza a nyomtatást.
+
+          Ha letiltja vagy nem konfigurálja ezt a beállítást, akkor nincsenek a nyomtatásra vonatkozó korlátozások a kapcsolat típusa vagy a nyomtató márkája/típusa alapján.</string>
+        <string id="ApprovedUsbPrintDevices">A jóváhagyott, USB-csatlakoztatású nyomtatóeszközök listája</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Ez a beállítás az Eszközvezérlő nyomtatás korlátozásainak összetevője. A beállítás használatához engedélyezze az Eszközvezérlő nyomtatást az „Eszközvezérlő nyomtatás korlátozásainak engedélyezése” beállítás engedélyezésével.
+
+            Ha engedélyezve van az Eszközvezérlő nyomtatás, a rendszer a VID-/PID-értékek megadott listájának használatával állapítja meg, hogy az aktuális USB-csatlakoztatású nyomtató jóvá van-e hagyva helyi nyomtatáshoz.
+
+            Írja be az összes olyan, jóváhagyott VID-/PID-értékekből álló kombinációt (vesszővel elválasztva), amely jóváhagyott USB-s nyomtatómodellnek felel meg. Amikor egy felhasználó USB-s nyomtatási várólistára próbál nyomtatni, a rendszer összehasonlítja az eszköz VID-/PID-értékét a jóváhagyott listával.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Ha nem konfigurálja a beállítást, változatlan marad az alapértelmezett nyo
           <label>Alapértelmezett Active Directory-beli elérési út</label>
         </textBox>
         <text>például --&gt; LDAP://DC=Tartomány1,DC=SajátCég,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Adja meg a jóváhagyott, USB-csatlakoztatású nyomtatóeszközök listáját.</text>
+        <text>A lista USB-s VID-/PID-értékek vesszővel tagolt listája. Példa: 0351/0872,135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>VID/PID</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

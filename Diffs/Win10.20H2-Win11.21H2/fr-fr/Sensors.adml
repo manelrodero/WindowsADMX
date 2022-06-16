@@ -36,6 +36,34 @@
       
       </string>
       <string id="LocationAndSensors">Emplacement et capteurs</string>
+      <string id="HumanPresence">Présence humaine</string>
+      <string id="ForceInstantWake_DisplayName">Forcer la sortie de veille instantanée</string>
+      <string id="ForceInstantWake_ExplainText">Détermine si la stratégie MDM active/désactive de force la sortie de veille à l’arrivée. L’utilisateur ne pourra pas modifier ce paramètre et le bouton bascule de l’interface utilisateur sera en grisé.</string>
+      <string id="ForceInstantWake_0">Prend pour valeur par défaut le choix de l’utilisateur</string>
+      <string id="ForceInstantWake_1">Activation forcée</string>
+      <string id="ForceInstantWake_2">Désactivation forcée</string>
+      <string id="ForceInstantLock_DisplayName">Forcer le verrouillage instantané</string>
+      <string id="ForceInstantLock_ExplainText">Détermine si la stratégie MDM active/désactive Lock on Leave. L’utilisateur ne pourra pas modifier ce paramètre et le bouton bascule de l’interface utilisateur sera en grisé.</string>
+      <string id="ForceInstantLock_0">Prend pour valeur par défaut le choix de l’utilisateur</string>
+      <string id="ForceInstantLock_1">Activation forcée</string>
+      <string id="ForceInstantLock_2">Désactivation forcée</string>
+      <string id="ForceLockTimeout_DisplayName">Verrouiller le délai d’expiration</string>
+      <string id="ForceLockTimeout_ExplainText">Détermine le délai d’expiration de Lock on Leave imposé par la stratégie MDM. L’utilisateur ne pourra pas modifier ce paramètre et le bouton bascule de l’interface utilisateur sera en grisé.</string>
+      <string id="ForceLockTimeout_0">Valeur par défaut pour le choix de l’utilisateur</string>
+      <string id="ForceLockTimeout_1">10 secondes</string>
+      <string id="ForceLockTimeout_2">30 secondes</string>
+      <string id="ForceLockTimeout_3">2 minutes</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Choisissez l’une des actions suivantes</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Choisissez l’une des actions suivantes</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Choisir l’un des délais d’expiration suivants</dropdownList>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>

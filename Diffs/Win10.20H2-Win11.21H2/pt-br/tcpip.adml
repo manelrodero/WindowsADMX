@@ -27,19 +27,17 @@
       <string id="IPHTTPS_ClientState">Definir o Estado IP-HTTPS</string>
       <string id="IPHTTPS_ClientUrl">URL IP-HTTPS</string>
 
-      <string id="ISATAP_State_Help">Esta configuração de política permite configurar o protocolo ISATAP, uma tecnologia de túnel automático de endereço para roteador e host para host, host para roteador e roteador para host usada para fornecer conectividade IPv6 unicast entre hosts IPv6 por uma intranet IPv4.
+      <string id="ISATAP_State_Help">Esta configuração de política permite que você configure o protocolo ISATAP, uma tecnologia de túnel de endereço para roteador e host para host, host para roteador e roteador a host, que é usada para fornecer conectividade IPv6 unicast entre hosts IPv6 em uma intranet IPv4. # notendereço
 
-Se você desabilitar ou não definir esta configuração de política, a configuração de host local será usada.
+Se você desabilitar ou não definir essa configuração de política, a configuração de host local será usada.
 
-Se você habilitar esta configuração de política, poderá definir o protocolo ISATAP com uma das seguintes configurações:
+Se você habilitar essa configuração de política, poderá definir o ISATAP com uma das seguintes configurações:
 
-Estado Padrão da Política: se o nome do roteamento ISATAP for resolvido com êxito, o host terá o protocolo ISATAP configurado com um endereço local de vínculo e um endereço para cada prefixo recebido do roteamento ISATAP pela configuração automática de endereço sem monitoração de estado. Se o nome do roteamento ISATAP não for resolvido com êxito, a conectividade ISATAP não estará disponível no host usando o endereço IPv4 correspondente.
+Estado padrão da política: nenhuma interface ISATAP está presente no host.
 
-Estado Habilitado para Política: se o nome do ISATAP for resolvido com êxito, o host terá o protocolo ISATAP configurado com um endereço local de vínculos e um endereço para cada prefixo recebido do roteamento ISATAP pela configuração automática de endereço sem monitoração de estado. Se o nome do ISATAP não for resolvido com êxito, o host terá uma interface ISATAP configurada com um endereço local de vínculo.
+Estado habilitado para política: se o nome ISATAP for resolvido com êxito, o host terá o protocolo ISATAP configurado com um endereço local de vínculo e um endereço para cada prefixo recebido do roteador ISATAP por meio de configuração automática de endereço sem monitoração de estado. Se o nome ISATAP não for resolvido com êxito, o host terá uma interface ISATAP configurada com um endereço local de link.
 
-Estado Desabilitado para Política:nenhuma interface ISATAP está presente no host.
-
-
+Estado desabilitado para política: nenhuma interface ISATAP está presente no host.
 
 </string>
 
@@ -54,19 +52,17 @@ Se você desabilitar ou não definir essa configuração de política, a configu
 </string>
 
 
-      <string id="6to4_State_Help">Esta configuração de política permite configurar 6to4, uma atribuição de endereço e uma tecnologia de túnel automático roteador para roteador usadas para fornecer conectividade IPv6 unicast entre hosts e sites IPv6 pela Internet IPv4. 6to4 usa o prefixo de endereço global: 2002:WWXX:YYZZ::/48 no qual as letras são uma representação hexadecimal do endereço IPv4 global (w.x.y.z) atribuído a um site.
+      <string id="6to4_State_Help">Esta configuração de política permite configurar 6to4, uma atribuição de endereço e tecnologia de túnel automático roteador a roteador que é usada para fornecer conectividade IPv6 unicast entre sites IPv6 e hosts na Internet IPv4. 6to4 usa o prefixo de endereço global: 2002: WWXX: YYZZ :: / 48 em que as letras são uma representação hexadecimal do endereço IPv4 global (w.x.y.z) atribuído a um site.
 
-Se você desabilitar ou não definir esta configuração de política, a configuração de host local será usada.
+Se você desabilitar ou não definir esta configuração de política, a configuração do host local será usada.
 
-Se você habilitar esta configuração de política, poderá definir o 6to4 com uma das seguintes configurações:
+Se você habilitar esta configuração de política, poderá definir 6to4 com uma das seguintes configurações: 
 
-Estado da Política Padrão: 6to4 será habilitado se o host tiver somente a conectividade IPv6 local de vínculo e um endereço IPv4 público. Se nenhum IPv6 global estiver presente e nenhum endereço IPv4 global estiver presente, o host não terá uma interface 6to4. Se nenhum IPv6 global estiver presente e um endereço IPv4 global estiver presente, o host terá uma interface 6to4.
+Estado Padrão da Política: 6to4 está desativado e a conectividade com 6to4 não estará disponível. 
 
-Estado Habilitado para Política: se um endereço IPv4 global estiver presente, o host terá uma interface 6to4. Se nenhum endereço IPv4 global estiver presente, o host não terá uma interface 6to4.
+Estado de Política Habilitada : Se um endereço IPv4 global estiver presente, o host terá uma interface 6to4. Se nenhum endereço IPv4 global estiver presente, o host não terá uma interface 6to4.
 
-Estado Desabilitado para Política: 6to4 está desativado, e a conectividade com 6to4 não estará disponível.
-
-
+Estado de política Desabilitada: 6to4 está desligado e a conectividade com 6to4 não estará disponível.
 
 </string>
 

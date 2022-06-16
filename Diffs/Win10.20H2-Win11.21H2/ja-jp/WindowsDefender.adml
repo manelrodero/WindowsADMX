@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender ウイルス対策</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">除外</string>
+    <string id="DeviceControl">デバイス制御</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Attack Surface Reduction</string>
     <string id="ExploitGuard_ControlledFolderAccess">フォルダー アクセスの制御</string>
@@ -29,6 +30,28 @@
 
 この設定を無効にした場合、マルウェア対策サービスは低い優先順位のタスクとして読み込まれます。</string>
 
+    <string id="MeteredConnectionUpdates">Microsoft Defender ウイルス対策が従量制課金接続で更新して通信できるようにします。</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    無効 (既定): 
+    従量制課金接続を使用して更新と通信を行うことはできません。
+
+    有効: 
+    管理対象デバイスで従量制課金接続を使用して更新できます。データ通信の料金が発生する場合があります。</string>
+    <string id="AllowNetworkProtectionOnWinServer">この設定では、Windows Server でネットワーク保護をブロックモードまたは監査モードに構成することを許可するかどうかを制御します。</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    無効 (既定):
+    構成しなかった場合、または無効にした場合は、Windows Server でネットワーク保護をブロックモードまたは監査モードに構成することはできません。
+
+に
+    有効にした場合、管理者は、Windows Server でネットワーク保護をブロックモードまたは監査モードに構成することを許可するかどうかを制御できます。
+    この構成は EnableNetworkProtection の構成に依存していることに注意してください。この構成が false の場合、EnableNetworkProtection は無視されます。それ以外の場合は、EnableNetworkProtection の値に応じて Windows Server でネットワーク保護が開始されます。</string>
+    <string id="DisableDatagramProcessing">この設定は、ネットワーク保護のためのデータグラム処理を制御します。</string>
+    <string id="DisableDatagramProcessing_Explain">
+    有効 (既定): 
+    未構成または無効の場合、データグラム処理はネットワーク保護に対して有効になります。
+
+    有効: 
+    有効の場合、ネットワーク保護のため、データグラム処理は無効になります。</string>
     <string id="DisableAutoExclusions">自動除外を無効にする</string>
     <string id="DisableAutoExclusions_Explain">
         Server SKU に対して自動除外機能をオフにする必要があるかどうかを管理者が指定できます。
@@ -60,11 +83,11 @@
 
     このポリシーを有効または無効にすると、予期しない動作やサポートされない動作が発生する可能性があります。このポリシー設定は未構成のままにしておくことをお勧めします。</string>
     <string id="DisableLocalAdminMerge">一覧に関するローカル管理者の統合動作を構成する</string>
-    <string id="DisableLocalAdminMerge_Explain">このポリシー設定は、ローカル管理者によって構成された複雑な一覧の設定をグループ ポリシー設定を使用して統合するかどうかを制御します。この設定は、脅威や除外などの一覧に適用されます。
+    <string id="DisableLocalAdminMerge_Explain">このポリシー設定は、ローカル管理者によって構成された複雑な一覧の設定をグループポリシー設定に統合するかどうかを制御します。この設定は、脅威や除外などの一覧に適用されます。
 
-この設定を有効にした場合、または構成しなかった場合、グループ ポリシーに定義されている一意の項目およびローカル管理者によって構成された基本設定内の一意の項目が統合され、有効なポリシーが作成されます。矛盾が生じた場合は、グループ ポリシー設定が基本設定よりも優先されます。
+この設定を無効にした場合、または構成しなかった場合、グループポリシーで定義された一意の項目、およびローカル管理者によって構成された基本設定の項目は、その結果有効なポリシーに統合されます。競合がある場合、グループポリシー設定は基本設定よりも優先されます。
 
-この設定を無効にすると、作成される有効なポリシーではグループ ポリシーで定義された項目だけが使用されます。グループ ポリシー設定が、ローカル管理者によって構成された基本設定よりも優先されます。</string>
+この設定を有効にした場合、有効なポリシーの結果として、グループポリシーで定義された項目のみが使用されます。ローカル管理者が構成した基本設定は、グループポリシーの設定によって上書きされます。</string>
     <string id="DisableRoutinelyTakingAction">定期的な修復を無効にする</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     このポリシー設定を使用すると、検出されたすべての脅威に対して Microsoft Defender ウイルス対策で自動的に処置を実行するかどうかを構成できます。特定の脅威に対して実行される処置は、ポリシーで定義された処置、ユーザーによって定義された処置、署名で定義された処置の組み合わせによって決定されます。
@@ -109,11 +132,15 @@
       この設定を無効にした場合、または構成しなかった場合、プロキシは上で示した順番に従ってこのフォールバック ステップをスキップします。
     </string>
     <string id="RandomizeScheduleTaskTimes">スケジュールされたタスクの時間をランダム化する</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">このポリシー設定を使用すると、スケジュールされたスキャンの開始時刻およびスケジュールされたセキュリティ インテリジェンスの更新の開始時刻のランダム化を有効または無効にすることができます。この設定は、スキャンによるリソースの影響度を分散するために使用されます。たとえば、ホストを共有しているゲスト仮想マシンで使用すると、ディスクを多用する操作を複数のゲスト仮想マシンで同時に実行できないようにすることができます。
+    <string id="RandomizeScheduleTaskTimes_Explain">このポリシー設定を使用すると、スケジュールされたスキャンおよびスケジュールされたセキュリティ インテリジェンスの更新が開始される時刻の時間帯を時間単位で構成できます。
 
-    この設定を有効にした場合、または構成しなかった場合、スケジュールされたタスクは、指定した開始時刻の前後 30 分以内のランダムな時間に開始されます。
+    この設定を無効にした場合、または構成しなかった場合、スケジュールされたタスクは、タスク スケジューラで指定した時刻から 4 時間後までの間のランダムな時刻に開始されます。
+    この設定を有効にした場合は、このランダム化の期間を拡大または縮小できます。指定できるランダム化の時間帯は 1 時間から 23 時間です。</string>
+    <string id="SchedulerRandomizationTime">スケジュールされたタスク時間のランダム化ウィンドウを構成する</string>
+    <string id="SchedulerRandomizationTime_Explain">このポリシー設定を使用すると、スケジュールされたスキャンの開始時刻およびスケジュールされたセキュリティ インテリジェンスの更新開始時刻の時間帯を時間単位で構成できます。
 
-    この設定を無効にした場合、スケジュールされたタスクが、指定した開始時刻に開始されます。</string>
+    この設定を無効にした場合、または構成しなかった場合は、スケジュールされたタスクは、指定した開始時間から 4 時間の間のランダムな時間に開始されます。
+    この設定を有効にした場合は、時間単位でランダム化の時間帯を選択する必要があります。指定できるランダム化の時間帯の幅は 1 時間から 23 時間です。</string>
     <string id="ServiceKeepAlive">マルウェア対策サービスの常時実行を許可する</string>
     <string id="ServiceKeepAlive_Explain">このポリシー設定を使用すると、ウイルス対策およびスパイウェア対策のセキュリティ インテリジェンスが無効の場合でもマルウェア対策サービスの実行を継続するかどうかを構成できます。この設定は無効のままにしておくことをお勧めします。
 
@@ -135,12 +162,20 @@
         未構成:
         無効と同じです。
     </string>
+    <string id="SupportLogLocation">サポートログファイルをコピーするためのディレクトリパスを定義します</string>
+    <string id="SupportLogLocation_Explain">このポリシー設定を使用すると、サポートログファイルのコピー先となるディレクトリパスを構成できます。この設定の値は、有効なディレクトリパスである必要があります。
+
+この設定を有効にした場合、サポートログファイルが、指定されたサポートログの場所のパスにコピーされます。
+
+この設定を無効にした場合、または構成しなかった場合は、サポートログファイルはどの場所にもコピーされません。</string>
     <string id="Exclusions_Extensions">拡張子の除外</string>
     <string id="Exclusions_Extensions_Explain">このポリシー設定を使用すると、スケジュールされたスキャン、カスタム スキャン、およびリアルタイム スキャンから除外するファイルの種類の一覧を指定できます。ファイルの種類は、この設定の [オプション] の下に追加してください。各項目は、名前と値のペアとして一覧に追加します。この名前は、ファイルの種類の拡張子を表す文字列 ("obj" や "lib" など) です。このペアの値は使用されないため、0 に設定することをお勧めします。</string>
     <string id="Exclusions_Paths">パスの除外</string>
     <string id="Exclusions_Paths_Explain">このポリシー設定を使用すると、指定したパスのファイルまたは指定した完全修飾リソースに対するスケジュールされたスキャンとリアルタイム スキャンを無効にすることができます。パスは、この設定の [オプション] の下に追加してください。各項目は、名前と値のペアとして一覧に追加します。この名前は、パスまたは完全修飾リソース名を表す文字列です。たとえばパスを "c:\Windows" と定義して、このディレクトリ内のすべてのファイルを除外できます。完全修飾リソース名は "C:\Windows\App.exe" のように定義できます。このペアの値は使用されないため、0 に設定することをお勧めします。</string>
     <string id="Exclusions_Processes">プロセスの除外</string>
-    <string id="Exclusions_Processes_Explain">このポリシー設定を使用すると、指定したプロセスで開かれたすべてのファイルに対するスケジュールされたスキャンとリアルタイム スキャンを無効にすることができます。このプロセス自体は除外されません。プロセスを除外するには、パスの除外を使用します。プロセスは、この設定の [オプション] の下に追加してください。各項目は、名前と値のペアとして一覧に追加します。この名前は、プロセス イメージへのパスを表す文字列です。除外できるのは、実行可能ファイルのみです。たとえば、プロセスを "c:\windows\app.exe" と定義できます。このペアの値は使用されないため、0 に設定することをお勧めします。</string>
+    <string id="Exclusions_Processes_Explain">このポリシー設定を使用すると、指定したプロセスで開かれたすべてのファイルに対するリアルタイム スキャンを無効にすることができます。このポリシーは、スケジュールされたスキャンには適用されません。このプロセス自体は除外されません。プロセスを除外するには、パスの除外を使用します。プロセスは、この設定の「オプション」の下に追加してください。各項目は、名前と値のペアとして一覧に追加します。この名前は、プロセス イメージへのパスを表す文字列です。除外できるのは、実行可能ファイルのみです。たとえば、プロセスを "c:\windows\app.exe" と定義できます。このペアの値は使用されないため、0 に設定することをお勧めします。</string>
+    <string id="Exclusions_IpAddresses">IP アドレスの除外</string>
+    <string id="Exclusions_IpAddresses_Explain">管理者は、wdnisdrv によって特定の IP　アドレス セットに対して行われたネットワーク パケット検査を明示的に無効にできます。</string>
     <string id="Nis_DisableProtocolRecognition">プロトコル認識を有効にする</string>
     <string id="Nis_DisableProtocolRecognition_Explain">このポリシー設定を使用すると、既に知られている脆弱性の悪用からネットワークを保護するためのプロトコル認識を構成できます。
 
@@ -167,6 +202,14 @@
 この設定を有効にした場合、指定した日数の経過後に [検疫] フォルダーから項目が削除されます。
 
 この設定を無効にした場合、または構成していない場合、項目は無期限に [検疫] フォルダーに保管され、自動的には削除されません。</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">スクリプトのスキャンを有効にします。</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">このポリシー設定を使用すると、スクリプトのスキャンを構成できます。
+
+この設定を有効にした場合、または構成しなかった場合、スクリプトのスキャンが有効になります。
+
+この設定を無効にした場合、スクリプトのスキャンは無効になります。</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">動作の監視を有効にする</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">このポリシー設定を使用すると、動作の監視を構成できます。
 
@@ -400,12 +443,6 @@
 この設定を有効にした場合、または構成しなかった場合、ヒューリスティックが有効になります。
 
 この設定を無効にした場合、ヒューリスティックが無効になります。</string>
-    <string id="Scan_DisablePackedExeScanning">圧縮された実行可能ファイルをスキャンする</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">このポリシー設定を使用すると、圧縮された実行可能ファイルのスキャンを構成できます。この種類のスキャンは有効にしておくことをお勧めします。
-
-この設定を有効にした場合、または構成しなかった場合、圧縮された実行可能ファイルがスキャンされます。
-
-この設定を無効にした場合、圧縮された実行可能ファイルがスキャンされません。</string>
     <string id="Scan_DisableRemovableDriveScanning">リムーバブル ドライブをスキャンする</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">このポリシー設定を使用すると、フル スキャンの実行時に、USB フラッシュ ドライブなどのリムーバブル ドライブに含まれる、悪意のあるソフトウェアと不要なソフトウェアをスキャンするかどうかを管理できます。
 
@@ -473,11 +510,11 @@
 
 この設定を無効にした場合、または構成しなかった場合、既定の日数だけ、項目がスキャンの履歴フォルダーに保管されます。</string>
     <string id="Scan_QuickScanInterval">1 日にクイック スキャンを実行する間隔を指定する</string>
-    <string id="Scan_QuickScanInterval_Explain">このポリシー設定を使用すると、クイック スキャンを実行する間隔を指定できます。時間の値は、クイック スキャンの実行間隔の時間数を表します。有効な値の範囲は 1 (1 時間ごと) から 24 (1 日ごと) までです。0 に設定した場合は、一定間隔でのクイック スキャンは実行されません。既定では、この値が 0 に設定されます。
+    <string id="Scan_QuickScanInterval_Explain">このポリシー設定を使用すると、クイックスキャンを実行する間隔を指定できます。時間の値は、クイックスキャン間の時間数で表されます。有効な値の範囲は 1 (1 時間ごと) から 24 (1 日1回) までです。0に設定すると、間隔クイックスキャンは実行されません。既定では、この設定は0に設定されています。
 
-この設定を有効にした場合、クイック スキャンが指定した間隔で実行されます。
+この設定を有効にした場合、クイックスキャンが指定した間隔で実行されます。
 
-この設定を無効にした場合、または構成しなかった場合、クイック スキャンが既定の時間に実行されます。</string>
+この設定を無効にした場合、または構成しなかった場合、この構成で制御されているクイックスキャンは実行されません。</string>
     <string id="Scan_ScanOnlyIfIdle">コンピューターが起動しているが使用中でないときにのみスケジュールされたスキャンを開始する</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">このポリシー設定を使用すると、コンピューターが起動しているが使用中でないときにのみ、スケジュールされたスキャンが開始されるように構成できます。
 
@@ -521,11 +558,11 @@
     <string id="Scan_ScheduleDay_7">金曜日</string>
     <string id="Scan_ScheduleDay_8">土曜日</string>
     <string id="Scan_ScheduleQuickScantime">毎日のクイック スキャンの時刻を指定する</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">このポリシー設定を使用すると、毎日のクイック スキャンを実行する時刻を指定できます。時刻の値は、真夜中 (00:00) 以降の分の数で表されます。 たとえば、120 (0x78) は 02:00 AM を表します。既定では、2:00 AM という時刻の値に設定されます。スケジュールは、スキャンを実行しているコンピューターのローカル時間に基づきます。
+    <string id="Scan_ScheduleQuickScantime_Explain">このポリシー設定を使用すると、毎日のクイック スキャンを実行する時刻を指定できます。時刻の値は、真夜中 (00:00) 以降の分の数で表されます。 たとえば、120 (0x78) は 02:00 AM を表します。既定では、無効に設定されます。スケジュールは、スキャンを実行しているコンピューターのローカル時間に基づきます。
 
 この設定を有効にした場合、毎日のクイック スキャンが指定した時刻に実行されます。
 
-この設定を無効にした場合、または構成しなかった場合、毎日のクイック スキャンが既定の時間に実行されます。</string>
+この設定を無効にした場合、または構成しなかった場合、この設定で制御されている毎日のクイック スキャンは実行されません。</string>
     <string id="Scan_ScheduleTime">スケジュールされたスキャンを実行する時刻を指定する</string>
     <string id="Scan_ScheduleTime_Explain">このポリシー設定を使用すると、スケジュールされたスキャンを実行する時刻を指定できます。時刻の値は、真夜中 (00:00) 以降の分の数で表されます。 たとえば、120 (0x78) は 02:00 AM を表します。既定では、2:00 AM という時刻の値に設定されます。スケジュールは、スキャンを実行しているコンピューターのローカル時間に基づきます。
 
@@ -548,17 +585,17 @@
 この設定を無効にするか、未構成にした場合、スケジュールされたスキャンの CPU の優先度は変更されません。
     </string>
     <string id="SignatureUpdate_ASSignatureDue">スパイウェア対策セキュリティ インテリジェンスが期限切れと見なされるまでの日数を定義する</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">このポリシー設定を使用すると、スパイウェア対策セキュリティ インテリジェンスが最新でないと見なされるまでに経過する必要がある日数を定義できます。セキュリティ インテリジェンスが最新でないと判断されると、その状態により、代替の更新元から新たに更新を取得したり、ユーザー インターフェイスに警告アイコンを表示したりするなど、いくつかの追加動作がトリガーされる可能性があります。既定では、この値は 14 日に設定されています。
+    <string id="SignatureUpdate_ASSignatureDue_Explain">このポリシー設定を使用すると、スパイウェア対策セキュリティインテリジェンスが最新の状態でないと見なされるまでに必要な日数を定義できます。セキュリティインテリジェンスが最新でないと判定された場合、この状態になると、代替の更新ソースへのフォールバックや、ユーザーインターフェイスでの警告アイコンの表示など、いくつかの追加アクションが実行される可能性があります。既定では、この値は7日間に設定されています。
 
-    この設定を有効にした場合、更新が行われないまま指定した日数が経過した後に、スパイウェア対策セキュリティ インテリジェンスが最新の状態でないと見なされます。
+この設定を有効にした場合、指定した日数が経過した後に、スパイウェア対策セキュリティインテリジェンスが更新されずに有効期限が切れたと見なされます。
 
-    この設定を無効にした場合、または構成しなかった場合、更新が行われないまま既定の日数が経過した後に、スパイウェア対策セキュリティ インテリジェンスが最新の状態でないと見なされます。</string>
+この設定を無効にした場合、または構成しなかった場合、既定の日数が経過した後に、スパイウェア対策セキュリティインテリジェンスが更新されずに有効期限が切れたと見なされます。</string>
     <string id="SignatureUpdate_AVSignatureDue">ウイルス対策セキュリティ インテリジェンスが最新でないと見なされるまでの日数を定義する</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">このポリシー設定を使用すると、ウイルス対策セキュリティ インテリジェンスが最新でないと見なされるまでに経過する必要がある日数を定義できます。セキュリティ インテリジェンスが最新でないと判断されると、その状態により、代替の更新元から新たに更新を取得したり、ユーザー インターフェイスに警告アイコンを表示したりするなど、いくつかの追加動作がトリガーされる可能性があります。既定では、この値は 14 日に設定されています。
+    <string id="SignatureUpdate_AVSignatureDue_Explain">このポリシー設定を使用すると、ウイルスセキュリティインテリジェンスが最新の状態でないと見なされるまでに経過する日数を定義できます。セキュリティインテリジェンスが最新でないと判定された場合、この状態になると、代替の更新ソースへのフォールバックや、ユーザーインターフェイスでの警告アイコンの表示など、いくつかの追加アクションが実行される可能性があります。既定では、この値は7日間に設定されています。
 
-    この設定を有効にした場合、更新が行われないまま指定した日数が経過した後に、ウイルス対策セキュリティ インテリジェンスが最新の状態でないと見なされます。
+この設定を有効にした場合、指定した日数が経過した後に、ウイルス対策セキュリティインテリジェンスが更新されずに有効期限が切れたと見なされます。
 
-    この設定を無効にした場合、または構成しなかった場合、更新が行われないまま既定の日数が経過した後に、ウイルス対策セキュリティ インテリジェンスが最新の状態でないと見なされます。</string>
+この設定を無効にした場合、または構成しなかった場合は、既定の日数が経過した後に、ウイルス対策セキュリティインテリジェンスが更新されず有効期限が切れたと見なされます。</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">セキュリティ インテリジェンスの更新をダウンロードするためのファイル共有を定義する</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">このポリシー設定を使用すると、セキュリティ インテリジェンスの更新のダウンロード元となる UNC ファイル共有を構成できます。更新元への接続は、指定した順序で行われます。この設定の値は、セキュリティ インテリジェンスの更新元を列挙したパイプ区切りの文字列として入力する必要があります。たとえば、{\\unc1 | \\unc2 } のように入力します。既定では、この一覧は空です。
 
@@ -847,36 +884,52 @@
     </string>
     <string id="ExploitGuard_ASR_Rules">Attack Surface Reduction 規則の構成</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    各 Attack Surface Reduction (ASR) 規則に状態を設定します。
+    各 Attack Surface Reduction (ASR) 規則に状態を設定します。.
 
-    この設定を有効にした後、[オプション] セクションで各規則を次のように設定できます。
+    この設定を有効にした後、セクションで各規則を次のように設定できます。
     - ブロック: 規則が適用されます
     - 監査モード: 規則が通常ならイベントを発生させるように設定されている場合、記録を残します (しかし規則は実際には適用されません)
     - オフ: 規則は適用されません
+    -未構成：ルールはデフォルト値で有効になっています
+     - 警告：ルールが適用され、エンドユーザーはブロックをバイパスするオプションを利用できます
+ 
+ 
+ 
+       ASRルールが無効になっていない限り、ASRルールの監査イベントのサブサンプルは値が設定されていません。
 
-    有効:
-    この設定の [オプション] セクションで、各 ASR 規則の状態を指定します。
-    規則ごとに行を変えて、規則を名前と値のペアとして入力します。
-    - 名前列: 有効な ASR 規則 ID を入力します
-    - 値列: その規則について、指定したい状態に対応する状態 ID を入力します
-
-    値列には、次の状態 ID が許可されています。
+   有効：
+ 
+この設定の[オプション]セクションで各ASRルールの状態を指定します。
+ 
+名前と値のペアとして新しい行に各ルールを入力します。
+ 
+   - 名前列：有効なASRルールIDを入力します
+ 
+    -値列：関連付けられたルールに指定する状態に関連するステータスIDを入力します
+ 
+ 
+ 
+    次のステータス IDは値列の下で許可されます：
     - 1 (ブロック)
-    - 0 (オフ)
-    - 2 (監査)
+     - 0 (オフ)
+     - 2 (監査)
+    - 5(未構成)
+    - 6(警告)
+
     
-    例:
+   例::
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
-    無効:
-    ASR 規則は構成されません。
+    無効：
+ 
+ ASRルールは構成されません。
 
     未構成:
-    無効と同じです。
+ 無効と同じです。
 
-    ""Attack Surface Reduction 規則からファイルとパスを除外する"" の GP 設定でフォルダーまたはファイルを除外できます。
+     ""Attack Surface Reduction 規則からファイルとパスを除外する"" の GP 設定でフォルダーまたはファイルを除外できます。
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">フォルダー アクセスの制御を構成する</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1031,14 @@
 
     Microsoft Defender ウイルス対策は、信頼できるアプリケーションを自動的に判断します。[許可されているアプリケーションを構成します] GP 設定で、信頼されるアプリケーションを追加できます。
     </string>
+    <string id="DeviceControl_PolicyGroups">デバイス制御ポリシー グループの定義</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        ポリシーグループのデータを入力するには、デバイス制御ポリシーグループの xml スキーマに従ってください。
+    </string>
+    <string id="DeviceControl_PolicyRules">デバイス制御ポリシー ルールの定義</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        デバイス制御ポリシー ルールの XML スキーマに従い、ポリシー ルール データを入力してください。
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1056,11 @@
         <label>ネットワークへ接続するためのプロキシ サーバーを定義する</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>サポートログファイルをコピーするためのディレクトリパスを定義します</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">拡張子の除外</listBox>
     </presentation>
@@ -1003,6 +1069,9 @@
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">プロセスの除外</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">IP アドレスの除外</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">ネットワーク トラフィック検査の追加の定義セットを指定する</listBox>
@@ -1071,10 +1140,10 @@
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">スケジュールされたスキャンを実行する時刻を指定する</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">スパイウェア対策セキュリティ インテリジェンスが期限切れと見なされるまでの日数を定義する</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">スパイウェア対策セキュリティ インテリジェンスが期限切れと見なされるまでの日数を定義する</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">ウイルス対策セキュリティ インテリジェンスが最新でないと見なされるまでの日数を定義する</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">ウイルス対策セキュリティ インテリジェンスが最新でないと見なされるまでの日数を定義する</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1218,19 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>ここでポリシー グループを定義</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>ここでポリシー ルールを定義</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">スケジューラのランダム化ウィンドウを時間単位で指定します。</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

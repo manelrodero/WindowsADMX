@@ -6,27 +6,24 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Leveringsoptimering</string>
       <string id="DownloadMode">Downloadtilstand</string>
-      <string id="DownloadMode_Help">Angiver den downloadmetode, som Leveringsoptimering kan bruge til downloads af Windows-opdateringer, apps og appopdateringer.
+      <string id="DownloadMode_Help">Angiver den download metode, som leveringsoptimering kan bruge til overførsler af Windows-opdateringer, apps og app-opdateringer.
 
 Følgende liste viser de understøttede værdier:
 
-0 = Kun HTTP, ingen peering.
+0 = kun HTTP, ingen peers.
 
-1 = HTTP blandet med peering bag samme NAT-enhed.
+1 = HTTP blandet med peering bag den samme NAT.
 
-2 = HTTP blandet med peering i en privat gruppe. Peering forekommer som standard på enheder på samme Active Directory-netværk (hvis der findes et) eller i samme domæne. Når denne indstilling vælges, krydser peering NAT-enheder. Hvis du vil oprette en tilpasset gruppe, skal du bruge gruppe-id sammen med tilstand 2.
+2 = HTTP blandet med peering på tværs af en privat gruppe. Peers sker på enheder i det samme Active Directory-område (hvis det findes) eller det samme domæne som standard. Når denne indstilling er valgt, vil peer-enheder. Opret et gruppe-ID til brugerdefineret gruppe i kombination med tilstand 2.
 
-3 = HTTP blandet med peering via internettet.
+3 = HTTP blandet med Internet-peers.
 
-99 = Simpel downloadtilstand uden peering. Leveringsoptimering downloader kun ved brug af HTTP og forsøger ikke at kontakte cloudtjenester for Leveringsoptimering.
-
-100 = Tilstanden Omgå. Brug ikke Leveringsoptimering, og brug i stedet for BITS.</string>
+99 = simpel download-tilstand uden peers. Downloads til levering af levering udelukkende ved hjælp af HTTP og forsøger ikke at kontakte tjenesten for leveringsoptimering.</string>
       <string id="DownloadMode_CdnOnly">Kun HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Gruppe (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Simpel (99)</string>
-      <string id="DownloadMode_Bypass">Omgå (100)</string>
       <string id="GroupId">Gruppe-id</string>
       <string id="GroupId_Help">Gruppe-id'et skal angives som et GUID. Denne politik angive et vilkårligt gruppe-id, som enheden tilhører.
 
@@ -169,14 +166,19 @@ Bemærk! Hvis du indstiller politikken til at udskyde downloaden i baggrunden fr
 
 Bemærk! Hvis du indstiller politikken til at udskyde downloaden i forgrunden fra http, anvendes denne først (for at tillade downloads fra peers først).</string>
       <string id="RestrictPeerSelectionBy">Vælg en metode til at begrænse peer-markering</string>
-      <string id="RestrictPeerSelectionBy_Help">Angiv denne politik for at begrænse peer-valg via valgte indstilling.
+      <string id="RestrictPeerSelectionBy_Help">Angiv denne politik for at begrænse peer-valg via valgt indstilling.
 
 Tilgængelige indstillinger er:
-1 = undernetmaske (flere indstillinger tilføjes i en fremtidig version).
+0 = NAT.
+1 = undernetmaske.
+2 = lokal registrering (DNS-SD).
 
-Indstilling 1 (undernetmaske) gælder for både Downloadtilstand LAN (1) og Gruppe (2).</string>
-      <string id="RestrictPeerSelectionBy_None">Ingen</string>
+Standardværdien er ændret fra 0 (ingen begrænsning) til 1 (Begræns til undernettet).
+
+Disse indstillinger gælder for både download tilstand LAN (1) og gruppe (2).</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Undernet</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Lokal registrering</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Indstil arbejdstider for at begrænse båndbredde til download i baggrunden</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Angiver den maksimale båndbredde til download i baggrunden, som Leveringsoptimering bruger i og uden for arbejdstiden på tværs af alle samtidige downloadaktiviteter som en procentdel af den tilgængelige båndbredde til download.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Indstil arbejdstider for at begrænse båndbredde til download i forgrunden</string>
@@ -303,7 +305,7 @@ Indstilling 1 (undernetmaske) gælder for både Downloadtilstand LAN (1) og Grup
         <text>Standardværdien er 0 (ingen forsinkelse)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Begræns peer-valget med:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Begræns peer-valget med:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

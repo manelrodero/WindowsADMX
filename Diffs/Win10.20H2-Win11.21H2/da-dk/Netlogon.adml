@@ -338,6 +338,22 @@ Hvis du vil angive denne funktionsmåde, skal du klikke på Aktiveret og derefte
 
 Hvis du ikke konfigurerer denne politikindstilling, anvendes den ikke på nogen computere, og computere bruger den lokale konfiguration.</string>
 
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Brug DNS-værtsnavne med små bogstaver ved registrering af SRV-poster til domænecontroller</string>
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Denne politikindstilling konfigurerer, om de domænecontrollere, som denne indstilling anvendes på, får deres DNS-værtsnavn til små bogstaver ved registrering af SRV-poster.
+
+Hvis den er aktiveret, vil domænecontrollere skrive deres DNS-værtsnavn ved registrering af SRV-poster for domænecontroller. Det vil blive forsøgt at slette tidligere registrerede SRV-poster, der indeholder blandede DNS-værtsnavne med blandede tilfælde. Du kan finde flere oplysninger om og potentielle manuelle oprydnings procedurer i nedenstående link.
+
+Hvis indstillingen er deaktiveret, vil domænecontrollere bruge deres konfigurerede DNS-værtsnavn som-når som helst ved registrering af SRV-poster for domænecontroller.
+
+Hvis den ikke er konfigureret, vil domænecontrollere som standard benytte deres lokale konfiguration.
+
+Standardkonfigurationen for lokal standard er aktiveret.
+
+Det er ikke nødvendigt at genstarte computeren, for at ændringer til denne indstilling træder i kraft.
+
+Du kan finde flere oplysninger på https://aka.ms/lowercasehostnamesrvrecord
+      </string>
+
     </stringTable>
     <presentationTable>
       <presentation id="Netlogon_BackgroundRetryInitialPeriod">

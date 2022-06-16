@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivírus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusões</string>
+    <string id="DeviceControl">Controle de Dispositivos</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Redução da Superfície de Ataque</string>
     <string id="ExploitGuard_ControlledFolderAccess">Acesso a Pastas Controladas</string>
@@ -29,6 +30,28 @@ Se você habilitar ou não definir essa configuração, o serviço antimalware s
 
 Se você desabilitar essa configuração, o serviço antimalware será carregado como uma tarefa de prioridade baixa.</string>
 
+    <string id="MeteredConnectionUpdates">Permite que o Microsoft Defender Antivirus atualize e se comunique em uma conexão limitada.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Desabilitado (padrão): 
+    Atualizações e comunicações não são permitidas em conexões limitadas.
+
+Disponível 
+    Permitir que dispositivos gerenciados sejam atualizados através de conexões limitadas. Tarifas de dados podem ser aplicadas.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Esta configuração controla se a proteção de rede pode ser configurada no modo de bloco ou de auditoria no Windows Server.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Desabilitado (Padrão): 
+    Se Não Configurado ou Desativado, a proteção de rede não pode ser configurada no modo de bloqueio ou auditoria no Windows Server.
+
+    Habilitado: 
+    Se Habilitado, os administradores podem controlar se a Proteção de Rede pode ser configurada no modo de bloqueio ou auditoria no Windows Server.
+    Observe que esta configuração depende da configuração EnableNetworkProtection. Se esta configuração for falsa, EnableNetworkProtection será ignorado, caso contrário, a proteção de rede será iniciada no Windows Server dependendo do valor de EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Esta configuração controla o processamento de datagramas para proteção de rede.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Habilitado (padrão): 
+    Se não estiver configurada ou estiver desabilitada, o processamento de datagrama será habilitado para a proteção de rede.
+
+Disponível 
+    Se habilitada, o processamento de datagrama será desabilitado para proteção de rede.</string>
     <string id="DisableAutoExclusions">Desativar Exclusões Automáticas</string>
     <string id="DisableAutoExclusions_Explain">
         Permite a um administrador especificar se o recurso de Exclusões Automáticas para SKUs do Servidor deve ser desativado.
@@ -60,11 +83,11 @@ Se você desabilitar ou não definir essa configuração de política, por padr�
 
     A habilitação ou desabilitação desta política pode causar um comportamento inesperado ou sem suporte. É recomendável que você deixe esta configuração de política não configurada.</string>
     <string id="DisableLocalAdminMerge">Configurar comportamento de mesclagem de listas de administrador local</string>
-    <string id="DisableLocalAdminMerge_Explain">Esta configuração de política controla se as configurações de listas complexas definidas por um administrador local são mescladas com as configurações de política de grupo. Essa configuração se aplica, por exemplo, a listas de ameaças e de exclusões.
+    <string id="DisableLocalAdminMerge_Explain">Essa configuração de política controla se as configurações de listas complexas definidas por um administrador local são mescladas com as configurações de política de grupo. Esta configuração se aplica a listas como ameaças e exclusões.
 
-Se você habilitar ou não definir essa configuração, itens exclusivos definidos na Política de Grupo e nas configurações de preferências especificadas pelo administrador local serão mesclados na política efetiva resultante. No caso de conflitos, as configurações de política de grupo substituem as configurações de preferências.
+Se você desabilitar ou não definir essa configuração, os itens exclusivos definidos na política de grupo e nas configurações de preferências definidas pelo administrador local serão mesclados na política efetiva resultante. No caso de conflitos, as configurações de política de grupo substituem as configurações de preferências.
 
-Se você desabilitar essa configuração, somente itens definidos pela Política de Grupo serão usados na política efetiva resultante. As configurações de Política de Grupo substituem as configurações de preferências especificadas pelo administrador local.</string>
+Se você habilitar essa configuração, somente os itens definidos pela política de grupo serão usados na política efetiva resultante. As configurações de política de grupo substituirão as configurações de preferências definidas pelo administrador local.</string>
     <string id="DisableRoutinelyTakingAction">Desativar correção de rotina</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Essa configuração de política permite definir se o Microsoft Defender Antivírus deverá executar automaticamente ações em relação a todas as ameaças detectadas. A ação a ser executada em relação a determinada ameaça é estabelecida pela combinação da ação definida pela política, da ação definida pelo usuário e da ação definida pela assinatura.
@@ -109,11 +132,15 @@ Se você desabilitar ou não definir essa configuração, o servidor proxy não 
       Se você desabilitar ou não definir essa configuração, o proxy ignorará essa etapa de fallback de acordo com a ordem especificada acima.
     </string>
     <string id="RandomizeScheduleTaskTimes">Randomizar horários de tarefas agendadas</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Esta configuração de política permite habilitar ou desabilitar a randomização da hora de início de verificações agendadas e da hora de início de atualizações de inteligência de segurança agendadas. Esta configuração é usada para distribuir o impacto da verificação sobre o recurso. Por exemplo, ela pode ser usada em máquinas virtuais convidadas que compartilham um host, para impedir que várias máquinas virtuais convidadas executem uma operação com uso intensivo de disco ao mesmo tempo.
+    <string id="RandomizeScheduleTaskTimes_Explain">Essa configuração de política permite configurar a verificação agendada e a atualização de inteligência de segurança agendada, janela de hora de início em horas.
 
-    Se você habilitar ou não definir esta configuração, as tarefas agendadas serão iniciadas em um horário aleatório dentro de um intervalo de 30 minutos antes e após a hora de início especificada.
+ Se você desabilitar ou não definir essa configuração, as tarefas agendadas começarão em um horário aleatório dentro de quatro horas após o período especificado no Agendador de Tarefas.
+ Se você habilitar essa configuração, pode ampliar ou restringir esse período de aleatórios. Especifique uma janela de aleatórios entre 1 e 23 horas.</string>
+    <string id="SchedulerRandomizationTime">Configurar janela de randomização de tempo de tarefa agendada</string>
+    <string id="SchedulerRandomizationTime_Explain">Esta configuração de política permite configurar a hora de início agendada e a janela de hora de início da atualização de inteligência de segurança.
 
-    Se você desabilitar esta configuração, as tarefas agendadas serão iniciadas na hora de início especificada.</string>
+Se você desabilitar ou não definir essa configuração, as tarefas agendadas serão iniciadas em um horário aleatório dentro de um intervalo de 4 horas após a hora de início especificada.
+    Se você habilitar essa configuração, deverá escolher uma janela de randomização em horas. O intervalo de janela de randomização possível está entre 1 e 23 horas.</string>
     <string id="ServiceKeepAlive">Permitir que o serviço antimalware permaneça sempre em execução</string>
     <string id="ServiceKeepAlive_Explain">Esta configuração de política permite configurar se o serviço antimalware permanecerá em execução quando a inteligência de segurança antivírus e antispyware for desabilitada. Recomendamos que essa configuração permaneça desabilitada.
 
@@ -135,12 +162,20 @@ Habilitada:
         Não configurada:
         O mesmo que Desabilitada.
     </string>
+    <string id="SupportLogLocation">Definir o caminho do diretório para copiar os arquivos de log de suporte</string>
+    <string id="SupportLogLocation_Explain">Essa configuração de política permite que você configure o caminho do diretório no qual os arquivos de log de suporte seriam copiados. O valor desta configuração deve ser um caminho de diretório válido.
+
+Se você habilitar essa configuração, os arquivos de log de suporte serão copiados para o caminho do local de log de suporte especificado.
+
+Se você desabilitar ou não definir essa configuração, os arquivos de logs de suporte não serão copiados para qualquer local.</string>
     <string id="Exclusions_Extensions">Exclusões de Extensão</string>
     <string id="Exclusions_Extensions_Explain">Esta configuração de política permite especificar uma lista de tipos de arquivos que devem ser excluídos da verificação agendada, personalizada e em tempo real. Os tipos de arquivos devem ser adicionados às Opções dessa configuração. Cada entrada deve ser listada como um par nome-valor, em que o nome deve ser uma representação de cadeia de caracteres da extensão do tipo de arquivo (como "obj" ou "lib"). O valor não é usado e convém que seja definido como 0.</string>
     <string id="Exclusions_Paths">Exclusões de Caminho</string>
     <string id="Exclusions_Paths_Explain">Esta configuração de política permite desabilitar a verificação agendada e em tempo real de arquivos que estejam em caminhos especificados ou de recursos totalmente qualificados especificados. Os caminhos devem ser adicionados às Opções dessa configuração. Cada entrada deve ser listada como um par nome-valor, em que o nome deve ser uma representação de cadeia de caracteres de um caminho ou de um nome de recurso totalmente qualificado. Por exemplo, um caminho pode ser definido como: "c:\Windows" para excluir todos os arquivos nesse diretório. Um nome de recurso totalmente qualificado deve ser definido como: "C:\Windows\App.exe". O valor não é usado e convém que seja definido como 0.</string>
     <string id="Exclusions_Processes">Exclusões de Processo</string>
-    <string id="Exclusions_Processes_Explain">Esta configuração de política permite desabilitar a verificação agendada e em tempo real de arquivos abertos por qualquer um dos processos especificados. O processo propriamente dito não será excluído. Para excluir o processo, use a exclusão Caminho. Os processos devem ser adicionados às Opções dessa configuração. Cada entrada deve ser listada como um par nome-valor, em que o nome deve ser uma representação de cadeia de caracteres do caminho para a imagem do processo. Observe que somente executáveis podem ser excluídos. Por exemplo, um processo pode ser definido como: "c:\windows\app.exe". O valor não é usado e convém que seja definido como 0.</string>
+    <string id="Exclusions_Processes_Explain">Essa configuração de política permite desabilitar a verificação em tempo real para qualquer arquivo aberto por qualquer um dos processos especificados. Esta política não se aplica a verificações agendadas. O processo propriamente dito não será excluído. Para excluir o processo, use a exclusão de caminho. Os processos devem ser adicionados às opções dessa configuração. Cada entrada deve ser listada como um par nome-valor, no qual o nome deve ser uma representação de cadeia de caracteres do caminho para a imagem do processo. Observe que somente executáveis podem ser excluídos. Por exemplo, um processo pode ser definido como: "c:\windows\app.exe". O valor não é usado e é recomendável que isso seja definido como 0.</string>
+    <string id="Exclusions_IpAddresses">Exclusões de Endereço Ip</string>
+    <string id="Exclusions_IpAddresses_Explain">Permite a um administrador desabilitar explicitamente a inspeção de pacotes de rede feita por wdnisdrv em um determinado conjunto de endereços IP.</string>
     <string id="Nis_DisableProtocolRecognition">Habilitar reconhecimento de protocolo</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Esta configuração de política permite configurar o reconhecimento de protocolos de proteção de rede contra exploradores de vulnerabilidades conhecidas.
 
@@ -167,6 +202,14 @@ Se você desabilitar ou não definir essa configuração, a Política de Grupo t
 Se você habilitar essa configuração, os itens serão removidos da pasta Quarentena após o número de dias especificado.
 
 Se você desabilitar ou não definir essa configuração, os itens serão mantidos na pasta de quarentena indefinidamente e não serão automaticamente removidos.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Ativar a verificação de script</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Esta configuração de política permite configurar a verificação de scripts.
+
+Se você habilitar ou não definir essa configuração, a verificação de scripts será habilitada.
+
+Se você desabilitar essa configuração, a verificação de scripts será desabilitada.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Habilitar monitoramento de comportamento</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Esta política permite configurar o monitoramento de comportamento.
 
@@ -400,12 +443,6 @@ Se você desabilitar ou não definir essa configuração, a verificação de ema
 Se você habilitar ou não definir essa configuração, a heurística será habilitada.
 
 Se você desabilitar essa, a heurística será desabilitada.</string>
-    <string id="Scan_DisablePackedExeScanning">Examinar executáveis empacotados</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Esta política permite configurar a verificação de executáveis empacotados. Recomendamos que esse tipo de verificação permaneça habilitado.
-
-Se você habilitar ou não definir essa configuração, os executáveis empacotados serão examinados.
-
-Se você desabilitar essa configuração, os executáveis empacotados não serão examinados.</string>
     <string id="Scan_DisableRemovableDriveScanning">Examinar unidades removíveis</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Esta configuração de política permite gerenciar a verificação de software mal-intencionado e software indesejado no conteúdo de unidades de disco removíveis, como unidades flash USB, durante uma verificação completa.
 
@@ -473,11 +510,11 @@ Se você habilitar essa configuração, os itens serão removidos da pasta de hi
 
 Se você desabilitar ou não definir essa configuração, os itens serão mantidos na pasta de histórico de verificação pelo número de dias especificado.</string>
     <string id="Scan_QuickScanInterval">Especificar o intervalo para executar verificações diárias por dia</string>
-    <string id="Scan_QuickScanInterval_Explain">Esta configuração de política permite especificar o intervalo no qual executar uma verificação rápida. O valor da hora é representado como o número de horas entre as verificações rápidas. Valores válidos variam de 1 (toda hora) a 24 (uma vez por dia). Se definido como zero, verificações rápidas intervaladas não ocorrerão. Por padrão, essa configuração é definida como 0.
+    <string id="Scan_QuickScanInterval_Explain">Essa configuração de política permite especificar um intervalo no qual executar uma verificação rápida. O valor da hora é representado como o número de horas entre as verificações rápidas. Os valores válidos variam de 1 (a cada hora) a 24 (uma vez por dia). Se for definido como zero, as verificações rápidas de intervalo não ocorrerão. Por padrão, essa configuração é definida como 0.
 
 Se você habilitar essa configuração, uma verificação rápida será executada no intervalo especificado.
 
-Se você desabilitar ou não definir essa configuração, uma verificação rápida será executada no horário padrão.</string>
+Se você desabilitar ou não definir essa configuração, a verificação rápida controlada por esta configuração não será executada.</string>
     <string id="Scan_ScanOnlyIfIdle">Iniciar a verificação agendada somente quando o computador estiver ligado, mas não em uso</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Esta política permite configurar verificações agendadas a serem iniciadas somente quando o computador estiver ligado, mas não em uso.
 
@@ -521,11 +558,11 @@ Se você desabilitar ou não definir essa configuração, uma verificação agen
     <string id="Scan_ScheduleDay_7">Sexta</string>
     <string id="Scan_ScheduleDay_8">Sábado</string>
     <string id="Scan_ScheduleQuickScantime">Especificar a hora para uma verificação rápida diária</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Esta configuração de política permite especificar a hora do dia na qual executar uma verificação rápida diária. O valor da hora é representado como o número de minutos após a meia-noite (00:00).  Por exemplo, 120 (0x78) é o mesmo que 2:00. Por padrão, essa configuração é definida como um valor de hora de 2:00. A agenda é baseada na hora local do computador em que a verificação é executada.
+    <string id="Scan_ScheduleQuickScantime_Explain">Esta configuração de política permite especificar a hora do dia na qual executar uma verificação rápida diária. O valor da hora é representado como o número de minutos após a meia-noite (00:00).  Por exemplo, 120 (0x78) é equivalente a 02:00 AM. Por padrão, essa configuração é definida como desabilitada. A agenda é baseada na hora local do computador em que a verificação está sendo executada.
 
 Se você habilitar essa configuração, uma verificação rápida diária será executada na hora do dia especificada.
 
-Se você desabilitar ou não definir essa configuração, uma verificação rápida diária será executada no horário padrão.</string>
+Se você desabilitar ou não definir essa configuração, a verificação rápida diária controlada por esta configuração não será executada.</string>
     <string id="Scan_ScheduleTime">Especificar a hora do dia para executar uma verificação agendada</string>
     <string id="Scan_ScheduleTime_Explain">Esta configuração de política permite especificar a hora do dia na qual executar uma verificação rápida. O valor da hora é representado como o número de minutos após a meia-noite (00:00).  Por exemplo, 120 (0x78) é o mesmo que 2:00. Por padrão, essa configuração é definida como um valor de hora de 2:00. A agenda é baseada na hora local do computador em que a verificação é executada.
 
@@ -548,17 +585,17 @@ Se você desabilitar ou não definir essa configuração, a verificação de atu
         Se você desabilitar ou não configurar essa política, não serão feitas alterações na prioridade da CPU para verificações agendadas.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definir o número de dias antes que a inteligência de segurança contra spyware seja considerada desatualizada</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta configuração de política permite definir o número de dias que devem ser transcorridos antes que a inteligência de segurança contra spyware seja considerada desatualizada. Se a inteligência de segurança for determinada como desatualizada, esse estado pode disparar várias ações adicionais, incluindo o fallback para uma origem de atualização alternativa ou a exibição de um ícone de aviso na interface do usuário. Por padrão, esse valor é definido como 14 dias.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta configuração de política permite definir o número de dias que devem ser transcorridos antes que a inteligência de segurança contra spyware seja considerada desatualizada. Se a inteligência de segurança for determinada como desatualizada, esse Estado poderá disparar várias ações adicionais, incluindo o fallback para uma origem de atualização alternativa ou a exibição de um ícone de aviso na interface do usuário. Por padrão, esse valor é definido como 7 dias.
 
-    Se você habilitar esta configuração, a inteligência de segurança contra spyware será considerada desatualizada decorrido o número de dias especificado sem uma atualização.
+Se você habilitar essa configuração, a inteligência de segurança contra spyware será considerada desatualizada depois que o número de dias especificado tiver passado sem uma atualização.
 
-    Se você desabilitar ou não definir esta configuração, a inteligência de segurança contra spyware será considerada desatualizada decorrido o número de dias padrão sem uma atualização.</string>
+Se você desabilitar ou não definir essa configuração, a inteligência de segurança contra spyware será considerada desatualizada depois que o número padrão de dias tiver passado sem uma atualização.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definir o número de dias antes que a inteligência de segurança contra vírus seja considerada desatualizada</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta configuração de política permite definir o número de dias que devem ser transcorridos antes que a inteligência de segurança contra vírus seja considerada desatualizada. Se a inteligência de segurança for determinada como desatualizada, esse estado pode disparar várias ações adicionais, incluindo o fallback para uma origem de atualização alternativa ou a exibição de um ícone de aviso na interface do usuário. Por padrão, esse valor é definido como 14 dias.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta configuração de política permite definir o número de dias que devem ser transcorridos antes que a inteligência de segurança contra vírus seja considerada desatualizada. Se a inteligência de segurança for determinada como desatualizada, esse Estado poderá disparar várias ações adicionais, incluindo o fallback para uma origem de atualização alternativa ou a exibição de um ícone de aviso na interface do usuário. Por padrão, esse valor é definido como 7 dias.
 
-    Se você habilitar esta configuração, a inteligência de segurança contra vírus será considerada desatualizada decorrido o número de dias especificado sem uma atualização.
+Se você habilitar essa configuração, a inteligência de segurança contra vírus será considerada desatualizada depois que o número de dias especificado tiver passado sem uma atualização.
 
-    Se você desabilitar ou não definir esta configuração, a inteligência de segurança contra vírus será considerada desatualizada decorrido o número de dias padrão sem uma atualização.</string>
+Se você desabilitar ou não definir essa configuração, a inteligência de segurança contra vírus será considerada desatualizada depois que o número padrão de dias tiver passado sem uma atualização.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definir compartilhamentos de arquivos para baixar atualizações de inteligência de segurança</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Esta configuração de política permite configurar as origens de compartilhamento de arquivos UNC para baixar atualizações de inteligência de segurança. As origens serão contatadas na ordem especificada. O valor dessa configuração deve ser inserido como uma cadeia separada por pipe que enumere as origens de atualizações de inteligência de segurança. Por exemplo: "{\\unc1 | \\unc2 }". A lista fica vazia por padrão.
 
@@ -847,36 +884,43 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
     </string>
     <string id="ExploitGuard_ASR_Rules">Configurar Regras de Redução da Superfície de Ataque</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Defina o estado para cada regra ASR (Attack Surface Reduction).
+    Defina o estado de cada regra ASR (redução da superfície de ataque).
 
-    Depois de habilitar essa configuração, você pode configurar cada regra para o seguinte na seção Opções:
-    - Bloquear: a regra será aplicada
-    - Modo de Auditoria: se a regra normalmente causaria um evento, ela será registrada (embora a regra não seja realmente aplicada)
-    - Desativada: a regra não será aplicada
+ Depois de habilitar essa configuração, você pode definir cada regra para o seguinte na seção Opções:
+-Block: a regra será aplicada
+ – Modo de Auditoria: se a regra normalmente causa um evento, em seguida, ele será gravado (embora a regra não seja realmente aplicada)
+-Off: a regra não será aplicada
+-Não Configurada: a regra está habilitada com valores padrão
+-WARN: a regra será aplicada e o usuário final terá a opção de ignorar o bloco
 
-    Habilitado:
-    Especifique o estado para cada regra ASR na seção Opções dessa configuração.
-    Insira cada regra em uma nova linha como um par de nome-valor:
-    - Coluna Nome: insira uma ID de regra ASR válida
-    - Coluna Valor: insira a ID de status relacionada ao estado que você quer especificar para a regra associada
+, A menos que a regra ASR esteja desabilitada , uma subamostra de eventos de auditoria será coletada para as regras ASR o valor de não configurado.
 
-    As IDs de status a seguir são permitidas na coluna Valor:
-    - 1 (Bloquear)
-    - 0 (Desativada)
-    - 2 (Auditar)
-    
-    Exemplo:
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
-    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
+ Habilitado:
+ Especificar o estado de cada regra ASR na seção opções dessa configuração.
+ Inserir cada regra em uma nova linha como um par nome-valor:
+ coluna Nome: Insira uma ID de regra ASR válida
+ -coluna Valor: Insira a ID do status que se refere ao estado que você deseja especificar na regra associada
 
-    Desabilitado:
-    Nenhuma regra ASR será configurada.
+ As seguintes IDs de status são permitidas na coluna valor:
+-1 (Bloquear)
+-0 (Desativado)
+-2 (Auditoria)
+-5 (Não Configuradas)
+-6 (Alerta)
 
-    Não configurado:
-    O mesmo que Desabilitado.
 
-    Você pode excluir pastas ou arquivos na configuração de política de grupo ""Excluir arquivos e caminhos das Regras de Attack Surface Reduction"".
+ Exemplo:
+ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 0
+ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 1
+ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 2
+
+ Desabilitado:
+ Nenhuma regra ASR será configurada.
+
+ Não configurada:
+ Mesmos que Desabilitado.
+
+ Você pode excluir pastas ou arquivos na configuração de política "" Exclua arquivos e caminhos de regras de redução da superfície de ataque "".
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Configurar Acesso controlado a pastas</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
 
     O Microsoft Defender Antivírus determina automaticamente quais aplicativos são confiáveis. Você pode adicionar mais aplicativos confiáveis na configuração de política de grupo Configurar aplicativos permitidos.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definir grupos de políticas de controle de dispositivos</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Siga o esquema XML dos grupos de políticas de controle de dispositivos para preencher os dados de grupos de políticas.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definir regras de políticas de controle de dispositivos</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Siga o esquema XML das regras de política de controle de dispositivo para preencher os dados de regras de política.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
         <label>Definir servidor proxy para conexão com a rede</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Definir o caminho do diretório para copiar os arquivos de log de suporte</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Exclusões de Extensão</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Exclusões de Processo</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">Exclusões de Endereço IP</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Especificar conjuntos de definições adicionais para a inspeção de tráfego de rede</listBox>
@@ -1071,10 +1131,10 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Especificar a hora do dia para executar uma verificação agendada</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definir o número de dias antes que a inteligência de segurança contra spyware seja considerada desatualizada</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definir o número de dias antes que a inteligência de segurança contra spyware seja considerada desatualizada</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definir o número de dias antes que a inteligência de segurança contra vírus seja considerada desatualizada</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definir o número de dias antes que a inteligência de segurança contra vírus seja considerada desatualizada</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Defina os grupos de políticas aqui</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Defina as regras de políticas aqui</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Especificar a janela de randomização do agendador em horas.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

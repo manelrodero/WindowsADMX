@@ -270,7 +270,7 @@
 
 如果您停用或未設定這個原則設定，則將無法提供預設的快顯封鎖程式例外清單。
 
-注意: 您可以透過停用 [關閉管理允許快顯清單] 原則，來禁止使用者新增或移除例外清單中的網站。</string>
+注意: 您可以透過停用 [關閉管理快顯允許清單] 原則，來禁止使用者新增或移除例外清單中的網站。</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">這個原則設定可讓您在電腦上某個處理程序執行的指令碼嘗試執行剪貼簿作業 (刪除、複製或貼上) 時略過提示。
 
 如果您啟用這個原則設定，使用者將不會在電腦上某個處理程序執行的指令碼執行剪貼簿作業時收到提示。也就是說，如果區域行為目前設為 [提示]，則這個設定會被略過和啟用。
@@ -298,7 +298,6 @@
 如果您未設定這個原則設定，清單中應用程式或處理程序的 URL 動作目前值會優先。</string>
       <string id="FavImportExport">停用匯入/匯出設定精靈</string>
       <string id="GeolocationDisable">關閉瀏覽器地理位置</string>
-      <string id="DisableFlashInIE">關閉 Internet Explorer 中的 Adobe Flash，防止應用程式使用 Internet Explorer 技術具現化 Flash 物件</string>
       <string id="File_NoBrowserClose">[檔案] 功能表: 停用關閉瀏覽器和檔案總管視窗</string>
       <string id="File_NoBrowserSaveAs">[檔案] 功能表: 停用 [另存新檔...] 功能表選項</string>
       <string id="File_NoBrowserSaveWebComplete">[檔案] 功能表: 完全停用另存新檔為網頁</string>
@@ -420,7 +419,7 @@
 如果您停用或未設定這個原則設定，將會提示使用者決定網路釣魚篩選工具的作業模式。</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">這個原則設定可讓使用者啟用 [SmartScreen 篩選工具]，如果所造訪的網站已知會透過「網路釣魚」意圖詐騙個人資訊、或已知為裝載惡意軟體，這個功能會警告使用者。
 
-如果您啟用這個原則設定，將不會提示使用者開啟 [SmartScreen 篩選工具]。您必須指定 [SmartScreen 篩選工具] 使用的模式: 開啟或關閉。不在篩選工具允許的清單上的所有網址將會自動傳送到 Microsoft，而且不會提示使用者。
+如果您啟用這個原則設定，將不會提示使用者開啟 [SmartScreen 篩選工具]。您必須指定 [SmartScreen 篩選工具] 使用的模式: 開啟或關閉。不在篩選工具允許清單上的所有網址將會自動傳送到 Microsoft，而且不會提示使用者。
 
 如果您停用或未設定這個原則設定，將會提示使用者決定是否在初次執行體驗時開啟 [SmartScreen 篩選工具]。</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">這個原則設定可防止使用者管理 [SmartScreen 篩選工具]，如果所造訪的網站已知會透過「網路釣魚」意圖詐騙個人資訊、或已知為裝載惡意軟體，這個功能會警告使用者。
@@ -726,13 +725,6 @@ Microsoft Agent 是一組在 Microsoft Windows 介面中，支援將軟體助理
 如果您停用這個原則設定，將會開啟瀏覽器地理位置支援。
 
 如果您未設定這個原則設定，瀏覽器地理位置支援可以透過 [網際網路選項] 的 [隱私權] 索引標籤來開啟或關閉。</string>
-      <string id="IE_ExplainDisableFlashInIE">此原則設定會關閉 Internet Explorer 中的 Adobe Flash，並防止應用程式使用 Internet Explorer 技術將 Flash 物件具現化。
-
-若啟用此原則設定，系統會關閉 Internet Explorer 的 Flash，而且應用程式無法使用 Internet Explorer 技術將 Flash 物件具現化。在 [管理附加元件] 對話方塊中，Flash 狀態將會是「已停用」，而且使用者無法啟用 Flash。若啟用此原則設定，Internet Explorer 將會忽略透過「附加元件清單」與「除非附加元件清單中特別允許，否則拒絕所有附加元件」原則設定中針對 Adobe Flash 所做的設定。
-
-若停用或未設定此原則設定，系統會開啟 Internet Explorer 的 Flash，而且應用程式可以使用 Internet Explorer 技術將 Flash 物件具現化。使用者可以在 [管理附加元件] 對話方塊中啟用或停用 Flash。
-
-注意，即使停用或未設定此原則設定，還是可以透過「附加元件清單」與「除非附加元件清單中特別允許，否則拒絕所有附加元件」原則設定來停用 Adobe Flash。不過，若 Adobe Flash 是透過「附加元件清單」與「除非附加元件清單中特別允許，否則拒絕所有附加元件」原則設定而不是這個原則設定來停用，則使用 Internet Explorer 技術將 Flash 物件具現化的所有應用程式仍然可以將它停用。如需詳細資訊，請參閱 Internet Explorer TechNet 文件庫中的＜Internet Explorer 10 中的群組原則設定＞。</string>
       <string id="IE_ExplainFile_NoBrowserClose">防止使用者關閉 Microsoft Internet Explorer 和 [檔案總管]。
 
 如果您啟用這個原則，則 [檔案] 功能表中的 [關閉] 命令將呈現停用。
@@ -874,13 +866,13 @@ Microsoft Agent 是一組在 Microsoft Windows 介面中，支援將軟體助理
 
 4.在 [執行 ActiveX 控制項與外掛程式] 區域中，按一下 [系統管理員已批准]。</string>
       <string id="IE_ExplainMenusCategory">包含顯示或隱藏 Internet Explorer 中的功能表和功能表選項的設定。</string>
-      <string id="IE_ExplainMicrosoft_Chat">將 Microsoft Chat ActiveX 控制項指定為系統管理員已批准。
+      <string id="IE_ExplainMicrosoft_Chat">將 Microsoft Chat ActiveX 控制項指定為系統管理員已核准。
 
 網頁作者使用這個控制項建立以文字與圖形為基礎的聊天室，以便在網路上進行即時通訊。
 
 如果您啟用這個原則，則在您指定可以執行系統管理員已批准之控制項的安全性區域中，可以執行這個控制項。
 
-如果您停用或未設定這個原則，這個控制項將不會被指定為系統管理員已批准。
+如果您停用或未設定這個原則，這個控制項將不會被指定為系統管理員已核准。
 
 如果要指定每個安全性區域處理系統管理員已批准控制項的方式，請執行下列步驟:
 
@@ -1345,7 +1337,7 @@ Microsoft Agent 是一組在 Microsoft Windows 介面中，支援將軟體助理
 
 如果您停用或未設定這個原則設定，使用者可以在例外清單中新增或移除網站。
 
-注意: 您可以透過啟用 [指定允許快顯清單] 原則設定，來允許預設清單中的網站開啟快顯視窗，而不理會 Internet Explorer 處理程序的快顯封鎖程式設定。</string>
+注意: 您可以透過啟用 [指定快顯允許清單] 原則設定，來允許預設清單中的網站開啟快顯視窗，而不理會 Internet Explorer 處理程序的快顯封鎖程式設定。</string>
       <string id="IE_ExplainRestrictPopupManagement">這個原則設定可讓您管理 Internet Explorer 中的快顯管理功能。
 
 如果您啟用這個原則設定，則與快顯管理相關的 [控制台] 資訊將無法使用 (變成灰色)，而且所有其他快顯管理員控制項、通知和對話方塊將不會出現。雖然啟動超出螢幕的視窗仍將會重新定位到螢幕內，不過，如同它們在 Windows XP Service Pack 1 或較舊版本中一樣，快顯視窗將會繼續運作。
@@ -3014,7 +3006,7 @@ img 標籤的 dynsrc 屬性指定的是舊版媒體播放程式。此外，在 I
       <string id="Persistence_FileLimits4">受限制的網站區域檔案大小限制</string>
       <string id="PhishingOff">關閉</string>
       <string id="PhishingOn">開啟</string>
-      <string id="PopupBlocker_AllowList">允許快顯清單</string>
+      <string id="PopupBlocker_AllowList">快顯允許清單</string>
       <string id="Printing">列印中</string>
       <string id="Printing_Explain">這個原則設定可指定使用者列印網頁時，是否要 Internet Explorer 列印背景色彩與影像。視印表機的功能而定，包括背景色彩及映像可能會降低網頁列印速度及列印品質。
 
@@ -3903,7 +3895,7 @@ Internet Explorer 9 和 10:
 若開啟此設定，使用者將可以在 [工具] 功能表上看到 [企業模式] 選項並使用此選項。若開啟此設定，但並未指定報告位置，您的使用者仍將能使用「企業模式」，但您將無法取得任何報告。
 
 若停用或未設定此原則設定，將不會顯示該功能表選項，且使用者將無法在「企業模式」中執行網站。</string>
-      <string id="RestrictInternetExplorer">將企業模式網站清單中沒有包含的所有網站傳送到 Microsoft Edge。</string>
+      <string id="RestrictInternetExplorer">將 [企業模式網站清單] 中未包含的所有網站傳送到 Microsoft Edge。</string>
       <string id="IE_ExplainRestrictInternetExplorer">此設定讓您決定是否在 Microsoft Edge 中開啟企業模式網站清單中未包含的所有網站。若使用此設定，則也必須開啟「系統管理範本\Windows 元件\Internet Explorer\使用企業模式 IE 網站清單」原則設定，而且企業模式網站清單中必須至少包含一個網站。
 
 啟用此設定會自動在 Microsoft Edge 中開啟企業模式網站清單中未包含的所有網站。
@@ -3917,7 +3909,7 @@ Internet Explorer 9 和 10:
 若啟用此設定，員工會在 Internet Explorer 11 中看到額外的頁面，說明已使用 Microsoft Edge 搭配「企業模式」開啟網站。
 
 若停用或未設定此設定，會發生預設 App 行為，而且不會顯示額外的頁面。</string>
-      <string id="NeedEdgeBrowser">設定開啟重新導向網站要使用的 Microsoft Edge 通道</string>
+      <string id="NeedEdgeBrowser">設定用於開啟重新導向網站的 Microsoft Edge 通道</string>
       <string id="IE_ExplainNeedEdgeBrowser">可讓您設定最多三個版本的 Microsoft Edge 來開啟重新導向的網站 (按優先順序排列)。如果您的環境設定為將網站從 Internet Explorer 11 重新導向到 Microsoft Edge，請使用此原則。如果裝置上未安裝任何選定版本，則將忽略此優先順序。
 
 如果同時安裝了 Microsoft Edge * 下一版本的 Windows Update 與 Microsoft Edge 穩定通道，則會發生下列行為：
@@ -3958,6 +3950,41 @@ Internet Explorer 9 和 10:
 -將未包含在企業模式網站清單中的所有網站，傳送到 Microsoft Edge ([RestrictIE])
 
 有關如何將此原則與其他相關原則一起使用，以為您的組織建立最佳設定的詳細資訊，請參閱 https://go.microsoft.com/fwlink/?linkid=2094210。</string>
+      <string id="AllowSaveTargetAsInIEMode">允許在 Internet Explorer 模式中「另存目標」</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">這個原則設定可讓系統管理員在 Internet Explorer 模式中啟用 [將目標另存成] 操作功能表。
+
+如果您啟用這個原則，將會在 Internet Explorer 模式操作功能表中顯示 [將目標另存新檔]，並與 Internet Explorer 相同。
+
+如果您停用或未設定這個原則設定，[將目標另存目標] 將不會顯示在 Internet Explorer 模式的操作功能表中。
+
+如需詳細資訊，請參閱 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">在 Internet Explorer 模式中啟用延伸快速鍵</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">此原則設定可讓系統管理員啟用延伸的 Microsoft Edge Internet Explorer 模式快速鍵，例如「Ctrl+S」以擁有「另存新檔」功能。
+
+如果您啟用這個原則，Internet Explorer 模式會啟用延伸的快速鍵功能，而且工作方式與 Internet Explorer 相同。
+
+如果您停用或未設定這個原則，延伸的快速鍵將無法在 Internet Explorer 模式中運作。
+
+如需詳細資訊，請參閱 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">停用 Internet Explorer 11 做為獨立瀏覽器</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">此原則可讓您限制以獨立瀏覽器的形式啟動 Internet Explorer。
+
+如果您啟用此原則，它會:
+- 防止 Internet Explorer 11 以獨立瀏覽器的形式啟動。
+- 將 Internet Explorer 的原生「Internet Explorer 模式」限制為 Internet Explorer 的使用狀況。
+- 啟動 Internet Explorer 11 的所有嘗試重新導向到 Microsoft Edge 穩定通道瀏覽器。
+- 覆寫任何其他重新導向到 Internet Explorer 11 的原則。
+
+如果停用或未設定此原則，則會使用目前作用中瀏覽器設定來開啟所有網站。注意: 必須安裝 Microsoft Edge 穩定通道此原則才會生效。</string>
+      <string id="NotifyDisableIEOptions_Never">永不停用</string>
+      <string id="NotifyDisableIEOptions_Always">永遠顯示</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">每個使用者一次</string>
+      <string id="JScriptReplacement">透過 MSHTML/WebOC 載入 JScript9Legacy 以取代 JScript 以取代 JScript。</string>
+      <string id="IE_ExplainJScriptReplacement">此原則設定可指定是否針對 MSHTML/WebOC 的調用載入 JScript 或 JScript9Legacy。
+      
+如果您啟用這個原則設定，將會在 JScript 具現化的情況中載入 JScript9Legacy。
+
+如果您停用或未設定這個原則，則會使用 JScript。</string>
       <string id="VerMgmtDisable">為 Internet Explorer 關閉封鎖已過期的 ActiveX 控制項。</string>
       <string id="IE_ExplainVerMgmtDisable">這個原則設定決定 Internet Explorer 是否會封鎖特定已過期的 ActiveX 控制項。「內部網路區域」永不會封鎖已過期的 ActiveX 控制項。
 
@@ -4119,7 +4146,7 @@ Internet Explorer 9 和 10:
       <string id="IE_Explain_SiteDiscoveryEnableWMI">這個原則設定可讓您管理 Internet Explorer 站台探索工具組 (SDTK) 的 WMI 輸出功能。當啟用這個功能時，會寫入資料收集到可透過用戶端管理方案 (SCCM)，或透過其他方式彙總的 WMI 類別。當停用時，則不會有任何資料寫入 WMI 類別。啟用或停用這個設定不會影響 SDTK 其他的輸出方法。</string>
       <string id="IE_Explain_SiteDiscoveryDomainAllowList">這個原則設定可讓您控制包含在 Internet Explorer 網站探索工具組 (SDTK) 探索功能中的網域。當啟用這個功能時，會從設定在原則內網域部分的網站收集資料。當停用、或未設定時，網站探索將包含所有網域。這個原則可與其他原則結合控制包含在網站探索的網站。
 
-若要設定包含在 IE 網站探索工具組資料集合的網域，請單行輸入單個網域到文字方塊。例如:
+若要設定包含在 IE 網站探索工具組資料集合的網域，請單行輸入單個網域到文字輸入框。例如:
 
 microsoft.sharepoint.com
 outlook.com
@@ -4831,8 +4858,11 @@ LOBApp.contoso.com</string>
       </presentation>
       <presentation id="NeedEdgeBrowser">
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">首選</dropdownList>
-        <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">第二選擇</dropdownList>
+        <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">次要選擇</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">第三選擇</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">通知 Internet Explorer 11 瀏覽器已停用</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

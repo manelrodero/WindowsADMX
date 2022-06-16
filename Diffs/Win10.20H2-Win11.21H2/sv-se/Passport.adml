@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Använd Windows Hello för företag</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Använd certifikat för lokal autentisering</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Använd moln förtroende för lokal autentisering</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello för företag är ett alternativt sätt att logga in i Windows med ditt Active Directory- eller Azure Active Directory-konto i stället för att använda lösenord, smartkort och virtuella smartkort.
 
@@ -118,13 +120,22 @@ Om du inaktiverar eller låter bli att konfigurera principinställningen skapar 
 OBS! Den här principen gäller endast enheter som är registrerade med Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Använd den här principinställningen för att konfigurera Windows Hello för företag och registrera ett inloggningscertifikat för lokal autentisering.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Med den här princip inställningen kan du konfigurera Windows Hello för företag så att ett inloggnings certifikat som används för lokal autentisering registreras.
 
-Om du aktiverar den här principinställningen så registrerar Windows Hello för företag ett inloggningscertifikat för lokal autentisering.
+Om du aktiverar den här princip inställningen registrerar Windows Hello för företag ett inloggnings certifikat som används för lokal autentisering.
 
-Om du inaktiverar eller låter bli att konfigurera principinställningen registrerar Windows Hello för företag en nyckel som används för lokal autentisering.
+Om du inaktiverar eller låter bli att konfigurera den här princip inställningen använder Windows Hello för företag en nyckel eller en Kerberos-biljett (beroende på andra princip inställningar) för lokal autentisering.
 
-Obs! Om du inaktiverar eller låter bli att konfigurera den här principinställningen, men aktiverar principinställningen Använd Windows Hello för företag, måste det finnas en eller flera Windows Server 2016-domänkontrollanter för att autentisering med Windows Hello för företag ska lyckas.
+Obs! Om du inaktiverar eller låter bli att konfigurera den här princip inställningen och aktiverar princip inställningen Använd Windows Hello för företag måste en eller flera Windows Server 2016-domänkontrollanter tillåta att Windows Hello för företag-autentisering Miss lyckas.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Använd den här princip inställningen för att konfigurera Windows Hello för företag till att använda Azure AD Kerberos för lokal autentisering.
+
+Om du aktiverar den här princip inställningen använder Windows Hello för företag en Kerberos-biljett som hämtats från autentisering till Azure för lokal autentisering.
+
+Om du inaktiverar eller låter bli att konfigurera den här princip inställningen använder Windows Hello för företag en nyckel eller ett certifikat (beroende på andra princip inställningar) för lokal autentisering. 
+ 
+Obs! en miljö som aktiverar både den här princip inställningen och princip inställningen Använd Windows Hello för företag kräver en eller flera Windows Server 2016-domänkontrollanter. Annars kommer Windows Hello för företag-autentisering att Miss lyckas.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Konfigurera enhetsupplåsningsfaktorer</string>

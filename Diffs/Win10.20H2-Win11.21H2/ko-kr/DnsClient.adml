@@ -250,6 +250,22 @@ LLMNR은 보조 이름 확인 프로토콜입니다. LLMNR을 사용하면 단�
 이 정책 설정을 사용하면 IDN이 Nameprep 형태로 변환됩니다.
 
 이 정책 설정을 사용하지 않거나 구성하지 않으면 IDN이 Nameprep 형태로 변환되지 않습니다.</string>
+      <string id="DNS_Doh">HTTPS(DoH) 이름 해결 방법을 통한 DNS 구성</string>
+      <string id="DNS_Doh_Disabled">DoH 금지</string>
+      <string id="DNS_Doh_Auto">DoH 허용</string>
+      <string id="DNS_Doh_Force">DoH 필요</string>
+      <string id="DNS_Doh_Help">DNS 클라이언트가 HTTPS(DoH)를 통해 DNS 이름 확인을 수행할지를 지정합니다 
+.#A1 기본적으로 DNS 클라이언트는 UDP 또는 TCP를 통한 클래식 DNS 이름 확인을 수행합니다. 이 설정은 DNS 클라이언트에서 도메인 이름을 확인하기 위해 사용하도록 설정합니다. 
+ 
+이 정책 설정을 사용하려면 사용을 클릭한 다음 드롭다운 목록에서 다음 옵션 중 하나를 선택하십시오 
+.
+금지됨: DoH name 확인이 수행되지 않습니다.
+
+허용: DNS 서버가 지원하는 경우 DoH 쿼리를 수행합니다. 기능이 지원되지 않는 경우 클래식 이름 확인을 사용해 보세요.
+
+RequireH: DoH 이름 확인만 허용합니다. 구성된 DoH 지원 DNS 서버가 없으면 이름 확인에 실패합니다 
+.
+이 정책 설정을 사용하지 않거나 구성하지 않으면 컴퓨터에서 로컬로 구성된 설정을 사용합니다.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +302,9 @@ LLMNR은 보조 이름 확인 프로토콜입니다. LLMNR을 사용하면 단�
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">보안 수준 업데이트:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">DoH 옵션 구성:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

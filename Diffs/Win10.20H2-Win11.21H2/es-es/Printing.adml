@@ -278,11 +278,11 @@ De forma predeterminada, en las SKU Windows Ultimate, Professional y Home se con
 
         Si deshabilita esta configuración de directiva o no la establece, todas las extensiones de impresora que se hayan instalado podrán ejecutarse.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Cambiar el formato de salida predeterminado del Escritor de documentos XPS de Microsoft (MXDW) por el formato heredado de XPS de Microsoft (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Escritor de documentos XPS de Microsoft (MXDW) genera archivos OpenXPS (*.oxps) de forma predeterminada en Windows 10, Windows 10 y Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">El escritor de documentos XPS de Microsoft (MXDW) genera archivos de OpenXPS (*. oxps) de forma predeterminada en Windows 10, Windows 10 y Windows Server 2022.
 
-          Si habilitas esta configuración de directiva de grupo, el formato de salida MXDW predeterminado es el formato heredado de Microsoft XPS (*.xps).
+Si habilita esta configuración de directiva de grupo, el formato de salida MXDW predeterminado será el Microsoft XPS heredado (*. XPS).
 
-          Si deshabilitas o no configuras esta configuración de directiva, el formato de salida MXDW predeterminado es OpenXPS (*.oxps).</string>
+Si deshabilita o no establece esta configuración de Directiva, el formato predeterminado de salida de MXDW es OpenXPS (*. oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Desactivar la administración de la impresora predeterminada de Windows.</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Esta preferencia te permite cambiar el modo de administrar la impresora predeterminada.
 
@@ -291,6 +291,24 @@ Si habilitas esta configuración, Windows no administrará la impresora predeter
 Si deshabilitas esta configuración, Windows administrará la impresora predeterminada.
 
 Si no estableces esta configuración, el modo administración de la impresora predeterminada no cambiará. </string>
+      <string id="EnableDeviceControl">Habilitar restricciones de impresión de control de dispositivo</string>
+      <string id="EnableDeviceControl_Help">
+          Determina si las restricciones de impresión de control de dispositivo se aplican para imprimir en este equipo.
+
+          De forma predeterminada, no hay ninguna restricción para imprimir basada en el tipo de conexión o en la creación y modelo de la impresora.
+
+          Si se habilita esta configuración, el equipo restringirá la impresión a las conexiones de impresora de la red corporativa o de impresoras conectadas con USB.
+
+         Si se deshabilita esta configuración o no se configura, no hay ninguna restricción para imprimir basada en el tipo de conexión o en la creación y modelo de la impresora.</string>
+        <string id="ApprovedUsbPrintDevices">Lista de dispositivos de impresión conectados por USB aprobados</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Esta configuración es un componente de las Restricciones de impresión de control de dispositivos. Para usar esta configuración, habilita la Impresión de control de dispositivos habilitando la opción "Habilitar restricciones de impresión de control de dispositivo".
+
+            Cuando se habilita la Impresión de control de dispositivos, el sistema usa la lista especificada de valores vid/PID para determinar si la impresora actual conectada por USB está aprobada para la impresión local.
+
+            Escribe todas las combinaciones de vid/PID aprobadas (separadas por comas) que correspondan a modelos de impresora USB aprobados. Cuando un usuario intente imprimir en una cola de impresora USB, el vid/PID del dispositivo se comparará con la lista aprobada.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Si no estableces esta configuración, el modo administración de la impresora pr
           <label>Ruta predeterminada de Active Directory</label>
         </textBox>
         <text>ejemplo:&gt; LDAP://DC=Dominio1,DC=MiCompañía,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Especifica la lista de dispositivos de impresora conectados con USB aprobados.</text>
+        <text>La lista es una lista separada por comas de valores de vid/PID USB. Ejemplo: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/PID</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

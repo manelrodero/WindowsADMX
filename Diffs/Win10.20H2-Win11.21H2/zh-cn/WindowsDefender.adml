@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender 防病毒</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">排除项</string>
+    <string id="DeviceControl">设备控制</string>
     <string id="ExploitGuard">Microsoft Defender 攻击防护</string>
     <string id="ExploitGuard_ASR">攻击面减少</string>
     <string id="ExploitGuard_ControlledFolderAccess">受控制文件夹的访问</string>
@@ -29,6 +30,28 @@
 
 如果禁用此设置，则反恶意软件服务会作为低优先级任务加载。</string>
 
+    <string id="MeteredConnectionUpdates">允许 Microsoft Defender 防病毒通过按流量计费的连接进行更新和通信。</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    禁用（默认）：
+不允许通过按流量计费的连接进行更新和通信。
+
+ 启用：
+ 允许受管理的设备通过按流量计费的连接进行更新。可能需要支付数据费用。</string>
+    <string id="AllowNetworkProtectionOnWinServer">此设置控制是否允许网络保护在 Windows Server 上配置成阻止或审核模式。</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    已禁用 (默认)：
+    如果未配置或已禁用，则不允许在 Windows Server 上将网络保护配置为阻止或审核模式。
+
+功能
+    如果启用，管理员可以控制是否允许网络保护在 Windows Server 上配置成阻止或审核模式。
+    请注意，此配置依赖于 EnableNetworkProtection 配置。如果此配置为 false，则会忽略 EnableNetworkProtection，否则将根据 EnableNetworkProtection 的值在 Windows Server 上启动网络保护。</string>
+    <string id="DisableDatagramProcessing">此设置控制用于网络保护的数据报处理。</string>
+    <string id="DisableDatagramProcessing_Explain">
+    启用 (默认)：
+    如果未配置或已禁用，将为网络保护启用数据报处理。
+
+    启用：
+    如果启用，将禁用数据报处理以便进行网络保护。</string>
     <string id="DisableAutoExclusions">关闭自动排除项</string>
     <string id="DisableAutoExclusions_Explain">
         允许管理员指定是否应关闭服务器 SKU 的自动排除功能。
@@ -60,11 +83,11 @@
 
     启用或禁用此策略可能会导致意外或不受支持的行为。建议你不要配置此策略设置。</string>
     <string id="DisableLocalAdminMerge">为本地管理员配置列表合并行为</string>
-    <string id="DisableLocalAdminMerge_Explain">此策略设置会控制是否使用组策略设置合并由本地管理员配置的复杂列表设置。此设置适用于诸如威胁和排除项的列表。
+    <string id="DisableLocalAdminMerge_Explain">此策略设置控制是否使用组策略设置合并由本地管理员配置的复杂列表设置。此设置适用于诸如威胁和排除项的列表。
 
-如果启用或未配置此设置，则会将本地管理员配置的组策略设置中和首选设置中定义的唯一项合并为生成的有效策略。在发生冲突的情况下，组策略设置会替代首选设置。
+如果禁用或未配置此设置，则会将本地管理员配置的组策略中和首选设置中定义的唯一项合并为生成的有效策略。在发生冲突的情况下，组策略设置将替代首选项设置。
 
-如果禁用此设置，则生成的有效策略中仅会使用组策略定义的项。组策略设置会替代本地管理员配置的首选设置。</string>
+如果启用此设置，则仅在生成的有效策略中使用组策略定义的项目。组策略设置将替代本地管理员配置的首选项设置。</string>
     <string id="DisableRoutinelyTakingAction">关闭例程更新</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     使用此策略设置，可以配置 Microsoft Defender 防病毒是否对所有检测到的威胁自动采取操作。对特定威胁采取的操作取决于策略定义的操作、用户定义的操作和签名定义的操作的组合。
@@ -109,11 +132,15 @@
       如果禁用或未配置此设置，代理将按照上面指定的顺序跳过此回退步骤。
     </string>
     <string id="RandomizeScheduleTaskTimes">随机化计划任务时间</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">此策略设置允许你启用或禁用随机计划扫描开始时间和计划的安全智能更新开始时间。此设置用于分配扫描对资源的影响。例如，它可以在共享主机的来宾虚拟机中使用，以防止多个来宾虚拟机同时执行大量占用磁盘的操作。
+    <string id="RandomizeScheduleTaskTimes_Explain">此策略设置允许你配置计划扫描以及计划的安全智能更新、开始时间段(以小时为单位)。
 
-    如果启用或未配置此设置，计划任务会在指定开始时间前后 30 分钟的时间间隔内选取一个随机时间开始。
+    如果禁用或未配置此设置，则计划任务将在任务计划程序中指定的时间后 4 小时内随机开始。
+    如果启用此设置，则可以扩大或者缩小此随机时间段。请指定 1 到 23 小时之间的随机时间段。</string>
+    <string id="SchedulerRandomizationTime">配置计划任务时间随机化窗口</string>
+    <string id="SchedulerRandomizationTime_Explain">此策略设置允许你配置计划扫描以及计划的安全智能更新开始时间段(以小时为单位)。
 
-    如果禁用此设置，计划任务将在指定的开始时间开始。</string>
+    如果禁用或未配置此设置，则计划任务将在指定的开始时间后的 4 小时间隔内随机开始。
+    如果启用此设置，则必须选择一个随机时间段(以小时为单位)。可能的随机时间段间隔为 1 至 23 小时。</string>
     <string id="ServiceKeepAlive">允许反恶意软件服务始终保持运行状态</string>
     <string id="ServiceKeepAlive_Explain">此策略设置允许你配置在禁用防病毒和反间谍软件安全智能时反恶意软件服务是否保持运行状态。建议此设置保持禁用状态。
 
@@ -135,12 +162,20 @@
         未配置:
         同“已禁用”。
     </string>
+    <string id="SupportLogLocation">定义用于复制支持日志文件的目录路径</string>
+    <string id="SupportLogLocation_Explain">使用此策略设置，可以配置要将支持日志文件复制到其中的目录路径。此设置的值应为有效的目录路径。
+
+如果启用此设置，则支持日志文件将被复制到指定的支持日志位置路径。
+
+如果禁用或未配置此设置，则不会将支持日志文件复制到任何位置。</string>
     <string id="Exclusions_Extensions">扩展名排除项</string>
     <string id="Exclusions_Extensions_Explain">使用此策略设置，可以指定应从计划、自定义以及实时扫描中排除的一系列文件类型。应在“选项”下为此设置添加文件类型。必须将每个条目作为名称值对列出，其中名称应为文件类型扩展名（如“obj”或“lib”）的字符串表示。不使用该值且建议将此值设置为 0。</string>
     <string id="Exclusions_Paths">路径排除项</string>
     <string id="Exclusions_Paths_Explain">使用此策略设置，可以为指定路径下的文件或指定的完全限定资源禁用计划和实时扫描。应在“选项”下为此设置添加路径。必须将每个条目作为名称值对列出，其中名称应为路径或完全限定资源名称的字符串表示。作为示例，路径可以定义为：“c:\Windows”以排除此目录下的所有文件。完全限定资源名称可以定义为：“C:\Windows\App.exe”。不使用该值且建议将此值设置为 0。</string>
     <string id="Exclusions_Processes">进程排除项</string>
-    <string id="Exclusions_Processes_Explain">使用此策略设置，可以为使用任何指定进程打开的任一文件禁用计划和实时扫描。进程本身不会排除在外。若要排除进程，请使用路径排除项。应在“选项”下为此设置添加进程。必须将每个条目作为名称值对列出，其中名称应为进程映像路径的字符串表示。注意：仅可以排除可执行文件。例如，进程可以定义为：“c:\windows\app.exe”。不使用该值且建议将此值设置为 0。</string>
+    <string id="Exclusions_Processes_Explain">此策略设置允许禁用对任何指定进程打开的任一文件进行实时扫描。此策略不适用于计划扫描。进程本身不会排除在外。若要排除进程，请使用路径排除项。必须将每个条目以名称值对的形式列出，其中名称应用进程映像路径的字符串表示。注意：仅可排除可执行文件。例如，进程可以定义为：“c:\windows\app.exe”。若不使用该值，建议将此值设置为 0。</string>
+    <string id="Exclusions_IpAddresses">IP 地址排除</string>
+    <string id="Exclusions_IpAddresses_Explain">允许管理员明确禁用在一组特定的 IP 地址上通过 wdnisdrv 进行网络数据包检查。</string>
     <string id="Nis_DisableProtocolRecognition">打开协议识别</string>
     <string id="Nis_DisableProtocolRecognition_Explain">使用此策略设置，可以为保护网络免遭已知漏洞攻击配置协议识别。
 
@@ -167,6 +202,14 @@
     如果启用此设置，则在指定天数后会从“隔离”文件夹中删除这些项。
 
     如果禁用或未配置此设置，则项会无限期保留在“隔离”文件夹中且不会自动删除。</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">启用脚本扫描</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">通过此策略设置，您可以配置脚本扫描。
+
+如果启用或未配置此设置，则将启用脚本扫描。
+
+如果禁用此设置，则将禁用脚本扫描。</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">打开行为监视</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">使用此策略设置可以配置行为监视。
 
@@ -400,12 +443,6 @@
     如果启用或未配置此设置，则会启用启发。
 
     如果禁用此设置，则会禁用启发。</string>
-    <string id="Scan_DisablePackedExeScanning">扫描压缩的可执行文件</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">使用此策略设置，可以配置扫描压缩的可执行文件。建议保持启用此类型的扫描。
-
-    如果启用或未配置此设置，则会扫描压缩的可执行文件。
-
-    如果禁用此设置，则不会扫描压缩的可执行文件。</string>
     <string id="Scan_DisableRemovableDriveScanning">扫描可移动驱动器</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">使用此策略设置，可以管理运行完整扫描时是否扫描可移动驱动器(如 U 盘)内容中的恶意软件和不需要的软件。
 
@@ -473,11 +510,11 @@
 
     如果禁用或未配置此设置，则项在扫描历史记录文件夹中保留默认天数。</string>
     <string id="Scan_QuickScanInterval">指定每天运行快速扫描的时间间隔</string>
-    <string id="Scan_QuickScanInterval_Explain">使用此策略设置，可以指定执行快速扫描的时间间隔。时间值采用两次快速扫描间的小时数表示。有效值范围介于 1(每小时)和 24(每天一次)之间。如果设置为 0，则不会执行时间间隔快速扫描。默认情况下，此设置设置为 0。
+    <string id="Scan_QuickScanInterval_Explain">通过此策略设置，您可以指定执行快速扫描的时间间隔。时间值用两个快速扫描之间的小时数表示。有效值范围为 1 (每小时) 到 24 (一天)。如果设置为零，则不会进行间隔快速扫描。默认情况下，此设置设置为0。
 
-    如果启用此设置，则快速扫描会以指定的时间间隔运行。
+如果启用此设置，则会以指定的时间间隔运行快速扫描。
 
-    如果禁用或未配置此设置，则会在默认时间运行快速扫描。</string>
+如果禁用或未配置此设置，则不会运行此配置控制的快速扫描。</string>
     <string id="Scan_ScanOnlyIfIdle">仅当计算机处于打开但未使用状态才启动计划扫描</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">使用此策略设置，可以配置为仅当计算机处于打开但未使用状态启动计划扫描。
 
@@ -521,11 +558,11 @@
     <string id="Scan_ScheduleDay_7">星期五</string>
     <string id="Scan_ScheduleDay_8">星期六</string>
     <string id="Scan_ScheduleQuickScantime">指定每天运行快速扫描的时间</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">使用此策略设置，可以指定每天的不同时间执行每日快速扫描。时间值采用超过午夜的分钟数(00:00)表示。 例如，120 (0x78)等同于 02:00 AM。默认情况下，将此设置设置为时间值 2:00 AM。计划基于执行扫描的计算机上的本地时间。
+    <string id="Scan_ScheduleQuickScantime_Explain">此策略设置允许你指定每天执行快速扫描的时间。时间值以午夜 (00:00) 后的分钟数表示。例如，120 (0x78) 相当于凌晨 02:00。默认情况下，此设置已设置为禁用。调度基于执行扫描的计算机上的当地时间。
 
-    如果启用此设置，则每日快速扫描会在每天指定的时间运行。
+      如果启用此设置，每天的快速扫描将在指定的时间运行。
 
-    如果禁用或未配置此设置，则会在默认时间运行每日快速扫描。</string>
+    如果已禁用或未配置此设置，则不会运行由此配置控制的每日快速扫描。</string>
     <string id="Scan_ScheduleTime">指定每天的不同时间运行计划扫描</string>
     <string id="Scan_ScheduleTime_Explain">使用此策略设置，可以指定每天的不同时间执行计划扫描。时间值采用超过午夜的分钟数(00:00)表示。 例如，120 (0x78)等同于 02:00 AM。默认情况下，将此设置设置为时间值 2:00 AM。计划基于执行扫描的计算机上的本地时间。
 
@@ -548,17 +585,17 @@
         如果禁用或不配置此设置，则不会对定时扫描的 CPU 优先级进行更改。
     </string>
     <string id="SignatureUpdate_ASSignatureDue">定义间谍软件安全情报被视为过期之前的天数</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">此策略设置允许你定义在间谍软件安全智能视为过期之前必须经过的天数。如果确定安全智能已过期，此状态可能会触发多个其他操作，包括回退到备用更新源或在用户界面中显示警告图标。默认情况下，此值设置为 14 天。
+    <string id="SignatureUpdate_ASSignatureDue_Explain">此策略设置允许你定义在间谍软件安全智能视为过期之前必须经过的天数。如果确定安全智能已过期，此状态可能会触发多个其他操作，包括回退到备用更新源或在用户界面中显示警告图标。默认情况下，此值设置为 7 天。
 
-    如果启用此设置，间谍软件安全智能将在已超过指定天数而无更新后视为过期。
+    如果启用此设置，间谍软件安全智能将在超过指定天数而无更新后视为过期。
 
-    如果禁用或未配置此设置，间谍软件安全智能将在已超过默认天数而无更新后视为过期。</string>
+    如果禁用或未配置此设置，间谍软件安全智能将在超过默认天数而无更新后视为过期。</string>
     <string id="SignatureUpdate_AVSignatureDue">定义病毒安全情报被视为过期之前的天数 </string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">此策略设置允许你定义在病毒安全智能视为过期之前必须经过的天数。如果确定安全智能已过期，此状态可能会触发多个其他操作，包括回退到备用更新源或在用户界面中显示警告图标。默认情况下，此值设置为 14 天。
+    <string id="SignatureUpdate_AVSignatureDue_Explain">此策略设置允许你定义在病毒安全智能视为过期之前必须经过的天数。如果确定安全智能已过期，此状态可能会触发多个其他操作，包括回退到备用更新源或在用户界面中显示警告图标。默认情况下，此值设置为 7 天。
 
-    如果启用此设置，病毒安全智能将在已超过指定天数而无更新后视为过期。
+    如果启用此设置，病毒安全智能将在超过指定天数而无更新后视为过期。
 
-    如果禁用或未配置此设置，病毒安全智能将在已超过默认天数而无更新后视为过期。</string>
+    如果禁用或未配置此设置，病毒安全智能将在超过默认天数而无更新后视为过期。</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">定义用于下载安全智能更新的文件共享</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">此策略设置允许你配置用于下载安全智能更新的 UNC 文件共享源。将按指定的顺序连接源。此设置的值应作为枚举安全智能更新源的以竖线分隔的字符串输入。例如:“{\\unc1 | \\unc2 }”。默认情况下，该列表为空。
 
@@ -847,36 +884,43 @@
     </string>
     <string id="ExploitGuard_ASR_Rules">配置攻击面减少规则</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    设置每个攻击面减少(ASR)规则的状态。
+    设置每个攻击面减少 (ASR) 规则的状态。
 
-    启用此设置后，你可以在“选项”部分将每个规则设置为以下各项:
-    - 阻止: 将应用规则
-    - 审核模式: 如果规则正常地触发事件，则事件将被记录(虽然实际上将不应用规则)
-    - 关闭: 将不应用规则
+    启用此设置后，你可以在“选项”部分将每个规则设置为以下各项：
+     - 阻止： 将应用规则
+      - 审核模式： 如果规则正常地触发事件，则事件将被记录（虽然实际上将不应用规则）
+   关闭： 将不应用规则
+        未配置：使用默认值启用规则
+   -警告：规则将被应用，最终用户可以选择忽而文本块
 
-    启用:
-    在“选项”部分下面为此设置指定每个 ASR 规则的状态。
-    以名称-值对形式在一个新行中输入各个规则:
-    - 名称列: 输入有效的 ASR 规则 ID
-    - 值列: 输入与要为关联规则指定的状态相关的状态 ID
+    除非ASR规则被禁用，否则将为 ASR 规则收集审核事件的子样例，其值为未配置。
 
-    值列中允许使用以下状态 ID:
-    - 1 (阻止)
-    - 0 (关闭)
-    - 2 (审核)
+    启用：
+  在“选项”部分下面为此设置指定每个 ASR 规则的状态。
+   以名称-值对形式在一个新行中输入各个规则：
+   - 名称列： 输入有效的 ASR 规则 ID
+   - 值列： 输入与要为关联规则指定的状态相关的状态
+
+    值列中允许使用以下状态 ID：
+     - 1 （阻止）
+    - 0（关闭）
+   - 2 （审核）
+    - 5 （未配置）
+    - 6 （警告）
+
     
-    示例:
+    示例：
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
-    禁用:
+   禁用：
     将不配置 ASR 规则。
 
-    未配置:
+    未配置：
     与“禁用”相同。
 
-    你可以在“从攻击面减少规则中排除文件和路径”GP 设置中排除文件夹或文件。
+   你可以在“从攻击面减少规则中排除文件和路径”GP 设置中排除文件夹或文件。
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">配置受控文件夹访问权限</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@
 
     Microsoft Defender 防病毒会自动确定可以信任哪些应用程序。你可以在“配置允许的应用程序”GP 设置中添加其他受信任的应用程序。
     </string>
+    <string id="DeviceControl_PolicyGroups">定义设备控制策略组</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        请按照设备控制策略组 xml 架构来填写策略组数据。
+    </string>
+    <string id="DeviceControl_PolicyRules">定义设备控制策略规则</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        请按照设备控制策略规则 xml 架构填写策略规则数据。
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@
         <label>定义用于连接到网络的代理服务器</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>定义用于复制支持日志文件的目录路径</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">扩展名排除项</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">进程排除项</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">IP 地址排除</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">指定用于网络通讯检查的其他定义集</listBox>
@@ -1071,10 +1131,10 @@
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">指定每天的不同时间运行计划扫描</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">定义间谍软件安全情报被视为过期之前的天数</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">定义间谍软件安全情报被视为过期之前的天数</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">定义病毒安全情报被视为过期之前的天数 </decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">定义病毒安全情报被视为过期之前的天数 </decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>在此处定义策略组</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>在此处定义策略规则</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">指定调度程序随机化窗口 (小时)。</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

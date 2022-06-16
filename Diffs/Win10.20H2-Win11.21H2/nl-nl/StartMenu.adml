@@ -203,6 +203,19 @@ In Bestandenverkenner wordt het item Zoeken nog altijd weergegeven op de standaa
 Deze beleidsinstelling is alleen van invloed op de opgegeven onderdelen van de gebruikersinterface. De instelling is niet van invloed op Internet Explorer, terwijl de gebruiker ook nog altijd andere zoekmethoden kan kiezen.
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, is de koppeling Zoeken beschikbaar in het Startmenu.</string>
+      <string id="ShowOrHideMostUsedApps">De lijst 'Meest gebruikt' weergeven of verbergen in Startmenu</string>
+      <string id="ShowOrHideMostUsedApps_Help">Als u deze beleidsinstelling inschakelt, kunt u Startmenu configureren om de lijst met meestgebruikte toepassingen van gebruikers weer te geven of te verbergen, ongeacht de gebruikersinstellingen.
+
+Als u 'Weergeven' selecteert, wordt de lijst 'Meest gebruikt' geforceerd weergegeven en kan de gebruiker deze niet verbergen door dit te wijzigen met behulp van de Instellingen-app.
+
+Als u 'Verbergen' selecteert, wordt de lijst 'Meest gebruikt' geforceerd verborgen en kan de gebruiker deze niet weergeven door dit te wijzigen met behulp van de Instellingen-app.
+
+Als u 'Niet geconfigureerd' selecteert of deze beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers de weergave van de lijst 'Meest gebruikt' in- of uitschakelen met behulp van de Instellingen-app. Dit is standaardgedrag.
+
+Opmerking: als u dit beleid instelt op 'Weergeven' of 'Verbergen' in ondersteunde versies van Windows 10, overstijgt dit alle beleidsinstellingen voor 'Lijst met veelgebruikte Programma's uit Startmenu verwijderen' (wat hetzelfde deel van Startmenu beheert, maar met minder opties).</string>
+      <string id="MFU_NotConfigured">Niet geconfigureerd</string>
+      <string id="MFU_Show">Weergeven</string>
+      <string id="MFU_Hide">Verbergen</string>        
       <string id="NoFrequentUsedPrograms">Lijst met meest gebruikte programma's uit het Startmenu verwijderen</string>
       <string id="NoFrequentUsedPrograms_Help">Als u deze instelling inschakelt, wordt de lijst met meest gebruikte programma's verwijderd uit het Startmenu.
 
@@ -620,10 +633,14 @@ Als u dit beleid inschakelt, worden aanroepen van contextmenu's in het Startmenu
           <label>Bestand met de indeling van het startscherm</label>
           <defaultValue></defaultValue>
         </textBox>
+        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Lay-out opnieuw toepassen bij elke aanmelding</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Kies een van de volgende opties voor de grootte</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Kies een van de volgende acties</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

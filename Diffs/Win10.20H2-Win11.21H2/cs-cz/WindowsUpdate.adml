@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Minimálně Windows XP Professional Service Pack 1 nebo Windows 2000 Service Pack 3, kromě systému Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Minimálně operační systémy Windows Server 2003 nebo Windows XP Professional s aktualizací Service Pack 1, kromě systému Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minimálně Windows XP Professional Service Pack 1 nebo minimálně Windows 2000 Service Pack 3 až Windows 8.1 nebo Windows Server 2012 R2 s nejnovější aktualizací Service Pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minimálně Windows Vista až Windows 8.1 nebo Windows Server 2012 R2 s nejnovější aktualizací Service Pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minimálně Windows XP Professional Service Pack 1 nebo minimálně Windows 2000 Service Pack 3 až Windows 8.1 nebo Windows Server 2012 R2 s nejaktuálnější aktualizací Service Pack. Nepodporováno na Windows 10 a vyšších.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minimálně Windows Vista až Windows 8.1 nebo Windows Server 2012 R2 s nejaktuálnější aktualizací Service Pack Nepodporováno na Windows 10 a vyšších.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 nebo alespoň Windows 2000 Service Pack 3
 Možnost 7 je podporována na serverech minimálně s edicí Windows Server 2016.</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 nebo Windows Server 2022 nebo Windows 10​</string>
       <string id="AUDontShowUasHelp">Nastavení této zásady umožňuje určit, zda bude v dialogu pro vypnutí počítače zobrazena možnost Nainstalovat aktualizace a vypnout.
 
 Pokud toto nastavení zásad povolíte, nebude volba Nainstalovat aktualizace a vypnout zobrazena v dialogovém okně pro vypnutí počítače, ani v případě, že jsou při vypínání připraveny aktualizace k instalaci.
@@ -149,19 +150,27 @@ Pokud bude nastavena na Nenakonfigurováno, používání automatických aktuali
 
         Poznámka: Pokud alternativní server pro stahování není nastavený, použije se pro stahování aktualizací ve výchozím nastavení intranetová aktualizační služba.
 
-        Poznámka: Možnost „Stahovat soubory bez adresy URL…“ se použije jen v případě, kdy je nastaven „Alternativní server pro stahování“.
+        Poznámka: Možnost „Stahovat soubory bez adresy URL…“ se použije jen v případě, kdy je nastavený alternativní server pro stahování.
 
         Poznámka: Tato zásada není podporovaná ve Windows RT. Nastavení této zásady nemá na počítačích s Windows RT žádný účinek.
 
-        Poznámka ohledně proxy serverů: Pro nejvyšší úroveň zabezpečení doporučuje Microsoft zabezpečení služby WSUS pomocí protokolu TLS/SSL, a tedy používání intranetových serverů založených na HTTPS, díky kterým budou systémy zabezpečené. Pokud je vyžadována proxy, doporučujeme nakonfigurovat proxy systém.
+        Pro nejvyšší úroveň zabezpečení doporučuje Microsoft zabezpečení služby WSUS pomocí protokolu TLS/SSL, a tedy používání intranetových serverů založených na HTTPS, díky kterým budou systémy zabezpečené. Pokud je vyžadována proxy, doporučujeme nakonfigurovat proxy systém.
 
-        Výběr chování proxy nijak neovlivní klienty, které pro zjišťování aktualizací používají intranetové servery založené na HTTPS. 
+        Aby byli klienti zabezpečení, už nepovolujeme, aby intranetové servery ve výchozím nastavení používaly proxy uživatele pro zjišťování aktualizací. Pokud potřebujete používat proxy uživatele pro zjišťování aktualizací, když používáte intranetový server, ačkoli to může vést k ohrožení zabezpečení, musíte chování proxy nakonfigurovat na Povolit použití uživatelského proxy serveru jako náhradního, pokud se nezdaří rozpoznávání pomocí systému proxy.
 
-        Aby byli klienti ve své podstatě zabezpečení, už nepovolujeme, aby intranetové servery založené na HTTP ve výchozím nastavení používaly proxy uživatele pro zjišťování aktualizací. Pokud potřebujete používat proxy uživatele pro zjišťování aktualizací, když používáte intranetový server založený na HTTP, ačkoli to může vést k ohrožení zabezpečení, musíte chování proxy nakonfigurovat na „Povolit použití uživatelského proxy serveru jako náhradního, pokud se nezdaří rozpoznávání pomocí systému proxy.“
-
-        Zjišťování aktualizací neuspěje, když se intranetové servery založené na HTTP používají bez nakonfigurovaného proxy systému, pokud není nakonfigurovaná zásada pro použití alternativního chování proxy.</string>
+        Zjišťování aktualizací v rámci intranetových serverů neuspěje, když se bude jako náhradní akce vyžadovat proxy uživatele a zároveň nebude nakonfigurovaná zásada pro použití alternativního chování proxy.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Pro zjišťování aktualizací používat pouze systémový proxy server (výchozí)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Povolit použití uživatelského proxy serveru jako náhradního, pokud se nezdaří rozpoznávání pomocí systému proxy</string>
+      <string id="UpdateClassPolicySource_Title">Zadejte zdrojovou službu pro určité třídy aktualizací Windows</string>
+      <string id="UpdateClassPolicySource_Help">Pokud je tato zásada povolena, budou zařízení přijímat aktualizace systému Windows pro třídy uvedené na základě zadaného zdroje aktualizací: Windows Update nebo Windows Server Update Service. 
+
+Poznámka: Chcete-li dostávat aktualizace ze služby Windows Server Update Service, je nutné správně nakonfigurovat intranetové umístění služby pomocí zásady „Určit umístění intranetového serveru služby Microsoft Update“.
+
+Pokud toto nastavení zásad není nakonfigurováno nebo je zakázáno, zařízení bude i nadále zjišťovat aktualizace pro vaše další konfigurace zásad. 
+
+Poznámka: Pokud používáte možnost „Nepovolit, aby se na webu Windows Update vyhledaly zásady časově rozlišených položek“, měli byste aktuálně zajistit, aby se zařízení kontrolovala jenom na zadaném serveru. Doporučujeme raději tuto zásadu nakonfigurovat.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Určuje počet hodin, pomocí kterých systém Windows zjistí dobu čekání před vyhledáním dostupných aktualizací. Přesná doba čekání je součtem zadané hodnoty a náhodné odchylky v rozsahu 0–4 hodin.
 
         Pokud je nastavený stav Povoleno, vyhledá systém Windows dostupné aktualizace v zadaném intervalu.
@@ -305,6 +314,12 @@ Poznámka: Tato zásada je platná pouze v případě, že intranetová služba 
 Poznámka: Tato zásada není podporována v systému Windows RT. Nastavení této zásady nemá v počítačích se systémem Windows RT žádný účinek.</string>
       <string id="TargetGroup_Title">Povolit cílení na klientské straně</string>
       <string id="WindowsUpdateCat">Windows Update</string>
+      <!--Category sub-folders-->
+      <string id="WindowsUpdateOffering">Spravovat aktualizace nabízené ze služby Windows Update</string>
+      <string id="WSUSOffering">Spravovat aktualizace nabízené službou Windows Server Update Service</string>
+      <string id="WindowsUpdateExperience">Spravovat možnosti koncového uživatele</string>
+      <string id="PreSV">Starší verze zásad</string>
+
       <string id="TrustedPublisher_Title">Povolit podepsané aktualizace z umístění intranetové služby Microsoft Update  </string>
       <string id="TrustedPublisher_Help">Nastavení této zásady umožňuje určit, jestli má funkce Automatické aktualizace přijímat aktualizace podepsané jinými subjekty než je Microsoft, pokud se aktualizace nachází v umístění intranetové služby Microsoft Update. 
 
@@ -320,48 +335,30 @@ Poznámka: Tato zásada není podporovaná ve Windows RT. Nastavení této zása
 Povolení této zásady tuto funkci zakáže a může způsobit, že připojení k veřejným službám, jako je Windows Store, přestane fungovat.
 
 Poznámka: Tato zásada se použije pouze v případě, že je tento počítač nakonfigurován pro připojení k intranetové aktualizační službě pomocí zásady Určit umístění intranetového serveru služby Microsoft Update.</string>
-      <string id="DeferUpdateCat">Windows Update pro firmy</string>
       <string id="ManagePreviewBuilds_Title">Spravovat buildy Preview</string>
-      <string id="ManagePreviewBuilds_Help">Pokud vyberete Zakázat buildy Preview, znemožníte jejich instalaci na zařízení. Uživatelé se nebudou moct přihlásit do Programu Windows Insider přes Nastavení -&gt; Aktualizace a zabezpečení.
+      <string id="ManagePreviewBuilds_Help">Povolením této zásady umožníte správu aktualizací, které dostáváte před jejich všeobecným vydáním.
 
-Pokud vyberete Zakázat buildy Preview po zveřejnění příští verze, znemožníte jejich instalaci po vydání další verze Windows pro veřejnost. Tato možnost je užitečná, pokud je vaše zařízení připravené na instalaci verze Preview a chcete později hladce ukončit jeho účast v programu publikování testovacích verzí. Tato možnost znamená, že se budou na zařízení instalovat buildy Preview, dokud nedospějeme k příští veřejné verzi. 
+Vývojní kanál
+Ideální pro uživatele s technickými znalostmi na vysoké úrovni. Insideři ve vývojním kanálu dostávají buildy z naší aktivní vývojové větve, což je nejranější část vývojového cyklu. Tyto buildy se nepřiřazují ke konkrétní verzi Windows 10.
 
-Pokud vyberete Povolit buildy Preview, povolíte instalaci buildů Preview na zařízení. Uživatelé si můžou stahovat a instalovat buildy Preview systému Windows na svá zařízení potom, co se do programu přihlásí přes Nastavení -&gt; Aktualizace a zabezpečení -&gt; Program Windows Insider. Po nastavení této hodnoty můžou správci nastavení pro testovací verze u uživatelů řídit i pomocí dalších zásad.</string>
-      <string id="DisablePreviewBuilds">Zakázat buildy Preview</string>
-      <string id="DisablePreviewBuildsAndOptOut">Zakázat buildy Preview po zveřejnění příští verze</string>
-      <string id="EnablePreviewBuilds">Povolit buildy Preview</string>
-      <string id="PreviewBuildFastFeatureUpdates">Build Preview – rychlý okruh</string>
-      <string id="PreviewBuildSlowFeatureUpdates">Build Preview – pomalý okruh</string>
-      <string id="ReleasePreviewBranchFeatureUpdates">Verze Preview před vydáním</string>
-      <string id="SemiAnnualChannelFeatureUpdates">Pololetní kanál</string>
-      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Pololetní kanál pro verzi 1809 a nižší (zastaralé)</string>
-      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Pololetní kanál (cílený) pro verzi 1809 a nižší (zastaralé)</string>
+Beta kanál
+Ideální pro ty, kdo rádi objevují připravované funkce Windows 10. Vaše zpětná vazba bude zvláště důležitá, protože pomůže technikům zajistit, aby byly před vydáním hlavní verze opraveny klíčové problémy.
+
+Kanál verze Preview před vydáním (výchozí)
+Insideři v kanálu verze Preview před vydáním budou mít k nadcházející verzi Windows 10 přístup před jejím všeobecným vydáním. Tyto buildy jsou podporované Microsoftem. Doporučujeme, aby si společnosti právě v tomto kanálu předběžně prohlédli a ověřili nadcházející verze Windows 10, a to ještě před jejich rozsáhlým nasazením v rámci organizace.
+
+Poznámka: Při registraci pro buildy Preview se vyžaduje nastavení telemetrie na úroveň 2 nebo vyšší a registrace domény na insider.windows.com. Další informace o buildech Preview najdete v následujících tématech: https://aka.ms/wipforbiz
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update vám nebude nabízet žádné aktualizace před vydáním a tento obsah dostanete po všeobecném vydání. Zakázáním této zásady dojde k vynětí všech zařízení, která aktuálně používají předběžný build, z aktualizací – zůstanou na nejnovější aktualizaci funkcí, až bude vydána.</string>
+      <string id="DevChannel">Vývojní kanál</string>
+      <string id="BetaChannel">Beta kanál</string>
+      <string id="ReleasePreviewChannel">Kanál verze Preview před vydáním</string>
       <string id="DeferFeatureUpdates_Title">Vybrat při příjmu buildů Preview a aktualizací funkcí</string>
-      <string id="DeferFeatureUpdates_Help">Pokud povolíte tuto zásadu, můžete určit úroveň buildů Preview nebo aktualizací funkcí, které chcete přijímat, a také to, kdy je chcete přijímat.
+      <string id="DeferFeatureUpdates_Help">Po povolení této zásady můžete určit, kdy se mají přijímat aktualizace funkcí.
 
-* Build Preview – rychlý okruh: Zařízení nastavená na tuto úroveň jsou mezi prvními, která získávají nové buildy Windows s funkcemi, které zatím nejsou dostupné pro širokou veřejnost. Výběrem rychlého okruhu se zapojíte do vyhledávání problémů, jejich hlášení Microsoftu a poskytování návrhů k novým funkcím.
-* Build Preview – pomalý okruh: Zařízení nastavená na tuto úroveň získávají nové buildy Windows, ještě než jsou dostupné pro širokou veřejnost, ale s nižší frekvencí než u rychlého okruhu a se změnami a opravami provedenými v předchozích buildech.
-* Verze Preview před vydáním: Zařízení získávají buildy Windows těsně před tím, než je Microsoft vydá pro širokou veřejnost.
-* Pololetní kanál: Zařízení získávají aktualizace funkcí, když jsou vydány pro širokou veřejnost.
+Odložit aktualizace | Toto nastavení umožňuje zařízením odklad příští aktualizace funkcí dostupné v daném kanálu, a to až o 14 dní ve všech kanálech předběžných verzí a až o 365 dní v Půlročním kanálu. Pokud se zařízení aktualizuje z Půlročního kanálu, existuje také možnost určit verzi, na kterou se má zařízení posunout nebo na které má zůstat až do další aktualizace zásady nebo do konce podpory služeb produktu. Poznámka: Pokud nastavíte obě zásady, bude mít zadaná verze přednost a odklady nebudou platné. Informace o verzi operačního systému najdete na stránce s informacemi o verzi Windows.
 
-Následující úrovně připravenosti Windows byly označené jako zastaralé a vztahují se jen na verzi 1809 a nižší:
-* Pololetní kanál (cílený) pro verzi 1809 a nižší: Aktualizace funkcí byly vydány.
-* Pololetní kanál pro verzi 1809 a nižší: Aktualizace funkcí byly deklarovány jako Pololetní kanál. Toto označení znamená, že vydaní je připravené pro široké nasazení.
-Data vydání pro Pololetní kanál (cílený) a Pololetní kanál najdete na stránce s příslušnými informacemi: http://aka.ms/ReleaseInformationPage.
-
-Při výběru buildu Preview:
-    - Příjem buildů Preview můžete odložit až o 14 dní.
-    - Pokud chcete zabránit příjmu buildů Preview v jejich naplánovaném čase, můžete je dočasně pozastavit. Pozastavení bude v platnosti 35 dní od zadaného počátečního data.
-    - Pokud chcete příjem aktualizací funkcí, které jsou pozastavené, obnovit, vymažte pole pro počáteční datum.
-
-Registrace pro buildy Preview vyžaduje nastavení úrovně telemetrie 2 nebo vyšší a registraci domény na insider.windows.com. Další informace o buildech Preview: https://aka.ms/wipforbiz
-
-Při výběru Pololetního kanálu:
-    - Příjem aktualizací funkcí můžete odložit až o 365 dní.
-    - Pokud chcete zabránit příjmu aktualizací funkcí v jejich naplánovaném čase, můžete je dočasně pozastavit. Pozastavení bude v platnosti 35 dní od zadaného počátečního data.
-    - Pokud chcete příjem aktualizací funkcí, které jsou pozastavené, obnovit, vymažte pole pro počáteční datum.
-
-Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update nezmění své chování.</string>
+Pozastavit aktualizace | Pokud chcete zabránit příjmu aktualizací funkcí v jejich plánovaných termínech, můžete tyto aktualizace dočasně pozastavit. Pozastavení zůstane platné po dobu 35 dní od zadaného počátečního data nebo do doby, dokud toto pole nevymažete (aktualizace pro zvýšení kvality se budou stále nabízet).</string>
       <string id="DeferQualityUpdates_Title">Vybrat při příjmu aktualizací pro zvýšení kvality</string>
       <string id="DeferQualityUpdates_Help">Když tuto zásadu povolíte, můžete určit, kdy chcete přijímat aktualizace pro zvýšení kvality.
 
@@ -373,9 +370,19 @@ Pokud chcete znovu přijímat aktualizace pro zvýšení kvality, které jsou po
 
 Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update své chování nezmění.</string>
       <string id="TargetReleaseVersion_Title">Vybrat cílovou verzi aktualizace funkcí</string>
-      <string id="TargetReleaseVersion_Help">Pokud povolíte tuto zásadu, můžete určit cílovou verzi aktualizace funkcí, která má být vyžadována při následných kontrolách.
+      <string id="TargetReleaseVersion_Help">Zadejte produkt a verzi uvedené na stránce cílové verze služby Windows Update:
 
-Zadejte verzi uvedenou na stránce s informacemi o verzích Windows: aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Zařízení požádá o produkt a verzi služby Windows Update při následných kontrolách.
+
+Když zadáte cílový produkt a kliknete na OK nebo Použít, znamená to, že přijímáte Licenční podmínky pro software společnosti Microsoft, jejichž znění najdete na aka.ms/WindowsTargetVersioninfo. Pokud organizace pro tento software poskytuje licenci, potvrzujete, že jste autorizovaní přijmout podmínky jménem organizace.
+
+Pokud zadáte neplatnou hodnotu, zůstanete ve své aktuální verzi, dokud hodnoty neopravíte na podporovaný produkt a verzi.</string>
+      <string id="DisableWUfBSafeguards">Zakázat ochranu pro aktualizace funkcí</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Toto nastavení povolte, pokud se mají aktualizace funkcí nasadit do zařízení bez blokování na jakýchkoli ochranných blokováních. Ochranná blokování jsou známé problémy s kompatibilitou, které blokují nasazení upgradů do ovlivněných zařízení, dokud se problém nevyřeší. Pokud tuto zásadu povolíte, může organizace nasazovat aktualizace funkcí do zařízení za účelem testování nebo nasazovat aktualizace funkcí bez blokování ze strany ochranných blokování.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Nezahrnovat ovladače do aktualizací systému Windows</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Když povolíte tuto zásadu, do aktualizací pro zvýšení kvality Windows se nebudou zahrnovat ovladače.
 
@@ -613,19 +620,21 @@ Důležité: Pokud se rozhodnete nedostávat oznámení o aktualizacích a záro
       <string id="ExcludingRebootWarnings">1 – Zakázat všechna oznámení kromě upozornění na restart</string>
       <string id="IncludingRebootWarnings">2 – Zakázat všechna oznámení včetně upozornění na restart</string>
       <string id="ComplianceDeadline_Title">Zadat lhůty pro automatické aktualizace a restartování</string>
-      <string id="ComplianceDeadline_Help">Pomocí této zásady můžete zadat počet dní, které má uživatel k dispozici před automatickou instalací aktualizací pro zvýšení kvality a aktualizací funkcí na jeho zařízení. Aktualizace a restartování pak proběhnou bez ohledu na dobu aktivního používání a uživatel je nebude moct přeplánovat.
+      <string id="ComplianceDeadline_Help">Tato zásada umožňuje určit počet dní, po jejichž uplynutí se aktualizace pro zvýšení kvality a aktualizace funkcí automaticky nainstalují na zařízení, a poskytnutou lhůtu navíc, po jejímž uplynutí automaticky dochází k požadovaným restartům.
 
-Lhůty u aktualizací pro zvýšení kvality a aktualizací funkcí je možné stanovit až na 30 dní. Poskytnutá lhůta pro automatické restartování může být od 0 do 7 dní.
+Konečné termíny pro aktualizace funkcí a aktualizace pro zvýšení kvality nastavte tak, aby splňovaly vaše cíle v oblasti dodržování předpisů. Aktualizace se stáhnou a nainstalují hned, jakmile se nabídnou, a pokusí se automaticky restartovat počítač mimo dobu aktivního používání. Po vypršení konečného termínu dojde k restartování bez ohledu na dobu aktivního používání a uživatelé nebudou moct tento plán změnit. Pokud je konečný termín nastaven na hodnotu 0 dnů, aktualizace se nainstaluje hned při nabídnutí, ale nemusí se dokončit během stejného dne, a to v závislosti na dostupnosti zařízení a připojení k síti.
 
-Automatická restartování je také možné až do konce této lhůty zakázat.
+Poskytnutou lhůtu navíc u aktualizací funkcí a aktualizací pro zvýšení kvality nastavte tak, aby uživatelé měli zajištěnou určitou minimální dobu pro správu restartů po instalaci aktualizací. Uživatelé si budou moct během poskytnuté lhůty naplánovat restart, a i když se rozhodnou ho nenaplánovat, systém Windows se bude moct automaticky restartovat mimo dobu aktivního používání. Poskytnutá lhůta se nemusí projevit, pokud už uživatelé mají nastaveno více dnů, než je poskytnutá lhůta pro správu restartování, a to na základě konfigurace konečného termínu.
+
+Zařízení můžete nastavit tak, aby restartování odložilo, dokud nevyprší konečný termín i poskytnutá lhůta navíc.
 
 Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou zařízení přijímat aktualizace a restartovat se podle výchozího plánu.
 
 Tato zásada přepíše následující zásady:
-1.  Zadat konečný termín pro automatické restartování po instalaci aktualizace
-2.  Zadat přechod restartování podle plánu a časový plán oznámení pro aktualizace
-3.  Vždy automaticky restartovat v naplánovaný čas
-4.  Zakázat automatické restartování v případě přihlášených uživatelů pro instalaci naplánovaných automatických aktualizací
+1. Zadat konečný termín pro automatické restartování po instalaci aktualizace
+2. Zadat přechod restartování podle plánu a časový plán oznámení pro aktualizace
+3. Vždy automaticky restartovat v naplánovaný čas
+4. Konfigurovat automatické aktualizace
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -691,20 +700,26 @@ Tato zásada přepíše následující zásady:
         </textBox>
         <text>(příklad: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Umožňuje stahovat soubory bez adres URL, když je nastaven server pro alternativní stahování.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Vyberte chování serveru proxy pro klienta služby Windows Update pro zjišťování aktualizací pomocí služby nepoužívající protokol TLS (HTTP):</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">U klienta služby Windows Update na zjišťování aktualizací nevynucujte připnutí certifikátu TLS.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Vyberte chování proxy serveru pro klienta služby Windows Update při zjišťování aktualizací:</dropdownList>
+      </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Zadejte zdrojovou službu pro následující třídy aktualizací Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Aktualizace funkcí</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Aktualizace pro zvýšení kvality</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Aktualizace ovladačů</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Ostatní aktualizace</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Zjišťovat aktualizace v</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervalu (hodiny):  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Doba čekání před</text>
-        <text>opakováním dotazu na naplánované</text>
+        <text>Po tuto dobu vyčkejte před opětovnou výzvou pomocí naplánovaného</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">restartování (minuty):  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Doba čekání před</text>
-        <text>vykonáním naplánovaného</text>
+        <text>Po tuto dobu vyčkejte před vykonáním naplánovaného</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">restartování (minuty):  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -716,27 +731,23 @@ Tato zásada přepíše následující zásady:
           <label>Cílová skupina pro tento počítač</label>
         </textBox>
       </presentation>
-      <presentation id="IdleShutdownTimerDuration_Title">
-        <text>Doba čekání před</text>
-        <text>vypnutím služby při </text>
-        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">nečinnosti (minuty):  </decimalTextBox>
-      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>Časovač restartování poskytne uživatelům</text>
-        <text>následující čas k uložení jejich</text>
+        <text>Časovač restartu poskytne uživatelům tolik času na uložení</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">práce (v minutách):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Pro kterou verzi produktu Windows chcete dostávat aktualizace funkcí? např. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Cílová verze pro aktualizace funkcí</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Nastavte chování pro příjem buildů Preview:</dropdownList>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Vyberte úroveň připravenosti Windows pro aktualizace, které chcete přijímat:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Vyberte úroveň připravenosti Windows pro aktualizace, které chcete přijímat:</dropdownList>
-        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Po vydání buildu Preview nebo aktualizace funkcí pozdržet její přijetí o tento počet dnů:</decimalTextBox>
+       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">O kolik dní chcete odložit aktualizaci funkcí po jejím vydání, než se nabídne do zařízení?</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Pozastavit spouštění buildů Preview nebo aktualizací funkcí:</label>
         </textBox>
@@ -796,12 +807,13 @@ Tato zásada přepíše následující zásady:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Zadejte možnosti zobrazování oznámení o aktualizacích:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Zadejte počet dní (až 30), které má uživatel před automatickým spuštěním aktualizací, a to bez ohledu na dobu aktivního používání a bez možnosti přeplánování.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Aktualizace pro zvýšení kvality (dny):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Aktualizace funkcí (dny):</dropdownList>
+        <text>Aktualizace pro zvýšení kvality</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Termín (dny):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Poskytnutá lhůta (dny):</dropdownList>
         <text></text>
-        <text>Zadejte poskytnutou lhůtu pro automatické restartování (0 až 7 dní). Jde o časový úsek od okamžiku, kdy je restartování vyžadováno, do chvíle, kdy se restartuje automaticky. Zařízení se pak restartují bez ohledu na dobu aktivního používání a bez možnosti přeplánování.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Poskytnutá lhůta (dny)</dropdownList>
+        <text>Aktualizace funkcí</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Termín (dny):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Poskytnutá lhůta (dny):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Nerestartovat automaticky do konce poskytnuté lhůty</checkBox>
       </presentation>

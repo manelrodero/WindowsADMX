@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Udeladelser</string>
+    <string id="DeviceControl">Enhedskontrol</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Mindskelse af angrebsoverfladen</string>
     <string id="ExploitGuard_ControlledFolderAccess">Kontrolleret mappeadgang</string>
@@ -29,6 +30,28 @@ Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, indlæ
 
 Hvis du deaktiverer denne politikindstilling, indlæses antimalwaretjenesten som en opgave med lav prioritet.</string>
 
+    <string id="MeteredConnectionUpdates">Gør det muligt for Microsoft Defender Antivirus at opdatere og kommunikere via en forbrugsbaseret forbindelse.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Deaktiveret (standard): 
+    Opdateringer og kommunikationer er ikke tilladt på forbrugsbaserede forbindelser.
+
+    Aktiveret: 
+    Tillad, at administrerede enheder kan opdatere via forbrugsbaserede forbindelser. Der kan påløbe datagebyrer.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Denne indstilling styrer, om Netværksbeskyttelse er tilladt at være konfigureret i blokerings-eller overvågningstilstand på Windows Server.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Deaktiveret (standard): 
+    Hvis den ikke er konfigureret eller deaktiveret, har netværksbeskyttelse ikke tilladelse til at blive konfigureret i blokerings-eller overvågningstilstand på Windows Server.
+
+Kompatible 
+    Hvis indstillingen er aktiveret, kan administratorer styre, om netværksbeskyttelse er tilladt at konfigurere i blokerings-eller overvågningstilstand på Windows Server.
+    Bemærk, at denne konfiguration er afhængig af EnableNetworkProtection-konfigurationen. Hvis denne konfiguration er falsk, ignoreres EnableNetworkProtection, ellers vil netværksbeskyttelse starte Windows Server afhængigt af værdien af EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Denne indstilling styrer behandling af datagram til netværksbeskyttelse.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Aktiveret (standard): 
+    Hvis ikke konfigureret eller deaktiveret, aktiveres datagrambehandling til netværksbeskyttelse.
+
+    Aktiveret: 
+    Hvis aktiveret, vil datagrambehandling til netværksbeskyttelse være deaktiveret.</string>
     <string id="DisableAutoExclusions">Slå automatiske udeladelser fra</string>
     <string id="DisableAutoExclusions_Explain">
         Gør det muligt for en administrator at angive, om automatiske undtagelser for server-SKU'er skal deaktiveres.
@@ -60,11 +83,11 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kør
 
     Hvis du aktiverer eller deaktiverer denne politik, kan det medføre en uventet eller ikke-understøttet funktionsmåde. Det anbefales, at du undlader at konfigurere denne politikindstilling.</string>
     <string id="DisableLocalAdminMerge">Konfigurer lokal administrators fletteadfærd for lister</string>
-    <string id="DisableLocalAdminMerge_Explain">Denne politikindstilling styrer, om komplekse listeindstillinger, som er konfigureret af en lokal administrator, skal flettes med gruppepolitikindstillinger. Denne politikindstilling gælder for lister som trusler og udeladelser.
+    <string id="DisableLocalAdminMerge_Explain">Denne politikindstilling styrer, om komplekse Listeindstillinger, der er konfigureret af en lokal administrator, skal flettes med indstillingerne for gruppepolitik. Denne indstilling gælder for lister som trusler og udeladelser.
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, indflettes entydige elementer, der er defineret i gruppepolitikindstillinger og foretrukne indstillinger, som er konfigureret af den lokale administrator, i den politikindstilling, der træder i kraft. I tilfælde af konflikter tilsidesætter gruppepolitikindstillinger foretrukne indstillinger.
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, flettes entydige elementer, der er defineret i gruppepolitikindstillinger og indstillinger, der er konfigureret af den lokale administrator, i den gældende politikindstilling. I tilfælde af konflikter tilsidesætter gruppepolitikindstillingerne indstillingerne for gruppepolitik.
 
-Hvis du deaktiverer denne politikindstilling, bruges kun elementer, der er defineret af gruppepolitikken, i den politikindstilling, der træder i kraft. Gruppepolitikindstillinger tilsidesætter foretrukne indstillinger, som er konfigureret af administratoren.</string>
+Hvis du aktiverer denne indstilling, vil kun de elementer, der er defineret af gruppepolitik, blive brugt i den gældende politikindstilling. Gruppepolitikindstillingerne tilsidesætter de præference indstillinger, der er konfigureret af den lokale administrator.</string>
     <string id="DisableRoutinelyTakingAction">Deaktiver rutinemæssig afhjælpning</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Du kan bruge denne politikindstilling til at konfigurere, om Microsoft Defender Antivirus automatisk skal reagere på alle fundne trusler. Den handling, der skal udføres på en bestemt trussel, bestemmes af kombinationen af den politikdefinerede handling, den brugerdefinerede handling og den signaturdefinerede handling.
@@ -109,11 +132,15 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, brug
       Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, springer proxyen over dette fallback-trin i den rækkefølge, der er angivet ovenfor.
     </string>
     <string id="RandomizeScheduleTaskTimes">Tilfældige tidspunkter for planlagte opgaver</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Med denne politikindstilling kan du aktivere eller deaktivere tilfældighed af den planlagte starttid for scanning og starttidspunktet for den planlagte sikkerhedsintelligens. Denne indstilling bruges til at fordele ressourcevirkningen i at scanne. Den kan f.eks. bruges på virtuelle gæstemaskiner, som deler en vært, for at forhindre at flere virtuelle gæstemaskiner kan oprette én diskintensiv handling ad gangen.
+    <string id="RandomizeScheduleTaskTimes_Explain">Du kan bruge denne politikindstilling til at konfigurere den planlagt scanning og det planlagte vindue, i timer, for starttidspunkt for opdateringer af sikkerhedsviden.
 
-    Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, starter planlagte opgaver på et tilfældigt tidspunkt inden for et interval på 30 minutter før og efter det angivne starttidspunkt.
+    Hvis du deaktiverer eller undlader at konfigurere denne indstilling, starter planlagte opgaver på et tilfældigt tidspunkt inden for 4 timer efter det angivne starttidspunkt i Opgavestyring.
+    Hvis du aktiverer denne indstilling, kan du udvide eller indsnævre denne randomiseringsperiode. Angiv et randomiseringsvindue på mellem 1 og 23 timer.</string>
+    <string id="SchedulerRandomizationTime">Konfigurer vinduet til tilfældigheds tider for planlagt opgave</string>
+    <string id="SchedulerRandomizationTime_Explain">Du kan bruge denne politikindstilling til at konfigurere starttidspunkt for planlagt scanning og det planlagte vindue, i timer, for starttidspunkt for opdateringer af sikkerhedsviden.
 
-    Hvis du deaktiverer denne politikindstilling, starter planlagte opgaver på det angivne starttidspunkt.</string>
+    Hvis du deaktiverer eller undlader at konfigurere denne indstilling, starter planlagte opgaver på et tilfældigt tidspunkt inden for et interval på 4 timer efter det angivne starttidspunkt.
+    Hvis du aktiverer denne indstilling, skal du vælge et vilkårligt vindue i timer. Det mulige interval for randomiseringsvinduet er mellem 1 og 23 timer.</string>
     <string id="ServiceKeepAlive">Tillad, at antimalwaretjenesten altid kører</string>
     <string id="ServiceKeepAlive_Explain">Du kan bruge denne politikindstilling til at konfigurere, om antimalwaretjenesten skal køres, når antivirus- og antispyware-sikkerhedsovervågning er deaktiveret. Det anbefales, at denne indstilling forbliver deaktiveret.
 
@@ -135,12 +162,20 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, brug
         Ikke konfigureret:
         Samme som deaktiveret.
     </string>
+    <string id="SupportLogLocation">Definer mappestien for at kopiere supportlogfilerne</string>
+    <string id="SupportLogLocation_Explain">Du kan bruge denne politikindstilling til at konfigurere den mappesti, hvor support logfilerne skal kopieres til. Værdien af denne indstilling skal være en gyldig mappesti.
+
+Hvis du aktiverer denne indstilling, vil logfilerne for support blive kopieret til den angivne sti til support logfilen.
+
+Hvis du deaktiverer eller undlader at konfigurere denne indstilling, bliver logfilerne til support logfiler ikke kopieret til en placering.</string>
     <string id="Exclusions_Extensions">Udeladelse af filtypenavne</string>
     <string id="Exclusions_Extensions_Explain">Med denne politikindstilling kan du angive en liste over filtyper, som skal springes over i planlagte og brugerdefinerede scanninger samt realtidsscanninger. Filetyper skal tilføjes under Indstillinger for denne politikindstilling. Hver filtype skal angives som et navneværdipar, hvor navnet skal være en strengrepræsentation af filetypenavnet (f.eks. "obj" eller "lib"). Værdien bruges ikke, og du anbefales at indstille den til 0.</string>
     <string id="Exclusions_Paths">Udeladelser af stier</string>
     <string id="Exclusions_Paths_Explain">Med denne politikindstilling kan du deaktivere planlagt scanning og realtidsscanning for filer under de angivne stier eller for de fuldt kvalificerede ressourcer, der er angivet. Stier skal tilføjes under Indstillinger for denne politikindstilling. Hver filtype skal angives som et navneværdipar, hvor navnet skal være en strengrepræsentation af en sti eller et fuldt kvalificeret ressourcenavn. En sti kan f.eks. defineres som: "c:\Windows" for at udelade alle filer i denne mappe. Et fuldt kvalificeret ressourcenavn kan f.eks. defineres som: "C:\Windows\App.exe". Værdien bruges ikke, og du anbefales at indstille den til 0.</string>
     <string id="Exclusions_Processes">Udeladelser af processer</string>
-    <string id="Exclusions_Processes_Explain">Med denne politikindstilling kan du deaktivere planlagt scanning og realtidsscanning for en eller flere filer, der åbnes af en eller flere af de angivne processer. Selve processen udelades ikke. Du udelader processen ved at bruge Udeladelse af stier. Processer skal tilføjes under Indstillinger for denne politikindstilling. Hver filtype skal angives som et navneværdipar, hvor navnet skal være en strengrepræsentation af stien til procesbilledet. Bemærk, at kun eksekverbare filer kan udelades. En proces kan f.eks. defineres som: "c:\windows\app.exe". Værdien bruges ikke, og du anbefales at indstille den til 0.</string>
+    <string id="Exclusions_Processes_Explain">Du kan bruge denne politikindstilling til at deaktivere realtidsscanning for alle filer, der er åbnet af en af de angivne processer. Denne politik gælder ikke for planlagte scanninger. Selve processen vil ikke blive udeladt. Hvis du vil udelade processen, skal du bruge stiens udeladelse. Processer skal tilføjes under indstillinger for denne indstilling. Hver post skal angives som et navneværdipar, hvor navnet skal være en strengrepræsentation af stien til proces billedet. Bemærk, at det kun er muligt at udelukke eksekverbare filer. F. eks. kan en proces defineres som: "c:\windows\app.exe". Værdien bruges ikke, og det anbefales, at denne indstilling indstilles til 0.</string>
+    <string id="Exclusions_IpAddresses">Udeladelser af IP-adresser</string>
+    <string id="Exclusions_IpAddresses_Explain">Gør det muligt for en administrator eksplicit at deaktivere kontrol af netværkspakker, der er foretaget af wdnisdrv, på et bestemt sæt af IP-adresser.</string>
     <string id="Nis_DisableProtocolRecognition">Aktivér protokolgenkendelse</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Med denne politikindstilling kan du konfigurere protokolgenkendelse for at beskytte netværket mod udnyttelse af kendte sårbarheder.
 
@@ -167,6 +202,14 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, tils
 Hvis du aktiverer denne politikindstilling, fjernes elementer fra karantænemappen efter det angivne antal dage.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, gemmes elementer i karantænemappen og fjernes ikke automatisk.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Slå scriptscanning til</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Med denne politikindstilling kan du konfigurere scriptscanning.
+
+    Hvis du aktiverer eller ikke konfigurerer denne indstilling, vil scriptscanning blive aktiveret.
+
+    Hvis du deaktiverer denne indstilling, vil scriptscanning blive deaktiveret.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Aktivér handlingsovervågning</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Med denne politikindstilling kan du konfigurere handlingsovervågning.
 
@@ -400,12 +443,6 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, deak
 Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, aktiveres heuristik.
 
 Hvis du deaktiverer denne politikindstilling, deaktiveres heuristik.</string>
-    <string id="Scan_DisablePackedExeScanning">Scan pakkede eksekverbare filer</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Med denne politikindstilling kan du konfigurere scanning for pakkede eksekverbare filer. Du anbefales at lade denne type scanning være aktiveret.
-
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, scannes pakkede eksekverbare filer.
-
-Hvis du deaktiverer denne politikindstilling, scannes pakkede eksekverbare filer ikke.</string>
     <string id="Scan_DisableRemovableDriveScanning">Scan flytbare drev</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Med denne politikindstilling kan du administrere, om der skal scannes for skadelig software og uønsket software i indholdet af flytbare drev, f.eks. USB-flashdrev, når der køres en fuld scanning.
 
@@ -473,11 +510,11 @@ Hvis du aktiverer denne politikindstilling, fjernes elementer fra mappen med sca
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, gemmes elementer i mappen med scanningsoversigter i det antal dage, der er standard.</string>
     <string id="Scan_QuickScanInterval">Angiv interval for kørsel af hurtigscanninger pr. dag</string>
-    <string id="Scan_QuickScanInterval_Explain">Med denne politikindstilling kan du angive et interval for kørsel af hurtigscanninger. Tidsværdien repræsenteres som antallet af timer mellem hurtigscanninger. Gyldige værdier går fra 1 (hver time) til 24 (én gang pr. dag). Hvis værdien er indstillet til nul, køres der ingen hurtige intervalscanninger. Denne politikindstilling er som standard sat til 0.
+    <string id="Scan_QuickScanInterval_Explain">Du kan bruge denne politikindstilling til at angive et interval for udførelse af en hurtig scanning. Tidsværdien repræsenteres som antallet af timer mellem hurtigscanninger. Gyldige værdier går fra 1 (hver time) til 24 (én gang pr. dag). Hvis den er indstillet til nul, foretages der ikke hurtig scanning for interval. Denne indstilling er som standard angivet til 0.
 
-Hvis du aktiverer denne politikindstilling, køres der en hurtigscanning med det angivne interval.
+Hvis du aktiverer denne politikindstilling, køres der en hurtig scanning med det angivne interval.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, køres der en hurtigscanning på et standardtidspunkt.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, køres der ikke en hurtig scanning, der styres af denne konfiguration.</string>
     <string id="Scan_ScanOnlyIfIdle">Start kun den planlagte scanning, når computeren er tændt, men ikke i brug</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Med denne politikindstilling kan du konfigurere planlagte scanninger til kun at starte, når din computer er tændt, men ikke er i brug.
 
@@ -521,11 +558,11 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kør
     <string id="Scan_ScheduleDay_7">Fredag</string>
     <string id="Scan_ScheduleDay_8">Lørdag</string>
     <string id="Scan_ScheduleQuickScantime">Angiv tidspunktet for en daglig hurtigscanning</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Med denne politikindstilling kan du angive det tidspunkt på dagen, hvor der skal køres en daglig hurtigscanning. Tidsværdien repræsenteres som antallet af minutter efter midnat (00:00).  For eksempel svarer 120 (0x78) til 02:00. Som standard er denne politikindstilling sat til tidsværdien 2:00. Tidsplanen er baseret på det tidspunkt, lokal tid, på computeren, hvor scanningen udføres.
+    <string id="Scan_ScheduleQuickScantime_Explain">Du kan bruge denne politikindstilling til at angive det tidspunkt på dagen, hvor der skal udføres en daglig hurtig scanning. Klokkeslætsværdien repræsenteres som antallet af minutter efter midnat (00:00).  F. eks. 120 (0x78) svarer til 02:00 AM. Denne indstilling er som standard angivet til deaktiveret. Tidsplanen er baseret på den lokale tid på den computer, hvor scanningen udføres.
 
-Hvis du aktiverer denne politikindstilling, køres der en daglig hurtigscanning på det angivne tidspunkt på dagen.
+Hvis du aktiverer denne indstilling, vil der blive kørt en daglig hurtig scanning på det angivne tidspunkt på dagen.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, køres der en daglig hurtigscanning på et standardtidspunkt.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, køres daglig hurtig scanning, der styres af denne konfiguration, ikke.</string>
     <string id="Scan_ScheduleTime">Angiv det tidspunkt på dagen, hvor der skal køres en planlagt scanning</string>
     <string id="Scan_ScheduleTime_Explain">Med denne politikindstilling kan du angive det tidspunkt på dagen, hvor der skal køres en planlagt scanning. Tidsværdien repræsenteres som antallet af minutter efter midnat (00:00).  For eksempel svarer 120 (0x78) til 02:00. Som standard er denne politikindstilling sat til tidsværdien 2:00. Tidsplanen er baseret på det tidspunkt, lokal tid, på computeren, hvor scanningen udføres.
 
@@ -548,17 +585,17 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kør
         Hvis du deaktiverer eller undlader at konfigurere denne indstilling, foretages der ikke ændringer af CPU-prioritet for planlagte scanninger.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definer antallet af dage, før spywarens sikkerhedsintelligens anses for at være forældet</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før spywarens sikkerhedsintelligens anses for at være forældet. Hvis sikkerhedsintelligens er beregnet til at være forældet, kan denne tilstand udløse flere yderligere handlinger, herunder gå tilbage til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Denne værdi er som standard angivet til 14 dage.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før spywarens sikkerhedsefterretninger anses for at være forældede. Hvis sikkerhedsefterretningerne bestemmes til at være forældede, kan denne tilstand udløse flere yderligere handlinger, herunder at gå tilbage til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Denne værdi er som standard angivet til 7 dage.
 
-    Hvis du aktiverer denne indstilling, anses spywarens sikkerhedsintelligens for at være forældet, når det angivne antal dage er gået uden en opdatering.
+    Hvis du aktiverer denne indstilling, anses spywarens sikkerhedsefterretninger for at være forældede, når det angivne antal dage er gået uden en opdatering.
 
-    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses spywarens sikkerhedsintelligens for at være forældet, når det antal dage, der er standard, er gået uden en opdatering.</string>
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses spywarens sikkerhedsefterretninger for at være forældede, når det antal dage, der er standard, er gået uden en opdatering.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definer antallet af dage, før virussens sikkerhedsintelligens anses for at være forældet</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før virussens sikkerhedsintelligens anses for at være forældet. Hvis sikkerhedsintelligens er beregnet til at være forældet, kan denne tilstand udløse flere yderligere handlinger, herunder at gå tilbage til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Denne værdi er som standard angivet til 14 dage.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før virussens sikkerhedsefterretninger anses for at være forældede. Hvis sikkerhedsefterretningerne beregnes til at være forældede, kan denne tilstand udløse flere yderligere handlinger, herunder at gå tilbage til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Denne værdi er som standard angivet til 7 dage.
 
-    Hvis du aktiverer denne indstilling, anses virussens sikkerhedsintelligens for at være forældet, når det angivne antal dage er gået uden en opdatering.
+    Hvis du aktiverer denne indstilling, anses virussens sikkerhedsefterretninger for at være forældede, når det angivne antal dage er gået uden en opdatering.
 
-    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses virussens sikkerhedsintelligens for at være forældet, når det antal dage, der er standard, er gået uden en opdatering.</string>
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses virussens sikkerhedsefterretninger for at være forældede, når det antal dage, der er standard, er gået uden en opdatering.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definer filshares til download af opdateringer til sikkerhedsintelligens</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Du kan bruge denne politikindstilling til at konfigurere UNC-filshare til download af opdateringer til sikkerhedsintelligens. Kilder kontaktes i den angivne rækkefølge. Værdien af denne indstilling skal angives som en pipe-separeret streng, der optæller opdateringskilderne til sikkerhedsintelligens. For eksempel: "{\\unc1 | \\unc2 }". Listen er som standard tom.
 
@@ -847,23 +884,30 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     </string>
     <string id="ExploitGuard_ASR_Rules">Konfigurer regler for at mindske angrebsoverfladen</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Angiv tilstanden for hver regel for at mindske angrebsoverfladen (ASR-regel).
+    Sæt en tilstand for hver regel for reduktion af angrebsoverflade (ASR).
 
-    Når du aktiverer denne indstilling, kan du sætte hver regel til følgende tilstande i afsnittet Indstillinger:
-    - Bloker: Reglen anvendes.
-    - Overvåg: Hvis en regel normalt ville forårsage en hændelse, registreres den (selv om reglen rent faktisk ikke normalt vil blive anvendt).
-    - Fra: Reglen anvendes ikke.
+    Efter aktivering af denne indstilling, kan du sætte hver regel til følgende i afsnittet Indstillinger:
+    - Bloker: reglen vil blive anvendt
+    - Overvågningstilstand: Hvis reglen normalt vil forårsage en hændelse, så vil dette blive registreret (selvom regelen reelt ikke vil blive anvendt)
+    - Fra: reglen vil ikke blive anvendt
+    - Ikke konfigureret: reglen er aktiveret med standardværdier
+    - Advarsel: reglen vil blive anvendt og slutbrugeren vil have valgmuligheden for at omgå blokeringen
+
+    Medmindre ASR-reglen er deaktiveret, en delprøve af overvågningshændelser er indsamlet for ASR-regler vil værdierne ikke blive konfigureret.
 
     Aktiveret:
-    Angiv tilstanden for hver ASR-regel under afsnittet Indstillinger for denne indstilling.
-    Angiv hver regel på en ny linje i form af et navne/værdi-par:
-    - Kolonnen Navn: Angiv et gyldigt id for ASR-reglen.
-    - Kolonnen Værdi: Angiv status-id'et, som relaterer til den tilstand, du vil specificere for den tilknyttede regel.
+    Specificer tilstanden for hver ASR-regel under afsnit Indstillinger for denne indstilling.
+    Angiv hver regel på en ny linje som et navn-værdipar:
+    - Navnekolonne: Angiv en gyldig ASR-regel-ID
+    - Værdikolonne: Angiv status-ID der relateres til tilstanden du vil specificere den tilknyttede regel
 
-    Følgende status-id'er kan bruges i kolonnen Værdi:
+    De følgende status-ID er tilladt under værdikolonne:
     - 1 (Bloker)
     - 0 (Fra)
-    - 2 (Overvåg)
+    - 2 (Overvågning)
+    - 5 (Ikke konfigureret)
+    - 6 (Advarsel)
+
     
     Eksempel:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -871,12 +915,12 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
     Deaktiveret:
-    Ingen ASR-regler konfigureres.
+    Ingen ASR-regler vil blive konfigureret.
 
     Ikke konfigureret:
-    Samme som Deaktiveret.
+    Den samme som Deaktiveret.
 
-    Du kan undtage mapper eller filer og ressourcer i gruppepolitikindstillingen "Undtag mapper eller filer og ressourcer".
+    Du kan udelukke mapper eller filer i GP-indstillingen ""Undtag filer og stier fra regler for reduktion af angrebsoverflade"".
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Konfigurer kontrolleret mappeadgang</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
 
     Microsoft Defender Antivirus fastslår automatisk, hvilke programmer der er tillid til. Du kan tilføje yderligere programmer, der er tillid til, i gruppepolitikindstillingen Konfigurer tilladte programmer.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definer gruppe til enhedskontrol af politikker</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Følg xml-skemaet for politikgrupper for enhedskontrol for at udfylde politikgruppers data.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definer reglerne for enhedskontrol af politikker</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Følg xml-skemaet for politikregler for enhedskontrol for at udfylde politikreglers data.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
         <label>Definer proxyserver for at oprette forbindelse til netværket</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Definer mappestien for at kopiere supportlogfilerne</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Udeladelse af filtypenavne</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Udeladelser af processer</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">Udeladelser af IP-adresser</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Angiv yderligere definitionssæt til kontrol af netværkstrafik</listBox>
@@ -1071,10 +1131,10 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Angiv det tidspunkt på dagen, hvor der skal køres en planlagt scanning</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definer antallet af dage, før spywarens sikkerhedsintelligens anses for at være forældet</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definer antallet af dage, før spywarens sikkerhedsintelligens anses for at være forældet</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definer antallet af dage, før virussens sikkerhedsintelligens anses for at være forældet</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definer antallet af dage, før virussens sikkerhedsintelligens anses for at være forældet</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definer politikgrupperne her</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definer politikreglerne her</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Specificer tilfældigheds vinduet for planlæggeren i timer.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

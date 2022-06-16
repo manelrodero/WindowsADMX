@@ -6,7 +6,7 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">傳遞最佳化</string>
       <string id="DownloadMode">下載模式</string>
-      <string id="DownloadMode_Help">指定可使用傳遞最佳化下載 Windows 更新、應用程式和應用程式更新時，使用的下載方法。
+      <string id="DownloadMode_Help">指定可使用傳遞最佳化下載 Windows Updates、應用程式和應用程式更新時，使用的下載方法。
 
 下列清單顯示支援的值: 
 
@@ -14,19 +14,16 @@
 
 1 = HTTP 混合同一 NAT 下的對等互連。
 
-2 = HTTP 混合跨私人群組的對等互連。在預設情況下，對等互連將在處於同一 Active Directory 站台 (如果存在) 或同一網域中的裝置上進行。選擇此選項後，對等互連將跨越 NAT。若要建立自訂群組，請使用群組識別碼並搭配模式 2。
+2 = HTTP 混合跨私人群組的對等互連。在預設情況下，對等互連將在處於同一 Active Directory 站台 (如果存在) 或同一網域中的裝置上進行。選擇此選項後，對等互連將跨越 NAT。若要建立自訂群組，請使用群組識別碼並搭配模式 2.
 
 3 = HTTP 混合網際網路對等互連。
 
-99 = 沒有對等互連的簡單下載模式。傳遞最佳化僅使用 HTTP 下載，且不會嘗試聯繫傳遞最佳化雲端服務。
-
-100 = 略過模式。請勿使用傳遞最佳化，改為使用 BITS。</string>
+99 = 沒有對等互連的簡單下載模式。傳遞最佳化僅使用 HTTP 下載，且不會嘗試聯繫傳遞最佳化雲端服務。</string>
       <string id="DownloadMode_CdnOnly">僅限 HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">群組 (2)</string>
       <string id="DownloadMode_Internet">網際網路 (3)</string>
       <string id="DownloadMode_Simple">簡單 (99)</string>
-      <string id="DownloadMode_Bypass">略過 (100)</string>
       <string id="GroupId">群組識別碼</string>
       <string id="GroupId_Help">複寫群組識別碼必須設定為 GUID。此原則可指定裝置所屬的任意群組識別碼。
 
@@ -169,14 +166,19 @@
 
 注意：如果您設定原則以從 http 延遲前景下載，則會優先套用 (優先允許來自同儕節點的下載)。</string>
       <string id="RestrictPeerSelectionBy">選取一種方法來限制同儕節點選取項目</string>
-      <string id="RestrictPeerSelectionBy_Help">設定此原則以限制透過選取選項限制的同儕點選取。
+      <string id="RestrictPeerSelectionBy_Help">設定此原則，以限制透過所選選項進行的對等選取。
 
-可用選項有：
-1 = 子網路遮罩 (未來版本會新增更多選項)。
+可用的選項有：
+0 = NAT。
+1 = 子網路遮罩。
+2 = 本機探索 (DNS-SD)。
 
-選項 1 (子網路遮罩) 同時適用於下載模式 LAN (1) 與群組 (2)。</string>
-      <string id="RestrictPeerSelectionBy_None">無</string>
+預設值已從 0 (無限制) 變更為 1 (限制為子網路)。
+
+這些選項適用於下載模式 LAN (1) 與群組 (2)。</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">子網路</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">本機探索</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">設定上班時間，以限制背景下載頻寬</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">指定傳遞最佳化在上班時間內、外的所有並行下載活動使用的背景下載頻寬上限 (可用下載頻寬的百分比)。</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">設定上班時間，以限制幕前下載頻寬</string>
@@ -303,7 +305,7 @@
         <text>預設值為 0 (無延遲)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">同儕節點選取項目限制依據:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">同儕節點選取項目限制依據:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

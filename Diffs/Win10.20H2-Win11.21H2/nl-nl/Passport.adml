@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Windows Hello voor Bedrijven gebruiken</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Certificaat gebruiken voor on-premises authenticatie</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Gebruik CloudTrust voor on-premises-verificatie</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello voor Bedrijven is een alternatieve methode om u aan te melden bij Windows met uw Active Directory- of Azure Active Directory-account. Hierdoor hebt u geen wachtwoorden, smartcards of virtuele smartcards nodig.
 
@@ -118,13 +120,22 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, maakt Windows gee
 OPMERKING: dit beleid geldt alleen voor apparaten die zijn geregistreerd bij Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Gebruik deze beleidsinstelling om te configureren dat er een aanmeldingscertificaat wordt geregistreerd voor Windows Hello voor Bedrijven dat wordt gebruikt voor on-premises authenticatie.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Gebruik deze beleidsinstelling om Windows hello voor bedrijven te configureren voor het inschrijven van een aanmeldingscertificaat voor on-premises authenticatie.
 
-Als u deze beleidsinstelling inschakelt, wordt er voor Windows Hello voor Bedrijven een aanmeldingscertificaat geregistreerd dat wordt gebruikt voor on-premises authenticatie.
-		
-Als u deze beleidsinstelling uitschakelt of niet configureert, wordt er voor Windows Hello voor Bedrijven een sleutel geregistreerd die wordt gebruikt voor on-premises authenticatie.
+Als u deze beleidsinstelling inschakelt, registreert Windows hello voor bedrijven een aanmeldcertificaat dat wordt gebruikt voor on-premises authenticatie.
 
-OPMERKING: als u deze beleidsinstelling uitschakelt of niet configureert, en de beleidsinstelling 'Windows Hello voor Bedrijven gebruiken' inschakelt, moet er in de omgeving een of meer Windows Server 2016-domeincontrollers zijn om te voorkomen dat de Windows Hello voor Bedrijven-authenticatie mislukt.
+Als u deze beleidsinstelling uitschakelt of niet configureert, wordt in Windows hello voor bedrijven een sleutel of een Kerberos-ticket (afhankelijk van andere beleidsinstellingen) gebruikt voor on-premises authenticatie.
+
+Opmerking: als u deze beleidsinstelling uitschakelt of niet configureert en de beleidsinstelling ' Windows hello voor bedrijven gebruiken ' inschakelt, moet de omgeving een of meer Windows Server 2016-domeincontrollers hebben om te voorkomen dat de verificatie van Windows hello voor bedrijven wordt afgebroken.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Gebruik deze beleidsinstelling om Windows hello voor bedrijven te configureren voor het gebruik van Azure AD Kerberos voor on-premises authenticatie.
+
+Als u deze beleidsinstelling inschakelt, gebruikt Windows hello voor bedrijven een Kerberos-ticket dat wordt opgehaald van verificatie naar Azure voor on-premises authenticatie.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, zal Windows hello voor bedrijven een sleutel of certificaat gebruiken (afhankelijk van andere beleidsinstellingen) voor on-premises authenticatie. 
+ 
+Opmerking: een omgeving waarin deze beleidsinstelling is ingeschakeld en de beleidsinstelling ' Windows hello voor bedrijven gebruiken ' vereist een of meer Windows Server 2016-domeincontrollers. Als dit niet het geval is, mislukt de verificatie van Windows hello voor bedrijven.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Apparaatontgrendelingsfactoren configureren</string>

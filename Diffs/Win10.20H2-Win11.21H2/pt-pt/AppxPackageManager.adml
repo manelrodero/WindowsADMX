@@ -13,6 +13,14 @@
 Se ativar esta definição de política, pode instalar qualquer aplicação LOB ou da Loja Windows assinadas pelo programador (que deve ser assinada com uma cadeia de certificados que pode ser validada com sucesso pelo computador local).
 
 Se desativar ou não configurar esta definição de política, não é possível instalar aplicações LOB ou da Loja Windows assinadas pelo programador.</string>
+      <string id="AllowAutomaticAppArchiving">Arquivar aplicações utilizadas com frequência</string>
+      <string id="AllowAutomaticAppArchivingExplanation">Esta definição de políticas controla se o sistema pode arquivar aplicações utilizadas com frequência.
+
+Se ativar esta definição de política, então o sistema verificará e arquivará periodicamente as aplicações utilizadas com pouca frequência.
+
+Se desativar esta definição de política, então o sistema não arquivará quaisquer aplicações.
+
+Se não configurar esta definição de política (por defeito), então o sistema seguirá o comportamento por defeito, que é verificar e arquivar periodicamente as aplicações utilizadas com pouca frequência, e o utilizador será capaz de configurar esta definição por si próprio.</string>
       <string id="AllowDeploymentInSpecialProfiles">Permitir operações de implementação em perfis especiais</string>
       <string id="AllowDeploymentInSpecialProfilesExplanation">Esta definição de política permite gerir a implementação de aplicações da Loja Windows quando o utilizador tem sessão iniciada utilizando um perfil especial. Perfis especiais são os seguintes perfis de utilizador, em que as alterações são eliminadas quando o utilizador encerra sessão:
 
@@ -30,7 +38,7 @@ Se ativar esta definição de política, a Política de Grupo permitirá operaç
 Se desativar ou não configurar esta definição de política, a Política de Grupo bloqueará as operações de implementação de aplicações da Loja Windows ao utilizar um perfil especial.</string>
       <string id="AllowDevelopmentWithoutDevLicense">Permite o desenvolvimento de aplicações da Loja Windows e a respetiva instalação a partir de um ambiente de desenvolvimento integrado (IDE)</string>
       <string id="AllowDevelopmentWithoutDevLicenseExplanation">
-        Permite ou nega o desenvolvimento de aplicações da Microsoft Store e instala-as diretamente a partir de um IDE.
+        Permite ou nega o desenvolvimento de aplicações da Microsoft Store e a sua instalação diretamente a partir de um IDE.
 
         Se ativar esta definição e ativar a Política de Grupo "Permitir a instalação de todas as aplicações fidedignas", pode desenvolver aplicações da Microsoft Store e instalá-las diretamente a partir de um IDE.
 
@@ -65,6 +73,24 @@ Se desativar ou não configurar esta definição de política, a Política de Gr
         Se ativar esta política, os utilizadores não Administradores não conseguirão iniciar a instalação de pacotes de aplicações do Windows. Os administradores que pretendem instalar uma aplicação terão de o fazer a partir de um contexto de Administrador (por exemplo, uma janela do PowerShell como Administrador). Todos os utilizadores continuarão a poder instalar pacotes de aplicações do Windows através da Microsoft Store, se permitido por outras políticas.
 
         Se desativar ou não configurar esta política, todos os utilizadores poderão iniciar a instalação de pacotes de aplicações do Windows.
+      </string>
+      <string id="DisableBackgroundAutoUpdates">Não permitir que aplicações com carga secundária sejam automaticamente atualizadas em segundo plano</string>
+      <string id="DisableBackgroundAutoUpdatesExplanation">Gere uma capacidade de aplicações com carga secundária para atualização automática em segundo plano. 
+
+Se ativar esta política, as aplicações com carga secundária não serão atualizadas automaticamente em segundo plano.
+
+Se desativar esta política, as aplicações com carga secundária serão atualizadas automaticamente em segundo plano.
+
+A predefinição é ' desativada ' (chave não presente).
+      </string>
+      <string id="DisableMeteredNetworkBackgroundAutoUpdates">Não permitir que aplicações com carga secundária sejam automaticamente atualizadas em segundo plano numa rede com tráfego limitado</string>
+      <string id="DisableMeteredNetworkBackgroundAutoUpdatesExplanation">Gere uma capacidade de aplicações com carga secundária para atualização automática em segundo plano numa rede com tráfego limitado. 
+
+Se ativar esta política, as aplicações com carga secundária não serão atualizadas automaticamente em segundo plano numa rede com tráfego limitado.
+
+Se desativar esta política, as aplicações com carga secundária serão atualizadas automaticamente em segundo plano numa rede com tráfego limitado.
+
+A predefinição é ' desativada ' (chave não presente).
       </string>
     </stringTable>
   </resources>

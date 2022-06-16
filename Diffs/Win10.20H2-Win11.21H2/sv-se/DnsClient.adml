@@ -250,6 +250,23 @@ Om den här principinställningen är inaktiverad eller inte har konfigurerats k
 Om den här principinställningen är aktiverad konverteras IDN:er till formen Nameprep.
 
 Om den här principinställningen är inaktiverad eller inte har konfigurerats konverteras inte IDN:er till formen Nameprep.</string>
+      <string id="DNS_Doh">Konfigurera namnmatchning för DNS över HTTPS (DoH)</string>
+      <string id="DNS_Doh_Disabled">Prohibit DoH</string>
+      <string id="DNS_Doh_Auto">Allow DoH</string>
+      <string id="DNS_Doh_Force">Kräv DoH</string>
+      <string id="DNS_Doh_Help">Anger om DNS-klienten ska utföra namnmatchning över DNS över HTTPS (DoH). 
+
+Som standard görs DNS-namnmatchning (via UDP eller TCP) av DNS-klienten. Den här inställningen kan göra att DNS-klienten använder DoH protokoll för att matcha domännamn.
+
+Om du vill använda den här principinställningen klickar du på aktiverad och väljer ett av följande alternativ i listrutan: 
+
+Förhindra DoH: Ingen DoH namnmatchning utförs.
+
+Tillåt DoH: Kör DoH frågor om de konfigurerade DNS-servrarna stöder det. Om de inte stöder det kan du försöka med klassisk namnmatchning.
+
+ Kräv DoH: Tillåt endast DoH namnmatchning. Om det inte finns några konfigurerade DoH-kompatibla DNS-servrar kommer namnmatchningen att misslyckas.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen använder datorerna lokalt konfigurerade inställningar.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +303,9 @@ Om den här principinställningen är inaktiverad eller inte har konfigurerats k
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Säkerhetsnivå för uppdateringar:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Konfigurera DoH alternativ:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

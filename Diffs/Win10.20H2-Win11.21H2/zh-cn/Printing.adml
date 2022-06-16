@@ -67,7 +67,7 @@
       <string id="DownlevelBrowse">浏览网络以便查找打印机</string>
       <string id="DownlevelBrowse_Help">允许用户使用添加打印机向导来搜索网络上共享的打印机。
 
-如果启用或未配置此设置，当用户通过在添加打印机向导的第二页上选择“网络打印机，或者在另一台计算机上的打印机”选项来添加网络打印机后，选中添加打印机向导第三页上的“连接到此打印机(或浏览打印机，选择此选项并单击‘下一步’)”选项，并且没有在旁边的“名称”编辑框中指定打印机名称，则添加打印机向导会显示网络上共享的打印机列表，可从显示的列表中选择打印机。
+如果启用或未配置此设置，当用户通过在添加打印机向导的第二页上选择“网络打印机，或者在另一台计算机上的打印机”选项来添加网络打印机后，选中添加打印机向导第三页上的“连接到此打印机”(或浏览打印机，选择此选项并单击“下一步”)选项，并且没有在旁边的“名称”编辑框中指定打印机名称，则添加打印机向导会显示网络上共享的打印机列表，可从显示的列表中选择打印机。
 
 如果禁用此设置，则网络打印机浏览页将从添加打印机向导中删除，从而用户将无法搜索网络打印机，但必须键入打印机名称。
 
@@ -278,11 +278,11 @@ Web 服务打印机: 50
 
         如果禁用或未配置此策略设置，则系统将允许运行所有已安装的打印机扩展。</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">将 Microsoft XPS 文档写入程序(MXDW)默认输出格式更改为旧版 Microsoft XPS 格式(*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">默认情况下，Microsoft XPS 文档写入程序(MXDW)在 Windows 10、Windows 10 和 Windows Server 2019 中生成 OpenXPS (*.oxps)文件。
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">默认情况下，Microsoft XPS 文档写入程序 (MXDW) 在 Windows 10、Windows 10 和 Windows Server 2022 中生成 OpenXPS ( *. oxps) 文件。
 
-          如果启用此组策略设置，则默认 MXDW 输出格式为旧版 Microsoft XPS (*.xps)。
+如果启用此组策略设置，则默认 MXDW 输出格式为旧版 Microsoft XPS ( * .xps)。
 
-          如果禁用或未配置此策略设置，则默认 MXDW 输出格式为 OpenXPS (*.oxps)。</string>
+如果禁用或未配置此策略设置，则默认 MXDW 输出格式为 OpenXPS ( oxps)。</string>
       <string id="SetDefaultPrinterMRUModeOff">关闭 Windows 默认打印机管理</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">此首选项允许你更改默认打印机管理。
 
@@ -291,6 +291,24 @@ Web 服务打印机: 50
 如果禁用此设置，Windows 将管理默认打印机。
 
 如果未配置此设置，则默认打印机管理将不会更改。 </string>
+      <string id="EnableDeviceControl">启用设备控制打印限制</string>
+      <string id="EnableDeviceControl_Help">
+          确定是否对此计算机上的打印强制实施设备控制打印限制。
+
+          默认情况下，不会根据连接类型或打印机制造商/型号限制打印。
+
+          如果启用此设置，则计算机将限制打印到公司网络或认可的 USB 连接的打印机上的打印机连接。
+
+          如果禁用此设置或未配置此设置，则不会根据连接类型或打印机制造商/型号限制打印。</string>
+        <string id="ApprovedUsbPrintDevices">已批准 USB 连接的打印设备列表</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            此设置是设备控制打印限制的组件。若要使用此设置，请启用“启用设备控制打印限制“设置来启用设备控制打印。
+
+启用设备控制打印时，系统使用指定的 vid/pid 值列表来确定是否已批准当前 USB 连接的打印机进行本地打印。
+
+键入所有批准的 vid/pid 组合 (以逗号分隔，) 与批准的 USB 打印机型号相对应。当用户尝试打印到 USB 打印机队列时，设备 vid/pid 将与批准列表进行比较。
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Web 服务打印机: 50
           <label>默认 Active Directory 路径</label>
         </textBox>
         <text>示例 --&gt; LDAP://DC=Domain1,DC=MyCompany,DC=com。</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>指定已批准 USB 连接的打印机设备的列表。</text>
+        <text>此列表是一个以逗号分隔的 USB vid/pid 值列表。示例： 0351/0872、135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

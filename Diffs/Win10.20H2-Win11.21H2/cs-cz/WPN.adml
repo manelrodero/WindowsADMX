@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Oznámení</string>
+      <string id="WnsEndpoint">Povolí zásady skupiny pro plně kvalifikovaný název domény u služby nabízených oznámení Windows</string>
+      <string id="WnsEndpointExplain">Tato zásada nastavuje zvláštní plně kvalifikovaný název domény u služby nabízených oznámení Windows pro konkrétní prostředí.</string>
       <string id="NoTileNotification">Vypnout oznámení dlaždic</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minuty po půlnoci:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>Plně kvalifikovaný název domény pro Službu nabízených oznámení Windows</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

@@ -67,7 +67,7 @@ Anmärkningar:
       <string id="DownlevelBrowse">Bläddra i nätverket för att hitta skrivare</string>
       <string id="DownlevelBrowse_Help">Ger användarna möjlighet att söka igenom nätverket efter delade skrivare med guiden Lägg till skrivare.
 
-Om du aktiverar eller låter bli att konfigurera den här inställningen visar guiden Lägg till skrivare en lista med delade skrivare i nätverket och låter användaren välja en skrivare i den, under följande förutsättningar:Användaren väljer att lägga till en nätverksskrivare genom att markera alternativknappen "En nätverksskrivare eller skrivare som är ansluten till en annan dator" på den andra sidan i guiden Lägg till skrivare, markerar dessutom alternativknappen "Anslut till den här skrivaren (välj detta alternativ och klicka på Nästa om du vill bläddra)" på den tredje sidan i guiden och anger inte något skrivarnamn i textrutan "Namn".
+Om du aktiverar den här inställningen eller väljer att inte konfigurera den, kommer guiden Lägg till skrivare att visa en lista med delade skrivare i nätverket och användaren får möjlighet att välja en skrivare från listan, under följande förutsättningar: användare väljer att lägga till en nätverksskrivare genom att markera alternativknappen "En nätverksskrivare eller skrivare som är ansluten till en annan dator" på sidan 2 i guiden Lägg till skrivare, markerar dessutom alternativknappen "Anslut till den här skrivaren (välj detta alternativ och klicka på Nästa om du vill bläddra)" på sidan 3 i guiden och anger inte något skrivarnamn i textrutan "Namn".
 
 Om du inaktiverar den här inställningen, tas sidan där det är möjligt att bläddra efter nätverksskrivare bort från guiden Lägg till skrivare och användarna kan inte söka igenom nätverket, utan måste ange skrivarens namn.
 
@@ -278,11 +278,11 @@ Som standard fortsätter Windows Ultimate, Professional och Home att söka efter
 
         Om du inaktiverar eller låter bli att konfigurera den här principinställningen får alla tillägg för skrivare som installerats lov att köras.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Ändra formatet för standardutdata i MXDW (Microsoft XPS Document Writer) så att det överensstämmer med det äldre Microsoft XPS-formatet (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">MXDW (Microsoft XPS Document Writer) genererar OpenXPS-filer (*.oxps) som standard i Windows 10, Windows 10 Server och Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">MXDW (Microsoft XPS Document Writer) genererar OpenXPS-filer (*.oxps) som standard i Windows 10, Windows 10 Server och Windows Server 2022.
 
-          Om du aktiverar den här grupprincipinställningen används det äldre Microsoft XPS-formatet (*.xps) som standard för utdata i MXDW.
+ Om du aktiverar den här grupprincipinställningen används det äldre Microsoft XPS-formatet (*.xps) som standard för utdata i MXDW.
 
-          Om du inaktiverar eller låter bli att konfigurera principinställningen används OpenXPS (*.oxps) som standard för utdata i MXDW.</string>
+ Om du inaktiverar eller låter bli att konfigurera principinställningen används OpenXPS (*.oxps) som standard för utdata i MXDW.</string>
       <string id="SetDefaultPrinterMRUModeOff">Inaktivera Windows hantering av standardskrivare</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Med den här inställningen kan du ändra hanteringen av standardskrivare.
 
@@ -291,6 +291,24 @@ Om du aktiverar inställningen hanterar Windows inte standardskrivaren.
 Om du inaktiverar inställningen hanterar Windows standardskrivaren.
 
 Om du inte konfigurerar inställningen ändras inte hanteringen av standardskrivare. </string>
+      <string id="EnableDeviceControl">Aktivera utskriftsbegränsningar för enhetskontroll</string>
+      <string id="EnableDeviceControl_Help">
+          Avgör om utskriftsbegränsningar för enhetskontroll ska gälla för utskrift på den här datorn.
+
+Som standard finns det inga begränsningar för utskrift baserat på anslutningstyp eller skrivarens märke/modell.
+
+Om den här inställningen aktiveras begränsas utskriften till skrivaranslutningar i företagsnätverket eller godkända USB-anslutna skrivare.
+
+Om du inaktiverar eller låter bli att konfigurera den här inställningen finns det inga begränsningar för att skriva ut baserat på anslutningstyp eller skrivarens märke/modell.</string>
+        <string id="ApprovedUsbPrintDevices">Lista över godkända USB-anslutna utskriftsenheter</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Den här inställningen är en komponent i begränsningarna för utskrifts tjänsten enhets kontroll. Aktivera enhets kontroll genom att aktivera inställningen Aktivera begränsningar för utskrifts enheter om du vill använda den här inställningen.
+
+När enhets kontrolls utskrift är aktiverat använder systemet den angivna listan med vid/PID-värden för att avgöra om den aktuella USB-anslutna skrivaren är godkänd för lokal utskrift.
+
+Ange alla kombinationer av godkänd vid/PID (avgränsade med kommatecken) som motsvarar godkända USB-skrivardrivrutiner. När en användare försöker skriva ut till en USB-skrivarkö kommer enheten vid/PID att jämföras med den godkända listan.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -327,7 +345,7 @@ Om du inte konfigurerar inställningen ändras inte hanteringen av standardskriv
       </presentation>
       <presentation id="PhysicalLocation">
         <text>Ange datorns plats</text>
-        <text>Exempelvis: Stad/Byggnad 2/Våning 2/Kontor 1 800</text>
+        <text>Exempelvis: Stad/Byggnad 2/Våning 1/Kontor 1 800</text>
         <textBox refId="PhysicalLocation_Name">
           <label>Plats</label>
         </textBox>
@@ -350,6 +368,13 @@ Om du inte konfigurerar inställningen ändras inte hanteringen av standardskriv
           <label>Standardsökväg i Active Directory</label>
         </textBox>
         <text>exempel --&gt; LDAP://DC=Doman1,DC=MinFirma,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Ange listan över godkända USB-anslutna skrivarenheter.</text>
+        <text>Listan är en kommaseparerad lista över USB vid / pid-värden. Exempel: 0351 / 0872,135E / 2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

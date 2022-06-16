@@ -4,7 +4,7 @@
   <description>Este archivo describe la configuración de directiva de grupo de Optimización de distribución</description>
   <resources>
     <stringTable>
-      <string id="DeliveryOptimizationCat">Optimización de distribución</string>
+      <string id="DeliveryOptimizationCat">Optimización de entrega</string>
       <string id="DownloadMode">Modo de descarga</string>
       <string id="DownloadMode_Help">Especifica el método de descarga que el servicio Optimización de distribución puede usar al descargar actualizaciones de Windows, aplicaciones y actualizaciones de aplicaciones.
 
@@ -18,15 +18,12 @@ En la siguiente lista encontrarás los valores admitidos:
 
 3 = HTTP combinado con el emparejamiento de Internet. 
 
-99 = Modo de descarga simple sin emparejamiento. El servicio Optimización de distribución realiza las descargas mediante Solo HTTP y no intenta ponerse en contacto con los servicios en la nube de Optimización de distribución.
-
-100 = Modo omisión. No uses el servicio Optimización de distribución; en su lugar, usa BITS.</string>
+99 = Modo de descarga simple sin emparejamiento. El servicio Optimización de distribución realiza las descargas mediante Solo HTTP y no intenta ponerse en contacto con los servicios en la nube de Optimización de distribución.</string>
       <string id="DownloadMode_CdnOnly">Solo HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Grupo (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Simple (99)</string>
-      <string id="DownloadMode_Bypass">Omitir (100)</string>
       <string id="GroupId">Id. de grupo</string>
       <string id="GroupId_Help">Debes establecer el id. de grupo como un GUID. Esta directiva especifica un id. de grupo arbitrario al que pertenece el dispositivo.
 
@@ -169,14 +166,19 @@ Nota: Si estableces la directiva para retrasar la descarga en segundo plano en H
 
 Nota: Si estableces la directiva para retrasar la descarga en primer plano en HTTP, esta se aplicará primero para permitir descargas desde los equipos del mismo nivel.</string>
       <string id="RestrictPeerSelectionBy">Seleccionar un método para restringir la selección de pares</string>
-      <string id="RestrictPeerSelectionBy_Help">Establece esta directiva para limitar la selección de nodos del mismo nivel a través de la opción seleccionada.
+      <string id="RestrictPeerSelectionBy_Help">Establece esta directiva para restringir la selección del mismo nivel a través de la opción seleccionada.
 
 Las opciones disponibles son:
-1 = Máscara de subred (se agregarán más opciones en una versión futura).
+0 = NAT.
+1 = máscara de subred.
+2 = detección local (DNS-SD).
 
-La opción 1 (Máscara de subred) se aplica a ambos modos de descarga: LAN (1) y grupo (2).</string>
-      <string id="RestrictPeerSelectionBy_None">Ninguno</string>
+El valor predeterminado ha cambiado de 0 (sin restricción) a 1 (restringir a la subred).
+
+Estas opciones se aplican tanto a la LAN (1) como al grupo (2) del modo de descarga.</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Subred</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Detección local</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Establecer el horario comercial para limitar el ancho de banda de descarga en segundo plano</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Especifica el ancho de banda de descarga en segundo plano máximo que usa Optimización de distribución durante el horario comercial y fuera de este en todas las actividades de descarga simultáneas como un porcentaje de ancho de banda de descarga disponible.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Establecer el horario comercial para limitar el ancho de banda de descarga en primer plano</string>
@@ -303,7 +305,7 @@ La opción 1 (Máscara de subred) se aplica a ambos modos de descarga: LAN (1) y
         <text>El valor predeterminado es 0 (sin retraso)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Limitar la selección de pares a:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Limitar la selección de pares a:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

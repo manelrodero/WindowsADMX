@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">通知</string>
+      <string id="WnsEndpoint">WNS FQDN のグループポリシーを有効にする</string>
+      <string id="WnsEndpointExplain">このポリシーでは、特定の環境に対する特別な WNS FQDN を設定します。</string>
       <string id="NoTileNotification">タイル通知をオフにする</string>
       <string id="NoTileNotificationExplain">
           
@@ -121,6 +123,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">深夜 00:00 以降の分:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>WNS 用 FQDN</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

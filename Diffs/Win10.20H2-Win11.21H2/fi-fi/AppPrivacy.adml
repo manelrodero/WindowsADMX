@@ -99,6 +99,36 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai jätät sen määrittä
 
 Jos sovellus on avoinna, kun tämä ryhmäkäytäntöobjekti otetaan käyttöön laitteessa, työntekijöiden on käynnistettävä sovellus tai laite uudelleen, jotta käytäntömuutokset tulevat käyttöön sovellukseen.
       </string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">Anna Windows-sovellusten ottaa näyttökuvia eri ikkunoista tai näytöistä</string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">Tämä käytäntöasetus määrittää, voivatko Windows-sovellukset ottaa näyttökuvia erilaisista ikkunoista tai näytöistä.
+
+Voit määrittää joko oletusasetuksen kaikille sovelluksille tai sovelluskohtaisen asetuksen määrittämällä pakettiperheen nimen. Voit hankkia sovellukselle pakettiperheen nimen käyttämällä Windows PowerShellin cmdlet-komentoa Get-AppPackage. Sovelluskohtaiset asetukset korvaavat oletusasetuksen.
+
+Jos valitset Hallinta on käyttäjällä -vaihtoehdon, organisaation työntekijät voivat päättää, voivatko Windows-sovellukset ottaa näyttökuvia eri ikkunoista tai näytöistä valitsemalla laitteessa Asetukset &gt; Tietosuoja.
+
+Jos valitset Pakota salliminen -vaihtoehdon, Windows-sovellukset voivat ottaa näyttökuvia eri ikkunoista tai näytöistä eivätkä organisaation työntekijät voi muuttaa asetusta.
+
+Jos valitset Pakota estäminen -vaihtoehdon, Windows-sovellukset eivät voi ottaa näyttökuvia eri ikkunoista tai näytöistä eivätkä organisaation työntekijät voi muuttaa asetusta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai jätät sen määrittämättä, organisaation työntekijät voivat päättää, voivatko Windows-sovellukset ottaa näyttökuvia eri ikkunoista tai näytöistä, valitsemalla laitteessa Asetukset &gt; Tietosuoja.
+
+Jos jokin sovellus on avoinna, kun tätä ryhmäkäytäntöobjektia käytetään laitteeseen, työntekijöiden tulee käynnistää sovellus tai laite uudelleen, jotta käytäntömuutokset vaikuttavat sovellukseen.
+      </string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">Anna Windows-sovellusten poistaa näyttökuvan reuna käytöstä</string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">Tämä käytäntöasetus määrittää, voivatko Windows-sovellukset poistaa näyttökuvan reunan käytöstä.
+
+Voit määrittää joko oletusasetuksen kaikille sovelluksille tai sovelluskohtaisen asetuksen määrittämällä pakettiperheen nimen. Voit hankkia sovellukselle pakettiperheen nimen käyttämällä Windows PowerShellin cmdlet-komentoa Get-AppPackage. Sovelluskohtaiset asetukset korvaavat oletusasetuksen.
+
+Jos valitset Hallinta on käyttäjällä -vaihtoehdon, organisaation työntekijät voivat päättää, voivatko Windows-sovellukset poistaa näyttökuvan reunan käytöstä, valitsemalla laitteessa Asetukset &gt; Tietosuoja.
+
+Jos valitset Pakota salliminen -vaihtoehdon, Windows-sovellukset voivat poistaa näyttökuvan reunan käytöstä eivätkä organisaation työntekijät voi muuttaa asetusta.
+
+Jos valitset Pakota estäminen -vaihtoehdon, Windows-sovellukset eivät voi poistaa näyttökuvan reunaa käytöstä eivätkä organisaation työntekijät voi muuttaa asetusta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai jätät sen määrittämättä, organisaation työntekijät voivat päättää, voivatko Windows-sovellukset poistaa näyttökuvan reunan käytöstä, valitsemalla laitteessa Asetukset &gt; Tietosuoja.
+
+Jos jokin sovellus on avoinna, kun tätä ryhmäkäytäntöobjektia käytetään laitteeseen, työntekijöiden tulee käynnistää sovellus tai laite uudelleen, jotta käytäntömuutokset vaikuttavat sovellukseen.
+      </string>
       <string id="LetAppsAccessLocation_Name">Anna Windows-sovellusten käyttää sijaintia</string>
       <string id="LetAppsAccessLocation_Explain">Tämä käytäntöasetus määrittää, voivatko Windows-sovellukset käyttää sijaintia.
 
@@ -391,6 +421,24 @@ Jos sovellus on avoinna, kun tämä ryhmäkäytäntöobjekti otetaan käyttöön
         <multiTextBox refId="LetAppsAccessEmail_ForceAllowTheseApps_List"/>
         <text>Pakota näiden tiettyjen sovellusten estäminen (käytä pakettiperheiden nimiä):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">Oletusarvo kaikille sovelluksille:</dropdownList>
+        <text>Anna käyttäjän hallita näitä tiettyjä sovelluksia (käytä pakettiperheiden nimiä):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
+        <text>Pakota näiden tiettyjen sovellusten salliminen (käytä pakettiperheiden nimiä):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
+        <text>Pakota näiden tiettyjen sovellusten estäminen (käytä pakettiperheiden nimiä):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">Oletusarvo kaikille sovelluksille:</dropdownList>
+        <text>Anna käyttäjän hallita näitä tiettyjä sovelluksia (käytä pakettiperheiden nimiä):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
+        <text>Pakota näiden tiettyjen sovellusten salliminen (käytä pakettiperheiden nimiä):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
+        <text>Pakota näiden tiettyjen sovellusten estäminen (käytä pakettiperheiden nimiä):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Oletusarvo kaikille sovelluksille:</dropdownList>

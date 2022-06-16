@@ -135,11 +135,11 @@ Als u de levensduur voor DNS-records voor de DC-locator wilt opgeven, klikt u op
 
 Als u deze beleidsinstelling niet configureert, wordt deze op geen enkele DC toegepast en gebruiken DC's hun lokale configuratie.</string>
       <string id="Netlogon_ExpectedDialupDelay">"Verwachte inbelvertraging tijdens aanmelding" opgeven</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">Deze beleidsinstelling bepaalt de extra tijd die de computer op de reactie van de domeincontroller (DC) moet wachten bij aanmelding op het netwerk
+      <string id="Netlogon_ExpectedDialupDelay_Help">Met deze beleidsinstelling geeft u de extra tijd op die de computer moet wachten op de reactie van de domeincontroller (DC) wanneer u zich aanmeldt bij het netwerk.
 
-Als u de verwachte vertraging wilt opgeven, klikt u op Inschakelen en voert u de gewenste waarde in seconden in (de waarde 60 is bijvoorbeeld 1 minuut).
+U kunt de verwachte vertraging bij het aanmelden opgeven door te klikken op Ingeschakeld en vervolgens de gewenste waarde in seconden in te voeren (de waarde '60' is bijvoorbeeld 1 minuut).
 
-Als u deze beleidsinstelling niet configureert, wordt deze op geen enkele computer toegepast en gebruiken computers hun lokale configuratie.</string>
+Als u deze beleidsinstelling niet configureert, wordt deze op geen enkele computer toegepast en wordt voor computers de lokale configuratie gebruikt.</string>
       <string id="Netlogon_GcSiteCoverage">"Sites gedekt door de DNS-SRV-records voor de GC-locator" opgeven</string>
       <string id="Netlogon_GcSiteCoverage_Help">Deze beleidsinstelling geeft de sites op waarvoor de globale catalogi (GC) sitespecifieke DNS-SRV-bronrecords voor de GC-locator moeten registreren. Deze records worden geregistreerd naast de sitespecifieke SRV-records die worden geregistreerd voor de site waar de GC zich bevindt, en records die worden geregistreerd door een GC die is geconfigureerd om DNS-SRV-records voor de GC-locator te registreren voor de dichtstbijzijnde sites zonder GC. 
 
@@ -337,6 +337,22 @@ De toegestane waarden voor deze instelling resulteren in de onderstaande werking
 Als u dit gedrag wilt opgeven, klikt u op Ingeschakeld en voert u een waarde in. U kunt de waarde 1 of 2 opgeven.
 
 Als u de beleidsinstelling niet configureert, wordt deze op geen enkele computer toegepast en worden op computers de lokale configuratie gebruikt.</string>
+
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">DNS-hostnamen in kleine letters gebruiken bij het registreren van SRV-records van domeincontrollers</string>
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Met deze beleidsinstelling configureert u of de domeincontrollers waarop deze instelling wordt toegepast, de DNS-hostnaam in kleine letters weer krijgen wanneer SRV-records worden geregistreerd.
+
+Als u deze instelling inschakelt, wordt de DNS-hostnaam in de DNS-hostnaam omgezet wanneer de domeincontroller SRV-records registreert. Er wordt een poging gedaan om eerder geregistreerde SRV-records te verwijderen die de DNS-hostnamen met een gemengd geval bevatten. Zie de onderstaande koppeling voor meer informatie en mogelijke procedures voorhand matig opschonen.
+
+Als deze service is uitgeschakeld, gebruiken domeincontrollers hun geconfigureerde DNS-hostnaam bij het registreren van SRV-records van de domeincontroller.
+
+Als dit niet is geconfigureerd, wordt de lokale configuratie van domeincontrollers standaard gebruikt.
+
+De standaard lokale configuratie is ingeschakeld.
+
+De computer moet opnieuw worden opgestart voordat de wijzigingen in de instelling van kracht worden.
+
+Meer informatie is beschikbaar op https://aka.ms/lowercasehostnamesrvrecord
+      </string>
 
     </stringTable>
     <presentationTable>

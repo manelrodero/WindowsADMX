@@ -5,20 +5,20 @@
   <description>buraya açıklamayı girin</description>
   <resources>
     <stringTable>
-      <string id="AllowTelemetry">Telemetriye izin ver</string>
-      <string id="AllowTelemetry_0">0 - Güvenlik [Sadece Kurum]</string>
-      <string id="AllowTelemetry_1">1 - Gerekli</string>
-      <string id="AllowTelemetry_2">2 - Geliştirilmiş</string>
-      <string id="AllowTelemetry_3">3 - İsteğe bağlı</string>
-      <string id="AllowTelemetry_Explain">Bu ayar Windows 10'da yapılandırıldığında son kullanıcılar, kuruluşunuz için ayarlamış olduğunuz düzeyden daha yüksek düzeyli bir telemetri toplama işlemine katılamaz. Bu sınırlama yalnızca Windows işletim sistemi ve Windows'da bulunan uygulamalar için geçerlidir, Windows 10'da çalışan üçüncü taraf uygulamalar için geçerli değildir.
+      <string id="AllowTelemetry">Tanılama Verilerine İzin Ver</string>
+      <string id="AllowTelemetry_0">Tanılama verileri kapalı (önerilmez)</string>
+      <string id="AllowTelemetry_1">Gerekli tanılama verilerini gönder</string>
+      <string id="AllowTelemetry_3">İsteğe bağlı tanılama verilerini gönder</string>
+      <string id="AllowTelemetry_Explain">Bu ilke ayarlarını yapılandırarak Windows’tan hangi tanılama verilerinin toplanacağını ayarlayabilirsiniz. Bu ilke ayarı ayrıca, kullanıcının Ayarlar uygulamasıyla toplanan tanılama verisi miktarını artırmasını engeller. Bu ilke altında toplanan tanılama verileri, işletim sistemini ve Windows’un bir parçası olarak kabul edilen uygulamaları etkiler; kuruluşunuzun yüklediği diğer uygulamalar için geçerli değildir.
 
-Tanılama verileri, aşağıdaki şekilde dört düzeye ayrılır:
- - 0 (Güvenlik). Bağlı Kullanıcı Deneyimleri ve Telemetrisi bileşeninin ayarları ile Kötü Amaçlı Yazılımları Temizleme Aracı ve Microsoft Defender ile ilgili veriler dahil olmak üzere Windows, Windows Server ve System Center'ın güvenli kalmasına yardımcı olmak için gerekli bilgiler.
- - 1 (Gerekli). Kaliteye ilişkin veriler, uygulama uyumluluğu ve Güvenlik düzeyindeki veriler dahil olmak üzere temel cihaz bilgileri.
- - 2 (Gelişmiş). Windows, Windows Server, System Center ile uygulamaların nasıl kullanıldığı ve nasıl çalıştığına yönelik veriler, gelişmiş güvenilirlik verileri ve hem Gerekli hem de Güvenlik düzeylerindeki veriler dahil olmak üzere ek bilgiler.
- - 3 (İsteğe bağlı). Sorunları tanımlamak ve çözmek için gerekli olan tüm veriler ile Güvenlik, Gerekli ve Gelişmiş düzeylerindeki veriler.
+    - Tanılama verileri kapalı (önerilmez). Bu değer kullanıldığında, cihazdan tanılama verisi gönderilmez. Bu değer, yalnızca Enterprise, Education ve Server sürümlerinde desteklenir.
+    - Gerekli tanılama verilerini gönder. Bu, Windows’un güvenli ve güncel olması ve beklendiği gibi çalışması için gereken minimum tanılama verisidir. Bu değerin kullanılması, Ayarlar uygulamasında “İsteğe bağlı tanılama verileri” denetimini devre dışı bırakır.
+    - İsteğe bağlı tanılama verilerini gönder. Sorunları tespit etmemize, tanılamamıza ve gidermemize yardımcı olan ve ürünleri geliştirmemizi sağlayan ek tanılama verileri toplanır. İsteğe bağlı tanılama verilerinin gönderilmesini seçtiğinizde, gerekli tanılama verileri her zaman dahil edilir.  İsteğe bağlı tanılama verileri, tanılama günlük dosyalarını ve kilitlenme bilgi dökümlerini de içerebilir. Hangi isteğe bağlı tanılama verilerinin gönderileceğine ilişkin daha ayrıntılı bir denetim için “Döküm Toplamayı Sınırla” ve “Tanılama Günlüğü Toplamayı Sınırla” ilkelerini kullanın.
 
-Ayarlar uygulamasında kullanıcıların kullanabileceği seçenekler, bu ayar yapılandırılarak değiştirilir; ayarlanmamış olsa da diğer grup ilkesi ayarlarından etkilenebilir. Bu ilke, Güvenlik veya Temel bir telemetri ayarına izin verecek şekilde yapılandırılırsa son kullanıcılar, daha yüksek bir düzey seçemezler.
+Bu ilke ayarını devre dışı bırakırsanız ya da yapılandırmazsanız cihaz gerekli tanılama verilerini gönderir ve son kullanıcı Ayarlar uygulamasından isteğe bağlı tanılama verilerini gönderip göndermemeyi seçebilir.
+
+Not:
+”Tanılama verilerini kabul etme ayarları kullanıcı arabirimini yapılandır” grup ilkesi, son kullanıcıların veri toplama ayarlarını değiştirmesini önlemek için kullanılabilir.
       </string>
 
       <string id="TelemetryProxy">Bağlı Kullanıcı Deneyimleri ve Telemetrisi'ni yapılandır</string>
@@ -30,9 +30,9 @@ Bu ayarın biçimi &lt;server&gt;:&lt;port&gt; şeklindedir.
       </string>
 
       <string id="CommercialId">Ticari Kimliği Yapılandır</string>
-      <string id="CommercialId_Explain">Bu ilke ayarı, bu cihazın telemetri verilerini benzersiz bir şekilde belirli bir kuruluşa ait olarak ilişkilendirmek için kullanılan tanımlayıcıyı tanımlar. Kuruluşunuz bu cihazın kuruluşunuza ait olarak tanımlanmasını gerektiren bir programa katılıyorsa, bu tanımlamayı sağlamak için bu ayarı kullanın. Bu ayarın değeri programın ekleme sürecinin bir parçası olarak Microsoft tarafından sağlanır. 
+      <string id="CommercialId_Explain">Bu ilke ayarı, bu cihazın tanılama verilerini benzersiz bir şekilde belirli bir kuruluşa ait olarak ilişkilendirmek için kullanılan tanımlayıcıyı tanımlar. Kuruluşunuz bu cihazın kuruluşunuza ait olarak tanımlanmasını gerektiren bir programa katılıyorsa bu tanımlamayı sağlamak için bu ayarı kullanın. Bu ayarın değeri programın ekleme sürecinin bir parçası olarak Microsoft tarafından sağlanır.
 
-Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, o zaman Microsoft bu makineyi ve telemetri verilerini kuruluşunuzla ilişkilendirmek için bu tanımlayıcıyı kullanamaz.
+Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız Microsoft, bu makineyi ve tanılama verilerini kuruluşunuzla ilişkilendirmek için bu tanımlayıcıyı kullanamaz.
       </string>
 
       <string id="DisableEnterpriseAuthProxy">Kimliği doğrulanmış ara sunucu kullanımını Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmeti için yapılandır</string>
@@ -40,21 +40,20 @@ Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, o zaman Mi
       <string id="DisableEnterpriseAuthProxy_2">Kimliği Doğrulanmış Ara sunucu kullanımını devre dışı bırak</string>
       <string id="DisableEnterpriseAuthProxy_Explain">Bu ilke ayarı, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmetinin otomatik olarak kimliği doğrulanmış bir ara sunucuyu kullanarak Windows 10 üzerinden Microsoft'a veri göndermesini engeller. Eğer bu ilke ayarını devre dışı bırakı veya yapılandırmazsanız, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmeti kimliği doğrulanmış bir ara sunucuyu otomatik olarak kullanarak Microsoft'a veri gönderecektir. Bu ilkeyi etkinleştirmek, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmetinin otomatik olarak bir kimliği doğrulanmış ara sunucuyu kullanmasını engelleyecektir.</string>
 
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Gelişmiş tanılama verilerini Windows Analytics'in gerektirdiği minimum seviyeye getirin</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics koleksiyonunu etkinleştir</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Windows Analytics koleksiyonunu devre dışı bırak</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Telemetriye izin ver ilke ayarı ile birlikte bu ilke ayarı, kuruluşların Microsoft'a Windows Analytics hizmetleri aracılığıyla BT içgörülerine dair belirli bir tanılama veri kümesi göndermesini sağlar.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Desktop Analytics için isteğe bağlı tanılama verilerini sınırla</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Desktop Analytics koleksiyonunu etkinleştir</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Desktop Analytics koleksiyonunu devre dışı bırak</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Bu ilke ayarı, "Tanılama Verilerine İzin Ver" ilke ayarı ile birlikte, kuruluşların Desktop Analytics tarafından gerekli kılınan minimum veri miktarını göndermesini sağlar.
 
-Bu davranışı etkinleştirmek için şu iki adımı tamamlamalısınız:
-
+Yukarıda açıklanan davranışı etkinleştirmek için aşağıdaki adımları tamamlayın:
     1. Bu ilke ayarını etkinleştirin
-    2. Telemetriye izin ver'i düzey 2'ye (Gelişmiş) ayarlayın
+    2. "Tanılama Verilerine İzin Ver" ilkesini "İsteğe bağlı tanılama verilerini gönder" olarak ayarlayın
+    3. "Döküm Toplamayı Sınırla" ilkesini etkinleştirin 
+    4. "Tanılama Günlüğü Toplamayı Sınırla" ilkesini etkinleştirin
 
-Bu ayar Güvenlik veya Gerekli tanılama verilerini Microsoft'a göndermek üzere yapılandırılmış bilgisayarları etkilemez. 
+Bu ilkeler yapılandırıldığında, Microsoft yalnızca gerekli tanılama verilerini ve Desktop Analytics tarafından gerekli kılınan olayları toplar; bunları şu adreste görüntüleyebilirsiniz: https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Bu ilkeleri yapılandırdığınızda, tanılama verilerinin toplanması Desktop Analytics için gereken tanılama verileri ve olaylar ile sınırlandırılır. Bu olaylar şurada görülebilir: https://go.microsoft.com/fwlink/?linkid=2116020.
-
-Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız Microsoft'a gönderilen tanılama verilerinin düzeyi, yapılandırıldığında Telemetriye izin ver ilkesi tarafından belirlenir (örneğin, bu ilkeyi yapılandırmadan Telemetriye izin ver ilkesindeki gelişmiş tanılama verilerini etkinleştirdiğinizde ek Gelişmiş düzey telemetri verilerinin yanı sıra, Windows Analytics için gerekli olaylar da Microsoft’a gönderilir).
+Bu ilke ayarını devre dışı bırakmanız veya yapılandırmamanız durumunda, tanılama verilerinin toplanması "Tanılama Verilerine İzin Ver" ilke ayarına göre veya son kullanıcı tarafından Ayarlar uygulamasından belirlenir.
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Cihaz adının Windows tanılama verisinde gönderilmesine izin ver</string>
@@ -63,82 +62,114 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız Microsoft'a g
 Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız cihaz adı Windows tanılama verisinin bir parçası olarak Microsoft'a gönderilmez.
       </string>
 
-      <string id="ConfigureTelemetryOptInSettingsUx">Telemetri katılımı ayarı kullanıcı arabirimini yapılandırın.</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_1">Telemetri katılımı Ayarlarını devre dışı bırak</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_2">Telemetri katılım Ayarlarını etkinleştir</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Bu ilke ayarı, son kullanıcının Ayarlar'da telemetri düzeylerini değiştirip değiştiremeyeceğini belirler.
+      <string id="ConfigureTelemetryOptInSettingsUx">Tanılama verilerini kabul etme ayarları kullanıcı arabirimini yapılandır</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Tanılama verilerini kabul etme ayarlarını devre dışı bırak</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Tanılama verilerini kabul etme ayarlarını etkinleştir</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Bu ilke ayarı, bir son kullanıcının Ayarlar uygulamasında tanılama verileri ayarlarını değiştirip değiştiremeyeceğini belirler.
 
-Bu ilke ayarını "Telemetri Katılım Ayarlarını Devre Dışı Bırak" olarak ayarlarsanız telemetri düzeyleri Ayarlar'da devre dışı bırakılır ve son kullanıcıların bu ayarları değiştirmeleri engellenir.
+Bu ilke ayarını "Tanılama verilerini kabul etme ayarlarını devre dışı bırak" olarak belirlerseniz, Ayarlar uygulamasında tanılama verileri ayarları devre dışı bırakılır.
 
-Bu ilke ayarını "Telemetri Katılım Ayarlarını Etkinleştir" olarak ayarlarsanız veya yapılandırmazsanız son kullanıcılar, Ayarlar uygulamasında cihaz telemetri düzeyini değiştirebilirler.
+Bu ilke ayarını yapılandırmadığınız veya "Tanılama verilerini kabul etme ayarlarını etkinleştir" olarak belirlediğiniz takdirde, son kullanıcılar Ayarlar uygulamasında cihaz tanılama ayarlarını değiştirebilir.
 
 Not:
-Kuruluşunuz tarafından Microsoft'a gönderilen tanılama verileri düzeyinde bir sınır belirlemek için Telemetriye izin ver ilke ayarını kullanın.
+Kuruluşunuz tarafından Microsoft’a gönderilen tanılama verilerinin miktarına ilişkin bir sınır belirlemek için "Tanılama Verilerine İzin Ver" ilke ayarını kullanın.
       </string>
 
-      <string id="ConfigureTelemetryOptInChangeNotification">Telemetri katılımı değişikliği bildirimlerini yapılandırın.</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_1">Telemetri değişiklik bildirimlerini devre dışı bırak</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_2">Telemetri değişiklik bildirimlerini etkinleştir</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
-          Bu ilke ayarı, bir cihazın ilk oturum açmada veya Ayarlar'da değişiklik yapıldığında kişilere telemetri düzeyleri hakkında bildirim gösterip göstermeyeceğini denetler. 
-          Bu ilke ayarını "Telemetri değişikliği bildirimlerini devre dışı bırak" olarak ayarlarsanız telemetri düzeyi bildirimleri görünmeyi durdurur.
-          Bu ilke ayarını "Telemetri değişikliği bildirimlerini etkinleştir" olarak ayarlarsanız veya yapılandırmazsanız telemetri bildirimleri ilk oturum açmada ve Ayarlar'da değişiklik yapıldığında görünür.
+      <string id="ConfigureTelemetryOptInChangeNotification">Tanılama verilerini kabul etme ayarları değişiklik bildirimlerini yapılandır</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Tanılama verileri değişikliği bildirimlerini devre dışı bırak</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Tanılama verileri değişikliği bildirimlerini etkinleştir</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">Bu ilke ayarı, tanılama verilerini kabul etme ayarlarında bir değişiklik yapıldığında, ilk oturum açmada ve ayarlarda değişiklikler olduğunda bildirim gösterilip gösterilmeyeceğini denetler.
+
+Bu ilke ayarını "Tanılama verileri değişiklik bildirimlerini devre dışı bırak" olarak belirlerseniz, tanılama verilerini kabul etme ayarları değişiklik bildirimleri görüntülenmez.
+
+Bu ilke ayarını "Tanılama verileri değişiklik bildirimlerini etkinleştir" olarak belirlemeniz veya bu ilke ayarını yapılandırmamanız durumunda, tanılama verilerini kabul etme ayarları değişiklik bildirimleri ilk oturum açmada ve Ayarlarda değişiklikler olduğunda görüntülenir.
       </string>
 
-      <string id="DisableDeviceDelete">Tanılama verilerini silmeyi devre dışı bırak </string>
-      <string id="DisableDeviceDelete_Explain">
-          Bu ilke ayarı, Tanılama ve Geri Bildirim Ayarları sayfasında Tanılama verilerini sil düğmesinin etkin olup olmadığını denetler.
+      <string id="DisableDeviceDelete">Tanılama verilerini silmeyi devre dışı bırak</string>
+      <string id="DisableDeviceDelete_Explain">Bu ilke ayarı, Tanılama ve Geri Bildirim Ayarları sayfasında Tanılama verilerini sil düğmesinin etkin olup olmadığını denetler.
           Bu ilke ayarını etkinleştirirseniz Tanılama verilerini sil düğmesi, Ayarlar sayfasında devre dışı bırakılır ve Microsoft tarafından cihazdan toplanan tanılama verilerinin silinmesi önlenir. 
           Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Tanılama verilerini sil düğmesi, Ayarlar sayfasında etkinleştirilir ve bu, kişilerin Microsoft tarafından bu cihazdan toplanan tüm tanılama verilerini silmelerine olanak sağlar.
       </string>
 
-      <string id="DisableDiagnosticDataViewer">Tanılama veri görüntüleyicisini devre dışı bırakın. </string>
-      <string id="DisableDiagnosticDataViewer_Explain">
-          Bu ilke ayarı, kullanıcıların Tanılama ve Geri Bildirim Ayarları sayfasından Tanılama Veri Görüntüleyicisi'ni etkinleştirip başlatabilmelerini denetler.
+      <string id="DisableDiagnosticDataViewer">Tanılama verileri görüntüleyicisini devre dışı bırak</string>
+      <string id="DisableDiagnosticDataViewer_Explain">Bu ilke ayarı, kullanıcıların Tanılama ve Geri Bildirim Ayarları sayfasından Tanılama Veri Görüntüleyicisi'ni etkinleştirip başlatabilmelerini denetler.
           Bu ilke ayarını etkinleştirirseniz Tanılama Veri Görüntüleyicisi, Ayarlar sayfasında etkinleştirilmez ve görüntüleyicinin Microsoft tarafından cihazdan toplanan tanılama verilerini göstermesini engeller.  
           Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Tanılama Veri Görüntüleyicisi Ayarlar sayfasında etkinleştirilir.
       </string>
 
       <string id="ConfigureMicrosoft365UploadEndpoint">Desktop Analytics için tanılama verileri karşıya yükleme uç noktasını yapılandır</string>
-      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Bu ilke, Masaüstü Analizi programının bir parçası olarak bu cihazın tanılama verileri için karşıya yükleme bitiş noktasını ayarlar.
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">Bu ilke, Masaüstü Analizi programının bir parçası olarak bu cihazın tanılama verileri için karşıya yükleme bitiş noktasını ayarlar.
           Kuruluşunuz programa katılıyorsa ve özel bir karşıya yükleme bitiş noktası yapılandırmak için talimat aldıysa bu bitiş noktasını tanımlamak için bu ayarı kullanın.
           Bu ayarın değeri, program için katılım işleminin bir parçası olarak Microsoft tarafından sağlanır. 
       </string>
-
+      
       <string id="AllowUpdateComplianceProcessing">Güncelleştirme Uyumluluğu İşlemesi'ne izin ver</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-          BT yöneticilerinin bu cihazdan alınan tanılama verilerinin Güncelleştirme Uyumluluğu tarafından işlenmesini etkinleştirmesine olanak tanır. 
+          BT yöneticilerinin bu cihazdan, güncelleştirme uyumluluğu ile işlenmesini sağlamak için tanılama verilerini etkinleştirmesine izin verir. 
             Aşağıdaki liste desteklenen değerleri gösterir:  
-              0 (varsayılan) – Tanılama verileri Güncelleştirme Uyumluluğu tarafından işlenmez. 
-              16 – Tanılama verilerinin Güncelleştirme Uyumluluğu tarafından işlenmesine izin verilir. 
-            Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, bu cihazdan alınan tanılama verileri Güncelleştirme Uyumluluğu tarafından işlenmez.
+              0 (varsayılan) – tanılama verileri güncelleştirme uyumluluğu tarafından işlenmez. 
+              16 – tanılama verilerinin, güncelleştirme uyumluluğu ile işlenmesine izin verilir. 
+            Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, bu cihazdaki Tanılama verileri güncelleştirme uyumluluğu ile işlenmez.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Desktop Analytics İşlemesi'ne izin ver</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-          BT yöneticilerinin bu cihazdan alınan tanılama verilerinin Desktop Analytics tarafından işlenmesini etkinleştirmesine olanak tanır. 
+          BT yöneticilerinin bu cihazdan, masaüstü Analizi tarafından işlenmek üzere tanılama verilerini etkinleştirmesine izin verir. 
             Aşağıdaki liste desteklenen değerleri gösterir:  
-              0 (varsayılan) – Tanılama verileri Desktop Analytics tarafından işlenmez. 
-              2 – Tanılama verilerinin Desktop Analytics tarafından işlenmesine izin verilir. 
-            Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, bu cihazdan alınan tanılama verileri Desktop Analytics tarafından işlenmez. 
+              0 (varsayılan) – tanılama verileri masaüstü Analizi tarafından işlenmez. 
+              2 – tanılama verilerinin masaüstü Analizi tarafından işlenmesine izin verilir. 
+          Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, bu cihazdaki Tanılama verileri masaüstü Analizi tarafından işlenmez. 
       </string>
 
       <string id="AllowWUfBCloudProcessing">WUfB Bulut İşlemine İzin Ver</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-          BT yöneticilerinin bu cihazdan, Iş bulutu için Windows Update tarafından işlenmek üzere tanılama verilerini etkinleştirmesine izin verir. 
+          BT yöneticilerinin bu cihazdan gelen tanılama verilerini Iş bulutu için Windows Update tarafından işlenmek üzere etkinleştirmesini sağlar. 
             Aşağıdaki liste desteklenen değerleri gösterir:  
-              0 (varsayılan) – tanılama verileri Iş bulutu için Windows Update tarafından işlenmiyor.. 
+              0 (varsayılan) – tanılama verileri Iş bulutu için Windows Update tarafından işlenmez.. 
               8 – tanılama verilerinin Iş bulutu için Windows Update tarafından işlenmesine izin verilir.. 
-          Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, bu cihazdaki Tanılama verileri Iş bulutu için Windows Update tarafından işlenmez. 
+          Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız bu cihazdaki Tanılama verileri Iş bulutu için Windows Update tarafından işlenmez. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Ticari veri ardışık düzenine izin ver</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline, cihazı Windows kurumsal veri ardışık düzenine dahil eder.
-          Bu ayarı etkinleştirirseniz, cihazdan toplanan veriler Windows kurumsal veri ardışık düzenine dahil edilir.
-          Bu ayarı devre dışı bırakır veya yapılandırmazsanız, cihazdaki tüm veriler toplanıp Windows standart veri ardışık düzeni için ilkelerimizle uyumlu olarak işlenir.
-          Bu ayarın yapılandırılması, telemetri koleksiyonu düzeyini veya kullanıcının düzeyi değiştirme yeteneğini değiştirmez. Bu ayar yalnızca Windows işletim sistemi ve Windows'ta bulunan uygulamalar için geçerlidir, Windows 10 üzerinde çalışan üçüncü taraf uygulamalar veya hizmetler için geçerli değildir.
+      <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline, Microsoft'un bu cihazdan toplanan Windows tanılama verileri için bir işlemci mi yoksa denetleyici mi olduğunu denetler.
+
+Bu ilkeyi etkinleştirirseniz, Microsoft Windows cihazından toplanan Windows Tanılama verilerinin işlemcisi, müşteri de denetleyicisi olur. Bu ilkenin başarılı olması için cihazın Azure AD'ye kaydedilmesi gerekir.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, Microsoft bu cihazdan toplanan Windows Tanılama verilerinin denetleyicisi olur.
+
+Bu ilke, yalnızca Microsoft'un bu cihazdan Windows Tanılama verileri için işlemci olup olmadığını denetler. Bu ayarın yapılandırılması, tanılama verilerinin toplanıp toplanamayacağını veya kullanıcının düzeyi değiştirme yeteneğini değiştirmez. Koleksiyon düzeyini yapılandırmak için "Tanılama Verilerine İzin Ver" ilkesini kullanın, bu cihazdaki kullanıcıların tanılama veri düzeyini değiştirmesini sınırlamak için de "Tanılama verileri kabul etme ayarları kullanıcı arabirimini yapılandır" ilkesini kullanın.
+      </string>
+
+      <string id="LimitDiagnosticLogCollection">Tanılama Günlüğü Toplamayı Sınırla</string>
+      <string id="LimitDiagnosticLogCollection_Explain">Bu ilke ayarı, cihazda bir sorunu gidermek için daha fazla bilgi gerektiğinde ek tanılama günlüklerinin toplanıp toplanmayacağını denetler. Tanılama günlükleri yalnızca cihaz isteğe bağlı tanılama verilerini göndermek üzere yapılandırılmışsa gönderilir.
+
+Bu ilke ayarı etkinleştirildiğinde, tanılama günlükleri toplanmaz.
+
+Bu ilke ayarını devre dışı bırakmanız veya yapılandırmamanız durumunda, cihaz isteğe bağlı tanılama verilerini göndermek için yapılandırılmşsa, bazen tanılama günlüklerini toplayabiliriz.
+      </string>
+
+      <string id="LimitDumpCollection">Döküm Toplamayı Sınırla</string>
+      <string id="LimitDumpCollection_Explain">Bu ilke ayarı, bir sorunu gidermek için daha fazla bilgi gerektiğinde toplanabilecek döküm türlerini sınırlar. Dökümler yalnızca cihaz isteğe bağlı tanılama verilerini göndermek üzere yapılandırılmışsa gönderilir.
+
+Bu ayar etkinleştirildiğinde, Windows Hata Bildirimi özelliği çekirdek özet dökümlerinin ve kullanıcı modu önceliklendirme dökümlerinin gönderilmesi ile sınırlanır.
+
+Bu ilke ayarını devre dışı bırakmanız veya yapılandırmamanız durumunda, kullanıcı isteğe bağlı tanılama verilerini göndermeyi seçmişse, bazen tam veya yığın dökümler toplayabiliriz.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">OneSettings Denetimini Etkinleştir</string>
+      <string id="EnableOneSettingsAuditing_Explain">Bu ilke ayarı, Windows kayıtlarının, OneSettings hizmetiyle EventLog'a bağlanma girişiminde bulunup bulunmadığını denetler.
+
+Bu ilkeyi etkinleştirirseniz, Windows, OneSettings hizmetiyle Microsoft\Windows\Privacy-Auditing\Operational EventLog kanalına bağlanma girişimlerini kaydeder.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, Windows, yapılandırma ayarlarını OneSettings hizmetiyle EventLog'a bağlanma girişimlerini kaydetmez.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">OneSettings İndirmelerini Devre Dışı Bırak</string>
+      <string id="DisableOneSettingsDownloads_Explain">Bu ilke ayarı, Windows 'un OneSettings hizmetiyle bağlantı kurmayı ve denemeyeceğini denetler.
+
+Bu ilkeyi etkinleştirirseniz Windows, OneSettings hizmetiyle bağlantı kurmayı denemez.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, Windows yapılandırma ayarlarını indirmek için düzenli aralıklarla OneSettings hizmetiyle bağlantı kurmayı dener.
       </string>
     </stringTable>
     <presentationTable>

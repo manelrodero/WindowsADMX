@@ -18,15 +18,12 @@
 
 3 = HTTP とインターネット ピアリングの組み合わせ。
 
-99 = ピアリングなしの簡易ダウンロード モード。配信の最適化によるダウンロードは HTTP のみを使用して行われ、配信の最適化クラウド サービスへのアクセスは行われません。
-
-100 = バイパス モード。配信の最適化は使用されず、代わりに BITS が使用されます。</string>
+99 = ピアリングなしの簡易ダウンロード モード。配信の最適化によるダウンロードは HTTP のみを使用して行われ、配信の最適化クラウド サービスへのアクセスは行われません。</string>
       <string id="DownloadMode_CdnOnly">HTTP のみ (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">グループ (2)</string>
       <string id="DownloadMode_Internet">インターネット (3)</string>
       <string id="DownloadMode_Simple">簡易 (99)</string>
-      <string id="DownloadMode_Bypass">バイパス (100)</string>
       <string id="GroupId">グループ ID</string>
       <string id="GroupId_Help">グループ ID は、GUID として設定する必要があります。このポリシーでは、デバイスが属している任意のグループ ID を指定します。
 
@@ -169,14 +166,19 @@
 
 注: http からのフォアグラウンド ダウンロードを延期するようにポリシーを設定した場合は、そのポリシーが最初に適用されます (ピアから最初にダウンロードできるようになります)。</string>
       <string id="RestrictPeerSelectionBy">ピアの選択を制限する方法を選択します</string>
-      <string id="RestrictPeerSelectionBy_Help">選択したオプションを使用してピア選択を制限するには、このポリシーを設定します。
+      <string id="RestrictPeerSelectionBy_Help">選択したオプションを使用してピアの選択を制限するには、このポリシーを設定します。
 
 使用可能なオプションは次のとおりです。
-1 = サブネット マスク (その他のオプションが今後のリリースで追加されます)。
+0 = NAT。
+1 = サブネットマスク。
+2 = ローカル探索 (DNS-SD)
 
-オプション 1 (サブネット マスク) は、ダウンロード モードの LAN (1) とグループ (2) の両方に適用されます。</string>
-      <string id="RestrictPeerSelectionBy_None">なし</string>
+既定値は 0 (制限なし) から 1 (サブネットに制限) に変更されています。
+
+これらのオプションは、ダウンロードモード LAN (1) とグループ (2) の両方に適用されます。</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">サブネット</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">ローカル探索</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">バックグラウンド ダウンロード帯域幅を制限する営業時間を設定します</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">すべての同時ダウンロード操作で配信の最適化によって営業時間内および営業時間外に使用されるバックグラウンド ダウンロード最大帯域幅を、使用可能なダウンロード帯域幅に対する割合として指定します。</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">フォアグラウンド ダウンロード帯域幅を制限する営業時間を設定します</string>
@@ -303,7 +305,7 @@
         <text>既定値は 0 (延期なし) です</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">ピアの選択を制限する条件:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">ピアの選択を制限する条件:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

@@ -252,7 +252,7 @@ Můžete také vytvořit seznam povolených doplňků tak, že zadáte řetězce
 Pokud používáte prostředí uzamčeného systému, je nastavení této zásady zbytečné, protože uživatelé bez oprávnění pro správu nemohou instalovat nové součásti. V případě, že uživatelé mají oprávnění pro správu nebo mohou instalovat software, zabrání jim tato zásada konkrétně v použití doplňků souvisejících se službou Windows Desktop Search.
 
 Poznámka: Z důvodu omezení v editoru zásad skupiny je třeba do seznamu povolených přidat nejméně jednu položku, a to i když chcete tuto zásadu povolit bez seznamu povolených. Položku seznamu vytvoříte tak, že jak do pole názvu, tak i do pole hodnoty vložíte mezeru a poté seznam uložíte. Tím vytvoříte zástupný text, který je programem ignorován.</string>
-      <string id="PreventUnwantedAddins_AllowList">Seznam povolených položek</string>
+      <string id="PreventUnwantedAddins_AllowList">Seznam povolených</string>
       <string id="ExcludedExtensionsMultiline">Zabránit indexování určitých typů souborů</string>
       <string id="ExcludedExtensionsMultiline_Explain">Povolením této zásady můžete upravit seznam typů souborů, které chcete vyloučit z indexování. Koncový uživatel tento seznam nemůže upravovat. Každý typ přípony je nutné oddělit středníkem.
 
@@ -333,7 +333,7 @@ Pokud bude toto nastavení povolené, budou mít vyhledávání i Cortana k info
         <decimalTextBox refId="LimitEnableThrottlingOnlineMailboxes" defaultValue="120">Počet položek za minutu</decimalTextBox>
       </presentation>
       <presentation id="PreventUnwantedAddins">
-        <listBox refId="PreventUnwantedAddins_AllowList">Seznam povolených položek</listBox>
+        <listBox refId="PreventUnwantedAddins_AllowList">Seznam povolených</listBox>
       </presentation>
       <presentation id="PreventIndexingCertainPaths_1">
         <listBox refId="PreventIndexingCertainPaths">Zabránit indexování určitých cest</listBox>

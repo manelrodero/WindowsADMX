@@ -278,11 +278,11 @@ Windows Ultimate、Professional、および Home の SKU では、既定で、�
 
         このポリシー設定を無効にした場合、または構成しなかった場合は、インストールされているすべてのプリンター拡張の実行が許可されます。</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Microsoft XPS ドキュメント ライター (MXDW) の既定の出力形式をレガシ Microsoft XPS 形式 (*.xps) に変更する</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Windows 10 と Windows Server 2019 では、Microsoft XPS ドキュメント ライター (MXDW) により既定で OpenXPS (*.oxps) ファイルが生成されます。
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Windows 10、Windows 10、Windows Server 2022 では、Microsoft XPS ドキュメントライター (MXDW) によって、既定で OpenXPS (* oxps) ファイルが生成されます。
 
-          このグループ ポリシー設定を有効にした場合、既定の MXDW 出力形式はレガシ Microsoft XPS (*.xps) になります。
+このグループポリシー設定を有効にした場合、既定の MXDW 出力形式はレガシ Microsoft XPS (* .xps) になります。
 
-          このポリシー設定を無効にした場合、または構成しなかった場合は、既定の MXDW 出力形式は OpenXPS (*.oxps) になります。</string>
+このポリシー設定を無効にした場合、または構成しなかった場合は、既定の MXDW 出力形式は OpenXPS (* oxps) になります。</string>
       <string id="SetDefaultPrinterMRUModeOff">Windows での通常使うプリンターの管理を無効にします</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">この基本設定では、通常使うプリンターの管理を変更できます。
 
@@ -291,6 +291,24 @@ Windows Ultimate、Professional、および Home の SKU では、既定で、�
 この設定を無効にした場合、Windows で通常使うプリンターが管理されます。
 
 この設定を構成しなかった場合、通常使うプリンターの管理は変更されません。 </string>
+      <string id="EnableDeviceControl">デバイス コントロールの印刷制限を有効にする</string>
+      <string id="EnableDeviceControl_Help">
+          このコンピューター上での印刷にデバイス コントロールの印刷制限が適用されるかどうかを指定します。
+
+          既定では、接続の種類やプリンターのメーカー/モデルによる印刷の制限はありません。
+
+          この設定を有効にすると、コンピューターは企業ネットワーク上のプリンター接続や承認済みの USB 接続プリンターに対する印刷を制限します。
+
+          この設定を無効にしているか、設定していない場合、接続の種類やプリンターのメーカー/モデルによる印刷の制限はありません。</string>
+        <string id="ApprovedUsbPrintDevices">許可された USB 接続印刷デバイスのリスト</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            この設定は、デバイスコントロールの印刷制限のコンポーネントです。この設定を使用するには、[デバイスコントロールの印刷制限を有効にする] 設定を有効にして、デバイスコントロール印刷を有効にします。
+
+デバイスコントロール印刷が有効になっている場合、指定した vid/pid 値の一覧を使用して、現在の USB 接続プリンターがローカル印刷に対して承認されているかどうかが判断されます。
+
+承認された USB プリンターのモデルに対応する、承認されたすべての vid と pid の組み合わせ (コンマ区切り) を入力します。ユーザーが USB プリンターキューに出力しようとすると、デバイス vid/pid が承認済みリストと比較されます。
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Windows Ultimate、Professional、および Home の SKU では、既定で、�
           <label>既定の Active Directory パス</label>
         </textBox>
         <text>例 --&gt; LDAP://DC=Domain1,DC=MyCompany,DC=com</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>許可された USB 接続プリンターデバイスの一覧を指定します。</text>
+        <text>リストは、USB vid/pid の値をコンマで区切ったリストです。例: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

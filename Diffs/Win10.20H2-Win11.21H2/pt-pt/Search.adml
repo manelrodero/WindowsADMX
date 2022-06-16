@@ -252,7 +252,7 @@ Também pode especificar uma lista de permissões dos suplementos fornecendo a c
 Se tem um ambiente de trabalho bloqueado, esta definição é redundante pois os utilizadores não administrativos não têm permissão para instalar componentes novos. Se is utilizadores têm permissões de Administrador ou podem instalar software, esta política impede-os de utilizar especificamente os suplementos relacionados com o Windows Desktop Search.
 
 Nota: devido a uma limitação do editor de Políticas de Grupo, tem de adicionar pelo menos uma entrada à lista de permissões, mesmo que pretenda ativar esta política sem uma lista de permissões. Crie uma entrada de lista colocando um espaço no campo de nome e um espaço no campo de valor e, em seguida, guarde-a. Isto criará uma entrada de marcador de posição que será ignorada pelo programa.</string>
-      <string id="PreventUnwantedAddins_AllowList">Lista de Autorizados</string>
+      <string id="PreventUnwantedAddins_AllowList">Lista de Permissões</string>
       <string id="ExcludedExtensionsMultiline">Impedir a indexação de determinados tipos de ficheiros</string>
       <string id="ExcludedExtensionsMultiline_Explain">Ativar esta política permite editar a lista de tipos de ficheiros a excluir da indexação. O utilizador final não pode modificar esta lista. Deve separar cada tipo de extensão por ponto e vírgula.
 
@@ -333,7 +333,7 @@ Se ativada, a pesquisa e a Cortana terão acesso às informações de localizaç
         <decimalTextBox refId="LimitEnableThrottlingOnlineMailboxes" defaultValue="120">Número de itens por minuto</decimalTextBox>
       </presentation>
       <presentation id="PreventUnwantedAddins">
-        <listBox refId="PreventUnwantedAddins_AllowList">Lista de Autorizados</listBox>
+        <listBox refId="PreventUnwantedAddins_AllowList">Lista de Permissões</listBox>
       </presentation>
       <presentation id="PreventIndexingCertainPaths_1">
         <listBox refId="PreventIndexingCertainPaths">Impedir a Indexação de Determinados Caminhos</listBox>

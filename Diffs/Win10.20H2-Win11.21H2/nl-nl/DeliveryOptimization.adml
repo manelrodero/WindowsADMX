@@ -6,27 +6,24 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Delivery Optimization</string>
       <string id="DownloadMode">Downloadmodus</string>
-      <string id="DownloadMode_Help">De downloadmethode die Delivery Optimization kan gebruiken bij downloads van Windows-updates, apps en app-updates.
+      <string id="DownloadMode_Help">Hiermee geeft u de downloadmethode op die Delivery Optimization kan gebruiken in downloads van Windows-updates, apps en app-updates.
 
- De volgende lijst bevat de ondersteunde waarden:
+In de volgende lijst worden de ondersteunde waarden weergegeven:
 
 0 = alleen HTTP, geen peering.
 
-1 = HTTP gemengd met peers achter hetzelfde NAT.
+1 = HTTP gemengd met peering achter dezelfde NAT.
 
-2 = HTTP gemengd met peers in een privégroep. Peering vindt standaard plaats tussen apparaten op dezelfde Active Directory-site (als deze bestaat) of in hetzelfde domein. Als deze optie is geselecteerd, kan peering plaatsvinden tussen NAT's. Als u een aangepaste groep wilt maken, gebruikt u de groeps-id in combinatie met modus 2.
+2 = HTTP gemengd met peering over een privégroep. Peering vindt plaats op apparaten in dezelfde Active Directory-site (indien aanwezig) of op hetzelfde domein. Als deze optie is geselecteerd, wordt door peering meerdere Nat's uitgeschakeld. Voor het maken van een groeps-ID voor een aangepaste groep gebruikt in combinatie met modus 2.
 
-3 = HTTP gemengd met internetpeering.
+3 = HTTP-overvloeiing met Internet-peering.
 
-99 = Eenvoudige downloadmodus zonder peering. Delivery Optimization voert downloads uitsluitend via HTTP uit en doet geen poging om contact op te nemen met Delivery Optimization-cloudservices.
-
-100 = Bypass-modus. Delivery Optimization niet gebruiken en in plaats daarvan BITS gebruiken.</string>
+99 = eenvoudige downloadmodus zonder peering. Download Delivery Optimization alleen met HTTP en neemt niet contact op met de cloudservices voor Delivery-optimalisatie.</string>
       <string id="DownloadMode_CdnOnly">Alleen HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Groep (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Eenvoudig (99)</string>
-      <string id="DownloadMode_Bypass">Bypass (100)</string>
       <string id="GroupId">Groeps-id</string>
       <string id="GroupId_Help">Groeps-id moet worden ingesteld als GUID. Stel dit beleid in om een willekeurige groeps-id op te geven waartoe het apparaat behoort.
 
@@ -169,14 +166,19 @@ Opmerking: als u het beleid instelt om de achtergronddownload van http te vertra
 
 Opmerking: als u het beleid instelt om de voorgronddownload van http te vertragen, wordt deze eerst toegepast (om eerst downloads van peers toe te staan).</string>
       <string id="RestrictPeerSelectionBy">Een methode selecteren om peerselectie te beperken</string>
-      <string id="RestrictPeerSelectionBy_Help">Stel dit beleid in om de selectie van peers te beperken via de geselecteerde optie.
+      <string id="RestrictPeerSelectionBy_Help">Stel dit beleid in om de selectie van peers via de geselecteerde optie te beperken.
 
-Beschikbare opties zijn:
-1 = subnetmasker (meer opties worden toegevoegd in een toekomstige release).
+De volgende opties zijn beschikbaar:
+0 = NAT.
+1 = subnetmasker.
+2 = lokale detectie (DNS-SD).
 
-Optie 1 (subnetmasker) is van toepassing op zowel Downloadmodus-LAN (1) als Groep (2).</string>
-      <string id="RestrictPeerSelectionBy_None">Geen</string>
+De standaardwaarde is gewijzigd van 0 (geen beperking) in 1 (beperken tot subnet).
+
+Deze opties zijn van toepasding op zowel Downloadmodus LAN (1) en Groep (2).</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Subnet</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Lokale detectie</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Kantooruren instellen om de bandbreedte voor downloaden op de achtergrond te beperken</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">De maximale bandbreedte voor downloaden op de achtergrond die buiten en tijdens kantooruren door Delivery Optimization wordt gebruikt voor alle gelijktijdige downloadactiviteiten, als percentage van de beschikbare downloadbandbreedte. </string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Kantooruren instellen om de bandbreedte voor downloaden op de voorgrond te beperken</string>
@@ -303,7 +305,7 @@ Optie 1 (subnetmasker) is van toepassing op zowel Downloadmodus-LAN (1) als Groe
         <text>De standaardwaarde is 0 (geen vertraging)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Peerselectie beperken tot:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Peerselectie beperken tot:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

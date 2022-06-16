@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Pelo menos o Windows XP Professional Service Pack 1 ou o Windows 2000 Service Pack 3, excluindo o Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Pelo menos o sistema operativo Windows Server 2003 ou Windows XP Professional com SP1, excluindo o Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Pelo menos, Windows XP Professional Service Pack 1 ou, pelo menos, Windows 2000 Service Pack 3 a Windows 8.1 ou Windows Server 2012 R2 com o service pack mais recente</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Pelo menos, Windows Vista a Windows 8.1 ou Windows Server 2012 R2 com o service pack mais recente</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Pelo menos, Windows XP Professional Service Pack 1 ou, pelo menos, Windows 2000 Service Pack 3 a Windows 8,1 ou Windows Server 2012 R2 com o Service Pack mais atual. Não suportado no Windows 10 e superior.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Pelo menos, Windows Vista através do Windows 8,1 ou Windows Server 2012 R2 com o Service Pack mais atual. Não suportado no Windows 10 e superior.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 ou, Pelo menos, Windows 2000 Service Pack 3
 A opção 7 é apenas suportada por servidores com edição do Windows Server 2016, no mínimo</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 através do Windows Server 2022 ou Windows 10</string>
       <string id="AUDontShowUasHelp">Esta definição de política permite-lhe gerir se a opção 'Instalar Atualizações e Encerrar' é apresentada na caixa de diálogo Encerrar o Windows.
 
 Se ativar esta definição de política, 'Instalar Atualizações e Encerrar' não irá aparecer como uma opção na caixa de diálogo Encerrar o Windows, mesmo que estejam disponíveis atualizações para instalação quando o utilizador selecionar a opção Encerrar no menu Iniciar.
@@ -132,37 +133,45 @@ Se o estado estiver definido como Não Configurado, a utilização das Atualiza�
       <string id="AutoUpdateSchTimeAuto">Automático</string>
       <string id="CorpWuURL">Especificar localização do serviço de atualizações da Microsoft na intranet</string>
       <string id="CorpWuURL_Help">
-        Especifica um servidor da intranet para alojar atualizações do Microsoft Update. Pode depois utilizar este serviço de atualização para atualizar automaticamente os computadores na sua rede.
+        Especifica um servidor de intranet para alojar atualizações do Microsoft Update. Pode então utilizar este serviço de atualizações para atualizar automaticamente os computadores na sua rede.
 
-        Esta definição permite-lhe especificar um servidor na sua rede que funcione como serviço de atualização interno. O cliente de Atualizações Automáticas procura neste serviço as atualizações que se aplicam aos computadores da sua rede.
+        Esta configuração permite-lhe especificar um servidor na sua rede para funcionar como um serviço de atualizações internas. O cliente de Atualizações Automáticas procurará neste serviço por atualizações que se apliquem aos computadores na sua rede.
 
-        Para utilizar esta definição, tem de definir dois valores de nomes de servidor: o servidor a partir do qual o cliente de Atualizações Automáticas deteta e transfere atualizações e o servidor para o qual as estações de trabalho atualizadas carregam estatísticas. Pode definir ambos os valores para corresponderem ao mesmo servidor. É possível especificar um valor de nome de servidor opcional para configurar o Windows Update Agent para transferir atualizações a partir de um servidor de transferências alternativo em vez do serviço de atualização na intranet.
+        Para utilizar esta definição, deve definir dois valores de nome de servidor: o servidor a partir do qual o cliente de Atualizações Automáticas deteta e transfere atualizações, e o servidor para o qual as estações de trabalho atualizadas carregam estatísticas. Pode definir ambos os valores para serem o mesmo servidor. Um valor opcional de nome de servidor pode ser especificado para configurar o Agente do Windows Update para que transfira atualizações a partir de um servidor de transferências alternativo, em vez do serviço de atualização da intranet.
 
-        Se o estado estiver definido como Ativado, o cliente de Atualizações Automáticas liga-se ao serviço de atualização da Microsoft na intranet especificada (ou servidor de transferências alternativo), em vez de ao Windows Update, para procurar e transferir atualizações. Ao ativar esta definição faz com que os utilizadores finais na sua organização não tenham de passar por uma firewall para receber atualizações e também lhe dá a oportunidade de testar as atualizações antes de as implementar.
+        Se o estado for definido para Ativado, o cliente de Atualizações Automáticas liga-se ao serviço do Microsoft Update especificado na intranet (ou servidor de transferências alternativo), em vez de ao Windows Update, para pesquisar e transferir atualizações. Ativar esta definição significa que os utilizadores finais na sua organização não têm de passar por uma firewall para obter atualizações, e dá-lhe a oportunidade de testar as atualizações antes de as implementar.
 
-        Se o estado estiver definido como Desativado ou Não Configurado e se as Atualizações Automáticas não estiverem desativadas pela política ou pelas preferências do utilizador, o cliente de Atualizações Automáticas liga-se diretamente ao site do Windows Update na Internet.
+        Se o estado estiver definido para Desativado ou Não Configurado, e se as Atualizações Automáticas não estiverem desativadas por política ou preferência do utilizador, o cliente de Atualizações Automáticas liga-se diretamente ao site do Windows Update na Internet.
 
-        O servidor de transferências alternativo configura o Windows Update Agent para transferir ficheiros de um servidor de transferências alternativo em vez do serviço de atualização na intranet.
+        O servidor de transferências alternativo configura o Agente do Windows Update para transferir ficheiros a partir de um servidor de transferências alternativo em vez do serviço de atualizações da intranet.
 
-        A opção para transferir ficheiros com Urls em falta permite que o conteúdo seja transferido do Servidor de Transferências Alternativo quando não existir nenhum Url de transferência de ficheiros nos metadados de atualização. Esta opção só deve ser utilizada quando o serviço de atualização na intranet não fornecer Urls de transferência nos metadados de atualização para os ficheiros que estão presentes no servidor de transferência alternativo.
+        A opção de transferir ficheiros com Urls em falta permite que seja transferido conteúdo do Servidor de Transferências Alternativo quando não existem URLs de transferência para os ficheiros nos metadados da atualização. Esta opção só deve ser utilizada quando o serviço de atualizações da intranet não fornecer URLs de transferência nos metadados da atualização para ficheiros que estejam presentes no servidor de transferências alternativo.
 
-        Nota: Se a política "Configurar Atualizações Automáticas" estiver desativada, esta política não tem efeito.
+        Nota: Se a política "Configurar Atualizações Automáticas" estiver desativada, esta política não tem qualquer efeito.
 
-        Nota: Se o "Servidor de Transferências Alternativo" não estiver definido, utiliza o servidor de atualização na intranet predefinido para transferir atualizações.
+        Nota: Se o "Servidor de Transferências Alternativo" não estiver definido, utilizará, por predefinição, o serviço de atualizações da intranet para transferir atualizações.
 
-        Nota: A opção "Transferir ficheiros sem Url..." é utilizada apenas se o "Servidor de Transferências Alternativo" estiver definido.
+        Nota: A opção de "Transferir ficheiros sem URL..." só é utilizada se o "Servidor de Transferências Alternativo" estiver definido.
 
-        Nota: Esta política não é suportada no Windows RT. A definição desta política não afeta os PCs com Windows RT.
+        Nota: Esta política não é suportada no Windows RT. A definição desta política não terá qualquer efeito nos PCs Windows RT.
 
- Nota sobre proxies: Para garantir o mais elevado nível de segurança, a Microsoft recomenda proteger os WSUS com o protocolo TLS/SSL, usando assim servidores de intranet com base em HTTPS para manter os sistemas em segurança. Se for necessário um proxy, recomendamos a configuração de um proxy de sistema.
+        Para garantir o mais alto nível de segurança, a Microsoft recomenda proteger o WSUS com o protocolo TLS/SSL, utilizando assim servidores de intranet baseados em HTTPS para manter os sistemas seguros. Se for necessário um proxy, recomendamos a configuração de um proxy de sistema. Para assegurar o mais alto nível de segurança, tire partido, adicionalmente, da afixação de certificados WSUS TLS em todos os dispositivos.
 
-        Selecionar um comportamento de proxy não terá qualquer efeito sobre os clientes que usarem os servidores de intranet com base em HTTPS para detetar atualizações. 
+        A fim de manter os clientes inerentemente seguros, já não estamos a permitir que os servidores de intranet tirem partido da utilização por predefinição de proxys de utilizador para detetar atualizações. Se precisar de utilizar proxys de utilizador para detetar atualizações ao utilizar um servidor de intranet apesar das vulnerabilidades que apresenta, deve configurar o comportamento do proxy para "Permitir que o proxy de utilizador seja utilizado como contingência se a deteção ao utilizar o proxy de sistema falhar".
 
-        Para manter os clientes inerentemente em segurança, já não permitimos que servidores de intranet com base em HTTP tirem partido do proxy do utilizador por predefinição para detetar atualizações. Se precisar de aproveitar um proxy de utilizador para detetar atualizações ao mesmo tempo que usa um servidor de intranet com base em HTTP, apesar das vulnerabilidades que apresenta, deverá configurar o comportamento do proxy para "Permitir que o proxy de utilizador seja usado como recurso se a deteção através do proxy de sistema falhar".
-
-        A deteção de atualizações irá falhar quando os servidores de intranet com base em HTTP forem usados sem um proxy de sistema configurado se a política de usar um comportamento de proxy alternativo não estiver configurada.</string>
+        A deteção de atualizações em servidores de intranet falhará quando o proxy de utilizador for necessário como contingência e o comportamento do proxy alternativo não estiver configurado.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Utilizar o proxy do sistema apenas para detetar atualizações (predefinição)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Permitir que o proxy do utilizador seja utilizado como contingência se a deteção de proxy do sistema falhar</string>
+      <string id="UpdateClassPolicySource_Title">Especificar o serviço de origem para classes específicas de atualizações do Windows Update</string>
+      <string id="UpdateClassPolicySource_Help">Quando esta política estiver ativada, os dispositivos receberão atualizações do Windows para as turmas listadas a partir da origem de atualizações especificada: Windows Update ou Serviço Windows Server Update. 
+
+Nota: para receber atualizações do Serviço Windows Server Update, tem de ter configurado corretamente uma localização do serviço de atualização da Microsoft na intranet através da política "Especificar localização do serviço de atualização da Microsoft na intranet".
+
+Se esta política não estiver configurada ou desativada, o dispositivo continuará a detetar atualizações de acordo com as suas outras configurações de política. 
+
+Nota: se estiver a utilizar a mensagem "Não permitir políticas de diferimento para causar análises contra o Windows Update" atualmente para garantir que os dispositivos só analisam em vez do servidor especificado, recomendamos que configure esta política como alternativa ou para além disso.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Especifica as horas que o Windows vai utilizar para determinar quanto tempo deve aguardar antes de verificar a existência de atualizações disponíveis. O tempo de espera exato é a soma do valor específico e de uma variável aleatória de 0 a 4 horas.
 
         Se o estado for definido como Ativado, o Windows vai verificar a existência de atualizações disponíveis no intervalo especificado.
@@ -306,6 +315,12 @@ Nota: Esta política só se aplica quando o serviço de atualização da Microso
 Nota: Esta política não é suportada no Windows RT. Definir esta política não afetará os PCs com Windows RT.</string>
       <string id="TargetGroup_Title">Ativar alvos do lado do cliente</string>
       <string id="WindowsUpdateCat">Windows Update</string>
+      <!--Category sub-folders-->
+      <string id="WindowsUpdateOffering">Gerir atualizações disponibilizadas pelo Windows Update</string>
+      <string id="WSUSOffering">Gerir atualizações disponibilizadas a partir do Serviço Windows Server Update</string>
+      <string id="WindowsUpdateExperience">Gerir a experiência do utilizador final</string>
+      <string id="PreSV">Políticas Legadas</string>
+
       <string id="TrustedPublisher_Title">Permitir atualizações assinadas de uma localização do serviço de atualização da Microsoft na intranet  </string>
       <string id="TrustedPublisher_Help">Esta definição de política permite-lhe gerir se as Atualizações Automáticas aceitam atualizações assinadas por outras entidades sem ser a Microsoft quando a atualização provém de uma localização do serviço de atualização da Microsoft na intranet.
 
@@ -321,48 +336,30 @@ Nota: Esta política não é suportada no Windows RT. Definir esta política nã
 Ativar esta política desativará essa funcionalidade e poderá fazer com que a ligação a servidores públicos como a Loja Windows deixe de funcionar.
 
 Nota: esta política só se aplica quando este PC está configurado para se ligar a um serviço de atualização na intranet através da política "Especificar localização do serviço de atualizações da Microsoft na intranet".</string>
-      <string id="DeferUpdateCat">Windows Update para Empresas</string>
-      <string id="ManagePreviewBuilds_Title">Gerir preview builds</string>
-      <string id="ManagePreviewBuilds_Help">Selecionar "Desativar preview builds" impede a instalação de preview builds no dispositivo. Esta ação impedirá que os utilizadores optem por participar no Programa Windows Insider, através de Definições -&gt; Atualizar e Segurança.
+      <string id="ManagePreviewBuilds_Title">Gerir compilações de pré-visualização</string>
+      <string id="ManagePreviewBuilds_Help">Ative esta política para gerir quais as atualizações que recebe antes da atualização ser lançada para o mundo.
 
-Selecionar "Desativar preview builds assim que a próxima versão for pública" evita que as preview builds sejam instaladas assim que a próxima versão do Windows for pública. Esta opção é útil quando o seu dispositivo está configurado para instalar a preview build e pretende retirar voluntariamente o dispositivo da distribuição de pacotes piloto. Esta opção fornece preview builds até os dispositivos terem a próxima versão pública.
+Canal de Desenvolvimento
+Ideal para utilizadores altamente técnicos. Os insiders do Canal de Desenvolvimento irão receber compilações do nosso ramo de desenvolvimento ativo mais antigo num ciclo de desenvolvimento. Estas compilações não correspondem a uma versão específica do Windows 10.
 
-Selecionar "Ativar preview builds" ativa a instalação de preview builds no dispositivo. Os utilizadores podem transferir e instalar preview builds do Windows nos respetivos dispositivos ao ativarem a opção em Definições -&gt; Atualizar e Segurança -&gt; Programa Windows Insider. Os administradores também podem utilizar outras políticas para gerir as definições de piloto em nome de utilizadores quando este valor é definido.</string>
-      <string id="DisablePreviewBuilds">Desativar preview builds</string>
-      <string id="DisablePreviewBuildsAndOptOut">Desativar preview builds assim que a próxima versão for pública</string>
-      <string id="EnablePreviewBuilds">Ativar preview builds</string>
-      <string id="PreviewBuildFastFeatureUpdates">Preview Build - Rápida</string>
-      <string id="PreviewBuildSlowFeatureUpdates">Preview Build - Lenta</string>
-      <string id="ReleasePreviewBranchFeatureUpdates">Pré-visualização de Versões</string>
-      <string id="SemiAnnualChannelFeatureUpdates">Via de Atualizações Semianuais</string>
-      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Via de Atualizações Semianuais para 1809 e inferior (Preterido)</string>
-      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Via de Atualizações Semianuais (Direcionado) para 1809 e inferior (Preterido)</string>
-      <string id="DeferFeatureUpdates_Title">Selecionar quando são recebidas Preview Builds e Atualizações de Funcionalidades</string>
-      <string id="DeferFeatureUpdates_Help">Ative esta política para especificar o nível de Preview Build ou Atualizações de Funcionalidades a receber e quando.
+Canal Beta
+Ideal para exploradores de recursos que pretendam ver as futuras funcionalidades do Windows 10. Os seus comentários serão especialmente importantes aqui, pois ajudarão os nossos engenheiros a garantir que os principais problemas sejam corrigidos antes do grande lançamento.
 
-* Preview Build - Rápida: Os dispositivos definidos para este nível serão os primeiros a receber novas compilações do Windows com funcionalidades que ainda não estão disponíveis para o público em geral. Selecione Rápida para participar na identificação e comunicação de problemas à Microsoft e para fornecer sugestões sobre novas funcionalidades.
-* Preview Build - Lenta: Os dispositivos definidos para este nível recebem novas compilações do Windows antes de estas estarem disponíveis para o público em geral, mas a uma cadência mais lenta do que a dos dispositivos definidos para Rápida e com alterações e correções identificadas em compilações anteriores.
-* Release Preview: Receba compilações do Windows imediatamente antes de a Microsoft as lançar para o público em geral.
-* Via de Atualizações Semianuais: Receba atualizações de funcionalidades quando estas são disponibilizadas ao público em geral.
+Canal de pré-visualização do lançamento (predefinição)
+Os insiders no canal de pré-visualização do lançamento terão acesso à próxima versão do Windows 10, antes de ser lançado para o mundo. Estas compilações são suportadas pela Microsoft. O canal de pré-visualização do lançamento é onde recomendamos que as empresas pré-visualizem e validem futuras versões do Windows 10 antes da implantação em toda a sua organização.
 
-Os seguintes níveis de Preparação do Windows foram preteridos e apenas são aplicáveis a 1809 e abaixo:
-* Via de Atualizações Semianuais (Direcionada) para 1809 e inferior: As atualizações de funcionalidades que tenham sido lançadas.
-* Via de Atualizações Semianuais para 1809 e inferior: As atualizações de funcionalidades foram declaradas Via de Atualizações Semianuais, sendo que a designação indica que a versão está pronta para uma implementação alargada.
-Consulte a página de informações de versão em http://aka.ms/ReleaseInformationPage para as datas de lançamento de Via de Atualizações Semianuais e Via de Atualizações Semianuais (Direcionada).
+Nota: a inscrição para Preview Build requer uma definição de nível de telemetria de 2 ou superior e o seu domínio registado em insider.windows.com. Para obter informações adicionais sobre Preview Builds, consulte: https://aka.ms/wipforbiz
 
-Ao selecionar uma Preview Build:
-    - É possível adiar a receção de Preview Builds até 14 dias.
-    - Para evitar que as Preview Builds sejam recebidas no tempo agendado, é possível colocá-las temporariamente em pausa. A pausa permanecerá em vigor durante 35 dias a partir da hora de início fornecida.
-    - Para retomar a receção de Atualizações de Funcionalidades que se encontrem em pausa, limpe o campo da data de início.
+Se desativar ou não configurar esta política, o Windows Update não oferecerá nenhuma atualização de pré-lançamento e receberá esses conteúdos assim que forem lançados para o mundo. Desativar esta política irá fazer com que todos os dispositivos atualmente numa compilação de pré-lançamento sejam excluídos da mesma e permaneçam na atualização de funcionalidades mais recente uma vez lançada.</string>
+      <string id="DevChannel">Canal de Desenvolvimento</string>
+      <string id="BetaChannel">Canal Beta</string>
+      <string id="ReleasePreviewChannel">Canal de Pré-visualização de Lançamento</string>
+      <string id="DeferFeatureUpdates_Title">Selecionar quando são recebidas Compilações de Pré-Visualização e Atualizações de Funcionalidades</string>
+      <string id="DeferFeatureUpdates_Help">Ative esta política para especificar quando pretende receber atualizações de funcionalidades.
 
-A inscrição em Preview Build requer um nível de telemetria de valor 2 ou superior e que o seu domínio esteja registado em insider.windows.com. Para obter mais informações sobre Preview Builds, consulte: https://aka.ms/wipforbiz
+Adiar atualizações | Isto permite aos dispositivos adiar a colocação da próxima atualização de funcionalidades no seu canal durante até 14 dias para todos os canais de pré-lançamento e até 365 dias para o canal semestral. Em alternativa, se o dispositivo estiver a atualizar a partir do canal semestral, pode ser especificada uma versão para a qual o dispositivo possa ser passado e/ou mantido até a política ser atualizada ou até que atinja o fim do serviço. Nota: se definir ambas as políticas, a versão especificada terá precedência e os adiamentos não estarão em vigor. Consulte a página de informações de versão do Windows para obter informações sobre a versão do SO.
 
-Ao selecionar a Via de Atualizações Semianuais:
-    - É possível adiar a receção das Atualizações de Funcionalidades até 365 dias.
-    - Para evitar que as Atualizações de Funcionalidades sejam recebidas no tempo agendado, é possível colocá-las temporariamente em pausa. A pausa permanecerá em vigor durante 35 dias a partir da hora de início fornecida.
-    - Para retomar a receção de Atualizações de Funcionalidades que se encontrem em pausa, limpe o campo da data de início.
-
-Se desativar ou não configurar esta política, o Windows Update não alterará o comportamento.</string>
+Colocar atualizações em pausa | Para impedir a receção de atualizações de funcionalidades no horário agendado para as mesmas, pode colocar temporariamente em pausa as atualizações de funcionalidades. A colocação em pausa permanecerá em vigor durante 35 dias a partir da data de início especificada ou até o campo ser limpo (as atualizações de qualidade ainda serão disponibilizadas).</string>
       <string id="DeferQualityUpdates_Title">Selecione quando são recebidas Atualizações de Qualidade</string>
       <string id="DeferQualityUpdates_Help">Ative esta política para especificar quando pretende receber atualizações de qualidade.
 
@@ -374,9 +371,19 @@ Para retomar a receção de Atualizações de Qualidade que estejam colocadas em
 
 Se desativar ou não configurar esta política, o Windows Update não altera o respetivo comportamento.</string>
       <string id="TargetReleaseVersion_Title">Selecione a versão de destina da Atualização de Funcionalidades</string>
-      <string id="TargetReleaseVersion_Help">Ative esta política para especificar uma versão de Atualização de Funcionalidades a ser solicitada em análises subsequentes.
+      <string id="TargetReleaseVersion_Help">Insira o produto e a versão conforme listado na página da versão de destino do Windows Update:
 
-Introduza a versão listada na página de Informações de Versão do Windows aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+O dispositivo irá pedir o produto e a versão do Windows Update nas análises subsequentes.
+
+Entrar num produto de destino e clicar em OK ou Aplicar significa que aceito os Termos de Licenciamento para Software Microsoft para o mesmo encontrados em aka.ms/WindowsTargetVersioninfo. Se uma organização estiver a licenciar o software, estou autorizado a vincular a organização.
+
+Se introduzir um valor inválido, permanecerá na sua versão atual até corrigir os valores para um produto e versão suportados.</string>
+      <string id="DisableWUfBSafeguards">Desativar salvaguardas para Atualizações de Funcionalidades</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Ative esta definição quando as Atualizações de Funcionalidades devem ser implementadas em dispositivos sem o bloqueio em suspensões de salvaguarda. As suspensões de salvaguarda são problemas de compatibilidade conhecidos que bloqueiam a implementação de atualizações nos dispositivos afetados até o problema ser resolvido. A ativação desta política pode permitir que uma organização implemente a Atualização da Funcionalidade em dispositivos para efeitos de teste ou sem o bloqueio em suspensões de salvaguarda.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Não inclua os controladores nas Atualizações do Windows</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Ative esta política para não incluir controladores com atualizações de qualidade do Windows.
 
@@ -614,19 +621,21 @@ Importante: se optar por não receber notificações de atualizações e definir
       <string id="ExcludingRebootWarnings">1 – Desativar todas as notificações, exceto avisos de reinício</string>
       <string id="IncludingRebootWarnings">2 – Desativar todas as notificações, incluindo avisos de reinício</string>
       <string id="ComplianceDeadline_Title">Especificar prazos para reinícios e atualizações automáticos</string>
-      <string id="ComplianceDeadline_Help">Esta política permite especificar o número de dias que um utilizador tem antes de as atualizações de funcionalidades e qualidade serem instaladas automaticamente nos respetivos dispositivos e um período de tolerância após o qual os reinícios necessários ocorrem automaticamente. As atualizações e os reinícios ocorrerão independentemente das horas de atividade e o utilizador não poderá reagendar.
+      <string id="ComplianceDeadline_Help">Esta política permite-lhe especificar o número de dias antes das actualizações de qualidade e características serem instaladas automaticamente nos dispositivos, e um período de carência após o qual as reinicializações necessárias ocorrem automaticamente.
 
-Os prazos para as atualizações de funcionalidades e qualidade podem ser de até 30 dias. O período de tolerância de reinício automático pode ser de 0 a 7 dias.
+Defina prazos para actualizações de características e actualizações de qualidade para cumprir os seus objectivos de conformidade. As actualizações serão descarregadas e instaladas logo que sejam oferecidas e os reinícios automáticos serão tentados fora do horário de funcionamento. Uma vez decorrido o prazo, os reinícios ocorrerão independentemente das horas activas, e os utilizadores não poderão reprogramar. Se o prazo for fixado em 0 dias, a actualização será instalada imediatamente após a oferta, mas poderá não terminar dentro do dia devido à disponibilidade do dispositivo e à conectividade de rede.
 
-Também é possível desativar os reinícios automáticos até ao final do período de tolerância de reinício automático.
+Definir um período de carência para actualizações de características e actualizações de qualidade para garantir aos utilizadores um tempo mínimo para gerir os seus reinícios, uma vez instaladas as actualizações. Os utilizadores poderão agendar reinícios durante o período de carência e o Windows pode ainda reiniciar automaticamente fora das horas activas se os utilizadores optarem por não agendar os reinícios. O período de carência poderá não ter efeito se os utilizadores já tiverem mais do que o número de dias definido como período de carência para gerir o seu reinício, com base em configurações de prazos.
 
-Se desativar ou não configurar esta política, os dispositivos serão atualizados e reiniciados de acordo com o agendamento predefinido.
+É possível definir o dispositivo para atrasar o reinício até que tanto o prazo como o período de carência tenham expirado.
 
-Esta política substituirá as seguintes políticas:
-1.  Especificar o prazo antes de reiniciar automaticamente para instalação da atualização
-2.  Especificar a transição de Reinício obrigatório e o agendamento de notificações para atualizações
-3.  Reiniciar sempre automaticamente de acordo com a hora programada
-4.  Nenhum reinício automático com utilizadores com sessão iniciada para a instalação de atualizações automáticas programadas
+Se desactivar ou não configurar esta política, os dispositivos receberão actualizações e serão reiniciados de acordo com o calendário padrão.
+
+Esta política anulará as seguintes políticas:
+1. Especificar o prazo antes do reinício automático para a instalação da actualização
+2. Especificar o calendário de transição e de notificação de reinício automático para as actualizações
+3. Reiniciar sempre automaticamente na hora programada
+4. Configurar as actualizações automáticas
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,20 +701,26 @@ Esta política substituirá as seguintes políticas:
         </textBox>
         <text>(exemplo: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Transferir ficheiros sem Url nos metadados, se o servidor de transferências alternativo estiver definido.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecione o comportamento do proxy para o cliente Windows Update para detetar atualizações com serviço não baseado em TLS (HTTP):</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Não aplicar a afixação do certificado TLS para o cliente Windows Update para detetar atualizações.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecione o comportamento do proxy para o cliente Windows Update para detetar atualizações:</dropdownList>
+      </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Especifique o serviço de origem para as seguintes turmas de atualizações do Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Atualizações de Funcionalidades</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Atualizações de Qualidade</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Atualizações de Controlador</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Outras Atualizações</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Verificar se existem atualizações no próximo</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervalo (horas):  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Esperar o seguinte período antes</text>
-        <text>de pedir novamente um reinício</text>
+        <text>Aguarde o seguinte período de tempo antes de solicitar novamente um agendamento</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">reinício (minutos):  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Esperar o seguinte período antes</text>
-        <text>prosseguir com um reinício</text>
+        <text>Aguarde o seguinte período antes de prosseguir com uma</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">reinício (minutos):  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -717,29 +732,25 @@ Esta política substituirá as seguintes políticas:
           <label>Nome de grupo alvo para este computador</label>
         </textBox>
       </presentation>
-      <presentation id="IdleShutdownTimerDuration_Title">
-        <text>Esperar o seguinte período antes</text>
-        <text>encerrar o serviço quando</text>
-        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">inativo (minutos):  </decimalTextBox>
-      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>O temporizador de reinício dará aos utilizadores</text>
-        <text>este período de tempo para guardarem o</text>
+        <text>O temporizador de reinício dará aos utilizadores este período de tempo para guardar os seus</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">trabalho (minutos):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Para que versão de produto do Windows pretende receber atualizações de funcionalidades? por exemplo, Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Versão de Destino das Atualizações de Funcionalidades</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Definir o comportamento para receber preview builds:</dropdownList>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Selecione o nível de preparação do Windows para as atualizações que pretende receber:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Selecione o nível de preparação do Windows para as atualizações que pretende receber:</dropdownList>
-        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Depois de ter sido lançada uma Preview Build ou Atualização de Funcionalidades, adie a receção da mesma durante o número seguinte de dias:</decimalTextBox>
+       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Quantos dias após o lançamento de uma Actualização de Funcionalidade gostaria de adiar a actualização antes de esta ser oferecida ao dispositivo?</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>Colocação em Pausa das Preview Builds ou Atualizações de Funcionalidades com início a:</label>
+          <label>Colocação em Pausa das Compilações de Pré-Visualização ou Atualizações de Funcionalidades com início a:</label>
         </textBox>
         <text>(exemplo de formato aaaa-mm-dd: 2016-10-30)</text>
       </presentation>
@@ -797,12 +808,13 @@ Esta política substituirá as seguintes políticas:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Especifique as opções de visualização para notificações de atualizações:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Especifique o número de dias (até 30 dias) que um utilizador tem antes de as atualizações serem executadas automaticamente, independentemente das horas de atividade, sem a possibilidade de reagendar.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Atualizações de qualidade (dias):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Atualizações de funcionalidades (dias):</dropdownList>
+        <text>Atualizações de Qualidade</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Prazo (dias):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Período de tolerância (dias):</dropdownList>
         <text></text>
-        <text>Especifique um período de tolerância de reinício automático (0 a 7 dias), a partir do momento em que um reinício é necessário até o dispositivo reiniciar automaticamente. Os dispositivos reiniciarão independentemente das horas de atividade, sem a possibilidade de reagendar.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Período de tolerância (dias)</dropdownList>
+        <text>Atualizações de Funcionalidades</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Prazo (dias):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Período de Tolerância (dias):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Não reiniciar automaticamente até ao final do período de tolerância</checkBox>
       </presentation>

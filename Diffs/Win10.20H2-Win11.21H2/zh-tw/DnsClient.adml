@@ -250,6 +250,17 @@ LLMNR 是次要名稱解析通訊協定。使用 LLMNR，查詢會透過單一�
 如果您啟用這個原則設定，會將 IDN 轉換成 Nameprep 格式。
 
 如果您停用這個原則設定，或未設定這個原則設定，不會將 IDN 轉換成 Nameprep 格式。</string>
+      <string id="DNS_Doh">透過 HTTPS 設定 DNS (DoH) 名稱解析</string>
+      <string id="DNS_Doh_Disabled">禁止 DoH</string>
+      <string id="DNS_Doh_Auto">允許 DoH</string>
+      <string id="DNS_Doh_Force">需要 DoH</string>
+      <string id="DNS_Doh_Help">指定 DNS 用戶端是否會透過 HTTPS (哼) 在 DNS 上執行名稱解析。 
+ # B1 根據預設，DNS 用戶端會透過 UDP 或 TCP) 進行傳統的 DNS 名稱 (解析。這個設定可以增強 DNS 用戶端使用哼通訊協定來解析功能變數名稱。 
+ # B3 若要使用這個原則設定，請按一下 [已啟用]，然後從下拉式清單選取下列其中一個選項： 
+ # B5 禁止哼：將不會執行哼名稱解析。 
+ # B7 Allow 哼：如果設定的 DNS 伺服器支援，則執行哼查詢。如果不支援，請嘗試傳統名稱解析。 
+ # B9 需要哼：只允許哼名稱解析。如果未設定可哼的 DNS 伺服器，名稱解析將會失敗 
+。如果您停用這個原則設定，或未設定這個原則設定，電腦將會使用本機設定的設定。</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +297,9 @@ LLMNR 是次要名稱解析通訊協定。使用 LLMNR，查詢會透過單一�
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">更新安全性等級:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">設定 DoH選項：</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

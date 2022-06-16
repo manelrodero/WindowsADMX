@@ -19,13 +19,13 @@ Alternativet Inaktiverad fjärrinaktiverar Virtualiseringsbaserat skydd för kod
  
 Alternativet Aktiverat med UEFI-lås säkerställer att Virtualiseringsbaserat skydd för kodintegritet inte kan fjärrinaktiveras. Om du vill inaktivera funktionen måste du sätta grupprincipen till Inaktiverad och ta bort säkerhetsfunktionen från alla datorer (med användarna fysiskt närvarande), för att kunna rensa den sparade konfigurationen i UEFI.
  
-Alternativet Aktiverat utan lås gör att Virtualiseringsbaserat skydd för kodintegritet kan fjärrinaktiveras med hjälp av en grupprincip. 
+Alternativet Aktiverat utan lås gör att Virtualiseringsbaserat skydd för kodintegritet kan fjärrinaktiveras med hjälp av en grupprincip.
 
 Alternativet Inte konfigurerad innebär att principinställningen inte är definierad. Grupprincipen skriver inte principinställningen i registret, vilket innebär att den inte har någon effekt för datorer och användare. Om det redan finns en inställning i registret ändras den inte.
 
 Alternativet Kräv UEFI-stöd för minnesattributtabellen aktiverar endast Virtualiseringsbaserat skydd för kodintegritet på enheter med UEFI-stöd för minnesattributtabellen. Enheter utan UEFI-stöd för minnesattributtabellen kan ha inbyggd programvara som är inkompatibel med Virtualiseringsbaserat skydd för kodintegritet vilket i vissa fall kan leda till krascher eller dataförlust eller inkompatibilitet med vissa plugin-kort. Om den här inställningen inte används bör målenheterna testas för att säkerställa kompatibilitet.
 
-Varning! Alla drivrutiner i systemet måste vara kompatibla med den här funktionen, annars kan systemet krascha. Se till att den här principinställningen endast distribueras på datorer som är kända för att vara kompatibla. 
+Varning! Alla drivrutiner i systemet måste vara kompatibla med den här funktionen, annars kan systemet krascha. Se till att den här principinställningen endast distriberas på datorer som är kända för att vara kompatibla. 
 
 Credential Guard
 
@@ -35,10 +35,10 @@ Alternativet Inaktiverad fjärrinaktiverar Credential Guard om det tidigare var 
 
 Alternativet Aktiverat med UEFI-lås säkerställer att Credential Guard inte kan fjärrinaktiveras. Om du vill inaktivera funktionen måste du sätta grupprincipen till Inaktiverad och ta bort säkerhetsfunktionen från alla datorer (med användarna fysiskt närvarande), för att kunna rensa den sparade konfigurationen i UEFI.
 
-Alternativet Aktiverat utan lås gör att Credential Guard kan fjärrinaktiveras med hjälp av en grupprincip. Windows 10 version 1511 eller senare måste köras på de enheter som använder den här inställningen.
+Alternativet Aktiverat utan lås gör att Credential Guard kan fjärrinaktiveras med hjälp av en grupprincip. Windows 10 (version 1511) eller senare måste köras på de enheter som använder den här inställningen.
 
 Alternativet Inte konfigurerad innebär att principinställningen inte är definierad. Grupprincipen skriver inte principinställningen i registret, vilket innebär att den inte har någon effekt för datorer och användare. Om det redan finns en inställning i registret ändras den inte.
-      
+
 Säker start
 
 Med den här inställningen ställs konfigurationen för Säker start in till att säkra startkedjan.

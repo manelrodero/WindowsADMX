@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Windows Hello for Business verwenden</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Zertifikat für die lokale Authentifizierung verwenden</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Verwenden der Cloud-Vertrauensstellung für die lokale Authentifizierung</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello for Business ist eine alternative Anmeldemethode für Windows, bei der Sie anstelle von Kennwörtern, Smartcards oder virtuellen Smartcards Ihr Active Directory- oder Azure Active Directory-Konto verwenden können.
 
@@ -121,10 +123,19 @@ HINWEIS: Diese Richtlinie kann nur auf Geräte angewendet werden, die bei Azure 
         <string id="WHFB_UseCertificateForOnPremAuthExplain">Verwenden Sie diese Richtlinieneinstellung, um Windows Hello for Business für die Registrierung eines Anmeldezertifikats zu konfigurieren, das für die lokale Authentifizierung verwendet wird.
 
 Wenn Sie die Richtlinieneinstellung aktivieren, registriert Windows Hello for Business ein Anmeldezertifikat, das für die lokale Authentifizierung verwendet wird.
-
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, registriert Windows Hello for Business einen Schlüssel, der für die lokale Authentifizierung verwendet wird.
+		
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwendet Windows Hello for Business einen Schlüssel oder ein Kerberos-Ticket (abhängig von anderen Richtlinieneinstellungen) für die lokale Authentifizierung.
 
 HINWEIS: Wenn die Richtlinieneinstellung deaktiviert oder nicht konfiguriert und die Richtlinieneinstellung "Windows Hello for Business verwenden" aktiviert wird, muss die Umgebung mindestens einen Windows Server 2016-Domänencontroller enthalten, damit Fehler bei der Windows Hello for Business-Authentifizierung vermieden werden.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Verwenden Sie diese Richtlinien Einstellung, um Windows Hello for Business für die Verwendung von Azure AD-Kerberos für die lokale Authentifizierung zu konfigurieren.
+
+Wenn Sie die Richtlinien Einstellung aktivieren, verwendet Windows Hello for Business ein Kerberos-Ticket, das von der Authentifizierung mit Azure für die lokale Authentifizierung abgerufen wurde.
+
+Wenn Sie die Richtlinien Einstellung deaktivieren oder nicht konfigurieren, verwendet Windows Hello for Business einen Schlüssel oder ein Zertifikat (abhängig von anderen Richtlinien Einstellungen) für die lokale Authentifizierung. 
+ 
+Hinweis: eine Umgebung, die sowohl diese Richtlinien Einstellung aktiviert, und die Richtlinien Einstellung "Windows Hello for Business verwenden" erfordert mindestens einen Windows Server 2016-Domänen Controller. Andernfalls schlägt Windows Hello for Business-Authentifizierung fehl.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Faktoren für die Geräteentsperrung konfigurieren</string>

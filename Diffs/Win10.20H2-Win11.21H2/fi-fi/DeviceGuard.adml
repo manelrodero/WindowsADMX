@@ -19,13 +19,13 @@ Kun asetus on Ei käytössä, koodin eheyden virtualisointiin perustuva suojaus 
  
 Käytössä käyttäen UEFI-lukitusta -asetus varmistaa, että koodin eheyden virtualisointiin perustuvaa suojausta ei voi poistaa käytöstä etäyhteyden kautta. Jos haluat poistaa tämän ominaisuuden käytöstä, sinun on määritettävä ryhmäkäytännön asetukseksi Ei käytössä ja fyysisesti tietokoneen ääressä olevan käyttäjän on poistettava suojaustoiminnot jokaisesta tietokoneesta, jotta pysyvän UEFI-määrityksen voi poistaa.
  
-Käytössä ilman lukitusta -asetus sallii koodin eheyden virtualisointiin perustuvan suojauksen poistamisen käytöstä etäyhteyden kautta ryhmäkäytännön avulla.
+Käytössä ilman lukitusta -asetus sallii koodin eheyden virtualisointiin perustuvan suojauksen poistamisen käytöstä etäyhteyden kautta ryhmäkäytännön avulla. 
 
 Jos valitset Ei määritetty -asetuksen, käytäntöasetusta ei määritetä. Ryhmäkäytäntö ei kirjoita käytäntöasetusta rekisteriin, joten se ei vaikuta tietokoneisiin tai käyttäjiin. Jos rekisterissä on määritettynä jokin aiempi asetus, asetusta ei muokata.
 
 Vaadi UEFI-muistimääritetaulukkoa -asetus ottaa koodin eheyden virtualisointiin perustuvan suojauksen käyttöön vain sellaisissa laitteissa, joiden laiteohjelmisto tukee muistimääritetaulukkoa. Laitteissa, joissa ei ole UEFI-muistimääritetaulukkoa, laiteohjelmisto ei ehkä tue koodin eheyden virtualisointiin perustuvaa suojausta, mikä voi joissakin tapauksissa johtaa kaatumisiin, tietojen menettämiseen tai yhteensopimattomuuteen tiettyjen laajennuskorttien kanssa. Jos tätä asetusta ei oteta käyttöön, kohdelaitteet on testattava yhteensopivuuden varmistamiseksi.
 
-Varoitus: Kaikkien järjestelmässä olevien ohjainten on oltava yhteensopivia tämän ominaisuuden kanssa, tai järjestelmä saattaa kaatua. Varmista, että tämä käytäntöasetus otetaan käyttöön vain tietokoneille, jotka ovat yhteensopivia.
+Varoitus: Kaikkien järjestelmässä olevien ohjainten on oltava yhteensopivia tämän ominaisuuden kanssa, tai järjestelmä saattaa kaatua. Varmista, että tämä käytäntöasetus otetaan käyttöön vain tietokoneille, jotka ovat yhteensopivia. 
 
 Credential Guard
 
@@ -38,7 +38,7 @@ Käytössä käyttäen UEFI-lukitusta -asetus varmistaa, että Credential Guardi
 Käytössä ilman lukitusta -asetus sallii Credential Guardin poistamisen käytöstä etäyhteyden kautta ryhmäkäytännön avulla. Tätä asetusta käyttävissä laitteissa on oltava vähintään Windows 10 (versio 1511).
 
 Jos valitset Ei määritetty -asetuksen, käytäntöasetusta ei määritetä. Ryhmäkäytäntö ei kirjoita käytäntöasetusta rekisteriin, joten se ei vaikuta tietokoneisiin tai käyttäjiin. Jos rekisterissä on määritettynä jokin aiempi asetus, asetusta ei muokata.
-      
+ 
 Suojattu käynnistys
 
 Tämä asetus asettaa suojatun käynnistyksen määrityksen käynnistysketjun suojaamiseksi.

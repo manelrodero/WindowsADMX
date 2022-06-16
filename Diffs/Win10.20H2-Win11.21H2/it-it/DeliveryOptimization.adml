@@ -6,27 +6,24 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Ottimizzazione recapito</string>
       <string id="DownloadMode">Modalità download</string>
-      <string id="DownloadMode_Help">Specifica il metodo di download che Ottimizzazione recapito può usare nei download di aggiornamenti di Windows, app e aggiornamenti di app.
+      <string id="DownloadMode_Help">Specifica il metodo di download che Ottimizzazione recapito può usare durante download di aggiornamenti di Windows, app e aggiornamenti di app.
 
 Di seguito sono elencati i valori supportati:
 
 0 = solo HTTP, nessun peering.
 
-1 = HTTP misto con peering nella stessa NAT.
+1 = HTTP misto a peering nella stessa NAT.
 
-2 = HTTP misto con peering in un gruppo privato. Per impostazione predefinita, il peering avviene tra i dispositivi nello stesso sito Active Directory (se presente) o nello stesso dominio. Quando questa opzione è selezionata, il peering attraversa le NAT. Per creare un gruppo personalizzato, usa l'ID gruppo in combinazione con la modalità 2.
+2 = HTTP misto a peering in un gruppo privato. Per impostazione predefinita, il peering avviene tra i dispositivi nello stesso sito Active Directory (se presente) o nello stesso dominio. Quando questa opzione è selezionata, il peering verrà eseguito attraverso NAT. Per creare un gruppo personalizzato, usa l'ID gruppo in combinazione con la modalità 2.
 
-3 = HTTP misto con peering Internet.
+3 = HTTP misto a peering Internet.
 
-99 = modalità di download semplice senza peering. Ottimizzazione recapito esegue il download usando solo HTTP e non tenta di contattare i servizi cloud di Ottimizzazione recapito.
-
-100 = modalità Bypass. Invece di Ottimizzazione recapito viene usato BITS.</string>
+99 = modalità di download semplice senza peering. Ottimizzazione recapito esegue il download usando solo HTTP e non tenta di contattare i servizi cloud di Ottimizzazione recapito.</string>
       <string id="DownloadMode_CdnOnly">Solo HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Gruppo (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Semplice (99)</string>
-      <string id="DownloadMode_Bypass">Bypass (100)</string>
       <string id="GroupId">ID gruppo</string>
       <string id="GroupId_Help">L'ID gruppo deve essere impostato come un GUID. Questo criterio specifica un ID gruppo arbitrario a cui appartiene il dispositivo.
 
@@ -171,13 +168,17 @@ Nota: se imposti il criterio per il ritardo del download in primo piano da http,
       <string id="RestrictPeerSelectionBy">Seleziona un metodo per limitare la selezione Peer</string>
       <string id="RestrictPeerSelectionBy_Help">Imposta questo criterio per limitare la selezione peer tramite l'opzione selezionata.
 
-Le opzioni disponibili sono:
+Opzioni disponibili:
+0 = NAT.
+1 = subnet mask.
+2 = individuazione locale (DNS-SD).
 
-1 = Subnet mask (altre opzioni verranno aggiunte in una versione futura).
+Il valore predefinito è stato modificato da 0 (nessuna restrizione) a 1 (limita alla subnet).
 
-L'opzione 1 (Subnet mask) si applica sia alla Modalità download LAN (1) che Gruppo (2).</string>
-      <string id="RestrictPeerSelectionBy_None">Nessuno</string>
+Queste opzioni si applicano alla modalità download LAN (1) e gruppo (2).</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Subnet</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Individuazione locale</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Imposta l'orario di lavoro per limitare la larghezza di banda del download in background</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Specifica la larghezza di banda massima per il download in background utilizzata dall'ottimizzazione recapito fuori dall'orario di lavoro per tutte le attività di download simultanee come percentuale della larghezza di banda di download disponibile.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Imposta l'orario di lavoro per limitare la larghezza di banda per il download in primo piano</string>
@@ -304,7 +305,7 @@ L'opzione 1 (Subnet mask) si applica sia alla Modalità download LAN (1) che Gru
         <text>Il valore predefinito è 0 (nessun ritardo)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Limita la selezione peer per:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Limita la selezione peer per:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

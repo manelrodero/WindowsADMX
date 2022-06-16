@@ -99,6 +99,36 @@
 
 如果在设备上应用此组策略对象时某个应用处于打开状态，则员工必须重新启动该应用或设备才能将策略更改应用到该应用。
       </string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">允许 Windows 应用拍摄各种窗口或显示的屏幕截图</string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">此策略设置指定 Windows 应用是否能够拍摄各种窗口或显示的屏幕截图。
+
+你可以为所有应用指定默认设置，也可以通过指定程序包系列名称按应用设置。可以通过使用 Get-AppPackage Windows PowerShell cmdlet 来获取应用的程序包系列名称。按应用设置将覆盖默认设置。
+
+如果你选择“由用户控制”选项，则你组织中的员工可以在设备上使用“设置”&gt;“隐私”来决定 Windows 应用是否能够拍摄各种窗口或显示的屏幕截图。
+
+如果你选择“强制允许”选项，则将允许 Windows 应用拍摄各种窗口或显示的屏幕截图，并且你组织中的员工无法更改此项设置。
+
+如果你选择“强制拒绝”选项，则不允许 Windows 应用拍摄各种窗口或显示的屏幕截图，并且你组织中的员工无法更改此项设置。
+
+如果禁用或未配置此策略设置，你组织中的员工可以在设备上使用“设置”&gt;“隐私”来决定 Windows 应用是否能够拍摄各种窗口或显示的屏幕截图。
+
+如果在设备上应用此组策略对象时某个应用处于打开状态，则员工必须重新启动该应用或设备才能将策略更改应用到该应用。
+      </string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">允许 Windows 应用关闭屏幕截图边框</string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">此策略设置指定 Windows 应用是否能够关闭屏幕截图边框。
+
+你可以为所有应用指定默认设置，也可以通过指定程序包系列名称按应用设置。可以通过使用 Get-AppPackage Windows PowerShell cmdlet 来获取应用的程序包系列名称。按应用设置将覆盖默认设置。
+
+如果你选择“由用户控制”选项，则你组织中的员工可以在设备上使用“设置”&gt;“隐私”来决定 Windows 应用是否能够关闭屏幕截图边框。
+
+如果你选择“强制允许”选项，则将允许 Windows 应用访问日历关闭屏幕截图边框，并且你组织中的员工无法更改此项设置。
+
+如果你选择“强制拒绝”选项，则不允许 Windows 应用关闭屏幕截图边框，并且你组织中的员工无法更改此项设置。
+
+如果禁用或未配置此策略设置，你组织中的员工可以在设备上使用“设置”&gt;“隐私”来决定 Windows 应用是否能够关闭屏幕截图边框。
+
+如果在设备上应用此组策略对象时某个应用处于打开状态，则员工必须重新启动该应用或设备才能将策略更改应用到该应用。
+      </string>
       <string id="LetAppsAccessLocation_Name">允许 Windows 应用访问位置</string>
       <string id="LetAppsAccessLocation_Explain">此策略设置指定 Windows 应用是否能够访问位置。
 
@@ -392,6 +422,24 @@
         <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
+        <text>由用户控制这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
+        <text>强制允许这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
+        <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
+        <text>由用户控制这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
+        <text>强制允许这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
+        <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
         <text>由用户控制这些特定应用(使用程序包系列名称):</text>
@@ -486,9 +534,9 @@
         <dropdownList refId="LetAppsRunInBackground_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
         <text>由用户控制这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsRunInBackground_UserInControlOfTheseApps_List"/>
-        <text>强制允许这些特定应用(使用程序包系列名称):</text>
+        <text>强制允许这些特定应用(使用包系列名称):</text>
         <multiTextBox refId="LetAppsRunInBackground_ForceAllowTheseApps_List"/>
-        <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
+        <text>强制拒绝这些特定应用(使用包系列名称):</text>
         <multiTextBox refId="LetAppsRunInBackground_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsGetDiagnosticInfo">
@@ -504,9 +552,9 @@
         <dropdownList refId="LetAppsAccessGazeInput_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
         <text>由用户控制这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_UserInControlOfTheseApps_List"/>
-        <text>强制允许这些特定应用(使用包系列名称):</text>
+        <text>强制允许这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
-        <text>强制拒绝这些特定应用(使用包系列名称):</text>
+        <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsActivateWithVoice">

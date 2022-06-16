@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivirus Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusions</string>
+    <string id="DeviceControl">Contrôle de périphérique</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Réduction de la vulnérabilité aux attaques</string>
     <string id="ExploitGuard_ControlledFolderAccess">Dispositif d’accès contrôlé aux dossiers</string>
@@ -29,6 +30,28 @@ Si vous activez ou ne configurez pas ce paramètre, le service anti-programme ma
 
 Si vous désactivez ce paramètre, le service anti-programme malveillant est chargé comme une tâche de priorité basse.</string>
 
+    <string id="MeteredConnectionUpdates">Permet à l’antivirus Microsoft Defender de mettre à jour et de communiquer via une connexion limitée.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Désactivé (par défaut) : 
+    Les mises à jour et les communications ne sont pas autorisées sur les connexions limitées.
+
+Actives 
+    Autoriser la mise à jour des appareils gérés via des connexions limitées. Des frais de données peuvent s’appliquer.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Ces paramètres contrôlent si la protection du réseau est autorisée à être configurée en mode de blocage ou d’audit sur Windows Server.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Désactivé (par défaut) : 
+    Si elle n’est pas configurée ou est désactivée, la protection du réseau n’est pas autorisée à être configurée en mode de blocage ou d’audit sur Windows Server.
+
+Actives 
+    Si cette option est activée, les administrateurs peuvent contrôler si la protection du réseau est autorisée à être configurée en mode de blocage ou d’audit sur Windows Server.
+    Notez que cette configuration dépend de la configuration de EnableNetworkProtection. Si cette configuration est fausse, EnableNetworkProtection sera ignoré, sinon la protection du réseau démarrera sur Windows Server en fonction de la valeur de EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Ce paramètre contrôle le traitement du datagramme pour la protection du réseau.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Activé (par défaut) : 
+    Si elle n’est pas configurée ou est désactivée, le traitement des datagrammes est activé pour la protection du réseau.
+
+Actives 
+    Si cette option est activée, le traitement des datagrammes est désactivé pour la protection du réseau.</string>
     <string id="DisableAutoExclusions">Désactiver les exclusions automatiques</string>
     <string id="DisableAutoExclusions_Explain">
         Autorise un administrateur à spécifier si la fonctionnalité Exclusions automatiques pour les serveurs SKU doit être désactivée.
@@ -60,11 +83,11 @@ Si vous désactivez ce paramètre, le service anti-programme malveillant est cha
 
     L’activation ou la désactivation de cette stratégie peut entraîner un comportement inattendu ou non pris en charge. Nous vous recommandons de ne pas configurer ce paramètre de stratégie.</string>
     <string id="DisableLocalAdminMerge">Configurer le comportement de fusion de l’administrateur local pour les listes</string>
-    <string id="DisableLocalAdminMerge_Explain">Ce paramètre de stratégie détermine si les paramètres de listes complexes configurés par un administrateur local sont fusionnés ou non avec les paramètres de stratégie de groupe. Ce paramètre s’applique aux listes telles que les menaces et les exclusions.
+    <string id="DisableLocalAdminMerge_Explain">Ce paramètre de politique contrôle si les paramètres de liste complexes configurés par un administrateur local sont fusionnés ou non avec les paramètres de politique de groupe. Ce paramètre s'applique aux listes telles que les menaces et les exclusions. 
 
-Si vous activez ou ne configurez pas ce paramètre, les éléments uniques définis dans les paramètres de stratégie de groupe et des préférences configurés par l’administrateur local sont fusionnés dans la stratégie en cours produite. En cas de conflits, les paramètres de stratégie de groupe remplacent les paramètres des préférences.
+     Si vous désactivez ou ne configurez pas ce paramètre, les éléments uniques définis dans la stratégie de groupe et dans les paramètres de préférence configurés par l'administrateur local seront fusionnés dans la stratégie effective résultante. En cas de conflit, les paramètres de la politique de groupe prévaudront sur les paramètres de préférence.
 
-Si vous désactivez ce paramètre, seuls les éléments définis par la stratégie de groupe sont utilisés dans la stratégie en cours produite. Les paramètres de stratégie de groupe remplacent les paramètres des préférences configurés par l’administrateur local.</string>
+     Si vous activez ce paramètre, seuls les éléments définis par la politique de groupe seront utilisés dans la politique effective résultante. Les paramètres de la stratégie de groupe remplaceront les paramètres de préférence configurés par l'administrateur local.</string>
     <string id="DisableRoutinelyTakingAction">Désactiver la mise à jour de routine</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Ce paramètre de stratégie vous permet de déterminer si l’antivirus Microsoft Defender intervient automatiquement sur toutes les menaces détectées. L’action à entreprendre sur une menace particulière est déterminée par la combinaison de l’action définie par la stratégie, de l’action définie par l’utilisateur et de l’action définie par la signature.
@@ -109,11 +132,15 @@ Si vous désactivez ou ne configurez pas ce paramètre, le serveur proxy n’est
       Si vous désactivez ce paramètre ou que vous ne le configurez pas, le proxy ignore cette étape de remplacement en respectant l’ordre spécifié ci-dessus.
     </string>
     <string id="RandomizeScheduleTaskTimes">Rendre aléatoires les heures des tâches planifiées</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Ce paramètre de stratégie vous permet d’activer ou de désactiver la randomisation de l’heure de début de l’analyse planifiée et de l’heure de début de la mise à jour de la veille de sécurité planifiée. Ce paramètre permet de répartir l’impact de l’analyse sur les ressources. Par exemple, il peut être utilisé sur les ordinateurs virtuels invités qui partagent un hôte, pour empêcher plusieurs d’entre eux d’entreprendre une opération sollicitant le disque de manière intensive en même temps.
+    <string id="RandomizeScheduleTaskTimes_Explain">Ce paramètre de stratégie vous permet de configurer l’analyse prévue et la mise à jour prévue du service d’informations de sécurité, dont la fenêtre d’heure de début est en heures.
 
-Si vous activez ce paramètre ou que vous ne le configurez pas, les tâches planifiées débutent à une heure aléatoire située dans un intervalle de 30 minutes avant et après l’heure de début indiquée.
+    Si vous désactivez ou ne configurez pas ce paramètre, les tâches programmées commencent à un horaire aléatoire dans un délai de 4 heures après l’heure spécifiée dans le Planificateur de tâches.
+    Si vous activez ce paramètre, vous pouvez élargir ou affiner cette période de randomisation. Spécifier une fenêtre de randomisation de 1 à 23 heures.</string>
+    <string id="SchedulerRandomizationTime">Fenêtre Configurer la randomisation des heures des tâches planifiées</string>
+    <string id="SchedulerRandomizationTime_Explain">Ce paramètre de stratégie vous permet de configurer l’heure de début de l’analyse prévue et la fenêtre de démarrage de la mise à jour prévue du service d’informations de sécurité en heures.
 
-Si vous désactivez ce paramètre, les tâches planifiées débutent à l’heure de début indiquée.</string>
+    Si vous désactivez ou ne configurez pas ce paramètre, les tâches programmées commencent à un intervalle aléatoire de 4 heures après l’heure de début spécifiée.
+    Si vous activez ce paramètre, vous devez sélectionner une fenêtre de randomisation en quelques heures. L’intervalle de fenêtre de randomisation possible est entre 1 et 23 heures.</string>
     <string id="ServiceKeepAlive">Autoriser le service anti-programme malveillant à rester constamment actif</string>
     <string id="ServiceKeepAlive_Explain">Ce paramètre de stratégie vous permet de configurer si le service anti-programme malveillant reste ou non actif lorsque la veille de sécurité anti-espions et la veille de sécurité antivirus sont désactivées. Il est recommandé que ce paramètre reste désactivé.
 
@@ -135,12 +162,20 @@ Désactivé :
 Non configuré :
         Identique à Désactivé.
     </string>
+    <string id="SupportLogLocation">Définir le chemin d’accès au répertoire de copie des fichiers journaux de support</string>
+    <string id="SupportLogLocation_Explain">Ce paramètre de stratégie vous permet de configurer le chemin d’accès au répertoire dans lequel les fichiers journaux du support seront copiés. La valeur de ce paramètre doit être un chemin d’accès de répertoire valide.
+
+Si vous activez ce paramètre, les fichiers journaux du support sont copiés dans le chemin d’accès au Journal de support spécifié.
+
+Si vous désactivez ce paramètre ou ne le configurez pas, les fichiers journaux de support ne sont copiés à aucun emplacement.</string>
     <string id="Exclusions_Extensions">Exclusions d’extensions</string>
     <string id="Exclusions_Extensions_Explain">Ce paramètre de stratégie vous permet de spécifier une liste de types de fichiers à exclure des analyses planifiées, personnalisées et en temps réel. Les types de fichiers doivent être ajoutés sous Options pour ce paramètre. Chaque entrée doit être répertoriée en tant que paire nom/valeur, où le nom doit être une représentation sous forme de chaîne de l’extension de type de fichier (par exemple, « obj » ou « lib »). La valeur n’est pas utilisée et il est recommandé qu’elle soit égale à 0.</string>
     <string id="Exclusions_Paths">Exclusions de chemins d’accès</string>
     <string id="Exclusions_Paths_Explain">Ce paramètre de stratégie vous permet de désactiver les analyses planifiées et en temps réel pour les fichiers sous les chemins d’accès spécifiés ou pour les noms de ressources complets spécifiés. Les chemins d’accès doivent être ajoutés sous Options pour ce paramètre. Chaque entrée doit être répertoriée en tant que paire nom/valeur, où le nom doit être une représentation sous forme de chaîne d’un chemin d’accès ou d’un nom de ressource complet. Par exemple, un chemin d’accès peut être défini en tant que « c:\Windows » pour exclure tous les fichiers de ce répertoire. Un nom de ressource complet peut être défini en tant que « C:\Windows\App.exe ». La valeur n’est pas utilisée et il est recommandé qu’elle soit égale à 0.</string>
     <string id="Exclusions_Processes">Exclusions de processus</string>
-    <string id="Exclusions_Processes_Explain">Ce paramètre de stratégie vous permet de désactiver les analyses planifiées et en temps réel pour tout fichier ouvert par l’un des processus spécifiés. Le processus lui-même n’est pas exclu. Pour exclure le processus, utilisez l’exclusion de chemin d’accès. Les processus doivent être ajoutés sous Options pour ce paramètre. Chaque entrée doit être répertoriée en tant que paire nom/valeur, où le nom doit être une représentation sous forme de chaîne du chemin d’accès à l’image du processus. Notez que seuls les exécutables peuvent être exclus. Par exemple, un processus peut être défini en tant que « c:\windows\app.exe ». La valeur n’est pas utilisée et il est recommandé qu’elle soit égale à 0.</string>
+    <string id="Exclusions_Processes_Explain">Ce paramètre de stratégie vous permet de désactiver les analyses en temps réel pour tout fichier ouvert par l’un des processus spécifiés. Cette stratégie ne s’applique pas aux analyses planifiées. Le processus lui-même n’est pas exclu. Pour exclure le processus, utilisez l’exclusion de chemin d’accès. Les processus doivent être ajoutés sous Options pour ce paramètre. Chaque entrée doit être répertoriée en tant que paire nom/valeur, où le nom doit être une représentation sous forme de chaîne du chemin d’accès à l’image du processus. Notez que seuls les exécutables peuvent être exclus. Par exemple, un processus peut être défini en tant que « c:\windows\app.exe ». La valeur n’est pas utilisée et il est recommandé qu’elle soit égale à 0.</string>
+    <string id="Exclusions_IpAddresses">Exclusions de l’Adresse Ip</string>
+    <string id="Exclusions_IpAddresses_Explain">Permet à un administrateur de désactiver explicitement l’inspection du paquet réseau effectuée par wdnisdrv sur un ensemble d’adresses IP particulier.</string>
     <string id="Nis_DisableProtocolRecognition">Activer la reconnaissance de protocole</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Ce paramètre de stratégie vous permet de configurer la reconnaissance de protocole pour la protection réseau contre les attaques des vulnérabilités connues.
 
@@ -167,6 +202,14 @@ Si vous désactivez ou ne configurez pas ce paramètre, la stratégie de groupe 
 Si vous activez ce paramètre, les éléments sont supprimés du dossier Quarantaine après le nombre de jours spécifié.
 
 Si vous désactivez ou ne configurez pas ce paramètre, les éléments sont conservés indéfiniment dans le dossier Quarantaine et ne sont pas automatiquement supprimés.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Activer l’analyse de script</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Ce paramètre de stratégie vous permet de configurer l’analyse des scripts.
+
+Si vous activez ou ne configurez pas ce paramètre, l’analyse des scripts est activée.
+
+Si vous désactivez ce paramètre, l’analyse des scripts est désactivée.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Activer l’analyse du comportement</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Ce paramètre de stratégie vous permet de configurer l’analyse du comportement.
 
@@ -400,12 +443,6 @@ Si vous désactivez ou ne configurez pas ce paramètre, l’analyse du courrier 
 Si vous activez ou ne configurez pas ce paramètre, la détection heuristique est activée.
 
 Si vous désactivez ce paramètre, la détection heuristique est désactivée.</string>
-    <string id="Scan_DisablePackedExeScanning">Analyser les fichiers exécutables compressés</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Ce paramètre de stratégie vous permet de configurer l’analyse des fichiers exécutables compressés. Il est recommandé que ce type d’analyse reste activé.
-
-Si vous activez ou ne configurez pas ce paramètre, les fichiers exécutables compressés sont analysés.
-
-Si vous désactivez ce paramètre, les fichiers exécutables compressés ne sont pas analysés.</string>
     <string id="Scan_DisableRemovableDriveScanning">Analyser les lecteurs amovibles</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Ce paramètre de stratégie vous permet de définir s’il convient ou non de rechercher des logiciels malveillants et programmes indésirables dans le contenu des lecteurs amovibles (lecteurs flash USB, par exemple) lors d’une analyse complète.
 
@@ -473,11 +510,11 @@ Si vous activez ce paramètre, les éléments sont supprimés du dossier de l’
 
 Si vous désactivez ou ne configurez pas ce paramètre, les éléments sont conservés dans le dossier de l’historique de l’analyse pendant le nombre de jours par défaut.</string>
     <string id="Scan_QuickScanInterval">Spécifier l’intervalle d’exécution des analyses rapides par jour</string>
-    <string id="Scan_QuickScanInterval_Explain">Ce paramètre de stratégie vous permet de spécifier un intervalle en fonction duquel exécuter une analyse rapide. La valeur de l’heure est représentée sous la forme du nombre d’heures entre les analyses rapides. Les valeurs valides sont comprises entre 1 (toutes les heures) et 24 (une fois par jour). Si la valeur est zéro, les analyses rapides avec intervalle n’ont pas lieu. Par défaut, ce paramètre a la valeur 0.
+    <string id="Scan_QuickScanInterval_Explain">Ce paramètre de stratégie vous permet de spécifier un intervalle pour effectuer une analyse rapide. La valeur de l’heure est représentée sous la forme du nombre d’heures entre les analyses rapides. Les valeurs valides sont comprises entre 1 (toutes les heures) et 24 (une fois par jour). Si cette valeur est définie sur zéro, les analyses rapides d’intervalles n’auront pas lieu. Par défaut, ce paramètre est défini sur 0.
 
 Si vous activez ce paramètre, une analyse rapide est exécutée selon l’intervalle spécifié.
 
-Si vous désactivez ou ne configurez pas ce paramètre, une analyse rapide est exécutée à une heure par défaut.</string>
+Si vous désactivez ou ne configurez pas ce paramètre, l’analyse rapide contrôlée par cette configuration ne sera pas exécutée.</string>
     <string id="Scan_ScanOnlyIfIdle">Lancer l’analyse planifiée uniquement lorsque l’ordinateur n’est pas en cours d’utilisation</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Ce paramètre de stratégie vous permet de configurer le lancement d’analyses planifiées uniquement lorsque votre ordinateur n’est pas en cours d’utilisation.
 
@@ -521,11 +558,11 @@ Si vous désactivez ou ne configurez pas ce paramètre, une analyse planifiée e
     <string id="Scan_ScheduleDay_7">Vendredi</string>
     <string id="Scan_ScheduleDay_8">Samedi</string>
     <string id="Scan_ScheduleQuickScantime">Spécifier l’heure d’une analyse rapide quotidienne</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Ce paramètre de stratégie vous permet de spécifier l’heure de la journée à laquelle exécuter une analyse rapide quotidienne. La valeur de l’heure est représentée sous la forme du nombre de minutes après minuit (00:00).  Par exemple, 120 (0x78) est équivalent à 02:00. Par défaut, ce paramètre a la valeur d’heure 02:00. La planification est basée sur l’heure locale de l’ordinateur où l’analyse est exécutée.
+    <string id="Scan_ScheduleQuickScantime_Explain">Ce paramètre de stratégie vous permet de spécifier l’heure de la journée à laquelle effectuer une analyse rapide quotidienne. La valeur de l’heure est représentée sous la forme d’un nombre de minutes ayant dépassé minuit (00:00).  Par exemple, 120 (0x78) est équivalent à 02:00 AM. Par défaut, ce paramètre est défini sur désactivé. La planification est basée sur l’heure locale de l’ordinateur sur lequel l’analyse est en cours d’exécution.
 
 Si vous activez ce paramètre, une analyse rapide quotidienne est exécutée à l’heure de la journée spécifiée.
 
-Si vous désactivez ou ne configurez pas ce paramètre, une analyse rapide quotidienne est exécutée à une heure par défaut.</string>
+Si vous désactivez ou ne configurez pas ce paramètre, l’analyse rapide quotidienne contrôlée par cette configuration ne sera pas exécutée.</string>
     <string id="Scan_ScheduleTime">Spécifier l’heure de la journée à laquelle exécuter une analyse planifiée</string>
     <string id="Scan_ScheduleTime_Explain">Ce paramètre de stratégie vous permet de spécifier l’heure de la journée à laquelle exécuter une analyse planifiée. La valeur de l’heure est représentée sous la forme du nombre de minutes après minuit (00:00).  Par exemple, 120 (0x78) est équivalent à 02:00. Par défaut, ce paramètre a la valeur d’heure 02:00. La planification est basée sur l’heure locale de l’ordinateur où l’analyse est exécutée.
 
@@ -548,17 +585,17 @@ Si vous désactivez ou ne configurez pas ce paramètre, une analyse planifiée e
         Si vous désactivez ou ne configurez pas ce paramètre, aucune modification n'est apportée à la priorité de l'UC pour les analyses planifiées.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Définir le nombre de jours avant que la veille de sécurité des logiciels espions soit considérée comme périmée</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que la veille de sécurité des logiciels espions soit considérée comme périmée. Si la veille de sécurité est considérée comme périmée, cet état peut déclencher plusieurs actions supplémentaires, y compris le rétablissement d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est égale à 14 jours.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que la veille de sécurité des logiciels espions soit considérée comme obsolète. Si la veille de sécurité est considérée comme obsolète, cet état peut déclencher plusieurs actions supplémentaires, notamment le rétablissement d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est égale à 7 jours.
 
-Si vous activez ce paramètre, la veille de sécurité des logiciels espions est considérée comme périmée une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
+    Si vous activez ce paramètre, la veille de sécurité des logiciels espions est considérée comme obsolète une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
 
-Si vous désactivez ce paramètre ou que vous ne le configurez pas, la veille de sécurité des logiciels espions est considérée comme périmée une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
+    Si vous désactivez ce paramètre ou que vous ne le configurez pas, la veille de sécurité des logiciels espions est considérée comme obsolète une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
     <string id="SignatureUpdate_AVSignatureDue">Définir le nombre de jours avant que la veille de sécurité des virus soit considérée comme périmée</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que la veille de sécurité de virus soit considéré comme périmée. Si la veille de sécurité est considérée comme périmée, cet état peut déclencher plusieurs actions supplémentaires, y compris le rétablissement d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est égale à 14 jours.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que la veille de sécurité antivirus ne soit considérée comme périmée. Si la veille de sécurité n’est pas à jour, cet État peut déclencher plusieurs actions supplémentaires, notamment la restauration d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est définie sur 7 jours.
 
-Si vous activez ce paramètre, la veille de sécurité de virus est considérée comme périmée une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
+Si vous activez ce paramètre, la veille de sécurité antivirus est considérée comme périmée une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
 
-Si vous désactivez ce paramètre ou que vous ne le configurez pas, la veille de sécurité de virus est considérée comme périmée une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
+Si vous désactivez ce paramètre ou ne le configurez pas, la veille de sécurité de virus est considérée comme périmée une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Définir les partages de fichiers pour le téléchargement des mises à jour de la veille de sécurité</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Ce paramètre de stratégie vous permet de configurer des sources de partages de fichiers UNC pour le téléchargement des mises à jour de la veille de sécurité. Les sources sont contactées dans l’ordre spécifié. La valeur de ce paramètre doit être entrée sous la forme d’une chaîne séparée par des barres verticales énumérant les sources des mises à jour de la veille de sécurité. Par exemple : « {\\unc1 | \\unc2 } ». La liste est vide par défaut.
 
@@ -847,36 +884,43 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     </string>
     <string id="ExploitGuard_ASR_Rules">Configurer les règles de réduction de la vulnérabilité aux attaques</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Définissez l'état de chaque règle de réduction de la vulnérabilité aux attaques.
+    Définit l’état de chaque règle de Réduction de la Surface d’Attaque (ASR).
 
-        Après l'activation de ce paramètre, vous pouvez définir chaque règle comme suit dans la section Options :
-        - Refuser : la règle sera appliquée
-        - Audit : la règle sera enregistrée dans le cas où elle entraînerait habituellement un événement (la règle ne sera cependant pas appliquée)
-        - Désactivé : la règle ne sera pas appliquée
+    Après avoir activé ce paramètre, vous pouvez définir les règles suivantes dans la section Options :
+    -Bloc : la règle est appliquée
+    -Mode audit : si la règle entraîne normalement un événement, celle-ci est enregistrée (bien que la règle ne soit pas réellement appliquée)
+    Inactif : la règle ne sera pas appliquée
+    -Non configuré : la règle est activée avec les valeurs par défaut
+    -Avertir : la règle est appliquée et l’utilisateur final peut ignorer le bloc
 
-        Activé :
-        Spécifiez l'état de chaque règle de réduction de la vulnérabilité aux attaques dans la section Options de ce paramètre.
-        Saisissez chaque règle sur une nouvelle ligne en tant que paire nom-valeur :
-        - colonne Nom : saisissez un ID valide de règle de réduction de la vulnérabilité aux attaques
-        - colonne Valeur : saisissez l'ID de l'état qui lie l'état que vous souhaitez spécifier pour la règle associée
+    À moins que la règle ASR ne soit désactivée , un sous-exemple d’événements d’audit est collecté pour les règles de récupération automatique des messages dont la valeur n’est pas configurée.
 
-        Les ID de l'état suivants sont autorisés dans la colonne Valeur :
-        - 1 (Refuser)
-        - 0 (Désactivé)
-        - 2 (Audit)
+    Activé :
+    Spécifier l’état de chaque règle ASR dans la section Options pour ce paramètre.
+    Entrez chaque règle sur une nouvelle ligne sous forme de paire nom-valeur :
+    -Nom colonne : entrez un ID de règle ASR valide
+    Colonne valeur : entrez l’ID d’État qui correspond à l’état que vous voulez spécifier pour la règle associée
+
+    Les ID d’état suivants sont autorisés dans la colonne valeur :
+    -1 (bloquer)
+    -0 (désactivée)
+    -2 (audit)
+    -5 (non configuré)
+    -6 (avertir)
+
     
-    Example:
+    Exemple :
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
     Désactivé :
-        Aucune règle de réduction de la vulnérabilité aux attaques ne sera configurée.
+    Aucune règle ASR n’est configurée.
 
-        Non configuré :
-        Identique à Désactivé.
+    Non configuré :
+    Même que désactivé.
 
-        Vous pouvez exclure des dossiers ou fichiers et des ressources dans le paramètre de stratégie de groupe Exclure des dossiers ou fichiers et des ressources.
+    Vous pouvez exclure des dossiers ou des fichiers dans le paramètre de stratégie de stratégie « exclure les fichiers et les chemins d’accès des règles de Réduction de la Surface d’Attaque ».
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Configurer le contrôle d'accès aux dossiers</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
 
     L'antivirus Microsoft Defender détermine automatiquement les applications qui peuvent être approuvées. Vous pouvez ajouter des applications approuvées dans le paramètre de stratégie de groupe Configurer les applications autorisées.
     </string>
+    <string id="DeviceControl_PolicyGroups">Définir les groupes de stratégie de contrôle des appareils</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Veuillez suivre le schéma XML des groupes de stratégie de contrôle des appareils pour renseigner les données des groupes de stratégies.
+    </string>
+    <string id="DeviceControl_PolicyRules">Définir les règles de stratégie de contrôle des appareils</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Veuillez suivre le schéma XML des règles de stratégie de contrôle de l’appareil pour renseigner les données de règles de stratégie.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
         <label>Définir un serveur proxy pour la connexion au réseau</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Définir le chemin d’accès au répertoire de copie des fichiers journaux de support</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Exclusions d’extensions</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Exclusions de processus</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">Exclusions de l’Adresse IP</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Spécifier d’autres jeux de définitions pour l’inspection du trafic réseau</listBox>
@@ -1071,10 +1131,10 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Spécifier l’heure de la journée à laquelle exécuter une analyse planifiée</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Définir le nombre de jours avant que la veille de sécurité des logiciels espions soit considérée comme périmée</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Définir le nombre de jours avant que la veille de sécurité des logiciels espions soit considérée comme périmée</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Définir le nombre de jours avant que la veille de sécurité des virus soit considérée comme périmée</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Définir le nombre de jours avant que la veille de sécurité des virus soit considérée comme périmée</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Définir les groupes de stratégie ici</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Définir les règles de stratégie ici</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Spécifier la fenêtre de randomisation du planificateur en heures.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

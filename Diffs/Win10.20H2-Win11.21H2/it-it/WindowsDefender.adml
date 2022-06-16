@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Esclusioni</string>
+    <string id="DeviceControl">Controllo dispositivo</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Riduzione superficie di attacco</string>
     <string id="ExploitGuard_ControlledFolderAccess">Accesso alle cartelle controllato</string>
@@ -29,6 +30,28 @@ Se si abilita o non si configura questa impostazione dei criteri, il servizio an
 
 Se si disabilita questa impostazione dei criteri, il servizio antimalware verrà caricato come attività con priorità bassa.</string>
 
+    <string id="MeteredConnectionUpdates">Consente a Antivirus Microsoft Defender di aggiornare e comunicare tramite una connessione a consumo.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Disabilitato (impostazione predefinita): 
+    Non sono consentiti aggiornamenti e comunicazioni con connessioni a consumo.
+
+Abilitato 
+    Consenti l'aggiornamento dei dispositivi gestiti tramite connessioni a consumo. Potrebbero essere applicate tariffe dati.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Questa impostazione determina se è consentita la configurazione di protezione rete nella modalità di blocco o controllo in Windows Server.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Disabilitato (impostazione predefinita): 
+    Se non configurato o disabilitato, la protezione della rete non può essere configurata nella modalità di blocco o controllo in Windows Server.
+
+Abilitato 
+    Se abilitato, gli amministratori possono controllare se è consentito configurare protezione rete nella modalità di blocco o controllo in Windows Server.
+    Nota. questa configurazione dipende dalla configurazione EnableNetworkProtection. Se questa configurazione è falsa, EnableNetworkProtection verrà ignorato. in caso contrario, la protezione della rete verrà avviata su Windows Server, a seconda del valore di EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Questa impostazione controlla l'elaborazione dei datagrammi per la protezione della rete.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Abilitato (impostazione predefinita): 
+    Se non è configurato o disabilitato, l'elaborazione dei datagrammi verrà abilitata per la protezione della rete.
+
+Abilitato 
+    Se abilitato, l'elaborazione dei datagrammi verrà disabilitata per la protezione della rete.</string>
     <string id="DisableAutoExclusions">Disattiva le esclusioni automatiche</string>
     <string id="DisableAutoExclusions_Explain">
         Consente all'amministratore di specificare se la funzionalità delle esclusioni automatiche per le SKU server deve essere disabilitata.
@@ -62,9 +85,9 @@ Se si disabilita questa impostazione dei criteri, il servizio antimalware verrà
     <string id="DisableLocalAdminMerge">Configura comportamento di unione per elenchi di amministratori locali</string>
     <string id="DisableLocalAdminMerge_Explain">Questa impostazione dei criteri determina se le impostazioni di elenco complesse configurate da un amministratore locale vengono o meno unite con le impostazioni di Criteri di gruppo. Questa impostazione dei criteri si applica a elenchi come quelli delle minacce e delle esclusioni.
 
-Se si abilita o non si configura questa impostazione dei criteri, gli elementi univoci definiti in Criteri di gruppo e nelle impostazioni delle preferenze configurate dall'amministratore locale verranno uniti nei criteri validi risultanti. In caso di conflitti, le impostazioni di Criteri di gruppo saranno prioritarie rispetto alle impostazioni delle preferenze.
+    Se si disabilita o non si configura questa impostazione dei criteri, gli elementi univoci definiti in Criteri di gruppo e nelle impostazioni delle preferenze configurate dall'amministratore locale verranno uniti nei criteri validi risultanti. In caso di conflitti, le impostazioni di Criteri di gruppo saranno prioritarie rispetto alle impostazioni delle preferenze.
 
-Se si disabilita questa impostazione dei criteri, nei criteri validi risultanti verranno utilizzati solo gli elementi definiti da Criteri di gruppo. Le impostazioni di Criteri di gruppo saranno prioritarie rispetto alle impostazioni delle preferenze configurate dall'amministratore locale.</string>
+    Se si disabilita questa impostazione dei criteri, nei criteri validi risultanti verranno utilizzati solo gli elementi definiti da Criteri di gruppo. Le impostazioni di Criteri di gruppo saranno prioritarie rispetto alle impostazioni delle preferenze configurate dall'amministratore locale.</string>
     <string id="DisableRoutinelyTakingAction">Disattiva monitoraggio e aggiornamento di routine</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Questa impostazione di criteri consente di specificare se Microsoft Defender Antivirus interverrà automaticamente su tutte le minacce rilevate. L'intervento da eseguire per una particolare minaccia sarà determinato dalla combinazione dell'azione definita dal criterio, dell'azione definita dall'utente e dell'azione definita dalla firma.
@@ -109,11 +132,15 @@ Se si disabilita o non si configura questa impostazione dei criteri, il server p
       Se disabiliti o non configuri questa impostazione, il proxy ignorerà questo passaggio di fallback, in base all'ordine specificato in precedenza.
     </string>
     <string id="RandomizeScheduleTaskTimes">Utilizza ore casuali per le attività pianificate</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Questa impostazione di criteri consente di abilitare o disabilitare la scelta casuale dell'ora di inizio per le analisi pianificate e dell'ora di inizio per gli aggiornamenti di intelligence sulla sicurezza pianificati. Questa impostazione viene utilizzata per distribuire l'impatto a livello di risorse delle operazioni di analisi. Potrebbe essere utilizzata, ad esempio, nelle macchine virtuali guest che condividono un host, per evitare che più macchine virtuali guest eseguano contemporaneamente un'operazione con utilizzo elevato del disco.
+    <string id="RandomizeScheduleTaskTimes_Explain">Questa impostazione dei criteri consente di configurare l'intervallo di tempo per l'inizio dell'analisi pianificata e dell'aggiornamento pianificato dell'intelligence sulla sicurezza.
 
-    Se abiliti o non configuri questa impostazione, le attività pianificate inizieranno a un'ora casuale, entro un intervallo di 30 minuti prima o dopo l'ora di inizio specificata.
+    Se disabiliti o non configuri questa impostazione, le attività pianificate inizieranno ad un orario casuale entro 4 ore dall'orario specificato in Utilità di pianificazione.
+    Se abiliti questa impostazione, puoi ampliare o restringere questo intervallo di tempo per l'avvio casuale. Specifica un intervallo di tempo per l'avvio casuale tra 1 e 23 ore.</string>
+    <string id="SchedulerRandomizationTime">Configura la finestra di assegnazione casuale per l'attività pianificata</string>
+    <string id="SchedulerRandomizationTime_Explain">Questa impostazione dei criteri consente di configurare l'ora di inizio dell'analisi pianificata e l’intervallo di tempo per l’inizio dell’aggiornamento pianificato dell’intelligence sulla sicurezza.
 
-    Se disabiliti questa impostazione, le attività pianificate inizieranno all'ora specificata.</string>
+    Se disabiliti o non configuri questa impostazione, le attività pianificate inizieranno ad un orario casuale in un intervallo di 4 ore dopo l'ora di inizio specificata.
+    Se abiliti questa impostazione, devi scegliere un intervallo di tempo per l’avvio casuale. L'intervallo di tempo consentito per l’avvio casuale è compreso tra 1 e 23 ore.</string>
     <string id="ServiceKeepAlive">Servizio antimalware sempre in esecuzione</string>
     <string id="ServiceKeepAlive_Explain">Questa impostazione di criteri consente di definire se il servizio antimalware rimane in esecuzione quando viene disabilitata l'intelligence sulla sicurezza antivirus e antispyware. È consigliabile mantenere disabilitata questa impostazione.
 
@@ -135,12 +162,20 @@ Disabilato:
 Non configurato:
         come Disabilitato.
     </string>
+    <string id="SupportLogLocation">Definire il percorso della directory per copiare i file di log del supporto</string>
+    <string id="SupportLogLocation_Explain">Questa impostazione dei criteri consente di configurare il percorso di directory in cui verranno copiati i file di registro di supporto. Il valore di questa impostazione deve essere un percorso di directory valido.
+
+Se si abilita questa impostazione, i file di log del supporto verranno copiati nel percorso del registro di supporto specificato.
+
+Se si disabilita o non si configura questa impostazione, il supporto dei file di registro non verrà copiato in nessun percorso.</string>
     <string id="Exclusions_Extensions">Esclusioni di estensioni</string>
     <string id="Exclusions_Extensions_Explain">Questa impostazione dei criteri consente di specificare un elenco di tipi di file da escludere dall'analisi pianificata, personalizzata e in tempo reale. I tipi di file devono essere aggiunti nelle opzioni per questa impostazione dei criteri. Ogni voce deve essere elencata come coppia nome-valore, nella quale il nome deve essere una rappresentazione stringa dell'estensione del tipo di file (ad esempio, "obj" o "lib"). Il valore non viene utilizzato ed è consigliabile impostarlo su 0.</string>
     <string id="Exclusions_Paths">Esclusioni di percorsi</string>
     <string id="Exclusions_Paths_Explain">Questa impostazione dei criteri consente di disabilitare l'analisi pianificata e in tempo reale per i file nei percorsi specificati o per i nomi di risorsa completi specificati. I percorsi devono essere aggiunti nelle opzioni per questa impostazione dei criteri. Ogni voce deve essere elencata come coppia nome-valore, nella quale il nome deve essere una rappresentazione stringa di un percorso o nome di risorsa completo. Si potrebbe definire un percorso come "c:\Windows", ad esempio, per escludere tutti i file in questa directory. Un esempio di nome di risorsa completo potrebbe essere: "C:\Windows\App.exe". Il valore non viene utilizzato ed è consigliabile impostarlo su 0.</string>
     <string id="Exclusions_Processes">Esclusioni di processi</string>
-    <string id="Exclusions_Processes_Explain">Questa impostazione dei criteri consente di disabilitare l'analisi pianificata e in tempo reale per qualsiasi file aperto da qualsiasi processo specificato. Il processo stesso non verrà escluso. Per escludere il processo, utilizzare un'esclusione di percorso. I processi devono essere aggiunti nelle opzioni per questa impostazione dei criteri. Ogni voce deve essere elencata come coppia nome-valore, nella quale il nome deve essere una rappresentazione stringa del percorso dell'immagine del processo. Si noti che è possibile escludere solo file eseguibili. Un esempio di definizione di processo, ad esempio, potrebbe essere "c:\windows\app.exe". Il valore non viene utilizzato ed è consigliabile impostarlo su 0.</string>
+    <string id="Exclusions_Processes_Explain">Questa impostazione dei criteri consente di disabilitare l'analisi in tempo reale per qualsiasi file aperto da uno dei processi specificati. Questo criterio non si applica alle analisi pianificate. Il processo stesso non verrà escluso. Per escludere il processo, utilizzare l'esclusione del percorso. I processi devono essere aggiunti nelle opzioni per questa impostazione. Ogni voce deve essere elencata come coppia nome-valore, in cui il nome deve essere una rappresentazione stringa del percorso dell'immagine del processo. Si noti che solo gli eseguibili possono essere esclusi. È ad esempio possibile definire un processo come: "c:\windows\app.exe". Il valore non è utilizzato ed è consigliabile impostarlo su 0.</string>
+    <string id="Exclusions_IpAddresses">Esclusioni di indirizzi IP</string>
+    <string id="Exclusions_IpAddresses_Explain">Consente a un amministratore di disabilitare esplicitamente l'ispezione dei pacchetti di rete eseguite da wdnisdrv in un determinato set di indirizzi IP.</string>
     <string id="Nis_DisableProtocolRecognition">Attiva riconoscimento protocollo</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Questa impostazione dei criteri consente di configurare il riconoscimento del protocollo per la protezione della rete da exploit di vulnerabilità note.
 
@@ -167,6 +202,14 @@ Se si disabilita o non si configura questa impostazione dei criteri, Criteri di 
 Se si abilita questa impostazione dei criteri, gli elementi verranno rimossi dalla cartella di quarantena dopo il numero di giorni specificato.
 
 Se si disabilita o non si configura questa impostazione dei criteri, gli elementi verranno mantenuti nella cartella di quarantena a tempo indeterminato e non verranno rimossi automaticamente.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Abilita l'analisi degli script</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Questa impostazione dei criteri consente di configurare l'analisi degli script.
+
+Se si Abilita o non si configura questa impostazione, l'analisi degli script verrà abilitata.
+
+Se si disabilita questa impostazione, l'analisi degli script verrà disabilitata.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Attiva monitoraggio comportamento</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Questa impostazione dei criteri consente di configurare il monitoraggio del comportamento.
 
@@ -400,12 +443,6 @@ Se si disabilita o non si configura questa impostazione dei criteri, l'analisi d
 Se si abilita o non si configura questa impostazione dei criteri, l'euristica verrà abilitata.
 
 Se si disabilita questa impostazione dei criteri, l'euristica verrà disabilitata.</string>
-    <string id="Scan_DisablePackedExeScanning">Analizza eseguibili compressi</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Questa impostazione dei criteri consente di configurare l'analisi per gli eseguibili compressi. È consigliabile che questo tipo di analisi rimanga abilitata.
-
-Se si abilita o non si configura questa impostazione dei criteri, gli eseguibili compressi verranno analizzati.
-
-Se si disabilita questa impostazione dei criteri, gli eseguibili compressi non verranno analizzati.</string>
     <string id="Scan_DisableRemovableDriveScanning">Analizza unità rimovibili</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Questa impostazione dei criteri consente di stabilire se analizzare o meno il contenuto delle unità rimovibili, come le unità flash USB, per rilevare software dannoso o indesiderato durante l'esecuzione di un'analisi completa.
 
@@ -477,7 +514,7 @@ Se si disabilita o non si configura questa impostazione dei criteri, gli element
 
 Se si abilita questa impostazione dei criteri, verrà eseguita un'analisi veloce con l'intervallo specificato.
 
-Se si disabilita o non si configura questa impostazione dei criteri, verrà eseguita un'analisi veloce all'ora predefinita.</string>
+Se si disabilita o non si configura questa impostazione, non verrà eseguita un'analisi veloce controllata da questa configurazione.</string>
     <string id="Scan_ScanOnlyIfIdle">Avvia l'analisi pianificata solo se il computer è acceso ma non in uso</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Questa impostazione dei criteri consente di configurare le analisi pianificate in modo che vengano avviate solo se il computer è acceso, ma non in uso.
 
@@ -521,11 +558,11 @@ Se si disabilita o non si configura questa impostazione dei criteri, verrà eseg
     <string id="Scan_ScheduleDay_7">Venerdì</string>
     <string id="Scan_ScheduleDay_8">Sabato</string>
     <string id="Scan_ScheduleQuickScantime">Specifica l'ora per un'analisi veloce giornaliera</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Questa impostazione dei criteri consente di specificare l'ora del giorno per l'esecuzione di un'analisi veloce giornaliera. Il valore dell'ora è rappresentato come numero di minuti dopo la mezzanotte (00.00).  Ad esempio, 120 (0x78) equivale alle 02.00. Per impostazione predefinita, l'impostazione dei criteri è configurata per il valore di ora 02.00. La pianificazione è basata sull'ora locale nel computer in cui viene eseguita l'analisi.
+    <string id="Scan_ScheduleQuickScantime_Explain">Questa impostazione dei criteri consente di specificare l'ora del giorno per l'esecuzione di un'analisi veloce giornaliera. Il valore dell'ora è rappresentato come numero di minuti dopo la mezzanotte (00.00).  Ad esempio, 120 (0x78) equivale alle 02.00. Per impostazione predefinita, questa impostazione è disabilitata. La pianificazione è basata sull'ora locale nel computer in cui viene eseguita l'analisi.
 
 Se si abilita questa impostazione dei criteri, verrà eseguita un'analisi veloce giornaliera all'ora del giorno specificata.
 
-Se si disabilita o non si configura questa impostazione dei criteri, verrà eseguita un'analisi veloce giornaliera all'ora predefinita.</string>
+Se si disabilita o non si configura questa impostazione, non verrà eseguita un'analisi veloce giornaliera controllata da questa configurazione.</string>
     <string id="Scan_ScheduleTime">Specifica ora del giorno per l'esecuzione di un'analisi pianificata</string>
     <string id="Scan_ScheduleTime_Explain">Questa impostazione dei criteri consente di specificare l'ora del giorno per l'esecuzione di un'analisi pianificata. Il valore dell'ora è rappresentato come numero di minuti dopo la mezzanotte (00.00).  Ad esempio, 120 (0x78) equivale alle 02.00. Per impostazione predefinita, l'impostazione dei criteri è configurata per il valore di ora 02.00. La pianificazione è basata sull'ora locale nel computer in cui viene eseguita l'analisi.
 
@@ -548,17 +585,17 @@ Se si disabilita o non si configura questa impostazione dei criteri, verrà eseg
 Se disabiliti o non configuri questa impostazione, non verranno apportate modifiche alla priorità della CPU per le scansioni pianificate.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definisci il numero di giorni dopo i quali l'intelligence sulla sicurezza antispyware viene considerata obsoleta</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Questa impostazione di criteri consente di definire il numero di giorni che devono trascorrere prima che l'intelligence sulla sicurezza antispyware sia considerata non aggiornata. Se si stabilisce che l'intelligence non è aggiornata, questo stato può attivare varie ulteriori azioni, incluso il fallback a un'origine di aggiornamento alternativa o la visualizzazione di un'icona di avviso nell'interfaccia utente. Per impostazione predefinita, il valore è impostato su 14 giorni.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Questa impostazione dei criteri consente di definire il numero di giorni che devono trascorrere prima che l'intelligence sulla sicurezza antispyware sia considerata non aggiornata. Se l'intelligence di sicurezza non è aggiornata, questo stato può attivare diverse azioni aggiuntive, incluso il fallback a un'origine di aggiornamento alternativa o la visualizzazione di un'icona di avviso nell'interfaccia utente. Per impostazione predefinita, il valore è impostato su 7 giorni.
 
-    Se abiliti questa impostazione, l'intelligence sulla sicurezza antispyware verrà considerata non aggiornata una volta trascorso il numero di giorni specificato senza un aggiornamento.
+Se abiliti questa impostazione, l'intelligence sulla sicurezza antispyware verrà considerata non aggiornata una volta trascorso il numero di giorni specificato senza un aggiornamento.
 
-    Se disabiliti o non configuri questa impostazione, l'intelligence sulla sicurezza antispyware verrà considerata non aggiornata una volta trascorso il numero di giorni predefinito senza un aggiornamento.</string>
+Se disabiliti o non configuri questa impostazione, l'intelligence sulla sicurezza antispyware verrà considerata non aggiornata una volta trascorso il numero di giorni predefinito senza un aggiornamento.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definisci il numero di giorni dopo i quali l'intelligence sulla sicurezza antivirus viene considerata non aggiornata</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Questa impostazione di criteri consente di definire il numero di giorni che devono trascorrere prima che l'intelligence sulla sicurezza antivirus sia considerata non aggiornata. Se si stabilisce che l'intelligence non è aggiornata, questo stato può attivare varie ulteriori azioni, incluso il fallback a un'origine di aggiornamento alternativa o la visualizzazione di un'icona di avviso nell'interfaccia utente. Per impostazione predefinita, il valore è impostato su 14 giorni.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Questa impostazione dei criteri consente di definire il numero di giorni che devono trascorrere prima che l'intelligence sulla sicurezza antivirus sia considerata non aggiornata. Se l'intelligence di sicurezza non è aggiornata, questo stato può attivare diverse azioni aggiuntive, incluso il fallback a un'origine di aggiornamento alternativa o la visualizzazione di un'icona di avviso nell'interfaccia utente. Per impostazione predefinita, il valore è impostato su 7 giorni.
 
-    Se abiliti questa impostazione, l'intelligence sulla sicurezza antivirus verrà considerata non aggiornata una volta trascorso il numero di giorni specificato senza un aggiornamento.
+Se si abilita questa impostazione, l'intelligence sulla sicurezza antivirus verrà considerata non aggiornata una volta trascorso il numero di giorni specificato senza un aggiornamento.
 
-    Se disabiliti o non configuri questa impostazione, l'intelligence sulla sicurezza antivirus verrà considerata non aggiornata una volta trascorso il numero di giorni predefinito senza un aggiornamento.</string>
+Se disabiliti o non configuri questa impostazione, l'intelligence sulla sicurezza antivirus verrà considerata non aggiornata una volta trascorso il numero di giorni predefinito senza un aggiornamento.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definisci le condivisioni file per il download degli aggiornamenti di intelligence sulla sicurezza</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Questa impostazione di criteri consente di configurare le origini di condivisioni file UNC per il download degli aggiornamenti di intelligence sulla sicurezza. Le origini verranno contattate nell'ordine specificato. Il valore di questa impostazione deve essere immesso come stringa delimitata da barre verticali che enumera le origini di aggiornamento di intelligence sulla sicurezza. Ad esempio: "{\\unc1 | \\unc2 }". L'elenco è vuoto per impostazione predefinita.
 
@@ -847,23 +884,30 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
     </string>
     <string id="ExploitGuard_ASR_Rules">Configura regole Riduzione superficie di attacco</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Imposta lo stato per ogni regola Attack Surface Reduction (ASR).
+    Imposta lo stato per ogni regola di riduzione della superficie di attacco (ASR).
 
     Dopo aver abilitato l'impostazione puoi impostare ogni regola sui seguenti valori nella sezione Opzioni:
     - Blocca: la regola viene applicata
     - Modalità Controllo: se la regola normalmente causasse un evento, verrebbe registrata (non effettivamente applicata)
-    - Disattiva: la regola non viene applicata
+    Disattiva: la regola non viene applicata
+    - Non configurato: la regola è abilitata con valori predefiniti
+    - Avviso: la regola verrà applicata e l'utente finale avrà la possibilità di escludere il blocco
+
+    A meno che la regola di riduzione della superficie di attacco sia disabilitata, un sottocampione di eventi di controllo raccolti per le regole di riduzione della superficie di attacco avrà il valore di non configurato
 
     Abilitato:
-    Specifica lo stato di ogni regola Attack Surface Reduction nella sezione Opzioni per questa impostazione.
+    Specifica lo stato di ogni regola di riduzione della superficie di attacco nella sezione Opzioni per questa impostazione.
     Specifica ogni regola su una riga nuova come coppia nome-valore:
-    - Colonna Nome: immetti un ID regola Attack Surface Reduction valido
+    - Colonna Nome: immetti un ID regola di riduzione della superficie di attacco valido
     - Colonna Valore: immetti l'ID relativo allo stato che vuoi specificare per la regola associata
 
     Nella colonna Valore sono consentiti i seguenti ID stato:
     - 1 (Blocca)
     - 0 (Disattiva)
     - 2 (Controllo)
+    - 5 (Non configurato)
+    - 6 (Avviso)
+
     
     Esempio:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -871,12 +915,12 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
     Disabilitato:
-    Nessuna regola Attack Surface Reduction viene configurata.
+    Nessuna regola di riduzione della superficie di attacco viene configurata.
 
     Non configurato:
     Come Disabilitato.
 
-    Puoi escludere cartelle o file e risorse nell'impostazione dei criteri di gruppo Escludi cartelle o file e risorse.
+    Puoi escludere cartelle o file nell'impostazione dei criteri di gruppo "Escludi file o percorsi dalle regole di riduzione della superficie di attacco".
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Configura accesso controllato alle cartelle</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
 
     Microsoft Defender Antivirus determina automaticamente quali applicazioni possono essere considerate attendibili. Puoi aggiungere altre applicazioni attendibili nell'impostazione di Criteri di gruppo Configura applicazioni consentite.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definisci gruppi dei criteri di controllo dispositivo</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Seguire lo schema XML dei criteri di controllo del dispositivo per compilare i dati dei gruppi di criteri.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definisci regole dei criteri di controllo dispositivo</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Seguire lo schema XML delle regole dei criteri di controllo del dispositivo per compilare i dati delle regole dei criteri.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
         <label>Definisci server proxy per la connessione alla rete</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Definire il percorso della directory per copiare i file di log del supporto</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Esclusioni di estensioni</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Esclusioni di processi</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">Esclusioni di indirizzi IP</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Specifica set di definizioni aggiuntivi per l'ispezione del traffico di rete</listBox>
@@ -1071,10 +1131,10 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Specifica ora del giorno per l'esecuzione di un'analisi pianificata</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definisci il numero di giorni dopo i quali l'intelligence sulla sicurezza antispyware viene considerata obsoleta</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definisci il numero di giorni dopo i quali l'intelligence sulla sicurezza antispyware viene considerata obsoleta</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definisci il numero di giorni dopo i quali l'intelligence sulla sicurezza antivirus viene considerata non aggiornata</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definisci il numero di giorni dopo i quali l'intelligence sulla sicurezza antivirus viene considerata non aggiornata</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definisci qui i gruppi dei criteri</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definisci qui le regole dei criteri</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Specifica la finestra di assegnazione casuale dell'utilità di pianificazione in ore.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

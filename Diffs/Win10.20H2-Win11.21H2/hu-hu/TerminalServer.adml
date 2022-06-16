@@ -5,6 +5,8 @@
   <description>itt adja meg a leírást</description>
   <resources>
     <stringTable>
+      <string id="TS_AUTOSUBSCRIPTION_NAME">Automatikus előfizetés engedélyezése</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Ellenőrzi azon URL-címek listáját, amelyekre a felhasználónak automatikusan fel kell iratkoznia</string>
       <string id="TS_SUPPORTED_Windows10">Legalább Windows 10 vagy Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Legalább Windows 8 vagy Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Legalább Windows Server 2012</string>
@@ -26,6 +28,7 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Legalább Windows XP, és csak Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Legalább Windows Server 2008 vagy Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Csak Windows Server 2008 R2</string>
+      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 1903-as verzió, Windows 10 1909-es verzió és Windows 10 2004-es verzió</string>
       <string id="TS_TERMINAL_SERVER">Távoli asztali munkamenetgazda</string>
       <string id="TS_TERMINAL_SERVER_Help">Távoli asztali munkamenetgazda kiszolgáló konfigurációjának vezérlése</string>
       <string id="TS_LICENSE_SERVER">Távoli asztali licencelés</string>
@@ -144,6 +147,7 @@ Ha nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza 
       <string id="TS_CLIENT_LPT">LPT-port átirányításának tiltása</string>
       <string id="TS_CLIENT_PNP">A támogatott Plug and Play eszközök átirányításának tiltása</string>
       <string id="TS_CAMERA_REDIRECTION">Videorögzítés átirányításának tiltása</string>
+      <string id="TS_LOCATION_REDIRECTION">Hely átirányításának tiltása</string>
       <string id="TS_CLIENT_PRINTER">Ügyfélnyomtatóra történő átirányítás tiltása</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Ezzel a házirend-beállítással a vágólapon található tartalom távoli számítógép és ügyfélszámítógép közötti megosztását (vagyis a vágólap átirányítását) tilthatja le a Távoli asztal szolgáltatások munkamenetében.
 
@@ -208,6 +212,15 @@ Ha engedélyezi ezt a házirend-beállítást, a felhasználók nem irányíthat
 
 Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználók átirányíthatják videorögzítő eszközeiket a távoli számítógépre. A felhasználók a Távoli asztali kapcsolat párbeszédpanel Helyi erőforrások lapján található Egyebek gombra kattintva választhatják ki a távoli számítógépre átirányítani kívánt videorögzítő eszközöket.
 
+</string>
+      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Ezzel a házirend-beállítással szabályozhatja a helyadatok távoli számítógépre történő átirányítását távoli asztali szolgáltatási munkamenetben.
+
+A távoli asztali szolgáltatások alapértelmezés szerint lehetővé teszik a helyadatok átirányítását.
+
+Ha engedélyezi ezt a házirend-beállítást, a felhasználók nem irányítják át a helyadataikat a távoli számítógépre.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználók átirányíthatják a helyadataikat a távoli számítógépre.
+          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Ezzel a házirend-beállítással korlátozhatja, hogy a felhasználó hány monitort használhat a Távoli asztali szolgáltatások munkamenetének megjelenítésére. A Távoli asztali szolgáltatások munkamenetének megjelenítésére használható monitorok számának korlátozásával növelhető a kapcsolat teljesítménye (különösen lassú kapcsolatok esetében), és csökkenthető a kiszolgáló terhelése.
 
@@ -420,23 +433,20 @@ Ha engedélyezi ezt a házirend-beállítást, az értesítések nem jelennek me
 Ha letiltja vagy nem konfigurálja ezt a beállítást, az értesítések megjelennek a távoli asztali munkamenetgazda kiszolgálón, miután helyi rendszergazdaként bejelentkezett.</string>
       <string id="TS_LICENSING_MODE">A távoli asztali licencelés módjának beállítása</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Ezzel a házirend-beállítással meghatározhatja, hogy a távoli asztali szolgáltatások ügyfélhozzáférési licencei (RDS CAL) közül milyen típusúval lehet ehhez a távoli asztali munkamenetgazda-kiszolgálóhoz csatlakozni.
+        Ezzel a házirend-beállítással meghatározhatja, hogy a Távoli asztali szolgáltatások ügyféllicenceinek (RDS CAL) mely típusának kell csatlakoznia ehhez a Távoli asztali munkamenetgazda-kiszolgálóhoz.
 
-        A házirend-beállítás megadásakor háromféle licencelési mód közül választhat: Felhasználónkénti, Eszközönkénti, illetve AAD-alapú felhasználónkénti.
+        A házirend-beállítás használatával kétféle licencelési mód közül választhat: felhasználónkénti vagy eszközönkénti.
 
-        A Felhasználónkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes felhasználói fióknak kell rendelkeznie RD-licenckiszolgáló által kibocsájtott felhasználónkénti RDS CAL-lal.
+        A felhasználónkénti licencelési mód esetén az ehhez a Távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes felhasználói fióknak rendelkeznie kell Távoli asztali licenckiszolgáló által kibocsátott felhasználószintű RDS-ügyféllicenccel.
 
-        Az Eszközönkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes eszköznek kell rendelkeznie RD-licenckiszolgáló által kibocsájtott eszközönkénti RDS CAL-lal.
+        Az eszközönkénti licencelési mód esetén az ehhez a Távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes eszköznek rendelkeznie kell Távoli asztali licenckiszolgáló által kibocsátott eszközszintű RDS-ügyféllicenccel.
 
-        Az AAD-alapú felhasználónkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes felhasználói fióknak kell rendelkeznie az AAD-ben hozzárendelt, RDS-licenceket támogató szolgáltatáscsomaggal.
-        
-        Ha engedélyezi ezt a házirend-beállítást, a távoli asztali licenckiszolgáló és a távoli asztali munkamenetgazda a megadott távoli asztali licencelési módot veszi figyelembe.
+        Ha engedélyezi ezt a házirend-beállítást, a Távoli asztali licenckiszolgáló és a Távoli asztali munkamenetgazda az Ön által megadott távoli asztali licencelési módot veszi figyelembe.
 
-        Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a licencelési módot a csoportházirend szintjén.
+        Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a licencelési mód nem lesz meghatározva a csoportházirend szintjén.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Eszközönkénti</string>
       <string id="TS_LICENSING_MODE_PER_USER">Felhasználónkénti</string>
-      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD-alapú felhasználónkénti</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">A házirend-beállítással letilthatja az adatoknak az ügyfél LPT-portjaira történő átirányítása a Távoli asztali szolgáltatások munkameneteiben.
 
 Ezzel a házirend-beállítással megakadályozhatja, hogy a felhasználók helyi LPT-portok csatlakoztatását kezdeményezzék vagy adatokat irányítsanak át a távoli számítógépről a helyi LPT-porton található eszközökre. Alapértelmezés szerint a Távoli asztali szolgáltatások engedélyezi az adatok LPT-portokra történő átirányítását.
@@ -787,6 +797,17 @@ Ha engedélyezi ezt a beállítást, az asztal mindig megjelenik, amikor egy üg
 Ha letiltja vagy nem konfigurálja ezt a beállítást, megadható az ügyfél távoli számítógéphez történő kapcsolódása után a távoli számítógépen elinduló kezdőprogram. Ha nincs megadva kezdőprogram, akkor mindig az asztal jelenik meg a távoli számítógépen az ügyfél kapcsolódása után.
 
 Megjegyzés: Ha ez a házirend-beállítás engedélyezett, akkor a „Program indítása kapcsolódáskor” házirend-beállítás figyelmen kívül marad.</string>
+      <string id="TS_UIA">UI-automatizálás átirányításának engedélyezése</string>
+      <string id="TS_UIA_EXPLAIN">Ez a házirend-beállítás határozza meg, hogy a helyi számítógépen futó UI-automatizálási (felhasználóifelület-automatizálási) ügyfélalkalmazások hozzáférhetnek-e a kiszolgálón lévő felhasználói felületi elemekhez.
+
+Az UI-automatizálás a legtöbb UI-elemhez hozzáférést biztosít a programok számára, ami lehetővé teszi az olyan kisegítő technológiai termékek (például a Nagyító és a Narrátor) használatát, amelyeknek együtt kell működniük a felhasználói felülettel a megfelelő működés érdekében. A felhasználói felület adatai az automatikus tesztparancsfájlok számára is lehetővé teszik a felhasználói felülettel való együttműködést.
+
+A távoli asztali munkamenetek jelenleg nem támogatják az UI-automatizálás átirányítását.
+
+Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, a helyi számítógépen található összes UI-automatizálási ügyfél együttműködhet a távoli alkalmazásokkal. Például használhatja a helyi számítógépen a Narrátor- és a Nagyító-ügyfeleket arra, hogy együttműködjenek egy távoli munkamenetben megnyitott weblap felhasználói felületével.
+
+Ha letiltja ezt a házirend-beállítást, a helyi számítógépen futó UI-automatizálási ügyfelek nem működhetnek együtt a távoli alkalmazásokkal.
+</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Ezzel a házirend-beállítással megadhatja, hogy a távoli asztali munkamenetgazda-kiszolgálóval való távoli kapcsolat létesítéséhez szükség legyen-e hálózati szintű hitelesítéssel történő felhasználóhitelesítésre. Ez a beállítás fokozza a biztonságot azáltal, hogy a távoli kapcsolat létesítésének egy korai szakaszában felhasználóhitelesítést tesz kötelezővé.
 
 Ha engedélyezi ezt a házirend-beállítást, csak a hálózati szintű hitelesítést támogató ügyfélszámítógépek csatlakozhatnak a távoli asztali munkamenetgazda-kiszolgálóhoz.

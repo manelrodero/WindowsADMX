@@ -266,11 +266,11 @@ Si vous activez ce paramètre de stratégie, la commande Visite guidée est supp
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent exécuter la Visite guidée à partir du menu ? (Aide).</string>
       <string id="ExplainPopupBlocker_AllowList">Ce paramètre de stratégie permet de spécifier la liste des sites Web qui sont autorisés à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres du bloqueur de fenêtres publicitaires du processus Internet Explorer.
 
-Si vous activez ce paramètre de stratégie, vous pouvez entrer la liste des sites Web qui sont autorisés à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres utilisateur. Seul le nom de domaine est autorisé : www.contoso.com est valide, mais http://www.contoso.com ne l’est pas. Les caractères génériques étant autorisés, *.contoso.com est également valide.
+Si vous activez ce paramètre de stratégie, vous pouvez entrer la liste des sites Web qui sont autorisés à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres utilisateur. Seul le nom de domaine est autorisé: www.contoso.com est valide, mais http://www.contoso.com ne l’est pas. Les caractères génériques étant autorisés, *.contoso.com est également valide.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, vous ne pouvez pas spécifier la liste des exceptions du bloqueur de fenêtres publicitaires par défaut.
 
-Remarque : vous pouvez désactiver des utilisateurs pour les empêcher d’ajouter des sites Web à la liste des exceptions ou d’en supprimer, en activant la stratégie « Désactiver la gestion de la liste des exceptions du bloqueur de fenêtres publicitaires ».</string>
+Remarque: vous pouvez désactiver des utilisateurs pour les empêcher d’ajouter des sites Web à la liste des exceptions ou d’en supprimer, en activant la stratégie «Désactiver la gestion de la liste verte du bloqueur de fenêtres publicitaires».</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">Ce paramètre de stratégie vous permet d’ignorer les invites lorsqu’un script qui s’exécute dans un processus de l’ordinateur tente d’effectuer une opération sur le Presse-papiers (supprimer, copier ou coller).
 
 Si vous activez ce paramètre de stratégie, l’utilisateur ne reçoit pas d’invite lorsqu’un script qui s’exécute dans un processus de l’ordinateur effectue une opération sur le Presse-papiers. Cela signifie que si le comportement de la zone est défini pour afficher les invites, il est ignoré et activé.
@@ -298,7 +298,6 @@ Si vous désactivez ce paramètre de stratégie pour une application ou un proce
 Si vous ne configurez pas ce paramètre de stratégie, les valeurs actuelles de l’action d’URL pour une application ou un processus de la liste sont prioritaires.</string>
       <string id="FavImportExport">Désactiver l’Assistant Importer/Exporter les paramètres</string>
       <string id="GeolocationDisable">Désactiver la géolocalisation du navigateur</string>
-      <string id="DisableFlashInIE">Désactiver Adobe Flash dans Internet Explorer et empêcher les applications d’utiliser la technologie Internet Explorer pour instancier des objets Flash</string>
       <string id="File_NoBrowserClose">Menu Fichier : désactiver la fermeture des fenêtres du navigateur et de l’Explorateur</string>
       <string id="File_NoBrowserSaveAs">Menu Fichier : désactiver l’option de menu Enregistrer sous</string>
       <string id="File_NoBrowserSaveWebComplete">Menu Fichier : désactiver l’option Page Web complète de la commande Enregistrer sous</string>
@@ -415,17 +414,17 @@ Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut inte
 
 Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre anti-hameçonnage. Vous devez spécifier le mode utilisé par le filtre anti-hameçonnage : manuel, automatique ou désactivé.
 
-Si vous sélectionnez le mode manuel, le filtre anti-hameçonnage effectue seulement une analyse locale et l’utilisateur est invité à confirmer l’envoi de données à Microsoft. Si la fonctionnalité est complètement activée, les adresses des sites Web qui ne figurent pas dans la liste autorisée du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
+Si vous sélectionnez le mode manuel, le filtre anti-hameçonnage effectue seulement une analyse locale et l’utilisateur est invité à confirmer l’envoi de données à Microsoft. Si la fonctionnalité est complètement activée, les adresses des sites Web qui ne figurent pas dans la liste verte du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur est invité à déterminer le mode de fonctionnement du filtre anti-hameçonnage.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">Ce paramètre de stratégie permet à l’utilisateur d’activer le filtre SmartScreen, qui l’avertit si le site Web visité est connu pour ses tentatives frauduleuses de collecte d’informations personnelles par « hameçonnage » ou pour son hébergement de programmes malveillants.
 
-Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Vous devez spécifier le mode utilisé par le filtre SmartScreen : activé ou désactivé. Toutes les adresses des sites Web qui ne figurent pas dans la liste autorisée du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
+Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Vous devez spécifier le mode utilisé par le filtre SmartScreen : activé ou désactivé. Toutes les adresses des sites Web qui ne figurent pas dans la liste verte du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur est invité à décider de l’activation ou non du filtre SmartScreen durant l’introduction de l’interface logicielle lors de la première utilisation.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">Ce paramètre de stratégie empêche l’utilisateur de gérer le filtre SmartScreen, qui l’avertit si le site Web visité est connu pour ses tentatives frauduleuses de collecte d’informations personnelles par « hameçonnage » ou pour son hébergement de programmes malveillants.
 
-Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Toutes les adresses des sites Web qui ne figurent pas dans la liste autorisée du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
+Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Toutes les adresses des sites Web qui ne figurent pas dans la liste verte du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur est invité à décider de l’activation ou non du filtre SmartScreen durant l’introduction de l’interface logicielle lors de la première utilisation.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Ce paramètre de stratégie désactive la fonctionnalité de vérification des paramètres de sécurité, qui examine les paramètres de sécurité d’Internet Explorer pour déterminer s’ils font courir un risque à Internet Explorer.
@@ -726,13 +725,6 @@ Si vous activez ce paramètre de stratégie, la prise en charge de la géolocali
 Si vous désactivez ce paramètre de stratégie, la prise en charge de la géolocalisation du navigateur est activée.
 
 Si vous ne configurez pas ce paramètre de stratégie, la prise en charge de la géolocalisation du navigateur peut être activée ou désactivée dans Options Internet sous l’onglet Confidentialité.</string>
-      <string id="IE_ExplainDisableFlashInIE">Ce paramètre de stratégie désactive Adobe Flash dans Internet Explorer et empêche les applications d’utiliser la technologie Internet Explorer pour instancier les objets Flash.
- 
-Si vous activez ce paramètre de stratégie, Flash est désactivé pour Internet Explorer, et les applications ne peuvent pas utiliser la technologie Internet Explorer pour instancier les objets Flash. Dans la boîte de dialogue Gérer les modules complémentaires, l’état de Flash est Désactivé, et les utilisateurs ne peuvent pas activer Flash. Si vous activez ce paramètre de stratégie, Internet Explorer ignore les paramètres créés pour Adobe Flash via les paramètres de stratégie Liste des modules complémentaires et Interdire tous les modules complémentaires, sauf s’ils sont explicitement autorisés dans la liste des modules complémentaires. 
- 
-Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Flash est activé pour Internet Explorer, et les applications peuvent utiliser la technologie Internet Explorer pour instancier les objets Flash. Les utilisateurs peuvent activer ou désactiver Flash dans la boîte de dialogue Gérer les modules complémentaires. 
-
-Notez qu’Adobe Flash peut toujours être désactivé via les paramètres de stratégie Liste des modules complémentaires et Interdire tous les modules complémentaires, sauf s’ils sont explicitement autorisés dans la liste des modules complémentaires et ce, même si ce paramètre de stratégie est désactivé, ou n’est pas configuré. Toutefois, si Adobe Flash est désactivé via les paramètres de stratégie Liste des modules complémentaires et Interdire tous les modules complémentaires, sauf s’ils sont explicitement autorisés dans la liste des modules complémentaires, et non pas via ce paramètre de stratégie, toutes les applications qui utilisent la technologie Internet Explorer pour instancier les objets Flash peuvent continuer à le faire. Pour plus d’informations, consultez Paramètres de stratégie de groupe dans Internet Explorer 10 dans la bibliothèque TechNet Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Empêche les utilisateurs de fermer Internet Explorer et l’Explorateur de fichiers.
 
 Si vous activez ce paramètre de stratégie, la commande Fermer dans le menu Fichier est estompée.
@@ -1345,7 +1337,7 @@ Si vous activez ce paramètre de stratégie, l’utilisateur ne peut pas ajouter
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur peut ajouter ou supprimer des sites Web dans la liste des exceptions.
 
-Remarque : vous pouvez autoriser une liste de sites Web par défaut à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres du bloqueur de fenêtres publicitaires du processus Internet Explorer, en activant le paramètre de stratégie « Liste des fenêtres publicitaires autorisées ».</string>
+Remarque: vous pouvez autoriser une liste de sites Web par défaut à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres du bloqueur de fenêtres publicitaires du processus Internet Explorer, en activant le paramètre de stratégie «Liste verte des fenêtres publicitaires».</string>
       <string id="IE_ExplainRestrictPopupManagement">Ce paramètre de stratégie vous permet de gérer les fenêtres publicitaires dans Internet Explorer.
 
 Si vous activez ce paramètre de stratégie, les informations du Panneau de configuration concernant la gestion des fenêtres publicitaires sont non disponibles (grisées) et aucun autre contrôle, notification et boîte de dialogue du gestionnaire de fenêtres publicitaires n’apparaît. Les fenêtres publicitaires fonctionnent comme dans Windows XP Service Pack 1 ou versions antérieures, mais les fenêtres affichées hors de l’écran continuent à être repositionnées sur l’écran.
@@ -3014,7 +3006,7 @@ Cette fonctionnalité s’applique uniquement aux versions d’Internet Explorer
       <string id="Persistence_FileLimits4">Limites de taille de fichier pour la zone Sites sensibles</string>
       <string id="PhishingOff">Désactivé</string>
       <string id="PhishingOn">Activé</string>
-      <string id="PopupBlocker_AllowList">Liste des fenêtres publicitaires autorisées</string>
+      <string id="PopupBlocker_AllowList">Liste verte des fenêtres publicitaires</string>
       <string id="Printing">Impression en cours</string>
       <string id="Printing_Explain">Ce paramètre de stratégie spécifie si Internet Explorer imprime les couleurs et les images d’arrière-plan lorsque l’utilisateur imprime une page Web. L’inclusion des couleurs et des images d’arrière-plan peut réduire la vitesse et la qualité d’impression de la page, selon les capacités de votre imprimante.
 
@@ -3958,6 +3950,41 @@ Stratégies associées :
 - Envoyer tous les sites non inclus dans la liste des sites en mode Entreprise vers Microsoft Edge (« RestrictIE »)
 
 Pour plus d’informations sur l’utilisation de cette stratégie avec d’autres stratégies associées afin de créer la configuration optimale pour votre organisation, voir https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Autoriser « enregistrer la cible sous » en mode Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Ce paramètre de stratégie permet aux administrateurs d’activer le menu contextuel « enregistrer la cible sous » en mode Internet Explorer.
+
+Si vous activez ce paramètre de stratégie, « enregistrer la cible sous » s’affiche dans le menu contextuel du mode Internet Explorer et fonctionne comme Internet Explorer.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, « enregistrer la cible sous » n’apparaîtra pas dans le menu contextuel du mode Internet Explorer.
+
+Pour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Activer les touches d’accès rapide étendues en mode Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Ce paramètre de stratégie permet aux administrateurs d’activer les touches d’accès rapide au mode Microsoft Edge Internet Explorer étendues, telles que « Ctrl+S », de façon à utiliser la fonctionnalité « Enregistrer sous ».
+
+si vous activez cette stratégie, les fonctionnalités de clé hotkey étendues sont activées en mode Internet Explorer et fonctionnent de la même manière qu’Internet Explorer.
+
+si vous désactivez ou ne configurez pas cette stratégie, les touches d’accès rapide étendues ne fonctionneront pas en mode Internet Explorer.
+
+pour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Désactiver Internet Explorer 11 comme navigateur autonome</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Cette stratégie vous permet de limiter le lancement d’Internet Explorer en tant que navigateur autonome.
+
+Si vous activez cette stratégie, elle :
+-Empêche le lancement d’Internet Explorer 11 en tant que navigateur autonome.
+-Limite l’utilisation d’Internet Explorer au mode « Internet Explorer » natif de Microsoft Edge.
+-Redirige toutes les tentatives de lancement d’Internet Explorer 11 vers l’Explorateur de canaux stables Microsoft Edge.
+-Remplace toutes les autres stratégies qui redirigent vers Internet Explorer 11.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, tous les sites sont ouverts à l’aide des paramètres actuels du navigateur actif. Remarque : le canal stable Microsoft Edge doit être installé pour que cette stratégie prenne effet.</string>
+      <string id="NotifyDisableIEOptions_Never">Jamais</string>
+      <string id="NotifyDisableIEOptions_Always">Toujours</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Une fois par utilisateur</string>
+      <string id="JScriptReplacement">Remplacez JScript en chargeant JScript9Legacy à la place de JScript via MSHTML/WebOC.</string>
+      <string id="IE_ExplainJScriptReplacement">Ce paramètre de stratégie spécifie si le script JScript ou JScript9Legacy est chargé pour les invocations basées sur MSHTML/WebOC.
+      
+Si vous activez ce paramètre de stratégie, JScript9Legacy sera chargé dans les situations où JScript est instancié.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, JScript est utilisé.</string>
       <string id="VerMgmtDisable">Désactiver le blocage des contrôles ActiveX obsolètes par Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Ce paramètre de stratégie détermine si Internet Explorer bloque certains contrôles ActiveX obsolètes. Les contrôles ActiveX obsolètes ne sont jamais bloqués dans la Zone Intranet.
 
@@ -4833,6 +4860,9 @@ Pour plus d’informations, consultez la page « Mise à jour pour bloquer les 
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Premier choix</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Deuxième choix</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Troisième choix</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Avertir que le navigateur Internet Explorer 11 est désactivé</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

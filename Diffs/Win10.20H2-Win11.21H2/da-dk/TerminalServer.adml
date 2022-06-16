@@ -5,6 +5,8 @@
   <description>indtast beskrivelsen her</description>
   <resources>
     <stringTable>
+      <string id="TS_AUTOSUBSCRIPTION_NAME">Aktivér automatisk oprettelse af abonnement</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Administrerer listen over URL-adresser, som brugeren automatisk skal abonnere på</string>
       <string id="TS_SUPPORTED_Windows10">Mindst Windows 10 eller Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Mindst Windows 8 eller Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Mindst Windows Server 2012</string>
@@ -26,6 +28,7 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Mindst Windows XP og kun Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Mindst Windows Server 2008 eller Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Kun Windows Server 2008 R2</string>
+      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 version 1903, Windows 10 version 1909 og Windows 10 version 2004</string>
       <string id="TS_TERMINAL_SERVER">Vært for fjernskrivebordssession</string>
       <string id="TS_TERMINAL_SERVER_Help">Kontrollerer konfigurationen af en værtsserver for en fjernskrivebordssession</string>
       <string id="TS_LICENSE_SERVER">RD-licensering</string>
@@ -144,6 +147,7 @@ Hvis du ikke konfigurerer denne politikindstilling, er omdirigering af klientdre
       <string id="TS_CLIENT_LPT">Tillad ikke omdirigering af LPT-port</string>
       <string id="TS_CLIENT_PNP">Tillad ikke understøttet omdirigering af Plug and Play-enhed</string>
       <string id="TS_CAMERA_REDIRECTION">Tillad ikke omdirigering af videooptagelse</string>
+      <string id="TS_LOCATION_REDIRECTION">Tillad ikke omdirigering af placering</string>
       <string id="TS_CLIENT_PRINTER">Tillad ikke omdirigering af klientprinter</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Denne politikindstilling angiver, om deling af indholdet i Udklipsholder (omdirigering af Udklipsholder) mellem en fjerncomputer og en klientcomputer skal forhindres under en session med Fjernskrivebord-tjenester.
 
@@ -208,6 +212,15 @@ Hvis du aktiverer denne politikindstilling, kan brugere ikke omdirigere deres en
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan brugere omdirigere deres enheder til videooptagelse til fjerncomputeren. Brugere kan bruge indstillingen Mere under fanen Lokale ressourcer i Forbindelse til Fjernskrivebord for at vælge, hvilke enheder til videooptagelse, der skal omdirigeres til den eksterne computer.
 
+</string>
+      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Denne politikindstilling gør det muligt at styre omdirigering af placeringsdata til fjerncomputeren i en session med Fjernskrivebord-tjenester.
+
+Fjernskrivebord-tjenester tillader som standard omdirigering af placeringsdata.
+
+Hvis du aktiverer denne politikindstilling, kan brugere ikke omdirigere deres placeringsdata til fjerncomputeren.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan brugerne omdirigere deres placeringsdata til fjerncomputeren.
+          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Med denne politikindstilling kan du begrænse antallet af skærme, som en bruger kan bruge til at vise en session med Fjernskrivebord-tjenester. Ved at begrænse antallet af skærme, som viser en session med Fjernskrivebord-tjenester, kan du forbedre forbindelsen, særligt for langsomme forbindelser, og reducere serverbelastningen.
 
@@ -422,21 +435,18 @@ Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vises medd
       <string id="TS_LICENSING_MODE_EXPLAIN">
         Denne politikindstilling giver dig mulighed for at angive, hvilken type klientadgangslicens til Fjernskrivebord-tjenester (RDS CAL), der skal bruges for at oprette forbindelse til denne RD-sessions værtsserver.
 
-        Du kan bruge denne politikindstilling til at vælge en af tre licenstilstande: pr. bruger, pr. enhed og AAD pr. bruger.
+        Du kan bruge denne politikindstilling til at vælge en af to licenstilstande: pr. bruger eller pr. enhed.
 
         Licenstilstand pr. bruger kræver, at alle brugere, der opretter forbindelse til denne RD-sessions værtsserver, skal have en RDS CAL pr. bruger tildelt fra en RD-licensserver.
 
         Licenstilstand pr. enhed kræver, at alle enheder, der opretter forbindelse til denne RD-sessions værtsserver, skal have en RDS CAL pr. enhed tildelt fra en RD-licensserver.
 
-        AAD-licenstilstand pr. bruger kræver, at alle brugere, der opretter forbindelse til denne RD-sessions værtsserver, skal have en serviceplan, som understøtter RDS-licenser tildelt i AAD.
-        
         Hvis du aktiverer denne politikindstilling, overholder Fjernskrivebord-licensserveren RD-sessionens vært den Fjernskrivebord-licenstilstand, du angiver.
 
         Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, er licenstilstanden ikke angivet på gruppepolitikniveau.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Pr. enhed</string>
       <string id="TS_LICENSING_MODE_PER_USER">Pr. bruger</string>
-      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD pr. bruger</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Denne politikindstilling angiver, om omdirigering af data til klienters LPT-port skal forhindres under en session med Fjernskrivebord-tjenester.
 
 Du kan bruge denne indstilling til at forhindre brugere i at tilknytte lokale LPT-porte og omdirigere data fra fjerncomputeren til lokale LPT-porte på ydre enheder. Fjernskrivebord-tjenester tillader som standard omdirigering til LPT-port.
@@ -787,6 +797,17 @@ Hvis du aktiverer denne politikindstilling, vises skrivebordet altid, når en kl
 Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, kan der angives et startprogram, som køres på fjerncomputeren, når klienten har oprettet forbindelse til fjerncomputeren. Hvis der ikke er angivet et startprogram, vises skrivebordet altid på fjerncomputeren, når klienten har oprettet forbindelse til fjerncomputeren.
 
 Bemærk! Hvis denne politikindstilling er aktiveret, ignoreres politikindstillingen "Start et program, når der oprettes forbindelse".</string>
+      <string id="TS_UIA">Tillad omdirigering af brugergrænseflade automatisering</string>
+      <string id="TS_UIA_EXPLAIN">Denne politikindstilling bestemmer, om de programmer til automatiserings af brugergrænsefladen, som kører på den lokale computer, kan få adgang til brugergrænsefladeelementer på serveren.
+
+Brugergrænsefladeautomatisering giver programmer adgang til de fleste brugergrænsefladeelementer, som gør det muligt at bruge teknologiske hjælpemidler som f. eks. forstørrelsesglas og Oplæser, der skal interagere med BRUGERGRÆNSEFLADEN for at fungere korrekt. BRUGERGRÆNSEFLADE oplysninger giver også mulighed for automatisk test af scripts til at interagere med BRUGERGRÆNSEFLADEN.
+
+Fjernskrivebordssessioner understøtter i øjeblikket ikke omdirigering af Brugergrænsefladeautomatisering.
+
+Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, kan alle brugergrænseflade automatiseringsklienter på din lokale computer interagere med eksterne apps. Du kan f. eks. bruge den lokale computers Oplæser-og forstørrelses klient til at interagere med brugergrænseflade på en webside, du har åbnet i en fjernsession.
+
+Hvis du deaktiverer denne politikindstilling, kan de brugergrænseflade automatiseringsklienter, der kører på den lokale computer, ikke interagere med eksterne apps.
+</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Denne politikindstilling giver dig mulighed for at angive, om der skal kræves brugergodkendelse til fjernforbindelser til fjernskrivebordssessionens værtsserver ved hjælp af Godkendelse på netværksniveau (NLA). Denne politikindstilling forbedrer sikkerheden ved at kræve, at brugergodkendelse skal ske tidligere i processen til oprettelse af fjernforbindelse.
 
 Hvis du aktiverer denne politikindstilling, er det kun klientcomputere, der understøtter Godkendelse på netværksniveau (NLA), som kan oprette forbindelse til fjernskrivebordssessionens værtsserver.

@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">通知</string>
+      <string id="WnsEndpoint">為 WNS FQDN 啟用群組原則</string>
+      <string id="WnsEndpointExplain">此原則會為特定環境設計特別 WNS FQDN。</string>
       <string id="NoTileNotification">關閉磚通知</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">午夜過後的分鐘數:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>適用 FQDN 的 WNS</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

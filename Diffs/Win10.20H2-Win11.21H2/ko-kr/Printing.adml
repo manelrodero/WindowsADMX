@@ -278,11 +278,11 @@ Active Directory가 있는 도메인의 경우는 Active Directory에 사용 가
 
         이 정책 설정을 사용하지 않거나 구성하지 않으면 설치된 모든 프린터 확장의 실행이 허용됩니다.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Change Microsoft XPS Document Writer (MXDW) default output format to the legacy Microsoft XPS format (*.xps)(MXDW(Microsoft XPS 문서 작성기) 기본 출력 형식을 레거시 Microsoft XPS 형식(*.xps)으로 변경)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer(MXDW)는 Windows 10 및 Windows Server 2019에서 기본적으로 OpenXPS(*.oxps) 파일을 생성합니다.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer(MXDW)는 Windows 10 및 Windows Server 2022에서 기본적으로 OpenXPS(*.oxps) 파일을 생성합니다.
 
-          이 그룹 정책 설정을 사용하는 경우 기본 MXDW 출력 형식은 레거시 Microsoft XPS(*.xps)입니다.
+이 그룹 정책 설정을 사용하는 경우 기본 MXDW 출력 형식은 레거시 Microsoft XPS(*.xps)입니다.
 
-          이 정책 설정을 사용하지 않거나 구성하지 않는 경우 기본 MXDW 출력 형식은 OpenXPS(*.oxps)입니다.</string>
+이 정책 설정을 사용하지 않거나 구성하지 않으면 기본 MXDW 출력 형식이 OpenXPS(*.oxps)입니다.</string>
       <string id="SetDefaultPrinterMRUModeOff">Windows 기본 프린터 관리 끄기</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">이 기본 설정을 통해 기본 프린터 관리를 변경할 수 있습니다.
 
@@ -291,6 +291,24 @@ Active Directory가 있는 도메인의 경우는 Active Directory에 사용 가
 이 설정을 사용하지 않으면 Windows에서 기본 프린터를 관리합니다.
 
 이 설정을 구성하지 않으면 기본 프린터 관리가 변경되지 않습니다. </string>
+      <string id="EnableDeviceControl">장치 제어 인쇄 제한 사용</string>
+      <string id="EnableDeviceControl_Help">
+          이 컴퓨터에서 인쇄하기 위해 장치 제어 인쇄 제한을 적용할지 여부를 결정합니다.
+
+기본적으로 연결 종류나 프린터 제조/모델에 따른 인쇄에 제한이 없습니다.
+
+이 설정을 사용하면 컴퓨터는 회사 네트워크의 프린터 연결이나 승인된 USB 연결 프린터로 인쇄를 제한합니다.
+
+이 설정을 사용하지 않거나 구성하지 않으면 연결 유형이나 프린터 제조/모델에 따른 인쇄에 제한이 없습니다.</string>
+        <string id="ApprovedUsbPrintDevices">승인된 USB 연결 인쇄 장치 목록</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            이 설정은 장치 제어의 인쇄 제한 요소입니다. 이 설정을 사용하려면 "장치 제어 인쇄 제한 사용" 설정을 사용하도록 설정하여 장치 제어 인쇄를 사용하도록 설정합니다.
+
+장치 제어 인쇄를 사용하면 시스템은 지정된 vid/pid 값 목록을 사용하여 현재 USB 연결 프린터가 로컬 인쇄용으로 승인되었는지 확인합니다.
+
+승인된 USB 프린터 모델에 해당하는 승인된 vid/pid 조합(쉼표로 구분됨)을 모두 입력합니다. 사용자가 USB 프린터 큐에 인쇄하려고 하면 장치 vid/pid가 승인된 목록과 비교됩니다.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -352,6 +370,13 @@ Active Directory가 있는 도메인의 경우는 Active Directory에 사용 가
         <text>
         예 --&gt; LDAP://DC=Domain1,DC=MyCompany,DC=com
       </text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>승인된 USB 연결 프린터 장치 목록을 지정합니다.</text>
+        <text>목록은 USB vid/pid 값의 쉼표로 구분된 목록입니다. 예: 0351/0872,135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

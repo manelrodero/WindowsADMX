@@ -99,6 +99,36 @@
 
 このグループ ポリシー オブジェクトがデバイスに適用されているときに、アプリを開く場合、従業員は、アプリやデバイスを再起動してポリシーの変更をアプリに適用する必要があります。
       </string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">Windows アプリでさまざまなウィンドウまたはディスプレイのスクリーンショットを取ることができるようにします</string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">このポリシー設定は、Windows アプリがさまざまなウィンドウやディスプレイでスクリーンショットを撮影できるかどうかを指定します。
+
+すべてのアプリに既定の設定を適用するか、パッケージ ファミリ名を指定してアプリごとの設定を適用するかを指定できます。アプリのパッケージ ファミリ名を取得するには、Get-AppPackage Windows PowerShell コマンドレットを使います。アプリごとの設定は既定の設定より優先されます。
+
+[ユーザーが制御] オプションを選ぶと、Windows アプリがさまざまなウィンドウやディスプレイでスクリーンショットを撮影することができるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使用)。
+
+[強制的に許可] オプションを選ぶと、Windows アプリはさまざまなウィンドウやディスプレイでスクリーンショットを撮影することができます。組織の従業員はこの設定を変更することはできません。
+
+[強制的に拒否] オプションを選ぶと、Windows アプリはさまざまなウィンドウやディスプレイでスクリーンショットを撮影できなくなります。組織の従業員はこの設定を変更することはできません。
+
+このポリシー設定を無効にした場合や構成しなかった場合、Windows アプリがさまざまなウィンドウやディスプレイでスクリーンショットを撮影できるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使用)。
+
+このグループ ポリシー オブジェクトがデバイスに適用されているときにアプリを開く場合、従業員は、アプリやデバイスを再起動してポリシーの変更をアプリに適用する必要があります。
+      </string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">Windows アプリでスクリーンショットの境界を無効にする</string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">このポリシー設定は、Windows アプリがスクリーンショットの境界線をオフにできるかどうかを指定します。
+
+すべてのアプリに既定の設定を適用するか、パッケージ ファミリ名を指定してアプリごとの設定を適用するかを指定できます。アプリのパッケージ ファミリ名を取得するには、Get-AppPackage Windows PowerShell コマンドレットを使います。アプリごとの設定は既定の設定より優先されます。
+
+[ユーザーが制御] オプションを選ぶと、Windows アプリがスクリーンショットの境界線をオフにできるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使用)。
+
+[強制的に許可] オプションを選ぶと、Windows アプリはスクリーンショットの境界線をオフにできます。組織の従業員はこの設定を変更することはできません。
+
+[強制的に拒否] オプションを選ぶと、Windows アプリはスクリーンショットの境界線をオフにできません。組織の従業員はこの設定を変更することはできません。
+
+このポリシー設定を無効にした場合や構成しなかった場合、Windows アプリがスクリーンショットの境界線をオフにできるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使用)。
+
+このグループ ポリシー オブジェクトがデバイスに適用されているときにアプリを開く場合、従業員は、アプリやデバイスを再起動してポリシーの変更をアプリに適用する必要があります。
+      </string>
       <string id="LetAppsAccessLocation_Name">Windows アプリで位置情報にアクセスする</string>
       <string id="LetAppsAccessLocation_Explain">このポリシー設定では、Windows アプリが位置情報にアクセスできるかどうかを指定します。
 
@@ -391,6 +421,24 @@
         <multiTextBox refId="LetAppsAccessEmail_ForceAllowTheseApps_List"/>
         <text>これらの特定のアプリを強制的に拒否 (パッケージ ファミリ名を使用):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">すべてのアプリの既定値:</dropdownList>
+        <text>ユーザーをこれらの特定のアプリで管理 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
+        <text>これらの特定のアプリを強制的に許可 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
+        <text>これらの特定のアプリを強制的に拒否 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">すべてのアプリの既定値:</dropdownList>
+        <text>ユーザーをこれらの特定のアプリで管理 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
+        <text>これらの特定のアプリを強制的に許可 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
+        <text>これらの特定のアプリを強制的に拒否 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">すべてのアプリの既定値:</dropdownList>

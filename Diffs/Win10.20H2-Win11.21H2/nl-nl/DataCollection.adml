@@ -5,20 +5,20 @@
   <description>voer hier een beschrijving in</description>
   <resources>
     <stringTable>
-      <string id="AllowTelemetry">Telemetrie toestaan</string>
-      <string id="AllowTelemetry_0">0 - Beveiliging [Alleen Enterprise]</string>
-      <string id="AllowTelemetry_1">1 - Vereist</string>
-      <string id="AllowTelemetry_2">2 - Uitgebreid</string>
-      <string id="AllowTelemetry_3">3 - Optioneel</string>
-      <string id="AllowTelemetry_Explain">Als deze instelling wordt geconfigureerd in Windows 10, kunnen eindgebruikers niet kiezen voor een hoger niveau van telemetrieverzameling dan het niveau dat u hebt ingesteld voor uw organisatie. Deze beperking geldt uitsluitend voor het Windows-besturingssysteem en de apps die worden meegeleverd met Windows en niet voor apps van derden die worden uitgevoerd op Windows 10
+      <string id="AllowTelemetry">Diagnostische gegevens toestaan</string>
+      <string id="AllowTelemetry_0">Diagnostische gegevens uit (niet aanbevolen)</string>
+      <string id="AllowTelemetry_1">Vereiste diagnostische gegevens verzenden</string>
+      <string id="AllowTelemetry_3">Optionele diagnostische gegevens verzenden</string>
+      <string id="AllowTelemetry_Explain">Door deze beleidsinstelling te configureren, kunt u aanpassen welke diagnostische gegevens van Windows worden verzameld. Deze beleidsinstelling beperkt ook de gebruiker van het vergroten van de hoeveelheid diagnostische gegevensverzameling via de app Instellingen. De diagnostische gegevens die onder dit beleid worden verzameld, zijn van invloed op het besturingssysteem en de apps die als onderdeel van Windows worden beschouwd en zijn niet van toepassing op eventuele aanvullende apps die door uw organisatie zijn geïnstalleerd.
 
-Diagnosegegevens worden als volgt onderverdeeld in vier niveaus:
- - 0 (Beveiliging). Informatie die is vereist om Windows, Windows Server en System Center veilig te houden, met inbegrip van gegevens over de instellingen voor het onderdeel Connected User Experiences and Telemetry, het hulpprogramma voor verwijderen van schadelijke software en Windows Defender.
-  - 1 (Vereist). Basisapparaatgegevens, met inbegrip van: kwaliteitsgegevens, app-compatibiliteit en gegevens van het niveau Beveiliging.
-  - 2 (Uitgebreid). Aanvullende inzichten, met inbegrip van: de wijze van gebruik van Windows, Windows Server, System Center en apps, hun prestaties, geavanceerde betrouwbaarheidsgegevens en gegevens van het niveau Vereist en het niveau Beveiliging.
-  - 3 (Optioneel). Alle gegevens die nodig zijn voor het identificeren en helpen oplossen van problemen, plus gegevens van de niveaus Beveiliging, Vereist en Uitgebreid.
+ - Diagnostische gegevens uitgeschakeld (niet aanbevolen). Met deze waarde worden er geen diagnostische gegevens verzonden vanaf het apparaat. Deze waarde wordt alleen ondersteund op Enterprise-, Education- en Server-edities.
+ - Verzend vereiste diagnostische gegevens. Dit zijn de minimale diagnostische gegevens die nodig zijn om Windows veilig, up-to-date en naar verwachting te laten presteren.  Als u deze waarde gebruikt, wordt de optie 'Optionele diagnostische gegevens' in de app Instellingen uitgeschakeld.
+ - Stuur optionele diagnose gegevens. Er worden aanvullende diagnostische gegevens verzameld waarmee we problemen kunnen opsporen, diagnosticeren en oplossen, en productverbeteringen kunnen aanbrengen. Vereiste diagnostische gegevens worden altijd opgenomen wanneer u ervoor kiest om optionele diagnostische gegevens te verzenden. Optionele diagnostische gegevens kunnen ook diagnostische logbestanden en crashdumps bevatten. Gebruik het beleid 'Limit Dump Collection' en het 'Limit Diagnostic Log Collection' voor meer gedetailleerde controle over welke optionele diagnostische gegevens worden verzonden.
 
-Opties die beschikbaar zijn voor gebruikers in de app Instellingen worden gewijzigd door het configureren van deze instelling, en zelfs als zij niet zijn ingesteld, kunnen zij worden beïnvloed door andere instellingen voor groepsbeleid. Opmerking: als dit beleid zodanig is geconfigureerd dat een telemetrie-instelling van het niveau Beveiliging of Basis is toegestaan, zijn gebruikers niet in staat om een hoger niveau te selecteren.
+ Als u deze beleidsinstelling uitschakelt of niet configureert , verzendt het apparaat de vereiste diagnostische gegevens en kan de eindgebruiker kiezen of hij optionele diagnostische gegevens wil verzenden via de app Instellingen.
+
+ Opmerking:
+ de "Configureer diagnostische gegevens opt-in instellingen gebruikersinterface "groepsbeleid kan worden gebruikt om te voorkomen dat eindgebruikers hun instellingen voor gegevensverzameling wijzigen.
       </string>
 
       <string id="TelemetryProxy">De Connected User Experiences and Telemetry-service configureren</string>
@@ -30,7 +30,7 @@ De notatie voor deze instelling is als volgt: &lt;server&gt;:&lt;poort&gt;
       </string>
 
       <string id="CommercialId">Commerciële id configureren</string>
-      <string id="CommercialId_Explain">Deze beleidsinstelling bepaalt de id die wordt gebruikt om de telemetriegegevsn van dit apparaat uniek te koppelen aan een specifieke organisatie. Als uw organisatie deelneemt aan een programma waarvoor het noodzakelijk is dat dit apparaat wordt geïdentificeerd als een apparaat dat deel uitmaakt van uw organisatie, gebruikt u deze instelling om die identificatie te bieden. De waarde voor deze instelling wordt door Microsoft geleverd tijdens het onboarding-proces voor het programma. 
+      <string id="CommercialId_Explain">Deze beleidsinstelling bepaalt de id die wordt gebruikt om de diagnostische gegevens van dit apparaat uniek te koppelen aan een specifieke organisatie. Als uw organisatie deelneemt aan een programma waarvoor het noodzakelijk is dat dit apparaat wordt geïdentificeerd als een apparaat dat deel uitmaakt van uw organisatie, gebruikt u deze instelling om die identificatie te bieden. De waarde voor deze instelling wordt door Microsoft geleverd tijdens het onboarding-proces voor het programma. 
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, kan deze id niet worden gebruikt door Microsoft om deze computer en de bijbehorende telemetriegegevens te koppelen aan uw organisatie.
       </string>
@@ -40,21 +40,20 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, kan deze id niet 
       <string id="DisableEnterpriseAuthProxy_2">Geauthenticeerd proxygebruik inschakelen</string>
       <string id="DisableEnterpriseAuthProxy_Explain">Met deze beleidsinstelling wordt verhinderd dat de Connected User Experience and Telemetry-service een geauthenticeerde proxy gebruikt om gegevens terug te sturen aan Microsoft op Windows 10. Als u deze beleidsinstelling uitschakelt of niet configureert, gebruikt de Connected User Experience and Telemetry-service automatisch een geauthenticeerde proxy om gegevens terug te sturen aan Microsoft. Als u dit beleid inschakelt, kan de Connected User Experience and Telemetry-service niet automatisch een geauthenticeerde proxy gebruiken.</string>
 
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Uitgebreide diagnostische gegevens beperken tot het door Windows Analytics vereiste minimum</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Verzameling door Windows Analytics inschakelen</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Verzameling door Windows Analytics uitschakelen</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Met deze beleidsinstelling kunnen organisaties, in combinatie met de beleidsinstelling Telemetrie toestaan, via Windows Analytics-services een specifieke set diagnostische gegevens voor IT-informatie naar Microsoft versturen.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Verzamelen van optionele diagnostische gegevens voor Desktop Analytics beperken</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Verzameling met Desktop Analytics inschakelen</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Verzameling met Desktop Analytics uitschakelen</string>
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Deze beleidsinstelling, in combinatie met de beleidsinstelling 'Sta diagnostische gegevens toe', stelt organisaties in staat de minimaal vereiste gegevens voor Desktop Analytics te verzenden.
 
-Om dit in te schakelen, moet u twee stappen uitvoeren:
+ Om het hierboven beschreven gedrag mogelijk te maken, moet u het volgende doen stappen:
+ 1. Schakel deze beleidsinstelling in
+ 2. Stel het beleid "Allow Diagnostic Data" in op "Send optional diagnostic data"
+ 3. Schakel de "Limit Dump in" Verzamelbeleid
+ 4. Schakel het beleid "Limit Diagnostic Log Collection" in
 
-    1. Deze beleidsinstelling inschakelen
-2. Telemetrie toestaan instellen op niveau 2 (Uitgebreid)
+ Wanneer dit beleid is geconfigureerd, verzamelt Microsoft alleen de vereiste diagnostische gegevens en de gebeurtenissen die vereist zijn door Desktop Analytics, die kan worden bekeken op https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Deze instelling heeft geen effect op apparaten die zijn geconfigureerd om beveiligingsgegevens of vereiste diagnostische gegevens naar Microsoft te verzenden. 
-
-Wanneer dit beleid is geconfigureerd, is het verzamelen van diagnostische gegevens beperkt tot de vereiste diagnostische gegevens en de gebeurtenissen die vereist zijn voor Desktop Analytics. Deze evenementen kunnen worden bekeken op https://go.microsoft.com/fwlink/?linkid=2116020.
-
-Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het niveau van naar Microsoft verzonden diagnostische gegevens bepaald door de instelling Telemetrie-beleid toestaan als deze is geconfigureerd (bijvoorbeeld als u verbeterde diagnostische gegevens inschakelt via de beleidsinstelling Telemetrie toestaan, maar als u deze beleidsinstelling niet configureert, stuurt u de vereiste gebeurtenissen voor Windows Analytics, plus eventuele aanvullende diagnostische gegevens voor Verbeterd niveau naar Microsoft).
+Als u deze beleidsinstelling uitschakelt of niet configureert, diagnostische gegevens verzameling wordt bepaald door de beleidsinstelling "Allow Diagnostic Data" of door de eindgebruiker van de app Instellingen.
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Toestaan dat apparaatnaam wordt verzonden in diagnostische Windows-gegevens</string>
@@ -63,65 +62,63 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het niveau 
 Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de apparaatnaam niet naar Microsoft verzonden als onderdeel van diagnostische Windows-gegevens.
       </string>
 
-      <string id="ConfigureTelemetryOptInSettingsUx">Gebruikersinterface van instelling voor telemetrie-inschrijving configureren.</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_1">Instellingen voor telemetrie-inschrijving uitschakelen</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_2">Instellingen voor telemetrie-inschrijving inschakelen</string>
-      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Deze beleidsinstelling bepaalt of een eindgebruiker zelf telemetrieniveaus kan wijzigen in Instellingen.
+      <string id="ConfigureTelemetryOptInSettingsUx">Configureer gebruikersinterface voor opt-in-instelling voor diagnostische gegevens.</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_1">Instellingen voor diagnostische gegevens uitschakelen</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_2">Opt-in instellingen voor diagnostische gegevens inschakelen</string>
+      <string id="ConfigureTelemetryOptInSettingsUx_Explain">Deze beleidsinstelling bepaalt of een eindgebruiker de instellingen voor diagnostische gegevens kan wijzigen in de app Instellingen.
 
-Als u dit beleid instelt op 'Instellingen voor telemetrie-inschrijving uitschakelen', worden telemetrieniveaus uitgeschakeld in Instellingen en kunnen eindgebruikers deze niet wijzigen.
+ Als u deze beleidsinstelling instelt op 'Instellingen voor aanmelden voor diagnostische gegevens uitschakelen', instellingen voor diagnostische gegevens zijn uitgeschakeld in de app Instellingen.
 
-Als u dit beleid instelt op 'Instellingen voor telemetrie-inschrijving inschakelen' of niet configureert, kunnen eindgebruikers het telemetrieniveau van hun apparaat wijzigen in de app Instellingen.
+ Als u deze beleidsinstelling niet configureert of als u deze instelt op 'Instellingen voor aanmelden voor diagnostische gegevens inschakelen', kunnen eindgebruikers het apparaat wijzigen diagnostische instellingen in de app Instellingen.
 
-Opmerking:
-Als u een limiet wilt instellen voor het niveau van diagnostische gegevens dat naar Microsoft wordt verzonden door uw organisatie, gebruikt u de beleidsinstelling Telemetrie toestaan.
+ Opmerking:
+ om een limiet in te stellen voor de hoeveelheid diagnostische gegevens die uw organisatie naar Microsoft verzendt, gebruik de "Beleidsinstelling Diagnostische gegevens"-optie.
       </string>
 
-      <string id="ConfigureTelemetryOptInChangeNotification">Wijzigingsmeldingen voor telemetrie-inschrijving configureren.</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_1">Wijzigingsmeldingen voor telemetrie uitschakelen</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_2">Wijzigingsmeldingen voor telemetrie inschakelen</string>
-      <string id="ConfigureTelemetryOptInChangeNotification_Explain">
-          Deze beleidsinstelling bepaalt of op een apparaat meldingen over telemetrieniveaus worden weergegeven wanneer gebruikers zich voor het eerst aanmelden of wanneer wijzigingen optreden in Instellingen. 
-          Als u dit beleid instelt op 'Wijzigingsmeldingen voor telemetrie uitschakelen', worden meldingen over het telemetrieniveau niet meer weergegeven.
-          Als u dit beleid instelt op 'Wijzigingsmeldingen voor telemetrie inschakelen' of niet configureert, worden telemetriemeldingen weergegeven bij de eerste aanmelding en wanneer wijzigingen optreden in Instellingen.
+      <string id="ConfigureTelemetryOptInChangeNotification">Configureer wijzigingsmeldingen voor opt-in voor diagnostische gegevens.</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_1">Wijzigingsmeldingen voor diagnostische gegevens uitschakelen</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_2">Wijzigingsmeldingen voor diagnostische gegevens inschakelen</string>
+      <string id="ConfigureTelemetryOptInChangeNotification_Explain">Deze beleidsinstelling bepaalt of meldingen worden weergegeven, na een wijziging in de instellingen voor het aanmelden van diagnostische gegevens, bij de eerste aanmelding en wanneer de wijzigingen plaatsvinden in de instellingen.
+
+Als u deze beleidsinstelling instelt op 'Meldingen voor wijziging van diagnostische gegevens uitschakelen', worden meldingen voor het wijzigen van aanmeldingen voor diagnostische gegevens niet weergegeven.
+
+Als u deze beleidsinstelling instelt op 'Meldingen voor wijziging van diagnostische gegevens inschakelen' of deze beleidsinstelling niet configureert, worden meldingen voor het wijzigen van aanmeldingen voor diagnostische gegevens weergegeven bij de eerste aanmelding en wanneer de wijzigingen plaatsvinden in Instellingen.
       </string>
 
-      <string id="DisableDeviceDelete">Verwijderen van diagnostische gegevens uitschakelen </string>
-      <string id="DisableDeviceDelete_Explain">
-          Deze beleidsinstelling bepaalt of de knop Diagnostische gegevens verwijderen wordt ingeschakeld op de pagina Instellingen voor diagnostische gegevens en feedback.
+      <string id="DisableDeviceDelete">Verwijderen van diagnostische gegevens uitschakelen</string>
+      <string id="DisableDeviceDelete_Explain">Deze beleidsinstelling bepaalt of de knop Diagnostische gegevens verwijderen wordt ingeschakeld op de pagina Instellingen voor diagnostische gegevens en feedback.
            Als u deze beleidsinstelling inschakelt, wordt de knop Diagnostische gegevens verwijderen uitgeschakeld op de pagina Instellingen. Hiermee wordt voorkomen dat diagnostische gegevens die door Microsoft zijn verzameld, van het apparaat worden verwijderd.
            Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de knop Diagnostische gegevens verwijderen ingeschakeld op de pagina Instellingen. Hiermee kunnen mensen alle diagnostische gegevens wissen die door Microsoft vanaf dat apparaat zijn verzameld.
       </string>
 
-      <string id="DisableDiagnosticDataViewer">Viewer voor diagnostische gegevens uitschakelen. </string>
-      <string id="DisableDiagnosticDataViewer_Explain">
-          Deze beleidsinstelling bepaalt of gebruikers Viewer voor diagnostische gegevens kunnen inschakelen en starten vanaf de pagina Instellingen voor diagnostische gegevens en feedback.
+      <string id="DisableDiagnosticDataViewer">Viewer voor diagnostische gegevens uitschakelen.</string>
+      <string id="DisableDiagnosticDataViewer_Explain">Deze beleidsinstelling bepaalt of gebruikers Viewer voor diagnostische gegevens kunnen inschakelen en starten vanaf de pagina Instellingen voor diagnostische gegevens en feedback.
            Als u deze beleidsinstelling inschakelt, wordt de Viewer voor diagnostische gegevens niet ingeschakeld op de pagina Instellingen en wordt voorkomen dat de met viewer diagnostische gegevens worden weergegeven die door Microsoft zijn verzameld vanaf het apparaat.
            Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de Viewer voor diagnostische gegevens ingeschakeld op de pagina Instellingen.
       </string>
 
       <string id="ConfigureMicrosoft365UploadEndpoint">Uploadeindpunt voor diagnostische gegevens van Desktop Analytics configureren</string>
-      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Met dit beleid stelt u het uploadeindpunt in voor de diagnostische gegevens van dit apparaat als onderdeel van het Desktop Analytics-programma.
+      <string id="ConfigureMicrosoft365UploadEndpoint_Explain">Met dit beleid stelt u het uploadeindpunt in voor de diagnostische gegevens van dit apparaat als onderdeel van het Desktop Analytics-programma.
           Als uw organisatie deelneemt aan het programma en de opdracht heeft gekregen om een aangepast uploadeindpunt te configureren, definieert u het eindpunt via deze instelling.
           De waarde voor deze instelling wordt door Microsoft verstrekt tijdens het onboardingsgedeelte van het programma. 
       </string>
-
+      
       <string id="AllowUpdateComplianceProcessing">Bijwerken van compatibiliteitsverwerking toestaan</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-          Hiermee kunnen IT-beheerders diagnostische gegevens van dit apparaat laten verwerken door Update Compliance. 
-De volgende lijst toont de ondersteunde waarden: 
-0 (standaard) - Diagnostische gegevens worden niet verwerkt door Update Compliance.
- 16 - Diagnostische gegevens mogen worden verwerkt door Update Compliance. 
-Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostische gegevens van dit apparaat niet verwerkt door Update Compliance.
+          Hiermee kunnen IT-beheerders toestaan dat diagnostische gegevens van dit apparaat worden verwerkt door de update-compliance. 
+            In de volgende lijst worden de ondersteunde waarden weergegeven:  
+              0 (standaard) – de diagnostische gegevens worden niet verwerkt door de update-compliance. 
+              16 – diagnostische gegevens kunnen worden verwerkt door de update-compliance. 
+            Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostische gegevens van dit apparaat niet verwerkt door de update-compliance.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Verwerking van bureaubladanalyse toestaan</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-          Hiermee kunnen IT-beheerders diagnostische gegevens van dit apparaat laten verwerken door Desktop Analytics. 
- De volgende lijst toont de ondersteunde waarden: 
- 0 (standaard) - Diagnostische gegevens worden niet verwerkt door Desktop Analytics. 
- 2 - Diagnostische gegevens mogen worden verwerkt door Desktop Analytics. 
- Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostische gegevens van dit apparaat niet verwerkt door Desktop Analytics. 
+          Hiermee kunnen IT-beheerders de diagnostische gegevens van dit apparaat inschakelen voor verwerking door Desktop Analytics. 
+            In de volgende lijst worden de ondersteunde waarden weergegeven:  
+              0 (standaard) – de diagnostische gegevens worden niet verwerkt door de Desktop analyse. 
+              2 – diagnostische gegevens mogen worden verwerkt door Desktop Analytics. 
+          Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostische gegevens van dit apparaat niet verwerkt door de Desktop analyse. 
       </string>
 
       <string id="AllowWUfBCloudProcessing">Verwerking met WUfB-cloud toestaan</string>
@@ -134,11 +131,45 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostis
       </string>
 
       <string id="AllowCommercialDataPipeline">Pijplijn voor commerciële gegevens toestaan</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          Met AllowCommercialDataPipeline wordt het apparaat ingeschreven bij de Windows-pijplijn voor bedrijfsgegevens.
-          Als u deze instelling inschakelt, worden verzamelde gegevens van dit apparaat gekoppeld aan de Windows-pijplijn voor bedrijfsgegevens.
-          Als u deze instelling uitschakelt of niet configureert, worden de verzamelde gegevens op het apparaat verwerkt in overeenstemming met ons beleid voor de Windows-pijplijn voor standaardgegevens.
-          Het configureren van deze instelling is niet van invloed op het verzamelingsniveau voor telemetrie of de bevoegdheid van de gebruiker om het niveau te wijzigen. Deze instelling is alleen van toepassing op het Windows-besturingssysteem en apps die bij Windows zijn inbegrepen, maar niet op apps of services van derden in Windows 10.
+      <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline bepaalt of Microsoft een processor of controller is voor diagnostische gegevens van Windows die van dit apparaat zijn verzameld.
+
+ Als u dit beleid inschakelt, is Microsoft de processor van diagnostische gegevens van Windows die zijn verzameld van het Windows-apparaat en is de klant de controller. Het apparaat moet zijn geregistreerd in Azure AD om dit beleid te laten slagen.
+
+ Als u deze beleidsinstelling uitschakelt of niet configureert, is Microsoft de controller van diagnostische gegevens van Windows die vanaf dit apparaat zijn verzameld.
+
+ Dit beleid bepaalt alleen of Microsoft een processor is voor diagnostische gegevens van Windows vanaf dit apparaat. Het configureren van deze instelling verandert niet of diagnostische gegevens worden verzameld of dat de gebruiker het niveau kan wijzigen. Gebruik het beleid 'Diagnostische gegevens toestaan' om het verzamelniveau te configureren en gebruik het beleid 'Gebruikersinterface voor het configureren van diagnostische gegevens configureren' om te voorkomen dat gebruikers op dit apparaat het diagnostische gegevensniveau wijzigen.
+      </string>
+
+      <string id="LimitDiagnosticLogCollection">Verzamelen van diagnostische logboeken beperken</string>
+      <string id="LimitDiagnosticLogCollection_Explain">Deze beleidsinstelling bepaalt of aanvullende diagnostische logboeken worden verzameld wanneer er meer informatie nodig is om een probleem op het apparaat op te lossen. Diagnostische logboeken worden alleen verzonden als het apparaat is geconfigureerd om optionele diagnostische gegevens te verzenden.
+
+ Door deze beleidsinstelling in te schakelen, worden diagnostische logboeken niet verzameld.
+
+ Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen we af en toe diagnostische logboeken verzamelen als het apparaat is geconfigureerd om optionele diagnostische gegevens te verzenden.
+      </string>
+
+      <string id="LimitDumpCollection">Dumpverzameling beperken</string>
+      <string id="LimitDumpCollection_Explain">Met deze beleidsinstelling wordt het type back-ups beperkt dat kan worden verzameld als er meer informatie nodig is om een probleem op te lossen. Back-ups worden alleen verzonden wanneer het apparaat is geconfigureerd voor het verzenden van optionele diagnostische gegevens.
+
+Als u deze instelling inschakelt, is de Windows Foutrapportage beperkt tot het verzenden van mini-back-ups van de kernel en van back-ups voor gebruikersmodussortering.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen we af en toe volledige back-ups of heapback-ups verzamelen als de gebruiker heeft gekozen voor het verzenden van optionele diagnostische gegevens.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">OneSettings-controle inschakelen</string>
+      <string id="EnableOneSettingsAuditing_Explain">Met deze beleidsinstelling regelt u of Windows pogingen om verbinding te maken met de OneSettings-service vastlegt in het EventLog.
+
+Als u deze beleidsinstelling inschakelt, worden pogingen tot het verbinden met de OneSettings-service in het Microsoft\Windows\Privacy-Auditing\Operational EventLog-kanaal vastgelegd.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, worden pogingen om verbinding te maken met de OneSettings-service niet vastgelegd in het EventLog.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">OneSettings-downloads uitschakelen</string>
+      <string id="DisableOneSettingsDownloads_Explain">Met deze beleidsinstelling regelt u of Windows verbinding probeert te maken met de OneSettings-service.
+
+Als u deze beleidsinstelling inschakelt, kan Windows geen verbinding proberen te maken met de OneSettings-service.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, kan Windows regelmatig verbinding proberen te maken met de OneSettings-service om configuratie-instellingen downloaden.
       </string>
     </stringTable>
     <presentationTable>

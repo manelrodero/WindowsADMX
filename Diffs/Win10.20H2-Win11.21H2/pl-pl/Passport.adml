@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Użyj usługi Windows Hello dla firm</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Użyj certyfikatu do uwierzytelniania lokalnego</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Użyj zaufania w chmurze do uwierzytelniania lokalnego</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Funkcja Windows Hello dla firm to alternatywna metoda logowania się do systemu Windows przy użyciu konta usługi Active Directory lub Azure Active Directory, która może zastąpić hasła, karty inteligentne i wirtualne karty inteligentne.
 
@@ -122,9 +124,18 @@ UWAGA: Ta zasada ma zastosowanie tylko do urządzeń zarejestrowanych w usłudze
 
 Jeśli to ustawienie zasad zostanie włączone, funkcja Windows Hello dla firm będzie rejestrować certyfikat logowania używany na potrzeby uwierzytelniania lokalnego.
 
-Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja Windows Hello dla firm będzie rejestrować klucz używany na potrzeby uwierzytelniania lokalnego.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja Windows Hello dla firm użyje klucza lub biletu protokołu Kerberos (w zależności od innych ustawień zasad) na potrzeby uwierzytelniania lokalnego.
 
 UWAGA: Wyłączenie lub nieskonfigurowanie tego ustawienia zasad i włączenie ustawienia zasad „Użyj funkcji Windows Hello dla firm” wymaga co najmniej jednego kontrolera domeny z systemem Windows Server 2016 w używanym środowisku. W przeciwnym razie uwierzytelnianie za pomocą funkcji Windows Hello dla firm nie powiedzie się.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">To ustawienie zasad umożliwia skonfigurowanie funkcji Windows Hello dla firm w taki sposób, aby używała biletu Kerberos usługi Azure AD na potrzeby uwierzytelniania lokalnego.
+
+Jeśli to ustawienie zasad zostanie włączone, funkcja Windows Hello dla firm będzie używać biletu Kerberos pobranego z funkcji uwierzytelniania na platformie Azure na potrzeby uwierzytelniania lokalnego.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja Windows Hello dla firm będzie używać klucza lub certyfikatu (w zależności od innych ustawień zasad) na potrzeby uwierzytelniania lokalnego.
+
+UWAGA: Włączenie tego ustawienia zasad i ustawienia zasad „Użyj funkcji Windows Hello dla firm” wymaga co najmniej jednego kontrolera domeny z systemem Windows Server 2016 w używanym środowisku. W przeciwnym razie uwierzytelnianie za pomocą funkcji Windows Hello dla firm nie powiedzie się.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Konfiguruj składniki odblokowania urządzenia</string>

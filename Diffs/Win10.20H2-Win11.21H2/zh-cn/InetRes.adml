@@ -298,7 +298,6 @@
 如果未配置此策略设置，则列表中应用程序或进程的 URL 操作的当前值将起作用。</string>
       <string id="FavImportExport">禁用导入/导出设置向导</string>
       <string id="GeolocationDisable">关闭浏览器地理位置</string>
-      <string id="DisableFlashInIE">关闭 Internet Explorer 中的 Adobe Flash 并阻止应用程序使用 Internet Explorer 技术来实例化 Flash 对象</string>
       <string id="File_NoBrowserClose">“文件”菜单: 禁用关闭浏览器和资源管理器窗口</string>
       <string id="File_NoBrowserSaveAs">“文件”菜单: 禁用“另存为…”菜单选项</string>
       <string id="File_NoBrowserSaveWebComplete">“文件”菜单: 禁用另存为“网页，全部”格式</string>
@@ -415,17 +414,17 @@
 
 如果启用此策略设置，则不会提示用户启用网络钓鱼网站筛选。必须指定网络钓鱼网站筛选要使用的模式: 手动、自动或关闭。
 
-如果选择手动模式，则网络钓鱼网站筛选将仅执行本地分析，并将提示用户允许将任何数据发送到 Microsoft。如果完全启用该功能，则未列在筛选允许名单中的所有网站地址都将自动发送到 Microsoft，而不提示用户。
+如果选择手动模式，则网络钓鱼网站筛选将仅执行本地分析，并将提示用户允许将任何数据发送到 Microsoft。如果完全启用该功能，则未列在筛选允许列表中的所有网站地址都将自动发送到 Microsoft，而不提示用户。
 
 如果禁用或未配置此策略设置，则提示用户确定网络钓鱼网站筛选的操作模式。</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">此策略设置允许用户启用 SmartScreen 筛选器。如果已知所访问的网站试图通过“网络钓鱼网站”骗取个人信息，或已知含有恶意软件，该筛选器就会向用户发出警告。
 
-如果启用此策略设置，将不提示用户启用 SmartScreen 筛选器。必须指定 SmartScreen 筛选器使用的模式: 启用或关闭。未列在该筛选器允许名单中的所有网站地址都将自动发送到 Microsoft，而不提示用户。
+如果启用此策略设置，将不提示用户启用 SmartScreen 筛选器。必须指定 SmartScreen 筛选器使用的模式: 启用或关闭。未列在该筛选器允许列表中的所有网站地址都将自动发送到 Microsoft，而不提示用户。
 
 如果禁用或未配置此策略设置，则在首次运行体验期间提示用户决定是否启用 SmartScreen 筛选器。</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">此策略设置阻止用户管理 SmartScreen 筛选器。如果已知所访问的网站试图通过“网络钓鱼网站”骗取个人信息，或已知含有恶意软件，则该筛选器向用户发出警告。
 
-如果启用此策略设置，将不提示用户启用 SmartScreen 筛选器。不在筛选允许名单中的所有网站地址都将自动发送到 Microsoft，而不提示用户。
+如果启用此策略设置，将不提示用户启用 SmartScreen 筛选器。不在筛选允许列表中的所有网站地址都将自动发送到 Microsoft，而不提示用户。
 
 如果禁用或未配置此策略设置，则在第一次运行体验期间提示用户决定是否启用 SmartScreen 筛选器。</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">此策略设置关闭安全设置检查功能，该功能检查 Internet Explorer 安全设置，以确定这些设置将 Internet Explorer 置于不安全状态的时间。
@@ -726,13 +725,6 @@ Microsoft Agent 是一个软件服务集，支持软件代理作为交互式个�
 如果禁用此策略设置，则启用浏览器地理位置支持。
 
 如果未配置此策略设置，则可以在“隐私”选项卡上的“Internet 选项”中启用或关闭浏览器地理位置支持。</string>
-      <string id="IE_ExplainDisableFlashInIE">此策略设置关闭 Internet Explorer 中的 Adobe Flash 并阻止应用程序使用 Internet Explorer 技术来实例化 Flash 对象。
-
-如果启用此策略设置，会为 Internet Explorer 关闭 Flash，且应用程序不可使用 Internet Explorer 技术来实例化 Flash 对象。在“管理加载项”对话框中，Flash 状态将为“禁用”，且用户无法启用 Flash。如果启用此策略设置，Internet Explorer 将忽略通过“加载项列表”和“除非在加载项列表中特别指定，否则拒绝所有加载项”这两个策略设置为 Adobe Flash 所做的设置。 
-
-如果禁用或未配置此策略设置，会为 Internet Explorer 关闭 Flash，且应用程序可以使用 Internet Explorer 技术来实例化 Flash 对象。用户可在“管理加载项”对话框中启用或禁用 Flash。
-
-请注意，即使禁用或未配置此策略设置，也仍可通过“加载项列表”和“除非在加载项列表中特别指定，否则拒绝所有加载项”这两个策略设置来禁用 Adobe Flash。然而，如果通过“加载项列表”和“除非在加载项列表中特别指定，否则拒绝所有加载项”策略设置禁用 Adobe Flash，而不通过此策略设置禁用它，则所有使用 Internet Explorer 技术来实例化 Flash 对象的应用程序仍然可以实现这种实例化。有关详细信息，请参阅 Internet Explorer TechNet 库中的“Internet Explorer 10 组策略设置”。</string>
       <string id="IE_ExplainFile_NoBrowserClose">阻止用户关闭 Microsoft Internet Explorer 和文件资源管理器。
 
 如果启用此策略，“文件”菜单上的“关闭”命令将灰显。
@@ -3903,7 +3895,7 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果启用此设置，用户可以从“工具”菜单查看和使用“企业模式”选项。如果启用此设置但未指定报告位置，“企业模式”仍将可供用户使用，但你不会收到任何报告。
 
 如果禁用或未配置此策略设置，则不会显示该菜单选项，用户将无法在企业模式下运行网站。</string>
-      <string id="RestrictInternetExplorer">将企业模式站点列表中不包含的所有站点发送到 Microsoft Edge。</string>
+      <string id="RestrictInternetExplorer">将未包含在企业模式站点列表中的所有站点发送到 Microsoft Edge</string>
       <string id="IE_ExplainRestrictInternetExplorer">此设置可以让你决定是否要在 Microsoft Edge 中打开企业模式站点列表中不包含的所有站点。如果使用此设置，还必须启用“管理模板\Windows 组件\Internet Explorer\使用企业模式 IE 网站列表”策略设置，并且必须在企业模式站点列表中至少包含一个站点。
 
 启用此设置将在 Microsoft Edge 中自动打开企业模式站点列表中不包含的所有站点。
@@ -3958,6 +3950,41 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 - 将企业模式站点列表中不包含的所有站点发送到 Microsoft Edge ("RestrictIE")
 
 有关如何将此策略与其他相关策略结合使用以为你的组织创建最佳配置的详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2094210。</string>
+      <string id="AllowSaveTargetAsInIEMode">允许 Internet Explorer 模式下的“将目标另存为”</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">使用此策略设置，管理员可以在 Internet Explorer 模式下启用 "将目标另存为" 上下文菜单。
+
+如果启用此策略，将在 Internet Explorer 模式上下文菜单中显示 "目标另存为"，并且其作用与 Internet Explorer 相同。
+
+如果禁用或未配置此策略设置，则不会在 Internet Explorer 模式上下文菜单中显示 "目标另存为"。
+
+有关详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">在 Internet Explorer 模式下启用扩展热键</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">此策略设置让管理员可以启用扩展的 Microsoft Edge Internet Explorer 模式热键，例如“Ctrl+S”具有“另存为”功能。
+
+如果启用此策略，则会在 Internet Explorer 模式下启用扩展热键功能，并且其工作方式与 Internet Explorer 相同。
+
+如果禁用或未配置此策略，则在 Internet Explorer 模式下扩展热键将无法工作。
+
+有关详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">将 Internet Explorer 11 作为独立浏览器禁用</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">通过此策略，你可以限制 Internet Explorer 作为独立浏览器的启动。
+
+如果启用此策略，它将: 
+- 阻止 Internet Explorer 11 作为独立浏览器启动。
+- 将 Internet Explorer 的使用限制为 Microsoft Edge 的本机“Internet Explorer 模式”。
+- 将所有启动 Internet Explorer 11 的尝试重定向到 Microsoft Edge 稳定渠道浏览器。
+- 替代任何其他重定向到 Internet Explorer 11 的策略。
+
+如果禁用或未配置此策略，则将使用当前活动的浏览器设置打开所有站点。注意: 必须安装 Microsoft Edge 稳定渠道，此策略才能生效。</string>
+      <string id="NotifyDisableIEOptions_Never">从不</string>
+      <string id="NotifyDisableIEOptions_Always">始终</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">每个用户配置一次</string>
+      <string id="JScriptReplacement">借助加载 JScript9Legacy 通过 MSHTML/WebOC 代替 JScript 来取代 JScript。</string>
+      <string id="IE_ExplainJScriptReplacement">此策略设置指定是否为基于 MSHTML/WebOC 的调用加载 JScript 或 JScript9Legacy。
+      
+如果启用此策略设置，则在实例化 JScript 的情况下将加载 JScript9Legacy。
+
+如果禁用或未配置此策略，则将使用 JScript。</string>
       <string id="VerMgmtDisable">关闭 Internet explorer 的过时 ActiveX 控件的阻止功能</string>
       <string id="IE_ExplainVerMgmtDisable">此策略设置可确定 Internet Explorer 是否会阻止特定的过时 ActiveX 控件。过时的 ActiveX 控件在 Intranet 区域中不受阻止。
 
@@ -4833,6 +4860,9 @@ LOBApp.contoso.com</string>
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">第一个选项</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">第二个选项</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">第三个选项</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">通知 Internet Explorer 11 浏览器已禁用</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

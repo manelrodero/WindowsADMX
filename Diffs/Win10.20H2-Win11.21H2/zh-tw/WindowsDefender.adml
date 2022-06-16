@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender 防毒軟體</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">排除範圍</string>
+    <string id="DeviceControl">裝置控制</string>
     <string id="ExploitGuard">Microsoft Defender 惡意探索防護</string>
     <string id="ExploitGuard_ASR">攻擊面減少</string>
     <string id="ExploitGuard_ControlledFolderAccess">受控資料夾存取權</string>
@@ -29,6 +30,28 @@
 
 如果您停用這個設定，反惡意程式碼服務將以低優先順序工作載入。</string>
 
+    <string id="MeteredConnectionUpdates">允許 Microsoft Defender 防毒軟體透過計量付費連線更新及通訊。</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    已停用 (預設)：
+    不允許透過計量付費連線進行更新和通訊。
+
+啟用：
+    允許受管理的裝置透過計量付費連線進行更新。可能需要支付資料傳輸費用。</string>
+    <string id="AllowNetworkProtectionOnWinServer">此設定可控制是否允許在 Windows Server 上將網路保護設定為封鎖或稽核模式。</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    已停用 (預設)：
+    如果未設定或已停用，則不允許在 Windows Server 上將網路保護設定為封鎖或稽核模式。
+
+啟用：
+    如果啟用，系統管理員可以控制是否允許在 Windows Server 上將網路保護設定為封鎖或稽核模式。
+    請注意，此設定相依于 EnableNetworkProtection 設定。如果此設定為 false，將會略過 EnableNetworkProtection，否則會根據 EnableNetworkProtection 的值，在 Windows Server 上啟動網路保護。</string>
+    <string id="DisableDatagramProcessing">這個設定控制網路保護的資料包處理。</string>
+    <string id="DisableDatagramProcessing_Explain">
+    已啟用 (預設)：
+    若未設定或停用，將會啟用資料包處理以進行網路保護。
+
+啟用：
+    如果啟用，將會停用網路保護的資料包處理。</string>
     <string id="DisableAutoExclusions">關閉自動排除</string>
     <string id="DisableAutoExclusions_Explain">
         允許系統管理員指定伺服器 SKU 的「自動排除」功能。
@@ -62,9 +85,9 @@
     <string id="DisableLocalAdminMerge">設定本機系統管理員的清單合併行為</string>
     <string id="DisableLocalAdminMerge_Explain">這個原則設定控制本機系統管理員設定的複雜清單設定是否與群組原則設定合併。這個設定適用於威脅和排除項目這類清單。
 
-如果您啟用或未設定這個設定，產生的有效原則會合併群組原則和本機系統管理員在喜好設定中定義的特殊項目。如果發生衝突，群組原則設定將覆寫喜好設定。
+    如果您停用或未設定這個設定，產生的有效原則會合併群組原則和本機系統管理員在喜好設定中定義的特殊項目。如果發生衝突，群組原則設定將覆寫喜好設定。
 
-如果您停用這個設定，產生的有效原則只會使用群組原則定義的項目。群組原則設定將覆寫本機系統管理員設定的喜好設定。</string>
+如果您啟用這個設定，產生的有效原則只會使用群組原則定義的項目。群組原則設定將覆寫本機系統管理員設定的喜好設定。</string>
     <string id="DisableRoutinelyTakingAction">關閉例行修復</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     這個原則設定可讓您設定 Microsoft Defender 防毒軟體是否會自動對所有偵測到的威脅採取行動。對特定威脅採取的動作將以原則定義的動作、使用者定義的動作和特徵碼定義的動作這三者的組合決定。
@@ -109,11 +132,15 @@
       若停用或未設定此設定，Proxy 將跳過此遞補步驟 (根據上面指定的順序)。
     </string>
     <string id="RandomizeScheduleTaskTimes">隨機選擇排程工作時間</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">這個原則設定可讓您啟用或停用排定的掃描開始時間和排程安全性情報更新開始時間的隨機安排。這個設定用於分散掃描對資源的影響。例如，可以用於共用一個主機的訪客虛擬機器，防止多個訪客虛擬機器同時進行大量磁碟操作。
+    <string id="RandomizeScheduleTaskTimes_Explain">此原則設定可讓您設定排程的掃描開始時間，以及排程的安全情報更新開始時間時段 (小時)。
 
-    如果您啟用或未設定這個設定，會在指定的開始時間之前和之後，以 30 分鐘以內的時間為間隔隨機開始執行排程工作。
+    如果您停用或未設定此設定，則排程的工作將會在工作排程器中所指定的開始時間之後，在 4 小時之內於隨機時間開始。
+    如果您啟用這項設定，您可以將此隨機時段變寬或變窄。請指定介於 1 至 23 小時之間的隨機時段。</string>
+    <string id="SchedulerRandomizationTime">設定已排程的工作時間隨機化視窗。</string>
+    <string id="SchedulerRandomizationTime_Explain">此原則設定可讓您設定排程的掃描開始時間，以及排程的安全情報更新開始時間時段 (小時)。
 
-    如果您停用這個設定，會在指定的時間開始執行排程工作。</string>
+    如果您停用或未設定此設定，則排程的工作將會在指定的開始時間之後，以 4 小時的時間間隔內於隨機時間開始。
+    如果您啟用這項設定，您必須以小時挑選一個隨機時段。可行的隨機時段間隔為 1 至 23 小時之間。</string>
     <string id="ServiceKeepAlive">允許反惡意程式碼服務一直持續執行</string>
     <string id="ServiceKeepAlive_Explain">這個原則設定可讓您設定當防毒和反間諜功能安全性情報停用時，是否繼續執行反惡意程式碼服務。建議您保持停用這個設定。
 
@@ -135,12 +162,20 @@
         未設定:
         與 [停用] 相同。
     </string>
+    <string id="SupportLogLocation">定義要複製支援記錄檔的目錄路徑</string>
+    <string id="SupportLogLocation_Explain">這個原則設定可讓您設定要將支援記錄檔複製到的目錄路徑。這個設定的值應該是有效的目錄路徑。
+
+如果您啟用這個設定，將會把支援記錄檔複製到指定的支援記錄檔位置路徑。
+
+如果您停用或未設定這個設定，則不會將支援記錄檔複製到任何位置。</string>
     <string id="Exclusions_Extensions">副檔名排除</string>
     <string id="Exclusions_Extensions_Explain">這個原則設定可讓您指定應從排程、自訂和即時掃描排除的檔案類型清單。檔案類型應該新增到這份清單的「選項」之下。每個項目都必須以名稱值組列出，其中名稱應該是副檔名的字串表示 (例如 "obj" 或 "lib")。通常不會用到這個值，建議設定為 0。</string>
     <string id="Exclusions_Paths">路徑排除</string>
     <string id="Exclusions_Paths_Explain">這個原則設定可讓您停用指定路徑下的檔案或指定的完整資源的排程和即時掃描。路徑應該新增到這個設定的「選項」之下。每個項目都必須以名稱值組列出，其中名稱應該是路徑或完整資源名稱的字串表示。例如，路徑可以定義為: "c:\Windows"，以排除這個目錄中的所有檔案。完整資源名稱可以定義為: "C:\Windows\App.exe"。通常不會用到這個值，建議設定為 0。</string>
     <string id="Exclusions_Processes">處理程序排除</string>
-    <string id="Exclusions_Processes_Explain">這個原則設定可讓您停用任何指定處理程序所開啟的任何檔案的排程和即時掃描。不會排除處理程序本身。若要排除處理程序，要使用路徑排除。處理程序應該新增到這個設定的「選項」之下。每個項目都必須以名稱值組列出，其中名稱應該是處理程序映像路徑的字串表示。請注意，只能排除可執行檔。例如，處理程序可以定義為: "c:\windows\app.exe"。通常不會用到這個值，建議設定為 0。</string>
+    <string id="Exclusions_Processes_Explain">這個原則設定可讓您停用任何指定處理程序所開啟的任何檔案的即時掃描。這個原則不會套用到排定的掃描。不會排除處理程序本身。若要排除處理程序，要使用「路徑」排除。處理程序應該新增到這個設定的「選項」之下。每個項目都必須以名稱值組列出，其中名稱應該是處理程序映像路徑的字串表示。請注意，只能排除可執行檔。例如，處理程序可以定義為:「c:\windows\app.exe」。通常不會用到這個值，建議設定為 0。</string>
+    <string id="Exclusions_IpAddresses">IP 位址排除項目</string>
+    <string id="Exclusions_IpAddresses_Explain">允許管理員明確停用 wdnisdrv 對特定 IP 位址組進行的網路封包檢查。</string>
     <string id="Nis_DisableProtocolRecognition">開啟通訊協定辨識</string>
     <string id="Nis_DisableProtocolRecognition_Explain">這個原則設定可讓您針對網路保護設定通訊協定辨識，以避免他人入侵已知的安全性弱點。
 
@@ -167,6 +202,14 @@
 如果您啟用這個設定，將會在指定的天數之後，從隔離資料夾移除項目。
 
 如果您停用或未設定這個設定，項目將無限期地保留在隔離資料夾，且不會自動移除。</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">啟用指令碼掃描</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">這個原則設定允許您設定指令碼掃描。
+
+    如果您啟用或未設定這個設定，將啟用指令碼掃描。
+
+    如果您停用這個設定，就會停用指令碼掃描。</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">開啟行為監視</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">這個原則設定允許您設定行為監視。
 
@@ -400,12 +443,6 @@
 如果您啟用或未設定這個設定，將會啟用啟發學習。
 
 如果您停用這個設定，將會停用啟發學習。</string>
-    <string id="Scan_DisablePackedExeScanning">掃描封裝的可執行檔</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">這個原則設定可讓您設定封裝可執行檔的掃描。建議您讓這類掃描保持開啟。
-
-如果您啟用或未設定這個設定，將會掃描封裝的可執行檔。
-
-如果您停用這個設定，則不會掃描封裝的可執行檔。</string>
     <string id="Scan_DisableRemovableDriveScanning">掃描抽取式磁碟機</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">這個原則設定可讓您管理是否要在執行完整掃描時掃描抽取式磁碟機 (例如，USB 快閃磁碟機) 內容，以查看是否有惡意軟體及垃圾軟體。
 
@@ -477,7 +514,7 @@
 
 如果您啟用這個設定，會以指定的間隔執行快速掃描。
 
-如果您停用或未設定這個設定，會在預設時間執行快速掃描。</string>
+如果您停用或未設定這個設定，此設定所控制的快速掃描將不會執行。</string>
     <string id="Scan_ScanOnlyIfIdle">只在電腦開啟但不在使用中時開始排定的掃描</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">這個原則設定可讓您設定排定的掃描只在電腦開啟但不在使用中時開始。
 
@@ -521,11 +558,11 @@
     <string id="Scan_ScheduleDay_7">星期五</string>
     <string id="Scan_ScheduleDay_8">星期六</string>
     <string id="Scan_ScheduleQuickScantime">指定一天中執行快速掃描的時間</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">這個原則設定可讓您指定每天執行快速掃描的時間。時間值以午夜 (00:00) 過後的分鐘數表示。 例如，120 (0x78) 等於 02:00 AM。這個設定的預設時間值為早上 2:00。排程是根據執行掃描的電腦上的本機時間計算。
+    <string id="Scan_ScheduleQuickScantime_Explain">這個原則設定可讓您指定每天執行快速掃描的時間。時間值以午夜 (00:00) 過後的分鐘數表示。 例如，120 (0x78) 等於上午 02:00。這個設定的預設值為停用。排程是根據執行掃描的電腦上的本機時間計算。
 
 如果您啟用這個設定，會在指定的時間執行每天快速掃描。
 
-如果您停用或未設定這個設定，會在預設時間執行每天快速掃描。</string>
+如果您停用或未設定這個設定，此設定所控制的快速掃描將不會執行。</string>
     <string id="Scan_ScheduleTime">指定執行排定的掃描的時間</string>
     <string id="Scan_ScheduleTime_Explain">這個原則設定可讓您指定執行排定的掃描的時間。時間值以午夜 (00:00) 過後的分鐘數表示。 例如，120 (0x78) 等於 02:00 AM。這個設定的預設時間值為早上 2:00。排程是根據執行掃描的電腦上的本機時間計算。
 
@@ -548,17 +585,17 @@
         如果您停用或未進行此設定，排定的掃描期間不會對 CPU 優先順序進行任何變更。
     </string>
     <string id="SignatureUpdate_ASSignatureDue">定義要將間諜軟體安全情報視為過時的天數</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">這個原則設定可讓您定義要將間諜程式安全性情報視為過時必須經過的天數。如果安全性情報被判斷為過時，這個狀態會觸發幾個額外的動作，包含回到替代的更新來源，或者在使用者介面顯示警告圖示。這個值預設為 14 天。
+    <string id="SignatureUpdate_ASSignatureDue_Explain">此原則設定允許您定義將病毒安全情報視為過時所需經過的天數。如果安全情報判斷為過時，則此狀態會觸發幾個額外的動作，包含回到替代的更新來源，或在使用者介面顯示警告圖示。此值預設為 7 天。\r\n\r\n    如果您啟用這個設定，會將經過指定的天數且尚未更新的間諜程式安全情報視為過時。
 
-    如果您啟用這個設定，會將經過指定的天數且尚未更新的間諜程式安全性情報視為過時。
+    如果您啟用此設定，會將經過指定的天數且尚未更新的病毒安全情報視為過時。
 
-    如果您停用或未設定這個設定，會將經過預設天數且尚未更新的間諜程式安全性情報視為過時。</string>
+    如果您停用或未設定此設定，會將經過預設天數且尚未更新的病毒安全情報視為過時。</string>
     <string id="SignatureUpdate_AVSignatureDue">定義要將病毒安全情報視為過時的天數</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">這個原則設定可讓您定義要將病毒安全性情報視為過時必須經過的天數。如果安全性情報被判斷為過時，這個狀態會觸發幾個額外的動作，包含回到替代的更新來源，或者在使用者介面顯示警告圖示。這個值預設為 14 天。
+    <string id="SignatureUpdate_AVSignatureDue_Explain">此原則設定允許您定義將病毒安全情報視為過時所需經過的天數。如果安全情報判斷為過時，則此狀態會觸發幾個額外的動作，包含回到替代的更新來源，或在使用者介面顯示警告圖示。此值預設為 7 天。
 
-    如果您啟用這個設定，會將經過指定的天數且尚未更新的病毒安全性情報視為過時。
+    如果您啟用此設定，會將經過指定的天數且尚未更新的病毒安全情報視為過時。
 
-    如果您停用或未設定這個設定，會將經過預設天數且尚未更新的病毒安全性情報視為過時。</string>
+    如果您停用或未設定此設定，會將經過預設天數且尚未更新的病毒安全情報視為過時。</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">定義檔案共用區，用以下載安全性情報更新檔案</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">這個原則設定可以讓您設定下載安全性情報更新的 UNC 檔案共用來源。來源會依指定的順序連絡。這個設定的值應該以列舉安全性情報更新來源的管線分隔字串輸入。例如: "{\\unc1 | \\unc2 }"。這個清單預設為空白。
 
@@ -847,23 +884,30 @@
     </string>
     <string id="ExploitGuard_ASR_Rules">設定攻擊面減少規則</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    設定每項 Attack Surface Reduction (ASR) 規則的狀態。
+    設定每個受攻擊面縮小 (ASR) 規則的狀態。
 
-    啟用此設定後，您可以在 [選項] 區段將每項規則設定成如下:
+    啟用此設定後，您可以在 [選項] 區段將每個規則設定成下列內容:
     - 封鎖: 將套用規則
     - 稽核模式: 如果規則在正常狀況下會引發事件，則將予以記錄 (但並沒有實際套用規則)
     - 關閉: 將不會套用規則
+    - 未設定: 將使用預設值啟用規則
+    - 警告: 將會套用規則，而使用者可以選擇略過封鎖
+
+    除非停用 ASR 規則，為 ASR 規則收集稽核事件的子樣本將為未設定的值。
 
     啟用:
-    在此設定的 [選項] 區段下指定每項 ASR 規則的狀態。
-    以名稱值組的形式各用新的一行輸入每項規則:
-    - [名稱] 欄: 輸入有效的 ASR 規則識別碼
-    - [值] 欄: 輸入與相關規則所要指定之狀態對應的狀態識別碼
+    在此設定的 [選項] 區段下指定每個 ASR 規則的狀態。
+    以名稱值組的形式在新的一行輸入每個規則:
+    - 名稱欄: 輸入有效的 ASR 規則識別碼
+    - 值欄: 輸入與您要針對相關規則指定之狀態相關的狀態識別碼
 
-    [值] 欄內允許的狀態識別碼如下:
+    值欄底下允許下列狀態識別碼:
     - 1 (封鎖)
     - 0 (關閉)
     - 2 (稽核)
+    - 5 (未設定)
+    - 6 (警告)
+
     
     範例:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -871,12 +915,12 @@
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
     停用:
-    不設定任何 ASR 規則。
+    未設定任何 ASR 規則。
 
     未設定:
-    與 [停用] 同。
+    與停用相同。
 
-    在 [自 Attack Surface Reduction 規則排除檔案和路徑] GP 設定中可排除特定資料夾或檔案。
+    您可以排除「排除受攻擊面縮小規則的檔案和路徑」GP 設定中的資料夾或檔案。
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">設定受控資料夾存取權</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@
 
     Microsoft Defender 防毒軟體會自動判斷可受信任的應用程式。您可在 Configure allowed applications GP (設定允許的應用程式 GP) 設定中新增其他受信任應用程式。
     </string>
+    <string id="DeviceControl_PolicyGroups">定義裝置控制原則群組</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        請依照裝置控制原則群組 xml 結構描述來填寫原則群組資料。
+    </string>
+    <string id="DeviceControl_PolicyRules">定義裝置控制原則規則</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        請依照裝置控制原則規則 xml 結構描述來填寫原則規則資料。
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@
         <label>定義連線到網路的 Proxy 伺服器</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>定義要複製支援記錄檔的目錄路徑</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">副檔名排除</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">處理程序排除</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">IP 位址排除項目</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">指定網路流量檢查的其他定義集</listBox>
@@ -1071,10 +1131,10 @@
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">指定執行排定的掃描的時間</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">定義要將間諜軟體安全情報視為過時的天數</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">定義要將間諜軟體安全情報視為過時的天數</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">定義要將病毒安全情報視為過時的天數</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">定義要將病毒安全情報視為過時的天數</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>在此處定義原則群組</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>在此處定義原則規則</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">指定排程器隨機化視窗 (以小時為單位)。</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

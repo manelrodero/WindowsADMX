@@ -99,6 +99,36 @@
 
 當在裝置上套用此「群組原則」物件時，若某個 App 是開啟的，員工必須重新啟動 App 或裝置，系統才能將原則變更套用到該 App。
       </string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">讓 Windows 應用程式擷取各種視窗或顯示的螢幕擷取畫面</string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">此原則設定可指定 Windows 應用程式是否可以擷取各種視窗或顯示器的螢幕擷取畫面。
+
+您可以透過指定 [套件系列名稱]，為所有應用程式指定預設設定或為個別應用程式指定設定。您可以透過使用 Get-AppPackage Windows PowerShell Cmdlet 來取得應用程式的套件系列名稱。每個應用程式的設定會覆寫預設設定。
+
+如果您選擇 [由使用者控制] 選項，貴組織中的員工可透過使用裝置上的 [設定] &gt; [隱私權] 來決定 Windows 應用程式是否可以擷取各種視窗或顯示的螢幕擷取畫面。
+
+如果您選擇 [強制允許] 選項，則會允許 Windows 應用程式擷取各種視窗或顯示的螢幕擷取畫面，而貴組織中的員工就無法將其變更。
+
+如果您選擇 [強制拒絕] 選項，則不允許 Windows 應用程式擷取各種視窗或顯示的螢幕擷取畫面，而貴組織中的員工無法將其變更。
+
+如果您停用或未設定此原則設定，貴組織中的員工可透過使用裝置上的 [設定] &gt; [隱私權] 來決定 Windows 應用程式是否可以擷取各種視窗或顯示的螢幕擷取畫面。
+
+如果裝置上套用此群組原則物件時已開啟應用程式，員工必須重新啟動該應用程式或裝置，原則變更才會套用至該應用程式。
+      </string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">讓 Windows 應用程式關閉螢幕擷取畫面框線</string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">此原則設定可指定 Windows 應用程式是否可以關閉螢幕擷取畫面框線。
+
+您可以透過指定 [套件系列名稱]，為所有應用程式指定預設設定或為個別應用程式指定設定。您可以透過使用 Get-AppPackage Windows PowerShell Cmdlet 來取得應用程式的套件系列名稱。每個應用程式的設定會覆寫預設設定。
+
+如果您選擇 [由使用者控制] 選項，貴組織中的員工可透過使用裝置上的 [設定] &gt; [隱私權] 來決定 Windows 應用程式是否可以關閉螢幕擷取畫面框線。
+
+如果您選擇 [強制允許] 選項，則會允許 Windows 應用程式關閉螢幕擷取畫面框線，而貴組織中的員工就無法將其變更。
+
+如果您選擇 [強制拒絕] 選項，則不允許 Windows 應用程式關閉螢幕擷取畫面框線，而貴組織中的員工無法將其變更。
+
+如果您停用或未設定此原則設定，貴組織中的員工可透過使用裝置上的 [設定] &gt; [隱私權] 來決定 Windows 應用程式是否可以關閉螢幕擷取畫面框線。
+
+如果裝置上套用此群組原則物件時已開啟應用程式，員工必須重新啟動該應用程式或裝置，原則變更才會套用至該應用程式。
+      </string>
       <string id="LetAppsAccessLocation_Name">讓 Windows App 存取位置</string>
       <string id="LetAppsAccessLocation_Explain">此原則設定可指定 Windows App 是否能存取位置。
 
@@ -392,6 +422,24 @@
         <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">所有應用程式的預設值:</dropdownList>
+        <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
+        <text>強制允許這些特定 App (使用套件系列名稱):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
+        <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">設為所有應用程式的預設:</dropdownList>
+        <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
+        <text>強制允許這些特定 App (使用套件系列名稱):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
+        <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">所有 App 的預設值:</dropdownList>
         <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
@@ -475,38 +523,38 @@
       </presentation>
       <presentation id="LetAppsAccessTrustedDevices">
         <dropdownList refId="LetAppsAccessTrustedDevices_Enum" noSort="true" defaultItem="0">所有 App 的預設值:</dropdownList>
-        <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
+        <text>讓使用者控制這些特定應用程式 (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_UserInControlOfTheseApps_List"/>
-        <text>強制允許這些特定 App (使用套件系列名稱):</text>
+        <text>強制允許這些特定應用程式 (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceAllowTheseApps_List"/>
-        <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
+        <text>強制拒絕這些特定應用程式 (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsRunInBackground">
         <dropdownList refId="LetAppsRunInBackground_Enum" noSort="true" defaultItem="0">所有 App 的預設值:</dropdownList>
         <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsRunInBackground_UserInControlOfTheseApps_List"/>
-        <text>強制允許這些特定 App (使用套件系列名稱):</text>
+        <text>強制允許這些特定應用程式 (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsRunInBackground_ForceAllowTheseApps_List"/>
         <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsRunInBackground_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsGetDiagnosticInfo">
         <dropdownList refId="LetAppsGetDiagnosticInfo_Enum" noSort="true" defaultItem="0">所有應用程式的預設:</dropdownList>
-        <text>讓使用者控制這些特定應用程式 (使用套件系列名稱):</text>
+        <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_UserInControlOfTheseApps_List"/>
-        <text>強制允許這些特定應用程式 (使用套件系列名稱):</text>
+        <text>強制允許這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceAllowTheseApps_List"/>
-        <text>強制拒絕這些特定應用程式 (使用套件系列名稱):</text>
+        <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessGazeInput">
         <dropdownList refId="LetAppsAccessGazeInput_Enum" noSort="true" defaultItem="0">所有應用程式的預設:</dropdownList>
         <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_UserInControlOfTheseApps_List"/>
-        <text>強制允許這些特定應用程式 (使用套件系列名稱):</text>
+        <text>強制允許這些特定 App (使用套件系列名稱)：</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
-        <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
+        <text>強制拒絕這些特定 App (使用套件系列名稱)：</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsActivateWithVoice">
@@ -519,9 +567,9 @@
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">設為所有應用程式的預設:</dropdownList>
         <text>讓使用者控制這些特定 App (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>強制允許這些特定 App (使用套件系列名稱):</text>
+        <text>強制允許這些特定應用程式 (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>強制拒絕這些特定 App (使用套件系列名稱):</text>
+        <text>強制拒絕這些特定應用程式 (使用套件系列名稱):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

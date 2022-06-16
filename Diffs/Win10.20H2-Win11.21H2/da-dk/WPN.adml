@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Beskeder</string>
+      <string id="WnsEndpoint">Aktiverer gruppepolitik for WNS FQDN</string>
+      <string id="WnsEndpointExplain">Denne politik angiver en særlig WNS FQDN for bestemte miljøer.</string>
       <string id="NoTileNotification">Slå feltbeskeder fra</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minutter efter midnat:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>FQDN til WNS</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

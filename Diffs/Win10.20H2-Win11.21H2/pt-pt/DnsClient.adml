@@ -250,6 +250,23 @@ Se esta definição de política estiver desativada, ou se não a configurar, os
 Se esta definição de política for ativada, os IDNs são convertidos para o formato Nameprep.
 
 Se esta definição de política estiver desativada, ou se não for configurada, os IDNs não são convertidos para o formato Nameprep.</string>
+      <string id="DNS_Doh">Configurar resolução de nomes DNS por HTTPS (DoH)</string>
+      <string id="DNS_Doh_Disabled">Proibir DoH</string>
+      <string id="DNS_Doh_Auto">Permitir DoH</string>
+      <string id="DNS_Doh_Force">Exigir DoH</string>
+      <string id="DNS_Doh_Help">Especifica se o cliente DNS efetuará a resolução de nomes através de DNS por HTTPS (DoH). 
+
+Por predefinição, o cliente DNS irá efetuar a resolução de nomes DNS clássica (por UDP ou TCP). Esta definição pode melhorar o cliente DNS para utilizar o protocolo DoH para resolver nomes de domínio.
+
+Para utilizar esta definição de política, clique em ativado e, em seguida, selecione uma das seguintes opções na lista pendente:
+
+Proibir DoH: não será efetuada uma resolução de nomes DoH.
+
+Permitir DoH: executa consultas DoH se os servidores DNS configurados suportarem. Se não o suportarem, experimente a resolução de nomes clássica.
+
+Exigir DoH: permite apenas a resolução de nomes DoH. Se não existirem servidores DNS com capacidade DoH configurados, a resolução de nomes falhará.
+
+Se desativar esta definição de política, ou se não a configurar, os computadores utilizarão as definições configuradas localmente.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +303,9 @@ Se esta definição de política estiver desativada, ou se não for configurada,
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Atualizar nível de segurança:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Configurar opções DoH:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

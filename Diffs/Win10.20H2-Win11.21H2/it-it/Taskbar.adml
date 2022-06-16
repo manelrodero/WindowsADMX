@@ -29,6 +29,12 @@ Se si disabilita o non si configura questa impostazione dei criteri, l'icona del
 Se si abilita questa impostazione dei criteri, l'icona di Sicurezza e manutenzione non verrà visualizzata nell'area di notifica del sistema.
 
 Se si disabilita o non si configura questa impostazione dei criteri, l'icona di Sicurezza e manutenzione verrà visualizzata nell'area di notifica del sistema.</string>
+      <string id="HideSCAMeetNow">Rimuovi l'icona Riunione immediata</string>
+      <string id="HideSCAMeetNow_Help">Questa impostazione dei criteri consente di rimuovere l'icona Riunione immediata dall'area di controllo del sistema.
+
+Se si abilita questa impostazione dei criteri, l'icona Riunione immediata non verrà visualizzata nell'area di notifica del sistema.
+
+Se si disabilita o non si configura questa impostazione dei criteri, l'icona Riunione immediata verrà visualizzata nell'area di notifica del sistema.</string>
       <string id="TaskbarLockAll">Blocca tutte le impostazioni della barra delle applicazioni</string>
       <string id="TaskbarLockAll_Help">Questa impostazione dei criteri consente di bloccare tutte le impostazioni della barra delle applicazioni.
 
@@ -92,7 +98,7 @@ Se si disabilita o non si configura questa impostazione dei criteri, le icone di
       <string id="EnableLegacyBalloonNotifications">Disabilita la visualizzazione delle notifiche in fumetti come avvisi popup.</string>
       <string id="EnableLegacyBalloonNotifications_Help">Questo criterio disabilita la funzionalità che converte i fumetti in notifiche di tipo avviso popup. 
 
-Se si abilita questa impostazione dei criteri, le notifiche di sistema e delle applicazioni verranno visualizzate come fumetti anziché come notifiche di tipo avviso popup.   
+Se si abilita questa impostazione dei criteri, le notifiche di sistema e delle applicazioni verranno visualizzate come fumetti anziché come notifiche di tipo avviso popup. 
 
 Abilitare questa impostazione dei criteri se un'app o un componente di sistema specifico che usa i fumetti per le notifiche presenta problemi di compatibilità con le notifiche di tipo avviso popup. 
 
@@ -148,7 +154,7 @@ Se si abilita questa impostazione, nell'area di notifica non vengono visualizzat
 Se si disabilita o non si configura questa impostazione dei criteri, sulla barra delle applicazioni verranno visualizzate le notifiche e Sicurezza e manutenzione. 
 
 Per rendere effettiva questa impostazione dei criteri, è necessario riavviare il sistema.</string>
-      <string id="NoPinningStoreToTaskbar">Non consentire l'aggiunta dell'app Store alla barra delle applicazioni</string> 
+      <string id="NoPinningStoreToTaskbar">Non consentire l'aggiunta dell'app Store alla barra delle applicazioni</string>
       <string id="NoPinningStoreToTaskbar_Help">
 Questa impostazione dei criteri consente di controllare l'aggiunta dell'app Store alla barra delle applicazioni.
 
@@ -165,10 +171,30 @@ Se questa impostazione di criteri viene disabilitata, gli utenti non potranno vi
 Se non si configura questa impostazione di criteri, il calendario verrà impostato secondo la logica predefinita.</string>
       <string id="ConfigureTaskbarCalendar_SimplifiedChinese">Cinese semplificato (calendario lunare)</string>
       <string id="ConfigureTaskbarCalendar_TraditionalChinese">Cinese tradizionale (calendario lunare)</string>
+      <string id="Chat">Chat</string>
+      <string id="ConfigureChatIcon">Configura l'icona Chat sulla barra delle applicazioni</string>
+      <string id="ConfigureChatIcon_Help">Questa impostazione del criterio consente di configurare l'icona Chat sulla barra delle applicazioni.
+
+Abilitando questa impostazione criterio e impostandola su Mostra, l'icona Chat verrà visualizzata sulla barra delle applicazioni per impostazione predefinita. Gli utenti potranno mostrarla o nasconderla nelle Impostazioni.
+
+Abilitando questa impostazione criterio e impostandola su Nascondi, l'icona Chat verrà nascosta per impostazione predefinita. Gli utenti potranno mostrarla o nasconderla nelle Impostazioni.
+
+Abilitando questa impostazione del criterio e impostandola su Disabilitata, l'icona Chat non verrà visualizzata e gli utenti non potranno mostrarla o nasconderla nelle Impostazioni.
+
+Disabilitando o non configurando questa impostazione del criterio, l'icona Chat verrà configurata in base alle impostazioni predefinite dell'edizione di Windows.</string>
+      <string id="ChatEnum_Show">Mostra</string>
+      <string id="ChatEnum_Hide">Nascondi</string>
+      <string id="ChatEnum_Disabled">Disabilitato</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureTaskbarCalendar">
         <dropdownList refId="ConfigureTaskbarCalendar_Dropdown" defaultItem="0">Calendario:</dropdownList>
+      </presentation>
+      <presentation id="ConfigureChatIcon">
+          <text>Configura l'impostazione della chat</text>
+          <text> </text>
+          <dropdownList refId="ConfigureChatIcon_Action" noSort="true" defaultItem="1">Stato: </dropdownList>
+          <text> </text>
       </presentation>
     </presentationTable>
   </resources>

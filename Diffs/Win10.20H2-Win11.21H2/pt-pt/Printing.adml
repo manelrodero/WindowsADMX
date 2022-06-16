@@ -278,9 +278,9 @@ Por predefinição e desde que necessário, os SKUs do Windows Ultimate, Profess
 
         Se desativar ou não configurar esta definição de política, todas as extensões de impressora instaladas poderão ser executadas.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Alterar o formato de saída Microsoft XPS Document Writer (MXDW) predefinido para o formato Microsoft XPS (*.xps) legado</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Por predefinição, o Microsoft XPS Document Writer (MXDW) gera ficheiros OpenXPS (*.oxps) no Windows 10, Windows 10 e Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Por predefinição, o Microsoft XPS Document Writer (MXDW) gera ficheiros OpenXPS (*.oxps) no Windows 10, Windows 10 e Windows Server 2022.
 
-          Se ativar esta definição de política de grupo, o formato de saída MXDW predefinido será o Microsoft XPS (*.xps) legado.
+ Se ativar esta definição de política de grupo, o formato de saída MXDW predefinido será o Microsoft XPS (*.xps) legado.
 
           Se desativar ou não configurar esta definição de política, o formato de saída MXDW predefinido será o OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Desativar a gestão de impressoras predefinidas do Windows</string>
@@ -291,6 +291,24 @@ Se ativar esta definição, o Windows não irá gerir a impressora predefinida.
 Se desativar esta definição, o Windows irá gerir a impressora predefinida.
 
 Se não configurar esta definição, a gestão de impressoras predefinidas não será alterada. </string>
+      <string id="EnableDeviceControl">Ativar as restrições de impressão de controlo de dispositivo</string>
+      <string id="EnableDeviceControl_Help">
+          Determina se as Restrições de Impressão do Controlo de Dispositivos são impostas para impressões neste computador.
+
+         Por predefinição, não existem restrições à impressão baseada no tipo de ligação ou no Modelo/Marca da impressora.
+
+         Se ativar esta definição, o computador irá restringir a impressão através de ligações a impressoras na rede empresarial ou em impressoras USB aprovadas.
+
+         Se desativar esta definição ou não configurá-la, não serão aplicadas restrições à impressão com base no tipo de ligação ou na Marca/Modelo da impressora.</string>
+        <string id="ApprovedUsbPrintDevices">Lista de dispositivos de impressão aprovados com ligação USB</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Esta configuração é um componente das Restrições de Impressão de Controlo de Dispositivos. Para utilizar esta definição, ativar a impressão de Controlo de Dispositivos, ativando a definição "Ativar Restrições de Impressão de Controlos de Dispositivo".
+
+                Quando a Impressão de Controlo de Dispositivos está ativada, o sistema utiliza a lista especificada de valores vid/pid para determinar se a impressora atual ligada por USB está aprovada para impressão local.
+
+                Digite todas as combinações aprovadas de vid/pid (separadas por vírgulas) que correspondem aos modelos de impressora USB aprovados. Quando um utilizador tenta imprimir para uma fila de impressoras USB, o dispositivo vid/pid será comparado com a lista de aprovados.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Se não configurar esta definição, a gestão de impressoras predefinidas não 
           <label>Caminho predefinido do Active Directory</label>
         </textBox>
         <text>exemplo --&gt; LDAP://DC=Dominio1,DC=AMinhaEmpresa,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Especifique a lista de dispositivos de impressão aprovados com ligação USB.</text>
+        <text>A lista é uma lista separada por vírgulas de valores de vid/pid USB. Exemplo: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

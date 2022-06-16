@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Bildirimler</string>
+      <string id="WnsEndpoint">WNS FQDN için grup ilkesini etkinleştirir</string>
+      <string id="WnsEndpointExplain">Bu ilke belirli ortamlar için özel bir WNS FQDN belirler.</string>
       <string id="NoTileNotification">Kutucuk bildirimlerini kapat</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Gece yarısından sonraki dakika sayısı:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>WNS için FQDN</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

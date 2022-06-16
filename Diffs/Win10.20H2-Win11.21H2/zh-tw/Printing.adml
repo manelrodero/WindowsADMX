@@ -67,7 +67,7 @@
       <string id="DownlevelBrowse">瀏覽網路來尋找印表機</string>
       <string id="DownlevelBrowse_Help">可讓使用者利用 [新增印表機精靈] 搜尋網路中的共用印表機。
 
-如果您啟用或未設定這個設定，當使用者在 [新增印表機精靈] 的第 2 頁選擇 [網路印表機或連接到另一部電腦的印表機] 選項按鈕，並在 [新增印表機精靈] 的第 3 頁核取 [連線到這部印表機 (或瀏覽印表機，選取這個選項，然後按 [下一步])] 選項按鈕，以新增網路印表機時，若未在旁邊的 [名稱] 編輯方塊中指定印表機名稱，[新增印表機精靈] 就會顯示網路上的共用印表機清單，並邀請使用者從顯示的清單中選擇印表機。
+如果您啟用或未設定這個設定，當使用者在 [新增印表機精靈] 的第 2 頁選擇 [網路印表機或連接到另一部電腦的印表機] 選項按鈕，並在 [新增印表機精靈] 的第 3 頁核取 [連線到這部印表機 (或瀏覽印表機，選取這個選項，然後按 [下一步]]) 選項按鈕，以新增網路印表機時，若未在旁邊的 [名稱] 編輯方塊中指定印表機名稱，[新增印表機精靈] 就會顯示網路上的共用印表機清單，並邀請使用者從顯示的清單中選擇印表機。
 
 如果您停用這個設定，[新增印表機精靈] 中的網路印表機瀏覽頁面就會被移除，因此使用者無法搜尋網路，並且必須輸入印表機名稱。
 
@@ -95,13 +95,13 @@
       <string id="IntranetPrintersUrl">瀏覽一般網站來尋找印表機</string>
       <string id="IntranetPrintersUrl_Help">在 [新增印表機精靈] 中加入網際網路或內部網路網頁的連結。
 
-          您可以使用此設定，將使用者導向可進行印表機安裝的網頁。
+ 您可以使用此設定，將使用者導向可進行印表機安裝的網頁。
 
-          如果您啟用這個設定，並在文字方塊中輸入網際網路或內部網路位址，系統就會在 [新增印表機精靈] 中的 [指定印表機] 頁面上加入 [瀏覽] 按鈕。[瀏覽] 按鈕會出現在 [連線到網際網路、家用或辦公室網路的印表機] 選項旁。當使用者按一下 [瀏覽] 時，系統即會開啟網際網路瀏覽器，並瀏覽至指定的 URL 位址來顯示可用的印表機。
+ 如果您啟用這個設定，並在文字輸入框中輸入網際網路或內部網路位址，系統就會在 [新增印表機精靈] 中的 [指定印表機] 頁面上加入 [瀏覽] 按鈕。[瀏覽] 按鈕會出現在 [連線到網際網路、家用或辦公室網路的印表機] 選項旁。當使用者按一下 [瀏覽] 時，系統即會開啟網際網路瀏覽器，並瀏覽至指定的 URL 位址來顯示可用的印表機。
 
-          這個設定可讓使用者輕鬆地找到您希望他們新增的印表機。
+ 這個設定可讓使用者輕鬆地找到您希望他們新增的印表機。
 
-          另請參閱位於 [電腦設定\系統管理範本\印表機] 中的 [在印表機資料夾左窗格中的自訂支援 URL] 及 [啟動網際網路列印] 設定。</string>
+ 另請參閱位於 [電腦設定\系統管理範本\印表機] 中的 [在印表機資料夾左窗格中的自訂支援 URL] 及 [啟動網際網路列印] 設定。</string>
       <string id="KMPrintersAreBlocked">不允許安裝使用核心模式驅動程式的印表機</string>
       <string id="KMPrintersAreBlocked_Help">決定能否在本機電腦安裝使用核心模式驅動程式的印表機。 核心模式驅動程式可以存取全系統的記憶體，因此編寫不當的核心模式驅動程式可能導致停機的錯誤。
 
@@ -278,11 +278,11 @@ Windows Vista 和更新版本的用戶端在封裝指向並列印連線失敗時
 
         如果您停用或未設定這個原則設定，則允許執行所有已安裝的印表機延伸。</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">將 Microsoft XPS Document Writer (MXDW) 預設輸出格式變更為傳統 Microsoft XPS 格式 (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">在 Windows 10、Windows 10 與 Windows Server 2019 中，Microsoft XPS Document Writer (MXDW) 預設會產生 OpenXPS (*.oxps) 檔案。
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) 會在 Windows 10、Windows 10 與 Windows Server 2022 中，預設會產生 OpenXPS ( *. oxps) 檔案。
 
-          若啟用此群組原則設定，預設的 MXDW 輸出格式為傳統 Microsoft XPS (*.xps)。
+若啟用此群組原則設定，預設的 MXDW 輸出格式為舊版 Microsoft XPS ( * .xps)。
 
-          若停用或未設定此原則設定，預設的 MXDW 輸出格式為 OpenXPS (*.oxps)。</string>
+如果停用或未設定此原則設定，預設的 MXDW 輸出格式為 OpenXPS ( *. oxps)。</string>
       <string id="SetDefaultPrinterMRUModeOff">關閉 Windows 預設印表機管理</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">此喜好設定可讓您變更預設印表機管理。
 
@@ -291,6 +291,24 @@ Windows Vista 和更新版本的用戶端在封裝指向並列印連線失敗時
 若停用此設定，Windows 將會管理預設印表機。
 
 若未設定此設定，將不會變更預設印表機管理。 </string>
+      <string id="EnableDeviceControl">啟用裝置控制列印限制</string>
+      <string id="EnableDeviceControl_Help">
+          判斷 [裝置控制列印限制] 是否在這部電腦上強制列印。
+
+          根據預設，沒有依據連線類型或印表機的廠商/型號來限制列印。
+
+          如果啟用此設定，電腦將限制列印至公司網路上的印表機連線或已核准的 USB連線印表機。
+
+          如果停用或未進行這個設定，則沒有依據連線類型或印表機的廠商/型號來限制列印。</string>
+        <string id="ApprovedUsbPrintDevices">核准的 USB 連線的列印裝置清單</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            這個設定是裝置控制列印限制的元件。若要使用此設定，請啟用 [裝置控制列印限制] 設定以啟用裝置控制項列印。
+
+啟用裝置控制列印時，系統會使用指定的 vid/pid 值清單來判斷目前 USB 連線印表機是否已核准可進行本機列印。
+
+請輸入所有核准的 vid/pid 組合 (並以逗點分隔)，對應到核准的 USB 印表機模型。當使用者嘗試列印到 USB 印表機佇列時，裝置 vid/pid 將會與核准的清單進行比較。
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Windows Vista 和更新版本的用戶端在封裝指向並列印連線失敗時
           <label>預設 Active Directory 路徑</label>
         </textBox>
         <text>範例 --&gt; LDAP://DC=Domain1,DC=MyCompany,DC=com。</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>指定核准的 USB 連線印表機裝置清單。</text>
+        <text>此清單是以逗號分隔的 USB vid/pid 值清單。範例： 0351/0872、135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

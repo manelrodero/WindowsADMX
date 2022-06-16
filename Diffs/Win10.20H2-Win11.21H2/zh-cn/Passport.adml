@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">使用 Windows Hello 企业版</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">使用证书进行本地身份验证</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">使用云信任进行本地身份验证</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello 企业版是使用 Active Directory 或 Azure Active Directory 帐户登录到 Windows 的替代方法，可以取代密码、智能卡和虚拟智能卡。
 
@@ -122,9 +124,18 @@
 
 如果启用此策略设置，Windows Hello 企业版将注册用于本地身份验证的登录证书。
 
-如果禁用或未配置此策略设置，Windows Hello 企业版将注册用于本地身份验证的密钥。
+如果禁用或未配置此策略设置，Windows Hello 企业版将使用密钥或 Kerberos 票证 (，具体取决于用于本地身份验证的其他策略设置)。
 
-注意: 禁用或不配置此策略设置并启用“使用 Windows Hello 企业版”策略设置要求环境具有一个或多个 Windows Server 2016 域控制器，以防止 Windows Hello 企业版身份验证失败。
+注意：禁用或未配置此策略设置并启用 "使用 Windows Hello 企业版" 策略设置要求环境具有一个或多个 Windows Server 2016 域控制器，以防止 Windows Hello 企业版身份验证失败。
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">使用此策略设置可将 Windows Hello 企业版配置为使用 Azure AD Kerberos 进行本地身份验证。
+
+如果启用此策略设置，Windows Hello 企业版将使用检索到 Azure 的 Kerberos 票证进行本地身份验证。
+
+如果禁用或未配置此策略设置，Windows Hello 企业版将使用密钥或证书 (根据本地身份验证的其他策略设置)。
+ 
+注意：启用此策略设置和 "使用 Windows Hello 企业版" 策略设置的环境需要一个或多个 Windows Server 2016 域控制器。否则，Windows Hello 企业版身份验证将失败。
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">配置设备解锁凭据</string>

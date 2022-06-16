@@ -250,6 +250,17 @@ Jos tämä käytäntöasetus on poistettu käytöstä tai jos sitä ei ole mää
 Jos tämä käytäntöasetus on käytössä, kansainvälistetyt toimialuenimet muunnetaan Nameprep-muotoon.
 
 Jos tämä käytäntöasetus poistetaan käytöstä tai jos sitä ei määritetä, kansainvälistettyjä toimialuenimiä ei muunneta Nameprep-muotoon.</string>
+      <string id="DNS_Doh">Määritä DNS over HTTPS (DoH) -nimenselvitys</string>
+      <string id="DNS_Doh_Disabled">Estä DoH</string>
+      <string id="DNS_Doh_Auto">Salli DoH</string>
+      <string id="DNS_Doh_Force">DoH pakollinen</string>
+      <string id="DNS_Doh_Help">Määrittää, jos DNS-asiakas suorittaa nimen selvityksen DNS:N kautta HTTPS (OUH). 
+ # B1 oletus arvon mukaan DNS-asiakas tekee oletusarvoisesti perinteisen DNS-nimen selvityksen (UDP-tai TCP). Tämä asetus voi parantaa DNS-asiakasta käyttämään OUH protokollaa toimi alue nimien ratkaisemiseen. 
+ # B3 jos haluat käyttää tätä käytäntö asetusta, valitse käytössä ja valitse sitten jokin seuraavista avattavan luettelon vaihto ehdoista: 
+ # B5 kiellä OUH: mitään OUH nimen selvitystä ei suoriteta. 
+ # B7 salli OUH: Suorita OUH kyselyt, jos määritetyt DNS-palvelimet tukevat sitä. Jos ne eivät tue sitä, kokeile perinteistä nimen selvitystä. 
+ # B9 vaadi OUH: Salli vain OUH nimen selvitys. Jos OUH DNS-palvelimia ei ole määritetty, nimen selvitys epäonnistuu. 
+ # b11 Jos poistat tämän käytäntö asetuksen käytöstä tai jos et määritä sitä, tieto koneet käyttävät paikallisesti määritettyjä asetuksia.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +297,9 @@ Jos tämä käytäntöasetus poistetaan käytöstä tai jos sitä ei määritet�
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Päivityksen suojaustaso:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Määritä DoH-asetukset:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

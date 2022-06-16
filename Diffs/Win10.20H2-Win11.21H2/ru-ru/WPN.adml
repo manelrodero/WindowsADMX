@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Уведомления</string>
+      <string id="WnsEndpoint">Включает групповую политику для полного доменного имени WNS</string>
+      <string id="WnsEndpointExplain">Эта политика задает специальное полное доменное имя WNS для конкретных сред.</string>
       <string id="NoTileNotification">Отключить уведомления плиток</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Минуты после полуночи:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>Полное доменное имя для WNS</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

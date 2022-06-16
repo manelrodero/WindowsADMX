@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">A Vállalati Windows Hello használata</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Tanúsítvány használata a helyszíni hitelesítéshez</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Felhőbeli bizalmi kapcsolat használata a helyszíni hitelesítéshez</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">A Vállalati Windows Hello szolgáltatás egy alternatív módszer, amellyel a saját Active Directory-fiókon vagy Azure Active Directory-fiókon keresztül lehet bejelentkezni a Windowsba, így nincs szükség jelszavakra, intelligens kártyákra és virtuális intelligens kártyákra.
 
@@ -121,10 +123,19 @@ MEGJEGYZÉS: Ez a házirend csak az Azure Active Directory szolgáltatásban reg
         <string id="WHFB_UseCertificateForOnPremAuthExplain">Ezzel a házirend-beállítással megadhatja, hogy a Vállalati Windows Hello bejelentkezési tanúsítványt használjon a helyszíni hitelesítéshez.
 
 Ha engedélyezi ezt a házirend-beállítást, a Vállalati Windows Hello bejelentkezési tanúsítványt használ a helyszíni hitelesítéshez.
+		
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Vállalati Windows Hello kulcsot vagy Kerberos jegyet használ (más házirend-beállításoktól függően) a helyszíni hitelesítéshez.
 
-Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Vállalati Windows Hello kulcsot használ a helyszíni hitelesítéshez.
+Megjegyzés: Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, és engedélyezi „A Vállalati Windows Hello használata“ házirend-beállítást, akkor a Vállalati Windows Hello hitelesítésének megfelelő működéséhez a környezetben lenni kell legalább egy Windows Server 2016 rendszerű tartományvezérlőnek.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Ezzel a házirend-beállítással megadhatja, hogy a Vállalati Windows Hello Azure Active Directory Kerberost használjon a helyszíni hitelesítéshez.
 
-Megjegyzés: Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, és engedélyezi A Vállalati Windows Hello használata házirend-beállítást, akkor a Vállalati Windows Hello hitelesítésének megfelelő működéséhez a környezetben lenni kell legalább egy Windows Server 2016 rendszerű tartományvezérlőnek.
+Ha engedélyezi ezt a házirend-beállítást, a Vállalati Windows Hello olyan Kerberos jegyet fog használni, amelyet az Azure-hoz kapcsolódó hitelesítéskor kért le a rendszer a helyszíni hitelesítéshez.
+		
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Vállalati Windows Hello kulcsot vagy tanúsítványt használ (más házirend-beállításoktól függően) a helyszíni hitelesítéshez.
+
+Megjegyzés: Egy olyan környezet, amely mindkettő házirend-beállítást engedélyezi, és „A Vállalati Windows Hello használata házirend-beállítás“ egy vagy több Windows Server 2016 rendszerű tartományvezérlőt igényel. Másképp a Vállalati Windows Hello hitelesítése meghiúsul.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Eszközfeloldási tényezők beállítása</string>

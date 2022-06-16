@@ -36,6 +36,34 @@
       
       </string>
       <string id="LocationAndSensors">Locatie en sensors</string>
+      <string id="HumanPresence">Menselijke aanwezigheid</string>
+      <string id="ForceInstantWake_DisplayName">Direct opstarten forceren</string>
+      <string id="ForceInstantWake_ExplainText">Bepaalt of Opstarten na aankomst geforceerd aan/uit wordt geschakeld door het MDM-beleid. De gebruiker kan deze instelling niet wijzigen en de wisselknop in de gebruikersinterface zal grijs worden weergeven.</string>
+      <string id="ForceInstantWake_0">Wordt standaard ingesteld op gebruikersselectie</string>
+      <string id="ForceInstantWake_1">Geforceerd aan</string>
+      <string id="ForceInstantWake_2">Geforceerd uit</string>
+      <string id="ForceInstantLock_DisplayName">Direct vergrendelen forceren</string>
+      <string id="ForceInstantLock_ExplainText">Bepaalt of Vergrendeling na het verlaten geforceerd wordt in-/uitgeschakeld door het MDM-beleid. De gebruiker kan deze instelling niet wijzigen en de wisselknop in de gebruikersinterface zal grijs worden weergeven.</string>
+      <string id="ForceInstantLock_0">Wordt standaard ingesteld op gebruikersselectie</string>
+      <string id="ForceInstantLock_1">Geforceerd aan</string>
+      <string id="ForceInstantLock_2">Geforceerd uit</string>
+      <string id="ForceLockTimeout_DisplayName">Time-out voor vergrendeling</string>
+      <string id="ForceLockTimeout_ExplainText">Bepaalt de time-out voor Vergrendeling na het verlaten, geforceerd door het MDM-beleid. De gebruiker kan deze instelling niet wijzigen en de wisselknop in de gebruikersinterface zal grijs worden weergeven.</string>
+      <string id="ForceLockTimeout_0">Wordt standaard ingesteld op gebruikersselectie</string>
+      <string id="ForceLockTimeout_1">10 seconden</string>
+      <string id="ForceLockTimeout_2">30 seconden</string>
+      <string id="ForceLockTimeout_3">2 minuten</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Kies een van de volgende acties</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Kies een van de volgende acties</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Kies een van de volgende time-outs</dropdownList>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>

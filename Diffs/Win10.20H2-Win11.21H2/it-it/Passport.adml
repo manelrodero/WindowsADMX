@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Usa Windows Hello for Business</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Usa certificato per l'autenticazione locale</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Usare cloud trust per l'autenticazione locale</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello for Business è un metodo alternativo per accedere a Windows con l'account di Active Directory o di Azure Active Directory che può sostituire password, smart card e smart card virtuali.
 
@@ -118,13 +120,22 @@ Se disabiliti o non configuri questa impostazione di criterio, Windows non crea 
 NOTA: Il presente criterio è applicabile solo ai dispositivi che hanno eseguito la registrazione con Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Usa questa impostazione dei criteri per configurare Windows Hello for Business per registrare un certificato di accesso per l'autenticazione locale.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Usa questa impostazione dei criteri per configurare Windows Hello for business per registrare un certificato di accesso per l'autenticazione locale.
 
-Se abiliti questa impostazione, Windows Hello for Business registra un certificato di accesso usato per l'autenticazione locale.
+Se abiliti questa impostazione dei criteri, Windows Hello for Business registra un certificato di accesso usato per l'autenticazione locale.
 
-Se disabiliti o non configuri questa impostazione, Windows Hello for Business registra una chiave usata per l'autenticazione locale.
+Se si disabilita o non si configura questa impostazione dei criteri, Windows Hello per le aziende utilizzerà una chiave o un ticket Kerberos (in base ad altre impostazioni dei criteri) per l'autenticazione locale.
 
-NOTA: se disabiliti o non configuri questa impostazione e abiliti l'impostazione "Usa Windows Hello for Business", l'ambiente deve includere uno o più controller di dominio Windows Server 2016 per evitare errori dell'autenticazione di Windows Hello for Business.
+Nota: se si disabilita o non si configurando questa impostazione dei criteri e si Abilita l'impostazione "usa Windows Hello for business", l'ambiente deve disporre di uno o più controller di dominio Windows Server 2016 per impedire l'errore dell'autenticazione di Windows Hello for business.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Usa questa impostazione dei criteri per configurare Windows Hello for business per l'uso di Azure AD Kerberos per l'autenticazione locale.
+
+Se si abilita questa impostazione dei criteri, Windows Hello per le aziende utilizzerà un ticket Kerberos recuperato dall'autenticazione in Azure per l'autenticazione locale.
+
+Se si disabilita o non si configura questa impostazione dei criteri, Windows Hello per le aziende utilizzerà una chiave o un certificato (a seconda delle impostazioni di altri criteri) dell'autenticazione locale. 
+ 
+Nota: un ambiente che attiva sia questa impostazione di criterio e l'impostazione dei criteri "usa Windows Hello for business" richiede uno o più controller di dominio di Windows Server 2016. In caso contrario, l'autenticazione di Windows Hello for business non riuscirà.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configura fattori di sblocco del dispositivo</string>

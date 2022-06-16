@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivirus de Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusiones</string>
+    <string id="DeviceControl">Control de dispositivo</string>
     <string id="ExploitGuard">Protección contra vulnerabilidades de seguridad de Microsoft Defender</string>
     <string id="ExploitGuard_ASR">Reducir la superficie de ataque</string>
     <string id="ExploitGuard_ControlledFolderAccess">Acceso a la carpeta controlado</string>
@@ -29,6 +30,28 @@ Si habilita o no establece esta configuración, el servicio antimalware se carga
 
 Si deshabilita esta configuración, el servicio antimalware se cargará como una tarea de prioridad baja.</string>
 
+    <string id="MeteredConnectionUpdates">Permite que antivirus de Microsoft defender se actualice y se comunique a través de una conexión de uso medido.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Deshabilitado (predeterminado): 
+    No se permiten actualizaciones ni comunicaciones a través de conexiones de uso medido.
+
+Esté 
+    Permitir que los dispositivos administrados se actualicen a través de conexiones de uso medido. Se pueden aplicar cargos de datos.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Esta configuración controla si se permite que la protección de red esté configurada en modo de bloqueo o auditoría en Windows Server.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Deshabilitado (predeterminado): 
+    Si no se configura o se deshabilita, no se permite que la protección de red esté configurada en modo de bloqueo o auditoría en Windows Server.
+
+Esté 
+    Si se habilita, los administradores pueden controlar si se permite la configuración de la protección de red en modo de bloqueo o auditoría en Windows Server.
+    Tenga en cuenta que esta configuración depende de la configuración de EnableNetworkProtection. Si esta configuración es falsa, se omitirá EnableNetworkProtection. de lo contrario, se iniciará la protección de red en Windows Server, dependiendo del valor de EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Esta configuración controla el procesamiento de datagramas para la protección de red.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Habilitado (predeterminado): 
+    Si no está configurado o está deshabilitado, el procesamiento de datagramas se habilitará para la protección de red.
+
+Esté 
+    Si está habilitada, el procesamiento de datagramas se deshabilitará para la protección de red.</string>
     <string id="DisableAutoExclusions">Desactivar las exclusiones automáticas</string>
     <string id="DisableAutoExclusions_Explain">
         Permite a un Administrador especificar si debe desactivarse la característica Exclusiones automáticas para las SKU del servidor.
@@ -60,11 +83,11 @@ Si deshabilita o no define esta configuración de directiva, de manera predeterm
 
     Habilitar o deshabilitar esta directiva puede provocar un comportamiento inesperado o no admitido. Se recomienda dejar esta configuración de directiva desconfigurada.</string>
     <string id="DisableLocalAdminMerge">Configurar el comportamiento de combinación de las listas de administrador local</string>
-    <string id="DisableLocalAdminMerge_Explain">Esta configuración de directiva controla si la configuración de lista compleja establecida por un administrador local se va a combinar con la configuración de la directiva de grupo. Esta configuración es válida en listas como las amenazas y las exclusiones.
+    <string id="DisableLocalAdminMerge_Explain">Esta configuración de directiva controla si la configuración de lista compleja establecida por un administrador local se va a combinar con la configuración de la Directiva de grupo. Esta configuración se aplica a las listas como las amenazas y las exclusiones.
 
-Si habilita o no establece esta configuración, los elementos únicos definidos en la directiva de grupo y en la configuración de preferencias establecida por un administrador local se combinarán en la directiva vigente resultante. En caso de que surjan conflictos, la configuración de la directiva de grupo reemplazará la configuración de preferencias.
+Si deshabilita o no configura esta opción, los elementos únicos definidos en la Directiva de grupo y en la configuración de preferencias establecida por el administrador local se combinarán en la Directiva vigente resultante. En caso de conflictos, la configuración de la Directiva de grupo invalidará la configuración de preferencias.
 
-Si deshabilita esta configuración, la directiva vigente resultante solo usará los elementos definidos en la directiva de grupo. La configuración de directiva de grupo reemplazará la configuración de preferencias establecida por el administrador local.</string>
+Si habilita esta configuración, solo se usarán los elementos definidos por la Directiva de grupo en la Directiva vigente resultante. La configuración de la Directiva de grupo invalidará la configuración de preferencias establecida por el administrador local.</string>
     <string id="DisableRoutinelyTakingAction">Desactivar corrección de rutina</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Esta configuración de directiva te permite configurar si Antivirus de Microsoft Defender emprende automáticamente acciones contra todas las amenazas detectadas. La acción que debe realizarse contra una amenaza en particular se determina mediante la combinación de la acción definida por la directiva, la acción definida por el usuario y la acción definida por la firma.
@@ -109,11 +132,15 @@ Si deshabilita o no establece esta configuración, el servidor proxy no se omiti
       Si deshabilitas o no estableces esta configuración, el proxy omitirá este paso de retroceso según el orden especificado anteriormente.
     </string>
     <string id="RandomizeScheduleTaskTimes">Seleccionar horas de tareas programadas aleatoriamente</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Esta configuración de directiva permite habilitar o deshabilitar la selección aleatoria de la hora de inicio del examen programado y la hora de inicio de la actualización de inteligencia de seguridad programada. Esta configuración se usa para distribuir el impacto del examen en los recursos. Podría usarse, por ejemplo, en máquinas virtuales invitadas que comparten un host a fin de impedir que varias máquinas virtuales invitadas hagan un uso intensivo del disco al mismo tiempo.
+    <string id="RandomizeScheduleTaskTimes_Explain">Esta configuración de directiva te permite configurar el examen programado, la actualización de inteligencia de seguridad programada, y la ventana de tiempo de inicio en horas.
 
-    Si habilitas o no estableces esta configuración, las tareas programadas comenzarán a una hora aleatoria dentro de un intervalo de 30 minutos anterior y posterior a la hora de inicio especificada.
+    Si deshabilitas o no estableces esta configuración, las tareas programadas comenzarán a una hora aleatoria dentro de 4 horas después de lo especificado en el Programador de tareas.
+    Si habilitas esta configuración, puedes ampliar o reducir este periodo de aleatoriedad. Especifica una ventana de aleatoriedad de entre 1 y 23 horas.</string>
+    <string id="SchedulerRandomizationTime">Configurar el período de selección aleatoria de tarea programadas</string>
+    <string id="SchedulerRandomizationTime_Explain">Esta configuración de directiva le permite configurar la hora de inicio del examen programado y la ventana de tiempo de inicio de actualización de inteligencia de seguridad programada en horas.
 
-    Si deshabilitas esta configuración, las tareas programadas comenzarán a la hora de inicio especificada.</string>
+    Si deshabilita o no establece esta configuración, las tareas programadas comenzarán a una hora aleatoria dentro de un intervalo de 4 horas después de la hora de inicio especificada.
+    Si habilita esta configuración, debe elegir una ventana de selección aleatoria en horas. El intervalo posible de la ventana de selección aleatoria está entre 1 y 23 horas.</string>
     <string id="ServiceKeepAlive">Permitir que el servicio antimalware permanezca siempre en ejecución</string>
     <string id="ServiceKeepAlive_Explain">Esta configuración de directiva permite configurar si el servicio antimalware permanecerá o no cuando la inteligencia de seguridad de antivirus y antispyware esté deshabilitada. Se recomienda que esta configuración permanezca deshabilitada.
 
@@ -135,12 +162,20 @@ Si deshabilita o no establece esta configuración, el servidor proxy no se omiti
         No configurado:
         Igual que Deshabilitado.
     </string>
+    <string id="SupportLogLocation">Definir la ruta de acceso del directorio para copiar los archivos de registro compatibles</string>
+    <string id="SupportLogLocation_Explain">Esta configuración de directiva le permite configurar la ruta de acceso de directorio donde se copiarán los archivos de registro de soporte técnico. El valor de esta configuración debe ser una ruta de acceso de directorio válida.
+
+Si habilita esta opción, los archivos de registro de soporte se copiarán en la ruta de acceso de ubicación de registro de soporte especificada.
+
+Si deshabilita o no configura esta opción, los archivos de registros de soporte no se copiarán en ninguna ubicación.</string>
     <string id="Exclusions_Extensions">Exclusiones de extensión</string>
     <string id="Exclusions_Extensions_Explain">Esta configuración de directiva permite especificar una lista de los tipos de archivo que deben quedar excluidos de la detección programada, personalizada y en tiempo real. Los tipos de archivo se deben agregar mediante las opciones de esta configuración. Cada entrada debe figurar como un par nombre-valor, donde el nombre debe ser una representación en forma de cadena de la extensión del tipo de archivo (como "obj" o "lib"). El valor no se usa y se recomienda establecerlo en 0.</string>
     <string id="Exclusions_Paths">Exclusiones de ruta de acceso</string>
     <string id="Exclusions_Paths_Explain">Esta configuración de directiva permite deshabilitar la detección programada y en tiempo real de los archivos que se encuentren en las rutas de acceso especificadas o de los recursos completos especificados. Las rutas de acceso se deben agregar mediante las opciones de esta configuración. Cada entrada debe figurar como un par nombre-valor, donde el nombre debe ser una representación en forma de cadena de una ruta de acceso o un nombre de recurso completo. Una ruta de acceso podría definirse, por ejemplo, como "c:\Windows" para excluir todos los archivos contenidos en este directorio, mientras que un nombre de recurso completo podría definirse como "C:\Windows\App.exe". El valor no se usa y se recomienda establecerlo en 0.</string>
     <string id="Exclusions_Processes">Exclusiones de proceso</string>
-    <string id="Exclusions_Processes_Explain">Esta configuración de directiva permite deshabilitar las detecciones programadas y en tiempo real en un archivo abierto por cualquiera de los procesos especificados. El proceso en sí no se excluirá; para excluirlo, use la exclusión de ruta de acceso. Los procesos se deben agregar mediante las opciones de esta configuración. Cada entrada debe figurar como un par nombre-valor, donde el nombre debe ser una representación en forma de cadena de la ruta de acceso a la imagen del proceso. No olvide que solo se pueden excluir archivos ejecutables. Por ejemplo, un proceso se podría definir como "c:\windows\app.exe". El valor no se usa y se recomienda establecerlo en 0.</string>
+    <string id="Exclusions_Processes_Explain">Esta configuración de directiva le permite deshabilitar el examen en tiempo real de cualquier archivo abierto por cualquiera de los procesos especificados. Esta Directiva no se aplica a los exámenes programados. El proceso en sí no se excluirá. Para excluir el proceso, use la exclusión de ruta de acceso. Los procesos deben agregarse en las opciones para esta configuración. Cada entrada debe aparecer como un par nombre-valor, donde el nombre debe ser una representación de cadena de la ruta de acceso a la imagen del proceso. Tenga en cuenta que solo se pueden excluir archivos ejecutables. Por ejemplo, un proceso podría definirse como: "c:\windows\app.exe". No se usa el valor y se recomienda establecerlo en 0.</string>
+    <string id="Exclusions_IpAddresses">Exclusiones de direcciones IP</string>
+    <string id="Exclusions_IpAddresses_Explain">Permite a un administrador deshabilitar explícitamente la inspección de paquetes de red realizada por wdnisdrv en un conjunto de direcciones IP concreto.</string>
     <string id="Nis_DisableProtocolRecognition">Activar reconocimiento de protocolo</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Esta configuración de directiva permite configurar el reconocimiento de protocolo para proteger la red de vulnerabilidades conocidas.
 
@@ -167,6 +202,14 @@ Si deshabilita o no establece esta configuración, la directiva de grupo tendrá
 Si habilita esta configuración, los elementos se eliminarán de la carpeta Cuarentena cuando haya transcurrido un número de días concreto.
 
 Si deshabilita o no establece esta configuración, los elementos permanecerán en la carpeta Cuarentena de forma indefinida y no se eliminarán automáticamente.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Activar el examen de scripts</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Esta configuración de directiva le permite configurar el examen de scripts.
+
+Si habilita o no establece esta configuración, el examen de scripts se habilitará.
+
+Si deshabilita esta configuración, se deshabilitará el examen de scripts.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Activar supervisión de comportamiento</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Esta configuración de directiva permite configurar la supervisión de comportamiento.
 
@@ -402,12 +445,6 @@ Si deshabilita o no establece esta configuración, el examen de correo electrón
 Si habilita o no establece esta configuración, la heurística se habilitará.
 
 Si deshabilita esta configuración, la heurística se deshabilitará.</string>
-    <string id="Scan_DisablePackedExeScanning">Examinar ejecutables empaquetados</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Esta configuración de directiva le permite configurar el examen de ejecutables empaquetados. Se recomienda tener habilitado este tipo de examen.
-
-Si habilita o no establece esta configuración, los ejecutables empaquetados se examinarán.
-
-Si deshabilita esta configuración, los ejecutables empaquetados no se examinarán.</string>
     <string id="Scan_DisableRemovableDriveScanning">Examinar unidades extraíbles</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Esta configuración de directiva permite administrar si, durante un examen completo, se va a examinar o no el contenido de las unidades extraíbles (como las unidades flash USB) en busca de software no deseado o malintencionado.
 
@@ -475,11 +512,11 @@ Si habilita esta configuración, los elementos se eliminarán de la carpeta de h
 
 Si deshabilita o no establece esta configuración, los elementos permanecerán en la carpeta de historial de exámenes durante el número de días predeterminado.</string>
     <string id="Scan_QuickScanInterval">Especificar el intervalo de ejecución de exámenes rápidos al día</string>
-    <string id="Scan_QuickScanInterval_Explain">Esta configuración de directiva le permite especificar un intervalo en el que se va a realizar un examen rápido. El valor de tiempo se representa como el un número de horas que transcurre entre un examen rápido y otro. Los valores válidos oscilan entre 1 (cada hora) y 24 (una vez al día). Si se establece en cero, no habrá exámenes rápidos de intervalo. Este valor está establecido de forma predeterminada en 0.
+    <string id="Scan_QuickScanInterval_Explain">Esta configuración de directiva le permite especificar un intervalo en el que realizar un examen rápido. El valor de tiempo se representa como el número de horas entre exámenes rápidos. Los valores válidos oscilan entre 1 (cada hora) y 24 (una vez al día). Si se establece en cero, no se realizarán los exámenes rápidos de intervalo. De forma predeterminada, esta configuración se establece en 0.
 
 Si habilita esta configuración, se ejecutará un examen rápido en el intervalo especificado.
 
-Si deshabilita o no establece esta configuración, se ejecutará un examen rápido a la hora predeterminada.</string>
+Si deshabilita o no configura esta opción, no se ejecutará el examen rápido controlado por esta configuración.</string>
     <string id="Scan_ScanOnlyIfIdle">Iniciar el examen programado solo cuando el equipo esté activado, pero no en uso</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Esta configuración de directiva permite configurar exámenes programados de forma que se inicien solo cuando el equipo esté activado, pero no en uso.
 
@@ -523,11 +560,11 @@ Si deshabilita o no establece esta configuración, se ejecutará un examen progr
     <string id="Scan_ScheduleDay_7">Viernes</string>
     <string id="Scan_ScheduleDay_8">Sábado</string>
     <string id="Scan_ScheduleQuickScantime">Especificar la hora de un examen rápido diario</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Esta configuración de directiva le permite especificar la hora del día a la que realizar un examen rápido diario. El valor de hora se representa como un número de minutos pasada la medianoche (00:00).  Así, por ejemplo, 120 (0x78) equivale a 02:00 AM. Esta configuración está establecida de forma predeterminada en un valor de hora de 2:00 AM. La programación se basa en la hora local del equipo en el que el examen vaya a realizarse.
+    <string id="Scan_ScheduleQuickScantime_Explain">Esta configuración de directiva le permite especificar la hora del día a la que realizar un examen rápido diario. El valor de tiempo se representa como el número de minutos pasados a la medianoche (00:00).  Por ejemplo, 120 (0x78) equivale a 02:00 AM. De forma predeterminada, esta opción se establece en deshabilitado. La programación se basa en la hora local del equipo en el que se está ejecutando el examen.
 
 Si habilita esta configuración, se ejecutará un examen rápido diario a la hora del día especificada.
 
-Si deshabilita o no establece esta configuración, se ejecutará un examen rápido diario a la hora predeterminada.</string>
+Si deshabilita o no configura esta opción, no se ejecutará el examen rápido diario controlado por esta configuración.</string>
     <string id="Scan_ScheduleTime">Especificar la hora del día a la que ejecutar un examen programado</string>
     <string id="Scan_ScheduleTime_Explain">Esta configuración de directiva le permite especificar la hora del día a la que realizar un examen programado. El valor de hora se representa como un número de minutos pasada la medianoche (00:00).  Así, por ejemplo, 120 (0x78) equivale a 02:00 AM. Esta configuración está establecida de forma predeterminada en un valor de hora de 2:00 AM. La programación se basa en la hora local del equipo en el que el examen vaya a realizarse.
 
@@ -550,17 +587,17 @@ Si deshabilita o no establece esta configuración, se ejecutará un examen progr
         Si deshabilitas o no configuras esta configuración, no se realizarán cambios en la prioridad de la CPU para los exámenes programados.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definir el número de días que deben transcurrir para considerar la inteligencia de seguridad de spyware como caducada</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta configuración de directiva permite definir el número de días que deben transcurrir para que la inteligencia de seguridad de spyware se considere caducada. Si se determina que la inteligencia de seguridad está caducada, este estado puede desencadenar varias acciones adicionales, como revertir a un origen de actualización alternativo o mostrar un icono de advertencia en la interfaz de usuario. De forma predeterminada, este valor se establece en 14 días.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta configuración de directiva le permite definir el número de días que debe transcurrir para que se considere que la inteligencia de seguridad de spyware no está actualizada. Si se determina que la inteligencia de seguridad está caducada, este estado puede desencadenar varias acciones adicionales, como revertir a un origen de actualización alternativo o mostrar un icono de advertencia en la interfaz de usuario. De forma predeterminada, este valor se establece en 7 días.
 
-    Si habilitas esta configuración, la inteligencia de seguridad de spyware se considerará caducada después de que haya transcurrido el número de días especificado sin una actualización.
+Si habilita esta configuración, la inteligencia de seguridad de spyware se considerará caducada después de que haya transcurrido el número de días especificado sin una actualización.
 
-    Si deshabilitas o no estableces esta configuración, la inteligencia de seguridad de spyware se considerará caducada después de que haya transcurrido el número de días predeterminado sin una actualización.</string>
+Si deshabilitas o no estableces esta configuración, la inteligencia de seguridad de spyware se considerará caducada después de que haya transcurrido el número de días predeterminado sin una actualización.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definir el número de días que deben transcurrir para considerar la inteligencia de seguridad de virus como caducada</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta configuración de directiva permite definir el número de días que deben transcurrir para que la inteligencia de seguridad de virus se considere caducada. Si se determina que la inteligencia de seguridad está caducada, este estado puede desencadenar varias acciones adicionales, como revertir a un origen de actualización alternativo o mostrar un icono de advertencia en la interfaz de usuario. De forma predeterminada, este valor se establece en 14 días.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta configuración de directiva permite definir el número de días que debe transcurrir para considerar la inteligencia de seguridad de virus como caducada. Si se determina que la inteligencia de seguridad está caducada, este estado puede desencadenar varias acciones adicionales, como revertir a un origen de actualización alternativo o mostrar un icono de advertencia en la interfaz de usuario. De forma predeterminada, este valor se establece en 7 días.
 
-    Si habilitas esta configuración, la inteligencia de seguridad de virus se considerará caducada después de que haya transcurrido el número de días especificado sin una actualización.
+Si habilita esta configuración, la inteligencia de seguridad de virus se considerará caducada después de que haya transcurrido el número de días especificado sin una actualización.
 
-    Si deshabilitas o no estableces esta configuración, la inteligencia de seguridad de virus se considerará caducada después de que haya transcurrido el número de días predeterminado sin una actualización.</string>
+Si deshabilitas o no estableces esta configuración, la inteligencia de seguridad de virus se considerará caducada después de que haya transcurrido el número de días predeterminado sin una actualización.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definir recursos compartidos de archivos para descargar actualizaciones de inteligencia de seguridad</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Esta configuración de directiva permite configurar orígenes de recursos compartidos de archivos de UNC para la descarga de actualizaciones de inteligencia de seguridad. Se establecerá contacto con los orígenes en el orden especificado. El valor de esta configuración debe escribirse como una cadena separada por canalización en la que se enumeren los orígenes de actualización de inteligencia de seguridad (por ejemplo, "{\\unc1 | \\unc2 }"). La lista está vacía de forma predeterminada.
 
@@ -851,23 +888,30 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
     </string>
     <string id="ExploitGuard_ASR_Rules">Configurar reglas de reducción de la superficie de ataque</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    Establece el estado para cada regla de Attack Surface Reduction (ASR).
+    Establece el estado para cada regla de reducción de la superficie expuesta a ataques (ASR).
 
     Después de habilitar esta configuración, puedes establecer las siguientes opciones para cada regla en la sección Opciones:
-    - Bloquear: se aplicará la regla.
-    - Modo auditoría: si la regla suele generar un evento, se registrará (aunque la regla no se aplicará realmente).
-    - Desactivar: no se aplicará la regla.
+    - Bloquear: se aplicará la regla
+    - Modo auditoría: si la regla generaría un evento, se registrará (aunque la regla no se aplicará realmente)
+    - Desactivar: no se aplicará la regla
+    - No Configurado:  la regla está habilitada con los valores predeterminados
+    - Aviso: la regla se aplicará y el usuario final tendrá la opción de omitir el bloqueo
 
-    Habilitado:
+    A menos que la regla ASR esté deshabilitada, se recopilará una submuestra de eventos de auditoría para las reglas ASR con el valor no configurado.
+
+     Habilitado:
     Especifica el estado de cada regla de ASR en la sección Opciones para esta configuración.
     Escribe cada regla en una línea nueva como un par nombre-valor:
     - Columna Nombre: indica un id. de regla de ASR válido.
-    - Columna Valor: indica el id. de estado que hace referencia al estado que quieres especificar para la regla asociada.
+    - Columna Valor: indica el id. de estado que hace referencia al estado que quieres especificar para la regla asociada
 
     Se permiten los siguientes id. de estado en la columna Valor:
     - 1 (Bloquear)
     - 0 (Desactivar)
     - 2 (Auditar)
+    - 5 (No Configurado)
+    - 6 (Aviso)
+
     
     Ejemplo:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -880,7 +924,7 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
     No configurado:
     Lo mismo que Deshabilitado.
 
-    Puedes excluir carpetas o archivos en la opción de GP para excluir archivos y rutas de acceso de las reglas de Attack Surface Reduction.
+    Puedes excluir carpetas o archivos en la configuración de directiva de grupo para ""Excluir archivos y rutas de acceso de las regla de reducción de la superficie expuesta a ataques"".
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Configurar Acceso controlado a carpeta</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -982,6 +1026,14 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
 
     Antivirus de Microsoft Defender determina automáticamente las aplicaciones que pueden ser de confianza. Puedes agregar aplicaciones de confianza adicionales en la opción de GP Configurar aplicaciones permitidas.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definir grupos de directivas para el control de dispositivos</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Siga el esquema XML de grupos de directivas de control de dispositivos para rellenar los datos de grupos de directivas.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definir reglas para las directivas para el control de dispositivos</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Siga el esquema XML de reglas de directiva de control de dispositivos para rellenar los datos de reglas de directivas.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -999,6 +1051,11 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
         <label>Definir servidor proxy para las conexiones con la red</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Definir la ruta de acceso del directorio para copiar los archivos de registro compatibles</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Exclusiones de extensión</listBox>
     </presentation>
@@ -1007,6 +1064,9 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Exclusiones de proceso</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">Exclusiones de direcciones IP</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Especificar más conjuntos de definiciones para la inspección del tráfico de red</listBox>
@@ -1075,10 +1135,10 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Especificar la hora del día a la que ejecutar un examen programado</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definir el número de días que deben transcurrir para considerar la inteligencia de seguridad de spyware como caducada</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definir el número de días que deben transcurrir para considerar la inteligencia de seguridad de spyware como caducada</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definir el número de días que deben transcurrir para considerar la inteligencia de seguridad de virus como caducada</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definir el número de días que deben transcurrir para considerar la inteligencia de seguridad de virus como caducada</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1153,6 +1213,19 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definir los grupos de directivas aquí</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definir las reglas de directivas aquí</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Especificar el período de selección aleatoria del programador en horas.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

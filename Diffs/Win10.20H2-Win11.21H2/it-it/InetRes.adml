@@ -270,7 +270,7 @@ Se si abilita questa impostazione dei criteri, sarà possibile immettere un elen
 
 Se si disabilita o non si configura questa impostazione dei criteri, gli utenti non potranno specificare un elenco delle eccezioni predefinito per Blocco popup.
 
-Nota: è possibile impedire agli utenti di aggiungere o rimuovere siti Web dall'elenco di eccezioni abilitando l'impostazione dei criteri "Disattiva gestione Elenco popup consentiti".</string>
+Nota: è possibile impedire agli utenti di aggiungere o rimuovere siti Web dall'elenco di eccezioni abilitando il criterio "Disattiva gestione Elenco autorizzati per popup".</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">Questa impostazione dei criteri consente di ignorare la richiesta di conferma quando uno script in esecuzione in qualsiasi processo nel computer cerca di eseguire un'operazione con gli Appunti (Elimina, Copia o Incolla).
 
 Se si abilita questa impostazione dei criteri, all'utente non verrà richiesta conferma quando uno script in esecuzione in qualsiasi processo nel computer esegue un'operazione con gli Appunti. Questo significa che se il comportamento dell'area è attualmente impostato per la richiesta di conferma verrà ignorato e si procederà all'abilitazione.
@@ -298,7 +298,6 @@ Se si disabilita questa impostazione dei criteri per un'applicazione o un proces
 Se non si configura questa impostazione dei criteri, i valori correnti dell'azione URL per un'applicazione o un processo in elenco avranno la priorità.</string>
       <string id="FavImportExport">Disabilita Importazione/Esportazione impostazioni</string>
       <string id="GeolocationDisable">Disattiva georilevazione nel browser</string>
-      <string id="DisableFlashInIE">Disattiva Adobe Flash in Internet Explorer e impedisci alle applicazioni di utilizzare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash</string>
       <string id="File_NoBrowserClose">Menu File: disabilita la chiusura delle finestre del browser e di Esplora risorse</string>
       <string id="File_NoBrowserSaveAs">Menu File: disabilita l'opzione di menu Salva con nome</string>
       <string id="File_NoBrowserSaveWebComplete">Menu File: disabilita il salvataggio della pagina Web completa</string>
@@ -415,17 +414,17 @@ Se non si configura questa impostazione dei criteri, l'utente potrà scambiare l
 
 Se si abilita questa impostazione dei criteri, non verrà visualizzata alcuna richiesta di abilitazione del filtro anti-phishing. L'amministratore deve specificare la modalità del filtro anti-phishing scegliendo tra le seguenti: manuale, automatico o disattivato.
 
-Se si seleziona la modalità manuale, il filtro anti-phishing eseguirà solo analisi locali e verrà visualizzata una richiesta di conferma prima dell'invio di qualsiasi dato a Microsoft. Se la funzionalità viene abilitata completamente, tutti gli indirizzi di siti Web non inclusi nell'elenco di quelli consentiti saranno automaticamente inviati a Microsoft senza richiedere conferma all'utente.
+Se si seleziona la modalità manuale, il filtro anti-phishing eseguirà solo analisi locali e verrà visualizzata una richiesta di conferma prima dell'invio di qualsiasi dato a Microsoft. Se la funzionalità viene abilitata completamente, tutti gli indirizzi di siti Web non inclusi nell'elenco autorizzati saranno automaticamente inviati a Microsoft senza richiedere conferma all'utente.
 
 Se si disabilita o non si configura questa impostazione dei criteri, l'utente potrà scegliere la modalità di funzionamento desiderata per il filtro anti-phishing.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">Questa impostazione dei criteri consente di abilitare il filtro SmartScreen, che avviserà l'utente se il sito Web visitato è noto per aver eseguito tentativi fraudolenti di raccogliere informazioni personali attraverso il "phishing" o per contenere malware.
 
-Se si abilita questa impostazione dei criteri, all'utente non verrà richiesto di attivare il filtro SmartScreen. L'amministratore deve specificare la modalità del filtro SmartScreen scegliendo tra le seguenti: abilitato o disabilitato. Tutti gli indirizzi di siti Web non inclusi nell'elenco di quelli consentiti saranno automaticamente inviati a Microsoft senza richiedere conferma all'utente.
+Se si abilita questa impostazione dei criteri, all'utente non verrà richiesto di attivare il filtro SmartScreen. L'amministratore deve specificare la modalità del filtro SmartScreen scegliendo tra le seguenti: abilitato o disabilitato. Tutti gli indirizzi di siti Web non inclusi nell'elenco autorizzati del filtro saranno automaticamente inviati a Microsoft senza richiedere conferma all'utente.
 
 Se si disabilita o non si configura questa impostazione dei criteri, l'utente potrà scegliere di attivare il filtro SmartScreen alla prima esecuzione.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">Questa impostazione dei criteri impedisce all'utente di gestire il filtro SmartScreen, che avviserà l'utente se il sito Web visitato è noto per aver eseguito tentativi fraudolenti di raccogliere informazioni personali attraverso il "phishing" o per contenere malware.
 
-Se si abilita questa impostazione dei criteri, all'utente non verrà richiesto di attivare il filtro SmartScreen. Tutti gli indirizzi di siti Web non inclusi nell'elenco di quelli consentiti saranno automaticamente inviati a Microsoft senza richiedere conferma all'utente.
+Se si abilita questa impostazione dei criteri, all'utente non verrà richiesto di attivare il filtro SmartScreen. Tutti gli indirizzi di siti Web non inclusi nell'elenco autorizzati saranno automaticamente inviati a Microsoft senza richiedere conferma all'utente.
 
 Se si disabilita o non si configura questa impostazione dei criteri, l'utente potrà scegliere di attivare il filtro SmartScreen alla prima esecuzione.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Questa impostazione dei criteri consente di disattivare la funzionalità di verifica delle impostazioni di sicurezza, che controlla le impostazioni di sicurezza di Internet Explorer per determinare quando comportano dei rischi per Internet Explorer.
@@ -726,13 +725,6 @@ Se si abilita questa impostazione dei criteri, il supporto per la georilevazione
 Se si disabilita questa impostazione dei criteri, il supporto per la georilevazione nel browser sarà attivato.
 
 Se non si configura questa impostazione dei criteri, il supporto per la georilevazione nel browser potrà essere attivato o disattivato dalla scheda Privacy in Opzioni Internet.</string>
-      <string id="IE_ExplainDisableFlashInIE">Questa impostazione dei criteri disattiva Adobe Flash in Internet Explorer e impedisce alle applicazioni di usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash.
-
-Se si abilita questa impostazione dei criteri, Flash verrà disattivato per Internet Explorer e le applicazioni non saranno in grado di usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash. Nella finestra di dialogo Gestione componenti aggiuntivi lo stato di Flash sarà 'Disabilitato' e gli utenti non potranno abilitarlo. Se si abilita questa impostazione dei criteri, in Internet Explorer verranno ignorate le impostazioni specificate per Adobe Flash tramite le impostazioni dei criteri "Elenco componenti aggiuntivi" e "Impedisci tutti i componenti aggiuntivi a meno che siano esplicitamente consentiti nell'Elenco componenti aggiuntivi".
-
-Se si disabilita o non si configura questa impostazione dei criteri, Flash verrà attivato per Internet Explorer e le applicazioni saranno in grado di usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash. Gli utenti potranno abilitare o disabilitare Flash nella finestra di dialogo Gestione componenti aggiuntivi.
-
-È comunque possibile disabilitare Adobe Flash tramite le impostazioni dei criteri "Elenco componenti aggiuntivi" e "Impedisci tutti i componenti aggiuntivi a meno che siano esplicitamente consentiti nell'Elenco componenti aggiuntivi" anche se questa impostazione dei criteri è disabilitata o non è configurata. Se tuttavia Adobe Flash è disabilitato tramite le impostazioni dei criteri "Elenco componenti aggiuntivi" e "Impedisci tutti i componenti aggiuntivi a meno che siano esplicitamente consentiti nell'Elenco componenti aggiuntivi" e non tramite questa impostazione dei criteri, tutte le applicazioni potranno continuare a usare la tecnologia di Internet Explorer per creare un'istanza di oggetti Flash. Per altre informazioni, vedi "Impostazioni di Criteri di gruppo in Internet Explorer 10" nella libreria TechNet di Internet Explorer.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Impedisce agli utenti di chiudere Microsoft Internet Explorer ed Esplora file.
 
 Se si abilita questo criterio, il comando Chiudi del menu File verrà visualizzato in grigio.
@@ -1345,7 +1337,7 @@ Se si abilita questa impostazione dei criteri, l'utente non potrà aggiungere n�
 
 Se si disabilita o non si configura questa impostazione dei criteri, l'utente potrà aggiungere o rimuovere siti Web nell'elenco delle eccezioni.
 
-Nota: abilitando l'impostazione dei criteri "Elenco popup consentiti" è possibile specificare un elenco di siti Web a cui è consentito aprire finestre popup indipendentemente dalle impostazioni Blocco popup di Internet Explorer.</string>
+Nota: abilitando l'impostazione dei criteri "Elenco autorizzati per popup" è possibile specificare un elenco di siti Web a cui è consentito aprire finestre popup indipendentemente dalle impostazioni Blocco popup di Internet Explorer.</string>
       <string id="IE_ExplainRestrictPopupManagement">Questa impostazione dei criteri consente di controllare la funzionalità di gestione dei popup in Internet Explorer.
 
 Se si abilita questa impostazione dei criteri, le informazioni del Pannello di controllo relative alla gestione dei componenti aggiuntivi non saranno disponibili (appariranno in grigio) e controlli, notifiche e finestre di dialogo relative alla gestione componenti aggiuntivi non verranno visualizzati. Le finestre popup continueranno a funzionare come in Windows XP Service Pack 1 e versioni precedenti, ma le finestre visualizzate al di fuori della schermata verranno riposizionate all'interno della schermata.
@@ -3014,7 +3006,7 @@ Questa funzionalità è valida solo per le versioni di Internet Explorer fino a 
       <string id="Persistence_FileLimits4">Limiti dimensioni file per l'area siti con restrizioni</string>
       <string id="PhishingOff">Disattiva</string>
       <string id="PhishingOn">Attivati</string>
-      <string id="PopupBlocker_AllowList">Elenco popup consentiti</string>
+      <string id="PopupBlocker_AllowList">Elenco autorizzati per popup</string>
       <string id="Printing">Stampa</string>
       <string id="Printing_Explain">Questa impostazione dei criteri consente di specificare se quando l'utente stampa una pagina Web, verranno stampati anche i colori e le immagini di sfondo. La stampa di colori e immagini di sfondo può rallentare la velocità di stampa della pagina e compromettere la qualità della stampa in base alle funzionalità della stampante in uso.
 
@@ -3903,7 +3895,7 @@ Se si disabilita o non si configura questa impostazione dei criteri, gli utenti 
 Se si attiva questa impostazione, gli utenti potranno visualizzare e utilizzare l'opzione Modalità Enterprise dal menu Strumenti. Se si attiva questa impostazione ma non si specifica un percorso per i rapporti, la modalità Enterprise sarà comunque disponibile per gli utenti ma non si riceveranno i rapporti.
 
 Se si disabilita o non si configura questa impostazione, l'opzione di menu non verrà visualizzata e gli utenti non saranno in grado di eseguire siti Web in modalità Enterprise.</string>
-      <string id="RestrictInternetExplorer">Invia a Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise.</string>
+      <string id="RestrictInternetExplorer">Invia a Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise</string>
       <string id="IE_ExplainRestrictInternetExplorer">Questa impostazione consente di decidere se aprire in Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise. Se si usa questa impostazione, è necessario attivare anche l'impostazione dei criteri Modelli amministrativi\Componenti di Windows\Internet Explorer\Usa elenco siti Web di Internet Explorer modalità Enterprise e includere almeno un sito nell'elenco siti modalità Enterprise.
 
 Se si abilita questa impostazione, vengono aperti automaticamente in Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise.
@@ -3958,6 +3950,41 @@ Criteri correlati:
 - Invia tutti i siti non inclusi nell'elenco siti in modalità Enterprise in Microsoft Edge ("RestrictIE")
 
 Per ulteriori informazioni sulla modalità di utilizzo di questi criteri insieme ad altri criteri per creare la configurazione ottimale per la tua organizzazione, vedi https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Consenti a "Salva destinazione con nome" in modalità Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Questa impostazione dei criteri consente agli amministratori di abilitare il menu di scelta rapida "Salva destinazione come" nella modalità di Internet Explorer.
+
+Se si Abilita questo criterio, l'impostazione "Salva destinazione con nome" verrà visualizzata nel menu di scelta rapida della modalità di Internet Explorer e funzionerà come Internet Explorer.
+
+Se si disattiva o non si configura questa impostazione di criterio, "Salva destinazione con nome" non verrà visualizzato nel menu di scelta rapida della modalità di Internet Explorer.
+
+Per altre informazioni, Vedi https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Abilita tasti di scelta rapida estesi nella modalità Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Questa impostazione dei criteri consente agli amministratori di abilitare la modalità estesa per i tasti di scelta rapida di Microsoft Edge Internet Explorer, ad esempio "CTRL+S" per la funzionalità "Salva con nome".
+
+Se si abilita questo criterio, la funzionalità per i tasti di scelta rapida estesa sarà abilitata in modalità Internet Explorer e funzionerà come Internet Explorer.
+
+Se si disabilita o non si configura questa impostazione dei criteri, i tasti di scelta rapida estesi non funzioneranno in modalità Internet Explorer.
+
+Per altre informazioni, vedere https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Disabilita Internet Explorer 11 come browser autonomo</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Questo criterio ti consente di limitare l'avvio di Internet Explorer come browser autonomo.
+
+Attivandolo, questo criterio:
+- Impedisce l'avvio di Internet Explorer 11 come browser autonomo.
+- Limita l'utilizzo di Internet Explorer alla "modalità Internet Explorer" nativa di Microsoft Edge.
+- Reindirizza tutti i tentativi di avvio di Internet Explorer 11 al browser del canale stabile Microsoft Edge.
+- Sostituisce qualsiasi altro criterio che reindirizza a Internet Explorer 11.
+
+Se disattivi o non configuri questo criterio, tutti i siti verranno aperti utilizzando le impostazioni correnti del browser attivo. Nota: per rendere effettivo questo criterio, è necessario installare il canale stabile Microsoft Edge.</string>
+      <string id="NotifyDisableIEOptions_Never">Mai</string>
+      <string id="NotifyDisableIEOptions_Always">Sempre</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Una volta per utente</string>
+      <string id="JScriptReplacement">Sostituisci JScript caricando JScript9Legacy al posto di JScript tramite MSHTML/WebOC.</string>
+      <string id="IE_ExplainJScriptReplacement">Questa impostazione dei criteri specifica se JScript o JScript9Legacy viene caricato per le chiamate basate su MSHTML/WebOC.
+      
+Se si abilita questa impostazione dei criteri, JScript9Legacy verrà caricato nelle situazioni in cui JScript è stata creata un'istanza.
+
+Se si disabilita o non si configura questo criterio, verrà utilizzato il JScript.</string>
       <string id="VerMgmtDisable">Disattiva blocco dei controlli ActiveX obsoleti per Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Questa impostazione dei criteri determina se Internet Explorer blocca specifici controlli ActiveX obsoleti. I controlli ActiveX obsoleti non vengono mai bloccati nell'area Intranet.
 
@@ -4162,7 +4189,7 @@ Per altre informazioni, vedi l'argomento relativo al blocco dei controlli Active
     </stringTable>
     <presentationTable>
       <presentation id="VerMgmtDomainAllowlist_1">
-        <listBox refId="DomainList">Elenco domini consentiti</listBox>
+        <listBox refId="DomainList">Elenco autorizzati per dominio</listBox>
       </presentation>
       <presentation id="AddonManagement_AddOnList_1">
         <listBox refId="AddOnList">Elenco componenti aggiuntivi</listBox>
@@ -4833,6 +4860,9 @@ Per altre informazioni, vedi l'argomento relativo al blocco dei controlli Active
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Prima scelta</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Seconda scelta</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Terza scelta</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notifica che il browser Internet Explorer 11 è disabilitato</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

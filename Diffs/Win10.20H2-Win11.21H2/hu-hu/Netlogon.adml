@@ -135,7 +135,7 @@ A tartományvezérlő-lokátor DNS-rekordjai élettartamának megadásához jel�
 
 Ha nem adja meg ezt a házirend-beállítást, a rendszer egyetlen tartományvezérlőre sem alkalmazza, a tartományvezérlők pedig a helyi konfigurációt alkalmazzák.</string>
       <string id="Netlogon_ExpectedDialupDelay">Bejelentkezésnél engedélyezett csatlakozási várakozás megadása</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">Ez a házirend-beállítás határozza meg, hogy a számítógép mennyi idővel várjon tovább a tartományvezérlő válaszára a hálózatra történt bejelentkezés során.
+      <string id="Netlogon_ExpectedDialupDelay_Help">Ez a házirend-beállítás meghatározza, hogy a számítógép mennyi idővel várjon tovább a tartományvezérlő válaszára a hálózatra történt bejelentkezéskor.
 
 A bejelentkezésnél engedélyezett csatlakozási várakozás megadásához jelölje be az Engedélyezett választógombot, majd adja meg másodpercben a kívánt értéket (a „60” érték megadása például egy percet jelent).
 
@@ -337,6 +337,22 @@ A beállítás megengedett értékei a következő viselkedésmódokat eredmény
 A kívánt viselkedésmód beállításához kattintson az Engedélyezve választógombra, majd adja meg a megfelelő értéket. Az érték 1 és 2 között lehet.
 
 Ha nem adja meg ezt a házirend-beállítást, a rendszer egyetlen számítógépre sem alkalmazza, a számítógépek pedig a helyi konfigurációt használják.</string>
+
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Kisbetűs DNS-állomásnevek használata a tartományvezérlő SRV rekordjainak regisztrálásakor</string>
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Ezzel a házirend-beállítással konfigurálhatja, hogy a beállítás hatálya alá tartozó tartományvezérlők kisbetűssé alakítsák-e DNS-állomásnevüket az SRV rekordok regisztrálásakor.
+
+Ha engedélyezi ezt a beállítást, a tartományvezérlők kisbetűssé alakítják DNS-állomásnevüket a tartományvezérlők SRV rekordjainak regisztrálásakor. A rendszer a lehető legjobb próbálkozással igyekszik törölni az olyan korábban regisztrált SRV rekordokat, amelyek kis- és nagybetűket vegyesen használó DNS-állomásneveket tartalmaznak. További információkért és a potenciális manuális karbantartási eljárásokért tekintse meg a lenti hivatkozást.
+
+Ha letiltja ezt a beállítást, a tartományvezérlők adott állapotában használják beállított DNS-állomásnevüket a tartományvezérlők SRV rekordjainak regisztrálásakor.
+
+Ha a beállítás nincs konfigurálva, a tartományvezérlők alapértelmezés szerint a helyi konfigurációjukat fogják használni.
+
+Az alapértelmezett helyi konfiguráció engedélyezve van.
+
+A beállítás módosításának érvénybe léptetéséhez nem szükséges a rendszer újraindítása.
+
+További információt a https://aka.ms/lowercasehostnamesrvrecord címen olvashat.
+      </string>
 
     </stringTable>
     <presentationTable>

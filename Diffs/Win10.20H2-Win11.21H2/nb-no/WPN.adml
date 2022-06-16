@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Varslinger</string>
+      <string id="WnsEndpoint">Aktiverer gruppepolicy for WNS FQDN</string>
+      <string id="WnsEndpointExplain">Denne policyen angir en spesiell WNS FQDN for bestemte miljøer.</string>
       <string id="NoTileNotification">Deaktiver flisvarslinger</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minutter etter midnatt:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>FQDN for WNS</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

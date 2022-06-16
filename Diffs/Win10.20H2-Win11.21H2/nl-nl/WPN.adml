@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Meldingen</string>
+      <string id="WnsEndpoint">Hiermee schakelt u het groepsbeleid in voor de WNS-FQDN</string>
+      <string id="WnsEndpointExplain">Met dit beleid wordt een speciale WNS-FQDN ingesteld voor bepaalde omgevingen.</string>
       <string id="NoTileNotification">Tegelmeldingen uitschakelen</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minuten na middernacht:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>FQDN voor WNS</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

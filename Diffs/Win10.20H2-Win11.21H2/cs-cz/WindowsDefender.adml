@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivirová ochrana v programu Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Vyloučení</string>
+    <string id="DeviceControl">Ovládání zařízení</string>
     <string id="ExploitGuard">Ochrana Exploit Guard v programu Microsoft Defender</string>
     <string id="ExploitGuard_ASR">Omezení prostoru pro útok</string>
     <string id="ExploitGuard_ControlledFolderAccess">Řízený přístup ke složkám</string>
@@ -29,6 +30,28 @@ Pokud toto nastavení povolíte nebo nenakonfigurujete, bude antimalwarová slu�
 
 Pokud toto nastavení zakážete, bude antimalwarová služba zaváděna jako úloha s nízkou prioritou.</string>
 
+    <string id="MeteredConnectionUpdates">Povolí Antivirové ochraně v programu Microsoft Defender aktualizace a komunikaci přes připojení účtované podle objemu dat.</string>
+    <string id="MeteredConnectionUpdates_Explain">
+    Zakázáno (výchozí): 
+    Aktualizace a komunikace nejsou povolené přes připojení účtovaná podle objemu dat.
+
+    Povoleno: 
+    Povolí aktualizace spravovaných zařízení přes připojení účtovaná podle objemu dat. Můžou se účtovat poplatky za data.</string>
+    <string id="AllowNetworkProtectionOnWinServer">Toto nastavení určuje, jestli je v systému Windows Server povolená konfigurace ochrany sítě do režimu blokování nebo auditování.</string>
+    <string id="AllowNetworkProtectionOnWinServer_Explain">
+    Zakázáno (výchozí): 
+    Pokud toto nastavení není nakonfigurované nebo je zakázané, není povolené nakonfigurovat v systému Windows Server ochranu sítě do režimu blokování nebo auditování.
+
+    Povoleno: 
+    Pokud je toto nastavení povolené, můžou správci určit, jestli se v systému Windows Server může nakonfigurovat ochrana sítě do režimu blokování nebo auditování.
+    Upozorňujeme, že toto nastavení je závislé na nastavení EnableNetworkProtection. Pokud je toto nastavení false, bude se nastavení EnableNetworkProtection ignorovat. V opačném případě se v systému Windows Server spustí ochrana sítě podle hodnoty nastavení EnableNetworkProtection.</string>
+    <string id="DisableDatagramProcessing">Toto nastavení řídí zpracování datagramů pro ochranu sítě.</string>
+    <string id="DisableDatagramProcessing_Explain">
+    Povoleno (výchozí): 
+    Pokud toto nastavení není nakonfigurované nebo je zakázané, bude zpracování datagramů pro ochranu sítě povolené.
+
+    Povoleno: 
+    Pokud je toto nastavení povolené, bude zpracování datagramů pro ochranu sítě zakázané.</string>
     <string id="DisableAutoExclusions">Vypnout automatická vyloučení</string>
     <string id="DisableAutoExclusions_Explain">
         Umožňuje správci určit, jestli se má vypnout funkce Automatická vyloučení pro serverové skladové jednotky (SKU).
@@ -60,11 +83,11 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Endpoint Protect
 
     Pokud tuto zásadu povolíte nebo zakážete, může to způsobit neočekávané nebo nepodporované chování. Tuto zásadu doporučujeme nekonfigurovat.</string>
     <string id="DisableLocalAdminMerge">Konfigurovat sloučení nastavení seznamů provedeného místním správcem</string>
-    <string id="DisableLocalAdminMerge_Explain">Toto nastavení zásad určuje, zda má být nastavení složitých seznamů nakonfigurované místním správcem sloučeno s nastavením zásad skupiny či nikoli. Toto nastavení platí pro takové seznamy, jako jsou hrozby a vyloučení.
+    <string id="DisableLocalAdminMerge_Explain">Toto nastavení zásad určuje, zda budou nastavení komplexního seznamu nakonfigurované místním správcem sloučena s nastavením zásad skupiny. Toto nastavení platí pro seznamy, jako jsou hrozby a vyloučení.
 
-Pokud toto nastavení povolíte nebo nenakonfigurujete, budou jedinečné položky definované v zásadách skupiny a v nastavení předvoleb nakonfigurovaném místním správcem sloučeny do výsledných platných zásad. V případě konfliktu bude mít nastavení zásad skupiny přednost před nastavením předvoleb.
+Pokud toto nastavení zakážete nebo nenakonfigurujete, budou jedinečné položky definované v zásadách skupiny a v nastavení předvoleb nakonfigurovaných místním správcem sloučeny do výsledné platné zásady. V případě konfliktu přepíše nastavení zásad skupiny nastavení předvoleb.
 
-Pokud toto nastavení zakážete, budou ve výsledných platných zásadách použity pouze položky definované v zásadách skupiny. Nastavení zásad skupiny bude mít přednost před nastavením předvoleb nakonfigurovaným místním správcem.</string>
+Pokud toto nastavení povolíte, budou ve výsledné platné zásadě použity pouze položky definované zásadami skupiny. Nastavení zásad skupiny přepíše nastavení předvoleb nakonfigurované místním správcem.</string>
     <string id="DisableRoutinelyTakingAction">Vypnout pravidelné odstraňování problémů</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Nastavení této zásady umožňuje nakonfigurovat, jestli Antivirová ochrana v programu Microsoft Defender automaticky provede akci u všech zjištěných hrozeb. Akce, která se má provést u konkrétní hrozby, je určená kombinací akce definované zásadami, akce definované uživatelem a akce definované podpisem.
@@ -109,11 +132,15 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, bude proxy server pro z
       Pokud toto nastavení zakážete nebo nenakonfigurujete, proxy server přeskočí tento krok pro nalezení zálohy podle výše uvedeného pořadí.
     </string>
     <string id="RandomizeScheduleTaskTimes">Nastavit náhodný čas plánovaných úloh</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Nastavení této zásady umožňuje povolit nebo zakázat náhodný čas spuštění plánovaných kontrol a plánovaných aktualizací bezpečnostních informací. Účelem tohoto nastavení je distribuovat dopad kontrol na prostředky. Jeho použitím je možné například zabránit tomu, aby v případě, že hostované virtuální počítače sdílejí hostitele, provádělo více hostovaných virtuálních počítačů operace náročné pro disk ve stejnou dobu.
+    <string id="RandomizeScheduleTaskTimes_Explain">Toto nastavení zásady vám umožňuje nakonfigurovat naplánovanou kontrolu a aktualizaci bezpečnostních informací a okno času zahájení v hodinách.
 
-    Pokud toto nastavení povolíte nebo nenakonfigurujete, zahájí se naplánované úlohy v náhodném čase v intervalu 30 minut před zadaným časem spuštění a po něm.
+    Pokud toto nastavení zakážete nebo nenakonfigurujete, budou plánované úlohy zahájeny v náhodném čase v intervalu 4 hodin po určeném čase v Plánovači úloh.
+   Pokud toto nastavení povolíte, můžete rozšířit nebo zúžit toto randomizované období. Upřesněte okno randomizace v rozmezí 1 až 23 hodin.</string>
+    <string id="SchedulerRandomizationTime">Konfigurovat okno pro randomizaci časů naplánovaných úloh</string>
+    <string id="SchedulerRandomizationTime_Explain">Toto nastavení zásad vám umožňuje nakonfigurovat v hodinách časový interval naplánovaného času spuštění kontroly a naplánovaného času spuštění aktualizace bezpečnostních informací.
 
-    Pokud toto nastavení zakážete, zahájí se naplánované úlohy v zadaném čase spuštění.</string>
+    Pokud toto nastavení zakážete nebo nenakonfigurujete, spustí se naplánované úkoly náhodně v intervalu 4 hodin po zadaném čase spuštění.
+    Pokud toto nastavení povolíte, musíte vybrat časový interval pro randomizaci v hodinách. Časový interval pro randomizaci musí být mezi 1 až 23 hodinou.</string>
     <string id="ServiceKeepAlive">Povolit trvalé spuštění antimalwarové služby</string>
     <string id="ServiceKeepAlive_Explain">Nastavení této zásady umožňuje nakonfigurovat, jestli má antimalwarová služba zůstat spuštěná, když jsou zakázané antivirové a antispywarové bezpečnostní informace. Toto nastavení doporučujeme ponechat zakázané.
 
@@ -135,12 +162,20 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, bude proxy server pro z
         Není nakonfigurováno:
         Stejné jako Zakázáno.
     </string>
+    <string id="SupportLogLocation">Definovat cestu k adresáři pro kopírování souborů protokolů podpory</string>
+    <string id="SupportLogLocation_Explain">Toto nastavení zásad umožňuje konfigurovat cestu k adresáři, do kterého budou zkopírovány soubory protokolu podpory. Hodnota tohoto nastavení by měla být platná cesta adresáře.
+
+Pokud toto nastavení povolíte, budou soubory protokolu podpory zkopírovány do zadané cesty umístění protokolu podpory.
+
+Pokud toto nastavení zakážete nebo nenakonfigurujete, soubory protokolu podpory se nebudou kopírovat do žádného umístění.</string>
     <string id="Exclusions_Extensions">Vyloučení přípon</string>
     <string id="Exclusions_Extensions_Explain">Toto nastavení zásad umožňuje zadat seznam typů souborů, které by měly být z plánovaných a vlastních kontrol a kontrol v reálném čase vyloučeny. Typy souborů by měly být přidány v části Možnosti pro toto nastavení. Každou položku je třeba uvést jako dvojici názvu a hodnoty, kde název by měl být řetězec představující příponu typu souboru (například obj nebo lib). Hodnota se nepoužívá a doporučujeme ji nastavit na 0.</string>
     <string id="Exclusions_Paths">Vyloučení cest</string>
     <string id="Exclusions_Paths_Explain">Toto nastavení zásad umožňuje zakázat plánované kontroly a kontroly v reálném čase u souborů, které se nacházejí v zadaných umístěních, nebo u zadaných prostředků s plně kvalifikovaným názvem. Cesty by měly být přidány v části Možnosti pro toto nastavení. Každou položku je třeba uvést jako dvojici názvu a hodnoty, kde název by měl být řetězec představující cestu nebo plně kvalifikovaný název prostředku. Pokud je například cesta definována jako c:\Windows, budou vyloučeny všechny soubory v tomto adresáři. Plně kvalifikovaný název prostředku je možné definovat jako C:\Windows\App.exe. Hodnota se nepoužívá a doporučujeme ji nastavit na 0.</string>
     <string id="Exclusions_Processes">Vyloučení procesů</string>
-    <string id="Exclusions_Processes_Explain">Toto nastavení zásad umožňuje zakázat plánované kontroly a kontroly v reálném čase u všech souborů otevřených kterýmkoli ze zadaných procesů. Samotny proces vyloučen nebude. Pokud chcete vyloučit proces, použijte vyloučení cest. Procesy by měly být přidány v části Možnosti pro toto nastavení. Každou položku je třeba uvést jako dvojici názvu a hodnoty, kde název by měl být řetězec představující cestu k bitové kopii procesu. Poznámka: Vyloučit lze pouze spustitelné soubory. Proces je možné definovat například jako c:\windows\app.exe. Hodnota se nepoužívá a doporučujeme ji nastavit na 0.</string>
+    <string id="Exclusions_Processes_Explain">Toto nastavení zásad umožňuje zakázat kontrolu v reálném čase pro všechny soubory otevřené některým ze zadaných procesů. Tato zásada se nevztahuje na naplánované kontroly. Samotný proces nebude vyloučen. Chcete-li tento proces vyloučit, použijte vyloučení cesty. Procesy by měly být přidány do možností pro toto nastavení. Každá položka musí být uvedena jako dvojice hodnot názvu, přičemž název by měl představovat řetězcovou reprezentaci cesty k bitové kopii procesu. Mějte na paměti, že pouze spustitelné soubory mohou být vyloučeny. Proces může být například definován jako: "c:\windows\app.exe". Hodnota se nepoužije a doporučuje se ji nastavit na 0.</string>
+    <string id="Exclusions_IpAddresses">Vyloučení IP adres</string>
+    <string id="Exclusions_IpAddresses_Explain">Umožňuje správci výslovně zakázat kontrolu síťových paketů, kterou provádí proces wdnisdrv, pro konkrétní sadu IP adres.</string>
     <string id="Nis_DisableProtocolRecognition">Zapnout rozpoznávání protokolu</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Toto nastavení zásad umožňuje nakonfigurovat rozpoznávání protokolu pro účely ochrany sítě před zneužitím známých chyb zabezpečení.
 
@@ -167,6 +202,14 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, budou mít zásady skup
 Pokud toto nastavení povolíte, budou položky ze složky Karanténa odebrány po zadaném počtu dní.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, zůstanou položky ve složce karantény neomezeně dlouho a nebudou automaticky odebrány.</string>
+
+    <string id="RealtimeProtection_DisableSriptScanning">Zapnout kontrolu skriptů</string>
+    <string id="RealtimeProtection_DisableSriptScanning_Explain">Toto nastavení zásad umožňuje nakonfigurovat kontrolu skriptů.
+
+    Pokud toto nastavení povolíte nebo nenakonfigurujete, bude kontrola skriptů zapnutá.
+
+    Pokud toto nastavení zakážete, bude kontrola skriptů vypnutá.</string>
+
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Zapnout monitorování chování</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Toto nastavení zásad umožňuje nakonfigurovat monitorování chování.
 
@@ -400,12 +443,6 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, bude kontrola e-mailů 
 Pokud toto nastavení povolíte nebo nenakonfigurujete, bude heuristika povolena.
 
 Pokud toto nastavení zakážete, heuristika bude zakázána.</string>
-    <string id="Scan_DisablePackedExeScanning">Kontrolovat zabalené spustitelné soubory</string>
-    <string id="Scan_DisablePackedExeScanning_Explain">Toto nastavení zásad umožňuje konfigurovat kontroly zabalených spustitelných souborů. Doporučuje se, aby tento typ kontrol zůstal povolen.
-
-Pokud toto nastavení povolíte nebo nenakonfigurujete, budou zabalené spustitelné soubory kontrolovány.
-
-Pokud toto nastavení zakážete, zabalené spustitelné soubory nebudou kontrolovány.</string>
     <string id="Scan_DisableRemovableDriveScanning">Kontrolovat vyměnitelné jednotky</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Toto nastavení zásad umožňuje určit, zda se má během úplné kontroly hledat škodlivý a nežádoucí software na vyměnitelných jednotkách, jako jsou jednotky USB Flash.
 
@@ -473,11 +510,11 @@ Pokud toto nastavení povolíte, budou položky odebírány ze složky historie 
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, zůstanou položky ve složce historie kontrol výchozí počet dnů.</string>
     <string id="Scan_QuickScanInterval">Zadat interval spouštění rychlých kontrol během dne</string>
-    <string id="Scan_QuickScanInterval_Explain">Toto nastavení zásad umožňuje zadat interval provádění rychlých kontrol. Časová hodnota je vyjádřena jako počet hodin mezi rychlými kontrolami. Platné hodnoty jsou od 1 (každou hodinu) do 24 (jednou za den). Pokud nastavíte hodnotu nula, intervalové rychlé kontroly se nebudou používat. Výchozí nastavená hodnota je 0.
+    <string id="Scan_QuickScanInterval_Explain">Toto nastavení zásad umožňuje zadat interval, při kterém má být prováděna Rychlá kontrola. Hodnota času je vyjádřena jako počet hodin mezi rychlými kontrolami. Platné hodnoty jsou v rozsahu od 1 (každou hodinu) do 24 (jednou za den). Pokud je nastavena hodnota nula, nebudou k disblokovat rychlé kontroly intervalu. Ve výchozím nastavení je tato možnost nastavená na hodnotu 0.
 
-Pokud toto nastavení povolíte, bude rychlá kontrola spouštěna v zadaném intervalu.
+Pokud toto nastavení povolíte, bude rychlé prohledání spuštěno v zadaném intervalu.
 
-Pokud toto nastavení zakážete nebo nenakonfigurujete, bude rychlá kontrola spouštěna ve výchozím čase.</string>
+Pokud toto nastavení zakážete nebo nenakonfigurujete, nebude Rychlá kontrola řízená touto konfigurací spuštěna.</string>
     <string id="Scan_ScanOnlyIfIdle">Zahájit naplánovanou kontrolu, pouze pokud je počítač zapnut, ale není používán</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Toto nastavení zásad umožňuje nakonfigurovat, aby se naplánované kontroly spouštěly pouze v případě, že je počítač zapnutý, ale není používán.
 
@@ -521,11 +558,11 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, bude plánovaná kontro
     <string id="Scan_ScheduleDay_7">Pátek</string>
     <string id="Scan_ScheduleDay_8">Sobota</string>
     <string id="Scan_ScheduleQuickScantime">Zadat čas každodenní rychlé kontroly</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Toto nastavení zásad umožňuje zadat čas během dne, kdy se má provádět každodenní rychlá kontrola. Hodnota času je vyjádřena jako počet minut po půlnoci (0:00).  Hodnota 120 (0x78) například odpovídá času 2:00 ráno. Výchozí nastavení tohoto času je 2:00 ráno. Plán se řídí místním časem počítače, ve kterém je prováděna kontrola.
+    <string id="Scan_ScheduleQuickScantime_Explain">Toto nastavení zásad umožňuje zadat čas během dne, kdy se má provést každodenní Rychlá kontrola. Hodnota času je vyjádřena jako počet minut po půlnoci (00:00).  Například 120 (0x78) je ekvivalent 02:00 AM. Ve výchozím nastavení je tato zásada nastavena na hodnotu zakázáno. Plán je založen na místním čase počítače, ve kterém je prováděna kontrola.
 
-Pokud toto nastavení povolíte, bude každodenní rychlá kontrola spouštěna v zadaném čase během dne.
+Pokud toto nastavení povolíte, každodenní Rychlá kontrola se spustí v denním intervalu.
 
-Pokud toto nastavení zakážete nebo nenakonfigurujete, bude každodenní rychlá kontrola spouštěna ve výchozím čase.</string>
+Pokud toto nastavení zakážete nebo nenakonfigurujete, nebude denní Rychlá kontrola řízená touto konfigurací spuštěna.</string>
     <string id="Scan_ScheduleTime">Zadat čas během dne, kdy se má spouštět plánovaná kontrola</string>
     <string id="Scan_ScheduleTime_Explain">Toto nastavení zásad umožňuje zadat čas během dne, kdy se má provádět plánovaná kontrola. Hodnota času je vyjádřena jako počet minut po půlnoci (0:00).  Hodnota 120 (0x78) například odpovídá času 2:00 ráno. Výchozí nastavení tohoto času je 2:00 ráno. Plán se řídí místním časem počítače, ve kterém je prováděna kontrola.
 
@@ -548,17 +585,17 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, bude plánovaná kontro
         Pokud toto nastavení zakážete nebo nenakonfigurujete, nedojde u naplánovaných kontrol ke změně priority u CPU.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Definovat počet dní, než budou bezpečnostní informace týkající se spywaru považovány za zastaralé</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Nastavení této zásady umožňuje definovat počet dní, které musí uplynout, než budou bezpečnostní informace týkající se spywaru považovány za zastaralé. Potom co budou bezpečnostní informace označeny za zastaralé, může tento stav vyvolat několik dalších akcí včetně návratu k alternativnímu zdroji aktualizací nebo zobrazení varovné ikony v uživatelském rozhraní. Výchozí hodnota je 14 dní.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Toto nastavení zásad umožňuje definovat počet dní, které musí uplynout, než budou informace o zabezpečení spywaru považovány za zastaralé. Pokud je zjištěno, že jsou bezpečnostní logika zastaralá, může tento stav vyvolat několik dalších akcí, včetně návratu k alternativnímu zdroji aktualizací nebo zobrazení ikony upozornění v uživatelském rozhraní. Ve výchozím nastavení je tato hodnota nastavená na 7 dní.
 
-    Pokud toto nastavení povolíte, budou bezpečnostní informace týkající se spywaru považovány za zastaralé po uplynutí zadaného počtu dní bez aktualizace.
+Pokud toto nastavení povolíte, budou bezpečnostní informace spywaru považovány za zastaralé po uplynutí zadaného počtu dní bez aktualizace.
 
-    Pokud toto nastavení zakážete nebo nenakonfigurujete, budou bezpečnostní informace týkající se spywaru považovány za zastaralé po uplynutí výchozího počtu dní bez aktualizace.</string>
+Pokud toto nastavení zakážete nebo nenakonfigurujete, budou bezpečnostní informace týkající se spywaru považovány za zastaralé po uplynutí výchozího počtu dní bez aktualizace.</string>
     <string id="SignatureUpdate_AVSignatureDue">Definovat počet dní, než budou bezpečnostní informace týkající se virů považovány za zastaralé</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Nastavení této zásady umožňuje definovat počet dní, které musí uplynout, než budou bezpečnostní informace týkající se virů považovány za zastaralé. Potom co budou bezpečnostní informace označeny za zastaralé, může tento stav vyvolat několik dalších akcí včetně návratu k alternativnímu zdroji aktualizací nebo zobrazení varovné ikony v uživatelském rozhraní. Výchozí hodnota je 14 dní.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Toto nastavení zásad umožňuje definovat počet dní, které musí uplynout, než budou datové logiky zabezpečení považovány za zastaralé. Pokud je zjištěno, že jsou bezpečnostní logika zastaralá, může tento stav vyvolat několik dalších akcí, včetně návratu k alternativnímu zdroji aktualizací nebo zobrazení ikony upozornění v uživatelském rozhraní. Ve výchozím nastavení je tato hodnota nastavená na 7 dní.
 
-    Pokud toto nastavení povolíte, budou bezpečnostní informace týkající se virů považovány za zastaralé po uplynutí zadaného počtu dní bez aktualizace.
+Pokud toto nastavení povolíte, budou bezpečnostní informace o virech považovány za zastaralé po uplynutí zadaného počtu dní bez aktualizace.
 
-    Pokud toto nastavení zakážete nebo nenakonfigurujete, budou bezpečnostní informace týkající se virů považovány za zastaralé po uplynutí výchozího počtu dní bez aktualizace.</string>
+Pokud toto nastavení zakážete nebo nenakonfigurujete, budou bezpečnostní informace o virech považovány za zastaralé po uplynutí výchozího počtu dní bez aktualizace.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definovat sdílené složky pro stahování aktualizací bezpečnostních informací</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Nastavení této zásady umožňuje konfiguraci zdrojů ve formě názvů UNC sdílených složek, ze kterých se mají stahovat aktualizace bezpečnostních informací. Zdroje budou kontaktovány v uvedeném pořadí. Hodnota tohoto nastavení by měla být zadána jako řetězec s výčtem zdrojů aktualizací, které jsou oddělené svislými čarami. Příklad: {\\unc1 | \\unc2 }. Seznam je ve výchozím nastavení prázdný.
 
@@ -849,21 +886,28 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
     <string id="ExploitGuard_ASR_Rules_Explain">
     Nastavte stav pro každé pravidlo Attack Surface Reduction (ASR).
 
-        Pokud povolíte toto nastavení, můžete v části Možnosti nastavit každé pravidlo následujícím způsobem:
-        - Blokovat: Pravidlo bude použito.
-        - Režim auditování: Pokud by pravidlo za normálních okolností vygenerovalo událost, bude tato událost zaznamenána (i když se pravidlo ve skutečnosti nepoužije).
-        - Vypnuto: Pravidlo nebude použito.
+    Pokud povolíte toto nastavení, můžete v části Možnosti nastavit každé pravidlo následujícím způsobem:
+    - Blokovat: Pravidlo bude použito.
+    - Režim auditování: Pokud by pravidlo za normálních okolností vygenerovalo událost, bude tato událost zaznamenána (i když se pravidlo ve skutečnosti nepoužije).
+    - Vypnuto: Pravidlo nebude použito.
+    - Nenakonfigurováno: Pravidlo se použije s výchozími hodnotami.
+    - Varování: Pravidlo se použije a koncový uživatel bude mít možnost blok obejít.
 
-        Povoleno:
-        V části Možnosti tohoto nastavení určete stav každého pravidla Attack Surface Reduction.
-        Každé pravidlo zadejte na nový řádek jako párovou specifikaci název-hodnota:
-        - Sloupec s názvem: Zadejte platné ID pravidla Attack Surface Reduction.
-        - Sloupec s hodnotou: Zadejte ID stavu pro odpovídající stav, který chcete určit pro přidružené pravidlo.
+    Pokud není pravidlo ASR vypnuté, shromažďuje se pro pravidla ASR s nenakonfigurovanou hodnotou dílčí ukázka událostí auditu.
 
-        Ve sloupci s hodnotou jsou povolena následující ID stavu:
+    Povoleno:
+    V části Možnosti tohoto nastavení určete stav každého pravidla Attack Surface Reduction.
+    Každé pravidlo zadejte na nový řádek jako dvojici název-hodnota:
+    - Sloupec s názvem: Zadejte platné ID pravidla Attack Surface Reduction.
+    - Sloupec s hodnotou: Zadejte ID stavu pro odpovídající stav, který chcete určit pro přidružené pravidlo
+
+    Ve sloupci s hodnotou jsou povolena následující ID stavu:
     - 1 (blokování)
     - 0 (vypnuto)
     - 2 (audit)
+    - 5 (nenakonfigurováno)
+    - 6 (varování)
+
     
     Příklad:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -871,12 +915,12 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
     Zakázáno:
-        Nebudou nakonfigurována žádná pravidla Attack Surface Reduction.
+    Nebudou nakonfigurována žádná pravidla Attack Surface Reduction.
 
-        Nenakonfigurováno:
-        Stejné jako možnost Zakázáno.
+    Nenakonfigurováno:
+    Stejné jako možnost Zakázáno.
 
-        Složky, soubory a prostředky můžete vyloučit v zásadách skupiny v nastavení Vyloučit soubory a cesty z pravidel Attack Surface Reduction.
+    Složky, soubory a prostředky můžete vyloučit v zásadách skupiny v nastavení Vyloučit soubory a cesty z pravidel Attack Surface Reduction.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Konfigurovat řízený přístup ke složkám</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -978,6 +1022,14 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
 
         Antivirová ochrana v programu Microsoft Defender automaticky určuje, které aplikace jsou důvěryhodné. Další důvěryhodné aplikace můžete přidat v zásadách skupiny v nastavení Konfigurovat povolené aplikace.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definujte skupiny zásad ovládání zařízení</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Postupujte prosím podle xml schématu skupin zásad ovládání zařízení a vyplňte data skupin zásad.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definujte pravidla zásad ovládání zařízení</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Postupujte prosím podle xml schématu pravidel zásad ovládání zařízení a vyplňte data pravidel zásad.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -995,6 +1047,11 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
         <label>Definovat proxy server pro připojení k síti</label>
     </textBox>
     </presentation>
+    <presentation id="SupportLogLocation">
+    <textBox refId="SupportLogLocation">
+        <label>Definovat cestu k adresáři pro kopírování souborů protokolů podpory</label>
+    </textBox>
+    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Vyloučení přípon</listBox>
     </presentation>
@@ -1003,6 +1060,9 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Vyloučení procesů</listBox>
+    </presentation>
+    <presentation id="Exclusions_IpAddresses">
+    <listBox refId="Exclusions_IpAddressesList">Vyloučení IP adres</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Zadat další sady definic pro kontrolu přenosu v síti</listBox>
@@ -1071,10 +1131,10 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Zadat čas během dne, kdy má být spouštěna plánovaná kontrola</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definovat počet dní, než budou bezpečnostní informace týkající se spywaru považovány za zastaralé</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Definovat počet dní, než budou bezpečnostní informace týkající se spywaru považovány za zastaralé</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definovat počet dní, než budou bezpečnostní informace týkající se virů považovány za zastaralé</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Definovat počet dní, než budou bezpečnostní informace týkající se virů považovány za zastaralé</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1149,6 +1209,19 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Zde definujte skupiny zásad.</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Tady můžete definovat pravidla zásad.</label>
+    </textBox>
+    </presentation>
+    <presentation id="SchedulerRandomizationTime">
+        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Zadejte okno randomizace plánovače v hodinách.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

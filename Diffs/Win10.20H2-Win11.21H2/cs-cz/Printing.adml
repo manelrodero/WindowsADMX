@@ -278,11 +278,11 @@ Ve výchozím nastavení budou v případě potřeby hledat kompatibilní ovlada
 
         Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude povoleno spouštění všech rozšíření tiskáren, která byla nainstalována.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Změnit výchozí výstupní formát zapisovacího modulu dokumentů Microsoft XPS (MXDW) na starší formát Microsoft XPS (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Ve výchozím nastavení generuje Zapisovací modul dokumentů Microsoft XPS (MXDW) v systémech Windows 10 a Windows Server 2019 soubory OpenXPS (*.oxps).
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Ve výchozím nastavení generuje Zapisovací modul dokumentů Microsoft XPS (MXDW) v systémech Windows 10 a Windows Server 2022 soubory OpenXPS (*.oxps).
 
-          Pokud nastavení této zásady skupiny povolíte, bude výchozím výstupním formátem modulu MXDW starší formát Microsoft XPS (*.xps).
+ Pokud nastavení této zásady skupiny povolíte, bude výchozím výstupním formátem modulu MXDW starší formát Microsoft XPS (*.xps).
 
-          Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude výchozím výstupním formátem modulu MXDW formát OpenXPS (*.oxps).</string>
+ Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude výchozím výstupním formátem modulu MXDW formát OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Vypnout správu výchozí tiskárny ve Windows</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Tato předvolba umožňuje změnit správu výchozí tiskárny.
 
@@ -291,6 +291,24 @@ Pokud toto nastavení povolíte, systém Windows nebude výchozí tiskárnu spra
 Pokud toto nastavení zakážete, systém Windows bude výchozí tiskárnu spravovat.
 
 Pokud toto nastavení nenakonfigurujete, správa výchozí tiskárny se nezmění. </string>
+      <string id="EnableDeviceControl">Povolit omezení tisku ovládání zařízení</string>
+      <string id="EnableDeviceControl_Help">
+          Určuje, zda jsou na tomto počítači vynucována omezení tisku ovládání zařízení pro tisk. 
+
+          Ve výchozím nastavení neexistují žádná omezení tisku na základě typu připojení nebo značky/modelu tiskárny.
+
+          Pokud toto nastavení povolíte, počítač omezí tisk na základě připojení tiskáren v podnikové síti nebo na schválených tiskárnách připojených pomocí USB.
+
+          Pokud toto nastavení zakážete nebo nenakonfigurujete, nebudou žádná omezení tisku na základě typu připojení nebo značky/modelu tiskárny.</string>
+        <string id="ApprovedUsbPrintDevices">Seznam schválených tiskáren připojených pomocí USB</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Toto nastavení je součástí omezení tisku ovládacích prvků zařízení. Chcete-li použít toto nastavení, povolte tisk ovládání zařízení tak, že povolíte nastavení Povolit omezení tisku ovládacích prvků zařízení.
+
+Když je povolený tisk ovládání zařízení, systém použije zadaný seznam hodnot vid/PID k určení, jestli je aktuální tiskárna připojená k USB schválená pro místní tisk.
+
+Zadejte všechny schválené kombinace vid/PID (oddělené čárkami), které odpovídají schváleným modelům tiskáren USB. Když se uživatel pokusí vytisknout do fronty tiskárny USB, bude v porovnání se schváleným seznamem zařízení vid/PID.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Pokud toto nastavení nenakonfigurujete, správa výchozí tiskárny se nezměn�
           <label>Výchozí cesta služby Active Directory</label>
         </textBox>
         <text>příklad --&gt; LDAP://DC=Domena1,DC=Spolecnost,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Zadejte seznam schválených tiskáren připojených pomocí USB.</text>
+        <text>Seznam je čárkou oddělený seznam hodnot USB vid/pid. Příklad: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

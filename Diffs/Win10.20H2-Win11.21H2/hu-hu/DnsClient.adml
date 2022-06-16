@@ -250,6 +250,23 @@ Ha ez a házirend-beállítás le van tiltva vagy nincs konfigurálva, az IDN fo
 Ha ez a házirend-beállítás engedélyezve van, az IDN-ek át lesznek alakítva Nameprep formátumba.
 
 Ha ez a házirend-beállítás le van tiltva vagy nincs konfigurálva, az IDN formátumú tartománynevek nem lesznek átalakítva Nameprep formátumba.</string>
+      <string id="DNS_Doh">DNS over HTTPS- (DoH-) alapú névfeloldás konfigurálása</string>
+      <string id="DNS_Doh_Disabled">A DoH tiltása</string>
+      <string id="DNS_Doh_Auto">A DoH engedélyezése</string>
+      <string id="DNS_Doh_Force">A DoH megkövetelése</string>
+      <string id="DNS_Doh_Help">Azt adja meg, hogy a DNS-ügyfél DNS over HTTPS- (DoH-) alapú névfeloldást hajt-e végre.
+
+A DNS-ügyfél alapértelmezés szerint hagyományos DNS-névfeloldást hajt végre (UDP vagy TCP protokollon keresztül). Ez a beállítás lehetővé teheti a DNS-ügyfélnek a DoH protokoll használatát a tartománynevek feloldásához.
+
+Ha használni szeretné ezt a házirend-beállítást, kattintson az Engedélyezve lehetőségre, majd válassza az alábbi lehetőségek valamelyikét a legördülő listából:
+
+A DoH tiltása: Nem hajtható végre DoH-alapú névfeloldás.
+
+A DoH engedélyezése: DoH-alapú lekérdezéseket hajthat végre, ha a konfigurált DNS-kiszolgálók támogatják azt. Ha nem támogatják, próbálkozzon hagyományos névfeloldással.
+
+A DoH megkövetelése: Engedélyezi a DoH-alapú névfeloldást. Ha nincsenek konfigurálva DoH-kompatibilis DNS-kiszolgálók, a névfeloldás sikertelen lesz.
+
+Ha letiltja ezt a házirend-beállítást, vagy ha nem konfigurálja ezt a házirend-beállítást, a számítógépek helyileg konfigurált beállításokat fognak használni.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +303,9 @@ Ha ez a házirend-beállítás le van tiltva vagy nincs konfigurálva, az IDN fo
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Frissítés biztonsági szintje:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">DoH-beállítások konfigurálása:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

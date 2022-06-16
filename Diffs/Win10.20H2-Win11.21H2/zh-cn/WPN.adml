@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">通知</string>
+      <string id="WnsEndpoint">为 WNS FQDN 启用组策略</string>
+      <string id="WnsEndpointExplain">此策略为特定环境设置特殊 WNS FQDN。</string>
       <string id="NoTileNotification">关闭所有通知</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">午夜后（以分钟计）：</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>用于WNS 的 FQDN</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

@@ -27,19 +27,17 @@
       <string id="IPHTTPS_ClientState">Ustaw stan protokołu IP-HTTPS</string>
       <string id="IPHTTPS_ClientUrl">Adres URL serwera IP-HTTPS</string>
 
-      <string id="ISATAP_State_Help">To ustawienie zasad umożliwia skonfigurowanie protokołu ISATAP (Intra-Site Automatic Tunnel Addressing Protocol), czyli technologii automatycznego tunelowania adres-router i host-host, host-router i router-host, służącej do zapewniania łączności protokołu IPv6 w trybie emisji pojedynczej między hostami protokołu IPv6 w intranecie, w którym jest używany protokół IPv4.
+      <string id="ISATAP_State_Help">To ustawienie zasad umożliwia skonfigurowanie protokołu ISATAP (ang. Intra-Site Automatic Tunnel Addressing Protocol), czyli technologii automatycznego tunelowania typu adres-router i host-host, host-router i router-host, służącej do zapewniania łączności protokołu IPv6 w trybie emisji pojedynczej między hostami protokołu IPv6 w intranecie, w którym jest używany protokół IPv4. 
 
 Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, będzie używane ustawienie hosta lokalnego.
 
 Jeśli to ustawienie zasad zostanie włączone, protokół ISATAP będzie można skonfigurować przy użyciu jednego z następujących ustawień:
 
-Stan domyślny zasad: Jeżeli nazwa routera ISATAP zostanie pomyślnie rozpoznana, konfiguracja protokołu ISATAP na hoście będzie obejmować adres łącza lokalnego oraz adres każdego prefiksu odebranego z routera ISATAP w ramach bezstanowej autokonfiguracji adresu. Jeżeli nazwa routera ISATAP nie zostanie rozpoznana pomyślnie, łączność z użyciem protokołu ISATAP będzie niedostępna na hoście używającym odpowiedniego adresu IPv4.
+Stan domyślny zasad: na hoście nie ma interfejsów ISATAP.
 
-Stan włączenia zasad: jeżeli nazwa ISATAP zostanie pomyślnie rozpoznana, konfiguracja protokołu ISATAP na hoście będzie obejmować adres łącza lokalnego oraz adres każdego prefiksu odebranego z routera ISATAP w ramach bezstanowej autokonfiguracji adresu. Jeżeli nazwa ISATAP nie zostanie rozpoznana pomyślnie, interfejs protokołu ISATAP na hoście będzie obejmować adres łącza lokalnego.
+Stan włączenia zasad: jeżeli nazwa ISATAP zostanie pomyślnie rozpoznana, konfiguracja protokołu ISATAP na hoście będzie obejmować adres łącza lokalnego oraz adres każdego prefiksu odebranego z routera ISATAP w ramach bezstanowej automatycznej konfiguracji adresu. Jeżeli nazwa ISATAP nie zostanie rozpoznana pomyślnie, interfejs protokołu ISATAP na hoście będzie obejmować adres łącza lokalnego.
 
-Stan wyłączenia zasad: na hoście nie będą używane interfejsy ISATAP.
-
-
+Stan wyłączenia zasad: na hoście nie ma interfejsów ISATAP.
 
 </string>
 
@@ -60,13 +58,11 @@ Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane
 
 Jeżeli to ustawienie zasad zostanie włączone, protokół 6to4 będzie można skonfigurować za pomocą jednego z następujących ustawień:
 
-Stan domyślny zasad: Protokół 6to4 jest włączony, jeśli host ma łączność IPv6 tylko w obrębie łącza lokalnego oraz publiczny adres IPv4. W przypadku braku globalnych adresów IPv6 i IPv4 host nie będzie miał interfejsu 6to4. Jeżeli mimo braku globalnego adresu IPv6 będzie dostępny globalny adres IPv4, host będzie miał interfejs 6to4.
+Stan domyślny zasad: Protokół 6to4 jest wyłączony i łączność z protokołem 6to4 nie będzie dostępna.
 
-Stan włączenia zasad: Jeżeli będzie dostępny adres IPv4, host będzie miał interfejs 6to4. W przypadku braku globalnego adresu IPv4 host nie będzie miał interfejsu 6to4.
+Stan włączenia zasad: Jeżeli będzie dostępny globalny adres IPv4, host będzie miał interfejs 6to4. W przypadku braku globalnego adresu IPv4 host nie będzie miał interfejsu 6to4.
 
 Stan wyłączenia zasad: protokół 6to4 jest wyłączony i łączność za pośrednictwem interfejsu 6to4 jest niedostępna.
-
-
 
 </string>
 

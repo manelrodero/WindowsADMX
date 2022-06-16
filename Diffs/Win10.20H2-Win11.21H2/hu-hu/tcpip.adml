@@ -33,13 +33,11 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer a h
 
 Ha engedélyezi a házirend-beállítást, a következő beállítások egyikével konfigurálhatja az ISATAP protokollt:
 
-A házirend alapértelmezett állapota: az ISATAP-útválasztó nevének sikeres feloldása esetén az állomáson az ISATAP egy helyi kötésű címre és az ISATAP-útválasztótól automatikus állapotmentes konfigurációval kapott előtagok címeire lesz beállítva. Ha az ISATAP-útválasztó nevét nem sikerül feloldani, az ISATAP-kapcsolat nem lesz elérhető az adott IPv4-címet használó állomáson.
+A házirend alapértelmezett állapota: nincs ISATAP-felület az állomáson.
 
 A házirend engedélyezett állapota: az ISATAP-útválasztó nevének sikeres feloldása esetén az állomáson az ISATAP egy helyi kötésű címre és az ISATAP-útválasztótól automatikus állapotmentes konfigurációval kapott előtagok címeire lesz beállítva. Ha az ISATAP-útválasztó nevét nem sikerül feloldani, az állomáson egy helyi kötésű címre konfigurált ISATAP-kapcsolat lesz beállítva.
 
 A házirend letiltott állapota: nincs ISATAP-kapcsolat beállítva az állomáson.
-
-
 
 </string>
 
@@ -60,13 +58,11 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a rendsz
 
 Ha engedélyezi a házirend-beállítást, a 6to4 protokollt a következő beállításokkal konfigurálhatja:
 
-A házirend alapértelmezett állapota: a 6to4 engedélyezve van, ha az állomás csak helyi kötésű IPv6-kapcsolattal és egy nyilvános IPv4-címmel rendelkezik. Ha nincs jelen globális IPv6-cím és globális IPv4-cím, az állomásnak nem lesz 6to4-kapcsolata. Ha nincs jelen globális IPv6-cím, de van IPv4-cím, az állomásnak lesz 6to4-kapcsolata.
+A házirend alapértelmezett állapota: a 6to4 ki van kapcsolva, és a 6to4-kapcsolat nem engedélyezett.
 
 A házirend engedélyezett állapota: ha van globális IPv4-cím, az állomásnak lesz 6to4-kapcsolata. Ha nincs jelen globális IPv4-cím, az állomásnak nem lesz 6to4-kapcsolata.
 
 A házirend letiltott állapota: a 6to4 ki van kapcsolva, és nem érhető el 6to4-kapcsolat.
-
-
 
 </string>
 

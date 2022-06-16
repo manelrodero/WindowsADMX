@@ -278,11 +278,11 @@ Par défaut, la famille de référence (SKU) Windows Édition Intégrale, Profes
 
         Si vous désactivez ou ne configurez pas ce paramètre de stratégie, toutes les extensions d’imprimantes installées pourront être exécutées.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Remplacer le format de sortie Microsoft XPS Document Writer (MXDW) par défaut par le format Microsoft XPS (*.xps) hérité</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) génère des fichiers OpenXPS (*.oxps) par défaut dans Windows 10 et Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS document Writer (MXDW) génère des fichiers OpenXPS (*. oxps) par défaut dans Windows 10, Windows 10 et Windows Server 2022.
 
-          Si vous activez ce paramètre de stratégie de groupe, le format de sortie MXDW par défaut est le format Microsoft XPS (*.xps) hérité.
+Si vous activez ce paramètre de stratégie de groupe, le format de sortie MXDW par défaut est le format Microsoft XPS (*. Xps) hérité.
 
-          Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le format de sortie MXDW par défaut est OpenXPS (*.oxps).</string>
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, le format de sortie MXDW par défaut est OpenXPS (*. oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Désactiver la gestion des imprimantes par défaut Windows</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Cette préférence vous permet de modifier la gestion des imprimantes par défaut.
 
@@ -291,6 +291,24 @@ Si vous activez ce paramètre, Windows ne gère pas l’imprimante par défaut.
 Si vous désactivez ce paramètre, Windows gère l’imprimante par défaut.
 
 Si vous ne configurez pas ce paramètre, la gestion des imprimantes par défaut n’est pas modifiée. </string>
+      <string id="EnableDeviceControl">Activer les Restrictions d’Impression sous Contrôle de Périphérique</string>
+      <string id="EnableDeviceControl_Help">
+          Détermine si les restrictions d’impression de contrôle de périphérique sont appliquées pour l’impression sur cet ordinateur.
+
+          Par défaut, il n’y a aucune restriction à l’impression en fonction du type de connexion ou de la marque/du modèle de l’imprimante.
+
+          Si vous activez ce paramètre, l’ordinateur limite l’impression aux connexions aux imprimantes sur le réseau d’entreprise ou aux imprimantes USB approuvées.
+
+          Si vous désactivez ce paramètre ou ne le configurez pas, l’impression n’est soumise à aucune restriction en fonction du type de connexion ou de la marque/du modèle de l’imprimante.</string>
+        <string id="ApprovedUsbPrintDevices">Liste des périphériques d’impression connectés à USB approuvés</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Ce paramètre est un composant des restrictions d’impression de pilotage de matériel. Pour utiliser ce paramètre, activez le paramètre d’impression de contrôle de périphérique en activant le paramètre « Activer les restrictions d’impression de contrôle de périphérique ».
+
+Lorsque l’impression du contrôle de périphérique est activée, le système utilise la liste de valeurs VID/PID spécifiée pour déterminer si l’imprimante USB connectée actuelle est approuvée pour l’impression locale.
+
+Tapez toutes les combinaisons VID/PID approuvées (séparées par des virgules) qui correspondent aux modèles d’imprimante USB approuvés. Lorsqu’un utilisateur tente d’imprimer vers une file d’attente d’impression USB, le numéro/PID de l’appareil sera comparé à la liste approuvée.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Si vous ne configurez pas ce paramètre, la gestion des imprimantes par défaut 
           <label>Chemin Active Directory par défaut</label>
         </textBox>
         <text>exemple --&gt; LDAP://DC=Domain1,DC=MyCompany,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Spécifiez la liste des périphériques d’imprimante connectés à USB approuvés.</text>
+        <text>La liste est une liste séparée par des virgules de valeurs PID/PID USB. Exemple : 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

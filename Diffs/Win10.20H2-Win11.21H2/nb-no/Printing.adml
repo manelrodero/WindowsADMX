@@ -67,11 +67,11 @@ Obs!
       <string id="DownlevelBrowse">Søk på nettverket etter skrivere</string>
       <string id="DownlevelBrowse_Help">Lar brukere bruke veiviseren for skriver til å søke etter delte skrivere på nettverket.
 
-Hvis du aktiverer eller ikke konfigurerer denne innstillingen, vil veiviseren for skriver vise listen over alle delte skrivere på nettverket og be brukere velge en skriver fra disse når de velger å legge til en nettverksskriver ved å velge alternativknappen En nettverksskriver eller en skriver koblet til en annen datamaskin på side 2 av veiviseren for skriver, velger alternativknappen Koble til denne skriveren (eller klikk her og klikk Neste hvis du vil søke etter en skriver) på side 3 av veiviseren for skriver, og ikke angir navnet på skriveren i redigeringsboksen Navn ved siden av.
+Hvis du aktiverer eller ikke konfigurerer denne innstillingen, vises listen over alle delte skrivere på nettverket og brukerne blir bedt om å velge en skriver fra disse når de velger å legge til en nettverksskriver ved å velge En nettverksskriver eller en skriver koblet til en annen datamaskin på side 2 i veiviseren for skriver, velger Koble til denne skriveren (eller klikk her og klikk på Neste hvis du vil søke etter en skriver) på side 3 i veiviseren for skriver og ikke angir navnet på skriveren i redigeringsboksen Navn ved siden av.
 
 Hvis du deaktiverer denne innstillingen, fjernes siden for søking etter nettverksskrivere fra veiviseren for skriver, slik at brukere ikke lenger kan søke på nettverket, men må skrive inn et skrivernavn.
 
-Obs!  Denne innstillingen påvirker bare veiviseren for skriver. Den forhindrer ikke brukere fra å bruke andre programmer til å søke etter delte skrivere eller koble til nettverksskrivere.</string>
+Obs! Denne innstillingen påvirker bare veiviseren for skriver. Den forhindrer ikke brukere fra å bruke andre programmer til å søke etter delte skrivere eller koble til nettverksskrivere.</string>
       <string id="EMFDespooling">Utfør alltid skriverjobber på serveren</string>
       <string id="EMFDespooling_Help">Angir, ved utskrift via en utskriftsserver, om utskriftskøen på klienten skal behandle utskriftsjobbene selv eller sende dem videre til serveren for utskrift.
 
@@ -278,11 +278,11 @@ Som standard vil lagerenheter på Windows Ultimate, Professional og Home fortset
 
         Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, tillates det at alle installerte skriverutvidelser kjører.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Endre standard utdataformat for Microsoft XPS-dokumentskriver (MXDW) til det eldre formatet Microsoft XPS (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS-dokumentskriver (MXDW) genererer OpenXPS-filer (OXPS) som standard i Windows 10 og Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS-dokumentskriver (MXDW) genererer OpenXPS (*. oxps)-filer som standard i Windows 10, Windows 10 og Windows Server 2022.
 
-          Hvis du aktiverer denne gruppepolicyinnstillingen, blir det eldre formatet Microsoft XPS (XPS) standard MXDW-utdataformat.
+Hvis du aktiverer denne gruppe policy innstillingen, er standard MXDW output format den eldre Microsoft XPS (*. XPS).
 
-          Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, blir OpenXPS (OXPS) standard MXDW-utdataformat.</string>
+Hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen, er standard MXDW output format OpenXPS (*. oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Deaktiver administrasjon av standardskriver i Windows</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Med denne innstillingen kan du endre administrasjon av standardskriver.
 
@@ -291,6 +291,24 @@ Hvis du aktiverer denne innstillingen, vil ikke Windows administrere standardskr
 Hvis du deaktiverer innstillingen, vil Windows administrere standardskriveren.
 
 Hvis du ikke konfigurerer denne innstillingen, endres ikke administrasjonen av standardskriver. </string>
+      <string id="EnableDeviceControl">Aktiver utskriftsbegrensninger for enhetskontroll</string>
+      <string id="EnableDeviceControl_Help">
+          Fastslår om utskriftsrestriksjoner for enhetskontroll håndheves for utskrift på denne datamaskinen.
+
+          Som standard er det ingen begrensninger for å skrive ut basert på tilkoblingstype eller skriverprodusent/-modell.
+
+          Hvis du aktiverer denne innstillingen, begrenser datamaskinen utskrift til skrivertilkoblingene på bedriftsnettverket eller godkjente USB-tilkoblede skrivere.
+
+          Hvis du deaktiverer denne innstillingen eller ikke konfigurerer den, er det ingen begrensninger for å skrive ut basert på tilkoblingstype eller skriverprodusent/-modell.</string>
+        <string id="ApprovedUsbPrintDevices">Liste over godkjente USB-tilkoblede utskriftenheter</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Denne innstillingen er en komponent i utskrifts begrensningen for enhets kontroll. Hvis du vil bruke denne innstillingen, aktiverer du utskrift av enhets kontroll ved å aktivere innstillingen Aktiver utskrifts begrensninger for enhets kontroll.
+
+Når kontroll av enhets kontroll er aktivert, bruker systemet den angitte listen med vid/PID-verdier til å avgjøre om gjeldende USB-tilkoblede skriver godkjennes for lokal utskrift.
+
+Skriv inn alle godkjente vid/PID-kombinasjonene (atskilt med komma) som tilsvarer godkjente USB-skrivermodeller. Når en bruker prøver å skrive ut til en USB-skriverkø, sammenlignes enhets-og PID-listen med den godkjente listen.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -327,7 +345,7 @@ Hvis du ikke konfigurerer denne innstillingen, endres ikke administrasjonen av s
       </presentation>
       <presentation id="PhysicalLocation">
         <text>Angi plasseringen av datamaskinen</text>
-        <text>Eksempel: By/Bygning 2/Etasje 1/Kontor nr. 1800</text>
+        <text>Eksempel: By / Bygning 2 / Etasje 1 / Kontor 1800</text>
         <textBox refId="PhysicalLocation_Name">
           <label>Plassering</label>
         </textBox>
@@ -350,6 +368,13 @@ Hvis du ikke konfigurerer denne innstillingen, endres ikke administrasjonen av s
           <label>Standard Active Directory-bane</label>
         </textBox>
         <text>eksempel --&gt; LDAP://DC=Domene1,DC=MittFirma,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Angi listen over godkjente USB-tilkoblede skriverenheter.</text>
+        <text>Listen er en kommadelt liste over USB vid/PID-verdier. Eksempel: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

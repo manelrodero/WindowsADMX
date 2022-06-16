@@ -278,11 +278,11 @@ Oletusarvon mukaan Windows Ultimaten, Professionalin ja Homen varastointiyksikö
 
         Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, kaikki asennetut tulostinlaajennukset ovat suoritettavissa.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Vaihda Microsoft XPS Document Writerin (MXDW) oletusarvoiseksi tulosmuodoksi vanha Microsoft XPS -muoto (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS -asiakirjojen kirjoitustoiminto (MXDW) muodostaa OpenXPS (*.oxps) -tiedostoja oletusarvon mukaan Windows 10:ssä ja Windows Server 2019:ssä.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS-tiedoston kirjoitus toiminto (MXDW) luo muodostaa openxps (*. oxps)-tiedostoja oletusarvoisesti Windows 10-, Windows 10-ja Windows Server 2022-palvelussa.
 
-          Jos otat tämän ryhmäkäytäntöasetuksen käyttöön, oletusarvon mukainen MXDW-tulostemuoto on vanha Microsoft XPS (*.xps).
+Jos otat tämän ryhmä käytäntö asetuksen käyttöön, MXDW oletus tulostus muoto on vanha Microsoft XPS (*. XPS).
 
-          Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, oletusarvon mukainen MXDW-tulostemuoto on OpenXPS (*.oxps).</string>
+Jos poistat tämän käytäntö asetuksen käytöstä tai et määritä sitä, MXDW oletus tulostus muoto on muodostaa openxps (*. oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Poista Windowsin oletustulostimen hallinta käytöstä</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Tämän asetuksen avulla voit muuttaa oletustulostimen hallintaa.
 
@@ -291,6 +291,24 @@ Jos otat tämän asetuksen käyttöön, Windows ei hallitse oletustulostinta.
 Jos poistat tämän asetuksen käytöstä, Windows hallitsee oletustulostinta.
 
 Jos et määritä tätä asetusta, oletustulostimen hallinta ei muutu. </string>
+      <string id="EnableDeviceControl">Ota laitehallinnan tulostusrajoitukset käyttöön</string>
+      <string id="EnableDeviceControl_Help">
+          Määrittää, pakotetaanko laitehallinnan tulostusrajoitukset tulostukseen tällä tietokoneella.
+
+          Oletusarvoisesti tulostukseen ei sovelleta mitään rajoituksia yhteystyypin tai tulostimen valmistajan/mallin mukaan.
+
+          Jos otat käyttöön tämän asetuksen, tietokone rajoittaa tulostuksen tulostimen yhteyksiin yritysverkossa tai hyväksytyissä USB-liitetyissä tulostimissa.
+
+          Jos poistat käytöstä tämän asetuksen tai et määritä sitä, tulostukseen ei sovelleta rajoituksia yhteystyypin tai tulostimen valmistajan/mallin mukaan.</string>
+        <string id="ApprovedUsbPrintDevices">Hyväksyttyjen USB-tulostimien luettelo</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Tämä asetus on laite hallinnan tulostus rajoitusten osa. Jos haluat käyttää tätä asetusta, ota laitteen hallinta käyttöön ottamalla käyttöön laite hallinnan tulostus rajoitukset-asetuksen avulla.
+
+Kun laite hallinnan tulostus on käytössä, järjestelmä käyttää määritettyä vid/PID-arvojen luetteloa, jos se selvittää, onko nykyinen USB-tulostin hyväksytty paikallista tulostusta varten.
+
+Kirjoita kaikki hyväksytyt vid/Pas-yhdistelmistä (pilkuin erotettuina), jotka vastaavat hyväksytyistä USB-tulostin malleja. Kun käyttäjä yrittää tulostaa USB-tulostin jonon, laite vid/PID ohjataan hyväksyttyjen luetteloon.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Jos et määritä tätä asetusta, oletustulostimen hallinta ei muutu. </string>
           <label>Active Directory -oletuspolku</label>
         </textBox>
         <text>esimerkki --&gt; LDAP://DC=Alue1,DC=Yritys,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Määritä hyväksyttyjen USB-tulostimien luettelo.</text>
+        <text>Luettelo on pilkuin eroteltu luettelo USB:n vid/pid-arvoista. Esimerkki: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

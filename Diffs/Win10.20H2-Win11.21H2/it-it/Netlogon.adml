@@ -137,9 +137,9 @@ Se non si configura questa impostazione dei criteri, essa non verrà applicata a
       <string id="Netlogon_ExpectedDialupDelay">Specifica ritardo previsto accesso alla rete in connessione remota</string>
       <string id="Netlogon_ExpectedDialupDelay_Help">Questa impostazione dei criteri specifica il periodo di tempo supplementare che il computer lascia trascorrere in attesa della risposta del controller di dominio durante la procedura di accesso alla rete.
 
-Per specificare il valore relativo al ritardo previsto nell'accesso alla rete in connessione remota, selezionare Abilitato e quindi immettere il valore desiderato espresso in secondi.Il valore 60 corrisponde ad esempio a un minuto.
+Per specificare il valore relativo al ritardo previsto nell'accesso alla rete in connessione remota, seleziona Abilitato e quindi specifica il valore desiderato espresso in secondi. Il valore 60 corrisponde ad esempio a un minuto.
 
-Se non si configura questa impostazione dei criteri, essa non verrà applicata ai computer, nei quali verrà pertanto utilizzata la configurazione locale.</string>
+Se non la configuri, questa impostazione dei criteri non verrà applicata ai computer nei quali verrà pertanto utilizzata la configurazione locale.</string>
       <string id="Netlogon_GcSiteCoverage">Specifica siti inclusi dai record DNS SRV di tipo GC Locator</string>
       <string id="Netlogon_GcSiteCoverage_Help">Questa impostazione dei criteri specifica i siti per i quali i cataloghi globali (GC) devono registrare i record di risorse DNS SRV di tipo GC Locator specifici del sito. Questi record vengono registrati in aggiunta ai record SRV specifici registrati per il sito in cui risiede il catalogo globale e a quelli registrati da un catalogo globale configurato per la registrazione dei record DNS SRV di tipo GC Locator per i siti ad esso più vicini che non dispongono di catalogo globale. 
 
@@ -337,6 +337,22 @@ I valori consentiti per questa impostazione generano i comportamenti seguenti:
 Per specificare questo comportamento, fare clic su Abilitata e quindi immettere un valore. L'intervallo di valori è compreso tra 1 e 2.
 
 Se non si configura questa impostazione dei criteri, essa non verrà applicata ai computer, nei quali verrà pertanto utilizzata la configurazione locale.</string>
+
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Usa nomi host DNS minuscoli durante la registrazione dei record SRV del controller di dominio</string>
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Questa impostazione dei criteri consente di stabilire se i controller di dominio a cui viene applicata questa impostazione consentiranno di specificare in minuscolo il nome host DNS durante la registrazione dei record SRV.
+
+Se abilitato, i controller di dominio specificano in minuscolo il nome host DNS durante la registrazione dei record SRV del controller di dominio. Verrà effettuato un tentativo migliore per eliminare tutti i record SRV precedentemente registrati che contengono nomi host DNS con maiuscoli e minuscoli. Per altre informazioni e le possibili procedure di pulizia manuale, vedi il collegamento seguente.
+
+Se questa impostazione è disabilitata, i controller di dominio utilizzano il nome host DNS configurato così com'è durante la registrazione dei record SRV del controller di dominio.
+
+Se non è configurata, i controller di dominio utilizzano la configurazione locale.
+
+La configurazione locale predefinita è abilitata.
+
+Per rendere effettive le modifiche apportate a questa impostazione, non è necessario riavviare il sistema.
+
+Ulteriori informazioni sono disponibili all'indirizzo https://aka.ms/lowercasehostnamesrvrecord
+      </string>
 
     </stringTable>
     <presentationTable>

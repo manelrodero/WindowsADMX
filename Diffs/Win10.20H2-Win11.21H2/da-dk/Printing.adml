@@ -67,11 +67,11 @@ Bemærk!
       <string id="DownlevelBrowse">Gennemse netværket for at søge efter printere</string>
       <string id="DownlevelBrowse_Help">Giver brugerne mulighed for at bruge guiden Tilføj printer til at søge efter delte printere på netværket.
 
-Hvis du aktiverer denne indstilling eller undlader at konfigurere den, viser guiden Tilføj printer en liste over delte printere på netværket og beder brugerne om at vælge en printer på den viste liste, når de vælger at tilføje en netværksprinter ved at markere alternativknappen "En netværksprinter eller en printer, der er tilsluttet en anden computer" på side to i guiden Tilføj printer og desuden markerer alternativknappen "Opret forbindelse til denne printer (eller vælg denne indstilling, og klik på Næste, hvis du vil søge efter en printer)" på side tre i guiden Tilføj printer uden at angive et navn på printeren i feltet "Navn".
+Hvis du aktiverer denne indstilling eller undlader at konfigurere den, når brugerne vælger at tilføje en netværksprinter ved hjælp af alternativknappen "En netværksprinter eller en printer, der er knyttet til en anden computer" på side 2 i guiden Tilføj printer, og desuden markerer alternativknappen "Opret forbindelse til denne printer (eller vælg denne indstilling, og klik på Næste, hvis du vil søge efter en printer)" på side 3 i guiden Tilføj printer uden at angive et navn på printeren i feltet "Navn", så viser guiden Tilføj printer listen over delte printere på netværket og inviterer til valg af en printer på den viste liste.
 
-Hvis du deaktiverer denne indstilling, fjernes siden til søgning efter netværksprintere i guiden Tilføj printer. Brugerne kan derfor ikke søge på netværket, men skal i stedet skrive navnet på en printer.
+Hvis du deaktiverer denne indstilling, fjernes siden til søgning efter netværksprintere i guiden Tilføj printer, og brugerne kan ikke søge på netværket, men skal i stedet skrive navnet på en printer.
 
-Bemærk! Indstillingen påvirker kun guiden Tilføj printer. Den forhindrer ikke brugerne i at anvende andre programmer til at søge efter delte printere eller oprette forbindelse til netværksprintere.</string>
+Bemærk! Denne indstilling påvirker kun guiden Tilføj printer. Den forhindrer ikke brugerne i at anvende andre programmer til at søge efter delte printere eller oprette forbindelse til netværksprintere.</string>
       <string id="EMFDespooling">Gengiv altid udskriftsjob på serveren</string>
       <string id="EMFDespooling_Help">Når der udskrives via en printerserver, fastslår denne indstilling, om printspooleren på klienten selv behandler udskriftsjob eller sender dem videre til serveren.
 
@@ -278,11 +278,11 @@ Som standard fortsætter SKU'er til Windows Ultimate, Professional og Home med a
 
         Hvis du deaktiverer denne politikindstilling, eller hvis du undlader at konfigurere den, vil alle printerudvidelser, der er installeret, have tilladelse til at køre.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Skift fra standardformatet Microsoft XPS Document Writer (MXDW) til det ældre Microsoft XPS-format (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) opretter OpenXPS-filer (*.oxps) som standard i Windows 10, Windows RT 10 og Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) genererer OpenXPS (*. oxps)-filer som standard i Windows 10, Windows 10 og Windows Server 2022.
 
-          Hvis du aktiverer denne gruppepolitikindstilling, er standardformatet for MXDW-output det ældre Microsoft XPS (*.xps).
+Hvis du aktiverer denne gruppepolitikindstilling, er standardformatet for MXDW-output den ældre Microsoft XPS (*. XPS).
 
-          Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er standardformatet for MXDW-output OpenXPS (*.oxps).</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er standardformatet for MXDW-output OpenXPS (*. oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Slå standardprinterstyring i Windows fra</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Denne præference giver dig mulighed for at ændre standardprinterstyring.
 
@@ -291,6 +291,24 @@ Hvis du aktiverer denne indstilling styrer Windows ikke standardprinteren.
 Hvis du deaktiverer denne indstilling, styrer Windows standardprinteren.
 
 Hvis du ikke konfigurerer denne indstilling, ændres standardprinterstyring ikke. </string>
+      <string id="EnableDeviceControl">Aktivér udskrivningsbegrænsninger for enhedskontrol</string>
+      <string id="EnableDeviceControl_Help">
+          Fastslår, om udskrivningsbegrænsninger for enhedskontrol skal håndhæves for udskrivning på denne computer.
+
+          Der er som standard ingen begrænsninger for udskrivning baseret på forbindelsestype eller printerens fabrikat/model.
+
+          Hvis du aktiverer denne indstilling, vil computeren begrænse udskrivning til printerforbindelser på virksomhedens netværk eller godkendte USB-tilsluttede printere.
+
+          Hvis du deaktiverer denne indstilling eller undlader at konfigurere den, er der ingen begrænsninger for udskrivning på basis af forbindelsestype eller printerens fabrikat/model.</string>
+        <string id="ApprovedUsbPrintDevices">Liste over godkendte USB-tilsluttede udskriftsenheder</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Denne indstilling er en komponent i udskrivningsbegrænsninger for enhedskontrol. Hvis du vil bruge denne indstilling, skal du aktivere udskrivning for enhedskontrol ved at aktivere indstillingen "Aktivér udskrivningsbegrænsninger for enhedskontrol".
+
+            Når udskrivning for enhedskontrol er aktiveret, bruger systemet den angivne liste over vid/pid-værdier til at fastslå, om den aktuelle USB-tilsluttede printer er godkendt til lokal udskrivning.
+
+            Skriv alle godkendte vid/pid-kombinationer (adskilt af kommaer), der svarer til godkendte USB-printermodeller. Når en bruger forsøger at udskrive til en USB-printerkø, sammenlignes enhedens vid/pid med den godkendte liste.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ Hvis du ikke konfigurerer denne indstilling, ændres standardprinterstyring ikke
           <label>Standardsti i Active Directory</label>
         </textBox>
         <text>eksempel --&gt; LDAP://DC=Domæne1,DC=Firma,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Angiv listen over godkendte USB-tilsluttede printerenheder.</text>
+        <text>Listen er en kommasepareret liste over USB vid/PID-værdier. Eksempel: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>
