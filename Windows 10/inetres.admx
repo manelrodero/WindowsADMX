@@ -35454,6 +35454,49 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="AllowSaveTargetAsInIEMode" class="Both" displayName="$(string.AllowSaveTargetAsInIEMode)" explainText="$(string.IE_ExplainAllowSaveTargetAsInIEMode)" key="Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" valueName="AllowSaveTargetAsInIEMode">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableExtendedIEModeHotkeys" class="Both" displayName="$(string.EnableExtendedIEModeHotkeys)" explainText="$(string.IE_ExplainEnableExtendedIEModeHotkeys)" key="Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" valueName="EnableExtendedIEModeHotkeys">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableInternetExplorerApp" class="Both" displayName="$(string.DisableInternetExplorerApp)" explainText="$(string.IE_ExplainDisableInternetExplorerApp)" presentation="$(presentation.NotifyDisableIEOptions)" key="Software\Policies\Microsoft\Internet Explorer\Main">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11" />
+      <elements>
+        <enum id="NotifyDisableIEOptions" valueName="NotifyDisableIEOptions"  required="true">
+          <item displayName="$(string.NotifyDisableIEOptions_Never)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.NotifyDisableIEOptions_Always)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.NotifyDisableIEOptions_OncePerUser)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
     <policy name="DefaultDomainCacheLimitInMB" class="Both" displayName="$(string.DefaultDomainCacheLimitInMB)" explainText="$(string.IE_ExplainDefaultDomainCacheLimitInMB)" presentation="$(presentation.DefaultDomainCacheLimitInMB)" key="Software\Policies\Microsoft\Internet Explorer\BrowserStorage">
       <parentCategory ref="CategoryBrowsingHistory" />
       <supportedOn ref="SUPPORTED_IE10" />

@@ -64,29 +64,29 @@ Obs! Den här principen gäller inte för Windows RT.
 
 Med den här inställningen kan du ange om automatiska uppdateringar är aktiverat på den här datorn. Om tjänsten aktiveras måste du välja ett av de fyra alternativen i grupprincipinställningen:
 
-        2 = Meddela innan uppdateringar laddas ned och installeras.
+ 2 = Meddela innan uppdateringar laddas ned och installeras.
 
-        När Windows hittar uppdateringar som gäller den här datorn meddelas användarna om att uppdateringarna är klara att laddas ned. Användarna kan gå till Windows Update och ladda ned och installera tillgängliga uppdateringar.
+ När Windows hittar uppdateringar som gäller den här datorn meddelas användarna om att uppdateringarna är klara att laddas ned. Användarna kan gå till Windows Update och ladda ned och installera tillgängliga uppdateringar.
 
-        3 = (standardinställning) Ladda ned uppdateringarna automatiskt och meddela när de är klara att installeras.
+ 3 = (standardinställning) Ladda ned uppdateringarna automatiskt och meddela när de är klara att installeras.
 
-        Windows söker efter uppdateringar som gäller datorn och laddar ned dem i bakgrunden (användaren meddelas eller störs inte under denna process). När filerna har laddats ned meddelas användarna om att de är klara att installeras. Användarna kan gå till Windows Update och installera dem.
+ Windows söker efter uppdateringar som gäller datorn och laddar ned dem i bakgrunden (användaren meddelas eller störs inte under denna process). När filerna har laddats ned meddelas användarna om att de är klara att installeras. Användarna kan gå till Windows Update och installera dem.
 
-        4 = Ladda ned uppdateringar automatiskt och installera dem enligt det nedan angivna schemat.
+ 4 = Ladda ned uppdateringar automatiskt och installera dem enligt det nedan angivna schemat.
 
-        När Automatiskt är valt som schemalagd installationstid söker Windows automatiskt efter uppdateringar och laddar ned och installerar dem. Enheten startas om enligt Windows standardinställningar såvida det inte är konfigurerat av en grupprincip. (Gäller Windows 10 version 1809 och senare)
+ När Automatiskt är valt som schemalagd installationstid söker Windows automatiskt efter uppdateringar och laddar ned och installerar dem. Enheten startas om enligt Windows standardinställningar såvida det inte är konfigurerat av en grupprincip. (Gäller Windows 10 version 1809 och senare)
 
-        Ange schemat med hjälp av alternativen i grupprincipinställningen. För version 1709 och senare finns det ytterligare ett alternativ för att begränsa uppdateringar till varje vecka, varannan vecka eller varje månad. Om inget schema anges är standardschemat att alla installationer sker varje dag klockan tre på morgonen. Om en uppdatering kräver en omstart för att installationen ska slutföras startar Windows om datorn automatiskt. (Om en användare är inloggad på datorn när den är klar att startas om meddelas användarna och ges möjlighet att vänta med omstarten.)
+ Ange schemat med hjälp av alternativen i grupprincipinställningen. För version 1709 och senare finns det ytterligare ett alternativ för att begränsa uppdateringar till varje vecka, varannan vecka eller varje månad. Om inget schema anges är standardschemat att alla installationer sker varje dag klockan tre på morgonen. Om en uppdatering kräver en omstart för att installationen ska slutföras startar Windows om datorn automatiskt. (Om en användare är inloggad på datorn när den är klar att startas om meddelas användarna och ges möjlighet att vänta med omstarten.)
 
-        I Windows 8 och senare kan du ange att uppdateringar ska installeras vid automatiskt underhåll i stället för enligt ett schema. Vid automatiskt underhåll installeras uppdateringarna när datorn inte används (installation undviks när datorn körs med batteri). Om det inte går att installera uppdateringarna inom två dagar vid automatiskt underhåll installeras uppdateringarna direkt med Windows Update. Användarna meddelas om att datorn kommer att startas om och att omstarten endast utförs om det inte föreligger risk att data går förlorade.
+ I Windows 8 och senare kan du ange att uppdateringar ska installeras vid automatiskt underhåll i stället för enligt ett schema. Vid automatiskt underhåll installeras uppdateringarna när datorn inte används (installation undviks när datorn körs med batteri). Om det inte går att installera uppdateringarna inom två dagar vid automatiskt underhåll installeras uppdateringarna direkt med Windows Update. Användarna meddelas om att datorn kommer att startas om och att omstarten endast utförs om det inte föreligger risk att data går förlorade.
 
-        5 = Låt lokala administratörer välja konfigurationsläge efter vilket Automatiska uppdateringar meddelar om uppdateringar och installerar dem. (Det här alternativet finns inte kvar på någon Windows 10-version)
+ 5 = Låt lokala administratörer välja konfigurationsläge efter vilket Automatiska uppdateringar meddelar om uppdateringar och installerar dem. (Det här alternativet finns inte kvar på någon Windows 10-version)
 
-        Med det här alternativet tillåts lokala administratörer att använda Windows Update på Kontrollpanelen och välja ett konfigurationsalternativ. Lokala administratörer tillåts inte inaktivera konfigurationen av Automatiska uppdateringar.
+ Med det här alternativet tillåts lokala administratörer att använda Windows Update på Kontrollpanelen och välja ett konfigurationsalternativ. Lokala administratörer tillåts inte inaktivera konfigurationen av Automatiska uppdateringar.
 
-        7 = Meddela innan installation och omstart görs. (endast Windows Server)
+ 7 = Meddela innan installation och omstart görs. (endast Windows Server)
 
-        Med det här alternativet från Windows Server 2016 (gäller endast enheter med server-SKU) tillåts lokala administratörer använda Windows Update och fortsätta med installationer eller omstarter manuellt.
+ Med det här alternativet från Windows Server 2016 (gäller endast enheter med server-SKU) tillåts lokala administratörer använda Windows Update och fortsätta med installationer eller omstarter manuellt.
 
 Om status för den här principen är Inaktiverad måste eventuella uppdateringar på Windows Update laddas ned och installeras manuellt. Det gör du genom att söka efter Windows Update på Start.
 
@@ -150,17 +150,15 @@ Om statusen är Inte konfigurerad så används inte Automatiska uppdateringar p�
 
         Anmärkning: Om den alternativa nedladdningsservern inte anges används intranätuppdateringstjänsten som standard för att ladda ned uppdateringar.
 
-        Anmärkning: Alternativet "Ladda ned filer utan URL:er ..." används endast om "Alternativ nedladdningsserver" anges.
+        Anmärkning: Alternativet "Ladda ned filer utan URL:er..." används endast om "Alternativ nedladdningsserver" anges.
 
         Anmärkning: Den här principen stöds inte på Windows RT, och om den anges har den ingen effekt på Windows RT-datorer.
 
-        Anmärkning om proxyservrar: För att säkerställa högsta säkerhetsnivå rekommenderar Microsoft att WSUS skyddas med TLS/SSL-protokoll, så att HTTPS-baserade intranätservrar används för att skydda systemen. Om en proxy krävs rekommenderar vi att en systemproxy konfigureras.
+        För att säkerställa högsta säkerhetsnivå rekommenderar Microsoft att WSUS skyddas med TLS/SSL-protokoll, så att HTTPS-baserade intranätservrar används för att skydda systemen. Om en proxy krävs rekommenderar vi att en systemproxy konfigureras. För att försäkra högsta nivå av säkerhet, ytterligare WSUS TLS-certifikat fästs på alla enheter.
 
-        Val av proxybeteende har ingen effekt på klienter som använder HTTPS-baserade intranätservrar för att identifiera uppdateringar. 
+        För att skydda klienter tillåter vi inte längre intranätservrar att som standard utnyttja användarproxy för att identifiera uppdateringar. Om du behöver dra nytta av användarproxy för att identifiera uppdateringar vid användning av en intranätserver trots de sårbarheter som finns måste du konfigurera proxybeteendet till "Tillåt användarproxy att användas som reserv om identifiering med systemproxy misslyckas".
 
-        För att skydda klienter tillåter vi inte längre HTTP-baserade intranätservrar att som standard utnyttja användarproxy för att identifiera uppdateringar. Om du behöver dra nytta av användarproxy för att identifiera uppdateringar vid användning av en HTTP-baserad intranätserver trots de sårbarheter som finns måste du konfigurera proxybeteendet till "Tillåt användarproxy att användas som reserv om identifiering med systemproxy misslyckas".
-
-        Om principen för att använda ett alternativt proxybeteende inte har konfigurerats misslyckas identifiering av uppdateringar när HTTP-baserade intranätservrar används utan en konfigurerad systemproxy.</string>
+        Om principen för att använda ett alternativt proxybeteende inte har konfigurerats kommer upptäckter för uppdateringar mot internetservrar att misslyckas när användarproxy behövs som en reserv.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Använd endast systemets proxy för identifiering av uppdateringar (standard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillåt att proxyn används som reserv om identifieringen av systemproxyn misslyckas</string>
       <string id="DetectionFrequency_Help">Anger antalet timmar Windows använder för att avgöra väntetiden innan en sökning görs efter tillgängliga uppdateringar. Den exakta väntetiden är summan av det angivna värdet och ett slumpmässigt värde mellan 0 och 4 timmar.
@@ -377,6 +375,10 @@ Om du inaktiverar eller låter bli att konfigurera den här principen kommer Win
       <string id="TargetReleaseVersion_Help">Aktivera den här principen om du vill ange den funktionsuppdateringsversion som ska begäras i efterföljande sökningar.
 
 Ange versionen enligt sidan med versionsinformation för Windows: aka.ms/ReleaseInformationPage</string>
+      <string id="DisableWUfBSafeguards">Inaktivera skydd för funktionsuppdateringar</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Aktiverar den här inställningen när funktionsuppdateringar ska distribueras till enheter som inte blockerar alla skyddsundantag. Skyddslösningar är kända kompatibilitetsproblem som hindrar uppgraderingen från att distribueras till berörda enheter tills problemet är löst. Aktivering av den här principen kan tillåta att en organisation distribuerar funktionsuppdateringen till enheter för testning, eller för att distribuera funktionsuppdateringen utan blockering vid säkerhetskontroll.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Ta inte med drivrutiner med Windows-uppdateringar</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Aktivera den här principen om du inte vill inkludera drivrutiner i kvalitetsuppdateringar för Windows.
 
@@ -614,19 +616,21 @@ Viktigt! Om du väljer att inte visa aviseringar om uppdateringar, och du även 
       <string id="ExcludingRebootWarnings">1 – inaktivera alla aviseringar, utom omstartsvarningar</string>
       <string id="IncludingRebootWarnings">2 – inaktivera alla aviseringar, även omstartsvarningar</string>
       <string id="ComplianceDeadline_Title">Ange deadlines för automatiska uppdateringar och omstarter</string>
-      <string id="ComplianceDeadline_Help">Med den här principen kan du ange antalet dagar användarna kan vänta innan kvalitets- och funktionsuppdateringar installeras automatiskt på deras enheter, samt en respitperiod efter vilken obligatoriska omstarter sker automatiskt. Uppdateringar och omstarter görs oavsett aktiva timmar och användarna kan inte ändra tiden för när dem görs.
+      <string id="ComplianceDeadline_Help">Med den här principen kan du ange antalet dagar innan kvalitets-och funktions uppdateringar installeras på enheter automatiskt, och en respitperiod efter vilken start tid som krävs görs automatiskt.
 
-Deadlines för kvalitets- och funktionsuppdateringar kan vara upp till 30 dagar. Respitperioden för automatisk omstart kan vara mellan 0 och 7 dagar.
+Ställ in deadlines för funktions uppdateringar och kvalitets uppdateringar för att uppfylla dina mål. Uppdateringar laddas ned och installeras så fort de erbjuds och de automatiska omstarterna görs utanför aktiva timmar. När tids gränsen har passerats inträffar omstarter oavsett aktiva tider och användare kommer inte att kunna schemalägga om. Om tids gränsen anges till 0 dagar installeras uppdateringen omedelbart vid erbjudandet, men det kan hända att den inte slutförs på grund av enhetens tillgänglighet och nätverks anslutning.
 
-Du kan också inaktivera automatisk omstart till slutet av respitperioden.
+Ställ in en respitperiod för funktions uppdateringar och kvalitets uppdateringar för att garantera att användare har en lägsta tid att hantera sina omstarter när uppdateringar har installerats. Användare kommer att kunna schemalägga omstarter under avdragsperiod och Windows kan fortfarande starta om utanför aktiva timmar om användarna väljer inte att schemalägga om. Avdragsperiod kanske inte träder i kraft om användarna redan har angett mer än det antal dagar som angetts som respitperiod för att hantera deras omstart, baserat på tids gränser som konfigureras.
 
-Om du inaktiverar eller låter bli att konfigurera den här principen får enheterna uppdateringar och omstart görs enligt standardschemat.
+du kan ställa in så att enheten startar om tills både deadline och avdragsperiod har gått ut.
 
-Den här principen åsidosätter följande principer:
-1.  Ange en tidsgräns för automatisk omstart för uppdateringsinstallation
-2.  Definiera övergång till Interaktiv omstart och meddelandeschema för uppdateringar
-3.  Starta alltid om automatiskt vid den schemalagda tiden
-4.  Ingen automatisk omstart med inloggade användare för schemalagda installationer av automatiska uppdateringar
+om du inaktiverar eller inte konfigurerar principen får enheter uppdateringar och startar om enligt standard schema.
+
+principen åsidosätter följande principer:
+1.  Ange deadline före starta automatiskt för installation av uppdatering
+2.  Ange över gång och meddelande schema för interaktiv omstart för uppdateringar
+3.  Starta alltid om automatiskt den schemalagda tiden
+4.  Konfigurera automatiska uppdateringar
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,7 +696,8 @@ Den här principen åsidosätter följande principer:
         </textBox>
         <text>(exempel: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Ladda ned filer utan URL:er i metadata om en alternativ nedladdningsserver har angetts.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Välj proxy-beteendet för Windows Update-klienten för identifiering av uppdateringar med en icke-TLS-baserad (HTTP) tjänst:</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Tving inte TLS-certifikatfästning för Windows Update-klienten för identifiering av uppdateringar.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Välj proxyns beteende för Windows Update-klienten för att hitta uppdateringar:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Sök efter uppdateringar enligt följande</text>
@@ -731,7 +736,7 @@ Den här principen åsidosätter följande principer:
         <textBox refId="TargetReleaseVersionId">
           <label>Målversion för funktionsuppdateringar</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
         <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Ange beteende för mottagande av förhandsversioner:</dropdownList>
       </presentation>
@@ -797,12 +802,13 @@ Den här principen åsidosätter följande principer:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Ange alternativ för att visa aviseringar om uppdateringar:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Ange antalet dagar (upp till 30 dagar) som en användare kan vänta innan uppdateringar görs automatiskt, oavsett aktiva timmar, och utan möjlighet att ändra tiden.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Kvalitetsuppdateringar (dagar):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Funktionsuppdateringar (dagar):</dropdownList>
+        <text>Kvalitetsuppdateringar</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Tidsgräns (dagar):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Respitperiod (dagar):</dropdownList>
         <text></text>
-        <text>Ange en respitperiod (0 till 7 dagar) för automatisk omstart från tiden då en omstart krävs tills enheten startar om automatiskt. Enheter startar om automatiskt oavsett aktiva timmar och utan möjlighet att ändra tiden.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Respitperiod (dagar)</dropdownList>
+        <text>Funktionsuppdateringar</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Tidsgräns (dagar):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Respitperiod (dagar):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Starta inte om automatiskt förrän respitperioden är över</checkBox>
       </presentation>

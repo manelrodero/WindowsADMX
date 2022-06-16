@@ -3537,7 +3537,7 @@ Se você habilitar essa configuração de política, o navegador negociará ou n
 
 Se você desabilitar ou não definir essa configuração de política, o usuário poderá selecionar o método de criptografia ao qual o navegador dará suporte.
 
-Observação: o SSL 2.0 está desativado por padrão. O SSL 2.0 é um protocolo de segurança ultrapassado. Ativar o SSL 2.0 diminui o desempenho e a funcionalidade do TLS 1.0.</string>
+Observação: o SSL 2.0 está desativado por padrão e não tem mais suporte no Windows 10 versão 1607. O SSL 2.0 é um protocolo de segurança ultrapassado. Ativar o SSL 2.0 diminui o desempenho e a funcionalidade do TLS 1.0.</string>
       <string id="IE_ExplainNoPrinting">Esta política permite gerenciar o acesso de usuários ao menu Imprimir. A partir do Windows 8, essa configuração de política também permite gerenciar o acesso dos usuários ao menu suspenso Imprimir do Internet Explorer e a qualquer impressora no botão Dispositivos.
 
 Se você habilitar essa configuração de política, o menu Imprimir do Internet Explorer não estará disponível. A partir do Windows 8, o menu suspenso Imprimir do Internet Explorer não está disponível e os usuários não vêm as impressoras no botão Dispositivos.
@@ -3927,19 +3927,19 @@ Se você desabilitar ou não definir essa configuração, o comportamento padrã
 Se o Windows Update da próxima versão do Microsoft Edge* e o canal estável do Microsoft Edge estiverem instalados, os seguintes comportamentos ocorrerão:
 - Se você desabilitar ou não configurar essa política, o canal estável do Microsoft Edge será usado. Esse é o comportamento padrão.
 - Se você habilitar essa política, poderá configurar os sites redirecionados para serem abertos em até três dos seguintes canais, em que:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versão 77 ou posterior
-    3 = Microsoft Edge Dev versão 77 ou posterior
-    4 = Microsoft Edge Canary versão 77 ou posterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versão 77 ou posterior
+ 3 = Microsoft Edge Dev versão 77 ou posterior
+ 4 = Microsoft Edge Canary versão 77 ou posterior
 
 Se o Windows Update da próxima versão do Microsoft Edge* ou o canal estável do Microsoft Edge não estiver instalado, os seguintes comportamentos ocorrerão:
 - Se você desabilitar ou não configurar essa política, o Microsoft Edge versão 45 ou anterior será usado automaticamente. Esse é o comportamento padrão.
 - Se você habilitar essa política, poderá configurar os sites redirecionados para serem abertos em até três dos seguintes canais, em que:
-    0 = Microsoft Edge versão 45 ou anterior
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versão 77 ou posterior
-    3 = Microsoft Edge Dev versão 77 ou posterior
-    4 = Microsoft Edge Canary versão 77 ou posterior
+ 0 = Microsoft Edge versão 45 ou anterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versão 77 ou posterior
+ 3 = Microsoft Edge Dev versão 77 ou posterior
+ 4 = Microsoft Edge Canary versão 77 ou posterior
 
 *Para obter mais informações sobre o Windows Update para a próxima versão do Microsoft Edge, inclusive como desabilitá-lo, consulte https://go.microsoft.com/fwlink/?linkid=2102115. Essa atualização se aplica somente ao Windows 10 versão 1709 e posterior.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3962,6 +3962,35 @@ Políticas relacionadas:
 - Enviar todos os sites não incluídos na Enterprise Mode Site List para o Microsoft Edge ("RestrictIE")
 
 Para obter mais informações sobre como usar esta política em conjunto com outras políticas relacionadas para criar a configuração ideal para sua organização, consulte https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Permitir "salvar destino como" no modo Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Essa configuração de política permite que os administradores habilitem o menu de contexto "salvar destino como" no modo Internet Explorer.
+
+Se você habilitar essa política, "salvar destino como" aparecerá no menu de contexto do modo Internet Explorer e funcionará da mesma forma que o Internet Explorer.
+
+Se você desabilitar ou não definir essa configuração de política, "salvar destino como" não será exibido no menu de contexto do modo Internet Explorer.
+
+Para obter mais informações, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Habilitar chaves de acesso estendidas no modo Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Esta configuração de política permite que os administradores habilitem as teclas de acesso estendidas do modo Internet Explorer do Microsoft Edge, como "Ctrl+S" para ter a funcionalidade "Salvar como".
+
+Se você habilitar essa política, a funcionalidade de teclas de atalho estendida será habilitada no modo Internet Explorer e funcionará da mesma forma que o Internet Explorer.
+
+Se você desabilitar ou não configurar essa política, as teclas de atalho estendidas não funcionarão no modo Internet Explorer.
+
+Para obter mais informações, confira https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Desabilitar o Internet Explorer 11 como um navegador autônomo</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Essa política permite restringir a inicialização do Internet Explorer como um navegador autônomo.
+
+Se você habilitar essa política, ela:
+ - Impedirá a inicialização do Internet Explorer 11 como um navegador autônomo.
+- Restringirá o uso do Internet Explorer para o "modo do Internet Explorer" nativo do Microsoft Edge.
+- Redirecionará todas as tentativas de iniciar o Internet Explorer 11 para o navegador do Canal Estável do Microsoft Edge.
+ - Substituirá as demais políticas que redirecionam para o Internet Explorer 11.
+
+Se você desabilitar ou não configurar essa política, todos os sites serão abertos usando as configurações atuais do navegador ativo. Observação: o Canal Estável do Microsoft Edge deve ser instalado para que essa política tenha efeito.</string>
+      <string id="NotifyDisableIEOptions_Never">Nunca</string>
+      <string id="NotifyDisableIEOptions_Always">Sempre</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Uma vez por usuário</string>
       <string id="VerMgmtDisable">Desativar bloqueio de controles ActiveX desatualizados do Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Essa configuração de política determina se o Internet Explorer bloqueia controles ActiveX desatualizados específicos. Controles ActiveX desatualizados nunca são bloqueados na zona da Intranet.
 
@@ -4837,6 +4866,9 @@ Para obter mais informações, consulte "Bloqueio de controles ActiveX desatuali
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Primeira opção</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Segunda opção</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Terceira opção</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notificar que o navegador Internet Explorer 11 está desabilitado</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

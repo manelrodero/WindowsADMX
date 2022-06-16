@@ -334,7 +334,7 @@ Pokud toto nastavení zásad zakážete, zobrazí se uživateli při potížích
 Pokud toto nastavení zásad nenakonfigurujete, uživatel může zapnout nebo vypnout zobrazování podrobných chybových zpráv.</string>
       <string id="General_Zooming">Vypnout funkci zvětšení stránky</string>
       <string id="GeneralColors">Obecné barvy</string>
-      <string id="Help_NoFeedback">Nabídka Nápověda: Odebrat položku Váš názor</string>
+      <string id="Help_NoFeedback">Nabídka Nápověda: Odebrat položku Poslat názor</string>
       <string id="Help_NoNetscapeHelp">Nabídka Nápověda: Odebrat položku Pro uživatele aplikací Netscape</string>
       <string id="Help_NoTip">Nabídka Nápověda: Odebrat položku Tip dne</string>
       <string id="Help_NoTutorial">Nabídka Nápověda: Odebrat položku Prohlídka</string>
@@ -788,9 +788,9 @@ Chcete-li určit, jak s ovládacími prvky schválenými správcem pracovat v z�
 Pokud toto nastavení povolíte, nebudou aplikace, které jsou hostitelem modulu rozložení MSHTML, reagovat na příkazy uživatele ke zvětšení či zmenšení zobrazení obsahu.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, nebudou aplikace, které jsou hostitelem modulu rozložení MSHTML, reagovat na příkazy uživatele ke zvětšení či zmenšení zobrazení obsahu.</string>
-      <string id="IE_ExplainHelp_NoFeedback">Zabraňuje uživatelům v odeslání jejich názoru společnosti Microsoft pomocí příkazu Váš názor v nabídce Nápověda.
+      <string id="IE_ExplainHelp_NoFeedback">Zabraňuje uživatelům v odeslání jejich názoru společnosti Microsoft pomocí příkazu Poslat názor v nabídce Nápověda.
 
-Pokud toto nastavení povolíte, bude příkaz Váš názor odebrán z nabídky Nápověda.
+Pokud toto nastavení povolíte, bude příkaz Poslat názor odebrán z nabídky Nápověda.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, budou uživatelé moci vyplnit formulář na Internetu a odeslat názor na produkty společnosti Microsoft.</string>
       <string id="IE_ExplainHelp_NoNetscapeHelp">Zabraňuje uživatelům v zobrazování tipů pro uživatele přecházející z prohlížeče Netscape.
@@ -3923,19 +3923,19 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se aplikace chova
 Pokud je nainstalována aktualizace Windows Update pro další verzi Microsoft Edge* i stabilní kanál Microsoft Edge, stane se toto:
 - Pokud tuto zásadu zakážete nebo nenakonfigurujete, použije se stabilní kanál Microsoft Edge. To je výchozí chování.
 - Pokud tuto zásadu povolíte, můžete přesměrované weby nakonfigurovat tak, aby se otevíraly až ve 3 následujících kanálech:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta verze 77 nebo novější
-    3 = Microsoft Edge Dev verze 77 nebo novější
-    4 = Microsoft Edge Canary verze 77 nebo novější
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta verze 77 nebo novější
+ 3 = Microsoft Edge Dev verze 77 nebo novější
+ 4 = Microsoft Edge Canary verze 77 nebo novější
 
 Pokud aktualizace Windows Update pro další verzi Microsoft Edge* nebo stabilní kanál Microsoft Edge není nainstalována, stane se toto:
 - Pokud tuto zásadu zakážete nebo nenakonfigurujete, automaticky se použije Microsoft Edge verze 45 nebo starší. To je výchozí chování.
 - Pokud tuto zásadu povolíte, můžete přesměrované weby nakonfigurovat tak, aby se otevíraly až ve 3 následujících kanálech:
-    0 = Microsoft Edge verze 45 nebo starší
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta verze 77 nebo novější
-    3 = Microsoft Edge Dev verze 77 nebo novější
-    4 = Microsoft Edge Canary verze 77 nebo novější
+ 0 = Microsoft Edge verze 45 nebo starší
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta verze 77 nebo novější
+ 3 = Microsoft Edge Dev verze 77 nebo novější
+ 4 = Microsoft Edge Canary verze 77 nebo novější
 
 *Další informace o aktualizaci Windows pro další verzi Microsoft Edge, včetně pokynů, jak ji zakázat, najdete na stránce https://go.microsoft.com/fwlink/?linkid=2102115. Tato aktualizace platí jen pro Windows 10 verze 1709 a novější.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3958,35 @@ Související zásady:
 - Posílat do Microsoft Edge všechny weby, které nejsou v seznamu webů podnikového režimu  (RestrictIE)
 
 Další informace o tom, jak vytvořit optimální konfiguraci pro vaši organizaci používáním této zásady společně s dalšími souvisejícími zásadami, najdete na https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Povolit možnost Uložit cíl jako v režimu aplikace Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Toto nastavení zásad umožňuje správcům povolit místní nabídku Uložit cíl jako v režimu aplikace Internet Explorer.
+
+Pokud toto nastavení povolíte, bude příkaz Uložit cíl jako zobrazen v místní nabídce režimu aplikace Internet Explorer a bude fungovat stejně jako aplikace Internet Explorer.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, příkaz Uložit cíl jako nebude zobrazen v místní nabídce režimu aplikace Internet Explorer.
+
+Další informace naleznete v tématu https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Povolit rozšířené klávesové zkratky v režimu aplikace Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Toto nastavení zásad umožňuje správcům povolit rozšířené klávesové zkratky pro režim prohlížeče Internet Explorer v Microsoft Edge, jako je například Ctrl+S pro funkci Uložit jako.
+
+Pokud tuto zásadu povolíte, bude funkce rozšířených klávesových zkratek povolená v režimu prohlížeče Internet Explorer a bude fungovat stejně jako Internet Explorer.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebudou rozšířené klávesové zkratky v režimu prohlížeče Internet Explorer fungovat.
+
+Další informace najdete tady: https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Zakázat Internet Explorer 11 jako samostatný prohlížeč</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Tato zásada umožňuje omezit spouštění Internet Exploreru jako samostatného prohlížeče.
+
+Pokud tuto zásadu povolíte:
+– Znemožní spouštění Internet Exploreru 11 jako samostatného prohlížeče.
+– Omezí používání Internet Exploreru jen na nativní režim Internet Exploreru v rámci Microsoft Edge.
+– Přesměruje všechny pokusy o spuštění Internet Exploreru 11 na prohlížeč Microsoft Edge ve stabilním kanálu.
+– Přepíše všechny ostatní zásady, které provádí přesměrování na Internet Explorer 11.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou se všechny weby otevírat pomocí aktuálního aktivního nastavení prohlížeče. Poznámka: Tato zásada bude platit, jen pokud je nainstalovaný stabilní kanál Microsoft Edge.</string>
+      <string id="NotifyDisableIEOptions_Never">Nikdy</string>
+      <string id="NotifyDisableIEOptions_Always">Vždy</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Jedenkrát na uživatele</string>
       <string id="VerMgmtDisable">Vypnout blokování zastaralých ovládacích prvků ActiveX pro Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Nastavení této zásady určuje, jestli bude Internet Explorer blokovat určité zastaralé ovládací prvky ActiveX. Zastaralé ovládací prvky ActiveX v zóně Intranet se nikdy neblokují.
 
@@ -4833,6 +4862,9 @@ Další informace najdete v článku Out-of-date ActiveX control blocking (Bloko
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">První volba</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Druhá volba</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Třetí volba</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Upozornit, že prohlížeč Internet Explorer 11 je zakázaný</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

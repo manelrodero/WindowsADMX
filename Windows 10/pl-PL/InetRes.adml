@@ -3923,19 +3923,19 @@ Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, aplik
 Jeśli będzie zainstalowana zarówno aktualizacja z usługi Windows Update dla następnej wersji przeglądarki Microsoft Edge*, jak i stabilny kanał Microsoft Edge, system będzie zachowywał się w następujący sposób:
 - Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, będzie używany stabilny kanał Microsoft Edge. Jest to zachowanie domyślne.
 - Jeśli włączysz tę zasadę, będziesz mieć możliwość określenia, że przekierowane witryny będą otwierane w maksymalnie trzech z wymienionych poniżej kanałów, gdzie:
-    1 = Stabilny kanał Microsoft Edge
-    2 = Microsoft Edge Beta w wersji 77 lub nowszej
-    3 = Microsoft Edge Dev w wersji 77 lub nowszej
-    4 = Microsoft Edge Canary w wersji 77 lub nowszej
+ 1 = Stabilny kanał Microsoft Edge
+ 2 = Microsoft Edge Beta w wersji 77 lub nowszej
+ 3 = Microsoft Edge Dev w wersji 77 lub nowszej
+ 4 = Microsoft Edge Canary w wersji 77 lub nowszej
 
 Jeśli nie będzie zainstalowana aktualizacja z usługi Windows Update dla następnej wersji przeglądarki Microsoft Edge* lub stabilny kanał Microsoft Edge, system będzie zachowywał się w następujący sposób:
 - Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, automatycznie będzie używana przeglądarka Microsoft Edge w wersji 45. Jest to zachowanie domyślne.
 - Jeśli włączysz tę zasadę, będziesz mieć możliwość określenia, że przekierowane witryny będą otwierane w maksymalnie trzech z wymienionych poniżej kanałów, gdzie:
-    0 = Microsoft Edge w wersji 45 lub nowszej
-    1 = Stabilny kanał Microsoft Edge
-    2 = Microsoft Edge Beta w wersji 77 lub nowszej
-    3 = Microsoft Edge Dev w wersji 77 lub nowszej
-    4 = Microsoft Edge Canary w wersji 77 lub nowszej
+ 0 = Microsoft Edge w wersji 45 lub nowszej
+ 1 = Stabilny kanał Microsoft Edge
+ 2 = Microsoft Edge Beta w wersji 77 lub nowszej
+ 3 = Microsoft Edge Dev w wersji 77 lub nowszej
+ 4 = Microsoft Edge Canary w wersji 77 lub nowszej
 
 *Aby uzyskać więcej informacji dotyczących aktualizacji systemu Windows dla następnej wersji przeglądarki Microsoft Edge, w tym jak ją wyłączyć, zobacz https://go.microsoft.com/fwlink/?linkid=2102115. Ta aktualizacja dotyczy tylko systemu Windows 10 w wersji 1709 i nowszych.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3958,35 @@ Powiązane zasady:
 - Wysyłaj wszystkie witryny spoza listy witryn trybu przedsiębiorstwa do programu Microsoft Edge (RestrictIE)
 
 Aby uzyskać więcej informacji dotyczących sposobu używania tej zasady wraz z innymi powiązanymi zasadami w celu utworzenia optymalnej konfiguracji dla swojej organizacji, zobacz https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Zezwalaj na opcję „Zapisz element docelowy jako” w trybie programu Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">To ustawienie zasad umożliwia administratorom Włączanie menu kontekstowego Zapisz element docelowy jako w trybie programu Internet Explorer.
+
+Jeśli ta zasada zostanie włączona, polecenie Zapisz element docelowy jako zostanie wyświetlone w menu kontekstowym trybu programu Internet Explorer i będzie działało tak samo jak w programie Internet Explorer.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, polecenie "Zapisz element docelowy jako" nie będzie wyświetlane w menu kontekstowym trybu programu Internet Explorer.
+
+Aby uzyskać więcej informacji, zobacz https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Włącz funkcję rozszerzone klawisze dostępu w trybie Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">To ustawienie zasad umożliwia administratorom włączenie rozszerzonych skrótów trybu przeglądarki Internet Explorer w przeglądarce Microsoft Edge, takich jak „Ctrl+S”, w celu aktywowania funkcji „Zapisz jako”.
+
+Jeśli ta zasada zostanie włączona, funkcje rozszerzonych klawiszy dostępu będą włączone w trybie Internet Explorer i będą działać tak samo jak w przeglądarce Internet Explorer.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja rozszerzonych klawiszy dostępu nie będzie obsługiwana w trybie przeglądarki Internet Explorer.
+
+Aby uzyskać więcej informacji, odwiedź https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Wyłącz program Internet Explorer 11 jako autonomiczną przeglądarkę</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Te zasady umożliwiają ograniczenie uruchamiania programu Internet Explorer jako samodzielnej przeglądarki.
+
+Jeśli te zasady zostaną włączone, spowoduje to:
+- Uniemożliwienie uruchamiania programu Internet Explorer 11 jako samodzielnej przeglądarki.
+- Ograniczenie użycia programu Internet Explorer do natywnego „trybu programu Internet Explorer” w przeglądarce Microsoft Edge.
+- Przekierowywanie wszystkich prób uruchomienia przeglądarki Internet Explorer 11 do przeglądarki Microsoft Edge z kanału stabilnego.
+- Zastąpienie wszelkich innych zasad przekierowujących do programu Internet Explorer 11.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, wszystkie witryny będą otwierane przy użyciu bieżących ustawień aktywnej przeglądarki. Uwaga: aby te zasady zaczęły obowiązywać, musi być zainstalowana przeglądarka Microsoft Edge z kanału stabilnego.</string>
+      <string id="NotifyDisableIEOptions_Never">Nigdy</string>
+      <string id="NotifyDisableIEOptions_Always">Zawsze</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Raz na użytkownika</string>
       <string id="VerMgmtDisable">Wyłącz blokowanie nieaktualnych kontrolek ActiveX w programie Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">To ustawienie zasad określa, czy program Internet Explorer ma blokować określone nieaktualne kontrolki ActiveX. Nieaktualne kontrolki ActiveX nie są nigdy blokowane w strefie intranetu.
 
@@ -4833,6 +4862,9 @@ Więcej informacji zawiera artykuł „Blokowanie nieaktualnych kontrolek Active
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Pierwszy wybór</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Drugi wybór</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Trzeci wybór</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Powiadom o wyłączeniu programu Internet Explorer 11</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

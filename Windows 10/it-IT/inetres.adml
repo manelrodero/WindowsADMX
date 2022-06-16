@@ -334,7 +334,7 @@ Se si disabilita questa impostazione dei criteri, quando si verifica un problema
 Se non si configura questa impostazione dei criteri, l'utente potrà attivare o disattivare i dettagli in questi messaggi di errore.</string>
       <string id="General_Zooming">Disattiva la funzionalità di zoom sulla pagina</string>
       <string id="GeneralColors">Impostazioni generali colori</string>
-      <string id="Help_NoFeedback">Menu ?: rimuove l'opzione di menu Commenti e suggerimenti</string>
+      <string id="Help_NoFeedback">Menu ?: rimuove l'opzione di menu Feedback e suggerimenti</string>
       <string id="Help_NoNetscapeHelp">Menu ?: rimuove l'opzione di menu Per utenti Netscape</string>
       <string id="Help_NoTip">Menu ?: rimuove l'opzione di menu Suggerimenti utili</string>
       <string id="Help_NoTutorial">Menu ?: rimuove l'opzione di menu Esercitazione</string>
@@ -788,11 +788,11 @@ Per specificare la modalità di gestione dei controlli autorizzati dall'amminist
 Se si abilita questa impostazione dei criteri, le applicazioni contenenti MSHTML non risponderanno all'input dell'utente che richiede un nuovo rendering del contenuto con una diversa dimensione.
 
 Se si disabilita o non si configura questa impostazione dei criteri, le applicazioni contenenti MSHTML risponderanno all'input dell'utente che richiede un nuovo rendering del contenuto con una diversa dimensione.</string>
-      <string id="IE_ExplainHelp_NoFeedback">Impedisce agli utenti di inviare commenti e suggerimenti a Microsoft scegliendo Commenti e suggerimenti dal menu ?.
+      <string id="IE_ExplainHelp_NoFeedback">Impedisce agli utenti di inviare feedback e suggerimenti a Microsoft scegliendo Feedback e suggerimenti dal menu ?.
 
-Se si abilita questo criterio, il comando Commenti e suggerimenti verrà rimosso dal menu ?.
+Se si abilita questo criterio, il comando Feedback e suggerimenti verrà rimosso dal menu ?.
 
-Se si disabilita o non si configura questo criterio, gli utenti potranno compilare un modulo Internet per inviare commenti e suggerimenti su prodotti Microsoft.</string>
+Se si disabilita o non si configura questo criterio, gli utenti potranno compilare un modulo Internet per inviare feedback e suggerimenti su prodotti Microsoft.</string>
       <string id="IE_ExplainHelp_NoNetscapeHelp">Impedisce agli utenti di visualizzare i suggerimenti per il passaggio da Netscape a Internet Explorer.
 
 Se si abilita questo criterio, il comando Per utenti Netscape verrà rimosso dal menu ?.
@@ -1486,9 +1486,9 @@ Se si abilita questa impostazione dei criteri, l'utente non potrà configurare l
 Se si disabilita o non si configura questa impostazione dei criteri, l'utente potrà configurare l'elenco dei provider di ricerca.</string>
       <string id="IE_ExplainSQM_DisableCEIP">Questa impostazione dei criteri impedisce all'utente di partecipare al programma Analisi utilizzo software.
 
-Se si abilita questa impostazione dei criteri, l'utente non potrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni suggerimenti clienti.
+Se si abilita questa impostazione dei criteri, l'utente non potrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni feedback clienti.
 
-Se si disabilita questa impostazione dei criteri, l'utente dovrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni suggerimenti clienti.
+Se si disabilita questa impostazione dei criteri, l'utente dovrà partecipare al programma Analisi utilizzo software e nel menu ? verrà rimossa la voce Opzioni feedback clienti.
 
 Se non si configura questa impostazione dei criteri, l'utente potrà scegliere di partecipare al programma Analisi utilizzo software.</string>
       <string id="IE_ExplainSurvey">Designa il controllo Microsoft Survey come autorizzato dall'amministratore.
@@ -3923,19 +3923,19 @@ Se si disabilita o non si configura questa impostazione, viene applicato il comp
 Se Windows Update è installato per la versione successiva del canale Microsoft Edge* e canale stabile Microsoft Edge, si verificano i seguenti comportamenti:
 - Se disabiliti o non configuri questi criteri, viene utilizzato il canale stabile Microsoft Edge. Questo è il comportamento predefinito.
 - Se abiliti questi criteri, puoi configurare l'apertura dei siti reindirizzati in un massimo di tre dei seguenti canali:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta 77 o versione successiva
-    3 = Microsoft Edge Dev 77 o versione successiva
-    4 = Microsoft Edge Canary 77 o versione successiva
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta 77 o versione successiva
+ 3 = Microsoft Edge Dev 77 o versione successiva
+ 4 = Microsoft Edge Canary 77 o versione successiva
 
 Se Windows Update non è installato per la versione successiva del canale Microsoft Edge* o canale stabile Microsoft Edge, si verificano i seguenti comportamenti:
 - Se disabiliti o non configuri questi criteri, viene automaticamente utilizzato Microsoft Edge 45 o versione precedente. Questo è il comportamento predefinito.
 - Se abiliti questi criteri, puoi configurare l'apertura dei siti reindirizzati in un massimo di tre dei seguenti canali:
-    0 = Microsoft Edge 45 o versione precedente
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta 77 o versione successiva
-    3 = Microsoft Edge Dev 77 o versione successiva
-    4 = Microsoft Edge Canary 77 o versione successiva
+ 0 = Microsoft Edge 45 o versione precedente
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta 77 o versione successiva
+ 3 = Microsoft Edge Dev 77 o versione successiva
+ 4 = Microsoft Edge Canary 77 o versione successiva
 
 *Per ulteriori informazioni sull'aggiornamento di Windows per la versione successiva di Microsoft Edge, incluse quelle per disabilitarlo, vedi https://go.microsoft.com/fwlink/?linkid=2102115. Questo aggiornamento si applica solo a Windows 10 1709 e versione successiva.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3958,35 @@ Criteri correlati:
 - Invia tutti i siti non inclusi nell'elenco siti in modalità Enterprise in Microsoft Edge ("RestrictIE")
 
 Per ulteriori informazioni sulla modalità di utilizzo di questi criteri insieme ad altri criteri per creare la configurazione ottimale per la tua organizzazione, vedi https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Consenti a "Salva destinazione con nome" in modalità Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Questa impostazione dei criteri consente agli amministratori di abilitare il menu di scelta rapida "Salva destinazione come" nella modalità di Internet Explorer.
+
+Se si Abilita questo criterio, l'impostazione "Salva destinazione con nome" verrà visualizzata nel menu di scelta rapida della modalità di Internet Explorer e funzionerà come Internet Explorer.
+
+Se si disattiva o non si configura questa impostazione di criterio, "Salva destinazione con nome" non verrà visualizzato nel menu di scelta rapida della modalità di Internet Explorer.
+
+Per altre informazioni, Vedi https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Abilita tasti di scelta rapida estesi nella modalità Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Questa impostazione dei criteri consente agli amministratori di abilitare la modalità estesa per i tasti di scelta rapida di Microsoft Edge Internet Explorer, ad esempio "CTRL+S" per la funzionalità "Salva con nome".
+
+Se si abilita questo criterio, la funzionalità per i tasti di scelta rapida estesa sarà abilitata in modalità Internet Explorer e funzionerà come Internet Explorer.
+
+Se si disabilita o non si configura questa impostazione dei criteri, i tasti di scelta rapida estesi non funzioneranno in modalità Internet Explorer.
+
+Per altre informazioni, vedere https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Disabilita Internet Explorer 11 come browser autonomo</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Questo criterio ti consente di limitare l'avvio di Internet Explorer come browser autonomo.
+
+Attivandolo, questo criterio:
+- Impedisce l'avvio di Internet Explorer 11 come browser autonomo.
+- Limita l'utilizzo di Internet Explorer alla "modalità Internet Explorer" nativa di Microsoft Edge.
+- Reindirizza tutti i tentativi di avvio di Internet Explorer 11 al browser del canale stabile Microsoft Edge.
+- Sostituisce qualsiasi altro criterio che reindirizza a Internet Explorer 11.
+
+Se disattivi o non configuri questo criterio, tutti i siti verranno aperti utilizzando le impostazioni correnti del browser attivo. Nota: per rendere effettivo questo criterio, è necessario installare il canale stabile Microsoft Edge.</string>
+      <string id="NotifyDisableIEOptions_Never">Mai</string>
+      <string id="NotifyDisableIEOptions_Always">Sempre</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Una volta per utente</string>
       <string id="VerMgmtDisable">Disattiva blocco dei controlli ActiveX obsoleti per Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Questa impostazione dei criteri determina se Internet Explorer blocca specifici controlli ActiveX obsoleti. I controlli ActiveX obsoleti non vengono mai bloccati nell'area Intranet.
 
@@ -4833,6 +4862,9 @@ Per altre informazioni, vedi l'argomento relativo al blocco dei controlli Active
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Prima scelta</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Seconda scelta</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Terza scelta</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notifica che il browser Internet Explorer 11 è disabilitato</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

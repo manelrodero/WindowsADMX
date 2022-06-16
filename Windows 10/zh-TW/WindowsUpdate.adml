@@ -60,37 +60,37 @@
       <string id="AutoUpdateCfg">設定自動更新</string>
       <string id="AutoUpdateCfg_Help">指定此電腦是否透過 Windows 自動更新服務，接收安全性更新和其他重要下載。
 
-注意：此原則不適用於 Windows RT。
+注意: 此原則不適用於 Windows RT。
 
-此設定可讓您指定是否在此電腦上啟用自動更新。如果您啟用該服務，您必須在群組原則設定中選取以下四個選項之一：
+此設定可讓您指定是否在此電腦上啟用自動更新。如果您啟用該服務，您必須在群組原則設定中選取以下四個選項之一: 
 
-        2 = 下載和安裝任何更新之前先通知。
+ 2 = 下載和安裝任何更新之前先通知。
 
 當 Windows 找到適用於此電腦的更新時，將會通知使用者更新已準備好可以下載。前往 Windows Update 之後，使用者便可以下載和安裝任何可用更新。
 
-        3 = (預設設定) 自動下載更新，並在準備好安裝時通知
+ 3 = (預設設定) 自動下載更新，並在準備好安裝時通知
 
-Windows 會尋找適用於您電腦的更新，並於背景下載這些內容 (過程中使用者不會收到通知或受到打擾)。下載完成時，將會通知使用者更新已經準備好安裝。前往 Windows Update 後，使用者便可以進行安裝。
+Windows 會尋找適用於您電腦的更新，並在背景下載這些內容 (過程中使用者不會收到通知或受到打擾)。下載完成時，將會通知使用者更新已經準備好安裝。前往 Windows Update 後，使用者便可以進行安裝。
 
-        4 = 自動下載更新，並於以下指定的排程安裝更新。
+ 4 = 自動下載更新，並於以下指定的排程安裝更新。
 
-選擇排程安裝時間為「自動」時，Windows 將自動檢查、下載並安裝更新。除非群組原則設定，否則裝置將依照 Windows 預設設定重新開機。(適用於 Windows 10 版本 1809及更高版本) 
+選擇排程安裝時間為 [自動] 時，Windows 將自動檢查、下載並安裝更新。除非由群組原則設定，否則裝置將依照 Windows 預設設定重新開機。(適用於 Windows 10 1809 版更高版本) 
 
-        使用 [群組原則] 設定中的選項指定排程。對於版本 1709及更高版本，限制更新的其他選擇為每週、每兩週或每月進行。如果未指定排程，則所有安裝的預設排程將在每日的上午 3 點。如果有任何更新需要重新開機以完成安裝，Windows 會自動重新啟動電腦。(如果 Windows 準備重新開機時使用者已登入電腦，則使用者將會收到通知和延遲重新開機選項。) 
+ 使用 [群組原則] 設定中的選項指定排程。針對 1709 版與更高版本，有額外的選擇可將更新限制為每週、每兩週或每月進行。如果未指定排程，則所有安裝的預設排程將為每天的上午 3 點。如果有任何更新需要重新啟動以完成安裝，Windows 會自動重新啟動電腦。(如果 Windows 準備重新啟動時使用者已登入電腦，則使用者將會收到通知，而且系統會顯示延遲重新啟動選項。)
 
-        在 Windows 8 和更高版本中，您可以設定讓更新在自動維護期間安裝，而不是依照特定排程安裝。自動維護將在電腦未使用時安裝更新，並避免在電腦電力不足時執行這項作業。如果自動維護無法在 2 天內安裝更新，Windows Update 將立即安裝更新。使用者將收到即將重新啟動的通知，並在確認沒有潛在的意外資料遺失問題後，才會執行重新開機。
+ 在 Windows 8 與更高版本中，您可以設定讓更新在自動維護期間安裝，而不是依照特定排程安裝。自動維護將在電腦未使用時安裝更新，並避免在電腦電力不足時執行此作業。如果自動維護無法在 2 天內安裝更新，Windows Update 將立即安裝更新。使用者將收到即將重新啟動的通知，並在確認沒有潛在的意外資料遺失問題後，才會執行重新啟動。
 
-        5 = 允許本機系統管理員選擇自動更新應通知和安裝更新的設定模式。(此選項並未沿用至 Win 10 版本) 
+ 5 = 允許本機系統管理員選擇自動更新應通知和安裝更新的設定模式。(此選項並未沿用至 Win 10 版本) 
 
-        透過此選項，將允許本機系統管理員使用 Windows Update 控制台選取他們所選擇的設定選項。不允許本機系統管理員停用自動更新的設定。
+ 透過此選項，將允許本機系統管理員使用 Windows Update 控制台選取他們所選擇的設定選項。將不允許本機系統管理員停用自動更新的設定。
 
-        7 = 通知安裝並通知重新開機。(僅限 Windows Server) 
+ 7 = 通知安裝並通知重新開機。(僅限 Windows Server)
 
-        根據此來自 Windows Server 2016、僅適用於伺服器 SKU 裝置的選項，本機系統管理員將可以使用 Windows Update 繼續進行安裝，或以手動方式重新開機。
+ 根據此來自 Windows Server 2016、僅適用於伺服器 SKU 裝置的選項，本機系統管理員將可以使用 Windows Update 繼續進行安裝，或以手動方式重新開機。
 
-如果此原則狀態設定為 [停用]，則 Windows Update 的所有可用更新都必須手動下載並安裝。若要執行此動作，請透過 [開始] 搜尋 Windows Update。
+如果此原則狀態設定為 [已停用]，則 Windows Update 的所有可用更新都必須手動下載並安裝。若要執行此動作，請透過 [開始] 搜尋 Windows Update。
 
-如果狀態設定為 [未設定]，自動更新的使用將不會指定為群組原則層級。不過，系統管理員仍可以透過 [控制台] 設定自動更新。</string>
+如果狀態設定為 [尚未設定]，自動更新的使用將不會於群組原則層級指定。不過，系統管理員仍可以透過 [控制台] 設定自動更新。</string>
 
       <string id="AutoUpdateModeNotifyToInstallNotifyToReboot">7 - 自動下載，通知安裝，通知重新啟動</string>
       <string id="AutoUpdateModeAdminChooses">5 - 允許本機系統管理員選擇設定</string>
@@ -138,29 +138,27 @@ Windows 會尋找適用於您電腦的更新，並於背景下載這些內容 (�
 
         若要使用此設定，您必須設定兩個伺服器名稱值: 自動更新用戶端偵測及下載更新的伺服器，以及已更新過的工作站上傳統計資料的伺服器。您可以將這兩個值設定為相同的伺服器。您也可指定選用的伺服器名稱值，以設定 Windows Update 代理程式從替代下載伺服器 (而非內部網路更新服務) 下載更新。
 
-        若狀態設定為 [已啟用]，自動更新用戶端會連線到指定的內部網路 Microsoft 更新服務 (或替代下載伺服器) 而非 Windows Update，以搜尋及下載更新。啟用此設定表示您公司中的使用者不用經由防火牆來取得更新，而且您將可以在部署更新之前先對更新進行測試。
+        若狀態設定為 [啟用]，自動更新用戶端會連線到指定的內部網路 Microsoft 更新服務 (或替代下載伺服器) 而非 Windows Update，以搜尋及下載更新。啟用此設定表示您公司中的使用者不用經由防火牆來取得更新，而且您將可以在部署更新之前先對更新進行測試。
 
-        若狀態設定為 [已停用] 或 [尚未設定]，且原則或使用者喜好設定未停用自動更新，則自動更新用戶端會直接連線到網際網路上的 Windows Update 網站。
+        若狀態設定為 [停用] 或 [未設定]，且原則或使用者喜好設定未停用自動更新，則自動更新用戶端會直接連線到網際網路上的 Windows Update 網站。
 
         替代下載伺服器會設定 Windows Update 代理程式，以從替代下載伺服器 (而非內部網路更新服務) 下載檔案。
 
-        [下載遺漏 URL 的檔案] 選項讓您能在更新中繼資料未提供檔案的下載 URL 時從替代下載伺服器下載內容。僅當內部網路更新服務對於替代下載伺服器上的檔案並未在其更新中繼資料內提供下載 URL 時才應使用此選項。
+        下載遺漏 URL 之檔案的選項讓您能在更新中繼資料未提供檔案的下載 URL 時從替代下載伺服器下載內容。僅當內部網路更新服務對於替代下載伺服器上的檔案並未在其更新中繼資料內提供下載 URL 時才應使用此選項。
 
         注意: 若停用「設定自動更新」原則，此原則將不會有任何作用。
 
         注意: 若未設定「替代下載伺服器」，預設將會使用內部網路更新服務來下載更新。
 
-        注意: [下載遺漏 URL 的檔案...] 選項僅限於已設定「替代下載伺服器」時才會使用。
+        注意: [下載遺漏 URL 的檔案] 選項僅限於已設定「替代下載伺服器」時才會使用。
 
         注意: Windows RT 不支援此原則。在 Windows RT 電腦上設定此原則將不會有任何作用。
 
-        Proxy 上的備註: 為了確保最高等級的安全性，Microsoft 建議使用 TLS/SSL 通訊協定保護 WSUS，藉以使用以 HTTPS 為基礎的內部網路伺服器來確保系統安全。如果需要 Proxy，建議您設定系統 Proxy。
+        為了確保最高等級的安全性，Microsoft 建議使用 TLS/SSL 通訊協定保護 WSUS，藉以使用以 HTTPS 為基礎的內部網路伺服器來確保系統安全。如果需要 Proxy，建議您設定系統 Proxy。為了確保最高等級的安全性，請另外在所有裝置上使用 WSUS TLS 憑證釘選。
 
-        選取 Proxy 行為對使用以 HTTPS 為基礎內部網路伺服器檢測更新的用戶端沒有影響。
+        為了確保用戶端固有的安全性，在預設的情況下，我們不再允許內部網路伺服器利用使用者 Proxy 來偵測更新。儘管使用內部網路伺服器時仍存在漏洞，如果仍需要利用使用者 Proxy 來偵測更新，則必須將 Proxy 行為設定為 [如果使用系統 Proxy 的偵測失敗，則允許將使用者 Proxy 作為遞補]。
 
-        為了確保用戶端固有的安全性，在預設的情況下，我們不再允許以 HTTP 為基礎的內部網路伺服器利用使用者 Proxy 來檢測更新。儘管使用以 HTTP 為基礎的內部網路伺服器時仍存在漏洞，如果仍需要利用使用者 Proxy 來檢測更新，則必須將 Proxy 行為設定為 [如果使用系統 Proxy 的偵測失敗，則允許將使用者 Proxy 做為遞補]。
-
-        如果未設定使用替代 Proxy 行為的原則，在沒有設定系統 Proxy 的情況下使用以 HTTP 為基礎的內部網路伺服器時，更新檢測將失敗。</string>
+        當需要使用者 Proxy 作為遞補且未設定替代 Proxy 行為時，對內部網路伺服器偵測更新將會失敗。</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">只使用系統 proxy 偵測更新 (預設)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">如果使用系統 proxy 的偵測失敗，則允許將使用者 proxy 做為遞補</string>
       <string id="DetectionFrequency_Help">指定 Windows 將用幾小時來判定等候時間，再檢查是否有可用的更新。確切的等候時間是特定值和隨機變數 0-4 小時的加總。
@@ -322,7 +320,7 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
 
 注意: 這部電腦設定為使用「指定內部網路 Microsoft 更新服務位置」原則連線到內部網路更新服務時，才適用這個原則。</string>
       <string id="DeferUpdateCat">商務用 Windows Update</string>
-      <string id="ManagePreviewBuilds_Title">管理預覽版</string>
+      <string id="ManagePreviewBuilds_Title">管理預覽組建</string>
       <string id="ManagePreviewBuilds_Help">選取 [停用預覽版] 將使裝置無法安裝預覽版。如此使用者便不能透過 [設定] -&gt; [更新與安全性] 選擇加入 Windows 測試人員計畫。
 
 選取 [下一個版本公開後停用預覽版] 將使裝置在下一版 Windows 公開後無法安裝預覽版。若您的裝置設定成安裝預覽版且您希望裝置能適時退出正式發行前小眾測試，此選項即可派上用場。此選項將為裝置持續提供預覽版直到下一個版本公開為止。
@@ -337,7 +335,7 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
       <string id="SemiAnnualChannelFeatureUpdates">半年通道</string>
       <string id="SemiAnnualChannelFeatureUpdatesDeprecated">1809 和以下版本的半年通道 (已過時)</string>
       <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">1809 和以下版本的半年通道 (目標) (已過時)</string>
-      <string id="DeferFeatureUpdates_Title">選取接收預覽版及功能更新的時機</string>
+      <string id="DeferFeatureUpdates_Title">選取接收預覽組建及功能更新的時機</string>
       <string id="DeferFeatureUpdates_Help">啟用此原則以指定預覽版或接收功能更新的層級以及時間。
 
 * 預覽版 - 快速: 設定為此層級的裝置將會優先接收 Windows 的新版組建與尚未提供給一般大眾的功能。選取 [快速] 即可參與識別並回報問題給 Microsoft，並且針對新功能提供建議。
@@ -377,6 +375,10 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
       <string id="TargetReleaseVersion_Help">啟用此原則以指定要在後續掃描中請求的 [功能更新] 版本。
 
 請輸入 Windows 版本資訊頁面 aka.ms/ReleaseInformationPage 中列出的版本</string>
+      <string id="DisableWUfBSafeguards">停用功能更新的保護措施</string>
+      <string id="DisableWUfBSafeguards_Help">
+          應該在功能更新部署到裝置上而不封鎖任何保護措施時，啟用此設定。 保護措施是已知的相容性問題，這些問題會封鎖升級而無法在受影響的裝置上部署，直到問題解決為止。 啟用此原則可讓組織將功能更新部署到裝置以進行測試，或在不封鎖保護措施的情況下部署功能更新。
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">不包含 Windows 更新的驅動程式</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">啟用此原則以排除驅動程式 (含 Windows 品質更新)。
 
@@ -614,19 +616,21 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
       <string id="ExcludingRebootWarnings">1 – 停用所有通知，排除重新開機警告</string>
       <string id="IncludingRebootWarnings">2 – 停用所有通知，包括重新開機警告</string>
       <string id="ComplianceDeadline_Title">指定自動更新和重新啟動的期限</string>
-      <string id="ComplianceDeadline_Help">此原則能讓您指定使用者在品質和功能更新自動安裝到其裝置之前擁有的天數，以及系統自動執行必要重新開機的寬限期。無論使用時間多長，系統都會進行更新和重新開機，使用者將無法重新排程。
+      <string id="ComplianceDeadline_Help">此原則可讓您指定在裝置上自動安裝品質與功能更新前的天數，以及在要求自動重新開機後的寬限期。
 
-功能更新和品質更新的期限最長 30 天。自動重新開機寬限期可從 0 到 7 天。
+設定功能更新與品質更新的期限，以符合您的合規性目標。更新會在提供後立即下載並安裝，並將在作用中的時間外嘗試自動重新開機。一旦超過期限，無論作用中的時間為何，皆會重新開機，而使用者將無法重新排程。如果期限設定為0天，則會在提供時立即安裝更新，但可能會陰裝置的可用性和網路連線能力，而無法在一天內完成。
 
-您也可以停用自動重新開機，直到自動重新開機寬限期結束。
+設定功能更新與品質更新的寬限期，以保證使用者在安裝更新後最短的時間可以成功重新開機。使用者將能夠在寬限期期間排程重新開機，且若使用者選擇不排程重新開機，Windows 仍可在作用中的時間外自動重新開機。如果使用者已有超過設作寬限期限之天數，可成功進行重新開機，則寬限期可能不會生效。
 
-若停用或未設定此原則，裝置將取得更新，並按照預設排程重新開機。
+您可以設定裝置延遲重新開機，直到期限和寬限期皆到期為止。
 
-此原則將覆寫下列原則:
-1.  指定安裝更新後的自動重新開機期限
-2.  為更新指定預約重新啟動轉換和通知排程
-3.  一律在排定的時間自動重新開機
-4.  有使用者登入時不自動重新開機以完成排定的自動更新安裝
+如果您停用或未設定此原則，則裝置將會收到更新，並會依照預設排程重新開機。
+
+此原則將會覆寫下列原則:
+1. 指定更新安裝自動重新開機前的期限
+2. 指定更新的 [預定] 重新開機轉換和通知排程
+3. 一律在排定的時間自動重新開機
+4. 設定 [自動更新]
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,7 +696,8 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         </textBox>
         <text>(範例： https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">若已設定替代下載伺服器，即下載中繼資料內遺漏 URL 的檔案。</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">選取 Windows Update 用戶端的 proxy 行為，以偵測具是否有非 TLS (HTTP) 服務的更新：</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">請不要為 Windows Update 用戶端強制執行 TLS 憑證釘選來偵測更新。</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">選取 Windows Update 用戶端的 Proxy 行為來偵測更新：</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>檢查更新的</text>
@@ -731,7 +736,7 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         <textBox refId="TargetReleaseVersionId">
           <label>功能更新的目標版本</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
         <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">設定接收預覽版的行為:</dropdownList>
       </presentation>
@@ -739,7 +744,7 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">針對您要接收的更新選取 Windows 整備層級:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">在預覽版或功能更新發行之後，延遲下列天數而不接收:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>暫停預覽版或功能更新的開始時間:</label>
+          <label>暫停預覽組建或功能更新的開始時間:</label>
         </textBox>
         <text>(格式 yyyy-mm-dd 範例: 2016-10-30)</text>
       </presentation>
@@ -797,12 +802,13 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">指定更新通知的顯示選項:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>指定無論使用時間多長，系統必須自動更新的天數  (最多 30 天)，而且無法重新排程。</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">品質更新 (天):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">功能更新 (天):</dropdownList>
+        <text>品質更新</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">期限 (天):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">寬限期 (天):</dropdownList>
         <text></text>
-        <text>指定從必須重新開機的時間到裝置自動重新開機的自動重新開機寬限期 (0 到 7 天)。無論使用時間多長，裝置都將重新開機，而且無法重新排程。</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">寬限期 (天)</dropdownList>
+        <text>功能更新</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">期限 (天):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">寬限期 (天):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">在寬限期結束前不自動重新開機</checkBox>
       </presentation>

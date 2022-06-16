@@ -64,29 +64,29 @@ Opmerking: Dit beleid is niet van toepassing op Windows RT.
 
 Met deze optie geeft u aan of het gebruik van automatische updates is ingeschakeld op deze computer. Als de service is ingeschakeld, moet u een van de drie opties kiezen voor de groepsbeleidsinstelling:
 
-        2 = Vraag mij of ik updates wil downloaden en installeren.
+ 2 = Vraag mij of ik updates wil downloaden en installeren.
 
-        Wanneer er updates worden gevonden die van toepassing zijn op de computer, wordt de gebruiker gewaarschuwd dat er updates zijn gedownload. Als de gebruiker naar Windows Update gaat, kan deze de beschikbare updates downloaden en installeren.
+ Wanneer er updates worden gevonden die van toepassing zijn op de computer, wordt de gebruiker gewaarschuwd dat er updates zijn gedownload. Als de gebruiker naar Windows Update gaat, kan deze de beschikbare updates downloaden en installeren.
 
-        3 = (standaardinstelling) Updates automatisch downloaden. Vraag mij na het downloaden of ik de updates wil installeren
+ 3 = (standaardinstelling) Updates automatisch downloaden. Vraag mij na het downloaden of ik de updates wil installeren
 
-        Er wordt gezocht naar updates die bestemd zijn voor uw computer. Deze updates worden op de achtergrond gedownload (de gebruiker krijgt geen meldingen en wordt niet gestoord tijdens dit proces). Wanneer de downloads zijn voltooid, krijgen gebruikers het bericht dat de updates kunnen worden geïnstalleerd. Nadat gebruikers naar Windows Update zijn gegaan, kunnen ze de updates installeren.
+ Er wordt gezocht naar updates die bestemd zijn voor uw computer. Deze updates worden op de achtergrond gedownload (de gebruiker krijgt geen meldingen en wordt niet gestoord tijdens dit proces). Wanneer de downloads zijn voltooid, krijgen gebruikers het bericht dat de updates kunnen worden geïnstalleerd. Nadat gebruikers naar Windows Update zijn gegaan, kunnen ze de updates installeren.
 
-        4 = Updates automatisch downloaden en installeren volgens de opgegeven planning.
+ 4 = Updates automatisch downloaden en installeren volgens de opgegeven planning.
 
-        Wanneer 'Automatisch' is geselecteerd als de geplande installatietijd, controleert Windows automatisch op updates en worden deze automatisch gedownload en geïnstalleerd. Het apparaat wordt opnieuw opgestart volgens de standaardinstellingen van Windows, tenzij deze zijn geconfigureerd met Groepsbeleid. (Van toepassing op Windows 10 versie 1809 en hoger)
+ Wanneer 'Automatisch' is geselecteerd als de geplande installatietijd, controleert Windows automatisch op updates en worden deze automatisch gedownload en geïnstalleerd. Het apparaat wordt opnieuw opgestart volgens de standaardinstellingen van Windows, tenzij deze zijn geconfigureerd met Groepsbeleid. (Van toepassing op Windows 10 versie 1809 en hoger)
 
-        Geef de gewenste planning op met behulp van de opties in de groepsbeleidsinstelling. Voor versie 1709 en hoger is er een extra keuze waarbij u het bijwerken kunt beperken tot wekelijks, tweewekelijks of maandelijks. Als er geen planning is opgegeven, wordt de standaardplanning voor alle installaties gebruikt (elke nacht om 3:00 uur). Als een update vereist dat de computer opnieuw wordt opgestart, gebeurt dit automatisch. (Als een gebruiker is aangemeld op de computer wanneer deze opnieuw moet worden opgestart, wordt de gebruiker hiervan op de hoogte gesteld en kan deze het opstarten uitstellen.)
+ Geef de gewenste planning op met behulp van de opties in de groepsbeleidsinstelling. Voor versie 1709 en hoger is er een extra keuze waarbij u het bijwerken kunt beperken tot wekelijks, tweewekelijks of maandelijks. Als er geen planning is opgegeven, wordt de standaardplanning voor alle installaties gebruikt (elke nacht om 3:00 uur). Als een update vereist dat de computer opnieuw wordt opgestart, gebeurt dit automatisch. (Als een gebruiker is aangemeld op de computer wanneer deze opnieuw moet worden opgestart, wordt de gebruiker hiervan op de hoogte gesteld en kan deze het opstarten uitstellen.)
 
-        In Windows 8 en later kunt u instellen dat updates worden geïnstalleerd tijdens automatisch onderhoud in plaats van volgens een specifieke planning. Via Automatisch onderhoud worden updates geïnstalleerd wanneer de computer niet in gebruik is en wordt de installatie van updates voorkomen wanneer de computer op een batterij werkt. Als updates 2 dagen niet via Automatisch onderhoud kunnen worden geïnstalleerd, installeert Windows Update de updates onmiddellijk. Gebruikers krijgen een bericht dat de computer opnieuw wordt opgestart. Deze procedure wordt uitsluitend uitgevoerd als er geen risico op gegevensverlies is.
+ In Windows 8 en hoger kunt u instellen dat updates worden geïnstalleerd tijdens automatisch onderhoud in plaats van volgens een specifieke planning. Via Automatisch onderhoud worden updates geïnstalleerd wanneer de computer niet in gebruik is en wordt de installatie van updates voorkomen wanneer de computer op een batterij werkt. Als updates 2 dagen niet via Automatisch onderhoud kunnen worden geïnstalleerd, installeert Windows Update de updates onmiddellijk. Gebruikers krijgen een bericht dat de computer opnieuw wordt opgestart. Deze procedure wordt uitsluitend uitgevoerd als er geen risico op gegevensverlies is.
 
-        5 = Lokale administrators kunnen de configuratiemodus voor Automatische updates voor berichtgeving en installatie van updates zelf kiezen. (Deze optie is niet overgenomen door Win 10-versies)
+ 5 = Lokale administrators kunnen de configuratiemodus voor Automatische updates voor berichtgeving en installatie van updates zelf kiezen. (Deze optie is niet overgenomen door Win 10-versies)
 
-        Met deze optie kunnen lokale administrators in het configuratiescherm Automatische updates een configuratieoptie naar keuze selecteren. Lokale administrators kunnen de configuratie voor Automatische updates niet uitschakelen.
+ Met deze optie kunnen lokale administrators in het configuratiescherm voor Automatische updates een configuratieoptie naar keuze selecteren. Lokale administrators kunnen de configuratie voor Automatische updates niet uitschakelen.
 
-        7 = Vraag mij of ik de updates wil installeren en of ik opnieuw wil opstarten. (Alleen Windows Server)
+ 7 = Vraag mij of ik de updates wil installeren en of ik opnieuw wil opstarten. (Alleen Windows Server)
 
-        Met deze optie van Windows Server 2016, die alleen geschikt voor Server SKU-apparaten, kunnen lokale administrators Windows Update gebruiken om door te gaan met installaties of handmatig opnieuw op te starten.
+ Met deze optie van Windows Server 2016, die alleen geschikt voor Server SKU-apparaten, kunnen lokale administrators Windows Update gebruiken om door te gaan met installaties of handmatig opnieuw op te starten.
 
 Als de status voor dit beleid is ingesteld op Uitgeschakeld, moeten alle updates die beschikbaar zijn op de Windows Update-website handmatig worden gedownload en geïnstalleerd. Hiertoe zoekt u via Start naar Windows Update.
 
@@ -144,23 +144,21 @@ Als de waarde is ingesteld op Niet-geconfigureerd, wordt het gebruik van Automat
 
         De alternatieve downloadserver configureert dat de Windows Update-agent bestanden downloadt van een alternatieve downloadserver in plaats van de intranetupdateservice.
 
-        Dankzij de optie om bestanden met ontbrekende URL's te downloaden kan inhoud worden gedownload van de alternatieve downloadserver wanneer er geen download-URL's voor bestanden zijn in de updatemetadata. Deze optie moet alleen worden gebruikt wanneer de intranetupdateservice geen download-URL's geeft in de updatemetadata voor bestanden die aanwezig zijn op de alternatieve downloadserver
+        Dankzij de optie om bestanden met ontbrekende URL's te downloaden kan inhoud worden gedownload van de alternatieve downloadserver wanneer er geen download-URL's voor bestanden zijn in de update-metadata. Deze optie moet alleen worden gebruikt wanneer de intranetupdateservice geen download-URL's geeft in de update-metadata voor bestanden die aanwezig zijn op de alternatieve downloadserver
 
-        Opmerking: als het beleid Automatische updates configureren is uitgeschakeld, heeft deze beleidsinstelling geen effect.
+        Opmerking: als het beleid 'Automatische updates configureren' is uitgeschakeld, heeft deze beleidsinstelling geen effect.
 
-        Opmerking: als er geen alternatieve downloadserver is ingesteld, wordt standaard de intranetupdateservice gebruikt voor het downloaden van updates.
+        Opmerking: als er geen 'alternatieve downloadserver' is ingesteld, wordt standaard de intranetupdateservice gebruikt voor het downloaden van updates.
 
-        Opmerking: de optie om bestanden zonder URL te downloaden wordt alleen gebruikt als er een alternatieve downloadserver is ingesteld.
+        Opmerking: de optie om 'bestanden zonder URL te downloaden' wordt alleen gebruikt als er een 'alternatieve downloadserver' is ingesteld.
 
         Opmerking: deze beleidsinstelling wordt niet ondersteund in Windows RT en heeft dan ook geen effect op computers met Windows RT.
 
-        Opmerking over proxy’s: Microsoft wil het hoogste niveau van beveiliging garanderen en raadt daarom aan om WSUS te beveiligen met het TLS/SSL-protocol, waarbij gebruik wordt gemaakt van HTTPS- intranetservers om systemen veilig te houden. Als er een proxy nodig is, raden we aan om de systeemproxy te configureren.
+        Microsoft wil het hoogste niveau van beveiliging garanderen en raadt daarom aan om WSUS te beveiligen met het TLS/SSL-protocol, waarbij gebruik wordt gemaakt van HTTPS- intranetservers om systemen veilig te houden. Als er een proxy nodig is, raden we aan om de systeemproxy te configureren. Om de hoogste beveiligingsniveaus te garanderen, maakt u bovendien gebruik van WSUS TLS-certificaatpinning op alle apparaten. 
 
-        Het selecteren van een proxygedrag heeft geen invloed op klanten die HTTPS-intranetservers gebruiken om updates te detecteren.
+                Om klanten inherent veilig te houden, staan we niet langer toe dat intranetservers standaard gebruikmaken van een gebruikersproxy voor het detecteren van updates. Als u gebruik moet maken van een gebruikersproxy voor het detecteren van updates terwijl u een intranetserver gebruikt, ondanks de kwetsbaarheden die deze met zich meebrengt, moet u het proxygedrag instellen op 'Toestaan om de gebruikersproxy te gebruiken als noodoplossing als detectie met de systeemproxy mislukt'.
 
-        Om klanten inherent veilig te houden, staan we niet langer toe dat HTTP-intranetservers standaard gebruikmaken van een gebruikersproxy voor het detecteren van updates. Als u gebruik moet maken van een gebruikersproxy voor het detecteren van updates terwijl u een HTTP-intranetserver gebruikt, ondanks de kwetsbaarheden die deze bevat, moet u het proxygedrag instellen op ‘Toestaan om de gebruikersproxy te gebruiken als noodoplossing als detectie met de systeemproxy mislukt’.
-
-Detectie voor updates zal mislukken wanneer HTTP- intranetservers worden gebruikt zonder een geconfigureerde systeemproxy als het beleid om een alternatieve proxy te gebruiken niet is geconfigureerd.</string>
+        Detectie van updates tegen intranetservers mislukt wanneer een gebruikersproxy nodig is als een fallback en het alternatieve proxygedrag niet is geconfigureerd.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Alleen systeemproxy gebruiken voor het detecteren van updates (standaard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Toestaan dat gebruikers proxy als terugval gebruiken als detectie met systeemproxy mislukt</string>
       <string id="DetectionFrequency_Help">Hiermee geeft u het aantal uren op dat Windows wacht voordat wordt gezocht naar beschikbare updates. De exacte wachttijd is de som van de opgegeven waarde en een willekeurige periode van 0-4 uur.
@@ -337,7 +335,7 @@ Als u 'Preview-builds inschakelen' selecteert, worden preview-builds op het appa
       <string id="SemiAnnualChannelFeatureUpdates">Semi-Annual-kanaal</string>
       <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Semi-Annual-kanaal voor 1809 en lager (afgeschaft)</string>
       <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Semi-Annual-kanaal (targeted) voor 1809 en lager (afgeschaft)</string>
-      <string id="DeferFeatureUpdates_Title">Selecteren wanneer preview-versies en onderdelenupdates worden ontvangen</string>
+      <string id="DeferFeatureUpdates_Title">Selecteren wanneer preview-builds en onderdelenupdates worden ontvangen</string>
       <string id="DeferFeatureUpdates_Help">Schakel dit beleid in om op te geven welk type Preview-versie of Onderdelenupdates u wilt ontvangen en wanneer.
 
 * Preview-versie - snel: Apparaten die zijn ingesteld op dit niveau, worden als eerste gebruikt voor het ontvangen van nieuwe builds van Windows met functies die nog niet beschikbaar zijn voor het grote publiek. Selecteer Snel als u wilt helpen problemen op te sporen en bij Microsoft te melden en om suggesties te doen voor nieuwe functionaliteit.
@@ -377,6 +375,10 @@ Als u dit beleid uitschakelt of niet configureert, wordt het gedrag van Windows 
       <string id="TargetReleaseVersion_Help">Schakel dit beleid in om de versie van de onderdelenupdate op te geven die bij volgende scans moet worden opgevraagd.
 
 Voer de versie in zoals deze wordt weergegeven op de pagina met informatie over Windows-versies aka.ms/ReleaseInformationPage</string>
+      <string id="DisableWUfBSafeguards">Schakel beveiligingen voor functie-updates uit</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Schakel deze instelling in wanneer functie-updates moeten worden geïmplementeerd op apparaten zonder blokkering van enige bewaring. Beveiligingsbewaring zijn bekende compatibiliteitsproblemen die verhinderen dat de upgrade wordt geïmplementeerd op getroffen apparaten totdat het probleem is opgelost. Als u dit beleid inschakelt, kan dit een organisatie de mogelijkheid geven om de functie-update te implementeren op apparaten om te testen, of om de functie-update te implementeren zonder de bewaring te blokkeren.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Geen stuurprogramma's opnemen in Windows-updates</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Schakel dit beleid in als u geen stuurprogramma's wilt opnemen in de Windows-kwaliteitsupdates.
 
@@ -614,19 +616,21 @@ Belangrijk: Als u ervoor kiest geen updatemeldingen te ontvangen en ook ander gr
       <string id="ExcludingRebootWarnings">1 – Alle meldingen uitschakelen, uitgezonderd waarschuwingen over opnieuw opstarten</string>
       <string id="IncludingRebootWarnings">2 – Alle meldingen uitschakelen, inclusief waarschuwingen over opnieuw opstarten</string>
       <string id="ComplianceDeadline_Title">Deadlines opgeven voor automatische updates en opnieuw opstarten</string>
-      <string id="ComplianceDeadline_Help">Met dit beleid kunt u het aantal dagen opgeven dat een gebruiker heeft voordat kwaliteits- en onderdelenupdates automatisch op hun apparaten worden geïnstalleerd, en een respijtperiode waarna de vereiste herstart automatisch wordt uitgevoerd. Updates en opnieuw opstarten vinden plaats ongeacht de gebruikstijden, en de gebruiker is niet in staat om opnieuw te plannen.
+      <string id="ComplianceDeadline_Help">Met dit beleid kunt u het aantal dagen opgeven voordat kwaliteits- en onderdelenupdates automatisch op apparaten worden geïnstalleerd, en een respijtperiode waarna automatisch opstarten automatisch wordt uitgevoerd.
 
-Deadlines voor onderdelenupdates en kwaliteitsupdates kunnen maximaal 30 dagen zijn. De respijtperiode voor automatisch opnieuw opstarten kan van 0 tot 7 dagen zijn.
+Stel deadlines in voor onderdelenupdates en kwaliteitsupdates om te voldoen aan uw compatibiliteitsdoelen. Updates worden gedownload en geïnstalleerd zodra ze worden aangeboden en er wordt geprobeerd om opnieuw opstarten buiten de gebruikstijden uit te voeren. Nadat de deadline is verstreken, wordt er opnieuw opgestart ongeacht de gebruikstijden en kunnen gebruikers deze niet opnieuw plannen. Als de deadline is ingesteld op 0 dagen, wordt de update onmiddellijk na het aanbieden geïnstalleerd, maar deze wordt mogelijk niet dezelfde dag voltooid vanwege de beschikbaarheid van het apparaat en de netwerkverbinding.
 
-U kunt automatisch opnieuw opstarten ook uitschakelen tot het einde van de respijtperiode voor automatisch opnieuw opstarten.
+Stel een respijtperiode in voor onderdelen- en kwaliteitsupdates om gebruikers te garanderen dat ze het beheer van de opstarttijden tot een minimum kunnen beperken. Gebruikers kunnen het opnieuw opstarten plannen tijdens de respijtperiode en Windows kan nog steeds automatisch opnieuw opstarten buiten de gebruiksuren als gebruikers ervoor kiezen om het opnieuw opstarten niet te plannen. De respijtperiode is mogelijk niet van toepassing als al meer dagen zijn verstreken dan is ingesteld als respijtperiode voor het beheer van opnieuw opstarten op basis van de deadline-configuraties.
 
-Als u dit beleid uitschakelt of niet configureert, krijgen apparaten updates en worden ze opnieuw gestart volgens het standaardschema.
+U kunt het apparaat zo instellen dat het opnieuw opstarten wordt uitgesteld totdat zowel de deadline als de respijtperiode zijn verstreken.
 
-Dit beleid overschrijft de volgende beleidsregels:
+Als u dit beleid uitschakelt of niet configureert, ontvangen de apparaten updates en worden ze opnieuw opgestart volgens de standaardplanning.
+
+Dit beleid heeft voorrang op de volgende beleidsregels:
 1. Deadline vóór automatisch opnieuw opstarten opgeven voor installatie van updates
-2. Geef de overgangs- en meldingsplanning voor updates op voor gepland opnieuw opstarten
+2. De overgangs- en meldingsplanning voor updates opgeven nadat opnieuw opstarten is gepland door de gebruiker:
 3. Altijd automatisch opnieuw opstarten op het geplande tijdstip
-4. Niet automatisch opnieuw opstarten als gebruikers zijn aangemeld na geplande installaties van Automatische updates
+4. Automatische updates configureren
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,7 +696,8 @@ Dit beleid overschrijft de volgende beleidsregels:
         </textBox>
         <text>(voorbeeld: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Download bestanden zonder URL in de metadata als er een alternatieve downloadserver is ingesteld.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecteer het proxy gedrag voor Windows Update-client voor het detecteren van updates met een niet-TLS-service (HTTP):</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Geen TLS-certificaat afdwingen voor Windows Update-client voor het detecteren van updates.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecteer het proxy gedrag voor Windows Update-client voor het detecteren van updates:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Zoek naar updates met het volgende</text>
@@ -731,7 +736,7 @@ Dit beleid overschrijft de volgende beleidsregels:
         <textBox refId="TargetReleaseVersionId">
           <label>Doelversie voor onderdelenupdates</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
         <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">De werking definiëren om preview-builds te ontvangen:</dropdownList>
       </presentation>
@@ -739,7 +744,7 @@ Dit beleid overschrijft de volgende beleidsregels:
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Selecteer het niveau van Windows-gereedheid voor de updates die u wilt ontvangen:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Aantal dagen dat een onderdelenupdate wordt uitgesteld na een preview-versie of onderdelenupdate:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>Starten van preview-versies of onderdelenupdates onderbreken:</label>
+          <label>Preview-builds en onderdelenupdates onderbreken vanaf:</label>
         </textBox>
         <text>(notatie jjjj-mm-dd, voorbeeld: 2016-10-30)</text>
       </presentation>
@@ -797,12 +802,13 @@ Dit beleid overschrijft de volgende beleidsregels:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Geef de weergaveopties voor updatemeldingen op:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Geef het aantal dagen (maximaal 30 dagen) op dat een gebruiker heeft voordat updates automatisch worden uitgevoerd, ongeacht de gebruikstijden, zonder de mogelijkheid om opnieuw te plannen.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Kwaliteitsupdates (dagen):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Onderdelenupdates (dagen):</dropdownList>
+        <text>Kwaliteitsupdates</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Uiterlijke datum (dagen):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Respijtperiode (dagen):</dropdownList>
         <text></text>
-        <text>Geef een respijtperiode (0 tot 7 dagen) op voor het automatisch opnieuw opstarten, vanaf het moment dat de computer opnieuw moet worden opgestart tot het moment waarop het apparaat automatisch opnieuw wordt opgestart. Apparaten worden opnieuw opgestart, ongeacht de gebruikstijden, zonder mogelijkheid om opnieuw te plannen.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Respijtperiode (dagen)</dropdownList>
+        <text>Onderdelenupdates</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Uiterlijke datum (dagen):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Bedenktijd (dagen):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Niet automatisch opnieuw opstarten tot het einde van de respijtperiode</checkBox>
       </presentation>

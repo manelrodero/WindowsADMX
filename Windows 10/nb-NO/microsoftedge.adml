@@ -7,14 +7,14 @@
     <stringTable>
       <!-- Product -->
       <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Bare Microsoft Edge 1.0</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge i Windows 10 eller senere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge på Windows 10, versjon 1511 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge på Windows 10, versjon 1607 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge i Windows 10, versjon 1703 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge på Windows 10, versjon 1709 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge på Windows 10, versjon 1708 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge på Windows 10, versjon 1803 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge på Windows 10, versjon 1809 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge i Windows 10 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge i Windows 10 versjon 1511 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge i Windows 10 versjon 1607 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge i Windows 10 versjon 1703 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge i Windows 10 versjon 1709 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge i Windows 10 versjon 1708 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge i Windows 10 versjon 1803 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge i Windows 10 versjon 1809 eller nyere</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge-kategori</string>
 
@@ -159,15 +159,15 @@ Hvis du deaktiverer denne innstillingen, kan ikke ansatte se søkeforslag på ad
 
 Hvis du ikke konfigurerer denne innstillingen, kan ansatte velge om søkeforslag skal vises på adresselinjen i Microsoft Edge.</string>
       <string id="AllowSideloadingOfExtensions">Tillat sideinnlasting av utvidelsen</string>
-      <string id="AllowSideloadingOfExtensions_Explain">Sideinnlasting installerer og kjører uverifiserte utvidelser i Microsoft Edge. Med denne policyen kan du spesifisere om uverifiserte utvidelser kan sideinnlastes i Microsoft Edge.
+      <string id="AllowSideloadingOfExtensions_Explain">Sideinnlasting installerer og kjører ubekreftede utvidelser i Microsoft Edge. Med denne policyen kan du spesifisere om ubekreftede utvidelser kan installeres direkte i Microsoft Edge.
 
-Hvis policyen aktiveres eller ikke konfigureres, kan uverifiserte utvidelser sideinnlastes i Microsoft Edge.
+Hvis policyen aktiveres eller ikke konfigureres, kan ubekreftede utvidelser installeres direkte i Microsoft Edge.
 
-Hvis policyen deaktiveres, kan uverifiserte utvidelser ikke sideinnlastes i Microsoft Edge. Utvidelser kan bare installeres via Microsoft Store (inkludert Store for bedrifter), en bedriftsbutikk (for eksempel en firmaportal) eller PowerShell (ved hjelp av Add-AppxPackage). Når denne policyen er deaktivert, hindrer den ikke sideinnlasting av utvidelser ved hjelp av Add-AppxPackage via PowerShell. For å hindre dette går du til Redigeringsprogram for gruppepolicy og aktiverer Tillat distribusjon av Windows Store-apper uten å installere dem fra et integrert utviklingsmiljø (IDE), som du finner på følgende sted:
+Hvis policyen deaktiveres, kan du ikke installere ubekreftede utvidelser direkte i Microsoft Edge. Utvidelser kan bare installeres via Microsoft Store (inkludert Store for bedrifter), en bedriftsbutikk (for eksempel en firmaportal) eller PowerShell (ved hjelp av Add-AppxPackage). Når denne policyen er deaktivert, hindrer den ikke sideinnlasting av utvidelser ved hjelp av Add-AppxPackage via PowerShell. For å hindre dette går du til redigeringsprogrammet for gruppepolicy og aktiverer Tillat distribusjon av Windows Store-apper uten å installere dem fra et integrert utviklingsmiljø (IDE), som du finner på følgende sted:
 
 Datamaskinkonfigurasjon &gt; Administrative maler &gt; Windows-komponenter &gt; App-pakkedistribusjon
 
-Støttede versjoner: Microsoft Edge i Windows 10, versjon 1809
+Støttede versjoner: Microsoft Edge i Windows 10 versjon 1809
 Standardinnstilling: deaktivert eller ikke konfigurert
 Relaterte policyer:
 – Tillat distribusjon av Windows Store-apper uten å installere dem fra et integrert utviklingsmiljø (IDE)
@@ -441,7 +441,7 @@ Relatert policy:
 – Angi URL-adresse for Hjem-knapp</string>
       <string id="AllowFlashClickToRun">Konfigurer klikk og bruk-innstillingen for Adobe Flash</string>
       <string id="AllowFlashClickToRun_Explain">
-        Hvis du aktiverer eller ikke konfigurerer klikk og bruk-innstillingen for Adobe Flash, krever Microsoft Edge at en bruker klikker på klikk og bruk-knappen eller på innholdet, eller at nettstedet er i listen over automatisk tillatte nettsteder, før innholdet kan lastes og kjøres.
+        Hvis du aktiverer eller ikke konfigurerer Klikk og bruk-innstillingen for Adobe Flash, krever Microsoft Edge at en bruker klikker på Klikk og bruk-knappen eller på innholdet, eller at nettstedet er i listen over automatisk tillatte nettsteder, før innholdet kan lastes inn og kjøres.
 
 Nettsteder kommer med på listen over automatisk tillatte nettsteder basert på tilbakemelding fra brukere, nærmere bestemt basert på hvor ofte brukere tillater at innholdet lastes inn og kjøres.
       </string>
@@ -479,9 +479,9 @@ Hvis du forhindrer forhåndslasting, vil ikke Microsoft Edge laste startsiden el
       <string id="AllowTabPreloadingDropdown_AllowTabPreloading">Tillat faneforhåndslasting</string>
       <string id="AllowTabPreloadingDropdown_PreventTabPreloading">Hindre faneforhåndslasting</string>
       <string id="ConfigureTelemetryForMicrosoft365Analytics">Konfigurer innsamling av nettleserdata for Skrivebordsanalyse</string>
-      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">Du kan konfigurere Microsoft Edge til bare å sende intranet-loggen, Internett-loggen eller begge deler til Skrivebordsanalyse for bedriftsenheter der en kommersiell-ID er konfigurert. Hvis funksjonen deaktiveres eller ikke er konfigurert, sender ikke Microsoft Edge data om nettleserloggen til Skrivebordsanalyse.
+      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">Du kan konfigurere Microsoft Edge til å sende bare intranettloggen, bare Internett-loggen eller begge deler til Skrivebordsanalyse for bedriftsenheter der en kommersiell-ID er konfigurert. Hvis funksjonen deaktiveres eller ikke er konfigurert, sender ikke Microsoft Edge data i nettleserloggen til Skrivebordsanalyse.
 
-Støttede versjoner: Microsoft Edge på Windows 10, versjon 1809
+Støttede versjoner: Microsoft Edge i Windows 10 versjon 1809
 Standardinnstilling: Deaktivert eller ikke konfigurert (ingen data samles inn eller sendes)</string>
       <string id="ZonesList_IntranetOnly">Bare tillat sending av logg for intranett</string>
       <string id="ZonesList_InternetOnly">Tillat bare sending av Internett-logg</string>
@@ -518,9 +518,14 @@ Hvis du setter denne policyen til 0, bruker ikke Microsoft Edge inaktivitetstidt
 Hvis den er deaktivert eller ikke konfigurert, er standardverdien 5 minutter.
 
 Hvis du ikke konfigurerer Microsoft Edge med tilordnet tilgang, kommer ikke policyen til å tre i kraft.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Undertrykk varsel om foreldet versjon av Microsoft Edge</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">Du kan konfigurere Microsoft Edge til å undertrykke visningen av varselet som informerer brukere om at støtte for denne versjonen av Microsoft Edge opphørte den 9. mars 2021. Hvis den er aktivert, vises ikke varslingen.
 
+Hvis den er deaktivert eller ikke konfigurert, vises varslingen hver gang Edge startes. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

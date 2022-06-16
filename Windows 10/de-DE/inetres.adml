@@ -3920,22 +3920,32 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, verhält sich 
       <string id="NeedEdgeBrowser">Konfigurieren Sie, welcher Kanal von Microsoft Edge zum Öffnen umgeleiteter Websites verwendet werden soll.</string>
       <string id="IE_ExplainNeedEdgeBrowser">Ermöglicht es, bis zu drei Versionen von Microsoft Edge für das Öffnen einer umgeleiteten Website (in der gewünschten Reihenfolge) zu konfigurieren. Verwenden Sie diese Richtlinie, wenn Ihre Umgebung für die Umleitung von Websites von Internet Explorer 11 zu Microsoft Edge konfiguriert ist. Wenn eine der ausgewählten Versionen nicht auf dem Gerät installiert ist, wird diese Einstellung umgangen.
 
-Wenn sowohl das Windows Update für die nächste Version von Microsoft Edge* als auch der Microsoft Edge Stable Channel installiert sind, tritt folgendes Verhalten auf:
-- Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Microsoft Edge Stable Channel verwendet. Dies ist das Standardverhalten.
-- Wenn Sie diese Richtlinie aktivieren, können Sie umgeleitete Websites so konfigurieren, dass sie in bis zu drei der folgenden Kanäle geöffnet werden, wobei Folgendes gilt:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta, Version 77 oder höher
-    3 = Microsoft Edge Dev, Version 77 oder höher
-    4 = Microsoft Edge Canary, Version 77 oder höher
 
-Wenn das Windows Update für die nächste Version von Microsoft Edge* oder den Microsoft Edge Stable Channel nicht installiert wird, tritt folgendes Verhalten auf:
+
+Wenn sowohl das Windows Update für die nächste Version von Microsoft Edge* als auch der Microsoft Edge Stable-Kanal installiert sind, tritt folgendes Verhalten auf:
+
+- Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Microsoft Edge Stable-Kanal verwendet. Dies ist das Standardverhalten.
+
+- Wenn Sie diese Richtlinie aktivieren, können Sie umgeleitete Websites so konfigurieren, dass sie in bis zu drei der folgenden Kanäle geöffnet werden, wobei Folgendes gilt:
+
+ 1 = Microsoft Edge Stable
+
+ 2 = Microsoft Edge Beta, Version 77 oder höher
+
+ 3 = Microsoft Edge Dev, Version 77 oder höher
+
+ 4 = Microsoft Edge Canary, Version 77 oder höher
+
+
+
+Wenn das Windows Update für die nächste Version von Microsoft Edge* oder den Microsoft Edge Stable-Kanal nicht installiert wird, tritt folgendes Verhalten auf:
 - Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird automatisch Microsoft Edge, Version 45 oder früher verwendet. Dies ist das Standardverhalten.
 - Wenn Sie diese Richtlinie aktivieren, können Sie umgeleitete Websites so konfigurieren, dass sie in bis zu drei der folgenden Kanäle geöffnet werden, wobei Folgendes gilt:
-    0 = Microsoft Edge, Version 45 oder früher
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta, Version 77 oder höher
-    3 = Microsoft Edge Dev, Version 77 oder höher
-    4 = Microsoft Edge Canary, Version 77 oder höher
+ 0 = Microsoft Edge, Version 45 oder früher
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta, Version 77 oder höher
+ 3 = Microsoft Edge Dev, Version 77 oder höher
+ 4 = Microsoft Edge Canary, Version 77 oder höher
 
 *Weitere Informationen zum Windows Update für die nächste Version von Microsoft Edge, einschließlich Informationen zu dessen Deaktivierung, finden Sie unter https://go.microsoft.com/fwlink/?linkid=2102115. Dieses Update gilt nur für Windows 10, Version 1709 und höher.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3968,35 @@ Verwandte Richtlinien:
 - Alle Websites, die nicht in der Enterprise Mode Site List enthalten sind, an Microsoft Edge senden (‘RestrictIE’)
 
 Weitere Informationen dazu, wie diese Richtlinie mit anderen verwandten Richtlinien zum Erstellen der optimalen Konfiguration für Ihre Organisation verwendet wird, finden Sie unter https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">„Ziel speichern unter“ im Internet Explorer-Modus zulassen</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Mithilfe dieser Richtlinien Einstellung können Administratoren das Kontext Menü "Ziel speichern" im Internet Explorer-Modus aktivieren.
+
+Wenn Sie diese Richt Linie aktivieren, wird "Ziel speichern unter" im Kontext Menü des Internet Explorer-Modus angezeigt und wie Internet Explorer verwendet.
+
+Wenn Sie diese Richtlinien Einstellung deaktivieren oder nicht konfigurieren, wird "Ziel speichern unter" nicht im Kontext Menü von Internet Explorer angezeigt.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Aktivieren Sie erweiterte Abkürzungstasten im Internet Explorer-Modus</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Mit dieser Richtlinieneinstellung können Administratoren erweiterte Abkürzungstasten für den Microsoft Edge Internet Explorer-Modus aktivieren, z. B. „STRG+S“, um die Funktion „Speichern unter“ festzulegen.
+
+Wenn Sie diese Richtlinie aktivieren, wird die erweiterte Abkürzungstasten-Funktionalität im Internet Explorer-Modus aktiviert und funktioniert genauso wie Internet Explorer.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, funktionieren erweiterte Abkürzungstasten im Internet Explorer-Modus nicht.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Internet Explorer 11 als eigenständigen Browser deaktivieren</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Mit dieser Richtlinie können Sie das Starten von Internet Explorer als eigenständigen Browser einschränken.
+
+Wenn Sie diese Richtlinie aktivieren, wird sie:
+- Verhindern, dass Internet Explorer 11 als eigenständiger Browser startet.
+- Die Nutzung von Internet Explorer auf den einheitlichen Internet Explorer-Modus von Microsoft Edge einschränken.
+- Alle Versuche zum Starten von Internet Explorer 11 auf den stabilen Kanalbrowser von Microsoft Edge weiterleiten.
+- Alle anderen Richtlinien, die zu Internet Explorer 11 weiterleiten, überschreiben.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden alle Websites mithilfe der aktuellen aktiven Browsereinstellungen geöffnet. Hinweis: Der stabile Kanal von Microsoft Edge muss installiert sein, damit diese Richtlinie wirksam wird.</string>
+      <string id="NotifyDisableIEOptions_Never">Nie</string>
+      <string id="NotifyDisableIEOptions_Always">Immer</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Einmal pro Benutzer</string>
       <string id="VerMgmtDisable">Blockieren von veralteten ActiveX-Steuerelementen für Internet Explorer ausschalten</string>
       <string id="IE_ExplainVerMgmtDisable">Mit dieser Richtlinieneinstellung wird bestimmt, ob Internet Explorer spezifische veraltete ActiveX-Steuerelemente blockiert. Veraltete ActiveX-Steuerelemente werden in der Intranetzone nie blockiert.
 
@@ -4833,6 +4872,9 @@ Weitere Informationen finden Sie in der Internet Explorer TechNet-Bibliothek unt
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Erste Auswahl</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Zweite Auswahl</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Dritte Auswahl</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Benachrichtigung senden, dass der Internet Explorer 11-Browser deaktiviert ist</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

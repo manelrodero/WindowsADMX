@@ -154,13 +154,11 @@ If the status is set to Not Configured, use of Automatic Updates is not specifie
 
         Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.
 
-        Note on proxies: To ensure the highest level of security, Microsoft recommends securing WSUS with TLS/SSL protocol, thereby using HTTPS based intranet servers to keep systems secure. If a proxy is required, we recommend configuring system proxy.
+        To ensure the highest level of security, Microsoft recommends securing WSUS with TLS/SSL protocol, thereby using HTTPS based intranet servers to keep systems secure. If a proxy is required, we recommend configuring system proxy. To ensure highest levels of security, additionally leverage WSUS TLS certificate pinning on all devices.
 
-        Selecting a proxy behavior will have no effect on clients using HTTPS based intranet servers to detect for updates. 
+        In order to keep clients inherently secure, we are no longer allowing intranet servers to leverage user proxy by default for detecting updates. If you need to leverage user proxy for detecting updates while using an intranet server despite the vulnerabilities it presents, you must configure the proxy behavior to "Allow user proxy to be used as a fallback if detection using system proxy fails".
 
-        In order to keep clients inherently secure, we are no longer allowing HTTP based intranet servers to leverage user proxy by default for detecting updates. If you need to leverage user proxy for detecting updates while using an HTTP based intranet server despite the vulnerabilities it presents, you must configure the proxy behavior to "Allow user proxy to be used as a fallback if detection using system proxy fails".
-
-        Detection for updates will fail when HTTP based intranet servers are used without a configured system proxy if the policy to use an alternate proxy behavior is not configured.</string>
+        Detection for updates against intranet servers will fail when user proxy is needed as a fallback and the alternate proxy behavior is not configured.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Only use system proxy for detecting updates (default)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Allow user proxy to be used as a fallback if detection using system proxy fails</string>
       <string id="DetectionFrequency_Help">Specifies the hours that Windows will use to determine how long to wait before checking for available updates. The exact wait time is a sum of the specific value and a random variant of 0-4 hours.
@@ -375,6 +373,10 @@ If you disable or do not configure this policy, Windows Update will not alter it
       <string id="TargetReleaseVersion_Help">Enable this policy to specify a Feature Update version to be requested in subsequent scans.
 
 Enter version as listed in the Windows Release Information page aka.ms/ReleaseInformationPage</string>
+      <string id="DisableWUfBSafeguards">Disable safeguards for Feature Updates</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Enable this setting when Feature Updates should be deployed to devices without blocking on any safeguard holds. Safeguard holds are known compatibility issues that block the upgrade from being deployed to affected devices until the issue is resolved. Enabling this policy can allow an organization to deploy the Feature Update to devices for testing, or to deploy the Feature Update without blocking on safeguard holds.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Do not include drivers with Windows Updates</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Enable this policy to not include drivers with Windows quality updates.
 
@@ -612,11 +614,13 @@ Important: if you choose not to get update notifications and also define other G
       <string id="ExcludingRebootWarnings">1 – Disable all notifications, excluding restart warnings</string>
       <string id="IncludingRebootWarnings">2 – Disable all notifications, including restart warnings</string>
       <string id="ComplianceDeadline_Title">Specify deadlines for automatic updates and restarts</string>
-      <string id="ComplianceDeadline_Help">This policy lets you specify the number of days that a user has before quality and feature updates are installed on their devices automatically, and a grace period after which required restarts occur automatically.  Updates and restarts will occur regardless of active hours, and the user will not be able to reschedule.
+      <string id="ComplianceDeadline_Help">This policy lets you specify the number of days before quality and feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-Deadlines for feature updates and quality updates can be up to 30 days.  The auto-restart grace period can be from 0 to 7 days.
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-You can also disable auto-restarts until the end of the auto-restart grace period.
+Set a grace period for feature updates and quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
 If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
@@ -624,7 +628,7 @@ This policy will override the following policies:
 1.  Specify deadline before auto restart for update installation
 2.  Specify Engaged restart transition and notification schedule for updates
 3.  Always automatically restart at the scheduled time
-4.  No auto-restart with logged on users for scheduled automatic updates installation
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -690,7 +694,8 @@ This policy will override the following policies:
         </textBox>
         <text>(example: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Download files with no Url in the metadata if alternate download server is set.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Select the proxy behavior for Windows Update client for detecting updates with non-TLS (HTTP) based service:</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Do not enforce TLS certificate pinning for Windows Update client for detecting updates.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Select the proxy behavior for Windows Update client for detecting updates:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Check for updates at the following</text>
@@ -729,7 +734,7 @@ This policy will override the following policies:
         <textBox refId="TargetReleaseVersionId">
           <label>Target Version for Feature Updates</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
         <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Set the behavior for receiving preview builds:</dropdownList>
       </presentation>
@@ -795,12 +800,13 @@ This policy will override the following policies:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Specify the update notifications display options :</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Specify the number of days (up to 30 days) that a user has before updates run automatically, regardless of active hours, with no ability to reschedule.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Quality updates (days):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Feature updates (days):</dropdownList>
+        <text>Quality Updates</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Deadline (days):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Grace period (days):</dropdownList>
         <text></text>
-        <text>Specify an auto-restart grace period (0 to 7 days), from the time a restart is required until the device automatically restarts.  Devices will restart regardless of active hours, with no ability to reschedule.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Grace period (days)</dropdownList>
+        <text>Feature Updates</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Deadline (days):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Grace Period (days):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
       </presentation>

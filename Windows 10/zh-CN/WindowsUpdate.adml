@@ -64,29 +64,29 @@
 
 此设置允许你指定是否在此计算机上启用自动更新。如果启用该服务，则必须在组策略设置中选择四个选项之一:
 
-        2 = 在下载和安装任何更新之前通知。
+ 2 = 在下载和安装任何更新之前通知。
 
-        当 Windows 找到适用于此计算机的更新时，系统将通知用户更新已准备好下载。转到 Windows 更新后，用户可以下载并安装任何可用更新。
+ 当 Windows 找到适用于此计算机的更新时，系统将通知用户更新已准备好下载。转到 Windows 更新后，用户可以下载并安装任何可用更新。
 
-        3 = (默认设置)自动下载更新并在准备好安装时通知
+ 3 = (默认设置)自动下载更新并在准备好安装时通知
 
-        Windows 查找适用于该计算机的更新，并在后台下载它们(在此过程中，用户不会收到通知或被打扰)。下载完成后，将通知用户更新已准备好进行安装。在转到 Windows 更新后，用户可以安装它们。
+ Windows 查找适用于该计算机的更新，并在后台下载它们(在此过程中，用户不会收到通知或被打扰)。下载完成后，将通知用户更新已准备好进行安装。在转到 Windows 更新后，用户可以安装它们。
 
-        4 = 自动下载更新并按下面指定的计划进行安装。
+ 4 = 自动下载更新并按下面指定的计划进行安装。
 
-        选择“自动”作为计划的安装时间时，Windows 将自动检查、下载和安装更新。除非通过组策略进行配置，否则，设备将按照 Windows 默认设置重新启动。(适用于 Windows 10 版本 1809 及更高版本)
+ 选择“自动”作为计划的安装时间时，Windows 将自动检查、下载和安装更新。除非通过组策略进行配置，否则，设备将按照 Windows 默认设置重新启动。(适用于 Windows 10 版本 1809 及更高版本)
 
-        使用组策略设置中的选项指定计划。对于版本 1709 及更高版本，还可以选择将更新限制为每周、每两周或每月一次。如果未指定任何计划，则所有安装的默认计划都将是每天凌晨的 3:00。如果有任何更新需要重启才能完成安装，Windows 将自动重启计算机。(如果用户在 Windows 准备重启时已登录到计算机，则用户将收到通知，并可以选择延迟重启。)
+ 使用组策略设置中的选项指定计划。对于版本 1709 及更高版本，还可以选择将更新限制为每周、每两周或每月一次。如果未指定任何计划，则所有安装的默认计划都将是每天凌晨的 3:00。如果有任何更新需要重启才能完成安装，Windows 将自动重启计算机。(如果用户在 Windows 准备重启时已登录到计算机，则用户将收到通知，并可以选择延迟重启。)
 
-        在 Windows 8 和更高版本中，可以将更新设置为在自动维护期间安装，而不是按特定计划安装。自动维护将在计算机未使用时安装更新，并在计算机使用电池电源运行时避免这样做。如果自动维护无法在 2 天内安装更新，Windows 更新将立即安装更新。随后，将会通知用户即将重启，并且只有在数据不会意外丢失的情况下，才会进行重启。
+ 在 Windows 8 和更高版本中，可以将更新设置为在自动维护期间安装，而不是按特定计划安装。自动维护将在计算机未使用时安装更新，并在计算机使用电池电源运行时避免这样做。如果自动维护无法在 2 天内安装更新，Windows 更新将立即安装更新。随后，将会通知用户即将重启，并且只有在数据不会意外丢失的情况下，才会进行重启。
 
-        5 = 允许本地管理员选择自动更新应通知并安装更新的配置模式。(此选项尚未传递到任何 Win 10 版本)
+ 5 = 允许本地管理员选择自动更新应通知并安装更新的配置模式。(此选项尚未传递到任何 Win 10 版本)
 
-        如果选择此选项，则本地管理员将可以使用 Windows 更新控制面板选择所选的配置选项。本地管理员将无法禁用自动更新的配置。
+ 如果选择此选项，则本地管理员将可以使用 Windows 更新控制面板选择所选的配置选项。本地管理员将无法禁用自动更新的配置。
 
-        7 = 安装任何更新之前通知并在重启之前通知。(仅限 Windows Server)
+ 7 = 安装任何更新之前通知并在重启之前通知。(仅限 Windows Server)
 
-        如果选择 Windows Server 2016 中的此选项(仅适用于服务器 SKU 设备)，则将允许本地管理员使用 Windows 更新继续手动进行安装或重新启动。
+ 如果选择 Windows Server 2016 中的此选项(仅适用于服务器 SKU 设备)，则将允许本地管理员使用 Windows 更新继续手动进行安装或重新启动。
 
 如果将此策略的状态设置为“已禁用”，则必须手动下载并安装 Windows 更新中可用的任何更新。若要执行此操作，请使用“开始”搜索 Windows 更新。
 
@@ -138,29 +138,27 @@
 
         若要使用此设置，必须设置两个服务器名称值: 自动更新客户端从中检测和下载更新的服务器，以及更新的工作站将统计信息上载到其中的服务器。可以将两个值设为同一台服务器。可以指定一个可选的服务器名称值，以便将 Windows 更新代理配置为从备用下载服务器而不是 Intranet 更新服务下载更新。
 
-        如果状态设置为“已启用”，自动更新客户端会连接到指定的 Intranet Microsoft 更新服务(或备用下载服务器)而不是 Windows 更新，以搜索和下载更新。如果启用此设置，你组织内的最终用户将不必通过防火墙获得更新，并允许你在部署更新前对其进行测试。
+        如果状态设置为“已启用”，自动更新客户端会连接到指定的 Intranet Microsoft 更新服务（或备用下载服务器）而不是 Windows 更新，以搜索和下载更新。如果启用此设置，你组织内的最终用户将不必通过防火墙获得更新，并允许你在部署更新前对其进行测试。
 
         如果将状态设置为“已禁用”或“未配置”，并且策略或用户首选项未禁用自动更新，则自动更新客户端将直接连接到 Internet 上的 Windows 更新站点。
 
         备用下载服务器将 Windows 更新代理配置为从备用下载服务器而不是 Intranet 更新服务下载文件。
 
-        通过用于下载缺少 Url 的文件的选项，可以在更新元数据中没有文件的下载 Url 时从备用下载服务器下载内容。仅当 Intranet 更新服务未在更新元数据中提供文件的下载 Url，并且备用下载服务器上有这些文件时，才应使用此选项。
+        通过用于下载缺少 URL 的文件的选项，可以在更新元数据中没有文件的下载 URL 时从备用下载服务器下载内容。仅当 Intranet 更新服务未在更新元数据中提供文件的下载 URL，并且备用下载服务器上有这些文件时，才应使用此选项。
 
         注意: 如果“配置自动更新”策略已禁用，则此策略将不起作用。
 
         注意: 如果未设置“备用下载服务器”，则默认情况下将使用 Intranet 更新服务来下载更新。
 
-        注意: 仅当设置了“备用下载服务器”时才会使用“下载没有 Url 的文件...”选项。
+        注意: 仅当设置了“备用下载服务器”时才会使用“下载没有 URL... 的文件”选项。
 
-        注意: Windows RT 不支持此策略。在 Windows RT 电脑上设置此策略不起任何作用。
+        注意: Windows RT 电脑不支持此策略。在 Windows RT 电脑上设置此策略不起任何作用。
 
-       有关代理的说明：为了确保最高级别的安全性，Microsoft建议使用TLS / SSL协议保护WSUS，从而使用基于 HTTPS 的 Intranet 服务器来确保系统安全。如果需要代理，我们建议配置系统代理。
+     为了确保最高级别的安全性，Microsoft 建议使用 TLS / SSL 协议保护 WSUS，从而使用基于 HTTPS 的 Intranet 服务器来确保系统安全。如果需要代理，我们建议配置系统代理。为确保最高级别的安全性，还可以在所有设备上利用 WSUS TLS 证书固定。
 
-        选择代理行为对使用基于 HTTPS 的 Intranet 服务器来检测更新的客户端没有影响。
+       为了确保客户端固有的安全性，默认情况下，我们不再允许 Intranet 服务器利用用户代理来检测更新。如果尽管存在安全漏洞，仍需要利用用户代理在使用 Intranet 服务器时检测更新，必须将代理行为配置为“如果使用系统代理检测失败，允许用户代理用作回退”。
 
-       为了确保客户端固有的安全性，默认情况下，我们不再允许基于 HTTP 的 Intranet 服务器利用用户代理来检测更新。如果尽管存在安全漏洞，仍需要利用用户代理在使用基于 HTTP 的 Intranet 服务器时检测更新，必须将代理行为配置为“如果使用系统代理检测失败，允许用户代理用作回退”。
-
-        如果未配置使用备用代理行为的策略，则在没有配置系统代理的情况下使用基于 HTTP 的 Intranet 服务器时，更新检测将失败。</string>
+        当需要用户代理作为回退并且未配置备用代理行为时，针对 Intranet 服务器的更新检测将失败。</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">仅使用系统代理检测 (默认的更新)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">当使用系统代理进行检测时，允许将用户代理用作回退</string>
       <string id="DetectionFrequency_Help">指定 Windows 确定在检查可用更新前等待的时间(小时)。确切的等待时间是具体值和 0-4 小时之间的随机变量的总和。
@@ -377,6 +375,10 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
       <string id="TargetReleaseVersion_Help">启用此策略可指定要在后续扫描中请求的功能更新版本。
 
 输入 Windows 版本信息页面 aka.ms/ReleaseInformationPage 中列出的版本</string>
+      <string id="DisableWUfBSafeguards">禁用功能更新的安全措施</string>
+      <string id="DisableWUfBSafeguards_Help">
+          若要在不阻止任何安全措施的情况下将功能更新部署到设备，请启用此设置。 安全措施是已知的兼容性问题，阻止将升级部署到受影响的设备，直到问题解决。 启用此策略可以允许组织将功能更新部署到设备以进行测试，或在不阻止安全措施的情况下部署功能更新。
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Windows 更新不包括驱动程序</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">启用此策略将不会在 Windows 质量更新中包括驱动程序。
 
@@ -614,19 +616,21 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
       <string id="ExcludingRebootWarnings">1 – 禁止所有通知，不包括重启警告</string>
       <string id="IncludingRebootWarnings">2 – 禁止所有通知，包括重启警告</string>
       <string id="ComplianceDeadline_Title">指定自动更新和重启的最后期限</string>
-      <string id="ComplianceDeadline_Help">此策略允许你指定用户在其设备上自动安装质量和功能更新前所拥有的天数，以及在需要自动重启后所拥有的宽限期。将进行更新并重启，而不考虑使用时段，用户将无法重新计划。
+      <string id="ComplianceDeadline_Help">此策略允许你指定在设备上自动安装质量和功能更新之前的天数，以及自动重启之前的宽限期。
 
-功能更新和质量更新的最后期限可以是最多 30 天。自动重启宽限期可以是从 0 到 7 天。
+设置功能更新和质量更新的最后期限，以达到合规性目标。将在提供更新后立即下载并安装这些更新，并且将在使用时段以外的时间尝试自动重新启动。在截止时间过后，将发生重启（不管使用时段），并且用户将无法重新安排重启时间。如果最后期限设置为 0 天，则会立即安装更新，但鉴于设备可用性和网络连接，可能无法在一天内完成。
 
-你还可以在自动重启宽限期结束之前，禁用自动重启。
+设置功能更新和质量更新的宽限期，以保证用户在安装更新后至少能够管理重新启动。用户将能够在宽限期期间安排重新启动时间，如果用户选择不安排重新启动时间，Windows 仍可在使用时段以外的时间自动重启。如果根据截止日期配置，用户已经超过设置为宽限期的天数来管理其重新启动，则宽限期可能不会生效。
 
-如果禁用或未配置此策略，设备将获取更新并按照默认计划重启。
+你可以将设备设置为延迟重新启动，直到最后期限和宽限期已过期。
 
-此策略将覆盖以下策略:
-1.  指定更新安装进行自动重启之前的最后期限
-2.  为更新指定预定重启转换和通知计划 
-3.  始终在计划的时间自动重启
-4.  已登录用户进行计划的自动更新安装时不自动重启
+如果禁用或未配置此策略，则设备将会接收更新并根据默认日程安排重新启动。
+
+此策略将覆盖以下策略：
+1. 指定更新安装自动重启之前的最后期限
+2. 为更新指定预定重启转换和通知日程安排
+3. 始终在安排的时间自动重启
+4. 配置自动更新
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,7 +696,8 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
         </textBox>
         <text>(示例： https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">如果设置了备用下载服务器，则下载元数据中没有 Url 的文件。</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">选择 Windows 更新客户端用于检测使用非 TLS (HTTP) 的更新的代理行为基于 HTTP 服务：</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">不要对 Windows 更新客户端强制执行 TLS 证书固定以检测更新。</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">选择 Windows 更新客户端用于检测更新的代理行为：</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>检查下列更新的</text>
@@ -731,7 +736,7 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
         <textBox refId="TargetReleaseVersionId">
           <label>功能更新的目标版本</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
         <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">设置接收预览版的行为:</dropdownList>
       </presentation>
@@ -797,12 +802,13 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">指定更新通知显示选项:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>指定自动运行更新前用户可以推迟的天数 (最多30天)。注意！这个选项不会考虑你使用计算机的时间，并且不能再次推迟更新计划。</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">质量更新(天数): </dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">功能更新(天数):</dropdownList>
+        <text>质量更新</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">最后期限(天):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">宽限期(天):</dropdownList>
         <text></text>
-        <text>指定从需要重启时间到设备自动重启的自动重启宽限期(0 到 7 天)。设备将重启，不考虑使用时段，且无法重新计划。</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">宽限期(天数)</dropdownList>
+        <text>功能更新</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">最后期限(天):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">宽限期(天):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">在宽限期结束前不自动重启</checkBox>
       </presentation>

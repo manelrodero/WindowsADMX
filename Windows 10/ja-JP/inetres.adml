@@ -787,7 +787,7 @@ Microsoft エージェントとは、Microsoft Windows のインターフェイ�
 このポリシー設定を有効にすると、MSHTML をホストしているアプリケーションは、ページの表示倍率を変更するためのユーザー入力を受け付けません。
 
 このポリシー設定を無効にするか、構成しない場合、MSHTML をホストしているアプリケーションは、ページの表示倍率を変更するためのユーザー入力を受け付けます。</string>
-      <string id="IE_ExplainHelp_NoFeedback">Internet Explorer の [ヘルプ] メニューの [フィードバックの送信] コマンドを使用した Microsoft へのフィードバックを送信できないようにします。
+      <string id="IE_ExplainHelp_NoFeedback">[ヘルプ] メニューの [フィードバックの送信] コマンドを使用した Microsoft へのフィードバックを送信できないようにします。
 
 このポリシーを有効にすると、[ヘルプ] メニューから [フィードバックの送信] コマンドが削除されます。
 
@@ -3925,19 +3925,19 @@ InPrivate フィルターを使用すると、ユーザーが訪れた Web サ�
 Microsoft Edge* の次期バージョンの Windows Update と Microsoft Edge 安定チャネルの両方がインストールされている場合、動作は次のようになります。
 - このポリシーを無効にするか、未構成にした場合、Microsoft Edge 安定チャネルが使用されます。これが既定の動作です。
 - このポリシーを有効にすると、リダイレクトされたサイトを次のうち最大 3 つのチャネルで開くように構成できます。
-    1 = Microsoft Edge 安定
-    2 = Microsoft Edge Beta version 77 またはそれ以降
-    3 = Microsoft Edge Dev version 77 またはそれ以降
-    4 = Microsoft Edge Canary version 77 またはそれ以降
+ 1 = Microsoft Edge 安定
+ 2 = Microsoft Edge Beta version 77 またはそれ以降
+ 3 = Microsoft Edge Dev version 77 またはそれ以降
+ 4 = Microsoft Edge Canary version 77 またはそれ以降
 
 Microsoft Edge* の次期バージョンの Windows Update がインストールされていない場合、または Microsoft Edge 安定チャネルがインストールされていない場合、動作は次のようになります。
 - このポリシーを無効にするか、未構成にした場合、Microsoft Edge version 45 またはそれ以前が自動的に使用されます。これが既定の動作です。
 - このポリシーを有効にすると、リダイレクトされたサイトを次のうち最大 3 つのチャネルで開くように構成できます。
-    0 = Microsoft Edge version 45 またはそれ以前
-    1 = Microsoft Edge 安定
-    2 = Microsoft Edge Beta version 77 またはそれ以降
-    3 = Microsoft Edge Dev version 77 またはそれ以降
-    4 = Microsoft Edge Canary version 77 またはそれ以降
+ 0 = Microsoft Edge version 45 またはそれ以前
+ 1 = Microsoft Edge 安定
+ 2 = Microsoft Edge Beta version 77 またはそれ以降
+ 3 = Microsoft Edge Dev version 77 またはそれ以降
+ 4 = Microsoft Edge Canary version 77 またはそれ以降
 
 *無効にする方法を含めて Microsoft Edge の次期バージョンの Windows Update については、https://go.microsoft.com/fwlink/?linkid=2102115 を参照してください。この更新は Windows 10 version 1709 およびそれ以降にのみ適用されます。</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3960,6 +3960,35 @@ Microsoft Edge* の次期バージョンの Windows Update がインストール
 - エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します ('RestrictIE')
 
 このポリシーを他の関連するポリシーと共に使用して、組織に最適な構成を作成する方法の詳細については、https://go.microsoft.com/fwlink/?linkid=2094210 を参照してください。</string>
+      <string id="AllowSaveTargetAsInIEMode">Internet Explorer モードで "対象をファイルに保存" を許可する</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">このポリシー設定を使用すると、管理者は Internet Explorer モードの [対象をファイルに保存] コンテキストメニューを有効にすることができます。
+
+このポリシーを有効にした場合、[対象をファイルとして保存] は Internet Explorer モードのショートカットメニューに表示され、Internet Explorer と同じように作業できます。
+
+このポリシー設定を無効にした場合、または構成しなかった場合、[対象をファイルに保存] は Internet Explorer モードのショートカットメニューに表示されません。
+
+詳細については、https://go.microsoft.com/fwlink/?linkid=2102115 を参照してください。</string>
+      <string id="EnableExtendedIEModeHotkeys">Internet Explorer モードで拡張ホットキーを有効にする</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">このポリシー設定を使用すると、管理者は "Ctrl+S" のように "名前を付けて保存" 機能を使用して、Microsoft Edge Internet Explorer の拡張モード ホットキーを有効にすることができます。
+
+このポリシーを有効にした場合、 Internet Explorer モードで拡張ホットキー機能が有効になり、Internet Explorer と同様の作業ができます。
+
+このポリシーを無効にした場合、または構成しなかった場合は、Internet Explorer モードでは拡張ホットキーは動作しません。
+
+詳細については、「https://go.microsoft.com/fwlink/?linkid=2102115」を参照してください。</string>
+      <string id="DisableInternetExplorerApp">Internet Explorer 11 をスタンドアロンブラウザーとして無効にする</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">このポリシーを使用すると、Internet Explorer をスタンドアロン ブラウザーとして起動することを制限できます。
+
+このポリシーを有効にすると、次のポリシーが有効になります。
+- Internet Explorer 11 がスタンドアロン ブラウザーとして起動されないようにする。
+- Internet Explorer の使用を Microsoft Edge のネイティブの Internet Explorer モードに制限する。
+- Internet Explorer 11 の起動が試みられた場合、それをすべて Microsoft Edge 安定チャネル ブラウザーにリダイレクトする。
+- Internet Explorer 11 にリダイレクトするその他のポリシーがある場合、それらを上書きする。
+
+このポリシーを無効にした場合、または構成しなかった場合は、すべてのサイトが現在のアクティブなブラウザーの設定を使用して開かれます。注: このポリシーを有効にするには、Microsoft Edge 安定チャネルがインストールされている必要があります。</string>
+      <string id="NotifyDisableIEOptions_Never">しない</string>
+      <string id="NotifyDisableIEOptions_Always">常時</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">ユーザーごとに 1 回</string>
       <string id="VerMgmtDisable">Internet Explorer の古い ActiveX コントロールのブロックを無効する</string>
       <string id="IE_ExplainVerMgmtDisable">このポリシー設定では、Internet Explorer で特定の古い ActiveX コントロールをブロックするかどうかを決定します。イントラネット ゾーンでは、古い ActiveX コントロールがブロックされません。
 
@@ -4836,6 +4865,9 @@ LOBApp.contoso.com</string>
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">最初の選択</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">2 番目の選択</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">3 番目の選択</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Internet Explorer 11 ブラウザーが無効になっていることを通知する</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -161,9 +161,15 @@ Wenn Sie die Einstellung nicht konfigurieren, können die Mitarbeiter entscheide
       <string id="AllowSideloadingOfExtensions">Querladen der Erweiterung zulassen</string>
       <string id="AllowSideloadingOfExtensions_Explain">Beim Querladen werden nicht überprüfte Erweiterungen in Microsoft Edge installiert und ausgeführt. Mit dieser Richtlinie können Sie angeben, ob nicht überprüfte Erweiterungen in Microsoft Edge quergeladen werden können.
 
+
+
 Falls aktiviert oder nicht konfiguriert, ist das Querladen nicht überprüfter Erweiterungen in Microsoft Edge zulässig.
 
+
+
 Falls deaktiviert, ist das Querladen nicht überprüfter Erweiterungen in Microsoft Edge nicht zulässig. Erweiterungen können nur über den Microsoft Store (einschließlich eines Stores für Unternehmen), eine Unternehmensstorefront (z. B. das Unternehmensportal) oder PowerShell (mithilfe von Add-AppxPackage) installiert werden. Falls deaktiviert, verhindert diese Richtlinie nicht, dass Erweiterungen mithilfe von Add-AppxPackage über PowerShell quergeladen werden. Um dies zu verhindern, aktivieren Sie im Gruppenrichtlinien-Editor "Ermöglicht die Entwicklung von Windows Store-Apps und deren Installation von einer integrierten Entwicklungsumgebung (IDE) aus". Sie finden die Richtlinie unter:
+
+
 
 Computerkonfiguration &gt; Administrative Vorlagen &gt; Windows-Komponenten &gt; Bereitstellung von App-Paketen
 
@@ -171,7 +177,7 @@ Unterstützte Versionen: Microsoft Edge unter Windows 10, Version 1809
 Standardeinstellung: Deaktiviert oder nicht konfiguriert
 Verwandte Richtlinien:
 – Ermöglicht die Entwicklung von Windows Store-Apps und deren Installation von einer integrierten Entwicklungsumgebung (IDE) aus
-– Installation aller vertrauenswürdigen Apps zulassen</string>
+– Installation aller vertrauenswürdigen Apps zulassen​</string>
       <string id="AllowSmartScreen">Windows Defender SmartScreen konfigurieren</string>
       <string id="AllowSmartScreen_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob Windows Defender SmartScreen aktiviert wird. Windows Defender SmartScreen gibt Warnmeldungen aus, um Ihre Mitarbeiter vor potenziellen betrügerischen Phishing-Versuchen und Schadsoftware zu schützen. Standardmäßig ist Windows Defender SmartScreen aktiviert.
 
@@ -518,9 +524,14 @@ Wenn Sie diese Richtlinie auf 0 setzen, verwendet Microsoft Edge keinen Leerlauf
 Wenn deaktiviert oder nicht konfiguriert, ist der Standardwert 5 Minuten.
 
 Wenn Sie Microsoft Edge nicht im zugewiesenen Zugriff konfigurieren, wird diese Richtlinie nicht wirksam.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Anzeige der Benachrichtigung über Veralterung von Microsoft Edge unterdrücken</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">Sie können Microsoft Edge so konfigurieren, dass die Anzeige der Benachrichtigung unterdrückt wird, welche die Benutzer darüber informiert, dass die Unterstützung dieser Version von Microsoft Edge am 9. März 2021 endet. Wenn die Option aktiviert ist, wird die Benachrichtigung nicht angezeigt.
 
+Wenn sie deaktiviert oder nicht konfiguriert ist, wird die Benachrichtigung jedes Mal angezeigt, wenn Edge gestartet wird. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

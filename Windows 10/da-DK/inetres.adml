@@ -334,7 +334,7 @@ Hvis du deaktiverer denne politikindstilling, vil brugeren få vist en detaljere
 Hvis du undlader at konfigurere denne politikindstilling, kan brugeren slå detaljer i disse fejlmeddelelser til eller fra.</string>
       <string id="General_Zooming">Slå funktionen for sidezooming fra</string>
       <string id="GeneralColors">Standardfarver</string>
-      <string id="Help_NoFeedback">Menuen Hjælp: Fjern menupunktet Send feedback</string>
+      <string id="Help_NoFeedback">Menuen Hjælp: Fjern menuindstillingen "Send feedback"</string>
       <string id="Help_NoNetscapeHelp">Menuen Hjælp: Fjern menupunktet Til Netscape-brugere</string>
       <string id="Help_NoTip">Menuen Hjælp: Fjern menupunktet Dagens tip</string>
       <string id="Help_NoTutorial">Menuen Hjælp: Fjern menupunktet Præsentation</string>
@@ -876,7 +876,7 @@ Udfør følgende trin for at angive, hvordan objekter, der er godkendt af admini
       <string id="IE_ExplainMenusCategory">Indeholder indstillinger til at vise eller skjule menuer og menupunkter i Internet Explorer.</string>
       <string id="IE_ExplainMicrosoft_Chat">Angiver, at ActiveX-objektet Microsoft Chat er godkendt af administratoren.
 
-Dette objekt bruges af webforfattere til at opbygge tekst- og grafikbaserede chatgrupper til onlinesamtaler på World Wide Web.
+Dette objekt bruges af webforfattere til at oprette tekst- og grafikbaserede chatgrupper til onlinesamtaler på internettet.
 
 Hvis du aktiverer denne politik, kan objektet køres i sikkerhedszoner, hvor du angiver, at objekter, der er godkendt af administratoren, kan køres.
 
@@ -3527,13 +3527,13 @@ Denne politik påvirker ikke, hvilke sikkerhedsprotokoller der er aktiveret.
 
 Hvis du deaktiverer denne politik, anvendes systemstandarder.
 </string>
-      <string id="Advanced_ExplainSetWinInetProtocols">Denne politikindstilling giver dig mulighed for at slå understøttelse af TLS 1.0 (Transport Layer Security), TLS 1.1, TLS 1.2, SSL 2.0 (Secure Sockets Layer) eller SSL 3.0 fra i browseren. TLS og SSL er protokoller, der beskytter kommunikationen mellem browseren og målserveren. Når browseren forsøger at oprette en beskyttet kommunikation med målserveren, vil browseren og serveren forhandle om, hvilken protokol og udgave der skal bruges. Browseren og serveren forsøger at sammenligne hinandens lister over understøttede protokoller og versioner, og de vælger den mest foretrukne match.
+      <string id="Advanced_ExplainSetWinInetProtocols">Denne politikindstilling giver dig mulighed for at slå understøttelse af TLS 1.0 (Transport Layer Security), TLS 1.1, TLS 1.2, SSL 2.0 (Secure Sockets Layer) eller SSL 3.0 fra i browseren. TLS og SSL er protokoller, der beskytter kommunikationen mellem browseren og målserveren. Når browseren forsøger at oprette beskyttet kommunikation med målserveren, vil browseren og serveren forhandle om, hvilken protokol og udgave der skal bruges. Browseren og serveren forsøger at sammenligne hinandens lister over understøttede protokoller og versioner, og de vælger det mest foretrukne match.
 
 Hvis du aktiverer denne politikindstilling, vil browseren enten forhandle eller ikke forhandle en krypteret tunnel ved hjælp af de krypteringsmetoder, som du vælger på rullelisten.
 
 Hvis du deaktiverer eller undlader at konfigurere politikindstillingen, kan brugeren vælge, hvilken krypteringsmetode browseren understøtter.
 
-Bemærk! SSL 2.0 er som standard slået fra og understøttes ikke længere fra og med Windows 10 Version 1607. SSL 2.0 er en forældet sikkerhedsprotokol, og aktivering af SSL 2.0 hæmmer ydelse og funktionalitet af TLS 1.0.</string>
+Bemærk! SSL 2.0 er som standard slået fra og understøttes ikke længere fra og med Windows 10 version 1607. SSL 2.0 er en forældet sikkerhedsprotokol, og aktivering af SSL 2.0 hæmmer ydeevnen og funktionaliteten af TLS 1.0.</string>
       <string id="IE_ExplainNoPrinting">Denne politikindstilling giver dig mulighed for at styre, om brugere har adgang til menuen Udskriv. Fra og med Windows 8 kan du også bruge denne politikindstilling til at styre, om brugerne har adgang til pop op-vinduet Udskriv i Internet Explorer og alle printere under amuletten Enheder.
 
 Hvis du aktiverer denne politikindstilling, er menuen Udskriv ikke tilgængelig i Internet Explorer. Fra og med Windows 8 er pop op-vinduet Udskriv i Internet Explorer ikke tilgængeligt, og brugerne kan ikke se printere under amuletten Enheder.
@@ -3572,7 +3572,7 @@ Hvis du aktiverer denne politikindstilling, viser Internet Explorer indstillinge
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, viser Internet Explorer ikke indstillingen Klassifikationsfilter under fanen Indhold i dialogboksen Internetindstillinger.
 
-Bemærk! Denne politik understøttes ikke længere fra og med Windows 10 Version 1607.</string>
+Bemærk! Denne politik understøttes ikke længere fra og med Windows 10 version 1607.</string>
       <string id="Protocols_None">Brug ingen sikre protokoller</string>
       <string id="Protocols_SSL2">Brug kun SSL 2.0</string>
       <string id="Protocols_SSL3">Brug kun SSL 3.0</string>
@@ -3920,24 +3920,24 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anve
       <string id="NeedEdgeBrowser">Konfigurer, hvilken kanal i Microsoft Edge der skal bruges til at åbne omdirigerede websteder</string>
       <string id="IE_ExplainNeedEdgeBrowser">Giver dig mulighed for at konfigurere op til tre versioner af Microsoft Edge for at åbne et omdirigeret websted (i prioriteret rækkefølge). Brug denne politik, hvis dit miljø er konfigureret til at omdirigere websteder fra Internet Explorer 11 til Microsoft Edge. Hvis en eller flere af de valgte versioner ikke er installeret på enheden, vil denne indstilling blive ignoreret.
 
-Hvis der er installeret Windows Update til den næste version af Microsoft Edge* og den stabile Microsoft Edge-kanal, opstår der følgende problemer:
-- Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges den stabile Microsoft Edge-kanal. Det er standardfunktionsmåden.
-- Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta-version 77 eller nyere
-    3 = Microsoft Edge Dev-version 77 eller nyere
-    4 = Microsoft Edge Canary-version 77 eller nyere
+Hvis både Windows Update for den næste version af Microsoft Edge* og den stabile Microsoft Edge-kanal er installeret, opstår der følgende problemer:
+– Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges den stabile Microsoft Edge-kanal. Det er standardfunktionsmåden.
+– Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
+ 1 = Stabil Microsoft Edge
+ 2 = Microsoft Edge Beta-version 77 eller nyere
+ 3 = Microsoft Edge Dev-version 77 eller nyere
+ 4 = Microsoft Edge Canary-version 77 eller nyere
 
 Hvis Windows-opdateringen til den næste version af Microsoft Edge* eller den stabile Microsoft Edge-kanal ikke er installeret, opstår følgende funktionsmåder:
--Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges Microsoft Edge version 45 eller tidligere automatisk. Det er standardfunktionsmåden.
-- Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
-    0 = Microsoft Edge version 45 eller ældre
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta-version 77 eller nyere
-    3 = Microsoft Edge Dev-version 77 eller nyere
-    4 = Microsoft Edge Canary-version 77 eller nyere
+– Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges Microsoft Edge version 45 eller ældre automatisk. Det er standardfunktionsmåden.
+– Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
+ 0 = Microsoft Edge version 45 eller ældre
+ 1 = Stabil Microsoft Edge
+ 2 = Microsoft Edge Beta-version 77 eller nyere
+ 3 = Microsoft Edge Dev-version 77 eller nyere
+ 4 = Microsoft Edge Canary-version 77 eller nyere
 
-* Du kan finde flere oplysninger om Windows-opdateringen til den næste version af Microsoft Edge, herunder hvordan du deaktiverer den, i https://go.microsoft.com/fwlink/?linkid=2102115. Denne opdatering gælder kun for Windows 10 version 1709 og nyere.</string>
+* Du kan finde flere oplysninger om Windows-opdateringen til den næste version af Microsoft Edge, herunder hvordan du deaktiverer den, på https://go.microsoft.com/fwlink/?linkid=2102115. Denne opdatering gælder kun for Windows 10 version 1709 og nyere.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
       <string id="NeedEdgeBrowserChoice_ChromiumStable">Microsoft Edge Stable</string>
       <string id="NeedEdgeBrowserChoice_ChromiumBeta">Microsoft Edge Beta-version 77 eller nyere</string>
@@ -3958,6 +3958,35 @@ Relaterede politikker:
 - Send alle de websteder, der ikke er inkluderet på listen over websteder i Enterprise-tilstand til Microsoft Edge ("RestrictIE")
 
 Du kan få flere oplysninger om, hvordan denne politik bruges sammen med andre relaterede politikker for at oprette den bedste konfiguration for din organisation, på https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Tillad "Gem målskive som" i Internet Explorer-tilstand</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Denne politikindstilling giver administratorer mulighed for at aktivere genvejsmenuen "Gem destinationer som" i Internet Explorer-tilstand.
+
+Hvis du aktiverer denne politik, vises "Gem som Place ringe som" i genvejsmenuen i Internet Explorer-tilstand, og du kan arbejde på samme måde som Internet Explorer.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vises "Gem som Place ringe som" ikke i genvejsmenuen i Internet Explorer-tilstand.
+
+Du kan finde flere oplysninger i https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Aktivér udvidede genvejstaster i Internet Explorer-tilstand</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Med denne politikindstilling kan administratorer aktivere udvidede genvejstaster i Microsoft Edge Internet Explorer-tilstand, f.eks. "Ctrl+S" for at have funktionen "Gem som".
+
+Hvis du aktiverer denne politik, aktiveres udvidet genvejstastfunktion i Internet Explorer-tilstand, og de fungerer på samme måde som i Internet Explorer.
+
+Hvis du deaktiverer eller ikke konfigurerer denne politik, vil udvidede genvejstaster ikke fungere i Internet Explorer-tilstand.
+
+Du kan finde flere oplysninger under https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Deaktiver Internet Explorer 11 som en separat browser</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Denne politik gør det muligt at begrænse start af Internet Explorer som en separat browser.
+
+Hvis du aktiverer denne politik, vil den:
+- forhindre Internet Explorer 11 i at starte som en separat browser.
+- begrænse Internet Explorers brug af den oprindelige "Internet Explorer-tilstand" i Microsoft Edge.
+- omdirigere alle forsøg på start af Internet Explorer 11 til browseren stabil Microsoft Edge-kanal.
+- tilsidesætte alle andre politikker, der omdirigerer til Internet Explorer 11.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politik, åbnes alle websteder ved hjælp af de aktuelle aktive browserindstillinger. Bemærk! Den stabile Microsoft Edge-kanal skal være installeret, for at denne politik kan træde i kraft.</string>
+      <string id="NotifyDisableIEOptions_Never">Aldrig</string>
+      <string id="NotifyDisableIEOptions_Always">Altid</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Én gang pr. bruger</string>
       <string id="VerMgmtDisable">Deaktiver blokering af forældede ActiveX-kontrolelementer til Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Denne politikindstilling bestemmer, om Internet Explorer blokerer specifikke forældede ActiveX-kontrolelementer. Forældede ActiveX-kontrolelementer blokeres aldrig i intranetzonen.
 
@@ -4100,9 +4129,9 @@ Hvis du aktiverer denne politikindstilling, aktiveres automatisk opgradering af 
 
 Hvis du deaktiverer denne politikindstilling, vil automatisk opgradering af Internet Explorer være slået fra.
 
-Hvis ud ikke konfigurerer denne politik, kan brugere slå automatisk opdateringer til eller fra i dialogboksen Om Internet Explorer.
+Hvis du ikke konfigurerer denne politik, kan brugerne slå automatisk opdateringer til eller fra i dialogboksen Om Internet Explorer.
 
-Bemærk! Denne politik frarådes fra og med Windows 10 version 1703.</string>
+Bemærk! Denne politik udfases fra og med Windows 10 version 1703.</string>
       <string id="TurnOffFormatDetectionPhone">Slå identifikation af telefonnumre fra</string>
       <string id="TurnOffFormatDetectionPhone_Explain">Denne politikindstilling bestemmer, om telefonnumre skal genkendes og gøres til hyperlinks, som kan bruges til at starte systemets standardtelefonprogram.
 
@@ -4833,6 +4862,9 @@ Der er flere oplysninger under "Out-of-date ActiveX control blocking" i TechNet-
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Første valg</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Andet valg</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Tredje valg</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Giv besked om, at Internet Explorer 11-browseren er deaktiveret</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -334,7 +334,7 @@ Se desativar esta definição de política, quando ocorrer um problema de ligaç
 Se não configurar esta definição de política, o utilizador poderá ativar ou desativar os detalhes nestas mensagens de erro.</string>
       <string id="General_Zooming">Desativar a funcionalidade de zoom na página</string>
       <string id="GeneralColors">Cores Gerais</string>
-      <string id="Help_NoFeedback">Menu Ajuda: Remover opção de menu 'Enviar Comentários'</string>
+      <string id="Help_NoFeedback">Menu Ajuda: Remover opção de menu "Enviar Comentários"</string>
       <string id="Help_NoNetscapeHelp">Menu Ajuda: Remover opção de menu 'Para Utilizadores do Netscape'</string>
       <string id="Help_NoTip">Menu Ajuda: Remover opção de menu 'Sugestão do Dia'</string>
       <string id="Help_NoTutorial">Menu Ajuda: Remover opção de menu 'Introdução'</string>
@@ -3924,19 +3924,19 @@ Se desativar ou não configurar esta definição, ocorre o comportamento padrão
 Se o Windows Update para a versão seguinte do Microsoft Edge* e o canal estável Microsoft Edge estiverem instalados, ocorrem os seguintes comportamentos:
 - Se desativar ou não configurar esta política, é utilizado o canal estável Microsoft Edge. Este é o comportamento predefinido.
 - Se ativar esta política, pode configurar o redirecionamento de sites para abertura em até três dos seguintes canais:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta, versão 77 ou posterior
-    3 = Microsoft Edge Dev, versão 77 ou posterior
-    4 = Microsoft Edge Canary, versão 77 ou posterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta, versão 77 ou posterior
+ 3 = Microsoft Edge Dev, versão 77 ou posterior
+ 4 = Microsoft Edge Canary, versão 77 ou posterior
 
 Se o Windows Update para a versão seguinte do Microsoft Edge* ou o canal estável Microsoft Edge não estiverem instalados, ocorrem os seguintes comportamentos:
 - Se desativar ou não configurar esta política, é utilizada automaticamente a versão 45 ou posterior do Microsoft Edge. Este é o comportamento predefinido.
 - Se ativar esta política, pode configurar o redirecionamento de sites para abertura em até três dos seguintes canais:
-    0 = Microsoft Edge, versão 45 ou posterior
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta, versão 77 ou posterior
-    3 = Microsoft Edge Dev, versão 77 ou posterior
-    4 = Microsoft Edge Canary, versão 77 ou posterior
+ 0 = Microsoft Edge, versão 45 ou posterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta, versão 77 ou posterior
+ 3 = Microsoft Edge Dev, versão 77 ou posterior
+ 4 = Microsoft Edge Canary, versão 77 ou posterior
 
 *Para obter mais informações sobre o Windows Update para a versão seguinte do Microsoft Edge, incluindo como a desativar, aceda a https://go.microsoft.com/fwlink/?linkid=2102115. Esta atualização aplica-se apenas à versão 1709 ou superior do Windows 10.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3959,6 +3959,35 @@ Políticas relacionadas:
 - Enviar todos os sites não incluídos na Lista de Sites do Modo de Empresa para o Microsoft Edge ("RestrictIE")
 
 Para obter mais informações sobre como utilizar esta política juntamente com outras políticas relacionadas para criar a configuração ideal para a sua empresa, consulte https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Permitir que "guardar destino como" no modo do Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Esta definição de política permite aos administradores ativar o menu de contexto "guardar destino como" no modo de Internet Explorer.
+
+Se ativar esta política, "guardar destino como" será apresentado no menu de contexto do modo do Internet Explorer e funcionar o mesmo como o Internet Explorer.
+
+Se desativar ou não configurar esta definição de política, "guardar destino como" não será apresentado no menu de contexto do modo de Internet Explorer.
+
+Para mais informações, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Ative teclas de atalho alargadas no modo Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Esta configuração de política concede aos administradores permitir que as teclas de atalho de modo estendido do Microsoft Edge Internet Explorer, tais como "Ctrl+S" tenham a funcionalidade "Guardar como".
+
+Se ativar esta política, a funcionalidade estendida da tecla de atalho é ativada no modo Internet Explorer e funciona da mesma forma que o Internet Explorer.
+
+Se desativar, ou não configurar esta política, as teclas de atalho alargadas não funcionarão no modo Internet Explorer.
+
+Para mais informações, veja https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Desativar o Internet Explorer 11 como um browser autónomo</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Esta política permite-lhe restringir o início do Internet Explorer como browser autónomo.
+
+Se ativar a política, esta:
+– Impede que o Internet Explorer 11 seja iniciado como um browser autónomo.
+– Restringe a utilização do Internet Explorer ao "modo Internet Explorer" do Microsoft Edge
+– Redireciona todas as tentativas de iniciar o Internet Explorer 11 para o browser de canal estável Microsoft Edge.
+– Substitui todas as outras políticas que redirecionem para o Internet Explorer 11.
+
+Se desativar ou não configurar esta política, todos os sites serão abertos com as definições atuais do browser. Nota: o canal estável Microsoft Edge tem de estar instalado para que esta política tenha efeito.</string>
+      <string id="NotifyDisableIEOptions_Never">Nunca</string>
+      <string id="NotifyDisableIEOptions_Always">Sempre</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Uma vez por utilizador</string>
       <string id="VerMgmtDisable">Desativar bloqueio de controlos ActiveX desatualizados para Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Esta definição de política determina se o Internet Explorer bloqueia controlos ActiveX desatualizados específicos. Controlos ActiveX desatualizados nunca são bloqueados na Zona da Intranet.
 
@@ -4834,6 +4863,9 @@ Para obter mais informações, consulte "Bloqueio de controlo do ActiveX desatua
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Primeira escolha</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Segunda escolha</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Terceira escolha</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notificar que o navegador Internet Explorer 11 está desactivado</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

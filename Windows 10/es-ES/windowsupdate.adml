@@ -64,29 +64,29 @@ Nota: Esta directiva no se aplica a Windows RT.
 
 Esta configuración te permite especificar si se habilitan las actualizaciones automáticas en este equipo. Si se habilita el servicio, debes seleccionar una de las cuatro opciones que figuran en Configuración de directiva de grupo:
 
-        2 = Notificar antes de descargar e instalar cualquier actualización.
+ 2 = Notificar antes de descargar e instalar cualquier actualización.
 
-        Cuando Windows encuentre actualizaciones aplicables a este equipo, se notificará a los usuarios que hay actualizaciones listas para descargar. Los usuarios pueden descargar e instalar cualquier actualización disponible desde Windows Update.
+ Cuando Windows encuentre actualizaciones aplicables a este equipo, se notificará a los usuarios que hay actualizaciones listas para descargar. Los usuarios pueden descargar e instalar cualquier actualización disponible desde Windows Update.
 
-        3 = (valor predeterminado) Descargar las actualizaciones automáticamente y notificar cuando estén listas para instalarse.
+ 3 = (valor predeterminado) Descargar las actualizaciones automáticamente y notificar cuando estén listas para instalarse.
 
-        Windows busca las actualizaciones que se aplican al equipo y las descarga en segundo plano (no se notifica al usuario ni se le interrumpe durante el proceso). Una vez completadas las descargas, se notifica a los usuarios que están listas para instalarse. Los usuarios pueden instalarlas desde Windows Update.
+ Windows busca las actualizaciones que se aplican al equipo y las descarga en segundo plano (no se notifica al usuario ni se le interrumpe durante el proceso). Una vez completadas las descargas, se notifica a los usuarios que están listas para instalarse. Los usuarios pueden instalarlas desde Windows Update.
 
-        4 = Descargar las actualizaciones automáticamente e instalarlas según la programación especificada a continuación.
+ 4 = Descargar las actualizaciones automáticamente e instalarlas según la programación especificada a continuación.
 
-        Cuando se seleccione "Automático" como la hora de instalación programada, Windows buscará, descargará e instalará automáticamente las actualizaciones. El dispositivo se reiniciará según la configuración predeterminada de Windows, a menos que la directiva de grupo indique lo contrario. (Se aplica a Windows 10, versión 1809 y versiones posteriores).
+ Cuando se seleccione "Automático" como la hora de instalación programada, Windows buscará, descargará e instalará automáticamente las actualizaciones. El dispositivo se reiniciará según la configuración predeterminada de Windows, a menos que la directiva de grupo indique lo contrario. (Se aplica a Windows 10, versión 1809 y versiones posteriores).
 
-        Especifica la programación mediante las opciones de la configuración de la directiva de grupo. Para las versiones 1709 posteriores, hay una opción adicional que limita la actualización a una frecuencia semanal, quincenal o mensual. Si no se especifica ninguna programación, la programación predeterminada para todas las instalaciones será todos los días a las 15:00. Si alguna actualización requiere que se reinicie el equipo para completar la instalación, Windows reiniciará el equipo automáticamente. (Si un usuario ha iniciado sesión en el equipo cuando Windows está listo para reiniciarse, se le notificará y se le dará la opción de retrasar el reinicio).
+ Especifica la programación mediante las opciones de la configuración de la directiva de grupo. Para las versiones 1709 posteriores, hay una opción adicional que limita la actualización a una frecuencia semanal, quincenal o mensual. Si no se especifica ninguna programación, la programación predeterminada para todas las instalaciones será todos los días a las 15:00. Si alguna actualización requiere que se reinicie el equipo para completar la instalación, Windows reiniciará el equipo automáticamente. (Si un usuario ha iniciado sesión en el equipo cuando Windows está listo para reiniciarse, se le notificará y se le dará la opción de retrasar el reinicio).
 
-        En Windows 8 y versiones posteriores, puedes establecer que las actualizaciones se instalen durante el mantenimiento automático en lugar de según una programación específica. El mantenimiento automático instalará las actualizaciones cuando el equipo no esté en uso y evitará hacerlo cuando el equipo funcione con batería. Si el mantenimiento automático no puede instalar las actualizaciones durante 2 días, Windows Update las instalará de inmediato. De este modo, se notificará a los usuarios sobre un próximo reinicio, y dicho reinicio solo se realizará si no hay posibilidad de pérdida accidental de datos.
+ En Windows 8 y versiones posteriores, puedes establecer que las actualizaciones se instalen durante el mantenimiento automático en lugar de según una programación específica. El mantenimiento automático instalará las actualizaciones cuando el equipo no esté en uso y evitará hacerlo cuando el equipo funcione con batería. Si el mantenimiento automático no puede instalar las actualizaciones durante 2 días, Windows Update las instalará de inmediato. De este modo, se notificará a los usuarios sobre un próximo reinicio, y dicho reinicio solo se realizará si no hay posibilidad de pérdida accidental de datos.
 
-        5 = Permitir a los administradores locales seleccionar el modo de configuración en el que la característica Actualizaciones automáticas debe notificar e instalar las actualizaciones. (Esta opción no se ha trasladado a ninguna de las versiones de Windows 10).
+ 5 = Permitir a los administradores locales seleccionar el modo de configuración en el que la característica Actualizaciones automáticas debe notificar e instalar las actualizaciones. (Esta opción no se ha trasladado a ninguna de las versiones de Windows 10).
 
-        Con esta opción, se permitirá a los administradores locales usar el Panel de control de Windows Update para seleccionar la opción de configuración que deseen. No se permitirá a los administradores locales deshabilitar la configuración de Actualizaciones automáticas.
+ Con esta opción, se permitirá a los administradores locales usar el Panel de control de Windows Update para seleccionar la opción de configuración que deseen. No se permitirá a los administradores locales deshabilitar la configuración de Actualizaciones automáticas.
 
-        7 = Notificar la instalación y notificar el reinicio. (solo Windows Server)
+ 7 = Notificar la instalación y notificar el reinicio. (solo Windows Server)
 
-        Con esta opción de Windows Server 2016, que solo se aplica a los dispositivos con SKU de servidor, los administradores locales podrán usar Windows Update para realizar las instalaciones o los reinicios de forma manual.
+ Con esta opción de Windows Server 2016, que solo se aplica a los dispositivos con SKU de servidor, los administradores locales podrán usar Windows Update para realizar las instalaciones o los reinicios de forma manual.
 
 Si el estado de esta directiva se establece en Deshabilitado, todas las actualizaciones disponibles en Windows Update deberán descargarse e instalarse manualmente. Para ello, busca Windows Update en Inicio.
 
@@ -132,9 +132,9 @@ Si el estado se establece en No configurado, el uso de la característica Actual
       <string id="AutoUpdateSchTimeAuto">Automático</string>
       <string id="CorpWuURL">Especificar la ubicación del servicio Windows Update en la intranet</string>
       <string id="CorpWuURL_Help">
-        Especifica un servidor de la intranet que hospede actualizaciones de Microsoft Update. Puedes usar este servicio de actualización para actualizar automáticamente equipos de la red.
+        Especifica un servidor de la intranet para que reciba actualizaciones de Microsoft Update. Puedes usar este servicio de actualización para actualizar automáticamente equipos de la red.
 
-        Esta opción te permite especificar un servidor en la red para que funcione como un servicio de actualización interno. El cliente Actualizaciones automáticas buscará en este servicio actualizaciones que se apliquen a los equipos de la red.
+        Esta opción te permite especificar un servidor en la red para que funcione como un servicio de actualización interno. El cliente Actualizaciones automáticas buscará en este servicio actualizaciones que se apliquen a los equipos de tu red.
 
         Para usar esta opción, debes establecer dos valores de nombre de servidor: el servidor desde el que el cliente de Actualizaciones automáticas detecta y descarga las actualizaciones y el servidor en el que las estaciones de trabajo actualizadas cargan las estadísticas. Puedes establecer ambos valores en el mismo servidor. Se puede especificar un valor de nombre de servidor opcional para configurar el agente de Windows Update para que descargue actualizaciones desde un servidor de descargas alternativo, en lugar del servicio de actualización de la intranet.
 
@@ -144,23 +144,21 @@ Si el estado se establece en No configurado, el uso de la característica Actual
 
         El servidor de descargas alternativo configura el agente de Windows Update para descargar archivos desde un servidor de descargas alternativo, en lugar del servicio de actualización de la intranet.
 
-        La opción para descargar archivos con URL faltantes permite descargar contenido desde el servidor de descargas alternativo cuando no haya ninguna URL de descarga para los archivos de los metadatos de la actualización. Esta opción solo se debe usar cuando el servicio de actualización de la intranet no proporciona las URL de descarga en los metadatos de actualización para los archivos del servidor de descargas alternativo.
+        La opción para descargar archivos con URL que falten permite descargar contenido desde el servidor de descargas alternativo cuando no haya ninguna URL de descarga para los archivos de los metadatos de la actualización. Esta opción solo se debe usar cuando el servicio de actualización de la intranet no proporciona las URL de descarga en los metadatos de actualización para los archivos del servidor de descargas alternativo.
 
         Nota: si la directiva "Configurar Actualizaciones automáticas" está deshabilitada, esta directiva no tiene ningún efecto.
 
-        Nota: si no está establecida la opción "Definir el servidor de descargas alternativo", se usará el servicio de actualización de la intranet de forma predeterminada para la descarga de actualizaciones.
+        Nota: si no está establecida la opción "Servidor de descargas alternativo", se usará el servicio de actualización de la intranet de forma predeterminada para la descarga de actualizaciones.
 
-        Nota: la opción "Descargar archivos sin Url..." solo se usa si se establece la opción "Definir el servidor de descargas alternativo".
+        Nota: la opción "Descargar archivos sin Url..." solo se usa si se establece la opción "Servidor de descargas alternativo".
 
         Nota: esta directiva no es compatible con Windows RT. Si estableces esta directiva, no tendrá ningún efecto en equipos con Windows RT.
 
-        Nota sobre los servidores proxy: para garantizar el más alto nivel de seguridad, Microsoft recomienda proteger WSUS con el protocolo TLS/SSL, utilizando de este modo servidores de intranet basados ​​en HTTPS para mantener los sistemas seguros. Si se requiere un proxy, recomendamos configurar el proxy del sistema. 
+         para garantizar el más alto nivel de seguridad, Microsoft recomienda proteger WSUS con el protocolo TLS/SSL, utilizando de este modo servidores de intranet basados en HTTPS para mantener los sistemas seguros. Si se requiere un proxy, recomendamos configurar el proxy del sistema. Para garantizar los más altos niveles de seguridad, aprovecha además el certificado WSUS TLS que se encuentra en todos los dispositivos.
 
-        Seleccionar un comportamiento de proxy no tendrá ningún efecto en los clientes que usan servidores de intranet basados en HTTPS para detectar actualizaciones. 
+      Para mantener a los clientes inherentemente seguros, ya no permitimos que los servidores de intranet basados en HTTP aprovechen el proxy del usuario de forma predeterminada para detectar actualizaciones. Si necesitas aprovechar el proxy de usuario para detectar actualizaciones mientras usas un servidor de intranet basado en HTTP a pesar de las vulnerabilidades que presenta, debes configurar el comportamiento del proxy para "Permitir que el proxy de usuario se use como reserva si falla la detección usando el proxy del sistema".
 
-        Para mantener a los clientes inherentemente seguros, ya no permitimos que los servidores de intranet basados en HTTP aprovechen el proxy del usuario de forma predeterminada para detectar actualizaciones. Si necesitas aprovechar el proxy de usuario para detectar actualizaciones mientras usas un servidor de intranet basado en HTTP a pesar de las vulnerabilidades que presenta, debes configurar el comportamiento del proxy para "Permitir que el proxy de usuario se use como reserva si falla la detección usando el proxy del sistema".
-
-        La detección de actualizaciones fallará cuando los servidores de intranet basados en HTTP se usen sin un proxy del sistema configurado si la directiva para usar un comportamiento de proxy alternativo no está configurada.</string>
+          La detección de actualizaciones fallará cuando los servidores de intranet basados en HTTP se usen sin un proxy del sistema configurado si la directiva para usar un comportamiento de proxy alternativo no está configurada.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Usar solo el proxy del sistema para detectar actualizaciones (predeterminado)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Permitir que el proxy del usuario se utilice como reserva si se produce un error en la detección con el proxy del sistema</string>
       <string id="DetectionFrequency_Help">Especifica las horas que Windows usará para determinar cuánto debe esperar antes de comprobar si existen actualizaciones disponibles. El tiempo de espera exacto se obtiene al sumar el valor específico y una variante aleatoria de entre 0 y 4 horas.
@@ -322,7 +320,7 @@ Si habilita esta directiva, se deshabilitará esa funcionalidad y podría causar
 
 Nota: esta directiva solo se aplica cuando el equipo está configurado para conectarse a un servicio de actualización de la intranet mediante la directiva "Especificar la ubicación del servicio Windows Update en la intranet".</string>
       <string id="DeferUpdateCat">Actualización de Windows para empresas</string>
-      <string id="ManagePreviewBuilds_Title">Administrar preliminares</string>
+      <string id="ManagePreviewBuilds_Title">Administrar compilaciones preliminares</string>
       <string id="ManagePreviewBuilds_Help">Si seleccionas "Deshabilitar las versiones preliminares", estas no se instalarán en el dispositivo y así evitarás que los usuarios participen en el Programa Windows Insider mediante Configuración -&gt; Actualizaciones y seguridad.
 
 Si seleccionas "Disable preview builds once next release is public", no se instalarán las versiones preliminares cuando la siguiente versión de Windows se lance al público. Esta opción puede serte de utilidad si tienes el dispositivo configurado para instalar versiones preliminares y quieres que deje de recibir paquetes piloto. Igualmente, esta opción proporcionará versiones preliminares hasta que el dispositivo tenga la siguiente versión pública.
@@ -337,7 +335,7 @@ Si seleccionas "Enable preview builds", podrás instalarlas en el dispositivo. L
       <string id="SemiAnnualChannelFeatureUpdates">Canal semianual</string>
       <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Canal semestral para la versión 1809 y versiones anteriores (en desuso)</string>
       <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Canal semestral (dirigido) para la versión 1809 y versiones anteriores (en desuso)</string>
-      <string id="DeferFeatureUpdates_Title">Seleccione cuando se reciben las compilaciones de vista previa y actualizaciones de características</string>
+      <string id="DeferFeatureUpdates_Title">Seleccione cuando se reciben las compilaciones preliminares y actualizaciones de características</string>
       <string id="DeferFeatureUpdates_Help">Habilita esta directiva para especificar el nivel de versiones preliminares o actualizaciones de características que quieres recibir y cuándo.
 
 * Versión preliminar (rápida): los dispositivos establecidos en este nivel serán los primeros en recibir nuevas compilaciones de Windows con características que todavía no están disponibles para el público general. Selecciona Rápido para participar en la identificación y notificación de problemas a Microsoft, y envía tus sugerencias sobre la nueva funcionalidad.
@@ -377,6 +375,10 @@ Si deshabilitas esta directiva o no la configuras, Windows Update no alterará s
       <string id="TargetReleaseVersion_Help">Habilita esta directiva para especificar una versión de actualización de característica que se va a solicitar en exámenes posteriores.
 
 Escribe la versión tal como aparece en la página de información de la versión de Windows aka.ms/ReleaseInformationPage</string>
+      <string id="DisableWUfBSafeguards">Deshabilitar la protección de las Actualizaciones de características</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Habilite esta configuración cuando se deban implementar Actualizaciones de características en los dispositivos sin bloquear ninguna retención de seguridad. Las retenciones de seguridad son problemas de compatibilidad conocidos que impiden que se implemente la actualización en los dispositivos afectados hasta que se solucione el problema. Habilitar esta directiva puede permitir que una organización implemente la Actualización de características en los dispositivos para pruebas, o bien que implemente la Actualización de características sin bloquear las protecciones.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">No incluyas controladores con las actualizaciones de Windows</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Habilita esta directiva para no incluir controladores con las actualizaciones de calidad de Windows.
 
@@ -614,19 +616,21 @@ Importante: Si decides no recibir notificaciones de actualización y también qu
       <string id="ExcludingRebootWarnings">1 – Deshabilitar todas las notificaciones, excepto las advertencias de reinicio</string>
       <string id="IncludingRebootWarnings">2 – Deshabilitar todas las notificaciones, incluidas las advertencias de reinicio</string>
       <string id="ComplianceDeadline_Title">Especificar fechas límite para actualizaciones y reinicios automáticos</string>
-      <string id="ComplianceDeadline_Help">Esta directiva permite especificar el número de días que un usuario tiene antes de que se instalen automáticamente las actualizaciones de calidad y características en sus dispositivos, así como un período de gracia tras el cual se realizan reinicios automáticos. Las actualizaciones y los reinicios se producirán independientemente de las horas activas y el usuario no podrá volver a programarlos.
+      <string id="ComplianceDeadline_Help">Esta directiva te permite especificar el número de días antes de que se instalen automáticamente las actualizaciones de calidad y características en los dispositivos, y un período de gracia tras el cual se producen automáticamente los reinicios necesarios.
 
-Los plazos de actualización de características y de calidad pueden ser de hasta 30 días. El período de gracia de reinicio automático puede comprender entre 0 y 7 días.
+Establece fechas límite para las actualizaciones de características y de calidad para cumplir los objetivos de cumplimiento. Las actualizaciones se descargarán e instalarán en cuanto se ofrezcan y se intentará realizar reinicios automáticos fuera de las horas activas. Una vez que se haya superado la fecha límite, los reinicios se producirán independientemente de las horas activas y los usuarios no podrán volver a programar la actualización. Si la fecha límite se establece en 0 días, la actualización se instalará inmediatamente tras su recepción, pero puede que no termine el mismo día que empieza, según la disponibilidad del dispositivo y la conectividad de la red.
 
-También puedes deshabilitar los reinicios automáticos hasta el final de dicho período de gracia.
+Establece un período de gracia para las actualizaciones de características y las actualizaciones de calidad, con el fin de dar a los usuarios un tiempo mínimo para administrar los reinicios una vez que se instalen las actualizaciones. Los usuarios podrán programar los reinicios durante el período de gracia y Windows aún podrá reiniciarse automáticamente fuera de las horas activas si los usuarios deciden no programar los reinicios. El período de gracia puede no surtir efecto si los usuarios ya tienen establecido en las configuraciones de fecha límite un número de días mayor que el período de gracia.
+
+Puedes configurar el dispositivo para retrasar el reinicio hasta que hayan expirado la fecha límite y el período de gracia.
 
 Si deshabilitas o no configuras esta directiva, los dispositivos recibirán actualizaciones y se reiniciarán según la programación predeterminada.
 
 Esta directiva invalidará las siguientes directivas:
-1.  Especificar la fecha límite antes del reinicio automáticamente para instalar las actualizaciones
-2.  Especificar la transición de reinicio establecido y la programación de notificaciones
-3.  Reiniciar siempre automáticamente a la hora programada
-4.  No reiniciar automáticamente para instalar actualizaciones automáticas programadas si hay usuarios con una sesión iniciada
+1. Especificar la fecha límite antes del reinicio automático para la instalación de la actualización
+2. Especificar la transición de Reinicio establecido y la programación de notificaciones para actualizaciones
+3. Reiniciar siempre automáticamente a la hora programada
+4. Configurar actualizaciones automáticas
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -692,7 +696,8 @@ Esta directiva invalidará las siguientes directivas:
         </textBox>
         <text>(ejemplo: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Descarga archivos sin URL en los metadatos si se estableció un servidor de descargas alternativo.</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Seleccione el comportamiento del proxy para el cliente de Windows Update para detectar actualizaciones con el servicio basado en no TLS (HTTP):</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">No fuerces el anclaje de certificados TLS para que el cliente de Windows Update detecte las actualizaciones.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Seleccione el comportamiento del proxy para el cliente de Windows Update para detectar actualizaciones:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Comprobar actualizaciones con el siguiente</text>
@@ -731,7 +736,7 @@ Esta directiva invalidará las siguientes directivas:
         <textBox refId="TargetReleaseVersionId">
           <label>Versión de destino de Actualizaciones de características</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
         <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Establecer el comportamiento de recibir compilaciones de vista previa:</dropdownList>
       </presentation>
@@ -739,7 +744,7 @@ Esta directiva invalidará las siguientes directivas:
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Seleccione el nivel de preparación de Windows para obtener las actualizaciones que desea recibir:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Después del lanzamiento de una vista previa de compilación o actualización de características, aplazar su recepción por la siguiente cantidad de días:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>Pausar actualizaciones de características iniciando o compilaciones de vista previa:</label>
+          <label>Pausar actualizaciones de características iniciando o compilaciones preliminares:</label>
         </textBox>
         <text>(ejemplo de formato aaaa-mm-dd: 2016-10-30)</text>
       </presentation>
@@ -797,12 +802,13 @@ Esta directiva invalidará las siguientes directivas:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Especificar las opciones de visualización de las notificaciones de actualización:</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Especifica el número de días (hasta 30 días) que el usuario tiene antes de que las actualizaciones se ejecuten automáticamente, con independencia de las horas activas y sin posibilidad de reprogramarlo.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Actualizaciones de calidad (días):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Actualizaciones de características (días):</dropdownList>
+        <text>Actualizaciones de calidad</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Fecha límite (días):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Período de gracia (días):</dropdownList>
         <text></text>
-        <text>Especifica un período de gracia para el reinicio automático (entre 0 y 7 días) desde el momento en que se requiere un reinicio hasta que el dispositivo se reinicie automáticamente. Los dispositivos se reiniciarán con independencia de las horas activa y sin posibilidad de reprogramarlo.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Período de gracia (días)</dropdownList>
+        <text>Actualizaciones de características</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Fecha límite (días):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Período de gracia (días):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">No reiniciar automáticamente hasta el final del período de gracia</checkBox>
       </presentation>

@@ -7,14 +7,14 @@
     <stringTable>
       <!-- Product -->
       <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Vain Microsoft Edge 1.0</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Windows 10:n Microsoft Edge tai uudempi</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Windows 10:n Microsoft Edge, versio 1511 tai uudempi</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Windows 10:n Microsoft Edge, versio 1607 tai uudempi</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Windows 10:n Microsoft Edge, versio 1703 tai uudempi</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Windows 10:n Microsoft Edge, versio 1709 tai uudempi</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Windows 10:n Microsoft Edge, versio 1708 tai uudempi</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge Windows 10 -versiossa 1803 tai sitä uudemmassa</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge - Windows 10, versio 1809 tai uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge – Windows 10 tai sitä uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge – Windows 10, versio 1511 tai sitä uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge – Windows 10, versio 1607 tai sitä uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge – Windows 10, versio 1703 tai sitä uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge – Windows 10, versio 1709 tai sitä uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge – Windows 10, versio 1708 tai sitä uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge – Windows 10, versio 1803 tai sitä uudempi</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge – Windows 10, versio 1809 tai sitä uudempi</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge -luokka</string>
 
@@ -167,11 +167,11 @@ Jos käytäntö poistetaan käytöstä, vahvistamattomien laajennusten ohilataus
 
 Tietokoneasetukset &gt; Hallintamallit &gt; Windowsin osat &gt; Sovelluspaketin hallinta
 
-Tuetut versiot: Microsoft Edge - Windows 10, versio 1809
+Tuetut versiot: Microsoft Edge – Windows 10, versio 1809
 Oletusasetus: poistettu käytöstä tai ei määritetty
 Aiheeseen liittyvät käytännöt:
 - Salli Windows-kaupan sovellusten kehittäminen ja asentaminen integroidusta kehitysympäristöstä (IDE)
-- Salli kaikkien luotettavien sovellusten asennus</string>
+- Salli kaikkien luotettavien sovellusten asennus​</string>
       <string id="AllowSmartScreen">Määritä Windows Defender SmartScreen</string>
       <string id="AllowSmartScreen_Explain">Tämän käytäntöasetuksen avulla voit määrittää, otetaanko Windows Defender SmartScreen käyttöön. Windows Defender SmartScreen antaa varoitussanomia, jotka auttavat suojaamaan työntekijöitäsi mahdollisilta tietokalasteluhuijauksilta ja haittaohjelmilta. Oletusarvon mukaan Windows Defender SmartScreen on käytössä.
 
@@ -482,7 +482,7 @@ Jos estät esilatauksen, Microsoft Edge ei lataa aloitussivua tai uutta välileh
       <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">Voit määrittää Microsoft Edgen lähettämään yrityslaitteista, joissa on kaupallinen tunnus, pelkästään intranet-historian, pelkän Internet-historian tai molemmat Desktop Analyticsiin. Jos Microsoft Edge poistetaan käytöstä tai sitä ei määritetä, se ei lähetä selaushistoriaa Desktop Analyticsille.
 
 Tuetut versiot: Microsoft Edge – Windows 10, versio 1809
-Oletusasetus: Poistettu käytöstä tai ei määritetty (tietoja ei kerätä eikä lähetetä)</string>
+Oletusasetus: poistettu käytöstä tai ei määritetty (tietoja ei kerätä eikä lähetetä)</string>
       <string id="ZonesList_IntranetOnly">Salli vain intranet-historian lähettäminen</string>
       <string id="ZonesList_InternetOnly">Salli vain Internet-historian lähettäminen</string>
       <string id="ZonesList_Both">Salli sekä intranet- että Internet-historian lähettäminen</string>
@@ -518,9 +518,14 @@ Jos määrität tämän käytännön arvoksi 0, käyttämättömyysajastinta ei 
 Jos käytäntö ei ole käytössä tai sitä ei määritetä, oletusarvo on 5 minuuttia.
 
 Jos et määritä Microsoft Edgeä määritettyä käyttöä varten, tämä käytäntö ei tule voimaan.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Estä Edgen käytöstäpoistoilmoituksen näyttäminen</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">Voit määrittää Microsoft Edgen estämään ilmoituksen näyttämisen, jossa kerrotaan, että tämän Microsoft Edge -version tuki päättyi 9. maaliskuuta, 2021. Jos asetus on käytössä, ilmoitus ei näy.
 
+Jos asetus ei ole käytössä tai sitä ei ole määritetty, ilmoitus näytetään aina, kun Edge käynnistetään. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

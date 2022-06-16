@@ -334,7 +334,7 @@
 如果未配置此策略设置，则用户可以启用或关闭这些错误消息中的详细信息。</string>
       <string id="General_Zooming">关闭页面缩放功能</string>
       <string id="GeneralColors">常规颜色</string>
-      <string id="Help_NoFeedback">“帮助”菜单: 删除“发送反馈意见”菜单选项</string>
+      <string id="Help_NoFeedback">“帮助”菜单: 删除“发送反馈”菜单选项</string>
       <string id="Help_NoNetscapeHelp">“帮助”菜单: 删除“Netscape 用户”菜单选项</string>
       <string id="Help_NoTip">“帮助”菜单: 删除“每日提示”菜单选项</string>
       <string id="Help_NoTutorial">“帮助”菜单: 删除“教程”菜单选项</string>
@@ -3923,19 +3923,19 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果同时安装了适用于下一版本 Microsoft Edge* 的 Windows 更新和 Microsoft Edge 稳定渠道，则会发生以下行为:
 - 如果禁用或未配置此策略，则使用 Microsoft Edge 稳定渠道。这是默认行为。
 - 如果启用此策略，则可以将重定向的站点配置为最多在以下三个渠道中打开，其中:
-    1 = Microsoft Edge 稳定渠道
-    2 = Microsoft Edge 测试版本 77 或更高版本
-    3 = Microsoft Edge Dev 版本 77 或更高版本
-    4 = Microsoft Edge Canary 版本 77 或更高版本
+ 1 = Microsoft Edge 稳定渠道
+ 2 = Microsoft Edge 测试版本 77 或更高版本
+ 3 = Microsoft Edge Dev 版本 77 或更高版本
+ 4 = Microsoft Edge Canary 版本 77 或更高版本
 
 如果未安装适用于下一版本 Microsoft Edge* 的 Windows 更新或 Microsoft Edge 稳定渠道，则会发生以下行为:
 - 如果禁用或未配置此策略，则会自动使用 Microsoft Edge 45 或更早版本。这是默认行为。
 - 如果启用此策略，则可以将重定向的站点配置为最多在以下三个渠道中打开，其中:
-    0 = Microsoft Edge 版本 45 或更早版本
-    1 = Microsoft Edge 稳定渠道
-    2 = Microsoft Edge 测试版本 77 或更高版本
-    3 = Microsoft Edge Dev 版本 77 或更高版本
-    4 = Microsoft Edge Canary 版本 77 或更高版本
+ 0 = Microsoft Edge 版本 45 或更早版本
+ 1 = Microsoft Edge 稳定渠道
+ 2 = Microsoft Edge 测试版本 77 或更高版本
+ 3 = Microsoft Edge Dev 版本 77 或更高版本
+ 4 = Microsoft Edge Canary 版本 77 或更高版本
 
 *有关适用于下一版本 Microsoft Edge 的 Windows 更新的详细信息(包括如何禁用)，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115。此更新仅适用于 Windows 10 版本 1709 及更高版本。</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3958,35 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 - 将企业模式站点列表中不包含的所有站点发送到 Microsoft Edge ("RestrictIE")
 
 有关如何将此策略与其他相关策略结合使用以为你的组织创建最佳配置的详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2094210。</string>
+      <string id="AllowSaveTargetAsInIEMode">允许 Internet Explorer 模式下的“将目标另存为”</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">使用此策略设置，管理员可以在 Internet Explorer 模式下启用 "将目标另存为" 上下文菜单。
+
+如果启用此策略，将在 Internet Explorer 模式上下文菜单中显示 "目标另存为"，并且其作用与 Internet Explorer 相同。
+
+如果禁用或未配置此策略设置，则不会在 Internet Explorer 模式上下文菜单中显示 "目标另存为"。
+
+有关详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">在 Internet Explorer 模式下启用扩展热键</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">此策略设置让管理员可以启用扩展的 Microsoft Edge Internet Explorer 模式热键，例如“Ctrl+S”具有“另存为”功能。
+
+如果启用此策略，则会在 Internet Explorer 模式下启用扩展热键功能，并且其工作方式与 Internet Explorer 相同。
+
+如果禁用或未配置此策略，则在 Internet Explorer 模式下扩展热键将无法工作。
+
+有关详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">将 Internet Explorer 11 作为独立浏览器禁用</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">通过此策略，你可以限制 Internet Explorer 作为独立浏览器的启动。
+
+如果启用此策略，它将: 
+- 阻止 Internet Explorer 11 作为独立浏览器启动。
+- 将 Internet Explorer 的使用限制为 Microsoft Edge 的本机“Internet Explorer 模式”。
+- 将所有启动 Internet Explorer 11 的尝试重定向到 Microsoft Edge 稳定渠道浏览器。
+- 替代任何其他重定向到 Internet Explorer 11 的策略。
+
+如果禁用或未配置此策略，则将使用当前活动的浏览器设置打开所有站点。注意: 必须安装 Microsoft Edge 稳定渠道，此策略才能生效。</string>
+      <string id="NotifyDisableIEOptions_Never">从不</string>
+      <string id="NotifyDisableIEOptions_Always">始终</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">每个用户配置一次</string>
       <string id="VerMgmtDisable">关闭 Internet explorer 的过时 ActiveX 控件的阻止功能</string>
       <string id="IE_ExplainVerMgmtDisable">此策略设置可确定 Internet Explorer 是否会阻止特定的过时 ActiveX 控件。过时的 ActiveX 控件在 Intranet 区域中不受阻止。
 
@@ -4833,6 +4862,9 @@ LOBApp.contoso.com</string>
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">第一个选项</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">第二个选项</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">第三个选项</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">通知 Internet Explorer 11 浏览器已禁用</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -3158,14 +3158,14 @@ Si vous ne configurez pas ce paramètre de stratégie, le bouton permettant d’
       <string id="SUPPORTED_IE8">Au moins Internet Explorer 8.0</string>
       <string id="SUPPORTED_IE8ONLY">Internet Explorer 8.0 uniquement</string>
       <string id="SUPPORTED_IE9">Au moins Internet Explorer 9.0</string>
-      <string id="SUPPORTED_IE9_IE11NONWIN10">Uniquement Internet Explorer 9.0 à 11.0. Non pris en charge dans Windows 10.</string>
+      <string id="SUPPORTED_IE9_IE11NONWIN10">Uniquement Internet Explorer 9.0 à 11.0. Non pris en charge dans Windows 10.</string>
       <string id="SUPPORTED_IE10">Au moins Internet Explorer 10.0</string>
       <string id="SUPPORTED_IE10WIN8">Au minimum Internet Explorer 10.0 sur Windows 8</string>
       <string id="SUPPORTED_IE11WIN8">Au minimum Internet Explorer 11.0 sur Windows 8.1</string>
       <string id="SUPPORTED_IE11WIN8ONLY">Uniquement Internet Explorer 11.0 sur Windows 8.1</string>
-      <string id="SUPPORTED_IE11WIN10">Au minimum Internet Explorer 11.0 sur Windows 10</string>
-      <string id="SUPPORTED_IE11WIN10_1607">Au moins Internet Explorer 11.0 sous Windows 10, version 1607 ou ultérieure</string>
-      <string id="SUPPORTED_IE11WIN10_1703">Au moins Internet Explorer 11.0 sous Windows 10, version 1703 ou ultérieure</string>
+      <string id="SUPPORTED_IE11WIN10">Au minimum Internet Explorer 11.0 sur Windows 10</string>
+      <string id="SUPPORTED_IE11WIN10_1607">Au moins Internet Explorer 11.0 sous Windows 10, version 1607 ou ultérieure</string>
+      <string id="SUPPORTED_IE11WIN10_1703">Au moins Internet Explorer 11.0 sous Windows 10, version 1703 ou ultérieure</string>
       <string id="SUPPORTED_IE11">Au moins Internet Explorer 11.0</string>
       <string id="SUPPORTED_IE7_NONVISTA">Au moins Internet Explorer 7.0. Non pris en charge par Windows Vista</string>
       <string id="SUPPORTED_IE7VISTA">Au moins Internet Explorer 7.0 dans Windows Vista</string>
@@ -3572,7 +3572,7 @@ Si vous activez ce paramètre de stratégie, Internet Explorer affiche le param�
 
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Internet Explorer n'affiche pas le paramètre Gestionnaire d’accès sous l'onglet Contenu de la boîte de dialogue Options Internet.
 
-Remarque : cette stratégie n'est plus prise en charge à partir de Windows 10 version 1607.</string>
+Remarque : cette stratégie n'est plus prise en charge à partir de Windows 10 version 1607.</string>
       <string id="Protocols_None">N’utiliser aucun protocole sécurisé</string>
       <string id="Protocols_SSL2">Utiliser SSL 2.0 uniquement</string>
       <string id="Protocols_SSL3">Utiliser SSL 3.0 uniquement</string>
@@ -3923,19 +3923,19 @@ Si vous désactivez ce paramètre ou si vous ne le configurez pas, le comporteme
 Si Windows Update pour la prochaine version de Microsoft Edge* et le canal stable Microsoft Edge sont installés, le comportement suivant s'applique :
 - Si vous désactivez ou ne configurez pas cette stratégie, le canal stable Microsoft Edge est utilisé. Il s'agit du comportement par défaut.
 - Si vous activez cette stratégie, vous pouvez configurer l'ouverture des sites redirigés dans un maximum de trois des canaux suivants, parmi lesquels :
-    1 = Canal stable Microsoft Edge
-    2 = Microsoft Edge Beta version 77 ou ultérieure
-    3 = Microsoft Edge Dev version 77 ou ultérieure
-    4 = Microsoft Edge Canary version 77 ou ultérieure
+ 1 = Canal stable Microsoft Edge
+ 2 = Microsoft Edge Beta version 77 ou ultérieure
+ 3 = Microsoft Edge Dev version 77 ou ultérieure
+ 4 = Microsoft Edge Canary version 77 ou ultérieure
 
 Si Windows Update pour la prochaine version de Microsoft Edge* ou le canal stable Microsoft Edge n'est pas installé, le comportement suivant s'applique :
 - Si vous désactivez ou ne configurez pas cette stratégie, Microsoft Edge version 45 ou version antérieure est automatiquement utilisé. Il s'agit du comportement par défaut.
 - Si vous activez cette stratégie, vous pouvez configurer l'ouverture des sites redirigés dans un maximum de trois des canaux suivants, parmi lesquels :
-    0 = Microsoft Edge version 45 ou version antérieure
-    1 = Canal stable Microsoft Edge
-    2 = Microsoft Edge Beta version 77 ou version ultérieure
-    3 = Microsoft Edge Dev version 77 ou version ultérieure
-    4 = Microsoft Edge Canary version 77 ou version ultérieure
+ 0 = Microsoft Edge version 45 ou version antérieure
+ 1 = Canal stable Microsoft Edge
+ 2 = Microsoft Edge Beta version 77 ou version ultérieure
+ 3 = Microsoft Edge Dev version 77 ou version ultérieure
+ 4 = Microsoft Edge Canary version 77 ou version ultérieure
 
 *Pour plus d'informations sur Windows Update pour la prochaine version de Microsoft Edge, notamment la procédure de désactivation, voir https://go.microsoft.com/fwlink/?linkid=2102115. Cette mise à jour s'applique uniquement à Windows 10 version 1709 et version supérieure.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3958,6 +3958,35 @@ Stratégies associées :
 - Envoyer tous les sites non inclus dans la liste des sites en mode Entreprise vers Microsoft Edge (« RestrictIE »)
 
 Pour plus d’informations sur l’utilisation de cette stratégie avec d’autres stratégies associées afin de créer la configuration optimale pour votre organisation, voir https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Autoriser « enregistrer la cible sous » en mode Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Ce paramètre de stratégie permet aux administrateurs d’activer le menu contextuel « enregistrer la cible sous » en mode Internet Explorer.
+
+Si vous activez ce paramètre de stratégie, « enregistrer la cible sous » s’affiche dans le menu contextuel du mode Internet Explorer et fonctionne comme Internet Explorer.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, « enregistrer la cible sous » n’apparaîtra pas dans le menu contextuel du mode Internet Explorer.
+
+Pour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Activer les touches d’accès rapide étendues en mode Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Ce paramètre de stratégie permet aux administrateurs d’activer les touches d’accès rapide au mode Microsoft Edge Internet Explorer étendues, telles que « Ctrl+S », de façon à utiliser la fonctionnalité « Enregistrer sous ».
+
+si vous activez cette stratégie, les fonctionnalités de clé hotkey étendues sont activées en mode Internet Explorer et fonctionnent de la même manière qu’Internet Explorer.
+
+si vous désactivez ou ne configurez pas cette stratégie, les touches d’accès rapide étendues ne fonctionneront pas en mode Internet Explorer.
+
+pour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Désactiver Internet Explorer 11 comme navigateur autonome</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Cette stratégie vous permet de limiter le lancement d’Internet Explorer en tant que navigateur autonome.
+
+Si vous activez cette stratégie, elle :
+-Empêche le lancement d’Internet Explorer 11 en tant que navigateur autonome.
+-Limite l’utilisation d’Internet Explorer au mode « Internet Explorer » natif de Microsoft Edge.
+-Redirige toutes les tentatives de lancement d’Internet Explorer 11 vers l’Explorateur de canaux stables Microsoft Edge.
+-Remplace toutes les autres stratégies qui redirigent vers Internet Explorer 11.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, tous les sites sont ouverts à l’aide des paramètres actuels du navigateur actif. Remarque : le canal stable Microsoft Edge doit être installé pour que cette stratégie prenne effet.</string>
+      <string id="NotifyDisableIEOptions_Never">Jamais</string>
+      <string id="NotifyDisableIEOptions_Always">Toujours</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Une fois par utilisateur</string>
       <string id="VerMgmtDisable">Désactiver le blocage des contrôles ActiveX obsolètes par Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Ce paramètre de stratégie détermine si Internet Explorer bloque certains contrôles ActiveX obsolètes. Les contrôles ActiveX obsolètes ne sont jamais bloqués dans la Zone Intranet.
 
@@ -4102,7 +4131,7 @@ Si vous désactivez ce paramètre de stratégie, la mise à niveau automatique d
 
 Si vous ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent activer ou désactiver les mises à jour automatiques à partir de la boîte de dialogue À propos de Internet Explorer.
 
-Remarque : cette stratégie est déconseillée à partir de Windows 10 version 1703.</string>
+Remarque : cette stratégie est déconseillée à partir de Windows 10 version 1703.</string>
       <string id="TurnOffFormatDetectionPhone">Désactiver la détection des numéros de téléphone</string>
       <string id="TurnOffFormatDetectionPhone_Explain">Ce paramètre de stratégie détermine si les numéros de téléphone sont reconnus et transformés en liens hypertexte, ce qui permet d’appeler l’application téléphonique par défaut du système.
 
@@ -4833,6 +4862,9 @@ Pour plus d’informations, consultez la page « Mise à jour pour bloquer les 
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Premier choix</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Deuxième choix</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Troisième choix</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Avertir que le navigateur Internet Explorer 11 est désactivé</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

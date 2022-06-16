@@ -3917,19 +3917,19 @@ Si deshabilitas o no configuras esta opción, se aplicará el comportamiento pre
 Si tanto la actualización de Windows Update para la siguiente versión de Microsoft Edge* como el canal estable Microsoft Edge están instalados, se producen los comportamientos siguientes:
 - Si deshabilitas o no configuras esta directiva, se usa el canal estable Microsoft Edge. Este es el comportamiento predeterminado.
 - Si habilitas esta directiva, puedes especificar en la configuración que los sitios redirigidos se abran en un máximo de tres de los canales siguientes, donde:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versión 77 o posterior
-    3 = Microsoft Edge Dev versión 77 o posterior
-    4 = Microsoft Edge Canary versión 77 o posterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versión 77 o posterior
+ 3 = Microsoft Edge Dev versión 77 o posterior
+ 4 = Microsoft Edge Canary versión 77 o posterior
 
 Si la actualización de Windows Update para la siguiente versión de Microsoft Edge* o el canal estable Microsoft Edge no están instalados, se producen los comportamientos siguientes:
 - Si deshabilitas o no configuras esta directiva, se usará Microsoft Edge versión 45 o una versión anterior automáticamente. Este es el comportamiento predeterminado.
 - Si habilitas esta directiva, puedes especificar en la configuración que los sitios redirigidos se abran en un máximo de tres de los canales siguientes, donde:
-    0 = Microsoft Edge versión 45 o anterior
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versión 77 o posterior
-    3 = Microsoft Edge Dev versión 77 o posterior
-    4 = Microsoft Edge Canary versión 77 o posterior
+ 0 = Microsoft Edge versión 45 o anterior
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versión 77 o posterior
+ 3 = Microsoft Edge Dev versión 77 o posterior
+ 4 = Microsoft Edge Canary versión 77 o posterior
 
 *Para obtener más información acerca de la actualización de Windows Update para la siguiente versión de Microsoft Edge; p. ej., cómo deshabilitarla, consulta https://go.microsoft.com/fwlink/?linkid=2102115. Esta actualización solo se aplica a Windows 10 versión 1709 o superior.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3952,6 +3952,35 @@ Directivas relacionadas:
 - Enviar todos los sitios que no están incluidos en la lista de sitios del modo de empresa a Microsoft Edge ("RestrictIE")
 
  Para obtener más información sobre cómo usar esta directiva junto con otras directivas relacionadas para crear la configuración óptima para la organización, consulta https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Permitir "Guardar destino como" en el modo de Internet Explorer</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">Esta configuración de directiva permite a los administradores habilitar el menú contextual "Guardar destino como" en el modo de Internet Explorer.
+
+Si habilita esta Directiva, "Guardar destino como" se mostrará en el menú contextual del modo de Internet Explorer y funcionará del mismo modo que Internet Explorer.
+
+Si deshabilita o no establece esta configuración de Directiva, "Guardar destino como" no se mostrará en el menú contextual del modo de Internet Explorer.
+
+Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Habilitar teclas de acceso rápido extendidas en el modo de Internet Explorer</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">Esta configuración de directiva permite a los administradores habilitar las teclas de acceso rápido extendidas del modo de Microsoft Edge Internet Explorer, como "Ctrl+S" para tener la funcionalidad "Guardar como".
+
+Si habilita esta directiva, la funcionalidad de teclas de acceso rápido extendidas se habilitará en el modo de Internet Explorer y funcionará del mismo modo que Internet Explorer.
+
+Si deshabilita o no configura esta directiva, las teclas de acceso rápido extendidas no funcionarán en el modo de Internet Explorer.
+
+Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Deshabilitar Internet Explorer 11 como un explorador independiente</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">Esta directiva te permite restringir el inicio de Internet Explorer como un explorador independiente.
+
+Si habilitas esta directiva:
+- Impide que Internet Explorer 11 se inicie como un explorador independiente.
+- Restringe el uso de Internet Explorer al modo nativo 'Internet Explorer' de Microsoft Edge.
+- Redirige todos los intentos de inicio de Internet Explorer 11 al navegador del canal estable de Microsoft Edge.
+- Invalida cualquier otra directiva que redirija a Internet Explorer 11.
+
+Si deshabilitas o no configuras esta directiva, todos los sitios se abrirán con la configuración actual del explorador activo. Nota: para que esta directiva surta efecto, es necesario instalar el Canal estable de Microsoft Edge.</string>
+      <string id="NotifyDisableIEOptions_Never">Nunca</string>
+      <string id="NotifyDisableIEOptions_Always">Siempre</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Una vez por usuario</string>
       <string id="VerMgmtDisable">Desactivar el bloqueo de controles ActiveX obsoletos para Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Esta configuración de directiva determina si Internet Explorer bloquea determinados controles ActiveX obsoletos. Nunca se bloquean los controles ActiveX obsoletos en la zona de Intranet.
 
@@ -4827,6 +4856,9 @@ Para obtener más información, consulta "Bloqueo de controles ActiveX obsoletos
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">Primera opción</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Segunda opción</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Tercera opción</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notificar que el explorador Internet Explorer 11 está deshabilitado</dropdownList>
       </presentation>
     </presentationTable>
   </resources>
