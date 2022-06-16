@@ -28,14 +28,13 @@ BitLocker 回復情報には、回復パスワードと一意の識別子デー�
 
 注: このポリシーは Windows Server 2008 または Windows Vista を実行しているコンピューターにのみ適用できます。
 
-互換性のあるトラステッド プラットフォーム モジュール (TPM) が装備されているコンピューターでは、スタートアップ時に 2 種類の認証方法を使用して暗号化されたデータの保護を強化できます。コンピューターが起動すると、ユーザーに、スタートアップ キーが格納された USB フラッシュ ドライブを挿入するように要求できます。また、4 ～ 20 桁のスタートアップ暗証番号 (PIN) を入力するように要求することもできます。
+互換性のあるトラステッド プラットフォーム モジュール (TPM) が装備されているコンピューターでは、スタートアップ時に 2 種類の認証方法を使用して暗号化されたデータの保護を強化できます。コンピューターが起動すると、ユーザーに、スタートアップ キーが格納された USB フラッシュ ドライブを挿入するように要求できます。また、4 ～ 20 桁のスタートアップ PIN を入力するように要求することもできます。
 
 互換性のある TPM が装備されていないコンピューターでは、スタートアップ キーを含む USB フラッシュ ドライブが必要です。TPM が装備されていない場合、BitLocker 暗号化データは、この USB フラッシュ ドライブのキー マテリアルのみで保護されます。
 
 このポリシー設定を有効にすると、ウィザードによって、BitLocker の詳細なスタートアップ オプションを構成できるページが表示されます。TPM が装備されているコンピューターおよび TPM が装備されていないコンピューターについて、さらに設定オプションを構成できます。
 
 このポリシー設定を無効にするか、または構成しない場合、BitLocker セットアップ ウィザードは、TPM が装備されているコンピューターで BitLocker を有効にできる基本的な手順を表示します。この基本のウィザードでは、追加のスタートアップ キーまたはスタートアップ PIN は構成できません。
-
 </string>
 
       <string id="ConfigureStartupUsage_Name">スタートアップ時に追加の認証を要求する (Windows Server 2008 および Windows Vista)</string>
@@ -47,15 +46,13 @@ BitLocker 回復情報には、回復パスワードと一意の識別子デー�
 
 複数のオプションを追加すると、ポリシー エラーが発生します。TPM が装備されていないコンピューターで BitLocker を使用する場合は、[互換性のある TPM が装備されていない BitLocker を許可する] チェック ボックスをオンにします。このモードでは、スタートアップにパスワードまたは USB ドライブが必要です。スタートアップ キーを使用する場合、ドライブの暗号化に使用されるキー情報は USB ドライブに格納され、USB キーが作成されます。USB キーが挿入されると、ドライブへのアクセスが認証され、ドライブにアクセスできるようになります。USB キーが失われたり、使用できなくなった場合、またはパスワードを忘れた場合は、BitLocker 回復オプションのいずれかを使用してドライブにアクセスする必要があります。
 
-互換性のある TPM が装備されているコンピューターでは、スタートアップ時に 4 種類の認証方法を使用して暗号化されたデータの保護を強化できます。コンピューターの起動時に、認証に TPM のみを使用することも、スタートアップ キーを含む USB フラッシュ ドライブの挿入または 4 ～ 20 桁の暗証番号 (PIN) の入力、あるいはその両方を要求することもできます。
+互換性のある TPM が装備されているコンピューターでは、スタートアップ時に 4 種類の認証方法を使用して暗号化されたデータの保護を強化できます。コンピューターの起動時に、認証に TPM のみを使用することも、スタートアップ キーを含む USB フラッシュ ドライブの挿入または 4 ～ 20 桁の PIN の入力、あるいはその両方を要求することもできます。
 
 このポリシー設定を有効にすると、BitLocker セットアップ ウィザードで詳細なスタートアップ オプションを構成できます。
 
 このポリシー設定を無効にするか、または構成しない場合、TPM が装備されているコンピューターで基本オプションのみを構成できます。
 
 注: スタートアップ PIN および USB フラッシュ ドライブを使用する必要がある場合は、BitLocker ドライブ暗号化セットアップ ウィザードではなく、コマンドライン ツール manage-bde を使用して BitLocker 設定を構成する必要があります。
-
-
 
 </string>
       <string id="AllowNetworkUnlockAtStartup_Name">スタートアップ時にネットワーク ロック解除を許可する</string>
@@ -239,12 +236,26 @@ BitLocker で保護されているリムーバブル データ ドライブで�
 このポリシー設定を無効にした場合、または構成しなかった場合、BitLocker は、"ドライブの暗号化方法と暗号強度を選択する (Windows Vista、Windows Server 2008、Windows 7)" ポリシー設定とビット強度 (128 ビットまたは 256 ビット) が同じ AES が設定されていればそれを使用します。いずれのポリシーも設定されていない場合、BitLocker は、既定の暗号化方法である AES 128 ビット、またはセットアップ スクリプトで指定された暗号化方法を使用します。
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">このポリシー設定を使用すると、BitLocker ドライブ暗号化で使用されるアルゴリズムと暗号強度を構成できます。このポリシー設定は、BitLocker を有効にすると適用されます。ドライブが既に暗号化されているか、暗号化が進行中の場合は、暗号化方法を変更しても影響はありません。
+
+このポリシー設定を有効にすると、固定データ ドライブ、オペレーティング システム ドライブ、リムーバブル データ ドライブの暗号化アルゴリズムおよびキーの暗号強度を別々に構成できます。固定ドライブとオペレーティング システム ドライブでは、XTS-AES アルゴリズムの使用をお勧めします。リムーバブル ドライブでは、Windows 10 (Version 1511) が実行されていない他のデバイスで使用する場合、AES-CBC 128 ビットまたは AES-CBC 256 ビットを使用する必要があります。
+
+このポリシー設定を無効にした場合、または構成しなかった場合、BitLocker は、"ドライブの暗号化方法と暗号強度を選択する (Windows Vista、Windows Server 2008、Windows 7)" ポリシー設定および "ドライブの暗号化方法と暗号強度を選択する" ポリシー設定が設定されていれば、これら (ここに示した順序で) と同じビット強度 (128 ビットまたは 256 ビット) の AES を使用します。いずれのポリシーも設定されていない場合、BitLocker は、既定の暗号化方法である XTS-AES 128 ビット、またはセットアップ スクリプトで指定された暗号化方法を使用します。
+
+      </string>
       <string id="EncryptionMethod_Name">ドライブの暗号化方法と暗号強度を選択する (Windows Vista、Windows Server 2008、Windows 7、Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">ドライブの暗号化方法と暗号強度を選択する</string>
+      <string id="EncryptionMethodNoDiffuser_Name">ドライブの暗号化方法と暗号強度を選択する (Windows 8、Windows Server 2012、Windows 8.1、Windows Server 2012 R2、Windows 10 [Version 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">ドライブの暗号化方法と暗号強度を選択してください (Windows 10 [Version 1511] 以降)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">ディフューザーを使用した AES 128 ビット</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">ディフューザーを使用した AES 256 ビット</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES 128 ビット (既定)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC 128 ビット</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC 128 ビット (既定)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES 256 ビット</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC 256 ビット</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES 128 ビット (既定)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES 128 ビット</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES 256 ビット</string>
 
       <string id="FVECategory">BitLocker ドライブ暗号化</string>
       <string id="PlatformValidation_Deprecated_Help">このポリシー設定を使用すると、コンピューターのトラステッド プラットフォーム モジュール (TPM) セキュリティ ハードウェアが BitLocker の暗号化キーをセキュリティで保護する方法を構成できます。コンピューターに互換性のある TPM が装備されていない場合、または BitLocker の TPM 保護が既に有効になっている場合は、このポリシー設定は適用されません。
@@ -801,6 +812,12 @@ BitLocker で PIN やパスワードなどの追加の情報が要求される�
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">暗号化方法を選択してください:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">オペレーティング システム ドライブの暗号化方法を選択してください:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">固定データ ドライブの暗号化方法を選択してください:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">リムーバブル データ ドライブの暗号化方法を選択してください:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

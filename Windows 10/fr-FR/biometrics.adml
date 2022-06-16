@@ -6,6 +6,7 @@
   <resources>
     <stringTable>
       <string id="BiometricsConfiguration">Biométrie</string>
+      <string id="FaceConfiguration">Traits du visage</string>
       <string id="Biometrics_EnableBio">Autoriser l’utilisation de la biométrie</string>
       <string id="Biometrics_EnableBio_Help">Ce paramètre de stratégie autorise ou empêche l’exécution du service de biométrie Windows sur cet ordinateur.
         
@@ -42,6 +43,15 @@ Si vous activez ce paramètre, vous pouvez configurer le délai d’expiration d
 
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, une valeur par défaut de 10 secondes est appliquée au délai d’expiration du changement rapide d’utilisateur.
 
+</string>
+      <string id="Face_EnhancedAntiSpoofing">Utiliser la détection d'usurpation d'identité avancée lorsqu'elle est disponible</string>
+      <string id="Face_EnhancedAntiSpoofing_Help">This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
+
+If you do not configure this policy setting, users will be able to choose whether or not to use enhanced anti-spoofing on supported devices.
+
+If you enable this policy setting, Windows will require all users on the device to use anti-spoofing for facial features, on devices which support it.
+
+If you disable this policy setting, enhanced anti-spoofing is turned off for all users on the device and they will be unable to turn it on.
 </string>
     </stringTable>
     <presentationTable>

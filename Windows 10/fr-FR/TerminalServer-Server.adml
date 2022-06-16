@@ -56,16 +56,16 @@ Remarque : si ce paramètre de stratégie est activé, le paramètre de straté
       </string>
       
       <string id="TS_ALLOW_APPS">Autoriser le démarrage distant de programmes non répertoriés</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">Ce paramètre de stratégie permet de spécifier si des utilisateurs distants peuvent démarrer tout programme sur le serveur Hôte de session Bureau à distance lorsqu'ils ouvrent une session des services Bureau à distance, ou s'ils peuvent uniquement démarrer les programmes répertoriés dans la liste des programmes RemoteApp.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+Vous pouvez déterminer quels sont les programmes sur un serveur Hôte de session Bureau à distance qui peuvent être démarrés à distance en utilisant le Gestionnaire RemoteApp sur Windows Server 2008 R2 et Windows Server 2008. Si vous utilisez Windows Server 2012, vous pouvez configurer cet aspect dans la feuille de propriétés Collection à l'aide du Gestionnaire de serveur.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+Par défaut, seuls les programmes figurant dans la liste Programmes RemoteApp peuvent être démarrés lorsqu'un utilisateur ouvre une session des services Bureau à distance.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Si vous activez ce paramètre de stratégie, les utilisateurs distants peuvent démarrer n'importe quel programme sur le serveur Hôte de session Bureau à distance lorsqu'ils ouvrent une session des services Bureau à distance. 
+Par exemple, un utilisateur distant peut le faire en spécifiant le chemin d'accès de l'exécutable du programme au moment de la connexion à l'aide du client Connexion Bureau à distance.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Si vous désactivez ce paramètre de stratégie ou que vous ne le configurez pas, les utilisateurs distants peuvent uniquement démarrer les programmes répertoriés dans la liste des programmes RemoteApp lorsqu'ils ouvrent une session des services Bureau à distance.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Autoriser la composition du Bureau pour les sessions Bureau à distance</string>

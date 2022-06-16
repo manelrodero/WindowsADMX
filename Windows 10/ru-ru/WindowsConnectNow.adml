@@ -13,24 +13,24 @@
 
 Если вы отключаете или не настраиваете этот параметр политики, пользователям будут доступны задачи мастера, в том числе задачи «Установить маршрутизатор беспроводной сети или точку доступа» и «Добавить беспроводное устройство». Этот параметр политики по умолчанию разрешает доступ ко всем мастерам WCN.</string>
       <string id="WCN_EnableRegistrar">Настроить параметры беспроводной сети с помощью Windows Connect Now</string>
-      <string id="WCN_EnableRegistrar_Help">This policy setting allows the configuration of wireless settings using Windows Connect Now (WCN). The WCN Registrar enables the discovery and configuration of devices over Ethernet (UPnP), over In-band 802.11 WLAN, through the Windows Portable Device API (WPD), and via USB Flash drives.
+      <string id="WCN_EnableRegistrar_Help">Этот параметр политики позволяет настроить параметры беспроводной сети с помощью Windows Connect Now (WCN). Регистратор WCN обеспечивает обнаружение и настройку устройств через Ethernet (UPnP), беспроводную сеть 802.11 со штатным каналом, с помощью API переносных устройств Windows (WPD) и USB-устройств флэш-памяти.
 
-Additional options are available to allow discovery and configuration over a specific medium. 
+Доступны дополнительные параметры, позволяющие осуществлять обнаружение и настройку через определенные носители. 
 
-If you enable this policy setting, additional choices are available to turn off the operations over a specific medium. 
+Если вы включите этот параметр политики, станут доступными дополнительные параметры, с помощью которых можно отключить выполнение операций через определенные носители. 
 
-If you disable this policy setting, operations are disabled over all media. 
+Если вы выключите этот параметр политики, операции будут отключены для всех носителей. 
 
-If you do not configure this policy setting, operations are enabled over all media. 
+Если вы не настроите этот параметр политики, операции будут включены для всех носителей. 
 
-The default for this policy setting allows operations over all media.</string>
+Значение по умолчанию для этого параметра политики позволяет осуществлять операции через все носители.</string>
       <string id="WCN_Higher_Precedence_Registrar_UPnP">WCN через Ethernet (UPnP)</string>
-      <string id="WCN_Higher_Precedence_Registrar_InBand802DOT11">WCN over In-band 802.11 WLAN</string>
+      <string id="WCN_Higher_Precedence_Registrar_InBand802DOT11">WCN через беспроводную сеть 802.11 со штатным каналом</string>
     </stringTable>
     <presentationTable>
       <presentation id="WCN_EnableRegistrar">
         <checkBox refId="WCN_EnableRegistrar_DisableUPnP">Отключить возможность настройки через Ethernet (UPnP) с помощью Windows Connect Now</checkBox>
-        <checkBox refId="WCN_EnableRegistrar_DisableInBand802DOT11">Turn off ability to configure using WCN over In-band 802.11 WLAN</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableInBand802DOT11">Отключить возможность настройки с помощью WCN по беспроводной сети 802.11 со штатным каналом</checkBox>
         <checkBox refId="WCN_EnableRegistrar_DisableFlashConfig">Отключить возможность настройки с помощью USB-устройства флэш-памяти</checkBox>
         <checkBox refId="WCN_EnableRegistrar_DisableWPD">Отключить возможность настройки переносных устройств Windows (WPD)</checkBox>
         <decimalTextBox refId="WCN_EnableRegistrar_MaxWCNDeviceNumber" defaultValue="500">Максимально допустимое число устройств Windows Connect Now:</decimalTextBox>

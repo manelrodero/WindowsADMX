@@ -144,8 +144,8 @@ Hvis du deaktiverer eller ikke konfigurerer denne indstilling, vises al pop op-t
 Hvis du aktiverer denne indstilling, forhindrer du, at en bruger kan vælge en app, ændre størrelsen på et felt, fastgøre eller frigøre et felt eller et sekundært felt, aktivere tilpasningstilstand og omarrangere felter i Start og Apps.
 
 Hvis du deaktiverer eller undlader at konfigurere denne indstilling, gør du det muligt for en bruger at vælge en app, ændre størrelsen på et felt, fastgøre eller frigøre et felt eller et sekundært felt, aktivere tilpasningstilstand og omarrangere felter i Start og apps.</string>
-      <string id="ClearTilesOnExit">Ryd historik for feltmeddelelser ved afslutning</string>
-      <string id="ClearTilesOnExit_Help">Hvis du aktiverer denne indstilling, slettes feltmeddelelser, når brugeren logger af. Derfor vil felterne i startvisningen altid vise deres standardindhold, når brugeren logger på. Desuden ryddes alle cachelagrede versioner af disse meddelelser, når brugeren logger af.
+      <string id="ClearTilesOnExit">Ryd feltmeddelelser under logon</string>
+      <string id="ClearTilesOnExit_Help">Hvis du aktiverer denne indstilling, slettes feltmeddelelser, når brugeren logger på. Derfor vil felterne i startvisningen altid vise deres standardindhold, når brugeren logger på. Desuden ryddes alle cachelagrede versioner af disse meddelelser, når brugeren logger på.
 
 Hvis du deaktiverer eller ikke konfigurerer denne indstilling, bevares meddelelser på systemet, og når en bruger logger på, vises felterne på samme måde, som de gjorde, da brugeren loggede af. Det gælder også historikken for forrige meddelelser for hvert felt.
 
@@ -569,6 +569,12 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
 Hvis du slår denne politikindstilling til, vises startskærmen på den skærm, brugeren anvender, når der trykkes på Windows-tasten.
 
 Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, vises startskærmen altid på den primære skærm, når brugeren trykker på Windows-tasten. Brugerne vil fortsat kunne åbne startskærmen på andre skærme ved at trykke på knappen Start på den pågældende skærm. Brugeren vil desuden kunne konfigurere denne politikindstilling.</string>
+      <string id="ForceStartSize_DisplayName">Gennemtving, at start enten skal være i fuld skærmstørrelse eller i menustørrelse</string>
+      <string id="ForceStartSize_ExplainText">Hvis du aktiverer denne politik og indstiller den for menuen Start eller Start i fuld skærm, får Start den størrelse, og brugerne vil ikke kunne ændre størrelsen på Start under Indstillinger. 
+
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vælger Windows automatisk størrelsen baseret på hardwarens formfaktor, og brugerne vil kunne ændre størrelsen på Start under Indstillinger.</string>
+      <string id="ForceLauncherSize_Collapsed">Menuen Start</string>
+      <string id="ForceLauncherSize_Expanded">Start i fuld skærm</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, vi
           <label>Startlayoutfil</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Vælg en af følgende størrelser</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

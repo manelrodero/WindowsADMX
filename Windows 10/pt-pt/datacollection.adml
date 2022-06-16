@@ -6,13 +6,13 @@
   <resources>
     <stringTable>
       <string id="AllowTelemetry">Permitir Telemetria</string>
-      <string id="AllowTelemetry_0">0 - Desativado [Apenas Empresa]</string>
+      <string id="AllowTelemetry_0">0 - Segurança [Apenas Empresa]</string>
       <string id="AllowTelemetry_1">1 - Básico</string>
       <string id="AllowTelemetry_2">2 - Melhorado</string>
       <string id="AllowTelemetry_3">3 - Completo</string>
-      <string id="AllowTelemetry_Explain">Esta definição de política determina a quantidade de dados de diagnóstico e de utilização comunicados à Microsoft. Um valor de 0 indica que não são enviados dados de telemetria dos componentes do SO para a Microsoft. A definição de um valor de 0 é aplicável apenas a dispositivos da empresa e do servidor. A definição de um valor de 0 para outros dispositivos é equivalente a escolher um valor de 1. Um valor de 1 envia apenas uma quantidade limitada, ou básica, de dados de diagnóstico e de utilização. Note-se que definir valores de 0 ou 1 irá degradar determinadas experiências no dispositivo. Um valor de 2 envia dados de diagnóstico e de utilização melhorados. Um valor de 3 envia os mesmos dados que um valor de 2, bem como dados de diagnóstico adicionais, como o estado do sistema no momento de uma suspensão ou falha e os ficheiros e conteúdos que podem ter originado o problema.
+      <string id="AllowTelemetry_Explain">Esta definição de política determina a quantidade de dados de diagnóstico e de utilização comunicados à Microsoft. Um valor de 0 irá enviar dados mínimos para a Microsoft. Estes dados incluem a Ferramenta de Remoção de Software Malicioso (MSRT) &amp; dados do Windows Defender, se ativado, e definições de cliente de telemetria. A definição de um valor de 0 é aplicável apenas a dispositivos da empresa, EDU, IoT e do servidor. A definição de um valor de 0 para outros dispositivos é equivalente a escolher um valor de 1. Um valor de 1 envia apenas uma quantidade básica de dados de diagnóstico e de utilização. Note-se que definir valores de 0 ou 1 irá degradar determinadas experiências no dispositivo. Um valor de 2 envia dados de diagnóstico e de utilização melhorados. Um valor de 3 envia os mesmos dados que um valor de 2, bem como dados de diagnóstico adicionais, incluindo os ficheiros e conteúdos que podem ter originado o problema. As definições de telemetria do Windows 10 são aplicáveis ao sistema operativo Windows e a algumas aplicações originais. Esta definição não é aplicável a aplicações de outros fornecedores em execução no Windows 10.   
 
-Se desativar ou não configurar esta definição de política, os utilizadores podem configurar este Nível de telemetria em Definições.
+Se desativar esta definição de política ou não a configurar, os utilizadores podem configurar o Nível de telemetria em Definições.
 
 </string>
       <string id="EnableExperimentation">Desativar as definições ou funcionalidades de pré-lançamento</string>

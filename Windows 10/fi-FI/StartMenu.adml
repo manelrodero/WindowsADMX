@@ -144,8 +144,8 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, kaikki Käynn
 Jos otat tämän käytäntöasetuksen käyttöön, voit estää käyttäjää valitsemasta sovellusta, muuttamasta ruudun kokoa, kiinnittämästä ruutua tai toissijaista ruutua tai poistamasta niiden kiinnitystä, siirtymästä mukautustilaan tai järjestämästä ruutuja uudelleen aloitusnäytössä ja sovelluksissa.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, voit sallia käyttäjän valita sovelluksen, muuttaa ruudun kokoa, kiinnittää ruudun tai toissijaisen ruudun tai poistaa niiden kiinnityksen, siirtyä mukautustilaan tai järjestää ruutuja uudelleen aloitusnäytössä ja sovelluksissa.</string>
-      <string id="ClearTilesOnExit">Tyhjennä ruutuilmoitusten historia poistuttaessa</string>
-      <string id="ClearTilesOnExit_Help">Jos otat tämän asetuksen käyttöön, järjestelmä poistaa ruutuilmoitukset, kun käyttäjä kirjautuu ulos. Tämän tuloksena aloitusnäytön ruudut näyttävät aina oletussisällön, kun käyttäjä kirjautuu sisään. Lisäksi ilmoitusten välimuistiin tallennetut versiot poistetaan, kun käyttäjä kirjautuu ulos.
+      <string id="ClearTilesOnExit">Tyhjennä ruutuilmoitukset kirjauduttaessa</string>
+      <string id="ClearTilesOnExit_Help">Jos otat tämän asetuksen käyttöön, järjestelmä poistaa ruutuilmoitukset, kun käyttäjä kirjautuu sisään. Tämän tuloksena aloitusnäytön ruudut näyttävät aina oletussisällön, kun käyttäjä kirjautuu sisään. Lisäksi ilmoitusten välimuistiin tallennetut versiot poistetaan, kun käyttäjä kirjautuu sisään.
 
 Jos poistat tämän asetuksen käytöstä tai et määritä sitä, järjestelmä säilyttää ilmoitukset, ja kun käyttäjä kirjautuu sisään, ruudut näkyvät samanlaisina kuin ne olivat käyttäjän uloskirjautuessa. Myös jokaisen ruudun aiempien ilmoitusten historia säilytetään.
 
@@ -569,6 +569,12 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, ty
 Jos otat tämän käytäntöasetuksen käyttöön, aloitusnäyttö näytetään näytössä, jota käyttäjä käyttää painaessaan Windows-näppäintä.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, aloitusnäyttö näytetään aina päänäytössä käyttäjän painaessa Windows-näppäintä. Käyttäjät voivat silti avata aloitusnäytön muissa näytöissä painamalla kyseisen näytön käynnistyspainiketta. Käyttäjä voi myös määrittää tämän käytäntöasetuksen.</string>
+      <string id="ForceStartSize_DisplayName">Pakota Aloitus joko koko näytön kokoon tai valikkokokoon</string>
+      <string id="ForceStartSize_ExplainText">Jos otat tämän käytännön käyttöön ja määrität joko aloitusvalikon tai koko näytön aloitusnäytön, Aloitus on samankokoinen kaikille käyttäjille, eivätkä käyttäjät voi muuttaa sen kokoa asetuksissa.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai jätät sen määrittämättä, Windows valitsee koon automaattisesti laitemuodon mukaan, ja käyttäjät voivat muuttaa sitä asetuksissa.</string>
+      <string id="ForceLauncherSize_Collapsed">Aloitusvalikko</string>
+      <string id="ForceLauncherSize_Expanded">Koko näytön kokoinen aloitusnäyttö</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, al
           <label>Aloitusnäytön asettelutiedosto</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Valitse jokin seuraavista kokovaihtoehdoista</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

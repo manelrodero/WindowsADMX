@@ -239,12 +239,26 @@
 Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το BitLocker θα χρησιμοποιήσει το AES με την ίδια ισχύ bit (128-bit ή 256-bit) στη ρύθμιση πολιτικής "Επιλογή της μεθόδου κρυπτογράφησης μονάδων δίσκου και δυνατότητας κρυπτογράφησης (Windows Vista, Windows Server 2008, Windows 7)", αν αυτή έχει οριστεί. Αν καμία από τις πολιτικές δεν έχει οριστεί, το BitLocker θα χρησιμοποιήσει την προεπιλεγμένη μέθοδο κρυπτογράφησης AES 128-bit ή τη μέθοδο κρυπτογράφησης που έχει καθοριστεί από τη δέσμη ενεργειών εγκατάστασης.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Αυτή η ρύθμιση πολιτικής σάς επιτρέπει να ρυθμίσετε τις παραμέτρους του αλγόριθμου και της δυνατότητας κρυπτογράφησης που χρησιμοποιείται από την κρυπτογράφηση μονάδων δίσκου BitLocker. Αυτή η ρύθμιση πολιτικής εφαρμόζεται όταν ενεργοποιείτε το BitLocker. Η αλλαγή της μεθόδου κρυπτογράφησης δεν έχει κανένα αποτέλεσμα εάν η μονάδα δίσκου είναι ήδη κρυπτογραφημένη ή εάν η κρυπτογράφηση βρίσκεται σε εξέλιξη.
+
+Εάν ενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, θα μπορείτε να ρυθμίσετε τις παραμέτρους ενός αλγόριθμου κρυπτογράφησης και της δυνατότητας κρυπτογράφησης κλειδιού για τις σταθερές μονάδες δίσκου δεδομένων, τις μονάδες δίσκου λειτουργικού συστήματος και τις αφαιρούμενες μονάδες δίσκου δεδομένων ξεχωριστά. Για τις σταθερές μονάδες δίσκου και τις μονάδες δίσκου λειτουργικού συστήματος, συνιστούμε να χρησιμοποιείτε τον αλγόριθμο XTS-AES. Για τις αφαιρούμενες μονάδες δίσκου, θα πρέπει να χρησιμοποιήσετε AES-CBC 128 bit ή AES-CBC 256 bit αν η μονάδα δίσκου θα χρησιμοποιηθεί σε άλλες συσκευές που δεν εκτελούν τα Windows 10 (Έκδοση 1511).
+
+Εάν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το BitLocker θα χρησιμοποιεί AES με την ίδια ισχύ bit (128 bit ή 256 bit) με τις ρυθμίσεις πολιτικής "Επιλογή της μεθόδου κρυπτογράφησης μονάδων δίσκου και δυνατότητας κρυπτογράφησης (Windows Vista, Windows Server 2008, Windows 7)" και "Επιλογή της μεθόδου κρυπτογράφησης μονάδων δίσκου και δυνατότητας κρυπτογράφησης" (με αυτήν τη σειρά), αν έχουν οριστεί. Αν δεν έχουν οριστεί αυτές οι πολιτικές, το BitLocker θα χρησιμοποιεί την προεπιλεγμένη μέθοδο κρυπτογράφησης XTS-AES 128 bit ή τη μέθοδο κρυπτογράφησης που καθορίζεται από τη δέσμη ενεργειών εγκατάστασης.”
+
+      </string>
       <string id="EncryptionMethod_Name">Επιλογή της μεθόδου κρυπτογράφησης μονάδων δίσκου και δυνατότητας κρυπτογράφησης (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Επιλογή της μεθόδου κρυπτογράφησης μονάδων δίσκου και δυνατότητας κρυπτογράφησης</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Επιλογή μεθόδου κρυπτογράφησης μονάδων δίσκου και ισχύος κρυπτογράφησης (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [Έκδοση 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">Επιλογή μεθόδου κρυπτογράφησης μονάδων δίσκου και ισχύος κρυπτογράφησης (Windows 10 [Έκδοση 1511] και νεότερες εκδόσεις)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES 128-bit με Diffuser</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES 256-bit με Diffuser</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES 128 bit (προεπιλογή)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC 128 bit</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC 128 bit (προεπιλογή)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES 256 bit</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC 256 bit</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES 128 bit (προεπιλογή)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES 128 bit</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES 256 bit</string>
 
       <string id="FVECategory">Κρυπτογράφηση μονάδων δίσκου BitLocker</string>
       <string id="PlatformValidation_Deprecated_Help">Αυτή η ρύθμιση πολιτικής σάς επιτρέπει να ορίσετε τον τρόπο με τον οποίο το υλικό ασφαλείας Μονάδας αξιόπιστης πλατφόρμας (TPM) διασφαλίζει το κλειδί κρυπτογράφησης BitLocker. Αυτή η ρύθμιση πολιτικής δεν εφαρμόζεται αν ο υπολογιστής δεν διαθέτει συμβατή TPM ή αν το BitLocker έχει ήδη ενεργοποιηθεί με προστασία TPM.
@@ -801,6 +815,12 @@
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Επιλέξτε τη μέθοδο κρυπτογράφησης:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Επιλέξτε τη μέθοδο κρυπτογράφησης για μονάδες δίσκου λειτουργικού συστήματος:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Επιλέξτε τη μέθοδο κρυπτογράφησης για σταθερές μονάδες δίσκου δεδομένων:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Επιλέξτε τη μέθοδο κρυπτογράφησης για αφαιρούμενες μονάδες δίσκου δεδομένων:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

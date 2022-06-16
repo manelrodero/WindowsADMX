@@ -6,11 +6,11 @@
   <resources>
     <stringTable>
       <string id="AllowTelemetry">允许遥测</string>
-      <string id="AllowTelemetry_0">0 - 关 [仅企业]</string>
+      <string id="AllowTelemetry_0">0 - 安全性 [仅企业]</string>
       <string id="AllowTelemetry_1">1 - 基本</string>
       <string id="AllowTelemetry_2">2 - 增强</string>
       <string id="AllowTelemetry_3">3 - 完整</string>
-      <string id="AllowTelemetry_Explain">此策略设置决定了报告给 Microsoft 的诊断和使用情况数据量。值为 0 表示不会将 OS 组件的遥测数据发送给 Microsoft。将值设为 0 仅适用于企业或服务器设备。对于其他设备，将值设为 0 相当于选择值 1。值为 1 时，只发送有限或基本数量的诊断和使用情况数据。请注意，将值设为 0 或 1 会降低有关设备的特定体验。值为 2 时，会发送增强的诊断和使用情况数据。值为 3 时，会发送与值为 2 时相同的数据，以及额外的诊断数据(如挂起或崩溃时的系统状态，以及可能导致问题的文件和内容)。
+      <string id="AllowTelemetry_Explain">此策略设置决定了报告给 Microsoft 的诊断和使用情况数据量。值为 0 表示将最少的数据发送到 Microsoft。这些数据包括恶意软件删除工具(MSRT)和 Windows Defender 数据(如果已启用)以及遥测客户端设置。将值设为 0 仅适用于企业、EDU、IoT 和服务器设备。对于其他设备，将值设为 0 相当于选择值 1。值为 1 时，只发送基本数量的诊断和使用情况数据。请注意，将值设为 0 或 1 会降低有关设备的特定体验。值为 2 时，会发送增强的诊断和使用情况数据。值为 3 时，会发送与值为 2 时相同的数据，以及额外的诊断数据(包括可能已导致问题的文件和内容)。Windows 10 遥测设置适用于 Windows 操作系统和一些第一方应用。此设置不适用于在 Windows 10 上运行的第三方应用。
 
 如果你禁用或未配置此策略设置，用户可以在“设置”中配置“遥测级别”。
 

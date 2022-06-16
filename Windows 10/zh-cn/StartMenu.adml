@@ -144,12 +144,12 @@ Windows 可以通过将最近使用的菜单项移至菜单顶部，并且隐藏
 如果启用此设置，将阻止用户选择应用、调整文件大小、固定/取消固定磁贴或辅助磁贴、进入自定义模式以及重新排列“开始”屏幕和“应用”中的磁贴。
 
 如果禁用或未配置此设置，将允许用户选择应用、调整文件大小、固定/取消固定磁贴或辅助磁贴、进入自定义模式以及重新排列“开始”屏幕和“应用”中的磁贴。</string>
-      <string id="ClearTilesOnExit">退出系统时清除瓦片通知的历史记录</string>
-      <string id="ClearTilesOnExit_Help">如果启用此设置，则系统将会在用户注销时删除瓦片通知。因此，用户登录时启动视图中的“瓦片”将始终显示其默认内容。此外，用户注销时将会清除这些通知的所有缓存版本。
+      <string id="ClearTilesOnExit">登录期间清除磁贴通知</string>
+      <string id="ClearTilesOnExit_Help">如果启用此设置，则系统将在用户登录时删除磁贴通知。因此，当用户登录时，开始视图中的磁贴将始终显示其默认内容。此外，当用户登录时，会清除这些通知的所有缓存版本。
 
-如果禁用或未配置此设置，则系统会保留通知，以便当用户登录时，瓦片通知显示内容与用户注销时显示的内容相同，其中包含每个瓦片通知的先前通知历史记录。
+如果你禁用或未配置此设置，则系统会保留通知，并且在用户登录时，将会像用户注销时一样显示磁贴，包括每个磁贴的先前通知历史记录。
 
-此设置不会阻止显示新通知。请参阅“关闭应用程序通知”设置以阻止新通知。</string>
+此设置不会阻止显示新通知。若要阻止新通知，请参阅“关闭应用程序通知”设置。</string>
       <string id="StartPinAppsWhenInstalled">在安装应用时将其固定到“开始”屏幕</string>
       <string id="StartPinAppsWhenInstalled_Help">当列表中包括应用的 AppID 时，使用此策略设置可以将应用默认固定到“开始”屏幕。</string>
 
@@ -569,6 +569,12 @@ Windows 更新是 Windows 的联机扩展，提供软件更新以使用户的系
 如果启用此策略设置，当用户按 Windows 徽标键时，该用户正在使用的显示器上将显示“开始”屏幕。
 
 如果禁用或未配置此策略设置，当用户按 Windows 徽标键时，“开始”屏幕将始终显示在主显示器上。用户仍然可以通过按其他显示器上的“开始”按钮，打开该显示器上的“开始”屏幕。此外，用户也可以对此设置进行配置。</string>
+      <string id="ForceStartSize_DisplayName">将“开始”菜单强制为全屏大小或菜单大小</string>
+      <string id="ForceStartSize_ExplainText">如果你启用此策略并对“开始”菜单或全屏“开始”菜单设置此策略，则“开始”菜单将采用这种大小，用户将无法在“设置”中更改“开始”菜单的大小。
+
+如果你禁用或未配置此策略设置，Windows 将根据硬件外形规格自动选择大小，并且用户可以在“设置”中更改“开始”菜单的大小。</string>
+      <string id="ForceLauncherSize_Collapsed">“开始”菜单</string>
+      <string id="ForceLauncherSize_Expanded">全屏“开始”菜单</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Windows 更新是 Windows 的联机扩展，提供软件更新以使用户的系
           <label>“开始”屏幕布局文件</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">在下面选择一种大小</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

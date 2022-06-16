@@ -1,89 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
-  <displayName>Microsoft Edge Group Policies</displayName>
-  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <displayName>Microsoft Edge-gruppepolitikker</displayName>
+  <description>Politikker defineret til at administrere indstillinger for Microsoft Edge via administrationstjenesterne til gruppepolitik.</description>
   <resources>
     <stringTable>
       <!-- Product -->
-      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Kun Microsoft Edge 1.0</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
-      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      <string id="InternetBrowser_ExplainCat">Microsoft Edge-kategori</string>
       
       <!-- Categories -->
 
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
-      <string id="AllowActiveScripting">Gør det muligt at køre scripts som f.eks. Javascript</string>
-      <string id="AllowActiveScripting_Explain">Denne indstilling gør det muligt at bestemme, om brugerne kan køre scripts som f.eks. JavaScript. Denne indstilling er aktiveret som standard.
+      <string id="AllowAutofill">Slå Automatisk udfyld fra</string>
+      <string id="AllowAutofill_Explain">Denne indstilling giver dig mulighed for at bestemme, om medarbejderne kan bruge Autofyld til automatisk at udfylde formularfelter, mens de bruger Microsoft Edge.
 
-Hvis du aktiverer denne indstilling, slås brug af scripts til på alle dine computere. 
+Hvis denne indstilling aktiveres eller ikke konfigureres, kan medarbejderne bruge Autofyld i formularfelter.
 
-Hvis du deaktiverer denne indstilling, er det ikke muligt at køre et script.</string>
-      <string id="AllowAutofill">Gør det muligt at tillade, at brugerne kan anvende autofyld på websteder</string>
-      <string id="AllowAutofill_Explain">Denne indstilling gør det muligt at bestemme, om brugerne kan anvende autofyld på deres websteder. Denne indstilling er aktiveret som standard.
+Hvis denne indstilling deaktiveres, kan medarbejderne ikke længere bruge Autofyld i formularfelterne.</string>
+      <string id="AllowDeveloperTools">Slå udviklerværktøjer fra</string>
+      <string id="AllowDeveloperTools_Explain">Denne indstilling giver dig mulighed for at bestemme, om medarbejderne kan bruge F12-udviklerværktøjer på Microsoft Edge.
 
-Hvis du aktiverer denne indstilling, kan brugerne anvende autofyld på webstedet, hvor oplysningerne lagres i cachen lokalt.
+Hvis denne indstilling aktiveres eller ikke konfigureres, kan medarbejderne bruge F12-udviklerværktøjer.
 
-Hvis du deaktiverer denne indstilling, kan brugerne ikke anvende autofyld.</string>
-      <string id="AllowDoNotTrack">Gør det muligt at lade brugerne sende Do Not Track-headere</string>
-      <string id="AllowDoNotTrack_Explain">Denne indstilling gør det muligt at bestemme, om brugerne kan sende Do Not Track-headere. Denne indstilling er deaktiveret som standard.
+Hvis denne indstilling deaktiveres, kan medarbejderne ikke længere bruge F12-udviklerværktøjer.</string>
+      <string id="AllowDoNotTrack">Giver medarbejdere mulighed for at sende Do Not Track-headere</string>
+      <string id="AllowDoNotTrack_Explain">Denne indstilling gør det muligt at bestemme, om medarbejderne kan sende Do Not Track-headere til websteder, der anmoder om sporingsoplysninger.
 
-Hvis du aktiverer denne indstilling, kan brugerne sende Do Not Track-headere fra en hvilken som helst computer i din organisation.
+Hvis du aktiverer denne indstilling, kan medarbejderne sende Do Not Track-headere.
 
-Hvis du deaktiverer denne indstilling, kan brugerne ikke sende Do Not Track-headere.</string>
-      <string id="AllowPasswordManager">Gør det muligt at konfigurere styring af adgangskoder</string>
-      <string id="AllowPasswordManager_Explain">Denne indstilling gør det muligt at bestemme, om brugerne kan gemme adgangskoder lokalt på deres computere. Denne indstilling er aktiveret som standard.
+Hvis du deaktiverer denne indstilling eller undlader at konfigurere den, kan medarbejderne ikke længere sende Do Not Track-headere.</string>
+      <string id="AllowInPrivate">Slå InPrivate-browsing fra</string>
+      <string id="AllowInPrivate_Explain">Denne indstilling gør det muligt at bestemme, om medarbejdere kan bruge InPrivate-browsing på websteder.
 
-Hvis du aktiverer denne indstilling, aktiveres styring af adgangskoder, og brugerne kan gemme adgangskoder lokalt på deres computere.
+Hvis denne indstilling aktiveres eller ikke konfigureres, kan medarbejdere bruge InPrivate-browsing på virksomhedens netværk.
 
-Hvis du deaktiverer denne indstilling, slås styring af adgangskoder fra, og brugerne kan ikke gemme adgangskoder lokalt.</string>
-      <string id="AllowPopups">Gør det muligt at vise pop op-vinduer</string>
-      <string id="AllowPopups_Explain">Denne indstilling gør det muligt at bestemme, om pop op-vinduer skal tillades. Denne indstilling er deaktiveret som standard.
+Hvis denne indstilling deaktiveres, kan medarbejderne ikke længere bruge InPrivate-browsing på websteder.</string>
+      <string id="AllowPasswordManager">Slå Password Manager fra</string>
+      <string id="AllowPasswordManager_Explain">Denne indstilling gør det muligt at bestemme, om medarbejderne kan gemme deres adgangskoder lokalt ved hjælp af Password Manager.
 
-Hvis du aktiverer denne indstilling, kan pop op-beskeder køre på alle organisationens computere.
+Hvis denne indstilling aktiveres eller ikke konfigureres, kan medarbejderne bruge Password Manager.
 
-Hvis du deaktiverer denne indstilling, er det ikke muligt at køre pop op-beskeder.</string>
-      <string id="AllowSearchSuggestionsinAddressBar">Forhindrer adresselinjen i at vise søgeforslag</string>
-      <string id="AllowSearchSuggestionsinAddressBar_Explain">Denne indstilling gør det muligt at bestemme, om adresselinjen skal vise søgeforslag. Denne indstilling er aktiveret som standard.
+Hvis denne indstilling deaktiveres, kan medarbejderne ikke længere bruge Password Manager.</string>
+      <string id="AllowPopups">Slå blokering af pop op-vinduer fra</string>
+      <string id="AllowPopups_Explain">Denne indstilling gør det muligt at bestemme, om blokering af pop op-vinduer skal slås fra, og om der pop op-vinduer kan vises i sekundære vinduer.
 
-Hvis du aktiverer denne indstilling, kan brugerne se søgeforslag på adresselinjen.
+Hvis denne indstilling aktiveres eller ikke konfigureres, slås blokering af pop op-vinduer til, og så vises der ingen pop op-vinduer.
 
-Hvis du deaktiverer denne indstilling, vises søgeresultater ikke på adresselinjen.</string>
-      <string id="AllowSmartScreen">Gør det muligt at konfigurere SmartScreen</string>
-      <string id="AllowSmartScreen_Explain">Denne indstilling gør det muligt at bestemme, om SmartScreen skal slås til. Denne indstilling er aktiveret som standard.
+Hvis denne indstilling deaktiveres, slås blokering af pop op-vinduer fra, og så vises der pop op-vinduer.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Deaktiver søgeforslag i adresselinjen</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Denne indstilling gør det muligt at bestemme, om der skal vises søgeforslag i adresselinjen i Microsoft Edge.
 
-Hvis du aktiverer denne indstilling, slås SmartScreen til på alle dine computere. 
+Hvis denne indstilling aktiveres eller ikke konfigureres, kan dine medarbejdere se søgeresultater i adresselinjen.
 
-Hvis du deaktiverer denne indstilling, slås SmartScreen fra.</string>
-      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
-      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+Hvis denne indstilling deaktiveres, kan medarbejderne ikke længere se søgeresultater i adresselinjen.</string>
+      <string id="AllowSmartScreen">Slå SmartScreen-filteret fra</string>
+      <string id="AllowSmartScreen_Explain">Denne indstilling gør det muligt at bestemme, om SmartScreen Filter skal være slået til. SmartScreen-filtret giver advarselsmeddelelser, der beskytter dine medarbejdere mod potentiel phishingsvindel og skadelig software.
 
-If you enable this setting, you have 3 additional options:
-  • Don’t block. Cookies can download from all websites. This is the default value.
-  • Block only third-party cookies. Stops third-party cookies from downloading.
-  • Block all cookies. Stops all cookies from downloading.</string>
-      <string id="CookiesList_Block_None">Bloker ikke</string>
-      <string id="CookiesList_Block_ThirdParty">Bloker kun cookies fra tredjeparter</string>
-      <string id="CookiesList_Block_All">Bloker alle cookies</string>
-      <string id="EnterpriseModeSiteList">Gør det muligt at konfigurere listen over Enterprise-websteder</string>
-      <string id="EnterpriseModeSiteList_Explain">Denne indstilling gør det muligt at bestemme, om listen over Enterprise-websteder skal konfigureres og bruges af hensyn til kompatibilitet.
+Hvis denne indstilling aktiveres eller ikke konfigureres, aktiveres SmartScreen-filtret.
 
-Hvis du aktiverer denne indstilling, har du ekstra indstillinger:
-  • Ikke konfigureret. Du kan ikke bruge listen over Enterprise-websteder.
-  • UseEnterpriseModeSiteList. Gør det muligt at bruge listen over Enterprise-websteder. Hvis du bruger denne indstilling, skal du også medtage placeringen til din liste over XML-websteder i feltet {URI}. Dette er standardværdien.</string>
-      <string id="HomePage">Gør det muligt at konfigurere din startside</string>
-      <string id="HomePage_Explain">Denne indstilling gør det muligt at konfigurere startsiden for din organisation. Denne indstilling er som standard ikke konfigureret, og appindstillingerne bruges i stedet.
+Hvis denne indstilling deaktiveres, deaktiveres SmartScreen-filtret.</string>
+      <string id="AllowWebContentOnNewTabPage">Open a new tab with an empty tab</string>
+      <string id="AllowWebContentOnNewTabPage_Explain">This policy setting specifies what happens when Microsoft Edge opens a new tab. By default, a new tab page appears.  
+ 
+If you disable this policy setting, Microsoft Edge opens a new, empty tab.  Employees can’t change this option.
+ 
+If you enable or don’t configure this policy setting, Microsoft Edge opens a new tab with a new tab page, including Top Sites, Top Sites with suggested content, or a blank page. Employees can change what type of tab page appears.</string>
+      <string id="Cookies">Konfigurer cookies</string>
+      <string id="Cookies_Explain">Denne indstilling gør det muligt at bestemme, hvordan dit firma håndterer cookies.
 
-Hvis du aktiverer denne indstilling, skal du medtage placeringen af dit websted i feltet {URI}.</string>
+Hvis denne indstilling aktiveres, får du mulighed for:
+At tillade alle cookies (standard). Tillader alle cookies fra alle websteder.
+Kun at blokere cookies fra tredjeparter. Blokerer kun cookies fra tredjepartswebsteder.
+At blokere alle cookies. Blokerer alle cookies fra alle websteder.
+
+Hvis denne indstilling deaktiveres, tillades alle cookies fra alle websteder.</string>
+      <string id="CookiesList_Block_None">Tillad alle cookies (standard).</string>
+      <string id="CookiesList_Block_ThirdParty">Bloker kun cookies fra tredjeparter.</string>
+      <string id="CookiesList_Block_All">Bloker alle cookies.</string>
+      <string id="EnterpriseModeSiteList">Konfigurer listen over websteder, der skal åbnes i Enterprise-tilstand</string>
+      <string id="EnterpriseModeSiteList_Explain">Denne indstilling gør det muligt at konfigurere, om dit firma bruger Enterprise-tilstand og listen over websteder i Enterprise-tilstand for på den måde at håndtere almindelige kompatibilitetsproblemer med ældre websteder.
+
+Hvis denne indstilling aktiveres, kan Microsoft Edge søge efter XML-filen til listen over websteder i Enterprise-tilstand. Denne fil omfatter de websteder og domæner, der skal vises ved hjælp Internet Explorer 11 og Enterprise-tilstand.
+
+Hvis denne indstilling deaktiveres eller ikke konfigureres, kan Microsoft Edge ikke længere bruge filen til listen over websteder i Enterprise-tilstand. I dette tilfælde kan medarbejderne opleve kompatibilitetsproblemer, når de bruger gamle websteder.</string>
+      <string id="HideLocalHostIPAddress">Tillad ikke, at WebRTC kan dele IP-adressen for LocalHost</string>
+      <string id="HideLocalHostIPAddress_Explain">Denne indstilling gør det muligt at bestemme, om en medarbejders IP-adresse til LocalHost vises, når der foretages telefonopkald ved hjælp af WebRTC-protokollen.
+
+Hvis denne indstilling aktiveres, skjules en medarbejders IP-adresse til LocalHost, når der foretages telefonopkald ved hjælp af WebRTC.
+
+Hvis denne indstilling deaktiveres, vises en medarbejders IP-adresse til LocalHost, når der foretages opkald ved hjælp af WebRTC.</string>
       <string id="ItemNameDisable">Deaktiver</string>
       <string id="ItemNameEnable">Aktivér</string>
-      <string id="SendIntranetTraffictoInternetExplorer">Sender al intranettrafik over til Internet Explorer</string>
-      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+      <string id="HomePages">Konfigurer firmaets startsider</string>
+      <string id="HomePages_Explain">Denne indstilling gør det muligt at konfigurere dit firmas startsider for enheder, der er tilsluttet domænet. Dine medarbejdere kan ændre denne indstilling.
+Hvis denne indstilling aktiveres, kan du konfigurere en eller flere firmastartsider. Hvis denne indstilling er aktiveret, skal du også medtage URL-adresser til siderne, og hvis der er flere sider, skal de adskilles med vinkelparenteser og være i dette format:
+    &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
+Hvis denne indstilling deaktiveres eller ikke konfigureres, indstilles din standardstartside til den side, du har angivet under appindstillingerne.</string>
+      <string id="PreventSmartScreenPromptOverride">Tillad ikke tilsidesættelser af SmartScreen-filteradvarsler</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Denne indstilling gør det muligt at bestemme, om medarbejderne kan tilsidesætte SmartScreen Filter-advarsler om potentielt set skadelige websteder.
 
-If you enable this setting, your intranet websites automatically open in Internet Explorer.
+Hvis denne indstilling aktiveres, kan medarbejderne ikke længere ignorere SmartScreen-filteradvarsler, og de forhindres i at komme ind på webstedet.
 
-If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+Hvis denne indstilling deaktiveres eller ikke konfigureres, kan medarbejderne ignorere SmartScreen-filteradvarslerne om potentielt set skadelige websteder og gå ind på webstedet.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">Tillad ikke tilsidesættelser af SmartScreen-filteradvarsler, når det gælder filer, der ikke er bekræftet</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Denne indstilling gør det muligt at bestemme, om medarbejderne kan tilsidesætte SmartScreen Filter-advarsler om download af filer, der ikke er bekræftet.
+
+Hvis denne indstilling aktiveres, kan medarbejderne ikke længere ignorere SmartScreen-filteradvarsler, og de forhindres i at downloade filer, der ikke er bekræftet.
+
+Hvis denne indstilling deaktiveres eller ikke konfigureres, kan medarbejderne ignorere SmartScreen-filteradvarslerne om filer, der ikke er bekræftet, og gå ind på webstedet.</string>
+      <string id="ProvisionedFavorites">Konfigurer favoritter</string>
+      <string id="ProvisionedFavorites_Explain">Denne indstilling gør det muligt at konfigurere den standardliste over favoritter, dine medarbejdere kan se. Dine medarbejdere kan ændre denne indstilling og når som helst tilføje eller fjerne favoritter.
+
+Hvis denne indstilling aktiveres, kan du konfigurere, hvilke standardfavoritter dine medarbejdere kan se. Hvis denne indstilling er aktiveret, skal du angive en liste over favoritter i sektionen Indstillinger. Listen importeres, når politikken er implementeret.
+
+Hvis denne indstilling deaktiveres eller ikke konfigureres, kan medarbejderne se de favoritter, de har angivet i hubben Favoritter.</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Send al intranettrafik til Internet Explorer 11</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">Denne indstilling gør det muligt at bestemme, om alle dine intranetwebsteder skal åbne Internet Explorer 11. Denne indstilling bør kun bruges, hvis der er kendte kompatibilitetsproblemer med Microsoft Edge.
+
+Hvis denne indstilling aktiveres, åbnes alle intranetwebsteder automatisk ved hjælp af Internet Explorer 11.
+
+Hvis denne indstilling deaktiveres eller ikke konfigureres, åbnes alle intranetwebsteder automatisk ved hjælp af Microsoft Edge.</string>
     </stringTable>
     
     <!-- Presentation -->
@@ -98,8 +137,16 @@ If you disable this setting, your intranet websites will automatically open in M
           <label>Angiv placering (webadresse) for dit websteds startside</label>
         </textBox>
       </presentation>
+      <presentation id="HomePages_Presentation">
+        <textBox refId="HomePagesPrompt">
+          <label>Brug dette format: &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ProvisionedFavorites_Presentation">
+        <listBox refId="ProvisionedFavorites_List">Angiv navnet på favoritten i den første kolonne og URL-adressen på favoritten i den anden kolonne, f.eks. Contoso http://www.contoso.com/</listBox>
+      </presentation>
       <presentation id="Cookies">
-        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Konfigurer indstilling for cookies</dropdownList>
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="2">Konfigurer cookies </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

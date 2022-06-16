@@ -13,22 +13,26 @@ La seguridad basada en la virtualización usa el hipervisor de Windows para prop
 
 Seguridad basada en la virtualización de la integridad de código
 
-Esta configuración permite la seguridad basada en la virtualización de la integridad de código del modo Kernel. Cuando esta opción esté habilitada, se aplicarán las protecciones de memoria del modo Kernel y la ruta de validación de la integridad de código estará protegida por la función de seguridad basada en la virtualización.
+Esta configuración permite la seguridad basada en la virtualización de la integridad de código del modo Kernel. Cuando esta opción esté habilitada, se aplicarán las protecciones de memoria del modo Kernel y la ruta de validación de la integridad de código estará protegida por la característica de seguridad basada en la virtualización.
 
-Advertencia: Todos los controladores del sistema deben ser compatibles con esta función o el sistema puede bloquearse. Asegúrate de que esta configuración de directiva solo se haya implementado en equipos que sean compatibles. 
+Advertencia: Todos los controladores del sistema deben ser compatibles con esta característica o el sistema puede bloquearse. Asegúrate de que esta configuración de directiva solo se haya implementado en PC que sean compatibles. 
 
 Protección de credenciales
 
-Esta configuración te permite decidir si los usuarios pueden activar la protección de credenciales con la seguridad basada en la virtualización para proteger las credenciales.
- 
-Si deshabilitas esta configuración, no se eliminará la función del equipo. Deberás eliminar la funcionalidad de seguridad de cada equipo, con un usuario presente de forma física, para poder borrar la configuración persistente en el arranque seguro.
+Esta opción permite a los usuarios activar la protección de credenciales con seguridad basada en la virtualización para ayudar a proteger las credenciales.
 
-Consulta el conjunto completo de requisitos que figura en la documentación para configurar esta función de forma segura.
+La opción "Deshabilitado" desactiva la protección de credenciales de manera remota si se había activado anteriormente mediante la opción "Habilitado sin bloqueo".
+
+La opción "Habilitado con bloqueo UEFI" garantiza que la protección de credenciales no se pueda deshabilitar de manera remota. Para deshabilitar la función, tienes que establecer la directiva de grupo en "Deshabilitado", así como quitar la funcionalidad de seguridad de cada PC, con un usuario presente físicamente, con el fin de borrar la configuración que persiste en UEFI.
+
+La opción "Deshabilitado sin bloqueo" permite deshabilitar la protección de credenciales de manera remota al usar una directiva de grupo. Los dispositivos que usan esta opción deben ejecutar al menos Windows 10 (versión 1511).
       </string>
       <string id="SecureBoot">Arranque seguro</string>
       <string id="SecureBootAndDmaProtection">Arranque seguro y protección de DMA</string>
       <string id="Disabled">Deshabilitado</string>
       <string id="Enabled">Habilitado</string>
+      <string id="EnabledWithoutLock">Habilitar sin bloqueo</string>
+      <string id="EnabledWithUefiLock">Habilitado con el bloqueo UEFI</string>
       <string id="ConfigCIPolicy">Implementar la directiva de integridad de código</string>
       <string id="ConfigCIPolicyHelp">Implementar la directiva de integridad de código
 
@@ -48,7 +52,7 @@ Si usas una directiva firmada y protegida, no se eliminará la característica d
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Selecciona el nivel de seguridad de la plataforma:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Habilitar la protección basada en la virtualización de la integridad de código</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Habilitar Protección de credenciales</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Configuración de protección de credenciales:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

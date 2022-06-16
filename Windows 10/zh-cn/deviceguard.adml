@@ -7,9 +7,9 @@
     <stringTable>
       <string id="DeviceGuard">Device Guard</string>
       <string id="VirtualizationBasedSecurity">打开基于虚拟化的安全</string>
-      <string id="VirtualizationBasedSecurityHelp">指定是否启用基于虚拟化的安全。
+      <string id="VirtualizationBasedSecurityHelp">指定是否启用基于虚拟化的安全性。
 
-基于虚拟化的安全使用 Windows 虚拟机监控程序支持安全服务。基于虚拟化的安全需要安全启动，并且可以使用 DMA 保护进行有选择的启用。DMA 保护需要硬件支持，只能在配置正确的设备上启用。
+基于虚拟化的安全性使用 Windows 虚拟机监控程序支持安全服务。基于虚拟化的安全性需要安全启动，并且可以使用 DMA 保护进行有选择的启用。DMA 保护需要硬件支持，只能在配置正确的设备上启用。
 
 基于虚拟化的代码完整性保护
 
@@ -19,16 +19,20 @@
 
 凭据保护
 
-此设置使你可以确定用户是否可以打开其安全性以虚拟化为基础的凭据保护，以帮助保护凭据。
- 
-禁用这些设置不会从计算机中删除该功能。相反，你还必须通过真实存在的用户从每台计算机中删除该安全功能，然后才能清除安全启动中永久保留的配置。
+此设置允许用户使用基于虚拟化的安全性启用凭据保护，以帮助保护凭据。
 
-有关安全配置此功能的要求的完整内容，请参考相关文档。
+“禁用”选项将远程关闭凭据保护(如果之前已使用“无锁启用”选项启用)。
+
+“使用 UEFI 锁启用”选项可确保无法远程禁用凭据保护。若要禁用该功能，必须将组策略设为“禁用”并通过真实存在的用户从每台计算机中删除该安全功能，然后才能清除 UEFI 中永久保留的配置。
+
+“无锁启用”选项允许使用组策略远程禁用凭据保护。使用此设置的设备必须至少运行 Windows 10 (1511 版)。
       </string>
       <string id="SecureBoot">安全启动</string>
       <string id="SecureBootAndDmaProtection">安全启动和 DMA 保护</string>
       <string id="Disabled">已禁用</string>
       <string id="Enabled">已启用</string>
+      <string id="EnabledWithoutLock">无锁启用</string>
+      <string id="EnabledWithUefiLock">使用 UEFI 锁启用</string>
       <string id="ConfigCIPolicy">部署代码完整性策略</string>
       <string id="ConfigCIPolicyHelp">部署代码完整性策略
 
@@ -48,7 +52,7 @@
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">选择平台安全级别:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">启用基于虚拟化的代码完整性保护</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">启用凭据保护</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">凭据保护配置:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

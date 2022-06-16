@@ -5,14 +5,15 @@
   <description>indtast beskrivelsen her</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Mindst Windows 10 eller Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Mindst Windows 8 eller Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Mindst Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Mindst Windows 8 Enterprise eller Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Mindst Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Mindst Windows 8 Enterprise eller Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Kun Windows 7 eller Windows Server 2008 R2 (og senere servicepakker)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista og Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Mindst Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Mindst Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Mindst Windows Server Technical Preview 2, hvor RDSH-rollen er installeret</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Mindst Windows Server 2012 med RDSH-rollen installeret</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Mindst Windows 7 med Service Pack 1 eller Windows Server 2008 R2 med Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Mindst Windows Vista med Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Mindst Windows 2000 Terminal Services</string>
@@ -45,7 +46,7 @@
       <string id="TS_AUDIOMAP_EXPLAIN">Med denne politikindstilling kan du angive, om brugere skal kunne omdirigere fjerncomputerens lyd- og videooutput under en session med Fjernskrivebord-tjenester.
 Brugere kan angive, hvor fjerncomputerens lydoutput skal afspilles ved at konfigurere indstillingerne for fjernlyd under fanen Lokale ressourcer i Forbindelse til Fjernskrivebord. Brugere kan også vælge at afspille fjernlyden på fjerncomputeren eller på den lokale computer. Brugere kan desuden vælge ikke at afspille lyden. Videoafspilning kan konfigureres ved hjælp af indstillingen for videoafspilning i en .rdp-fil (Remote Desktop Protocol). Som standard er videoafspilning aktiveret.
 
-Omdirigering af lyd og video er som standard ikke tilladt, når der oprettes forbindelse til en computer, som kører Windows Server 2008 R2, Windows Server 2008 eller Windows Server 2003. Brugere, som opretter forbindelse til en computer, der kører Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista eller Windows XP Professional, kan som standard anvende omdirigering af lyd og video.
+Omdirigering af lyd og video er som standard ikke tilladt, når der oprettes forbindelse til en computer, som kører Windows Server 2008 R2, Windows Server 2008 eller Windows Server 2003. Brugere, som opretter forbindelse til en computer, der kører Windows 8, Windows Server 2012, Windows 7, Windows Vista eller Windows XP Professional, kan som standard anvende omdirigering af lyd og video.
 
 Hvis du aktiverer denne politikindstilling, kan brugere omdirigere afspilning af lyd og video.
 
@@ -154,24 +155,23 @@ Hvis du deaktiverer denne politikindstilling, tillader Fjernskrivebord-tjenester
 Hvis du ikke konfigurerer denne politikindstilling, er omdirigering af Udklipsholder ikke angivet på gruppepolitikniveau. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Denne politikindstilling giver dig mulighed for at angive den maksimale farveopløsning (farvedybde) for forbindelser på Fjernskrivebord-tjenester.
+      <string id="TS_COLOR_EXPLAIN">Denne politikindstilling gør det muligt at angive den maksimale farveopløsning (farvedybde) for forbindelser på Fjernskrivebord-tjenester.
 
-        Du kan bruge denne politikindstilling til at angive en grænse for farvedybden af enhver forbindelse, der benytter RDP. Begrænsning af farvedybden kan forbedre forbindelsen, især over langsomme forbindelser, og formindske serverens belastning.
+Du kan bruge denne politikindstilling til at angive en grænse for farvedybden af enhver forbindelse, der benytter RDP. Begrænsning af farvedybden kan forbedre forbindelsen, især over langsomme forbindelser, og formindske serverens belastning.
 
-        Hvis du aktiverer denne politikindstilling, vil den farvedybde, du angiver, være den maksimalt tilladte farvedybde for en brugers RDP-forbindelse. Den faktiske farvedybde for forbindelsen fastslås af den tilgængelige farveunderstøttelse på klientcomputeren. Hvis du vælger Klientkompatibel, vil den højeste farvedybde, som klienten understøtter, blive brugt.
+Hvis du aktiverer denne politikindstilling, vil den farvedybde, du angiver, være den maksimalt tilladte farvedybde for en brugers RDP-forbindelse. Den faktiske farvedybde for forbindelsen fastslås af den tilgængelige farveunderstøttelse på klientcomputeren. Hvis du vælger Klientkompatibel, vil den højeste farvedybde, som klienten understøtter, blive brugt.
 
-        Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, er farvedybden for forbindelser ikke angivet på gruppepolitikniveau.
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, er farvedybden for forbindelser ikke angivet på gruppepolitikniveau.
 
-        Bemærk!
-        1.	Angivelse af farvedybden til 24 bit understøttes kun i Windows Server 2003 og Windows XP Professional.
-        2.	Den værdi, der angives i denne politikindstilling, anvendes ikke på forbindelser fra klientcomputere, der benytter den seneste Remote Desktop Protocol 8.0 (computere, der mindst kører Windows 8 eller Windows Server Technical Preview 2). Farvedybdeformatet 32-bit bruges altid til disse forbindelser.
-        3.	For forbindelser fra klientcomputere, der benytter version Remote Desktop Protocol 7.1 eller ældre, der opretter forbindelse til computere med mindst Windows 8 eller Windows Server Technical Preview 2, bruges der som minimum følgende værdier som farvedybdeformat:
-        a.	Værdi angivet af denne politikindstilling
-        b.	Maksimal farvedybde understøttet af klienten
-        c.	Værdi anmodet af klienten
+Bemærk!
+1.	Angivelse af farvedybden til 24 bit understøttes kun i Windows Server 2003 og Windows XP Professional.
+2.	Den værdi, der angives i denne politikindstilling, anvendes ikke på forbindelser fra klientcomputere, der benytter den seneste Remote Desktop Protocol 8.0 (computere, der mindst kører Windows 8 eller Windows Server 2012). Farvedybdeformatet 32-bit bruges altid til disse forbindelser.
+3.	For forbindelser fra klientcomputere, der benytter versionen Remote Desktop Protocol 7.1 eller ældre, der opretter forbindelse til computere med mindst Windows 8 eller Windows Server 2012, bruges der som minimum følgende værdier som farvedybdeformat:
+a.	Værdi angivet af denne politikindstilling
+b.	Maksimal farvedybde understøttet af klienten
+c.	Værdi anmodet af klienten
 
-        Hvis klienten ikke understøtter mindst 16 bit, afbrydes forbindelsen.      
+Hvis klienten ikke understøtter mindst 16 bit, afbrydes forbindelsen.
       </string>
       <string id="TS_COLORDEPTH">Begræns maksimal farvedybde</string>
       <string id="TS_Comp_Help">Styrer konfigurationen af Fjernskrivebord-tjenester og egenskaber for klientsessioner for enkelte computere eller grupper af computere.</string>
@@ -564,7 +564,7 @@ Bemærk!
       <string id="TS_SD_Loc">Konfigurer servernavn for forbindelsesmægler for fjernskrivebord</string>
       <string id="TS_SD_Loc_Explain">Denne politikindstilling giver dig mulighed for at angive den server for forbindelsesmægler for fjernskrivebord, som værtsserveren for fjernskrivebordssessionen bruger til at spore og omdirigere brugersessioner for en serverfarm med afbalancering af belastning. Den angivne server skal køre tjenesten Forbindelsesmægler for fjernskrivebord. Alle værtsservere for fjernskrivebordssessionen i en farm med afbalancering af belastning skal bruge den samme server for Forbindelsesmægler for fjernskrivebord.
 
-Hvis du aktiverer denne politikindstilling, skal du angive den server, der kører Forbindelsesmægler for Fjernskrivebord, ved hjælp af dens fulde domænenavn (FQDN). For at opnå en konfiguration med stor tilgængelighed, når du har mange servere, der kører Forbindelsesmægler for Fjernskrivebord i Windows Server 2012 R2, skal du angive en semikolonadskilt liste over alle servernes FQDN'er.
+Hvis du aktiverer denne politikindstilling, skal du angive den server, der kører Forbindelsesmægler for Fjernskrivebord, ved hjælp af dens fulde domænenavn (FQDN). For at opnå en konfiguration med stor tilgængelighed, når du har mange servere, der kører Forbindelsesmægler for Fjernskrivebord i Windows Server 2012, skal du angive en semikolonadskilt liste over alle servernes FQDN'er.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er den ikke angivet på gruppepolitikniveau.
 
@@ -950,19 +950,17 @@ Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, bestemmer 
 
     <string id="TS_SERVER_IMAGE_QUALITY">Konfigurer billedkvalitet for tilpasset RemoteFX-grafik</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Denne politikindstilling giver dig mulighed for at angive den visuelle kvalitet for fjernbrugere, når de opretter forbindelse til denne computer ved hjælp af Forbindelse til fjernskrivebord. Du kan bruge denne politikindstilling til at afbalancere forbruget af netværksbåndbredde med den visuelle kvalitet, der leveres.
- 
-Hvis du aktiverer denne politikindstilling og angiver kvaliteten til Mellem, bruger tilpasset RemoteFX-grafik en kodningsmekanisme, der medfører billeder i en mellemkvalitet. Denne tilstand forbruger den mindste netværksbåndbredde af kvalitetstilstandene. 
-Hvis du aktiverer denne politikindstilling og angiver kvaliteten til Høj, bruger tilpasset RemoteFX-grafik en kodningsmekanisme, der medfører billeder i en høj kvalitet og forbruger en moderat netværksbåndbredde. 
-Hvis du aktiverer denne politikindstilling og angiver kvaliteten til Tabsfri, vil tilpasset RemoteFX-grafik bruge tabsfri kodning. I denne tilstand bliver grafikdataenes farveintegritet ikke påvirket. Men indstillingen medfører en betydelig forøgelse af forbruget af netværksbåndbredde. Vi anbefaler, at du kun bruger denne indstilling i helt særlige situationer. 
- 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger tilpasset RemoteFX-grafik en kodningsmekanisme, der medfører billeder i en mellemkvalitet.
-
-    
-
+      Hvis du aktiverer denne politikindstilling og angiver kvaliteten til lav, bruger tilpasset RemoteFX-grafik en kodningsmekanisme, der medfører billeder i lav kvalitet. Denne tilstand forbruger den mindste netværksbåndbredde af kvalitetstilstandene.
+      Hvis du aktiverer denne politikindstilling og angiver kvaliteten til mellem, bruger tilpasset RemoteFX-grafik en kodningsmekanisme, der medfører billeder i mellem kvalitet. Denne tilgang giver grafik i en bedre kvalitet end lav kvalitet og bruger mindre båndbredde end høj kvalitet.
+      Hvis du aktiverer denne politikindstilling og angiver kvaliteten til høj, bruger tilpasset RemoteFX-grafik en kodningsmekanisme, der medfører billeder i høj kvalitet og forbruger moderat netværksbåndbredde.
+      Hvis du aktiverer denne politikindstilling og indstiller kvaliteten til tabsfri, bruger tilpasset RemoteFX-grafik tabsfri kodning. I denne tilstand påvirkes farveintegriteten af grafikdataene ikke. Denne indstilling resulterer imidlertid i en markant stigning i forbruget af netværksbåndbredden. Vi anbefaler, at du kun indstiller den i meget specifikke tilfælde.
+      Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger tilpasset RemoteFX-grafik en kodningsmekanisme, der medfører billeder i en mellem kvalitet.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Tabsfri</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Høj</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Mellem</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Lav</string>      
 
     <string id="TS_SERVER_PROFILE">Konfigurere tilpasset RemoteFX-grafik</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">Denne politikindstilling giver administratoren mulighed for at konfigurere RemoteFX-oplevelsen for værtsservere for fjernskrivebordssessioner eller værtsservere for fjernskrivebordsvirtualisering. Systemet vælger som standard den bedste oplevelse baseret på den tilgængelige netværksbåndbredde.
@@ -991,14 +989,13 @@ Du kan også vælge ikke at bruge en RDP-komprimeringsalgoritme. Hvis du vælger
 Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, bruges standardkomprimeringsalgoritmen for RDP.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Afbalancerer hukommelse og netværksbåndbredde</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimeret til at bruge mindre netværksbåndbredde</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Optimeret til at bruge mindre hukommelse</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Undlad at bruge en RDP-komprimeringsalgoritme</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Afbalancerer hukommelse og netværksbåndbredde</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimeret til at bruge mindre netværksbåndbredde</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Optimeret til at bruge mindre hukommelse</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Undlad at bruge en RDP-komprimeringsalgoritme</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Brug avanceret RemoteFX-grafik til RemoteApp</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     Med denne politikindstilling kan du aktivere RemoteApp-programmer til at bruge avanceret grafik, herunder understøttelse af gennemsigtighed, liveminiaturer og problemfrie programflytninger. Denne politikindstilling gælder kun for RemoteApp-programmer og ikke for fjernskrivebordssessioner.
 
 Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, bruger RemoteApp-programmer, som udgives fra denne fjernskrivebordssessions værtsserver, denne avancerede grafik.
@@ -1007,6 +1004,30 @@ Hvis du deaktiverer denne politikindstilling, bruger RemoteApp-programmer, som u
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Konfigurer H.264/AVC-hardwarekodning til forbindelser til Fjernskrivebord</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Med denne indstilling kan du aktivere understøttelse af H.264/AVC-hardwarekodning til forbindelser til Fjernskrivebord. Hvis der opstår en fejl, når du har aktiveret hardwarekodning, forsøger vi at bruge softwarekodning. Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, bruger vi altid softwarekodning.
+        
+Hvis du angiver kodningsindstillingen til "Forsøg altid", forsøger Fjernskrivebord altid at bruge H.264/AVC-hardwarekodning, når den er tilgængelig. Vær opmærksom på, at politikken skal angives på Hyper-V-værtsmaskinen, hvis RemoteFX vGPU er aktiveret for den Windows Server, der kører Hyper-V.
+        
+Hvis du angiver kodningsindstillingen til "Forsøg kun for virtuelle RemoteFX vGPU-maskiner", skal du være opmærksom på, at politikken skal angives på Hyper-V-værtsmaskinen, hvis RemoteFX vGPU er aktiveret for den Windows Server, der kører Hyper-V.
+        
+Hvis du angiver kodningsindstillingen til "Forsøg kun for scenarier uden RemoteFX vGPU", forsøger Fjernskrivebord at bruge hardwarekodning i alle scenarier undtagen RemoteFX vGPU.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Forsøg altid</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Forsøg kun for virtuelle RemoteFX vGPU-maskiner</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Forsøg kun for scenarier uden RemoteFX vGPU</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">Prioriter H.264/AVC 444-grafiktilstanden for forbindelser til Fjernskrivebord</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Denne politikindstilling prioriterer H.264/AVC 444-grafiktilstanden for scenarier uden RemoteFX vGPU. Når du bruger denne indstilling på RDP-server, bruger serveren H.264/AVC 444 som codec i en RDP 10-forbindelse, hvor både klienten og serveren kan bruge H.264/AVC 444.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Tillad ikke hardwareaccelereret afkodning</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Denne indstilling angiver, om en forbindelse til Fjernskrivebord kan bruge hardwareacceleration, hvis den understøttede hardware er tilgængelig. Hvis du bruger denne indstilling, bruger fjernskrivebordsklienten kun softwareafkodning. Hvis du for eksempel har et problem, som du mener kan være relateret til hardwareacceleration, skal du bruge denne indstilling til at deaktivere accelerationen. Hvis problemet stadig forekommer derefter, ved du, at der er andre problemer, der skal undersøges. Hvis du deaktiverer indstillingen eller undlader at konfigurere den, bruger fjernskrivebordsklienten hardwareaccelereret afkodning, hvis den understøttede hardware er tilgængelig.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ Sessioner for forbindelse til Fjernskrivebord, der benytter RemoteFX er som stan
 
       <string id="TS_SERVER_LEGACY_RFX">Aktiver RemoteFX-kodning for RemoteFX-klienter, der er designet til Windows Server 2008 R2 SP1</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Denne politikindstilling giver dig mulighed for at konfigurere grafikkodning for at bruge RemoteFX-codec'et på værtsserveren for en fjernskrivebordssession, så sessionerne er kompatible med ikke-Windows tynde klientenheder, der er designet til Windows Server 2008 R2 SP1. Disse klienter understøtter kun Windows Server 2008 R2 SP1 RemoteFX-codec. Hvis du aktiverer denne politikindstilling, benytter brugersessioner på denne server kun Windows Server 2008 R2 SP1 RemoteFX-codec til kodning. Denne tilstand er kompatibel med tynde klientenheder, der kun understøtter Windows Server 2008 R2 SP1 RemoteFX-codec. Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil ikke-Windows tynde klienter, der kun understøtter Windows Server 2008 R2 SP1 RemoteFX-codec, ikke kunne oprette forbindelse til denne server. Denne politikindstilling gælder kun for klienter, der benytter RDP (Remote Desktop Protocol) 7.1, og påvirker ikke klienter, der benytter andre RDP-versioner.
       
       </string>
@@ -1296,6 +1316,9 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP-komprimeringsalgoritme:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Foretræk AVC-hardwarekodning:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Visuel oplevelse:</dropdownList>

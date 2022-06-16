@@ -19,16 +19,20 @@ Avviso: tutti i driver nel sistema devono essere compatibili con questa funziona
 
 Controllo credenziali
 
-Questa impostazione consente di determinare se gli utenti possono attivare il controllo delle credenziali con sicurezza basata su virtualizzazione per proteggere le credenziali.
- 
-La disabilitazione di queste impostazioni non comporta la rimozione della funzionalità dal computer. È invece necessario rimuovere anche le funzionalità di sicurezza da ogni computer con un utente fisicamente presente, per cancellare la configurazione salvata in Avvio protetto.
+Questa impostazione consente agli utenti di attivare il controllo delle credenziali con sicurezza basata su virtualizzazione per proteggere le credenziali.
 
-Consultare la documentazione per informazioni complete sui requisiti per configurare in modo sicuro questa funzionalità.
+L'opzione "Disabilitato" disattiva il controllo delle credenziali in remoto se era stato attivato in precedenza con l'opzione "Abilitato senza blocco".
+
+L'opzione "Abilitato con blocco UEFI" assicura che il controllo delle credenziali non possa essere disabilitato in remoto. Per disabilitare la funzionalità, è necessario impostare il criterio di gruppo su "Disabilitato" e rimuovere le funzionalità di sicurezza da ogni computer con un utente fisicamente presente, per cancellare la configurazione salvata in UEFI.
+
+L'opzione "Abilitato senza blocco" consente di disabilitare in remoto il controllo delle credenziali usando Criteri di gruppo. Nei dispositivi che usano questa impostazione deve essere in esecuzione almeno Windows 10 (versione 1511).
       </string>
       <string id="SecureBoot">Avvio protetto</string>
       <string id="SecureBootAndDmaProtection">Avvio protetto e protezione DMA</string>
       <string id="Disabled">Disabilitata</string>
       <string id="Enabled">Abilitata</string>
+      <string id="EnabledWithoutLock">Abilitato senza blocco</string>
+      <string id="EnabledWithUefiLock">Abilitato con blocco UEFI</string>
       <string id="ConfigCIPolicy">Distribuisci criteri di integrità del codice</string>
       <string id="ConfigCIPolicyHelp">Distribuisci criteri di integrità del codice
 
@@ -48,7 +52,7 @@ Se si utilizza un criterio firmato e protetto, la disabilitazione di questa impo
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Seleziona il livello di sicurezza della piattaforma:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Abilita protezione basata su virtualizzazione dell'integrità del codice</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Abilita controllo credenziali</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Configurazione di controllo credenziali:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

@@ -295,12 +295,20 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
 
 注意: 這部電腦設定為使用「指定內部網路 Microsoft 更新服務位置」原則連線到內部網路更新服務時，才適用這個原則。</string>
 
-      <string id="DeferUpgrade_Title">延遲升級</string>
-      <string id="DeferUpgrade_Help">如果您啟用這個原則設定，在專業版和企業版 SKU 中您可以延遲升級直到下一個升級週期 (至少有數個月)。
+      <string id="DeferUpgrade_Title">延遲升級與更新</string>
+      <string id="DeferUpgrade_Help">Enable this policy in order to defer upgrades for up to eight months.
+      
+You can also choose to delay updates for up to one month. If you do not delay updates, your PC will remain up to date with security updates as they become available.
 
-如果您沒有設定這個原則設定，只要有升級可用，並將安裝作為更新原則的一部分，您就會接收到升級。
+If an issue arises with an update or upgrade, select "Pause Upgrades and Updates". This will delay updates and upgrades until the next monthly update or upgrade becomes available. Once a new update or upgrade it available, the value will go back to the previously selected option, re-enabling your validation groups.
 
-安全性更新不會受到這個原則的影響。如需可用升級的詳細資訊，請參閱 windows.com/itpro。</string>
+Note: Definition updates will not be impacted by this policy.
+
+Note: If the "Specify intranet Microsoft update service location" policy is enabled, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+ 
+Note: If the “Allow Telemetry” policy is enabled and the Options value is set to 0, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+
+To stay informed about new features in Windows 10, see go.microsoft.com/fwlink/?LinkID=529169.</string>
     </stringTable>
     <presentationTable>
       <presentation id="RemoveWindowsUpdate">
@@ -354,6 +362,13 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         <text>重新啟動計時器讓使用者</text>
         <text>儲存他們的</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">工作的時間 (分鐘):  </decimalTextBox>
+      </presentation>
+      <presentation id="DeferUpgrade_Title">
+        <text>延遲升級下列項目</text>
+        <decimalTextBox refId="DeferUpgradePeriodId" defaultValue="0">持續時間 (月): </decimalTextBox>
+        <text>延後更新列項目</text>
+        <decimalTextBox refId="DeferUpdatePeriodId" defaultValue="0">持續時間 (週): </decimalTextBox>
+        <checkBox refId="PauseDeferralsId" defaultChecked="false">暫停升級與更新</checkBox>
       </presentation>
     </presentationTable>
   </resources>

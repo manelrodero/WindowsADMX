@@ -1,89 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
-  <displayName>Microsoft Edge Group Policies</displayName>
-  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <displayName>Políticas de Grupo do Microsoft Edge</displayName>
+  <description>Políticas definidas para gerenciar as configurações do Microsoft Edge por meio dos serviços de Gerenciamento de Política de Grupo.</description>
   <resources>
     <stringTable>
       <!-- Product -->
-      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Somente o Microsoft Edge 1.0</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
-      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      <string id="InternetBrowser_ExplainCat">Categoria do Microsoft Edge</string>
       
       <!-- Categories -->
 
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
-      <string id="AllowActiveScripting">Permite executar scripts, como Javascript</string>
-      <string id="AllowActiveScripting_Explain">Essa configuração permite que você decida se é para permitir que as pessoas executem scripts, como JavaScript. Essa configuração é habilitada por padrão.
+      <string id="AllowAutofill">Desativar o Preenchimento Automático</string>
+      <string id="AllowAutofill_Explain">Esta configuração permite decidir se os funcionários poderão usar o Preenchimento Automático para preencher automaticamente campos de formulário enquanto usam o Microsoft Edge.
 
-Se você habilitar essa configuração, o script será ativado para todos os seus computadores.
+Se você ativar esta configuração, ou não a definir, os funcionários poderão usar o Preenchimento Automático em campos de formulário.
 
-Se você desabilitar essa configuração, os scripts não poderão ser executados.</string>
-      <string id="AllowAutofill">Permite que você deixe as pessoas usarem o preenchimento automático em sites</string>
-      <string id="AllowAutofill_Explain">Essa configuração permite que você decida se as pessoas podem usar o preenchimento automático em sites. Essa configuração é habilitada por padrão.
+Se você desativar esta configuração, os funcionários não poderão usar o Preenchimento Automático em campos de formulário.</string>
+      <string id="AllowDeveloperTools">Desativar as Ferramentas de Desenvolvedor</string>
+      <string id="AllowDeveloperTools_Explain">Esta configuração permite decidir se os funcionários poderão usar as Ferramentas de Desenvolvedor F12 no Microsoft Edge.
 
-Se você habilitar essa configuração, as pessoas podem usar o preenchimento automático em sites, armazenando as informações em cache localmente.
+Se você ativar esta configuração, ou não a definir, os funcionários poderão usar as Ferramentas de Desenvolvedor F12.
 
-Se você desabilitar essa configuração, as pessoas não poderão usar o preenchimento automático.</string>
-      <string id="AllowDoNotTrack">Permite que você autorize as pessoas a enviar cabeçalhos Do Not Track</string>
-      <string id="AllowDoNotTrack_Explain">Essa configuração permite que você decida se é para permitir que as pessoas enviem cabeçalhos Do Not Track. Essa configuração é desabilitada por padrão.
+Se você desativar esta configuração, os funcionários não poderão usar as Ferramentas de Desenvolvedor F12.</string>
+      <string id="AllowDoNotTrack">Permitir que funcionários enviem cabeçalhos Do Not Track</string>
+      <string id="AllowDoNotTrack_Explain">Esta configuração permite que você decida se os funcionários poderão enviar cabeçalhos Do Not Track a sites que requerem informações de rastreamento.
 
-Se você habilitar essa configuração, as pessoas poderão enviar cabeçalhos Do Not Track de qualquer computador em sua organização.
+Se você ativar esta configuração, os funcionários poderão enviar cabeçalhos Do Not Track.
 
-Se você desabilitar essa configuração, as pessoas não poderão enviar cabeçalhos Do Not Track.</string>
-      <string id="AllowPasswordManager">Permite configurar o gerenciador de senhas</string>
-      <string id="AllowPasswordManager_Explain">Essa configuração permite que você decida se as pessoas podem salvar senhas localmente em seus computadores. Essa configuração é habilitada por padrão.
+Se você desativar esta configuração, ou não a definir, os funcionários não poderão enviar cabeçalhos Do Not Track.</string>
+      <string id="AllowInPrivate">Desativar a Navegação InPrivate</string>
+      <string id="AllowInPrivate_Explain">Esta configuração permite que você decida se os funcionários poderão navegar usando a navegação InPrivate em sites.
 
-Se você habilitar essa configuração, o Gerenciador de Senhas será ativado e as pessoas poderão salvar senhas localmente em seus computadores.
+Se você ativar esta configuração, ou não a definir, os funcionários poderão usar a navegação InPrivate na rede corporativa.
 
-Se você desabilitar essa configuração, o Gerenciador de Senhas será desativado e as pessoas não poderão salvar senhas localmente.</string>
-      <string id="AllowPopups">Permite executar pop-ups</string>
-      <string id="AllowPopups_Explain">Essa configuração permite que você decida se é para permitir pop-ups. Essa configuração é desabilitada por padrão.
+Se você desativar esta configuração, os funcionários não poderão usar a navegação InPrivate em sites.</string>
+      <string id="AllowPasswordManager">Desativar o Gerenciador de Senhas</string>
+      <string id="AllowPasswordManager_Explain">Esta configuração permite decidir se os funcionários poderão salvar suas senhas localmente usando o Gerenciador de Senhas.
 
-Se você habilitar essa configuração, os pop-ups poderão ser executados em todos os computadores de sua organização.
+Se você ativar esta configuração, ou não a definir, os funcionários poderão usar o Gerenciador de Senhas.
 
-Se você desabilitar essa configuração, os pop-ups não poderão ser executados.</string>
-      <string id="AllowSearchSuggestionsinAddressBar">Impede a barra de endereços de mostrar sugestões de pesquisa</string>
-      <string id="AllowSearchSuggestionsinAddressBar_Explain">Essa configuração permite que você decida se a barra de endereço deve mostrar sugestões de pesquisa. Essa configuração é habilitada por padrão.
+Se você desativar esta configuração, os funcionários não poderão usar o Gerenciador de Senhas.</string>
+      <string id="AllowPopups">Desativar o Bloqueador de Pop-ups</string>
+      <string id="AllowPopups_Explain">Esta configuração permite decidir se o Bloqueador de Pop-ups será ativado e se os pop-ups poderão ser exibidos em janelas secundárias.
 
-Se você habilitar essa configuração, as pessoas poderão ver sugestões de pesquisa na barra de endereço.
+Se você ativar esta configuração, ou não a definir, o Bloqueador de Pop-ups será ativado, impedindo que pop-ups sejam exibidos.
 
-Se você desabilitar essa configuração, os resultados da pesquisa não aparecerão na barra de endereço.</string>
-      <string id="AllowSmartScreen">Permite configurar o SmartScreen</string>
-      <string id="AllowSmartScreen_Explain">Essa configuração permite que você decida se é para ativar o SmartScreen. Essa configuração é habilitada por padrão.
+Se você desativar esta configuração, o Bloqueador de Pop-ups será desativado, e pop-ups serão exibidos.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Desativar as sugestões de pesquisa da barra de endereços</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Esta configuração permite decidir se as sugestões de pesquisa serão exibidas na barra de endereços do Microsoft Edge.
 
-Se você habilitar essa configuração, o SmartScreen será ativado para todos os seus computadores.
+Se você ativar esta configuração, os funcionários poderão ver sugestões de pesquisa na barra de endereços.
 
-Se você desabilitar essa configuração, o SmartScreen será desativado.</string>
-      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
-      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+Se você desativar esta configuração, os funcionários não poderão ver sugestões de pesquisa na barra de endereços.</string>
+      <string id="AllowSmartScreen">Desativar o Filtro SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Esta configuração permite decidir se o Filtro SmartScreen será ativado. O Filtro SmartScreen envia mensagens de aviso para ajudar a proteger seus funcionários de potenciais tentativas de phishing e software mal-intencionado.
 
-If you enable this setting, you have 3 additional options:
-  • Don’t block. Cookies can download from all websites. This is the default value.
-  • Block only third-party cookies. Stops third-party cookies from downloading.
-  • Block all cookies. Stops all cookies from downloading.</string>
-      <string id="CookiesList_Block_None">Não bloquear</string>
-      <string id="CookiesList_Block_ThirdParty">Bloquear somente cookies de terceiros</string>
-      <string id="CookiesList_Block_All">Bloquear todos os cookies</string>
-      <string id="EnterpriseModeSiteList">Permite configurar a Lista de Sites Empresariais</string>
-      <string id="EnterpriseModeSiteList_Explain">Essa configuração permite que você decida se é para configurar e usar a Lista de Sites Empresariais para compatibilidade.
+Se você ativar esta configuração, ou não a definir, o Filtro SmartScreen será ativado.
 
-Se você habilitar essa configuração, duas opções adicionais estarão disponíveis:
-  • Não configurado. Você não poderá usar a Lista de Sites Empresariais.
-  • UseEnterpriseModeSiteList. Permite usar a Lista de Sites Empresariais. Se você usar essa opção, também deverá incluir o local à sua lista de sites XML na caixa {URI}. Esse é o valor padrão.</string>
-      <string id="HomePage">Permite configurar sua Home Page</string>
-      <string id="HomePage_Explain">Essa configuração permite que você configure a Home Page de sua organização. Por padrão, essa configuração não é definida e as configurações do aplicativo são usadas.
+Se você desativar esta configuração, o Filtro SmartScreen será desativado.</string>
+      <string id="AllowWebContentOnNewTabPage">Open a new tab with an empty tab</string>
+      <string id="AllowWebContentOnNewTabPage_Explain">This policy setting specifies what happens when Microsoft Edge opens a new tab. By default, a new tab page appears.  
+ 
+If you disable this policy setting, Microsoft Edge opens a new, empty tab.  Employees can’t change this option.
+ 
+If you enable or don’t configure this policy setting, Microsoft Edge opens a new tab with a new tab page, including Top Sites, Top Sites with suggested content, or a blank page. Employees can change what type of tab page appears.</string>
+      <string id="Cookies">Configurar Cookies</string>
+      <string id="Cookies_Explain">Esta configuração permite definir como sua empresa lidará com os cookies.
 
-Se você habilitar essa configuração, também deverá incluir a localização de seu site na caixa {URI}.</string>
+Se você ativar esta configuração, poderá:
+Permitir todos os cookies (padrão). Permite todos os cookies de todos os sites.
+Bloquear somente cookies de terceiros. Bloqueia somente cookies de sites de terceiros.
+Bloquear todos os cookies. Bloqueia todos os cookies de todos os sites.
+
+Se você desativar esta configuração, permitirá todos os cookies de todos os sites.</string>
+      <string id="CookiesList_Block_None">Permitir todos os cookies (padrão).</string>
+      <string id="CookiesList_Block_ThirdParty">Bloquear somente cookies de terceiros.</string>
+      <string id="CookiesList_Block_All">Bloquear todos os cookies.</string>
+      <string id="EnterpriseModeSiteList">Configurar a Lista de Sites do Modo Empresarial</string>
+      <string id="EnterpriseModeSiteList_Explain">Esta configuração permite definir se sua empresa usará o Modo Empresarial e a Lista de Sites do Modo Empresarial para abordar problemas comuns de compatibilidade com sites herdados.
+
+Se você ativar esta configuração, o Microsoft Edge procurará o arquivo XML da Lista de Sites do Modo Empresarial. Esse arquivo inclui os sites e os domínios que precisam ser exibidos usando o Internet Explorer 11 e o Modo Empresarial.
+
+Se você desativar esta configuração, ou não a definir, o Microsoft Edge não usará o arquivo da Lista de Sites do Modo Empresarial. Nesse caso, os funcionários poderão enfrentar problemas de compatibilidade enquanto usarem sites herdados.</string>
+      <string id="HideLocalHostIPAddress">Não permitir que o WebRTC compartilhe o endereço IP LocalHost</string>
+      <string id="HideLocalHostIPAddress_Explain">Esta configuração permite decidir se o endereço IP LocalHost dos funcionários será exibido enquanto eles fizerem chamadas telefônicas usando o protocolo WebRTC.
+
+Se você ativar esta configuração, o endereço IP LocalHost dos funcionários ficará oculto enquanto eles fizerem chamadas telefônicas usando o WebRTC.
+
+Se você desativar esta configuração, ou não a definir, o endereço IP LocalHost dos funcionários será exibido enquanto eles fizerem chamadas telefônicas usando o WebRTC.</string>
       <string id="ItemNameDisable">Desabilitar</string>
       <string id="ItemNameEnable">Habilitar</string>
-      <string id="SendIntranetTraffictoInternetExplorer">Envia todo o tráfego da intranet via Internet Explorer</string>
-      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+      <string id="HomePages">Configurar home pages corporativas</string>
+      <string id="HomePages_Explain">Esta configuração permite definir home pages corporativas para dispositivos associados a domínio. Os funcionários podem alterar esta configuração.
+Se você ativar esta configuração, poderá definir uma ou mais home pages corporativas. Se esta configuração estiver ativada, você também deverá incluir URLs às páginas, separando várias páginas com colchetes angulares neste formato:
+    &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
+Se você desativar esta configuração, ou não a definir, sua home page padrão será definida como a página da Web especificada nas configurações de Aplicativo.</string>
+      <string id="PreventSmartScreenPromptOverride">Não permitir que avisos do Filtro SmartScreen sejam ignorados</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Essa configuração permite que você decida se os funcionários poderão ignorar os avisos do Filtro SmartScreen sobre sites potencialmente mal-intencionados.
 
-If you enable this setting, your intranet websites automatically open in Internet Explorer.
+Se você ativar essa configuração, os funcionários obedecerão aos avisos do Filtro SmartScreen e não poderão ir para o site.
 
-If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+Se você desativar essa configuração, ou não a definir, os funcionários vão ignorar os avisos do Filtro SmartScreen sobre sites potencialmente mal-intencionados e continuar no site.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">Não permitir que avisos do Filtro SmartScreen sejam ignorados para arquivos não verificados</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Esta configuração permite decidir se os funcionários poderão ignorar os avisos do Filtro SmartScreen sobre o download de arquivos não verificados.
+
+Se você ativar esta configuração, os funcionários não poderão ignorar os avisos do Filtro SmartScreen nem baixar arquivos não verificados.
+
+Se você desativar esta configuração, ou não a definir, os funcionários poderão ignorar os avisos do Filtro SmartScreen sobre arquivos não verificados e continuar o processo de download.</string>
+      <string id="ProvisionedFavorites">Configurar os Favoritos</string>
+      <string id="ProvisionedFavorites_Explain">Esta configuração permite definir a lista padrão de Favoritos que será exibida para seus funcionários. Os funcionários podem alterar esta configuração, adicionando ou removendo Favoritos a qualquer momento.
+
+Se você ativar esta configuração, poderá definir quais Favoritos padrão serão exibidos para os funcionários. Se esta configuração estiver ativada, você deverá fornecer uma lista de Favoritos na seção Opções. A lista será importada depois que a política for implantada.
+
+Se você desativar esta configuração, ou não a definir, os funcionários poderão ver os Favoritos que eles definirem no hub de Favoritos.</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Enviar todos os sites da intranet para o Internet Explorer 11</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">Esta configuração permite decidir se os sites da intranet deverão ser todos abertos usando o Internet Explorer 11. Esta configuração deverá ser usada somente se existirem problemas de compatibilidade conhecidos com o Microsoft Edge.
+
+Se você ativar esta configuração, todos os sites da intranet serão abertos automaticamente no Internet Explorer 11.
+
+Se você desativar esta configuração, ou não a definir, todos os sites da intranet serão abertos automaticamente no Microsoft Edge.</string>
     </stringTable>
     
     <!-- Presentation -->
@@ -98,8 +137,16 @@ If you disable this setting, your intranet websites will automatically open in M
           <label>Digite o local (URL) do site de sua Home Page</label>
         </textBox>
       </presentation>
+      <presentation id="HomePages_Presentation">
+        <textBox refId="HomePagesPrompt">
+          <label>Use este formato: &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ProvisionedFavorites_Presentation">
+        <listBox refId="ProvisionedFavorites_List">Insira o nome do favorito na primeira coluna e a URL do favorito na outra coluna como Contoso http://www.contoso.com/</listBox>
+      </presentation>
       <presentation id="Cookies">
-        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Definir Configurações de Cookies</dropdownList>
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="2">Configurar Cookies </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

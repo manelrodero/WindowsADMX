@@ -140,12 +140,12 @@ Als u deze instelling uitschakelt of niet configureert, worden alle pop-uptekste
 Als u deze instelling inschakelt, kan de gebruiker het volgende niet: een app selecteren, de grootte van een tegel aanpassen, een tegel of secundaire tegel vastmaken of losmaken, de aanpassingsmodus openen en tegels opnieuw ordenen in Start en Apps.
 
 Als u deze instelling uitschakelt, kan de gebruiker het volgende: een app selecteren, de grootte van een tegel aanpassen, een tegel of secundaire tegel vastmaken of losmaken, de aanpassingsmodus openen en tegels opnieuw ordenen in Start en Apps.</string>
-      <string id="ClearTilesOnExit">Geschiedenis van tilemeldingen wissen bij afsluiten</string>
-      <string id="ClearTilesOnExit_Help">Als u deze instelling inschakelt, worden tilemeldingen gewist als de gebruiker zich afmeldt. Daarom zullen de tiles in de startweergave altijd hun standaardinhoud tonen wanneer de gebruiker zich aanmeldt. Bovendien worden alle cacheversies van deze meldingen gewist wanneer de gebruiker zich afmeldt.
+      <string id="ClearTilesOnExit">Tegelmeldingen wissen bij aanmelden</string>
+      <string id="ClearTilesOnExit_Help">Als u deze instelling inschakelt, worden tegelmeldingen verwijderd als de gebruiker zich aanmeldt. Daarom zullen de tegels in de startweergave altijd hun standaardinhoud tonen wanneer de gebruiker zich aanmeldt. Bovendien worden alle cacheversies van deze meldingen gewist wanneer de gebruiker zich aanmeldt.
 
-Als u deze instelling uitschakelt of niet configureert, onthoudt het systeem meldingen, en wanneer een gebruiker zich aanmeldt, verschijnen de tiles net zoals wanneer de gebruiker zich afmeldt, inclusief de geschiedenis van eerdere meldingen voor elke tile.
+Als u deze instelling uitschakelt of niet configureert, worden meldingen door het systeem behouden. Wanneer een gebruiker zich aanmeldt, worden de tegels precies zo weergeven als op het moment dat de gebruiker zich afmeldde, inclusief de geschiedenis van eerdere meldingen voor elke tegel.
 
-Deze instelling verhindert niet dat er nieuwe meldingen verschijnen. Zie de instelling 'Applicatiemeldingen uitschakelen' om nieuwe meldingen te voorkomen.</string>
+Nieuwe meldingen worden niet verhinderd door deze instelling. Zie de instelling 'Toepassingsmeldingen uitschakelen' om nieuwe meldingen te voorkomen.</string>
       <string id="StartPinAppsWhenInstalled">Apps tijdens installatie vastmaken aan het startscherm</string>
       <string id="StartPinAppsWhenInstalled_Help">Met deze beleidsinstelling kunnen apps standaard aan het startscherm worden vastgemaakt wanneer ze met hun AppID in de lijst staan.</string>
 
@@ -557,6 +557,12 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, worden de apps op
 Als u deze beleidsinstelling inschakelt, wordt het startscherm weergegeven op het beeldscherm dat wordt gebruikt wanneer de gebruiker op de Windows-logotoets drukt.
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het startscherm altijd weergegeven op het hoofdbeeldscherm wanneer de gebruiker op de Windows-logotoets drukt. Gebruikers kunnen Start nog steeds openen op andere beeldschermen door op de knop Start op dat beeldscherm te drukken. Ook kunnen gebruikers deze instelling configureren.</string>
+      <string id="ForceStartSize_DisplayName">Start moet in volledig scherm of van menugrootte zijn</string>
+      <string id="ForceStartSize_ExplainText">Als u deze beleidsinstelling inschakelt en deze instelt op Startmenu of Start in volledig scherm, heeft Start een vaste grootte en kunnen gebruikers de grootte van Start niet wijzigen in Instellingen.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de grootte automatisch geselecteerd op basis van de hardware en kunnen gebruikers de grootte van Start wijzigen in Instellingen.</string>
+      <string id="ForceLauncherSize_Collapsed">Startmenu</string>
+      <string id="ForceLauncherSize_Expanded">Start in volledig scherm</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -570,6 +576,9 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het startsc
           <label>Bestand met de indeling van het startscherm</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Kies een van de volgende opties voor de grootte</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

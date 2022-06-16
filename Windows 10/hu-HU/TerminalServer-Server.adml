@@ -56,16 +56,16 @@ Megjegyzés: Ha ez a házirend-beállítás engedélyezett, akkor a „Program i
       </string>
       
       <string id="TS_ALLOW_APPS">A listában nem szereplő programok távindításának engedélyezése</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">Ezzel a házirend-beállítással adható meg, hogy távoli asztali munkamenet indításakor a távoli felhasználók elindíthatják-e a távoli asztali munkamenetgazda-kiszolgálón lévő programok bármelyikét, vagy csak azokat, amelyek szerepelnek a RemoteApp-programok listáján.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+A távoli asztali munkamenetgazda-kiszolgálókon lévő, távolról elindítható programok körét a Windows Server 2008 R2-ben és a Windows Server 2008-ban a RemoteApp-kezelővel határozhatja meg. Windows Server 2012 használata esetén ezt a Kiszolgálókezelő Gyűjtemény tulajdonságlapján állíthatja be.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+A távoli asztali munkameneteket indító felhasználók alapértelmezés szerint csak a RemoteApp-programok listáján szereplő programokat indíthatják el.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Ha engedélyezi ezt a házirend-beállítást, távoli asztali munkamenet indításakor a távoli felhasználók a távoli asztali munkamenetgazda-kiszolgálón lévő programok bármelyikét elindíthatják.
+A programindítás egyik módja például az, ha csatlakozáskor a távoli felhasználó a Távoli asztali kapcsolat ügyfele alkalmazással megadja az elindítandó program végrehajtható fájljának elérési útját.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor távoli asztali munkamenet indításakor a távoli felhasználók csak olyan programokat indíthatnak el, amelyek megtalálhatók a RemoteApp-programok listáján.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Asztal-összeállítás engedélyezése a távoli asztali munkamenetekben</string>

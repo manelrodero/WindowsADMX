@@ -6,11 +6,11 @@
   <resources>
     <stringTable>
       <string id="AllowTelemetry">Tillat telemetri</string>
-      <string id="AllowTelemetry_0">0 – Av [bare organisasjon]</string>
+      <string id="AllowTelemetry_0">0 – Sikkerhet [bare organisasjon]</string>
       <string id="AllowTelemetry_1">1 – Standard</string>
       <string id="AllowTelemetry_2">2 – Utvidet</string>
       <string id="AllowTelemetry_3">3 – Full</string>
-      <string id="AllowTelemetry_Explain">Denne policyinnstillingen bestemmer hvor mye diagnose- og bruksdata som rapporteres til Microsoft. Verdien 0 betyr at ingen telemetridata fra operativsystemkomponenter blir sendt til Microsoft. Bare bedrifts- og serverenheter kan bruke verdien 0. Hvis andre enheter bruker verdien 0, vil dette være det samme som å bruke verdien 1. Verdien 1 sender bare et begrenset utvalg diagnose- og bruksdata. Merk at bruk av verdien 0 og 1 vil gi en redusert opplevelse for bestemte ting på enheten. Verdien 2 sender mer diagnose- og bruksdata. Verdien 3 sender samme data som verdien 2 samt ekstra diagnosedata, for eksempel systemtilstanden når systemet slutter å reagere eller krasjer, og filene og innholdet som kan ha forårsaket problemet.
+      <string id="AllowTelemetry_Explain">Denne policyinnstillingen bestemmer hvor mye diagnose- og bruksdata som rapporteres til Microsoft. Verdien 0 betyr at et minimum av data blir sendt til Microsoft. Disse dataene omfatter data fra verktøy for fjerning av skadelig programvare (MSRT) og Windows Defender, hvis aktivert, og innstillinger for telemetriklient. Bare for bedrifts-, EDU-, IoT- og serverenheter kan bruke verdien 0. Hvis andre enheter bruker verdien 0, vil dette være det samme som å bruke verdien 1. Verdien 1 sender bare et begrenset utvalg diagnose- og bruksdata. Merk at bruk av verdien 0 og 1 vil gi en redusert opplevelse for bestemte ting på enheten. Verdien 2 sender mer diagnose- og bruksdata. Verdien 3 sender samme data som verdien 2 samt ekstra diagnosedata, for eksempel filene og innholdet som kan ha forårsaket problemet. Telemetriinnstillinger for Windows 10 gjelder for operativsystemet Windows og noen førstepartsapper. Innstillingen gjelder ikke for tredjepartsapper som kjører i Windows 10.
 
 Hvis du deaktiver eller ikke konfigurerer denne policyinnstillingen, kan brukerne konfigurere telemetrinivået under Innstillinger.
 

@@ -5,14 +5,15 @@
   <description>tutaj wprowadź opis</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Co najmniej Windows 10 lub Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Co najmniej system Windows 8 lub Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Co najmniej Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Co najmniej Windows 8 Enterprise lub Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Co najmniej Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Co najmniej Windows 8 Enterprise lub Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Tylko system Windows 7 lub Windows Server 2008 R2 (i kolejne dodatki Service Pack dla tych systemów)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Systemy Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista i Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Co najmniej system Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Co najmniej system Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Co najmniej system Windows Server Technical Preview 2 z zainstalowaną rolą hosta sesji usług pulpitu zdalnego</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Co najmniej system Windows Server 2012 z zainstalowaną rolą hosta sesji usług pulpitu zdalnego</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Co najmniej system Windows 7 z dodatkiem Service Pack 1 lub Windows Server 2008 R2 z dodatkiem Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Co najmniej system Windows Vista z dodatkiem Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Co najmniej usługi terminalowe systemu Windows 2000</string>
@@ -45,7 +46,7 @@
       <string id="TS_AUDIOMAP_EXPLAIN">To ustawienie zasad umożliwia określenie, czy użytkownicy mogą przekierowywać wyjście audio i wideo komputera zdalnego podczas sesji usług pulpitu zdalnego.
 Użytkownicy mogą określić, gdzie ma być odtwarzany wyjściowy sygnał audio komputera zdalnego, konfigurując ustawienia dźwięku zdalnego na karcie Zasoby lokalne w oknie Podłączanie pulpitu zdalnego. Użytkownicy mogą odtwarzać dźwięk zdalny na komputerze zdalnym lub lokalnym. Mogą również zrezygnować z odtwarzania dźwięku. Odtwarzanie wideo można konfigurować przy użyciu ustawienia videoplayback w pliku protokołu Remote Desktop Protocol (rdp). Odtwarzanie wideo jest domyślnie włączone.
 
-Domyślnie przekierowywanie odtwarzania audio i wideo nie jest dozwolone podczas nawiązywania połączenia z komputerem, na którym jest uruchomiony system Windows Server 2008 R2, Windows Server 2008 lub Windows Server 2003. Przekierowywanie odtwarzania audio i wideo jest dozwolone domyślnie podczas nawiązywania połączenia z komputerem, na którym jest uruchomiony system Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista lub Windows XP Professional.
+Domyślnie przekierowywanie odtwarzania audio i wideo nie jest dozwolone podczas nawiązywania połączenia z komputerem, na którym jest uruchomiony system Windows Server 2008 R2, Windows Server 2008 lub Windows Server 2003. Przekierowywanie odtwarzania audio i wideo jest dozwolone domyślnie podczas nawiązywania połączenia z komputerem, na którym jest uruchomiony system Windows 8, Windows Server 2012, Windows 7, Windows Vista lub Windows XP Professional.
 
 Jeśli to ustawienie zasad zostanie włączone, przekierowywanie odtwarzania audio i wideo będzie dozwolone.
 
@@ -154,24 +155,23 @@ Jeżeli to ustawienie zasad zostanie wyłączone, usługi pulpitu zdalnego zawsz
 Jeżeli to ustawienie zasad nie zostanie skonfigurowane, przekierowywanie schowka nie będzie określone na poziomie zasad grupy. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        To ustawienie zasad umożliwia określenie maksymalnej rozdzielczości koloru (głębi kolorów) dla połączeń usług pulpitu zdalnego.
+      <string id="TS_COLOR_EXPLAIN">To ustawienie zasad umożliwia określenie maksymalnej rozdzielczości koloru (głębi kolorów) dla połączeń usług pulpitu zdalnego.
 
-        Za pomocą tego ustawienia zasad można ustawić limit głębi kolorów dla dowolnego połączenia używającego protokołu RDP. Ograniczenie głębi kolorów może poprawić wydajność połączenia, zwłaszcza w przypadku powolnych łączy, oraz zmniejszyć obciążenie serwera.
+Za pomocą tego ustawienia zasad można ustawić limit głębi kolorów dla dowolnego połączenia używającego protokołu RDP. Ograniczenie głębi kolorów może poprawić wydajność połączenia, zwłaszcza w przypadku powolnych łączy, oraz zmniejszyć obciążenie serwera.
 
-        Jeśli to ustawienie zasad zostanie włączone, określona głębia kolorów będzie maksymalną głębią kolorów dozwoloną dla połączenia RDP użytkownika. Rzeczywista głębia kolorów dla połączenia zależy od obsługi kolorów dostępnej na komputerze klienckim. Zaznaczenie opcji Zgodna z klientem spowoduje zastosowanie największej głębi kolorów obsługiwanej przez klienta.
+Jeśli to ustawienie zasad zostanie włączone, określona głębia kolorów będzie maksymalną głębią kolorów dozwoloną dla połączenia RDP użytkownika. Rzeczywista głębia kolorów dla połączenia zależy od obsługi kolorów dostępnej na komputerze klienckim. Zaznaczenie opcji Zgodna z klientem spowoduje zastosowanie największej głębi kolorów obsługiwanej przez klienta.
 
-        Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, głębia kolorów dla połączeń nie będzie określona na poziomie zasad grupy.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, głębia kolorów dla połączeń nie będzie określona na poziomie zasad grupy.
 
-        Uwaga:
-        1.	24-bitowa głębia kolorów jest obsługiwana wyłącznie w systemach Windows Server 2003 i Windows XP Professional.
-        2.	Wartość określona w tym ustawieniu zasad nie jest stosowana do połączeń z komputerów klienckich, na których jest używany protokół Remote Desktop Protocol 8.0 lub nowszy (komputerów z systemem Windows 8 lub Windows Server Technical Preview 2). W przypadku takich połączeń zawsze jest używany 32-bitowy format głębi kolorów.
-        3.	W przypadku połączeń z komputerów klienckich, które używają protokołu Remote Desktop Protocol 7.1 lub starszego i łączą się z komputerami z systemem Windows 8 lub Windows Server Technical Preview 2, jako format głębi kolorów jest używana najmniejsza z następujących wartości:
-        a.	Wartość określona w tym ustawieniu zasad
-        b.	Maksymalna głębia kolorów obsługiwana przez klienta
-        c.	Wartość żądana przez klienta
+Uwaga:
+1.	24-bitowa głębia kolorów jest obsługiwana wyłącznie w systemach Windows Server 2003 i Windows XP Professional.
+2.	Wartość określona w tym ustawieniu zasad nie jest stosowana do połączeń z komputerów klienckich, na których jest używany protokół Remote Desktop Protocol 8.0 lub nowszy (komputerów z systemem Windows 8, Windows Server 2012 lub nowszym). W przypadku takich połączeń zawsze jest używany 32-bitowy format głębi kolorów.
+3.	W przypadku połączeń z komputerów klienckich, które używają protokołu Remote Desktop Protocol 7.1 lub starszego i łączą się z komputerami z systemem Windows 8, Windows Server 2012 lub nowszym, jako format głębi kolorów jest używana najmniejsza z następujących wartości:
+a.	Wartość określona w tym ustawieniu zasad
+b.	Maksymalna głębia kolorów obsługiwana przez klienta
+c.	Wartość żądana przez klienta
 
-        Jeśli klient nie obsługuje co najmniej 16 bitów, połączenie zostanie przerwane.
+Jeśli klient nie obsługuje co najmniej 16 bitów, połączenie zostanie zakończone.
       </string>
       <string id="TS_COLORDEPTH">Ogranicz maksymalną głębię kolorów</string>
       <string id="TS_Comp_Help">Steruje konfiguracją usług pulpitu zdalnego i właściwościami sesji klientów dla pojedynczych komputerów lub grup komputerów.</string>
@@ -564,7 +564,7 @@ Uwagi:
       <string id="TS_SD_Loc">Konfiguruj nazwę serwera brokera połączeń usług pulpitu zdalnego</string>
       <string id="TS_SD_Loc_Explain">To ustawienie zasad umożliwia określenie serwera brokera połączeń usług pulpitu zdalnego, który ma być używany przez serwer hosta sesji usług pulpitu zdalnego do śledzenia i przekierowywania sesji użytkowników dla farmy serwerów hosta sesji usług pulpitu zdalnego o zrównoważonym obciążeniu. Na podanym serwerze musi być uruchomiona usługa brokera połączeń usług pulpitu zdalnego. Wszystkie serwery hosta sesji usług pulpitu zdalnego w farmie o zrównoważonym obciążeniu powinny używać tego samego serwera brokera połączeń usług pulpitu zdalnego.
 
-Jeśli to ustawienie zasad zostanie włączone, należy określić serwer brokera połączeń usług pulpitu zdalnego, używając jego w pełni kwalifikowanej nazwy domeny (FQDN). W przypadku systemu Windows Server Technical Preview 2 w konfiguracji z wysoką dostępnością i wieloma serwerami brokera połączeń usług pulpitu zdalnego należy podać listę nazw FQDN wszystkich serwerów brokera połączeń usług pulpitu zdalnego, rozdzielonych średnikami.
+Jeśli to ustawienie zasad zostanie włączone, należy określić serwer brokera połączeń usług pulpitu zdalnego, używając jego w pełni kwalifikowanej nazwy domeny (FQDN). W przypadku systemu Windows Server 2012 w konfiguracji z wysoką dostępnością i wieloma serwerami brokera połączeń usług pulpitu zdalnego należy podać listę nazw FQDN wszystkich serwerów brokera połączeń usług pulpitu zdalnego, rozdzielonych średnikami.
 
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, nie będzie ono określone na poziomie zasad grupy.
 
@@ -950,19 +950,17 @@ Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane
 
     <string id="TS_SERVER_IMAGE_QUALITY">Konfiguruj jakość obrazu grafiki adaptacyjnej RemoteFX</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">To ustawienie zasad umożliwia określenie jakości obrazu wyświetlanego użytkownikom zdalnym łączącym się z tym komputerem za pomocą Podłączania pulpitu zdalnego. Za pomocą tego ustawienia zasad można równoważyć użycie przepustowości sieci i jakość prezentowanego obrazu.
- 
-Jeśli to ustawienie zasad zostanie włączone i zostanie ustawiona jakość średnia, grafika adaptacyjna RemoteFX będzie używać mechanizmu kodowania produkującego obrazy średniej jakości. Ten tryb w najmniejszym stopniu ze wszystkich trybów jakości obciąża przepustowość sieci. 
-Jeśli to ustawienie zasad zostanie włączone i zostanie ustawiona jakość wysoka, grafika adaptacyjna RemoteFX będzie używać mechanizmu kodowania produkującego obrazy wysokiej jakości i obciążającego przepustowość sieci w stopniu umiarkowanym. 
-Jeśli to ustawienie zasad zostanie włączone i zostanie ustawiona jakość bezstratna, grafika adaptacyjna RemoteFX będzie używać kodowania bezstratnego. W tym trybie nie następuje obniżenie integralności kolorów danych graficznych. Jednak to ustawienie znacznie zwiększa użycie przepustowości sieci. Zaleca się używanie go tylko w szczególnych przypadkach. 
- 
-Jeśli to ustawienie zasad zostanie wyłączone lub pozostanie nieskonfigurowane, grafika adaptacyjna RemoteFX będzie używać mechanizmu kodowania produkującego obrazy średniej jakości.
-
-    
-
+      Jeśli to ustawienie zasad zostanie włączone i zostanie ustawiona jakość niska, grafika adaptacyjna RemoteFX będzie używać mechanizmu kodowania produkującego obrazy niskiej jakości. Ten tryb w najmniejszym stopniu ze wszystkich trybów jakości obciąża przepustowość sieci.
+     Jeśli to ustawienie zasad zostanie włączone i zostanie ustawiona jakość średnia, grafika adaptacyjna RemoteFX będzie używać mechanizmu kodowania produkującego obrazy średniej jakości. Ten tryb daje grafikę lepszej jakości niż niska i mniej obciąża przepustowość sieci niż w przypadku jakości wysokiej. 
+     Jeśli to ustawienie zasad zostanie włączone i zostanie ustawiona jakość wysoka, grafika adaptacyjna RemoteFX będzie używać mechanizmu kodowania produkującego obrazy wysokiej jakości i obciążającego przepustowość sieci w stopniu umiarkowanym.
+     Jeśli to ustawienie zasad zostanie włączone i zostanie ustawiona jakość bezstratna, grafika adaptacyjna RemoteFX będzie używać kodowania bezstratnego. W tym trybie nie następuje obniżenie integralności kolorów danych graficznych. Jednak to ustawienie znacznie zwiększa użycie przepustowości sieci. Zaleca się używanie go tylko w szczególnych przypadkach. 
+     Jeśli to ustawienie zasad zostanie wyłączone lub pozostanie nieskonfigurowane, grafika adaptacyjna RemoteFX będzie używać mechanizmu kodowania produkującego obrazy średniej jakości.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Bezstratna</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Wysoka</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Średnia</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Niska</string>      
 
     <string id="TS_SERVER_PROFILE">Konfiguruj grafikę adaptacyjną RemoteFX</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">To ustawienie zasad umożliwia administratorowi skonfigurowanie jakości oferowanej przez funkcję RemoteFX dla hosta sesji usług pulpitu zdalnego lub serwerów hosta wirtualizacji pulpitu zdalnego. Domyślnie system wybierze najlepszą jakość na podstawie dostępnej przepustowości sieci.
@@ -991,14 +989,13 @@ Można również zrezygnować z użycia algorytmu kompresji RDP. Rezygnacja z u�
 Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, zostanie użyty domyślny algorytm kompresji RDP.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Równoważy użycie pamięci i przepustowości sieci</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Zoptymalizowany pod kątem mniejszego użycia przepustowości sieci</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Zoptymalizowany pod kątem mniejszego użycia pamięci</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Nie używaj algorytmu kompresji RDP</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Równoważy użycie pamięci i przepustowości sieci</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Zoptymalizowany pod kątem mniejszego użycia przepustowości sieci</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Zoptymalizowany pod kątem mniejszego użycia pamięci</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Nie używaj algorytmu kompresji RDP</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Użyj zaawansowanej grafiki RemoteFX w trybie RemoteApp</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     To ustawienie zasad umożliwia włączenie używania w programach RemoteApp grafiki zaawansowanej, w tym obsługi przezroczystości, miniatur dynamicznych i płynnych ruchów aplikacji. To ustawienie zasad jest stosowane tylko do programów RemoteApp i nie dotyczy sesji pulpitu zdalnego.
 
 Jeśli to ustawienie zasad zostanie włączone lub nie zostanie skonfigurowane, w programach RemoteApp opublikowanych na tym serwerze hosta sesji usług pulpitu zdalnego będzie używana ta grafika zaawansowana.
@@ -1007,6 +1004,30 @@ Jeśli to ustawienie zasad zostanie wyłączone, w programach RemoteApp opubliko
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Konfiguruj kodowanie sprzętowe H.264/AVC dla połączeń usług pulpitu zdalnego</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">To ustawienie zasad umożliwia włączenie obsługi kodowania sprzętowego H.264/AVC dla połączeń usług pulpitu zdalnego. Jeśli kodowanie sprzętowe zostanie włączone, to w przypadku wystąpienia błędu zostanie podjęta próba użycia kodowania programowego. Jeśli te zasady zostaną wyłączone lub nie zostaną skonfigurowane, zawsze będzie używane kodowanie programowe.
+        
+W przypadku ustawienia opcji kodowania „Zawsze próbuj” usługa pulpitu zdalnego będzie zawsze próbować użyć kodowania sprzętowego H.264/AVC, gdy będzie ono dostępne. W przypadku systemu Windows Server z uruchomioną funkcją Hyper-V z włączonym procesorem vGPU z obsługą funkcji RemoteFX konieczne jest ustawienie zasad na maszynie hosta funkcji Hyper-V.
+        
+W przypadku ustawienia opcji kodowania „Próbuj tylko w przypadku maszyn wirtualnych z procesorami vGPU z obsługą funkcji RemoteFX” w systemie Windows Server z uruchomioną funkcją Hyper-V z włączonym procesorem vGPU z obsługą funkcji RemoteFX konieczne jest ustawienie zasad na maszynie hosta funkcji Hyper-V.
+        
+W przypadku ustawienia opcji kodowania „Próbuj tylko w przypadku scenariuszy z procesorami vGPU bez obsługi funkcji RemoteFX” usługa pulpitu zdalnego będzie próbować użyć kodowania sprzętowego we wszystkich scenariuszach oprócz scenariuszy z procesorami vGPU z obsługą funkcji RemoteFX.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Zawsze próbuj</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Próbuj tylko w przypadku maszyn wirtualnych z procesorami vGPU z obsługą funkcji RemoteFX</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Próbuj tylko w przypadku scenariuszy z procesorami vGPU bez obsługi funkcji RemoteFX</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">W przypadku połączeń usług pulpitu zdalnego traktuj priorytetowo tryb graficzny H.264/AVC 444</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">To ustawienie określa priorytet trybu graficznego H.264/AVC 444 w przypadku scenariuszy dotyczących procesora vGPU bez obsługi funkcji RemoteFX. Jeśli to ustawienie zostanie użyte na serwerze RDP, serwer będzie używać kodera-dekodera H.264/AVC 444 podczas połączenia RDP 10, w ramach którego klient i serwer mogą korzystać z trybu H.264/AVC 444.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Nie zezwalaj na dekodowanie przyspieszane sprzętowo</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">To ustawienie zasad określa, czy usługa Podłączanie pulpitu zdalnego może korzystać z przyspieszania sprzętowego, jeśli jest dostępny obsługiwany sprzęt. Jeśli to ustawienie zostanie użyte, klient usługi pulpitu zdalnego będzie używać tylko dekodowania programowego. Jeśli na przykład występuje problem, który może być związany z przyspieszaniem sprzętowym, użyj tego ustawienia w celu wyłączenia przyspieszania. Jeśli problem będzie nadal występować, oznacza to, że występują inne problemy, które należy zbadać. Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, klient usługi pulpitu zdalnego będzie używać dekodowania przyspieszanego sprzętowo, gdy będzie dostępny obsługiwany sprzęt.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ Domyślnie sesje usługi Podłączanie pulpitu zdalnego, w których jest używan
 
       <string id="TS_SERVER_LEGACY_RFX">Włącz kodowanie RemoteFX dla klientów funkcji RemoteFX zaprojektowanych dla systemu Windows Server 2008 R2 z dodatkiem SP1</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        To ustawienie zasad umożliwia skonfigurowanie kodowania grafiki w celu używania kodera-dekodera funkcji RemoteFX na serwerze hosta sesji usług pulpitu zdalnego, tak aby sesje były zgodne ze zubożonymi urządzeniami klienckimi, które używają systemów innych niż Windows i są zaprojektowane dla systemu Windows Server 2008 R2 z dodatkiem SP1. Tacy klienci obsługują tylko koder-dekoder funkcji RemoteFX systemu Windows Server 2008 R2 z dodatkiem SP1. Jeżeli to ustawienie zasad zostanie włączone, sesje użytkowników na tym serwerze będą używać do kodowania wyłącznie kodera-dekodera funkcji RemoteFX systemu Windows Server 2008 R2 z dodatkiem SP1. Ten tryb jest zgodny ze zubożonymi urządzeniami klienckimi, które obsługują wyłącznie koder-dekoder funkcji RemoteFX systemu Windows Server 2008 R2 z dodatkiem SP1. Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, zubożeni klienci używający systemów innych niż Windows, którzy obsługują wyłącznie koder-dekoder funkcji RemoteFX systemu Windows Server 2008 R2 z dodatkiem SP1, nie będą mogli łączyć się z tym serwerem. To ustawienie zasad ma zastosowanie tylko do klientów, którzy używają protokołu RDP (Remote Desktop Protocol) 7.1, i nie ma wpływu na klientów używających innych wersji protokołu RDP.
       
       </string>
@@ -1296,6 +1316,9 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">Algorytm kompresji RDP:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Preferuj kodowanie sprzętu AVC:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Wygląd:</dropdownList>

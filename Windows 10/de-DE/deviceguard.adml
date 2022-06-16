@@ -19,16 +19,20 @@ Warnung: Alle Treiber im System müssen mit dieser Funktion kompatibel sein, da 
 
 Überwachung von Anmeldeinformationen
 
-Mit dieser Einstellung können Sie entscheiden, ob Benutzer im Rahmen der virtualisierungsbasierten Sicherheit die Überwachung von Anmeldeinformationen zum Schutz der Anmeldeinformationen aktivieren können.
+Mit dieser Einstellung können Benutzer die Überwachung von Anmeldeinformationen mit virtualisierungsbasierter Sicherheit aktivieren, um Anmeldeinformationen zu schützen.
 
-Wenn Sie diese Einstellungen deaktivieren, wird die Funktion nicht vom Computer entfernt. Stattdessen müssen Sie auch die Sicherheitsfunktionen von jedem Computer entfernen, um die in "Sicherer Start" persistent gespeicherte Konfiguration zu löschen. Bei diesem Vorgang muss ein Benutzer physisch anwesend sein.
+Durch die Option "Deaktiviert" wird die Überwachung von Anmeldeinformationen remote deaktiviert, wenn sie zuvor mit der Option "Ohne Sperre aktiviert" aktiviert wurde.
 
-Die vollständigen Anforderungen zur sicheren Konfiguration dieser Funktion finden Sie in der Dokumentation.
+Die Option "Mit UEFI-Sperre aktiviert" stellt sicher, dass die Überwachung von Anmeldeinformationen nicht remote deaktiviert werden kann. Um die Funktion zu deaktivieren, müssen Sie die Gruppenrichtlinie auf "Deaktiviert" festlegen und die Sicherheitsfunktionen von jedem Computer entfernen, um die in UEFI persistent gespeicherte Konfiguration zu löschen. Bei diesem Vorgang muss ein Benutzer physisch anwesend sein.
+
+Durch die Option "Ohne Sperre aktiviert" kann die Überwachung von Anmeldeinformationen mithilfe der Gruppenrichtlinie remote deaktiviert werden. Auf Geräten, die diese Einstellung verwenden, muss mindestens Windows 10 (Version 1511) ausgeführt werden.
       </string>
       <string id="SecureBoot">Sicherer Start</string>
       <string id="SecureBootAndDmaProtection">Sicherer Start und DMA-Schutz</string>
       <string id="Disabled">Deaktiviert</string>
       <string id="Enabled">Aktiviert</string>
+      <string id="EnabledWithoutLock">Ohne Sperre aktiviert</string>
+      <string id="EnabledWithUefiLock">Mit UEFI-Sperre aktiviert</string>
       <string id="ConfigCIPolicy">Codeintegritätsrichtlinie bereitstellen</string>
       <string id="ConfigCIPolicyHelp">Codeintegritätsrichtlinie bereitstellen
 
@@ -48,7 +52,7 @@ Bei Verwendung einer signierten, geschützten Richtlinie wird die Funktion nicht
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Plattform-Sicherheitsstufe auswählen:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Virtualisierungbasierten Schutz der Codeintegrität aktivieren</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Überwachung von Anmeldeinformationen aktivieren</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Konfiguration der Überwachung von Anmeldeinformationen:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

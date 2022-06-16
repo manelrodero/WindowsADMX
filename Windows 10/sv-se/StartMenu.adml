@@ -144,12 +144,12 @@ Om den här inställningen inaktiveras eller inte konfigureras visas alla textru
 Om du aktiverar den här principinställningen hindrar du användare från att välja appar, ändra storlek på paneler, fästa/ta bort paneler eller sekundära paneler, välja anpassningsläge och ändra ordning på panelerna på Startskärmen och i Appar.
 
 Om du inaktiverar eller inte konfigurerar den här principinställningen kan användarna välja appar, ändra storlek på paneler, fästa/ta bort paneler eller sekundära paneler, välja anpassningsläge och ändra ordning på paneler på Startskärmen och i Appar.</string>
-      <string id="ClearTilesOnExit">Rensa historik för panelmeddelanden vid avslut</string>
-      <string id="ClearTilesOnExit_Help">Om du aktiverar den här inställningen tas panelmeddelanden bort när användaren loggar ut. Det innebär att panelerna i startvyn alltid har sitt standardinnehåll när användaren loggar in. Dessutom tas eventuella cachelagrade versioner av dessa meddelanden bort när användaren loggar ut.
+      <string id="ClearTilesOnExit">Rensa panelmeddelanden under inloggning</string>
+      <string id="ClearTilesOnExit_Help">Om du aktiverar den här inställningen tas panelmeddelanden bort när användaren loggar in. Det innebär att panelerna i startvyn alltid har sitt standardinnehåll när användaren loggar in. Dessutom tas eventuella cachelagrade versioner av dessa meddelanden bort när användaren loggar in.
 
 Om du inaktiverar eller låter bli att konfigurera den här inställningen behålls alla meddelanden. När användaren loggar in visas panelerna precis som de såg ut när användaren loggade ut. Historiken med tidigare meddelanden för varje panel finns kvar.
 
-Den här inställningen hindrar inte nya meddelanden från att visas. Se inställningen Inaktivera programmeddelanden</string>
+Den här inställningen hindrar inte nya meddelanden från att visas. Använd inställningen Inaktivera programmeddelanden om du vill förhindra att nya meddelanden visas.</string>
       <string id="StartPinAppsWhenInstalled">Fäst appar på Start när de installeras</string>
       <string id="StartPinAppsWhenInstalled_Help">Med den här principinställningen kan appar fästas på Start som standard när de inkluderas av AppID i listan.</string>
 
@@ -569,6 +569,12 @@ Om du inaktiverar eller inte konfigurerar den här principinställningen visas i
 Om du aktiverar den här principinställningen visas Startskärmen på den bildskärm som användarna använder när de trycker på Windows-tangenten.
 
 Om du inaktiverar eller inte konfigurerar den här principinställningen visas alltid Startskärmen på huvudbildskärmen när användaren trycker på Windows-tangenten. Användarna kan fortfarande öppna Start på andra bildskärmar genom att trycka på Start på den bildskärmen. Användarna kan också konfigurera den här inställningen.</string>
+      <string id="ForceStartSize_DisplayName">Framtvinga helskärmsläge eller Start-menyläge för Startskärmen</string>
+      <string id="ForceStartSize_ExplainText">Om du aktiverar den här principen och väljer Start-meny eller helskärmsläge visas Start i den storlek du har valt, och användare kan inte ändra storlek på Start i Inställningar.
+
+Om du inaktiverar eller inte konfigurerar den här principinställningen väljs storleken automatiskt baserat på den aktuella maskinvaran, och användare kan ändra storlek för Start i Inställningar.</string>
+      <string id="ForceLauncherSize_Collapsed">Start-meny</string>
+      <string id="ForceLauncherSize_Expanded">Start i helskärmsläge</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Om du inaktiverar eller inte konfigurerar den här principinställningen visas a
           <label>Layoutfil för Start</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Välj en av följande storlekar</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

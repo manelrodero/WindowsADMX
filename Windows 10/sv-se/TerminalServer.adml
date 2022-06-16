@@ -5,14 +5,15 @@
   <description>ange beskrivning här</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Minst Windows 10 eller Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Minst Windows 8 eller Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Minst Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minst Windows 8 Enterprise eller Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Minst Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minst Windows 8 Enterprise eller Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Endast Windows 7 eller Windows Server 2008 R2 (och deras kommande service pack)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista och Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Minst Microsoft Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Minst Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minst Windows Server Technical Preview 2 med RDSH-rollen installerad</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minst Windows Server 2012 med RDSH-rollen installerad</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Minst Windows 7 med service pack 1 eller Windows Server 2008 R2 med service pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Minst Windows Vista med service pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Minst Windows 2000 Terminal Services</string>
@@ -45,7 +46,7 @@
       <string id="TS_AUDIOMAP_EXPLAIN">Med hjälp av den här principinställningen kan du ange om användare kan omdirigera fjärrdatorns ljud- och videoutdata i en session med Fjärrskrivbordstjänster.
 Användare kan ange var de ska spela upp fjärrdatorns ljud genom att konfigurera inställningar för fjärrljud på fliken Lokala resurser i Anslutning till fjärrskrivbord (RDC). Användarna kan välja att spela upp fjärrljudet på en fjärrdator eller på den lokala datorn. Användarna kan också välja att inte spela upp ljudet. Videouppspelning kan konfigureras med hjälp av inställningarna för videouppspelning i en RDP-fil (Remote Desktop Protocol). Som standard är videouppspelning aktiverad.
 
-Som standard är inte omdirigering av ljud- och videouppspelning tillåten vid anslutning till en dator som kör Windows Server 2008 R2, Windows Server 2008 eller Windows Server 2003. Som standard tillåts omdirigering av ljud- och videouppspelning vid anslutning till en dator med Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista eller Windows XP Professional.
+Som standard är inte omdirigering av ljud- och videouppspelning tillåten vid anslutning till en dator som kör Windows Server 2008 R2, Windows Server 2008 eller Windows Server 2003. Som standard tillåts omdirigering av ljud- och videouppspelning vid anslutning till en dator med Windows 8, Windows Server 2012, Windows 7, Windows Vista eller Windows XP Professional.
 
 Om du aktiverar den här principinställningen är omdirigering av ljud- och videouppspelning tillåten.
 
@@ -154,24 +155,23 @@ Om du inaktiverar den här principinställningen tillåts omdirigering av Urklip
 Om du inte konfigurerar den här principinställningen är omdirigering av Urklipp inte angivet på grupprincipnivå. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Den här principinställningen kan du använda för att ange den högsta färgupplösningen (färgdjupet) för anslutningar med Fjärrskrivbordstjänster.
+      <string id="TS_COLOR_EXPLAIN">Den här principinställningen kan du använda för att ange den högsta färgupplösningen (färgdjupet) för anslutningar med Fjärrskrivbordstjänster.
 
-        Du kan använda den här principinställningen för att ange en gräns för färgdjupet för alla anslutningar via RDP. Om du begränsar färgdjupet kan anslutningens prestanda förbättras, särskilt för långsamma förbindelser, och belastningen på servern kan minska.
+Du kan använda den här principinställningen för att ange en gräns för färgdjupet för alla anslutningar via RDP. Om du begränsar färgdjupet kan anslutningens prestanda förbättras, särskilt för långsamma förbindelser, och belastningen på servern kan minska.
 
-        Om du aktiverar den här principinställningen är det färgdjup du anger det maximala tillåtna för en användares RDP-anslutning. Anslutningens faktiska färgdjup avgörs av det färgstöd som är tillgängligt på klientdatorn. Om du väljer Klientkompatibel används det största färgdjupet som klienten stöder.
+Om du aktiverar den här principinställningen är det färgdjup du anger det maximala tillåtna för en användares RDP-anslutning. Anslutningens faktiska färgdjup avgörs av det färgstöd som är tillgängligt på klientdatorn. Om du väljer Klientkompatibel används det största färgdjupet som klienten stöder.
 
-        Om du inaktiverar eller låter bli att konfigurera principinställningen är färgdjupet för anslutningar inte angivet på grupprincipnivå.
+Om du inaktiverar eller låter bli att konfigurera principinställningen är färgdjupet för anslutningar inte angivet på grupprincipnivå.
 
-        Obs!
-        1.	Det går bara att ställa in färgdjupet till 24 bitar i Windows Server 2003 och Windows XP Professional.
-        2.	Det värde som anges i den här principinställningen tillämpas inte på anslutningar från klientdatorer som använder minst Remote Desktop Protocol 8.0 (datorer med minst Windows 8 eller Windows Server Technical Preview 2). För dessa anslutningar används alltid färgdjupet 32 bitar.
-        3.	För anslutningar från klientdatorer med Remote Desktop Protocol 7.1 eller tidigare versioner som ansluter till datorer med minst Windows 8 eller Windows Server Technical Preview 2 används de minsta av de följande värdena som färgdjup:
-        a.	Värdet som anges i den här principinställningen
-        b.	Maximalt färgdjup som klienten stöder
-        c.	Värdet som klienten begär
+Obs!
+1.	Det går bara att ställa in färgdjupet till 24 bitar i Windows Server 2003 och Windows XP Professional.
+2.	Det värde som anges i den här principinställningen tillämpas inte på anslutningar från klientdatorer som använder minst Remote Desktop Protocol 8.0 (datorer med minst Windows 8 eller Windows Server 2012). För dessa anslutningar används alltid färgdjupet 32 bitar.
+3.	För anslutningar från klientdatorer med Remote Desktop Protocol 7.1 eller tidigare versioner som ansluter till datorer med minst Windows 8 eller Windows Server 2012 används de minsta av de följande värdena som färgdjup:
+a.	Värdet som anges i den här principinställningen
+b.	Maximalt färgdjup som klienten stöder
+c.	Värdet som klienten begär
 
-        Om klienten inte stöder minst 16 bitar kopplas anslutningen från.
+Om klienten inte stöder minst 16 bitar kopplas anslutningen från.
       </string>
       <string id="TS_COLORDEPTH">Begränsa högsta färgdjup</string>
       <string id="TS_Comp_Help">Kontrollerar konfigurationen av Fjärrskrivbordstjänster och egenskaper för klientsessioner av enskilda datorer eller grupper med datorer.</string>
@@ -564,7 +564,7 @@ Anmärkningar:
       <string id="TS_SD_Loc">Konfigurera namn på server för Anslutningsutjämning för fjärrskrivbord</string>
       <string id="TS_SD_Loc_Explain">Med den här principinställningen kan du ange vilken server för Anslutningsutjämning för fjärrskrivbord som värdservern för fjärrskrivbordssessioner använder för att spåra och omdirigera användarsessioner för en belastningsutjämnad värdservergrupp för fjärrskrivbordssessioner. Den angivna servern måste köra tjänsten Anslutningsutjämning för fjärrskrivbord. Alla värdservrar för fjärrskrivbordssessioner i en belastningsutjämnad servergrupp måste använda samma server för Anslutningsutjämning för fjärrskrivbord.
 
-Om du aktiverar den här principinställningen måste du ange namnet på servern för anslutningsutjämning för fjärrskrivbord med dess fullständiga domännamn. Om du vill ha hög tillgänglighet med flera servrar för anslutningsutjämning för fjärrskrivbord måste du i Windows Server Technical Preview 2 ange en semikolonavgränsad lista med alla servrarnas fullständiga domännamn.
+Om du aktiverar den här principinställningen måste du ange namnet på servern för Anslutningsutjämning för fjärrskrivbord med dess fullständiga domännamn. Om du vill ha hög tillgänglighet med flera servrar för Anslutningsutjämning för fjärrskrivbord måste du i Windows Server 2012 ange en semikolonavgränsad lista med alla servrarnas fullständiga domännamn.
 
 Om du inaktiverar eller låter bli att konfigurera principinställningen har den inte angetts på grupprincipnivå.
 
@@ -950,19 +950,17 @@ Om du inaktiverar eller låter bli att konfigurera den här principinställninge
 
     <string id="TS_SERVER_IMAGE_QUALITY">Konfigurera bildkvaliteten för anpassad RemoteFX-grafik</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Med den här principinställningen kan du ange den visuella kvaliteten för fjärranvändare som ansluter till den här datorn med Anslutning till fjärrskrivbord. Du kan använda den här principinställningen för att avväga bandbreddsförbrukningen mot den visuella kvaliteten.
- 
-Om du aktiverar den här principinställningen och väljer kvaliteten Medel används en kodningsmekanism som ger bilder med medelhög kvalitet. Det här läget förbrukar minst nätverksbandbredd av alla kvalitetslägen. 
-Om du aktiverar den här principinställningen och väljer kvaliteten Hög används en kodningsmekanism som resulterar i bilder med hög kvalitet. De förbrukar måttligt mycket av nätverkets bandbredd. 
-Om du aktiverar den här principinställningen och väljer kvaliteten Förlustfri används en förlustfri kodning. I det här läget påverkas inte färgäktheten hos grafikinformationen. Men bandbreddsförbrukningen ökar betydligt med den här inställningen. Du bör bara välja den i väldigt speciella fall. 
- 
-Om du inaktiverar eller låter bli att konfigurera den här principinställningen används en kodningsmekanism som resulterar i bilder med medelhög kvalitet.
-
-    
-
+      Om du aktiverar den här principinställningen och väljer kvaliteten Låg används en kodningsmekanism som ger bilder med låg kvalitet. Det här läget förbrukar minst bandbredd av samtliga kvalitetslägen.
+      Om du aktiverar den här principinställningen och väljer kvaliteten Medel används en kodningsmekanism som ger bilder med medelhög kvalitet. Det här läget ger bättre grafikkvalitet än kvalitetsläget Låg, och förbrukar mindre nätverksbandbredd än kvalitetsläget Hög. 
+      Om du aktiverar den här principinställningen och väljer kvaliteten Hög används en kodningsmekanism som ger bilder med hög kvalitet. Det här läget förbrukar måttligt mycket av nätverkets bandbredd.
+      Om du aktiverar den här principinställningen och väljer kvaliteten Förlustfri används en förlustfri kodning. I det här läget påverkas inte färgäktheten hos grafikinformationen, men bandbreddsförbrukningen blir mycket stor. Du bör bara välja den här inställningen i väldigt speciella fall.
+      Om du inaktiverar eller låter bli att konfigurera den här principinställningen används en kodningsmekanism som ger bilder med medelhög kvalitet.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Förlustfri</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Hög</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Mellan</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Låg</string>      
 
     <string id="TS_SERVER_PROFILE">Konfigurera adaptiv grafik för RemoteFX</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">Med den här principinställningen kan administratören konfigurera RemoteFX för värdservrar för fjärrskrivbordssessioner eller Virtualiseringsvärd för fjärrskrivbord. Som standard väljer systemet de bästa inställningarna med ledning av den tillgängliga bandbredden i nätverket.
@@ -991,14 +989,13 @@ Du kan även välja att använda en RDP-komprimeringsalgoritm. Om du inte använ
 Om du inaktiverar eller låter bli att konfigurera den här principinställningen används den fördefinierade RDP-komprimeringsalgoritmen.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Balanserar minne och nätverksbandbredd</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimerad att använda mindre nätverksbandbredd</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Optimerad att använda mindre minne</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Använd inte RDP-komprimeringsalgoritm</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Balanserar minne och nätverksbandbredd</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimerad att använda mindre nätverksbandbredd</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Optimerad att använda mindre minne</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Använd inte RDP-komprimeringsalgoritm</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Använd avancerad RemoteFX-grafik för RemoteApp</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     Med den här principinställningen kan du aktivera RemoteApp-program för att använda avancerade grafikfunktioner, bland annat stöd för genomskinlighet, live-miniatyrbilder och smidiga programflyttningar. Den här principinställningen gäller bara för RemoteApp-program och gäller inte för fjärrskrivbordssessioner.
 
 Om du aktiverar eller låter bli att konfigurera den här principinställningen använder RemoteApp-program som publiceras från den här värdservern för fjärrskrivbordssessioner de här avancerade grafikfunktionerna.
@@ -1007,6 +1004,30 @@ Om du inaktiverar den här principinställningen använder RemoteApp-program som
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Konfigurera H.264/AVC-maskinvarukodning för anslutningar till fjärrskrivbord</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Med den här principinställningen kan du aktivera stöd för H.264/AVC-maskinvarukodning för anslutningar till fjärrskrivbord. Om ett fel inträffar när du har aktiverat maskinvarukodning används programvarukodning i stället om det går. Om du inaktiverar eller låter bli att konfigurera den här principinställningen används alltid programvarukodning.
+
+Om du väljer ”Försök alltid” för det här kodningsalternativet kommer Fjärrskrivbord alltid att försöka använda H.264/AVC-maskinvarukodning om det är tillgängligt. Om du använder Windows Server med Hyper-V och RemoteFX vGPU aktiverat måste principen anges på Hyper-V-värddatorn.
+        
+Om du väljer ”Försök endast för RemoteFX vGPU-baserade virtuella datorer” för det här kodningsalternativet och du använder Windows Server med Hyper-V och RemoteFX vGPU aktiverat måste principen anges på Hyper-V-värddatorn.
+        
+Om du väljer ”Försök endast i scenarier utan RemoteFX vGPU” för det här kodningsalternativet försöker Fjärrskrivbord använda maskinvarukodning i alla scenarier utom för RemoteFX vGPU.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Försök alltid</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Försök endast för RemoteFX vGPU-baserade virtuella datorer</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Försök endast i scenarier utan RemoteFX vGPU</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">Prioritera H.264/AVC 444-grafikläge för anslutningar till fjärrskrivbord</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Den här principinställningen prioriterar H.264/AVC 444-grafikläge i scenarier utan RemoteFX vGPU. När du använder den här inställningen på RDP-servern används H.264/AVC 444 som codec i en RDP 10-anslutning där både klienten och servern kan använda H.264/AVC 444.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Tillåt inte maskinvaruaccelererad avkodning</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Den här principinställningen anger om Anslutning till fjärrskrivbord kan använda maskinvaruacceleration när maskinvaran stöder det. Om du använder den här inställningen använder fjärrskrivbordsklienten endast programvarukodning. Om du får ett problem som du misstänker beror på maskinvaruacceleration kan du prova att inaktivera maskinvaruacceleration med den här inställningen. Om problemet kvarstår vet du att det finns andra problem som du behöver undersöka. Om du inaktiverar eller låter bli att konfigurera inställningen använder fjärrskrivbordsklienten maskinvaruaccelererad avkodning när maskinvaran stöder det.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ Som standard är Anslutning till fjärrskrivbord-sessioner som utnyttjar RemoteF
 
       <string id="TS_SERVER_LEGACY_RFX">Aktivera RemoteFX-kodning för RemoteFX-klienter som är utformade för Windows Server 2008 R2 SP1</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Med den här principinställningen kan du ställa in grafikkodningen så att RemoteFX-codecen används på värdservern för fjärrskrivbordssessioner så att sessionerna är kompatibla med tunna klienter utan Windows designade för Windows Server 2008 R2 SP1. Dessa klienter stöder bara RemoteFX-codecen i Windows Server 2008 R2 SP1. Om du aktiverar den här principinställningen används endast RemoteFX-codecen i Windows Server 2008 R2 SP1 för kodning av användarsessioner på den här servern. Läget är kompatibelt med tunna klienter som bara stöder RemoteFX-codecen i Windows Server 2008 R2 SP1. Om du inaktiverar eller låter bli att konfigurera den här principinställningen kommer tunna klienter utan Windows som bara stöder RemoteFX-codecen i Windows Server 2008 R2 SP1 inte kunna ansluta till den här servern. Den här principinställningen gäller bara klienter som använder Remote Desktop Protocol (RDP) 7.1 och påverkar inte klienter som använder andra versioner av RDP.
       
       </string>
@@ -1189,7 +1209,7 @@ Om du inaktiverar eller låter bli att konfigurera den här principinställninge
           <label>Licensservrar som ska användas:</label>
         </textBox>
         <text>Avgränsa licensservrarnas namn med kommatecken.</text>
-        <text>Exempel: Server1,Server2.exempel.com,192.168.1.1</text>
+        <text>Exempel: Server1,Server2.example.com,192.168.1.1</text>
       </presentation>
       <presentation id="TS_LICENSING_MODE">
         <dropdownList refId="TS_LICENSING_NAME" noSort="true" defaultItem="0">Ange licensieringsläge för värdservern för fjärrskrivbordssession.</dropdownList>
@@ -1296,6 +1316,9 @@ Om du inaktiverar eller låter bli att konfigurera den här principinställninge
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP-komprimeringsalgoritm:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Prioritera AVC-maskinvarukodning:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Visuell upplevelse:</dropdownList>

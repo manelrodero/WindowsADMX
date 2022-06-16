@@ -56,16 +56,16 @@ Obs! Om den här inställningen är aktiverad åsidosätts inställningen Starta
       </string>
       
       <string id="TS_ALLOW_APPS">Tillåt att olistade program startas</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">Med den här principinställningen kan du ange om fjärranvändare kan starta program på värdservern för fjärrskrivbordssession när de startar en session med Fjärrskrivbordstjänster, eller om de bara kan starta program som finns i listan över RemoteApp-program.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+Du kan reglera vilka program på en värdserver för fjärrskrivbordssession som kan fjärrstartas med hjälp av RemoteApp-hanteraren på Windows Server 2008 R2 och Windows Server 2008. Om du använder Windows Server 2012 kan du konfigurera detta i samlingsegenskaperna med hjälp av Serverhanteraren.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+Som standard går det endast att starta program som finns i listan över RemoteApp-program när en användare startar en session med Fjärrskrivbordstjänster.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Om du aktiverar den här principinställningen kan fjärranvändare starta program på värdservern för fjärrskrivbordssession när de startar en session med Fjärrskrivbordstjänster. 
+En fjärranvändare kan till exempel göra det genom att ange sökvägen till programmets körbara fil vid anslutningen med klienten för Anslutning till fjärrskrivbord.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Om du inaktiverar eller låter bli att konfigurera principinställningen kan fjärranvändare endast starta program som finns i listan över RemoteApp-program när de startar en session med Fjärrskrivbordstjänster.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Tillåt skrivbordssammansättning för fjärrskrivbordssessioner</string>

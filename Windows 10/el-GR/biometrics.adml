@@ -6,6 +6,7 @@
   <resources>
     <stringTable>
       <string id="BiometricsConfiguration">Βιομετρική</string>
+      <string id="FaceConfiguration">Χαρακτηριστικά προσώπου</string>
       <string id="Biometrics_EnableBio">Να επιτρέπεται η χρήση βιομετρικής</string>
       <string id="Biometrics_EnableBio_Help">Αυτή η ρύθμιση πολιτικής επιτρέπει ή αποτρέπει την εκτέλεση της Υπηρεσίας βιομετρικής των Windows σε αυτόν τον υπολογιστή.
         
@@ -42,6 +43,15 @@
 
 Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, χρησιμοποιείται η προεπιλεγμένη τιμή των 10 δευτερολέπτων για το χρονικό όριο συμβάντων γρήγορης εναλλαγής χρηστών.
 
+</string>
+      <string id="Face_EnhancedAntiSpoofing">Χρήση βελτιωμένης προστασίας από πλαστογράφηση όταν είναι διαθέσιμη</string>
+      <string id="Face_EnhancedAntiSpoofing_Help">This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
+
+If you do not configure this policy setting, users will be able to choose whether or not to use enhanced anti-spoofing on supported devices.
+
+If you enable this policy setting, Windows will require all users on the device to use anti-spoofing for facial features, on devices which support it.
+
+If you disable this policy setting, enhanced anti-spoofing is turned off for all users on the device and they will be unable to turn it on.
 </string>
     </stringTable>
     <presentationTable>

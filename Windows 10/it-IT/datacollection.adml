@@ -6,11 +6,11 @@
   <resources>
     <stringTable>
       <string id="AllowTelemetry">Consenti telemetria</string>
-      <string id="AllowTelemetry_0">0 - Disattivata [solo enterprise]</string>
+      <string id="AllowTelemetry_0">0 - Sicurezza [solo enterprise]</string>
       <string id="AllowTelemetry_1">1 - Dati di base</string>
       <string id="AllowTelemetry_2">2 - Dati avanzati</string>
       <string id="AllowTelemetry_3">3 - Dati completi</string>
-      <string id="AllowTelemetry_Explain">Questa impostazione dei criteri determina la quantità di dati di diagnostica e di utilizzo inviati a Microsoft. Il valore 0, indica che a Microsoft non verranno inviati dati di telemetria dai componenti del sistema operativo. L'impostazione del valore 0 è applicabile solo ai dispositivi Enterprise e server. L'impostazione del valore 0 per altri dispositivi equivale a scegliere il valore 1. Il valore 1 consente di inviare solo una quantità limitata di base di dati di diagnostica e di utilizzo. Si noti che l'impostazione dei valori 0 e 1 comporterà un peggioramento dell'esperienza nel dispositivo. Il valore 2 consente di inviare informazioni avanzate di diagnostica e di utilizzo. Il valore 3 invia gli stessi dati del valore 2, oltre a dati diagnostici aggiuntivi, come lo stato del sistema al momento di un blocco o un arresto anomalo e i file e il contenuto che potrebbero aver causato il problema.
+      <string id="AllowTelemetry_Explain">Questa impostazione dei criteri determina la quantità di dati di diagnostica e di utilizzo inviati a Microsoft. Il valore 0 consente di inviare dati minimi a Microsoft, inclusi i dati dello Strumento di rimozione malware Microsoft e di Windows Defender, se abilitati, e le impostazioni del client di telemetria. L'impostazione del valore 0 è applicabile solo ai dispositivi Enterprise, EDU, IoT e server. L'impostazione del valore 0 per altri dispositivi equivale a scegliere il valore 1. Il valore 1 consente di inviare solo una quantità di base di dati di diagnostica e di utilizzo. Si noti che l'impostazione dei valori 0 e 1 comporterà un peggioramento dell'esperienza nel dispositivo. Il valore 2 consente di inviare informazioni avanzate di diagnostica e di utilizzo. Il valore 3 invia gli stessi dati del valore 2, oltre a dati diagnostici aggiuntivi, come i file e il contenuto che potrebbero aver causato il problema. Le impostazioni di telemetria di Windows 10 si applicano al sistema operativo Windows e ad alcune app proprietarie. Questa impostazione non si applica alle app di terze parti in esecuzione in Windows 10
 
 Se si disabilita o non si configura questa impostazione dei criteri, gli utenti possono configurare il livello di telemetria in Impostazioni.
 

@@ -239,12 +239,26 @@ TPM이 없는 컴퓨터에서 BitLocker를 사용하려면 "호환되는 TPM 없
 이 정책 설정을 사용하지 않거나 구성하지 않으면 BitLocker에서는 "드라이브 암호화 방법 및 암호화 수준 선택(Windows Vista, Windows Server 2008, Windows 7)" 정책 설정(지정된 경우)과 동일한 비트 수준(128비트 또는 256비트)과 함께 AES를 사용합니다. 두 정책을 모두 설정하지 않으면 BitLocker에서는 기본 암호화 방법인 AES 128비트 도는 설정 스크립트에 지정된 암호화 방법을 사용합니다.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">이 정책 설정을 통해 BitLocker 드라이브 암호화에서 사용되는 알고리즘 및 암호화 수준을 구성할 수 있습니다. 이 정책 설정은 BitLocker를 켤 때만 적용됩니다. 드라이브가 이미 암호화되었거나 암호화가 진행 중인 경우에는 암호화 방법을 변경해도 아무 효과가 없습니다.
+
+이 정책 설정을 사용하면 고정 데이터 드라이브, 운영 체제 드라이브 및 이동식 데이터 드라이브에 대한 암호화 알고리즘과 키 암호화 수준을 개별적으로 구성할 수 있습니다. 고정 데이터 드라이브와 운영 체제 드라이브의 경우 XTS-AES 알고리즘을 사용하는 것이 좋습니다. 이동식 드라이브는 Windows 10(버전 1511)을 실행 중이지 않은 다른 장치에서 사용되는 경우 AES-CBC 128-bit 또는 AES-CBC 256비트를 사용해야 합니다.
+
+이 정책 설정을 사용하지 않거나 구성하지 않으면 BitLocker는 “드라이브 암호화 방법 및 암호화 수준 선택(Windows Vista, Windows Server 2008, Windows 7)” 및 "드라이브 암호화 방법 및 암호화 수준 선택" 정책 설정(이 순서대로)이 설정된 경우 해당 설정과 비트 강도(128비트 또는 256비트)가 동일한 AES를 사용합니다. 두 정책을 모두 설정하지 않으면 BitLocker는 기본 암호화 방법인 XTS-AES 128비트 또는 설치 스크립트에서 지정된 암호화 방법을 사용합니다.
+
+      </string>
       <string id="EncryptionMethod_Name">드라이브 암호화 방법 및 암호화 수준 선택(Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">드라이브 암호화 방법 및 암호화 수준 선택</string>
+      <string id="EncryptionMethodNoDiffuser_Name">드라이브 암호화 방법 및 암호화 수준 선택(Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [버전 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">드라이브 암호화 방법 및 암호화 수준 선택(Windows 10 [버전 1511] 이상)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES 128비트/디퓨저</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES 256비트/디퓨저</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES 128비트(기본값)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC 128비트</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC 128비트(기본값)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES 256비트</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC 256비트</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES 128비트(기본값)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES 128비트</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES 256비트</string>
 
       <string id="FVECategory">BitLocker 드라이브 암호화</string>
       <string id="PlatformValidation_Deprecated_Help">이 정책 설정으로 컴퓨터의 TPM(신뢰할 수 있는 플랫폼 모듈) 보안 하드웨어로 BitLocker 암호화 키의 보안을 유지하는 방법을 구성할 수 있습니다. 컴퓨터에 호환되는 TPM이 없거나 이미 BitLocker가 TPM 보호 기능과 함께 설정된 경우에는 이 정책 설정이 적용되지 않습니다.
@@ -801,6 +815,12 @@ PIN 또는 암호 등 추가 정보를 입력해야만 BitLocker를 사용할 �
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">암호화 방법을 선택합니다.</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">운영 체제 드라이브에 대한 암호화 방법 선택:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">고정 데이터 드라이브에 대한 암호화 방법 선택:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">이동식 데이터 드라이브에 대한 암호화 방법 선택:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

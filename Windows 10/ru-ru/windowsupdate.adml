@@ -295,12 +295,20 @@
 
 Примечание. Этот параметр политики применяется только в случае, если компьютер настроен для подключения к службе обновления в интрасети с помощью параметра политики «Указать размещение службы обновлений Майкрософт в интрасети».</string>
 
-      <string id="DeferUpgrade_Title">Отложить обновление</string>
-      <string id="DeferUpgrade_Help">Если этот параметр политики включен, в профессиональном и корпоративном выпусках обновление можно отложить до следующего периода обновления (по крайней мере несколько месяцев).
+      <string id="DeferUpgrade_Title">Отложить обновления</string>
+      <string id="DeferUpgrade_Help">Enable this policy in order to defer upgrades for up to eight months.
       
-Если этот параметр не задан, обновления поступают по мере их доступности и устанавливаются в рамках политик обновления.
+You can also choose to delay updates for up to one month. If you do not delay updates, your PC will remain up to date with security updates as they become available.
 
-Эта политика не влияет на обновления безопасности. Для получения более подробной информации о доступных обновлениях посетите веб-сайт windows.com/itpro.</string>
+If an issue arises with an update or upgrade, select "Pause Upgrades and Updates". This will delay updates and upgrades until the next monthly update or upgrade becomes available. Once a new update or upgrade it available, the value will go back to the previously selected option, re-enabling your validation groups.
+
+Note: Definition updates will not be impacted by this policy.
+
+Note: If the "Specify intranet Microsoft update service location" policy is enabled, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+ 
+Note: If the “Allow Telemetry” policy is enabled and the Options value is set to 0, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+
+To stay informed about new features in Windows 10, see go.microsoft.com/fwlink/?LinkID=529169.</string>
     </stringTable>
     <presentationTable>
       <presentation id="RemoveWindowsUpdate">
@@ -354,6 +362,13 @@
         <text>Таймер перезагрузки дает пользователям</text>
         <text>указанное время на сохранение</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">работы (в минутах):  </decimalTextBox>
+      </presentation>
+      <presentation id="DeferUpgrade_Title">
+        <text>Отложить обновления для следующих объектов</text>
+        <decimalTextBox refId="DeferUpgradePeriodId" defaultValue="0">длительность (мес.): </decimalTextBox>
+        <text>Отложить обновления для следующих объектов</text>
+        <decimalTextBox refId="DeferUpdatePeriodId" defaultValue="0">длительность (нед.): </decimalTextBox>
+        <checkBox refId="PauseDeferralsId" defaultChecked="false">Приостановить обновления</checkBox>
       </presentation>
     </presentationTable>
   </resources>

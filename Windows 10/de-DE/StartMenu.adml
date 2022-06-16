@@ -144,10 +144,10 @@ Wenn Sie diese Einstellung deaktivieren bzw. nicht konfigurieren, werden alle Po
 Wenn Sie diese Einstellung aktivieren, wird verhindert, dass Benutzer eine App auswählen, die Größe einer Kachel ändern, eine Kachel oder eine sekundäre Kachel anheften/lösen, in den Anpassungsmodus wechseln und Kacheln auf der Startseite und der Apps-Seite neu anordnen.
 
 Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, können Benutzer eine App auswählen, die Größe einer Kachel ändern, eine Kachel oder eine sekundäre Kachel anheften/lösen, in den Anpassungsmodus wechseln und Kacheln auf der Startseite und der Apps-Seite neu anordnen.</string>
-      <string id="ClearTilesOnExit">Beim Beenden die Liste der Kachelbenachrichtigungen leeren</string>
-      <string id="ClearTilesOnExit_Help">Wenn Sie diese Richtlinieneinstellung aktivieren, werden Kachelbenachrichtigungen vom System bei der Abmeldung des Benutzers gelöscht. Folglich werden die Kacheln in der Startansicht beim Anmelden des Benutzers immer mit Standardinhalt angezeigt. Darüber hinaus werden zwischengespeicherte Versionen dieser Benachrichtigungen beim Abmelden des Benutzers gelöscht.
+      <string id="ClearTilesOnExit">Kachelbenachrichtigungen während der Anmeldung löschen</string>
+      <string id="ClearTilesOnExit_Help">Wenn Sie diese Richtlinieneinstellung aktivieren, werden Kachelbenachrichtigungen vom System bei der Anmeldung des Benutzers gelöscht. Folglich werden die Kacheln in der Startansicht beim Anmelden des Benutzers immer mit Standardinhalt angezeigt. Darüber hinaus werden zwischengespeicherte Versionen dieser Benachrichtigungen beim Anmelden des Benutzers gelöscht.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, behält das System die Benachrichtigungen bei. Beim Anmelden eines Benutzers werden die Kacheln dann wie beim Abmelden des Benutzers angezeigt, einschließlich der Liste früherer Benachrichtigungen für die einzelnen Kacheln.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, behält das System die Benachrichtigungen bei. Beim Anmelden eines Benutzers werden die Kacheln dann wie beim Abmelden des Benutzers angezeigt, einschließlich des Verlaufs früherer Benachrichtigungen für die einzelnen Kacheln.
 
 Diese Richtlinieneinstellung verhindert nicht, dass neue Benachrichtigungen angezeigt werden. Weitere Informationen über das Verhindern der Anzeige neuer Benachrichtigungen finden Sie unter "Anwendungsbenachrichtigungen deaktivieren".</string>
       <string id="StartPinAppsWhenInstalled">Anheften der App an die Startseite bei Installation</string>
@@ -569,6 +569,12 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wer
 Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Startseite auf dem vom Benutzer verwendeten Bildschirm angezeigt, wenn er die Windows-Logo-Taste drückt.
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird immer die Startseite auf dem Hauptbildschirm angezeigt wird, wenn der Benutzer die Windows-Logo-Taste drückt. Benutzer können die Startseite weiterhin auf anderen Bildschirmen öffnen, indem Sie auf die Schaltfläche "Start" drücken. Außerdem kann der Benutzer diese Einstellung konfigurieren.</string>
+      <string id="ForceStartSize_DisplayName">Volle Bildschirm- oder Menügröße für "Start" erzwingen</string>
+      <string id="ForceStartSize_ExplainText">Wenn Sie diese Richtlinie aktivieren und auf "Menü 'Start'" oder "'Start' im Vollbildmodus" festlegen, weist "Start" die entsprechende Größe auf, und die Benutzer sind nicht in der Lage, die Größe von "Start" in den Einstellungen zu ändern. 
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wählt Windows die Größe automatisch nach dem Hardwareformfaktor aus, und die Benutzer sind in der Lage, die Größe von "Start" in den Einstelllungen zu ändern.</string>
+      <string id="ForceLauncherSize_Collapsed">Menü "Start"</string>
+      <string id="ForceLauncherSize_Expanded">"Start" im Vollbildmodus</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wir
           <label>Startlayoutdatei</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Eine der folgenden Größen auswählen</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

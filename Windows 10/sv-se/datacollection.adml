@@ -6,11 +6,11 @@
   <resources>
     <stringTable>
       <string id="AllowTelemetry">Tillåt telemetri</string>
-      <string id="AllowTelemetry_0">0 - av [endast företag]</string>
+      <string id="AllowTelemetry_0">0 - Säkerhet [endast företag]</string>
       <string id="AllowTelemetry_1">1 - Grundläggande</string>
       <string id="AllowTelemetry_2">2 - Utökad</string>
       <string id="AllowTelemetry_3">3 - Fullständig</string>
-      <string id="AllowTelemetry_Explain">Den här principinställningen anger mängden diagnostik- och användningsdata som rapporteras till Microsoft. Värdet 0 anger att inga telemetridata från operativsystemskomponenter skickas till Microsoft. Värdet 0 är endast tillämpligt för företags- eller serverenheter. Om 0 anges för andra enheter är det samma som att välja värdet 1. Värdet 1 innebär att endast en begränsad eller grundläggande mängd diagnostik- och användningsdata skickas. Observera att användningen av värdena 0 eller 1 kan göra att viss funktionalitet på enheten inte används optimalt. Värdet 2 innebär att utökad diagnostik- och användningsdata skickas. Med värdet 3 skickas samma data som för värdet 2, plus ytterligare diagnostikdata, t.ex. systemtillståndet vid en systemkrasch samt filerna och innehållet som orsakade problemet.
+      <string id="AllowTelemetry_Explain">Den här principinställningen anger mängden diagnostik- och användningsdata som rapporteras till Microsoft. Värdet 0 anger att en minimal mängd data skickas till Microsoft. Dessa data omfattar data från Borttagning av skadlig programvara och Windows Defender, om de är aktiverade, samt klientinställningar för telemetri. Värdet 0 är endast tillämpligt för företagsenheter, EDU-enheter, IoT-enheter och serverenheter. Om 0 anges för andra enheter är det samma som att välja värdet 1. Värdet 1 innebär att endast en grundläggande mängd diagnostik- och användningsdata skickas. Observera att användningen av värdena 0 eller 1 kan göra att viss funktionalitet på enheten inte används optimalt. Värdet 2 innebär att utökad diagnostik- och användningsdata skickas. Med värdet 3 skickas samma data som för värdet 2, plus ytterligare diagnostikdata, inklusive filerna och innehållet som kan ha orsakat problemet. Telemetriinställningar för Windows 10 gäller för Windows-operativsystemet och vissa förstapartsappar. Den här inställningen gäller inte för tredjepartsappar som körs på Windows 10.
 
 Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan användarna ställa in telemetrinivån i Inställningar.
 

@@ -239,12 +239,26 @@ Om du aktiverar den här principinställningen kan du välja krypteringsalgoritm
 Om du inaktiverar eller låter bli att konfigurera principinställningen använder BitLocker AES med samma krypteringsgrad (128 eller 256 bitar) som principinställningen Välj metod och styrka för kryptering av enhet (Windows Vista, Windows Server 2008, Windows 7), om den har angetts. Om ingen av dessa principer har angetts används standardkrypteringsmetoden 128-bitars AES eller den krypteringsmetod som anges i konfigurationsskriptet.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Med den här principinställningen kan du konfigurera algoritm och chifferstyrka för BitLocker-diskkryptering. Principinställningen tillämpas när du aktiverar BitLocker. Det händer inget om du ändrar krypteringsmetod när enheten redan är krypterad eller om kryptering pågår.
+
+Om du aktiverar den här principinställningen kan du konfigurera en krypteringsalgoritm och önskad chifferstyrka för fasta dataenheter, operativsystemenheter respektive flyttbara dataenheter. För fasta enheter och operativsystemenheter rekommenderas XTS-AES-algoritmen. För flyttbara enheter bör du använda 128-bitars eller 256-bitars AES-CBC om enheten ska användas i andra enheter som inte kör Windows 10 (version 1511).
+
+Om du inaktiverar eller låter bli att konfigurera principinställningen använder BitLocker AES med samma krypteringsgrad (128 eller 256 bitar) som principinställningen Välj metod och styrka för kryptering av enhet (Windows Vista, Windows Server 2008, Windows 7) och principinställningen Välj metod och styrka för kryptering av enhet (i den ordningen), om de har angetts. Om ingen av principerna har angetts använder BitLocker standardkrypteringsmetoden 128-bitars XTS-AES eller den krypteringsmetod som anges i konfigurationsskriptet.
+
+      </string>
       <string id="EncryptionMethod_Name">Välj metod och styrka för kryptering av enhet (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Välj metod och styrka för kryptering av enhet</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Välj krypteringsmetod och chifferstyrka för enhet (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [version 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">Välj krypteringsmetod och chifferstyrka för enhet (Windows 10 [version 1511] och senare)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">128-bitars AES med Diffuser</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">256-bitars AES med Diffuser</string>
       <string id="EncryptionMethodDropDown_AES128_Name">128-bitars AES (standard)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">128-bitars AES-CBC</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">128-bitars AES CBC (standard)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">256-bitars AES</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">256-bitars AES-CBC</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">128-bitars XTS-AES (standard)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">128-bitars XTS-AES</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">256-bitars XTS-AES</string>
 
       <string id="FVECategory">BitLocker-diskkryptering</string>
       <string id="PlatformValidation_Deprecated_Help">Med den här principinställningen kan du ange hur TPM-säkerhetsmaskinvaran (Trusted Platform Module) skyddar krypteringsnyckeln för BitLocker. Den här principinställningen gäller inte om datorn saknar kompatibel TPM-säkerhetsmaskinvara eller om BitLocker redan har aktiverats med TPM-skydd.
@@ -801,6 +815,12 @@ Obs! Det är inte alla tecken och språk som stöds i förstartsmiljön. Du bör
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Välj krypteringsmetod:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Välj krypteringsmetod för operativsystemenheter:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Välj krypteringsmetod för fasta dataenheter:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Välj krypteringsmetod för flyttbara dataenheter:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

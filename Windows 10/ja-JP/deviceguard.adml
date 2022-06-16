@@ -19,16 +19,20 @@
 
 資格情報ガード
 
-この設定を使用すると、資格情報を保護するために、仮想化ベースのセキュリティと共に資格情報ガードをユーザーが有効にできるかどうかを決定できます。
- 
-これらの設定を無効にしても、機能はコンピューターから削除されません。代わりに、セキュア ブートに保存されている構成を消去するために、物理的に存在するユーザーを使用して、各コンピューターからセキュリティ機能も削除する必要があります。
+この設定を使用すると、仮想化ベースのセキュリティ機能を持つ資格情報ガードを有効にして、資格情報を保護することができます。
 
-この機能を安全に構成するためのすべての要件については、ドキュメントを参照してください。
+[ロックなしで有効化] オプションを使用して資格情報ガードが有効化されていた場合、[無効] オプションを選択すると、資格情報ガードがリモートで無効になります。
+
+[UEFI ロックで有効化] オプションを選択すると、資格情報ガードをリモートで無効化できなくなります。この機能を無効にするには、グループ ポリシーを [無効] に設定すると共に、UEFI に保存されている構成を消去するために、物理的に存在するユーザーが各コンピューターからこのセキュリティ機能を削除する必要があります。
+
+[ロックなしで有効化] オプションを選択すると、グループ ポリシーを使用して資格情報ガードをリモートで無効化できます。この設定を使用しているデバイスは、Windows 10 (Version 1511) 以上を実行している必要があります。
       </string>
       <string id="SecureBoot">セキュア ブート</string>
       <string id="SecureBootAndDmaProtection">セキュア ブートと DMA 保護</string>
       <string id="Disabled">無効</string>
       <string id="Enabled">有効</string>
+      <string id="EnabledWithoutLock">ロックなしで有効化</string>
+      <string id="EnabledWithUefiLock">UEFI ロックで有効化</string>
       <string id="ConfigCIPolicy">コードの整合性ポリシーを展開する</string>
       <string id="ConfigCIPolicyHelp">コードの整合性ポリシーを展開する
 
@@ -48,7 +52,7 @@
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">プラットフォームのセキュリティ レベルを選択する:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">コードの整合性に対する仮想化ベースの保護を有効にする</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">資格情報ガードを有効にする</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">資格情報ガードの構成:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

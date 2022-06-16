@@ -9,26 +9,30 @@
       <string id="VirtualizationBasedSecurity">Ativar Segurança Baseada em Virtualização</string>
       <string id="VirtualizationBasedSecurityHelp">Especifica se a Segurança Baseada em Virtualização está habilitada.
 
-A Segurança Baseada em Virtualização usa o Hipervisor do Windows para dar suporte a serviços de segurança. A Segurança Baseada em Virtualização requer Inicialização Segura e, opcionalmente, pode ser ativada com o uso de Proteções DMA. As Proteções DMA exigem suporte de hardware e serão habilitadas apenas em dispositivos configurados corretamente.
+A Segurança Baseada em Virtualização usa o Hipervisor do Windows para dar suporte a serviços de segurança. A Segurança Baseada em Virtualização requer Inicialização Segura e, opcionalmente, pode ser habilitada com o uso de Proteções DMA. As Proteções DMA exigem suporte de hardware e serão habilitadas apenas em dispositivos configurados corretamente.
 
 Proteção de Integridade do Código Baseada em Virtualização
 
-Essa configuração habilita a proteção da Integridade do Código de Modo Kernel baseada em virtualização. Quando essa opção estiver habilitada, proteções de memória de modo kernel serão impostas e o caminho de validação da Integridade do Código estará protegido pelo recurso de segurança baseada em virtualização.
+Esta configuração habilita a proteção da Integridade do Código de Modo Kernel baseada em virtualização. Quando esta opção está habilitada, proteções de memória de modo kernel são impostas, e o caminho de validação da Integridade do Código fica protegido pelo recurso de segurança baseada em virtualização.
 
-Aviso: todos os drivers do sistema devem ser compatíveis com esse recurso ou o sistema poderá falhar. Essa configuração de política só deve ser implantada em computadores compatíveis. 
+Aviso: todos os drivers no sistema devem ser compatíveis com esse recurso ou o sistema poderá travar. Certifique-se de que esta configuração de política seja implantada somente em computadores compatíveis. 
 
 Proteção de Credenciais
 
-Essa configuração permite que você decida se os usuários podem ativar a Proteção de Credenciais com segurança baseada em virtualização para ajudar a proteger credenciais.
- 
-Desabilitar essas configurações não remove o recurso do computador. É necessário também remover a funcionalidade de segurança em cada computador, com um usuário fisicamente presente, a fim de limpar a configuração persistente em Inicialização Segura.
+Esta configuração permite que os usuários ativem a Proteção de Credenciais com segurança baseada em virtualização para ajudar a proteger credenciais.
 
-Consulte a documentação para saber todos os requisitos necessários para configurar esse recurso com segurança.
+A opção "Desabilitada" desativa a Proteção de Credenciais remotamente caso ela tenha sido ativada anteriormente com a opção "Habilitada sem bloqueio".
+
+A opção "Habilitada com bloqueio UEFI" assegura que a Proteção de Credenciais não será desabilitada remotamente. Para desabilitar o recurso, você deve definir a Política de Grupo como "Desabilitada" e remover a funcionalidade de segurança de cada computador, com um usuário fisicamente presente, para limpar a configuração persistente em UEFI.
+
+A opção "Habilitada sem bloqueio" permite que a Proteção de Credenciais seja desabilitada remotamente usando a Política de Grupo. Os dispositivos que usam esta configuração devem estar executando no mínimo o Windows 10 (Versão 1511).
       </string>
       <string id="SecureBoot">Inicialização Segura</string>
       <string id="SecureBootAndDmaProtection">Inicialização segura e a proteção de DMA</string>
       <string id="Disabled">Desabilitado</string>
       <string id="Enabled">Habilitado</string>
+      <string id="EnabledWithoutLock">Habilitada sem bloqueio</string>
+      <string id="EnabledWithUefiLock">Habilitada com o bloqueio UEFI</string>
       <string id="ConfigCIPolicy">Implantar política de integridade de código</string>
       <string id="ConfigCIPolicyHelp">Implantar política de integridade de código
 
@@ -48,7 +52,7 @@ Se usar uma política protegida e assinada, desabilitar essa configuração de p
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Selecione o Nível de Segurança da Plataforma:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Habilitar Proteção com Base em Virtualização de Integridade de Código</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Habilitar Proteção de Credenciais</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Configuração da Proteção de Credenciais:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

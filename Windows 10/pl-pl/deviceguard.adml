@@ -9,26 +9,30 @@
       <string id="VirtualizationBasedSecurity">Włącz zabezpieczenia oparte na wirtualizacji</string>
       <string id="VirtualizationBasedSecurityHelp">Określa, czy zabezpieczenia oparte na wirtualizacji mają być włączone.
 
-Zabezpieczenia oparte na wirtualizacji umożliwiają obsługę usług zabezpieczeń przy użyciu funkcji Windows Hypervisor. Wymagają one funkcji bezpiecznego rozruchu i opcjonalnie mogą być włączane przy użyciu ochrony DMA. Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na odpowiednio skonfigurowanych urządzeniach.
+Zabezpieczenia oparte na wirtualizacji umożliwiają obsługę usług zabezpieczeń przy użyciu funkcji hypervisor systemu Windows. Wymagają one funkcji bezpiecznego rozruchu i opcjonalnie mogą być włączane przy użyciu ochrony DMA. Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na odpowiednio skonfigurowanych urządzeniach.
 
 Ochrona integralności kodu oparta na wirtualizacji
 
-To ustawienie włącza opartą na wirtualizacji ochronę integralności kodu trybu jądra. Jeśli to ustawienie zostało włączone, zostanie wymuszona ochrona pamięci trybu jądra, a ścieżka weryfikacji integralności będzie chroniona przez funkcję zabezpieczeń opartych na wirtualizacji.
+To ustawienie włącza opartą na wirtualizacji ochronę integralności kodu trybu jądra. Jeśli to ustawienie zostanie włączone, będzie wymuszana ochrona pamięci trybu jądra, a ścieżka weryfikacji integralności będzie chroniona przez funkcję zabezpieczeń opartych na wirtualizacji.
 
-Ostrzeżenie: wszystkie sterowniki w systemie muszą być zgodne z tą funkcją. W przeciwnym razie system może ulec awarii. Upewnij się, że to ustawienie zasad zostało wdrożone tylko na zgodnych komputerach. 
+Ostrzeżenie: wszystkie sterowniki w systemie muszą być zgodne z tą funkcją. W przeciwnym razie system może ulec awarii. Upewnij się, że to ustawienie zasad jest wdrażane tylko na zgodnych komputerach.
 
 Ochrona poświadczeń
 
-To ustawienie umożliwia określenie, czy użytkownicy będą mogli włączyć ochronę poświadczeń z zabezpieczeniami opartymi na wirtualizacji w celu ochrony poświadczeń.
- 
-Wyłączenie tych ustawień nie powoduje usunięcia funkcji z komputera. Musisz też usunąć funkcję zabezpieczeń z każdego komputera, gdy użytkownik jest przy komputerze, aby wyczyścić konfigurację w funkcji bezpiecznego rozruchu.
+To ustawienie umożliwia użytkownikom włączanie ochrony poświadczeń z zabezpieczeniami opartymi na wirtualizacji w celu lepszej ochrony poświadczeń.
 
-Pełny zestaw wymagań dotyczących bezpiecznego skonfigurowania tej funkcji można znaleźć w dokumentacji.
+Ustawienie opcji „Wyłączone” powoduje zdalne wyłączenie ochrony poświadczeń, jeśli została ona wcześniej włączona za pomocą opcji „Włączone bez blokady”.
+
+Opcja „Włączone z blokadą UEFI” uniemożliwia zdalne wyłączenie ochrony poświadczeń. Aby wyłączyć tę funkcję, musisz ustawić opcję „Wyłączone” dla zasad grupy, a także usunąć funkcję zabezpieczeń z każdego komputera, gdy użytkownik jest przy komputerze, aby wyczyścić konfigurację w interfejsie UEFI.
+
+Opcja „Wyłączone bez blokady” umożliwia zdalne wyłączenie ochrony poświadczeń za pomocą zasad grupy. Tego ustawienia można używać wyłącznie na urządzeniach z systemem Windows 10 (wersja 1511) lub nowszym.
       </string>
       <string id="SecureBoot">Bezpieczny rozruch</string>
       <string id="SecureBootAndDmaProtection">Bezpieczny rozruch i ochrona DMA</string>
       <string id="Disabled">Wyłączone</string>
       <string id="Enabled">Włączone</string>
+      <string id="EnabledWithoutLock">Włączone bez blokady</string>
+      <string id="EnabledWithUefiLock">Włączone z blokadą UEFI</string>
       <string id="ConfigCIPolicy">Wdróż zasady integralności kodu</string>
       <string id="ConfigCIPolicyHelp">Wdróż zasady integralności kodu
 
@@ -48,7 +52,7 @@ Jeśli użycie podpisanych i chronionych zasad oraz wyłączenie tego ustawienia
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Wybierz poziom zabezpieczeń platformy:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Włącz ochronę integralności kodu opartą na wirtualizacji</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Włącz ochronę poświadczeń</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Konfiguracja ochrony poświadczeń:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

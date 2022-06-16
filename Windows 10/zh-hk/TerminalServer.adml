@@ -5,14 +5,15 @@
   <description>在此輸入描述</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">至少需要 Windows 10 或 Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">至少需要 Windows 8 或 Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">至少需要 Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> 至少需要 Windows 8 企業版或 Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">至少需要 Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> 至少需要 Windows 8 企業版或 Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">僅限 Windows 7 或 Windows Server 2008 R2 (及其後續 Service Pack)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2、Windows Server 2008、Windows Server 2003、Windows 7、Windows Vista，以及 Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">至少需要 Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">至少需要 Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> 至少需要安裝 Windows Server Technical Preview 2 含 RDSH 角色</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> 至少需要安裝 Windows Server 2012 含 RDSH 角色</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">至少需要 Windows 7 Service Pack 1 或 Windows Server 2008 R2 Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">至少需要 Windows Vista 含 Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">至少需要 Windows 2000 終端機服務</string>
@@ -42,16 +43,16 @@
       <string id="TS_8_bit">8 位元</string>
       <string id="TS_32_bit">32 位元</string>
 
-      <string id="TS_AUDIOMAP_EXPLAIN">這個原則設定可讓您指定使用者能否在遠端桌面服務工作階段中重新導向遠端電腦的音訊和視訊輸出。
-使用者可以設定 [遠端桌面連線] (RDC) 的 [本機資源] 索引標籤上的遠端音訊設定，來指定要在何處播放遠端電腦的音訊輸出。使用者可以選擇在遠端電腦或在本機電腦上播放遠端音訊。使用者也可以選擇不播放音訊。使用遠端桌面通訊協定 (.rdp) 檔案中的 videoplayback 設定可設定視訊播放。視訊播放預設為啟用。
+      <string id="TS_AUDIOMAP_EXPLAIN">此原則設定可讓您指定使用者能否在「遠端桌面服務」工作階段中重新導向遠端電腦的音訊與視訊輸出。
+使用者可以在 [遠端桌面連線] (RDC) 的 [本機資源] 索引標籤上設定遠端音訊設定，以指定要在何處播放遠端電腦的音訊輸出。使用者可以選擇在遠端電腦或在本機電腦上播放遠端音訊。使用者也可以選擇不播放音訊。使用遠端桌面通訊協定 (.rdp) 檔案中的 videoplayback 設定可以設定視訊播放。視訊播放預設為啟用。
 
-根據預設，連線到執行 Windows Server 2008 R2、Windows Server 2008 或 Windows Server 2003 的電腦時，不允許重新導向音訊和視訊播放。連線到執行 Windows 8、Windows Server Technical Preview 2、Windows 7、Windows Vista 或 Windows XP Professional 的電腦時，預設允許重新導向音訊和視訊播放。
+根據預設值，連線到執行 Windows Server 2008 R2、Windows Server 2008 或 Windows Server 2003 的電腦時，不允許重新導向音訊與視訊播放。連線到執行 Windows 8、Windows Server 2012、Windows 7、Windows Vista 或 Windows XP Professional 的電腦時，預設允許重新導向音訊與視訊播放。
 
-如果您啟用這個原則設定，就允許重新導向音訊和視訊播放。
+若啟用此原則設定，就允許重新導向音訊與視訊播放。
 
-如果您停用這個原則設定，就不允許重新導向音訊和視訊播放，即使已在 RDC 中指定音訊播放重新導向，或已在 .rdp 檔案中指定視訊播放。
+若停用此原則設定，就不允許重新導向音訊與視訊播放，即使已在 RDC 中指定音訊播放重新導向，或已在 .rdp 檔案中指定視訊播放。
 
-如果您未設定這個原則設定，則不會在群組原則層級指定音訊和視訊播放重新導向。 
+若未設定此原則設定，則不會在群組原則層級指定音訊與視訊播放重新導向。 
 </string>
       <string id="TS_AUDIOCAPTUREMAP_EXPLAIN">這個原則設定可讓您指定使用者能否在遠端桌面服務工作階段中錄製音訊。
 使用者可以設定 [遠端桌面連線] (RDC) 的 [本機資源] 索引標籤上的遠端音訊設定，來指定是否將音訊錄製到遠端電腦。使用者可以使用本機電腦上的音訊輸入裝置 (例如內建麥克風) 來錄製音訊。
@@ -154,24 +155,23 @@
 如果您未設定這個原則設定，則不會在群組原則層級指定剪貼簿重新導向。
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        這個原則設定可讓您為遠端桌面服務連線指定最大的色彩解析度 (色彩深度)。
+      <string id="TS_COLOR_EXPLAIN">此原則設定可讓您為「遠端桌面服務」連線指定最大的色彩解析度 (色彩深度)。
 
-        您可以使用這個原則設定，為使用 RDP 的任何連線設定色彩深度的限制。限制色彩深度可以改善連線的效能 (特別是在低速連結上)，並減少伺服器的負載。
+您可以使用此原則設定，為使用 RDP 的任何連線設定色彩深度的限制。限制色彩深度可以改善連線的效能 (特別是在低速連結上)，並減少伺服器的負載。
 
-        如果您啟用這個原則設定，您指定的色彩深度就會是使用者 RDP 連線所允許的最大色彩深度。連線的實際色彩深度取決於用戶端電腦支援的可用色彩。如果選取 [用戶端相容]，將使用用戶端支援的最高色彩深度。
+若啟用此原則設定，您指定的色彩深度就會是使用者 RDP 連線所允許的最大色彩深度。連線的實際色彩深度取決於用戶端電腦支援的可用色彩。如果選取 [用戶端相容]，將使用用戶端支援的最高色彩深度。
 
-        如果您停用或未設定這個原則設定，則不會在群組原則層級指定連線的色彩深度。
+若停用或未設定此原則設定，則不會在群組原則層級指定連線的色彩深度。
 
-        注意:
-        1.只有 Windows Server 2003 與 Windows XP Professional 支援設定 24 位元的色彩深度。
-        2.這個原則設定中指定的值不適用於使用至少是遠端桌面通訊協定 8.0 (至少執行 Windows 8 或 Windows Server Technical Preview 2 的電腦) 的用戶端電腦連線。這些連線永遠使用 32 位元色彩深度格式。
-        3.對於使用遠端桌面通訊協定 7.1 或更舊版本，且連線到至少執行 Windows 8 或 Windows Server Technical Preview 2 之電腦的用戶端電腦連線，至少要使用下列值做為色彩深度格式:
-        a.這個原則設定指定的值
-        b.用戶端支援的色彩深度上限
-        c.用戶端要求的值
+注意:
+1.	只有 Windows Server 2003 與 Windows XP Professional 支援設定 24 位元的色彩深度。
+2.	此原則設定中指定的值不適用於使用至少是遠端桌面通訊協定 8.0 (至少執行 Windows 8 或 Windows Server 2012 的電腦) 的用戶端電腦連線。這些連線永遠使用 32 位元色彩深度格式。
+3.	對於使用遠端桌面通訊協定 7.1 或更舊版本，且連線到至少執行 Windows 8 或 Windows Server 2012 之電腦的用戶端電腦連線，至少要使用下列值做為色彩深度格式:
+a.	此原則設定指定的值
+b.	用戶端支援的色彩深度上限
+c.	用戶端要求的值
 
-        如果用戶端不支援至少 16 位元，則連線會終止。
+如果用戶端不支援至少 16 位元，則連線會終止。
       </string>
       <string id="TS_COLORDEPTH">限制色彩深度最大值</string>
       <string id="TS_Comp_Help">控制個別電腦或電腦群組之遠端桌面服務設定及用戶端工作階段的內容。</string>
@@ -229,14 +229,14 @@
 如果停用或未設定這個原則設定，則由遠端桌面工作階段主機設定工具中 [顯示設定] 索引標籤上指定的值，來決定每部監視器可用來顯示遠端桌面服務工作階段的最大解析度。
 
 </string>
-      <string id="TS_DISABLE_REMOTE_DESKTOP_WALLPAPER">強制移除遠端桌面底色圖案</string>
-      <string id="TS_DISABLE_REMOTE_DESKTOP_WALLPAPER_EXPLAIN">指定是否要為透過遠端桌面服務連線的遠端用戶端顯示桌面底色圖案。
+      <string id="TS_DISABLE_REMOTE_DESKTOP_WALLPAPER">強制移除遠端桌面桌布</string>
+      <string id="TS_DISABLE_REMOTE_DESKTOP_WALLPAPER_EXPLAIN">指定是否要為透過遠端桌面服務連線的遠端用戶端顯示桌面桌布。
 
-您可以使用這個設定，在遠端桌面服務工作階段期間，強制移除底色圖案。根據預設，Windows XP Professional 會根據用戶端的設定，對透過遠端桌面連線的遠端用戶端顯示底色圖案 (如需詳細資訊，請參閱 [遠端桌面連線] 選項中的 [進階設定] 索引標籤)。執行 Windows Server 2003 的伺服器預設為不會對遠端桌面服務工作階段顯示底色圖案。
+您可以使用這個設定，在遠端桌面服務工作階段期間，強制移除桌布。根據預設，Windows XP Professional 會根據用戶端的設定，對透過遠端桌面連線的遠端用戶端顯示桌布 (如需詳細資訊，請參閱 [遠端桌面連線] 選項中的 [進階設定] 索引標籤)。執行 Windows Server 2003 的伺服器預設為不會對遠端桌面服務工作階段顯示桌布。
 
-如果狀態設定為 [啟用]，底色圖案永遠不會顯示在遠端桌面服務工作階段中。
+如果狀態設定為 [啟用]，桌布永遠不會顯示在遠端桌面服務工作階段中。
 
-如果狀態設定為 [停用]，底色圖案可能會顯示在遠端桌面服務工作階段中 (視用戶端設定而定)。
+如果狀態設定為 [停用]，桌布可能會顯示在遠端桌面服務工作階段中 (視用戶端設定而定)。
 
 如果狀態設定為 [尚未設定]，則套用預設行為。</string>
       <string id="TS_DRIVE_G">G:</string>
@@ -562,19 +562,19 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
 
 </string>
       <string id="TS_SD_Loc">設定 RD 連線代理人伺服器名稱</string>
-      <string id="TS_SD_Loc_Explain">這個原則設定可以讓您指定 RD 工作階段主機伺服器在為負載平衡的 RD 工作階段主機伺服器陣列追蹤和重新導向使用者工作階段時，所使用的 RD 連線代理人伺服器。指定的伺服器必須執行遠端桌面連線代理人服務。負載平衡的伺服器陣列中的所有 RD 工作階段主機伺服器都應該使用相同的 RD 連線代理人伺服器。
+      <string id="TS_SD_Loc_Explain">此原則設定可以讓您指定 RD 工作階段主機伺服器在為負載平衡的 RD 工作階段主機伺服器陣列追蹤和重新導向使用者工作階段時，所使用的 RD 連線代理人伺服器。指定的伺服器必須執行遠端桌面連線代理人服務。負載平衡的伺服器陣列中的所有 RD 工作階段主機伺服器都應該使用相同的 RD 連線代理人伺服器。
 
-如果您啟用這個原則設定，您必須使用完整網域名稱 (FQDN) 指定 RD 連線代理人伺服器。在 Windows Server Technical Preview 2 中，若要以高可用性方式設定多個 RD 連線代理人伺服器，您必須提供以分號分隔的所有 RD 連線代理人伺服器的 FQDN 清單。
+若啟用此原則設定，您必須使用完整網域名稱 (FQDN) 指定 RD 連線代理人伺服器。在 Windows Server 2012 中，若要以高可用性方式設定多個 RD 連線代理人伺服器，您必須提供以分號分隔的所有 RD 連線代理人伺服器的 FQDN 清單。
 
-如果您停用或未設定這個原則設定，則不會在群組原則層級指定這個原則設定。
+若停用或未設定此原則設定，則不會在群組原則層級指定此原則設定。
 
 注意:
 
-     1.若使用 Windows Server 2008，至少需要 Windows Server 2008 Standard 才支援這個原則設定。
+     1. 若使用 Windows Server 2008，至少需要 Windows Server 2008 Standard 才支援此原則設定。
 
-     2.除非啟用 [加入 RD 連線代理人] 原則設定，否則這個原則設定不會生效。
+     2. 除非啟用 [加入 RD 連線代理人] 原則設定，否則此原則設定不會生效。
 
-     3.若要成為 RD 工作階段主機伺服器陣列的使用中成員，陣列中的每個 RD 工作階段主機伺服器的電腦帳戶都必須是 RD 連線代理人伺服器上的下列其中一個本機群組成員: Session Directory Computers、Session Broker Computers 或 RDS Endpoint Servers。
+     3. 若要成為 RD 工作階段主機伺服器陣列的使用中成員，陣列中的每個 RD 工作階段主機伺服器的電腦帳戶都必須是 RD 連線代理人伺服器上的下列其中一個本機群組成員: Session Directory Computers、Session Broker Computers 或 RDS Endpoint Servers。
 
 </string>
       <string id="TS_SD_Node">RD 連線代理人</string>
@@ -950,19 +950,17 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
 
     <string id="TS_SERVER_IMAGE_QUALITY">設定 RemoteFX Adaptive Graphics 的影像品質</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">這個原則設定可讓您指定使用遠端桌面連線來連線這部電腦時，遠端使用者的視覺品質為何。您可以使用這個原則設定平衡網路頻寬使用量與傳遞的視覺品質。
- 
-如果您啟用這個原則設定並且將品質設定為 [中]，RemoteFX Adaptive Graphics 會使用編碼機制產生中品質影像。這個模式的品質模式會耗用較少量的網路頻寬。
-如果您啟用這個原則設定並且將品質設定為 [高]，RemoteFX Adaptive Graphics 會使用編碼機制產生高品質影像，並且會耗用一般的網路頻寬。
-如果您啟用這個原則設定並且將品質設定為 [不失真]，RemoteFX Adaptive Graphics 會使用不失真編碼。在這個模式中，圖形資料的色彩完整性不會受到影響。不過，這個設定會造成網路頻寬使用量顯著增加。建議您只在特定情況下才採用此設定。
- 
-如果您停用或未設定這個原則設定，RemoteFX Adaptive Graphics 會使用編碼機制產生中品質影像。
-
-    
-
+      如果您啟用這個原則設定並且將品質設定為 [低]，「RemoteFX 調適型圖形」會使用產生低品質影像的編碼機制。這個模式的品質模式會耗用最低的網路頻寬。
+      如果您啟用這個原則設定並且將品質設定為 [中]，「RemoteFX 調適型圖形」會使用產生中品質影像的編碼機制。這個模式可提供比低品質模式還好的圖形品質，而且所使用的頻寬會比高品質模式的頻寬還少。
+      如果您啟用這個原則設定並且將品質設定為 [高]，「RemoteFX 調適型圖形」會使用產生高品質影像的編碼機制，並且會耗用一般的網路頻寬。
+      如果您啟用這個原則設定並且將品質設定為 [不失真]，「RemoteFX 調適型圖形」會使用不失真編碼。在這個模式中，圖形資料的色彩完整性不會受到影響。不過，這個設定會造成網路頻寬使用量顯著增加。建議您只在特定情況下才採用此設定。
+      如果您停用或未設定這個原則設定，「RemoteFX 調適型圖形」會使用產生中品質影像的編碼機制。
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">不失真</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">高</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">中</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">低</string>      
 
     <string id="TS_SERVER_PROFILE">設定 RemoteFX 彈性圖形</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">這個原則設定可讓系統管理員設定遠端桌面工作階段主機或遠端桌面虛擬主機伺服器的 RemoteFX 效果。根據預設，系統將根據可用的網路頻寬選擇最佳效果。
@@ -991,14 +989,13 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
 如果您停用或未設定這個原則設定，則使用預設的 RDP 壓縮演算法。
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">平衡記憶體與網路頻寬</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">最佳化以使用較少的網路頻寬</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">最佳化以使用較少的記憶體</string>
- <string id="TS_SERVER_NO_COMPRESSOR">不使用 RDP 壓縮演算法</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">平衡記憶體與網路頻寬</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">最佳化以使用較少的網路頻寬</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">最佳化以使用較少的記憶體</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">不使用 RDP 壓縮演算法</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">使用 RemoteApp 的進階 RemoteFX 圖形</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     這個原則設定可讓您啟用 RemoteApp 程式來使用進階圖形，其中包括支援透明度、動態縮圖和隨選即用應用程式移動。這個原則設定只適用於 RemoteApp 程式，不適用於遠端桌面工作階段。
 
 如果您啟用或未設定這個原則設定，從這個 RD 工作階段主機伺服器發佈的 RemoteApp 程式會使用這些進階圖形。
@@ -1007,6 +1004,30 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">設定「遠端桌面連線」的 H.264/AVC 硬體編碼</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">此原則設定可讓您啟用「遠端桌面連線」的 H.264/AVC 硬體編碼支援。啟用硬體編碼時，若發生錯誤，我們將嘗試使用軟體編碼。若停用或未設定此原則，我們將一律使用軟體編碼。
+        
+若將編碼選項設定為 [一律嘗試]，「遠端桌面」將一律嘗試使用 H.264/AVC 硬體編碼 (若可用)，請注意，對於執行 Hyper-V (且 RemoteFX vGPU 已啟用) 的 Windows Server，必須在 Hyper-V 主機電腦上設定原則。
+        
+若將編碼選項設定為 [只針對 RemoteFX vGPU 虛擬機器嘗試]，請注意，對於執行 Hyper-V (且 RemoteFX vGPU 已啟用) 的 Windows Server，必須在 Hyper-V 主機電腦上啟用原則。
+        
+若將編碼選項設定為 [只針對非 RemoteFX vGPU 案例嘗試]，「遠端桌面」會嘗試為所有案例 (RemoteFX vGPU 除外) 使用硬體編碼。
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">一律嘗試</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">只針對 RemoteFX vGPU 虛擬機器嘗試</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">只針對非 RemoteFX vGPU 案例嘗試</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">排定「遠端桌面連線」的 H.264/AVC 444 圖形模式優先順序</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">此原則設定可排定非 RemoteFX vGPU 案例的 H.264/AVC 444 圖形模式優先順序。當您在 RDP 伺服器上使用此設定時，伺服器將會在 RDP 10 連線中使用 H.264/AVC 444 做為轉碼器，其中用戶端與伺服器都可以使用 H.264/AVC 444。
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">不允許硬體加速解碼</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">此原則設定指定「遠端桌面連線」是否可以在支援的硬體可用時使用硬體加速。若使用此設定，「遠端桌面用戶端」將只會使用軟體解碼。例如，若發生您懷疑可能與硬體加速有關的問題，請使用此設定來停用加速; 接著，若問題仍然存在，您將知道還有其他需要調查的問題。若停用或未設定此設定，，且有支援的硬體可用，「遠端桌面」用戶端將會使用硬體加速解碼。
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
 
       <string id="TS_SERVER_LEGACY_RFX">針對 Windows Server 2008 R2 SP1 設計的 RemoteFX 用戶端啟用 RemoteFX 編碼</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        這個原則設定可讓您設定圖形編碼方式，以使用遠端桌面工作階段主機伺服器上的 RemoteFX 轉碼器，讓工作階段與針對 Windows Server 2008 R2 SP1 設計的非 Windows 精簡型用戶端裝置相容。這些用戶端只支援 Windows Server 2008 R2 SP1 RemoteFX 轉碼器。如果您啟用這個原則設定，這部伺服器上的使用者工作階段只會使用 Windows Server 2008 R2 SP1 RemoteFX 轉碼器來進行編碼。這個模式與只支援 Windows Server 2008 R2 SP1 RemoteFX 轉碼器的精簡型用戶端裝置相容。如果您停用或未設定這個原則設定，只支援 Windows Server 2008 R2 SP1 RemoteFX 轉碼器的非 Windows 精簡型用戶端將無法連線到這部伺服器。這個原則設定只適用於使用遠端桌面通訊協定 (RDP) 7.1 的用戶端，不會影響使用其他 RDP 版本的用戶端。
       
       </string>
@@ -1296,6 +1316,9 @@ RD 工作階段主機伺服器後援印表機驅動程式預設為停用。如�
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP 壓縮演算法:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">偏好 AVC 硬體編碼:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">視覺效果:</dropdownList>

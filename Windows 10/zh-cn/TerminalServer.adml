@@ -5,14 +5,15 @@
   <description>请在此处输入描述</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">至少为 Windows 10 或 Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Windows 8 或 Windows RT 及以上版本</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Windows Server 技术预览版 2 及其更高版本</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Windows 8 Enterprise 或 Windows Server 技术预览版 2 及其更高版本</string>
+      <string id="TS_SUPPORTED_Windows8_Server">至少为 Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> 至少为 Windows 8 企业版或 Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">仅限 Windows 7 或 Windows Server 2008 R2 (及其后续 Service Pack)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2、Windows Server 2008、Windows Server 2003、Windows 7、Windows Vista 以及 Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Windows Server 2008 R2 及以上版本</string>
       <string id="TS_SUPPORTED_Windows7">Windows 7 及以上版本</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Windows Server 技术预览版 2(安装有 RDSH 角色)及其更高版本</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> 至少为装有 RDSH 角色的 Windows Server 2012</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Windows 7 (带 Service Pack 1)或 Windows Server 2008 R2 (带 Service Pack 1) 及以上版本</string>
       <string id="TS_SUPPORTED_Vista_SP1">Windows Vista (带 Service Pack 1) 及以上版本</string>
       <string id="TS_SUPPORTED_Win2k">Windows 2000 终端服务及以上版本</string>
@@ -42,16 +43,16 @@
       <string id="TS_8_bit">8 位</string>
       <string id="TS_32_bit">32 位</string>
 
-      <string id="TS_AUDIOMAP_EXPLAIN">使用此策略设置，可以指定用户在远程桌面服务会话中是否可以重定向远程计算机的音频和视频输出。
-用户可以指定通过远程桌面连接(RDC)中的本地资源选项卡上配置远程音频设置播放远程计算机的音频输出的位置。用户可以选择在远程计算机上或在本地计算机上播放远程音频。用户还可以选择不播放音频。通过使用远程桌面协议(.rdp)文件中的视频播放设置，可以配置播放视频。默认情况下，启用了视频播放。
+      <string id="TS_AUDIOMAP_EXPLAIN">使用此策略设置，可以指定用户是否可以在远程桌面服务会话中重定向远程计算机的音频和视频输出。
+用户可以通过在远程桌面连接(RDC)的“本地资源”选项卡上配置远程音频设置，来指定播放远程计算机的音频输出的位置。用户可以选择在远程计算机上或本地计算机上播放远程音频。用户还可以选择不播放音频。通过使用远程桌面协议(.rdp)文件中的视频播放设置，可以配置视频播放。默认情况下，启用了视频播放。
 
-默认情况下，在连接到运行 Windows Server 2008 R2、 Windows Server 2008 或 Windows Server 2003 的计算机时不允许音频和视频播放重定向。连接到运行 Windows 8、Windows Server 技术预览、 Windows 7、Windows Vista 或 Windows XP Professional 的计算机时，默认情况下允许音频和视频播放重定向。
+默认情况下，在连接到运行 Windows Server 2008 R2、Windows Server 2008 或 Windows Server 2003 的计算机时不允许音频和视频播放重定向。连接到运行 Windows 8、Windows Server 2012、Windows 7、Windows Vista 或 Windows XP Professional 的计算机时，默认情况下允许音频和视频播放重定向。
 
 如果启用此策略设置，则允许音频和视频播放重定向。
 
-如果禁用此策略设置，音频和视频播放重定向不允许，即使在 rdc 的情况下，指定的音频播放重定向或视频播放已.rdp 文件中指定。
+如果禁用此策略设置，则不允许音频和视频播放重定向，即使在 RDC 中指定了音频播放重定向，或者在 .rdp 文件中指定了视频播放，也不允许。
 
-如果不配置此策略设置，在组策略级别上不指定音频和视频播放重定向。 
+如果未配置此策略设置，则在组策略级别上未指定音频和视频播放重定向。 
 </string>
       <string id="TS_AUDIOCAPTUREMAP_EXPLAIN">使用此策略设置，可以指定用户是否可以在远程桌面服务会话中将音频录制到远程计算机。
 通过在“远程桌面连接(RDC)”中的“本地资源”选项卡上配置远程音频设置，用户可以指定是否将音频录制到远程计算机。用户可以使用本地计算机上的音频输入设备(如内置麦克风)录制音频。
@@ -154,24 +155,23 @@
 如果未配置此策略设置，则在“组策略”级别上不指定剪贴板重定向。
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        此策略设置可用于指定远程桌面服务连接的最大颜色分辨率(颜色深度)。
+      <string id="TS_COLOR_EXPLAIN">使用此策略设置，可以指定远程桌面服务连接的最大颜色分辨率(颜色深度)。
 
-        此策略设置可用于使用 RDP 任何连接的颜色深度设置限制。限制颜色深度可以增强连接性能，特别是慢速链接，并可能会缩短服务器负载。
+此策略设置可用于对使用 RDP 的任何连接的颜色深度设置限制。限制颜色深度可以提高连接性能，特别是慢速链接，并可以降低服务器负载。
 
-        如果启用此策略设置，则指定的颜色深度是允许的用户的 RDP 连接的最大颜色深度。客户端计算机上可用的颜色支持取决于该连接的实际颜色深度。如果你选择客户端兼容，将使用客户端支持的最高的颜色深度。
+如果启用此策略设置，则指定的颜色深度是用户的 RDP 连接允许的最大颜色深度。客户端计算机上提供的颜色支持决定了该连接的实际颜色深度。如果你选择“客户端兼容”，将使用客户端支持的最高颜色深度。
 
-        如果禁用或未配置此策略设置，在组策略级别未指定连接的颜色深度。
+如果禁用或未配置此策略设置，则在组策略级别上未指定连接的颜色深度。
 
-        注意:
-        1.	在 Windows Server 2003 和 Windows XP Professional 才支持设置为 24 位颜色深度。
-        2.	此策略设置中指定的值不会应用于连接从客户端计算机使用至少远程桌面协议 8.0 (计算机至少运行 Windows 8 或 Windows Server 技术预览)。这些连接是始终使用 32 位颜色深度格式。
-        3.	从远程桌面协议 7.1 或较早的版本与至少运行的计算机连接正在使用的客户端计算机的连接的 Windows 8 或 Windows Server 技术预览，以下值的最小值用作颜色深度格式: 
-        a.	此策略设置指定的值
-        b.	客户端支持的最大颜色深度
-        c.	客户端请求的值
+注意:
+1.	仅 Windows Server 2003 和 Windows XP Professional 支持将颜色深度设置为 24 位。
+2.	此策略设置中指定的值不会应用于从特定客户端计算机发起的连接，这些客户端计算机至少使用远程桌面协议 8.0 (此类计算机至少运行 Windows 8 或 Windows Server 2012)。这些连接始终使用 32 位颜色深度格式。
+3.	从客户端计算机发起连接时，如果这些客户端计算机使用的是远程桌面协议 7.1 或更早版本，而所连接到的计算机至少运行 Windows 8 或 Windows Server 2012，则以下值的最小值将用作颜色深度格式: 
+a.	此策略设置指定的值
+b.	客户端支持的最大颜色深度
+c.	客户端请求的值
 
-        如果客户端不支持至少为 16 位，则连接将被终止。
+如果客户端不至少支持 16 位，则连接将被终止。
       </string>
       <string id="TS_COLORDEPTH">限制最大颜色深度</string>
       <string id="TS_Comp_Help">控制远程桌面服务配置和独立的计算机或计算机组的客户端会话的属性。</string>
@@ -562,19 +562,19 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 
 </string>
       <string id="TS_SD_Loc">配置 RD 连接 Broker 服务器名称</string>
-      <string id="TS_SD_Loc_Explain">此策略设置，则可以指定 RD 会话主机服务器用于跟踪，并将重定向的负载平衡 RD 会话主机服务器场的用户会话的 RD 连接代理服务器。指定的服务器必须运行远程桌面连接代理服务。负载平衡的服务器场中的所有 RD 会话主机服务器应都使用相同的 RD 连接代理服务器。
+      <string id="TS_SD_Loc_Explain">使用此策略设置，可以指定 RD 连接代理服务器，该服务器可供 RD 会话主机服务器用于跟踪和重定向进行过负载平衡的 RD 会话主机服务器场的用户会话。指定的服务器必须运行远程桌面连接代理服务。经过负载平衡的场中的所有 RD 会话主机服务器应都使用同一 RD 连接代理服务器。
 
-如果启用此策略设置，你必须使用其完全限定的域名(FQDN)指定的 RD 连接代理服务器。在 Windows Server 技术预览的高可用性仅有多个 RD 连接代理服务器，你必须提供的所有 RD 连接代理服务器的 Fqdn 以分号分隔的列表。
+如果启用此策略设置，你必须使用完全限定的域名(FQDN)来指定 RD 连接代理服务器。在 Windows Server 2012 中，若要通过多个 RD 连接代理服务器来设置高可用性，你必须提供一个以分号分隔的列表，其中包含所有 RD 连接代理服务器的 FQDN。
 
-如果禁用或未配置此策略设置，在组策略级别未指定的策略设置。
+如果禁用或未配置此策略设置，则在组策略级别上未指定此策略设置。
 
 注意: 
 
-     1. 对于 Windows Server 2008，此策略设置上是否支持至少 Windows Server 2008 标准。
+     1. 对于 Windows Server 2008，此策略设置至少在 Windows Server 2008 标准版上是受支持的。
 
-     2. 除非启用了加入 RD 连接代理策略设置，此策略设置才会生效。
+     2. 除非启用了加入 RD 连接代理策略设置，否则此策略设置不会有效。
 
-     3. 如果是 RD 会话主机服务器场的活动成员，每个 RD 会话主机服务器场中的计算机帐户必须是在 RD 连接代理服务器上以下的本地组的成员: 会话目录计算机、会话代理计算机或 RDS 终结点服务器。
+     3. 若要成为 RD 会话主机服务器场的活动成员，该场中每个 RD 会话主机服务器的计算机帐户必须是 RD 连接代理服务器中以下本地组之一的成员: 会话目录计算机、会话代理计算机或 RDS 终结点服务器。
 
 </string>
       <string id="TS_SD_Node">RD 连接 Broker</string>
@@ -950,19 +950,17 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 
     <string id="TS_SERVER_IMAGE_QUALITY">配置 RemoteFX 自适应图形的图像质量</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">使用此策略设置，可以指定当通过远程桌面连接连接到此计算机时远程用户的视觉质量。可以使用此策略设置在网络带宽使用量与提供的视觉质量间获得平衡。
- 
-如果启用此策略设置并将质量设置为“中”，则 RemoteFX 自适应图形使用产生中等质量图像的编码机制。此模式使用质量模式的最低数量的网络带宽。
-如果启用此策略设置并将质量设置为“高”，则 RemoteFX 自适应图形使用产生高质量图像的编码机制，并使用中等网络带宽。
-如果启用此策略设置并将质量设置为“无损”，则 RemoteFX 自适应图形使用无损编码。在此模式中，图形数据的颜色完整性不会受到影响。但是，此设置会导致网络带宽使用量的显著增加。建议仅在非常特定的情况下设置此设置。
- 
-如果禁用或未配置此策略设置，则 RemoteFX 自适应图形使用产生中等质量图像的编码机制。
-
-    
-
+      如果启用此策略设置并将质量设置为“低”，则 RemoteFX 自适应图像使用产生低质量图像的编码机制。此模式使用质量模式的最低数量的网络带宽。
+      如果启用此策略设置并将质量设置为“中”，则 RemoteFX 自适应图像使用产生中等质量图像的编码机制。此模式提供的图形质量高于低质量设置，并且使用的带宽低于高质量设置。
+     如果启用此策略设置并将质量设置为“高”，则 RemoteFX 自适应图像使用产生高质量图像的编码机制，并使用中等网络带宽。
+     如果启用此策略设置并将质量设置为“无损”，则 RemoteFX 自适应图像使用无损编码。在此模式中，图形数据的颜色完整性不会受到影响。但是，此设置会导致网络带宽使用量的显著增加。建议仅在非常特定的情况下设置此设置。
+     如果禁用或未配置此策略设置，则 RemoteFX 自适应图像使用产生中等质量图像的编码机制。
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">无损</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">高</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">中</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">低</string>      
 
     <string id="TS_SERVER_PROFILE">配置 RemoteFX 自适应图形</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">使用此策略设置，管理员可以配置用于远程桌面会话主机或远程桌面虚拟化主机服务器的 RemoteFX 体验。默认情况下，系统将根据使用的网络带宽选择最佳体验。
@@ -991,14 +989,13 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 如果禁用或未配置此策略设置，将使用默认的 RDP 压缩算法。
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">平衡内存和网络带宽</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">已优化为使用较少网络带宽</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">已优化为使用较少内存</string>
- <string id="TS_SERVER_NO_COMPRESSOR">不使用 RDP 压缩算法</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">平衡内存和网络带宽</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">已优化为使用较少网络带宽</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">已优化为使用较少内存</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">不使用 RDP 压缩算法</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">对 RemoteApp 使用高级 RemoteFX 图形</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     使用此策略设置可让 RemoteApp 程序使用高级图形，包括对透明度、动态缩略图和无缝应用程序移动的支持。此策略设置仅适用于 RemoteApp 程序，不适用于远程桌面会话。
 
 如果启用或未配置此策略设置，则从此 RD 会话主机服务器发布的 RemoteApp 程序将使用这些高级图形。
@@ -1007,6 +1004,30 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">配置远程桌面连接的 H.264/AVC 硬件编码</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">使用此策略设置可以为远程桌面连接启用 H.264/AVC 硬件编码支持。启用硬件编码时，如果出现错误，我们将尝试使用软件编码。如果禁用或未配置此策略，我们将始终使用软件编码。
+        
+如果将编码选项设置为“始终尝试”，远程桌面将始终尝试使用 H.264/AVC 硬件编码(如果可用)。请注意，对于运行 Hyper-V 时启用了 RemoteFX vGPU 的 Windows Server，必须在 Hyper-V 主机上设置此策略。
+        
+如果将编码选项设置为“仅针对 RemoteFX vGPU 虚拟机进行尝试”，请注意，对于运行 Hyper-V 时启用了 RemoteFX vGPU 的 Windows Server，必须在 Hyper-V 主机上设置此策略。
+        
+如果将编码选项设置为“仅针对非 RemoteFX vGPU 方案进行尝试”，则远程桌面将尝试对 RemoteFX vGPU 以外的所有方案使用硬件编码。
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">始终尝试</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">仅针对 RemoteFX vGPU 虚拟机进行尝试</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">仅针对非 RemoteFX vGPU 方案进行尝试</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">为远程桌面连接设置 H.264/AVC 444 图形模式的优先级</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">此策略设置可以为非 RemoteFX vGPU 方案设置 H.264/AVC 444 图形模式的优先级。在 RDP 服务器上使用此设置时，服务器将使用 H.264/AVC 444 作为 RDP 10 连接中的编解码器，在该连接中客户端和服务器都可以使用 H.264/AVC 444。
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">不允许硬件加速解码</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">此策略设置指定远程桌面连接是否可以使用硬件加速(如果有支持的硬件可用)。如果使用此设置，则远程桌面客户端将仅使用软件解码。例如，如果你遇到怀疑与硬件加速有关的问题，使用此设置可以禁用加速；然后，如果问题仍然存在，你就会知道存在其他需要调查的问题。如果禁用此设置或将它保留为未配置状态，则远程桌面客户端将使用硬件加速解码(如果有支持的硬件可用)。
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 
       <string id="TS_SERVER_LEGACY_RFX">为专门针对 Windows Server 2008 R2 SP1 设计的 RemoteFX 客户端启用 RemoteFX 编码</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        使用此策略设置，可以将图形编码设置为在远程桌面会话主机服务器上使用 RemoteFX 编解码器，以便会话可与设计用于 Windows Server 2008 R2 SP1 的非 Windows 瘦客户端设备兼容。这些客户端仅支持 Windows Server 2008 R2 SP1 RemoteFX 编解码器。如果启用此策略设置，则此服务器上的用户的会话仅使用 Windows Server 2008 R2 SP1 RemoteFX 编解码器进行编码。此模式与仅支持 Windows Server 2008 R2 SP1 RemoteFX 编解码器的瘦客户端设备兼容。如果禁用或未配置此策略设置，则仅支持 Windows Server 2008 R2 SP1 RemoteFX 编解码器的非 Windows 瘦客户端将无法连接到此服务器。此策略设置仅适用于使用远程桌面协议(RDP) 7.1 的客户端，且不影响使用其他 RDP 版本的客户端。
       
       </string>
@@ -1296,6 +1316,9 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP 压缩算法:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">首选 AVC 硬件编码:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">视觉体验:</dropdownList>

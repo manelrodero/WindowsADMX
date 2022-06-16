@@ -144,8 +144,8 @@ Windows 會將最近使用過的項目移到功能表頂端，並隱藏最近未
 如果您啟用這個設定，將防止使用者在 [開始] 和 [應用程式] 內選取應用程式、調整磚的大小、釘選/取消釘選磚或次要磚、進入自訂模式以及重新排列磚。
 
 如果您停用或未設定這個設定，將允許使用者在 [開始] 和 [應用程式] 內選取應用程式、調整磚的大小、釘選/取消釘選磚或次要磚、進入自訂模式以及重新排列磚。</string>
-      <string id="ClearTilesOnExit">結束時清除磚通知記錄</string>
-      <string id="ClearTilesOnExit_Help">如果您啟用這個設定，系統會在使用者登出時刪除磚通知。因此，當使用者登入時，啟動畫面中的磚永遠會顯示它們的預設內容。此外，當使用者登出後，會清除任何快取的通知版本。
+      <string id="ClearTilesOnExit">登入期間清除磚通知</string>
+      <string id="ClearTilesOnExit_Help">若啟用此設定，系統會在使用者登入時刪除磚通知。因此，當使用者登入時，啟動畫面中的磚永遠會顯示它們的預設內容。此外，當使用者登入後，會清除任何快取的通知版本。
 
 如果您停用或者未設定這個設定，系統會保留通知，而且當使用者登入時，磚和使用者登出時顯示的內容一樣，其中包括每一個磚以前的通知歷史。
 
@@ -569,6 +569,12 @@ Windows Update 是 Windows 的線上延伸，提供軟體更新讓使用者的�
 如果您啟用這個原則設定，當使用者按下 Windows 標誌鍵時，會在使用者正在使用的顯示器上顯示 [開始] 畫面。
 
 如果您停用或未設定這個原則設定，當使用者按下 Windows 標誌鍵時，一律在主顯示器上顯示 [開始] 畫面。使用者按下其他顯示器上的 [開始] 按鈕時，仍然能夠開啟該顯示器上的 [開始] 畫面。此外，使用者也能夠設定這個設定。</string>
+      <string id="ForceStartSize_DisplayName">強制 [開始] 以全螢幕方式顯示或以功能表大小顯示</string>
+      <string id="ForceStartSize_ExplainText">若啟用此原則並將它設定為 [開始] 功能表或全螢幕的 [開始]，[開始] 將會是該大小，而且使用者將無法在 [設定] 中變更 [開始] 的大小。
+
+若停用或未設定此原則設定，Windows 將會根據硬體尺寸自動選取大小，而且使用者將可以在 [設定] 中變更 [開始] 的大小。</string>
+      <string id="ForceLauncherSize_Collapsed">[開始] 功能表</string>
+      <string id="ForceLauncherSize_Expanded">全螢幕的 [開始]</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Windows Update 是 Windows 的線上延伸，提供軟體更新讓使用者的�
           <label>啟動配置檔案</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">選擇下列其中一個大小</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

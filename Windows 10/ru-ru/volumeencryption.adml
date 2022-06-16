@@ -239,12 +239,26 @@ USB-устройство флэш-памяти с ключом запуска н
 Если вы отключите или не настроите этот параметр, BitLocker будет использовать метод шифрования AES с ключом того же разряда (128- или 256-разрядным), который установлен в параметре политики "Выбор метода шифрования диска и стойкости шифра (Windows Vista, Windows Server 2008, Windows 7)", если этот параметр политики настроен. Если не установлен ни один параметр политики, BitLocker будет использовать метод шифрования, заданный в сценарии установки, или стандартный метод шифрования — AES со 128-разрядным ключом.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Этот параметр политики позволяет настроить алгоритм и стойкость шифра, используемые программой шифрования дисков BitLocker. Этот параметр политики применяется при включении BitLocker. Если диск уже зашифрован или шифрование уже идет, изменение метода шифрования не вступит в силу. 
+
+Если вы включите этот параметр политики, вы сможете настроить алгоритм шифрования и стойкость шифра ключа для шифрования несъемных дисков с данными, дисков операционной системы и съемных носителей с данными по отдельности. Для несъемных дисков и дисков операционной системы рекомендуется использовать алгоритм XTS-AES. Для съемных носителей следует использовать алгоритм AES-CBC с 128-разрядным ключом или AES-CBC с 256-разрядным ключом, если диск будет использоваться на других устройствах, на которых не установлена ОС Windows 10 (версия 1511).
+
+Если вы отключите или не настроите этот параметр, BitLocker будет использовать метод шифрования AES с ключом того же разряда (128- или 256-разрядным), который установлен в параметрах политики "Выбор метода шифрования диска и стойкости шифра (Windows Vista, Windows Server 2008, Windows 7)" и "Этот параметр политики позволяет выбрать метод шифрования диска и стойкость шифра", если эти параметры политики настроены. Если не настроена ни одна политика, BitLocker будет использовать метод шифрования по умолчанию XTS-AES с 128-разрядным ключом или метод шифрования, указанный сценарием настройки.
+
+      </string>
       <string id="EncryptionMethod_Name">Этот параметр политики позволяет выбрать метод шифрования диска и стойкость шифра (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Этот параметр политики позволяет выбрать метод шифрования диска и стойкость шифра </string>
+      <string id="EncryptionMethodNoDiffuser_Name">Выберите метод шифрования диска и уровень стойкости шифра (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [версия 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">Выберите метод шифрования диска и уровень стойкости шифра (Windows 10 [версия 1511] и более поздние версии)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES с 128-разрядным ключом и диффузором</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES с 256-разрядным ключом и диффузором</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES с 128-разрядным ключом</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC с 128-разрядным ключом</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC с 128-разрядным ключом (по умолчанию)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES с 256-разрядным ключом</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC с 256-разрядным ключом</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES с 128-разрядным ключом (по умолчанию)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES с 128-разрядным ключом</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES с 256-разрядным ключом</string>
 
       <string id="FVECategory">Этот параметр политики позволяет выбрать шифрование диска BitLocker</string>
       <string id="PlatformValidation_Deprecated_Help">Этот параметр политики позволяет указать, как оборудование безопасности доверенного платформенного модуля компьютера обеспечивает безопасность ключа шифрования BitLocker. Этот параметр политики неприменим, если на компьютере нет совместимого доверенного платформенного модуля или если BitLocker уже включен с защитой доверенного платформенного модуля.
@@ -798,6 +812,12 @@ USB-устройство флэш-памяти с ключом запуска н
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Выберите метод шифрования.</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Выберите метод шифрования для дисков операционной системы:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Выберите метод шифрования для несъемных дисков с данными:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Выберите метод шифрования для съемных носителей с данными:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

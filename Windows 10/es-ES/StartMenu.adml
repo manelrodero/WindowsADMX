@@ -144,8 +144,8 @@ Si deshabilita esta opción o no la configura, se mostrarán todos los textos em
 Si habilita esta configuración, impedirá que los usuarios seleccionen una aplicación, cambien el tamaño de un icono, anclen o desanclen un icono o un icono secundario, entren en el modo de personalización y reorganicen los iconos de Inicio y Aplicaciones.
 
 Si deshabilita o no establece esta configuración, permitirá que los usuarios seleccionen una aplicación, cambien el tamaño de un icono, anclen/desanclen un icono o un icono secundario, entren en el modo de personalización y reorganicen los iconos de Inicio y Aplicaciones.</string>
-      <string id="ClearTilesOnExit">Borrar el historial de las notificaciones en mosaico al salir</string>
-      <string id="ClearTilesOnExit_Help">Si habilita esta opción, el sistema elimina las notificaciones en mosaico cuando el usuario cierra la sesión. Como consecuencia, los mosaicos de la vista de inicio siempre mostrarán el contenido predeterminado cuando el usuario inicia sesión. Además, cualquier versión en caché de estas notificaciones se borrará cuando el usuario cierre la sesión.
+      <string id="ClearTilesOnExit">Borrar las notificaciones en mosaico durante el inicio de sesión</string>
+      <string id="ClearTilesOnExit_Help">Si habilita esta opción, el sistema elimina las notificaciones en mosaico cuando el usuario inicia la sesión. Como consecuencia, los mosaicos de la vista de inicio siempre mostrarán el contenido predeterminado cuando el usuario inicia sesión. Además, cualquier versión en caché de estas notificaciones se borrará cuando el usuario inicia la sesión.
 
 Si deshabilita o no establece esta configuración, el sistema conserva las notificaciones, y cuando un usuario inicia sesión, los mosaicos aparecen tal como estaban cuando el usuario cerró la sesión, incluso aparece el historial de las notificaciones previas de cada mosaico.
 
@@ -569,6 +569,12 @@ Si deshabilita o no establece esta configuración de directiva, las aplicaciones
 Si deshabilita o no establece esta configuración de directiva, la pantalla Inicio aparecerá en la pantalla que esté usando el usuario cuando presione la tecla de logotipo de Windows.
 
 Si deshabilita o no establece esta configuración de directiva, la pantalla Inicio siempre aparecerá en la pantalla principal cuando el usuario presione la tecla de logotipo de Windows. Los usuarios podrán seguir abriendo Inicio en otras pantallas presionando el botón Inicio de esa pantalla. Además, el usuario podrá establecer esta configuración.</string>
+      <string id="ForceStartSize_DisplayName">Forzar el inicio para que sea el tamaño de pantalla completa o el tamaño de menú</string>
+      <string id="ForceStartSize_ExplainText">Si habilitas esta directiva y la estableces en el menú Inicio o pantalla de Inicio completa, Inicio será de ese tamaño y los usuarios no podrán cambiar el tamaño de Inicio en la Configuración. 
+
+Si deshabilitas o no estableces esta configuración de directiva, Windows seleccionará automáticamente el tamaño en función del factor de forma de hardware y los usuarios podrán cambiar el tamaño de Inicio en la Configuración.</string>
+      <string id="ForceLauncherSize_Collapsed">Menú Inicio</string>
+      <string id="ForceLauncherSize_Expanded">Pantalla de Inicio completa</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Si deshabilita o no establece esta configuración de directiva, la pantalla Inic
           <label>Iniciar el archivo de diseño</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Elija uno de los siguientes tamaños</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

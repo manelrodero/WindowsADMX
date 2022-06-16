@@ -144,10 +144,10 @@ Windows 2000 Professional および Windows XP Professional 上では、すべ�
 この設定を有効にした場合、ユーザーによるアプリの選択、タイルのサイズ変更、タイルやセカンダリ タイルのピン留め操作とピン留めを外す操作、カスタマイズ モードへの切り替え、および [スタート画面とアプリ] のタイルの並べ替えを禁止します。
 
 この設定を無効にした場合、または構成しなかった場合、ユーザーによるアプリの選択、タイルのサイズ変更、タイルやセカンダリ タイルのピン留め操作とピン留めを外す操作、カスタマイズ モードへの切り替え、および [スタート画面とアプリ] のタイルの並べ替えを許可します。</string>
-      <string id="ClearTilesOnExit">終了時にタイル通知の履歴を消去する</string>
-      <string id="ClearTilesOnExit_Help">この設定を有効にした場合、ユーザーのログオフ時にタイル通知が削除されます。この結果、ユーザーがログオンすると、開始時に表示されるタイルには常に既定のコンテンツが表示されます。また、ユーザーがログオフするときに、これらの通知のキャッシュされているバージョンがあれば消去されます。
+      <string id="ClearTilesOnExit">ログオン時にタイル通知を消去する</string>
+      <string id="ClearTilesOnExit_Help">この設定を有効にした場合、ユーザーのログオン時にタイル通知が削除されます。この結果、ユーザーがログオンすると、開始時に表示されるタイルには常に既定のコンテンツが表示されます。また、ユーザーがログオンするときに、これらの通知のキャッシュされているバージョンがあれば消去されます。
 
-この設定を無効にした場合、または構成しなかった場合は、通知が保持され、ユーザーがログオンすると、ユーザーがログオフしたときに表示されていたタイルが、各タイルの以前の通知の履歴を含んでそのまま表示されます。
+この設定を無効にした場合、または構成しなかった場合は、通知が保持され、ユーザーがログオンすると、ユーザーがログオフしたときに表示されていたタイルが、各タイルの以前の通知の履歴を含めてそのまま表示されます。
 
 この設定では、新しい通知が表示されます。新しい通知を表示しないようにするには、[アプリケーション通知を無効にする] 設定を参照してください。</string>
       <string id="StartPinAppsWhenInstalled">インストール時にスタート画面にアプリをピン留めする</string>
@@ -569,6 +569,12 @@ Windows のオンライン拡張である Windows Update を使うと、シス�
 このポリシー設定を有効にした場合、ユーザーが Windows ロゴ キーを押すと、ユーザーが使用している画面にスタート画面が表示されます。
 
 このポリシー設定を無効にした場合、または構成しなかった場合、ユーザーが Windows ロゴ キーを押すと、メイン ディスプレイに常にスタート画面が表示されます。ユーザーは、他の画面で [スタート] ボタンを押すと、その画面でスタート画面を開くことができます。また、ユーザーはこの設定を構成できます。</string>
+      <string id="ForceStartSize_DisplayName">スタート画面を全画面表示サイズまたはメニュー サイズに強制する</string>
+      <string id="ForceStartSize_ExplainText">このポリシーを有効にして、[スタート メニュー] または [スタートの全画面表示] に設定した場合、スタート画面がそのサイズになります。ユーザーが設定でスタート画面のサイズを変更することはできません。
+
+このポリシー設定を無効にした場合または構成しなかった場合、Windows ではハードウェアのフォーム ファクターに基づいてサイズが自動的に選択され、ユーザーが設定でスタート画面のサイズを変更できます。</string>
+      <string id="ForceLauncherSize_Collapsed">スタート メニュー</string>
+      <string id="ForceLauncherSize_Expanded">スタートの全画面表示</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Windows のオンライン拡張である Windows Update を使うと、シス�
           <label>スタート画面のレイアウト ファイル</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">次のサイズから 1 つ選択してください</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

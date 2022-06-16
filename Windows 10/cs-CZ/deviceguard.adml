@@ -19,16 +19,20 @@ Upozornění: Všechny ovladače v systému musí být s touto funkcí kompatibi
 
 Ochrana přihlašovacích údajů
 
-Toto nastavení umožňuje rozhodnout, jestli budou moct uživatelé zapnout Ochranu přihlašovacích údajů se zabezpečením na základě virtualizace.
- 
-Zakázáním tohoto nastavení neodeberete funkci z počítače. Pokud byste to chtěli udělat, museli byste taky odebrat funkci zabezpečení ze všech počítačů s fyzicky přítomným uživatelem, aby bylo možné vymazat konfiguraci, která je trvale uložená v rámci zabezpečeného spouštění.
+Toto nastavení umožňuje uživatelům zapnutí Ochrany přihlašovacích údajů se zabezpečením na základě virtualizace.
 
-Pokud vás zajímají kompletní požadavky, které musí být splněné, aby bylo možné tuto funkci bezpečně nakonfigurovat, podívejte se prosím do dokumentace.
+Možnost Zakázáno vypne Ochranu přihlašovacích údajů, pokud byla předtím zapnutá pomocí možnosti Povoleno bez zámku.
+
+Možnost Povoleno se zámkem UEFI zajišťuje, že se Ochrana přihlašovacích údajů nedá zakázat vzdáleně. Pokud chcete funkci zakázat, musíte tuto zásadu skupiny nastavit na Zakázáno a současně odebrat příslušné funkce zabezpečení na každém jednotlivém počítači a za fyzické přítomnosti uživatele – jen tak je možné vymazat konfiguraci, která je trvale uložená v rozhraní UEFI.
+
+Možnost Povoleno bez zámku umožňuje vzdálené zakázání Ochrany přihlašovacích údajů pomocí zásad skupiny. Na zařízeních s tímto nastavením musí běžet přinejmenším Windows 10 (verze 1511).
       </string>
       <string id="SecureBoot">Zabezpečené spouštění</string>
       <string id="SecureBootAndDmaProtection">Zabezpečené spouštění a ochrana DMA</string>
       <string id="Disabled">Zakázáno</string>
       <string id="Enabled">Povoleno</string>
+      <string id="EnabledWithoutLock">Povoleno bez zámku</string>
+      <string id="EnabledWithUefiLock">Povoleno se zámkem UEFI</string>
       <string id="ConfigCIPolicy">Nasadit zásady integrity kódu</string>
       <string id="ConfigCIPolicyHelp">Nasazení zásad integrity kódu
 
@@ -48,7 +52,7 @@ Pokud používáte podepsanou a chráněnou zásadu, pak zakázáním tohoto nas
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Vyberte úroveň zabezpečení platformy:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Povolit ochranu integrity kódu na základě virtualizace</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Povolit Ochranu přihlašovacích údajů</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Konfigurace Ochrany přihlašovacích údajů:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

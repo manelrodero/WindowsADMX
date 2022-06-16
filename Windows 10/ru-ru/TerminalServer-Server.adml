@@ -56,16 +56,16 @@
       </string>
       
       <string id="TS_ALLOW_APPS">Разрешать удаленный запуск любых программ</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">Данный параметр политики позволяет указать, могут ли удаленные пользователи запускать какие-либо программы на сервере узлов сеансов удаленных рабочих столов во время начала сеанса службы удаленных рабочих столов или они могут запускать только программы, перечисленные в списке программ RemoteApp.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+Вы можете контролировать, какие программы на сервере узла сеансов удаленных рабочих столов можно запускать удаленно с помощью диспетчера программ RemoteApp в ОС Windows Server 2008 R2 и Windows Server 2008. При использовании Windows Server 2012 вы можете настроить этот параметр на странице свойств сбора с помощью диспетчера сервера.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+По умолчанию при запуске пользователем сеанса служб удаленных рабочих столов можно запускать только программы из списка программ RemoteApp.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Если включить этот параметр политики, удаленные пользователи смогут запускать любую программу на сервере узла сеансов удаленных рабочих столов во время начала сеанса службы удаленных рабочих столов. 
+Например, удаленный пользователь может сделать это, указав путь к исполняемому файлу программы во время подключения с помощью клиента подключения к удаленному рабочему столу.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Если отключить или не настроить этот параметр политики, при запуске сеанса служб удаленных рабочих столов удаленные пользователи смогут запускать только программы, перечисленные в списке программ RemoteApp.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Разрешить композицию рабочего стола для сеансов удаленных рабочих столов</string>

@@ -7,98 +7,97 @@
     <stringTable>
         <string id="MSPassportForWorkCategory">Microsoft Passport for Work</string>
         <string id="MSPassportForWorkPINComplexityCategory">PIN-Komplexität</string>
+        <string id="MSPassportForWorkRemoteCategory">Remote Passport</string>
         <string id="MSPassport_UsePassportForWork">Microsoft Passport for Work verwenden</string>
         <!-- DropdownList Button strings -->
-        <string id="ButtonTextAllow">Zulassen</string>
-        <string id="ButtonTextDisallow">Nicht zulassen</string>
-        <string id="ButtonTextRequired">Erforderlich</string>
-        <string id="MSPassport_UsePassportForWorkExplain">Microsoft Passport for Work ist eine alternative Methode für die Anmeldung bei Windows. Dabei wird Ihr Active Directory- oder Azure Active Directory-Konto genutzt, das Kennwörter, Smartcards und virtuelle Smartcards ersetzen kann.
+        <string id="MSPassport_UsePassportForWorkExplain">Microsoft Passport for Work ist eine alternative Methode für die Anmeldung bei Windows. Dabei wird Ihr Active Directory- oder Azure Active Directory-Konto genutzt, um Kennwörter, Smartcards und virtuelle Smartcards zu ersetzen.
 
-Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, stellt das Gerät Microsoft Passport for Work für alle Benutzer bereit.
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, können Benutzer Microsoft Passport for Work zur Verschlüsselung ihres Domänenkennworts bereitstellen.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren, stellt das Gerät Microsoft Passport for Work für keinen Benutzer bereit.</string>
+Wenn Sie diese Richtlinie aktivieren, stellt das Gerät Microsoft Passport for Work mithilfe von Schlüsseln oder Zertifikaten für alle Benutzer bereit.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren, stellt das Gerät Microsoft Passport for Work für keinen Benutzer bereit.
+        </string>
         <string id="MSPassport_RequireSecurityDevice">Gerät mit sicherer Hardware verwenden</string>
         <string id="MSPassport_RequireSecurityDeviceExplain">Ein Trusted Platform Module (TPM) bietet zusätzliche Sicherheitsvorteile gegenüber Software, da die darin gespeicherten Daten nicht auf anderen Geräten verwendet werden können.
 
-Wenn Sie diese Richtlinieneinstellung aktivieren, wird Microsoft Passport for Work nur von Geräten mit nutzbarem TPM bereitgestellt.
+Wenn Sie diese Richtlinieneinstellung aktivieren, kann Microsoft Passport for Work nur von Geräten mit nutzbarem TPM bereitgestellt werden.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren, wird Microsoft Passport for Work von allen Geräten mittels Software bereitgestellt, auch wenn ein nutzbares TPM verfügbar ist.
-
-Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird Microsoft Passport for Work von allen Geräten mittels Software bereitgestellt, wenn das TPM nicht funktioniert oder nicht verfügbar ist.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird TPM weiterhin bevorzugt, aber alle Geräte können Microsoft Passport mittels Software bereitstellen, falls TPM nicht funktioniert oder nicht verfügbar ist.
         </string>
         <string id="MSPassport_MinimumPINLength">Minimale PIN-Länge</string>
-        <string id="MSPassport_MinimumPINLengthExplain">Durch "Minimale PIN-Länge" konfigurieren Sie die Mindestanzahl von Zeichen für die Arbeits-PIN. Die niedrigste Anzahl für diese Richtlinieneinstellung beträgt 4 Zeichen. Die größtmögliche Anzahl muss entweder kleiner als die in der Richtlinieneinstellung "Maximale PIN-Länge" konfigurierte Zahl oder gleich der Zahl 127 sein, je nachdem, welche Zahl kleiner ist.
+        <string id="MSPassport_MinimumPINLengthExplain">"Minimale PIN-Länge" konfiguriert die Mindestanzahl von Zeichen für die PIN. Die niedrigste Anzahl für diese Richtlinieneinstellung beträgt 4 Zeichen. Die größtmögliche Anzahl muss entweder kleiner als die in der Richtlinieneinstellung "Maximale PIN-Länge" konfigurierte Zahl oder gleich der Zahl 127 sein, je nachdem, welche Zahl kleiner ist.
 
-Wenn Sie diese Richtlinieneinstellung konfigurieren, muss die Länge der Arbeits-PIN größer oder gleich dieser Zahl sein.
+Wenn Sie diese Richtlinieneinstellung konfigurieren, muss die Länge der PIN größer oder gleich dieser Zahl sein.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, muss die Länge der Arbeits-PIN größer oder gleich 4 sein.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, muss die Länge der PIN größer oder gleich 4 sein.
 
 HINWEIS: Wenn die vorangehenden Bedingungen für die minimale PIN-Länge nicht erfüllt sind, werden sowohl für die maximale als auch für die minimale PIN-Länge Standardwerte verwendet.
         </string>
         <string id="MSPassport_MaximumPINLength">Maximale PIN-Länge</string>
-        <string id="MSPassport_MaximumPINLengthExplain">Durch "Maximale PIN-Länge" konfigurieren Sie die Höchstzahl von Zeichen für die Arbeits-PIN. Die größte Anzahl für diese Richtlinieneinstellung beträgt 127 Zeichen. Die niedrigstmögliche Anzahl muss entweder größer als die in der Richtlinieneinstellung "Minimale PIN-Länge" konfigurierte Zahl oder gleich der Zahl 4 sein, je nachdem, welche Zahl größer ist.
+        <string id="MSPassport_MaximumPINLengthExplain">"Maximale PIN-Länge" konfiguriert die Höchstanzahl von Zeichen für die PIN. Die größte Anzahl für diese Richtlinieneinstellung beträgt 127 Zeichen. Die niedrigstmögliche Anzahl muss entweder größer als die in der Richtlinieneinstellung "Minimale PIN-Länge" konfigurierte Zahl oder gleich der Zahl 4 sein, je nachdem, welche Zahl größer ist.
 
-Wenn Sie diese Richtlinieneinstellung konfigurieren, muss die Länge der Arbeits-PIN kleiner oder gleich dieser Zahl sein.
+Wenn Sie diese Richtlinieneinstellung konfigurieren, muss die Länge der PIN kleiner oder gleich dieser Zahl sein.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, muss die Länge der Arbeits-PIN kleiner oder gleich 127 sein.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, muss die Länge der PIN kleiner oder gleich 127 sein.
 
 HINWEIS: Wenn die vorangehenden Bedingungen für die maximale PIN-Länge nicht erfüllt sind, werden sowohl für die maximale als auch für die minimale PIN-Länge Standardwerte verwendet.
         </string>
-        <string id="MSPassport_UppercaseLetters">Großbuchstaben verwenden</string>
-        <string id="MSPassport_UppercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um zu konfigurieren, dass in Microsoft Passport Großbuchstaben für die Arbeits-PIN verwendet werden dürfen.
+        <string id="MSPassport_UppercaseLetters">Großbuchstaben erforderlich</string>
+        <string id="MSPassport_UppercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Großbuchstaben in Microsoft Passport für die PIN zu konfigurieren.
 
-Wenn Sie diese Richtlinieneinstellung auf "Zulassen" festlegen, ermöglicht Microsoft Passport for Work Benutzern die Verwendung von Großbuchstaben in ihrer Arbeits-PIN.
+Wenn Sie diese Richtlinieneinstellung aktivieren, verlangt Microsoft Passport for Work, dass die Benutzer mindestens einen Großbuchstaben in ihre PIN einschließen.
 
-Wenn Sie diese Richtlinieneinstellung auf "Nicht zulassen" festlegen, hindert Microsoft Passport for Work Benutzer daran, Großbuchstaben in ihrer Arbeits-PIN zu verwenden.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Microsoft Passport for Work Benutzer daran, Großbuchstaben in ihrer PIN zu verwenden.
+        </string>
+        <string id="MSPassport_LowercaseLetters">Kleinbuchstaben erforderlich</string>
+        <string id="MSPassport_LowercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Kleinbuchstaben in Microsoft Passport für die PIN zu konfigurieren.
 
-Wenn Sie diese Richtlinieneinstellung auf "Erforderlich" festlegen, verlangt Microsoft Passport for Work, dass die Benutzer mindestens einen Großbuchstaben in ihre Arbeits-PIN einschließen.
+Wenn Sie diese Richtlinieneinstellung aktivieren, verlangt Microsoft Passport for Work, dass die Benutzer mindestens einen Kleinbuchstaben in ihre PIN einschließen.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, erlaubt Microsoft Passport for Work Benutzern die Verwendung von Großbuchstaben in ihrer Arbeits-PIN.
-                </string>
-        <string id="MSPassport_LowercaseLetters">Kleinbuchstaben verwenden</string>
-        <string id="MSPassport_LowercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um zu konfigurieren, dass in Microsoft Passport Kleinbuchstaben für die Arbeits-PIN verwendet werden dürfen.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Microsoft Passport for Work Benutzer daran, Kleinbuchstaben in ihrer PIN zu verwenden.
+        </string>
+        <string id="MSPassport_SpecialCharacters">Sonderzeichen erforderlich</string>
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Sonderzeichen in Microsoft Passport für die PIN zu konfigurieren. Zulässige Sonderzeichen sind: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
 
-Wenn Sie diese Richtlinieneinstellung auf "Zulassen" festlegen, ermöglicht Microsoft Passport for Work Benutzern die Verwendung von Kleinbuchstaben in ihrer Arbeits-PIN.
+Wenn Sie diese Richtlinieneinstellung aktivieren, verlangt Microsoft Passport for Work, dass die Benutzer mindestens ein Sonderzeichen in ihre PIN einschließen.
 
-Wenn Sie diese Richtlinieneinstellung auf "Nicht zulassen" festlegen, hindert Microsoft Passport for Work Benutzer daran, Kleinbuchstaben in ihrer Arbeits-PIN zu verwenden.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Microsoft Passport for Work Benutzer daran, Sonderzeichen in ihrer PIN zu verwenden.]]>
+        </string>
+        <string id="MSPassport_Digits">Ziffern erforderlich</string>
+        <string id="MSPassport_DigitsExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Ziffern in Microsoft Passport für die PIN zu konfigurieren.
 
-Wenn Sie diese Richtlinieneinstellung auf "Erforderlich" festlegen, verlangt Microsoft Passport for Work, dass die Benutzer mindestens einen Kleinbuchstaben in ihre Arbeits-PIN einschließen.
+Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, verlangt Microsoft Passport for Work, dass die Benutzer mindestens eine Ziffer in ihre PIN einschließen.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, erlaubt Microsoft Passport for Work Benutzern die Verwendung von Kleinbuchstaben in ihrer Arbeits-PIN.
-                </string>
-        <string id="MSPassport_SpecialCharacters">Sonderzeichen verwenden</string>
-        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Sonderzeichen in Microsoft Passport für die Arbeits-PIN zu konfigurieren. Für die Arbeits-PIN sind folgende Sonderzeichen in Microsoft Passport zulässig: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
+Wenn Sie diese Richtlinieneinstellung deaktivieren, hindert Microsoft Passport for Work Benutzer daran, Ziffern in ihrer PIN zu verwenden.
+        </string>
+        <string id="MSPassport_PINHistory">Verlauf</string>
+        <string id="MSPassport_PINHistoryExplain">Diese Einstellung gibt die Anzahl der letzten PINs an, die einem Benutzerkonto zugeordnet und nicht wiederverwendet werden können. Mithilfe dieser Richtlinie können Administratoren die Sicherheit erhöhen, da alte PINs nicht fortlaufend wiederverwendet werden. Der PIN-Verlauf wird nach dem Zurücksetzen der PIN nicht beibehalten.
 
-Wenn Sie diese Richtlinieneinstellung auf "Zulassen" festlegen, ermöglicht Microsoft Passport for Work Benutzern die Verwendung von Sonderzeichen in ihrer Arbeits-PIN.
+Der Wert muss zwischen 0 und 50 PINs liegen. Wenn die Richtlinie auf 0 festgelegt ist, ist das Speichern der vorherigen PINs nicht erforderlich.
 
-Wenn Sie diese Richtlinieneinstellung auf "Nicht zulassen" festlegen, hindert Microsoft Passport for Work Benutzer daran, Sonderzeichen in ihrer Arbeits-PIN zu verwenden.
+Standardwert: 0.
+        </string>
+        <string id="MSPassport_PINExpiration">Ablauf</string>
+        <string id="MSPassport_PINExpirationExplain">Diese Einstellung gibt den Zeitraum (in Tagen) an, über den eine PIN verwendet werden kann, bevor das System den Benutzer zum Ändern der PIN auffordert. Die PIN kann so festgelegt werden, dass sie nach einer beliebigen Anzahl von Tagen (zwischen 1 und 730) abläuft. Wenn die Richtlinie auf 0 festgelegt ist, läuft sie nie ab.
 
-Wenn Sie diese Richtlinieneinstellung auf "Erforderlich" festlegen, verlangt Microsoft Passport for Work, dass die Benutzer mindestens ein Sonderzeichen in ihre Arbeits-PIN einschließen.
-
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, erlaubt Microsoft Passport for Work Benutzern die Verwendung von Sonderzeichen in ihrer Arbeits-PIN.
-                ]]></string>
-        <string id="MSPassport_Digits">Ziffern verwenden</string>
-        <string id="MSPassport_DigitsExplain">Verwenden Sie diese Richtlinieneinstellung, um zu konfigurieren, dass in Microsoft Passport Ziffern für die Arbeits-PIN verwendet werden dürfen.
-
-Wenn Sie diese Richtlinieneinstellung auf "Zulassen" festlegen, ermöglicht Microsoft Passport for Work Benutzern die Verwendung von Ziffern in ihrer Arbeits-PIN.
-
-Wenn Sie diese Richtlinieneinstellung auf "Nicht zulassen" festlegen, hindert Microsoft Passport for Work Benutzer daran, Ziffern in ihrer Arbeits-PIN zu verwenden.
-
-Wenn Sie diese Richtlinieneinstellung auf "Erforderlich" festlegen, verlangt Microsoft Passport for Work, dass die Benutzer mindestens eine Ziffer in ihre Arbeits-PIN einschließen.
-
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, erlaubt Microsoft Passport for Work Benutzern die Verwendung von Ziffern in ihrer Arbeits-PIN.
-
+Standardwert: 0.
         </string>
         <string id="MSPassport_UseBiometrics">Biometrie verwenden</string>
-        <string id="MSPassport_UseBiometricsExplain">Microsoft Passport for Work ermöglicht Benutzer die Verwendung der biometrischen Erkennung, z. B. durch Gesicht und Fingerabdruck, als Alternative zu PINs. Benutzer müssen jedoch trotzdem eine Arbeits-PIN konfigurieren, die im Fall einer Störung verwendet wird.
+        <string id="MSPassport_UseBiometricsExplain">Microsoft Passport for Work ermöglicht Benutzern die Verwendung der biometrischen Erkennung, z. B. durch Gesicht und Fingerabdruck, als Alternative zu PINs. Benutzer müssen jedoch trotzdem eine PIN konfigurieren, die im Fall einer Störung verwendet wird.
 
-Wenn Sie diese Richtlinieneinstellung aktivieren, lässt Microsoft Passport for Work die Verwendung der biometrischen Erkennung zu.
+Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, lässt Microsoft Passport for Work die Verwendung der biometrischen Erkennung zu.
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren, verhindert Microsoft Passport for Work die Verwendung der biometrischen Erkennung.
 
-Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, lässt Microsoft Passport for Work die Verwendung der biometrischen Erkennung zu.
-
 HINWEIS: Durch das Deaktivieren dieser Richtlinie wird der Benutzer daran gehindert, die biometrische Erkennung auf dem Gerät zu verwenden; dies gilt für alle Kontotypen.
+        </string>
+        <string id="MSPassport_UseRemote">Remote Passport verwenden</string>
+        <string id="MSPassport_UseRemoteExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Remote Passport zu konfigurieren. Mithilfe von Remote Passport kann ein tragbares, registriertes Gerät als Begleitgerät für die Desktopauthentifizierung verwendet werden. Remote Passport setzt voraus, dass der Desktop Azure AD beitritt und dass das Begleitgerät über eine Passport for Work-PIN verfügt.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, wird Remote Passport aktiviert, und ein tragbares, registriertes Gerät kann als Begleitgerät für die Desktopauthentifizierung verwendet werden.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird Remote Passport deaktiviert, und es kann kein tragfähiges, registriertes Gerät als Begleitgerät für die Desktopauthentifizierung verwendet werden.
         </string>
     </stringTable>
     <presentationTable>
@@ -120,6 +119,12 @@ HINWEIS: Durch das Deaktivieren dieser Richtlinie wird der Benutzer daran gehind
         <presentation id="MSPassport_DigitsControl">
             <dropdownList refId="MSPassport_DigitsChoices" defaultItem="0">Ziffern:</dropdownList>
         </presentation>
+        <presentation id="MSPassport_PINHistoryControl">
+            <decimalTextBox refId="MSPassport_PINHistoryDataType" spin="true" spinStep="1" defaultvalue="0">PIN-Verlauf</decimalTextBox>
+        </presentation>
+      <presentation id="MSPassport_PINExpirationControl">
+        <decimalTextBox refId="MSPassport_PINExpirationDataType" spin="true" spinStep="1" defaultvalue="0">PIN-Ablauf</decimalTextBox>
+      </presentation>
 
     </presentationTable>
   </resources>

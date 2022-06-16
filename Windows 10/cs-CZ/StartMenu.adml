@@ -144,12 +144,12 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se v nabídce Sta
 Pokud toto nastavení povolíte, uživatel nebude moci vybrat aplikaci, změnit velikost dlaždice, připnout nebo odepnout dlaždici nebo sekundární dlaždici, vstoupit do režimu přizpůsobení a měnit uspořádání dlaždic na úvodní obrazovce a na obrazovce Aplikace.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, bude uživatel moci vybrat aplikaci, změnit velikost dlaždice, připnout nebo odepnout dlaždici nebo sekundární dlaždici, vstoupit do režimu přizpůsobení a měnit uspořádání dlaždic na úvodní obrazovce a na obrazovce Aplikace.</string>
-      <string id="ClearTilesOnExit">Při ukončení vymazat historii oznámení dlaždic</string>
-      <string id="ClearTilesOnExit_Help">Pokud toto nastavení povolíte, systém po odhlášení uživatele odstraní oznámení dlaždic. V důsledku toho budou při přihlášení uživatele dlaždice v úvodním zobrazení vždy zobrazovat svůj výchozí obsah. Navíc se po odhlášení uživatele všechny verze těchto oznámení uložené v mezipaměti vymažou.
+      <string id="ClearTilesOnExit">Během přihlašování vymazat oznámení dlaždic</string>
+      <string id="ClearTilesOnExit_Help">Pokud toto nastavení povolíte, systém při přihlášení uživatele odstraní oznámení dlaždic. V důsledku toho budou při přihlášení uživatele dlaždice v úvodním zobrazení vždy zobrazovat svůj výchozí obsah. Navíc se při přihlášení uživatele vymažou všechny verze těchto oznámení uložené v mezipaměti.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, systém oznámení zachová. Při přihlášení uživatele se pak dlaždice zobrazí tak, jak vypadaly při odhlášení uživatele, a to včetně historie předchozích oznámení pro jednotlivé dlaždice.
 
-Toto nastavení nezabrání v zobrazování nových oznámení. Chcete-li zabránit v zobrazování nových oznámení, naleznete další informace v popisu nastavení Vypnout oznámení aplikace.</string>
+Toto nastavení nezabrání v zobrazování nových oznámení. Pokud chcete zabránit v zobrazování nových oznámení, naleznete další informace v popisu nastavení Vypnout oznámení aplikace.</string>
       <string id="StartPinAppsWhenInstalled">Připnout aplikace na úvodní obrazovku při instalaci</string>
       <string id="StartPinAppsWhenInstalled_Help">Toto nastavení zásad umožňuje připnutí aplikací na úvodní obrazovku ve výchozím nastavení, když jsou v seznamu uvedeny podle ID aplikace.</string>
 
@@ -569,6 +569,12 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, nebudou aplikace
 Pokud toto nastavení zásad povolíte, zobrazí se po stisknutí klávesy s logem Windows úvodní obrazovka na displeji, který uživatel právě používá.
 
 Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, úvodní obrazovka se po stisknutí klávesy s logem Windows vždy zobrazí na hlavním displeji. Uživatelé budou i nadále moci otevírat úvodní obrazovku na jiných displejích stisknutím tlačítka Start na daném displeji. Toto nastavení může nakonfigurovat také uživatel.</string>
+      <string id="ForceStartSize_DisplayName">Vynucovat otevření obrazovky Start buď v plné velikosti, nebo ve velikosti nabídky</string>
+      <string id="ForceStartSize_ExplainText">Pokud povolíte tuto zásadu a nastavíte ji na Nabídka Start nebo Obrazovka Start v plné velikosti, bude se úvodní obrazovka otevírat v této velikosti a uživatelé si nebudou moct její velikost změnit v Nastavení. 
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, vybere systém Windows velikost automaticky podle parametrů hardwaru a uživatelé ji budou moct změnit v Nastavení.</string>
+      <string id="ForceLauncherSize_Collapsed">Nabídka Start</string>
+      <string id="ForceLauncherSize_Expanded">Obrazovka Start v plné velikosti</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, úvodní obrazov
           <label>Soubor rozložení úvodní obrazovky</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Vyberte jednu z následujících velikostí:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

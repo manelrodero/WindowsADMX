@@ -239,12 +239,26 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie einen Verschlüsse
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwendet BitLocker AES mit derselben Bitstärke (128-Bit oder 256-Bit) wie die Richtlinieneinstellung "Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen (Windows Vista, Windows Server 2008, Windows 7)", sofern sie festgelegt wurde. Falls keine Gruppenrichtlinie festgelegt ist, verwendet BitLocker die Standardverschlüsselungsmethode "AES-128-Bit" oder die im Setupskript festgelegte Verschlüsselungsmethode.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Mit dieser Richtlinieneinstellung können Sie den von der BitLocker-Laufwerkverschlüsselung verwendeten Algorithmus und die Verschlüsselungsstärke konfigurieren. Diese Richtlinieneinstellung wird bei Aktivierung von BitLocker angewendet. Das Ändern der Verschlüsselungsmethode hat keine Auswirkung, wenn das Laufwerk bereits verschlüsselt ist oder die Verschlüsselung gerade stattfindet.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie einen Verschlüsselungsalgorithmus und eine Verschlüsselungsstärke für Schlüssel auswählen, die individuell für Festplatten-, Betriebssystem- und Wechsellaufwerke verwendet werden. Für Festplatten- und Betriebssystemlaufwerke empfehlen wir die Verwendung des XTS-AES-Algorithmus, und für Wechsellaufwerke sollten Sie AES-CBC 128-Bit oder AES-CBC 256-Bit verwenden, wenn das Laufwerk mit anderen Geräten ohne Windows 10 (Version 1511) eingesetzt wird.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwendet BitLocker AES mit derselben Bitstärke (128-Bit oder 256-Bit) wie die Richtlinieneinstellungen "Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen (Windows Vista, Windows Server 2008, Windows 7)" und "Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen" (in dieser Reihenfolge), sofern sie festgelegt wurden. Falls keine der Richtlinien festgelegt wurde, verwendet BitLocker die Standardverschlüsselungsmethode "XTS-AES 128-Bit" oder die im Setupskript festgelegte Verschlüsselungsmethode.
+
+      </string>
       <string id="EncryptionMethod_Name">Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [Version 1507]</string>
+      <string id="EncryptionMethodWithXts_Name">Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen (Windows 10 [Version 1511] und höher)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES-128-Bit mit Diffuser</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES-256-Bit mit Diffuser</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES-128-Bit (Standardeinstellung)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC 128-Bit</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC 128-Bit (Standardeinstellung)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES-256-Bit</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC 256-Bit</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES 128-Bit (Standardeinstellung)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES 128-Bit</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES 256-Bit</string>
 
       <string id="FVECategory">BitLocker-Laufwerkverschlüsselung</string>
       <string id="PlatformValidation_Deprecated_Help">Mit dieser Richtlinieneinstellung können Sie konfigurieren, wie die TPM-Sicherheitshardware (Trusted Platform Module) des Computers den BitLocker-Verschlüsselungsschlüssel sichert. Diese Richtlinieneinstellung gilt nicht, wenn der Computer nicht über ein kompatibles TPM verfügt oder wenn BitLocker bereits mit TPM-Schutz eingeschaltet ist.
@@ -801,6 +815,12 @@ Hinweis: Nicht alle Zeichen und Sprachen werden im Pre-Boot-Modus unterstützt. 
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Verschlüsselungsmethode auswählen:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Verschlüsselungsmethode für Betriebssystemlaufwerke auswählen:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Verschlüsselungsmethode für Festplattenlaufwerke auswählen:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Verschlüsselungsmethode für Wechsellaufwerke auswählen:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

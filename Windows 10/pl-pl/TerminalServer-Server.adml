@@ -56,16 +56,16 @@ Uwaga: jeśli to ustawienie zasad jest włączone, ustawienie zasad Uruchom prog
       </string>
       
       <string id="TS_ALLOW_APPS">Zezwalaj na zdalne uruchamianie programów spoza listy</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">To ustawienie zasad umożliwia określenie, czy użytkownicy zdalni podczas rozpoczynania sesji usług pulpitu zdalnego mogą uruchamiać na serwerze hosta sesji pulpitu zdalnego dowolne programy czy tylko programy z listy programów RemoteApp.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+W systemie Windows Server 2008 R2 lub Windows Server 2008 można określić programy, które będą mogły być uruchamiane zdalnie na serwerze hosta sesji pulpitu zdalnego, przy użyciu Menedżera programów RemoteApp. W przypadku korzystania z systemu Windows Server 2012 można to skonfigurować w arkuszu właściwości kolekcji, używając Menedżera serwera.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+Domyślnie przy uruchamianiu sesji usług pulpitu zdalnego przez użytkownika mogą być uruchamiane tylko programy z listy programów RemoteApp.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Jeśli to ustawienie zasad zostanie włączone, użytkownicy zdalni po rozpoczęciu sesji usług pulpitu zdalnego będą mogli uruchomić na serwerze hosta sesji pulpitu zdalnego dowolny program. 
+Użytkownik zdalny może to na przykład zrobić, określając ścieżkę do pliku wykonywalnego programu podczas nawiązywania połączenia za pomocą klienta usługi Podłączanie pulpitu zdalnego.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy zdalni po rozpoczęciu sesji usług pulpitu zdalnego będą mogli uruchamiać tylko programy z listy programów RemoteApp.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Zezwalaj na kompozycję pulpitu w sesjach usług pulpitu zdalnego</string>

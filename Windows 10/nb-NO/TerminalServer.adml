@@ -5,14 +5,15 @@
   <description>skriv inn beskrivelse her</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Minst Windows 10 eller Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Minst Windows 8 eller Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Minst Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minst Windows 8 Enterprise eller Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Minst Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minst Windows 8 Enterprise eller Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Bare Windows 7 eller Windows Server 2008 R2 (og påfølgende oppdateringspakker)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista og Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Minst Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Minst Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minst Windows Server Technical Preview 2 med RDSH-rollen installert</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minst Windows Server 2012 med RDSH-rolle installert</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Minst Windows 7 med Service Pack 1 eller Windows Server 2008 R2 med Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Minst Windows Vista med Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Minst Windows 2000 Terminal Services</string>
@@ -42,10 +43,10 @@
       <string id="TS_8_bit">8-biters</string>
       <string id="TS_32_bit">32-biters</string>
 
-      <string id="TS_AUDIOMAP_EXPLAIN">Ved hjelp av denne policyinnstillingen kan du angi om brukere kan omadressere lyd- og videoutdataene fra den eksterne datamaskinen i en Remote Desktop Services-økt.
-Brukere kan angi hvor de vil spille av lydutdataene fra den eksterne datamaskinen ved å konfigurere innstillingene for ekstern lyd i kategorien Lokale ressurser i RDC (Remote Desktop Connection – tilkobling til eksternt skrivebord). Brukere kan velge å spille av den eksterne lyden på den eksterne datamaskinen eller den lokale datamaskinen. Brukere kan også velge ikke å spille av lyden. Videoavspilling kan konfigureres ved hjelp av innstillingen for videoavspilling i en RDP-fil (Remote Desktop Protocol). Videoavspilling er aktivert som standard.
+      <string id="TS_AUDIOMAP_EXPLAIN">Ved hjelp av denne policyinnstillingen kan du angi om brukere kan omadressere lyd- og videoutdataene fra den eksterne datamaskinen i en økt for eksterne skrivebordstjenester.
+Brukere kan angi hvor de vil spille av lydutdataene fra den eksterne datamaskinen ved å konfigurere innstillingene for ekstern lyd i fanen Lokale ressurser i RDC (Remote Desktop Connection – tilkobling til eksternt skrivebord). Brukere kan velge å spille av den eksterne lyden på den eksterne datamaskinen eller den lokale datamaskinen. Brukere kan også velge ikke å spille av lyden. Videoavspilling kan konfigureres ved hjelp av innstillingen for videoavspilling i en RDP-fil (Remote Desktop Protocol). Videoavspilling er aktivert som standard.
 
-Omadressering av lyd- og videoavspilling er som standard ikke tillatt ved tilkobling til en datamaskin som kjører Windows Server 2008 R2, Windows Server 2008 eller Windows Server 2003. Omadressering av lyd- og videoavspilling er tillatt som standard ved tilkobling til en datamaskin som kjører Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista eller Windows XP Professional.
+Omadressering av lyd- og videoavspilling er som standard ikke tillatt ved tilkobling til en datamaskin som kjører Windows Server 2008 R2, Windows Server 2008 eller Windows Server 2003. Omadressering av lyd- og videoavspilling er tillatt som standard ved tilkobling til en datamaskin som kjører Windows 8, Windows Server 2012, Windows 7, Windows Vista eller Windows XP Professional.
 
 Hvis du aktiverer denne policyinnstillingen, er omadressering av lyd- og videoavspilling tillatt.
 
@@ -154,24 +155,23 @@ Hvis du deaktiverer denne policyinnstillingen, tillates alltid omadressering av 
 Hvis du ikke konfigurerer denne policyinnstillingen, er ikke omadressering av utklippstavledata angitt på gruppepolicynivå. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Ved hjelp av denne policyinnstillingen kan du angi maksimal fargeoppløsning (fargedybde) for tilkoblinger til Remote Desktop Services.
+      <string id="TS_COLOR_EXPLAIN">Ved hjelp av denne policyinnstillingen kan du angi maksimal fargeoppløsning (fargedybde) for tilkoblinger til eksterne skrivebordstjenester.
 
-        Du kan bruke denne policyinnstillingen til å angi en grense for fargedybden til en hvilken som helst tilkobling som bruker RDP. Begrensing av fargedybden kan øke tilkoblingsytelsen, spesielt over langsomme koblinger, og redusere belastningen på serveren.
+Du kan bruke denne policyinnstillingen til å angi en grense for fargedybden til en hvilken som helst tilkobling som bruker RDP. Begrensing av fargedybden kan øke tilkoblingsytelsen, spesielt over langsomme koblinger, og redusere belastningen på serveren.
 
-        Hvis du aktiverer denne policyinnstillingen, blir fargedybden du angir, maksimal fargedybde som tillates for en brukers RDP-tilkobling. Den faktiske fargedybden for tilkoblingen bestemmes av fargestøtten på klientdatamaskinen. Hvis du velger Klientkompatibel, brukes den høyeste fargedybden som støttes av klienten.
+Hvis du aktiverer denne policyinnstillingen, blir fargedybden du angir, maksimal fargedybde som tillates for en brukers RDP-tilkobling. Den faktiske fargedybden for tilkoblingen bestemmes av fargestøtten på klientdatamaskinen. Hvis du velger Klientkompatibel, brukes den høyeste fargedybden som støttes av klienten.
 
-        Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, er ikke fargedybden for tilkoblinger angitt på gruppepolicynivå.
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, er ikke fargedybden for tilkoblinger angitt på gruppepolicynivå.
 
-        Obs!
-        1.	En fargedybde på 24 biter støttes bare på Windows Server 2003 og Windows XP Professional.
-        2.	Verdien som er angitt i denne policyinnstillingen, brukes ikke for tilkoblinger fra klientdatamaskiner som bruker minst Remote Desktop Protocol 8.0 (datamaskiner som minst kjører Windows 8 eller Windows Server Technical Preview 2). Fargedybdeformatet på 32 biter brukes alltid for disse tilkoblingene.
-        3.	For tilkoblinger fra klientdatamaskiner som bruker Remote Desktop Protocol 7.1 eller tidligere versjoner som er koblet til datamaskiner som minst kjører Windows 8 eller Windows Server Technical Preview 2, brukes minimum for følgende verdier som fargedybdeformat:
-        a.	Verdi angitt av denne policyinnstillingen
-        b.	Maksimal fargedybde som støttes av klienten
-        c.	Verdi forespurt av klienten
+Obs!
+1.	En fargedybde på 24 biter støttes bare på Windows Server 2003 og Windows XP Professional.
+2.	Verdien som er angitt i denne policyinnstillingen, brukes ikke for tilkoblinger fra klientdatamaskiner som bruker minst Remote Desktop Protocol 8.0 (datamaskiner som minst kjører Windows 8 eller Windows Server 2012). Fargedybdeformatet på 32 biter brukes alltid for disse tilkoblingene.
+3.	For tilkoblinger fra klientdatamaskiner som bruker Remote Desktop Protocol 7.1 eller tidligere versjoner som er koblet til datamaskiner som minst kjører Windows 8 eller Windows Server 2012, brukes minimum for følgende verdier som fargedybdeformat:
+a.	Verdi angitt av denne policyinnstillingen
+b.	Maksimal fargedybde som støttes av klienten
+c.	Verdi forespurt av klienten
 
-        Hvis klienten ikke støtter minst 16 biter, avsluttes tilkoblingen.
+Hvis klienten ikke støtter minst 16 biter, avsluttes tilkoblingen.
       </string>
       <string id="TS_COLORDEPTH">Begrens maksimal fargedybde</string>
       <string id="TS_Comp_Help">Kontrollerer konfigurasjonen av Remote Desktop Services og egenskaper for klientøkter for individuelle datamaskiner eller grupper av datamaskiner.</string>
@@ -564,7 +564,7 @@ Obs!
       <string id="TS_SD_Loc">Konfigurer servernavn for RD Connection Broker</string>
       <string id="TS_SD_Loc_Explain">Ved hjelp av denne policyinnstillingen kan du angi RD Connection Broker-serveren som vertsserveren for den eksterne skrivebordsøkten skal bruke til å spore og omadressere brukerøkter for en belastningsfordelt vertsserverfarm for eksterne skrivebordsøkter. Den angitte serveren må kjøre RD Connection Broker-tjenesten. Alle vertsservere for eksterne skrivebordsøkter i en belastningsfordelt farm må bruke samme RD Connection Broker-server.
 
-Hvis du aktiverer denne policyinnstillingen, må du angi RD Connection Broker-serveren ved å bruke det fullstendig kvalifiserte domenenavnet (FQDN). I Windows Server Technical Preview 2 må du angi en semikolondelt liste over fullstendig kvalifiserte domenenavn for alle RD Connection Broker-servere for å få et oppsett med høy tilgjengelighet med flere RD Connection Broker-servere.
+Hvis du aktiverer denne policyinnstillingen, må du angi RD Connection Broker-serveren ved å bruke det fullstendig kvalifiserte domenenavnet (FQDN). I Windows Server 2012 må du angi en semikolondelt liste over fullstendig kvalifiserte domenenavn for alle RD Connection Broker-servere for å få et oppsett med høy tilgjengelighet med flere RD Connection Broker-servere.
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, er ikke policyinnstillingen angitt på gruppepolicynivå.
 
@@ -950,19 +950,17 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, avgjør g
 
     <string id="TS_SERVER_IMAGE_QUALITY">Konfigurer bildekvalitet for RemoteFX-grafikk som kan tilpasses</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Med denne policyinnstillingen kan du angi den visuelle kvaliteten for eksterne brukere ved tilkobling til datamaskinen ved hjelp av Remote Desktop Connection. Du kan bruke denne policyinnstillingen til å balansere bruken av nettverksbåndbredde etter den visuelle kvaliteten som gjengis.
- 
-Hvis du aktiverer denne policyinnstillingen og setter kvaliteten til Middels, bruker RemoteFX-grafikk som kan tilpasses, en kodemekanisme som fører til bilder med middels kvalitet. Denne modusen bruker den laveste mengden nettverksbåndbredde av kvalitetsmodiene. 
-Hvis du aktiverer denne policyinnstillingen og setter kvaliteten til Høy, bruker RemoteFX-grafikk som kan tilpasses, en kodemekanisme som fører til bilder med høy kvalitet, og som bruker moderat nettverksbåndbredde. 
-Hvis du aktiverer denne policyinnstillingen og setter kvaliteten til Uten tap, bruker RemoteFX-grafikk som kan tilpasses, koding uten tap. I denne modusen påvirkes ikke fargeintegriteten i grafikkdataene. Denne innstillingen fører imidlertid til en betydelig økning i bruk av nettverksbåndbredde. Vi anbefaler at du bare angir denne innstillingen i svært spesielle tilfeller. 
- 
-Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, bruker RemoteFX-grafikk som kan tilpasses, en kodemekanisme som fører til bilder med middels kvalitet.
-
-    
-
+      Hvis du aktiverer denne policyinnstillingen og setter kvaliteten til Lav, bruker RemoteFX-grafikk som kan tilpasses, en kodemekanisme som fører til bilder med lav kvalitet. Denne modusen bruker den laveste mengden nettverksbåndbredde av kvalitetsmodusene.
+      Hvis du aktiverer denne policyinnstillingen og setter kvaliteten til Middels, bruker RemoteFX-grafikk som kan tilpasses, en kodemekanisme som fører til bilder med middels kvalitet. Denne modusen gir bedre grafikkvalitet enn lav kvalitet og bruker mindre båndbredde enn høy kvalitet.
+      Hvis du aktiverer denne policyinnstillingen og setter kvaliteten til Høy, bruker RemoteFX-grafikk som kan tilpasses, en kodemekanisme som fører til bilder med høy kvalitet. Denne modusen bruker middels nettverksbåndbredde.
+      Hvis du aktiverer denne policyinnstillingen og setter kvaliteten til Uten tap, bruker RemoteFX-grafikk som kan tilpasses, koding uten tap. I denne modusen påvirkes ikke fargeintegriteten i grafikkdataene. Denne innstillingen fører imidlertid til en betydelig økning i bruk av nettverksbåndbredde. Vi anbefaler at du bare angir denne innstillingen i svært spesielle tilfeller.
+      Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, bruker RemoteFX-grafikk som kan tilpasses, en kodemekanisme som fører til bilder med middels kvalitet.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Uten tap</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Høy</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Middels</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Lav</string>      
 
     <string id="TS_SERVER_PROFILE">Konfigurer RemoteFX-grafikk som kan tilpasses</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">Denne policyinnstillingen lar administratoren konfigurere RemoteFX-opplevelsen for en vertsserver for en ekstern skrivebordsøkt eller en vertsserver for virtualisering av eksternt skrivebord. Som standard velger systemet den beste opplevelsen automatisk basert på tilgjengelig nettverksbåndbredde.
@@ -991,14 +989,13 @@ Du kan også velge ikke å bruke en RDP-komprimeringsalgoritme. Hvis du velger i
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, brukes standard RDP-komprimeringsalgoritme.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Balanserer minne og nettverksbåndbredde</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimalisert for å bruke mindre nettverksbåndbredde</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Optimalisert for å bruke mindre minne</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Ikke bruk en RDP-komprimeringsalgoritme</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Balanserer minne og nettverksbåndbredde</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimalisert for å bruke mindre nettverksbåndbredde</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Optimalisert for å bruke mindre minne</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Ikke bruk en RDP-komprimeringsalgoritme</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Bruke avansert RemoteFX-grafikk for RemoteApp</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     Med denne policyinnstillingen kan du aktivere RemoteApp-programmer slik at de bruker avansert grafikk, inkludert støtte for gjennomsiktighet, direkteminiatyrer og sømløse programflyttinger. Denne policyinnstillingen gjelder bare for RemoteApp-programmer, og gjelder ikke økter med eksternt skrivebord.
 
 Hvis du aktiverer eller ikke konfigurerer denne policyinnstillingen, bruker RemoteApp-programmer som ble publisert fra denne vertsserveren for den eksterne skrivebordsøkten, denne avanserte grafikken.
@@ -1007,6 +1004,30 @@ Hvis du deaktiverer denne policyinnstillingen, bruker ikke RemoteApp-programmer 
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Konfigurer H.264/AVC-maskinvarekoding for tilkoblinger til eksternt skrivebord</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Denne policyinnstillingen lar deg aktivere H.264/AVC-maskinvarekodestøtte for tilkoblinger til eksternt skrivebord. Hvis du aktiverer maskinvarekoding og det oppstår en feil, vil vi forsøke å bruke programvarekoding. Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil vi alltid bruke programvarekoding.
+        
+Hvis du setter alternativet for koding til "Alltid forsøk", prøver eksternt skrivebord alltid å bruke H.264/AVC-maskinvarekoding når det er tilgjengelig. Vær oppmerksom på at policyen må være angitt på Hyper-V-vertsmaskinen for Windows Server som kjører Hyper-V med RemoteFX vGPU aktivert.
+        
+Hvis du setter alternativet for koding til "Forsøk bare for RemoteFX vGPU-virtuelle maskiner", må du være oppmerksom på at policyen må være angitt på Hyper-V-vertsmaskinen for Windows Server som kjører Hyper-V med RemoteFX vGPU aktivert policyen må settes på vertsmaskinen Hyper-V.
+        
+Hvis du setter alternativet for koding til "Forsøk bare for ikke-RemoteFX vGPU-scenarier", prøver eksternt skrivebord å bruke maskinvarekoding for alle scenarier unntatt RemoteFX vGPU.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Alltid forsøk</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Forsøk bare for RemoteFX vGPU-virtuelle maskiner</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Forsøk bare for scenarier for ikke-RemoteFX vGPU</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">Prioriter H.264/AVC 444-grafikkmodus for tilkoblinger til eksternt skrivebord</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Denne policyinnstillingen prioriterer H.264/AVC 444-grafikkmodus for ikke-RemoteFX vGPU-scenarier. Hvis du bruker denne innstillingen på RDP-serveren, bruker serveren H.264/AVC 444 som kodeken i en RDP-10-tilkobling der både klienten og serveren kan bruke H.264/AVC 444.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Ikke tillat maskinvareakselerert dekoding</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Denne policyinnstillingen angir om tilkoblingen til eksternt skrivebord kan bruke maskinvareakselerasjonen hvis støttet maskinvare er tilgjengelig. Hvis du bruker denne innstillingen, bruker den eksterne skrivebordsklienten bare programvarebasert dekoding. Hvis du for eksempel har et problem som du tror kan være relatert til maskinvareakselerasjon, bruker du denne innstillingen til å deaktivere akselerasjon, og deretter, hvis problemet fremdeles oppstår, vet du at det er flere problemer å undersøke. Hvis denne innstillingen deaktiveres eller ikke konfigureres, bruker den eksterne skrivebordsklienten maskinvareakselerert dekoding hvis støttet maskinvare er tilgjengelig.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ Som standard er tilkoblingsøkter til eksternt skrivebord som bruker RemoteFX, o
 
       <string id="TS_SERVER_LEGACY_RFX">Aktiver RemoteFX-koding for RemoteFX-klienter utviklet for Windows Server 2008 R2 SP1</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Denne policyinnstillingen lar deg konfigurere grafikkoding for å bruke RemoteFX-kodeken på vertsserveren for den eksterne skrivebordsøkten, slik at øktene er kompatible med tynne ikke-Windows-klientenheter utviklet for Windows Server 2008 R2 SP1. Disse klientene støtter bare Windows Server 2008 R2 SP1 RemoteFX-kodeken. Hvis du aktiverer denne policyinnstillingen, vil brukerøkter på denne serveren bare bruke Windows Server 2008 R2 SP1 RemoteFX-kodeken til koding. Denne modusen er kompatibel med tynne klientenheter som bare støtter Windows Server 2008 R2 SP1 RemoteFX-kodeken. Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan ikke tynne ikke-Windows-klienter som bare støtter Windows Server 2008 R2 SP1 RemoteFX-kodeken, koble seg til denne serveren. Denne policyinnstillingen gjelder bare for klienter som bruker Remote Desktop Protocol (RDP) 7.1, og den virker ikke inn på klienter som bruker andre RDP-versjoner.
       
       </string>
@@ -1296,6 +1316,9 @@ Hvis du deaktiverer denne policyinnstillingen eller ikke konfigurerer den, vises
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP-komprimeringsalgoritme:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Foretrekk AVC-maskinvarekoding:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Visuell opplevelse:</dropdownList>

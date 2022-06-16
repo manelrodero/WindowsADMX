@@ -56,16 +56,16 @@ Opmerking: als deze beleidsinstelling is ingeschakeld, wordt de beleidsinstellin
       </string>
       
       <string id="TS_ALLOW_APPS">Extern starten van niet-vermelde programma's toestaan</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">Met deze beleidsinstelling kunt u bepalen of externe gebruikers een programma op de hostserver voor Extern bureaublad-sessies kunnen starten wanneer ze een Extern bureaublad-sessie starten. U kunt ook aangeven of ze alleen programma's kunnen starten die in de lijst met RemoteApp-programma's staan.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+U kunt bepalen welke programma's op een hostserver voor Extern bureaublad-sessies extern kunnen worden gestart met RemoteApp-beheer op Windows Server 2008 R2 en Windows Server 2008. Als u Windows Server 2012 gebruikt, kunt u dit configureren op het tabblad Eigenschappen van verzameling in Serverbeheer.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+Standaard kunnen alleen programma's in de lijst met RemoteApp-programma's worden gestart als een gebruiker een sessie van Extern bureaublad-services start.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Als u deze beleidsinstelling inschakelt, kunnen externe gebruikers elk programma op de hostserver voor Extern bureaublad-sessies starten als ze een sessie met Extern bureaublad-services starten. 
+Een externe gebruiker kan dit bijvoorbeeld doen door tijdens het uitvoeren het uitvoerbare pad naar het programma op te geven in de client voor Verbinding met extern bureaublad.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen externe gebruikers tijdens het starten van een sessie met Extern bureaublad-services alleen programma's starten die in de lijst met RemoteApp-programma's staan.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Bureaubladsamenstelling toestaan voor extern-bureaubladsessies</string>

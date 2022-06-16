@@ -6,6 +6,7 @@
   <resources>
     <stringTable>
       <string id="BiometricsConfiguration">Biometri</string>
+      <string id="FaceConfiguration">Ansiktstrekk</string>
       <string id="Biometrics_EnableBio">Tillat bruk av biometri</string>
       <string id="Biometrics_EnableBio_Help">Du kan bruke denne policyinnstillingen til å tillate eller forhindre at Windows biometritjeneste kjører på denne datamaskinen.
         
@@ -42,6 +43,15 @@ Hvis du aktiverer denne policyinnstillingen, kan du konfigurere tidsavbruddet fo
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, brukes standardverdien på 10 sekunder for tidsavbrudd for hendelser av typen raskt brukerbytte.
 
+</string>
+      <string id="Face_EnhancedAntiSpoofing">Bruk forbedret antiforfalskning når tilgjengelig</string>
+      <string id="Face_EnhancedAntiSpoofing_Help">This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
+
+If you do not configure this policy setting, users will be able to choose whether or not to use enhanced anti-spoofing on supported devices.
+
+If you enable this policy setting, Windows will require all users on the device to use anti-spoofing for facial features, on devices which support it.
+
+If you disable this policy setting, enhanced anti-spoofing is turned off for all users on the device and they will be unable to turn it on.
 </string>
     </stringTable>
     <presentationTable>

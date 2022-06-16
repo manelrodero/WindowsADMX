@@ -295,12 +295,20 @@ Hvis du aktiverer denne policyen, deaktiveres denne funksjonaliteten, og tilkobl
 
 Obs!  Denne policyen gjelder bare når denne PCen er konfigurert slik at den kobler til en oppdateringstjeneste på intranettet ved hjelp av policyen Angi en plassering på intranettet for Microsofts oppdateringstjeneste.</string>
 
-      <string id="DeferUpgrade_Title">Overdra oppgradering</string>
-      <string id="DeferUpgrade_Help">Hvis du aktiverer denne policyinnstillingen, kan du overdra oppgraderinger i SKUer for Pro og Enterprise til den neste oppgraderingen (minst et par måneder). 
+      <string id="DeferUpgrade_Title">Utsett oppgraderinger og oppdateringer</string>
+      <string id="DeferUpgrade_Help">Enable this policy in order to defer upgrades for up to eight months.
       
-Hvis du ikke har merket av for dette, mottar du oppgraderinger når de er tilgjengelige, og de blir installert som en del av oppdateringspolicyene. 
+You can also choose to delay updates for up to one month. If you do not delay updates, your PC will remain up to date with security updates as they become available.
 
-Sikkerhetsoppdateringer blir ikke påvirket av denne policyen. Hvis du vil ha mer informasjon om tilgjengelige oppgraderinger, kan du se windows.com/itpro.</string>
+If an issue arises with an update or upgrade, select "Pause Upgrades and Updates". This will delay updates and upgrades until the next monthly update or upgrade becomes available. Once a new update or upgrade it available, the value will go back to the previously selected option, re-enabling your validation groups.
+
+Note: Definition updates will not be impacted by this policy.
+
+Note: If the "Specify intranet Microsoft update service location" policy is enabled, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+ 
+Note: If the “Allow Telemetry” policy is enabled and the Options value is set to 0, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+
+To stay informed about new features in Windows 10, see go.microsoft.com/fwlink/?LinkID=529169.</string>
     </stringTable>
     <presentationTable>
       <presentation id="RemoveWindowsUpdate">
@@ -354,6 +362,13 @@ Sikkerhetsoppdateringer blir ikke påvirket av denne policyen. Hvis du vil ha me
         <text>Omstartstidtakeren gir brukerne</text>
         <text>følgende antall minutter til å</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">lagre arbeidet:  </decimalTextBox>
+      </presentation>
+      <presentation id="DeferUpgrade_Title">
+        <text>Utsett oppgraderinger for følgende</text>
+        <decimalTextBox refId="DeferUpgradePeriodId" defaultValue="0">varighet (måneder): </decimalTextBox>
+        <text>Utsett oppdateringer for følgende</text>
+        <decimalTextBox refId="DeferUpdatePeriodId" defaultValue="0">varighet (uker): </decimalTextBox>
+        <checkBox refId="PauseDeferralsId" defaultChecked="false">Stanse oppgraderinger og oppdateringer midlertidig</checkBox>
       </presentation>
     </presentationTable>
   </resources>

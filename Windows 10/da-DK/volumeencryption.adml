@@ -239,12 +239,26 @@ Hvis du aktiverer denne politikindstilling, kan du vælge en krypteringsalgoritm
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger BitLocker AES med samme bitstyrke (128-bit eller 256-bit) som politikindstillingen "Vælg drevkrypteringsmetode og -krypteringsgrad (Windows Vista, Windows Server 2008, Windows 7)", hvis den er angivet. Hvis ingen af politikkerne er angivet, bruger BitLocker standardkrypteringsmetoden for AES 128-bit eller den krypteringsmetode, der er angivet i installationsscriptet.     
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Denne politikindstilling gør det muligt at konfigurere den algoritme og krypteringsgrad, der bruges af BitLocker-drevkryptering. Denne indstilling anvendes, når du aktiverer BitLocker. En ændring af krypteringsmetoden har ingen virkning, hvis drevet allerede er krypteret, eller hvis kryptering er i gang.
+
+Hvis du aktiverer denne politikindstilling, kan du muligvis konfigurere krypteringsalgoritme og nøglekrypteringsgrad individuelt for faste datadrev, operativsystemdrev og flytbare datadrev. For faste drev og operativsystemdrev anbefaler vi, at du bruger XTS AES-algoritmen. Når det gælder flytbare drev, skal du bruge AES-CBC 128-bit eller AES-CBC 256-bit, hvis driveren bruges i andre enheder, der ikke kører Windows 10 (version 1511).
+
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, bruger BitLocker AES med samme bitstyrke (128-bit eller 256-bit) som politikindstillingen "Vælg drevkrypteringsmetode og -krypteringsgrad (Windows Vista, Windows Server 2008, Windows 7)" og "Vælg drevkrypteringsmetode og -krypteringsgrad" (i den rækkefølge), hvis de er indstillet. Hvis ingen af politikkerne er angivet, bruger BitLocker standardkrypteringsmetoden XTS-AES 128-bit eller den krypteringsmetode, der er angivet af installationsscriptet."
+
+      </string>
       <string id="EncryptionMethod_Name">Vælg drevkrypteringsmetode og -krypteringsgrad (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Vælg drevkrypteringsmetode og -krypteringsgrad</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Vælg drevkrypteringsmetode og -krypteringsgrad (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [Version 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">Vælg drevkrypteringsmetode og krypteringsgrad (Windows 10 [Version 1511] og senere)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES 128-bit med diffuser</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES 256-bit med diffuser</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES 128-bit (standard)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC 128-bit</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC 128-bit (standard)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES 256 bit</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC 256-bit</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES 128-bit (standard)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES 128-bit</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES 256-bit</string>
 
       <string id="FVECategory">BitLocker-drevkryptering</string>
       <string id="PlatformValidation_Deprecated_Help">Denne politikindstilling giver dig mulighed for at konfigurere, hvordan computerens TPM-sikkerhedshardware (Trusted Platform Module) sikrer BitLocker-krypteringsnøglen. Denne politikindstilling gælder ikke, hvis computeren ikke har et kompatibelt TPM-modul, eller hvis BitLocker allerede er blevet aktiveret med TPM-beskyttelse.
@@ -801,6 +815,12 @@ Bemærk! Det er ikke alle tegn og sprog, der understøttes før start. Det anbef
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Vælg krypteringsmetode:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Vælg krypteringsmetoden for operativsystemdrev:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Vælge krypteringsmetoden for faste datadrev:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Vælg krypteringsmetoden for flytbare datadrev:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

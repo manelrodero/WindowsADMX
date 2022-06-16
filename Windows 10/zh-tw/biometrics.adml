@@ -6,6 +6,7 @@
   <resources>
     <stringTable>
       <string id="BiometricsConfiguration">生物識別技術</string>
+      <string id="FaceConfiguration">臉部功能</string>
       <string id="Biometrics_EnableBio">允許使用生物識別</string>
       <string id="Biometrics_EnableBio_Help">這個原則設定可允許或禁止在這部電腦上執行 Windows 生物識別服務。
         
@@ -42,6 +43,15 @@
 
 如果您停用或未設定這個原則設定，則快速切換使用者事件逾時將使用預設值 10 秒。
 
+</string>
+      <string id="Face_EnhancedAntiSpoofing">使用增強式反詐騙 (若可用)</string>
+      <string id="Face_EnhancedAntiSpoofing_Help">This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
+
+If you do not configure this policy setting, users will be able to choose whether or not to use enhanced anti-spoofing on supported devices.
+
+If you enable this policy setting, Windows will require all users on the device to use anti-spoofing for facial features, on devices which support it.
+
+If you disable this policy setting, enhanced anti-spoofing is turned off for all users on the device and they will be unable to turn it on.
 </string>
     </stringTable>
     <presentationTable>

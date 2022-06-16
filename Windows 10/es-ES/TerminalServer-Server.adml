@@ -56,16 +56,16 @@ Nota: si esta configuración de directiva está habilitada, se pasará por alto 
       </string>
       
       <string id="TS_ALLOW_APPS">Permitir inicio remoto de programas que no figuran en la lista</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">Esta configuración de directiva te permite especificar si los usuarios remotos pueden iniciar programas en el servidor host de sesión de Escritorio remoto cuando inician una sesión de Servicios de Escritorio remoto, o si pueden iniciar solamente los programas enumerados en la lista de programas de RemoteApp.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+Puedes controlar qué programas pueden abrirse remotamente a través del administrador de RemoteApp en Windows Server 2008 R2 y Windows Server 2008 en un servidor host de sesión de Escritorio remoto. Si estás usando Windows Server 2012, puedes configurar esto en la hoja de propiedades de Colección con el Administrador del servidor.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+De forma predeterminada, solo los programas de la lista de programas de RemoteApp pueden iniciarse cuando el usuario inicia una sesión de Servicios de Escritorio remoto.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Si habilitas esta configuración de directiva, los usuarios remotos podrán iniciar cualquier programa en el servidor host de sesión de Escritorio remoto cuando inicien una sesión de Servicios de Escritorio remoto.
+Por ejemplo, un usuario remoto puede hacer esto especificando la ruta de acceso del archivo ejecutable del programa en el momento de la conexión con el cliente de Conexión a Escritorio Remoto.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Si deshabilitas o no estableces esta configuración de directiva, los usuarios remotos solo podrán iniciar los programas que se muestren en la lista de programas de RemoteApp cuando inicien una sesión de Servicios de Escritorio remoto.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Permitir composición del escritorio para sesiones de escritorio remoto</string>

@@ -27,7 +27,16 @@ Como modificar essa configuração:
 Organize os pacotes de codificação desejados na caixa de edição, um pacote de codificação por linha, do mais ao menos preferencial, com o pacote de codificação preferencial na parte superior. Remova qualquer pacote de criptografia que você não deseja usar.
 
 Observação: ao definir esta configuração de segurança, as alterações só terão efeito depois que você reiniciar o Windows.</string>
-      </stringTable>
+      <string id="Pol_EnableInsecureGuestLogons_Name">Habilitar logons de convidados não seguros</string>
+      <string id="Pol_EnableInsecureGuestLogons_Help">Essa configuração de política determina se o cliente SMB permitirá logons de convidados não seguros em um servidor SMB.
+
+Se você habilitar essa configuração de política, ou se você não definir essa configuração de política, o cliente SMB permitirá logons de convidados não seguros.
+
+Se você desabilitar essa configuração de política, o cliente SMB rejeitará logons de convidados não seguros.
+
+Logons de convidados não seguros são usados por servidores de arquivos para permitir o acesso não autenticado a pastas compartilhadas. Embora incomum em um ambiente empresarial, os logons de convidados não seguros são frequentemente usados por dispositivos de armazenamento NAS do consumidor que atuam como servidores de arquivos. Os servidores de arquivos do Windows requerem autenticação e não usam logons de convidados não seguros por padrão. Como logons de convidados não seguros não são autenticados, recursos de segurança importantes, como a Assinatura SMB e a Criptografia SMB, estão desativados. Como resultado, os clientes que permitem logons de convidados não seguros são vulneráveis a uma variedade de ataques man-in-the-middle que podem resultar em perda de dados, dados corrompidos e exposição a malware. Além disso, todos os dados gravados em um servidor de arquivos com o uso de um logon de convidado não seguro poderão ser potencialmente acessados por qualquer pessoa na rede. A Microsoft recomenda desabilitar logons de convidados não seguros e configurar os servidores de arquivos para exigir acesso autenticado.
+      </string>
+    </stringTable>
     <presentationTable>
       <presentation id="Pol_CipherSuiteOrder">
         <text>Pacotes de codificação:</text>

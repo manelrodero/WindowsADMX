@@ -6,6 +6,7 @@
   <resources>
     <stringTable>
       <string id="BiometricsConfiguration">Биометрия</string>
+      <string id="FaceConfiguration">Черты лица</string>
       <string id="Biometrics_EnableBio">Разрешение использования биометрии</string>
       <string id="Biometrics_EnableBio_Help">Этот параметр политики позволяет разрешать или запрещать запуск биометрической службы Windows на компьютере.
         
@@ -42,6 +43,15 @@
 
 Если вы отключаете или не настраиваете этот параметр политики, по умолчанию для времени ожидания события функции быстрого переключения пользователей используется значение, равное 10 секундам.
 
+</string>
+      <string id="Face_EnhancedAntiSpoofing">Использовать расширенную защиту от подделывания (когда возможно)</string>
+      <string id="Face_EnhancedAntiSpoofing_Help">This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
+
+If you do not configure this policy setting, users will be able to choose whether or not to use enhanced anti-spoofing on supported devices.
+
+If you enable this policy setting, Windows will require all users on the device to use anti-spoofing for facial features, on devices which support it.
+
+If you disable this policy setting, enhanced anti-spoofing is turned off for all users on the device and they will be unable to turn it on.
 </string>
     </stringTable>
     <presentationTable>

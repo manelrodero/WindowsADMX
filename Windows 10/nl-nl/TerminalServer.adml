@@ -5,14 +5,15 @@
   <description>typ hier een beschrijving</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Minimaal Windows 10 of Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Minimaal Windows 8 of Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Minimaal Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minimaal Windows 8 Enterprise of Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Minimaal Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minimaal Windows 8 Enterprise of Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Alleen Windows 7 of Windows Server 2008 R2 (en hun latere Service Packs)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista en Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Minimaal Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Minimaal Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minimaal Windows Server Technical Preview 2 met geïnstalleerde RDSH-rol</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minimaal Windows Server 2012 met geïnstalleerde RDSH-rol</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Minimaal Windows 7 met Service Pack 1 of Windows Server 2008 R2 met Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Minimaal Microsoft Vista met Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Minimaal Microsoft 2000 Terminal Services</string>
@@ -42,16 +43,16 @@
       <string id="TS_8_bit">8-bits</string>
       <string id="TS_32_bit">32-bits</string>
 
-      <string id="TS_AUDIOMAP_EXPLAIN">Met deze beleidsinstelling kunt u bepalen of gebruikers tijdens een sessie met Extern bureaublad-services audio en video van de externe computer mogen omleiden.
-Gebruikers kunnen aangeven waar de audio van de externe computer moet worden afgespeeld door op het tabblad Lokale bronnen van Verbinding met extern bureaublad de geluidsinstellingen voor de externe computer te configureren. Hierbij kunnen ze kiezen tussen de externe computer of de lokale computer. Audio kan ook worden uitgeschakeld. Het afspelen van video kan worden geconfigureerd met de instelling videoplayback in een RDP-bestand (Remote Desktop Protocol). Het afspelen van video is standaard ingeschakeld.
+      <string id="TS_AUDIOMAP_EXPLAIN">Met deze beleidsinstelling kunt u bepalen of gebruikers tijdens een sessie met Extern bureaublad-services de audio- en videoweergave van de externe computer mogen omleiden.
+Gebruikers kunnen aangeven waar de audio-uitvoer van de externe computer moet worden afgespeeld door op het tabblad Lokale bronnen van Verbinding met extern bureaublad de geluidsinstellingen voor de externe computer te configureren. Hierbij kunnen ze kiezen tussen de externe computer of de lokale computer. De audio-uitvoer kan ook worden uitgeschakeld. Het afspelen van videobeelden kan worden geconfigureerd met de instelling videoplayback in een RDP-bestand (Remote Desktop Protocol). Het afspelen van video is standaard ingeschakeld.
 
-Standaard is het niet mogelijk om audio en video om te leiden als verbinding wordt gemaakt met een server waarop Windows Server 2008 R2, Windows Server 2008 of Windows Server 2003 wordt uitgevoerd. Het omleiden van audio en video is standaard wel toegestaan bij verbinding met een computer met Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista of Windows XP Professional.
+Standaard is het niet mogelijk om de audio- en videoweergave om te leiden als verbinding wordt gemaakt met een computer waarop Windows Server 2008 R2, Windows Server 2008 of Windows Server 2003 wordt uitgevoerd. Het omleiden van de audio- en videoweergave is standaard wel toegestaan wanneer verbinding wordt gemaakt met een computer met Windows 8, Windows Server 2012, Windows 7, Windows Vista of Windows XP Professional.
 
-Als u deze beleidsinstelling inschakelt, is het omleiden van audio en video toegestaan.
+Als u deze beleidsinstelling inschakelt, is het omleiden van audio- en videoweergave toegestaan.
 
-Als u deze beleidsinstelling uitschakelt, is het omleiden van audio en video niet toegestaan, zelfs niet als dit voor audio is toegestaan in Verbinding met extern bureaublad of voor video in het RDP-bestand.
+Als u deze beleidsinstelling uitschakelt, is het omleiden de audio- en videoweergave niet toegestaan, zelfs niet als dit voor audio-uitvoer is toegestaan in Verbinding met extern bureaublad of voor videobeelden in het RDP-bestand.
 
-Als u deze beleidsinstelling niet configureert, is het omleiden van audio en video niet gedefinieerd in Groepsbeleid. 
+Als u deze beleidsinstelling niet configureert, is het omleiden van audio- en videoweergave niet gedefinieerd in Groepsbeleid. 
 </string>
       <string id="TS_AUDIOCAPTUREMAP_EXPLAIN">Met deze beleidsinstelling kunt u aangeven of gebruikers tijdens een sessie met Extern bureaublad-services audio kunnen opnemen op de externe computer.
 Gebruikers kunnen aangeven of audio moet worden opgenomen op de externe computer door op het tabblad Lokale bronnen van Verbinding met extern bureaublad geluidsinstellingen voor de externe computer op te geven. Gebruikers kunnen audio opnemen door een apparaat voor audio-invoer te gebruiken op de lokale computer, zoals een ingebouwde microfoon.
@@ -154,24 +155,23 @@ Als u deze beleidsinstelling uitschakelt, wordt klembordomleiding altijd toegest
 Als u deze beleidsinstelling niet configureert, is het omleiden van het klembord niet gedefinieerd in Groepsbeleid. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Met deze beleidsinstelling kunt u de maximale kleurenresolutie (kleurdiepte) voor verbindingen met Extern bureaublad-services instellen.
+      <string id="TS_COLOR_EXPLAIN">Met deze beleidsinstelling kunt u de maximale kleurenresolutie (kleurdiepte) voor verbindingen met Extern bureaublad-services instellen.
 
-        Gebruik deze beleidsinstelling om een limiet in te stellen voor de kleurdiepte van een verbinding die RDP gebruikt. Het beperken van de kleurdiepte kan de prestaties van een verbinding verbeteren (vooral als er sprake is van langzame verbindingen) en de belasting van de server verminderen.
+Gebruik deze beleidsinstelling om een limiet in te stellen voor de kleurdiepte van een verbinding die RDP gebruikt. Het beperken van de kleurdiepte kan de prestaties van een verbinding verbeteren (vooral als er sprake is van langzame verbindingen) en de belasting van de server verminderen.
 
-        Als u deze beleidsinstelling inschakelt, is de opgegeven kleurdiepte de maximale kleurdiepte die voor de RDP-verbinding van een gebruiker is toegestaan. De werkelijke kleurdiepte van de verbinding wordt bepaald door de ondersteuning voor kleuren die op de clientcomputer beschikbaar is. Als u Compatibel met client selecteert, wordt de hoogste waarde voor kleurdiepte gebruikt die door de client wordt ondersteund.
+Als u deze beleidsinstelling inschakelt, is de opgegeven kleurdiepte de maximale kleurdiepte die voor de RDP-verbinding van een gebruiker is toegestaan. De werkelijke kleurdiepte van de verbinding wordt bepaald door de ondersteuning voor kleuren die op de clientcomputer beschikbaar is. Als u Compatibel met client selecteert, wordt de hoogste waarde voor kleurdiepte gebruikt die door de client wordt ondersteund.
 
-        Als u deze beleidsinstelling uitschakelt of niet configureert, is de kleurdiepte van de verbinding niet gedefinieerd in Groepsbeleid.
+Als u deze beleidsinstelling uitschakelt of niet configureert, is de kleurdiepte van de verbinding niet gedefinieerd in Groepsbeleid.
 
-        Opmerking:
+Opmerking:
 1.	Een kleurdiepte van 24 bits wordt alleen ondersteund op Windows Server 2003 en Windows XP Professional.
-        2.	De waarde opgegeven in deze beleidsinstelling wordt niet toegepast op verbindingen van clientcomputers met minimaal Remote Desktop Protocol 8.0 (computers met minimaal Windows 8 of Windows Server Technical Preview 2). De kleurdiepte van 32 bits wordt altijd gebruikt voor deze verbindingen.
-        3.	Voor verbindingen van clientcomputers met Remote Desktop Protocol 7.1 of eerdere versies die verbinding maken met computers met minimaal Windows 8 of Windows Server Technical Preview 2, worden minimaal de volgende waarden voor kleurdiepte gebruikt:
-        a.	Waarde die is opgegeven bij deze beleidsinstelling
-        b.	Maximale kleurdiepte die op de client wordt ondersteund
-        c.	Waarde die de client heeft aangevraagd
+2.	De waarde opgegeven in deze beleidsinstelling wordt niet toegepast op verbindingen van clientcomputers met minimaal Extern bureaublad Protocol 8.0 (computers met minimaal Windows 8 of Windows Server 2012). De kleurdiepte van 32 bits wordt altijd gebruikt voor deze verbindingen.
+3.	Voor verbindingen van clientcomputers met Extern bureaublad Protocol 7.1 of eerdere versies die verbinding maken met computers met minimaal Windows 8 of Windows Server 2016 Technical Preview 3, worden minimaal de volgende waarden voor kleurdiepte gebruikt:
+a.	Waarde die is opgegeven bij deze beleidsinstelling
+b.	Maximale kleurdiepte die op de client wordt ondersteund
+c.	Waarde die de client heeft aangevraagd
 
-        Als op de client niet minimaal 16 bits wordt ondersteund, wordt de verbinding verbroken.
+Als op de client niet minimaal 16 bits wordt ondersteund, wordt de verbinding verbroken.
       </string>
       <string id="TS_COLORDEPTH">Maximale kleurdiepte beperken</string>
       <string id="TS_Comp_Help">Hiermee beheert u de configuratie van Extern bureaublad-services en de eigenschappen van clientsessies voor afzonderlijke computers of groepen computers.</string>
@@ -557,19 +557,19 @@ Opmerkingen:
 
 </string>
       <string id="TS_SD_Loc">RD Connection Broker-servernaam configureren</string>
-      <string id="TS_SD_Loc_Explain">U kunt met deze beleidsinstelling de server voor Extern bureaublad Connection Broker opgeven die de hostserver voor Extern bureaublad-sessies gebruikt voor het traceren en omleiden van gebruikerssessies voor een farm met hostservers voor Extern bureaublad-sessies met taakverdeling. Op de opgegeven server moet de service Extern bureaublad Connection Broker worden uitgevoerd. Alle hostservers voor Extern bureaublad-sessies in een farm met gelijke taakverdeling moeten dezelfde server voor Extern bureaublad Connection Broker gebruiken.
+      <string id="TS_SD_Loc_Explain">U kunt met deze beleidsinstelling de RD Connection Broker-server opgeven die door de hostserver voor Extern bureaublad-sessies wordt gebruikt voor het traceren en omleiden van gebruikerssessies voor een farm met gelijke taakverdeling voor hostservers voor Extern bureaublad-sessies. Op de opgegeven server moet de service Extern bureaublad Connection Broker worden uitgevoerd. Alle hostservers voor Extern bureaublad-sessies in een farm met gelijke taakverdeling moeten dezelfde RD Connection Broker-server gebruiken.
 
-Als u deze beleidsinstelling inschakelt, moet u de server voor Extern bureaublad Connection Broker opgeven met behulp van de FQDN-naam (Fully Qualified Domain Name) van de desbetreffende server. In Windows Server Technical Preview 2 moet u een door puntkomma's gescheiden lijst met FQDN-namen van alle servers voor Extern bureaublad Connection Broker maken voor een setup met hoge beschikbaarheid en meerdere servers voor Extern bureaublad Connection Broker.
+Als u deze beleidsinstelling inschakelt, moet u de server voor RD Connection Broker-server opgeven met de FQDN (Fully Qualified Domain Name) van de desbetreffende server. In Windows Server 2016 Technical Preview 3 moet u een door puntkomma's gescheiden lijst met FQDN's van alle RD Connection Broker-servers maken voor een setup met hoge beschikbaarheid en meerdere RD Connection Broker-servers.
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, is de beleidsinstelling niet opgegeven op groepsbeleidsniveau.
 
 Opmerkingen:
 
-     1. Voor Windows Server 2008 wordt deze beleidsinstelling minimaal ondersteund voor Windows Server 2008 Standard Edition.
+     1. Voor Windows Server 2008 wordt deze beleidsinstelling minimaal ondersteund voor Windows Server 2008 Standard.
 
-     2. Deze beleidsinstelling is niet effectief, tenzij deelname aan de beleidsinstelling voor Extern bureaublad Connection Broker is ingeschakeld.
+     2. Deze beleidsinstelling is niet effectief, tenzij de beleidsinstelling Deelnemen aan RD Connection Broker is ingeschakeld.
 
-     3. Voor een actief lidmaatschap van een farm met hostservers voor Extern bureaublad-sessies met Extern bureaublad Connection Broker is het noodzakelijk dat de computeraccounts voor de afzonderlijke hostservers in de farm lid zijn van één van de volgende groepen op de server voor Extern bureaublad Connection Broker: Session Directory Computers, Session Broker Computers of RDS Endpoint Servers.
+     3. Voor een actief lidmaatschap van een farm met hostservers voor Extern bureaublad-sessies moeten de computeraccounts voor de afzonderlijke hostservers in de farm lid zijn van één van de volgende groepen op de RD Connection Broker-server: Session Directory Computers, Session Broker Computers of RDS Endpoint Servers.
 
 </string>
       <string id="TS_SD_Node">RD Connection Broker</string>
@@ -948,19 +948,17 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, wordt aan de hand
 
     <string id="TS_SERVER_IMAGE_QUALITY">Beeldkwaliteit voor RemoteFX Adaptive Graphics configureren</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Met deze beleidsinstelling kunt u de beeldkwaliteit voor externe gebruikers opgeven, als zij door middel van het Externe bureaublad met deze computer verbonden zijn. U kunt deze beleidsinstelling gebruiken om de visuele kwaliteit die wordt geleverd af te stemmen op het gebruik van de netwerkbandbreedte.
- 
-Als u deze beleidsinstelling inschakelt en de kwaliteit op medium instelt, gebruikt RemoteFX Adaptive Graphics een coderingsmechanisme dat resulteert in beelden met een gemiddelde kwaliteit. Deze modus verbruikt de minste netwerkbandbreedte van de kwaliteitsmodi. 
-Als u deze beleidsinstelling inschakelt en de kwaliteit op hoog instelt, gebruikt RemoteFX Adaptive Graphics een coderingsmechanisme dat resulteert in beelden met een hoge kwaliteit. Hiervoor is een gemiddelde netwerkbandbreedte nodig. 
-Als u deze beleidsinstelling inschakelt en de kwaliteit op zonder kwaliteitsverlies instelt, gebruikt RemoteFX Adaptive Graphics de codering zonder kwaliteitsverlies. In deze modus wordt de kleurintegriteit van de afbeeldingen niet beïnvloed. Alhoewel deze instelling resulteert in een aanzienlijke stijging van het verbruik van de netwerkbandbreedte. Wij raden u aan om deze instelling alleen bij hoge uitzondering te gebruiken. 
- 
-Als u deze beleidsinstelling uitschakelt of niet configureert, gebruikt RemoteFX Adaptive Graphics een coderingsmechanisme dat resulteert in beelden met gemiddelde kwaliteit.
-
-    
-
+      Als u deze beleidsinstelling inschakelt en de kwaliteit op laag instelt, wordt voor RemoteFX Adaptive Graphics een coderingsmechanisme gebruikt dat resulteert in beelden met een lage kwaliteit. Deze modus verbruikt de minste netwerkbandbreedte van de kwaliteitsmodi.
+      Als u deze beleidsinstelling inschakelt en de kwaliteit op medium instelt, wordt voor RemoteFX Adaptive Graphics een coderingsmechanisme gebruikt dat resulteert in beelden met een gemiddelde kwaliteit. Met deze modus beschikt u over betere beelden dan wanneer u voor een lage kwaliteit kiest en wordt er minder bandbreedte gebruikt dan wanneer u voor een hoge kwaliteit kiest.
+       Als u deze beleidsinstelling inschakelt en de kwaliteit op hoog instelt, wordt voor RemoteFX Adaptive Graphics een coderingsmechanisme gebruikt dat resulteert in beelden met een hoge kwaliteit. Hiervoor is een gemiddelde netwerkbandbreedte nodig.
+      Als u deze beleidsinstelling inschakelt en de kwaliteit op zonder kwaliteitsverlies instelt, wordt voor RemoteFX Adaptive Graphics de codering zonder kwaliteitsverlies gebruikt. In deze modus wordt de kleurintegriteit van de afbeeldingen niet beïnvloed. Deze instelling resulteert echter wel in een aanzienlijke stijging van het verbruik van de netwerkbandbreedte. Wij raden u aan om deze instelling alleen bij hoge uitzondering te gebruiken.
+      Als u deze beleidsinstelling uitschakelt of niet configureert, wordt RemoteFX Adaptive Graphics een coderingsmechanisme gebruikt dat resulteert in beelden met gemiddelde kwaliteit.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Zonder kwaliteitsverlies</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Hoog</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Normaal</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Laag</string>      
 
     <string id="TS_SERVER_PROFILE">Aanpasbare grafische RemoteFX-gegevens configureren</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">Met deze beleidsinstelling kan de administrator de RemoteFX-ervaring voor de host van een extern-bureaubladsessie of hostservers van extern-bureaubladvirtualisatie configureren. Het systeem zal standaard de beste ervaring kiezen op basis van de beschikbare netwerkbandbreedte.
@@ -989,14 +987,13 @@ U kunt er ook voor kiezen geen RDP-compressiealgoritme te gebruiken. In dat geva
 Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het standaardalgoritme voor RDP-compressie gebruikt.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Geheugen balanceren met netwerkbandbreedte</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Geoptimaliseerd voor het gebruik van minder netwerkbandbreedte</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Geoptimaliseerd voor het gebruik van minder geheugen</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Geen RDP-compressiealgoritme gebruiken</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Geheugen balanceren met netwerkbandbreedte</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Geoptimaliseerd voor het gebruik van minder netwerkbandbreedte</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Geoptimaliseerd voor het gebruik van minder geheugen</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Geen RDP-compressiealgoritme gebruiken</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Geavanceerde grafische RemoteFX-gegevens voor RemoteApp gebruiken</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     Met deze beleidsinstelling kunt u RemoteApp-programma's gebruik laten maken van geavanceerde grafische functies, zoals ondersteuning voor transparantie, live miniatuurweergaven en naadloze verplaatsing van toepassingen. Deze beleidsinstelling is alleen van toepassing op RemoteApp-programma's en niet op extern-bureaubladsessies.
 
 Als u deze beleidsinstelling inschakelt of niet configureert, kunnen RemoteApp-programma's die vanuit deze hostserver voor Extern-bureaubladsessies worden gepubliceerd deze geavanceerde grafische functies gebruiken.
@@ -1005,6 +1002,30 @@ Als u deze beleidsinstelling uitschakelt, maken RemoteApp-programma's die vanuit
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Configureer H.264/AVC-hardwarecodering voor verbindingen met Extern bureaublad</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Met deze beleidsinstelling kunt u ondersteuning voor H.264/AVC-hardwarecodering inschakelen voor verbindingen met Extern bureaublad. Wanneer u hardwarecodering inschakelt en er treedt een fout op, wordt geprobeerd softwarecodering te gebruiken. Als u dit beleid uitschakelt of niet configureert, wordt altijd softwarecodering gebruikt.
+        
+Als u de coderingsoptie instelt op Altijd proberen, wordt door Extern bureaublad altijd geprobeerd de H.264/AVC-hardwarecodering te gebruiken en moet u er rekening mee houden dat voor Windows Server waarop Hyper-V wordt uitgevoerd met RemoteFX vGPU ingeschakeld, het beleid moet zijn ingesteld op de Hyper-V-hostmachine.
+        
+Als u de coderingsoptie instelt op Alleen proberen voor RemoteFX vGPU virtuele machines, moet u er rekening mee houden dat voor Windows Server waarop Hyper-V wordt uitgevoerd met RemoteFX vGPU ingeschakeld, het beleid moet zijn ingesteld op de Hyper-V-hostmachine.
+        
+Als u de coderingsoptie instelt op Alleen proberen voor niet-RemoteFX vGPU-scenario's, wordt door Extern bureaublad geprobeerd hardwarecodering te gebruiken voor alle scenario's met uitzondering van RemoteFX vGPU.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Altijd proberen</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Alleen proberen voor RemoteFX vGPU virtuele machines</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Alleen proberen voor niet-RemoteFX vGPU-scenario's</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">Prioriteit van H.264/AVC 444 grafische modus voor verbindingen met Extern bureaublad</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Met deze beleidsinstelling wordt prioriteit gegeven aan de H.264/AVC 444 grafische modus voor non-RemoteFX vGPU scenario's. Als u deze instelling op de RDP-server gebruikt, maakt de server gebruik van H.264/AVC 444 als codec in een RDP 10-verbinding waar zowel de client als de server H.264/AVC 444 kunnen gebruiken.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Decodering met hardwareversnelling niet toestaan</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Deze beleidsinstelling geeft aan of de verbinding met Extern bureaublad hardwareversnelling kan gebruiken als ondersteunde hardware beschikbaar is. Als u deze instelling gebruikt, past de client voor Extern bureaublad alleen softwaredecodering toe. Als u bijvoorbeeld vermoedt dat een probleem te wijten is aan hardwareversnelling, gebruikt u deze instelling om de versnelling uit te schakelen. Als het probleem zich blijft voordoen, weet u dat er extra problemen moeten worden onderzocht. Als u deze instelling uitschakelt of niet configureert, gebruikt de client voor Extern bureaublad hardwareversnelde decodering als ondersteunde hardware beschikbaar is.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1073,7 +1094,6 @@ Extern-bureaubladsessies die RemoteFX gebruiken, zijn standaard geoptimaliseerd 
 
       <string id="TS_SERVER_LEGACY_RFX">RemoteFX-codering inschakelen voor RemoteFX-clients ontworpen voor Windows Server 2008 R2 SP1</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Met deze beleidsinstelling kunt u de codering van grafische informatie configureren zodat de RemoteFX-codec op de hostserver van de extern-bureaubladsessie wordt gebruikt zodat de sessies compatibel zijn met thin client-apparaten van andere fabrikanten ontworpen voor Windows Server 2008 R2 SP1. Deze clients ondersteunen alleen de Windows Server 2008 R2 SP1 RemoteFX-codec. Als u deze beleidsinstelling inschakelt, gebruiken de gebruikerssessies op deze server alleen de Windows Server 2008 R2 SP1 RemoteFX-codec om te coderen. Deze modus is compatibel met thin client-apparaten die alleen de Windows Server 2008 R2 SP1 RemoteFX-codec ondersteunen. Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen thin clients van andere fabrikanten die alleen de Windows Server 2008 R2 SP1 RemoteFX-codec ondersteunen geen verbinding met deze server maken. Deze beleidsinstelling is alleen van toepassing op clients die Remote Desktop Protocol (RDP) 7.1 gebruiken en heeft geen invloed op clients die andere RDP-versies gebruiken.
       
       </string>
@@ -1187,7 +1207,7 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het startsc
           <label>Licentieservers die moeten worden gebruikt:</label>
         </textBox>
         <text>Gebruik een komma als scheidingsteken tussen namen van licentieservers.</text>
-        <text>Voorbeeld: Server1,Server2.voorbeeld.com,192.168.1.1</text>
+        <text>Voorbeeld: Server1,Server2.example.com,192.168.1.1</text>
       </presentation>
       <presentation id="TS_LICENSING_MODE">
         <dropdownList refId="TS_LICENSING_NAME" noSort="true" defaultItem="0">Geef de licentiemodus voor de hostserver voor extern-bureaubladsessies op.</dropdownList>
@@ -1294,6 +1314,9 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het startsc
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP-compressiealgoritme:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Voorkeur voor AVC-hardwarecodering:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Visuele ervaring:</dropdownList>

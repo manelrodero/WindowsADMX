@@ -239,12 +239,26 @@ Pokud nastavení této zásady povolíte, budete moct zvolit algoritmus šifrov�
 Pokud nastavení této zásady zakážete nebo nenakonfigurujete, nástroj BitLocker použije šifrování AES se stejnou bitovou délkou (128 bitů nebo 256 bitů) jako nastavení zásad Zvolit metodu šifrování jednotky a sílu šifry (Windows Vista, Windows Server 2008, Windows 7), pokud je tato hodnota nastavená. Pokud nejsou nastavené žádné zásady, nástroj BitLocker bude používat výchozí metodu 128bitového šifrování AES nebo šifrovací metodu určenou nastavovacím skriptem.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Nastavení této zásady umožňuje nakonfigurovat algoritmus a sílu šifrování, které používá nástroj BitLocker Drive Encryption. Toto nastavení se použije při zapnutí nástroje BitLocker. Změna šifrovací metody nemá žádný vliv v případě, že jednotka už je zašifrovaná nebo že šifrování právě probíhá.
+
+Pokud nastavení této zásady povolíte, budete moct šifrovací algoritmus a sílu šifrování nakonfigurovat jednotlivě pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. Pro pevné jednotky a jednotky operačního systému doporučujeme použití algoritmu XTS-AES. Pro vyměnitelné jednotky byste měli použít AES-CB na úrovni 128 nebo 256 bitů, pokud se jednotka bude používat i na jiných zařízeních bez Windows 10 (verze 1511).
+
+Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude nástroj BitLocker používat nástroje se stejnou bitovou délkou (128 bitů nebo 256 bitů) jako nastavení zásady Zvolit metodu šifrování jednotky a sílu šifry (Windows Vista, Windows Server 2008, Windows 7) a Zvolit metodu šifrování jednotky a sílu šifry (v tomto pořadí), pokud jsou tyto hodnoty nastavené. Pokud nejsou nastavené žádné ze zásad, bude nástroj BitLocker používat výchozí metodu 128bitového šifrování XTS-AES nebo šifrovací metodu určenou nastavovacím skriptem.
+
+      </string>
       <string id="EncryptionMethod_Name">Zvolit metodu šifrování jednotky a sílu šifry (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Zvolit metodu šifrování jednotky a sílu šifry</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Zvolit metodu šifrování jednotky a sílu šifry (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 verze 1507)</string>
+      <string id="EncryptionMethodWithXts_Name">Zvolit metodu šifrování jednotky a sílu šifry (Windows 10 verze 1511 a vyšší)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">128bitové AES s difuzorem</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">256bitové AES s difuzorem</string>
       <string id="EncryptionMethodDropDown_AES128_Name">128bitové AES (výchozí)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC, 128 bitů</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC, 128 bitů (výchozí)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">256bitové AES</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC, 256 bitů</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES, 128 bitů (výchozí)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES, 128 bitů</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES, 256 bitů</string>
 
       <string id="FVECategory">Šifrování jednotky nástrojem BitLocker</string>
       <string id="PlatformValidation_Deprecated_Help">Toto nastavení zásad umožňuje konfigurovat, jak čip TPM hardwaru zabezpečení v počítači zabezpečí šifrovací klíč nástroje BitLocker. Toto nastavení zásad nebude uplatněno, pokud počítač neobsahuje kompatibilní čip TPM nebo pokud byl nástroj BitLocker již spuštěn s ochranou TPM.
@@ -801,6 +815,12 @@ Poznámka: Ne všechny znaky a jazyky jsou v prostředí před spuštěním podp
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Vyberte metodu šifrování:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Vyberte metodu šifrování pro jednotky operačního systému:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Vyberte metodu šifrování pro pevné datové jednotky:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Vyberte metodu šifrování pro vyměnitelné datové jednotky:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

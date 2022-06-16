@@ -5,14 +5,15 @@
   <description>Sem zadejte popis.</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Minimálně Windows 10 nebo Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Minimálně systém Windows 8 nebo Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Minimálně systém Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minimálně systém Windows 8 Enterprise nebo Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Minimálně Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Minimálně Windows 8 Enterprise nebo Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Pouze systém Windows 7 nebo Windows Server 2008 R2 (a následné aktualizace Service Pack)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Systémy Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista a Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Minimálně systém Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Minimálně systém Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minimálně systém Windows Technical Preview 2 s nainstalovanou rolí Hostitel relací vzdálené plochy</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Minimálně Windows Server 2012 s nainstalovanou rolí Hostitel relací vzdálené plochy</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Minimálně systém Windows 7 s aktualizací Service Pack 1 nebo systém Windows Server 2008 R2 s aktualizací Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Minimálně systém Windows Vista s aktualizací Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Minimálně Terminálová služba systému Windows 2000</string>
@@ -43,9 +44,9 @@
       <string id="TS_32_bit">32 bitů</string>
 
       <string id="TS_AUDIOMAP_EXPLAIN">Nastavení této zásady umožňuje určit, jestli uživatelé můžou přesměrovat výstup zvuku a videa vzdáleného počítače v relaci služby Vzdálená plocha.
-Konfigurací nastavení vzdáleného zvuku na kartě Místní prostředky v okně Připojení ke vzdálené ploše můžou uživatelé určit, kde se má přehrávat výstup zvuku vzdáleného počítače. Uživatelé se můžou rozhodnout, jestli se bude vzdálený zvuk přehrávat ve vzdáleném nebo místním počítači. Můžou se taky rozhodnout zvuk nepřehrávat. Přehrávání videa je možné konfigurovat nastavením přehrávání videa v souboru RDP (Remote Desktop Protocol). Ve výchozím nastavení je přehrávání videa povolené.
+Konfigurací nastavení vzdáleného zvuku na kartě Místní prostředky v okně Připojení ke vzdálené ploše můžou uživatelé určit, kde se má přehrávat výstup zvuku vzdáleného počítače. Uživatelé se můžou rozhodnout, jestli se bude vzdálený zvuk přehrávat ve vzdáleném, nebo v místním počítači. Můžou se taky rozhodnout zvuk nepřehrávat. Přehrávání videa je možné konfigurovat nastavením přehrávání videa v souboru RDP (Remote Desktop Protocol). Ve výchozím nastavení je přehrávání videa povolené.
 
-Ve výchozím nastavení není přesměrování přehrávání zvuku a videa povolené při připojování k počítači se systémem Windows Server 2008 R2, Windows Server 2008 nebo Windows Server 2003. Přesměrování přehrávání zvuku a videa je ve výchozím nastavení povolené při připojování k počítači se systémem Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista nebo Windows XP Professional.
+Ve výchozím nastavení není přesměrování přehrávání zvuku a videa povolené při připojování k počítači se systémem Windows Server 2008 R2, Windows Server 2008 nebo Windows Server 2003. Přesměrování přehrávání zvuku a videa je ve výchozím nastavení povolené při připojování k počítači se systémem Windows 8, Windows Server 2012, Windows 7, Windows Vista nebo Windows XP Professional.
 
 Pokud nastavení této zásady povolíte, je přesměrování přehrávání zvuku a videa povolené.
 
@@ -154,24 +155,23 @@ Pokud nastavení této zásady zakážete, bude přesměrování schránky ve sl
 Pokud nastavení této zásady nenakonfigurujete, není přesměrování schránky určeno na úrovni zásad skupiny. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Nastavení této zásady umožňuje určit maximální barevné rozlišení (barevnou hloubku) pro připojení služby Vzdálená plocha.
+      <string id="TS_COLOR_EXPLAIN">Nastavení této zásady umožňuje určit maximální barevné rozlišení (barevnou hloubku) pro připojení služby Vzdálená plocha.
 
-        Nastavení této zásady může omezit barevnou hloubku zobrazení všech připojení, která využívají protokol RDP. Omezení barevné hloubky může zlepšit výkon připojení (hlavně na pomalých linkách) a snížit zatížení serveru.
+Nastavení této zásady může omezit barevnou hloubku zobrazení všech připojení, která využívají protokol RDP. Omezení barevné hloubky může zlepšit výkon připojení (hlavně na pomalých linkách) a snížit zatížení serveru.
 
-        Pokud nastavení této zásady povolíte, bude barevná hloubka určená maximální barevnou hloubkou povolenou pro připojení uživatele pomocí protokolu RDP. Skutečná barevná hloubka připojení je určená podporou barev, která je k dispozici v klientském počítači. Pokud vyberete možnost Kompatibilní s klientem, použije se nejvyšší barevná hloubka podporovaná klientem.
+Pokud nastavení této zásady povolíte, bude barevná hloubka určená maximální barevnou hloubkou povolenou pro připojení uživatele pomocí protokolu RDP. Skutečná barevná hloubka připojení je určená podporou barev, která je k dispozici v klientském počítači. Pokud vyberete možnost Kompatibilní s klientem, použije se nejvyšší barevná hloubka podporovaná klientem.
 
-        Pokud nastavení této zásady zakážete nebo nenakonfigurujete, nebude barevná hloubka připojení určená na úrovni zásad skupiny.
+Pokud nastavení této zásady zakážete nebo nenakonfigurujete, nebude barevná hloubka připojení určená na úrovni zásad skupiny.
 
-        Poznámka:
-        1.	Nastavení 24bitové barevné hloubky je podporované jenom v systémech Windows Server 2003 a Windows XP Professional.
-        2.	Hodnota určená tímto nastavením zásad není použitá u připojení z klientských počítačů, které používají protokol RDP (Remote Desktop Protocol) minimálně verze 8.0 (počítače minimálně se systémem Windows 8 nebo Windows Server Technical Preview 2). Pro tato připojení se vždycky používá 32bitová barevná hloubka.
-        3.	U připojení z klientských počítačů, které používají protokol RDP (Remote Desktop Protocol) verze 7.1 nebo starší a připojují se k počítačům minimálně se systémem Windows 8 nebo Windows Server Technical Preview 2, se jako barevná hloubka použije nejmenší z následujících hodnot:
-        a.	Hodnota určená tímto nastavením zásad
-        b.	Maximální barevná hloubka podporovaná klientem
-        c.	Hodnota vyžádaná klientem
+Poznámka:
+1.	Nastavení 24bitové barevné hloubky je podporované jenom v systémech Windows Server 2003 a Windows XP Professional.
+2.	Hodnota určená tímto nastavením zásad není použitá u připojení z klientských počítačů, které používají protokol RDP (Remote Desktop Protocol) minimálně verze 8.0 (počítače minimálně se systémem Windows 8 nebo Windows Server 2012). Pro tato připojení se vždycky používá 32bitová barevná hloubka.
+3.	U připojení z klientských počítačů, které používají protokol RDP (Remote Desktop Protocol) verze 7.1 nebo starší a připojují se k počítačům minimálně se systémem Windows 8 nebo Windows Server 2012, se jako barevná hloubka použije nejmenší z následujících hodnot:
+a.	Hodnota určená tímto nastavením zásad
+b.	Maximální barevná hloubka podporovaná klientem
+c.	Hodnota vyžádaná klientem
 
-        Pokud klient nepodporuje minimálně 16bitovou barevnou hloubku, připojení se ukončí.
+Pokud klient nepodporuje minimálně 16bitovou barevnou hloubku, připojení se ukončí.
       </string>
       <string id="TS_COLORDEPTH">Omezit maximální barevnou hloubku</string>
       <string id="TS_Comp_Help">Řídí konfiguraci služby Vzdálená plocha a vlastnosti klientských relací pro jednotlivé počítače nebo skupiny počítačů.</string>
@@ -564,7 +564,7 @@ Poznámky:
       <string id="TS_SD_Loc">Konfigurovat název serveru služby Zprostředkovatel připojení k VP</string>
       <string id="TS_SD_Loc_Explain">Nastavení této zásady umožňuje určit server Zprostředkovatele připojení k VP, který bude server hostitele relací VP používat ke sledování a přesměrování uživatelských relací ve farmě serverů hostitelů VP s vyrovnáváním zatížení. Na zadaném serveru musí být spuštěná služba Zprostředkovatel připojení k vzdálené ploše. Všechny servery hostitelů relací VP ve farmě s vyrovnáváním zatížení by měly používat stejný server Zprostředkovatele připojení k VP.
 
-Pokud nastavení této zásady povolíte, musíte zadat server Zprostředkovatele připojení k VP pomocí jeho plně kvalifikovaného názvu domény (FQDN). V systému Windows Server Technical Preview 2 musíte pro nastavení vysoké dostupnosti s více servery služby Zprostředkovatel připojení k VP uvést seznam středníkem oddělených plně kvalifikovaných názvů domény (FQDN) všech serverů služby Zprostředkovatel připojení k VP.
+Pokud nastavení této zásady povolíte, musíte zadat server Zprostředkovatele připojení k VP pomocí jeho plně kvalifikovaného názvu domény (FQDN). V systému Windows Server 2012 musíte pro nastavení vysoké dostupnosti s více servery služby Zprostředkovatel připojení k VP uvést seznam středníkem oddělených plně kvalifikovaných názvů domény (FQDN) všech serverů služby Zprostředkovatel připojení k VP.
 
 Pokud nastavení této zásady zakážete nebo nenakonfigurujete, není nastavení této zásady určené na úrovni zásad skupiny.
 
@@ -950,19 +950,17 @@ Pokud nastavení této zásady zakážete nebo nenakonfigurujete, o tom, zda kli
 
     <string id="TS_SERVER_IMAGE_QUALITY">Nastavit kvalitu obrazu pro adaptivní grafiku RemoteFX</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Toto nastavení zásad umožňuje určit vizuální kvalitu pro vzdálené uživatele při připojení k tomuto počítači pomocí programu Připojení ke vzdálené ploše. Pomocí tohoto nastavení zásad můžete dosáhnout vyváženého využití šířky pásma a nabízené kvality zobrazení.
- 
-Pokud toto nastavení zásad povolíte a nastavíte střední úroveň kvality, adaptivní grafika RemoteFX bude používat mechanismus kódování, který má za následek střední kvalitu obrazu. Tento režim spotřebovává ze všech režimů kvality nejmenší šířku pásma sítě. 
-Pokud toto nastavení zásad povolíte a nastavíte vysokou úroveň kvality, adaptivní grafika RemoteFX bude používat mechanismus kódování, který má za následek vysokou kvalitu obrazu a spotřebovává přijatelnou šířku pásma sítě. 
-Pokud toto nastavení zásad povolíte a nastavíte bezeztrátovou kvalitu, adaptivní grafika RemoteFX bude používat bezeztrátové kódování. V tomto režimu není integrita barev grafických dat nijak ovlivněna. Toto nastavení však vede k významnému zvýšení potřebné šířky pásma sítě. Doporučujeme toto nastavení používat jen ve velmi zvláštních případech. 
- 
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, adaptivní grafika RemoteFX bude používat mechanismus kódování, který má za následek střední kvalitu obrazu.
-
-    
-
+      Pokud toto nastavení zásad povolíte a nastavíte nízkou úroveň kvality, adaptivní grafika RemoteFX bude používat mechanismus kódování, který má za následek nízkou kvalitu obrazu. Tento režim spotřebovává ze všech režimů kvality nejmenší šířku pásma sítě.
+      Pokud toto nastavení zásad povolíte a nastavíte střední úroveň kvality, adaptivní grafika RemoteFX bude používat mechanismus kódování, který má za následek střední kvalitu obrazu. Tento režim poskytuje grafiku v lepší kvalitě než předchozí nastavení a spotřebovává nižší šířku pásma sítě než vysoká kvalita.
+      Pokud toto nastavení zásad povolíte a nastavíte vysokou úroveň kvality, adaptivní grafika RemoteFX bude používat mechanismus kódování, který má za následek vysokou kvalitu obrazu a spotřebovává přijatelnou šířku pásma sítě.
+      Pokud toto nastavení zásad povolíte a nastavíte bezeztrátovou kvalitu, adaptivní grafika RemoteFX bude používat bezeztrátové kódování. V tomto režimu není integrita barev grafických dat nijak ovlivněná. Toto nastavení ale vede k významnému zvýšení potřebné šířky pásma sítě. Doporučujeme toto nastavení používat jen ve velmi specifických případech.
+      Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, adaptivní grafika RemoteFX bude používat mechanismus kódování, který má za následek střední kvalitu obrazu.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Bezztrátová</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Vysoká</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Střední</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Nízká</string>      
 
     <string id="TS_SERVER_PROFILE">Konfigurovat adaptivní grafiku RemoteFX</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">Nastavení této zásady umožňuje správci konfigurovat výkon technologie RemoteFX pro hostitele relací Vzdálené plochy nebo Hostitele virtualizace vzdálené plochy. Ve výchozím nastavení systém zvolí nejvhodnější výkon na základě dostupné šířky pásma.
@@ -991,14 +989,13 @@ Můžete také zvolit, že se kompresní algoritmus protokolu RDP nemá použív
 Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude se používat výchozí kompresní algoritmus protokolu RDP.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Rovnováha mezi pamětí a šířkou pásma</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimalizováno na použití méně šířky pásma</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Optimalizováno na použití méně paměti</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Nepoužívat kompresní algoritmus RDP</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Rovnováha mezi pamětí a šířkou pásma</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimalizováno na použití méně šířky pásma</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Optimalizováno na použití méně paměti</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Nepoužívat kompresní algoritmus RDP</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Použít pro aplikaci RemoteApp pokročilou grafiku RemoteFX</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     Toto nastavení zásad umožňuje povolit aplikacím RemoteApp používání pokročilé grafiky včetně podpory průhledností, živých miniatur a plynulého přesouvání aplikace. Toto nastavení zásad se vztahuje pouze k aplikacím RemoteApp a ne k relacím vzdálené plochy.
 
 Pokud toto nastavení zásad povolíte nebo nenakonfigurujete, budou aplikace RemoteApp publikované z tohoto hostitelského serveru vzdálené plochy používat tuto pokročilou grafiku.
@@ -1007,6 +1004,30 @@ Pokud toto nastavení zásad zakážete, nebudou aplikace RemoteApp publikované
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Nakonfigurovat hardwarové kódování H.264/AVC pro připojení ke vzdálené ploše</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Nastavení této zásady umožňuje povolit podporu hardwarového kódování H.264/AVC pro připojení ke vzdálené ploše. Pokud hardwarové kódování povolíte, pak se v případě chyby pokusíme použít softwarové kódování. Pokud tuto zásadu zakážete nebo nenakonfigurujete, budeme vždycky používat softwarové kódování.
+        
+Pokud nastavíte možnost kódování Vždycky to zkusit, služba Vzdálená plocha se vždycky pokusí použít hardwarové kódování H.264/AVC v případě, že je k dispozici. Mějte na paměti, že v případě systému Windows Server s technologií Hyper-V s povolenou funkcí RemoteFX vGPU musí být tato zásada nastavená na hostitelském počítači Hyper-V.
+        
+Pokud nastavíte možnost kódování Zkusit to jenom u virtuálních počítačů s funkcí vGPU RemoteFX, mějte na paměti, že v případě systému Windows Server s technologií Hyper-V s povolenou funkcí RemoteFX vGPU musí být tato zásada nastavená na hostitelském počítači Hyper-V.
+        
+Pokud nastavíte možnost kódování Zkusit to jenom u scénářů bez funkce RemoteFX vGPU, služba Vzdálená plocha se pokusí použít hardwarové kódování u všech scénářů s výjimkou těch, kde se používá vGPU RemoteFX.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Vždycky to zkusit</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Zkusit to jenom u virtuálních počítačů s funkcí vGPU RemoteFX</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Zkusit to jenom u scénářů bez funkce RemoteFX vGPU</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">Upřednostňovat grafický režim H.264/AVC 444 u připojení ke vzdálené ploše</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Nastavení této zásady určuje, že se má u scénářů bez funkce vGPU RemoteFX upřednostňovat grafický režim H.264/AVC 444. Pokud toto nastavení použijete na serveru RDP, bude tento server používat H.264/AVC 444 jako kodek u připojení v protokolu RDP 10, v němž může klient i server používat H.264/AVC 444.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Zakázat dekódování s hardwarovou akcelerací</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Nastavení této zásady určuje, jestli se u připojení ke vzdálené ploše může používat hardwarová akcelerace, pokud je k dispozici podporovaný hardware. Pokud toto nastavení použijete, bude klient Vzdálené plochy používat jenom softwarové dekódování. Pokud například máte problém, u kterého máte podezření, že může souviset s hardwarovou akcelerací, použijte toto nastavení k jejímu zakázání. Pokud problém nezmizí, budete vědět, že musíte příčinu hledat i v jiných oblastech. Pokud toto nastavení zakážete nebo ponecháte nenakonfigurované, bude klient Vzdálené plochy používat dekódování s hardwarovou akcelerací v případě, že je k dispozici podporovaný hardware.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ Ve výchozím nastavení jsou relace Připojení ke vzdálené ploše, které vy
 
       <string id="TS_SERVER_LEGACY_RFX">Povolit kódování RemoteFX pro klienty RemoteFX určené pro systém Windows Server 2008 R2 SP1</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Nastavení této zásady umožňuje nakonfigurovat kódování grafiky tak, aby se na serveru hostitele relací Vzdálené plochy používal kodek RemoteFX, takže tyto relace budou kompatibilní s tenkými klientskými zařízeními bez systému Windows, která jsou určena pro systém Windows Server 2008 R2 SP1. Tito klienti podporují pouze kodek RemoteFX systému Windows Server 2008 R2 SP1. Pokud nastavení této zásady povolíte, budou relace uživatelů na tomto serveru používat ke kódování pouze kodek RemoteFX systému Windows Server 2008 R2 SP1. Tento režim je kompatibilní s tenkými klientskými zařízeními, jež podporují pouze kodek RemoteFX systému Windows Server 2008 R2 SP1. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, nebudou se tenká klientská zařízení, jež podporují pouze kodek RemoteFX systému Windows Server 2008 R2 SP1, schopna k tomuto serveru připojit. Nastavení této zásady platí pouze pro klienty, kteří používají protokol RDP (Remote Desktop Protocol) 7.1, a neovlivňuje klienty používající jiné verze tohoto protokolu.
       
       </string>
@@ -1189,7 +1209,7 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zobrazí se úvo
           <label>Používané licenční servery:</label>
         </textBox>
         <text>Názvy licenčních serverů oddělte čárkami.</text>
-        <text>Příklad: Server1,Server2.priklad.com,192.168.1.1</text>
+        <text>Příklad: Server1,Server2.example.com,192.168.1.1</text>
       </presentation>
       <presentation id="TS_LICENSING_MODE">
         <dropdownList refId="TS_LICENSING_NAME" noSort="true" defaultItem="0">Určete licenční režim pro server hostitele relací VP.</dropdownList>
@@ -1296,6 +1316,9 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zobrazí se úvo
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">Kompresní algoritmus pro data RDP:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Upřednostňovat hardwarové kódování AVC:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Vzhled:</dropdownList>

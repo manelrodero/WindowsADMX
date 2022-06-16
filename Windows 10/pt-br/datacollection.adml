@@ -6,13 +6,13 @@
   <resources>
     <stringTable>
       <string id="AllowTelemetry">Permitir Telemetria</string>
-      <string id="AllowTelemetry_0">0 - Desativado [Somente Empresa]</string>
+      <string id="AllowTelemetry_0">0 - Segurança [Somente Empresa]</string>
       <string id="AllowTelemetry_1">1 - Básico</string>
       <string id="AllowTelemetry_2">2 - Aprimorado</string>
       <string id="AllowTelemetry_3">3 - Total</string>
-      <string id="AllowTelemetry_Explain">Essa configuração de política determina a quantidade de dados de uso e diagnóstico relatados à Microsoft. Um valor igual a 0 significa que os dados de telemetria de componentes do sistema operacional não são enviados à Microsoft. A configuração do valor 0 é aplicável apenas a dispositivos empresariais e servidores. A configuração do valor 0 para outros dispositivos é o equivalente ao valor 1. Um valor igual a 1 envia apenas uma quantidade limitada ou básica de dados de uso e diagnóstico. Observe que configurar os valores 0 e 1 prejudicará algumas experiências no dispositivo. Um valor igual a 2 envia dados de uso e diagnóstico aprimorados. Um valor igual a 3 envia os mesmos dados que o valor 2, mais os dados de diagnóstico complementares, como o estado do sistema no momento de um travamento ou falha, e os arquivos e o conteúdo que podem ter causado o problema.
+      <string id="AllowTelemetry_Explain">Essa configuração de política determina a quantidade de dados de uso e diagnóstico relatada à Microsoft. Um valor igual a 0 enviará dados mínimos à Microsoft. Esses dados incluem dados da Ferramenta de Remoção de Software Mal-Intencionado (MSRT) e do Windows Defender, se habilitados, além de configurações de clientes de telemetria. A configuração de um valor igual 0 aplica-se somente a empresas, EDU, IoT e dispositivos de servidor. Um valor igual a 1 envia somente uma quantidade básica de dados de uso e diagnóstico. Observe que a configuração de valores iguais a 0 e 1 prejudica algumas experiências no dispositivo. Um valor igual a 2 envia dados de uso e diagnóstico avançados. Um valor igual a 3 envia os mesmos dados que um valor igual a 2, além de dados adicionais de diagnóstico, incluindo os arquivos e o conteúdo que podem ter causado o problema. As configurações de telemetria do Windows 10 aplicam-se ao sistema operacional Windows e a alguns aplicativos do usuário. Essa configuração não é utilizada para aplicativos de terceiros com o Windows 10.
 
-Se você desabilitar ou não definir essa configuração de política, os usuários poderão configurar o nível Telemetria em Configurações.
+Se você desabilitar ou não definir essa configuração de política, os usuários poderão configurar o nível de Telemetria em Configurações.
 
 </string>
       <string id="EnableExperimentation">Desabilitar recursos ou configurações pré-lançamento</string>

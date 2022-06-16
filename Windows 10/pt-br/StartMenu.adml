@@ -144,12 +144,12 @@ Se esta configuração for desabilitada ou não for definida, todos os textos po
 Se você habilitar essa configuração, impedirá que o usuário selecione aplicativos, redimensione blocos, fixe/desafixe blocos ou blocos secundários, entre no modo de personalização e reorganize blocos na tela inicial e em Aplicativos.
 
 Se você desabilitar ou não definir essa configuração, permitirá que o usuário selecione aplicativos, redimensione blocos, fixe/desafixe blocos ou blocos secundários, entre no modo de personalização e reorganize blocos na tela inicial e em Aplicativos.</string>
-      <string id="ClearTilesOnExit">Limpar o histórico de notificações de mosaico ao sair</string>
-      <string id="ClearTilesOnExit_Help">Se você habilitar esta configuração, o sistema excluirá as notificações de mosaico quando o usuário fizer logoff. Consequentemente, os Mosaicos na exibição inicial sempre mostrarão o conteúdo padrão quando o usuário fizer logon. Além disso, quaisquer versões em cache dessas notificações serão limpas quando o usuário fizer logoff.
+      <string id="ClearTilesOnExit">Limpar notificações de bloco durante o logon</string>
+      <string id="ClearTilesOnExit_Help">Se você habilitar essa configuração, o sistema excluirá as notificações de bloco quando o usuário fizer logon. Consequentemente, os Blocos na exibição inicial sempre mostrarão o conteúdo padrão quando o usuário fizer logon. Além disso, todas as versões dessas notificações em cache serão limpas quando o usuário fizer logon.
 
-Se você desabilitar ou não definir esta configuração, o sistema manterá as notificações e, quando o usuário fizer logon, os mosaicos aparecerão exatamente como estavam quando o usuário fez logoff, inclusive o histórico das notificações anteriores para cada mosaico.
+Se você desabilitar ou não definir essa configuração, o sistema manterá as notificações e, quando o usuário fizer logon, os blocos serão exibidos exatamente como estavam quando o usuário fez logoff, inclusive o histórico de notificações anteriores de cada bloco.
 
-Esta configuração não impede que novas notificações apareçam. Consulte a configuração "Desligar Notificações de Aplicativos" para impedir novas notificações.</string>
+Essa configuração não impede que novas notificações sejam exibidas. Consulte a configuração "Desligar Notificações de Aplicativos" para impedir novas notificações.</string>
       <string id="StartPinAppsWhenInstalled">Fixar aplicativos na tela inicial quando instalados</string>
       <string id="StartPinAppsWhenInstalled_Help">Essa configuração de política permite fixar os aplicativos na tela inicial por padrão, quando eles são incluídos na lista por AppID.</string>
 
@@ -569,6 +569,12 @@ Se você desabilitar ou não definir essa configuração de política, os aplica
 Se você habilitar essa configuração de política, a tela inicial aparecerá na tela usada pelo usuário quando ele pressionar a tecla do logotipo do Windows.
 
 Se você desabilitar ou não definir essa configuração de política, a tela inicial sempre aparecerá na tela principal quando o usuário pressionar a tecla do logotipo do Windows. Os usuários ainda poderão abrir a tela inicial em outras exibições, pressionando o botão Iniciar na exibição correspondente. Além disso, o usuário poderá definir essa configuração.</string>
+      <string id="ForceStartSize_DisplayName">Forçar para Iniciar ser do tamanho da tela inteira ou do tamanho do menu</string>
+      <string id="ForceStartSize_ExplainText">Se você habilitar essa política e defini-la como Menu Iniciar ou Iniciar em tela inteira, Iniciar terá esse tamanho e os usuários não poderão alterar o tamanho de Iniciar em Configurações. 
+
+Se você desabilitar ou não definir essa configuração de política, o Windows selecionará automaticamente o tamanho com base no fator forma de hardware e os usuários poderão alterar o tamanho de Iniciar em Configurações.</string>
+      <string id="ForceLauncherSize_Collapsed">Menu Iniciar</string>
+      <string id="ForceLauncherSize_Expanded">Iniciar em tela inteira</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Se você desabilitar ou não definir essa configuração de política, a tela in
           <label>Arquivo de layout de Iniciar</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Escolha um dos tamanhos a seguir</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

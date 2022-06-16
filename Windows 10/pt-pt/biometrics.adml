@@ -6,6 +6,7 @@
   <resources>
     <stringTable>
       <string id="BiometricsConfiguration">Biometria</string>
+      <string id="FaceConfiguration">Características Faciais</string>
       <string id="Biometrics_EnableBio">Permitir a utilização de biometria</string>
       <string id="Biometrics_EnableBio_Help">Esta política de definição permite ou impede a execução do Serviço de Biometria do Windows neste computador.
         
@@ -42,6 +43,15 @@ Se ativar esta definição de política, poderá configurar o tempo limite do ev
 
 Se desativar ou não configurar esta definição de política, será utilizado o valor predefinido de 10 segundos para tempos limite de eventos de mudança rápida de utilizador.
 
+</string>
+      <string id="Face_EnhancedAntiSpoofing">Utilizar anti-falsificação avançada quando disponível</string>
+      <string id="Face_EnhancedAntiSpoofing_Help">This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
+
+If you do not configure this policy setting, users will be able to choose whether or not to use enhanced anti-spoofing on supported devices.
+
+If you enable this policy setting, Windows will require all users on the device to use anti-spoofing for facial features, on devices which support it.
+
+If you disable this policy setting, enhanced anti-spoofing is turned off for all users on the device and they will be unable to turn it on.
 </string>
     </stringTable>
     <presentationTable>

@@ -5,14 +5,15 @@
   <description>itt adja meg a leírást</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Legalább Windows 10 vagy Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Legalább Windows 8 vagy Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Legalább Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Legalább Windows 8 Enterprise vagy Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Legalább Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Legalább Windows 8 Enterprise vagy Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Csak Windows 7 vagy Windows Server 2008 R2 (és szervizcsomagjaik)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista és Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Legalább Microsoft Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Legalább Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Legalább Windows Server Technical Preview 2 telepített RDSH szerepkörrel</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Legalább Windows Server 2012 telepített RDSH szerepkörrel</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Legalább Windows 7 Service Pack 1 vagy Windows Server 2008 R2 Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Legalább Windows Vista Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Legalább Windows 2000 rendszerű terminálszolgáltatás</string>
@@ -43,15 +44,15 @@
       <string id="TS_32_bit">32 bit</string>
 
       <string id="TS_AUDIOMAP_EXPLAIN">Ezzel a házirend-beállítással megadhatja, hogy a felhasználók átirányíthatják-e a távoli számítógép hang- és videokimenetét a Távoli asztali szolgáltatások munkamenetében.
-A felhasználók a Távoli asztali kapcsolat program Helyi erőforrások lapján, a távoli hangbeállításokkal adhatják meg, hogy hol történjen a távoli számítógép hangkimenetének lejátszása. A felhasználók a távoli hang távoli számítógépen vagy helyi számítógépen történő lejátszása között választhatnak. A hangok lejátszásának mellőzése ugyancsak beállítható. A videólejátszás a Remote Desktop Protocol-fájl (.rdp) videólejátszási beállításával konfigurálható. Alapértelmezés szerint a videólejátszás engedélyezve van.
+A felhasználók a Távoli asztali kapcsolat program Helyi erőforrások lapján, a távoli hangbeállításokkal adhatják meg, hogy hol történjen a távoli számítógép hangkimenetének lejátszása: a távoli számítógépen vagy a helyi számítógépen. A hangok lejátszásának mellőzése ugyancsak beállítható. A videolejátszás a Remote Desktop Protocol-fájl (.rdp) videolejátszási beállításával konfigurálható. A videók lejátszása alapértelmezés szerint engedélyezve van.
 
-Alapértelmezés szerint a hang- és videólejátszás átirányítása nem engedélyezett, ha Windows Server 2008 R2, Windows Server 2008 vagy Windows Server 2003 operációs rendszert futtató számítógéphez csatlakozik. Alapértelmezés szerint a hang- és videólejátszás átirányítása engedélyezett, ha Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista vagy Windows XP Professional operációs rendszert futtató számítógéphez csatlakozik.
+Ha Windows Server 2008 R2, Windows Server 2008 vagy Windows Server 2003 rendszerű számítógéphez csatlakozik, a hang- és videolejátszás átirányítása alapértelmezés szerint nem engedélyezett. Ha Windows 8, Windows Server 2012, Windows 7, Windows Vista vagy Windows XP Professional rendszerű számítógéphez csatlakozik, akkor a hang- és videolejátszás átirányítása alapértelmezés szerint engedélyezett.
 
-A házirend-beállítás engedélyezésével bekapcsolja a hang- és videólejátszás átirányítását.
+A házirend-beállítás engedélyezésével bekapcsolja a hang- és videolejátszás átirányítását.
 
-Ha letiltja ezt a házirend-beállítást, a hang- és videólejátszás átirányítása még akkor sem lesz bekapcsolva, ha a hanglejátszás átirányítása be van állítva a Távoli asztali kapcsolat programban, vagy ha a videólejátszás be van állítva az .rdp fájlban.
+Ha letiltja ezt a házirend-beállítást, a hang- és videolejátszás átirányítása még akkor sem lesz bekapcsolva, ha a hanglejátszás átirányítása be van állítva a Távoli asztali kapcsolat programban, vagy ha a videolejátszás be van állítva az RDP-fájlban.
 
-Ha nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a hang- és videólejátszás átirányítását a csoportházirend szintjén. 
+Ha nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a hang- és videolejátszás átirányítását a csoportházirend szintjén. 
 </string>
       <string id="TS_AUDIOCAPTUREMAP_EXPLAIN">Ezzel a házirend-beállítással megadhatja, hogy a felhasználók rögzíthetnek-e hangot egy távoli számítógépre a Távoli asztali szolgáltatások munkamenetében.
 A felhasználók a Távoli asztali kapcsolat program Helyi erőforrások lapján, a távoli hangbeállításokkal adhatják meg, hogy történjen-e hangrögzítés a távoli számítógépre. A felhasználók a helyi számítógép hangbemeneti eszközével (például beépített mikrofonnal) rögzíthetnek hangot.
@@ -154,24 +155,23 @@ Ha letiltja a házirend-beállítást, a Távoli asztali szolgáltatások mindig
 Ha nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a vágólap adatainak átirányítását a csoportházirend szintjén. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Ez a házirend-beállítás lehetővé teszi a maximális színfelbontás (színmélység) meghatározását a Távoli asztali szolgáltatásokkal létesített kapcsolatok számára.
+      <string id="TS_COLOR_EXPLAIN">Ez a házirend-beállítás lehetővé teszi a maximális színfelbontás (színmélység) meghatározását a Távoli asztali szolgáltatásokkal létesített kapcsolatokhoz.
 
-        A házirend-beállítással bármilyen, RDP protokollon keresztül létesített kapcsolat színmélységéhez beállíthat egy korlátot. A színmélység korlátozása javíthatja a kapcsolat teljesítményét (elsősorban a lassú kapcsolatok esetében) és csökkenti a kiszolgáló terhelését.
+Ezzel a házirend-beállítással az RDP protokollt használó kapcsolatok bármelyikének színmélységéhez beállítható egy korlát. A színmélység korlátozása javíthatja a kapcsolat teljesítményét (elsősorban lassú kapcsolatok esetén) és csökkentheti a kiszolgáló terhelését.
 
-        Ha engedélyezi ezt a házirend-beállítást, a megadott színmélység lesz a felhasználó RDP-kapcsolata számára engedélyezett maximális színmélység. A kapcsolat aktuális színmélységét az ügyfélszámítógépen rendelkezésre álló színtámogatás határozza meg. Ha az Ügyfél-kompatibilis beállítást adja meg, a rendszer az ügyfél által támogatott legnagyobb színmélységet használja.
+Ha engedélyezi ezt a házirend-beállítást, a megadott színmélység lesz a felhasználó RDP-kapcsolatához engedélyezett maximális színmélység. A kapcsolat tényleges színmélységét az ügyfélszámítógépen rendelkezésre álló színtámogatás határozza meg. Ha az Ügyfél-kompatibilis beállítást adja meg, az ügyfél által támogatott legnagyobb színmélység lép érvénybe.
 
-        Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a kapcsolatok színmélységét a csoportházirend szintjén.
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a kapcsolatok színmélységét a csoportházirend szintjén.
 
-        Megjegyzés:
-        1.	A 24 bites színmélységet csak a Windows Server 2003 és a Windows XP Professional támogatja.
-        2.	Ez a házirend-beállítás nem érinti a Remote Desktop Protocol 8.0 vagy újabb verzióját használó (legalább Windows 8 vagy Windows Server Technical Preview 2 rendszerű) ügyfélszámítógépekkel létesített kapcsolatokat. Ilyen kapcsolatok esetén a színmélység mindig 32 bites.
-        3.	A Remote Desktop Protocol 7.1 vagy korábbi verzióját használó ügyfélszámítógépek és a legalább Windows 8 vagy Windows Server Technical Preview 2 rendszerű számítógépek közötti kapcsolat esetén az alábbi értékek közül a legkisebb lesz a színmélység-formátum:
-        a.	A házirend-beállítás által megadott érték
-        b.	Az ügyfél által támogatott legnagyobb színmélység
-        c.	Az ügyfél által kért érték
+Megjegyzések:
+1.	A 24 bites színmélységet csak a Windows Server 2003 és a Windows XP Professional támogatja.
+2.	Az ebben a házirend-beállításban megadott érték nem vonatkozik a Remote Desktop Protocol 8.0-s vagy újabb verzióját használó (legalább Windows 8-as vagy Windows Server 2012-es) ügyfélszámítógépekkel létesített kapcsolatokra. Ilyen kapcsolatok esetén a színmélység mindig 32 bites.
+3.	A Remote Desktop Protocol 7.1-es vagy régebbi verzióját használó ügyfélszámítógépek és a legalább Windows 8-as vagy Windows Server 2012-es számítógépek közötti kapcsolatok esetén az alábbi értékek közül a legkisebb lesz a színmélységformátum:
+a.	A házirend-beállítás által megadott érték
+b.	Az ügyfél által támogatott legnagyobb színmélység
+c.	Az ügyfél által kért érték
 
-        Ha az ügyfél nem támogatja a legalább 16 bites színmélységet, a kapcsolat megszakad.
+Ha az ügyfél nem támogatja a legalább 16 bites színmélységet, a kapcsolat megszakad.
       </string>
       <string id="TS_COLORDEPTH">Maximális színmélység korlátozása</string>
       <string id="TS_Comp_Help">A Távoli asztali szolgáltatások konfigurálásának, valamint az egyes számítógépeken vagy számítógépcsoportokban futtatott ügyfélmunkamenetek tulajdonságainak vezérlése.</string>
@@ -562,19 +562,19 @@ Megjegyzések:
 
 </string>
       <string id="TS_SD_Loc">Távoli asztali kapcsolat-átvitelszervező kiszolgáló nevének konfigurálása</string>
-      <string id="TS_SD_Loc_Explain">Ezzel a házirend-beállítással megadhatja azt a távoli asztali kapcsolat-átvitelszervező kiszolgálót, amelynek segítségével a távoli asztali munkamenetgazda-kiszolgáló nyomon követi és átirányítja a felhasználói munkameneteket egy elosztott terhelésű távoli asztali munkamenet-gazdai kiszolgálófarmban. A megadott kiszolgálón futnia kell a Távoli asztali kapcsolat-átvitelszervező szolgáltatásnak. Az elosztott terhelésű farmban lévő összes távoli asztali munkamenetgazda-kiszolgálónak ugyanazt a távoli asztali kapcsolat-átvitelszervező kiszolgálót kell használnia.
+      <string id="TS_SD_Loc_Explain">Ezzel a házirend-beállítással megadhatja azt a távoli asztali kapcsolatszervező kiszolgálót, amellyel a távoli asztali munkamenetgazda-kiszolgáló nyomon követi és átirányítja a felhasználói munkameneteket egy elosztott terhelésű távoli asztali munkamenet-gazdai kiszolgálófarmban. A megadott kiszolgálón futnia kell a Távoli asztali kapcsolatszervező szolgáltatásnak. Az elosztott terhelésű farmban lévő összes távoli asztali munkamenetgazda-kiszolgálónak ugyanazt a távoli asztali kapcsolatszervező kiszolgálót kell használnia.
 
-Ha engedélyezi ezt a házirend-beállítást, meg kell adnia a távoli asztali kapcsolat-átvitelszervező kiszolgálót annak teljes tartománynevét használva. Ha több távoli asztali kapcsolat-átvitelszervező kiszolgálóval szeretne magas rendelkezésre állású telepítést végrehajtani a Windows Server Technical Preview 2 rendszerben, adja meg ezen kiszolgálók teljes tartománynevét pontosvesszőkkel elválasztva.
+Ha engedélyezi ezt a házirend-beállítást, meg kell adnia a távoli asztali kapcsolatszervező kiszolgálót annak teljes tartománynevét használva. Ha több távoli asztali kapcsolatszervező kiszolgálóval szeretne magas rendelkezésre állású környezetet kiépíteni a Windows Server 2012 rendszerben, adja meg ezen kiszolgálók teljes tartománynevét pontosvesszőkkel elválasztva.
 
-Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a házirend-beállítást a csoportházirend szintjén.
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor azt a rendszer nem szabályozza a csoportházirend szintjén.
 
 Megjegyzések:
 
-     1. A Windows Server 2008 rendszer verziói közül a Windows Server 2008 Standard és az annál újabb verziók támogatják ezt a házirend-beállítást.
+     1. A Windows Server 2008 rendszer kiadásai közül a Windows Server 2008 Standard és az annál újabb kiadások támogatják ezt a házirend-beállítást.
 
-     2. Ez a házirend-beállítás csak akkor érvényes, ha engedélyezi a Csatlakozás a Távoli asztali kapcsolat-átvitelszervezőhöz házirend-beállítást.
+     2. Ez a házirend-beállítás csak akkor érvényes, ha engedélyezi a Csatlakozás a Távoli asztali kapcsolatszervezőhöz házirend-beállítást.
 
-     3. Egy kiszolgáló csak úgy lehet a Távoli asztali munkamenet-gazdai kiszolgálófarm aktív tagja, ha a farmban lévő összes Távoli asztali munkamenetgazda-kiszolgáló számítógépfiókja tagja a Távoli asztali kapcsolat-átvitelszervező kiszolgáló következő helyi csoportjai valamelyikének: Munkamenetcímtár-számítógépek, Munkamenet-átvitelszervező számítógépek vagy RDS-végpontkiszolgálók.
+     3. Egy adott kiszolgáló csak úgy lehet a távoli asztali munkamenet-gazdai kiszolgálófarm aktív tagja, ha a farmban lévő összes távoli asztali munkamenetgazda-kiszolgáló számítógépfiókja tagja a távoli asztali kapcsolatszervező kiszolgáló következő helyi csoportjai valamelyikének: Munkamenetcímtár-számítógépek, Munkamenet-átvitelszervező számítógépek vagy RDS-végpontkiszolgálók.
 
 </string>
       <string id="TS_SD_Node">Távoli asztali kapcsolat-átvitelszervező</string>
@@ -949,20 +949,18 @@ Ha letiltja vagy nem konfigurálja ezt a beállítást, a távoli asztali kapcso
 </string>
 
     <string id="TS_SERVER_IMAGE_QUALITY">A képminőség beállítása a RemoteFX adaptív grafikus modul esetén</string>
-    <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Ezzel a házirend-beállítással beállíthatja a képminőséget a távoli asztali kapcsolat használatával csatlakozó felhasználók számára. Ezzel a házirend-beállítással kiegyensúlyozhatja a hálózati sávszélesség használatát és a képminőséget.
- 
-Ha engedélyezi ezt a házirend-beállítást és a minőséget Közepes értékre állítja, a RemoteFX adaptív grafikus modul olyan kódolási mechanizmust alkalmaz, amely közepes minőségű képeket eredményez. Az összes minőségi mód közül ez igényli a legkisebb hálózati sávszélességet. 
-Ha engedélyezi ezt a házirend-beállítást, és a minőséget Magas értékre állítja, a RemoteFX adaptív grafikus modul olyan kódolási mechanizmust alkalmaz, amely kiváló minőségű képeket eredményez és közepes hálózati sávszélességet igényel. 
-Ha engedélyezi ezt a házirend-beállítást és a minőséget Veszteségmentes értékre állítja, a RemoteFX adaptív grafikus modul veszteségmentes kódolást alkalmaz. Ez a mód nincs hatással a grafikus adatok színintegritására. Ez a beállítás azonban jelentősen megnöveli a hálózati sávszélesség-használatot. Emiatt javasoljuk, hogy csak különleges esetekben használja. 
- 
+    <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Ezzel a házirend-beállítással beállíthatja a képminőséget az ehhez a géphez távoli asztali kapcsolattal csatlakozó távoli felhasználóknak, így kiegyensúlyozhatja a hálózati sávszélesség kihasználtságát és a képminőséget.
+Ha engedélyezi ezt a házirend-beállítást és a Gyenge értékre állítja a minőséget, a RemoteFX adaptív grafikus modul olyan kódolási mechanizmust alkalmaz, amely gyenge minőségű képeket eredményez. Az összes minőségi mód közül ez igényli a legkisebb hálózati sávszélességet.
+Ha engedélyezi ezt a házirend-beállítást, és a minőséget a Közepes értékre állítja, a RemoteFX adaptív grafikus modul olyan kódolási mechanizmust használ, amely közepes minőségű képeket eredményez. Ez a minőségi mód a gyenge minőségnél jobb minőséget ad, és a kiváló minőséghez szükségesnél kisebb a sávszélességigénye.
+Ha engedélyezi ezt a házirend-beállítást, és a Kiváló értékre állítja a minőséget, a RemoteFX adaptív grafikus modul kiváló minőségű képeket eredményező kódolási mechanizmust használ mérsékelt sávszélességigény mellett.
+Ha engedélyezi ezt a házirend-beállítást és a Veszteségmentes értékre állítja a minőséget, a RemoteFX adaptív grafikus modul veszteségmentes kódolást alkalmaz. Ez a mód nincs hatással a grafikus adatok színintegritására, de ez a beállítás jelentősen növeli a hálózati sávszélesség-használatot. Emiatt javasoljuk, hogy csak különleges esetekben használja.
 Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a RemoteFX adaptív grafikus modul olyan kódolási mechanizmust alkalmaz, amely közepes minőségű képeket eredményez.
-
-    
-
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Veszteségmentes</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Jó</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Közepes</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Gyenge</string>      
 
     <string id="TS_SERVER_PROFILE">Adaptív grafikus átvitel beállítása a RemoteFX-hez</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">A házirend-beállítással engedélyezheti a rendszergazdák számára, hogy a távoli asztali virtualizálási kiszolgálókon és a távoli asztali munkamenetgazda-kiszolgálókon konfigurálják a RemoteFX szolgáltatás által biztosított felhasználói élményt. Alapértelmezés szerint a rendszer az elérhető sávszélességnek megfelelő legtökéletesebb felhasználói élményt választja.
@@ -991,14 +989,13 @@ Azt is választhatja, hogy nem használ RDP-tömörítési algoritmust. Ebben az
 Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer az alapértelmezett RDP-tömörítési algoritmust használja.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Memória és hálózati sávszélesség használatának kiegyensúlyozása</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimalizálás kisebb hálózati sávszélesség használatára</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Optimalizálás kevesebb memória használatára</string>
- <string id="TS_SERVER_NO_COMPRESSOR">RDP tömörítési algoritmus használatának mellőzése</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Memória és hálózati sávszélesség használatának kiegyensúlyozása</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimalizálás kisebb hálózati sávszélesség használatára</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Optimalizálás kevesebb memória használatára</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">RDP tömörítési algoritmus használatának mellőzése</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Fejlesztett RemoteFX grafika használata a RemoteApp programokhoz</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     A házirenddel engedélyezheti, hogy a RemoteApp programok továbbfejlesztett grafikus funkciókat használjanak (például támogassák az átlátszóságot, az élő miniatűröket vagy zökkenőmentes legyen az alkalmazások áthelyezése) . z a házirend-beállítás csak RemoteApp programokra érvényes, a távoli asztali munkameneteket nem érinti.
 
 Ha engedélyezi vagy nem támogatja ezt a házirend-beállítást, a távoli asztali munkamenetgazda kiszolgálóról közzé tett RemoteApp programok továbbfejlesztett grafikus funkciókat használnak.
@@ -1007,6 +1004,30 @@ Ha letiltja a házirend-beállítást, a távoli asztali munkamenetgazda kiszolg
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">H.264/AVC típusú hardveres kódolás beállítása távoli asztali kapcsolatokhoz</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Ezzel a házirend-beállítással engedélyezhető a H.264/AVC típusú hardveres kódolás támogatása a távoli asztali kapcsolatokhoz. Ha engedélyezett a hardveres kódolás, és hiba lép fel, a Windows megpróbál szoftveres kódolást használni. Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows mindig szoftveres kódolást használ.
+        
+Amennyiben a „Mindig legyen próbálkozás” értékre állítja a kódolási beállítást, a Távoli asztal összetevő minden esetben megpróbálja a H.264/AVC típusú hardveres kódolást használni (ha az telepítve van). Ne feledje, hogy azon Windows Server-példányokon, amelyeken a Hyper-V szolgáltatásban engedélyezett a RemoteFX vGPU használata, ezt a házirendet a Hyper-V gazdagépen kell beállítani.
+        
+Ha a „Próbálkozás csak RemoteFX vGPU-val szerelt virtuális gépek esetén” értéket adja meg a kódolási beállításhoz, akkor azokon a Windows Server-példányokon, amelyeknek Hyper-V szolgáltatásában engedélyezett a RemoteFX vGPU használata, ezt a házirendet ugyancsak a Hyper-V gazdagépen kell beállítani.
+        
+Ha a „Próbálkozás csak RemoteFX vGPU nélküli esetekben” értékre állítja a kódolási beállítást, a Távoli asztal összetevő a RemoteFX vGPU kivételével minden esetben megpróbál hardveres kódolást használni.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Mindig legyen próbálkozás</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Próbálkozás csak RemoteFX vGPU-val szerelt virtuális gépek esetén</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Próbálkozás csak RemoteFX vGPU nélküli esetetekben</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">H.264/AVC 444 grafikus mód preferálása távoli asztali kapcsolatokhoz</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Ez a házirend-beállítás elsődlegesként állítja be a H.264/AVC 444 grafikus módot a RemoteFX vGPU nélküli esetekhez. Ha az RDP-kiszolgálón használja ezt a beállítást, a kiszolgáló a H.264/AVC 444 grafikus módot használja kodekként minden olyan RDP 10-es kapcsolathoz, amelyben az ügyfél és a kiszolgáló is használhatja a H.264/AVC 444 módot.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Hardveres gyorsítású dekódolás tiltása</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Ezzel a házirend-beállítással adható meg, hogy a Távoli asztali kapcsolat összetevő használhat-e hardveres gyorsítást támogatott hardverek esetén. Ezt a beállítást megadva a Távoli asztali kapcsolat csak szoftveres kódolást fog használni. Ha például olyan problémát tapasztal, amely vélhetően a hardveres gyorsításra vezethető vissza, ezzel a beállítással letilthatja a gyorsítást. Amennyiben a probléma még így is jelentkezik, nyilvánvaló, hogy további problémákat kell megvizsgálni. Ha letiltja ezt a beállítást, vagy nem konfigurálja azt, a Távoli asztal ügyfélprogram hardveres gyorsítású kódolást fog használni minden olyan esetben, amikor támogatott hardver áll rendelkezésre.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ A RemoteFX szolgáltatást használó távoli asztali munkamenetek LAN-kapcsolat
 
       <string id="TS_SERVER_LEGACY_RFX">RemoteFX-kódolás engedélyezése a Windows Server 2008 R2 SP1 rendszerhez készült RemoteFX-ügyfelek számára</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Ezzel a házirend-beállítással úgy konfigurálhatja a grafikus kódolást, hogy a távoli asztali munkamenetgazda-kiszolgáló a RemoteFX-kodeket használja, így a munkamenetek kompatibilisek lesznek a Windows Server 2008 R2 SP1 rendszerre készült nem Windows-alapú vékony ügyféleszközökkel. Ezek az ügyfelek csak a Windows Server 2008 R2 SP1 rendszer RemoteFX kodekjét támogatják. Ha engedélyezi ezt a házirend-beállítást, a kiszolgáló felhasználói munkamenetei csak a Windows Server 2008 R2 SP1 rendszer RemoteFX kodekjét használják a kódoláshoz. Ez a mód a kizárólag a Windows Server 2008 R2 SP1 rendszer RemoteFX kodekjét támogató vékony ügyféleszközökkel kompatibilis. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a csak a Windows Server 2008 R2 SP1 rendszer RemoteFX kodekjét támogató nem Windows-alapú vékony ügyfelek nem képesek kapcsolódni a kiszolgálóhoz. Ez a házirend-beállítás csak a Remote Desktop Protocol (RDP) 7.1 verzióját használó ügyfelekre érvényes, az RDP protokoll más verzióit használó ügyfelekre nincs hatással.
       
       </string>
@@ -1296,6 +1316,9 @@ Ha letiltja vagy nem konfigurálja a házirend-beállítást, a kezdőképernyő
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP-tömörítési algoritmus:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Hardveres AVC kódolás preferálása:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Vizuális élmény:</dropdownList>

@@ -144,10 +144,10 @@ Se si disabilita o non si configura questa impostazione, tutti i testi popup del
 Se si abilita questa impostazione, si impedirà a un utente di selezionare un'app, ridimensionare un riquadro, aggiungere o rimuovere un riquadro principale o secondario, attivare la modalità di personalizzazione e ridisporre i riquadri all'interno di Start e app.
 
 Se si disabilita o non si configura questa impostazione, si consente a un utente di selezionare un'app, ridimensionare un riquadro, aggiungere o rimuovere un riquadro principale o secondario, attivare la modalità di personalizzazione e ridisporre i riquadri all'interno di Start e app.</string>
-      <string id="ClearTilesOnExit">Cancella la cronologia delle notifiche di tipo riquadro all'uscita</string>
-      <string id="ClearTilesOnExit_Help">Se si abilita questa impostazione, le notifiche di tipo riquadro verranno eliminate alla disconnessione dell'utente. Di conseguenza, i riquadri della visualizzazione Start mostreranno sempre il relativo contenuto predefinito all'accesso dell'utente. Inoltre, le eventuali versioni memorizzate nella cache di tali notifiche verranno cancellate alla disconnessione dell'utente.
+      <string id="ClearTilesOnExit">Cancella le notifiche di tipo riquadro durante l'accesso</string>
+      <string id="ClearTilesOnExit_Help">Se si abilita questa impostazione, le notifiche di tipo riquadro verranno eliminate all'accesso dell'utente. Di conseguenza, i riquadri della visualizzazione Start mostreranno sempre il relativo contenuto predefinito all'accesso dell'utente. Inoltre, le eventuali versioni memorizzate nella cache di tali notifiche verranno cancellate all'accesso dell'utente.
 
-Se si disabilita o non si configura questa impostazione, il sistema manterrà le notifiche e, all'accesso dell'utente, i riquadri verranno visualizzati esattamente come al momento della disconnessione, inclusa la cronologia delle notifiche precedenti per ogni riquadro.
+Se si disabilita o non si configura questa impostazione dei criteri, il sistema manterrà le notifiche e, all'accesso dell'utente, i riquadri verranno visualizzati esattamente come al momento della disconnessione, inclusa la cronologia delle notifiche precedenti per ogni riquadro.
 
 Questa impostazione non impedisce la visualizzazione delle nuove notifiche. Per impedire la visualizzazione delle nuove notifiche, vedere l'impostazione "Disattiva notifiche delle applicazioni".</string>
       <string id="StartPinAppsWhenInstalled">Aggiungi app a Start all'installazione</string>
@@ -569,6 +569,12 @@ Se si disabilita o non si configura questa impostazione dei criteri, le app desk
 Se si abilita questa impostazione dei criteri, la schermata Start verrà visualizzata sullo schermo utilizzato dall'utente quando questo preme il tasto logo Windows.
 
 Se si disabilita o non si configura questa impostazione dei criteri, la schermata Start verrà sempre visualizzata sullo schermo principale quando l'utente preme il tasto logo Windows. Gli utenti potranno comunque aprire la schermata Start in altri schermi premendo il pulsante Start in tali schermi. L'utente potrà inoltre configurare questa impostazione.</string>
+      <string id="ForceStartSize_DisplayName">Forza le dimensioni di Start in modalità a schermo intero o come menu</string>
+      <string id="ForceStartSize_ExplainText">Se si abilita questa impostazione dei criteri e la si imposta su Menu Start o su Start in modalità a schermo intero, verranno applicate le dimensioni corrispondenti per Start e gli utenti non potranno modificarle nelle impostazioni. 
+
+Se si disabilita o non si configura questa impostazione dei criteri, Windows selezionerà automaticamente le dimensioni in base al fattore di forma dell'hardware e gli utenti potranno modificare le dimensioni di Start nelle impostazioni.</string>
+      <string id="ForceLauncherSize_Collapsed">Menu Start</string>
+      <string id="ForceLauncherSize_Expanded">Start in modalità a schermo intero</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Se si disabilita o non si configura questa impostazione dei criteri, la schermat
           <label>File layout Start</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Scegliere una delle seguenti dimensioni</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -144,8 +144,8 @@ Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, w men
 Jeśli to ustawienie zostanie włączone, użytkownik nie będzie mógł wybrać aplikacji, zmienić rozmiaru kafelka, przypiąć/odpiąć kafelka lub kafelka pomocniczego, przejść w tryb dostosowywania ani zmienić układu kafelków na ekranie startowym i w widoku Aplikacje.
 
 Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł wybrać aplikację, zmienić rozmiar kafelka, przypiąć/odpiąć kafelek lub kafelek pomocniczy, przejść w tryb dostosowywania oraz zmienić układ kafelków na ekranie startowym i w widoku Aplikacje.</string>
-      <string id="ClearTilesOnExit">Wyczyść historię powiadomień na kafelkach przy zakończeniu</string>
-      <string id="ClearTilesOnExit_Help">Jeśli to ustawienie zostanie włączone, system usunie powiadomienia na kafelkach, gdy użytkownik się wyloguje. W rezultacie po zalogowaniu na kafelkach w widoku startowym będzie wyświetlana zawartość domyślna. Ponadto buforowane wersje tych powiadomień zostaną usunięte, gdy użytkownik się wyloguje.
+      <string id="ClearTilesOnExit">Wyczyść powiadomienia na kafelkach podczas logowania</string>
+      <string id="ClearTilesOnExit_Help">Jeśli to ustawienie zostanie włączone, system usunie powiadomienia na kafelkach, gdy użytkownik się zaloguje. W rezultacie po zalogowaniu na kafelkach w widoku startowym będzie wyświetlana zawartość domyślna. Ponadto buforowane wersje tych powiadomień zostaną usunięte, gdy użytkownik się zaloguje.
 
 Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, system zachowa powiadomienia, a gdy użytkownik się zaloguje, kafelki będą wyglądać tak samo jak przed wylogowaniem, z uwzględnieniem historii poprzednich powiadomień dla każdego kafelka.
 
@@ -569,6 +569,12 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
 Jeśli to ustawienie zasad zostanie włączone, ekran startowy będzie wyświetlany na używanym ekranie, gdy użytkownik naciśnie klawisz z logo systemu Windows.
 
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, ekran startowy będzie wyświetlany na ekranie głównym za każdym razem, gdy użytkownik naciśnie klawisz z logo systemu Windows. Użytkownicy nadal będą mogli otwierać ekran startowy na innych ekranach przez naciśnięcie przycisku Start na tych ekranach. Ponadto użytkownik będzie mógł skonfigurować to ustawienie.</string>
+      <string id="ForceStartSize_DisplayName">Wymuś rozmiar elementu Start: pełny ekran lub menu</string>
+      <string id="ForceStartSize_ExplainText">Jeśli włączysz te zasady i ustawisz wartość dla menu Start lub ekranu startowego, element Start będzie odpowiedniego rozmiaru, a użytkownicy nie będą mogli zmienić jego rozmiaru w obszarze Ustawienia. 
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, system Windows automatycznie wybierze rozmiar na podstawie typu urządzenia, a użytkownicy będą mogli zmienić rozmiar elementu Start w obszarze Ustawienia.</string>
+      <string id="ForceLauncherSize_Collapsed">Menu Start</string>
+      <string id="ForceLauncherSize_Expanded">Pełny ekran startowy</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
           <label>Plik układu ekranu startowego</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Wybierz jeden z następujących rozmiarów</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

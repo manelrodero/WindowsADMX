@@ -56,16 +56,16 @@ Poznámka: Pokud je toto nastavení zásad povoleno, neuplatňuje se nastavení 
       </string>
       
       <string id="TS_ALLOW_APPS">Povolit vzdálené spuštění aplikací neuvedených v seznamu</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">Toto nastavení zásad umožňuje určit, jestli můžou vzdálení uživatelé po spuštění relace služby Vzdálená plocha spustit jakoukoli aplikaci na serveru hostitele relací VP, nebo jestli můžou spouštět jenom aplikace uvedené v seznamu Aplikace RemoteApp.
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+Aplikace, které se dají na serveru hostitele relací vzdálené plochy spouštět vzdáleně, je možné určit ve Správci aplikací RemoteApp ve Windows Serveru 2008 R2 a Windows Serveru 2008. Pokud používáte Windows Server 2012, můžete toto nastavení nakonfigurovat pomocí Správce serveru v seznamu vlastností kolekce.
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+Po spuštění relace služby Vzdálená plocha může uživatel ve výchozím nastavení spouštět jenom aplikace ze seznamu Aplikace RemoteApp.
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+Pokud toto nastavení zásad povolíte, budou moct vzdálení uživatelé po spuštění relace služby Vzdálená plocha na serveru hostitele relací vzdálené plochy spouštět všechny aplikace. 
+Vzdálený uživatel bude moct v době připojení pomocí klienta Připojení ke vzdálené ploše například zadat cestu ke spustitelnému programu aplikace.
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, budou moct vzdálení uživatelé po spuštění relace služby Vzdálená plocha spouštět jenom aplikace uvedené v seznamu Aplikace RemoteApp.
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">Povolit kompozici plochy pro relace vzdálené plochy</string>

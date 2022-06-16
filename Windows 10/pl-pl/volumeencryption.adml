@@ -239,12 +239,26 @@ Jeśli to ustawienie zasad zostanie włączone, będzie można wybrać algorytm 
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja BitLocker będzie używać szyfrowania AES z taką samą siłą klucza (128 bitów lub 256 bitów) jak w przypadku ustawienia zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania (Windows Vista, Windows Server 2008, Windows 7)”, jeśli jest ono skonfigurowane. Jeśli nie zostaną ustawione żadne zasady, funkcja BitLocker będzie używać domyślnej metody szyfrowania — AES 128 bitów — lub metody określonej w skrypcie konfiguracyjnym.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">To ustawienie zasad umożliwia skonfigurowanie algorytmu i siły szyfrowania używanych przez szyfrowanie dysków funkcją BitLocker. To ustawienie zasad jest stosowane po włączeniu funkcji BitLocker. Zmiana metody szyfrowania jest ignorowana, jeśli dysk jest już zaszyfrowany lub jeśli szyfrowanie jest w toku.
+
+Jeśli to ustawienie zasad zostanie włączone, będzie można skonfigurować algorytm szyfrowania i siłę szyfrowania klucza dla stałych dysków danych, dysków systemu operacyjnego i wymiennych dysków danych. W przypadku dysków stałych i dysków systemu operacyjnego zalecamy używanie algorytmu XTS-AES. W przypadku dysków wymiennych należy używać 128-bitowego lub 256-bitowego algorytmu AES-CBC, jeśli dysk będzie używany na innych urządzeniach, na których nie jest uruchomiony system Windows 10 (wersja 1511).
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja BitLocker będzie używała algorytmu AES o tej samej sile (128 lub 256 bitów) co ustawienia zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania (Windows Vista, Windows Server 2008, Windows 7)” i „Wybierz metodę szyfrowania dysków i siłę szyfrowania” (w takiej kolejności), jeśli są one skonfigurowane. Jeśli nie ustawiono żadnej z tych zasad, funkcja BitLocker będzie używać domyślnej metody szyfrowania (128-bitowego algorytmu XTS-AES) lub metody szyfrowania określonej przez skrypt instalacyjny.
+
+      </string>
       <string id="EncryptionMethod_Name">Wybierz metodę szyfrowania dysków i siłę szyfrowania (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Wybierz metodę szyfrowania dysków i siłę szyfrowania</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Wybierz metodę szyfrowania dysków i siłę szyfrowania (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [wersja 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">Wybierz metodę szyfrowania dysków i siłę szyfrowania (system Windows 10 [wersja 1511] lub nowszy)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES 128 bitów z rozpraszaniem</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES 256 bitów z rozpraszaniem</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES 128 bitów (domyślnie)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">Algorytm AES-CBC 128-bitowy</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">Algorytm AES-CBC 128-bitowy (domyślnie)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES 256 bitów</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">Algorytm AES-CBC 256-bitowy</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">Algorytm XTS-AES 128-bitowy (domyślnie)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">Algorytm XTS-AES 128-bitowy</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">Algorytm XTS-AES 256-bitowy</string>
 
       <string id="FVECategory">Szyfrowanie dysków funkcją BitLocker</string>
       <string id="PlatformValidation_Deprecated_Help">To ustawienie zasad umożliwia skonfigurowanie sposobu zabezpieczenia klucza szyfrowania funkcji BitLocker przez zabezpieczenia sprzętowe modułu TPM. To ustawienie zasad nie jest stosowane, gdy komputer nie ma zgodnego modułu TPM ani gdy funkcja BitLocker została już włączona z ochroną za pomocą modułu TPM.
@@ -801,6 +815,12 @@ Uwaga: przed rozruchem nie są obsługiwane wszystkie znaki i języki. Zdecydowa
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Wybierz metodę szyfrowania:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Wybierz metodę szyfrowania dla dysków z systemem operacyjnym:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Wybierz metodę szyfrowania dla stałych dysków z danymi:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Wybierz metodę szyfrowania dla wymiennych dysków z danymi:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

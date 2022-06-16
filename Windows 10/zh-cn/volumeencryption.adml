@@ -239,12 +239,26 @@ BitLocker 恢复信息包括恢复密码和一些唯一的标识符数据。还�
 如果禁用或未配置此策略设置，则 BitLocker 会将具有相同位强度(128 位或 256 位)的 AES 用作“选择驱动器加密方法和密码长度(Windows Vista、Windows Server 2008、Windows 7)”策略设置(如果已设置)。如果设置以上任一策略，则 BitLocker 将使用 AES 128 位默认加密方法，或使用由安装脚本指定的加密方法。   
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">使用此策略设置，可以配置 BitLocker 驱动器加密所使用的算法和密码长度。此策略设置将在打开 BitLocker 时应用。如果驱动器已加密或正在加密，则更改加密方法将不起作用。
+
+如果启用此策略设置，你可以单独为固定数据驱动器、操作系统驱动器和可移动数据驱动器配置加密算法与密钥加密长度。对于固定驱动器和操作系统驱动器，我们建议使用 XTS-AES 算法。对于可移动驱动器，如果驱动器将在未运行 Windows 10 (版本 1511)的其他设备上使用，则应使用 AES-CBC 128 位或 AES-CBC 256 位。
+
+如果禁用或未配置此策略设置，则 BitLocker 会将具有相同位强度(128 位或 256 位)的 AES 用作“选择驱动器加密方法和密码长度(Windows Vista、Windows Server 2008、Windows 7)”和“选择驱动器加密方法和密码长度”策略设置(按该顺序，如果已设置)。如果未设置任何策略，则 BitLocker 将使用 XTS-AES 128 位默认加密方法，或使用由安装脚本指定的加密方法。
+
+      </string>
       <string id="EncryptionMethod_Name">选择驱动器加密方法和密码长度(Windows Vista、Windows Server 2008、Windows 7、Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">选择驱动器加密方法和密码长度</string>
+      <string id="EncryptionMethodNoDiffuser_Name">选择驱动器加密方法和密码长度(Windows 8、Windows Server 2012、Windows 8.1、Windows Server 2012 R2、Windows 10 [版本 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">选择驱动器加密方法和密码长度(Windows 10 [版本 1511] 和更高版本)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">含有扩散器的 AES 128 位</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">含有扩散器的 AES 256 位</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES 128 位(默认)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC 128 位</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC 128 位(默认)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES 256 位</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC 256 位</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES 128 位(默认)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES 128 位</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES 256 位</string>
 
       <string id="FVECategory">BitLocker 驱动器加密</string>
       <string id="PlatformValidation_Deprecated_Help">使用此策略设置，可以配置计算机的受信任平台模块(TPM)安全硬件如何保护 BitLocker 加密密钥。如果计算机没有兼容的 TPM 或者 BitLocker 已在 TPM 保护方式下打开，则此策略设置不适用。
@@ -801,6 +815,12 @@ Windows 触摸键盘(如平板电脑使用的键盘)不可用于预启动环境�
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">选择加密方法:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">选择操作系统驱动器的加密方法:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">选择固定数据驱动器的加密方法:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">选择可移动数据驱动器的加密方法:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

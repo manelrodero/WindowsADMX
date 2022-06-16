@@ -1,89 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
-  <displayName>Microsoft Edge Group Policies</displayName>
-  <description>Policies defined to manage Microsoft Edge settings via Group Policy Management services.</description>
+  <displayName>Criteri di gruppo Microsoft Edge</displayName>
+  <description>Criteri definiti per gestire le impostazioni di Microsoft Edge tramite i servizi Gestione Criteri di gruppo.</description>
   <resources>
     <stringTable>
       <!-- Product -->
-      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Only Microsoft Edge 1.0</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_1_DisplayName">Solo Microsoft Edge 1.0</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
-      <string id="InternetBrowser_ExplainCat">Microsoft Edge Category</string>
+      <string id="InternetBrowser_ExplainCat">Categoria Microsoft Edge</string>
       
       <!-- Categories -->
 
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
-      <string id="AllowActiveScripting">Consente di eseguire script, come JavaScript</string>
-      <string id="AllowActiveScripting_Explain">Questa impostazione consente di decidere se gli utenti possono eseguire script, come JavaScript. Questa impostazione è abilitata per impostazione predefinita.
+      <string id="AllowAutofill">Disattiva riempimento automatico</string>
+      <string id="AllowAutofill_Explain">Questa impostazione consente di decidere se i dipendenti possono usare il riempimento automatico per compilare automaticamente i campi dei moduli durante l'uso di Microsoft Edge.
 
-Se si abilita questa impostazione, l'esecuzione di script viene attivata per tutti i computer. 
+Se questa impostazione è abilitata o non è configurata, i dipendenti possono usare il riempimento automatico nei campi dei moduli.
 
-Se si disabilita questa impostazione, gli script non possono essere eseguiti.</string>
-      <string id="AllowAutofill">Consente di autorizzare l'uso del riempimento automatico nei siti Web</string>
-      <string id="AllowAutofill_Explain">Questa impostazione consente di decidere se gli utenti possono usare il riempimento automatico nei siti Web. Questa impostazione è abilitata per impostazione predefinita.
+Se questa impostazione è disabilitata, i dipendenti non possono usare il riempimento automatico nei campi dei moduli.</string>
+      <string id="AllowDeveloperTools">Disattiva Strumenti di sviluppo</string>
+      <string id="AllowDeveloperTools_Explain">Questa impostazione consente di decidere se i dipendenti possono usare gli strumenti di sviluppo F12 in Microsoft Edge.
 
-Se si abilita questa impostazione, gli utenti possono usare il riempimento automatico nei siti Web, con memorizzazione delle info nella cache in locale.
+Se questa impostazione è abilitata o non è configurata, i dipendenti possono usare gli strumenti di sviluppo F12.
 
-Se si disabilita questa impostazione, gli utenti non possono usare il riempimento automatico.</string>
-      <string id="AllowDoNotTrack">Consente di autorizzare l'invio di intestazioni Do Not Track</string>
-      <string id="AllowDoNotTrack_Explain">Questa impostazione consente di decidere se gli utenti possono inviare intestazioni Do Not Track. Questa impostazione è disabilitata per impostazione predefinita.
+Se questa impostazione è disabilitata, i dipendenti non possono usare gli strumenti di sviluppo F12.</string>
+      <string id="AllowDoNotTrack">Consenti ai dipendenti di inviare le intestazioni Do Not Track</string>
+      <string id="AllowDoNotTrack_Explain">Questa impostazione consente di decidere se i dipendenti possono inviare intestazioni Do Not Track ai siti Web che richiedono informazioni di registrazione.
 
-Se si abilita questa impostazione, gli utenti possono inviare le intestazioni Do Not Track da qualsiasi computer nell'organizzazione.
+Se questa impostazione è abilitata, i dipendenti possono inviare le intestazioni Do Not Track.
 
-Se si disabilita questa impostazione, gli utenti non possono inviare le intestazioni Do Not Track.</string>
-      <string id="AllowPasswordManager">Consente di configurare lo strumento per la gestione delle password</string>
-      <string id="AllowPasswordManager_Explain">Questa impostazione consente di decidere se gli utenti possono salvare le password in locale nei loro computer. Questa impostazione è abilitata per impostazione predefinita.
+Se questa impostazione è disabilitata o non è configurata, i dipendenti non possono inviare le intestazioni Do Not Track.</string>
+      <string id="AllowInPrivate">Disattiva InPrivate Browsing</string>
+      <string id="AllowInPrivate_Explain">Questa impostazione consente di decidere se i dipendenti possono esplorare i siti Web usando InPrivate Browsing.
 
-Se si abilita questa impostazione, lo strumento di gestione delle password viene attivato e gli utenti possono salvare le password in locale nei loro computer.
+Se questa impostazione è abilitata o non è configurata, i dipendenti possono usare InPrivate Browsing nella rete aziendale.
 
-Se si disabilita questa impostazione, lo strumento di gestione delle password è disattivato e gli utenti non possono salvare password in locale.</string>
-      <string id="AllowPopups">Consente l'esecuzione di popup</string>
-      <string id="AllowPopups_Explain">Questa impostazione consente di decidere se autorizzare i popup. Questa impostazione è disabilitata per impostazione predefinita.
+Se questa impostazione è disabilitata, i dipendenti non possono usare InPrivate Browsing per i siti Web.</string>
+      <string id="AllowPasswordManager">Disattiva lo strumento per la gestione delle password</string>
+      <string id="AllowPasswordManager_Explain">Questa impostazione consente di decidere se i dipendenti possono salvare le password in locale usando lo strumento di gestione delle password.
 
-Se si abilita questa impostazione, i popup possono essere eseguiti in tutti i computer dell'organizzazione.
+Se questa impostazione è abilitata o non è configurata, i dipendenti possono usare lo strumento di gestione delle password.
 
-Se si disabilita questa impostazione, i popup non possono essere eseguiti.</string>
-      <string id="AllowSearchSuggestionsinAddressBar">Impedisce la visualizzazione di suggerimenti per la ricerca nella barra degli indirizzi</string>
-      <string id="AllowSearchSuggestionsinAddressBar_Explain">Questa impostazione consente di decidere se visualizzare i suggerimenti per la ricerca nella barra degli indirizzi. Questa impostazione è abilitata per impostazione predefinita.
+Se questa impostazione è disabilitata, i dipendenti non possono usare lo strumento di gestione delle password.</string>
+      <string id="AllowPopups">Disattiva Blocco popup</string>
+      <string id="AllowPopups_Explain">Questa impostazione consente di decidere se attivare Blocco popup e se consentire la visualizzazione dei popup in finestre secondarie.
 
-Se si abilita questa impostazione, gli utenti possono visualizzare i suggerimenti per la ricerca nella barra degli indirizzi.
+Se questa impostazione è abilitata o non è configurata, Blocco popup è attivato e impedisce la visualizzazione dei popup.
 
-Se si disabilita questa impostazione, i risultati per la ricerca non vengono visualizzati nella barra degli indirizzi.</string>
-      <string id="AllowSmartScreen">Consente di configurare SmartScreen</string>
-      <string id="AllowSmartScreen_Explain">Questa impostazione consente di decidere se attivare SmartScreen. Questa impostazione è abilitata per impostazione predefinita.
+Se questa impostazione è disabilitata, Blocco popup è disattivato e la visualizzazione dei popup è consentita.</string>
+      <string id="AllowSearchSuggestionsinAddressBar">Disattiva i suggerimenti per la ricerca nella barra degli indirizzi</string>
+      <string id="AllowSearchSuggestionsinAddressBar_Explain">Questa impostazione consente di decidere se visualizzare i suggerimenti per la ricerca nella barra degli indirizzi di Microsoft Edge.
 
-Se si abilita questa impostazione, SmartScreen è attivato per tutti i computer.
+Se questa impostazione è abilitata o non è configurata, i dipendenti possono visualizzare i suggerimenti per la ricerca nella barra degli indirizzi.
 
-Se si disabilita questa impostazione, SmartScreen è disattivato.</string>
-      <string id="Cookies">Configure how Microsoft Edge treats cookies</string>
-      <string id="Cookies_Explain">This settings lets you decide how Microsoft Edge should treat cookies.
+Se questa impostazione è disabilitata, i dipendenti non possono visualizzare i suggerimenti per la ricerca nella barra degli indirizzi.</string>
+      <string id="AllowSmartScreen">Disattiva il filtro SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Questa impostazione consente di decidere se attivare il filtro SmartScreen. Il filtro SmartScreen visualizza messaggi di avviso che contribuiscono a proteggere i dipendenti da tentativi di phishing e software dannoso.
 
-If you enable this setting, you have 3 additional options:
-  • Don’t block. Cookies can download from all websites. This is the default value.
-  • Block only third-party cookies. Stops third-party cookies from downloading.
-  • Block all cookies. Stops all cookies from downloading.</string>
-      <string id="CookiesList_Block_None">Non bloccare</string>
-      <string id="CookiesList_Block_ThirdParty">Blocca solo cookie di terze parti</string>
-      <string id="CookiesList_Block_All">Blocca tutti i cookie</string>
-      <string id="EnterpriseModeSiteList">Consente di configurare l'elenco dei siti modalità Enterprise</string>
-      <string id="EnterpriseModeSiteList_Explain">Questa impostazione consente di decidere se configurare e usare l'elenco dei siti modalità Enterprise per compatibilità.
+Se questa impostazione è abilitata o non è configurata, il filtro SmartScreen è attivato.
 
-Se si abilita questa impostazione, sono disponibili 2 ulteriori opzioni:
-  • Non configurato. Non è possibile usare l'elenco dei siti modalità Enterprise.
-  • UseEnterpriseModeSiteList. Consente di usare l'elenco dei siti modalità Enterprise. Se si usa questa opzione, è necessario anche includere il percorso dell'elenco dei siti XML nella casella {URI}. Questa è l'impostazione predefinita.</string>
-      <string id="HomePage">Consente di configurare la pagina iniziale</string>
-      <string id="HomePage_Explain">Questa impostazione consente di configurare la pagina iniziale per l'organizzazione. Per impostazione predefinita questa impostazione non è configurata e vengono invece usate le impostazioni dell'app.
+Se questa impostazione è disabilitata, il filtro SmartScreen è disattivato.</string>
+      <string id="AllowWebContentOnNewTabPage">Open a new tab with an empty tab</string>
+      <string id="AllowWebContentOnNewTabPage_Explain">This policy setting specifies what happens when Microsoft Edge opens a new tab. By default, a new tab page appears.  
+ 
+If you disable this policy setting, Microsoft Edge opens a new, empty tab.  Employees can’t change this option.
+ 
+If you enable or don’t configure this policy setting, Microsoft Edge opens a new tab with a new tab page, including Top Sites, Top Sites with suggested content, or a blank page. Employees can change what type of tab page appears.</string>
+      <string id="Cookies">Configura i cookie</string>
+      <string id="Cookies_Explain">Questa impostazione consente di configurare la gestione dei cookie da parte dell'azienda.
 
-Se si abilita questa impostazione, è necessario includere anche il percorso del sito Web nella casella {URI}.</string>
+Se questa impostazione è abilitata, è possibile decidere di:
+Consentire tutti i cookie (impostazione predefinita). Sono consentiti tutti i cookie da tutti i siti Web.
+Bloccare solo cookie di terze parti. Vengono bloccati solo i cookie dei siti Web di terze parti.
+Bloccare tutti i cookie. Vengono bloccati tutti i cookie da tutti i siti Web.
+
+Se questa impostazione è disabilitata, sono consentiti tutti i cookie da tutti i siti Web.</string>
+      <string id="CookiesList_Block_None">Consenti tutti i cookie (impostazione predefinita).</string>
+      <string id="CookiesList_Block_ThirdParty">Blocca solo i cookie di terze parti.</string>
+      <string id="CookiesList_Block_All">Blocca tutti i cookie.</string>
+      <string id="EnterpriseModeSiteList">Configura elenco siti modalità Enterprise</string>
+      <string id="EnterpriseModeSiteList_Explain">Questa impostazione consente di configurare l'uso da parte dell'azienda della modalità Enterprise e dell'elenco dei siti in modalità Enterprise per risolvere i più comuni problemi di compatibilità con i siti Web legacy.
+
+Se questa impostazione è abilitata, Microsoft Edge cerca il file XML dell'elenco dei siti in modalità Enterprise. Questo file include i siti e i domini che devono essere visualizzati con Internet Explorer 11 e la modalità Enterprise.
+
+Se questa impostazione è disabilitata o non è configurata, Microsoft Edge non usa il file dell'elenco dei siti in modalità Enterprise. In questo caso, i dipendenti possono rilevare problemi di compatibilità durante l'uso dei siti Web legacy.</string>
+      <string id="HideLocalHostIPAddress">Non consentire a WebRTC di condividere l'indirizzo IP LocalHost</string>
+      <string id="HideLocalHostIPAddress_Explain">Questa impostazione consente di decidere se l'indirizzo IP LocalHost di un dipendente è visualizzato quando vengono effettuate chiamate telefoniche tramite il protocollo WebRTC.
+
+Se questa impostazione è abilitata, l'indirizzo IP LocalHost di un dipendente è nascosto quando vengono effettuate chiamate telefoniche tramite WebRTC.
+
+Se questa impostazione è disabilitata o non è configurata, l'indirizzo IP LocalHost di un dipendente è visualizzato quando vengono effettuate chiamate telefoniche tramite WebRTC.</string>
       <string id="ItemNameDisable">Disabilita</string>
       <string id="ItemNameEnable">Abilita</string>
-      <string id="SendIntranetTraffictoInternetExplorer">Invia tutto il traffico Intranet a Internet Explorer</string>
-      <string id="SendIntranetTraffictoInternetExplorer_Explain">This setting lets you decide whether to send all intranet traffic to Internet Explorer. This setting is disabled by default
+      <string id="HomePages">Configura le pagine iniziali aziendali</string>
+      <string id="HomePages_Explain">Questa impostazione consente di configurare le pagine iniziali aziendali per i dispositivi appartenenti al dominio. I dipendenti possono modificare questa impostazione.
+Se questa impostazione è abilitata, è possibile configurare una o più pagine iniziali aziendali. Se si abilita questa impostazione, è anche necessario includere gli URL delle pagine, separando più pagine con parentesi angolari e usando il seguente formato:
+    &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
+Se questa impostazione è disabilitata o non è configurata, la pagina iniziale predefinita viene impostata sulla pagina Web specificata nelle impostazioni dell'app.</string>
+      <string id="PreventSmartScreenPromptOverride">Non consentire di ignorare gli avvisi del filtro SmartScreen</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Questa impostazione consente di decidere se i dipendenti possono ignorare gli avvisi del filtro SmartScreen sui siti Web potenzialmente dannosi.
 
-If you enable this setting, your intranet websites automatically open in Internet Explorer.
+Se questa impostazione è abilitata, i dipendenti non possono ignorare gli avvisi del filtro SmartScreen e scegliere di visitare il sito.
 
-If you disable this setting, your intranet websites will automatically open in Microsoft Edge.</string>
+Se questa impostazione è disabilitata o non è configurata, i dipendenti possono ignorare gli avvisi del filtro SmartScreen sui siti Web potenzialmente dannosi e visitare il sito.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">Non consentire di ignorare gli avvisi del filtro SmartScreen per i file non verificati</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Questa impostazione consente di decidere se i dipendenti possono ignorare gli avvisi del filtro SmartScreen sui download di file non verificati.
+
+Se questa impostazione è abilitata, i dipendenti non possono ignorare gli avvisi del filtro SmartScreen e scegliere di scaricare i file non verificati.
+
+Se questa impostazione è disabilitata o non è configurata, i dipendenti possono ignorare gli avvisi del filtro SmartScreen sui file non verificati e continuare il processo di download.</string>
+      <string id="ProvisionedFavorites">Configura i Preferiti</string>
+      <string id="ProvisionedFavorites_Explain">Questa impostazione consente di configurare l'elenco predefinito dei Preferiti visualizzati per i dipendenti. I dipendenti possono modificare questa impostazione, aggiungendo o rimuovendo i Preferiti, in qualsiasi momento.
+
+Se questa impostazione è abilitata, è possibile configurare i Preferiti predefiniti visualizzati per i dipendenti. Se si abilita questa impostazione, è necessario fornire un elenco di Preferiti nella sezione Opzioni. L'elenco viene importato dopo la distribuzione del criterio.
+
+Se questa impostazione è disabilitata o non è configurata, i dipendenti vedranno i Preferiti che impostano nell'hub Preferiti.</string>
+      <string id="SendIntranetTraffictoInternetExplorer">Invia tutti i siti Intranet a Internet Explorer 11</string>
+      <string id="SendIntranetTraffictoInternetExplorer_Explain">Questa impostazione consente di decidere se tutti i siti Intranet devono essere aperti tramite Internet Explorer 11. Questa impostazione deve essere usata solo se si verificano problemi di compatibilità noti con Microsoft Edge.
+
+Se questa impostazione è abilitata, tutti i siti Intranet vengono automaticamente aperti in Internet Explorer 11.
+
+Se questa impostazione è disabilitata o non è configurata, tutti i siti Intranet vengono automaticamente aperti in Microsoft Edge.</string>
     </stringTable>
     
     <!-- Presentation -->
@@ -98,8 +137,16 @@ If you disable this setting, your intranet websites will automatically open in M
           <label>Digita percorso (URL) del sito Web per la pagina iniziale</label>
         </textBox>
       </presentation>
+      <presentation id="HomePages_Presentation">
+        <textBox refId="HomePagesPrompt">
+          <label>Usa il formato seguente:  &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ProvisionedFavorites_Presentation">
+        <listBox refId="ProvisionedFavorites_List">Immetti il nome del preferito nella prima colonna e l'URL del preferito nell'altra colonna, ad esempio come Contoso http://www.contoso.com/</listBox>
+      </presentation>
       <presentation id="Cookies">
-        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="0">Configura impostazione cookie</dropdownList>
+        <dropdownList refId="CookiesListBox" noSort="true" defaultItem="2">Configura i cookie </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

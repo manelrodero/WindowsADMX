@@ -7,28 +7,32 @@
     <stringTable>
       <string id="DeviceGuard">Eszközvédelem</string>
       <string id="VirtualizationBasedSecurity">Virtualizálás-alapú biztonság bekapcsolása</string>
-      <string id="VirtualizationBasedSecurityHelp">Itt adhatja meg, hogy engedélyezve van-e a virtualizálás-alapú biztonság.
+      <string id="VirtualizationBasedSecurityHelp">Itt adhatja meg, hogy engedélyezve van-e a virtualizálásalapú biztonság.
 
-A virtualizálás-alapú biztonság a Windows hipervizor használatával nyújt támogatást a biztonsági szolgáltatásoknak. A virtualizálás-alapú biztonsághoz szükséges a Biztonságos rendszerindítás, és engedélyezhető a DMA-védelmekkel együttes használata is. A DMA-védelmekhez megfelelő hardver szükséges, és csak a megfelelően konfigurált eszközökön engedélyezhető.
+A virtualizálásalapú biztonság a Windows hipervizor használatával nyújt támogatást a biztonsági szolgáltatásoknak. A virtualizálásalapú biztonsághoz szükséges a Biztonságos rendszerindítás, és engedélyezhető a DMA-védelmekkel együttes használata is. A DMA-védelmekhez megfelelő hardver szükséges, és csak a megfelelően konfigurált eszközökön engedélyezhető.
 
-Kódintegritás virtualizálás-alapú biztonsága
+Kódintegritás virtualizálásalapú biztonsága
 
-Ez a beállítás engedélyezi a kernel módú kódintegritás virtualizálás-alapú biztonságát. Ha engedélyezve van, a rendszer betartatja a kernel módú memóriavédelmet, és a kódintegritás ellenőrzési útvonalát a virtualizálás-alapú biztonság védi.
+Ez a beállítás engedélyezi a kernel módú kódintegritás virtualizálásalapú biztonságát. Ha engedélyezve van, a rendszer betartatja a kernel módú memóriavédelmet, és a kódintegritás ellenőrzési útvonalát a virtualizálásalapú biztonság védi.
 
-Figyelem! A rendszer összes illesztőprogramjának kompatibilisnek kell lennie ezzel a szolgáltatással, különben a rendszer összeomolhat. Csak olyan számítógépeken helyezze üzembe ezt a házirend-beállítást, amelyeknek a kompatibilitása nem kétséges. 
+Figyelmeztetés: A rendszer összes illesztőprogramjának kompatibilisnek kell lennie ezzel a szolgáltatással, különben a rendszer összeomolhat. Csak olyan számítógépeken helyezze üzembe ezt a házirend-beállítást, amelyeknek a kompatibilitása nem kétséges. 
 
 Hitelesítőadat-védelem
 
-Ezzel a beállítással adhatja meg, hogy a felhasználók bekapcsolhatják-e a hitelesítő adataik védelmére a virtualizálás-alapú biztonságot használó hitelesítőadat-védelmet.
- 
-A beállítások letiltása nem távolítja el az érintett funkciókat a számítógépről. Ha a Biztonságos rendszerindítás mentett konfigurációját szeretné törölni, minden egyes gépről helyileg bejelentkezve kell eltávolítania a biztonsági funkciókat.
+Ezzel a beállítással engedélyezi a felhasználók számára a virtualizálásalapú biztonságot használó hitelesítőadat-védelem bekapcsolását.
 
-A szolgáltatás biztonságos konfigurálásával kapcsolatos követelményeket a dokumentációban olvashatja el.
+A Letiltva beállítás távolról letiltja a hitelesítőadat-védelmet, ha korábban az Engedélyezve zárolás nélkül beállítással volt bekapcsolva.
+
+Az Engedélyezve UEFI zárolással beállítás esetén nem lehet távolról letiltani a hitelesítőadat-védelmet. Ha le szeretné tiltani a funkciót, akkor a csoportházirendet a Letiltva értékre kell állítania, de minden egyes számítógépnél egy fizikailag jelen lévő felhasználónak el kell távolítania ezt a biztonsági funkciót ahhoz, hogy törlődjön az UEFI által tárolt konfiguráció.
+
+Az Engedélyezve zárolás nélkül beállítás esetén távolról, csoportházirenddel is le lehet tiltani a hitelesítőadat-védelmet. Az ezt a beállítást használó rendszereken legalább a Windows 10-nek (az 1511-es verziónak) kell futnia.
       </string>
       <string id="SecureBoot">Biztonságos rendszerindítás</string>
       <string id="SecureBootAndDmaProtection">Biztonságos rendszerindítás és DMA-védelem</string>
       <string id="Disabled">Letiltva</string>
       <string id="Enabled">Engedélyezve</string>
+      <string id="EnabledWithoutLock">Engedélyezve zárolás nélkül</string>
+      <string id="EnabledWithUefiLock">Engedélyezve UEFI-zárolással</string>
       <string id="ConfigCIPolicy">Kódintegritási házirend üzembe helyezése</string>
       <string id="ConfigCIPolicyHelp">Kódintegritási házirend üzembe helyezése
 
@@ -48,7 +52,7 @@ Ha aláírt és védett házirendet használ, akkor ennek a házirend-beállít�
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="0">Platformbiztonsági szint megadása:</dropdownList>
         <checkBox refId="HypervisorEnforcedCodeIntegrityCheck" defaultChecked="false">Kódintegritás virtualizálás-alapú védelmének engedélyezése</checkBox>
-        <checkBox refId="CredentialIsolationCheck" defaultChecked="false">Hitelesítőadat-védelem engedélyezése</checkBox>
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Hitelesítőadat-védelem konfigurálása:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

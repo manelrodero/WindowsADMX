@@ -239,12 +239,26 @@ Se você habilitar essa configuração de política, poderá escolher um algorit
 Se você desabilitar ou não definir essa configuração de política, o BitLocker usará AES com o mesmo nível de bits (128 ou 256 bits) da configuração de política "Escolher método de criptografia de unidade e nível de codificação (Windows Vista, Windows Server 2008, Windows 7)", se ela estiver definida. Se nenhuma dessas políticas for definida, o BitLocker usará o método de criptografia padrão AES para chaves de 128 bits ou o método de criptografia especificado pelo script de configuração.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Essa configuração de política permite definir o algoritmo e o nível de codificação usados pela Criptografia de Unidade de Disco BitLocker. Essa configuração de política é aplicada ao ativar BitLocker. Alterar o método de criptografia não tem efeito se a unidade já está criptografada ou se a criptografia está em andamento.
+
+Se você habilitar essa configuração de política, poderá configurar um algoritmo de criptografia e o nível de codificação de chave para unidades de dados fixas, unidades do sistema operacional e unidades de dados removíveis individualmente. Para unidades fixas e do sistema operacional, recomendamos usar o algoritmo AES-XTS. Para unidades removíveis, use AES-CBC de 128 bits ou AES-CBC de 256 bits se a unidade for usada em outros dispositivos que não executem o Windows 10 (Versão 1511).
+
+Se você desabilitar ou não definir essa configuração de política, o BitLocker usará AES com o mesmo nível de bit (128 bits ou 256 bits) das configurações de política "Escolher método de criptografia de unidade e nível de codificação (Windows Vista, Windows Server 2008, Windows 7)" e "Escolher método de criptografia de unidade e nível de codificação", se elas estiverem definidas. Se nenhuma dessas políticas estiver definida, o BitLocker usará o método de criptografia padrão XTS-AES de 128 bits ou o método de criptografia especificado pelo script de instalação."
+
+      </string>
       <string id="EncryptionMethod_Name">Escolher método de criptografia de unidade e nível de codificação (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Escolher método de criptografia de unidade e nível de codificação</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Escolher método de criptografia de unidade e nível de codificação (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [Versão 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">Escolha o método de criptografia e o nível de codificação de unidade (Windows 10 [Versão 1511] e posterior)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES para chaves de 128 bits com Difusor</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES para chaves de 256 bits com Difusor</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES para chaves de 128 bits (padrão)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC de 128 bits</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC de 128 bits (padrão)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES para chaves de 256 bits</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC de 256 bits</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES de 128 bits (padrão)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES de 128 bits</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES de 256 bits</string>
 
       <string id="FVECategory">Criptografia de Unidade de Disco BitLocker</string>
       <string id="PlatformValidation_Deprecated_Help">Esta configuração de política permite configurar como o hardware de segurança TPM do computador protege a chave de criptografia do BitLocker. Essa configuração de política não será aplicável se o computador não possuir um TPM compatível ou se o BitLocker já tiver sido ativado com a proteção TPM.
@@ -801,6 +815,12 @@ Observação: nem todos os caracteres e idiomas têm suporte em pré-inicializa�
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Selecionar o método de criptografia:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Selecione o método de criptografia para unidades do sistema operacional:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Selecione o método de criptografia para unidades de dados fixas:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Selecione o método de criptografia para unidades de dados removíveis:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

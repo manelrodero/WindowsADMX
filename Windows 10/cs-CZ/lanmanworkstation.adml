@@ -27,7 +27,16 @@ Jak změnit toto nastavení:
 Uspořádejte požadované sady šifer v textovém poli (jedna sada šifer na řádek) v pořadí od nejvíce po nejméně upřednostňovanou, přičemž nejvíce upřednostňovaná sada šifrování bude nahoře. Odeberte všechny sady šifer, které nechcete používat.
 
 Poznámka: Pokud nakonfigurujete toto nastavení zabezpečení, změny se projeví až po restartování systému Windows.</string>
-      </stringTable>
+      <string id="Pol_EnableInsecureGuestLogons_Name">Povolit nezabezpečená přihlášení hostů</string>
+      <string id="Pol_EnableInsecureGuestLogons_Help">Nastavení této zásady určuje, jestli klient SMB povoluje nezabezpečená přihlášení hostů k serveru SMB.
+
+Pokud nastavení této zásady povolíte nebo nenakonfigurujete, klient SMB bude nezabezpečená přihlášení hostů povolovat.
+
+Pokud nastavení této zásady zakážete, bude klient SMB nezabezpečená přihlášení hostů odmítat.
+
+Nezabezpečená přihlášení hostů využívají souborové servery k umožnění neověřeného přístupu ke sdíleným složkám. Tento typ přihlášení sice není běžný v podnikovém prostředí, ale často se používá ve spotřebitelských zařízeních NAS (Network Attached Storage), která působí jako souborové servery. Souborové servery s Windows vyžadují ověření a ve výchozím nastavení nezabezpečená přihlášení hostů nepoužívají. Vzhledem k tomu, že tato přihlášení nejsou ověřená, deaktivují se důležité funkce zabezpečení, jako je podepisování a šifrování paketů SMB. V důsledku toho jsou klienti, kteří nezabezpečená přihlášení hostů povolují, zranitelní vůči různým útokům prostředníkem (man-in-the-middle), které můžou vést ke ztrátě nebo poškození dat a ohrožení malwarem. Kromě toho jsou všechna data zapsaná na souborový server při nezabezpečeném přihlášení hosta potenciálně přístupná pro všechny uživatele v síti. Microsoft doporučuje, abyste nezabezpečená přihlášení hostů zakázali a nakonfigurovali souborové servery tak, aby vyžadovaly ověřený přístup.
+      </string>
+    </stringTable>
     <presentationTable>
       <presentation id="Pol_CipherSuiteOrder">
         <text>Sady šifer:</text>

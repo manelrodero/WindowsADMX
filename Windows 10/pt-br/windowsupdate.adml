@@ -295,12 +295,20 @@ Ao habilitar essa política, essa funcionalidade será desabilitada, o que pode 
 
 Observação: essa política se aplica somente quando o computador está configurado para se conectar a um serviço de atualização de intranet usando a política "Especificar o local do serviço de atualização da intranet da Microsoft".</string>
 
-      <string id="DeferUpgrade_Title">Adiar Atualização</string>
-      <string id="DeferUpgrade_Help">Se você habilitar essa configuração de política, nos SKUs Pro e Enterprise, você pode adiar atualizações até o próximo período de atualização (pelo menos alguns meses). 
+      <string id="DeferUpgrade_Title">Adiar Atualizações</string>
+      <string id="DeferUpgrade_Help">Enable this policy in order to defer upgrades for up to eight months.
       
-Se você não tiver definido, receberá atualizações assim que estiverem disponíveis que serão instaladas como parte de suas políticas de atualização. 
+You can also choose to delay updates for up to one month. If you do not delay updates, your PC will remain up to date with security updates as they become available.
 
-Atualizações de segurança não serão afetadas por esta política. Para obter mais informações sobre as atualizações disponíveis, consulte windows.com/itpro.</string>
+If an issue arises with an update or upgrade, select "Pause Upgrades and Updates". This will delay updates and upgrades until the next monthly update or upgrade becomes available. Once a new update or upgrade it available, the value will go back to the previously selected option, re-enabling your validation groups.
+
+Note: Definition updates will not be impacted by this policy.
+
+Note: If the "Specify intranet Microsoft update service location" policy is enabled, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+ 
+Note: If the “Allow Telemetry” policy is enabled and the Options value is set to 0, then the “Defer upgrades by”, “Defer updates by” and “Pause Updates and Upgrades” settings have no effect.
+
+To stay informed about new features in Windows 10, see go.microsoft.com/fwlink/?LinkID=529169.</string>
     </stringTable>
     <presentationTable>
       <presentation id="RemoveWindowsUpdate">
@@ -354,6 +362,13 @@ Atualizações de segurança não serão afetadas por esta política. Para obter
         <text>O temporizador de reinício dará aos usuários</text>
         <text>esse tempo para salvar seu</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">trabalho (minutos):  </decimalTextBox>
+      </presentation>
+      <presentation id="DeferUpgrade_Title">
+        <text>Adiar atualizações para os seguintes itens:</text>
+        <decimalTextBox refId="DeferUpgradePeriodId" defaultValue="0">duração (meses): </decimalTextBox>
+        <text>Adiar atualizações para os seguintes itens:</text>
+        <decimalTextBox refId="DeferUpdatePeriodId" defaultValue="0">duração (semanas): </decimalTextBox>
+        <checkBox refId="PauseDeferralsId" defaultChecked="false">Pausar Atualizações</checkBox>
       </presentation>
     </presentationTable>
   </resources>

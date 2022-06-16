@@ -6,6 +6,7 @@
   <resources>
     <stringTable>
       <string id="BiometricsConfiguration">Biometria</string>
+      <string id="FaceConfiguration">Caratteristiche del viso</string>
       <string id="Biometrics_EnableBio">Consenti utilizzo della biometria</string>
       <string id="Biometrics_EnableBio_Help">Questa impostazione dei criteri consente o impedisce l'esecuzione del Servizio di biometria Windows nel computer.
         
@@ -42,6 +43,15 @@ Se si abilita questa impostazione dei criteri, sarà possibile configurare il ti
 
 Se si disabilita o non si configura questa impostazione dei criteri, per i timeout degli eventi di Cambio rapido utente verrà utilizzato il valore predefinito di 10 secondi.
 
+</string>
+      <string id="Face_EnhancedAntiSpoofing">Usa anti-spoofing avanzato se disponibile</string>
+      <string id="Face_EnhancedAntiSpoofing_Help">This policy setting determines whether enhanced anti-spoofing is configured for devices which support it.
+
+If you do not configure this policy setting, users will be able to choose whether or not to use enhanced anti-spoofing on supported devices.
+
+If you enable this policy setting, Windows will require all users on the device to use anti-spoofing for facial features, on devices which support it.
+
+If you disable this policy setting, enhanced anti-spoofing is turned off for all users on the device and they will be unable to turn it on.
 </string>
     </stringTable>
     <presentationTable>

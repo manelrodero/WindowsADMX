@@ -239,12 +239,26 @@ Se ativar esta definição de política, poderá escolher um algoritmo de encrip
 Se desativar ou não configurar esta definição de política, o BitLocker irá utilizar AES com a mesma força de codificação (128 ou 256 bits) que a definição de política "Escolher método de encriptação da unidade e força da cifra (Windows Vista, Windows Server 2008, Windows 7)", se estiver definida. Se não for definida qualquer política, o BitLocker irá utilizar o método de encriptação padrão de AES de 128 bits ou o método de encriptação especificado pelo script de configuração.
 
       </string>
+      <string id="EncryptionMethodWithXts_Help">Esta definição de política permite configurar o algoritmo e a força de codificação utilizados pela Encriptação de Unidade BitLocker. Esta definição de política é aplicada quando ativa o BitLocker. Alterar o método de encriptação não tem efeito se a unidade já estiver encriptada ou se a encriptação estiver em curso.
+
+Se ativar esta definição de política, poderá configurar individualmente um algoritmo de encriptação e a força de codificação da chave para unidades de dados fixas, unidades de sistema operativo e unidades de dados amovíveis. Para unidades de sistema operativo e fixas, recomenda-se a utilização do algoritmo XTS-AES. Para unidades amovíveis, deve utilizar AES-CBC de 128 bits ou AES-CBC de 256 bits, se a unidade for utilizada em outros dispositivos que não estão a executar o Windows 10 (Versão 1511).
+
+Se desativar ou não configurar esta definição de política, o BitLocker irá utilizar AES com a mesma força de codificação (128 ou 256 bits) que as definições de política "Escolher método de encriptação da unidade e força de codificação (Windows Vista, Windows Server 2008, Windows 7)" ou "Escolher método de encriptação da unidade e força de codificação (nesse ordem), se estiverem definidas. Se nenhuma das políticas for definida, o BitLocker irá utilizar o método de encriptação predefinido de XTS-AES de 128 bits ou o método de encriptação especificado pelo script de configuração."
+
+      </string>
       <string id="EncryptionMethod_Name">Escolher método de encriptação da unidade e força de cifra (Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2)</string>
-      <string id="EncryptionMethodNoDiffuser_Name">Escolher método de encriptação da unidade e força de cifra</string>
+      <string id="EncryptionMethodNoDiffuser_Name">Escolher método de encriptação da unidade e força de cifra (Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2, Windows 10 [Versão 1507])</string>
+      <string id="EncryptionMethodWithXts_Name">Escolher método de encriptação da unidade e força de cifra (Windows 10 [Versão 1511] e posterior)</string>
       <string id="EncryptionMethodDropDown_AES128Diffuser_Name">AES 128 bits com Difusor</string>
       <string id="EncryptionMethodDropDown_AES256Diffuser_Name">AES 256 bits com Difusor</string>
       <string id="EncryptionMethodDropDown_AES128_Name">AES 128 bits (predefinição)</string>
+      <string id="EncryptionMethodDropDown_AES128_Name2">AES-CBC de 128 bits</string>
+      <string id="EncryptionMethodDropDown_AES128_Name3">AES-CBC de 128 bits (predefinição)</string>
       <string id="EncryptionMethodDropDown_AES256_Name">AES 256 bits</string>
+      <string id="EncryptionMethodDropDown_AES256_Name2">AES-CBC de 256 bits</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name">XTS-AES de 128 bits (predefinição)</string>
+      <string id="EncryptionMethodDropDown_XTS_AES128_Name2">XTS-AES de 128 bits</string>
+      <string id="EncryptionMethodDropDown_XTS_AES256_Name">XTS-AES de 256 bits</string>
 
       <string id="FVECategory">Encriptação de Unidade BitLocker</string>
       <string id="PlatformValidation_Deprecated_Help">Esta definição de política permite configurar a forma como o hardware de segurança de TPM (Trusted Platform Module) do computador protege a chave de encriptação BitLocker. Esta definição de política não é aplicável se o computador não tiver um TPM compatível ou se o BitLocker já estiver ativado com proteção TPM.
@@ -801,6 +815,12 @@ Nota: nem todos os carateres e idiomas são suportados no pré-arranque. É viva
 
       <presentation id="EncryptionMethodNoDiffuser_Name">
         <dropdownList refId="EncryptionMethodNoDiffDropDown_Name" noSort="true" defaultItem="0">Selecionar o método de encriptação:</dropdownList>
+      </presentation>
+
+      <presentation id="EncryptionMethodWithXts_Name">
+        <dropdownList refId="EncryptionMethodWithXtsOsDropDown_Name" noSort="true" defaultItem="2">Selecionar o método de encriptação para unidades de sistema operativo:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsFdvDropDown_Name" noSort="true" defaultItem="2">Selecionar o método de encriptação para unidades de dados fixas:</dropdownList>
+        <dropdownList refId="EncryptionMethodWithXtsRdvDropDown_Name" noSort="true" defaultItem="0">Selecionar o método de encriptação para unidades de dados amovíveis:</dropdownList>
       </presentation>
 
       <presentation id="OSEncryptionType">

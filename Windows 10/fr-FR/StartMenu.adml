@@ -5,7 +5,7 @@
   <description>Entrer la description ici</description>
   <resources>
     <stringTable>
-      <string id="SUPPORTED_Win7UntilThreshold">Au minimum Windows Server 2008 R2 ou Windows 7. Non pris en charge sur Windows 10 ou version ultérieure.</string>
+      <string id="SUPPORTED_Win7UntilThreshold">Au minimum Windows Server 2008 R2 ou Windows 7. Non pris en charge sur Windows 10 ou version ultérieure</string>
       <string id="ClearRecentProgForNewUserInStartMenu">Effacer la liste des programmes récents pour les nouveaux utilisateurs</string>
       <string id="ClearRecentProgForNewUserInStartMenu_Help">Si ce paramètre de stratégie est activé, la liste des programmes récents dans le menu Démarrer est vide pour les nouveaux utilisateurs.
 
@@ -144,24 +144,24 @@ Si vous désactivez ce paramètre ou si vous ne le configurez pas, tous les text
 Si vous activez ce paramètre de stratégie, les utilisateurs ne pourront pas sélectionner une application, redimensionner la vignette, épingler/détacher une vignette ou une vignette secondaire, basculer en mode de personnalisation et réorganiser les vignettes dans l’écran de démarrage et Applications.
 
 Si vous activez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs pourront sélectionner une application, redimensionner la vignette, épingler/détacher une vignette ou une vignette secondaire, basculer en mode de personnalisation et réorganiser les vignettes dans l’écran de démarrage et Applications.</string>
-      <string id="ClearTilesOnExit">Effacer l’historique des notifications par vignette en quittant</string>
-      <string id="ClearTilesOnExit_Help">Si vous activez ce paramètre, le système supprime les notifications par vignette lorsque l’utilisateur ferme sa session. Par conséquent, les vignettes de la vue de démarrage affichent toujours leur contenu par défaut à l’ouverture d’une session. En outre, toutes les versions en cache de ces notifications sont effacées lorsque l’utilisateur ferme la session.
+      <string id="ClearTilesOnExit">Effacer l'historique des notifications par vignette lors de la connexion</string>
+      <string id="ClearTilesOnExit_Help">Si vous activez ce paramètre, le système supprime les notifications par vignette lorsque l'utilisateur ouvre sa session. Par conséquent, les vignettes de la vue de démarrage affichent toujours leur contenu par défaut à l'ouverture d'une session. En outre, toutes les versions en cache de ces notifications sont effacées lorsque l'utilisateur ouvre la session.
 
-Si vous désactivez ou ne configurez pas ce paramètre, le système conserve les notifications et, à l’ouverture d’une session, les vignettes apparaissent comme elles apparaissaient lorsque l’utilisateur a fermé la session, avec l’historique des notifications précédentes de chaque vignette.
+Si vous désactivez ce paramètre ou si vous ne le configurez pas, le système conserve les notifications et, à l'ouverture d'une session, les vignettes apparaissent comme elles apparaissaient lorsque l'utilisateur a fermé la session, avec l'historique des notifications précédentes de chaque vignette.
 
-Ce paramètre n’empêche pas l’apparition de nouvelles notifications. Reportez-vous au paramètre « Désactiver les notifications d’application » pour bloquer les nouvelles notifications.</string>
+Ce paramètre n'empêche pas l'apparition de nouvelles notifications. Reportez-vous au paramètre « Désactiver les notifications d'application » pour bloquer les nouvelles notifications.</string>
       <string id="StartPinAppsWhenInstalled">Épingler des applications à l’écran de démarrage lors de leur installation</string>
       <string id="StartPinAppsWhenInstalled_Help">Ce paramètre de stratégie permet d’épingler par défaut des applications à l’écran de démarrage, lorsqu’elles sont incluses par AppID dans la liste.</string>
 
       <string id="LockedStartLayout">Disposition de l'écran de démarrage</string>
       <string id="LockedStartLayout_Help">Spécifie la disposition de l'écran de démarrage pour les utilisateurs.
 
-Ce paramètre vous permet de spécifier la disposition de l’écran de démarrage pour les utilisateurs et les empêche de modifier sa configuration. La disposition de l’écran de démarrage que vous spécifiez doit être stockée dans un fichier XML généré par l’applet de commande PowerShell Export-StartLayout.
-Pour utiliser ce paramètre, vous devez d’abord configurer manuellement la disposition de l’écran de démarrage d’un appareil selon l’apparence souhaitée. Après cela, exécutez l’applet de commande PowerShell Export-StartLayout sur ce même appareil. L’applet de commande génère un fichier XML représentant la disposition que vous avez configurée.
+Ce paramètre vous permet de spécifier la disposition de l'écran de démarrage pour les utilisateurs et les empêche de modifier sa configuration. La disposition de l'écran de démarrage que vous spécifiez doit être stockée dans un fichier XML généré par l'applet de commande PowerShell Export-StartLayout.
+Pour utiliser ce paramètre, vous devez d'abord configurer manuellement la disposition de l'écran de démarrage d'un appareil selon l'apparence souhaitée. Après cela, exécutez l'applet de commande PowerShell Export-StartLayout sur ce même appareil. L'applet de commande génère un fichier XML représentant la disposition que vous avez configurée.
 
-Une fois le fichier XML généré et déplacé vers le chemin d’accès de fichier souhaité, tapez le nom et le chemin d’accès complet au fichier XML. Vous pouvez taper un chemin d’accès local, tel que C:\StartLayouts\myLayout.xml, ou un chemin d’accès UNC, tel que \\Serveur\Partage\Layout.xml. Si le fichier spécifié n’est pas disponible lorsque l’utilisateur ouvre une session, la disposition n’est pas modifiée. Les utilisateurs ne peuvent pas personnaliser leur écran de démarrage pendant que ce paramètre est activé.
+Une fois le fichier XML généré et déplacé vers le chemin d'accès de fichier souhaité, entrez le nom et le chemin d'accès complet au fichier XML. Vous pouvez entrer un chemin d'accès local, tel que C:\StartLayouts\myLayout.xml, ou un chemin d'accès UNC, tel que \\Serveur\Partage\Layout.xml. Si le fichier spécifié n'est pas disponible lorsque l'utilisateur ouvre une session, la disposition n'est pas modifiée. Les utilisateurs ne peuvent pas personnaliser leur écran de démarrage pendant que ce paramètre est activé.
 
-Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la disposition de l’écran de démarrage n’est pas modifiée et les utilisateurs peuvent la personnaliser.</string>
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la disposition de l'écran de démarrage n'est pas modifiée et les utilisateurs peuvent la personnaliser.</string>
       <string id="NoClose">Supprimer et empêcher l’accès aux commandes Arrêter, Redémarrer, Mettre en veille et Mettre en veille prolongée</string>
       <string id="NoClose_Help">Ce paramètre de stratégie empêche les utilisateurs d’exécuter les commandes suivantes à partir du menu Démarrer ou de l’écran Sécurité Windows : Arrêter, Redémarrer, Mettre en veille et Mettre en veille prolongée. Ce paramètre de stratégie n’empêche pas les utilisateurs d’utiliser des programmes Windows qui exécutent ces fonctions.
 
@@ -569,6 +569,12 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
 Si vous activez ce paramètre de stratégie, l’écran de démarrage apparaît sur l’écran dont se sert l’utilisateur quand il appuie sur la touche Windows.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’écran de démarrage est toujours affiché sur l’écran principal quand l’utilisateur appuie sur la touche Windows. Les utilisateurs peuvent toujours ouvrir l’écran de démarrage sur d’autres écrans en appuyant sur le bouton Démarrer sur l’écran en question. De plus, l’utilisateur peut configurer ce paramètre.</string>
+      <string id="ForceStartSize_DisplayName">Forcer le démarrage à la taille plein écran ou taille de menu</string>
+      <string id="ForceStartSize_ExplainText">Si vous activez cette stratégie et la définissez sur Menu Démarrer ou Plein écran de démarrage, le démarrage prendra cette taille et les utilisateurs ne pourront pas modifier la taille de démarrage dans les paramètres. 
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows va sélectionner automatiquement la taille en fonction du facteur de forme matérielle et les utilisateurs ne pourront pas modifier la taille de démarrage dans les paramètres.</string>
+      <string id="ForceLauncherSize_Collapsed">Menu Démarrer</string>
+      <string id="ForceLauncherSize_Expanded">Plein écran de démarrage</string>
     </stringTable>
     <presentationTable>
       <presentation id="PowerButtonAction">
@@ -582,6 +588,9 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <label>Fichier de disposition de démarrage</label>
           <defaultValue></defaultValue>
         </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Choisissez un des formats suivants</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

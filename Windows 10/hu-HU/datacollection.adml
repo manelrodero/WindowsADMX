@@ -6,13 +6,13 @@
   <resources>
     <stringTable>
       <string id="AllowTelemetry">Telemetria engedélyezése</string>
-      <string id="AllowTelemetry_0">0 – Kikapcsolva (csak vállalati módban)</string>
+      <string id="AllowTelemetry_0">0 – Biztonság (csak vállalati módban)</string>
       <string id="AllowTelemetry_1">1 – Alapszintű</string>
       <string id="AllowTelemetry_2">2 – Közepes</string>
       <string id="AllowTelemetry_3">3 – Teljes</string>
-      <string id="AllowTelemetry_Explain">Ezzel a házirend-beállítással határozható meg, hogy mennyi diagnosztikai és használati adatot küldjön el a Windows a Microsoftnak. Ha a 0 értéket adja meg, a Windows nem küldi el a Microsoftnak az operációsrendszer-összetevők telemetriai adatait. A 0 érték kizárólag vállalati és kiszolgálói eszközökön használható, hatása más eszközökön az 1 értékével azonos. Amennyiben az 1 értéket adja meg, csak korlátozott mennyiségű (alapszintű) diagnosztikai és használati adatot küld el a rendszer visszajelzésként. Vegye figyelembe, hogy a 0 és az 1 érték megadása bizonyos szempontokból hátrányosan befolyásolja az eszköz teljesítményét. Ha a 2 értéket adja meg, a Windows minden diagnosztikai és használati adatot elküld a Microsoftnak. A 3 érték megadásával ugyanazokat az adatokat küldi el, mint a 2 érték megadása esetén, ezenkívül további diagnosztikai adatokat is elküld (például a lefagyás pillanatában észlelt rendszerállapotot, valamint a vélhetően problémát okozó fájlokat és tartalmat).
+      <string id="AllowTelemetry_Explain">Ezzel a házirend-beállítással határozható meg, hogy mennyi diagnosztikai és használati adatot küldjön el a Windows a Microsoftnak. Ha a 0 értéket adja meg, a Windows csak minimális mennyiségű adatot küld el a Microsoftnak: ezen adatok között a Kártevő-eltávolító eszköz és a Windows Defender adatai szerepelnek (ha ez engedélyezett) a telemetriai ügyfél beállításaival együtt. A 0 érték kizárólag vállalati, EDU-, IoT- és kiszolgálói eszközökön használható, hatása más eszközökön az 1 értékével azonos. Ha az 1 értéket adja meg, csak alapszintű diagnosztikai és használati adatokat küld el a Windows. Ne feledje, hogy a 0 és az 1 érték megadása csökkenti az eszköz bizonyos funkcióinak teljesítményét. Ha a 2 értéket adja meg, a Windows nagyobb mennyiségű diagnosztikai és használati adatot küld el a Microsoftnak. A 3 érték megadásával ugyanazokat az adatokat küldi el, mint a 2 érték megadása esetén, ezenkívül további diagnosztikai adatokat is elküld (például azokat a fájlokat és tartalmakat, amelyek vélhetően a probléma okozói). A Windows 10 telemetriai beállításai magára az operációs rendszerre és néhány belső alkalmazásra vonatkoznak, a Windows 10-es külső alkalmazásokra nem.
 
-Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználók saját maguk állíthatják be az adatvédelmi szintet a Gépházban.
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználók saját maguk állíthatják be a telemetriai adatok szintjét a Gépházban.
 
 </string>
       <string id="EnableExperimentation">Előzetes funkciók és beállítások letiltása</string>

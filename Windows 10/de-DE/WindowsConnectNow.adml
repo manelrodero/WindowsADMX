@@ -13,24 +13,24 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, sind die Assistenten deaktivie
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, haben Benutzer Zugriff auf die Aufgaben des Assistenten (einschließlich "Drahtlosrouter oder Zugriffspunkt einrichten" und "Drahtlosgerät hinzufügen"). In der Standardeinstellung lässt diese Richtlinieneinstellung den Benutzerzugriff auf alle WCN-Assistenten zu.</string>
       <string id="WCN_EnableRegistrar">Konfiguration von Drahtloseinstellungen mit Windows-Sofortverbindung</string>
-      <string id="WCN_EnableRegistrar_Help">This policy setting allows the configuration of wireless settings using Windows Connect Now (WCN). The WCN Registrar enables the discovery and configuration of devices over Ethernet (UPnP), over In-band 802.11 WLAN, through the Windows Portable Device API (WPD), and via USB Flash drives.
+      <string id="WCN_EnableRegistrar_Help">Diese Richtlinieneinstellung ermöglicht die Konfiguration von Drahtloseinstellungen mittels Windows-Sofortverbindung (Windows Connect Now, WCN). Die WCN-Registrierungsstelle ermöglicht die Erkennung und Konfiguration von Geräten über Ethernet (UPnP), über In-Band-802.11-WLAN, mithilfe der Windows-API für tragbare Geräte (WPD) und über USB-Flashlaufwerke.
 
-Additional options are available to allow discovery and configuration over a specific medium. 
+Mit weiteren verfügbaren Optionen kann die Erkennung und Konfiguration über ein bestimmtes Medium zugelassen werden. 
 
-If you enable this policy setting, additional choices are available to turn off the operations over a specific medium. 
+Wenn Sie diese Richtlinieneinstellung aktivieren, sind weitere Optionen verfügbar, mit denen die Vorgänge über ein bestimmtes Medium deaktiviert werden können. 
 
-If you disable this policy setting, operations are disabled over all media. 
+Wenn Sie diese Richtlinieneinstellung deaktivieren, werden Vorgänge für alle Medien deaktiviert. 
 
-If you do not configure this policy setting, operations are enabled over all media. 
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, sind Vorgänge für alle Medien aktiviert. 
 
-The default for this policy setting allows operations over all media.</string>
+In der Standardeinstellung lässt diese Richtlinieneinstellung Vorgänge für alle Medien zu.</string>
       <string id="WCN_Higher_Precedence_Registrar_UPnP">WCN über Ethernet (UPnP)</string>
-      <string id="WCN_Higher_Precedence_Registrar_InBand802DOT11">WCN over In-band 802.11 WLAN</string>
+      <string id="WCN_Higher_Precedence_Registrar_InBand802DOT11">WCN über In-Band-802.11-WLAN</string>
     </stringTable>
     <presentationTable>
       <presentation id="WCN_EnableRegistrar">
         <checkBox refId="WCN_EnableRegistrar_DisableUPnP">Option zum Konfigurieren mit WCN über Ethernet (UPnP) deaktivieren</checkBox>
-        <checkBox refId="WCN_EnableRegistrar_DisableInBand802DOT11">Turn off ability to configure using WCN over In-band 802.11 WLAN</checkBox>
+        <checkBox refId="WCN_EnableRegistrar_DisableInBand802DOT11">Fähigkeit zum Konfigurieren mit WCN über In-Band-802.11-WLAN deaktivieren</checkBox>
         <checkBox refId="WCN_EnableRegistrar_DisableFlashConfig">Option zum Konfigurieren mittels USB-Flashlaufwerk deaktivieren</checkBox>
         <checkBox refId="WCN_EnableRegistrar_DisableWPD">Option zum Konfigurieren von tragbaren Windows-Geräten (Windows Portable Devices, WPD) deaktivieren</checkBox>
         <decimalTextBox refId="WCN_EnableRegistrar_MaxWCNDeviceNumber" defaultValue="500">Maximal zulässige Anzahl von WCN-Geräten:</decimalTextBox>

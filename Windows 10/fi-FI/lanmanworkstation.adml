@@ -27,7 +27,16 @@ Tämän asetuksen muokkaaminen:
 Järjestä halutut salausohjelmistot muokkausruudussa yksi salausohjelmisto per rivi siinä järjestyksessä, että halutuin salausohjelmisto on yläreunassa ja vähiten haluttu alareunassa. Poista ne salausohjelmistot, joita et halua käyttää.
 
 Huomautus: kun määrität tämän suojausasetuksen, muutokset eivät tule voimaan, ennen kuin käynnistät Windowsin uudelleen.</string>
-      </stringTable>
+      <string id="Pol_EnableInsecureGuestLogons_Name">Salli suojaamattomat vieraskirjautumiset</string>
+      <string id="Pol_EnableInsecureGuestLogons_Help">Tämä käytäntöasetus määrittää, salliiko SMB-asiakas suojaamattomat vieraskirjautumiset SMB-palvelimeen.
+
+Jos otat tämän käytäntöasetuksen käyttöön tai ei määritä sitä, SMB-asiakas sallii suojaamattomat vieraskirjautumiset.
+
+Jos poistat tämän käytäntöasetuksen käytöstä, SMB-asiakas ei salli suojaamattomia vieraskirjautumisia.
+
+Suojaamattomien vieraskirjautumisten avulla tiedostopalvelimet sallivat jaettujen kansioiden käytön ilman todennusta. Vaikka ne ovat epätavallisia yritysympäristössä, niitä käytetään usein kuluttajien verkkoon liitetyissä tallennuslaitteissa (NAS), jotka toimivat tiedostopalvelimina. Oletusarvon mukaan Windows-tiedostopalvelimet edellyttävät todennusta eivätkä salli suojaamattomia vieraskirjautumisia. Koska suojaamattomat vieraskirjautumiset ovat todentamattomia, SMB-allekirjoittamisen ja SMB-salauksen kaltaiset tärkeät tietoturvaominaisuudet eivät ole käytössä. Tämän vuoksi asiakkaat, jotka sallivat suojaamattomat vieraskirjautumiset, ovat alttiina monenlaisille välistävetohyökkäyksille, jotka voivat aiheuttaa tietojen menettämistä ja vioittumista sekä altistaa haittaohjelmille. Lisäksi tiedostopalvelimeen suojaamattoman vieraskirjautumisen aikana kirjoitetut tiedot voivat olla kenen tahansa kyseisessä verkossa olevan käytettävissä. Microsoft suosittelee suojaamattomien vieraskirjautumisten poistamista käytöstä ja määrittämään tiedostopalvelimet niin, että ne edellyttävät todennettua käyttöä.
+      </string>
+    </stringTable>
     <presentationTable>
       <presentation id="Pol_CipherSuiteOrder">
         <text>Salausohjelmistot:</text>

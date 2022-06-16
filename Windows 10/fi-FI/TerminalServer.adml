@@ -5,14 +5,15 @@
   <description>kirjoita kuvaus tähän</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Vähintään Windows 10 tai Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Vähintään Windows 8 tai Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Vähintään Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Vähintään Windows 8 Enterprise tai Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Vähintään Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Vähintään Windows 8 Enterprise tai Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Vain Windows 7 tai Windows Server 2008 R2 (ja niiden Service Packit)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista ja Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Vähintään Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Vähintään Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Vähintään Windows Server Technical Preview 2, jossa on RDSH-rooli asennettuna</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Vähintään Windows Server 2012, jossa on RDSH-rooli asennettuna</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Vähintään Windows 7 ja Service Pack 1 tai Windows Server 2008 R2 ja Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Vähintään Windows Vista ja Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Vähintään Windows 2000 Terminal Services</string>
@@ -45,7 +46,7 @@
       <string id="TS_AUDIOMAP_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, pystyvätkö käyttäjät uudelleenohjaamaan etätietokoneen ääni- ja videolähdön etätyöpöytäpalveluiden istunnossa.
 Käyttäjät voivat määrittää, missä etätietokoneen äänilähtö toistetaan, määrittämällä etä-ääniasetukset etätyöpöytäyhteyden Paikalliset resurssit -välilehdessä. Käyttäjät voivat valita etä-äänen toistamisen etätietokoneessa tai paikallisessa tietokoneessa. Käyttäjät voivat myös valita, ettei ääntä toisteta. Videotoisto voidaan määrittää etätyöpöytäprotokollatiedoston (.rdp) videoplayback-asetuksen avulla. Oletusarvon mukaan videotoisto on käytössä.
 
-Oletusarvon mukaan ääni- ja videotoiston uudelleenohjausta ei sallita, kun yhteys muodostetaan Windows Server 2008 R2-, Windows Server 2008- tai Windows Server 2003 -tietokoneeseen. Ääni- ja videotoiston uudelleenohjaus sallitaan oletusarvon mukaan, kun yhteys muodostetaan Windows 8-, Windows Server Technical Preview 2-, Windows 7-, Windows Vista- tai Windows XP Professional -tietokoneeseen.
+Oletusarvon mukaan ääni- ja videotoiston uudelleenohjausta ei sallita, kun yhteys muodostetaan Windows Server 2008 R2-, Windows Server 2008- tai Windows Server 2003 -tietokoneeseen. Ääni- ja videotoiston uudelleenohjaus sallitaan oletusarvon mukaan, kun yhteys muodostetaan Windows 8-, Windows Server 2012-, Windows 7-, Windows Vista- tai Windows XP Professional -tietokoneeseen.
 
 Jos otat tämän käytäntöasetuksen käyttöön, ääni- ja videotoiston uudelleenohjaus sallitaan.
 
@@ -154,24 +155,23 @@ Jos poistat tämän käytäntöasetuksen käytöstä, etätyöpöytäpalvelut sa
 Jos et määritä tätä käytäntöasetusta, leikepöydän uudelleenohjausta ei määritetä ryhmäkäytäntötasolla. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Tämän käytäntöasetuksen avulla voit määrittää etätyöpöytäpalveluiden yhteyksissä käytettävän värien enimmäismäärän.
+      <string id="TS_COLOR_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää etätyöpöytäpalveluiden yhteyksissä käytettävän värisyvyyden (väritarkkuuden) enimmäisarvon.
 
-        Tämän käytäntöasetuksen avulla voit rajoittaa minkä tahansa RDP:tä käyttävän yhteyden värien määrää. Värien määrän rajoittaminen voi parantaa yhteyden toimintaa etenkin silloin, kun yhteys on hidas, ja pienentää palvelimen kuormitusta.
+Tämän käytäntöasetuksen avulla voit rajoittaa minkä tahansa RDP:tä käyttävän yhteyden värisyvyyttä. Värisyvyyden rajoittaminen voi parantaa yhteyden toimintaa etenkin silloin, kun yhteys on hidas, ja pienentää palvelimen kuormitusta.
 
-        Jos otat tämän käytäntöasetuksen käyttöön, määrittämäsi värien määrä on käyttäjän RDP-yhteydessä sallittu värien enimmäismäärä. Yhteyden todellinen värien määrä määräytyy asiakkaan tietokoneessa olevan värituen mukaan. Jos valitset Asiakasyhteensopiva, käytetään suurinta asiakkaan tukemaa värien määrää.
+Jos otat tämän käytäntöasetuksen käyttöön, määrittämäsi värisyvyys on käyttäjän RDP-yhteydessä sallittu enimmäisvärisyvyys. Yhteyden todellinen värisyvyys määräytyy asiakkaan tietokoneessa olevan värituen mukaan. Jos valitset Asiakasyhteensopiva, käytetään suurinta asiakkaan tukemaa värisyvyyttä.
 
-        Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, yhteyksien värien määrää ei määritetä ryhmäkäytäntötasolla.
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, yhteyksien värisyvyyttä ei määritetä ryhmäkäytäntötasolla.
 
-        Huomautus:
-        1.	Värien määräksi voidaan määrittää 24 bittiä vain Windows Server 2003:ssa ja Windows XP Professionalissa.
-        2.	Tämän käytäntöasetuksen avulla määritettyä arvoa ei käytetä sellaisten asiakastietokoneiden yhteyksiin, jotka käyttävät vähintään Remote Desktop Protocol 8.0:aa (tietokoneet, joissa on vähintään Windows 8 tai Windows Server Technical Preview 2). Näissä yhteyksissä värien määrän asetuksena on aina 32 bittiä.
-        3.	Vähintään Windows 8- tai Windows Server Technical Preview 2 -tietokoneisiin yhteyksiä muodostavien asiakastietokoneiden, jotka käyttävät Remote Desktop Protocol 7.1:tä tai sitä aiempaa versiota, yhteyksiin käytetään seuraavia värien määrän arvoja:
-        a.	käytäntöasetuksen määrittämä arvo
-        b.	asiakkaan tukema värien enimmäismäärä
-        c.	asiakkaan pyytämä arvo.
+Huomautus:
+1.	Värisyvyydeksi voidaan määrittää 24 bittiä vain Windows Server 2003:ssa ja Windows XP Professionalissa.
+2.	Tämän käytäntöasetuksen avulla määritettyä arvoa ei käytetä sellaisten asiakastietokoneiden yhteyksiin, jotka käyttävät vähintään Remote Desktop Protocol 8.0:aa (tietokoneet, joissa on vähintään Windows 8 tai Windows Server 2012). Näissä yhteyksissä värisyvyyden asetuksena on aina 32 bittiä.
+3.	Vähintään Windows 8- tai Windows Server 2012 -tietokoneisiin yhteyksiä muodostavien asiakastietokoneiden, jotka käyttävät Remote Desktop Protocol 7.1:tä tai sitä aiempaa versiota, yhteyksiin käytetään seuraavia värisyvyyden arvoja:
+a.	käytäntöasetuksen määrittämä arvo
+b.	asiakkaan tukema värien enimmäisvärisyvyys
+c.	asiakkaan pyytämä arvo.
 
-        Jos asiakas ei tue vähintään 16:ta bittiä, yhteys katkaistaan.
+Jos asiakas ei tue vähintään 16:ta bittiä, yhteys katkaistaan.
       </string>
       <string id="TS_COLORDEPTH">Rajoita värien enimmäismäärää</string>
       <string id="TS_Comp_Help">Ohjaa yksittäisten tietokoneiden tai tietokoneryhmien etätyöpöytäpalveluiden määrityksiä ja asiakasistuntojen ominaisuuksia.</string>
@@ -564,7 +564,7 @@ Huomautukset:
       <string id="TS_SD_Loc">Määritä etätyöpöydän yhteyksien välittäjän palvelimen nimi</string>
       <string id="TS_SD_Loc_Explain">Tämän käytäntöasetuksen avulla voit määrittää etätyöpöydän yhteyksien välittäjäpalvelimen, jota etätyöpöytäistunnon isäntäpalvelin käyttää seuratessaan ja ohjatessaan etätyöpöytäistunnon käyttäjäistuntoja isäntäpalvelinklusterissa, jonka kuormitus on tasattu. Määritetyssä palvelimessa on oltava käytössä etätyöpöydän yhteyksien välittäjäpalvelu. Kaikkien etätyöpöytäistunnon isäntäpalvelinten on käytettävä samaa etätyöpöydän yhteyksien välittäjäpalvelinta, kun ne sijaitsevat klusterissa, jonka kuormitus on tasattu.
 
-Jos otat tämän käytäntöasetuksen käyttöön, sinun on määritettävä etätyöpöydän yhteyksien välittäjäpalvelin sen täydellisen toimialuenimen (FQDN) avulla. Windows Server Technical Preview 2 -tietokoneessa korkean käytettävyystason asennus useiden etätyöpöydän yhteyksien välittäjäpalvelimien avulla edellyttää, että sinun on annettava puolipistein eroteltu luettelo kaikkien etätyöpöydän yhteyksien välittäjäpalvelinten täydellisistä toimialuenimistä.
+Jos otat tämän käytäntöasetuksen käyttöön, sinun on määritettävä etätyöpöydän yhteyksien välittäjäpalvelin sen täydellisen toimialuenimen (FQDN) avulla. Windows Server 2012 -tietokoneessa korkean käytettävyystason asennus useiden etätyöpöydän yhteyksien välittäjäpalvelimien avulla edellyttää, että sinun on annettava puolipistein eroteltu luettelo kaikkien etätyöpöydän yhteyksien välittäjäpalvelinten täydellisistä toimialuenimistä.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käytäntöasetusta ei määritetä ryhmäkäytäntötasolla.
 
@@ -950,19 +950,17 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, et
 
     <string id="TS_SERVER_IMAGE_QUALITY">Määritä RemoteFX:n mukautuvan grafiikan kuvanlaatu</string>
     <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää etäkäyttäjien kuvanlaadun, kun tähän tietokoneeseen muodostetaan yhteys etätyöpöytäyhteyttä käyttämällä. Tämän käytäntöasetuksen avulla voit tasapainottaa verkon kaistanleveyden käyttöä tuotettuun kuvanlaatuun nähden.
- 
-Jos otat tämän käytäntöasetuksen käyttöön ja määrität laadun asetukseksi Normaali, RemoteFX:n mukautuva grafiikka käyttää koodaustapaa, joka tuottaa normaalilaatuisia kuvia. Tämä tila käyttää kaikista laatutiloista vähiten verkon kaistanleveyttä. 
-Jos otat tämän käytäntöasetuksen käyttöön ja määrität laadun asetukseksi Suuri, RemoteFX:n mukautuva grafiikka käyttää koodaustapaa, joka tuottaa korkealaatuisia kuvia ja käyttää kohtuullisesti verkon kaistanleveyttä. 
-Jos otat tämän käytäntöasetuksen käyttöön ja määrität laadun asetukseksi Häviötön, RemoteFX:n mukautuva grafiikka käyttää häviötöntä koodausta. Tällä tilalla ei ole vaikutusta grafiikkatietojen värien eheyteen. Tämä asetus kuitenkin lisää huomattavasti verkon kaistanleveyden käyttöä. Suosittelemme tämän asetuksen käyttöä vain erityistilanteissa. 
- 
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, RemoteFX:n mukautuva grafiikka käyttää koodaustapaa, joka tuottaa normaalilaatuisia kuvia.
-
-    
-
+      Jos otat tämän käytäntöasetuksen käyttöön ja määrität laadun asetukseksi Vaatimaton, RemoteFX:n mukautuva grafiikka käyttää koodaustapaa, joka tuottaa verraten heikkolaatuisia kuvia. Tämä tila käyttää kaikista laatutiloista vähiten verkon kaistanleveyttä.
+      Jos otat tämän käytäntöasetuksen käyttöön ja määrität laadun asetukseksi Normaali, RemoteFX:n mukautuva grafiikka käyttää koodaustapaa, joka tuottaa normaalilaatuisia kuvia. Tämä tila tuottaa laadukkaampia kuvia Vaatimaton-asetus, mutta käyttää vähemmän verkon kaistanleveyttä kuin Suuri-asetus.
+      Jos otat tämän käytäntöasetuksen käyttöön ja määrität laadun asetukseksi Suuri, RemoteFX:n mukautuva grafiikka käyttää koodaustapaa, joka tuottaa korkealaatuisia kuvia ja käyttää kohtuullisesti verkon kaistanleveyttä. 
+      Jos otat tämän käytäntöasetuksen käyttöön ja määrität laadun asetukseksi Häviötön, RemoteFX:n mukautuva grafiikka käyttää häviötöntä koodausta. Tällä tilalla ei ole vaikutusta grafiikkatietojen värien eheyteen. Tämä asetus kuitenkin lisää huomattavasti verkon kaistanleveyden käyttöä. Suosittelemme tämän asetuksen käyttöä vain erityistilanteissa.
+      Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, RemoteFX:n mukautuva grafiikka käyttää koodaustapaa, joka tuottaa normaalilaatuisia kuvia.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Häviötön</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Suuri</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Normaali</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Vaatimaton</string>      
 
     <string id="TS_SERVER_PROFILE">Määritä mukautuva RemoteFX-grafiikka</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">Tämän käytäntöasetuksen avulla järjestelmänvalvoja voi määrittää RemoteFX-grafiikan käyttökokemuksen etätyöpöytäistunnon isäntäpalvelimelle tai etätyöpöydän virtualisoinnin isäntäpalvelimelle. Oletusarvon mukaan järjestelmä valitsee parhaan käyttökokemuksen käytettävissä olevan verkon kaistanleveyden mukaan.
@@ -991,14 +989,13 @@ Voit myös valita, ettei RDP-pakkausalgoritmia käytetä. Jos valitset, ettei RD
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käytetään oletusarvon mukaista RDP-pakkausalgoritmia.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Muistin ja verkkokaistan tasapaino</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimoitu käyttämään vähän verkkotaajuutta</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Optimoitu käyttämään vähän muistia</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Älä käytä mitään RDP-pakkausalgoritmia</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Muistin ja verkkokaistan tasapaino</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Optimoitu käyttämään vähän verkkotaajuutta</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Optimoitu käyttämään vähän muistia</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Älä käytä mitään RDP-pakkausalgoritmia</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Käytä RemoteFX-grafiikan lisäominaisuuksia RemoteApp-sovelluksissa</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     Tämän käytäntöasetuksen avulla voit sallia RemoteApp-sovellusten käyttää grafiikan lisäominaisuuksia, kuten läpinäkyvyyden tukea, reaaliaikaisia pikkukuvia ja saumattomia sovellussiirtymiä. Tämä käytäntöasetus koskee vain RemoteApp-sovelluksia, ei etätyöpöytäistuntoja.
 
 Jos otat tämän käytäntöasetuksen käyttöön tai määrität sen, tästä etätyöpöytäistunnon isäntäpalvelimesta julkaistut RemoteApp-sovellukset käyttävät näitä grafiikan lisäominaisuuksia.
@@ -1007,6 +1004,30 @@ Jos poistat tämän käytäntöasetuksen käytöstä, tästä etätyöpöytäist
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Määritä H.264/AVC-laitteistokoodaus etätyöpöytäyhteyksille</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Tämän käytäntöasetuksen avulla voit ottaa käyttöön H.264/AVC-laitteistokoodauksen tuen etätyöpöytäyhteyksille. Kun laitteistokoodaus on otettu käyttöön, virheen tapahtuessa yritetään käyttää ohjelmistokoodausta. Jos poistat tämän käytännön käytöstä tai et määritä sitä, ohjelmistokoodausta käytetään aina.
+        
+Jos määrität koodausasetukseksi Yritä aina, etätyöpöytä yrittää aina käyttää H.264/AVC-laitteistokoodausta, kun se on käytettävissä. Huomaa, että Windows Server -järjestelmässä, jossa on käytössä Hyper-V ja RemoteFX vGPU, tämä käytäntö on määritettävä Hyper-V-isäntäkoneessa.
+        
+Jos määrität koodausasetukseksi Yritä vain RemoteFX vGPU -virtuaalikoneille, huomaa, että Windows Server -järjestelmässä, jossa on käytössä Hyper-V ja RemoteFX vGPU, tämä käytäntö on määritettävä Hyper-V-isäntäkoneessa.
+        
+Jos määrität koodausasetukseksi Yritä vain muille kuin RemoteFX vGPU -skenaarioille, etätyöpöytä yrittää käyttää laitteistokoodausta kaikille skenaarioille paitsi RemoteFX vGPU -skenaarioille.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Yritä aina</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Yritä vain RemoteFX vGPU -virtuaalikoneille</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Yritä vain muille kuin RemoteFX vGPU -skenaarioille</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">Priorisoi H.264/AVC 444 -grafiikkatilaa etätyöpöytäyhteyksille</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Tämä käytäntöasetus priorisoi H.264/AVC 444 -grafiikkatilaa muille kuin RemoteFX vGPU -skenaarioille. Kun käytät tätä asetusta RDP-palvelimessa, palvelin käyttää H.264/AVC 444 -pakkauksenhallintaa RDP 10 -yhteydessä, kun sekä asiakas että palvelin voi käyttää H.264/AVC 444 -tilaa.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Älä salli laitteistokiihdytystä koodauksen purussa</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Tämä käytäntöasetus määrittää, voiko etätyöpöytäyhteys käyttää laitteistokiihdytystä, jos tuettu laitteisto on käytettävissä. Jos käytät tätä asetusta, etätyöpöytäasiakas käyttää vain ohjelmallista koodauksen purkua. Jos esimerkiksi epäilet jonkin ongelman liittyvän laitteistokiihdytykseen, voit tämän asetuksen avulla poistaa kiihdytyksen käytöstä. Jos ongelma ei poistu tällä, tiedät varmasti, että vika ei ole ainakaan pelkästään laitteistokiihdytyksessä. Jos poistat tämän asetuksen käytöstä tai et määritä sitä, etätyöpöytäasiakas käyttää laitteistokiihdytystä koodauksen purussa, jos tuettu laitteisto on käytettävissä.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ Oletusarvon mukaan RemoteFX:ää käyttävät etätyöpöytäyhteyksien istunnot
 
       <string id="TS_SERVER_LEGACY_RFX">Ota Windows Server 2008 R2 SP1:tä varten suunniteltujen RemoteFX-asiakkaiden RemoteFX-koodaus käyttöön</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Tämän käytäntöasetuksen avulla voit määrittää grafiikkakoodauksen, joka käyttää RemoteFX-pakkauksenhallintaa etätyöpöytäistunnon isäntäpalvelimessa. Tällöin istunnot ovat yhteensopivia myös sellaisten Windows Server 2008 R2 SP1:tä varten suunniteltujen kevyiden asiakaslaitteiden kanssa, jotka eivät ole kevyitä Windows-asiakaslaitteita. Nämä asiakkaat tukevat Windows Server 2008 R2 SP1:n RemoteFX-pakkauksenhallintaa. Jos otat tämän käytäntöasetuksen käyttöön, käyttäjien istunnot tässä palvelimessa käyttävät vain Windows Server 2008 R2 SP1:n RemoteFX-pakkauksenhallintaa. Tämä tila on yhteensopiva vain Windows Server 2008 R2 SP1:n RemoteFX-pakkauksenhallintaa tukevien kevyiden asiakaslaitteiden kanssa. Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, vain Windows Server 2008 R2 SP1:n RemoteFX-pakkauksenhallintaa tukevat kevyet asiakkaat, jotka eivät ole kevyitä Windows-asiakkaita, eivät voi muodostaa yhteyttä tähän palvelimeen. Tämä käytäntöasetus koskee vain asiakkaita, jotka käyttävät RDP 7.1 -protokollaa. Se ei koske asiakkaita, jotka käyttävät jotakin muuta RDP-versiota.
       
       </string>
@@ -1296,6 +1316,9 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, al
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">RDP-pakkausalgoritmi:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">AVC-laitteistokoodaus ensisijainen:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Visuaalinen vaikutelma:</dropdownList>

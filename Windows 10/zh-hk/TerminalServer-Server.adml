@@ -56,16 +56,16 @@
       </string>
       
       <string id="TS_ALLOW_APPS">允許從遠端啟動未列出的程式</string>
-      <string id="TS_ALLOW_APPS_EXPLAIN">This policy setting allows you to specify whether remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session, or whether they can only start programs that are listed in the RemoteApp programs list.
+      <string id="TS_ALLOW_APPS_EXPLAIN">此原則設定可讓您指定在遠端使用者啟動遠端桌面服務工作階段後，是否能在 RD 工作階段主機伺服器上啟動任何程式，或者只能啟動 RemoteApp 程式清單中所列的程式。
 
-You can control which programs on an RD Session Host server can be started remotely by using the RemoteApp Manager on Windows Server 2008 R2 and Windows Server 2008. If you are using Windows Server Technical Preview 2, you can configure this in the Collection properties sheet by using Server Manager.
+您可以在 Windows Server 2008 R2 和 Windows Server 2008 使用 RemoteApp 管理員，控制 RD 工作階段主機伺服器上的哪些程式能夠從遠端啟動。如果您使用 Windows Server 2012，可以使用伺服器管理員在 [集合] 內容工作表頁中設定此項目。
 
-By default, only programs in the RemoteApp Programs list can be started when a user starts a Remote Desktop Services session.
+根據預設，使用者啟動遠端桌面服務工作階段時，只能啟動 [RemoteApp 程式] 清單中的程式。
 
-If you enable this policy setting, remote users can start any program on the RD Session Host server when they start a Remote Desktop Services session. 
-For example, a remote user can do this by specifying the program's executable path at connection time by using the Remote Desktop Connection client.
+若啟用此原則設定，遠端使用者就可以在啟動遠端桌面服務工作階段後，啟動在 RD 工作階段主機伺服器上的任何程式。
+例如，遠端使用者可以使用 [遠端桌面連線] 用戶端，指定連線時程式的可執行檔路徑，來執行此動作。
 
-If you disable or do not configure this policy setting, remote users can only start programs that are listed in the RemoteApp programs list when they start a Remote Desktop Services session.
+若停用或未設定此原則設定，則遠端使用者在啟動遠端桌面服務工作階段後，只能啟動 [RemoteApp 程式] 清單中所列的程式。
 </string>
 
       <string id="TS_ALLOW_DESKTOPCOMPOSITION">允許遠端桌面工作階段的桌面轉譯緩衝處理</string>

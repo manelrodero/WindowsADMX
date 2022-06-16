@@ -31,15 +31,15 @@
       
       </string>
       <string id="WCM_MinimizeConnections">最小化網際網路或 Windows 網域的同時連線數目</string>
-      <string id="WCM_MinimizeConnections_Help">This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain. By default, when this policy setting value is Not Configured, it is enabled.
+      <string id="WCM_MinimizeConnections_Help">此原則設定可防止電腦建立連線到網際網路或 Windows 網域的多個同時連線。根據預設，當此原則設定值是 [未設定] 時，它是啟用的。
       
-      If this policy setting is enabled, when the computer has at least one active connection to the Internet, a new automatic connection attempt to the Internet is blocked. When the computer has at least one active connection to a Windows domain, a new automatic connection to the same Windows domain is also blocked. Additional manual connection attempts by users to the Internet or to a Windows domain are not blocked by this policy setting.
+      若啟用此原則設定，當電腦至少有一個使用中的網際網路連線時，會封鎖新的網際網路自動連線嘗試。當電腦至少有一個使用中的 Windows 網域連線時，也會封鎖相同 Windows 網域的新自動連線。此原則設定不會封鎖使用者對網際網路或 Windows 網域所執行的其他手動連線嘗試。
       
-      In circumstances where there are multiple simultaneous connections to either the Internet or to a Windows domain, Windows disconnects the less preferred connection when the amount of network traffic over the less preferred connection drops below a certain threshold. For example, when a computer is connected to Internet using a WLAN connection and the user plugs in to an Ethernet network, network traffic is routed through the faster Ethernet connection, and the WLAN traffic diminishes. Windows detects this circumstance and responds by disconnecting the WLAN connection.
+      在對網際網路或 Windows 網域有多個同時連線的情況下，當非慣用連線的網路流量低於特定閾值時，Windows 會中斷非慣用連線。例如，當電腦使用 WLAN 連線來連線到網際網路，而且使用者插入乙太網路的網路線時，網路流量會透過較快的乙太網路連線路由傳送，而減少 WLAN 流量。Windows 會偵測到這種情況，然後以中斷 WLAN 連線來回應。
 
-      If this policy setting is disabled, multiple simultaneous connections to the Internet, to a Windows domain, or to both are allowed.
+      若停用此原則設定，則允許多個連到網際網路、Windows 網域或兩者的同時連線。
 
-      If this policy setting value is Not Configured, the default policy setting is enabled. This is different than enabling the policy setting with Group Policy, however - when the policy setting is Not Configured, the policy setting is configurable on the local computer. When the policy setting is applied with Group Policy, it is not configurable locally. With the policy setting value of Not Configured, new automatic connection attempts are not made, and less preferred connections are disconnected.
+      若此原則設定值是 [未設定]，則會啟用預設原則設定。不過，這與使用群組原則啟用原則設定不同; 當原則設定是 [未設定] 時，使用者即可設定本機電腦上的原則設定。當原則設定是使用群組原則所套用時，就無法在本機上設定。原則設定的值為 [未設定] 時，就不會建立新的自動連線嘗試，而且較不慣用的連線會被中斷。
       </string>
       <string id="WCM_DisablePowerManagement">停用連線待命模式的電源管理</string>
       <string id="WCM_DisablePowerManagement_Help">這個原則設定指定當電腦進入連線待命模式時停用電源管理。

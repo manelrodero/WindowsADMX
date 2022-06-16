@@ -5,14 +5,15 @@
   <description>introduzir a descrição aqui</description>
   <resources>
     <stringTable>
+      <string id="TS_SUPPORTED_Windows10">Pelo menos, Windows 10 ou Windows Server 2016 Technical Preview 4</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Pelo menos, Windows 8 ou Windows RT</string>
-      <string id="TS_SUPPORTED_Windows8_Server">Pelo menos, Windows Server Technical Preview 2</string>
-      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Pelo menos, Windows 8 Enterprise ou Windows Server Technical Preview 2</string>
+      <string id="TS_SUPPORTED_Windows8_Server">Pelo menos, Windows Server 2012</string>
+      <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Pelo menos, Windows 8 Enterprise ou Windows Server 2012</string>
       <string id="TS_SUPPORTED_ONLY_Windows7_OR_SERVER2K8R2">Apenas Windows 7 ou Windows Server 2008 R2 (e Service Packs subsequentes)</string>
       <string id="TS_SUPPORTED_ONLY_LEGACY">Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, Windows 7, Windows Vista e Windows XP</string>
       <string id="TS_SUPPORTED_Windows7_Server">Pelo menos o Windows Server 2008 R2</string>
       <string id="TS_SUPPORTED_Windows7">Pelo menos, Windows 7</string>
-      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Pelo menos, Windows Server Technical Preview 2 com função RDSH instalada</string>
+      <string id="TS_SUPPORTED_Windows8_Server_With_RDSH"> Pelo menos, Windows Server 2012 com função RDSH instalada</string>
       <string id="TS_SUPPORTED_Windows7_OR_SERVER2K8R2_SP1">Pelo menos, Windows 7 com Service Pack 1 ou Windows Server 2008 R2 com Service Pack 1</string>
       <string id="TS_SUPPORTED_Vista_SP1">Pelo menos, Windows Vista com Service Pack 1</string>
       <string id="TS_SUPPORTED_Win2k">Pelo menos, Serviços de Terminal do Windows 2000</string>
@@ -45,7 +46,7 @@
       <string id="TS_AUDIOMAP_EXPLAIN">Esta definição de política permite-lhe especificar se os utilizadores podem redirecionar a saída de áudio e vídeo do computador remoto numa sessão de Serviços de Ambiente de Trabalho Remoto.
 Os utilizadores podem especificar a reprodução da saída de áudio do computador remoto configurando as definições de áudio remoto no separador Recursos Locais da Ligação ao Ambiente de Trabalho Remoto (RDC). Os utilizadores podem optar por reproduzir o áudio remoto no computador remoto ou no computador local. Também podem optar por não reproduzir o áudio. A reprodução de vídeo pode ser configurada utilizando a definição videoplayback num ficheiro do protocolo RDP (Remote Desktop Protocol) (.rdp). Por predefinição, a reprodução de vídeo está ativada.
 
-Por predefinição, o redirecionamento da reprodução de áudio e vídeo não é permitido ao ligar a um computador com o Windows Server 2008 R2, Windows Server 2008 ou Windows Server 2003. O redirecionamento da reprodução de áudio e vídeo é permitido por predefinição ao ligar a um computador com o Windows 8, Windows Server Technical Preview 2, Windows 7, Windows Vista ou Windows XP Professional.
+Por predefinição, o redirecionamento da reprodução de áudio e vídeo não é permitido ao ligar a um computador com o Windows Server 2008 R2, Windows Server 2008 ou Windows Server 2003. O redirecionamento da reprodução de áudio e vídeo é permitido por predefinição ao ligar a um computador com o Windows 8, Windows Server 2012, Windows 7, Windows Vista, ou Windows XP Professional.
 
 Se ativar esta definição de política, é permitido o redirecionamento da reprodução de áudio e vídeo.
 
@@ -154,24 +155,23 @@ Se desativar esta definição de política, os Serviços de Ambiente de Trabalho
 Se não configurar esta definição de política, o redirecionamento da Área de Transferência não será especificado ao nível da Política de Grupo. 
  
 </string>
-      <string id="TS_COLOR_EXPLAIN">
-        Esta definição de política permite-lhe especificar a resolução de cores máxima (profundidade de cor) para ligações dos Serviços de Ambiente de Trabalho Remoto.
+      <string id="TS_COLOR_EXPLAIN">Esta definição de política permite-lhe especificar a resolução de cores máxima (profundidade de cor) para ligações dos Serviços de Ambiente de Trabalho Remoto.
 
-        Pode utilizar esta definição de política para definir um limite para a profundidade de cor de qualquer ligação que utilize RDP. A limitação da profundidade de cor pode melhorar o desempenho da ligação, sobretudo em ligações lentas, e reduzir a carga do servidor.
+Pode utilizar esta definição de política para definir um limite para a profundidade de cor de qualquer ligação que utilize RDP. A limitação da profundidade de cor pode melhorar o desempenho da ligação, sobretudo em ligações lentas, e reduzir a carga do servidor.
 
-        Se ativar esta definição de política, a profundidade de cor especificada é a profundidade de cor máxima permitida para a ligação RDP de um utilizador. A profundidade de cor real para a ligação é determinada pelo suporte de cores disponível no computador cliente. Se selecionar Compatível com o Cliente, será utilizada a profundidade de cor máxima suportada pelo cliente.
+Se ativar esta definição de política, a profundidade de cor especificada é a profundidade de cor máxima permitida para a ligação RDP de um utilizador. A profundidade de cor real para a ligação é determinada pelo suporte de cores disponível no computador cliente. Se selecionar Compatível com o Cliente, será utilizada a profundidade de cor máxima suportada pelo cliente.
 
-        Se desativar ou não configurar esta definição de política, a profundidade de cor para ligações não é especificada ao nível da Política de Grupo.
+Se desativar ou não configurar esta definição de política, a profundidade de cor para ligações não é especificada ao nível da Política de Grupo.
 
-        Nota:
-        1.	Uma profundidade de cor de 24 bits só é suportada no Windows Server 2003 e Windows XP Professional.
-        2.	O valor especificado nesta definição de política não é aplicável a ligações de computadores cliente que estejam a utilizar, pelo menos, a versão 8.0 do protocolo RDP (Remote Desktop Protocol) (computadores que tenham, pelo menos, o Windows 8 ou o Windows Server Technical Preview 2). É sempre utilizado o formato de profundidade de cor de 32 bits para estas ligações.
-        3.	Para ligações a partir de computadores cliente com a versão 7.1 do protocolo RDP (Remote Desktop Protocol) ou versões inferiores que estejam a ligar a computadores que tenham, pelo menos, o Windows 8 ou o Windows Server Technical Preview 2, é utilizado o mínimo dos valores seguintes como formato de profundidade de cor:
-        a.	Valor especificado por esta definição de política
-        b.	Profundidade de cor máxima suportada pelo cliente
-        c.	Valor pedido pelo cliente
+Nota:
+1.	A definição da profundidade de cor de 24 bits só é suportada no Windows Server 2003 e Windows XP Professional.
+2.	O valor especificado nesta definição de política não é aplicável a ligações de computadores cliente que estejam a utilizar, pelo menos, a versão 8.0 do protocolo RDP (Remote Desktop Protocol) (computadores que tenham, pelo menos, o Windows 8 ou o Windows Server 2012). É sempre utilizado o formato de profundidade de cor de 32 bits para estas ligações.
+3.	Para ligações a partir de computadores cliente com a versão 7.1 do protocolo RDP (Remote Desktop Protocol) ou versões inferiores que estejam a ligar a computadores que tenham, pelo menos, o Windows 8 ou o Windows Server 2012, é utilizado o mínimo dos valores seguintes como formato de profundidade de cor:
+a.	Valor especificado por esta definição de política
+b.	Profundidade de cor máxima suportada pelo cliente
+c.	Valor pedido pelo cliente
 
-        Se o cliente não suportar, pelo menos, 16 bits, a ligação é terminada.
+Se o cliente não suportar, pelo menos, 16 bits, a ligação é terminada.
       </string>
       <string id="TS_COLORDEPTH">Limitar o máximo da profundidade de cor</string>
       <string id="TS_Comp_Help">Controla a configuração dos Serviços de Ambiente de Trabalho Remoto e as propriedades de sessões de cliente para computadores individuais ou grupos de computadores.</string>
@@ -564,7 +564,7 @@ Notas:
       <string id="TS_SD_Loc">Configurar o nome do farm do Mediador de Ligações de RD</string>
       <string id="TS_SD_Loc_Explain">Esta definição de política permite-lhe especificar o servidor de Mediador de Ligações de RD que o servidor de Anfitrião de Sessões de RD utiliza para controlar e redirecionar sessões de utilizador para um farm de servidores de Anfitrião de Sessões de RD com balanceamento de carga. O servidor especificado tem de ter o serviço Mediador de Ligações de Ambiente de Trabalho Remoto em execução. Todos os servidores de Anfitrião de Sessões de RD de um farm com balanceamento de carga devem utilizar o mesmo servidor de Mediador de Ligações de RD.
 
-Se ativar esta definição de política, tem de especificar o servidor de Mediador de Ligações de RD utilizando o respetivo nome de domínio completamente qualificado (FQDN). No Windows Server Technical Preview 2, para uma configuração de elevada disponibilidade com múltiplos servidores de Mediador de Ligações de RD, tem de fornecer uma lista separada por ponto e vírgula dos FQDNs de todos os servidores de Mediador de Ligações de RD.
+Se ativar esta definição de política, tem de especificar o servidor de Mediador de Ligações de RD utilizando o respetivo nome de domínio completamente qualificado (FQDN). No Windows Server 2012, para uma configuração de elevada disponibilidade com múltiplos servidores de Mediador de Ligações de RD, tem de fornecer uma lista separada por ponto e vírgula dos FQDNs de todos os servidores de Mediador de Ligações de RD.
 
 Se desativar ou não configurar esta definição de política, esta não será especificada ao nível da Política de Grupo.
 
@@ -949,20 +949,18 @@ Se desativar ou não configurar esta definição de política, a definição de 
 </string>
 
     <string id="TS_SERVER_IMAGE_QUALITY">Configurar qualidade da imagem para Gráficos Adaptáveis RemoteFX</string>
-    <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Esta definição de política permite especificar a qualidade visual para os utilizadores remotos quando estabelece ligação a este computador utilizando a Ligação ao Ambiente de Trabalho Remoto. Pode utilizar esta definição de política para equilibrar a utilização de largura de banda de rede com a qualidade visual apresentada.
- 
-Se ativar esta definição de política e definir a qualidade como Média, os Gráficos Adaptáveis RemoteFX utilizam um mecanismo de codificação que resulta em imagens de qualidade média. Este é modo de qualidade que consome o menor volume de largura de banda de rede. 
-Se ativar esta definição de política e definir a qualidade como Alta, os Gráficos Adaptáveis RemoteFX utilizam um mecanismo de codificação que resulta em imagens de qualidade alta e consome um volume moderado de largura de banda de rede. 
-Se ativar esta definição de política e definir a qualidade como Sem Perdas, os Gráficos Adaptáveis RemoteFX utilizarão ao codificação sem perdas. Neste modo, a integridade de cor dos dados do gráfico não sofre qualquer impacto. No entanto, esta definição implica um aumento significativo no consumo de largura de banda de rede. Recomendamos que defina esta opção apenas em casos muito específicos. 
- 
-Se desativar ou não configurar esta definição de política, os Gráficos Adaptáveis RemoteFX utilizam um mecanismo de codificação que resulta em imagens de qualidade média.
-
-    
-
+    <string id="TS_SERVER_IMAGE_QUALITY_EXPLAIN">Esta definição de política permite especificar a qualidade visual para os utilizadores remotos quando estabelece ligação a este computador utilizando a Ligação ao Ambiente de Trabalho Remoto. Pode utilizar esta definição de política para equilibrar a utilização de largura de banda de rede com a qualidade visual apresentada. 
+      Se ativar esta definição de política e definir a qualidade como Baixa, os Gráficos Adaptáveis RemoteFX utilizam um mecanismo de codificação que resulta em imagens de qualidade baixa. Este é o modo de qualidade que consome o menor volume de largura de banda de rede.
+      Se ativar esta definição de política e definir a qualidade como Média, os Gráficos Adaptáveis RemoteFX utilizam um mecanismo de codificação que resulta em imagens de qualidade média. Este modo fornece uma qualidade de gráficos superior à qualidade baixa e consome menos largura de banda que a qualidade elevada. 
+      Se ativar esta definição de política e definir a qualidade como Alta, os Gráficos Adaptáveis RemoteFX utilizam um mecanismo de codificação que resulta em imagens de qualidade alta e consome um volume moderado de largura de banda de rede. 
+      Se ativar esta definição de política e definir a qualidade como Sem Perdas, os Gráficos Adaptáveis RemoteFX utilizam uma codificação sem perdas. Neste modo, a integridade de cor dos dados do gráfico não sofre qualquer impacto. No entanto, esta definição implica um aumento significativo no consumo de largura de banda de rede. Recomendamos que defina esta opção apenas em casos muito específicos.
+      Se desativar ou não configurar esta definição de política, os Gráficos Adaptáveis RemoteFX utilizam um mecanismo de codificação que resulta em imagens de qualidade média.
     </string>
+      
     <string id="TS_SERVER_IMAGE_QUALITY_LOSSLESS">Sem Perdas</string>
     <string id="TS_SERVER_IMAGE_QUALITY_HIGH">Alta</string>
     <string id="TS_SERVER_IMAGE_QUALITY_MEDIUM">Média</string>
+    <string id="TS_SERVER_IMAGE_QUALITY_LOW">Baixa</string>      
 
     <string id="TS_SERVER_PROFILE">Configurar gráficos RemoteFX adaptáveis</string>
     <string id="TS_SERVER_PROFILE_EXPLAIN">Esta definição de política permite que o administrador configure a experiência RemoteFX para servidores de Anfitrião de Sessões de Ambiente de Trabalho Remoto ou de Anfitrião de Virtualização de Ambientes de Trabalho Remotos. Por predefinição, o sistema escolhe a melhor experiência com base na largura de banda de rede disponível.
@@ -991,14 +989,13 @@ Também pode optar por não utilizar um algoritmo de compressão RDP. A opção 
 Se desativar ou não configurar esta definição de política, será utilizado o algoritmo de compressão RDP predefinido.
     
     </string>
- <string id="TS_SERVER_COMPRESSOR_NCRUSH">Equilibra a carga de memória e de largura de banda de rede</string>
- <string id="TS_SERVER_COMPRESSOR_XCRUSH">Otimizado para utilizar menos largura de banda de rede</string>
- <string id="TS_SERVER_COMPRESSOR_MPPC">Otimizado para utilizar menos memória</string>
- <string id="TS_SERVER_NO_COMPRESSOR">Não utilizar um algoritmo de compressão RDP</string>
+    <string id="TS_SERVER_COMPRESSOR_NCRUSH">Equilibra a carga de memória e de largura de banda de rede</string>
+    <string id="TS_SERVER_COMPRESSOR_XCRUSH">Otimizado para utilizar menos largura de banda de rede</string>
+    <string id="TS_SERVER_COMPRESSOR_MPPC">Otimizado para utilizar menos memória</string>
+    <string id="TS_SERVER_NO_COMPRESSOR">Não utilizar um algoritmo de compressão RDP</string>
 
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP">Utilizar gráficos RemoteFX avançados para RemoteApp</string>
     <string id="TS_SERVER_ADVANCED_REMOTEFX_REMOTEAPP_EXPLAIN">
-    
     Esta definição de política permite ativar programas RemoteApp para utilização de gráficos avançados, incluindo suporte de transparências, miniaturas dinâmicas e movimentos integrados de aplicações. Esta definição de política só é aplicável a programas RemoteApp, não se aplicando a sessões de ambiente de trabalho remoto.
 
 Se ativar ou não configurar esta definição de política, os programas RemoteApp publicados a partir deste servidor de Anfitrião de Sessões de RD utilizarão estes gráficos avançados.
@@ -1007,6 +1004,30 @@ Se desativar esta definição de política, os programas RemoteApp publicados a 
 
      
 
+    </string>
+
+    <!--AVC HW Encode Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">Configurar codificação de hardware H.264/AVC para Ligações ao Ambiente de Trabalho Remoto</string>
+    <string id="TS_SERVER_AVC_HW_ENCODE_PREFERRED_EXPLAIN">Esta definição de política permite-lhe ativar o suporte de codificação de hardware H.264/AVC para Ligações de Ambiente de Trabalho Remoto. Quando ativa a codificação de hardware, se ocorrer um erro, vamos tentar utilizar codificação de software. Se desativar ou não configurar esta política, vamos utilizar sempre codificação de software.
+
+Se definir a opção de codificação para "Tentar Sempre", o Ambiente de Trabalho Remoto vai sempre tentar utilizar a codificação de hardware H.264/AVC, quando esta estiver disponível. Tenha em conta que, para o Windows Server a executar o Hyper-V com RemoteFX vGPU ativado, a política tem de ser definida no computador anfitrião do Hyper-V.
+
+Se definir a opção de codificação para "Tentar apenas para máquinas virtuais RemoteFX vGPU", tenha em conta que, para o Windows Server a executar o Hyper-V com RemoteFX vGPU ativado, a política tem de ser definida no computador anfitrião do Hyper-V.
+
+Se definir a opção de codificação para "Tentar apenas para cenários sem RemoteFX vGPU", o Ambiente de Trabalho Remoto vai tentar utilizar codificação de hardware para todos os cenários, exceto para o RemoteFX vGPU.
+    </string>
+    <string id="TS_AVC_HW_ENCODE_ALWAYS">Tentar sempre</string>
+    <string id="TS_AVC_HW_ENCODE_VGPU">Tentar apenas para máquinas virtuais RemoteFX vGPU</string>
+    <string id="TS_AVC_HW_ENCODE_NONVGPU">Tentar apenas para cenários sem RemoteFX vGPU</string>
+        
+    <!--AVC444 Preferred Mode; Introduced Win10+-->
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED">Dar prioridade ao modo gráfico H.264/AVC 444 para Ligações ao Ambiente de Trabalho Remoto</string>
+    <string id="TS_SERVER_AVC444_MODE_PREFERRED_EXPLAIN">Esta definição de política dá prioridade ao modo gráfico H.264/AVC 444 para cenários sem RemoteFX vGPU. Quando utiliza esta definição no servidor RDP, o servidor vai utilizar o RemoteFX vGPU como o codec numa ligação RDP 10 em que tanto o cliente como o servidor podem utilizar H.264/AVC 444.
+    </string>
+
+    <!--Disable Client Hardware Mode; Introduced Win10+-->
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE">Não permitir a descodificação acelerada por hardware</string>
+    <string id="TS_CLIENT_DISABLE_HARDWARE_MODE_EXPLAIN">Esta definição de política especifica se a Ligação ao Ambiente de Trabalho Remoto pode utilizar a aceleração por hardware se estiver disponível hardware compatível. Se utilizar esta definição, o Cliente do Ambiente de Trabalho Remoto apenas vai usar descodificação de software. Por exemplo, se tiver um problema que creia estar relacionado com a aceleração por hardware, use esta definição para desativar a aceleração. Depois, se o problema persistir, saberá que existem outros problemas a investigar. Se desativar esta definição ou não a configurar, o cliente do Ambiente de Trabalho Remoto vai utilizar descodificação acelerada por hardware se estiver disponível hardware compatível.
     </string>
 
     <!--Visual Experience Policy strings; deprecated Win8+-->
@@ -1075,7 +1096,6 @@ Por predefinição, as sessões de Ligação ao Ambiente de Trabalho Remoto que 
 
       <string id="TS_SERVER_LEGACY_RFX">Ativar codificação RemoteFX para clientes RemoteFX concebidos para o Windows Server 2008 R2 SP1</string>
       <string id="TS_SERVER_LEGACY_RFX_EXPLAIN">
-       
        Esta definição de política permite configurar a codificação gráfica para utilizar o Codec de RemoteFX no servidor de Anfitrião de Sessões de Ambiente de Trabalho Remoto, para que as sessões sejam compatíveis com dispositivos cliente magros não Windows concebidos para o Windows Server 2008 R2 SP1. Estes clientes só suportam o Codec de RemoteFX do Windows Server 2008 R2 SP1. Se ativar esta definição de política, as sessões dos utilizadores neste servidor só utilizarão o Codec de RemoteFX do Windows Server 2008 R2 SP1 para codificação. Este modo é compatível com dispositivos cliente magros que suportem apenas o Codec de RemoteFX do Windows Server 2008 R2 SP1. Se desativar ou não configurar esta definição de política, os clientes magros não Windows que apenas suportem o Codec de RemoteFX do Windows Server 2008 R2 SP1 não conseguirão ligar a este servidor. Esta definição de política só é aplicável a clientes que estejam a utilizar a versão 7.1 do protocolo RDP (Remote Desktop Protocol) e não afeta os clientes que estejam a utilizar outras versões de RDP.
       
       </string>
@@ -1297,6 +1317,9 @@ Se desativar ou não configurar esta definição de política, é mostrado o ecr
       </presentation>
       <presentation id="TS_SERVER_COMPRESSOR">
         <dropdownList refId="TS_COMPRESSOR_LEVELS" noSort="true" defaultItem="0">Algoritmo de compressão RDP:</dropdownList>
+      </presentation>
+      <presentation id="TS_SERVER_AVC_HW_ENCODE_PREFERRED">
+        <dropdownList refId="TS_AVC_HW_ENCODE_ENUM" noSort="true" defaultItem="1">Codificação de hardware AVC preferido:</dropdownList>
       </presentation>
       <presentation id="TS_SERVER_VISEXP">
         <dropdownList refId="TS_VISEXP_SETTINGS" noSort="true" defaultItem="0">Experiência visual:</dropdownList>
