@@ -10,7 +10,7 @@
       <string id="AllowTelemetry_1">1 - Dati di base</string>
       <string id="AllowTelemetry_2">2 - Dati avanzati</string>
       <string id="AllowTelemetry_3">3 - Dati completi</string>
-      <string id="AllowTelemetry_Explain">Questa impostazione dei criteri determina il livello massimo di dati di diagnostica di Windows inviati a Microsoft. Configurando questa impostazione non si impedisce agli utenti di modificare le impostazioni di telemetria ma si impedisce loro di scegliere un livello superiore a quello impostato per l'organizzazione. Le impostazioni dei dati di diagnostica di Windows 10 si applicano solo al sistema operativo Windows e alle relative app. Queste impostazioni non si applicano alle app di terze parti in esecuzione in Windows 10.
+      <string id="AllowTelemetry_Explain">Questa impostazione dei criteri determina il livello massimo di dati di diagnostica Windows inviati a Microsoft. Configurando questa impostazione non si impedisce agli utenti di modificare le impostazioni di telemetria ma si impedisce loro di scegliere un livello superiore a quello impostato per l'organizzazione. Le impostazioni dei dati di diagnostica Windows 10 si applicano solo al sistema operativo Windows e alle relative app. Queste impostazioni non si applicano alle app di terze parti in esecuzione in Windows 10.
 
 Se abiliti questa impostazione, puoi scegliere il livello di dati di diagnostica da inviare a Microsoft, tra cui:
 
@@ -58,10 +58,10 @@ Se abiliti il livello Avanzato di dati di diagnostica nell'impostazione dei crit
 Se disabiliti o non configuri questa impostazione dei criteri, il livello di dati di diagnostica inviati a Microsoft viene determinato dall'impostazione dei criteri Consenti telemetria.
       </string>
 
-      <string id="AllowDeviceNameInDiagnosticData">Consenti l'invio del nome del dispositivo nei dati di diagnostica di Windows</string>
-      <string id="AllowDeviceNameInDiagnosticData_Explain">Questo criterio consente l'invio del nome del dispositivo da inviare a Microsoft come parte dei dati di diagnostica di Windows.
+      <string id="AllowDeviceNameInDiagnosticData">Consenti l'invio del nome del dispositivo nei dati di diagnostica Windows</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Questo criterio consente l'invio del nome del dispositivo da inviare a Microsoft come parte dei dati di diagnostica Windows.
 
-Se disabiliti o non configuri questa impostazione dei criteri, il nome del dispositivo non verrà inviato a Microsoft come parte dei dati di diagnostica di Windows.
+Se disabiliti o non configuri questa impostazione dei criteri, il nome del dispositivo non verrà inviato a Microsoft come parte dei dati di diagnostica Windows.
       </string>
 
       <string id="ConfigureTelemetryOptInSettingsUx">Configura l'interfaccia utente per l'impostazione di consenso esplicito di telemetria.</string>
@@ -100,11 +100,19 @@ impostare l'impostazione dei criteri Consenti telemetria per impedire agli utent
           Se disabiliti o non configuri questa impostazione dei criteri, il Visualizzatore dati di diagnostica verrà abilitato nella pagina Impostazioni.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Configura l'endpoint di caricamento Adozione aggiornamenti di Microsoft 365:</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Configura endpoint di caricamento dei dati di diagnostica per Desktop Analytics</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Questo criterio imposta l'endpoint di caricamento per i dati diagnostici del dispositivo come parte del programma Adozione aggiornamenti di Microsoft 365.
+          Questo tipo di criteri imposta l'endpoint di caricamento per i dati di diagnostica del dispositivo come parte del programma Desktop Analytics.
           Se l'organizzazione partecipa al programma e ha ricevuto istruzioni per configurare un endpoint di caricamento personalizzato, utilizza questa impostazione per definire l'endpoint.
           Il valore di questa impostazione verrà fornito da Microsoft come parte del processo di caricamento per il programma. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Consenti pipeline dati commerciali</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline sceglie il dispositivo nella pipeline dei dati aziendali di Windows.
+          Se questa impostazione è abilitata, i dati raccolti dal dispositivo vengono scelti per essere inclusi nella pipeline dei dati aziendali di Windows.
+          Se questa impostazione è disabilitata o non è configurata, tutti i dati del dispositivo verranno raccolti ed elaborati in base ai criteri relativi alla pipeline dei dati standard di Windows.
+          La configurazione di questa impostazione non ha impatto sul livello di raccolta di telemetria o sulla capacità dell'utente di modificare il livello. Questa impostazione si applica solo al sistema operativo Windows e alle app incluse in Windows. Non si applica alle app di terzi o ai servizi eseguiti in Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ impostare l'impostazione dei criteri Consenti telemetria per impedire agli utent
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Endpoint di caricamento personalizzato Adozione aggiornamenti di Microsoft 365:</label>
+          <label>Endpoint di caricamento personalizzato Desktop Analytics:</label>
         </textBox>
       </presentation>
     </presentationTable>

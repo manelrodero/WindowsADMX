@@ -100,11 +100,19 @@ Ställ in principinställningen Tillåt telemetri för att hindra användarna fr
           Om du inaktiverar eller låter bli att konfigurera principinställningen så aktiveras Visningsprogram för diagnostikdata i inställningarna.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurera uppladdningsslutpunkt för Microsoft 365 Update Readiness</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Ange uppladdningsslutpunkt för diagnostikdata för Desktop Analytics</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Med den här principen anger du uppladdningsslutpunkten för enhetens diagnostikdata som del i Microsoft 365 Update Readiness-programmet.
+          Med den här principen anger du uppladdningsslutpunkten för enhetens diagnostikdata som del i Desktop Analytics-programmet.
           Om din organisation deltar i programmet och har anvisats att konfigurera en anpassad uppladdningsslutpunkt kan du med den här inställningen ange den slutpunkten.
-          Värdet för inställningen tillhandahålls av Microsoft som del i registreringsprocessen för programmet. 
+          Värdet för den här inställningen tillhandahålls av Microsoft som del i registreringsprocessen för programmet. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Tillåt datapipeline för kommersiella enheter</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline registrerar enheten för Windows företagsdatapipeline.
+          Om du aktiverar den här inställningen registreras data som samlas in från enheten i Windows företagsdatapipeline.
+          Om du inaktiverar eller låter bli att konfigurera den här inställningen samlas alla data från enheten in och hanteras enligt våra principer för Windows standarddatapipeline.
+          Konfigurationen av den här inställningen förändrar inte telemetriinsamlingsnivån eller användarens möjligheter att ändra nivån. Den här inställningen gäller bara Windows-operativsystemet och apparna i Windows. Den gäller inte appar eller tjänster från tredje part som körs på Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Ställ in principinställningen Tillåt telemetri för att hindra användarna fr
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Anpassad uppladdningsslutpunkt för Microsoft 365 Update Readiness:</label>
+          <label>Egen uppladdningsslutpunkt för Desktop Analytics:</label>
         </textBox>
       </presentation>
     </presentationTable>

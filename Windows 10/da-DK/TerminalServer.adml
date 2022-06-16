@@ -419,21 +419,24 @@ Hvis du aktiverer denne politikindstilling, vises disse meddelelser ikke på væ
 
 Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vises meddelelserne på værtsserveren, når du har logget på som lokal administrator.</string>
       <string id="TS_LICENSING_MODE">Angiv Fjernskrivebord-licenstilstanden</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Denne politikindstilling giver dig mulighed for at angive, hvilken type Fjernskrivebord-klientadgangslicens (RDS CAL), der skal bruges for at oprette forbindelse til denne fjernskrivebordssessions værtsserver.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Denne politikindstilling giver dig mulighed for at angive, hvilken type klientadgangslicens til Fjernskrivebord-tjenester (RDS CAL), der skal bruges for at oprette forbindelse til denne RD-sessions værtsserver.
 
-Du kan bruge denne politikindstilling til at vælge en af to licenstilstande: pr bruger eller pr. enhed.
+        Du kan bruge denne politikindstilling til at vælge en af tre licenstilstande: pr. bruger, pr. enhed og AAD pr. bruger.
 
-Licenstilstand pr. bruger kræver, at alle brugere, der opretter forbindelse til denne værtsserver, skal have en RDS-klientadgangslicens pr. bruger.
+        Licenstilstand pr. bruger kræver, at alle brugere, der opretter forbindelse til denne RD-sessions værtsserver, skal have en RDS CAL pr. bruger tildelt fra en RD-licensserver.
 
-Licenstilstand pr. enhed kræver, at alle enheder, der opretter forbindelse til denne værtsserver, skal have en RDS-klientadgangslicens pr. enhed.
+        Licenstilstand pr. enhed kræver, at alle enheder, der opretter forbindelse til denne RD-sessions værtsserver, skal have en RDS CAL pr. enhed tildelt fra en RD-licensserver.
 
-Hvis du aktiverer denne politikindstilling, overholder Fjernskrivebord-licensserveren den Fjernskrivebord-licenstilstand, du angiver.
+        AAD-licenstilstand pr. bruger kræver, at alle brugere, der opretter forbindelse til denne RD-sessions værtsserver, skal have en serviceplan, som understøtter RDS-licenser tildelt i AAD.
+        
+        Hvis du aktiverer denne politikindstilling, overholder Fjernskrivebord-licensserveren RD-sessionens vært den Fjernskrivebord-licenstilstand, du angiver.
 
-Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, er licenstilstanden ikke angivet på gruppepolitikniveau.
-
-</string>
+        Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, er licenstilstanden ikke angivet på gruppepolitikniveau.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Pr. enhed</string>
       <string id="TS_LICENSING_MODE_PER_USER">Pr. bruger</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD pr. bruger</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Denne politikindstilling angiver, om omdirigering af data til klienters LPT-port skal forhindres under en session med Fjernskrivebord-tjenester.
 
 Du kan bruge denne indstilling til at forhindre brugere i at tilknytte lokale LPT-porte og omdirigere data fra fjerncomputeren til lokale LPT-porte på ydre enheder. Fjernskrivebord-tjenester tillader som standard omdirigering til LPT-port.
@@ -1015,6 +1018,37 @@ Hvis du deaktiverer denne politikindstilling, bruger RemoteApp-programmer, som u
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Brug WDDM-skærmdriveren til Forbindelse til Fjernskrivebord</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Denne politikindstilling gør det muligt at aktivere WDDM-skærmdriveren til Forbindelse til Fjernskrivebord.
+
+Hvis du aktiverer denne politikindstilling, vil Forbindelse til Fjernskrivebord bruge WDDM-skærmdriveren.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger Forbindelse til Fjernskrivebord ikke WDDM-skærmdriveren. I dette tilfælde bruger Forbindelse til Fjernskrivebord XDDM-skærmdriveren.
+
+Du skal genstarte Windows, før denne ændring kan træde i kraft.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Denne politikindstilling gør det muligt at aktivere WDDM-skærmdriveren til Forbindelse til Fjernskrivebord.
+
+Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, vil Forbindelse til Fjernskrivebord bruge WDDM-skærmdriveren.
+
+Hvis du deaktiverer denne politikindstilling, bruger Forbindelse til Fjernskrivebord ikke WDDM-skærmdriveren. I dette tilfælde bruger Forbindelse til Fjernskrivebord XDDM-skærmdriveren.
+
+Du skal genstarte Windows, før denne ændring kan træde i kraft.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Denne politikindstilling gør det muligt at aktivere WDDM-skærmdriveren til Forbindelse til Fjernskrivebord.
+
+Hvis du aktiverer denne politikindstilling, vil Forbindelse til Fjernskrivebord bruge WDDM-skærmdriveren.
+
+Hvis du deaktiverer denne politikindstilling, bruger Forbindelse til Fjernskrivebord ikke WDDM-skærmdriveren. I dette tilfælde bruger Forbindelse til Fjernskrivebord XDDM-skærmdriveren.
+
+Hvis du undlader at konfigurere denne politikindstilling, vil Forbindelse til Fjernskrivebord på værtsserveren for Fjernskrivebord ikke bruge WDDM-skærmdriveren. I alle andre tilfælde vil Forbindelse til Fjernskrivebord bruge WDDM-skærmdriveren.
+
+Du skal genstarte Windows, før denne ændring kan træde i kraft.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

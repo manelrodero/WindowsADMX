@@ -635,49 +635,46 @@ Jos tämä käytäntöasetus poistetaan käytöstä tai sitä ei määritetä, t
 
       <string id="RDVEDrive_Name">Määritä laitteistopohjainen salaus siirrettäville data-asemille</string>
 
-      <string id="OSEDrive_Help">Tämän käytäntöasetuksen avulla voit hallita BitLockerin laitteistopohjaista salausta käyttöjärjestelmäasemille ja määrittää, mitä salausalgoritmeja se käyttää laitteistopohjaisessa salauksessa. Laitteistopohjaisen salauksen käyttäminen voi tehostaa asemien toimintoja, joihin liittyy tiheään toistuvaa tietojen lukemista asemasta tai kirjoittamista siihen.
+      <string id="OSEDrive_Help">Tämän käytäntöasetuksen avulla voit hallita BitLockerin laitteistopohjaista salausta käyttöjärjestelmäasemissa ja määrittää, mitä salausalgoritmeja se käyttää laitteistopohjaisessa salauksessa. Laitteistopohjaisen salauksen käyttäminen voi tehostaa asemien toimintoja, jos niihin liittyy tiheään toistuvaa tietojen lukemista asemasta tai kirjoittamista siihen.
 
-Jos tämä käytäntöasetus otetaan käyttöön, voit määrittää lisäasetuksilla, käytetäänkö BitLockerin ohjelmistopohjaista salausta laitteistopohjaisen salauksen sijasta tietokoneissa, jotka eivät tue laitteistopohjaista salausta. Halutessasi voit myös rajoittaa laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja.
+Jos otat tämän käytäntöasetuksen käyttöön, voit määrittää lisäasetuksilla, käytetäänkö BitLockerin ohjelmistopohjaista salausta laitteistopohjaisen salauksen sijaan tietokoneissa, jotka eivät tue laitteistopohjaista salausta. Halutessasi voit myös rajoittaa laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja.
 
-Jos tätä käytäntöasetusta ei oteta käyttöön, BitLocker ei voi käyttää laitteistopohjaista salausta käyttöjärjestelmäasemille ja BitLockerin ohjelmistopohjaista salausta käytetään oletuksena aseman salauksessa.
+Jos et ota tätä käytäntöasetusta käyttöön, BitLocker ei pysty käyttämään laitteistopohjaista salausta käyttöjärjestelmäasemissa ja aseman salauksessa käytetään oletusarvoisesti BitLockerin ohjelmistopohjaista salausta.
 
-Jos tätä käytäntöasetusta ei määritetä, BitLockerin käyttää laitteistopohjaista salausta ja asemalle määritettyä salausalgoritmia. Jos laitteistopohjainen salaus ei ole käytettävissä, BitLockerin ohjelmistopohjaista salausta käytetään sen sijasta.
+Jos tätä käytäntöasetusta ei määritetä, BitLocker käyttää ohjelmistopohjaista salausta riippumatta siitä, onko laitteistopohjaista salausta käytettävissä vai ei.
 
-Huomautus: määritä aseman salausmenetelmä ja salauksen vahvuus -käytäntöasetus ei koske laitteistopohjaista salausta. Laitteistopohjaisessa salauksessa käytettävä salausalgoritmi määritetään aseman osioinnin yhteydessä. Oletusarvoisesti BitLocker käyttää asemalle määritettyä algoritmia aseman salaukseen. Rajoita laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja -asetuksen avulla voit rajoittaa salausalgoritmeja, joita BitLocker käyttää laitteistopohjaisessa salauksessa. Jos asemalle määritetty algoritmi ei ole käytettävissä, BitLocker poistaa laitteistopohjaisen salauksen käytöstä.
+Huomautus: Määritä aseman salausmenetelmä ja salauksen vahvuus -käytäntöasetus ei koske laitteistopohjaista salausta. Laitteistopohjaisessa salauksessa käytettävä salausalgoritmi määritetään aseman osioinnin yhteydessä. Oletusarvoisesti BitLocker käyttää aseman salauksessa asemalle määritettyä algoritmia. Rajoita laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja -asetuksen avulla voit rajoittaa salausalgoritmeja, joita BitLocker pystyy käyttämään laitteistopohjaisessa salauksessa. Jos asemalle määritetty algoritmi ei ole käytettävissä, BitLocker poistaa laitteistopohjaisen salauksen käytöstä.
 Salausalgoritmit määritetään OID-objektitunnuksilla. Esimerkki:
 - AES 128 -salauksen CBC-tilan OID: 2.16.840.1.101.3.4.1.2
 - AES 256 -salauksen CBC-tilan OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
-      <string id="FDVEDrive_Help">Tämän käytäntöasetuksen avulla voit hallita BitLockerin laitteistopohjaista salausta kiinteille data-asemille ja määrittää, mitä salausalgoritmeja se käyttää laitteistopohjaisessa salauksessa. Laitteistopohjaisen salauksen käyttäminen voi tehostaa asemien toimintoja, joihin liittyy tiheään toistuvaa tietojen lukemista asemasta tai kirjoittamista siihen.
+      <string id="FDVEDrive_Help">Tämän käytäntöasetuksen avulla voit hallita BitLockerin laitteistopohjaista salausta kiinteissä data-asemissa ja määrittää, mitä salausalgoritmeja se käyttää laitteistopohjaisessa salauksessa. Laitteistopohjaisen salauksen käyttäminen voi tehostaa asemien toimintoja, jos niihin liittyy tiheään toistuvaa tietojen lukemista asemasta tai kirjoittamista siihen.
 
-Jos tämä käytäntöasetus otetaan käyttöön, voit määrittää lisäasetuksilla, käytetäänkö BitLockerin ohjelmistopohjaista salausta laitteistopohjaisen salauksen sijasta tietokoneissa, jotka eivät tue laitteistopohjaista salausta. Halutessasi voit myös rajoittaa laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja.
+Jos otat tämän käytäntöasetuksen käyttöön, voit määrittää lisäasetuksilla, käytetäänkö BitLockerin ohjelmistopohjaista salausta laitteistopohjaisen salauksen sijaan tietokoneissa, jotka eivät tue laitteistopohjaista salausta. Halutessasi voit myös rajoittaa laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja.
 
-Jos tätä käytäntöasetusta ei oteta käyttöön, BitLocker ei voi käyttää laitteistopohjaista salausta käyttöjärjestelmäasemille ja BitLockerin ohjelmistopohjaista salausta käytetään oletuksena aseman salauksessa.
+Jos et ota tätä käytäntöasetusta käyttöön, BitLocker ei pysty käyttämään laitteistopohjaista salausta käyttöjärjestelmäasemissa ja aseman salauksessa käytetään oletusarvoisesti BitLockerin ohjelmistopohjaista salausta.
 
-Jos tätä käytäntöasetusta ei määritetä, BitLockerin käyttää laitteistopohjaista salausta ja asemalle määritettyä salausalgoritmia. Jos laitteistopohjainen salaus ei ole käytettävissä, BitLockerin ohjelmistopohjaista salausta käytetään sen sijasta.
+Jos tätä käytäntöasetusta ei määritetä, BitLocker käyttää ohjelmistopohjaista salausta riippumatta siitä, onko laitteistopohjaista salausta käytettävissä vai ei.
 
-Huomautus: määritä aseman salausmenetelmä ja salauksen vahvuus -käytäntöasetus ei koske laitteistopohjaista salausta. Laitteistopohjaisessa salauksessa käytettävä salausalgoritmi määritetään aseman osioinnin yhteydessä. Oletusarvoisesti BitLocker käyttää asemalle määritettyä algoritmia aseman salaukseen. Rajoita laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja -asetuksen avulla voit rajoittaa salausalgoritmeja, joita BitLocker käyttää laitteistopohjaisessa salauksessa. Jos asemalle määritetty algoritmi ei ole käytettävissä, BitLocker poistaa laitteistopohjaisen salauksen käytöstä.
+Huomautus: Määritä aseman salausmenetelmä ja salauksen vahvuus -käytäntöasetus ei koske laitteistopohjaista salausta. Laitteistopohjaisessa salauksessa käytettävä salausalgoritmi määritetään aseman osioinnin yhteydessä. Oletusarvoisesti BitLocker käyttää aseman salauksessa asemalle määritettyä algoritmia. Rajoita laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja -asetuksen avulla voit rajoittaa salausalgoritmeja, joita BitLocker pystyy käyttämään laitteistopohjaisessa salauksessa. Jos asemalle määritetty algoritmi ei ole käytettävissä, BitLocker poistaa laitteistopohjaisen salauksen käytöstä.
 Salausalgoritmit määritetään OID-objektitunnuksilla. Esimerkki:
 - AES 128 -salauksen CBC-tilan OID: 2.16.840.1.101.3.4.1.2
 - AES 256 -salauksen CBC-tilan OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
-      <string id="RDVEDrive_Help">Tämän käytäntöasetuksen avulla voit hallita BitLockerin laitteistopohjaista salausta siirrettäville asemille ja määrittää, mitä salausalgoritmeja se käyttää laitteistopohjaisessa salauksessa. Laitteistopohjaisen salauksen käyttäminen voi tehostaa asemien toimintoja, joihin liittyy tiheään toistuvaa tietojen lukemista asemasta tai kirjoittamista siihen.
+      <string id="RDVEDrive_Help">Tämän käytäntöasetuksen avulla voit hallita BitLockerin laitteistopohjaista salausta siirrettävissä data-asemissa ja määrittää, mitä salausalgoritmeja se käyttää laitteistopohjaisessa salauksessa. Laitteistopohjaisen salauksen käyttäminen voi tehostaa asemien toimintoja, jos niihin liittyy tiheään toistuvaa tietojen lukemista asemasta tai kirjoittamista siihen.
 
-Jos tämä käytäntöasetus otetaan käyttöön, voit määrittää lisäasetuksilla, käytetäänkö BitLockerin ohjelmistopohjaista salausta laitteistopohjaisen salauksen sijasta tietokoneissa, jotka eivät tue laitteistopohjaista salausta. Halutessasi voit myös rajoittaa laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja.
+Jos otat tämän käytäntöasetuksen käyttöön, voit määrittää lisäasetuksilla, käytetäänkö BitLockerin ohjelmistopohjaista salausta laitteistopohjaisen salauksen sijaan tietokoneissa, jotka eivät tue laitteistopohjaista salausta. Halutessasi voit myös rajoittaa laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja.
 
-Jos tätä käytäntöasetusta ei oteta käyttöön, BitLocker ei voi käyttää laitteistopohjaista salausta käyttöjärjestelmäasemille ja BitLockerin ohjelmistopohjaista salausta käytetään oletuksena aseman salauksessa.
+Jos et ota tätä käytäntöasetusta käyttöön, BitLocker ei pysty käyttämään laitteistopohjaista salausta käyttöjärjestelmäasemissa ja aseman salauksessa käytetään oletusarvoisesti BitLockerin ohjelmistopohjaista salausta.
 
-Jos tätä käytäntöasetusta ei määritetä, BitLockerin käyttää laitteistopohjaista salausta ja asemalle määritettyä salausalgoritmia. Jos laitteistopohjainen salaus ei ole käytettävissä, BitLockerin ohjelmistopohjaista salausta käytetään sen sijasta.
+Jos tätä käytäntöasetusta ei määritetä, BitLocker käyttää ohjelmistopohjaista salausta riippumatta siitä, onko laitteistopohjaista salausta käytettävissä vai ei.
 
-Huomautus: määritä aseman salausmenetelmä ja salauksen vahvuus -käytäntöasetus ei koske laitteistopohjaista salausta. Laitteistopohjaisessa salauksessa käytettävä salausalgoritmi määritetään aseman osioinnin yhteydessä. Oletusarvoisesti BitLocker käyttää asemalle määritettyä algoritmia aseman salaukseen. Rajoita laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja -asetuksen avulla voit rajoittaa salausalgoritmeja, joita BitLocker käyttää laitteistopohjaisessa salauksessa. Jos asemalle määritetty algoritmi ei ole käytettävissä, BitLocker poistaa laitteistopohjaisen salauksen käytöstä.
+Huomautus: Määritä aseman salausmenetelmä ja salauksen vahvuus -käytäntöasetus ei koske laitteistopohjaista salausta. Laitteistopohjaisessa salauksessa käytettävä salausalgoritmi määritetään aseman osioinnin yhteydessä. Oletusarvoisesti BitLocker käyttää aseman salauksessa asemalle määritettyä algoritmia. Rajoita laitteistopohjaisessa salauksessa käytettäviä salausalgoritmeja ja salausohjelmistoja -asetuksen avulla voit rajoittaa salausalgoritmeja, joita BitLocker pystyy käyttämään laitteistopohjaisessa salauksessa. Jos asemalle määritetty algoritmi ei ole käytettävissä, BitLocker poistaa laitteistopohjaisen salauksen käytöstä.
 Salausalgoritmit määritetään OID-objektitunnuksilla. Esimerkki:
 - AES 128 -salauksen CBC-tilan OID: 2.16.840.1.101.3.4.1.2
 - AES 256 -salauksen CBC-tilan OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Ota käyttöön BitLocker-todennus, joka vaatii käynnistystä edeltävää näppäimistön syötettä taulutietokoneissa</string>

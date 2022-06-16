@@ -72,17 +72,13 @@ Cuando Windows encuentre actualizaciones que se aplican a este equipo, se notifi
 
         4 = Descargar las actualizaciones automáticamente e instalarlas según la programación que se especifica a continuación.
 
-Cuando se selecciona "Automático" como el tiempo de instalación programado, Windows comprobará, descargará e instalará las actualizaciones automáticamente. El dispositivo se reiniciará según la configuración predeterminada de Windows, a menos que se configure con una directiva de grupo. (Se aplica a Windows 10, versión 1809 y superior)
+Cuando se selecciona "Automático" como el tiempo de instalación programado, Windows comprobará, descargará e instalará las actualizaciones automáticamente. El dispositivo se reiniciará según la configuración predeterminada de Windows, a menos que se configure con una directiva de grupo. (Se aplica a Windows 10, versión 1809 y posteriores)
 
-        Especifica la programación mediante las opciones de configuración de la directiva de grupo. Si no se especifica ninguna programación, la programación predeterminada para todas las instalaciones será todos los días a las 3:00 h. Si alguna actualización requiere un reinicio para completar la instalación, Windows reiniciará el equipo automáticamente. (Si un usuario tiene la sesión iniciada en el equipo cuando Windows está listo para reiniciarse, se le notificará y se le dará la opción de retrasar el reinicio).
+        Especifica la programación mediante las opciones de configuración de la directiva de grupo. Para la versión 1709 y las posteriores, hay la opción adicional de limitar la actualización a una ocurrencia semanal, quincenal o mensual. Si no se especifica ninguna programación, la programación predeterminada para todas las instalaciones será todos los días a las 3:00 h. Si alguna actualización requiere un reinicio para completar la instalación, Windows reiniciará el equipo automáticamente. (Si un usuario tiene la sesión iniciada en el equipo cuando Windows está listo para reiniciarse, se le notificará y se le dará la opción de retrasar el reinicio).
 
         En Windows 8 y versiones posteriores, puedes configurar que las actualizaciones se instalen durante el mantenimiento automático, en lugar de una programación específica. El mantenimiento automático instalará las actualizaciones cuando el equipo no esté en uso, y evitará hacerlo cuando el equipo solo esté funcionando con la batería. Si el mantenimiento automático no puede instalar actualizaciones durante 2 días, Windows Update instalará las actualizaciones de inmediato. A continuación, se notificará a los usuarios que próximamente se hará un reinicio, que solo tendrá lugar si no existe ningún riesgo de pérdida de datos accidental.
 
-        El mantenimiento automático se puede configurar aún más mediante la configuración de directiva de grupo que se encuentra en: Configuración del equipo-&gt; Plantillas administrativas-&gt;Componentes de Windows-&gt;Programador de mantenimiento
-
-        5 = Permitir a los administradores locales seleccionar el modo de configuración en el que las actualizaciones automáticas notifican e instalan las actualizaciones.
-
-Nota: Esta opción no se admite en Windows 10.
+        5 = Permitir a los administradores locales seleccionar el modo de configuración en el que las actualizaciones automáticas notifican e instalan las actualizaciones. (Esta opción no se ha transferido a ninguna de las versiones de Windows 10).
 
         Con esta opción, se permitirá a los administradores locales utilizar el panel de control de Windows Update para seleccionar una opción de configuración de su elección. No se permitirá que los administradores locales deshabiliten la configuración para las actualizaciones automáticas.
 
@@ -321,50 +317,49 @@ Si seleccionas "Enable preview builds", podrás instalarlas en el dispositivo. L
       <string id="PreviewBuildFastFeatureUpdates">Vista previa de compilación - rápido</string>
       <string id="PreviewBuildSlowFeatureUpdates">Versión preliminar - lento</string>
       <string id="ReleasePreviewBranchFeatureUpdates">Versión preliminar</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">Canal semianual (dirigido)</string>
       <string id="SemiAnnualChannelFeatureUpdates">Canal semianual</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Canal semestral para la versión 1809 y versiones anteriores (en desuso)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Canal semestral (dirigido) para la versión 1809 y versiones anteriores (en desuso)</string>
       <string id="DeferFeatureUpdates_Title">Seleccione cuando se reciben las compilaciones de vista previa y actualizaciones de características</string>
       <string id="DeferFeatureUpdates_Help">Habilita esta directiva para especificar el nivel de versiones preliminares o actualizaciones de características que quieres recibir y cuándo.
 
-* Versión preliminar (modo anticipado): los dispositivos establecidos en este nivel serán los primeros en recibir nuevas compilaciones de Windows con características que todavía no están disponibles para el público general. Selecciona Anticipado para contribuir a la identificación de problemas y su notificación a Microsoft, así como para proporcionar sugerencias sobre nuevas funciones.
-* Versión preliminar (modo aplazado): los dispositivos establecidos en este nivel recibirán nuevas compilaciones de Windows antes de que estén disponibles para el público general, pero con una cadencia más lenta que con la opción Anticipado, y con los cambios y las correcciones identificados en compilaciones anteriores.
+* Versión preliminar (rápida): los dispositivos establecidos en este nivel serán los primeros en recibir nuevas compilaciones de Windows con características que todavía no están disponibles para el público general. Selecciona Rápido para participar en la identificación y notificación de problemas a Microsoft, y envía tus sugerencias sobre la nueva funcionalidad.
+* Versión preliminar (lenta): los dispositivos establecidos en este nivel recibirán nuevas compilaciones de Windows antes de que estén disponibles para el público general, pero con una cadencia más lenta que la establecida en el nivel rápido, y con los cambios y las correcciones identificados en compilaciones anteriores.
 * Vista previa de versión: recibe compilaciones de Windows justo antes de que Microsoft las presente al público general.
-* Canal semianual (dirigido): recibe actualizaciones de características cuando se presenten al público general.
-* Canal semianual: las actualizaciones de características llegarán cuando se declaren del tipo Canal semianual. Esto suele ocurrir unos 4 meses después de Canal semianual (dirigido), lo que indica que Microsoft, los fabricantes de software independientes (ISV), los asociados y los clientes opinan que la versión está lista para la implementación general.
+* Canal semestral: recibe actualizaciones de características cuando estén disponibles para el público general.
 
-Al seleccionar una versión preliminar:
+ Los siguientes niveles de preparación de Windows han quedado en desuso y solo son aplicables a la versión 1809 y versiones anteriores:
+* Canal semestral (dirigido) para la versión 1809 y versiones anteriores: ya se han publicado las actualizaciones de características.
+* Canal semestral para la versión 1809 y versiones anteriores: las actualizaciones de características se han declarado del canal semestral, una designación que indica que la versión está lista para la implementación general.
+Revisa la página de información de la versión en http://aka.ms/ReleaseInformationPage para las fechas de lanzamiento del canal semestral (dirigido) y semestral.
+
+ Al seleccionar una versión preliminar:
     - Puedes aplazar la recepción de versiones preliminares hasta 14 días.
-    - Para evitar recibir versiones preliminares a la hora programada, las puedes detener temporalmente. La pausa permanecerá en vigor durante 35 días después de la hora de inicio proporcionada.
-    - Para reanudar la recepción de actualizaciones de características en pausa, borra el campo de fecha inicial.
+    - Para evitar recibir versiones preliminares a la hora programada, las puedes detener temporalmente. La pausa se mantendrá en vigor durante 35 días a partir de la hora de inicio proporcionada.
+    - Para reanudar la recepción de actualizaciones de características en pausa, borra el campo de fecha de inicio.
 
-La inscripción para recibir versiones preliminares requiere un nivel de telemetría de 2 o superior y que tu dominio esté registrado en insider.windows.com. Para obtener más información sobre las versiones preliminares, consulta: https://aka.ms/wipforbiz
+ La inscripción de versión preliminar requiere un nivel de telemetría de 2 o superior y que tu dominio esté registrado en insider.windows.com. Para obtener más información sobre las versiones preliminares, consulta: https://aka.ms/wipforbiz
 
-Al seleccionar las opciones Canal semianual (dirigido) o Canal semianual:
-    - Puedes aplazar la recepción de actualizaciones de características hasta 365 días.
-    - Para evitar recibir actualizaciones de características a la hora programada, las puedes detener temporalmente. La pausa permanecerá en vigor durante 35 días después de la hora de inicio proporcionada.
-    - Para reanudar la recepción de actualizaciones de características en pausa, borra el campo de fecha inicial.
+Cuando selecciones el canal semestral:
+    - Puedes aplazar la recepción de actualizaciones de características durante un máximo de 365 días.
+    - Para evitar recibir actualizaciones de características a la hora programada, las puedes detener temporalmente. La pausa se mantendrá en vigor durante 35 días a partir de la hora de inicio proporcionada.
+    - Para reanudar la recepción de actualizaciones de características en pausa, borra el campo de fecha de inicio.
 
-Para configurar las actualizaciones de características, debes tener un nivel de telemetría de 1 o superior.
+Si deshabilitas esta Directiva o no la configuras, Windows Update no alterará su comportamiento.</string>
+      <string id="DeferQualityUpdates_Title">Selecciona cuándo quieres recibir actualizaciones de calidad</string>
+      <string id="DeferQualityUpdates_Help">Habilita esta directiva para especificar si quieres recibir actualizaciones de calidad.
+
+Puedes aplazar la recepción de actualizaciones de calidad hasta 30 días.
+
+Para impedir la recepción de actualizaciones de calidad en la fecha programada, puedes pausar temporalmente las actualizaciones de calidad. La pausa permanecerá en vigor durante 35 días o hasta que desactives el campo de fecha de inicio.
+
+Para reanudar la recepción de actualizaciones de calidad que están en pausa, borra el campo de fecha de inicio.
 
 Si deshabilitas esta directiva o no la configuras, Windows Update no alterará su comportamiento.</string>
-      <string id="DeferQualityUpdates_Title">Selecciona cuándo quieres recibir actualizaciones de calidad</string>
-      <string id="DeferQualityUpdates_Help">Habilita esta directiva para especificar si deseas recibir actualizaciones de calidad.
-
-Puedes posponer la recepción de actualizaciones de calidad hasta 30 días.
-
-Para impedir la recepción de actualizaciones de calidad en la fecha programada, puedes detener temporalmente estas actualizaciones. La pausa se mantendrá en vigor durante 35 días o hasta que desactives el campo de fecha de inicio.
-
-Para reanudar la recepción de actualizaciones de calidad que has puesto en pausa, desactiva el campo de fecha de inicio.
-
-Si desactivas o no configuras esta directiva, Windows Update no modificará su comportamiento.
-
-Nota: si la directiva "Permitir telemetría" está establecida en 0, la directiva no tendrá efecto.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">No incluyas controladores con las actualizaciones de Windows</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Habilita esta directiva para que no incluya controladores con actualizaciones de calidad de Windows.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Habilita esta directiva para no incluir controladores con las actualizaciones de calidad de Windows.
 
-Si deshabilitas esta directiva o no la configuras, Windows Update incluirá las actualizaciones que tengan una clasificación de controlador.
-
-Nota: Para los dispositivos que ejecuten Windows 10, versión 1607 o Windows Server 2016, esta directiva solo surtirá efecto si habilitas la telemetría (es decir, si la directiva "Permitir telemetría" no es 0). Para los dispositivos que ejecutan Windows 10, versión 1703 (o posterior) o Windows Server, versión 1709 (o posterior), la telemetría no tiene que habilitarse para que esta directiva surta efecto.</string>
+Si deshabilitas o no configuras esta directiva, Windows Update incluirá las actualizaciones que tengan una clasificación de controlador.</string>
       <string id="ActiveHours_Title">Desactivar el reinicio automático de actualizaciones durante las horas activas</string>
       <string id="ActiveHours_Help">Si habilitas esta directiva, el equipo no se reiniciará automáticamente durante las horas activas después de que realices las actualizaciones, sino que intentará reiniciarse fuera de ellas.
 
@@ -586,17 +581,63 @@ Si se deshabilita esta directiva o no se configura, el cliente de Windows Update
 Nota: Esta directiva solo se aplica cuando el servicio de Microsoft Update en la intranet al que se dirige este equipo se configura para admitir destinatarios del lado cliente. Si la directiva "Especificar la ubicación del servicio Microsoft Update en la intranet" está deshabilitada o no configurada, no entrará en vigor.
       </string>
       <string id="UpdateNotificationLevel_Title">Mostrar opciones para notificaciones de actualización</string>
-      <string id="UpdateNotificationLevel_Help">0 (predeterminado) – Utilizar las notificaciones predeterminadas de Windows Update
-1 – Desactivar todas las notificaciones, excepto las advertencias de reinicio
-2 – Desactivar todas las notificaciones, incluidas las advertencias de reinicio
+      <string id="UpdateNotificationLevel_Help">0 (valor predeterminado): usar las notificaciones predeterminadas de Windows Update
+1: desactivar todas las notificaciones, excepto las advertencias de reinicio
+2: desactivar todas las notificaciones, incluidas las advertencias de reinicio
 
-Esta directiva permite definir qué notificaciones de Windows Update se muestran a los usuarios. Esta directiva no controla cómo ni cuándo se descargan e instalan las actualizaciones.
+Esta directiva te permite definir qué notificaciones de Windows Update pueden ver los usuarios. Esta Directiva no controla la forma y el momento en que se descargan e instalan las actualizaciones.
 
-Importante: Si decides no recibir notificaciones de actualizaciones y también defines la directiva "Configurar Actualizaciones automáticas" para que los dispositivos no reciban actualizaciones automáticamente, ni tú ni los usuarios de dispositivos estaréis al tanto de las actualizaciones de características, de calidad y de seguridad críticas, y los dispositivos pueden estar en riesgo.
+Importante: Si decides no recibir notificaciones de actualización y también quieres definir otra directiva de grupo para que los dispositivos no reciban actualizaciones automáticas, ni usuarios de dispositivos tendrán conocimiento de la seguridad, la calidad o las actualizaciones de características críticas, y tus dispositivos pueden estar en riesgo.
       </string>
       <string id="DefaultNotification">0 (predeterminado): notificaciones de Windows Update de SO predeterminadas</string>
       <string id="ExcludingRebootWarnings">1 – Deshabilitar todas las notificaciones, excepto las advertencias de reinicio</string>
       <string id="IncludingRebootWarnings">2 – Deshabilitar todas las notificaciones, incluidas las advertencias de reinicio</string>
+      <string id="ComplianceDeadline_Title">Especificar fechas límite para actualizaciones y reinicios automáticos</string>
+      <string id="ComplianceDeadline_Help">Esta directiva permite especificar el número de días que un usuario tiene antes de que se instalen automáticamente las actualizaciones de calidad y características en sus dispositivos, así como un período de gracia tras el cual se realizan reinicios automáticos. Las actualizaciones y los reinicios se producirán independientemente de las horas activas y el usuario no podrá volver a programarlos.
+
+Los plazos de actualización de características y de calidad pueden ser de hasta 30 días. El período de gracia de reinicio automático puede comprender entre 0 y 7 días.
+
+También puedes deshabilitar los reinicios automáticos hasta el final de dicho período de gracia.
+
+Si deshabilitas o no configuras esta directiva, los dispositivos recibirán actualizaciones y se reiniciarán según la programación predeterminada.
+
+Esta directiva invalidará las siguientes directivas:
+1.  Especificar la fecha límite antes del reinicio automáticamente para instalar las actualizaciones
+2.  Especificar la transición de reinicio establecido y la programación de notificaciones
+3.  Reiniciar siempre automáticamente a la hora programada
+4.  No reiniciar automáticamente para instalar actualizaciones automáticas programadas si hay usuarios con una sesión iniciada
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -727,6 +768,16 @@ Importante: Si decides no recibir notificaciones de actualizaciones y también d
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Especificar las opciones de visualización de las notificaciones de actualización:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>Especifica el número de días (hasta 30 días) que el usuario tiene antes de que las actualizaciones se ejecuten automáticamente, con independencia de las horas activas y sin posibilidad de reprogramarlo.</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Actualizaciones de calidad (días):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Actualizaciones de características (días):</dropdownList>
+        <text></text>
+        <text>Especifica un período de gracia para el reinicio automático (entre 0 y 7 días) desde el momento en que se requiere un reinicio hasta que el dispositivo se reinicie automáticamente. Los dispositivos se reiniciarán con independencia de las horas activa y sin posibilidad de reprogramarlo.</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Período de gracia (días)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">No reiniciar automáticamente hasta el final del período de gracia</checkBox>
       </presentation>
     </presentationTable>
   </resources>

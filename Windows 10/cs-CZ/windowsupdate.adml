@@ -55,7 +55,7 @@ Pokud je tato zásada povolena ve Windows 8 a Windows RT, budou se zobrazovat po
       <string id="RemoveWindowsUpdateModeAll">0 – Nezobrazovat žádná upozornění</string>
       <string id="RemoveWindowsUpdateModeReboot">1 – Zobrazovat upozornění na požadované restartování</string>
       <string id="AutoUpdateCfg">Konfigurace automatických aktualizací</string>
-      <string id="AutoUpdateCfg_Help">Určuje, jestli tento počítač dostane aktualizace zabezpečení a další důležité soubory ke stažení prostřednictvím služby automatických aktualizací Windows.
+      <string id="AutoUpdateCfg_Help">Určuje, jestli tento počítač bude dostávat aktualizace zabezpečení a další důležité soubory ke stažení prostřednictvím služby automatických aktualizací Windows.
 
 Poznámka: Tato zásada neplatí pro Windows RT.
 
@@ -73,15 +73,11 @@ Toto nastavení umožňuje zadat, jestli jsou na tomto počítači povolené aut
 
         Když se jako čas plánované instalace vybere možnost Automaticky, systém Windows automaticky vyhledá, stáhne a nainstaluje aktualizace. Pokud není restartování zařízení nakonfigurované prostřednictvím zásad skupiny, restartuje se podle výchozího nastavení Windows. (Platí pro Windows 10 verze 1809 a vyšší.)
 
-        Pomocí možností v nastavení zásad skupiny zadejte plán. Když se žádný plán nezadá, výchozí plán pro všechny instalace bude každý den ve 3 hodiny ráno. Pokud k dokončení některé z aktualizací bude nutné restartovat počítač, systém Windows počítač automaticky restartuje. (Pokud je uživatel ve chvíli, kdy systém Windows bude připravený restartovat počítač, přihlášený, zobrazí se mu oznámení o restartování a možnost restart odložit.)
+        Pomocí možností v nastavení zásad skupiny zadejte plán. U verze 1709 a vyšších je možné aktualizace omezit tak, aby probíhaly jen jednou za týden, za dva týdny nebo za měsíc. Když není zadán žádný plán, výchozí plán pro všechny instalace bude každý den ve 3 hodiny ráno. Pokud k dokončení některé z aktualizací bude nutné restartovat počítač, systém Windows počítač automaticky restartuje. (Pokud je uživatel ve chvíli, kdy systém Windows bude připravený restartovat počítač, přihlášený, zobrazí se mu oznámení o restartování a možnost restart odložit.)
 
         Ve Windows 8 a novějších verzích můžete nastavit, aby se aktualizace namísto konkrétního plánu instalovaly během automatické údržby. Automatická údržba bude aktualizace instalovat ve chvíli, kdy se počítač nepoužívá. Když se bude počítač napájet z baterie, instalovat se nebudou. V případě, že automatická údržba nebude moct aktualizace nainstalovat ani po 2 dnech, služba Windows Update aktualizace nainstaluje hned. Uživateli se zobrazí upozornění o blížícím se restartu, ke kterému ale dojde jen v případě, že nebude hrozit neúmyslná ztráta dat.
 
-        Automatická údržba se dá dále konfigurovat pomocí nastavení Zásad skupiny tady: Konfigurace počítače-&gt;Šablony pro správu-&gt;Součásti systému Windows-&gt;Plánovač údržby
-
-        5 = Umožní místním správcům vybrat režim konfigurace, ve kterém služba automatických aktualizací má zobrazovat oznámení a instalovat aktualizace.
-
-        Poznámka! Ve Windows 10 se tato možnost nepodporuje.
+        5 = Umožní místním správcům vybrat režim konfigurace, ve kterém služba automatických aktualizací má zobrazovat oznámení a instalovat aktualizace. Tato možnost nebyla přenesena do žádné verze Windows 10.
 
         S touto možností můžou místní správci pomocí ovládacího panelu Windows Update sami vybrat možnost konfigurace. Místní správci nebudou moct zakázat konfiguraci pro službu automatických aktualizací.
 
@@ -320,16 +316,21 @@ Pokud vyberete Povolit buildy Preview, povolíte instalaci buildů Preview na za
       <string id="PreviewBuildFastFeatureUpdates">Build Preview – rychlý okruh</string>
       <string id="PreviewBuildSlowFeatureUpdates">Build Preview – pomalý okruh</string>
       <string id="ReleasePreviewBranchFeatureUpdates">Verze Preview před vydáním</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">Pololetní kanál (cílený)</string>
       <string id="SemiAnnualChannelFeatureUpdates">Pololetní kanál</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Pololetní kanál pro verzi 1809 a nižší (zastaralé)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Pololetní kanál (cílený) pro verzi 1809 a nižší (zastaralé)</string>
       <string id="DeferFeatureUpdates_Title">Vybrat při příjmu buildů Preview a aktualizací funkcí</string>
       <string id="DeferFeatureUpdates_Help">Pokud povolíte tuto zásadu, můžete určit úroveň buildů Preview nebo aktualizací funkcí, které chcete přijímat, a také to, kdy je chcete přijímat.
 
-* Build Preview – rychlý okruh: Zařízení nastavená na tuto úroveň jsou mezi prvními, která získávají nové buildy Windows s funkcemi, které zatím nejsou dostupné pro širokou veřejnost. Výběrem rychlého okruhu se zapojíte do vyhledávání problémů a jejich hlášení do Microsoftu a poskytování návrhů k novým funkcím.
+* Build Preview – rychlý okruh: Zařízení nastavená na tuto úroveň jsou mezi prvními, která získávají nové buildy Windows s funkcemi, které zatím nejsou dostupné pro širokou veřejnost. Výběrem rychlého okruhu se zapojíte do vyhledávání problémů, jejich hlášení Microsoftu a poskytování návrhů k novým funkcím.
 * Build Preview – pomalý okruh: Zařízení nastavená na tuto úroveň získávají nové buildy Windows, ještě než jsou dostupné pro širokou veřejnost, ale s nižší frekvencí než u rychlého okruhu a se změnami a opravami provedenými v předchozích buildech.
 * Verze Preview před vydáním: Zařízení získávají buildy Windows těsně před tím, než je Microsoft vydá pro širokou veřejnost.
-* Pololetní kanál (cílený): Zařízení získávají aktualizace funkcí, když jsou vydány pro širokou veřejnost.
-* Pololetní kanál: Aktualizace funkcí se doručují, když získají označení „Pololetní kanál“. To obvykle nastává 4 měsíce po fázi Pololetní kanál (cílený) a indikuje to, že Microsoft, nezávislí výrobci softwaru (ISV), partneři a zákazníci věří, že toto vydání je připraveno pro široké nasazení.
+* Pololetní kanál: Zařízení získávají aktualizace funkcí, když jsou vydány pro širokou veřejnost.
+
+Následující úrovně připravenosti Windows byly označené jako zastaralé a vztahují se jen na verzi 1809 a nižší:
+* Pololetní kanál (cílený) pro verzi 1809 a nižší: Aktualizace funkcí byly vydány.
+* Pololetní kanál pro verzi 1809 a nižší: Aktualizace funkcí byly deklarovány jako Pololetní kanál. Toto označení znamená, že vydaní je připravené pro široké nasazení.
+Data vydání pro Pololetní kanál (cílený) a Pololetní kanál najdete na stránce s příslušnými informacemi: http://aka.ms/ReleaseInformationPage.
 
 Při výběru buildu Preview:
     - Příjem buildů Preview můžete odložit až o 14 dní.
@@ -338,14 +339,12 @@ Při výběru buildu Preview:
 
 Registrace pro buildy Preview vyžaduje nastavení úrovně telemetrie 2 nebo vyšší a registraci domény na insider.windows.com. Další informace o buildech Preview: https://aka.ms/wipforbiz
 
-Při výběru Půlročního kanálu (vybraní uživatelé) nebo Půlročního kanálu:
+Při výběru Pololetního kanálu:
     - Příjem aktualizací funkcí můžete odložit až o 365 dní.
     - Pokud chcete zabránit příjmu aktualizací funkcí v jejich naplánovaném čase, můžete je dočasně pozastavit. Pozastavení bude v platnosti 35 dní od zadaného počátečního data.
     - Pokud chcete příjem aktualizací funkcí, které jsou pozastavené, obnovit, vymažte pole pro počáteční datum.
 
-Pokud chcete aktualizace funkcí nakonfigurovat, musíte mít nastavení úrovně telemetrie 1 nebo vyšší.
-
-Pokud tuto zásadu zakážete nebo nenakonfigurujete, Windows Update nezmění své chování.</string>
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update nezmění své chování.</string>
       <string id="DeferQualityUpdates_Title">Vybrat při příjmu aktualizací pro zvýšení kvality</string>
       <string id="DeferQualityUpdates_Help">Když tuto zásadu povolíte, můžete určit, kdy chcete přijímat aktualizace pro zvýšení kvality.
 
@@ -355,15 +354,11 @@ Pokud chcete zabránit příjmu aktualizací pro zvýšení kvality v jejich pl�
 
 Pokud chcete znovu přijímat aktualizace pro zvýšení kvality, které jsou pozastavené, vymažte pole pro počáteční datum.
 
-Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update toto chování nezmění.
-
-Poznámka: Pokud je zásada Povolit telemetrii nastavená na 0, nebude mít tato zásada žádný vliv.</string>
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update své chování nezmění.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Nezahrnovat ovladače do aktualizací systému Windows</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Povolením této zásady určíte, že aktualizace pro zvýšení kvality Windows nebudou zahrnovat ovladače.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Když povolíte tuto zásadu, do aktualizací pro zvýšení kvality Windows se nebudou zahrnovat ovladače.
 
-Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update bude aktualizace s klasifikací ovladač zahrnovat.
-
-Poznámka: Pro zařízení se systémem Windows 10 verze 1607 nebo Windows Server 2016 bude tato zásada platit jen v případě, že povolíte telemetrii (to znamená, že zásada Povolit telemetrii nebude nastavená na 0). Pro zařízení se systémem Windows 10 verze 1703 (nebo novější) nebo Windows Server verze 1709 (nebo novější) nemusí být telemetrie povolená, aby tato zásada platila.</string>
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update bude zahrnovat aktualizace s klasifikací Ovladač.</string>
       <string id="ActiveHours_Title">Vypnout automatické restartování po aktualizacích v době aktivního používání</string>
       <string id="ActiveHours_Help">Pokud povolíte tuto zásadu, počítač se nebude po aktualizacích automaticky restartovat během doby aktivního používání. Počítač se pokusí restartovat mimo dobu aktivního používání.
 
@@ -589,13 +584,59 @@ Poznámka: Tato zásada platí pouze v případě, že je služba Microsoft Upda
 1 – Vypnout všechna oznámení kromě upozornění na restart
 2 – Vypnout všechna oznámení včetně upozornění na restart
 
-Tyto zásady umožní definovat, jaká oznámení služby Windows Update se zobrazí uživatelům. Tyto zásady neurčují, jak nebo kdy se budou aktualizace stahovat a instalovat.
+Tato zásada umožňuje definovat, jaká oznámení služby Windows Update se zobrazí uživatelům. Tato zásada neurčuje, jak nebo kdy se budou aktualizace stahovat a instalovat.
 
-Důležité! Pokud se rozhodnete nedostávat oznámení o aktualizacích a zároveň definujete zásady Konfigurace automatických aktualizací tak, aby se na zařízení aktualizace neinstalovaly automaticky, nedozvíte se vy ani uživatelé zařízení o důležitých aktualizacích zabezpečení, kvality ani funkcí a vaše zařízení může být ohrožené.
+Důležité: Pokud se rozhodnete nedostávat oznámení o aktualizacích a zároveň definujete další zásady skupiny tak, aby se na zařízení aktualizace neinstalovaly automaticky, nedozvíte se vy ani uživatelé zařízení o důležitých aktualizacích zabezpečení, aktualizacích pro zvýšení kvality ani aktualizacích funkcí a vaše zařízení může být ohrožené.
       </string>
       <string id="DefaultNotification">0 (výchozí) – Výchozí oznámení operačního systému o službě Windows Update</string>
       <string id="ExcludingRebootWarnings">1 – Zakázat všechna oznámení kromě upozornění na restart</string>
       <string id="IncludingRebootWarnings">2 – Zakázat všechna oznámení včetně upozornění na restart</string>
+      <string id="ComplianceDeadline_Title">Zadat lhůty pro automatické aktualizace a restartování</string>
+      <string id="ComplianceDeadline_Help">Pomocí této zásady můžete zadat počet dní, které má uživatel k dispozici před automatickou instalací aktualizací pro zvýšení kvality a aktualizací funkcí na jeho zařízení. Aktualizace a restartování pak proběhnou bez ohledu na dobu aktivního používání a uživatel je nebude moct přeplánovat.
+
+Lhůty u aktualizací pro zvýšení kvality a aktualizací funkcí je možné stanovit až na 30 dní. Poskytnutá lhůta pro automatické restartování může být od 0 do 7 dní.
+
+Automatická restartování je také možné až do konce této lhůty zakázat.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou zařízení přijímat aktualizace a restartovat se podle výchozího plánu.
+
+Tato zásada přepíše následující zásady:
+1.  Zadat konečný termín pro automatické restartování po instalaci aktualizace
+2.  Zadat přechod restartování podle plánu a časový plán oznámení pro aktualizace
+3.  Vždy automaticky restartovat v naplánovaný čas
+4.  Zakázat automatické restartování v případě přihlášených uživatelů pro instalaci naplánovaných automatických aktualizací
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -726,6 +767,16 @@ Důležité! Pokud se rozhodnete nedostávat oznámení o aktualizacích a záro
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Zadejte možnosti zobrazování oznámení o aktualizacích:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>Zadejte počet dní (až 30), které má uživatel před automatickým spuštěním aktualizací, a to bez ohledu na dobu aktivního používání a bez možnosti přeplánování.</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Aktualizace pro zvýšení kvality (dny):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Aktualizace funkcí (dny):</dropdownList>
+        <text></text>
+        <text>Zadejte poskytnutou lhůtu pro automatické restartování (0 až 7 dní). Jde o časový úsek od okamžiku, kdy je restartování vyžadováno, do chvíle, kdy se restartuje automaticky. Zařízení se pak restartují bez ohledu na dobu aktivního používání a bez možnosti přeplánování.</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Poskytnutá lhůta (dny)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Nerestartovat automaticky do konce poskytnuté lhůty</checkBox>
       </presentation>
     </presentationTable>
   </resources>

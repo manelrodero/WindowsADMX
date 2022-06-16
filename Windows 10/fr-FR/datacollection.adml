@@ -100,11 +100,19 @@ Définissez le paramètre de stratégie de télémétrie pour empêcher les util
           Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la Visionneuse de données de diagnostic est activée sur la page Paramètres.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Configurer le point de terminaison du chargement de la préparation aux mises à jour de Microsoft 365</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Configurer le point de terminaison de chargement de données de diagnostic pour les Analyses du bureau</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Cette stratégie définit le point de terminaison du chargement pour les données de diagnostic de cet appareil dans le cadre du programme de préparation aux mises à jour de Microsoft 365.
+          Cette stratégie définit le point de terminaison du chargement pour les données de diagnostic de cet appareil dans le cadre du programme Analyses du bureau.
           Si votre organisation participe au programme et a reçu l'instruction de configurer un point de terminaison de chargement personnalisé, utilisez ce paramètre pour définir ce point de terminaison.
           La valeur de ce paramètre sera fournie par Microsoft dans le cadre du processus d'intégration du programme. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Autoriser le pipeline de données commerciales</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline choisit l'appareil dans le pipeline de données d'entreprise Windows.
+          Si vous activez ce paramètre, les données collectées à partir de l'appareil seront choisies dans le pipeline de données d'entreprise Windows.
+          Si vous désactivez ce paramètre ou ne le configurez pas, toutes les données de l'appareil seront collectées et traitées conformément à nos stratégies pour le pipeline de données standard Windows.
+          La configuration de ce paramètre ne modifie pas le niveau de la collection de télémétrie ni la capacité de l'utilisateur à modifier le niveau. Ce paramètre s'applique uniquement au système d'exploitation Windows et aux applications incluses dans Windows, et non à des applications ou des services tiers exécutés sous Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Définissez le paramètre de stratégie de télémétrie pour empêcher les util
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Point de terminaison de téléchargement personnalisé Microsoft 365 Update:</label>
+          <label>Point de terminaison de chargement personnalisé des Analyses du bureau :</label>
         </textBox>
       </presentation>
     </presentationTable>

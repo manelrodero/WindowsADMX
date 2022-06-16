@@ -59,10 +59,41 @@ Aktywowanie tego ustawienia zasad nie wymaga ponownego rozruchu komputera ani po
 
 
 </string>
+<string id="TroubleshootingAllowRecommendations">Rozwiązywanie problemów: zezwalaj użytkownikom na dostęp do zalecanych kroków rozwiązywania znanych problemów</string>
+<string id="TroubleshootingAllowRecommendationsExplain">To ustawienie zasad powoduje stosowanie zalecanych kroków rozwiązywania znanych problemów do urządzenia i umożliwia administratorom skonfigurowanie sposobu stosowania ich w danych domenach lub środowiskach informatycznych.
+Nieskonfigurowanie tego ustawienia zasad umożliwi użytkownikowi określenie, czy i jak mają być stosowane zalecane kroki rozwiązywania problemów.
+
+Włączenie tej zasady umożliwia skonfigurowanie sposobu stosowania zalecanych kroków rozwiązywania problemów na urządzeniu użytkownika. Możesz wybrać jedną z następujących wartości:
+0 = Wyłącz tę funkcję.
+1 = Wyłącz tę funkcję, ale nadal stosuj kroki rozwiązywania problemów krytycznych.
+2 = Powiadom użytkowników o dostępności zalecanych kroków rozwiązywania problemów, a następnie umożliw użytkownikowi uruchomienie ich lub zignorowanie.
+3 = Uruchom automatycznie zalecane kroki rozwiązywania problemów i powiadom użytkownika po pomyślnym ich wykonaniu.
+4 = Uruchom automatycznie zalecane kroki rozwiązywania problemów bez powiadamiania użytkownika.
+5 = Zezwól użytkownikowi na wybranie własnych zalecanych kroków rozwiązywania problemów.
+
+Aby po określeniu wartości tego nowego ustawienia wyzwolić wykonanie zalecanych kroków rozwiązywania problemów dla urządzeń w Twojej domenie, wykonaj następujące instrukcje:
+1. Utwórz skrypt BAT z następującą zawartością:
+rem Ten skrypt wsadowy wyzwala wykonanie zalecanych kroków rozwiązywania problemów
+C:\Windows\System32\mitigationscanner.exe
+
+2. Aby utworzyć nowe zadanie natychmiastowe, wybierz kolejno pozycje Edytor zarządzania zasadami grupy &gt; Konfiguracja komputera &gt; Preferencje i wybierz pozycję Ustawienia Panelu sterowania. 
+3. W obszarze Ustawienia Panelu sterowania kliknij prawym przyciskiem myszy pozycję Zaplanowane zadania i wybierz polecenie Nowe. Wybierz pozycję Zadanie natychmiastowe (przynajmniej system Windows 7).
+4. Podaj odpowiednią nazwę i opis, a następnie w obszarze Opcje zabezpieczeń w polu Konto użytkownika wybierz wartość System i zaznacz pole wyboru Uruchom z najwyższymi uprawnieniami.
+5. Na karcie Akcje utwórz nową akcję, jako jej typ wybierz pozycję Uruchom program, a następnie wprowadź plik utworzony w kroku 1.
+6. Skonfiguruj zadanie do wdrożenia w swojej domenie.</string>
+<string id="RecommendationsDropDown_DoNothing">Wyłącz tę funkcję</string>
+<string id="RecommendationsDropDown_ApplyCoreSystemMitigationsOnly">Wyłącz tę funkcję, ale nadal stosuj kroki rozwiązywania problemów krytycznych.</string>
+<string id="RecommendationsDropDown_AskFirst">Powiadom użytkowników o dostępności zalecanych kroków rozwiązywania problemów, a następnie umożliw użytkownikowi uruchomienie ich lub zignorowanie.</string>
+<string id="RecommendationsDropDown_ApplyThenNotify">Uruchom automatycznie zalecane kroki rozwiązywania problemów i powiadom użytkownika po pomyślnym ich wykonaniu.</string>
+<string id="RecommendationsDropDown_ApplySilently">Uruchom automatycznie zalecane kroki rozwiązywania problemów bez powiadamiania użytkownika.</string>
+<string id="RecommendationsDropDown_DeferToUser">Zezwól użytkownikowi na wybranie własnych zalecanych kroków rozwiązywania problemów.</string>
     </stringTable>
     <presentationTable>
       <presentation id="MsdtToolDownloadPolicy">
         <dropdownList refId="MsdtToolDownloadPolicyLevel" noSort="true" defaultItem="1">Pobieranie narzędzi dozwolone</dropdownList>
+      </presentation>
+      <presentation id="TroubleshootingAllowRecommendations">
+        <dropdownList refId="TroubleshootingAllowRecommendations_Dropdown" noSort="true" defaultItem="0">Zezwalaj na wykonywanie zalecanych przez firmę Microsoft kroków rozwiązywania znanych problemów</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

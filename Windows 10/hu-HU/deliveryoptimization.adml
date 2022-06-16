@@ -110,26 +110,29 @@ A 0 érték azt jelenti, hogy nincs korlát. A rendszer a felhőszolgáltatás �
       <string id="GroupIdSource">Csoportazonosítók forrásának kijelölése</string>
       <string id="GroupIdSource_Help">A házirend beállításával egy adott forrásra korlátozhatja a társkiválasztást. 
       
-Elérhető lehetőségek a következők: 
+Az elérhető lehetőségek a következők: 
 
-1 = Active Directory-webhely.
+1 = Active Directory-hely.
 
-2 = Hitelesített tartomány helyazonosítója.
+2 = Hitelesített tartomány SID azonosítója.
 
 3 = DHCP-beállítás azonosítója.
 
 4 = DNS-utótag. 
 
+5 = AAD-bérlő azonosítója.
+
 Ha be van állítva, a csoportazonosítót a rendszer automatikusan hozzárendeli a kiválasztott forrásból. Ha beállítja ezt a házirendet, a GroupID-házirendet a rendszer figyelmen kívül hagyja. 
       
 A házirendben megadott beállítások csak a Csoport (2) letöltési módra érvényesek. Ha a Csoport (2) nincs letöltési módként megadva, a rendszer figyelmen kívül hagyja ezt a házirendet. 
 
-A 3. lehetőség – DHCP-beállítás azonosítója esetében az ügynök lekérdezi a 234-es azonosítójú DHCP-beállítást, és a visszakapott GUID-értéket használja csoportazonosítóként.</string>
+A 3. lehetőség (DHCP-beállítás azonosítója) esetében az ügyfél lekérdezi a 234-es azonosítójú DHCP-beállítást, és a visszakapott GUID-értéket használja csoportazonosítóként.</string>
       <string id="GroupIdSource_Unset">Nincs megadva (0)</string>
-      <string id="GroupIdSource_AD">AD-hely (1)</string>
+      <string id="GroupIdSource_AD">Active Directory-hely (1)</string>
       <string id="GroupIdSource_SID">Hitelesített tartomány helyazonosítója (2)</string>
       <string id="GroupIdSource_DHCP">DHCP-beállítás azonosítója (3)</string>
       <string id="GroupIdSource_DNS">DNS-utótag (4)</string>
+      <string id="GroupIdSource_AAD">AAD-bérlő azonosítója (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Háttérbeli letöltés késleltetése a HTTP-kiszolgálóról (másodperc)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Ez a házirend lehetővé teszi a HTTP-forrás használatának késleltetését olyan háttérbeli letöltésben, amely számára engedélyezett a társközi megosztás.
       
@@ -146,6 +149,14 @@ A maximális késleltetési idő elérése után a letöltés folytatódik a HTT
 Vegye figyelembe, hogy egy társforrásokra várakozó letöltés elakadt folyamatként jelenik meg a végfelhasználó számára.
       
 Az ajánlott érték 1 perc (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Gyorsítótár-kiszolgálóról tartalékra való átállás késleltetése háttérbeli letöltések esetén (másodpercben)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">A házirend beállításával X másodperccel késleltethető a HTTP-forrás tartalékként való használata a gyorsítótár-kiszolgáló helyett, tartalmak háttérbeli letöltése esetén. 
+
+Megjegyzés: Ha beállítja a HTTP-ről érkező háttérbeli letöltések késleltetésére vonatkozó házirendet, akkor az fog előbb érvénybe lépni (hogy előbb megtörténhessenek a társaktól származó letöltések).</string>
+      <string id="DelayCacheServerFallbackForeground">Gyorsítótár-kiszolgálóról tartalékra való átállás késleltetése előtérbeli letöltések esetén (másodpercben)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">A házirend beállításával X másodperccel késleltethető a HTTP-forrás tartalékként való használata a gyorsítótár-kiszolgáló helyett, tartalmak előtérbeli letöltése esetén. 
+
+Megjegyzés: Ha beállítja a HTTP-ről érkező előtérbeli letöltések késleltetésére vonatkozó házirendet, akkor az fog előbb érvénybe lépni (hogy előbb megtörténhessenek a társaktól származó letöltések).</string>
       <string id="RestrictPeerSelectionBy">A társkiválasztás korlátozási módjának megadása</string>
       <string id="RestrictPeerSelectionBy_Help">Állítsa be ezt a házirendet, ha a kiválasztott lehetőséggel korlátozni szeretné a társválasztást. 
       
@@ -271,6 +282,14 @@ Az 1 beállítás (Alhálózati maszk) a LAN (1) és a Csoport (2) letöltési m
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Előtérbeli letöltés késleltetése a HTTP-kiszolgálóról (másodperc):</decimalTextBox>
+        <text>Az alapértelmezett érték 0 (nincs késleltetés).</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Gyorsítótár-kiszolgálóról tartalékra való átállás késleltetése háttérbeli letöltések esetén (másodpercben):</decimalTextBox>
+        <text>Az alapértelmezett érték 0 (nincs késleltetés).</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Gyorsítótár-kiszolgálóról tartalékra való átállás késleltetése előtérbeli letöltések esetén (másodpercben):</decimalTextBox>
         <text>Az alapértelmezett érték 0 (nincs késleltetés).</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

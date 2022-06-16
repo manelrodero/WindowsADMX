@@ -294,6 +294,33 @@ Se si disabilita o non si configura questa impostazione dei criteri, i dipendent
 
 Se un'app è aperta quando questo oggetto Criteri di gruppo viene applicato in un dispositivo, i dipendenti devono riavviare l'app o il dispositivo per applicare all'app le modifiche dei criteri.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Consenti l'attivazione delle app di Windows con la voce</string>
+      <string id="LetAppsActivateWithVoice_Explain">Questa impostazione dei criteri specifica se le app di Windows possono essere attivate con la voce.
+
+Se scegli l'opzione "Controllo dell'utente", i dipendenti dell'organizzazione possono decidere se le app di Windows possono essere attivate con una parola chiave vocale usando Impostazioni &gt; Privacy nel dispositivo.
+
+Se scegli l'opzione "Forza Consenti", le app di Windows possono essere attivate con una parola chiave vocale e i dipendenti dell'organizzazione non possono modificare l'impostazione.
+
+Se scegli l'opzione "Forza Nega", le app di Windows non possono essere attivate con una parola chiave vocale e i dipendenti dell'organizzazione non possono modificare l'impostazione.
+
+Se disabiliti o non configuri questa impostazione dei criteri, i dipendenti dell'organizzazione possono decidere se le app di Windows possono essere attivate con una parola chiave vocale usando Impostazioni &gt; privacy nel dispositivo.
+
+Questo criterio si applica alle app di Windows e a Cortana.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Consenti l'attivazione delle app di Windows con la voce mentre il sistema è bloccato </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Questa impostazione dei criteri specifica se le app di Windows possono essere attivate con la voce mentre il sistema è bloccato.
+
+Se scegli l'opzione "Controllo dell'utente", i dipendenti dell'organizzazione possono decidere se gli utenti possono interagire con le applicazioni usando il riconoscimento vocale mentre il sistema è bloccato in Impostazioni &gt; privacy nel dispositivo.
+
+Se scegli l'opzione "Forza Consenti", gli utenti possono interagire con le applicazioni che usano il riconoscimento vocale mentre il sistema è bloccato e i dipendenti dell'organizzazione non possono modificare l'impostazione.
+
+Se scegli l'opzione "Forza Nega", gli utenti non possono interagire con le applicazioni che usano il riconoscimento vocale mentre il sistema è bloccato e i dipendenti dell'organizzazione non possono modificare l'impostazione.
+
+Se disabiliti o non configuri questa impostazione dei criteri, i dipendenti dell'organizzazione possono decidere se gli utenti possono interagire con le applicazioni che usano il riconoscimento vocale mentre il sistema è bloccato in Impostazioni &gt; Privacy nel dispositivo.
+
+Questo criterio si applica alle app di Windows e a Cortana. Ha la precedenza sul criterio "Consenti Cortana sopra la schermata di blocco". Questo criterio è applicabile solo se l'impostazione "Consenti attivazione vocale" è configurata per consentire l'attivazione delle applicazioni con la voce.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Se un'app è aperta quando questo oggetto Criteri di gruppo viene applicato in u
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Forza Nega per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Impostazione predefinita per tutte le app:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Impostazione predefinita per tutte le app:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

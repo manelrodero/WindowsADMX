@@ -100,11 +100,19 @@ Establece la configuración de directiva Permitir telemetría para evitar que la
           Si deshabilitas o no configuras estas opciones de directiva, el Visor de datos de diagnóstico se habilitará en la página Configuración.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Configurar el punto de conexión de carga de la preparación de actualizaciones de Microsoft 365</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Configurar el punto de conexión de carga de datos de diagnóstico para Análisis de escritorio</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Esta directiva establece el punto de conexión de carga de datos de diagnóstico de este dispositivo como parte del programa de preparación de actualizaciones de Microsoft 365.
-          Si tu organización participa en el programa y se le ha indicado que configure un punto de conexión de carga personalizado, usa esta opción para definir ese punto de conexión.
-          Microsoft proporcionará el valor para esta configuración como parte del proceso de incorporación del programa. 
+          Esta directiva establece el punto de conexión de carga para los datos de diagnóstico de este dispositivo como parte del programa Análisis de escritorio.
+          Si la organización participa en el programa y se le ha indicado que configure un punto de conexión de carga personalizado, use esta opción para definir dicho punto de conexión.
+          Microsoft proporcionará el valor de esta configuración como parte del proceso de incorporación del programa. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Permitir canalización de datos comerciales</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline permite que el dispositivo participe en la canalización de datos empresariales de Windows.
+          Si habilita esta opción, los datos recopilados del dispositivo participarán en la canalización de datos empresariales de Windows.
+          Si deshabilitas o no estableces esta configuración, todos los datos del dispositivo se recopilarán y procesarán de acuerdo con nuestras directivas para la canalización de datos estándar de Windows.
+          Si estableces esta configuración, no se cambiará el nivel de re colección de datos de telemetría ni la capacidad del usuario de cambiar el nivel. Esta configuración solo se aplica al sistema operativo Windows y a las aplicaciones incluidas con Windows, no a las aplicaciones o servicios de terceros que se ejecutan en Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Establece la configuración de directiva Permitir telemetría para evitar que la
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Punto de conexión de carga personalizado de preparación de actualizaciones de Microsoft 365:</label>
+          <label>Punto de conexión de carga personalizado de Análisis de escritorio:</label>
         </textBox>
       </presentation>
     </presentationTable>

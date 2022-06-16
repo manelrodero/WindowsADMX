@@ -120,7 +120,9 @@ As opções disponíveis são:
 
 4 = Sufixo DNS. 
 
-Quando configurada, a ID de grupo será atribuída automaticamente pela fonte selecionada. Se você definir esta política, a política GroupID será ignorada. 
+5 = ID de Locatário do AAD. 
+
+Quando configurado, o ID de grupo será atribuído automaticamente da fonte selecionada. Se você definir esta política, a política GroupID será ignorada. 
       
 As opções definidas nesta política aplicam-se apenas ao modo de download do Grupo (2). Se Grupo (2) não estiver configurado como modo de download, esta política será ignorada. 
 
@@ -130,6 +132,7 @@ Para a opção 3, ID de opções de DHCP, o cliente consultará a ID de opções
       <string id="GroupIdSource_SID">SID de domínio autenticado (2)</string>
       <string id="GroupIdSource_DHCP">ID de Opção de DHCP (3)</string>
       <string id="GroupIdSource_DNS">Sufixo DNS (4)</string>
+      <string id="GroupIdSource_AAD">ID de Locatário do AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Atrasar o download em segundo plano de http (em segundos)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Esta política permite que você atrase o uso de uma fonte HTTP em um download em segundo plano que tenha permissão para usar P2P.
       
@@ -146,6 +149,14 @@ Depois que o atraso máximo for atingido, o download será retomado usando HTTP,
 Observe que um download que estiver aguardando fontes pares parecerá estar paralisado para o usuário final.
       
 O valor recomendado é de 1 minuto (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Atrasar fallback do Servidor de Cache de download em segundo plano (em segundos)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Configure esta política para atrasar o fallback do Servidor de Cache para a origem HTTP para um download de conteúdo em segundo plano em X segundos. 
+
+Observação: se você configurar a política para atrasar o download em segundo plano a partir de http, isso será aplicado primeiro (para permitir downloads de outros pontos primeiro).</string>
+      <string id="DelayCacheServerFallbackForeground">Atrasar fallback do Servidor de Cache de download em primeiro plano (em segundos)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Configure esta política para atrasar o fallback do Servidor de Cache para a origem HTTP para um download de conteúdo em primeiro plano em X segundos. 
+
+Observação: se você configurar a política para atrasar o download em primeiro plano a partir de http, isso será aplicado primeiro (para permitir downloads de outros pontos primeiro).</string>
       <string id="RestrictPeerSelectionBy">Selecione um método para restringir a Seleção de Par</string>
       <string id="RestrictPeerSelectionBy_Help">Configure essa política para restringir a seleção do par por meio da opção selecionada. 
       
@@ -263,7 +274,7 @@ Opção 1 (Máscara de sub-rede) aplica-se a LAN no Modo Download (1) e a Grupo 
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">fonte de IDs de Grupo:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Fonte de IDs de Grupo:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Atrasar o download em segundo plano de http (em segundos):</decimalTextBox>
@@ -271,6 +282,14 @@ Opção 1 (Máscara de sub-rede) aplica-se a LAN no Modo Download (1) e a Grupo 
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Atrasar o download em primeiro plano de http (em segundos):</decimalTextBox>
+        <text>O valor padrão é 0 (sem atraso)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Atrasar fallback do Servidor de Cache de download em segundo plano (em segundos):</decimalTextBox>
+        <text>O valor padrão é 0 (sem atraso)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Atrasar fallback do Servidor de Cache de download em primeiro plano (em segundos):</decimalTextBox>
         <text>O valor padrão é 0 (sem atraso)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

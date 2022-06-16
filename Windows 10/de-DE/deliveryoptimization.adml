@@ -108,28 +108,31 @@ Der Wert 0 bedeutet, dass keine Beschränkung besteht und dass der für den Clou
       <string id="CacheHost">[Reserviert für zukünftige Verwendung] Cache-Server-Hostname</string>
       <string id="CacheHost_Help">[Reserviert für zukünftige Verwendung]</string>
       <string id="GroupIdSource">Quelle von Gruppen-IDs auswählen</string>
-      <string id="GroupIdSource_Help">Legen Sie diese Richtlinie fest, um die Peerauswahl auf eine bestimmte Quelle zu beschränken. 
+      <string id="GroupIdSource_Help">Legen Sie diese Richtlinie fest, um die Peerauswahl auf eine bestimmte Quelle einzuschränken. Die verfügbaren Optionen sind: 
       
-Verfügbare Optionen: 
+1 = AD-Site
 
-1 = AD-Site 
+2 = authentifizierte Domänen-SID
 
-2 = authentifizierte Domänen-SID 
+3 = DHCP-Options-ID
 
-3 = DHCP-Options-ID 
+4 = DNS-Suffix
 
-4 = DNS-Suffix.  
+5 = AAD-Mandanten-ID
 
-Wenn die Option festgelegt ist, wird die Gruppen-ID automatisch aus der ausgewählten Quelle zugewiesen. Wenn Sie diese Richtlinie festlegen, wird die GroupID-Richtlinie ignoriert. 
+Nach Festlegung wird die Gruppen-ID automatisch aus der ausgewählten Quelle zugewiesen. Wenn Sie diese Richtlinie festlegen, wird die GroupID-Richtlinie ignoriert. 
       
-Die in dieser Richtlinie festgelegten Optionen gelten nur für den Downloadmodus "Gruppe (2)". Wenn "Gruppe (2)" nicht als Downloadmodus festgelegt ist, wird diese Richtlinie ignoriert. 
+Die in dieser Richtlinie festgelegten Optionen gelten nur für den Downloadmodus Group (2). 
+
+Wenn Group (2) nicht als Downloadmodus festgelegt ist, wird diese Richtlinie ignoriert.
 
 Bei Option 3 (DHCP-Options-ID) fragt der Client die DHCP-Options-ID 234 ab und verwendet den zurückgegebenen GUID-Wert als Gruppen-ID.</string>
       <string id="GroupIdSource_Unset">Entfernen (0)</string>
       <string id="GroupIdSource_AD">AD-Standort (1)</string>
-      <string id="GroupIdSource_SID">SID der authentifizierten Domäne (2)</string>
+      <string id="GroupIdSource_SID">Authentifizierte Domänen-SID (2)</string>
       <string id="GroupIdSource_DHCP">DHCP-Options-ID (3)</string>
       <string id="GroupIdSource_DNS">DNS-Suffix (4)</string>
+      <string id="GroupIdSource_AAD">AAD-Mandanten-ID (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Hintergrunddownloads von HTTP verzögern (Sek.)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Mit dieser Richtlinie können Sie die Verwendung einer HTTP-Quelle in einem Hintergrunddownload verzögern, für den P2P verwendet werden darf.
       
@@ -146,6 +149,14 @@ Sobald die maximale Verzögerung erreicht ist, wird der Download mit HTTP fortge
 Beachten Sie, dass ein Download, der auf Peer-Quellen wartet, für den Endbenutzer wie unterbrochen aussieht.
       
 Der empfohlene Wert ist 1 Minute (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Verzögerter Cacheserver-Fallback für Hintergrund-Download (in Sekunden)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Legen Sie diese Richtlinie fest, um den Fallback vom Cacheserver auf die HTTP-Quelle für einen Hintergrund-Download von Inhalten um X Sekunden zu verzögern.
+
+Hinweis: Wenn Sie die Richtlinie zum Verzögern von Hintergrund-Downloads von HTTP festlegen, wird sie zuerst angewendet (um zuerst Downloads von Peers zuzulassen).</string>
+      <string id="DelayCacheServerFallbackForeground">Verzögerter Cacheserver-Fallback für Vordergrund-Download (in Sekunden):</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Legen Sie diese Richtlinie fest, um den Fallback vom Cacheserver auf die HTTP-Quelle für einen Vordergrund-Download von Inhalten um X Sekunden zu verzögern.
+
+Hinweis: Wenn Sie die Richtlinie zum Verzögern von Vordergrund-Downloads von HTTP festlegen, wird sie zuerst angewendet (um zuerst Downloads von Peers zuzulassen).</string>
       <string id="RestrictPeerSelectionBy">Methode zum Einschränken der Peerauswahl auswählen</string>
       <string id="RestrictPeerSelectionBy_Help">Legen Sie diese Richtlinie fest, um die Peerauswahl über die ausgewählte Option einzuschränken.
       
@@ -271,6 +282,14 @@ Option 1 (Subnetzmaske) gilt für beide Downloadmodi: "LAN" (1) und "Gruppe" (2)
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Vordergrunddownloads von HTTP verzögern (Sek.):</decimalTextBox>
+        <text>Der Standardwert ist 0 (keine Verzögerung).</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Verzögerter Cacheserver-Fallback für Hintergrund-Download (in Sekunden):</decimalTextBox>
+        <text>Der Standardwert ist 0 (keine Verzögerung).</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Verzögerter Cacheserver-Fallback für Vordergrund-Download (in Sekunden):</decimalTextBox>
         <text>Der Standardwert ist 0 (keine Verzögerung).</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

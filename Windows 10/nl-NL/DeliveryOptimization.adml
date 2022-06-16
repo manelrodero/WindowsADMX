@@ -108,28 +108,31 @@ De waarde 0 betekent 'niet-beperkt'; de ingestelde standaardwaarde voor de cloud
       <string id="CacheHost">[Gereserveerd voor toekomstig gebruik] Hostnaam cacheserver</string>
       <string id="CacheHost_Help">[Gereserveerd voor toekomstig gebruik]</string>
       <string id="GroupIdSource">Selecteer de bron van groeps-id's</string>
-      <string id="GroupIdSource_Help">Stel dit beleid in om de selectie van peers te beperken tot een specifieke bron. 
+      <string id="GroupIdSource_Help">Stel dit beleid in om peerselectie te beperken tot een bepaalde bron. 
       
-Beschikbare opties: 
+Beschikbare opties zijn: 
 
-1 = AD-site
+1 AD-site.
 
-2 = SID geauthenticeerd domein
+2 = Geverifieerde domein-SID.
 
-3 = DHCP-optie-id
+3 = DHCP-optie-ID.
 
-4 = DNS-achtervoegsel 
+4 = DNS-achtervoegsel. 
 
-Als dit beleid is ingesteld, wordt de groeps-id automatisch toegewezen op basis van de geselecteerde bron en wordt het groeps-id-beleid genegeerd. 
+5 = AAD tenant-ID. 
+
+Als deze optie is ingesteld, wordt de groeps-ID automatisch toegewezen vanuit de geselecteerde bron. Als u dit beleid instelt, wordt het GroupID-beleid genegeerd. 
       
-De opties die via dit beleid worden ingesteld zijn alleen van toepassing op de downloadmodus Groep (2). Als Groep (2) niet is ingesteld als downloadmodus, wordt het beleid genegeerd. 
+De opties die in dit beleid zijn ingesteld, zijn alleen van toepassing op de downloadmodus van groep (2). Als groep (2) niet is ingesteld als downloadmodus, wordt dit beleid genegeerd. 
 
-Bij optie 3 (DHCP-optie-id) gebruikt de client voor de groeps-id de GUID-waarde die is geretourneerd door DHCP-optie-id 234 op te vragen.</string>
+Bij optie 3 - DHCP-optie-ID zoekt de client DHCP-optie-ID 234 en gebruikt u de geretourneerde GUID-waarde als groeps-ID.</string>
       <string id="GroupIdSource_Unset">(0) opheffen</string>
       <string id="GroupIdSource_AD">AD-site (1)</string>
       <string id="GroupIdSource_SID">Geverifieerde domein-SID (2)</string>
       <string id="GroupIdSource_DHCP">DHCP-optie-id (3)</string>
       <string id="GroupIdSource_DNS">DNS-achtervoegsel (4)</string>
+      <string id="GroupIdSource_AAD">AAD-tenant-ID (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Download op de achtergrond via HTTP vertragen (in seconden)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Met deze beleidsinstelling kunt u het gebruik van een HTTP-bron vertragen voor een download op de achtergrond waarvoor P2P is toegestaan.
       
@@ -146,6 +149,14 @@ Wanneer de maximale vertraging is bereikt, wordt de download hervat via HTTP, wa
 Houd er rekening mee dat een download die op peerbronnen wacht, voor de eindgebruiker lijkt te zijn vastgelopen.
       
 De aanbevolen waarde is 1 minuut (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Terugvalvertraging achtergronddownload cacheserver (in seconden)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Stel dit beleid in om de terugval van de cacheserver naar de HTTP-bron voor een achtergronddownload met X seconden te vertragen. 
+
+Opmerking: als u het beleid instelt om de achtergronddownload van http te vertragen, wordt deze eerst toegepast (om eerst downloads van peers toe te staan).</string>
+      <string id="DelayCacheServerFallbackForeground">Terugvalvertraging voorgronddownload cacheserver (in seconden)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Stel dit beleid in om de terugval van de cacheserver naar de HTTP-bron voor een voorgronddownload met X seconden te vertragen. 
+
+Opmerking: als u het beleid instelt om de voorgronddownload van http te vertragen, wordt deze eerst toegepast (om eerst downloads van peers toe te staan).</string>
       <string id="RestrictPeerSelectionBy">Een methode selecteren om peerselectie te beperken</string>
       <string id="RestrictPeerSelectionBy_Help">Stel dit beleid in om de selectie van peers te beperken via de geselecteerde optie. 
       
@@ -263,7 +274,7 @@ Optie 1 (subnetmasker) is van toepassing op zowel Downloadmodus-LAN (1) als Groe
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">bron van groeps-id's:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Bron van groeps-ID's:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Download op de achtergrond via HTTP vertragen (in seconden):</decimalTextBox>
@@ -271,6 +282,14 @@ Optie 1 (subnetmasker) is van toepassing op zowel Downloadmodus-LAN (1) als Groe
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Download op de voorgrond via HTTP vertragen (in seconden):</decimalTextBox>
+        <text>De standaardwaarde is 0 (geen vertraging)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Terugvalvertraging achtergronddownload cacheserver (in s):</decimalTextBox>
+        <text>De standaardwaarde is 0 (geen vertraging)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Terugvalvertraging achtergronddownload cacheserver (in s):</decimalTextBox>
         <text>De standaardwaarde is 0 (geen vertraging)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

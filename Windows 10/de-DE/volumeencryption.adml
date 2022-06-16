@@ -645,13 +645,12 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie zusätzliche Optio
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren, kann BitLocker für Betriebssystemlaufwerke keine hardwarebasierte Verschlüsselung verwenden. Stattdessen wird bei der Verschlüsselung von Laufwerken standardmäßig die softwarebasierte Verschlüsselung von BitLocker verwendet.
 
-Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwendet BitLocker die hardwarebasierte Verschlüsselung mit dem für das jeweilige Laufwerk eingestellten Verschlüsselungsalgorithmus. Ist eine hardwarebasierte Verschlüsselung nicht verfügbar, wird stattdessen die softwarebasierte Verschlüsselung von BitLocker verwendet.
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwendet BitLocker die softwarebasierte Verschlüsselung. Dies geschieht unabhängig von der Verfügbarkeit der hardwarebasierten Verschlüsselung.
 
 Hinweis: Die Richtlinieneinstellung "Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen" gilt nicht für die hardwarebasierte Verschlüsselung. Der für die hardwarebasierte Verschlüsselung verwendete Verschlüsselungsalgorithmus wird beim Partitionieren des Laufwerks festgelegt. Standardmäßig verwendet BitLocker beim Verschlüsseln eines Laufwerks den für das Laufwerk konfigurierten Algorithmus. Mit der Option "Zulässige Verschlüsselungsalgorithmen und Verschlüsselungssammlungen für die hardwarebasierte Verschlüsselung einschränken" können Sie die Verschlüsselungsalgorithmen einschränken, die BitLocker für die Hardwareverschlüsselung zur Verfügung stehen. Ist der für das Laufwerk festgelegte Algorithmus nicht verfügbar, wird die hardwarebasierte Verschlüsselung von BitLocker deaktiviert.
 Verschlüsselungsalgorithmen werden durch Objekt-IDs (OID) angegeben. Beispiel:
 - AES 128 im CBC-Modus OID: 2.16.840.1.101.3.4.1.2
 - AES 256 im CBC-Modus OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="FDVEDrive_Help">Mit dieser Richtlinieneinstellung können Sie die Verwendung der hardwarebasierten Verschlüsselung durch BitLocker auf Festplattenlaufwerken verwalten und angeben, welche Verschlüsselungsalgorithmen für die hardwarebasierte Verschlüsselung verwendet werden können. Die Verwendung der hardwarebasierten Verschlüsselung kann die Laufwerksleistung beim Lesen oder Schreiben von Daten auf einem Laufwerk verbessern.
@@ -660,13 +659,12 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie zusätzliche Optio
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren, kann BitLocker für Betriebssystemlaufwerke keine hardwarebasierte Verschlüsselung verwenden. Stattdessen wird bei der Verschlüsselung von Laufwerken standardmäßig die softwarebasierte Verschlüsselung von BitLocker verwendet.
 
-Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwendet BitLocker die hardwarebasierte Verschlüsselung mit dem für das jeweilige Laufwerk eingestellten Verschlüsselungsalgorithmus. Ist eine hardwarebasierte Verschlüsselung nicht verfügbar, wird stattdessen die softwarebasierte Verschlüsselung von BitLocker verwendet.
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwendet BitLocker die softwarebasierte Verschlüsselung. Dies geschieht unabhängig von der Verfügbarkeit der hardwarebasierten Verschlüsselung.
 
 Hinweis: Die Richtlinieneinstellung "Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen" gilt nicht für die hardwarebasierte Verschlüsselung. Der für die hardwarebasierte Verschlüsselung verwendete Verschlüsselungsalgorithmus wird beim Partitionieren des Laufwerks festgelegt. Standardmäßig verwendet BitLocker beim Verschlüsseln eines Laufwerks den für das Laufwerk konfigurierten Algorithmus. Mit der Option "Zulässige Verschlüsselungsalgorithmen und Verschlüsselungssammlungen für die hardwarebasierte Verschlüsselung einschränken" können Sie die Verschlüsselungsalgorithmen einschränken, die BitLocker für die Hardwareverschlüsselung zur Verfügung stehen. Ist der für das Laufwerk festgelegte Algorithmus nicht verfügbar, wird die hardwarebasierte Verschlüsselung von BitLocker deaktiviert.
 Verschlüsselungsalgorithmen werden durch Objekt-IDs (OID) angegeben. Beispiel:
 - AES 128 im CBC-Modus OID: 2.16.840.1.101.3.4.1.2
 - AES 256 im CBC-Modus OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="RDVEDrive_Help">Mit dieser Richtlinieneinstellung können Sie die Verwendung der hardwarebasierten Verschlüsselung durch BitLocker auf Wechseldatenträgern verwalten und angeben, welche Verschlüsselungsalgorithmen für die hardwarebasierte Verschlüsselung verwendet werden können. Die Verwendung der hardwarebasierten Verschlüsselung kann die Laufwerksleistung beim Lesen oder Schreiben von Daten auf einem Laufwerk verbessern.
@@ -675,13 +673,12 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie zusätzliche Optio
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren, kann BitLocker für Betriebssystemlaufwerke keine hardwarebasierte Verschlüsselung verwenden. Stattdessen wird bei der Verschlüsselung von Laufwerken standardmäßig die softwarebasierte Verschlüsselung von BitLocker verwendet.
 
-Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwendet BitLocker die hardwarebasierte Verschlüsselung mit dem für das jeweilige Laufwerk eingestellten Verschlüsselungsalgorithmus. Ist eine hardwarebasierte Verschlüsselung nicht verfügbar, wird stattdessen die softwarebasierte Verschlüsselung von BitLocker verwendet.
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwendet BitLocker die softwarebasierte Verschlüsselung. Dies geschieht unabhängig von der Verfügbarkeit der hardwarebasierten Verschlüsselung.
 
 Hinweis: Die Richtlinieneinstellung "Verschlüsselungsmethode und Verschlüsselungsstärke für Laufwerk auswählen" gilt nicht für die hardwarebasierte Verschlüsselung. Der für die hardwarebasierte Verschlüsselung verwendete Verschlüsselungsalgorithmus wird beim Partitionieren des Laufwerks festgelegt. Standardmäßig verwendet BitLocker beim Verschlüsseln eines Laufwerks den für das Laufwerk konfigurierten Algorithmus. Mit der Option "Zulässige Verschlüsselungsalgorithmen und Verschlüsselungssammlungen für die hardwarebasierte Verschlüsselung einschränken" können Sie die Verschlüsselungsalgorithmen einschränken, die BitLocker für die Hardwareverschlüsselung zur Verfügung stehen. Ist der für das Laufwerk festgelegte Algorithmus nicht verfügbar, wird die hardwarebasierte Verschlüsselung von BitLocker deaktiviert.
 Verschlüsselungsalgorithmen werden durch Objekt-IDs (OID) angegeben. Beispiel:
 - AES 128 im CBC-Modus OID: 2.16.840.1.101.3.4.1.2
 - AES 256 im CBC-Modus OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Verwendung der BitLocker-Authentifizierung mit erforderlicher Tastatureingabe vor dem Starten auf Slates aktivieren</string>

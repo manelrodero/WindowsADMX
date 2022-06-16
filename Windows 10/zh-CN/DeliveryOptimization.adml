@@ -110,7 +110,7 @@
       <string id="GroupIdSource">选择组 ID 的源</string>
       <string id="GroupIdSource_Help">设置此策略可将对等选择限制为特定源。
       
-可用的选项有:
+可用的选项有: 
 
 1 = AD 站点。
 
@@ -120,9 +120,11 @@
 
 4 = DNS 后缀。
 
-设置后, 将自动从选定的源分配组 ID。如果设置此策略, 将忽略 GroupID 策略。
+5 = AAD 租户 ID。
+
+设置后，将从选定的源自动分配组 ID。如果设置此策略，将忽略 GroupID 策略。
       
-此策略中设置的选项仅适用于组(2)下载模式。如果组(2)未设置为下载模式, 则将忽略此策略。
+此策略中设置的选项仅适用于组(2)下载模式。如果组(2)未设置为下载模式，则将忽略此策略。
 
 对于选项 3 - DHCP 选项 ID，客户端将查询 DHCP 选项 ID 234，并使用返回的 GUID 值作为组 ID。</string>
       <string id="GroupIdSource_Unset">取消设置(0)</string>
@@ -130,6 +132,7 @@
       <string id="GroupIdSource_SID">经过身份验证的域 SID (2)</string>
       <string id="GroupIdSource_DHCP">DHCP 选项 ID (3)</string>
       <string id="GroupIdSource_DNS">DNS 后缀(4)</string>
+      <string id="GroupIdSource_AAD">AAD 租户 ID (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">延迟 http 的后台下载(以秒为单位)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">通过此策略，你可以在允许使用 P2P 的后台下载中延迟使用 HTTP 源。
       
@@ -146,6 +149,14 @@
 请注意，正在等待对等来源的下载将对最终用户显示为处于卡顿状态。
       
 建议的值为 1 分钟(60)。</string>
+      <string id="DelayCacheServerFallbackBackground">延迟后台下载缓存服务器回退(以秒为单位)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">设置此策略可将从缓存服务器回退到 HTTP 源以进行后台内容下载这一操作延迟 X 秒。
+
+注意: 如果将此策略设置为延迟从 http 的后台下载，则将先应用该策略(以允许先从对等端下载)。</string>
+      <string id="DelayCacheServerFallbackForeground">延迟前台下载缓存服务器回退(以秒为单位)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">设置此策略可将从缓存服务器回退到 HTTP 源以进行前台内容下载这一操作延迟 X 秒。
+
+注意: 如果将此策略设置为延迟从 http 的前台下载，则将先应用该策略(以允许先从对等端下载)。</string>
       <string id="RestrictPeerSelectionBy">选择一种方法来限制对等方选择</string>
       <string id="RestrictPeerSelectionBy_Help">设置此策略以通过选定选项限制对等选择。
       
@@ -271,6 +282,14 @@
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">延迟 http 的前台下载(以秒为单位):</decimalTextBox>
+        <text>默认值为 0 (无延迟)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">延迟后台下载缓存服务器回退(以秒为单位):</decimalTextBox>
+        <text>默认值为 0 (无延迟)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">延迟前台下载缓存服务器回退(以秒为单位):</decimalTextBox>
         <text>默认值为 0 (无延迟)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

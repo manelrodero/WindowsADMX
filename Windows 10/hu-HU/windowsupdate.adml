@@ -56,39 +56,35 @@ Windows 8 és Windows RT rendszerben, amennyiben a házirend engedélyezve van, 
       <string id="RemoveWindowsUpdateModeAll">0 - Ne jelenítsen meg értesítéseket</string>
       <string id="RemoveWindowsUpdateModeReboot">1 - Az újraindítás szükségességéről szóló értesítések megjelenítése</string>
       <string id="AutoUpdateCfg">Az Automatikus frissítések konfigurálása</string>
-      <string id="AutoUpdateCfg_Help">Ez a beállítás meghatározza, hogy a számítógép kapjon-e biztonsági frissítéseket és más fontos letöltéseket a Windows automatikus frissítési szolgáltatásán keresztül.
+      <string id="AutoUpdateCfg_Help">Itt adhatja meg, hogy a számítógép megkapja-e a biztonsági frissítéseket és a többi fontos letöltést a Windows automatikus frissítési szolgáltatásán keresztül.
 
-Megjegyzés: ez a házirend a Windows RT rendszerre nem vonatkozik.
+Megjegyzés: Ez a házirend nem vonatkozik a Windows RT-re.
 
-A beállítással megadhatja, hogy az automatikus frissítések engedélyezettek-e a számítógépen. Ha a szolgáltatás engedélyezett, választania kell egyet a csoportházirend-beállítás négy lehetősége közül:
+Ezzel a beállítással megadhatja, hogy engedélyezve vannak-e az automatikus frissítések ezen a számítógépen. Ha a szolgáltatás engedélyezve van, a csoportházirend-beállításban ki kell választania a négy lehetőség egyikét:
 
-        2 = Értesítés a frissítések letöltése és telepítése előtt.
+2 = Értesítés a frissítések letöltése és telepítése előtt.
 
-        Ha a Windows talál olyan frissítéseket, amelyek a számítógépre vonatkoznak, értesíti a felhasználókat arról, hogy frissítések tölthetők le. A Windows Update megjelenítése után a felhasználók letölthetik és telepíthetik az elérhető frissítéseket.
+        Ha a Windows olyan frissítéseket talál, amelyek erre a számítógépre vonatkoznak, a rendszer értesíti a felhasználókat arról, hogy a frissítések készen állnak a letöltésre. A Windows Update szolgáltatás megnyitása után a felhasználók letölthetik és telepíthetik az elérhető frissítéseket.
 
-        3 = (alapértelmezett beállítás) A frissítések automatikus letöltése és értesítés a telepítés előtt.
+        3 = (Alapértelmezett beállítás) A frissítések automatikus letöltése és értesítés küldése, amikor a frissítések készen állnak a telepítésre.
 
-        A Windows megkeresi azokat a frissítéseket, amelyek a számítógépre vonatkoznak, és a háttérben letölti őket (a folyamat alatt a rendszer nem értesíti és nem zavarja a felhasználót). Ha befejeződtek a letöltések, a rendszer értesíti a felhasználókat arról, hogy a frissítések készen állnak a telepítésre. A Windows Update megjelenítése után a felhasználók telepíthetik a frissítéseket.
+A Windows olyan frissítéseket talál, amelyek a számítógépre vonatkoznak, és a háttérben letölti őket (a rendszer nem értesíti, illetve nem zavarja meg a felhasználót a folyamat közben). Ha a letöltés befejeződött, a rendszer értesíti a felhasználókat arról, hogy a frissítések készen állnak a telepítésre. A Windows Update szolgáltatás megnyitása után a felhasználók telepíthetik a frissítéseket.
 
-        4 = A frissítések automatikus letöltése és az alábbiakban megadott ütemezés szerinti telepítése.
+        4 = Frissítések automatikus letöltése és telepítése az alábbiakban megadott ütemezés szerint.
 
-        Ha az ütemezett telepítési időhöz az „Automatikus” érték van kiválasztva, a Windows automatikusan megkeresi, letölti és telepíti a frissítéseket. Az eszköz a Window alapértelmezett beállításai szerint újraindul, kivéve, ha a csoportházirendben konfigurálva van. (A Windows 10 1809-es és újabb verziójára vonatkozik.)
+        Ha ütemezett telepítési időpontként az „Automatikus” érték van kiválasztva, a Windows automatikusan ellenőrzi, letölti és telepíti a frissítéseket. Az eszköz a Windows alapértelmezett beállításai szerint újraindul, kivéve, ha a csoportházirendben konfigurálva van az újraindítás. (A Windows 10, 1809-es verzióra és az újabb verziókra vonatkozik.)
 
-        Adja meg az ütemezést a csoportházirend-beállítás beállításaival. Ha nem ad meg ütemezést, a telepítések alapértelmezett időpontja minden nap éjjel 3:00 óra. Ha bármely frissítés véglegesítéséhez újra kell indítani a számítógépet, a Windows ezt automatikusan elvégzi. (Ha valaki be van jelentkezve a számítógépre, amikor a Windows újraindítaná azt, a felhasználó értesítést kap, és elhalaszthatja az újraindítást.)
+        Adja meg az ütemezést a csoportházirend-beállításban lévő lehetőségek közül választva. A 1709-es vagy újabb verzió esetén egy további választási lehetőség is rendelkezésére áll, amellyel heti, kétheti vagy havi gyakoriságúra korlátozhatja a frissítést. Ha nem adja meg az ütemezést, az összes telepítés az alapértelmezett ütemezés szerint minden nap hajnali 3 órakor történik. Ha valamely frissítés telepítésének befejezése újraindítást igényel, a Windows automatikusan újraindítja a számítógépet. (Ha egy felhasználó be van jelentkezve a számítógépen, amikor a Windows készen áll az újraindításra, a rendszer értesíti a felhasználót, és lehetőséget ad arra, hogy késleltesse az újraindítást.)
 
-        Windows 8 vagy újabb rendszer esetén beállíthatja, hogy a frissítések ne egy meghatározott ütemezés szerint, hanem az automatikus karbantartás során legyenek telepítve. Az automatikus karbantartási szolgáltatás akkor telepíti a frissítéseket, amikor a számítógép nincs használatban, de nem telepíti azokat, ha a számítógép akkumulátorról működik. Ha az automatikus karbantartás 2 nap után sem tudja telepíteni a frissítéseket, a Windows Update azonnal telepíti azokat. A felhasználók ezután értesítést kapnak egy közelgő újraindításról, valamint arról, hogy a számítógép csak akkor indul újra, ha nem áll fenn a véletlen adatvesztés lehetősége.
+        A Windows 8 és újabb verziókban beállíthatja, hogy a frissítések az automatikus karbantartás folyamán legyenek telepítve, nem pedig egy megadott ütemezés szerint. Az automatikus karbantartás akkor telepíti a frissítéseket, amikor a számítógép nincs használatban, illetve nem telepíti a frissítéseket, ha a számítógép akkumulátorról üzemel. Ha az automatikus karbantartás 2 napig nem tudja elvégezni a telepítést, a Windows Update azonnal telepíti a frissítéseket. Ezután a rendszer értesíti a felhasználókat a közelgő újraindításról, és az újraindítás csak akkor történik meg, ha nem történhet véletlen adatvesztés.
 
-        Az automatikus karbantartás további beállításai a következő csoportházirend-beállításnál adhatók meg: Számítógép konfigurációja &gt; Felügyeleti sablonok &gt; Windows-összetevők &gt; Karbantartás-ütemező.
+        5 = A konfigurációs mód kiválasztásának engedélyezése a helyi rendszergazdák számára, amely lehetővé teszi, hogy az Automatikus frissítések szolgáltatás értesítse a felhasználókat és telepítse a frissítéseket. (Ez a beállítás egyik Win 10-verzióban sem érhető el.)
 
-        5 = A helyi rendszergazdák kiválaszthatják azt a konfigurációs módot, amely szerint az Automatikus frissítések szolgáltatásnak értesítést kell küldenie a frissítésekről és telepítenie kell a frissítéseket.
+        Ezzel a beállítással a helyi rendszergazdák használhatják a Windows Update vezérlőpultját, amelyen kiválaszthatják a kívánt konfigurációs lehetőséget. A helyi rendszergazdák nem tilthatják le az Automatikus frissítések konfigurációját.
 
-        Megjegyzés! Ez a beállítás a Windows 10-ben nem támogatott.
+Ha a házirend állapota Letiltva, a Windows Update webhelyen elérhető frissítéseket manuálisan kell letölteni és telepíteni. Ehhez a Start menüben keresse meg a Windows Update szolgáltatást.
 
-        Ezzel a beállítással a helyi rendszergazdák tetszőleges konfigurációs beállítást választhatnak ki a Windows Update vezérlőpultján. A helyi rendszergazdák nem tilthatják le az Automatikus frissítések szolgáltatás konfigurációját.
-
-Ha a házirend-beállítás le van tiltva, a Windows Update-en elérhető frissítéseket manuálisan kell letölteni és telepíteni. Ehhez írja be a Windows Update keresőkifejezést a Start menüben.
-
-Ha nem konfigurálja a beállítást, a rendszer nem szabályozza az Automatikus frissítések szolgáltatás használatát a csoportházirend szintjén. Egy rendszergazdai jogosultságú felhasználó azonban továbbra is konfigurálhatja az automatikus frissítéseket a Vezérlőpulton keresztül.</string>
+Ha a Nincs konfigurálva állapot van megadva, az Automatikus frissítések szolgáltatás használata nincs megadva a csoportházirend szintjén. A rendszergazdák azonban továbbra is konfigurálhatják az Automatikus frissítések szolgáltatást a Vezérlőpulton keresztül.</string>
 
       <string id="AutoUpdateModeAdminChooses">5 - A helyi rendszergazda adja meg a beállítást</string>
       <string id="AutoUpdateModeAuto">4 - Automatikus letöltés és ütemezés szerinti telepítés</string>
@@ -321,16 +317,21 @@ Az „Előzetes buildek engedélyezése” lehetőség választásával engedél
       <string id="PreviewBuildFastFeatureUpdates">Előzetes build – gyors</string>
       <string id="PreviewBuildSlowFeatureUpdates">Előzetes build – lassú</string>
       <string id="ReleasePreviewBranchFeatureUpdates">Kiadás előzetese</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">Féléves csatorna (célzott)</string>
       <string id="SemiAnnualChannelFeatureUpdates">Féléves csatorna</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Féléves csatorna – 1809 és alatta (elavult)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Féléves csatorna (célzott) – 1809 és alatta (elavult)</string>
       <string id="DeferFeatureUpdates_Title">Előzetes buildek és funkciófrissítések fogadási idejének megadása</string>
       <string id="DeferFeatureUpdates_Help">A házirend engedélyezésével meghatározhatja a fogadni kívánt előzetes buildek vagy funkciófrissítések szintjét és idejét.
 
 * Előzetes build – Gyors: Az erre a szintre beállított eszközök elsőként kapják meg a Windows új buildjeit, amelyek a nagyközönség számára még nem elérhető szolgáltatásokat tartalmaznak. A Gyors lehetőség választása esetén részt vehet a hibák azonosításában és a Microsoftnak történő bejelentésében, valamint javaslatokat tehet az új funkciókra vonatkozóan.
 * Előzetes Build – Lassú: Az erre a szintre beállított eszközök azelőtt kapják meg a Windows új buildjeit, hogy azok elérhetővé válnának a nagyközönség számára, de lassabb ütemben, mint a Gyors értékre beállított eszközök, és az új buildek tartalmazzák a korábbi buildekben elvégzett módosításokat és javításokat.
 * Kiadás előtti előzetes: A Windows buildjeinek fogadása, mielőtt a Microsoft kiadja azokat a nagyközönség számára.
-* Féléves csatorna (célzott): A funkciófrissítések fogadása, amikor kiadják azokat a nagyközönség számára.
-* Féléves csatorna: A funkciófrissítések akkor érkeznek, amikor megkapják a Féléves csatorna készültségi szintet. Erre általában 4 hónappal a Féléves csatorna (célzott) készültségi szintre való besorolás után kerül sor, és ez azt jelzi, hogy a Microsoft, a független szoftvergyártók, a partnerek és az ügyfelek úgy gondolják, hogy a kiadás készen áll a széles körben történő üzembe helyezésre.
+* Féléves csatorna: A funkciófrissítések fogadása, amikor kiadják azokat a nagyközönség számára.
+
+Az alábbi Windows-készültségi szintek elavultak, és csak az 1809-es és a korábbi verziók esetén állnak rendelkezésre:
+*Féléves csatorna (célzott) – 1809 és alatta: A funkciófrissítéseket kiadták..
+* Féléves csatorna – 1809 és alatta: A funkciófrissítések megkapták a Féléves csatorna készültségi szintet, amely azt jelzi, hogy kiadás készen áll a széles körben történő üzembe helyezésre.
+A Féléves csatorna (célzott) és a Féléves csatorna kiadási dátumait a kiadási információs oldalon tekintheti meg: http://aka.ms/ReleaseInformationPage.
 
 Az Előzetes build lehetőségek egyikének kiválasztása esetén:
     – Legfeljebb 14 napig elhalaszthatja az előzetes buildek fogadását.
@@ -339,32 +340,26 @@ Az Előzetes build lehetőségek egyikének kiválasztása esetén:
 
 Az előzetes buildekre való jelentkezéshez 2-es vagy magasabb telemetriaszint-beállítás szükséges, és a tartományának regisztrálva kell lennie az insider.windows.com webhelyen. További információ az előzetes buildekről: https://aka.ms/wipforbiz
 
-A Féléves csatorna (célzott) vagy a Féléves csatorna lehetőség kiválasztása esetén:
+A Féléves csatorna lehetőség kiválasztása esetén:
     – Legfeljebb 365 napig elhalaszthatja a funkciófrissítések fogadását.
     – Ha meg szeretné akadályozni a funkciófrissítések ütemezett időpontban való fogadását, ideiglenesen felfüggesztheti őket. A felfüggesztés a megadott kezdési időponttól számított 35 napig marad érvényben.
     – Ha folytatni szeretné a felfüggesztett funkciófrissítések fogadását, törölje a kezdő dátum mezőjében szereplő értéket.
 
-A funkciófrissítések konfigurálásához 1-es vagy magasabb telemetriaszint-beállítással kell rendelkeznie.
-
 Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése nem módosul.</string>
       <string id="DeferQualityUpdates_Title">Minőségi frissítések fogadási idejének megadása</string>
-      <string id="DeferQualityUpdates_Help">Ezt a házirendet engedélyezve megadható, hogy mikor fogadja a Windows a minőségi frissítéseket.
+      <string id="DeferQualityUpdates_Help">A házirend engedélyezésével meghatározhatja a minőségi frissítések fogadásának idejét.
 
-A minőségi frissítések fogadása elhalasztható, de csak legfeljebb 30 napig.
+Legfeljebb 30 napig elhalaszthatja a minőségi frissítések fogadását.
 
-Ha nem szeretné, hogy a minőségi frissítések fogadása az ütemtervük szerint történjen, átmenetileg felfüggesztheti azokat. A felfüggesztés 35 napig vagy a kezdő dátum értékének törléséig marad érvényben.
+Ha meg szeretné akadályozni a minőségi frissítések ütemezett időpontban való fogadását, ideiglenesen felfüggesztheti őket. A felfüggesztés 35 napig vagy a kezdő dátum mezőjében található érték törléséig marad érvényben.
 
-A minőségi frissítések felfüggesztésének megszüntetéséhez törölje a kezdő dátum mezőjét.
+Ha folytatni szeretné a felfüggesztett minőségi frissítések fogadását, törölje a kezdő dátum mezőjében szereplő értéket.
 
-Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése nem változik.
-
-Megjegyzés: Ha a Telemetria engedélyezése házirend értéke 0, ez a házirend hatástalan lesz.</string>
+Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése nem módosul.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Illesztőprogramok kihagyása a Windows-frissítésekből</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">A házirend engedélyezésével kihagyhatók az illesztőprogramok a Windows minőségi frissítéseiből.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Ezt a házirendet engedélyezve kihagyhatók az illesztők a Windows minőségi frissítéseiből.
 
-Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése kiterjed az Illesztőprogram besorolású frissítésekre is.
-
-Megjegyzés: A Windows 10 1607-es verzióját vagy a Windows Server 2016 kiadást futtató eszközök esetében a házirend csak akkor lép érvénybe, ha engedélyezi a telemetriát (vagyis, ha a „Telemetria engedélyezése” házirend értéke nem 0). A Windows 10 1703-as (vagy újabb) verzióját, illetve a Windows Server 1709-es (vagy újabb) verzióját futtató eszközök esetében a telemetriát nem kell engedélyezni ahhoz, hogy a házirend érvénybe lépjen.</string>
+Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése kiterjed az Illesztőprogram besorolású frissítésekre is.</string>
       <string id="ActiveHours_Title">Frissítéseket követő automatikus újraindítás letiltása az aktív időszakban</string>
       <string id="ActiveHours_Help">Ha engedélyezi ezt a házirendet, a gép nem fog automatikusan újraindulni a frissítések után az aktív időszak során. A gép az aktív időszakon kívül próbál meg újraindulni.
 
@@ -592,11 +587,57 @@ Megjegyzés: Ez a házirend csak akkor érvényes, ha az intraneten található 
 
 Ezzel a házirenddel megadhatja, hogy milyen Windows Update-értesítések jelenjenek meg a felhasználók számára. A házirend nem szabályozza, hogy hogyan és mikor történjen a frissítések letöltése és telepítése.
 
-Fontos! Ha azt választja, hogy nem kér frissítési értesítéseket, és az „Automatikus frissítések konfigurálása” házirendben is azt állítja be, hogy az eszközök ne kapjanak automatikusan frissítéseket, akkor sem Ön, sem pedig az eszköz felhasználói nem fognak értesülni a fontos biztonsági, minőségi és funkciófrissítésekről, és az eszközök veszélynek lehetnek kitéve.
+Fontos: Ha azt választja, hogy nem kér frissítési értesítéseket, és más házirendet is úgy állít be, hogy az eszközök ne kapjanak automatikusan frissítéseket, akkor sem Ön, sem pedig az eszköz felhasználói nem fognak értesülni a fontos biztonsági, minőségi és funkciófrissítésekről, és az eszközök veszélynek lehetnek kitéve.
       </string>
       <string id="DefaultNotification">0 (alapértelmezett) – az operációs rendszerre vonatkozó alapértelmezett Windows Update-értesítések</string>
       <string id="ExcludingRebootWarnings">1 – az összes értesítés letiltása az újraindítási figyelmeztetések kivételével</string>
       <string id="IncludingRebootWarnings">2 – az összes értesítés letiltása az újraindítási figyelmeztetésekkel együtt</string>
+      <string id="ComplianceDeadline_Title">Határidők megadása az automatikus frissítések és újraindítások számára</string>
+      <string id="ComplianceDeadline_Help">Ezzel a házirenddel megadhatja, hogy hány nap áll a felhasználó rendelkezésére a minőségi és funkciófrissítések eszközökön való automatikus telepítése előtt, továbbá megadhat egy türelmi időszakot, amely után a rendszer automatikusan újraindítja az eszközt.  A frissítésekre és az újraindításokra az aktív időszaktól függetlenül kerül sor, és a felhasználó nem tudja átütemezni a műveleteket.
+
+A funkciófrissítések és a minőségi frissítések határideje legfeljebb 30 nap lehet. Az automatikus újraindításra vonatkozó türelmi időszak 0-tól 7 napig tarthat.
+
+Az automatikus újraindításra vonatkozó türelmi időszak végéig letilthatja az automatikus újraindításokat.
+
+Ha letiltja vagy nem konfigurálja ezt a házirendet, az eszközök az alapértelmezett ütemezés szerint kapnak frissítéseket és indulnak újra.
+
+Ez a házirend felülírja a következő házirendeket:
+1.  A frissítések telepítéséhez kapcsolódó automatikus újraindítás határidejének megadása
+2.  Aktív időszakbeli újraindításba való átmenet és frissítésértesítési ütemezés megadása
+3.  Automatikus újraindítás az ütemezett időpontban
+4.  Az automatikus újraindítás letiltása a bejelentkezett felhasználók számára ütemezett automatikus frissítések telepítésekor
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -727,6 +768,16 @@ Fontos! Ha azt választja, hogy nem kér frissítési értesítéseket, és az �
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Adja meg a frissítési értesítésekre vonatkozó megjelenítési beállításokat:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>Adja meg, hogy hány nap áll a felhasználó rendelkezésére (legfeljebb 30 nap lehet) a frissítések automatikus futtatásáig, az aktív időszaktól függetlenül. A műveletet nem lehet átütemezni.</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Minőségi frissítések (nap):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Funkciófrissítések (nap):</dropdownList>
+        <text></text>
+        <text>Adja meg az automatikus újraindításra vonatkozó türelmi időszakot (0–7 nap) attól az időponttól kezdve, amikor az újraindítás szükségessé válik, addig az időpontig, amíg az eszköz automatikusan újraindul. Az eszközök az aktív időszaktól függetlenül újraindulnak. A műveletet nem lehet átütemezni.</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Türelmi idő (nap)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Automatikus újraindítás mellőzése a türelmi időszak végéig</checkBox>
       </presentation>
     </presentationTable>
   </resources>

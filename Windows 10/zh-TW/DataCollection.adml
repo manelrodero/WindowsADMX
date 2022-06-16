@@ -100,11 +100,19 @@
           如果停用或未設定這個原則設定，診斷資料檢視器將在「設定」頁面中啟用。
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">設定 Microsoft 365 Update Readiness 上傳端點</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">設定電腦分析的診斷資料上傳端點</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          此原則會將此裝置診斷資料的上傳端點設定為 Microsoft 365 Update Readiness 程式的一部分。
-          若您的組織正在參與的程式，並已被指示設定自訂上傳端點，請使用此設定來定義該端點。
-          Microsoft 將會提供此設定值，作為程式中適應程序的一部分。 
+          這個原則會設定此裝置診斷資料的上傳端點，作為電腦分析計劃的一部分。
+          若您的組織正在參與計劃並且收到指示設定自訂上傳端點，請使用此設定定義端點。
+          Microsoft 會提供此設定的值，作為計劃上線流程的一部分。 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">允許商業資料管線</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline 會將裝置加入 Windows 企業資料管線。
+          若您啟用此設定，便會將從裝置收集到的資料加入 Windows 企業資料管線。
+          若您停用或未設定此設定，便會依據 Windows 標準資料管線，收集並處理來自裝置的所有資料。
+          設定此設定不會變更遙測收集層級或使用者變更層級的能力。此設定只會套用到 Windows 作業系統和隨附於 Windows 的應用程式，不包含在 Windows 10 上執行的協力廠商應用程式或服務。
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Microsoft 365 Update Readiness 自訂上傳端點：</label>
+          <label>電腦分析自訂上傳端點:</label>
         </textBox>
       </presentation>
     </presentationTable>

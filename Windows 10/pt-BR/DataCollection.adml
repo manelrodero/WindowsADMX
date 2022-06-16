@@ -100,11 +100,19 @@ Defina a configuração de política Permitir Telemetria para impedir que as pes
           Se você desabilitar ou não definir esta configuração de política, o Visualizador de Dados de Diagnóstico será habilitado na página Configurações.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Configurar o ponto de upload da Preparação para Atualização do Microsoft 365</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Configurar dados de diagnóstico para upload de ponto de extremidade para a Análise de Área de Trabalho</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Essa política define o ponto de extremidade de upload para os dados de diagnóstico deste dispositivo como parte do programa de Preparação para Atualização do Microsoft 365.
+          Essa política define o ponto de extremidade de upload para os dados de diagnóstico deste dispositivo como parte do programa Análise de Área de Trabalho.
           Se sua organização estiver participando do programa e tiver sido instruída a configurar um ponto de extremidade de upload personalizado, use essa configuração para definir esse ponto de extremidade.
           O valor dessa configuração será fornecido pela Microsoft como parte do processo de integração do programa. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Permitir pipeline de dados comerciais</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline inclui o dispositivo no pipeline de dados corporativos do Windows.
+          Se você habilitar esta configuração, os dados coletados do dispositivo serão aceitos no pipeline de dados corporativos do Windows.
+          Se você desabilitar ou não definir esta configuração, todos os dados do dispositivo serão coletados e processados de acordo com as políticas do pipeline de dados padrão do Windows.
+          Definir esta configuração não altera o nível de coleta de telemetria nem a capacidade do usuário de alterar o nível. Esta configuração aplica-se apenas ao sistema operacional Windows e aos apps incluídos no Windows, a não a apps ou serviços de terceiros em execução no Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Defina a configuração de política Permitir Telemetria para impedir que as pes
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Ponto de Extremidade de Upload Personalizado da Preparação para Atualização do Microsoft 365:</label>
+          <label>Ponto de Extremidade de Upload Personalizado para Análise de Área de Trabalho:</label>
         </textBox>
       </presentation>
     </presentationTable>

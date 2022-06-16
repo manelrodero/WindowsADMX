@@ -110,24 +110,29 @@
       <string id="GroupIdSource">Επιλέξτε την προέλευση των αναγνωριστικών ομάδας</string>
       <string id="GroupIdSource_Help">Ορίστε αυτήν την πολιτική για να περιορίσετε την επιλογή ομότιμου σε μια συγκεκριμένη προέλευση. 
       
-Διαθέσιμες επιλογές είναι: 1 = AD τοποθεσίας.
+Οι διαθέσιμες επιλογές είναι: 
+
+1 = Τοποθεσία AD.
 
 2 = SID τομέα με έλεγχο ταυτότητας.
 
-3 = το αναγνωριστικό επιλογή DHCP.
+3 = Αναγνωριστικό επιλογής DHCP.
 
-4 = επίθημα DNS. 
+4 = Επίθημα DNS. 
 
-Όταν οριστεί, το Αναγνωριστικό ομάδας θα αντιστοιχιστούν αυτόματα από την επιλεγμένη προέλευση. Εάν ορίσετε αυτήν την πολιτική, η πολιτική αναγνωριστικό ομάδας θα αγνοηθεί. 
+5 = Αναγνωριστικό μισθωτή AAD. 
+
+Όταν οριστεί, το αναγνωριστικό ομάδας θα αντιστοιχιστεί αυτόματα από την επιλεγμένη προέλευση. Εάν ορίσετε αυτή την πολιτική, η πολιτική GroupID θα αγνοηθεί. 
       
-Οι επιλογές που έχουν οριστεί σε αυτήν την πολιτική εφαρμόζονται μόνο σε λειτουργία λήψης ομάδας (2). Αν η ομάδα (2) δεν έχει οριστεί ως λειτουργία λήψης, αυτή η πολιτική θα αγνοηθεί. 
+Οι επιλογές που καθορίζονται σε αυτή την πολιτική ισχύουν μόνο για τη λειτουργία λήψης ομάδας (2). Αν η ομάδα (2) δεν έχει οριστεί ως λειτουργία λήψης, αυτή η πολιτική θα αγνοηθεί. 
 
-Για την επιλογή 3 - Αναγνωριστικό επιλογή DHCP, ο υπολογιστής-πελάτης θα ερώτημα 234 Αναγνωριστικό επιλογή DHCP και θα χρησιμοποιήσει την επιστρεφόμενη τιμή GUID ως το αναγνωριστικό ομάδας.</string>
+Για την επιλογή 3 - Αναγνωριστικό επιλογής DHCP, ο υπολογιστής-πελάτης θα υποβάλλει ερώτημα για το Αναγνωριστικό επιλογής DHCP 234 και θα χρησιμοποιεί την επιστρεφόμενη τιμή GUID ως το αναγνωριστικό ομάδας.</string>
       <string id="GroupIdSource_Unset">Κατάργηση ορισμού (0)</string>
       <string id="GroupIdSource_AD">Τοποθεσία AD (1)</string>
       <string id="GroupIdSource_SID">SID εξουσιοδοτημένου τομέα (2)</string>
       <string id="GroupIdSource_DHCP">Αναγνωριστικό επιλογής DHCP (3)</string>
       <string id="GroupIdSource_DNS">Επίθημα DNS (4)</string>
+      <string id="GroupIdSource_AAD">Αναγνωριστικό μισθωτή AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Καθυστέρηση λήψης στο παρασκήνιο από http (σε δευτερόλεπτα)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Αυτή η πολιτική σάς επιτρέπει την εφαρμογή καθυστέρησης στη χρήση μιας προέλευσης HTTP για μια λήψη στο παρασκήνιο που επιτρέπεται να χρησιμοποιεί P2P.
       
@@ -144,6 +149,14 @@
 Έχετε υπόψη σας ότι μια λήψη που αναμένει ομότιμες προελεύσεις, θα φαίνεται στον τελικό χρήστη να έχει κολλήσει.
       
 Η προτεινόμενη τιμή είναι 1 λεπτό (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Καθυστέρηση επιστροφής από διακομιστή cache για λήψη στο παρασκήνιο (σε δευτερόλεπτα)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Ορίστε αυτή την πολιτική για να καθυστερήσετε την επιστροφή από τον διακομιστή cache στην προέλευση HTTP για μια λήψη περιεχομένου στο παρασκήνιο κατά X δευτερόλεπτα. 
+
+Σημείωση: αν ορίσετε την πολιτική για να καθυστερήσετε τη λήψη στο παρασκήνιο από http, θα εφαρμοστεί πρώτα (για να επιτρέπονται οι λήψεις από ομότιμα συστήματα πρώτα).</string>
+      <string id="DelayCacheServerFallbackForeground">Καθυστέρηση επιστροφής από διακομιστή cache για λήψη στο προσκήνιο (σε δευτερόλεπτα)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Ορίστε αυτή την πολιτική για να καθυστερήσετε την επιστροφή από τον διακομιστή cache στην προέλευση HTTP για μια λήψη περιεχομένου στο προσκήνιο κατά X δευτερόλεπτα. 
+
+Σημείωση: αν ορίσετε την πολιτική για να καθυστερήσετε τη λήψη στο προσκήνιο από http, θα εφαρμοστεί πρώτα (για να επιτρέπονται οι λήψεις από ομότιμα συστήματα πρώτα).</string>
       <string id="RestrictPeerSelectionBy">Επιλέξτε μια μέθοδο για να περιορίσετε την επιλογή ομότιμων</string>
       <string id="RestrictPeerSelectionBy_Help">Ορίστε αυτήν την πολιτική για να περιορίσετε την επιλογή ομότιμου μέσω της επιλογής. 
       
@@ -261,7 +274,7 @@
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">προέλευση των αναγνωριστικών ομάδας:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Προέλευση των αναγνωριστικών ομάδας:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Καθυστέρηση λήψης στο παρασκήνιο από http (σε δευτερόλεπτα):</decimalTextBox>
@@ -269,6 +282,14 @@
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Καθυστέρηση λήψης στο προσκήνιο από http (σε δευτερόλεπτα):</decimalTextBox>
+        <text>Η προεπιλεγμένη τιμή είναι 0 (χωρίς καθυστέρηση)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Καθυστέρηση επιστροφής από διακομιστή cache για λήψη στο παρασκήνιο (σε δευτερόλεπτα):</decimalTextBox>
+        <text>Η προεπιλεγμένη τιμή είναι 0 (χωρίς καθυστέρηση)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Καθυστέρηση επιστροφής από διακομιστή cache για λήψη στο προσκήνιο (σε δευτερόλεπτα):</decimalTextBox>
         <text>Η προεπιλεγμένη τιμή είναι 0 (χωρίς καθυστέρηση)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

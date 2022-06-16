@@ -100,11 +100,19 @@ określ wartość ustawienia zasad Zezwalaj na telemetrię, aby uniemożliwić u
           Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, Przeglądarka danych diagnostycznych będzie włączona na stronie Ustawienia.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Konfiguruj punkt końcowy przekazywania programu Analiza gotowości na aktualizacje usługi Microsoft 365</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Konfiguruj punkt końcowy przekazywania danych diagnostycznych dla programu Desktop Analytics</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Ta zasada ustawia punkt końcowy przekazywania danych diagnostycznych tego urządzenia w ramach programu Analiza gotowości na aktualizacje usługi Microsoft 365.
+          Ta zasada ustawia punkt końcowy przekazywania danych diagnostycznych tego urządzenia w ramach programu Desktop Analytics.
           Jeśli Twoja organizacja uczestniczy w tym programie i zwrócono się do niej o skonfigurowanie niestandardowego punktu końcowego przekazywania, użyj tego ustawienia w celu zdefiniowania punktu końcowego.
-          Wartość tego ustawienia zostanie dostarczona przez firmę Microsoft w ramach procesu wdrażania do tego programu. 
+          Wartość tego ustawienia zostanie dostarczona przez firmę Microsoft w ramach procesu dołączania do tego programu. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Zezwalaj na komercyjny potok danych</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          Ustawienie AllowCommercialDataPipeline powoduje włączenie urządzenia do potoku danych przedsiębiorstwa systemu Windows.
+          Jeśli włączysz to ustawienie, dane zbierane z urządzenia będą włączane do potoku danych przedsiębiorstwa systemu Windows.
+          Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, wszystkie dane z urządzenia będą zbierane i przetwarzane zgodnie z naszymi zasadami dotyczącymi standardowego potoku danych systemu Windows.
+          Skonfigurowanie tego ustawienia nie powoduje zmiany poziomu zbierania telemetrii ani możliwości użytkownika w zakresie zmiany tego poziomu. To ustawienie jest stosowane tylko do systemu operacyjnego Windows oraz aplikacji wchodzących w skład systemu Windows i nie jest stosowane do aplikacji i usług innych firm, które są uruchamiane w systemie Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ określ wartość ustawienia zasad Zezwalaj na telemetrię, aby uniemożliwić u
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Niestandardowy punkt końcowy przekazywania programu Analiza gotowości na aktualizacje usługi Microsoft 365:</label>
+          <label>Niestandardowy punkt końcowy przekazywania programu Desktop Analytics:</label>
         </textBox>
       </presentation>
     </presentationTable>

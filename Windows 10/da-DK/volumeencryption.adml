@@ -639,49 +639,46 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, har 
 
       <string id="RDVEDrive_Name">Konfigurer brugen af hardwarebaseret kryptering for flytbare datadrev</string>
 
-      <string id="OSEDrive_Help">Med denne politikindstilling kan du administrere BitLockers anvendelse af hardwarebaseret kryptering på operativsystemdrev og angive, hvilke krypteringsalgoritmer BitLocker kan bruge ved hardwarebaseret kryptering. Brug af hardwarebaseret kryptering kan forbedre ydeevnen for drevhandlinger, der involverer hyppig læsning eller skrivning af data på drevet.
+      <string id="OSEDrive_Help">Du kan bruge denne politikindstilling til at administrere BitLockers brug af hardwarebaseret kryptering på operativsystemdrev og angive de krypteringsalgoritmer, der kan bruges med hardwarebaseret kryptering. Brug af hardwarebaseret kryptering kan forbedre ydeevnen af drevhandlinger, der ofte omfatter læsning eller skrivning af data til drevet.
 
-Hvis du aktiverer denne politikindstilling, kan du angive yderligere indstillinger, der styrer, om softwarebaseret BitLocker-kryptering bruges i stedet for hardwarebaseret kryptering på computere, der ikke understøtter hardwarebaseret kryptering, og om du vil begrænse de krypteringsalgoritmer og krypteringsprogrammer, der bruges ved hardwarebaseret kryptering.
+Hvis du aktiverer denne politikindstilling, kan du angive yderligere indstillinger, der styrer, om BitLocker-softwarebaseret kryptering bruges i stedet for hardwarebaseret kryptering på computere, som ikke understøtter hardwarebaseret kryptering, og om du vil begrænse de krypteringsalgoritmer og krypteringsprogrammer, der bruges med hardwarebaseret kryptering.
 
-Hvis du deaktiverer denne politikindstilling, kan BitLocker ikke bruge hardwarebaseret kryptering på operativsystemdrev, og softwarebaseret BitLocker-kryptering bruges som standard, når drevet krypteres.
+Hvis du deaktiverer denne politikindstilling, kan BitLocker ikke bruge hardwarebaseret kryptering sammen med operativsystemdrev, og BitLocker-softwarebaseret kryptering vil blive brugt som standard, når drevet krypteres.
 
-Hvis du undlader at konfigurere politikindstillingen, bruger BitLocker hardwarebaseret kryptering med krypteringsalgoritmen angivet for drevet. Hvis hardwarebaseret kryptering ikke er tilgængelig, bruges softwarebaseret BitLocker-kryptering i stedet for.
+Hvis du undlader at konfigurere denne politikindstilling, anvender BitLocker softwarebaseret kryptering, uanset om hardwarebaseret kryptering er tilgængelig.
 
-Bemærk! Politikindstillingen "Vælg drevkrypteringsmetode og -krypteringsgrad" gælder ikke for hardwarebaseret kryptering. Den krypteringsalgoritme, der bruges ved hardwarebaseret kryptering, angives, når drevet partitioneres. Som standard bruger BitLocker den algoritme, der er konfigureret på drevet, til at kryptere drevet. Med indstillingen "Begræns krypteringsalgoritmer og krypteringsprogrammer, der er tilladt ved hardwarebaseret kryptering" kan du begrænse de krypteringsalgoritmer, som BitLocker kan bruge ved hardwarekryptering. Hvis den algoritme, der er angivet for drevet, ikke er tilgængelig, deaktiverer BitLocker brugen af hardwarebaseret kryptering.
-Krypteringsalgoritmer angives af objekt-id'er. Eksempel:
-- Objekt-id for AES 128 i CBC-tilstand: 2.16.840.1.101.3.4.1.2
-- Objekt-id for AES 256 i CBC-tilstand: 2.16.840.1.101.3.4.1.42
-      
+Bemærk! Politikindstillingen "Vælg drevkrypteringsmetode og krypteringsgrad" gælder ikke for hardwarebaseret kryptering. Den krypteringsalgoritme, der bruges af hardwarebaseret kryptering, angives, når drevet partitioneres. BitLocker bruger som standard den algoritme, der er konfigureret på drevet, til at kryptere drevet. Indstillingen "Begræns krypteringsalgoritmer og krypteringsprogrammer, der er tilladt til hardwarebaseret kryptering" giver dig mulighed for at begrænse de krypteringsalgoritmer, som BitLocker kan bruge med hardwarebaseret kryptering. Hvis den algoritme, der er angivet for drevet, ikke er tilgængelig, vil BitLocker deaktivere brugen af hardwarebaseret kryptering.
+Krypteringsalgoritmer angives af objekt-id'er (OID). Eksempler:
+-AES 128 i CBC mode OID: 2.16.840.1.101.3.4.1.2
+-AES 256 i CBC mode OID: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="FDVEDrive_Help">Med denne politikindstilling kan du administrere BitLockers anvendelse af hardwarebaseret kryptering på faste datadrev og angive, hvilke krypteringsalgoritmer BitLocker kan bruge ved hardwarebaseret kryptering. Brug af hardwarebaseret kryptering kan forbedre ydeevnen for drevhandlinger, der involverer hyppig læsning eller skrivning af data på drevet.
+      <string id="FDVEDrive_Help">Du kan bruge denne politikindstilling til at administrere BitLockers brug af hardwarebaseret kryptering på permanente datadrev og angive de krypteringsalgoritmer, der kan bruges med hardwarebaseret kryptering. Brug af hardwarebaseret kryptering kan forbedre ydeevnen af drevhandlinger, der ofte omfatter læsning eller skrivning af data til drevet.
 
-Hvis du aktiverer denne politikindstilling, kan du angive yderligere indstillinger, der styrer, om softwarebaseret BitLocker-kryptering bruges i stedet for hardwarebaseret kryptering på computere, der ikke understøtter hardwarebaseret kryptering, og om du vil begrænse de krypteringsalgoritmer og krypteringsprogrammer, der bruges ved hardwarebaseret kryptering.
+Hvis du aktiverer denne politikindstilling, kan du angive yderligere indstillinger, der styrer, om BitLocker-softwarebaseret kryptering bruges i stedet for hardwarebaseret kryptering på computere, som ikke understøtter hardwarebaseret kryptering, og om du vil begrænse de krypteringsalgoritmer og krypteringsprogrammer, der bruges med hardwarebaseret kryptering.
 
-Hvis du deaktiverer denne politikindstilling, kan BitLocker ikke bruge hardwarebaseret kryptering på operativsystemdrev, og softwarebaseret BitLocker-kryptering bruges som standard, når drevet krypteres.
+Hvis du deaktiverer denne politikindstilling, kan BitLocker ikke bruge hardwarebaseret kryptering sammen med operativsystemdrev, og BitLocker-softwarebaseret kryptering vil blive brugt som standard, når drevet krypteres.
 
-Hvis du undlader at konfigurere politikindstillingen, bruger BitLocker hardwarebaseret kryptering med krypteringsalgoritmen angivet for drevet. Hvis hardwarebaseret kryptering ikke er tilgængelig, bruges softwarebaseret BitLocker-kryptering i stedet for.
+Hvis du undlader at konfigurere denne politikindstilling, anvender BitLocker softwarebaseret kryptering, uanset om hardwarebaseret kryptering er tilgængelig.
 
-Bemærk! Politikindstillingen "Vælg drevkrypteringsmetode og -krypteringsgrad" gælder ikke for hardwarebaseret kryptering. Den krypteringsalgoritme, der bruges ved hardwarebaseret kryptering, angives, når drevet partitioneres. Som standard bruger BitLocker den algoritme, der er konfigureret på drevet, til at kryptere drevet. Med indstillingen "Begræns krypteringsalgoritmer og krypteringsprogrammer, der er tilladt ved hardwarebaseret kryptering" kan du begrænse de krypteringsalgoritmer, som BitLocker kan bruge ved hardwarekryptering. Hvis den algoritme, der er angivet for drevet, ikke er tilgængelig, deaktiverer BitLocker brugen af hardwarebaseret kryptering.
-Krypteringsalgoritmer angives af objekt-id'er. Eksempel:
-- Objekt-id for AES 128 i CBC-tilstand: 2.16.840.1.101.3.4.1.2
-- Objekt-id for AES 256 i CBC-tilstand: 2.16.840.1.101.3.4.1.42
-      
+Bemærk! Politikindstillingen "Vælg drevkrypteringsmetode og krypteringsgrad" gælder ikke for hardwarebaseret kryptering. Den krypteringsalgoritme, der bruges af hardwarebaseret kryptering, angives, når drevet partitioneres. BitLocker bruger som standard den algoritme, der er konfigureret på drevet til at kryptere drevet. Indstillingen "Begræns krypteringsalgoritmer og krypteringsprogrammer, der er tilladt til hardwarebaseret kryptering" giver dig mulighed for at begrænse de krypteringsalgoritmer, som BitLocker kan bruge med hardwarebaseret kryptering. Hvis den algoritme, der er angivet for drevet, ikke er tilgængelig, vil BitLocker deaktivere brugen af hardwarebaseret kryptering.
+Krypteringsalgoritmer angives af objekt-id'er (OID). Eksempler:
+-AES 128 i CBC mode OID: 2.16.840.1.101.3.4.1.2
+-AES 256 i CBC mode OID: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="RDVEDrive_Help">Med denne politikindstilling kan du administrere BitLockers anvendelse af hardwarebaseret kryptering på flytbare datadrev og angive, hvilke krypteringsalgoritmer BitLocker kan bruge ved hardwarebaseret kryptering. Brug af hardwarebaseret kryptering kan forbedre ydeevnen for drevhandlinger, der involverer hyppig læsning eller skrivning af data på drevet.
+      <string id="RDVEDrive_Help">Du kan bruge denne politikindstilling til at administrere BitLockers brug af hardwarebaseret kryptering på flytbare datadrev og angive de krypteringsalgoritmer, der kan bruges med hardwarebaseret kryptering. Brug af hardwarebaseret kryptering kan forbedre ydeevnen af drevhandlinger, der ofte omfatter læsning eller skrivning af data til drevet.
 
-Hvis du aktiverer denne politikindstilling, kan du angive yderligere indstillinger, der styrer, om softwarebaseret BitLocker-kryptering bruges i stedet for hardwarebaseret kryptering på computere, der ikke understøtter hardwarebaseret kryptering, og om du vil begrænse de krypteringsalgoritmer og krypteringsprogrammer, der bruges ved hardwarebaseret kryptering.
+Hvis du aktiverer denne politikindstilling, kan du angive yderligere indstillinger, der styrer, om BitLocker-softwarebaseret kryptering bruges i stedet for hardwarebaseret kryptering på computere, som ikke understøtter hardwarebaseret kryptering, og om du vil Begræns de krypteringsalgoritmer og krypteringsprogrammer, der bruges med hardwarebaseret kryptering.
 
-Hvis du deaktiverer denne politikindstilling, kan BitLocker ikke bruge hardwarebaseret kryptering på operativsystemdrev, og softwarebaseret BitLocker-kryptering bruges som standard, når drevet krypteres.
+Hvis du deaktiverer denne politikindstilling, kan BitLocker ikke bruge hardwarebaseret kryptering sammen med operativsystemdrev, og BitLocker-softwarebaseret kryptering vil blive brugt som standard, når drevet krypteres.
 
-Hvis du undlader at konfigurere politikindstillingen, bruger BitLocker hardwarebaseret kryptering med krypteringsalgoritmen angivet for drevet. Hvis hardwarebaseret kryptering ikke er tilgængelig, bruges softwarebaseret BitLocker-kryptering i stedet for.
+Hvis du undlader at konfigurere denne politikindstilling, anvender BitLocker softwarebaseret kryptering, uanset om hardwarebaseret kryptering er tilgængelig.
 
-Bemærk! Politikindstillingen "Vælg drevkrypteringsmetode og -krypteringsgrad" gælder ikke for hardwarebaseret kryptering. Den krypteringsalgoritme, der bruges ved hardwarebaseret kryptering, angives, når drevet partitioneres. Som standard bruger BitLocker den algoritme, der er konfigureret på drevet, til at kryptere drevet. Med indstillingen "Begræns krypteringsalgoritmer og krypteringsprogrammer, der er tilladt ved hardwarebaseret kryptering" kan du begrænse de krypteringsalgoritmer, som BitLocker kan bruge ved hardwarekryptering. Hvis den algoritme, der er angivet for drevet, ikke er tilgængelig, deaktiverer BitLocker brugen af hardwarebaseret kryptering.
-Krypteringsalgoritmer angives af objekt-id'er. Eksempel:
-- Objekt-id for AES 128 i CBC-tilstand: 2.16.840.1.101.3.4.1.2
-- Objekt-id for AES 256 i CBC-tilstand: 2.16.840.1.101.3.4.1.42
-      
+Bemærk! Politikindstillingen "Vælg drevkrypteringsmetode og krypteringsgrad" gælder ikke for hardwarebaseret kryptering. Den krypteringsalgoritme, der bruges af hardwarebaseret kryptering, angives, når drevet partitioneres. BitLocker bruger som standard den algoritme, der er konfigureret på drevet til at kryptere drevet. Indstillingen "Begræns krypteringsalgoritmer og krypteringsprogrammer, der er tilladt til hardwarebaseret kryptering" giver dig mulighed for at begrænse de krypteringsalgoritmer, som BitLocker kan bruge med hardware kryptering. Hvis den algoritme, der er angivet for drevet, ikke er tilgængelig, vil BitLocker deaktivere brugen af hardwarebaseret kryptering.
+Krypteringsalgoritmer angives af objekt-id'er (OID). Eksempler:
+-AES 128 i CBC mode OID: 2.16.840.1.101.3.4.1.2
+-AES 256 i CBC mode OID: 2.16.840.1.101.3.4.1.42
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Aktivér brug af BitLocker-godkendelse, der kræver pre-boot-tastaturinput på slates før start</string>

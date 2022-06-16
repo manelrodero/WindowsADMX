@@ -108,28 +108,31 @@ Arvo 0 (nolla) tarkoittaa, että rajoitusta ei ole, vaan pilvipalvelulle asetett
       <string id="CacheHost">[Varattu tulevaa käyttöä varten] Välimuistipalvelimen isäntänimi</string>
       <string id="CacheHost_Help">[Varattu tulevaa käyttöä varten]</string>
       <string id="GroupIdSource">Valitse ryhmätunnusten lähde</string>
-      <string id="GroupIdSource_Help">Määritä tämä käytäntö, jotta vertaisjärjestelmän valinta voidaan rajoittaa tiettyyn lähteeseen. 
+      <string id="GroupIdSource_Help">Tämän käytännön avulla voit rajoittaa vertaisjärjestelmän valinnan tiettyyn lähteeseen.
       
-Käytettävissä olevat vaihtoehdot ovat seuraavat: 
+Käytettävissä olevat asetukset ovat seuraavat:
 
-1 = AD-sijainti,
+1 = AD-toimipaikka
 
-2 = todennettu toimialueen SID-tunnus,
+2 = Todennetun toimialueen SID-tunnus
 
-3 = DHCP-asetustunnus,
+3 = DHCP-asetustunnus
 
-4 = DNS-liite. 
+4 = DNS-liite
 
-Kun käytäntö on määritetty, ryhmätunnus määrittyy automaattisesti valitusta lähteestä. Jos määrität tämän käytännön, ryhmätunnuskäytäntö jätetään huomiotta. 
-      
-Tähän käytäntöön määritetyt asetukset koskevat vain ryhmä (2) -lataustilaa. Jos ryhmä (2):ta ei ole määritetty lataustilaksi, tämä käytäntö jätetään huomiotta. 
+5 = AAD-vuokraajan tunnus.
 
-Vaihtoehdon 3 - DHCP-asetustunnus - osalta asiakas lähettää DHCP-asetustunnus 234 -kyselyn ja käyttää palautettua GUID-arvoa ryhmätunnuksena.</string>
+Kun käytäntö on määritetty, ryhmätunnus määrittyy automaattisesti valitusta lähteestä. Jos määrität tämän käytännön, ryhmätunnuskäytäntö ohitetaan.
+
+Tähän käytäntöön määritetyt asetukset koskevat vain Ryhmä (2) -lataustilaa. Jos lataustilaksi on määritetty jokin muu kuin Ryhmä (2), tämä käytäntö ohitetaan.
+
+Asetuksen 3 (DHCP-asetustunnus) osalta asiakas lähettää DHCP-asetustunnusta 234 koskevan kyselyn ja käyttää palautettua GUID-arvoa ryhmätunnuksena.</string>
       <string id="GroupIdSource_Unset">Poista asetus käytöstä (0)</string>
       <string id="GroupIdSource_AD">Sivuston AD (1)</string>
-      <string id="GroupIdSource_SID">Todennettu toimialueen SID (2)</string>
+      <string id="GroupIdSource_SID">Todennettu toimialueen SID-tunnus (2)</string>
       <string id="GroupIdSource_DHCP">DHCP-asetustunnus (3)</string>
       <string id="GroupIdSource_DNS">DNS-liite (4)</string>
+      <string id="GroupIdSource_AAD">AAD-vuokraajan tunnus (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">HTTP-lähteen käytön viive taustalatauksessa (sekunteina)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Tämän käytännön avulla voit viivästyttää HTTP-lähteen käyttöä taustalatauksessa, jossa P2P:n käyttö on sallittua.
       
@@ -146,6 +149,14 @@ Kun enimmäisviive on saavutettu, latausta jatketaan HTTP:tä käyttäen joko la
 Huomaa, että vertaislähteitä odottava lataus näkyy käyttäjän näkökulmasta latauksena, joka on pysähtynyt.
       
 Suositeltu arvo on 1 minuutti (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Välimuistipalvelimen palautumisviive taustalatauksessa (sekunteina)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Määritä tämä käytäntö, jos haluat viivyttää palautumista välimuistipalvelimesta HTTP-lähteeseen sisällön taustalatauksessa X sekunnilla. 
+
+Huomautus: Jos määrität käytäntöasetuksen viivästyttämään taustalatausta HTTP-lähteestä, tätä asetusta sovelletaan ensisijaisesti (jotta lataukset vertaislähteistä sallitaan ensin).</string>
+      <string id="DelayCacheServerFallbackForeground">Välimuistipalvelimen palautumisviive edustalatauksessa (sekunteina)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Määritä tämä käytäntö, jos haluat viivyttää palautumista välimuistipalvelimesta HTTP-lähteeseen sisällön edustalatauksessa X sekunnilla. 
+
+Huomautus: Jos määrität käytäntöasetuksen viivästyttämään edustalatausta HTTP-lähteestä, tätä asetusta sovelletaan ensisijaisesti (jotta lataukset vertaislähteistä sallitaan ensin).</string>
       <string id="RestrictPeerSelectionBy">Valitse menetelmä, jolla rajoitetaan vertaisjärjestelmän valintaa</string>
       <string id="RestrictPeerSelectionBy_Help">Määrittämällä tämän käytännön voit rajoittaa vertaisjärjestelmän valintaa valittua vaihtoehtoa käyttäen. 
       
@@ -263,7 +274,7 @@ Asetus 1 (Aliverkon peite) koskee sekä lataustilan lähiverkkoa (1) että ryhm�
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">ryhmätunnusten lähde:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Ryhmätunnusten lähde:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">HTTP-lähteen käytön viive taustalatauksessa (sekunteina):</decimalTextBox>
@@ -271,6 +282,14 @@ Asetus 1 (Aliverkon peite) koskee sekä lataustilan lähiverkkoa (1) että ryhm�
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">HTTP-lähteen käytön viive edustalatauksessa (sekunteina):</decimalTextBox>
+        <text>Oletusarvo on 0 (ei viivettä)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Välimuistipalvelimen palautumisviive taustalatauksessa (sekunteina):</decimalTextBox>
+        <text>Oletusarvo on 0 (ei viivettä)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Välimuistipalvelimen palautumisviive edustalatauksessa (sekunteina):</decimalTextBox>
         <text>Oletusarvo on 0 (ei viivettä)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

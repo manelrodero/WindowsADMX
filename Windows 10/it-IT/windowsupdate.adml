@@ -70,19 +70,15 @@ Questa impostazione consente di specificare se abilitare gli aggiornamenti autom
 
         Quando vengono individuati aggiornamenti applicabili al computer, Windows li scarica in background senza avvisare o interrompere l'utente. Al termine dei download, verrà segnalato che sono pronti per l'installazione. Dopo essere passati a Windows Update, gli utenti possono installarli.
 
-        4 = Scarica automaticamente gli aggiornamenti ed esegui l'installazione in base alla pianificazione specificata
+        4 = Scarica automaticamente gli aggiornamenti ed esegui l'installazione in base alla pianificazione specificata.
 
         Quando è selezionato "Automatico" come ora pianificata per l'installazione, Windows eseguirà in automatico il controllo, il download e l'installazione degli aggiornamenti. Il dispositivo verrà riavviato in base alle impostazioni predefinite di Windows, purché non sia configurato tramite i criteri di gruppo. Applicabile a Windows 10, versione 1809 e superiore
 
-        Specificare la pianificazione utilizzando le opzioni presenti in Impostazione Criteri di gruppo. Se non si specifica alcuna pianificazione, tutte le installazioni verranno eseguite ogni giorno alle 3.00 in base alla pianificazione predefinita. Il computer verrà riavviato automaticamente nel caso in cui sia necessario per completare l'installazione di un aggiornamento. Se al momento del riavvio un utente è connesso al computer, verrà visualizzato un messaggio che consente di eseguire il riavvio in un momento successivo.
+        Specificare la pianificazione utilizzando le opzioni presenti in Impostazione Criteri di gruppo. Per la versione 1709 e successive è possibile anche scegliere di limitare l'aggiornamento a una cadenza settimanale, bisettimanale o mensile. Se non si specifica alcuna pianificazione, tutte le installazioni verranno eseguite ogni giorno alle 3.00 in base alla pianificazione predefinita. Il computer verrà riavviato automaticamente nel caso in cui sia necessario per completare l'installazione di un aggiornamento. Se al momento del riavvio un utente è connesso al computer, verrà visualizzato un messaggio che consente di eseguire il riavvio in un momento successivo.
 
         In Windows 8 e versioni successive è possibile impostare gli aggiornamenti in modo che vengano installati durante la manutenzione automatica anziché in base a una pianificazione specifica. Con la manutenzione automatica gli aggiornamenti vengono installati quando il computer non è in uso, ma vengono evitate installazioni mentre il computer è alimentato a batteria. Se trascorrono due giorni senza che sia possibile installare gli aggiornamenti con la manutenzione automatica, Windows Update li installerà immediatamente. Gli utenti verranno quindi avvisati di un imminente riavvio, il quale verrà eseguito solo se non vi è il rischio di perdite accidentali di dati.
 
-        È possibile configurare ulteriormente la manutenzione automatica mediante queste impostazioni di Criteri di gruppo: Configurazione computer-&gt;Modelli amministrativi-&gt;Componenti di Windows-&gt;Utilità di pianificazione della manutenzione
-
-        5 = Consenti agli amministratori locali di selezionare la modalità di configurazione per cui devono essere segnalati e installati gli aggiornamenti.
-
-        Nota: questa opzione non è supportata in Windows 10.
+        5 = Consenti agli amministratori locali di selezionare la modalità di configurazione per cui devono essere segnalati e installati gli aggiornamenti (questa opzione non è supportata in Windows 10).
 
         Con questa opzione, gli amministratori locali potranno utilizzare il pannello di controllo Windows Update per selezionare un'opzione di configurazione desiderata. Gli amministratori locali non potranno disabilitare la configurazione di Aggiornamenti automatici.
 
@@ -321,32 +317,35 @@ La selezione di "Abilita versioni di anteprima" consente l'installazione delle v
       <string id="PreviewBuildFastFeatureUpdates">Versione di anteprima - Rapido</string>
       <string id="PreviewBuildSlowFeatureUpdates">Versione di anteprima - Lento</string>
       <string id="ReleasePreviewBranchFeatureUpdates">Versione di anteprima</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">Canale semestrale (mirato)</string>
       <string id="SemiAnnualChannelFeatureUpdates">Canale semestrale</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Canale semestrale per 1809 e versioni precedenti (deprecato)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Canale semestrale (destinazione) per 1809 e versioni precedenti (deprecato)</string>
       <string id="DeferFeatureUpdates_Title">Seleziona il momento per la ricezione delle versioni di anteprima e degli aggiornamenti delle funzionalità</string>
-      <string id="DeferFeatureUpdates_Help">Abilita questo criterio per specificare il livello della versione di anteprima o degli aggiornamenti delle funzionalità per la ricezione e la frequenza.
+      <string id="DeferFeatureUpdates_Help">Abilita questo criterio per specificare il livello di versione di anteprima o aggiornamento delle funzionalità da ricevere, nonché il momento della ricezione.
 
-* Versione di anteprima - Veloce: i dispositivi impostati su questo livello sono i primi a ricevere le nuove versioni di Windows con funzionalità non ancora disponibili per il pubblico. Seleziona Veloce per partecipare all'identificazione e alla segnalazione dei problemi a Microsoft e fornire suggerimenti sulle nuove funzionalità.
-* Versione di anteprima - Lenta: i dispositivi impostati su questo livello ricevono le nuove versioni di Windows prima che vengano rese disponibili per il pubblico, ma con una cadenza più lenta rispetto a quelli impostati su Veloce e con le modifiche e le correzioni identificate nelle versioni precedenti.
-* Versione di anteprima: le versioni di Windows vengono ricevute appena prima che vengano rilasciate da Microsoft per il pubblico.
-* Canale semestrale (mirato): gli aggiornamenti delle funzionalità vengono ricevuti quando vengono rilasciati per il pubblico.
-* Canale semestrale: gli aggiornamenti delle funzionalità vengono ricevuti quando vengono dichiarati Canale semestrale. Ciò si verifica in genere 4 mesi dopo il Canale semestrale (mirato), a indicare che Microsoft, i fornitori di software indipendenti (ISV), i partner e i clienti ritengono che tale versione sia pronta per l'ampia distribuzione.
+* Versione di anteprima - Veloce: i dispositivi impostati su questo livello saranno i primi a ricevere le nuove versioni di Windows con funzionalità non ancora disponibili per il pubblico. Seleziona Veloce per partecipare all'identificazione e segnalazione dei problemi a Microsoft e fornire suggerimenti sulle nuove funzionalità.
+* Versione di anteprima - Lenta: i dispositivi impostati su questo livello ricevono le nuove versioni di Windows prima che siano disponibili per il pubblico, ma con una cadenza più lenta rispetto ai dispositivi impostati su Veloce e con le modifiche e le correzioni identificate nelle versioni precedenti.
+* Versione di anteprima: ricevono le versioni di Windows appena prima che Microsoft le rilasci per il pubblico.
+* Canale semestrale: le funzionalità vengono ricevute quando rilasciate per il pubblico.
 
-Quando si seleziona una versione di anteprima:
-    -Puoi rimandare la ricezione delle versioni di anteprima per un massimo di 14 giorni.
-    -Per evitare che le versioni di anteprima vengano ricevute all'ora pianificata, puoi sospenderle temporaneamente. La sospensione rimarrà attiva per 35 giorni dall'ora di inizio specificata.
-    -Per riprendere la ricezione degli aggiornamenti delle funzionalità sospesi, cancella la dati di inizio nel campo.
+I seguenti livelli di idoneità Windows sono deprecati e sono applicabili solo alla versione 1809 e precedenti:
+* Canale semestrale (destinazione) per la versione 1809 e precedenti: gli aggiornamenti delle funzionalità sono stati rilasciati.
+* Canale semestrale per la versione 1809 e precedenti: gli aggiornamenti delle funzionalità sono stati dichiarati Canale semestrale, a indicare che la versione è pronta per l'ampia distribuzione.
+Rivedi la pagina delle informazioni sulla versione in http://aka.ms/ReleaseInformationPage per le date di rilascio del canale semestrale (destinazione) e del canale semestrale.
 
-L'iscrizione alla versione di anteprima richiede un livello di telemetria pari a 2 o superiore e la registrazione del dominio su insider.windows.com. Per altre informazioni sulle versioni di anteprima, vedi: https://aka.ms/wipforbiz
+Durante la selezione di una versione di anteprima:
+    - Puoi posticipare il ricevimento delle versioni di anteprima per un massimo di 14 giorni.
+    - Per evitare di ricevere le versioni di anteprima alla data pianificata, puoi metterle temporaneamente in pausa. La pausa rimarrà valida per 35 giorni dalla data di inizio specificata.
+    - Per ricominciare a ricevere gli aggiornamenti delle funzionalità messi in pausa, cancella il campo relativo alla data di inizio.
 
-Quando selezioni Canale semestrale (mirato) o Canale semestrale:
-    -Puoi rimandare la ricezione degli aggiornamenti delle funzionalità per un massimo di 365 giorni.
-    -Per evitare che gli aggiornamenti delle funzionalità vengano ricevuti all'ora pianificata, puoi sospenderli temporaneamente. La sospensione rimarrà attiva per 35 giorni dall'ora di inizio specificata.
-    -Per riprendere la ricezione degli aggiornamenti delle funzionalità sospesi, cancella la data di inizio nel campo.
+L'iscrizione alle versioni di anteprima richiede l'impostazione del livello di telemetria su 2 o valore superiore e il tuo dominio deve essere registrato su insider.windows.com. Per altre informazioni sulle versioni di anteprima, vedi: https://aka.ms/wipforbiz
 
-Per configurare gli aggiornamenti delle funzionalità devi avere un'impostazione del livello di telemetria pari a 1 o superiore.
+Durante la selezione di Canale semestrale:
+    - Puoi posticipare il ricevimento degli aggiornamenti delle funzionalità per un massimo di 365 giorni.
+    - Per evitare di ricevere gli aggiornamenti delle funzionalità alla data prevista puoi metterli temporaneamente in pausa. La pausa rimarrà valida per 35 giorni dalla data di inizio specificata.
+    - Per ricominciare a ricevere gli aggiornamenti delle funzionalità messi in pausa, cancella il campo relativo alla data di inizio.
 
-Se disabiliti o non configuri questa impostazione dei criteri, il comportamento di Windows Update rimane inalterato.</string>
+Se disabiliti o non configuri questi criteri, Windows Update non modificherà il suo comportamento.</string>
       <string id="DeferQualityUpdates_Title">Seleziona il momento per la ricezione degli aggiornamenti qualitativi</string>
       <string id="DeferQualityUpdates_Help">Abilita questo criterio per specificare quando ricevere gli aggiornamenti qualitativi.
 
@@ -356,15 +355,11 @@ Per evitare che gli aggiornamenti qualitativi vengano ricevuti all'orario pianif
 
 Per riprendere la ricezione degli aggiornamenti qualitativi sospesi, deseleziona il campo della data di inizio.
 
-Se disabiliti o non configuri questo criterio, il funzionamento di Windows Update non verrà modificato.
-
-Nota: se il criterio "Consenti telemetria" è impostato su 0, questo criterio non avrà effetto.</string>
+Se disabiliti o non configuri questo criterio, il funzionamento di Windows Update non verrà modificato.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Non includere i driver con gli aggiornamenti di Windows</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Abilita questo criterio per non includere i driver con gli aggiornamenti qualitativi di Windows.
 
-Se disabiliti o non configuri questo criterio, Windows Update includerà gli aggiornamenti classificati come driver.
-
-Nota: per i dispositivi che eseguono Windows 10, versione 1607 o Windows Server 2016, questo criterio verrà applicato solo se abiliti la telemetria, vale a dire se il criterio "Consenti telemetria" non è 0. Per i dispositivi che eseguono Windows 10, versione 1703 (o successive) o Windows Server, versione 1709 (o successive), non è necessario abilitare la telemetria per applicare questo criterio.</string>
+Se disabiliti o non configuri questo criterio, Windows Update includerà gli aggiornamenti classificati come driver.</string>
       <string id="ActiveHours_Title">Disattiva il riavvio automatico per gli aggiornamenti durante l'orario di attività</string>
       <string id="ActiveHours_Help">Se abiliti questo criterio, il PC non verrà riavviato automaticamente dopo gli aggiornamenti durante l'orario di attività. Verrà eseguito un tentativo di riavviare il PC al di fuori dell'orario di attività.
 
@@ -592,11 +587,57 @@ Nota: questo criterio si applica solo quando il servizio di aggiornamento Micros
 
 Questa impostazione di criteri consente di definire le notifiche di Windows Update che vengono visualizzate per gli utenti, ma non controlla modalità e tempi di download e installazione degli aggiornamenti.
 
-Importante! Se scegli di non ricevere le notifiche di aggiornamento e definisci anche l'impostazione di criteri "Configura Aggiornamenti automatici" in modo tale che i dispositivi non ricevano automaticamente gli aggiornamenti, la disponibilità di aggiornamenti della sicurezza, qualitativi o delle funzionalità non verrà comunicata a te né agli utenti dei dispositivi, mettendo a rischio i dispositivi.
+Importante: se scegli di non ricevere le notifiche di aggiornamento e definisci altri criteri di gruppo in modo tale che i dispositivi non ricevano automaticamente gli aggiornamenti, la disponibilità di aggiornamenti della sicurezza, qualitativi o delle funzionalità non verrà comunicata a te né agli utenti dei dispositivi, mettendo a rischio i dispositivi.
       </string>
       <string id="DefaultNotification">0 (predefinito) = Notifiche di Windows Update per il sistema operativo predefinite</string>
       <string id="ExcludingRebootWarnings">1 = Disabilita tutte le notifiche, esclusi gli avvisi di riavvio</string>
       <string id="IncludingRebootWarnings">2 = Disabilita tutte le notifiche, inclusi gli avvisi di riavvio</string>
+      <string id="ComplianceDeadline_Title">Specifica le scadenze per gli aggiornamenti automatici e i riavvii</string>
+      <string id="ComplianceDeadline_Help">Questo criterio consente di specificare il numero di giorni a disposizione di un utente prima che gli aggiornamenti qualitativi e delle funzionalità vengano installati automaticamente nei suoi dispositivi e un periodo di tolleranza dopo il quale i riavvii necessari verranno eseguiti automaticamente.  Gli aggiornamenti e i riavvii verranno eseguiti indipendentemente dall'orario di attività e l'utente non potrà modificare la pianificazione.
+
+Le scadenze degli aggiornamenti delle funzionalità e degli aggiornamenti qualitativi possono arrivare a 30 giorni.  Il periodo di tolleranza per il riavvio automatico può essere compreso tra 0 e 7 giorni.
+
+È anche possibile disabilitare i riavvi automatici fino alla fine del periodo di tolleranza per il riavvio automatico.
+
+Se disabiliti o non configuri questo criterio, i dispositivi riceveranno gli aggiornamenti e verranno riavviati in base alla pianificazione predefinita.
+
+Questo criterio sostituirà i criteri seguenti:
+1.  Specifica la scadenza prima del riavvio automatico per l'installazione degli aggiornamenti
+2.  Specifica la transizione del riavvio in caso di Occupato e la pianificazione delle notifiche per gli aggiornamenti
+3.  Esegui sempre il riavvio automatico all'orario pianificato
+4.  Escludi riavvio automatico per installazioni pianificate di Aggiornamenti automatici con gli utenti non connessi
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -727,6 +768,16 @@ Importante! Se scegli di non ricevere le notifiche di aggiornamento e definisci 
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Specifica le opzioni di visualizzazione delle notifiche di aggiornamento:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>Specifica il numero di giorni (fino a 30) a disposizione di un utente prima dell'esecuzione automatica degli aggiornamenti, indipendentemente dall'orario di attività, senza possibilità di modificare la pianificazione.</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Aggiornamenti qualitativi (giorni):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Aggiornamenti delle funzionalità (giorni):</dropdownList>
+        <text></text>
+        <text>Specifica un periodo di tolleranza per il riavvio automatico (da 0 a 7 giorni), dal momento in cui è necessario riavviare il sistema.  I dispositivi verranno riavviati indipendentemente dall'orario di attività, senza possibilità di modificare la pianificazione.</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Periodo di tolleranza (giorni)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Non riavviare automaticamente fino alla fine del periodo di tolleranza</checkBox>
       </presentation>
     </presentationTable>
   </resources>

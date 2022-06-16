@@ -294,6 +294,33 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a szervezet al
 
 Ha egy alkalmazás meg van nyitva, amikor alkalmazzák ezt a csoportházirend-objektumot egy eszközön, az alkalmazottaknak a házirend-módosítás érvénybe léptetéséhez újra kell indítaniuk az alkalmazást vagy az eszközt.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">A Windows-alkalmazások hangparancsokkal aktiválhatók</string>
+      <string id="LetAppsActivateWithVoice_Explain">Ezzel a házirend-beállítással meghatározhatja, hogy a Windows-alkalmazások aktiválhatók-e hangparancsokkal.
+
+Ha „A felhasználó döntheti el” lehetőséget választja, a szervezet alkalmazottai az eszköz Gépház &gt; Adatvédelem lapján megadhatják, hogy a Windows-alkalmazások aktiválhatók-e hangkulcsszóval.
+
+Ha a „Mindig engedélyezve” lehetőséget választja, a Windows-alkalmazások aktiválhatók hangkulcsszóval és a szervezet alkalmazottai nem módosíthatják ezt a beállítást.
+
+Ha a „Mindig letiltva” lehetőséget választja, a Windows-alkalmazások nem aktiválhatók hangkulcsszóval és a szervezet alkalmazottai nem módosíthatják ezt a beállítást.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a szervezet alkalmazottai az eszköz Gépház &gt; Adatvédelem lapján megadhatják, hogy a Windows-alkalmazások aktiválhatók-e hangkulcsszóval.
+
+Ezt a házirendet a Windows-alkalmazásokra és a Cortana szolgáltatásra alkalmazza a rendszer.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">A Windows-alkalmazások hangparancsokkal aktiválhatók, amikor a rendszer zárolva van</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Ezzel a házirend-beállítással meghatározhatja, hogy a Windows-alkalmazások aktiválhatók-e hangparancsokkal, amikor a rendszer zárolva van.
+
+Ha „A felhasználó döntheti el” lehetőséget választja, a szervezet alkalmazottai az eszköz Gépház &gt; Adatvédelem lapján megadhatják, hogy a felhasználók vezérelhetik-e az alkalmazásokat hangparancsokkal, amikor a rendszer zárolva van.
+
+Ha a „Mindig engedélyezve” lehetőséget választja, a felhasználók vezérelhetik az alkalmazásokat hangparancsokkal, amikor a rendszer zárolva van, és a szervezet alkalmazottai nem módosíthatják ezt a beállítást.
+
+Ha a „Mindig letiltva” lehetőséget választja, a felhasználók nem vezérelhetik az alkalmazásokat hangparancsokkal, amikor a rendszer zárolva van, és a szervezet alkalmazottai nem módosíthatják ezt a beállítást.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a szervezet alkalmazottai az eszköz Gépház &gt; Adatvédelem lapján megadhatják, hogy a felhasználók vezérelhetik-e az alkalmazásokat hangparancsokkal, amikor a rendszer zárolva van.
+
+Ezt a házirendet a Windows-alkalmazásokra és a Cortana szolgáltatásra alkalmazza a rendszer. Ez a beállítás elsőbbséget élvez a „Cortana zárolt állapotban is működhet” házirenddel szemben. Ez a házirend csak akkor lép érvénybe, ha a „Hangaktiválás engedélyezése” házirend az alkalmazások hangparancsokkal való aktiválásának engedélyezésére van konfigurálva.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Ha egy alkalmazás meg van nyitva, amikor alkalmazzák ezt a csoportházirend-ob
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

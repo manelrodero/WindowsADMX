@@ -419,21 +419,24 @@ Ha engedélyezi ezt a házirend-beállítást, az értesítések nem jelennek me
 
 Ha letiltja vagy nem konfigurálja ezt a beállítást, az értesítések megjelennek a távoli asztali munkamenetgazda kiszolgálón, miután helyi rendszergazdaként bejelentkezett.</string>
       <string id="TS_LICENSING_MODE">A távoli asztali licencelés módjának beállítása</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Ezzel a házirend-beállítással meghatározhatja, hogy milyen típusú távoli asztali ügyféllicenccel lehet a távoli asztali munkamenetgazda-kiszolgálóhoz csatlakozni.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Ezzel a házirend-beállítással meghatározhatja, hogy a távoli asztali szolgáltatások ügyfélhozzáférési licencei (RDS CAL) közül milyen típusúval lehet ehhez a távoli asztali munkamenetgazda-kiszolgálóhoz csatlakozni.
 
-A házirend-beállítás megadásakor a Felhasználónkénti és az Eszközönkénti licencelési mód közül választhat.
+        A házirend-beállítás megadásakor háromféle licencelési mód közül választhat: Felhasználónkénti, Eszközönkénti, illetve AAD-alapú felhasználónkénti.
 
-A Felhasználónkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes felhasználói fióknak kell rendelkeznie felhasználónkénti RDS-ügyféllicenccel.
+        A Felhasználónkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes felhasználói fióknak kell rendelkeznie RD-licenckiszolgáló által kibocsájtott felhasználónkénti RDS CAL-lal.
 
-Az Eszközönkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes eszköznek kell rendelkeznie eszközönkénti RDS-ügyféllicenccel.
+        Az Eszközönkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes eszköznek kell rendelkeznie RD-licenckiszolgáló által kibocsájtott eszközönkénti RDS CAL-lal.
 
-Ha engedélyezi ezt a házirend-beállítást, a távoli asztali licenckiszolgáló a megadott távoli asztali licencelési módot veszi figyelembe.
+        Az AAD-alapú felhasználónkénti licencelési mód esetén a távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódó összes felhasználói fióknak kell rendelkeznie az AAD-ben hozzárendelt, RDS-licenceket támogató szolgáltatáscsomaggal.
+        
+        Ha engedélyezi ezt a házirend-beállítást, a távoli asztali licenckiszolgáló és a távoli asztali munkamenetgazda a megadott távoli asztali licencelési módot veszi figyelembe.
 
-Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a licencelési módot a csoportházirend szintjén.
-
-</string>
+        Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer nem szabályozza a licencelési módot a csoportházirend szintjén.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Eszközönkénti</string>
       <string id="TS_LICENSING_MODE_PER_USER">Felhasználónkénti</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD-alapú felhasználónkénti</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">A házirend-beállítással letilthatja az adatoknak az ügyfél LPT-portjaira történő átirányítása a Távoli asztali szolgáltatások munkameneteiben.
 
 Ezzel a házirend-beállítással megakadályozhatja, hogy a felhasználók helyi LPT-portok csatlakoztatását kezdeményezzék vagy adatokat irányítsanak át a távoli számítógépről a helyi LPT-porton található eszközökre. Alapértelmezés szerint a Távoli asztali szolgáltatások engedélyezi az adatok LPT-portokra történő átirányítását.
@@ -1015,6 +1018,37 @@ Ha letiltja a házirend-beállítást, a távoli asztali munkamenetgazda kiszolg
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">WDDM grafikus képernyőillesztő használata távoli asztali kapcsolatokhoz</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Ezzel a házirend-beállítással engedélyezheti a WDDM grafikus képernyőillesztőt a távoli asztali kapcsolatokhoz.
+
+Ha engedélyezi a házirend-beállítást, akkor a távoli asztali kapcsolatok a WDDM grafikus képernyőillesztőt fogják használni.
+
+Ha letiltja vagy nem konfigurálja a házirend-beállítást, akkor a távoli asztali kapcsolatok NEM fogják a WDDM grafikus képernyőillesztőt használni. Ebben az esetben a távoli asztali kapcsolatok az XDDM grafikus képernyőillesztőt fogják használni.
+
+A módosítás életbe léptetéséhez újra kell indítani a Windows rendszert.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Ezzel a házirend-beállítással engedélyezheti a WDDM grafikus képernyőillesztőt a távoli asztali kapcsolatokhoz.
+
+Ha engedélyezi vagy nem konfigurálja a házirend-beállítást, akkor a távoli asztali kapcsolatok a WDDM grafikus képernyőillesztőt fogják használni.
+
+Ha letiltja a házirend-beállítást, akkor a távoli asztali kapcsolatok NEM fogják a WDDM grafikus képernyőillesztőt használni. Ebben az esetben a távoli asztali kapcsolatok az XDDM grafikus képernyőillesztőt fogják használni.
+
+A módosítás életbe léptetéséhez újra kell indítani a Windows rendszert.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Ezzel a házirend-beállítással engedélyezheti a WDDM grafikus képernyőillesztőt a távoli asztali kapcsolatokhoz.
+
+Ha engedélyezi a házirend-beállítást, akkor a távoli asztali kapcsolatok a WDDM grafikus képernyőillesztőt fogják használni.
+
+Ha letiltja a házirend-beállítást, akkor a távoli asztali kapcsolatok NEM fogják a WDDM grafikus képernyőillesztőt használni. Ebben az esetben a távoli asztali kapcsolatok az XDDM grafikus képernyőillesztőt fogják használni.
+
+Ha nem konfigurálja a házirend-beállítást, akkor a távoli asztali munkamenetgazda-kiszolgálón a távoli asztali kapcsolatok NEM fogják a WDDM grafikus képernyőillesztőt használni. A távoli asztali kapcsolatok minden más esetben a WDDM grafikus képernyőillesztőt fogják használni.
+
+A módosítás életbe léptetéséhez újra kell indítani a Windows rendszert.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

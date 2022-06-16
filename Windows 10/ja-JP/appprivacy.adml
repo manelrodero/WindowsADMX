@@ -294,6 +294,33 @@
 
 このグループ ポリシー オブジェクトがデバイスに適用されているときに、アプリを開く場合、従業員は、アプリやデバイスを再起動してポリシーの変更をアプリに適用する必要があります。
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Windows アプリを音声でアクティブ化できるようにする</string>
+      <string id="LetAppsActivateWithVoice_Explain">このポリシー設定では、Windows アプリを音声でアクティブ化できるかどうかを指定します。
+
+[ユーザーが制御] オプションを選ぶと、音声キーワードを使用して Windows アプリをアクティブ化できるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使います)。
+
+[強制的に許可] オプションを選ぶと、Windows アプリは音声キーワードを使用してアクティブ化できるようになります。組織の従業員はこの設定を変更できません。
+
+[強制的に拒否] オプションを選ぶと、Windows アプリは音声キーワードを使用してアクティブ化できなくなります。組織の従業員はこの設定を変更できません。
+
+このポリシー設定を無効にした場合や構成しなかった場合、音声キーワードを使用して Windows アプリをアクティブ化できるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使います)。
+
+このポリシーは、Windows アプリと Cortana に適用されます。
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">システムがロックされているときに音声で Windows アプリをアクティブ化できるようにする</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+このポリシー設定では、システムがロックされた状態で音声を使用して Windows アプリをアクティブ化できるかどうかを指定します。
+
+[ユーザーが制御] オプションを選ぶと、システムがロックされた状態でユーザーが音声を使用してアプリケーションを操作できるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使います)。
+
+[強制的に許可] オプションを選ぶと、システムがロックされた状態でも、ユーザーは音声を使用してアプリケーションを操作できるようになります。組織の従業員はこの設定を変更できません。
+
+[強制的に拒否] オプションを選ぶと、システムがロックされた状態では、ユーザーが音声を使用してアプリケーションを操作することはできなくなります。組織の従業員はこの設定を変更できません。
+
+このポリシー設定を無効にした場合や構成しなかった場合、システムがロックされた状態でユーザーが音声を使用してアプリケーションを操作できるかどうかを、組織の従業員が選択できます (デバイスで [設定] &gt; [プライバシー] を使います)。
+
+このポリシーは、Windows アプリと Cortana に適用されます。この設定は、[ロック画面で Cortana を許可する] ポリシーよりも優先されます。このポリシーは、音声によるアクティブ化を許可するポリシーが、音声でアプリケーションをアクティブ化できるように構成されている場合にのみ適用されます。
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>これらの特定のアプリを強制的に拒否 (パッケージ ファミリ名を使用):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">すべてのアプリの既定値:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">すべてのアプリの既定値:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

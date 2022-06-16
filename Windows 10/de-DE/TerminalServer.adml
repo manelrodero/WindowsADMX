@@ -419,21 +419,24 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, werden diese Benachrichtigunge
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Benachrichtigungen auf dem Remotedesktopsitzungs-Hostserver angezeigt, nachdem Sie sich als lokaler Administrator angemeldet haben.</string>
       <string id="TS_LICENSING_MODE">Remotedesktop-Lizenzierungsmodus festlegen</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Mit dieser Richtlinieneinstellung können Sie den Typ der Remotedesktopdienste-Clientzugriffslizenz (Remotedesktopdienste-CAL) festlegen, die erforderlich ist, um eine Verbindung mit diesem Remotedesktopsitzungs-Hostserver herzustellen.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Mit dieser Richtlinieneinstellung können Sie den Typ der Clientzugriffslizenz für Remotedesktopdienste (RDS-CAL) festlegen, die erforderlich ist, um eine Verbindung mit diesem RD-Sitzungshostserver herzustellen.
 
-Sie können diese Richtlinieneinstellung verwenden, um einen von zwei Lizenzierungsmodi auszuwählen: "Pro Benutzer" oder "Pro Gerät".
+        Sie können diese Richtlinieneinstellung verwenden, um einen von zwei Lizenzierungsmodi auszuwählen: "Pro Benutzer" oder "Pro Gerät".
 
-Der Lizenzierungsmodus "Pro Benutzer" erfordert, dass jedes Benutzerkonto, das eine Verbindung mit diesem Remotedesktopsitzungs-Hostserver herstellt, über eine "Pro Benutzer"-Clientzugriffslizenz für Remotedesktopdienste verfügt.
+        Der Lizenzierungsmodus "Pro Benutzer" erfordert, dass für jedes Benutzerkonto, das eine Verbindung zu diesem Server mit dem RD-Sitzungshost herstellt, eine "Pro-Benutzer"-RDS-CAL von einem RD-Lizenzierungsserver ausgestellt wird.
 
-Der Lizenzierungsmodus "Pro Gerät" erfordert, dass jedes Gerät, das eine Verbindung mit diesem Remotedesktopsitzungs-Hostserver herstellt, über eine "Pro Gerät"-Clientzugriffslizenz für Remotedesktopdienste verfügt.
+        Der Lizenzierungsmodus "Pro Gerät" erfordert, dass für jedes Benutzerkonto, das eine Verbindung zu diesem Server mit dem RD-Sitzungshost herstellt, eine "Pro-Gerät"-RDS-CAL von einem RD-Lizenzierungsserver ausgestellt wird.
 
-Wenn Sie diese Richtlinieneinstellung aktivieren, wird der von Ihnen angegebene Remotedesktop-Lizenzierungsmodus vom Remotedesktop-Lizenzserver berücksichtigt.
+        Der AAD-Lizenzierungsmodus "Pro Benutzer" erfordert, dass jedes Benutzerkonto, das eine Verbindung zu diesem RD-Sitzungshostserver herstellt, über einen Dienstplan verfügt, der in AAD zugewiesene RDS-Lizenzen unterstützt.
+        
+        Wenn Sie diese Richtlinieneinstellung aktivieren, wird der von Ihnen angegebene Remotedesktop-Lizenzierungsmodus vom Remotedesktop-Lizenzserver und vom RD-Sitzungshost berücksichtigt.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Lizenzierungsmodus nicht auf Gruppenrichtlinienebene festgelegt.
-
-</string>
+        Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Lizenzierungsmodus nicht auf Gruppenrichtlinienebene angegeben.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Pro Gerät</string>
       <string id="TS_LICENSING_MODE_PER_USER">Pro Benutzer</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD pro Benutzer</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Diese Richtlinieneinstellung legt fest, ob die Umleitung von Daten an LPT-Clientanschlüsse während einer Remotedesktopdienste-Sitzung unterbunden wird.
 
 Durch diese Einstellung kann verhindert werden, dass Benutzer lokale LPT-Anschlüsse zuordnen und Daten vom Remotecomputer an lokale LPT-Anschlüsse umleiten. Standardmäßig ist die LPT-Anschlussumleitung für Remotedesktopdienste zulässig.
@@ -1015,6 +1018,37 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren, verwenden die auf diesem Ser
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">WDDM-Grafiktreiber für Remotedesktopverbindungen verwenden</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Mit dieser Richtlinieneinstellung können Sie den WDDM-Grafiktreiber für Remotedesktopverbindungen aktivieren.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, verwenden Remotedesktopverbindungen den WDDM-Grafiktreiber.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwenden Remotedesktopverbindungen nicht den WDDM-Grafiktreiber, sondern den XDDM-Grafiktreiber.
+
+Damit diese Änderung wirksam wird, müssen Sie Windows neu starten.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Mit dieser Richtlinieneinstellung können Sie den WDDM-Grafiktreiber für Remotedesktopverbindungen aktivieren.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, verwenden Remotedesktopverbindungen den WDDM-Grafiktreiber.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren, verwenden Remotedesktopverbindungen nicht den WDDM-Grafiktreiber, sondern den XDDM-Grafiktreiber.
+
+Damit diese Änderung wirksam wird, müssen Sie Windows neu starten.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Mit dieser Richtlinieneinstellung können Sie den WDDM-Grafiktreiber für Remotedesktopverbindungen aktivieren.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, verwenden Remotedesktopverbindungen den WDDM-Grafiktreiber.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren, verwenden Remotedesktopverbindungen nicht den WDDM-Grafiktreiber, sondern den XDDM-Grafiktreiber.
+
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, verwenden Remotedesktopverbindungen auf dem RD-Sitzungshostserver nicht den WDDM-Grafiktreiber. In allen anderen Fällen verwenden Remotedesktopverbindungen den WDDM-Grafiktreiber.
+
+Damit diese Änderung wirksam wird, müssen Sie Windows neu starten.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

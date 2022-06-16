@@ -100,11 +100,19 @@ Legen Sie die Einstellung "Telemetrie-Richtlinie zulassen" fest, um zu verhinder
           Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Diagnosedatenanzeige auf der Einstellungsseite aktiviert.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurieren des Microsoft 365 Update Readiness-Upload-Endpunkts</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Diagnosedaten-Uploadendpunkt für Desktop Analytics konfigurieren</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Diese Richtlinie legt als Teil des Microsoft 365 Update Readiness-Programms den Upload-Endpunkt für die Diagnosedaten dieses Geräts fest.
-          Wenn Ihre Organisation an dem Programm teilnimmt und angewiesen wurde, einen benutzerdefinierten Upload-Endpunkt zu konfigurieren, verwenden Sie diese Einstellung, um den Endpunkt zu definieren.
-          Der Wert für diese Einstellung wird von Microsoft als Teil des Onboarding-Prozesses für das Programm bereitgestellt. 
+          Diese Richtlinie legt als Teil des Desktop Analytics-Programms den Uploadendpunkt für die Diagnosedaten dieses Geräts fest.
+          Wenn Ihre Organisation an dem Programm teilnimmt und angewiesen wurde, einen benutzerdefinierten Uploadendpunkt zu konfigurieren, verwenden Sie diese Einstellung, um den Endpunkt zu definieren.
+          Der Wert für diese Einstellung wird von Microsoft als Teil des Onboardingprozesses für das Programm bereitgestellt. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Kommerzielle Datenpipeline zulassen</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          Durch "AllowCommercialDataPipeline" wird die kommerzielle Windows-Datenpipeline für das Gerät abonniert.
+          Wenn Sie die Einstellung aktivieren, wird für die vom Gerät erfassten Daten die kommerzielle Windows-Datenpipeline aktiviert.
+          Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, werden alle Daten gemäß unseren Richtlinien für die standardmäßige Windows-Datenpipeline vom Gerät erfasst und verarbeitet.
+          Wenn Sie die Einstellung konfigurieren, ändert sich weder die Ebene der Telemetriedatensammlung, noch die Fähigkeit des Benutzers, die Ebene zu ändern. Diese Einstellung gilt nur für das Windows-Betriebssystem und für Apps im Lieferumfang von Windows, nicht aber für Drittanbieter-Apps oder -Dienste, die unter Windows 10 ausgeführt werden.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Legen Sie die Einstellung "Telemetrie-Richtlinie zulassen" fest, um zu verhinder
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Benutzerdefinierter Microsoft 365 Update Readiness Upload-Endpunkt:</label>
+          <label>Benutzerdefinierter Uploadendpunkt für Desktop Analytics:</label>
         </textBox>
       </presentation>
     </presentationTable>

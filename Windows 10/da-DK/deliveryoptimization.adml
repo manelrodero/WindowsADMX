@@ -110,7 +110,7 @@ Værdien 0 betyder "ikke-begrænset". Den standardværdi, der er angivet for sky
       <string id="GroupIdSource">Vælg kilden for gruppe-id'er</string>
       <string id="GroupIdSource_Help">Indstil denne politik for at begrænse peer-valg til en bestemt kilde. 
       
-Tilgængelige indstillinger er:
+Tilgængelige indstillinger er: 
 
 1 = AD-websted.
 
@@ -120,16 +120,19 @@ Tilgængelige indstillinger er:
 
 4 = DNS-suffiks. 
 
-Når denne indstilling er indstillet, tildeles gruppe-id'et automatisk fra den valgte kilde. Hvis du indstiller denne politik, ignoreres GroupID-politikken. 
-      
-De indstillinger, der er indstillet i denne politik, gælder kun for gruppe (2) downloadtilstand. Hvis gruppe (2) ikke er angivet som downloadtilstand, ignoreres denne politik. 
+5 = AAD-lejer-ID. 
 
-For indstilling 3 - DHCP-indstillings-id, vil klienten forespørge DHCP-indstillings-id 234 og bruge den returnerede GUID-værdi som gruppe-id.</string>
+Når dette er angivet, tildeles gruppe-id'et automatisk fra den valgte kilde. Hvis du angiver denne politik, ignoreres GroupID-politikken. 
+      
+De indstillinger, der er angivet i denne politik, gælder kun for gruppe (2) downloadtilstand. Hvis gruppe (2) ikke er indstillet som downloadtilstand, ignoreres denne politik. 
+
+For indstilling 3-DHCP-indstillings-id vil klienten forespørge DHCP-indstillings-id 234 og bruge den returnerede GUID-værdi som gruppe-id.</string>
       <string id="GroupIdSource_Unset">Annuller indstilling (0)</string>
       <string id="GroupIdSource_AD">AD-websted (1)</string>
       <string id="GroupIdSource_SID">Godkendt domæne-SID (2)</string>
       <string id="GroupIdSource_DHCP">Id til DHCP-indstilling (3)</string>
       <string id="GroupIdSource_DNS">DNS-suffiks (4)</string>
+      <string id="GroupIdSource_AAD">AAD-lejer-id (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Forsinkelse af download i baggrunden fra http (i sekunder)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Med denne politik kan du forsinke brugen af en HTTP-kilde i en download i baggrunden, som har tilladelse til at bruge P2P.
       
@@ -146,6 +149,14 @@ Når den maksimale forsinkelse er nået, fortsætter downloaden ved hjælp af HT
 Bemærk, at en download, som venter på peer-kilder, vises som fastlåst for slutbrugeren.
       
 Den anbefalede værdi er 1 minut (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Udskyd fallback for download af cacheserver i baggrunden (i sekunder)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Indstil denne politik til at udskyde fallbacken fra cacheserveren til HTTP-kilden for en download af indhold i baggrunden med X sekunder. 
+
+Bemærk! Hvis du indstiller politikken til at udskyde downloaden i baggrunden fra http, anvendes denne først (for at tillade downloads fra peers først).</string>
+      <string id="DelayCacheServerFallbackForeground">Udskyd fallback for download af cacheserver i forgrunden (i sekunder)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Indstil denne politik til at udskyde fallbacken fra cacheserveren til HTTP-kilden for en download af indhold i forgrunden med X sekunder. 
+
+Bemærk! Hvis du indstiller politikken til at udskyde downloaden i forgrunden fra http, anvendes denne først (for at tillade downloads fra peers først).</string>
       <string id="RestrictPeerSelectionBy">Vælg en metode til at begrænse peer-markering</string>
       <string id="RestrictPeerSelectionBy_Help">Angiv denne politik for at begrænse peer-valg via valgte indstilling. 
       
@@ -263,7 +274,7 @@ Indstilling 1 (undernetmaske) gælder for både Downloadtilstand LAN (1) og Grup
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">kilde til gruppe-id'er:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Kilde til gruppe-id'er:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Forsinkelse af download i baggrunden fra http (i sekunder):</decimalTextBox>
@@ -271,6 +282,14 @@ Indstilling 1 (undernetmaske) gælder for både Downloadtilstand LAN (1) og Grup
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Forsinkelse af download i forgrunden fra http (i sekunder):</decimalTextBox>
+        <text>Standardværdien er 0 (ingen forsinkelse)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Udskyd fallback for download af cacheserver i baggrunden (i sek.):</decimalTextBox>
+        <text>Standardværdien er 0 (ingen forsinkelse)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Udskyd fallback for download af cacheserver i forgrunden (i sek.):</decimalTextBox>
         <text>Standardværdien er 0 (ingen forsinkelse)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

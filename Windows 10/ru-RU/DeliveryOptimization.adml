@@ -108,26 +108,31 @@
       <string id="CacheHost">[зарезервировано для использования в будущем] Имя узла сервера кэша</string>
       <string id="CacheHost_Help">[Зарезервировано для использования в будущем]</string>
       <string id="GroupIdSource">Выберите источник идентификаторов группы</string>
-      <string id="GroupIdSource_Help">Установите эту политику, чтобы ограничить выбор однорангового узла определенным источником. 
+      <string id="GroupIdSource_Help">С помощью этой политики можно ограничить выбор одноранговых объектов одним конкретным источником. 
       
-Доступны следующие опции: 1 = сайт AD.
+Доступные варианты: 
 
-2 = SID домена с проверкой подлинности.
+1 = сайт AD.
 
-3 = идентификатор параметра DHCP.
+2 = SID аутентифицированного домена.
 
-4 = DNS суффикс. 
+3 = ИД DHCP-параметра.
 
-Если задано, идентификатор группы будет автоматически назначен из выбранного источника. Если установить эту политику, политика groupId будет игнорироваться. 
+4 = DNS-суффикс. 
+
+5 = ИД клиента AAD. 
+
+Если политика настроена, автоматически назначается ИД группы из выбранного источника. Политика GroupID при этом игнорируется. 
       
-Параметры, установленные в этой политике, применяются только к режиму загрузки группы (2). Если группа (2) не задана как режим загрузки, эта политика будет игнорироваться. 
+Варианты, выбранные в этой политике, применяются только к режиму скачивания "Группа (2)". Если этот режим не установлен, эта политика игнорируется. 
 
-Для варианта 3-DHCP параметр ID, клиент будет запрашивать параметр DHCP ID 234 и использовать возвращенное значение GUID в качестве идентификатора группы.</string>
+В случае варианта 3 "ИД DHCP-параметра" клиент запрашивает ИД DHCP-параметра 234 и использует полученное значение GUID в качестве ИД группы.</string>
       <string id="GroupIdSource_Unset">Не определено (0)</string>
       <string id="GroupIdSource_AD">Сайт AD (1)</string>
       <string id="GroupIdSource_SID">ИД безопасности домена, прошедшего проверку подлинности (2)</string>
       <string id="GroupIdSource_DHCP">ИД параметра DHCP (3)</string>
       <string id="GroupIdSource_DNS">DNS-суффикс (4)</string>
+      <string id="GroupIdSource_AAD">ИД клиента AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Задерживать фоновое скачивание с HTTP-ресурса (в секундах)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Благодаря этой политике вы можете задерживать использование HTTP-источника при фоновом скачивании, для которого можно применять протокол P2P.
       
@@ -144,6 +149,14 @@
 Обратите внимание: если есть скачивание, которое ожидает использования одноранговых источников, пользователю будет казаться, что оно зависло.
       
 Рекомендуемое значение: 1 минута (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Задерживать переход с сервера кэширования на резервный источник при фоновом скачивании (в секундах)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Задайте эту политику, чтобы задерживать на X секунд переход с сервера кэширования на резервный HTTP-источник при фоновом скачивании содержимого. 
+
+Примечание. Если задана политика задержки фонового скачивания с HTTP-источника, она будет применяться первой (чтобы данные сначала скачивались с одноранговых узлов).</string>
+      <string id="DelayCacheServerFallbackForeground">Задерживать переход с сервера кэширования на резервный источник при скачивании, которое выполняется на переднем плане (в секундах)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Задайте эту политику, чтобы задерживать на X секунд переход с сервера кэширования на резервный HTTP-источник при скачивании содержимого, которое выполняется на переднем плане. 
+
+Примечание. Если задана политика задержки скачивания, которое выполняется на переднем плане с HTTP-источника, она будет применяться первой (чтобы данные сначала скачивались с одноранговых узлов).</string>
       <string id="RestrictPeerSelectionBy">Выбрать способ ограничения выбора одноранговых узлов</string>
       <string id="RestrictPeerSelectionBy_Help">Настройте эту политику, чтобы ограничить выбор узла на основе выбранного параметра. 
       
@@ -261,7 +274,7 @@
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">источник идентификаторов группы:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Источник ИД группы:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Задерживать фоновое скачивание с HTTP-ресурса (в секундах):</decimalTextBox>
@@ -269,6 +282,14 @@
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Задерживать интерактивное скачивание с HTTP-ресурса (в секундах):</decimalTextBox>
+        <text>Стандартное значение — 0 (без задержки)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Задерживать переход с сервера кэширования на резервный источник при фоновом скачивании (в секундах):</decimalTextBox>
+        <text>Стандартное значение — 0 (без задержки)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Задерживать переход с сервера кэширования на резервный источник при скачивании, которое выполняется на переднем плане (в секундах):</decimalTextBox>
         <text>Стандартное значение — 0 (без задержки)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

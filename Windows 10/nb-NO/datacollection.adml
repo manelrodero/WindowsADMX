@@ -58,10 +58,10 @@ Hvis du aktiverer forbedrede diagnosedata i policyinnstillingen Tillat telemetri
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, blir nivået for diagnosedata som sendes til Microsoft, bestemt av policyinnstillingen Tillat telemetri.
       </string>
 
-      <string id="AllowDeviceNameInDiagnosticData">Tillat at enhetsnavn sendes i diagnosedata for Windows</string>
-      <string id="AllowDeviceNameInDiagnosticData_Explain">Denne policyen tillater at navnet på enheten sendes til Microsoft som en del av diagnosedata for Windows.
+      <string id="AllowDeviceNameInDiagnosticData">Tillat at enhetsnavn sendes i Windows-diagnosedata</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Denne policyen tillater at navnet på enheten sendes til Microsoft som en del av Windows-diagnosedata.
 
-Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, blir ikke enhetsnavn sendt til Microsoft som en del av diagnosedata for Windows.
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, blir ikke enhetsnavn sendt til Microsoft som en del av Windows-diagnosedata.
       </string>
 
       <string id="ConfigureTelemetryOptInSettingsUx">Konfigurer grensesnittet for valg av telemetriinnstilling.</string>
@@ -100,11 +100,19 @@ Angi policyinnstillingen Tillat telemetri for å hindre at personer sender diagn
           Hvis policyinnstillingen deaktiveres eller ikke konfigureres, aktiveres visningsprogrammet for diagnosedata på innstillingssiden.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurer opplastingsendepunkt for Microsoft 365 Update Readiness</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurer endepunkt for opplasting av diagnosedata for Skrivebordsanalyse</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Denne policyen angir opplastingsendepunktet for denne enhetens diagnosedata som en del av Microsoft 365 Update Readiness-programmet.
+          Denne policyen angir opplastingsendepunktet for denne enhetens diagnosedata som en del av Skrivebordsanalyse-programmet.
           Hvis organisasjonen din deltar i programmet og er blitt bedt om å konfigurere et egendefinert opplastingsendepunkt, bruker du denne innstillingen til å definere dette sluttpunktet.
           Verdien for denne innstillingen blir gitt av Microsoft som en del av den innebygde prosessen for programmet. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Tillat kommersiell datapipeline</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline velger enheten til Windows Enterprise-datapipeline.
+          Hvis du aktiverer denne innstillingen, blir data som er innhentet fra enheten, tilordnet til Windows Enterprise-datapipeline.
+          Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, samles alle data fra enheten sammen og behandles i henhold til policyene for Windows-standarddatapipeline.
+          Hvis du konfigurerer denne innstillingen, endres ikke samlingsnivået for telemetri eller muligheten til brukeren å endre nivået. Denne innstillingen gjelder bare for Windows-operativsystemet og -appene som følger med Windows, ikke tredjepartsapper eller -tjenester som kjører på Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Angi policyinnstillingen Tillat telemetri for å hindre at personer sender diagn
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Tilpasset opplastingsendepunkt for Microsoft 365 Update Readiness:</label>
+          <label>Egendefinert endepunkt for opplasting for Skrivebordsanalyse:</label>
         </textBox>
       </presentation>
     </presentationTable>

@@ -100,11 +100,19 @@
           如果你禁用或不配置此策略设置，则将在“设置”页面中启用诊断数据查看器。
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">配置 Microsoft 365 更新准备上传端点</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">配置桌面分析的诊断数据上传终结点</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          此策略将此设备诊断数据的上传端点设置为 Microsoft 365 更新准备计划的一部分。
-          如果您的组织正在参与该项目，并且已被指示配置自定义上传端点，则使用此设置来定义该端点。
-          此设置值将由 Microsoft 提供，作为项目加入流程的一部分。 
+          此策略将此设备诊断数据的上传终结点设置为桌面分析计划的一部分。
+          如果你的组织正在参与该计划，并且已被指示配置自定义上传终结点，则使用此设置来定义该终结点。
+          在加入计划的过程中，此设置的值将由 Microsoft 提供。 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">允许商业数据管道</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline 选择将设备导入 Windows 企业数据管道中。
+          如果启用此设置，则会选择将从设备中收集的数据导入到 Windows 企业数据管道中。
+          如果禁用或未配置此设置，则将根据我们的 Windows 标准数据管道策略收集和处理设备中的所有数据。
+          如果配置此设置，则不会更改遥测集合级别或用户更改级别的能力。此设置仅适用于 Windows 操作系统及 Windows 附带的应用，不适用于 Windows 10 中运行的第三方应用或服务。
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Microsoft 365 更新准备自定义上传端点：</label>
+          <label>桌面分析自定义上传终结点:</label>
         </textBox>
       </presentation>
     </presentationTable>

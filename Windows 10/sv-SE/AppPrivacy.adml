@@ -294,6 +294,33 @@ Om du inaktiverar eller låter bli att konfigurera den här principinställninge
 
 Om en app är öppen när det här grupprincipobjektet tillämpas på en enhet måste anställda starta om appen eller enheten för att principändringarna ska börja gälla för appen.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Aktivera Windows-appar med rösten</string>
+      <string id="LetAppsActivateWithVoice_Explain">Den här principinställningen anger om Windows-appar kan aktiveras med röstkommandon.
+
+Om du väljer Användaren har kontrollen kan anställda i din organisation själva bestämma om Windows-appar ska kunna aktiveras med ett röstkommando via Inställningar &gt; Sekretess på sina enheter.
+
+Om du väljer Tvinga tillåt så kan Windows-appar aktiveras med ett röstkommando och anställda i din organisation kan inte ändra det.
+
+Om du väljer Tvinga neka så kan Windows-appar inte aktiveras med röstkommandon och anställda i din organisation kan inte ändra det.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan anställda i din organisation själva bestämma om Windows-appar ska kunna aktiveras med röstkommandon via Inställningar &gt; Sekretess på sina enheter.
+
+Den här principen gäller för Windows-appar och Cortana.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Låt Windows-appar aktiveras med röstkommando när systemet är låst</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Den här principinställningen anger om Windows-appar kan aktiveras med röstkommandon när systemet är låst.
+
+Om du väljer Användaren har kontrollen kan anställda i din organisation själva bestämma om användarna kan interagera med appar med röstkommandon när systemet är låst via Inställningar &gt; Sekretess på sina enheter.
+
+Om du väljer Tvinga tillåt kan användare använda röstkommandon för att interagera med appar när systemet är låst och anställda i din organisation kan inte ändra det.
+
+Om du väljer Tvinga neka kan användarna inte använda röstkommandon för att interagera med appar när systemet är låst och anställda i din organisation kan inte ändra det.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan anställda i din organisation själva bestämma om användare ska kunna använda röstkommandon för att interagera med appar när systemet är låst via Inställningar &gt; Sekretess på sina enheter.
+
+Den här principen gäller för Windows-appar och Cortana. Den åsidosätter principen Tillåt Cortana när systemet är låst. Den här principen kan endast tillämpas när principen Tillåt röstaktivering är konfigurerad för att låta appar aktiveras med röstkommandon.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Om en app är öppen när det här grupprincipobjektet tillämpas på en enhet m
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Tvinga neka för dessa specifika appar (använd paketfamiljenamn):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Standard för alla appar:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Standard för alla appar:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

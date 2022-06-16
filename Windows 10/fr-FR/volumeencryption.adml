@@ -634,19 +634,18 @@ Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, les uti
 
       <string id="RDVEDrive_Name">Configurer l’utilisation du chiffrement au niveau matériel pour les lecteurs de données amovibles</string>
 
-      <string id="OSEDrive_Help">Ce paramètre de stratégie permet de gérer l’utilisation par BitLocker du chiffrement au niveau matériel sur les lecteurs du système d’exploitation et de spécifier quels algorithmes de chiffrement il peut utiliser avec le chiffrement au niveau matériel. L’utilisation du chiffrement au niveau matériel permet d’améliorer les performances de fonctionnement des lecteurs sur lesquels des opérations de lecture et d’écriture de données sont fréquentes.
+      <string id="OSEDrive_Help">Ce paramètre de stratégie permet de gérer l’utilisation par BitLocker du chiffrement au niveau matériel sur les lecteurs de systèmes d'exploitation et de spécifier quels algorithmes de chiffrement il peut utiliser avec le chiffrement au niveau matériel. L’utilisation du chiffrement au niveau matériel permet d’améliorer les performances de fonctionnement des lecteurs sur lesquels des opérations de lecture et d’écriture de données sont fréquentes.
 
 Si vous activez ce paramètre de stratégie, vous pouvez spécifier des options supplémentaires qui contrôlent si le chiffrement au niveau logiciel BitLocker est utilisé à la place du chiffrement au niveau matériel sur les ordinateurs ne prenant pas en charge le chiffrement au niveau matériel, et si vous voulez restreindre les algorithmes et suites de chiffrement utilisés pour le chiffrement au niveau matériel.
 
 Si vous désactivez ce paramètre de stratégie, BitLocker ne peut pas utiliser le chiffrement au niveau matériel avec les lecteurs du système d’exploitation et le chiffrement au niveau logiciel BitLocker est utilisé par défaut pour chiffrer le lecteur.
 
-Si vous ne configurez pas ce paramètre de stratégie, BitLocker utilise le chiffrement au niveau matériel avec le jeu d’algorithmes de chiffrement pour le lecteur. Si le chiffrement au niveau matériel n’est pas disponible, le chiffrement au niveau logiciel BitLocker est utilisé à la place.
+Si vous ne configurez pas ce paramètre de stratégie, BitLocker utilise le chiffrement au niveau logiciel, peu importe si le chiffrement au niveau matériel est disponible.
 
 Remarque : le paramètre de stratégie « Sélectionner la méthode et la puissance de chiffrement des lecteurs » ne s’applique pas au chiffrement au niveau matériel. L’algorithme de chiffrement utilisé par le chiffrement au niveau matériel est défini lors du partitionnement du lecteur. Par défaut, BitLocker utilise l’algorithme configuré sur le lecteur pour chiffrer le lecteur. L’option « Restreindre les algorithmes et suites de chiffrement autorisés pour le chiffrement au niveau matériel » permet de restreindre les algorithmes de chiffrement que BitLocker utilise avec le chiffrement au niveau matériel. Si le jeu d’algorithmes pour le lecteur n’est pas disponible, BitLocker désactive l’utilisation du chiffrement au niveau matériel.
 Les algorithmes de chiffrement sont spécifiés par des identificateurs d’objets (OID). Par exemple :
 - OID AES 128 en mode CBC : 2.16.840.1.101.3.4.1.2
 - OID AES 256 en mode CBC : 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="FDVEDrive_Help">Ce paramètre de stratégie permet de gérer l’utilisation par BitLocker du chiffrement au niveau matériel sur les lecteurs de données fixes et de spécifier quels algorithmes de chiffrement il peut utiliser avec le chiffrement au niveau matériel. L’utilisation du chiffrement au niveau matériel permet d’améliorer les performances de fonctionnement des lecteurs sur lesquels des opérations de lecture et d’écriture de données sont fréquentes.
@@ -655,13 +654,12 @@ Si vous activez ce paramètre de stratégie, vous pouvez spécifier des options 
 
 Si vous désactivez ce paramètre de stratégie, BitLocker ne peut pas utiliser le chiffrement au niveau matériel avec les lecteurs du système d’exploitation et le chiffrement au niveau logiciel BitLocker est utilisé par défaut pour chiffrer le lecteur.
 
-Si vous ne configurez pas ce paramètre de stratégie, BitLocker utilise le chiffrement au niveau matériel avec le jeu d’algorithmes de chiffrement pour le lecteur. Si le chiffrement au niveau matériel n’est pas disponible, le chiffrement au niveau logiciel BitLocker est utilisé à la place.
+Si vous ne configurez pas ce paramètre de stratégie, BitLocker utilise le chiffrement au niveau logiciel, peu importe si le chiffrement au niveau matériel est disponible.
 
 Remarque : le paramètre de stratégie « Sélectionner la méthode et la puissance de chiffrement des lecteurs » ne s’applique pas au chiffrement au niveau matériel. L’algorithme de chiffrement utilisé par le chiffrement au niveau matériel est défini lors du partitionnement du lecteur. Par défaut, BitLocker utilise l’algorithme configuré sur le lecteur pour chiffrer le lecteur. L’option « Restreindre les algorithmes et suites de chiffrement autorisés pour le chiffrement au niveau matériel » permet de restreindre les algorithmes de chiffrement que BitLocker utilise avec le chiffrement au niveau matériel. Si le jeu d’algorithmes pour le lecteur n’est pas disponible, BitLocker désactive l’utilisation du chiffrement au niveau matériel.
 Les algorithmes de chiffrement sont spécifiés par des identificateurs d’objets (OID). Par exemple :
 - OID AES 128 en mode CBC : 2.16.840.1.101.3.4.1.2
 - OID AES 256 en mode CBC : 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="RDVEDrive_Help">Ce paramètre de stratégie permet de gérer l’utilisation par BitLocker du chiffrement au niveau matériel sur les lecteurs de données amovibles et de spécifier quels algorithmes de chiffrement il peut utiliser avec le chiffrement au niveau matériel. L’utilisation du chiffrement au niveau matériel permet d’améliorer les performances de fonctionnement des lecteurs sur lesquels des opérations de lecture et d’écriture de données sont fréquentes.
@@ -670,13 +668,12 @@ Si vous activez ce paramètre de stratégie, vous pouvez spécifier des options 
 
 Si vous désactivez ce paramètre de stratégie, BitLocker ne peut pas utiliser le chiffrement au niveau matériel avec les lecteurs du système d’exploitation et le chiffrement au niveau logiciel BitLocker est utilisé par défaut pour chiffrer le lecteur.
 
-Si vous ne configurez pas ce paramètre de stratégie, BitLocker utilise le chiffrement au niveau matériel avec le jeu d’algorithmes de chiffrement pour le lecteur. Si le chiffrement au niveau matériel n’est pas disponible, le chiffrement au niveau logiciel BitLocker est utilisé à la place.
+Si vous ne configurez pas ce paramètre de stratégie, BitLocker utilise le chiffrement au niveau logiciel, peu importe si le chiffrement au niveau matériel est disponible.
 
 Remarque : le paramètre de stratégie « Sélectionner la méthode et la puissance de chiffrement des lecteurs » ne s’applique pas au chiffrement au niveau matériel. L’algorithme de chiffrement utilisé par le chiffrement au niveau matériel est défini lors du partitionnement du lecteur. Par défaut, BitLocker utilise l’algorithme configuré sur le lecteur pour chiffrer le lecteur. L’option « Restreindre les algorithmes et suites de chiffrement autorisés pour le chiffrement au niveau matériel » permet de restreindre les algorithmes de chiffrement que BitLocker utilise avec le chiffrement au niveau matériel. Si le jeu d’algorithmes pour le lecteur n’est pas disponible, BitLocker désactive l’utilisation du chiffrement au niveau matériel.
 Les algorithmes de chiffrement sont spécifiés par des identificateurs d’objets (OID). Par exemple :
 - OID AES 128 en mode CBC : 2.16.840.1.101.3.4.1.2
 - OID AES 256 en mode CBC : 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Activer l’utilisation de l’authentification BitLocker exigeant une saisie au clavier préalable au démarrage sur tablettes tactiles</string>

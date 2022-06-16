@@ -56,39 +56,35 @@
       <string id="RemoveWindowsUpdateModeAll">0 - 不显示任何通知</string>
       <string id="RemoveWindowsUpdateModeReboot">1 - 显示需要重新启动的通知</string>
       <string id="AutoUpdateCfg">配置自动更新</string>
-      <string id="AutoUpdateCfg_Help">指定该计算机是否将通过Windows自动更新服务接收安全更新和其他重要下载。
+      <string id="AutoUpdateCfg_Help">指定此计算机是否通过 Windows 自动更新服务来接收安全更新和其他重要下载。
 
-注：此政策不适用于Windows RT。
+注意: 此策略不适用于 Windows RT。
 
-此设置可指定是否在该计算机上启用自动更新。如果启用了服务，则必须在组策略设置中选择四个选项中的一个：
+此设置允许你指定是否在此计算机上启用自动更新。如果已启用该服务，必须在“组策略设置”中的四个选项中选择一个:
 
-        2 = 在下载和安装任何更新之前通知。
+        2 = 在下载和安装任何更新前发出通知。
 
-        当Windows找到适用于此计算机的更新时，用户将被通知更新已准备好下载。在进入Windows更新之后，用户可以下载并安装任何可用的更新。
+        当 Windows 找到适用于此计算机的更新时，系统将通知用户可以下载更新。转到 Windows 更新后，用户即可下载和安装任何可用更新。
 
-        3 = （默认设置） 自动下载更新并通知何时准备安装。
+        3 = (默认设置)自动下载更新，并在准备好安装时发出通知
 
-        Windows发现适用于该电脑的的更新并在背景中予以下载 （用户不被通知或在此过程中被打断）。下载完成后，用户将被通知可以准备安装。在Windows更新后，用户可以进行安装。
+        Windows 会查找适用于此计算机的更新，并在后台下载它们(在此过程中，用户不会收到通知或发生中断)。下载完成后，系统将通知用户他们已准备好进行安装。转到 Windows 更新后，用户即可安装它们。
 
-        4 = 自动下载更新并按下面指定的时间表进行安装。
+        4 = 自动下载更新并按下面指定的计划进行安装。
 
-        当选定“自动”为预定安装时间时，Windows将自动检查、下载和安装更新。除非按组策略配置，否则设备将按Windows默认设置重新启动。（适用于Windows 10、1809及以上版本）。
+        选择“自动”作为计划的安装时间时，Windows 将自动检查、下载和安装更新。除非由组策略配置，否则设备将按照 Windows 默认设置重启。(适用于 Windows 10 版本 1809 和更高版本)
 
-        使用组策略设置中的选项指定日程安排。如果没有指定时间表，所有安装的默认时间表将在每天凌晨3点。如果任何更新都需要重新启动来完成安装，Windows将自动重新启动计算机。（如果Windows准备好重新启动时，用户已登录到计算机，将通知用户并给出延迟重启的选项。）
+        使用“组策略设置”中的选项指定计划。对于版本 1709 和更高版本，存在一个附加选项，即将更新频率限制为每周、每两周或每月。如果未指定任何计划，所有安装的默认计划将在每天上午 3:00 时进行。如果有任何更新需要重启才能完成安装，Windows 将自动重启计算机。(如果用户在 Windows 准备重启时已登录到计算机，系统将通知用户并提供延迟重启的选项。)
 
-        在Windows 8及以后版本，您可设置在自动维护期间而非特定的时间表更新。当计算机不在使用时，自动维护将安装更新，而当计算机以电池电源运行时则避免自动更新。如果两天时间自动维护无法安装更新，则Windows Update将立即安装更新。用户则将被通知即将重启，并且仅当在没有数据意外丢失的可能性时才会重新启动。
+        在 Windows 8 和更高版本中，你可以将更新设置为在自动维护期间而不是按指定计划安装。自动维护将在计算机未在使用时安装更新，并在计算机使用电池供电时避免执行此操作。如果自动维护在 2 天内无法安装更新，Windows 更新将立即安装更新。然后，系统将通知用户即将重启，并且仅在不会发生数据意外丢失的情况下才重启。
 
-        在这里使用组策略设置可以进一步配置自动维护：计算机配置 -&gt; 管理模板 -&gt; Windows组 件-&gt; 维护调度程序。
+        5 = 允许本地管理员选择自动更新应通知并安装更新的配置模式。(此选项尚未移到任何 Win 10 版本)
 
-        5 = 允许本地管理员选择自动更新应该通知并安装更新的配置模式。
+使用此选项，允许本地管理员使用 Windows 更新控制面板选择所选的配置选项。不允许本地管理员禁用自动更新的配置。
 
-        注意！Windows 10不支持此选项。
+如果将此策略的状态设置为“已禁用”，必须手动下载并安装 Windows 更新上可用的任何更新。若要执行此操作，请使用“开始”菜单搜索 Windows 更新。
 
-        有了这个选项，本地管理员将被允许使用 Windows Update 控制面板来选择配置选项。本地管理员将不允许禁用自动更新的配置。
-
-如果此策略的状态被设置为禁用，则 Windows Update 可用的任何更新都必须手动下载和安装。为此，使用启动搜索 Windows Update。
-
-如果状态设置为未配置，则在组策略级别不指定使用自动更新。但是，管理员仍然可以通过控制面板配置自动更新。</string>
+如果将状态设置为“未配置”，不会在“组策略”级别上指定使用自动更新。但是，管理员仍然可以通过控制面板配置自动更新。</string>
 
       <string id="AutoUpdateModeAdminChooses">5 - 允许本地管理员选择设置</string>
       <string id="AutoUpdateModeAuto">4 - 自动下载并计划安装</string>
@@ -321,32 +317,35 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
       <string id="PreviewBuildFastFeatureUpdates">预览版 - 快</string>
       <string id="PreviewBuildSlowFeatureUpdates">预览版 - 慢</string>
       <string id="ReleasePreviewBranchFeatureUpdates">版本预览</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">半年频道(定向)</string>
       <string id="SemiAnnualChannelFeatureUpdates">半年频道</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">适用于 1809 及以下版本的半年频道(已弃用)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">适用于 1809 及以下版本的半年频道(定向)(已弃用)</string>
       <string id="DeferFeatureUpdates_Title">选择何时接收预览版和功能更新</string>
-      <string id="DeferFeatureUpdates_Help">启用此策略，以指定何时接收何种级别的预览版或功能更新。
+      <string id="DeferFeatureUpdates_Help">启用此策略可指定要接收的预览版或功能更新的级别以及接收时间。
 
-* 预览版 - 快: 设为该级别的设备将最先收到功能尚未向公众提供的 Windows 的新内部版本。选择“快”可参与发现并向 Microsoft 报告错误，以及提供关于新功能的建议。
-* 预览版 - 慢: 设为该级别的设备将在向公众提供 Windows 的新内部版本前收到该 Windows 新内部版本，但是节奏较设为“快”的设备慢，并带有较早的内部版本中的变更和修复。
-* Release Preview: 在 Microsoft 即将向公众发布 Windows 的内部版本前收到 Windows 的该内部版本。
-* 半年频道(定向): 在向公众发布功能更新后收到该功能更新。
-* 半年频道: 功能更新会在将其声明为半年频道后获得。该声明通常会在半年频道(定向)后约 4 个月发布，表明 Microsoft、独立软件提供商(ISV)、合作伙伴以及客户认为该版本已准备就绪，可用于广泛部署。
+* 预览版 - 快: 设置为该级别的设备将最先收到新的 Windows 内部版本，其中包含尚未面向公众发布的功能。选择“快”可参与识别问题并向 Microsoft 报告问题，并提供有关新功能的建议。
+* 预览版 - 慢: 设置为该级别的设备将在新的 Windows 内部版本面向公众发布之前收到这些新版本，但是比设置为“快”的设备的节奏更慢，且会收到对早期内部版本的更改和修补程序。
+* Release Preview: 在 Microsoft 面向公众发布 Windows 内部版本之前接收这些版本。
+* 半年频道: 在功能更新面向公众发布之后收到功能更新。
+
+以下 Windows 就绪级别已弃用，仅适用于 1809 及以下版本:
+* 适用于 1809 及以下的半年频道(定向): 功能更新已发布。
+* 适用于 1809 及以下版本的半年频道: 功能更新已声明为“半年频道”，表明版本已准备就绪，可用于广泛部署。
+请查看 http://aka.ms/ReleaseInformationPage 中的版本信息页面以获得半年频道(定向)和半年频道的发布日期。
 
 当选择预览版时:
-    - 你最长可以延迟接收预览版 14 天。
-    - 若要避免按其计划时间接收预览版，你可以临时暂停接收。暂停将从提供的起始时间起持续 35 天有效。
-    - 若要继续接收已暂停的功能更新，请清除起始日期字段。
+    - 最多可以延迟接收预览版 14 天。
+    - 若要防止按计划时间接收预览版，可以将其暂停。暂停将从提供的起始时间起生效，并持续 35 天。
+    - 若要恢复接收已暂停的功能更新，请清除开始日期字段。
 
-预览版注册要求遥测级别的设置值不得低于 2 且已在 insider.windows.com 注册域。有关预览版的其他信息，请查阅: https://aka.ms/wipforbiz
+预览版注册要求遥测级别设置为 2 或更高，并且你的域已在 insider.windows.com 上注册。有关预览版的其他信息，请参阅: https://aka.ms/wipforbiz
 
-当选择半年频道(定向)或半年频道时:
-    - 你最长可以延迟接收功能更新 365 天。
-    - 若要避免按计划时间接收功能更新，可以临时暂停功能更新。暂停将从提供的起始时间起持续 35 天有效。
-    - 若要继续接收已暂停的功能更新，请清除起始日期字段。
+当选择半年频道时:
+    - 你可以延迟接收功能更新最多 365 天。
+    - 若要避免按计划时间接收功能更新，可以将其暂停。暂停将从提供的起始时间起生效，并持续 35 天。
+    - 若要恢复接收已暂停的功能更新，请清除开始日期字段。
 
-若要配置功能更新，你的遥测级别设置值不得低于 1。
-
-如果禁用或者不配置该策略，则 Windows 更新不会改变其行为。</string>
+如果禁用或未配置此策略，则 Windows 更新不会改变其行为。</string>
       <string id="DeferQualityUpdates_Title">选择何时接收质量更新</string>
       <string id="DeferQualityUpdates_Help">启用此策略可指定何时接收质量更新。
 
@@ -356,15 +355,11 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
 
 若要继续接收已暂停的质量更新，请清除开始日期字段。
 
-如果禁用或不配置此策略，Windows 更新不会改变其行为。
-
-注意: 如果“允许遥测”策略设置为 0，则此策略不起作用。</string>
+如果禁用或不配置此策略，Windows 更新不会改变其行为。</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Windows 更新不包括驱动程序</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">启用此策略不包括具有 Windows 质量更新的驱动程序。
+      <string id="ExcludeWUDriversInQualityUpdate_Help">启用此策略将不会在 Windows 质量更新中包括驱动程序。
 
-如果禁用或不配置此策略，Windows 更新将包含具备驱动程序分类的更新。
-
-注意: 如果设备运行 Windows 10 1607版本或 Windows Server 2016，此策略在启用遥测(即“允许遥测”策略不是 0)时才生效。如果设备运行的是 Windows 10 1703 版本(或更高版本)或 Windows Server 1709 版本(或更高版本)，则此策略可以在不启用遥测的情况下生效。</string>
+如果禁用或不配置此策略，Windows 更新将包括具有驱动程序分类的更新。</string>
       <string id="ActiveHours_Title">在使用时段关闭针对更新的自动重新启动</string>
       <string id="ActiveHours_Help">如果启用此策略，电脑在使用时段将不会在更新后自动重新启动。在使用时段以外，电脑将尝试重新启动。
 
@@ -523,11 +518,11 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
       <string id="RestartWarnMins30">30</string>
       <string id="RestartWarnMins60">60</string>
       <string id="EngagedRestartTransitionSchedule_Title">为更新指定预定重启转换和通知计划</string>
-      <string id="EngagedRestartTransitionSchedule_Help">启用此策略可控制多长时间后将从活动时间外计划的自动重启转换为重启提醒期，该提醒期需要用户进行计划。该时段可以设置为 0 天到 30 天(从重启变成挂起状态的时间算起)。
+      <string id="EngagedRestartTransitionSchedule_Help">启用此策略可控制多长时间后将从活动时间外计划的自动重启转换为预定重启，该提醒期需要用户进行计划。该时段可以设置为 0 天到 30 天(从重启变成挂起状态的时间算起)。
 
-你可以指定用户可推迟重启提醒期提醒通知的天数。该推迟时段可设置为 1 天到 3 天。
+你可以指定用户可推迟预定重启提醒通知的天数。该推迟时段可设置为 1 天到 3 天。
 
-你可以指定最后期限(天)，此期限过后将自动计划和执行挂起的重启，不论是否是在活动时间。最后期限可以设置为 2 天到 30 天(从重启变成挂起状态的时间算起)。如果已配置，挂起重启将从自动重启转换为重启提醒期(挂起用户计划)以在指定时段内自动执行。
+你可以指定最后期限(天)，此期限过后将自动计划和执行挂起的重启，不论是否是在活动时间。最后期限可以设置为 2 天到 30 天(从重启变成挂起状态的时间算起)。如果已配置，挂起重启将从自动重启转换为预定重启(挂起用户计划)以在指定时段内自动执行。
 
 如果未指定最后期限或最后期限设置为 0 天，该重启将不会自动执行，并且需要用户在重启前进行计划。
 
@@ -586,17 +581,63 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
 注意: 此策略仅在以下情况适用: 此计算机定向到的 Intranet Microsoft 更新服务被配置为支持客户端目标设置。如果禁用或未配置“指定 Intranet Microsoft 更新服务位置”策略，则此策略无效。
       </string>
       <string id="UpdateNotificationLevel_Title">更新通知显示选项</string>
-      <string id="UpdateNotificationLevel_Help">0 (默认) – 使用默认 Windows Update 通知
-1 – 关掉所有通知，不包括重启警告
-2 – 关掉所有通知，包括重启警告
+      <string id="UpdateNotificationLevel_Help">0(默认值) - 使用默认的 Windows 更新通知
+1 - 关闭所有通知, 但不包括重启警告
+2 – 关闭所有通知, 包括重启警告
 
-该策略允许您定义用户可看到的 Windows Update 通知的内容。此策略不控制下载和安装的方式及时间。
+此策略允许你定义 Windows 更新通知用户看到的内容。此策略不控制如何以及何时下载和安装更新。
 
-重要！如果您选择不获取更新通知，同时定义“配置自动更新”政策，则设备将不会自动获得更新，您和设备用户都不会知悉到关键的安全性、质量或特性更新，而您的设备可能处于危险之中。
+重要提示: 如果选择不获取更新通知, 且通过定义其他组策略来避免设备自动获取更新, 则你和设备用户均不会收到关键安全、质量或功能更新的通知, 但你的设备可能会处于风险之中。
       </string>
       <string id="DefaultNotification">0 (默认) – 默认 OS Windows 更新通知 </string>
       <string id="ExcludingRebootWarnings">1 – 禁止所有通知，不包括重启警告</string>
       <string id="IncludingRebootWarnings">2 – 禁止所有通知，包括重启警告</string>
+      <string id="ComplianceDeadline_Title">指定自动更新和重启的最后期限</string>
+      <string id="ComplianceDeadline_Help">此策略允许你指定用户在其设备上自动安装质量和功能更新前所拥有的天数，以及在需要自动重启后所拥有的宽限期。将进行更新并重启，而不考虑使用时段，用户将无法重新计划。
+
+功能更新和质量更新的最后期限可以是最多 30 天。自动重启宽限期可以是从 0 到 7 天。
+
+你还可以在自动重启宽限期结束之前，禁用自动重启。
+
+如果禁用或未配置此策略，设备将获取更新并按照默认计划重启。
+
+此策略将覆盖以下策略:
+1.  指定更新安装进行自动重启之前的最后期限
+2.  为更新指定预定重启转换和通知计划 
+3.  始终在计划的时间自动重启
+4.  已登录用户进行计划的自动更新安装时不自动重启
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -711,8 +752,8 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
         <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">警告(分钟): </dropdownList>
       </presentation>
       <presentation id="EngagedRestartTransitionSchedule_Title">
-        <text>过渡: 指定从自动重启过渡为重启提醒期的等待时间(待定用户计划)。</text>
-        <text>推迟: 指定重启提醒期提醒通知的推迟时间。</text>
+        <text>过渡: 指定从自动重启过渡为预定重启的等待时间(待定用户计划)。</text>
+        <text>推迟: 指定预定重启提醒通知的推迟时间。</text>
         <text>最后期限: 指定最后期限，在此最后期限后未完成的重启将在使用时段以外的时间自动执行。</text>
         <text></text>
         <text>质量更新: </text>
@@ -727,6 +768,16 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">指定更新通知显示选项:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>指定自动运行更新前用户可以推迟的天数 (最多30天)。注意！这个选项不会考虑你使用计算机的时间，并且不能再次推迟更新计划。</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">质量更新(天数): </dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">功能更新(天数):</dropdownList>
+        <text></text>
+        <text>指定从需要重启时间到设备自动重启的自动重启宽限期(0 到 7 天)。设备将重启，不考虑使用时段，且无法重新计划。</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">宽限期(天数)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">在宽限期结束前不自动重启</checkBox>
       </presentation>
     </presentationTable>
   </resources>

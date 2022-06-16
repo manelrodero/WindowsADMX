@@ -639,49 +639,46 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, standardní uži
 
       <string id="RDVEDrive_Name">Konfigurovat použití hardwarového šifrování pro vyměnitelné datové jednotky</string>
 
-      <string id="OSEDrive_Help">Toto nastavení zásad umožňuje spravovat používání hardwarového šifrování na jednotkách operačního systému nástrojem BitLocker a definovat, který šifrovací algoritmus může nástroj BitLocker používat s hardwarovým šifrováním. Používání hardwarového šifrování může zvýšit výkon operací s jednotkami, u kterých je prováděno časté čtení nebo zapisování dat.
+      <string id="OSEDrive_Help">Nastavení této zásady umožňuje spravovat používání hardwarového šifrování na jednotkách operačního systému nástrojem BitLocker a určit, které šifrovací algoritmy může nástroj BitLocker používat s hardwarovým šifrováním. Používání hardwarového šifrování může zvýšit výkon operací u jednotek, u kterých se provádí časté čtení nebo zapisování dat.
 
-Pokud toto nastavení zásad povolíte, můžete určit další možnosti, které řídí, zda je u počítačů, které nepodporují hardwarové šifrování, použito softwarové šifrování nástrojem BitLocker, a zda chcete omezit šifrovací algoritmy a sady šifer používané s hardwarovým šifrováním.
+Pokud tuto zásadu povolíte, můžete určit další možnosti, které řídí, jestli se u počítačů, které hardwarové šifrování nepodporují, má místo něho použít softwarové šifrování nástrojem BitLocker a jestli chcete omezit šifrovací algoritmy a sady šifer používané s hardwarovým šifrováním.
 
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, nástroj BitLocker nebude moci s jednotkami operačního systému používat hardwarové šifrování a ve výchozím nastavení bude při šifrování jednotek použito softwarové šifrování nástrojem BitLocker.
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, nástroj BitLocker nebude moct u jednotek operačního systému používat hardwarové šifrování a ve výchozím nastavení se při šifrování jednotek použije softwarové šifrování nástrojem BitLocker.
 
-Pokud toto nastavení zásad nenakonfigurujete, nástroj BitLocker použije hardwarové šifrování s šifrovacím algoritmem nastaveným pro danou jednotku. Pokud není hardwarové šifrování dostupné, bude místo něj použito softwarové šifrování nástrojem BitLocker.
+Pokud tuto zásadu nenakonfigurujete, nástroj BitLocker použije softwarové šifrování bez ohledu na dostupnost hardwarového šifrování.
 
-Poznámka: Nastavení zásad Zvolit metodu šifrování jednotky a sílu šifry se nevztahuje na hardwarové šifrování. Šifrovací algoritmus používaný hardwarovým šifrováním je nastaven při vytváření oddílů na jednotce. Ve výchozím nastavení používá nástroj BitLocker k šifrování jednotky algoritmus nakonfigurovaný na dané jednotce. Možnost Omezit šifrovací algoritmus a sady šifer povolené pro hardwarové šifrování umožňuje omezit šifrovací algoritmy, které nástroj BitLocker může používat s hardwarovým šifrováním. Pokud není sada algoritmů pro jednotku k dispozici, nástroj BitLocker používání hardwarového šifrování zakáže.
-Šifrovací algoritmy jsou určeny identifikátory objektu (OID). Například:
+Poznámka: Nastavení zásady Zvolit metodu šifrování jednotky a sílu šifry se nevztahuje na hardwarové šifrování. Šifrovací algoritmus používaný hardwarovým šifrováním se nastaví při vytváření oddílů na jednotce. Ve výchozím nastavení používá nástroj BitLocker k šifrování jednotky algoritmus nakonfigurovaný na dané jednotce. Možnost Omezit šifrovací algoritmus a sady šifer povolené pro hardwarové šifrování umožňuje omezit šifrovací algoritmy, které nástroj BitLocker může používat s hardwarovým šifrováním. Pokud není sada algoritmů pro jednotku k dispozici, nástroj BitLocker používání hardwarového šifrování zakáže.
+Šifrovací algoritmy jsou určené identifikátory objektu (OID). Například:
 - AES 128 v režimu CBC, OID: 2.16.840.1.101.3.4.1.2
 - AES 256 v režimu CBC, OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
-      <string id="FDVEDrive_Help">Toto nastavení zásad umožňuje spravovat používání hardwarového šifrování na pevných datových jednotkách nástrojem BitLocker a definovat, který šifrovací algoritmus může nástroj BitLocker používat s hardwarovým šifrováním. Používání hardwarového šifrování může zvýšit výkon operací s jednotkami, u kterých je prováděno časté čtení nebo zapisování dat.
+      <string id="FDVEDrive_Help">Nastavení této zásady umožňuje spravovat používání hardwarového šifrování na pevných datových jednotkách nástrojem BitLocker a určit, které šifrovací algoritmy může nástroj BitLocker používat s hardwarovým šifrováním. Používání hardwarového šifrování může zvýšit výkon operací u jednotek, u kterých se provádí časté čtení nebo zapisování dat.
 
-Pokud toto nastavení zásad povolíte, můžete určit další možnosti, které řídí, zda je u počítačů, které nepodporují hardwarové šifrování, použito softwarové šifrování nástrojem BitLocker, a zda chcete omezit šifrovací algoritmy a sady šifer používané s hardwarovým šifrováním.
+Pokud tuto zásadu povolíte, můžete určit další možnosti, které řídí, jestli se u počítačů, které hardwarové šifrování nepodporují, má místo něho použít softwarové šifrování nástrojem BitLocker a jestli chcete omezit šifrovací algoritmy a sady šifer používané s hardwarovým šifrováním.
 
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, nástroj BitLocker nebude moci s jednotkami operačního systému používat hardwarové šifrování a ve výchozím nastavení bude při šifrování jednotek použito softwarové šifrování nástrojem BitLocker.
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, nástroj BitLocker nebude moct u jednotek operačního systému používat hardwarové šifrování a ve výchozím nastavení se při šifrování jednotek použije softwarové šifrování nástrojem BitLocker.
 
-Pokud toto nastavení zásad nenakonfigurujete, nástroj BitLocker použije hardwarové šifrování s šifrovacím algoritmem nastaveným pro danou jednotku. Pokud není hardwarové šifrování dostupné, bude místo něj použito softwarové šifrování nástrojem BitLocker.
+Pokud tuto zásadu nenakonfigurujete, nástroj BitLocker použije softwarové šifrování bez ohledu na dostupnost hardwarového šifrování.
 
-Poznámka: Nastavení zásad Zvolit metodu šifrování jednotky a sílu šifry se nevztahuje na hardwarové šifrování. Šifrovací algoritmus používaný hardwarovým šifrováním je nastaven při vytváření oddílů na jednotce. Ve výchozím nastavení používá nástroj BitLocker k šifrování jednotky algoritmus nakonfigurovaný na dané jednotce. Možnost Omezit šifrovací algoritmus a sady šifer povolené pro hardwarové šifrování umožňuje omezit šifrovací algoritmy, které nástroj BitLocker může používat s hardwarovým šifrováním. Pokud není sada algoritmů pro jednotku k dispozici, nástroj BitLocker používání hardwarového šifrování zakáže.
-Šifrovací algoritmy jsou určeny identifikátory objektu (OID). Například:
+Poznámka: Nastavení zásady Zvolit metodu šifrování jednotky a sílu šifry se nevztahuje na hardwarové šifrování. Šifrovací algoritmus používaný hardwarovým šifrováním se nastaví při vytváření oddílů na jednotce. Ve výchozím nastavení používá nástroj BitLocker k šifrování jednotky algoritmus nakonfigurovaný na dané jednotce. Možnost Omezit šifrovací algoritmus a sady šifer povolené pro hardwarové šifrování umožňuje omezit šifrovací algoritmy, které nástroj BitLocker může používat s hardwarovým šifrováním. Pokud není sada algoritmů pro jednotku k dispozici, nástroj BitLocker používání hardwarového šifrování zakáže.
+Šifrovací algoritmy jsou určené identifikátory objektu (OID). Například:
 - AES 128 v režimu CBC, OID: 2.16.840.1.101.3.4.1.2
 - AES 256 v režimu CBC, OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
-      <string id="RDVEDrive_Help">Toto nastavení zásad umožňuje spravovat používání hardwarového šifrování na vyměnitelných datových jednotkách nástrojem BitLocker a definovat, který šifrovací algoritmus může nástroj BitLocker používat s hardwarovým šifrováním. Používání hardwarového šifrování může zvýšit výkon operací s jednotkami, u kterých je prováděno časté čtení nebo zapisování dat.
+      <string id="RDVEDrive_Help">Nastavení této zásady umožňuje spravovat používání hardwarového šifrování na vyměnitelných datových jednotkách nástrojem BitLocker a určit, které šifrovací algoritmy může nástroj BitLocker používat s hardwarovým šifrováním. Používání hardwarového šifrování může zvýšit výkon operací u jednotek, u kterých se provádí časté čtení nebo zapisování dat.
 
-Pokud toto nastavení zásad povolíte, můžete určit další možnosti, které řídí, zda je u počítačů, které nepodporují hardwarové šifrování, použito softwarové šifrování nástrojem BitLocker, a zda chcete omezit šifrovací algoritmy a sady šifer používané s hardwarovým šifrováním.
+Pokud tuto zásadu povolíte, můžete určit další možnosti, které řídí, jestli se u počítačů, které hardwarové šifrování nepodporují, má místo něho použít softwarové šifrování nástrojem BitLocker a jestli chcete omezit šifrovací algoritmy a sady šifer používané s hardwarovým šifrováním.
 
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, nástroj BitLocker nebude moci s jednotkami operačního systému používat hardwarové šifrování a ve výchozím nastavení bude při šifrování jednotek použito softwarové šifrování nástrojem BitLocker.
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, nástroj BitLocker nebude moct u jednotek operačního systému používat hardwarové šifrování a ve výchozím nastavení se při šifrování jednotek použije softwarové šifrování nástrojem BitLocker.
 
-Pokud toto nastavení zásad nenakonfigurujete, nástroj BitLocker použije hardwarové šifrování s šifrovacím algoritmem nastaveným pro danou jednotku. Pokud není hardwarové šifrování dostupné, bude místo něj použito softwarové šifrování nástrojem BitLocker.
+Pokud tuto zásadu nenakonfigurujete, nástroj BitLocker použije softwarové šifrování bez ohledu na dostupnost hardwarového šifrování.
 
-Poznámka: Nastavení zásad Zvolit metodu šifrování jednotky a sílu šifry se nevztahuje na hardwarové šifrování. Šifrovací algoritmus používaný hardwarovým šifrováním je nastaven při vytváření oddílů na jednotce. Ve výchozím nastavení používá nástroj BitLocker k šifrování jednotky algoritmus nakonfigurovaný na dané jednotce. Možnost Omezit šifrovací algoritmus a sady šifer povolené pro hardwarové šifrování umožňuje omezit šifrovací algoritmy, které nástroj BitLocker může používat s hardwarovým šifrováním. Pokud není sada algoritmů pro jednotku k dispozici, nástroj BitLocker používání hardwarového šifrování zakáže.
-Šifrovací algoritmy jsou určeny identifikátory objektu (OID). Například:
+Poznámka: Nastavení zásady Zvolit metodu šifrování jednotky a sílu šifry se nevztahuje na hardwarové šifrování. Šifrovací algoritmus používaný hardwarovým šifrováním se nastaví při vytváření oddílů na jednotce. Ve výchozím nastavení používá nástroj BitLocker k šifrování jednotky algoritmus nakonfigurovaný na dané jednotce. Možnost Omezit šifrovací algoritmus a sady šifer povolené pro hardwarové šifrování umožňuje omezit šifrovací algoritmy, které nástroj BitLocker může používat s hardwarovým šifrováním. Pokud není sada algoritmů pro jednotku k dispozici, nástroj BitLocker používání hardwarového šifrování zakáže.
+Šifrovací algoritmy jsou určené identifikátory objektu (OID). Například:
 - AES 128 v režimu CBC, OID: 2.16.840.1.101.3.4.1.2
 - AES 256 v režimu CBC, OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Povolit použití ověřování nástrojem BitLocker vyžadující vstup z klávesnice před spuštěním na tabletech</string>

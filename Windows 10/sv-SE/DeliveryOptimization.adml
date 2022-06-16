@@ -120,16 +120,19 @@ Tillgängliga alternativ:
 
 4 = DNS-suffix. 
 
-När du har ställt in principen tilldelas grupp-ID:t automatiskt från den valda källan. Om du ställer in principen används inte GroupID-principen. 
-      
-Alternativen i den här principen gäller endast nedladdningsläget Grupp (2). Principen har alltså ingen funktion om Grupp (2) inte används som nedladdningsläge. 
+5 = ID för AAD-klient. 
 
-nFör alternativ 3 (Alternativ-ID för DHCP) efterfrågar klienten alternativ-ID 234 för DHCP och använder sedan det returnerade GUID-värdet som grupp-ID.</string>
+När du har ställt in principen tilldelas grupp-ID:t automatiskt från den valda källan. Om du ställer in den här principen används inte GroupID-principen. 
+      
+Alternativen i den här principen gäller endast nedladdningsläget Grupp (2). Den här principen har alltså ingen funktion om Grupp (2) inte används som nedladdningsläge. 
+
+För alternativ 3 (Alternativ-ID för DHCP) efterfrågar klienten alternativ-ID 234 för DHCP och använder sedan det returnerade GUID-värdet som grupp-ID.</string>
       <string id="GroupIdSource_Unset">Ej angivet (0)</string>
       <string id="GroupIdSource_AD">AD-plats (1)</string>
       <string id="GroupIdSource_SID">SID för autentiserad domän (2)</string>
       <string id="GroupIdSource_DHCP">Alternativ-ID för DHCP (3)</string>
       <string id="GroupIdSource_DNS">DNS-suffix (4)</string>
+      <string id="GroupIdSource_AAD">ID för AAD-klient (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Fördröj bakgrundsnedladdning från http (i sek)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Med den här principen kan du fördröja användningen av en HTTP-källa i bakgrundsnedladdningar som tillåts använda P2P.
       
@@ -146,6 +149,14 @@ När den maximala fördröjningen har nåtts återupptas nedladdningen från HTT
 Observera att en nedladdning som väntar på peer-källor ser ut som att den har fastnat för slutanvändaren.
       
 Rekommenderat värde: 60 (1 minut).</string>
+      <string id="DelayCacheServerFallbackBackground">Fördröj växling från cacheserver för bakgrundsnedladdning (i sekunder)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Ange den här principen om du vill fördröja växlingen från cacheservern till HTTP-källan för en bakgrundsnedladdning med X sekunder. 
+
+Obs! Om du anger den här principen för att fördröja bakgrundsnedladdning från http tillämpas den först (för att tillåta nedladdning från peers först).</string>
+      <string id="DelayCacheServerFallbackForeground">Fördröj växling från cacheserver för förgrundsnedladdning (i sekunder)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Ange den här principen om du vill fördröja växlingen från cacheservern till HTTP-källan för en förgrundsnedladdning med X sekunder. 
+
+Obs! Om du anger den här principen för att fördröja förgrundsnedladdning från http tillämpas den först (för att tillåta nedladdning från peers först).</string>
       <string id="RestrictPeerSelectionBy">Välj metod för att begränsa peer-urval</string>
       <string id="RestrictPeerSelectionBy_Help">Ange den här principen om du vill begränsa peer-urvalet med det valda alternativet. 
       
@@ -263,7 +274,7 @@ Alternativ 1 (Nätmask) gäller både nedladdningsläget LAN (1) och Grupp (2).<
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">källa för grupp-ID:n:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Källa för grupp-ID:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Fördröj bakgrundsnedladdning från http (i sek):</decimalTextBox>
@@ -271,6 +282,14 @@ Alternativ 1 (Nätmask) gäller både nedladdningsläget LAN (1) och Grupp (2).<
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Fördröj förgrundsnedladdning från http (i sek):</decimalTextBox>
+        <text>Standardvärdet är 0 (ingen fördröjning)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Fördröj växling från cacheserver för bakgrundsnedladdning (i sek):</decimalTextBox>
+        <text>Standardvärdet är 0 (ingen fördröjning)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Fördröj växling från cacheserver för förgrundsnedladdning (i sek):</decimalTextBox>
         <text>Standardvärdet är 0 (ingen fördröjning)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

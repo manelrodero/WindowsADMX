@@ -1,4 +1,4 @@
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/Policysecurity intelligence">
 <displayName>Anzeigenamen hier eingeben</displayName>
 <description>Beschreibung hier eingeben</description>
 <resources>
@@ -17,7 +17,7 @@
     <string id="Remediation">Wartung</string>
     <string id="Reporting">Berichte</string>
     <string id="Scan">Scan</string>
-    <string id="SignatureUpdate">Signaturaktualisierungen</string>
+    <string id="SignatureUpdate">Aktualisierung der Sicherheitsinformationen</string>
     <string id="Spynet">MAPS</string>
     <string id="Threats">Bedrohungen</string>
     <string id="ClientInterface">Clientschnittstelle</string>
@@ -50,11 +50,15 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, wird Endpoint Protection nicht
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird Endpoint Protection standardmäßig ausgeführt. Die Computer werden auf schädliche Software und andere möglicherweise unerwünschte Software überprüft.
     </string>
     <string id="DisableAntiSpywareDefender">Windows Defender Antivirus deaktivieren</string>
-    <string id="DisableAntiSpywareDefender_Explain">Durch diese Richtlinieneinstellung wird Windows Defender Antivirus deaktiviert.
+    <string id="DisableAntiSpywareDefender_Explain">Diese Richtlinieneinstellung deaktiviert Windows Defender Antivirus.
+    
+    Wenn Sie diese Richtlinieneinstellung aktivieren, wird Windows Defender Antivirus nicht ausgeführt und die Computer werden nicht nach Malware oder anderer potenziell unerwünschter Software durchsucht.
 
-    Wenn Sie diese Richtlinieneinstellung aktivieren, wird Windows Defender Antivirus nicht ausgeführt. Die Computer werden nicht auf Schadsoftware oder andere möglicherweise unerwünschte Software überprüft.
+    Wenn Sie diese Richtlinieneinstellung deaktivieren, wird Windows Defender Antivirus unabhängig von anderen installierten Antivirenprodukten ausgeführt.
 
-    Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird Windows Defender Antivirus standardmäßig ausgeführt. Die Computer werden auf Schadsoftware und andere möglicherweise unerwünschte Software überprüft.</string>
+    Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird Windows Defender Antivirus von Windows intern verwaltet. Wenn Sie ein anderes Antivirenprogramm installieren, deaktiviert Windows automatisch Windows Defender Antivirus. Andernfalls durchsucht Windows Defender Antivirus Ihre Computer auf Malware und andere potenziell unerwünschte Software.
+
+    Das Aktivieren oder Deaktivieren dieser Richtlinie kann zu unerwartetem oder nicht unterstütztem Verhalten führen. Es wird empfohlen, diese Richtlinieneinstellung nicht zu konfigurieren.</string>
     <string id="DisableLocalAdminMerge">Konfigurieren des Zusammenführungsverhaltens von lokalen Administratoren für Listen</string>
     <string id="DisableLocalAdminMerge_Explain">Mit dieser Richtlinieneinstellung wird gesteuert, ob komplexe Listeneinstellungen, die von einem lokalen Administrator konfiguriert werden, mit Gruppenrichtlinieneinstellungen zusammengeführt werden. Diese Einstellung gilt für Listen wie Bedrohungen und Ausschlüsse.
 
@@ -82,7 +86,7 @@ Wenn diese Einstellung aktiviert wird, wird der Proxyserver für die angegebenen
 
 Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Proxyserver für die angegebenen Adressen nicht umgangen.</string>
     <string id="ProxyPacUrl">Automatische Proxykonfiguration (PAC) für Netzwerkverbindungen definieren</string>
-    <string id="ProxyPacUrl_Explain">Mit dieser Richtlinieneinstellung wird die URL einer PAC-Proxydatei definiert, die verwendet werden soll, wenn der Client zum Zweck von Definitionsupdates und MAPS-Berichten eine Verbindung mit dem Netzwerk herstellt. Wenn die automatische Konfiguration des Proxys fehlerhaft ist oder keine automatische Proxykonfiguration angegeben wurde, führt der Client einen Fallback auf alternative Optionen in der angegebenen Reihenfolge aus:
+    <string id="ProxyPacUrl_Explain">Mit dieser Richtlinieneinstellung wird die URL einer PAC-Proxydatei definiert, die verwendet werden soll, wenn der Client für Updates der Sicherheitsinformationen und MAPS-Berichte eine Verbindung mit dem Netzwerk herstellt. Wenn die automatische Konfiguration des Proxys fehlerhaft ist oder keine automatische Proxykonfiguration angegeben wurde, führt der Client einen Fallback auf alternative Optionen in der angegebenen Reihenfolge aus:
       1. Proxyserver (falls angegeben)
       2. PAC-URL des Proxys (falls angegeben)
       3. Keine
@@ -93,7 +97,7 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Proxys
 
       Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, überspringt der Proxy diesen Fallbackschritt (gemäß der oben angegebenen Reihenfolge).</string>
     <string id="ProxyServer">Definieren des Proxyservers für das Herstellen einer Verbindung mit dem Netzwerk</string>
-    <string id="ProxyServer_Explain">Mit dieser Richtlinieneinstellung kann der benannte Proxy konfiguriert werden, der verwendet werden sollte, wenn der Client zum Zweck von Definitionsupdates und MAPS-Berichten eine Verbindung mit dem Netzwerk herstellt. Wenn der benannte Proxy einen Fehler verursacht oder wenn kein Proxy angegeben wurde, führt der Client einen Fallback auf alternative Optionen in der angegebenen Reihenfolge aus:
+    <string id="ProxyServer_Explain">Mit dieser Richtlinieneinstellung kann der benannte Proxy konfiguriert werden, der verwendet werden sollte, wenn der Client für Updates der Sicherheitsinformationen und MAPS-Berichte eine Verbindung mit dem Netzwerk herstellt. Wenn der benannte Proxy einen Fehler verursacht oder wenn kein Proxy angegeben wurde, führt der Client einen Fallback auf alternative Optionen in der angegebenen Reihenfolge aus:
       1. Proxyserver (falls angegeben)
       2. PAC-URL des Proxys (falls angegeben)
       3. Keine
@@ -105,17 +109,17 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Proxys
       Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, überspringt der Proxy diesen Fallbackschritt (gemäß der oben angegebenen Reihenfolge).
     </string>
     <string id="RandomizeScheduleTaskTimes">Zufälliges Festlegen von Zeiten für geplante Aufgaben</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Mit dieser Richtlinieneinstellung können Sie die zufällige Festlegung der geplanten Scanstartzeit und der geplanten Startzeit für Definitionsupdates aktivieren oder deaktivieren. Mit dieser Einstellung wird die durch Scanvorgänge entstehende Ressourcenauslastung verteilt. Beispiel: Die Einstellung kann auf virtuellen Gastcomputern, die gemeinsam einen Host nutzen, verwendet werden, um zu verhindern, dass mehrere virtuelle Gastcomputer gleichzeitig einen Vorgang ausführen, der eine hohe Speicherkapazität erfordert.
+    <string id="RandomizeScheduleTaskTimes_Explain">Mit dieser Richtlinieneinstellung können Sie die zufällige Festlegung der geplanten Scanstartzeit und der geplanten Startzeit für Updates der Sicherheitsinformationen aktivieren oder deaktivieren. Mit dieser Einstellung wird die durch Scanvorgänge entstehende Ressourcenauslastung verteilt. Beispiel: Die Einstellung kann auf virtuellen Gastmaschinen, die gemeinsam einen Host nutzen, verwendet werden, um zu verhindern, dass mehrere virtuelle Gastmaschinen gleichzeitig einen Vorgang ausführen, der eine hohe Speicherkapazität erfordert.
 
-Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, beginnen geplante Aufgaben zu einem zufälligen Zeitpunkt innerhalb eines Intervalls von 30 Minuten vor und nach der angegebenen Startzeit.
+    Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, beginnen geplante Aufgaben zu einem zufälligen Zeitpunkt innerhalb eines Intervalls von 30 Minuten vor und nach der angegebenen Startzeit.
 
-Wird diese Einstellung deaktiviert, beginnen geplante Aufgaben zur angegebenen Startzeit.</string>
+    Wird diese Einstellung deaktiviert, beginnen geplante Aufgaben zur angegebenen Startzeit.</string>
     <string id="ServiceKeepAlive">Zulassen der ständigen Ausführung von AntiMalware-Diensten</string>
-    <string id="ServiceKeepAlive_Explain">Mit dieser Richtlinieneinstellung kann konfiguriert werden, ob der AntiMalware-Dienst weiterhin ausgeführt werden soll, wenn Antiviren- und Antispyware-Definitionen deaktiviert werden. Es wird empfohlen, dass diese Einstellung deaktiviert bleibt.
+    <string id="ServiceKeepAlive_Explain">Mit dieser Richtlinieneinstellung kann konfiguriert werden, ob der Antimalware-Dienst weiterhin ausgeführt werden soll, wenn Antiviren- und Antispyware-Sicherheitsinformationen deaktiviert werden. Es wird empfohlen, dass diese Einstellung deaktiviert bleibt.
 
-Wenn diese Einstellung aktiviert ist, wird der AntiMalware-Dienst stets weiterhin ausgeführt, auch wenn sowohl Antiviren- als auch Antispywaredefinitionen deaktiviert werden.
+    Wenn diese Einstellung aktiviert ist, wird der Antimalware-Dienst stets weiterhin ausgeführt, auch wenn sowohl Antiviren- als auch Antispyware-Sicherheitsinformationen deaktiviert werden.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der AntiMalware-Dienst beendet, wenn sowohl Antiviren- als auch Antispywaredefinitionen deaktiviert werden. Beim Neustart des Computers wird der Dienst gestartet, wenn er auf "Automatisch starten" festgelegt wird. Nach dem Start des Diensts wird überprüft, ob Antiviren- und Antispywaredefinitionen aktiviert sind. Wenn mindestens eine Definition aktiviert ist, wird der Dienst weiterhin ausgeführt. Wenn beide Definitionen deaktiviert werden, wird der Dienst beendet.</string>
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Antimalware-Dienst beendet, wenn sowohl Antiviren- als auch Antispyware-Sicherheitsinformationen deaktiviert werden. Beim Neustart des Computers wird der Dienst gestartet, wenn er auf "Automatisch starten" festgelegt wird. Nach dem Start des Diensts wird überprüft, ob Antiviren- und Antispyware-Sicherheitsinformationen aktiviert sind. Wenn mindestens eine Definition aktiviert ist, wird der Dienst weiterhin ausgeführt. Wenn beide Definitionen deaktiviert werden, wird der Dienst beendet.</string>
     <string id="Root_PUAProtection">Konfigurieren der Erkennung für potenziell unerwünschte Anwendungen</string>
     <string id="Root_PUAProtection_Explain">
         Aktivieren oder deaktivieren Sie die Erkennung potenziell unerwünschter Anwendungen. Sie können auswählen, ob potenziell unerwünschte Software, die heruntergeladen wird oder versucht, sich auf Ihrem Computer zu installieren, blockiert, überwacht oder zugelassen werden soll.
@@ -144,13 +148,13 @@ Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, wird die Protokol
 
 Wenn diese Einstellung deaktiviert wird, wird die Protokollerkennung deaktiviert.</string>
     <string id="Nis_Consumers_IPS_DisableSignatureRetirement">Aktivieren der Aufhebung der Definitionsverwendung</string>
-    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Mit dieser Richtlinieneinstellung kann die Aufhebung der Definitionsverwendung für den Schutz des Netzwerks vor Angriffen auf bekannte Schwachstellen konfiguriert werden. Mit dieser Einstellung wird überprüft, ob ein Computer über die erforderlichen Sicherheitsupdates verfügt, die zum Schutz bestimmter Schwachstellen benötigt werden. Wenn das System nicht anfällig gegen einen von einer Definition erkannten Exploit ist, wird die Verwendung der entsprechenden Definition "aufgehoben". Wenn die Verwendung aller Definitionen für ein bestimmtes Protokoll aufgehoben wird, wird das Protokoll nicht mehr analysiert. Die Aktivierung des Features trägt zur Verbesserung der Leistung bei. Auf einem Computer, der über die aktuellsten Sicherheitsupdates verfügt, wirkt sich der Netzwerkschutz nicht auf die Netzwerkleistung aus.
+    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Mit dieser Richtlinieneinstellung kann die Aufhebung der Definitionsverwendung für den Schutz des Netzwerks vor Angriffen auf bekannte Schwachstellen konfiguriert werden. Mit dieser Einstellung wird überprüft, ob ein Computer über die erforderlichen Sicherheitsupdates verfügt, die zum Schutz bestimmter Schwachstellen benötigt werden. Wenn das System nicht anfällig gegen einen von einer Definition erkannten Exploit ist, gilt die entsprechende Definition als "ausgelaufen". Wenn alle Sicherheitsinformationen für ein bestimmtes Protokoll ausgelaufen sind, wird das Protokoll nicht mehr analysiert. Die Aktivierung des Features trägt zur Verbesserung der Leistung bei. Auf einem Computer, der über die aktuellsten Sicherheitsupdates verfügt, wirkt sich der Netzwerkschutz nicht auf die Netzwerkleistung aus.
 
-Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, wird die Aufhebung der Definitionsverwendung aktiviert.
+    Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, wird ein Auslaufen der Definitionsverwendung aktiviert.
 
-Wenn diese Einstellung deaktiviert wird, wird die Verwendung der Definitionsaufhebung deaktiviert.</string>
+    Wenn diese Einstellung deaktiviert wird, wird ein Auslaufen der Definitionsverwendung deaktiviert.</string>
     <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">Angeben zusätzlicher Definitionssätze für die Überprüfung von Netzwerkdatenverkehr</string>
-    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Mit dieser Richtlinieneinstellung werden zusätzliche Definitionssätze definiert, um die die Überprüfung von Netzwerkdatenverkehr zu ermöglichen- GUIDs von Definitionssätzen sollten unter den Optionen für diese Einstellung hinzugefügt werden. Jeder Eintrag muss als Name/Wert-Paar aufgelistet werden, wobei der Name eine Zeichenfolgendarstellung der GUID eines Definitionssatzes sein sollte. Beispielsweise wird die GUID des Definitionssatzes zum Aktivieren von Testdefinitionen folgendermaßen definiert: "{b54b6ac9-a737-498e-9120-6616ad3bf590}". Der Wert wird nicht verwendet und sollte auf 0 festgelegt werden.</string>
+    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Mit dieser Richtlinieneinstellung werden zusätzliche Definitionssätze definiert, um die die Überprüfung von Netzwerkdatenverkehr zu ermöglichen. GUIDs von Definitionssätzen sollten unter den Optionen für diese Einstellung hinzugefügt werden. Jeder Eintrag muss als Name/Wert-Paar aufgelistet werden, wobei der Name eine Zeichenfolgendarstellung der GUID eines Definitionssatzes sein sollte. Beispielsweise wird die GUID des Definitionssatzes zum Aktivieren von Test-Sicherheitsinformationen folgendermaßen definiert: "{b54b6ac9-a737-498e-9120-6616ad3bf590}". Der Wert wird nicht verwendet und sollte auf 0 festgelegt werden.      </string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay">Konfigurieren der Außerkraftsetzung von lokalen Einstellungen für das Entfernen von Elementen aus dem Quarantäneordner</string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay_Explain">Mit dieser Richtlinieneinstellung wird eine lokale Außerkraftsetzung für die Konfiguration der Anzahl von Tagen konfiguriert, die Elemente vor dem Entfernen im Quarantäneordner behalten werden sollen. Diese Einstellung kann nur mithilfe der Gruppenrichtlinie festgelegt werden.
 
@@ -358,14 +362,14 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Archivda
 Wenn diese Einstellung aktiviert wird, überschreitet die CPU-Auslastung nicht den angegebenen Prozentsatz.
 
 Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, überschreitet die CPU-Auslastung nicht den Standardwert.</string>
-    <string id="CheckForSignaturesBeforeRunningScan">Überprüfung auf die aktuellen Viren- und Spywaredefinitionen vor Ausführung eines geplanten Scans</string>
-    <string id="CheckForSignaturesBeforeRunningScan_Explain">Mit dieser Richtlinieneinstellung wird verwaltet, ob vor einem Scanvorgang nach neuen Viren- und Spywaredefinitionen gesucht werden soll. 
+    <string id="CheckForSignaturesBeforeRunningScan">Vor Ausführung eines geplanten Scans nach den neuesten Viren- und Spyware-Sicherheitsinformationen suchen</string>
+    <string id="CheckForSignaturesBeforeRunningScan_Explain">Mit dieser Richtlinieneinstellung wird verwaltet, ob vor einem Scanvorgang nach neuen Viren- und Spyware-Sicherheitsinformationen gesucht werden soll. 
 
-Diese Einstellung bezieht sich auf geplante Scans sowie auf die Befehlszeile "mpcmdrun -SigUpdate", hat jedoch keine Auswirkungen auf Scans, die manuell von der Benutzeroberfläche aus initiiert werden.
+    Diese Einstellung bezieht sich auf geplante Scans sowie auf die Befehlszeile "mpcmdrun -SigUpdate", hat jedoch keine Auswirkungen auf Scans, die manuell von der Benutzeroberfläche aus initiiert werden.
 
-Wenn diese Einstellung aktiviert wird, wird vor Ausführung eines Scanvorgangs nach neuen Definitionen gesucht.
+    Wenn diese Einstellung aktiviert wird, wird vor Ausführung eines Scanvorgangs nach neuen Sicherheitsinformationen gesucht.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Scan mit den vorhandenen Definitionen gestartet.</string>
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Scan mit den vorhandenen Sicherheitsinformationen gestartet.</string>
     <string id="Scan_DisableArchiveScanning">Scannen von Archivdateien</string>
     <string id="Scan_DisableArchiveScanning_Explain">Mit dieser Richtlinieneinstellung können Scanvorgänge für die Suche nach Schadsoftware und unerwünschter Software in Archivdateien wie ZIP- oder CAB-Dateien konfiguriert werden.
 
@@ -543,79 +547,83 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird zu einer S
 
         Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, werden für geplante Scans keine Änderungen an der CPU-Priorität vorgenommen.
     </string>
-    <string id="SignatureUpdate_ASSignatureDue">Definieren der Anzahl der Tage, bevor Spywaredefinitionen als veraltet eingestuft werden</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl der Tage angegeben werden, die vergehen müssen, bevor Spywaredefinitionen als veraltet eingestuft werden. Wenn Definitionen als veraltet eingestuft werden, können durch diesen Zustand mehrere zusätzliche Aktionen ausgelöst werden, einschließlich eines Fallbacks auf eine alternative Updatequelle oder der Anzeige eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig wird der Wert auf 14 Tage festgelegt.
+    <string id="SignatureUpdate_ASSignatureDue">Festlegen, nach welcher Anzahl von Tagen Spyware-Sicherheitsinformationen als veraltet gelten</string>
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl der Tage angegeben werden, die vergehen müssen, bevor Spyware-Sicherheitsinformationen als veraltet eingestuft werden. Wenn Sicherheitsinformationen als veraltet eingestuft werden, können durch diesen Zustand mehrere zusätzliche Aktionen ausgelöst werden, einschließlich eines Fallbacks auf eine alternative Updatequelle oder der Anzeige eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig wird der Wert auf 14 Tage festgelegt.
 
-Wenn diese Einstellung aktiviert wird, werden Spywaredefinitionen als veraltet eingestuft, wenn die angegebene Anzahl von Tagen ohne Update verstrichen ist.
+    Wenn diese Einstellung aktiviert wird, werden Spyware-Sicherheitsinformationen als veraltet eingestuft, wenn die angegebene Anzahl von Tagen ohne Update verstrichen ist.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Spywaredefinitionen als veraltet eingestuft, wenn die standardmäßige Anzahl von Tagen ohne Update verstrichen ist.</string>
-    <string id="SignatureUpdate_AVSignatureDue">Definieren der Anzahl der Tage, bevor Virendefinitionen als veraltet eingestuft werden</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl der Tage angegeben werden, die vergehen müssen, bevor Virendefinitionen als veraltet eingestuft werden. Wenn Definitionen als veraltet eingestuft werden, können durch diesen Zustand mehrere zusätzliche Aktionen ausgelöst werden, einschließlich eines Fallbacks auf eine alternative Updatequelle oder der Anzeige eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig wird der Wert auf 14 Tage festgelegt.
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Spyware-Sicherheitsinformationen als veraltet eingestuft, wenn die standardmäßige Anzahl von Tagen ohne Update verstrichen ist.</string>
+    <string id="SignatureUpdate_AVSignatureDue">Festlegen, nach welcher Anzahl von Tagen Virus-Sicherheitsinformationen als veraltet gelten</string>
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl der Tage angegeben werden, die vergehen müssen, bevor Virus-Sicherheitsinformationen als veraltet eingestuft werden. Wenn Sicherheitsinformationen als veraltet eingestuft werden, können durch diesen Zustand mehrere zusätzliche Aktionen ausgelöst werden, einschließlich eines Fallbacks auf eine alternative Updatequelle oder der Anzeige eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig wird der Wert auf 14 Tage festgelegt.
 
-Wenn diese Einstellung aktiviert wird, werden Virusdefinitionen als veraltet eingestuft, wenn die angegebene Anzahl von Tagen ohne Update verstrichen ist.
+    Wenn diese Einstellung aktiviert wird, werden Virus-Sicherheitsinformationen als veraltet eingestuft, wenn die angegebene Anzahl von Tagen ohne Update verstrichen ist.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Virusdefinitionen als veraltet eingestuft, wenn die standardmäßige Anzahl von Tagen ohne Update verstrichen ist.</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definieren der Dateifreigaben für das Herunterladen von Definitionsupdates</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Mit dieser Richtlinieneinstellung können UNC-Dateifreigabequellen für das Herunterladen von Definitionsupdates konfiguriert werden. Quellen werden in der angegebenen Reihenfolge kontaktiert. Der Wert dieser Einstellung sollte als durch senkrechte Striche getrennte Zeichenfolge eingegeben werden, in der die Definitionsupdatequellen aufgeführt werden. Zum Beispiel: "{\\unc1 | \\unc2 }". Die Liste ist standardmäßig leer.
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Virus-Sicherheitsinformationen als veraltet eingestuft, wenn die standardmäßige Anzahl von Tagen ohne Update verstrichen ist.</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Dateifreigaben für das Herunterladen von Updates der Sicherheitsinformationen festlegen</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Mit dieser Richtlinieneinstellung können UNC-Dateifreigabequellen für das Herunterladen von Updates der Sicherheitsinformationen konfiguriert werden. Quellen werden in der angegebenen Reihenfolge abgefragt. Der Wert dieser Einstellung sollte als durch senkrechte Striche getrennte Zeichenfolge eingegeben werden, in der die Updates der Sicherheitsinformationen aufgeführt werden. Zum Beispiel: "{\\unc1 | \\unc2 }". Die Liste ist standardmäßig leer.
 
-Wenn diese Einstellung aktiviert wird, werden die angegebenen Quellen bezüglich Definitionsupdates kontaktiert. Sobald Definitionsupdates von einer angegebenen Quelle heruntergeladen wurden, werden verbleibende Quellen in der Liste nicht kontaktiert.
+    Wenn diese Einstellung aktiviert wird, werden die angegebenen Quellen bezüglich Updates der Sicherheitsinformationen kontaktiert. Sobald Updates der Sicherheitsinformationen von einer angegebenen Quelle heruntergeladen wurden, werden verbleibende Quellen in der Liste nicht kontaktiert.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, bleibt die Liste standardmäßig leer, und es werden keine Quellen kontaktiert.</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate">Aktivieren von automatischen Scans nach Signaturupdates</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Mit dieser Richtlinieneinstellung kann der automatische Scan konfiguriert werden, der nach einem Definitionsupdate gestartet wird.
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, bleibt die Liste standardmäßig leer, und es werden keine Quellen kontaktiert.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation">Speicherort der Sicherheitsinformationen für VDI-Clients festlegen.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation_Explain">Mit dieser Richtlinieneinstellung können Sie den Speicherort für Sicherheitsinformationen für VDI-konfigurierte Computer definieren.
 
-Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, wird nach einem Definitionsupdate ein Scanvorgang gestartet.
+    Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, werden Sicherheitsinformationen aus der lokalen Standardquelle abgerufen.</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate">Scan nach Update der Sicherheitsinformationen aktivieren</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Mit dieser Richtlinieneinstellung kann der automatische Scan konfiguriert werden, der nach einem Update der Sicherheitsinformationen gestartet wird.
 
-Wenn diese Einstellung deaktiviert wird, wird nach einem Definitionsupdate kein Scanvorgang gestartet.</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Zulassen von Definitionsupdates bei Ausführung im Akkubetrieb</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Mit dieser Richtlinieneinstellung können Sie Definitionsupdates konfigurieren, während der Computer im Akkubetrieb ist.
+    Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, wird nach einem Update der Sicherheitsinformationen ein Scanvorgang gestartet.
 
-Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, werden Definitionsupdates unabhängig vom Energiezustand wie üblich ausgeführt.
+    Wenn diese Einstellung deaktiviert wird, wird nach einem Update der Sicherheitsinformationen kein Scanvorgang gestartet.</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Updates der Sicherheitsinformationen im Akkubetrieb zulassen</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Mit dieser Richtlinieneinstellung können Sie Updates der Sicherheitsinformationen konfigurieren, während der Computer im Akkubetrieb ist.
 
-Wenn Sie diese Einstellung deaktivieren, werden Definitionsupdates deaktiviert, während der Computer im Akkubetrieb ist.</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Definitionsupdate beim Start initiieren</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Mit dieser Richtlinieneinstellung können Sie Definitionsupdates  beim Start konfigurieren, wenn kein Antischadsoftwaremodul vorhanden ist.
+    Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, werden Updates der Sicherheitsinformationen unabhängig vom Energiezustand wie üblich ausgeführt.
 
-Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, werden Definitionsupdates beim Start initiiert, wenn kein Antischadsoftwaremodul vorhanden ist.
+    Wenn Sie diese Einstellung deaktivieren, werden Updates der Sicherheitsinformationen deaktiviert, während der Computer im Akkubetrieb ist.</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Update der Sicherheitsinformationen beim Start initiieren</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Mit dieser Richtlinieneinstellung können Sie Updates der Sicherheitsinformationen beim Start konfigurieren, wenn kein Antischadsoftwaremodul vorhanden ist.
 
-Wenn Sie diese Einstellung deaktivieren, werden keine Definitionsupdates beim Start initiiert, wenn kein Antischadsoftwaremodul vorhanden ist.</string>
-    <string id="SignatureUpdate_FallbackOrder">Definieren der Reihenfolge der Quellen für das Herunterladen von Definitionsupdates</string>
-    <string id="SignatureUpdate_FallbackOrder_Explain">Mit dieser Richtlinieneinstellung kann die Reihenfolge definiert werden, in der verschiedene Definitionsupdatequellen kontaktiert werden sollen. Der Wert dieser Einstellung sollte als durch senkrechte Striche getrennte Zeichenfolge eingegeben werden, in der die Definitionsupdatequellen der Reihenfolge nach aufgeführt werden. Mögliche Werte: "InternalDefinitionUpdateServer", "MicrosoftUpdateServer", "MMPC" und "FileShares"
+    Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, werden Updates der Sicherheitsinformationen beim Start initiiert, wenn kein Antischadsoftwaremodul vorhanden ist.
 
-Beispiel: { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
+    Wenn Sie diese Einstellung deaktivieren, werden keine Updates der Sicherheitsinformationen beim Start initiiert, wenn kein Antischadsoftwaremodul vorhanden ist.</string>
+    <string id="SignatureUpdate_FallbackOrder">Reihenfolge der Quellen für das Herunterladen von Updates der Sicherheitsinformationen festlegen</string>
+    <string id="SignatureUpdate_FallbackOrder_Explain">Mit dieser Richtlinieneinstellung kann die Reihenfolge definiert werden, in der verschiedene Quellen für Updates der Sicherheitsinformationen kontaktiert werden sollen. Der Wert dieser Einstellung sollte als durch senkrechte Striche getrennte Zeichenfolge eingegeben werden, in der die Quellen für Updates der Sicherheitsinformationen der Reihenfolge nach aufgeführt werden. Mögliche Werte: "InternalDefinitionUpdateServer", "MicrosoftUpdateServer", "MMPC" und "FileShares"
 
-Wenn diese Einstellung aktiviert wird, werden Definitionsupdatequellen in der angegebenen Reihenfolge kontaktiert. Sobald Definitionsupdates von einer angegebenen Quelle heruntergeladen wurden, werden verbleibende Quellen in der Liste nicht kontaktiert.
+    Beispiel: { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Definitionsupdatequellen in einer Standardreihenfolge kontaktiert.</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU">Zulassen von Definitionsupdates von Microsoft Update</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Mit dieser Richtlinieneinstellung kann der Download von Definitionsupdates von Microsoft Update zugelassen werden, auch wenn der Standardserver für automatische Updates für eine andere Downloadquelle wie Windows Update konfiguriert ist.
+    Wenn diese Einstellung aktiviert wird, werden Quellen für Updates der Sicherheitsinformationen in der angegebenen Reihenfolge kontaktiert. Sobald Updates der Sicherheitsinformationen von einer angegebenen Quelle heruntergeladen wurden, werden verbleibende Quellen in der Liste nicht kontaktiert.
 
-Wenn diese Einstellung aktiviert wird, werden Definitionsupdates von Microsoft Update heruntergeladen.
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Quellen für Updates der Sicherheitsinformationen in einer Standardreihenfolge kontaktiert.</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU">Updates der Sicherheitsinformationen von Microsoft Update zulassen</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Mit dieser Richtlinieneinstellung kann der Download von Updates der Sicherheitsinformationen von Microsoft Update zugelassen werden, auch wenn der Standardserver für automatische Updates für eine andere Downloadquelle wie Windows Update konfiguriert ist.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Definitionsupdates von der konfigurierten Downloadquelle heruntergeladen.</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery">Zulassen von Echtzeit-Definitionsupdates auf Basis von Berichten an Microsoft MAPS</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Mit dieser Richtlinieneinstellung können Echtzeit-Definitionsupdates als Reaktion auf an Microsoft MAPS gesendete Berichte aktiviert werden. Wenn der Dienst eine Datei als unbekannt meldet und Microsoft MAPS feststellt, dass das aktuelle Definitionsupdate Definitionen für eine Bedrohung besitzt, die diese Datei betrifft, erhält der Dienst umgehend alle aktuellen Definitionen für die Bedrohung. Der Computer muss für einen Beitritt zu Microsoft MAPS konfiguriert sein, damit diese Funktion verwendet werden kann.
+    Wenn diese Einstellung aktiviert wird, werden Updates der Sicherheitsinformationen von Microsoft Update heruntergeladen.
 
-Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, werden Echtzeit-Definitionsupdates aktiviert.
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Updates der Sicherheitsinformationen von der konfigurierten Downloadquelle heruntergeladen.</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery">Updates der Sicherheitsinformationen in Echtzeit auf Basis von Berichten an Microsoft MAPS zulassen</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Mit dieser Richtlinieneinstellung können Echtzeit-Updates der Sicherheitsinformationen als Reaktion auf an Microsoft MAPS gesendete Berichte aktiviert werden. Wenn der Dienst eine Datei als unbekannt meldet und Microsoft MAPS feststellt, dass das aktuelle Update der Sicherheitsinformationen Definitionen für eine Bedrohung besitzt, die diese Datei betrifft, erhält der Dienst umgehend alle aktuellen Sicherheitsinformationen für die Bedrohung. Der Computer muss für einen Beitritt zu Microsoft MAPS konfiguriert sein, damit diese Funktion verwendet werden kann.
 
-Wenn diese Einstellung deaktiviert wird, werden die Echtzeit-Definitionsupdates deaktiviert.</string>
-    <string id="SignatureUpdate_ScheduleDay">Angeben des Wochentages, an dem nach Definitionsupdates gesucht werden soll</string>
-    <string id="SignatureUpdate_ScheduleDay_Explain">Mit dieser Richtlinieneinstellung kann der Wochentag angegeben werden, an dem nach Definitionsupdates gesucht werden soll. Die Suche kann auch so konfiguriert werden, dass sie jeden Tag oder überhaupt nicht ausgeführt wird.
+    Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, werden Echtzeit-Updates der Sicherheitsinformationen aktiviert.
 
-Diese Einstellung kann mit den folgenden Ordnungszahlwerten konfiguriert werden:
-(0x0) Jeden Tag (Standard)
-(0x1) Sonntag 
-(0x2) Montag
-(0x3) Dienstag
-(0x4) Mittwoch
-(0x5) Donnerstag
-(0x6) Freitag
-(0x7) Samstag
-(0x8) Niemals
+    Wenn diese Einstellung deaktiviert wird, werden die Echtzeit-Updates der Sicherheitsinformationen deaktiviert.</string>
+    <string id="SignatureUpdate_ScheduleDay">Wochentag für die Suche nach Updates der Sicherheitsinformationen festlegen</string>
+    <string id="SignatureUpdate_ScheduleDay_Explain">Mit dieser Richtlinieneinstellung kann der Wochentag angegeben werden, an dem nach Updates der Sicherheitsinformationen gesucht werden soll. Die Suche kann auch so konfiguriert werden, dass sie jeden Tag oder überhaupt nicht ausgeführt wird.
 
-Wenn diese Einstellung aktiviert wird, wird die Suche nach Definitionsupdates mit der angegebenen Häufigkeit ausgeführt.
+    Diese Einstellung kann mit den folgenden Ordnungszahlwerten konfiguriert werden:
+    (0x0) Jeden Tag (Standard)
+    (0x1) Sonntag 
+    (0x2) Montag
+    (0x3) Dienstag
+    (0x4) Mittwoch
+    (0x5) Donnerstag
+    (0x6) Freitag
+    (0x7) Samstag
+    (0x8) Niemals
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird die Suche nach Definitionsupdates mit einer Standardhäufigkeit ausgeführt.</string>
+    Wenn diese Einstellung aktiviert wird, wird die Suche nach Updates der Sicherheitsinformationen mit der angegebenen Häufigkeit ausgeführt.
+
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird die Suche nach Updates der Sicherheitsinformationen mit einer Standardhäufigkeit ausgeführt.</string>
     <string id="SignatureUpdate_ScheduleDay_0">Niemals</string>
     <string id="SignatureUpdate_ScheduleDay_1">Jeden Tag</string>
     <string id="SignatureUpdate_ScheduleDay_2">Sonntag</string>
@@ -625,24 +633,24 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird die Suche 
     <string id="SignatureUpdate_ScheduleDay_6">Donnerstag</string>
     <string id="SignatureUpdate_ScheduleDay_7">Freitag</string>
     <string id="SignatureUpdate_ScheduleDay_8">Samstag</string>
-    <string id="SignatureUpdate_ScheduleTime">Angeben der Uhrzeit, zu der nach Definitionsupdates gesucht werden soll</string>
-    <string id="SignatureUpdate_ScheduleTime_Explain">Mit dieser Richtlinieneinstellung kann die Tageszeit angegeben werden, zu der nach Definitionsupdates gesucht werden soll. Der Zeitwert wird als die Anzahl der Minuten nach Mitternacht (00:00) dargestellt.  Zum Beispiel entspricht 120 (0x78) der Uhrzeit 02:00. Standardmäßig ist diese Einstellung so konfiguriert, dass 15 Minuten vor der geplanten Scanzeit nach Definitionsupdates gesucht wird. Der Zeitplan basiert auf der lokalen Zeit des Computers, auf dem die Suche ausgeführt wird.
+    <string id="SignatureUpdate_ScheduleTime">Zeitpunkt für die Suche nach Updates der Sicherheitsinformationen festlegen</string>
+    <string id="SignatureUpdate_ScheduleTime_Explain">Mit dieser Richtlinieneinstellung kann die Tageszeit angegeben werden, zu der nach Updates der Sicherheitsinformationen gesucht werden soll. Der Zeitwert wird als die Anzahl der Minuten nach Mitternacht (00:00) dargestellt.  Zum Beispiel entspricht 120 (0x78) der Uhrzeit 02:00. Standardmäßig ist diese Einstellung so konfiguriert, dass 15 Minuten vor der geplanten Scanzeit nach Updates der Sicherheitsinformationen gesucht wird. Der Zeitplan basiert auf der lokalen Zeit des Computers, auf dem die Suche ausgeführt wird.
 
-Wenn diese Einstellung aktiviert wird, wird die Suche nach Definitionsupdates zur angegebenen Uhrzeit ausgeführt.
+    Wenn diese Einstellung aktiviert wird, wird die Suche nach Updates der Sicherheitsinformationen zur angegebenen Uhrzeit ausgeführt.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird die Suche nach Definitionsupdates zur Standarduhrzeit ausgeführt.</string>
-    <string id="SignatureUpdate_SignatureDisableNotification">Gestatten von Benachrichtigungen zum Deaktivieren von auf Definitionen basierenden Berichten an Microsoft MAPS</string>
-    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Mit dieser Richtlinieneinstellung kann der AntiMalware-Dienst dafür konfiguriert werden, dass er Benachrichtigungen empfängt, um einzelne Definitionen als Reaktion auf Berichte zu deaktivieren, die vom Dienst an Microsoft MAPS gesendet werden. Microsoft MAPS verwendet diese Benachrichtigungen, um Definitionen zu deaktivieren, durch die falsch positive Berichte verursacht werden. Der Computer muss für einen Beitritt zu Microsoft MAPS konfiguriert sein, damit diese Funktion verwendet werden kann.
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird die Suche nach Updates der Sicherheitsinformationen zur Standarduhrzeit ausgeführt.</string>
+    <string id="SignatureUpdate_SignatureDisableNotification">Benachrichtigungen erlauben, Berichte an Microsoft MAPS zu deaktivieren, die auf Sicherheitsinformationen basieren</string>
+    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Mit dieser Richtlinieneinstellung kann der Antimalware-Dienst dafür konfiguriert werden, dass er Benachrichtigungen empfängt, um einzelne Sicherheitsinformationen als Reaktion auf Berichte zu deaktivieren, die vom Dienst an Microsoft MAPS gesendet werden. Microsoft MAPS verwendet diese Benachrichtigungen, um Sicherheitsinformationen zu deaktivieren, durch die falsch positive Berichte verursacht werden. Der Computer muss für einen Beitritt zu Microsoft MAPS konfiguriert sein, damit diese Funktion verwendet werden kann.
 
-Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, empfängt der AntiMalware-Dienst Benachrichtigungen für das Deaktivieren von Definitionen.
+    Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, empfängt der Antimalware-Dienst Benachrichtigungen für das Deaktivieren von Sicherheitsinformationen.
 
-Wenn Sie diese Einstellung deaktivieren, empfängt der AntiMalware-Dienst keine Benachrichtigungen für das Deaktivieren von Definitionen.</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Definieren der Anzahl der Tage, nach denen ein Nachholdefinitionsupdate erforderlich ist</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl von Tagen definiert werden, nach denen ein Nachholdefinitionsupdate erforderlich ist. Standardmäßig ist der Wert für diese Einstellung 1 Tag.
+    Wenn Sie diese Einstellung deaktivieren, empfängt der Antimalware-Dienst keine Benachrichtigungen für das Deaktivieren von Sicherheitsinformationen.</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Festlegen, nach welcher Anzahl von Tagen ein Update der Sicherheitsinformationen erforderlich ist</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl von Tagen definiert werden, nach denen ein Nachholdupdate der Sicherheitsinformationen erforderlich ist. Standardmäßig ist der Wert für diese Einstellung 1 Tag.
 
-Wenn diese Einstellung aktiviert wird, wird ein Nachholdefinitionsupdate nach der angegebenen Anzahl von Tagen ausgeführt.
+    Wenn diese Einstellung aktiviert wird, wird ein Nachholdupdate der Sicherheitsinformationen nach der angegebenen Anzahl von Tagen ausgeführt.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, ist nach der Standardanzahl von Tagen ein Nachholdefinitionsupdate erforderlich.</string>
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, ist nach der Standardanzahl von Tagen ein Nachholdupdate der Sicherheitsinformationen erforderlich.</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays">Intervall für die Ablaufbenachrichtigung angeben</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays_Explain">
     Mit dieser Richtlinieneinstellung können Sie ein Intervall (in Tagen) für die Ablaufbenachrichtigung angeben.
@@ -650,28 +658,27 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, ist nach der St
 
     Der Wert muss größer als 0 (null) sein, damit die Richtlinie wirksam wird.
     </string>
-    <string id="SignatureUpdate_SignatureUpdateInterval">Angeben des Intervalls, in dem nach Definitionsupdates gesucht werden soll</string>
-    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Mit dieser Richtlinieneinstellung kann ein Intervall angegeben werden, in dem nach Definitionsupdates gesucht werden soll. Der Zeitwert wird als Anzahl der Stunden zwischen Updateüberprüfungen dargestellt. Gültige Werte reichen von 1 (jede Stunde) bis 24 (einmal pro Tag).
+    <string id="SignatureUpdate_SignatureUpdateInterval">Intervall für die Suche nach Updates der Sicherheitsinformationen festlegen</string>
+    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Mit dieser Richtlinieneinstellung kann ein Intervall angegeben werden, in dem nach Updates der Sicherheitsinformationen gesucht werden soll. Der Zeitwert wird als Anzahl der Stunden zwischen Updateüberprüfungen dargestellt. Gültige Werte reichen von 1 (jede Stunde) bis 24 (einmal pro Tag).
 
-Wenn diese Einstellung aktiviert wird, werden Suchvorgänge nach Definitionsupdates im angegebenen Intervall ausgeführt.
+    Wenn diese Einstellung aktiviert wird, werden Suchvorgänge nach Updates der Sicherheitsinformationen im angegebenen Intervall ausgeführt.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden die Suchvorgänge nach Definitionsupdates im Standardintervall ausgeführt.</string>
-    <string id="SignatureUpdate_UpdateOnStartup">Überprüfung auf die aktuellen Viren- und Spywaredefinitionen beim Start</string>
-    <string id="SignatureUpdate_UpdateOnStartup_Explain">Mit dieser Richtlinieneinstellung wird gesteuert, ob unmittelbar nach dem Start des Diensts nach neuen Viren- und Spywaredefinitionen gesucht werden soll.
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden die Suchvorgänge nach Updates der Sicherheitsinformationen im Standardintervall ausgeführt.</string>
+    <string id="SignatureUpdate_UpdateOnStartup">Suchen nach aktuellen Viren- und Spyware-Sicherheitsinformationen beim Start</string>
+    <string id="SignatureUpdate_UpdateOnStartup_Explain">Mit dieser Richtlinieneinstellung wird gesteuert, ob unmittelbar nach dem Start des Diensts nach neuen Viren- und Spyware-Sicherheitsinformationen gesucht werden soll.
 
-Wenn diese Einstellung aktiviert wird, wird nach dem Start des Diensts nach neuen Definitionen gesucht.
+    Wenn diese Einstellung aktiviert wird, wird nach dem Start des Diensts nach neuen Sicherheitsinformationen gesucht.
 
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird nach dem Start des Diensts keine Suche nach neuen Definitionen ausgeführt.</string>
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird nach dem Start des Diensts keine Suche nach neuen Sicherheitsinformationen ausgeführt.</string>
     <string id="DisableBlockAtFirstSeen">Feature "Bei erster Anzeige blockieren" konfigurieren</string>
     <string id="DisableBlockAtFirstSeen_Explain">Dieses Feature stellt sicher, dass das Gerät mithilfe von Microsoft Active Protection Service (MAPS) eine Echtzeitüberprüfung ausführt, bevor bestimmte Inhalte ausgeführt bzw. abgerufen werden dürfen. Wenn dieses Feature deaktiviert ist, findet keine Überprüfung statt, wodurch der Schutzstatus des Geräts gemindert wird.
-	Aktiviert – Die Einstellung "Bei erster Anzeige blockieren" ist aktiviert.
-	Deaktiviert – Die Einstellung "Bei erster Anzeige blockieren" ist deaktiviert.
-	
-	Für dieses Feature müssen die folgenden Gruppenrichtlinieneinstellungen wie hier angegeben festgelegt werden:
-	MAPS -&gt; Das Feature "Bei erster Anzeige blockieren" funktioniert nur, wenn "Beitritt zu Microsoft MAPS" aktiviert ist.
-	MAPS -&gt; "Dateibeispiele senden, wenn eine weitere Analyse erforderlich ist" sollte auf 1 (Sichere Beispiele senden) oder 3 (Alle Beispiele senden) festgelegt werden. Durch die Einstellung 0 (Immer auffordern) wird der Schutzstatus des Geräts gemindert. Bei Verwendung der Einstellung 2 (Nie senden) funktioniert das Feature "Bei erster Anzeige blockieren" nicht.
-	Echtzeitschutz -&gt; Die Richtlinie "Alle heruntergeladenen Dateien und Anlagen überprüfen" muss aktiviert sein, damit das Feature "Bei erster Anzeige blockieren" funktioniert.
-	Echtzeitschutz -&gt; Die Richtlinie "Deaktivieren von Echtzeitschutz" darf nicht aktiviert werden, da das Feature "Bei erster Anzeige blockieren" andernfalls nicht funktioniert.</string>
+    Aktiviert – Die Einstellung "Bei erster Anzeige blockieren" ist aktiviert.
+    Deaktiviert – Die Einstellung "Bei erster Anzeige blockieren" ist deaktiviert.
+    
+    Für dieses Feature müssen die folgenden Gruppenrichtlinieneinstellungen wie hier angegeben festgelegt werden:
+    MAPS -&gt; Das Feature "Bei erster Anzeige blockieren" funktioniert nur, wenn "Beitritt zu Microsoft MAPS" aktiviert ist.
+    MAPS -&gt; "Dateibeispiele senden, wenn eine weitere Analyse erforderlich ist" sollte auf 1 (Sichere Beispiele senden) oder 3 (Alle Beispiele senden) festgelegt werden. Durch die Einstellung 0 (Immer auffordern) wird der Schutzstatus des Geräts gemindert. Bei Verwendung der Einstellung 2 (Nie senden) funktioniert das Feature "Bei erster Anzeige blockieren" nicht.
+    Echtzeitschutz -&gt; Die Richtlinie "Alle heruntergeladenen Dateien und Anlagen überprüfen" muss aktiviert sein, damit das Feature "Bei erster Anzeige blockieren" funktioniert.	Echtzeitschutz -&gt; Die Richtlinie "Deaktivieren von Echtzeitschutz" darf nicht aktiviert werden, da das Feature "Bei erster Anzeige blockieren" andernfalls nicht funktioniert.</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting">Konfigurieren der Außerkraftsetzung von lokalen Einstellungen für Berichte an Microsoft MAPS</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting_Explain">Mit dieser Richtlinieneinstellung wird eine lokale Außerkraftsetzung für die Konfiguration des Beitritts zu Microsoft MAPS konfiguriert. Diese Einstellung kann nur mithilfe der Gruppenrichtlinie festgelegt werden.
 
@@ -697,9 +704,9 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, besitzt die Gru
     <string id="SpynetReporting">Beitritt zu Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Diese Richtlinieneinstellung ermöglicht den Beitritt zu Microsoft MAPS. Microsoft MAPS ist die Onlinecommunity, die Ihnen bei der Entscheidung hilft, wie Sie auf mögliche Bedrohungen reagieren. Die Community hilft auch dabei, die Verbreitung neuer Infektionen durch Schadsoftware zu verhindern.
 
-   Sie können entscheiden, ob Sie allgemeine oder zusätzliche Informationen zu erkannter Software senden. Zusätzliche Informationen helfen Microsoft bei der Erstellung neuer Definitionen und beim Schutz Ihres Computers. Diese Informationen können z. B. angeben, wo schädliche Elemente auf dem Computer erkannt wurden, falls Schadsoftware entfernt wurde. Die Informationen werden automatisch erfasst und gesendet. In einigen Fällen können unbeabsichtigt personenbezogene Informationen an Microsoft gesendet werden. Microsoft wird diese Informationen jedoch nicht dazu verwenden, Sie zu identifizieren oder zu kontaktieren.
+    Sie können entscheiden, ob Sie allgemeine oder zusätzliche Informationen zu erkannter Software senden. Zusätzliche Informationen helfen Microsoft bei der Erstellung neuer Sicherheitsinformationen und beim Schutz Ihres Computers. Diese Informationen können z. B. angeben, wo schädliche Elemente auf dem Computer erkannt wurden, falls Schadsoftware entfernt wurde. Die Informationen werden automatisch erfasst und gesendet. In einigen Fällen können unbeabsichtigt personenbezogene Informationen an Microsoft gesendet werden. Microsoft wird diese Informationen jedoch nicht dazu verwenden, Sie zu identifizieren oder zu kontaktieren.
 
-    Mögliche Optionen:
+    Optionen:
     (0x0) Deaktiviert (Standard)
     (0x1) Einfache Mitgliedschaft
     (0x2) Erweiterte Mitgliedschaft
@@ -711,7 +718,7 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, besitzt die Gru
     Wenn Sie diese Einstellung aktivieren, treten Sie Microsoft MAPS mit der angegebenen Mitgliedschaft bei.
 
     Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, erfolgt kein Beitritt zu Microsoft MAPS.
-  
+
     Da in Windows 10 keine einfache Mitgliedschaft mehr angeboten wird, wird das Gerät als erweitertes Mitglied registriert, wenn Sie den Wert auf 1 oder 2 festlegen.</string>
     <string id="SpynetReporting_Disabled">Deaktiviert</string>
     <string id="SpynetReporting_Basic">MAPS (Basis)</string>
@@ -1048,32 +1055,37 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird kein zus�
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Angeben der Tageszeit zur Ausführung eines geplanten Scans</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definieren der Anzahl der Tage, bevor Spywaredefinitionen als veraltet eingestuft werden</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Festlegen, nach welcher Anzahl von Tagen Spyware-Sicherheitsinformationen als veraltet gelten</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definieren der Anzahl der Tage, bevor Virendefinitionen als veraltet eingestuft werden</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Festlegen, nach welcher Anzahl von Tagen Virus-Sicherheitsinformationen als veraltet gelten</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
-        <label>Definieren der Dateifreigaben für das Herunterladen von Definitionsupdates</label>
+        <label>Dateifreigaben für das Herunterladen von Updates der Sicherheitsinformationen festlegen</label>
+    </textBox>
+    </presentation>
+    <presentation id="SignatureUpdate_SharedSignaturesLocation">
+    <textBox refId="SignatureUpdate_SharedSignaturesLocation">
+        <label>Eine Dateifreigabe für das Herunterladen von Updates der Sicherheitsinformationen in virtuellen Umgebungen festlegen</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_FallbackOrder">
     <textBox refId="SignatureUpdate_FallbackOrder">
-        <label>Definieren der Reihenfolge der Quellen für das Herunterladen von Definitionsupdates</label>
+        <label>Reihenfolge der Quellen für das Herunterladen von Updates der Sicherheitsinformationen festlegen</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleDay">
-    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Angeben des Wochentages, an dem nach Definitionsupdates gesucht werden soll</dropdownList>
+    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Wochentag für die Suche nach Updates der Sicherheitsinformationen festlegen</dropdownList>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleTime">
-    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Angeben der Uhrzeit, zu der nach Definitionsupdates gesucht werden soll</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Zeitpunkt für die Suche nach Updates der Sicherheitsinformationen festlegen</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateCatchupInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Definieren der Anzahl der Tage, nach denen ein Nachholdefinitionsupdate erforderlich ist</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Festlegen, nach welcher Anzahl von Tagen ein Update der Sicherheitsinformationen erforderlich ist</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Angeben des Intervalls, in dem nach Definitionsupdates gesucht werden soll</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Intervall für die Suche nach Updates der Sicherheitsinformationen festlegen</decimalTextBox>
     </presentation>
     <presentation id="SpynetReporting">
     <dropdownList refId="SpynetReporting" noSort="true" defaultItem="0">Beitritt zu Microsoft MAPS</dropdownList>

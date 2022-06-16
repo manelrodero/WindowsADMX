@@ -419,21 +419,24 @@ Jeżeli to ustawienie zasad zostanie włączone, te powiadomienia nie będą wy�
 
 Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, te powiadomienia będą wyświetlane na serwerze hosta sesji pulpitu zdalnego po zalogowaniu się administratora lokalnego.</string>
       <string id="TS_LICENSING_MODE">Ustaw tryb licencjonowania usług pulpitu zdalnego</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">To ustawienie zasad umożliwia określenie typu licencji CAL usług pulpitu zdalnego potrzebnej do nawiązania połączenia z tym serwerem hosta sesji usług pulpitu zdalnego.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        To ustawienie zasad umożliwia określenie typu licencji dostępu klienta usług pulpitu zdalnego (RDS CAL) potrzebnej do nawiązania połączenia z tym serwerem hosta sesji usług pulpitu zdalnego.
 
-Za pomocą tego ustawienia zasad można wybrać jeden z dwóch trybów licencjonowania: Na użytkownika lub Na urządzenie.
+        Za pomocą tego ustawienia zasad możesz wybrać jeden z trzech trybów licencjonowania: Na użytkownika, Na urządzenie i Usługa AAD na użytkownika.
 
-W trybie licencjonowania Na użytkownika dla każdego konta użytkownika łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana licencja CAL usług pulpitu zdalnego na użytkownika.
+        W trybie licencjonowania Na użytkownika dla każdego konta użytkownika łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana licencja RDS CAL na użytkownika wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
 
-W trybie licencjonowania Na urządzenie dla każdego urządzenia łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana licencja CAL usług pulpitu zdalnego na urządzenie.
+        W trybie licencjonowania Na urządzenie dla każdego urządzenia łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana licencja RDS CAL na urządzenie wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
 
-Jeżeli to ustawienie zasad zostanie włączone, określony tryb licencjonowania usług pulpitu zdalnego będzie uznawany przez serwer licencji usług pulpitu zdalnego.
+        W trybie licencjonowania Usługa AAD na użytkownika dla każdego konta użytkownika łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagany plan usług obsługujący licencje usług pulpitu zdalnego, który został przypisany w usłudze AAD.
+        
+        Jeśli włączysz to ustawienie zasad, określony tryb licencjonowania usług pulpitu zdalnego będzie uznawany przez serwer licencji usług pulpitu zdalnego i hosta sesji usług pulpitu zdalnego.
 
-Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, tryb licencjonowania nie będzie określony na poziomie zasad grupy.
-
-</string>
+        Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, tryb licencjonowania nie będzie określany na poziomie zasad grupy.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Na urządzenie</string>
       <string id="TS_LICENSING_MODE_PER_USER">Na użytkownika</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Usługa AAD na użytkownika</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">To ustawienie zasad określa, czy uniemożliwiać przekierowywanie danych do portów LPT klienta w czasie sesji usług pulpitu zdalnego.
 
 Za pomocą tego ustawienia można uniemożliwić użytkownikom mapowanie lokalnych portów LPT i przekierowywanie danych z komputera zdalnego do urządzeń peryferyjnych podłączonych do lokalnych portów LPT. Domyślnie w usługach pulpitu zdalnego jest możliwe przekierowywanie portów LPT.
@@ -1015,6 +1018,37 @@ Jeśli to ustawienie zasad zostanie wyłączone, w programach RemoteApp opubliko
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Użyj sterownika karty graficznej WDDM dla połączeń usług pulpitu zdalnego</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">To ustawienie zasad umożliwia włączenie obsługi sterownika wyświetlania grafiki WDDM dla połączeń usług pulpitu zdalnego.
+
+Jeśli włączysz to ustawienie zasad, w połączeniach usług pulpitu zdalnego będzie używany sterownik wyświetlania grafiki WDDM.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, w połączeniach usług pulpitu zdalnego NIE będzie używany sterownik wyświetlania grafiki WDDM. W takim przypadku w połączeniach usług pulpitu zdalnego będzie używany sterownik wyświetlania grafiki XDDM.
+
+Aby ta zmiana zaczęła obowiązywać, musisz uruchomić ponownie system Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">To ustawienie zasad umożliwia włączenie obsługi sterownika wyświetlania grafiki WDDM dla połączeń usług pulpitu zdalnego.
+
+Jeśli włączysz to ustawienie zasad albo go nie skonfigurujesz, w połączeniach usług pulpitu zdalnego będzie używany sterownik wyświetlania grafiki WDDM.
+
+Jeśli wyłączysz to ustawienie zasad, w połączeniach usług pulpitu zdalnego NIE będzie używany sterownik wyświetlania grafiki WDDM. W takim przypadku w połączeniach usług pulpitu zdalnego będzie używany sterownik wyświetlania grafiki XDDM.
+
+Aby ta zmiana zaczęła obowiązywać, musisz uruchomić ponownie system Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">To ustawienie zasad umożliwia włączenie obsługi sterownika wyświetlania grafiki WDDM dla połączeń usług pulpitu zdalnego.
+
+Jeśli włączysz to ustawienie zasad, w połączeniach usług pulpitu zdalnego będzie używany sterownik wyświetlania grafiki WDDM.
+
+Jeśli wyłączysz to ustawienie zasad, w połączeniach usług pulpitu zdalnego NIE będzie używany sterownik wyświetlania grafiki WDDM. W takim przypadku w połączeniach usług pulpitu zdalnego będzie używany sterownik wyświetlania grafiki XDDM.
+
+Jeśli nie skonfigurujesz tego ustawienia zasad, w połączeniach usług pulpitu zdalnego na serwerze hosta sesji usług pulpitu zdalnego NIE będzie używany sterownik wyświetlania grafiki WDDM. We wszystkich innych przypadkach w połączeniach usług pulpitu zdalnego będzie używany sterownik wyświetlania grafiki WDDM.
+
+Aby ta zmiana zaczęła obowiązywać, musisz uruchomić ponownie system Windows.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

@@ -64,29 +64,25 @@ Windows 8 および Windows RT では、このポリシーが有効な場合、�
 
         2 = 更新プログラムをダウンロードする前、およびインストールする前に通知する。
 
-        このコンピューターに適用する更新プログラムが見つかると、ユーザーには、ダウンロードできる更新プログラムがあることが通知されます。Windows Update にアクセスすると、使用可能なすべての更新プログラムをダウンロードしてインストールできます。
+        このコンピューターに適用する更新プログラムが見つかると、ダウンロードできる更新プログラムがあることがユーザーに通知されます。ユーザーは Windows Update にアクセスし、使用可能なすべての更新プログラムをダウンロードしてインストールできます。
 
         3 = (既定の設定) 更新プログラムを自動的にダウンロードし、インストールの準備ができたら通知する。
 
-        コンピューターに適用できる更新プログラムが見つかると、これらの更新プログラムがバックグラウンドでダウンロードされます (ユーザーには通知されず、作業も中断されません)。ダウンロードが完了すると、ユーザーには、更新プログラムをインストールする準備ができたことが通知されます。Windows Update にアクセスすると、それらの更新プログラムをインストールできます。
+        Windows がコンピューターに適用する更新プログラムを見つけてバックグラウンドでダウンロードする (ユーザーには通知しません。この処理中ユーザーの作業は中断されません)。ダウンロードが完了したら、インストールする準備ができたことをユーザーに通知します。ユーザーは Windows Update にアクセスして更新プログラムをインストールできます。
 
         4 = 更新プログラムを自動的にダウンロードし、以下に指定されたスケジュールでインストールする。
 
-        インストールを実行する時間として [自動] を選択すると、更新プログラムの確認、ダウンロード、インストールが Windows によって自動的に実行されます。グループ ポリシーで構成されていない場合は、Windows の既定の設定に従ってデバイスが再起動されます (Windows 10 バージョン 1809 以上に適用)。
+        インストールを実行する時間として [自動] を選択すると、更新プログラムの確認、ダウンロード、インストールが Windows によって自動的に実行されます。グループ ポリシーで構成されている場合を除き、Windows の既定の設定に従ってデバイスが再起動されます (Windows 10 バージョン 1809 以上に適用)。
 
-        グループ ポリシー設定のオプションを使用してスケジュールを指定します。スケジュールが指定されていない場合は、どのインストールにも既定値 (毎日、午前 3 時) が使用されます。インストールを完了するためにコンピューターの再起動が必要な更新プログラムがある場合、コンピューターは自動的に再起動されます (Windows の再起動が準備できた時点でユーザーがコンピューターにサインインしている場合は、ユーザーに通知が表示され、後で再起動するオプションが表示されます)。
+        グループ ポリシー設定のオプションを使用してスケジュールを指定します。バージョン 1709 およびそれ以降では、更新を毎週、隔週、または毎月行うように制限する追加の選択項目があります。スケジュールが指定されていない場合は、すべてのインストールに使用される既定のスケジュールは、毎日 3:00 AM です。更新プログラムのインストールを完了するために再起動が必要な場合、コンピューターは自動的に再起動されます (Windows の再起動が準備できた時点でユーザーがコンピューターにサインインしている場合は、ユーザーに通知が表示され、再起動を延期するオプションが表示されます)。
 
-        Windows 8 以降では、特定のスケジュールではなく自動メンテナンス時にインストールするように更新プログラムを設定できます。自動メンテナンスにより、更新プログラムは、コンピューターを使用していないときにインストールされます。また、コンピューターがバッテリで動作している場合はインストールされません。自動メンテナンスで更新プログラムを 2 日間インストールできない場合は、Windows Update によってすぐに更新プログラムがインストールされます。その後、もうすぐ再起動されることがユーザーに通知されます。この再起動は、誤ってデータが失われる可能性がない場合にのみ実行されます。
+        Windows 8 以降では、特定のスケジュールではなく自動メンテナンス時にインストールするように更新プログラムを設定できます。自動メンテナンスでは、更新プログラムはコンピューターを使用していないときにインストールされます。また、コンピューターがバッテリで動作している場合はインストールされません。自動メンテナンスで更新プログラムをインストールできない状態が 2 日間続くと、Windows Update にｙとってすぐに更新プログラムがインストールされます。その後、もうすぐ再起動されることがユーザーに通知されます。この再起動は、誤ってデータが失われる可能性がない場合にのみ実行されます。その後、もうすぐ再起動されることがユーザーに通知されます。この再起動は、誤ってデータが失われる可能性がない場合にのみ実行されます。
 
-        [コンピューターの構成] &gt; [管理用テンプレート] &gt; [Windows コンポーネント] &gt; [メンテナンス スケジューラ] でグループ ポリシー設定を使用することで、自動メンテナンスをさらに構成できます。
+        5 = ローカルの管理者が構成モードを選択し、自動更新による更新の通知とインストールを実行できるようにする (このオプションは、Windows 10 バージョンではサポートされていません)。
 
-        5 = ローカルの管理者が構成モードを選択し、自動更新による更新の通知とインストールを実行できるようにする。
+        このオプションを使用すると、ローカルの管理者は Windows Update コントロール パネルを使用して任意の構成オプションを選択できます。ローカルの管理者が自動更新の構成を無効にすることはできません。
 
-        注意! このオプションは、Windows 10 ではサポートされていません。
-
-        このオプションを使用すると、ローカルの管理者は Windows Update コントロール パネルを使用して構成オプションを選択できます。ローカルの管理者が自動更新の構成を無効にすることはできません。
-
-このポリシーの状態が無効に設定されている場合は、Windows Update に利用できる更新プログラムがあれば、手動でダウンロードしてインストールする必要があります。これを行うには、スタート画面を使用して「Windows Update」を検索します。
+このポリシーの状態が無効に設定されている場合、Windows Update に利用できる更新プログラムがあるときは、手動でダウンロードしてインストールする必要があります。。これを行うには、スタート画面を使用して「Windows Update」を検索します。
 
 状態が未構成に設定されている場合は、自動更新の使用はグループ ポリシー レベルでは指定されません。ただし、管理者はコントロール パネルを使用して自動更新を構成できます。</string>
 
@@ -321,50 +317,49 @@ Windows Update は、更新を自動的にインストールするように構�
       <string id="PreviewBuildFastFeatureUpdates">プレビュー ビルド - ファスト</string>
       <string id="PreviewBuildSlowFeatureUpdates">プレビュー ビルド - スロー</string>
       <string id="ReleasePreviewBranchFeatureUpdates">リリース プレビュー</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">半期チャネル (対象指定)</string>
       <string id="SemiAnnualChannelFeatureUpdates">半期チャネル</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">1809 またはそれ以前の半期チャネル (非推奨)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">1809 またはそれ以前の半期チャネル (対象指定) (非推奨)</string>
       <string id="DeferFeatureUpdates_Title">プレビュー ビルドや機能更新プログラムをいつ受信するかを選択してください</string>
       <string id="DeferFeatureUpdates_Help">このポリシーを有効にすると、どのレベルのプレビュー ビルドまたは機能更新プログラムをいつ受け取るかを指定できます。
 
 * プレビュー ビルド - ファスト: このレベルに設定したデバイスは、一般公開前の機能を含む Windows の新しいビルドを最初に受け取ります。問題を見つけて Microsoft に報告し、新機能についての提案を送るには、[ファスト] を選択してプレビューに参加します。
 * プレビュー ビルド - スロー: このレベルに設定したデバイスは、一般公開前の機能を含む Windows の新しいビルドを受け取りますが、[ファスト] に設定したデバイスよりも受信の頻度が少なくなります。受け取るビルドには、それ以前のビルドで見つかった変更や修正が組み込まれます。
 * リリース プレビュー: Microsoft が一般公開する Windows のビルドを一般公開の直前に受け取ります。
-* 半期チャネル (対象指定): 機能更新プログラムを、一般公開されたときに受け取ります。
-* 半期チャネル: 機能更新プログラムが半期チャネルと宣言された時点で配信されます。通常は半期チャネル (対象指定) の 4 か月後になります。半期チャネルは、Microsoft、独立系ソフトウェア ベンダー (ISV)、パートナー、ユーザーによってリリースが広範囲に展開できると判断されたことを意味します。
+* 半期チャネル: 機能更新プログラムを、一般公開されたときに受け取ります。
+
+以下に示す Windows 更新準備レベルは非推奨となっており、1809 またはそれ以前のプレビューのみに適用されます。
+* 1809 またはそれ以前の半期チャネル (対象指定): 機能更新プログラムがリリースされました。
+* 1809 またはそれ以前の半期チャネル: 機能更新プログラムに半期チャネルが宣言されています。これは、リリースが広範囲に展開できると判断されたことを意味します。
+半期チャネル (対象指定) と半期チャネルのリリース日については、リリース情報のページ (http://aka.ms/ReleaseInformationPage) をご確認ください。
 
 プレビュー ビルドを選択する場合:
-    - プレビュー ビルドの受信を最大 14 日間延長できます。
+    - プレビュー ビルドの受信を最大 14 日間延期できます。
     - スケジュールした時刻になってもプレビュー ビルドが受信されないようにする場合は、プレビュー ビルドを一時的に停止できます。一時停止は、指定した開始日から 35 日間有効です。
-    - 一時停止している機能更新プログラムの受信を再開するには、開始日フィールドをクリアします。
+    - 一時停止した機能更新プログラムの受信を再開するには、開始日フィールドをクリアします。
 
 プレビュー ビルドに登録するには、利用統計情報レベルの設定が 2 以上になっていること、insider.windows.com でドメインを登録済みであることが必要です。プレビュー ビルドの詳細については、次の情報を参照してください: https://aka.ms/wipforbiz
 
-半期チャネル (対象指定) または半期チャネルを選択する場合:
-    - 機能更新プログラムの受信を最大 365 日間延長できます。
-    - スケジュールした時刻になっても機能更新プログラムが受信されないようにする場合は、機能更新プログラムを一時的に停止できます。一時停止は、指定した開始日から 35 日間有効です。
-    - 一時停止している機能更新プログラムの受信を再開するには、開始日フィールドをクリアします。
-
-機能更新プログラムを構成するには、利用統計情報レベルの設定が 1 以上になっている必要があります。
+半期チャネルを選択する場合:
+    - 機能更新プログラムの受信を最大 365 日延期できます。
+    - スケジュールした時刻になっても機能更新プログラムを受信しないようにするには、機能更新プログラムを一時的に停止できます。一時停止は、指定した開始日から 35 日間有効です。
+    - 一時停止した機能更新プログラムの受信を再開するには、開始日フィールドをクリアします。
 
 このポリシーを無効にした場合、または構成しなかった場合は、Windows Update の動作は変更されません。</string>
       <string id="DeferQualityUpdates_Title">品質更新プログラムをいつ受信するかを選択してください</string>
-      <string id="DeferQualityUpdates_Help">品質更新プログラムを受信するときを指定するには、このポリシーを有効にします。
+      <string id="DeferQualityUpdates_Help">品質更新プログラムを受信するタイミングを指定するには、このポリシーを有効にします。
 
 品質更新プログラムの受信を最大 30 日間延期することができます。
 
-品質更新プログラムをスケジュールされた日時に受信しないようにするには、品質更新プログラムを一時停止できます。一時停止の有効期間は、35 日または開始日フィールドを消去するまでです。
+スケジュールされた時刻になっても品質更新プログラムを受信しないようにするには、品質更新プログラムを一時的に一時停止できます。一時停止は、35 日間または開始日フィールドをクリアするまで有効です。
 
 一時停止している品質更新プログラムの受信を再開するには、開始日フィールドをクリアします。
 
-このポリシーを無効にした場合、または構成しなかった場合は、Windows Update の動作は変更されません。
-
-注意: "利用統計情報の許可" ポリシーが 0 に設定されていると、このポリシーは何も行いません。</string>
+このポリシーを無効にした場合、または構成しなかった場合は、Windows Update の動作は変更されません。</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Windows Update からドライバーを除外する</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Windows 品質更新プログラムからドライバーを除外するには、このポリシーを有効にします。
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Windows 品質更新プログラムにドライバーを含めないようにするには、このポリシーを有効にします。
 
-このポリシーを無効にした場合、または構成しなかった場合は、分類がドライバーの更新プログラムが Windows Update に含まれます。
-
-注: Windows 10 Version 1607 または Windows Server 2016 を実行しているデバイスでは、このポリシーは製品利用統計情報を有効にした場合 (つまり、"利用統計情報の許可" ポリシーが 0 でない) にのみ有効になります。Windows 10 Version 1703 (またはそれ以降) または Windows Server Version 1709 (またはそれ以降) を実行しているデバイスでは、このポリシーを有効にするために製品利用統計情報を有効にする必要はありません。</string>
+このポリシーを無効にした場合、または構成しなかった場合は、Windows Update にドライバー分類の更新プログラムが含まれます。</string>
       <string id="ActiveHours_Title">アクティブ時間内の更新プログラムの自動再起動をオフにします</string>
       <string id="ActiveHours_Help">このポリシーを有効にした場合、アクティブ時間内の更新後に PC の自動再起動を行いません。アクティブ時間外に PC の再起動を試みます。
 
@@ -586,17 +581,63 @@ Windows Update は、更新を自動的にインストールするように構�
 注: このポリシーが適用されるのは、このコンピューターに指定されているイントラネットの Microsoft 更新サービスが、クライアント側のターゲット設定をサポートするように構成されている場合のみです。"イントラネットの Microsoft 更新サービスの場所を指定する" ポリシーが無効になっているか、未構成の場合、このポリシーは無効です。
       </string>
       <string id="UpdateNotificationLevel_Title">更新通知の表示オプション</string>
-      <string id="UpdateNotificationLevel_Help">0 (既定) – 既定の Windows Update 通知を使用する
-1 – 再起動警告を除くすべての通知をオフにする
-2 – 再起動警告を含むすべての通知をオフにする
+      <string id="UpdateNotificationLevel_Help">0 (既定値) – 既定の Windows Update 通知を使用する
+1 - 再起動の警告を除くすべての通知をオフにする
+2 - 再起動の警告を含むすべての通知をオフにする
 
-このポリシーを使用すると、ユーザーに表示される Windows Update 通知を定義できます。このポリシーでは、更新プログラムのダウンロードとインストールの方法や時期は制御しません。
+このポリシーを使用すると、ユーザーに表示される Windows Update 通知を定義できます。このポリシーでは、更新プログラムをダウンロードしてインストールする方法やタイミングは制御しません。
 
-重要! 更新通知を受け取らないことを選択し、デバイスが更新プログラムを自動的に取得しないように [自動更新を構成する] ポリシーを定義した場合、お客様とデバイスのユーザーが重大なセキュリティ、品質、機能更新プログラムを把握できなくなり、デバイスが危険にさらされるおそれがあります。
+重要: 更新の通知を受け取らないことを選択し、デバイスが更新プログラムを自動的に取得しないように他のグループ ポリシーを定義した場合、管理者とデバイスのユーザーが重大なセキュリティ、品質、機能更新プログラムを把握できなくなり、デバイスが危険にさらされるおそれがあります。
       </string>
       <string id="DefaultNotification">0 (既定) – 既定の OS の Windows Update 通知</string>
       <string id="ExcludingRebootWarnings">1 – 再起動警告を除くすべての通知を無効にする</string>
       <string id="IncludingRebootWarnings">2 – 再起動警告を含むすべての通知を無効にする</string>
+      <string id="ComplianceDeadline_Title">自動更新と再起動の期限を指定する</string>
+      <string id="ComplianceDeadline_Help">このポリシーを使用すると、品質更新プログラムおよび機能更新プログラムが自動的にインストールされるまでの日数と、必要な再起動が自動的に実行されるまでの猶予期間を指定できます。更新と再起動はアクティブ時間に関係なく行われます。ユーザーがスケジュールを変更することはできません。
+
+機能更新プログラムと品質更新プログラムの期限は最大 30 日です。自動再起動の猶予期間は、0 日から 7 日です。
+
+自動再起動の猶予期間が終了するまで、自動再起動を無効にすることもできます。
+
+このポリシーを無効にした場合、または構成しなかった場合、デバイスは更新プログラムを取得し、既定のスケジュールに従って再起動します。
+
+このポリシーによって、次のポリシーがオーバーライドされます。
+1.  更新プログラムをインストールするための自動再起動の期限を指定する
+2.  更新プログラムのための再起動猶予期間を移行および通知するスケジュールを指定する
+3.  スケジュールされた時刻に常に自動的に再起動する
+4.  スケジュールされた自動更新のインストールで、ログオンしているユーザーがいる場合には自動的に再起動しない
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -727,6 +768,16 @@ Windows Update は、更新を自動的にインストールするように構�
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">更新通知の表示オプションを指定:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>アクティブ時間に関係なく、スケジュールを変更できない更新を自動的に実行するまでの日数 (最大 30 日) を指定します。</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">品質更新プログラム (日数):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">機能更新プログラム (日数):</dropdownList>
+        <text></text>
+        <text>再起動が必要になってからデバイスが自動的に再起動されるまでの、自動再起動の猶予期間 (0 日から 7 日) を指定します。デバイスはアクティブ時間に関係なく再起動されます。スケジュールを変更することはできません。</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">猶予期間 (日数)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">猶予期間が終了するまで自動的に再起動しない</checkBox>
       </presentation>
     </presentationTable>
   </resources>

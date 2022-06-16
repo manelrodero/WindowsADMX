@@ -72,21 +72,17 @@ Met deze beleidsinstelling kunt u bepalen of het gebruik van automatische update
 
         4 = Updates automatisch downloaden en installeren volgens de opgegeven planning.
 
-        Wanneer 'Automatisch' wordt geselecteerd voor de geplande installatietijd, controleert, downloadt en installeert Windows updates automatisch. Het apparaat wordt opnieuw opgestart volgens de standaardinstellingen van Windows tenzij het volgens groepsbeleid is geconfigureerd. (Van toepassing op Windows 10, versie 1809 en hoger)
+        Wanneer 'Automatisch' wordt geselecteerd voor de geplande installatietijd, controleert, downloadt en installeert Windows updates automatisch. Het apparaat wordt opnieuw opgestart volgens de standaardinstellingen van Windows, tenzij het volgens groepsbeleid is geconfigureerd. (Van toepassing op Windows 10, versie 1809 en hoger)
 
-        Geef de gewenste planning op met behulp van de opties in de groepsbeleidsinstelling. Als er geen planning is opgegeven, wordt de standaardplanning voor alle installaties gebruikt (elke nacht om 3:00 uur). Als een update vereist dat de computer opnieuw wordt opgestart, gebeurt dit automatisch. (Als een gebruiker is aangemeld op de computer wanneer deze opnieuw moet worden opgestart, wordt de gebruiker hiervan op de hoogte gesteld en kan deze het opstarten uitstellen.)
+        Geef de gewenste planning op met behulp van de opties in de groepsbeleidsinstelling. Voor versie 1709 en hoger kunnen de updates worden beperkt tot wekelijks, tweewekelijks of maandelijks. Als er geen planning is opgegeven, wordt de standaardplanning voor alle installaties gebruikt (elke nacht om 3:00 uur). Als een update vereist dat de computer opnieuw wordt opgestart, gebeurt dit automatisch. (Als een gebruiker is aangemeld op de computer wanneer deze opnieuw moet worden opgestart, wordt de gebruiker hiervan op de hoogte gesteld en kan deze het opstarten uitstellen.)
 
         In Windows 8 en later kunt u instellen dat updates worden geïnstalleerd tijdens automatisch onderhoud in plaats van volgens een specifieke planning. Via Automatisch onderhoud worden updates geïnstalleerd wanneer de computer niet in gebruik is en wordt de installatie van updates voorkomen wanneer de computer op een batterij werkt. Als updates 2 dagen niet via Automatisch onderhoud kunnen worden geïnstalleerd, installeert Windows Update de updates onmiddellijk. Gebruikers krijgen een bericht dat de computer opnieuw wordt opgestart. Deze procedure wordt uitsluitend uitgevoerd als er geen risico op gegevensverlies is.
 
-        U kunt Automatisch onderhoud verder configureren via de groepsbeleidinstellingen: Computerconfiguratie-&gt;Beheersjablonen-&gt;Windows-onderdelen-&gt;Onderhoudsplanner
-
-        5 = Lokale beheerders kunnen de configuratiemodus voor Automatische updates voor berichtgeving en installatie van updates zelf kiezen.
-
-        Let op! Deze optie wordt niet ondersteund in Windows 10.
+\        5 = Lokale beheerders kunnen de configuratiemodus voor Automatische updates voor berichtgeving en installatie van updates zelf kiezen. (Deze optie wordt niet ondersteund in Windows 10).
 
         Met deze optie kunnen lokale beheerders in het configuratiescherm Automatische updates een configuratieoptie naar keuze selecteren. Lokale beheerders kunnen de configuratie voor Automatische updates niet uitschakelen.
 
-Als de status voor dit beleid is ingesteld op Uitgeschakeld, moeten alle updates die beschikbaar zijn op de Windows Update-website handmatig worden gedownload en geïnstalleerd. Hiertoe zoekt u via Start naar Windows Update.
+Als de status voor dit beleid is ingesteld op Uitgeschakeld, moeten alle updates die beschikbaar zijn via Windows Update handmatig worden gedownload en geïnstalleerd. Hiertoe zoekt u via Start naar Windows Update.
 
 Als de status is ingesteld op Niet-geconfigureerd, wordt het gebruik van Automatische updates niet geconfigureerd op groepsbeleidsniveau. Een beheerder kan de service Automatische updates echter nog steeds configureren via het Configuratiescherm.</string>
 
@@ -321,50 +317,49 @@ Als u 'Preview-builds inschakelen' selecteert, worden preview-builds op het appa
       <string id="PreviewBuildFastFeatureUpdates">Preview-versie - Snel</string>
       <string id="PreviewBuildSlowFeatureUpdates">Preview-versie - Langzaam</string>
       <string id="ReleasePreviewBranchFeatureUpdates">Release Preview</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">Semi-Annual-kanaal (Targeted)</string>
       <string id="SemiAnnualChannelFeatureUpdates">Semi-Annual-kanaal</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Semi-Annual-kanaal voor 1809 en lager (afgeschaft)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Semi-Annual-kanaal (targeted) voor 1809 en lager (afgeschaft)</string>
       <string id="DeferFeatureUpdates_Title">Selecteren wanneer preview-versies en onderdelenupdates worden ontvangen</string>
-      <string id="DeferFeatureUpdates_Help">Schakel dit beleid in om aan te geven welk type Preview-versie of Onderdelenupdate u wilt ontvangen en wanneer.
+      <string id="DeferFeatureUpdates_Help">Schakel dit beleid in om op te geven welk type Preview-versie of Onderdelenupdates u wilt ontvangen en wanneer.
 
-* Preview-versie - snel: Apparaten die zijn ingesteld op dit niveau worden als eerste ontvangen nieuwe builds van Windows met functies die nog niet beschikbaar voor het grote publiek. Selecteer snel om deel te nemen in op te sporen en problemen aan Microsoft melden en om suggesties te doen voor nieuwe functionaliteit.
-* Preview-versie - langzaam: Apparaten die zijn ingesteld op dit niveau ontvangen nieuwe builds van Windows voordat ze beschikbaar voor het grote publiek zijn, maar minder snel dan die is ingesteld op snel en met wijzigingen en oplossingen van fouten die zijn opgespoord eerdere versies.
-* Release Preview: Ontvangen builds van Windows vlak voordat Microsoft ze voor het grote publiek uitbrengt.
-* Semi-Annual-kanaal (Targeted): ontvangen onderdelenupdates wanneer deze worden uitgebracht voor het grote publiek.
-* Semi-Annual-kanaal: onderdelenupdates worden uitgebracht wanneer deze als semi-Annual-kanaal zijn verklaard. Dit gebeurt gewoonlijk ongeveer 4 maanden na semi-Annual-kanaal (Targeted) gemaakt die aangeeft dat Microsoft, Independent Software Vendors (ISV's), partners en klanten van mening zijn dat de versie gereed is voor een brede implementatie.
+* Preview-versie - snel: Apparaten die zijn ingesteld op dit niveau, worden als eerste gebruikt voor het ontvangen van nieuwe builds van Windows met functies die nog niet beschikbaar zijn voor het grote publiek. Selecteer Snel als u wilt helpen problemen op te sporen en bij Microsoft te melden en om suggesties te doen voor nieuwe functionaliteit.
+* Preview-versie - Langzaam: Apparaten die zijn ingesteld op dit niveau ontvangen nieuwe builds van Windows voordat ze beschikbaar zijn voor het grote publiek, maar minder snel dan apparaten die zijn ingesteld op Snel en met wijzigingen en oplossingen van fouten die zijn opgespoord in eerdere builds.
+* Release Preview: Ontvangen builds van Windows vlak voordat Microsoft ze uitbrengt voor het grote publiek.
+* Semi-Annual-kanaal: Ontvangen onderdelenupdates wanneer deze worden uitgebracht voor het grote publiek.
 
-Bij het selecteren van een Preview-versie:
-    -U kunt de uitstellen ontvangende Preview-versies maximaal 14 dagen.
-    -Als u wilt voorkomen dat Preview-versies op de geplande tijd worden ontvangen, kunt u ze tijdelijk onderbreken. De onderbreking blijft 35 dagen van de opgegeven begintijd van toepassing zijn op.
-    -Als u wilt doorgaan met het ontvangen van Onderdelenupdates die zijn onderbroken, schakelt u het veld met de startdatum.
+De volgende Windows Readiness-niveaus zijn verouderd en zijn alleen van toepassing op 1809 en lager:
+* Semi-Annual-kanaal (targeted) voor 1809 en lager: Onderdelenupdates zijn vrijgegeven.
+* Semi-Annual-kanaal voor 1809 en lager: Onderdelenupdates zijn gedeclareerd als Semi-Annual-kanaal, een aanduiding die aangeeft dat de release is gemaakt voor een brede implementatie.
+Raadpleeg de pagina met releasegegevens op http://aka.ms/ReleaseInformationPage voor het Semi-Annual-kanaal (Targeted) en releasedatums van het Semi-Annual-kanaal.
 
-Preview-versies is een telemetrieniveau van 2 of hoger instellen en uw domein geregistreerd op insider.windows.com. Raadpleeg voor meer informatie over Preview-versies: https://aka.ms/wipforbiz
+Wanneer u een preview-versie selecteert:
+    -U kunt de ontvangst van Preview-versies maximaal 14 dagen uitstellen.
+    - Als u wilt voorkomen dat Preview-versies op de geplande tijd worden ontvangen, kunt u ze tijdelijk onderbreken. De onderbreking blijft 35 dagen na de opgegeven begintijd van toepassing.
+    - Als u het ontvangen van onderbroken Onderdelenupdates wilt hervatten, maakt u het veld met de begindatum leeg.
 
-Als u selecteert semi-Annual-kanaal (Targeted) of semi-Annual-kanaal:
-    -U kunt de ontvangst van Onderdelenupdates maximaal 365 dagen uitstellen.
-    -Als u wilt voorkomen dat Onderdelenupdates op de geplande tijd worden ontvangen, kunt u ze tijdelijk onderbreken. De onderbreking blijft 35 dagen van de opgegeven begintijd van toepassing zijn op.
-    -Als u wilt doorgaan met het ontvangen van Onderdelenupdates die zijn onderbroken, schakelt u het veld met de startdatum.
+Voor de inschrijving van preview-versies is een telemetrieniveau van 2 of hoger vereist en moet uw domein zijn geregistreerd op insider.windows.com. Ga voor meer informatie over preview-versies naar: https://aka.ms/wipforbiz
 
-Voor het configureren van Onderdelenupdates hebt u een instelling voor telemetrie niveau 1 of hoger vereist.
+Als u Semi-Annual-kanaal selecteert:
+    - U kunt de ontvangst van Onderdelenupdates maximaal 365 dagen uitstellen.
+    - Als u wilt voorkomen dat Onderdelenupdates op de geplande tijd worden ontvangen, kunt u ze tijdelijk onderbreken. De onderbreking blijft 35 dagen na de opgegeven begintijd van toepassing.
+    - Als u het ontvangen van onderbroken Onderdelenupdates wilt hervatten, maakt u het veld met de begindatum leeg.
 
-Als u uitschakelen of deze beleidsinstelling niet configureert, wordt het gedrag niet gewijzigd door Windows Update.</string>
+Als u dit beleid uitschakelt of niet configureert, wordt het gedrag niet gewijzigd door Windows Update.</string>
       <string id="DeferQualityUpdates_Title">Selecteren wanneer kwaliteitsupdates worden ontvangen</string>
-      <string id="DeferQualityUpdates_Help">Schakel dit beleid in om op te geven wanneer u kwaliteitsupdates wilt ontvangen.
+      <string id="DeferQualityUpdates_Help">Schakel dit beleid in om aan te geven wanneer kwaliteitsupdates moeten worden ontvangen.
 
-U kunt de ontvangst van kwaliteitsupdates maximaal 30 dagen uitstellen. 
+U kunt de ontvangst van kwaliteitsupdates maximaal 30 dagen uitstellen.
 
-Als u geen kwaliteitsupdates wilt ontvangen op de geplande tijden, kunt u ze tijdelijk onderbreken. De onderbreking blijft 35 dagen van kracht of tot u het veld met de startdatum wist.
+Als u wilt voorkomen dat kwaliteitsupdates op de geplande tijd worden ontvangen, kunt u de kwaliteitsupdates tijdelijk onderbreken. De onderbreking blijft van kracht gedurende 35 dagen of totdat u het veld Begindatum wist.
 
-Als u kwaliteitsupdates die zijn onderbroken, weer wilt ontvangen, wist u het veld met de startdatum.
+Als u de ontvangst van kwaliteitsupdates die zijn onderbroken wilt hervatten, wist u het veld Begindatum.
 
-Als u dit beleid uitschakelt of niet configureert, blijft Windows Update op dezelfde manier werken.
-
-Opmerking: als het beleid 'Telemetrie toestaan' is ingesteld op 0, is dit beleid niet van kracht.</string>
+Als u dit beleid uitschakelt of niet configureert, wordt het gedrag van Windows Update niet gewijzigd.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Geen stuurprogramma's opnemen in Windows-updates</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Schakel dit beleid in om stuurprogramma's niet aan te bieden bij de Windows-kwaliteitsupdates.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Schakel dit beleid in als u geen stuurprogramma's wilt opnemen in de Windows-kwaliteitsupdates.
 
-Als u dit beleid uitschakelt of niet configureert, worden updates met een stuurprogrammaclassificatie opgenomen in Windows Update.
-
-Opmerking: Op apparaten met Windows 10 versie 1607 of Windows Server 2016 is dit beleid alleen van kracht als u telemetrie inschakelt (dus als het beleid 'Telemetrie toestaan' niet is ingesteld op 0). Op apparaten met Windows 10 versie 1703 (of hoger) hoeft telemetrie niet te worden ingeschakeld om dit beleid van kracht te laten worden.</string>
+Als u dit beleid uitschakelt of niet configureert, worden door Windows Update ook updates uitgevoerd die een stuurprogrammaclassificatie hebben.</string>
       <string id="ActiveHours_Title">Automatisch opnieuw opstarten voor updates tijdens gebruikstijden uitschakelen</string>
       <string id="ActiveHours_Help">Als u dit beleid inschakelt, wordt de pc niet automatisch opnieuw opgestart na updates tijdens gebruikstijden. Er wordt geprobeerd de pc opnieuw op te starten buiten de gebruikstijden.
 
@@ -592,11 +587,57 @@ Opmerking: Dit beleid is alleen van toepassing als de Microsoft-updateservice in
 
 Met dit beleid kunt u aangeven welke Windows Update-meldingen de gebruikers te zien krijgen. Dit beleid regelt niet hoe en wanneer updates worden gedownload en geïnstalleerd.
 
-Let op! Als u ervoor kiest geen updatemeldingen te ontvangen en ook het beleid 'Automatische updates configureren' zodanig definieert dat apparaten geen automatische updates ontvangen, zal noch u noch uw apparaat zich bewust zijn van kritieke beveiligings-, kwaliteits- of onderdelenupdates en kan uw apparaat gevaar lopen.
+Belangrijk: Als u ervoor kiest geen updatemeldingen te ontvangen en ook ander groepsbeleid zodanig definieert dat apparaten geen automatische updates ontvangen, zal noch u noch uw apparaat zich bewust zijn van kritieke beveiligings-, kwaliteits- of onderdelenupdates en kan uw apparaat gevaar lopen.
       </string>
       <string id="DefaultNotification">0 (standaard) – Standaardmeldingen van het besturingssysteem over Windows Update</string>
       <string id="ExcludingRebootWarnings">1 – Alle meldingen uitschakelen, uitgezonderd waarschuwingen over opnieuw opstarten</string>
       <string id="IncludingRebootWarnings">2 – Alle meldingen uitschakelen, inclusief waarschuwingen over opnieuw opstarten</string>
+      <string id="ComplianceDeadline_Title">Deadlines opgeven voor automatische updates en opnieuw opstarten</string>
+      <string id="ComplianceDeadline_Help">Met dit beleid kunt u het aantal dagen opgeven dat een gebruiker heeft voordat kwaliteits- en onderdelenupdates automatisch op hun apparaten worden geïnstalleerd, en een respijtperiode waarna de vereiste herstart automatisch wordt uitgevoerd. Updates en opnieuw opstarten vinden plaats ongeacht de gebruikstijden, en de gebruiker is niet in staat om opnieuw te plannen.
+
+Deadlines voor onderdelenupdates en kwaliteitsupdates kunnen maximaal 30 dagen zijn. De respijtperiode voor automatisch opnieuw opstarten kan van 0 tot 7 dagen zijn.
+
+U kunt automatisch opnieuw opstarten ook uitschakelen tot het einde van de respijtperiode voor automatisch opnieuw opstarten.
+
+Als u dit beleid uitschakelt of niet configureert, krijgen apparaten updates en worden ze opnieuw gestart volgens het standaardschema.
+
+Dit beleid overschrijft de volgende beleidsregels:
+1. Deadline vóór automatisch opnieuw opstarten opgeven voor installatie van updates
+2. Geef de overgangs- en meldingsplanning voor updates op voor gepland opnieuw opstarten
+3. Altijd automatisch opnieuw opstarten op het geplande tijdstip
+4. Niet automatisch opnieuw opstarten als gebruikers zijn aangemeld na geplande installaties van Automatische updates
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -727,6 +768,16 @@ Let op! Als u ervoor kiest geen updatemeldingen te ontvangen en ook het beleid '
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Geef de weergaveopties voor updatemeldingen op:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>Geef het aantal dagen (maximaal 30 dagen) op dat een gebruiker heeft voordat updates automatisch worden uitgevoerd, ongeacht de gebruikstijden, zonder de mogelijkheid om opnieuw te plannen.</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Kwaliteitsupdates (dagen):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Onderdelenupdates (dagen):</dropdownList>
+        <text></text>
+        <text>Geef een respijtperiode (0 tot 7 dagen) op voor het automatisch opnieuw opstarten, vanaf het moment dat de computer opnieuw moet worden opgestart tot het moment waarop het apparaat automatisch opnieuw wordt opgestart. Apparaten worden opnieuw opgestart, ongeacht de gebruikstijden, zonder mogelijkheid om opnieuw te plannen.</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Respijtperiode (dagen)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Niet automatisch opnieuw opstarten tot het einde van de respijtperiode</checkBox>
       </presentation>
     </presentationTable>
   </resources>

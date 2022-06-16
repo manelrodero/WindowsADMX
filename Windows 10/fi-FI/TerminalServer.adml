@@ -419,21 +419,24 @@ Jos otat tämän käytäntöasetuksen käyttöön, näitä ilmoituksia ei näyte
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, nämä ilmoitukset näytetään etätyöpöytäistunnon isäntäpalvelimessa sen jälkeen, kun olet kirjautunut sisään paikallisena järjestelmänvalvojana.</string>
       <string id="TS_LICENSING_MODE">Määritä etätyöpöydän käyttöoikeuksien myöntämisen tila</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, minkä tyyppistä etätyöpöytäpalveluiden Client Access -käyttöoikeutta (RDS CAL) tarvitaan yhteyden muodostamiseen tähän etätyöpöytäistunnon isäntäpalvelimeen.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Tämän käytäntöasetuksen avulla voit määrittää etätyöpöytäpalveluiden Client Access -käyttöoikeuden (RDS CAL) tyypin, joka tarvitaan muodostettaessa yhteyttä tähän etätyöpöytäistunnon isäntäpalvelimeen.
 
-Tämän käytäntöasetuksen avulla voit valita toisen kahdesta käyttöoikeuksien myöntämistilasta: käyttäjäkohtainen tai laitekohtainen.
+        Tämän käytäntöasetuksen avulla voit valita jonkin kolmesta käyttöoikeustilasta: Käyttäjäkohtainen, Laitekohtainen tai Käyttäjäkohtainen AAD.
 
-Käyttäjäkohtainen käyttöoikeuksien myöntämistila edellyttää, että kaikilla tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavilla käyttäjillä on oltava etätyöpöytäpalveluiden käyttäjäkohtainen Client Access -käyttöoikeus.
+        Käyttäjäkohtainen-käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavalla käyttäjätilillä on etätyöpöydän käyttöoikeuspalvelimesta myönnetty etätyöpöytäpalvelujen käyttäjäkohtainen CAL-käyttöoikeus.
 
-Laitekohtainen käyttöoikeuksien myöntämistila edellyttää, että kaikilla tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavilla laitteilla on oltava etätyöpöytäpalveluiden laitekohtainen Client Access -käyttöoikeus.
+        Laitekohtainen-käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavalla laitteella on etätyöpöydän käyttöoikeuspalvelimesta myönnetty etätyöpöytäpalvelujen laitekohtainen CAL-käyttöoikeus.
 
-Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöydän käyttöoikeuspalvelin käyttää määrittämääsi etätyöpöydän käyttöoikeusmallia.
+        Käyttäjäkohtainen AAD -käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavalla käyttäjätilillä on palvelumalli, joka tukee AAD-palvelussa määritettyjä etätyöpöytäpalveluiden käyttöoikeuksia.
+        
+        Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöydän käyttöoikeuspalvelin ja etätyöpöytäistunnon isäntä käyttävät määrittämääsi etätyöpöydän käyttöoikeustilaa.
 
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttöoikeusmallia ei määritetä ryhmäkäytäntötasolla.
-
-</string>
+        Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttöoikeustilaa ei määritetä ryhmäkäytäntötasolla.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Laitekohtainen</string>
       <string id="TS_LICENSING_MODE_PER_USER">Käyttäjäkohtainen</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Käyttäjäkohtainen AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, estetäänkö tietojen uudelleenohjaus asiakkaan LPT-portteihin etätyöpöytäpalveluiden istunnossa.
 
 Tämän asetuksen avulla voit estää käyttäjiä yhdistämästä paikallisia LPT-portteja ja ohjaamasta etätietokoneen tietoja paikallisiin LPT-portteihin liitettyihin laitteisiin. Oletusarvon mukaan etätyöpöytäpalvelut sallivat uudelleenohjauksen LPT-portteihin.
@@ -1015,6 +1018,37 @@ Jos poistat tämän käytäntöasetuksen käytöstä, tästä etätyöpöytäist
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Käytä etätyöpöytäyhteyksissä WDDM-näytönohjainta</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Tämän käytäntöasetuksen avulla voit ottaa käyttöön WDDM-näytönohjaimen etätyöpöytäyhteyksissä.
+
+Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöytäyhteyksissä käytetään WDDM-näytönohjainta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, etätyöpöytäyhteyksissä EI käytetä WDDM-näytönohjainta. Tällöin etätyöpöytäyhteyksissä käytetään XDDM-näytönohjainta.
+
+Tämä muutos tulee voimaan vasta, kun Windows on käynnistetty uudelleen.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Tämän käytäntöasetuksen avulla voit ottaa käyttöön WDDM-näytönohjaimen etätyöpöytäyhteyksissä.
+
+Jos otat tämän käytäntöasetuksen käyttöön tai et määritä sitä, etätyöpöytäyhteyksissä käytetään WDDM-näytönohjainta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä, etätyöpöytäyhteyksissä EI käytetä WDDM-näytönohjainta. Tällöin etätyöpöytäyhteyksissä käytetään XDDM-näytönohjainta.
+
+Tämä muutos tulee voimaan vasta, kun Windows on käynnistetty uudelleen.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Tämän käytäntöasetuksen avulla voit ottaa käyttöön WDDM-näytönohjaimen etätyöpöytäyhteyksissä.
+
+Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöytäyhteyksissä käytetään WDDM-näytönohjainta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä, etätyöpöytäyhteyksissä EI käytetä WDDM-näytönohjainta. Tällöin etätyöpöytäyhteyksissä käytetään XDDM-näytönohjainta.
+
+Jos et määritä tätä käytäntöasetusta, etätyöpöytäistunnon isäntäpalvelimen etätyöpöytäyhteyksissä EI käytetä WDDM-näytönohjainta. Kaikissa muissa tapauksissa etätyöpöytäyhteyksissä käytetään WDDM-näytönohjainta.
+
+Tämä muutos tulee voimaan vasta, kun Windows on käynnistetty uudelleen.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

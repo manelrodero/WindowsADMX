@@ -419,21 +419,24 @@ Se ativar esta definição de política, estas notificações não serão aprese
 
 Se desativar ou não configurar esta definição de política, estas notificações serão apresentadas no servidor Anfitrião de Sessões de RD depois de iniciar sessão como administrador local.</string>
       <string id="TS_LICENSING_MODE">Definir o modo de licenciamento de Ambiente de Trabalho Remoto</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Esta definição de política permite especificar o tipo de licença de acesso de cliente para Serviços de Ambiente de Trabalho Remoto (CAL de RDS) necessária para ligar a este servidor de Anfitrião de Sessões de RD.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Esta definição de política permite especificar o tipo de licença de acesso de cliente para Serviços de Ambiente de Trabalho Remoto (CAL de RDS) necessária para ligar a este servidor de Anfitrião de Sessões de RD.
 
-Pode utilizar esta definição de política para selecionar um de dois modos de licenciamento: Por Utilizador ou Por Dispositivo.
+        Pode utilizar esta definição de política para selecionar um de três modos de licenciamento: Por Utilizador, Por Dispositivo ou AAD Por Utilizador.
 
-O modo de licenciamento Por Utilizador exige que cada conta de utilizador que ligue a este servidor de Anfitrião de Sessões de RD tenha uma CAL de RDS Por Utilizador.
+        O modo de licenciamento Por Utilizador exige que cada conta de utilizador que se ligue a este servidor de Anfitrião de Sessões de RD tenha uma CAL de RDS Por Utilizador emitida por um servidor de Licenciamento de RD.
 
-O modo de licenciamento Por Dispositivo exige que cada dispositivo que ligue a este servidor de Anfitrião de Sessões de RD tenha uma CAL de RDS Por Dispositivo.
+        O modo de licenciamento Por Dispositivo exige que cada dispositivo que se ligue a este servidor de Anfitrião de Sessões de RD tenha uma CAL de RDS Por Dispositivo emitida por um servidor de Licenciamento de RD.
 
-Se ativar esta definição de política, o modo de licenciamento de Ambiente de Trabalho Remoto que especificar será honrado pelo servidor de licenças de Ambiente de Trabalho Remoto.
+        O modo de licenciamento AAD Por Utilizador exige que cada conta de utilizador que se ligue a este servidor de Anfitrião de Sessões de RD tenha um plano de serviço compatível com licenças RDS atribuídas em AAD.
+        
+        Se ativar esta definição de política, o modo de licenciamento de Ambiente de Trabalho Remoto que especificar será honrado pelo servidor de licenças de Ambiente de Trabalho Remoto e pelo Anfitrião de Sessões de RD.
 
-Se desativar ou não configurar esta definição de política, o modo de licenciamento não será especificado ao nível da Política de Grupo.
-
-</string>
+        Se desativar ou não configurar esta definição de política, o modo de licenciamento não será especificado ao nível da Política de Grupo.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Por Dispositivo</string>
       <string id="TS_LICENSING_MODE_PER_USER">Por Utilizador</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD Por Utilizador</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Esta definição de política especifica se deve ser impedido o redirecionamento de dados para portas LPT de cliente durante uma sessão de Serviços de Ambiente de Trabalho Remoto.
 
 Pode utilizar esta definição para impedir os utilizadores de mapear portas LPT locais e de redirecionar dados do computador remoto para periféricos de portas LPT locais. Por predefinição, os Serviços de Ambiente de Trabalho Remoto permitem o redirecionamento de porta LPT.
@@ -1015,6 +1018,37 @@ Se desativar esta definição de política, os programas RemoteApp publicados a 
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Utilizar o controlador da placa gráfica para Ligações ao Ambiente de Trabalho Remoto</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Esta definição de política permite-lhe ativar o controlador da placa gráfica WDDM para Ligações ao Ambiente de Trabalho Remoto.
+
+Se ativar esta definição de política, as Ligações ao Ambiente de Trabalho Remoto irão utilizar o controlador da placa gráfica WDDM.
+
+Se desativar ou não configurar esta definição de política, as Ligações ao Ambiente de Trabalho Remoto NÃO utilizarão o controlador da placa gráfica WDDM. Neste caso, as Ligações ao Ambiente de Trabalho Remoto irão utilizar o controlador da placa gráfica XDDM.
+
+Para que esta alteração surta efeito, tem de reiniciar o Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Esta definição de política permite-lhe ativar o controlador da placa gráfica WDDM para Ligações ao Ambiente de Trabalho Remoto.
+
+Se ativar ou não configurar esta definição de política, as Ligações ao Ambiente de Trabalho Remoto irão utilizar o controlador da placa gráfica WDDM.
+
+Se desativar esta definição de política, as Ligações ao Ambiente de Trabalho Remoto NÃO utilizarão o controlador da placa gráfica WDDM. Neste caso, as Ligações ao Ambiente de Trabalho Remoto irão utilizar o controlador da placa gráfica XDDM.
+
+Para que esta alteração surta efeito, tem de reiniciar o Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Esta definição de política permite-lhe ativar o controlador da placa gráfica WDDM para Ligações ao Ambiente de Trabalho Remoto.
+
+Se ativar ou esta definição de política, as Ligações ao Ambiente de Trabalho Remoto irão utilizar o controlador da placa gráfica WDDM.
+
+Se desativar esta definição de política, as Ligações ao Ambiente de Trabalho Remoto NÃO utilizarão o controlador da placa gráfica WDDM. Neste caso, as Ligações ao Ambiente de Trabalho Remoto irão utilizar o controlador da placa gráfica XDDM.
+
+Se não configurar esta definição de política, as Ligações ao Ambiente de Trabalho Remoto no Servidor de Anfitrião de Sessões de RD NÃO utilizarão o controlador da placa gráfica WDDM. EM todos os outros casos, as Ligações ao Ambiente de Trabalho Remoto irão utilizar o controlador da placa gráfica WDDM.
+
+Para que esta alteração surta efeito, tem de reiniciar o Windows.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

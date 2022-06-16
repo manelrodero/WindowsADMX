@@ -294,6 +294,33 @@ Se você desabilitar ou não definir esta configuração de política, os funcio
 
 Se um aplicativo estiver aberto quando esse objeto de Política de Grupo for aplicado a um dispositivo, os funcionários deverão reiniciar o aplicativo ou o dispositivo para que as alterações de política sejam aplicadas ao aplicativo.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Permitir que os aplicativos do Windows sejam ativados por voz</string>
+      <string id="LetAppsActivateWithVoice_Explain">Esta configuração de política especifica se os aplicativos do Windows podem ser ativados por voz.
+
+Se você escolher a opção "O usuário está no controle", os funcionários de sua organização podem decidir se os aplicativos do Windows podem ser ativados com uma palavra-chave de voz usando Configurações &gt; Privacidade no dispositivo.
+
+Se você escolher a opção "Forçar Permissão", os aplicativos do Windows poderão ser ativados com uma palavra-chave de voz, e os funcionários de sua organização não poderão alterar isso.
+
+Se você escolher a opção "Forçar Negação", os aplicativos do Windows não poderão ser ativados com uma palavra-chave de voz, e os funcionários de sua organização não poderão alterar isso.
+
+Se você desabilitar ou não configurar esta política, os funcionários da organização poderão decidir se os aplicativos do Windows podem ser ativados com uma palavra-chave de voz usando Configurações &gt; Privacidade no dispositivo.
+
+Esta política é aplicada aos aplicativos do Windows e à Cortana.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Permitir que os aplicativos do Windows sejam ativados por voz enquanto o sistema estiver bloqueado</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Esta configuração de política especifica se os aplicativos do Windows podem ser ativados por voz enquanto o sistema está bloqueado.
+
+Se você escolher a opção "O usuário está no controle", os funcionários de sua organização podem decidir se os usuários podem interagir com os aplicativos usando a voz enquanto o sistema está bloqueado usando Configurações &gt; Privacidade no dispositivo.
+
+Se você escolher a opção "Forçar Permissão", os usuários poderão interagir com os aplicativos usando a voz enquanto o sistema estiver bloqueado, e os funcionários de sua organização não podem alterar isso.
+
+Se você escolher a opção "Forçar Negação", os usuários não poderão interagir com os aplicativos usando voz enquanto o sistema estiver bloqueado, e os funcionários de sua organização não poderão alterar isso.
+
+Se você desabilitar ou não configurar essa política, os funcionários de sua organização poderão decidir se os usuários podem interagir com os aplicativos usando a voz enquanto o sistema está bloqueado usando Configurações &gt; Privacidade no dispositivo.
+
+Esta política é aplicada aos aplicativos do Windows e à Cortana. Ela tem precedência à política “Permitir a Cortana acima da tela de bloqueio”. Esta política é aplicável somente quando a política “Permitir ativação por voz” é configurada para permitir que os aplicativos sejam ativados por voz.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Se um aplicativo estiver aberto quando esse objeto de Política de Grupo for apl
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Forçar negação destes aplicativos específicos (usar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Padrão para todos os apps:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Padrão para todos os apps:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

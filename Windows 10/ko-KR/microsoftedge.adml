@@ -14,7 +14,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Windows 10의 Microsoft Edge, 버전 1709 이상</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Windows 10의 Microsoft Edge, 버전 1708 이상</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Windows 10의 Microsoft Edge, 버전 1803 이상</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Windows 10의 Microsoft Edge, 버전 1809 이상</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Windows 10, 버전 1809 이상의 Microsoft Edge</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge 범주</string>
 
@@ -161,7 +161,7 @@ Microsoft에 트래픽을 보내고 싶지 않으면 이 정책을 사용하도�
 
 컴퓨터 구성 &gt; 관리 템플릿 &gt; Windows 구성 요소 &gt; 앱 패키지 배포
 
-지원되는 버전: Windows 10의 Microsoft Edge, 버전 1809
+지원되는 버전: Windows 10, 버전 1809의 Microsoft Edge
 기본 설정: 사용 안 함 또는 구성되지 않음
 관련 정책:
 -IDE(통합 개발 환경)에서 Microsoft Store 앱을 개발하고 설치할 수 있음.
@@ -472,11 +472,11 @@ Microsoft에 트래픽을 보내고 싶지 않으면 이 정책을 사용하도�
 미리 로드하지 못하도록 하면 Windows 로그인 중에 그리고 Microsoft Edge가 닫힐 때마다 시작 또는 새 탭 페이지를 로드하지 않습니다.</string>
       <string id="AllowTabPreloadingDropdown_AllowTabPreloading">탭 미리 로드 허용</string>
       <string id="AllowTabPreloadingDropdown_PreventTabPreloading">탭 미리 로드 방지</string>
-      <string id="ConfigureTelemetryForMicrosoft365Analytics">Microsoft 365 Analytics에 대한 브라우징 데이터 컬렉션을 구성 합니다.</string>
-      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">Microsoft Edge를 설정하여 인트라넷 기록, 인터넷 기록, 또는 둘 다 설정된 상업 ID을 사용하여 기업 장치용 Microsoft 365 Analytics로 보낼 수 있습니다. Microsoft Edge가 실행되지 않거나 설정되지 않은 경우, Microsoft 365 Analytics로 브라우징 기록 데이터를 보내지 않습니다.
+      <string id="ConfigureTelemetryForMicrosoft365Analytics">Desktop Analytics에 대한 검색 데이터 수집 구성</string>
+      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">인트라넷 기록만, 인터넷 기록만 또는 두 가지 모두를 구성된 상업용 ID가 있는 기업 장치의 Desktop Analytics에 보내도록 Microsoft Edge를 구성할 수 있습니다. 사용하지 않거나 구성되지 않은 경우 Microsoft Edge에서 Desktop Analytics에 검색 기록 데이터를 보내지 않습니다.
 
-지원 버전: Windows 10 Microsoft Edge, 1809 버전
-기본 설정: 실행 안 함 또는 설정 안 됨 (수집되거나 보내진 데이터 없음)</string>
+지원되는 버전: Windows 10, 버전 1809의 Microsoft Edge
+기본 설정: 사용 안 함 또는 구성되지 않음(데이터를 수집하거나 보내지 않음)</string>
       <string id="ZonesList_IntranetOnly">인트라넷 기록만 보내도록 허용</string>
       <string id="ZonesList_InternetOnly">인터넷 기록만 보내도록 허용</string>
       <string id="ZonesList_Both">인트라넷 및 인터넷 기록 모두 전송 허용</string>
@@ -573,7 +573,7 @@ URL은 다음과 같이 지정할 수 있습니다.
       </presentation>
       <presentation id="PreventTurningOffRequiredExtensions_Presentation">
           <textBox refId="PreventTurningOffRequiredExtensions_Prompt">
-              <label>아래 입력란에 확장 PFN(패키지 패밀리 이름)을 세미콜론으로 구분하여 입력하세요.</label>
+              <label>아래 입력란에 세미콜론으로 구분된 확장 PFN(패키지 패밀리 이름)을 입력하세요.</label>
           </textBox>
       </presentation>
       <presentation id="Cookies">

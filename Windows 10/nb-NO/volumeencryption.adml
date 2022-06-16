@@ -639,49 +639,46 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan stand
 
       <string id="RDVEDrive_Name">Konfigurer bruk av maskinvarebasert kryptering for flyttbare datastasjoner</string>
 
-      <string id="OSEDrive_Help">Med denne policyinnstillingen kan du administrere BitLockers bruk av maskinvarebasert kryptering på operativsystemstasjoner og angi hvilke krypteringsalgoritmer som kan brukes med maskinvarebasert kryptering. Bruk av maskinvarebasert kryptering kan forbedre ytelsen til stasjonsoperasjoner som innebærer regelmessig lesing og skriving av data til stasjonen.
+      <string id="OSEDrive_Help">Med denne policyinnstillingen kan du administrere BitLockers bruk av maskinvarebasert kryptering på operativsystemstasjoner og angi hvilke krypteringsalgoritmer den kan bruke med maskinvarebasert kryptering. Ved å bruke maskinvarebasert kryptering kan du forbedre ytelsen til stasjonsoperasjoner som involverer å lese eller skrive data til stasjonen.
 
-Hvis du aktiverer denne policyinnstillingen, kan du angi flere alternativer som kontrollerer om programvarebasert kryptering for BitLocker brukes i stedet for maskinvarebasert kryptering på datamaskiner som ikke støtter maskinvarebasert kryptering, og om du vil begrense krypteringsalgoritmene og chiffreringssamlingene som brukes med maskinvarebasert kryptering.
+Hvis du aktiverer denne policyinnstillingen, kan du angi flere alternativer som kontrollerer om programvarebasert kryptering i BitLocker brukes i stedet for maskinvarebasert kryptering på datamaskiner som ikke har støtte for maskinvarebasert kryptering, og om du vil begrense krypteringsalgoritmer og chiffreringssamlinger som brukes med maskinvarebasert kryptering.
 
-Hvis du deaktiverer denne policyinnstillingen, kan ikke BitLocker bruke maskinvarebasert kryptering med operativsystemstasjoner, og programvarebasert kryptering for BitLocker brukes når stasjonen krypteres.
+Hvis du deaktiverer denne policyinnstillingen, kan ikke BitLocker bruke maskinvarebasert kryptering med operativsystemstasjoner og BitLocker-programvarebasert kryptering brukes som standard når stasjonen er kryptert.
 
-Hvis du ikke konfigurerer denne policyinnstillingen, bruker BitLocker maskinvarebasert kryptering med krypteringsalgoritmen angitt for stasjonen. Hvis maskinvarebasert kryptering ikke er tilgjengelig, brukes programvarebasert kryptering for BitLocker i stedet.
+Hvis du ikke konfigurerer denne policyinnstillingen, bruker BitLocker programvarebasert kryptering uavhengig av maskinvarebasert krypteringstilgjengelighet.
 
-Obs! Policyinnstillingen Velg krypteringsmetode og chifferkodestyrke for stasjon gjelder ikke for maskinvarebasert kryptering. Krypteringsalgoritmen som brukes av maskinvarebasert kryptering, angis når stasjonen partisjoneres. Som standard bruker BitLocker algoritmen som er konfigurert på stasjonen, for å kryptere stasjonen. Med alternativet Begrens krypteringsalgoritmer og chiffreringssamlinger tillatt for maskinvarebasert kryptering kan du begrense krypteringsalgoritmene som BitLocker kan bruke med maskinvarekryptering. Hvis algoritmen som er angitt for stasjonen, ikke er tilgjengelig, vil BitLocker deaktivere bruken av maskinvarebasert kryptering.
-Krypteringsalgoritmer angis ved hjelp av Objekt-IDer (OID). Eksempel:
-– AES 128 i OID for CBC-modus: 2.16.840.1.101.3.4.1.2
-– AES 256 i OID for CBC-modus: 2.16.840.1.101.3.4.1.42
-      
+Obs! Policyinnstillingen Velg krypteringsmetode for stasjon og chifferkodestyrke gjelder ikke for maskinvarebasert kryptering. Krypteringsalgoritmen som brukes av maskinvarebasert kryptering, angis når stasjonen er partisjonert. Som standard bruker BitLocker algoritmen som er konfigurert på stasjonen, til å kryptere stasjonen. Alternativet Begrens krypteringsalgoritmer og chiffreringssamlinger tillatt for maskinvarebasert kryptering gir deg muligheten til å begrense krypteringsalgoritmer som BitLocker kan bruke med maskinvarekryptering. Hvis algoritmen som er angitt for stasjonen, ikke er tilgjengelig, vil BitLocker deaktivere bruken av maskinvarebasert kryptering.
+Krypteringsalgoritmer angis av objekt-ID-er (OID). Eksempel:
+– AES 128 i CBC-modus-OID: 2.16.840.1.101.3.4.1.2
+– AES 256 i CBC-modus-OID: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="FDVEDrive_Help">Med denne policyinnstillingen kan du administrere BitLockers bruk av maskinvarebasert kryptering på faste datastasjoner og angi hvilke krypteringsalgoritmer som kan brukes med maskinvarebasert kryptering. Bruk av maskinvarebasert kryptering kan forbedre ytelsen til stasjonsoperasjoner som innebærer regelmessig lesing og skriving av data til stasjonen.
+      <string id="FDVEDrive_Help">Med denne policyinnstillingen kan du administrere BitLockers bruk av maskinvarebasert kryptering på faste datastasjoner og angi hvilke krypteringsalgoritmer den kan bruke med maskinvarebasert kryptering. Ved å bruke maskinvarebasert kryptering kan du forbedre ytelsen til stasjonsoperasjoner som involverer å lese eller skrive data til stasjonen.
 
-Hvis du aktiverer denne policyinnstillingen, kan du angi flere alternativer som kontrollerer om programvarebasert kryptering for BitLocker brukes i stedet for maskinvarebasert kryptering på datamaskiner som ikke støtter maskinvarebasert kryptering, og om du vil begrense krypteringsalgoritmene og chiffreringssamlingene som brukes med maskinvarebasert kryptering.
+Hvis du aktiverer denne policyinnstillingen, kan du angi flere alternativer som kontrollerer om programvarebasert kryptering i BitLocker brukes i stedet for maskinvarebasert kryptering på datamaskiner som ikke har støtte for maskinvarebasert kryptering, og om du vil begrense krypteringsalgoritmer og chiffreringssamlinger som brukes med maskinvarebasert kryptering.
 
-Hvis du deaktiverer denne policyinnstillingen, kan ikke BitLocker bruke maskinvarebasert kryptering med operativsystemstasjoner, og programvarebasert kryptering for BitLocker brukes når stasjonen krypteres.
+Hvis du deaktiverer denne policyinnstillingen, kan ikke BitLocker bruke maskinvarebasert kryptering med operativsystemstasjoner og BitLocker-programvarebasert kryptering brukes som standard når stasjonen er kryptert.
 
-Hvis du ikke konfigurerer denne policyinnstillingen, bruker BitLocker maskinvarebasert kryptering med krypteringsalgoritmen angitt for stasjonen. Hvis maskinvarebasert kryptering ikke er tilgjengelig, brukes programvarebasert kryptering for BitLocker i stedet.
+Hvis du ikke konfigurerer denne policyinnstillingen, bruker BitLocker programvarebasert kryptering uavhengig av maskinvarebasert krypteringstilgjengelighet.
 
-Obs! Policyinnstillingen Velg krypteringsmetode og chifferkodestyrke for stasjon gjelder ikke for maskinvarebasert kryptering. Krypteringsalgoritmen som brukes av maskinvarebasert kryptering, angis når stasjonen partisjoneres. Som standard bruker BitLocker algoritmen som er konfigurert på stasjonen, for å kryptere stasjonen. Med alternativet Begrens krypteringsalgoritmer og chiffreringssamlinger tillatt for maskinvarebasert kryptering kan du begrense krypteringsalgoritmene som BitLocker kan bruke med maskinvarekryptering. Hvis algoritmen som er angitt for stasjonen, ikke er tilgjengelig, vil BitLocker deaktivere bruken av maskinvarebasert kryptering.
-Krypteringsalgoritmer angis ved hjelp av Objekt-IDer (OID). Eksempel:
-– AES 128 i OID for CBC-modus: 2.16.840.1.101.3.4.1.2
-– AES 256 i OID for CBC-modus: 2.16.840.1.101.3.4.1.42
-      
+Obs! Policyinnstillingen Velg krypteringsmetode for stasjon og chifferkodestyrke gjelder ikke for maskinvarebasert kryptering. Krypteringsalgoritmen som brukes av maskinvarebasert kryptering, angis når stasjonen er partisjonert. Som standard bruker BitLocker algoritmen som er konfigurert på stasjonen, til å kryptere stasjonen. Alternativet Begrens krypteringsalgoritmer og chiffreringssamlinger tillatt for maskinvarebasert kryptering gir deg muligheten til å begrense krypteringsalgoritmer som BitLocker kan bruke med maskinvarekryptering. Hvis algoritmen som er angitt for stasjonen, ikke er tilgjengelig, vil BitLocker deaktivere bruken av maskinvarebasert kryptering.
+Krypteringsalgoritmer angis av objekt-ID-er (OID). Eksempel:
+– AES 128 i CBC-modus-OID: 2.16.840.1.101.3.4.1.2
+– AES 256 i CBC-modus-OID: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="RDVEDrive_Help">Med denne policyinnstillingen kan du administrere BitLockers bruk av maskinvarebasert kryptering på flyttbare datastasjoner og angi hvilke krypteringsalgoritmer som kan brukes med maskinvarebasert kryptering. Bruk av maskinvarebasert kryptering kan forbedre ytelsen til stasjonsoperasjoner som innebærer regelmessig lesing og skriving av data til stasjonen.
+      <string id="RDVEDrive_Help">Med denne policyinnstillingen kan du administrere BitLockers bruk av maskinvarebasert kryptering på datastasjoner som kan fjernes, og angi hvilke krypteringsalgoritmer den kan bruke med maskinvarebasert kryptering. Ved å bruke maskinvarebasert kryptering kan du forbedre ytelsen til stasjonsoperasjoner som involverer å lese eller skrive data til stasjonen.
 
-Hvis du aktiverer denne policyinnstillingen, kan du angi flere alternativer som kontrollerer om programvarebasert kryptering for BitLocker brukes i stedet for maskinvarebasert kryptering på datamaskiner som ikke støtter maskinvarebasert kryptering, og om du vil begrense krypteringsalgoritmene og chiffreringssamlingene som brukes med maskinvarebasert kryptering.
+Hvis du aktiverer denne policyinnstillingen, kan du angi flere alternativer som kontrollerer om programvarebasert kryptering i BitLocker brukes i stedet for maskinvarebasert kryptering på datamaskiner som ikke har støtte for maskinvarebasert kryptering, og om du vil begrense krypteringsalgoritmer og chiffreringssamlinger som brukes med maskinvarebasert kryptering.
 
-Hvis du deaktiverer denne policyinnstillingen, kan ikke BitLocker bruke maskinvarebasert kryptering med operativsystemstasjoner, og programvarebasert kryptering for BitLocker brukes når stasjonen krypteres.
+Hvis du deaktiverer denne policyinnstillingen, kan ikke BitLocker bruke maskinvarebasert kryptering med operativsystemstasjoner og BitLocker-programvarebasert kryptering brukes som standard når stasjonen er kryptert.
 
-Hvis du ikke konfigurerer denne policyinnstillingen, bruker BitLocker maskinvarebasert kryptering med krypteringsalgoritmen angitt for stasjonen. Hvis maskinvarebasert kryptering ikke er tilgjengelig, brukes programvarebasert kryptering for BitLocker i stedet.
+Hvis du ikke konfigurerer denne policyinnstillingen, bruker BitLocker programvarebasert kryptering uavhengig av maskinvarebasert krypteringstilgjengelighet.
 
-Obs! Policyinnstillingen Velg krypteringsmetode og chifferkodestyrke for stasjon gjelder ikke for maskinvarebasert kryptering. Krypteringsalgoritmen som brukes av maskinvarebasert kryptering, angis når stasjonen partisjoneres. Som standard bruker BitLocker algoritmen som er konfigurert på stasjonen, for å kryptere stasjonen. Med alternativet Begrens krypteringsalgoritmer og chiffreringssamlinger tillatt for maskinvarebasert kryptering kan du begrense krypteringsalgoritmene som BitLocker kan bruke med maskinvarekryptering. Hvis algoritmen som er angitt for stasjonen, ikke er tilgjengelig, vil BitLocker deaktivere bruken av maskinvarebasert kryptering.
-Krypteringsalgoritmer angis ved hjelp av Objekt-IDer (OID). Eksempel:
-– AES 128 i OID for CBC-modus: 2.16.840.1.101.3.4.1.2
-– AES 256 i OID for CBC-modus: 2.16.840.1.101.3.4.1.42
-      
+Obs! Policyinnstillingen Velg krypteringsmetode for stasjon og chifferkodestyrke gjelder ikke for maskinvarebasert kryptering. Krypteringsalgoritmen som brukes av maskinvarebasert kryptering, angis når stasjonen er partisjonert. Som standard bruker BitLocker algoritmen som er konfigurert på stasjonen, til å kryptere stasjonen. Alternativet Begrens krypteringsalgoritmer og chiffreringssamlinger tillatt for maskinvarebasert kryptering gir deg muligheten til å begrense krypteringsalgoritmer som BitLocker kan bruke med maskinvarekryptering. Hvis algoritmen som er angitt for stasjonen, ikke er tilgjengelig, vil BitLocker deaktivere bruken av maskinvarebasert kryptering.
+Krypteringsalgoritmer angis av objekt-ID-er (OID). Eksempel:
+– AES 128 i CBC-modus-OID: 2.16.840.1.101.3.4.1.2
+– AES 256 i CBC-modus-OID: 2.16.840.1.101.3.4.1.42
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Aktiver bruken av BitLocker-godkjenning som krever inndata fra tastatur før oppstart på nettbrett</string>

@@ -120,6 +120,8 @@ Alternativene er:
 
 4 = DNS-suffiks. 
 
+5 = AAD-tenant-ID. 
+
 Når den er angitt, tilordnes gruppe-ID-en automatisk fra den valgte kilden. Hvis du angir denne policyen, ignoreres GroupID-policyen. 
       
 Alternativene som er angitt i denne policyen, gjelder bare for nedlastingsmodus Gruppe (2). Hvis Gruppe (2) ikke er angitt som nedlastingsmodus, ignoreres denne policyen. 
@@ -130,6 +132,7 @@ For alternativ 3 – ID for DHCP-alternativ vil klienten sende forespørselen 23
       <string id="GroupIdSource_SID">Godkjent domene-SID (2)</string>
       <string id="GroupIdSource_DHCP">ID for DHCP-alternativ (3)</string>
       <string id="GroupIdSource_DNS">DNS-suffiks (4)</string>
+      <string id="GroupIdSource_AAD">AAD-tenant-ID (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Forsinkelse av bakgrunnsnedlasting fra http (i sek)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Med denne policyen kan du utsette bruken av en HTTP-kilde i en bakgrunnsnedlasting som har tillatelse til å bruke P2P.
       
@@ -146,6 +149,14 @@ Når du har nådd maksimal forsinkelse, gjenopptas nedlastingen ved hjelp av HTT
 Legg merke til at en nedlasting som venter på motpartkilder, vises som fastlåst for sluttbrukeren.
       
 Anbefalt verdi er 1 minutt (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Utsett veksling fra bufferserver for bakgrunnsnedlasting (i sekunder)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Angi denne policyinnstillingen til å utsette vekslingen fra bufferserveren til HTTP-kilden for en innholdsnedlasting i bakgrunnen med X sekunder. 
+
+Obs!  Hvis du angir at policyen skal utsette bakgrunnsnedlasting fra http, aktiveres den først (for å tillate nedlastinger fra motparter først).</string>
+      <string id="DelayCacheServerFallbackForeground">Utsett veksling fra bufferserver for forgrunnsnedlasting (i sekunder)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Angi denne policyinnstillingen til å utsette vekslingen fra bufferserveren til HTTP-kilden for en innholdsnedlasting i forgrunnen med X sekunder. 
+
+Obs!  Hvis du angir at policyen skal utsette forgrunnsnedlasting fra http, aktiveres den først (for å tillate nedlastinger fra motparter først).</string>
       <string id="RestrictPeerSelectionBy">Velg en metode for å begrense valg av motpart</string>
       <string id="RestrictPeerSelectionBy_Help">Konfigurer denne policyen for å begrense motpartvalg via valgt alternativ. 
       
@@ -263,7 +274,7 @@ Alternativ 1 (nettverksmaske) gjelder både Nedlastingsmodus LAN (1) og Gruppe (
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">kilder for gruppe-ID-er:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Kilde for gruppe-ID-er:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Forsinkelse av bakgrunnsnedlasting fra http (i sek)</decimalTextBox>
@@ -271,6 +282,14 @@ Alternativ 1 (nettverksmaske) gjelder både Nedlastingsmodus LAN (1) og Gruppe (
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Forsinkelse av forgrunnsnedlasting fra http (i sek)</decimalTextBox>
+        <text>Standardverdien er 0 (ingen forsinkelse)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Utsett veksling fra bufferserver for bakgrunnsnedlasting (i sekunder):</decimalTextBox>
+        <text>Standardverdien er 0 (ingen forsinkelse)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Utsett veksling fra bufferserver for forgrunnsnedlasting (i sekunder):</decimalTextBox>
         <text>Standardverdien er 0 (ingen forsinkelse)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

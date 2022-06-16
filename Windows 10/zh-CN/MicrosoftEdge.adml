@@ -14,7 +14,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Windows 10 版本 1709 或更高版本上的 Microsoft Edge</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Windows 10 版本 1708 或更高版本上的 Microsoft Edge</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Windows 10 版本 1803 或更高版本上的 Microsoft Edge</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Windows 10 上的 Microsoft Edge 版本 1809 或更新</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Windows 10 版本 1809 或更高版本上的 Microsoft Edge</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge 类别</string>
 
@@ -159,7 +159,7 @@
 
 如果已禁用，则不允许在 Microsoft Edge 中旁加载未经验证的扩展。只能通过 Microsoft Store (包括适用于企业的 Microsoft Store)、企业商店(如公司门户)或 PowerShell (使用 Add-AppxPackage)安装扩展。禁用后，此策略不会阻止通过 PowerShell 使用 Add-AppxPackage 旁加载扩展。为防止这种情况发生，请在“组策略编辑器”中启用“允许开发 Microsoft Store 应用并从集成开发环境(IDE)进行安装”，该项位于:
 
-计算机配置”&gt;“管理模板”&gt;“Windows 组件”&gt;“应用包部署”
+计算机配置 &gt;“管理模板”&gt;“Windows 组件”&gt;“应用包部署”
 
 支持的版本: Windows 10 版本 1809 上的 Microsoft Edge
 默认设置:
@@ -472,10 +472,10 @@
 如果阻止预加载，Microsoft Edge 将不会在 Windows 登录期间和每次关闭 Microsoft Edge 时加载“开始”或“新建标签页”页面。</string>
       <string id="AllowTabPreloadingDropdown_AllowTabPreloading">允许预加载标签页</string>
       <string id="AllowTabPreloadingDropdown_PreventTabPreloading">阻止预加载标签页</string>
-      <string id="ConfigureTelemetryForMicrosoft365Analytics">配置浏览数据集合以便 Microsoft 365 分析使用</string>
-      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">针对已配置商用 ID 的企业设备，你可以将 Microsoft Edge 配置为向 Microsoft 365 Analytics 只发送 Intranet 历史记录、Internet 历史记录或两者。如果已禁用或未配置，Microsoft Edge 不会向 Microsoft 365 Analytics 发送浏览历史记录数据。
+      <string id="ConfigureTelemetryForMicrosoft365Analytics">配置浏览数据集合以便桌面分析使用</string>
+      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">针对已配置商用 ID 的企业设备，你可以将 Microsoft Edge 配置为向桌面分析只发送 Intranet 历史记录、只发送 Internet 历史记录或两者都发送。如果已禁用或未配置，Microsoft Edge 不会向桌面分析发送浏览历史记录数据。
 
-支持的版本: Windows 10 上的 Microsoft Edge，版本 1809
+支持的版本: Windows 10 版本 1809 上的 Microsoft Edge
 默认设置: 已禁用或未配置(未收集或发送数据)</string>
       <string id="ZonesList_IntranetOnly">只允许发送 Intranet 历史记录</string>
       <string id="ZonesList_InternetOnly">只允许发送 Internet 历史记录</string>
@@ -555,7 +555,7 @@ URL 可以指定为
       </presentation>
       <presentation id="SetHomeButtonURL_Presentation">
         <textBox refId="SetHomeButtonURLPrompt">
-          <label>采用字符串格式输入 URL。例如: https://www.bing.com</label>
+          <label>以字符串格式输入 URL。例如: https://www.bing.com</label>
         </textBox>
       </presentation>
       <presentation id="SetNewTabPageURL_Presentation">

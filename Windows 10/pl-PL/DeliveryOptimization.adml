@@ -120,7 +120,9 @@ Dostępne opcje:
 
 4 = Sufiks DNS. 
 
-Po ustawieniu tej zasady identyfikator grupy będzie przypisywany automatycznie z wybranego źródła. Jeśli ustawisz tę zasadę, zasada GroupID będzie ignorowana. 
+5 = Identyfikator dzierżawy usługi AAD. 
+
+Po ustawieniu tej zasady identyfikator grupy będzie przypisywany automatycznie z wybranego źródła. Jeśli ustawisz tę zasadę, zasada dotycząca identyfikatora grupy będzie ignorowana. 
       
 Opcje ustawione w tej zasadzie dotyczą tylko trybu pobierania Grupa (2). Jeśli ustawienie Tryb pobierania będzie mieć wartość inną niż Grupa (2), ta zasada będzie ignorowana. 
 
@@ -128,8 +130,9 @@ W przypadku opcji 3 (Identyfikator opcji protokołu DHCP) klient będzie badał 
       <string id="GroupIdSource_Unset">Cofnij ustawienie (0)</string>
       <string id="GroupIdSource_AD">Lokacja usługi AD (1)</string>
       <string id="GroupIdSource_SID">Identyfikator SID uwierzytelnionej domeny (2)</string>
-      <string id="GroupIdSource_DHCP">Identyfikator opcji protokołu DHCP (3)</string>
+      <string id="GroupIdSource_DHCP">Identyfikator opcji DHCP (3)</string>
       <string id="GroupIdSource_DNS">Sufiks DNS (4)</string>
+      <string id="GroupIdSource_AAD">Identyfikator dzierżawy usługi AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Opóźnij pobieranie w tle ze źródła HTTP (w sekundach)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Ta zasada umożliwia opóźnienie użycia źródła HTTP w operacji pobierania w tle, w której jest dozwolone używanie protokołu P2P.
       
@@ -146,6 +149,14 @@ Po osiągnięciu maksymalnego opóźnienia zostanie wznowione pobieranie przy u�
 Należy pamiętać, że operacja pobierania oczekująca na źródła równorzędne będzie dla użytkownika końcowego sprawiać wrażenie zablokowanej.
       
 Zalecana wartość to 1 minuta (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Opóźnij wycofanie pobierania w tle z serwera pamięci podręcznej (w sekundach)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Ustaw tę zasadę, aby opóźnić wycofanie pobierania zawartości w tle z serwera pamięci podręcznej do źródła HTTP o X sekund. 
+
+Uwaga: jeśli ustawisz tę zasadę w celu opóźnienia pobierania w tle ze źródła HTTP, zostanie ona zastosowana jako pierwsza (aby umożliwić pobieranie najpierw z elementów równorzędnych).</string>
+      <string id="DelayCacheServerFallbackForeground">Opóźnij wycofanie pobierania na pierwszym planie z serwera pamięci podręcznej (w sekundach)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Ustaw tę zasadę, aby opóźnić wycofanie pobierania zawartości na pierwszym planie z serwera pamięci podręcznej do źródła HTTP o X sekund. 
+
+Uwaga: jeśli ustawisz tę zasadę w celu opóźnienia pobierania na pierwszym planie ze źródła HTTP, zostanie ona zastosowana jako pierwsza (aby umożliwić pobieranie najpierw z elementów równorzędnych).</string>
       <string id="RestrictPeerSelectionBy">Wybierz metodę ograniczania wyboru węzła równorzędnego</string>
       <string id="RestrictPeerSelectionBy_Help">Ustaw tę zasadę, aby ograniczyć możliwość wyboru węzła równorzędnego za pośrednictwem wybranej opcji. 
       
@@ -263,7 +274,7 @@ Opcja 1 (Maska podsieci) dotyczy zarówno trybu pobierania Sieć LAN (1), jak i 
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">źródło identyfikatorów grup:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Źródło identyfikatorów grup:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Opóźnij pobieranie w tle ze źródła HTTP (w sekundach):</decimalTextBox>
@@ -271,6 +282,14 @@ Opcja 1 (Maska podsieci) dotyczy zarówno trybu pobierania Sieć LAN (1), jak i 
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Opóźnij pobieranie na pierwszym planie ze źródła HTTP (w sekundach):</decimalTextBox>
+        <text>Wartość domyślna to 0 (brak opóźnienia)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Opóźnij pobieranie w tle rezerwy z serwera pamięci podręcznej (w sekundach):</decimalTextBox>
+        <text>Wartość domyślna to 0 (brak opóźnienia)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Opóźnij wycofanie pobierania na pierwszym planie z serwera pamięci podręcznej (w sekundach):</decimalTextBox>
         <text>Wartość domyślna to 0 (brak opóźnienia)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

@@ -100,11 +100,19 @@
           このポリシー設定を無効にするか、未構成にした場合は、[設定] ページで診断データ ビューアーが有効になります。
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Microsoft 365 更新準備アップロード エンドポイントを構成する</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Desktop Analytics の診断データのアップロード エンドポイントを構成します</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          このポリシーは、Microsoft 365 更新準備プログラムの一部として、このデバイスの診断データのアップロード エンドポイントを設定します。
-          組織がプログラムに参加していて、カスタム アップロード エンドポイントを構成するように指示されている場合は、この設定を使用してそのエンドポイントを定義します。
-          この設定の値は、プログラムのオンボーディング プロセスの一部として Microsoft によって提供されます。 
+          このポリシーでは、Desktop Analytics プログラムの一部として、このデバイスの診断データのアップロード エンドポイントを設定します。
+          組織がそのプログラムに参加しようとしており、カスタム アップロード エンドポイントを構成するように指示されている場合は、この設定を使用してそのエンドポイントを定義します。
+          この設定の値は、プログラムのオンボード プロセスの一部として Microsoft から提供されます。 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">商用データ パイプラインを許可する</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline は、デバイスを Windows エンタープライズ データ パイプラインにオプトインできます。
+          この設定を有効にした場合、デバイスから収集したデータが Windows エンタープライズ データ パイプラインにオプトインされます。
+          この設定を無効にした場合または構成しなかった場合は、Windows 標準データ パイプラインのポリシーに従って、デバイスのすべてのデータが収集されて処理されます。
+          この設定を構成しても、利用統計情報の収集レベルや、ユーザーがレベルを変更できるかどうかは変わりません。この設定は、Windows オペレーティング システムおよび Windows に含まれているアプリのみに適用され、Windows 10 で実行されているサード パーティのアプリやサービスには適用されません。
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Microsoft 365 更新準備カスタム アップロード エンドポイント:</label>
+          <label>Desktop Analytics カスタム アップロード エンドポイント:</label>
         </textBox>
       </presentation>
     </presentationTable>

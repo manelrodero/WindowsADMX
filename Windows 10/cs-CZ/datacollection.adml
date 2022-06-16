@@ -10,7 +10,7 @@
       <string id="AllowTelemetry_1">1 – Základní</string>
       <string id="AllowTelemetry_2">2 – Rozšířené</string>
       <string id="AllowTelemetry_3">3 – Úplné</string>
-      <string id="AllowTelemetry_Explain">Nastavení této zásady určuje nejvyšší úroveň diagnostických dat z Windows odesílaných do Microsoftu. Konfigurací tohoto nastavení nezabráníte uživatelům ve změně jejich nastavení telemetrie, ale nebudou si moct zvolit vyšší úroveň, než jste nastavili pro organizaci. Nastavení diagnostických dat Windows 10 se vztahuje jen na operační systém Windows a aplikace, které jsou jeho součástí. Nevztahuje se na aplikace třetích stran běžící ve Windows 10.
+      <string id="AllowTelemetry_Explain">Nastavení této zásady určuje nejvyšší úroveň diagnostických dat Windows odesílaných do Microsoftu. Konfigurací tohoto nastavení nezabráníte uživatelům ve změně jejich nastavení telemetrie, ale nebudou si moct zvolit vyšší úroveň, než jste nastavili pro organizaci. Nastavení diagnostických dat Windows 10 se vztahuje jen na operační systém Windows a aplikace, které jsou jeho součástí. Nevztahuje se na aplikace třetích stran běžící ve Windows 10.
 
 Pokud toto nastavení povolíte, můžete určit úroveň diagnostických dat, která se mají odesílat do Microsoftu. K dispozici jsou tyto možnosti:
 
@@ -58,7 +58,7 @@ Když v zásadě Povolit telemetrii povolíte rozšířená diagnostická data a
 Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, úroveň diagnostických dat odesílaných do Microsoftu se určí na základě zásady Povolit telemetrii.
       </string>
 
-      <string id="AllowDeviceNameInDiagnosticData">Povolit odeslání názvu zařízení k v diagnostických datech Windows</string>
+      <string id="AllowDeviceNameInDiagnosticData">Povolit odesílání názvu zařízení v diagnostických datech Windows</string>
       <string id="AllowDeviceNameInDiagnosticData_Explain">Tato zásada umožňuje odeslání názvu zařízení do Microsoftu jako součást diagnostických dat Windows.
 
 Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebude se název zařízení odesílat do Microsoftu jako součást diagnostických dat Windows.
@@ -100,11 +100,19 @@ Zásadu Povolit telemetrii nastavte tak, aby uživatelé nemohli do Microsoftu o
           Pokud tuto zásadu zakážete nebo nenakonfigurujete, bude Prohlížeč diagnostických dat na stránce nastavení povolený.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurovat koncový bod odesílání pro Microsoft 365 Update Readiness</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Nakonfigurovat koncový bod pro nahrávání diagnostických dat do Desktop Analytics</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Tato zásada nastaví koncový bod odesílání pro diagnostická data tohoto zařízení jako součást programu Microsoft 365 Update Readiness.
-          Pokud je vaše organizace do tohoto programu zapojena a obdržela pokyny, aby nakonfigurovala vlastní koncový bod odesílání, použijte toto nastavení a definujte koncový bod.
+          Tato zásada nastaví koncový bod pro nahrávání diagnostických dat tohoto zařízení v rámci Desktop Analytics.
+          Pokud se vaše organizace tohoto programu účastní a obdržela pokyny, aby nakonfigurovala vlastní koncový bod nahrávání, použijte toto nastavení a definujte koncový bod.
           Hodnotu tohoto nastavení získáte od Microsoftu v rámci procesu registrace do programu. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Povolit kanál obchodních dat</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          Nastavení AllowCommercialDataPipeline výslovně přihlásí zařízení do kanálu firemních dat ve Windows.
+          Pokud toto nastavení povolíte, budou se data shromážděná ze zařízení předávat do kanálu firemních dat ve Windows.
+          Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se všechna data ze zařízení shromažďovat a zpracovávat v souladu s našimi zásadami pro kanál standardních dat ve Windows.
+          Konfigurací tohoto nastavení nezměníte úroveň shromažďování telemetrie ani schopnost uživatele změnit tuto úroveň. Toto nastavení se vztahuje jenom na operační systém Windows a aplikace, které jsou součástí Windows, ne na aplikace nebo služby jiných výrobců běžící ve Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Zásadu Povolit telemetrii nastavte tak, aby uživatelé nemohli do Microsoftu o
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Vlastní koncový bod odesílání pro Microsoft 365 Update Readiness:</label>
+          <label>Vlastní koncový bod pro nahrávání do Desktop Analytics:</label>
         </textBox>
       </presentation>
     </presentationTable>

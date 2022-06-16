@@ -1,4 +1,4 @@
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/Policysecurity intelligence">
 <displayName>indtast det viste navn her</displayName>
 <description>indtast beskrivelsen her</description>
 <resources>
@@ -17,7 +17,7 @@
     <string id="Remediation">Afhjælpning</string>
     <string id="Reporting">Rapportering</string>
     <string id="Scan">Scan</string>
-    <string id="SignatureUpdate">Signaturopdateringer</string>
+    <string id="SignatureUpdate">Opdateringer til sikkerhedsintelligens</string>
     <string id="Spynet">MAPS</string>
     <string id="Threats">Trusler</string>
     <string id="ClientInterface">Klientens brugergrænseflade</string>
@@ -50,11 +50,15 @@ Hvis du aktiverer denne politikindstilling, køres Endpoint Protection ikke, og 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, køres Endpoint Protection som standard og computerne scannes for malware og andet potentielt uønsket software.
     </string>
     <string id="DisableAntiSpywareDefender">Slå Windows Defender Antivirus fra</string>
-    <string id="DisableAntiSpywareDefender_Explain">Denne politikindstilling slå Windows Defender Antivirus fra.
+    <string id="DisableAntiSpywareDefender_Explain">Denne politikindstilling slår Windows Defender Antivirus fra.
+    
+    Hvis du aktiverer denne politikindstilling, kører Windows Defender Antivirus ikke og vil ikke scanne computere for malware eller anden potentielt uønsket software.
 
-    Hvis du slår denne politikindstilling til, køres Windows Defender Antivirus ikke, og computerne scannes ikke for malware og andet potentielt uønsket software.
+    Hvis du deaktiverer denne politikindstilling, køres Windows Defender Antivirus uanset andre installerede antivirusprogrammer.
 
-    Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, køres Windows Defender Antivirus som standard, og computerne scannes for malware og andet potentielt uønsket software.</string>
+    Hvis du undlader at konfigurere denne politikindstilling, vil Windows administrere Windows Defender Antivirus internt. Hvis du installerer et andet antivirusprogram, deaktiverer Windows automatisk Windows Defender Antivirus. Ellers vil Windows Defender Antivirus scanne dine computere for malware og andre potentielt uønskede programmer.
+
+    Hvis du aktiverer eller deaktiverer denne politik, kan det medføre en uventet eller ikke-understøttet funktionsmåde. Det anbefales, at du undlader at konfigurere denne politikindstilling.</string>
     <string id="DisableLocalAdminMerge">Konfigurer lokal administrators fletteadfærd for lister</string>
     <string id="DisableLocalAdminMerge_Explain">Denne politikindstilling styrer, om komplekse listeindstillinger, som er konfigureret af en lokal administrator, skal flettes med gruppepolitikindstillinger. Denne politikindstilling gælder for lister som trusler og udeladelser.
 
@@ -82,40 +86,40 @@ Hvis du aktiverer denne politikindstilling, bruges proxyserveren ikke til de ang
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruges proxyserveren til de angivne adresser.</string>
     <string id="ProxyPacUrl">Angiv automatisk proxykonfiguration (.pac) for forbindelse til netværket</string>
-    <string id="ProxyPacUrl_Explain">Denne politikindstilling definerer URL-adressen for en proxy . pac-fil, der skal bruges, når klienten forsøger at oprette forbindelse til netværket for definitionsopdateringer og MAPS-rapportering. Hvis den automatiske proxykonfiguration mislykkes, bruger klienten de alternative indstillinger i stedet (i rækkefølge):
+    <string id="ProxyPacUrl_Explain">Denne politikindstilling definerer URL-adressen for en proxy. pac-fil, der skal bruges, når klienten forsøger at oprette forbindelse til netværket for sikkerhedsopdateringer og MAPS-rapportering. Hvis automatisk konfiguration af proxyserver mislykkes, eller hvis der ikke er angivet nogen automatisk proxykonfiguration, vil klienten gå tilbage til de alternative indstillinger (i rækkefølge):
       1. Proxyserver (hvis den er angivet)
-      2. URL-adresse for proxy .pac-fil (hvis den er angivet)
+      2. proxy. pac URL-adresse (hvis den er angivet)
       3. Ingen
       4. Internet Explorer-proxyindstillinger
       5. Automatisk genkendelse
 
-      Hvis du aktiverer denne indstilling, bliver proxyindstillingen angivet til at bruge den angivne proxy .pac i ovenstående rækkefølge.
+      Hvis du aktiverer denne indstilling, indstilles proxyindstillingen til at bruge den angivne proxy. pac i den rækkefølge, der er angivet ovenfor.
 
-      Hvis du deaktiverer eller ikke konfigurerer denne indstilling, springer proxyen over dette sikkerhedstrin i den rækkefølge, der er angivet ovenfor.</string>
+      Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, springer proxyen over dette fallback-trin i den rækkefølge, der er angivet ovenfor.</string>
     <string id="ProxyServer">Definer proxyserver for at oprette forbindelse til netværket</string>
-    <string id="ProxyServer_Explain">Med denne politikindstilling kan du konfigurere den nævnte proxyserver, som skal bruges, når klienten forsøger at oprette forbindelse til netværket for definitionsopdateringer og MAPS-rapportering. Hvis den nævnte proxy ikke kan bruges, eller hvis der ikke er angivet en proxy, bruges følgende indstillinger (i nævnte rækkefølge):
+    <string id="ProxyServer_Explain">Med denne politikindstilling kan du konfigurere den navngivne proxy, som skal bruges, når klienten forsøger at oprette forbindelse til netværket for opdateringer af sikkerhedsopdateringer og MAPS-rapportering. Hvis den navngivne proxy mislykkes, eller hvis der ikke er angivet en proxy, vil klienten gå tilbage til de alternative indstillinger (i rækkefølge):
       1. Proxyserver (hvis den er angivet)
-      2. Proxy .pac URL-adresse (hvis den er angivet)
+      2. proxy. pac URL-adresse (hvis den er angivet)
       3. Ingen
       4. Internet Explorer-proxyindstillinger
       5. Automatisk genkendelse
 
-      Hvis du aktiverer denne indstilling, indstilles proxyserveren til den angivne URL-adresse i den rækkefølge, der er angivet ovenfor. URL-adressen skal begynde med enten http:// eller https://.
+      Hvis du aktiverer denne indstilling, indstilles proxyserveren til den angivne URL-adresse i den rækkefølge, der er angivet ovenfor. URL-adressen skal begynde med http:// eller https://.
 
-      Hvis du deaktiverer eller ikke konfigurerer denne indstilling, springer proxyen dette sikkerhedstrin over i den rækkefølge, der er angivet ovenfor.
+      Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, springer proxyen over dette fallback-trin i den rækkefølge, der er angivet ovenfor.
     </string>
     <string id="RandomizeScheduleTaskTimes">Tilfældige tidspunkter for planlagte opgaver</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Med denne politikindstilling kan du aktivere eller deaktivere et tilfældigt starttidspunkt for den planlagte scanning og den planlagte definitionsopdatering. Denne politikindstilling bruges til at distribuere ressourcepåvirkningen af scanningen. Den kan f.eks. bruges i virtuelle gæstemaskiner, som deler en vært, til at forhindre, at flere virtuelle gæstemaskiner starter en diskintensiv handling samtidig.
+    <string id="RandomizeScheduleTaskTimes_Explain">Med denne politikindstilling kan du aktivere eller deaktivere tilfældighed af den planlagte starttid for scanning og starttidspunktet for den planlagte sikkerhedsintelligens. Denne indstilling bruges til at fordele ressourcevirkningen i at scanne. Den kan f.eks. bruges på virtuelle gæstemaskiner, som deler en vært, for at forhindre at flere virtuelle gæstemaskiner kan oprette én diskintensiv handling ad gangen.
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, starter planlagte opgaver på et tilfældigt tidspunkt inden for et interval på 30 minutter før og efter det angivne starttidspunkt.
+    Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, starter planlagte opgaver på et tilfældigt tidspunkt inden for et interval på 30 minutter før og efter det angivne starttidspunkt.
 
-Hvis du deaktiverer denne politikindstilling, starter planlagte opgaver på det angivne starttidspunkt.</string>
+    Hvis du deaktiverer denne politikindstilling, starter planlagte opgaver på det angivne starttidspunkt.</string>
     <string id="ServiceKeepAlive">Tillad, at antimalwaretjenesten altid kører</string>
-    <string id="ServiceKeepAlive_Explain">Med denne politikindstilling kan du konfigurere, om antimalwaretjenesten skal blive ved med at køre, når antivirus- og antispywaredefinitioner er deaktiverede. Du anbefales at lade denne politikindstilling være deaktiveret.
+    <string id="ServiceKeepAlive_Explain">Du kan bruge denne politikindstilling til at konfigurere, om antimalwaretjenesten skal køres, når antivirus- og antispyware-sikkerhedsovervågning er deaktiveret. Det anbefales, at denne indstilling forbliver deaktiveret.
 
-Hvis du aktiverer denne politikindstilling, kører antimalwaretjenesten altid, selv om både antivirus- og antispywaredefinitioner er deaktiverede.
+    Hvis du aktiverer denne indstilling, kører antimalwaretjenesten altid, selvom både antivirus- og antispyware-sikkerhedsovervågning er deaktiveret.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, stoppes antimalwaretjenesten, når både antivirus- og antispywaredefinitioner er deaktiverede. Hvis computeren genstartes, startes tjenesten, hvis den er indstillet til Automatisk start (Automatic startup). Når tjenesten er startet, kontrolleres det, om antivirus- og antispywaredefinitioner er aktiverede. Hvis mindst én af dem er aktiveret, fortsætter tjenesten med at køre. Hvis de begge er deaktiverede, stoppes tjenesten.</string>
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, stoppes antimalwaretjenesten, når antivirus- og antispyware-sikkerhedsovervågning er deaktiveret. Hvis computeren genstartes, startes tjenesten, hvis den er indstillet til automatisk start. Når tjenesten er startet, kan der være en kontrol for at se, om sikkerhedsintelligens for antivirus og antispyware er aktiveret. Hvis mindst én er aktiveret, kører tjenesten stadig. Hvis begge er deaktiveret, stoppes tjenesten.</string>
     <string id="Root_PUAProtection">Konfigurer genkendelse for potentielt uønskede applikationer</string>
     <string id="Root_PUAProtection_Explain">
         Aktivér eller deaktiver registrering af potentielt uønskede applikationer. Du kan vælge at blokere, overvåge eller tillade, når potentielt uønsket software downloades eller forsøger at installere sig selv på din computer.
@@ -144,13 +148,13 @@ Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, aktive
 
 Hvis du deaktiverer denne politikindstilling, deaktiveres protokolgenkendelse.</string>
     <string id="Nis_Consumers_IPS_DisableSignatureRetirement">Aktivér definitionstilbagetrækning</string>
-    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Med denne politikindstilling kan du konfigurere definitionstilbagetrækning for netværksbeskyttelse mod udnyttelse af kendte sårbarheder. Definitionstilbagetrækning kontrollerer, om computeren har de sikkerhedsopdateringer, der er nødvendige for at beskytte den mod en bestemt sårbarhed. Hvis systemet ikke er sårbart over for en udnyttelse, som en definition har registreret, "tilbagetrækkes" denne definition. Hvis alle definitioner for en givet protokol trækkes tilbage, bliver protokollen ikke længere fortolket. Aktivering af denne funktion er med til at forbedre ydeevnen. En computer, der er opdateret med alle de nyeste sikkerhedsopdateringer og netværksbeskyttelse, påvirker ikke netværkets ydeevne.
+    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Med denne politikindstilling kan du konfigurere definitionsophør for netværksbeskyttelse mod udnyttelse af kendte sårbarheder. Definitionsophør kontrollerer, om en computer har de påkrævede sikkerhedsopdateringer, der er nødvendige for at beskytte den mod en særlig sårbarhed. Hvis systemet ikke er sårbart over for den udnyttelse, der er registreret i en definition, bliver "ophører" definitionen. Hvis al sikkerhedsintelligens for en bestemt protokol udgår, parses protokollen ikke længere. Hvis denne funktion aktiveres, hjælper det med at forbedre ydeevnen. På en computer, der er opdateret med alle de nyeste sikkerhedsopdateringer, vil netværksbeskyttelse ikke påvirke netværksydelsen.
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, aktiveres definitionstilbagetrækning.
+    Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, aktiveres definitions ophør.
 
-Hvis du deaktiverer denne politikindstilling, deaktiveres definitionstilbagetrækning.</string>
+    Hvis du deaktiverer denne politikindstilling, deaktiveres definitionsophøret.</string>
     <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">Angiv yderligere definitionssæt til kontrol af netværkstrafik</string>
-    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Denne politikindstilling definerer yderligere definitionssæt, som kan aktiveres under kontrol af netværkstrafik. GUID'er, der er angivet pr. definition, skal tilføjes under Indstillinger for denne politikindstilling. Hver filtype skal angives som et navneværdipar, hvor navnet skal være en strengrepræsentation af et GUID, der er angivet pr. definition. For eksempel defineres det GUID, der er angivet pr. definition for at aktivere testdefinitioner, som: "{b54b6ac9-a737-498e-9120-6616ad3bf590}". Værdien bruges ikke, og du anbefales at indstille den til 0.</string>
+    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Denne politikindstilling definerer yderligere definitionssæt for at aktivere til kontrol af netværkstrafik. GUID'er af definitionssæt skal tilføjes under Indstillinger for denne indstilling. Hver post skal være angivet som et navneværdipar, hvor navnet skal være en strengrepræsentation af et GUID for en definitionsfil. Som eksempel er GUID'et af definitionssættet, der aktiverer testsikkerhedsintelligens, defineret som: "{b54b6ac9-a737-498e-9120-6616ad3bf590}". Værdien bruges ikke, og det anbefales, at denne indstilling indstilles til 0.</string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay">Konfigurer tilsidesættelse af lokal indstilling for fjernelse af elementer fra karantænemappen</string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay_Explain">Denne politikindstilling konfigurerer en lokal tilsidesættelse for konfigurationen af det antal dage, elementer skal gemmes i mappen Karantæne (Quarantine), før de fjernes. Denne politikindstilling kan kun indstilles af gruppepolitikken.
 
@@ -358,14 +362,14 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, scan
 Hvis du aktiverer denne politikindstilling, overstiger CPU-udnyttelsen ikke den angivne procentdel.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, overstiger CPU-udnyttelsen ikke standardværdien.</string>
-    <string id="CheckForSignaturesBeforeRunningScan">Søg efter de seneste virus- og spywaredefinitioner, før der køres en planlagt scanning</string>
-    <string id="CheckForSignaturesBeforeRunningScan_Explain">Med denne politikindstilling kan du styre, om der skal søges efter nye virus- og spywaredefinitioner, før der køres en scanning. 
+    <string id="CheckForSignaturesBeforeRunningScan">Søg efter den nyeste virus- og spyware-sikkerhedsintelligens, før du kører en planlagt scanning</string>
+    <string id="CheckForSignaturesBeforeRunningScan_Explain">Du kan bruge denne politikindstilling til at angive, om der skal tjekkes for ny sikkerhedsintelligens for virus og spyware, før der køres en scanning. 
 
-Denne politikindstilling gælder for planlagte scanninger samt for kommandolinjen "mpcmdrun -SigUpdate", men den indvirker ikke på scanninger, der initieres manuelt fra brugergrænsefladen.
+    Denne indstilling gælder for planlagte scanninger samt kommandolinjen "mpcmdrun -SigUpdate", men den har ingen indflydelse på scanninger, der startes manuelt fra brugergrænsefladen.
 
-Hvis du aktiverer denne politikindstilling, søges der efter nye definitioner, før der køres en scanning.
+    Hvis du aktiverer denne indstilling, udføres der en kontrol af ny sikkerhedsintelligens, før der køres en scanning.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, startes scanningen med de eksisterende definitioner.</string>
+    Hvis du deaktiverer indstillingen eller undlader at konfigurere denne politikindstilling, starter scanningen med den eksisterende sikkerhedsintelligens.</string>
     <string id="Scan_DisableArchiveScanning">Scan arkivfiler</string>
     <string id="Scan_DisableArchiveScanning_Explain">Med denne politikindstilling kan du konfigurere scanninger for skadelig software og uønsket software i arkivfiler som f.eks. .ZIP eller .CAB.
 
@@ -543,79 +547,83 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kør
 
         Hvis du deaktiverer eller undlader at konfigurere denne indstilling, foretages der ikke ændringer af CPU-prioritet for planlagte scanninger.
     </string>
-    <string id="SignatureUpdate_ASSignatureDue">Definer antallet af dage, før spywaredefinitioner anses for at være forældede</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før spywaredefinitioner anses for at være forældede. Hvis definitioner anses for at være forældede, kan denne tilstand udløse en række yderligere handlinger, herunder tilbagevenden til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Som standard er denne værdi indstillet til 14 sekunder.
+    <string id="SignatureUpdate_ASSignatureDue">Definer antallet af dage, før spywarens sikkerhedsintelligens anses for at være forældet</string>
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før spywarens sikkerhedsintelligens anses for at være forældet. Hvis sikkerhedsintelligens er beregnet til at være forældet, kan denne tilstand udløse flere yderligere handlinger, herunder gå tilbage til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Denne værdi er som standard angivet til 14 dage.
 
-Hvis du aktiverer denne politikindstilling, anses spywaredefinitioner for at være forældede, når det angivne antal dage er gået uden en opdatering.
+    Hvis du aktiverer denne indstilling, anses spywarens sikkerhedsintelligens for at være forældet, når det angivne antal dage er gået uden en opdatering.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses spywaredefinitioner for at være forældede, når det antal dage, der er standard, er gået uden en opdatering.</string>
-    <string id="SignatureUpdate_AVSignatureDue">Definer antallet af dage, før virusdefinitioner anses for at være forældede</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før virusdefinitioner anses for at være forældede. Hvis definitioner anses for at være forældede, kan denne tilstand udløse en række yderligere handlinger, herunder tilbagevenden til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Som standard er denne værdi indstillet til 14 sekunder.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses spywarens sikkerhedsintelligens for at være forældet, når det antal dage, der er standard, er gået uden en opdatering.</string>
+    <string id="SignatureUpdate_AVSignatureDue">Definer antallet af dage, før virussens sikkerhedsintelligens anses for at være forældet</string>
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Med denne politikindstilling kan du definere det antal dage, der skal gå, før virussens sikkerhedsintelligens anses for at være forældet. Hvis sikkerhedsintelligens er beregnet til at være forældet, kan denne tilstand udløse flere yderligere handlinger, herunder at gå tilbage til en alternativ opdateringskilde eller visning af et advarselsikon i brugergrænsefladen. Denne værdi er som standard angivet til 14 dage.
 
-Hvis du aktiverer denne politikindstilling, anses virusdefinitioner for at være forældede, når det angivne antal dage er gået uden en opdatering.
+    Hvis du aktiverer denne indstilling, anses virussens sikkerhedsintelligens for at være forældet, når det angivne antal dage er gået uden en opdatering.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses virusdefinitioner for at være forældede, når det antal dage, der er standard, er gået uden en opdatering.</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definer filshares til hentning af definitionsopdateringer</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Med denne politikindstilling kan du konfigurere UNC-filsharekilder til hentning af definitionsopdateringer. Kilder kontaktes i den angivne rækkefølge. Værdien for denne politikindstilling skal angives som en pipeadskilt streng, der optæller definitionsopdateringskilderne. For eksempel: "{\\unc1 | \\unc2 }". Listen er som standard tom.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anses virussens sikkerhedsintelligens for at være forældet, når det antal dage, der er standard, er gået uden en opdatering.</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definer filshares til download af opdateringer til sikkerhedsintelligens</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Du kan bruge denne politikindstilling til at konfigurere UNC-filshare til download af opdateringer til sikkerhedsintelligens. Kilder kontaktes i den angivne rækkefølge. Værdien af denne indstilling skal angives som en pipe-separeret streng, der optæller opdateringskilderne til sikkerhedsintelligens. For eksempel: "{\\unc1 | \\unc2 }". Listen er som standard tom.
 
-Hvis du aktiverer denne politikindstilling, kontaktes de angivne kilder om definitionsopdateringer. Når der er hentet definitionsopdateringer fra én angivet kilde, kontaktes de resterende kilder på listen ikke.
+    Hvis du aktiverer denne indstilling, kontaktes de angivne kilder for opdateringer til sikkerhedsintelligens. Når der er opdateringerne til sikkerhedsintelligens er downloadet fra én angivet kilde, kontaktes de resterende kilder på listen ikke.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, forbliver listen som standard tom, og ingen kilder kontaktes.</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate">Aktivér scanning efter signaturopdatering</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Med denne politikindstilling kan du konfigurere den automatiske scanning, som starter, når der er udført en definitionsopdatering.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, forbliver listen som standard tom, og ingen kilder kontaktes.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation">Definer placering af sikkerhedsintelligens for VDI-klienter.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation_Explain">Med denne politikindstilling kan du definere placeringen af sikkerhedsintelligens for computere, der er konfigureret til VDI. 
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, startes der en scanning efter en udført definitionsopdatering.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil sikkerhedsintelligens blive henvist fra den lokale standardkilde.</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate">Slå scanning til efter opdatering af sikkerhedsintelligens</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Med denne politikindstilling kan du konfigurere den automatiske scanning, der starter, efter at der er foretaget en opdatering af sikkerhedsintelligens.
 
-Hvis du deaktiverer denne politikindstilling, startes der ikke en scanning efter en definitionsopdatering.</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Tillad definitionsopdateringer ved kørsel på batteri</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Med denne politikindstilling kan du konfigurere definitionsopdateringer, når computeren kører på batteristrøm.
+    Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, starter en scanning efter en opdatering af sikkerhedsintelligens.
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, udføres definitionsopdateringer som ellers uanset strømtilstand.
+    Hvis du deaktiverer denne politikindstilling, startes der ikke en scanning efter en opdatering af sikkerhedsintelligens.</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Tillad opdateringer af sikkerhedsintelligens, når der køres på batteri</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Med denne politikindstilling kan du konfigurere opdateringer af sikkerhedsintelligens, når computeren kører på batteristrøm.
 
-Hvis du deaktiverer denne politikindstilling, deaktiveres definitionsopdateringer, mens computeren kører på batteristrøm.</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Initier definitionsopdatering ved start</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Med denne politikindstilling kan du konfigurere definitionsopdateringer ved start, når der ikke er installeret et antimalwareprogram.
+    Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, sker opdateringerne af sikkerhedsintelligens som sædvanligt uanset strømtilstand.
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, initieres definitionsopdateringer ved start, når der ikke er installeret et antimalwareprogram.
+    Hvis du deaktiverer denne politikindstilling, slås opdateringer til sikkerhedsintelligens fra, mens computeren kører på batteristrøm.</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Start opdatering af sikkerhedsintelligens ved start</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Med denne politikindstilling kan du konfigurere opdateringer til sikkerhedsintelligens ved start, når der ikke er installeret et antimalwareprogram.
 
-Hvis du deaktiverer denne politikindstilling, initieres definitionsopdateringer ikke ved start, når der ikke er installeret et antimalwareprogram.</string>
-    <string id="SignatureUpdate_FallbackOrder">Definer rækkefølgen af kilder til hentning af definitionsopdateringer</string>
-    <string id="SignatureUpdate_FallbackOrder_Explain">Med denne politikindstilling kan du definere den rækkefølge, som forskellige definitionsopdateringskilder skal kontaktes i. Værdien for denne politikindstilling skal angives som en pipeadskilt streng, der optæller definitionsopdateringskilderne i rækkefølge. De mulige værdier er: "InternalDefinitionUpdateServer", "MicrosoftUpdateServer", "MMPC" og "FileShares"
+    Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, startes opdateringer til sikkerhedsintelligens ved start, når der ikke er installeret et antimalwareprogram.
 
-For eksempel: { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
+    Hvis du deaktiverer denne politikindstilling, startes opdateringer af sikkerhedsintelligens ikke ved start, når der ikke er installeret et antimalwareprogram.</string>
+    <string id="SignatureUpdate_FallbackOrder">Definer rækkefølgen af kilder til download af opdateringer til sikkerhedsintelligens</string>
+    <string id="SignatureUpdate_FallbackOrder_Explain">Denne politikindstilling gør det muligt at definere, i hvilken rækkefølge de forskellige opdateringskilder til sikkerhedsintelligens skal kontaktes. Værdien af denne indstilling skal angives som en pipe-separeret streng, der optæller opdateringskilderne til sikkerhedsintelligens i rækkefølge. Mulige værdier er: "InternalDefinitionUpdateServer", "MicrosoftUpdateServer", "MMPC" og "FileShares"
 
-Hvis du aktiverer denne politikindstilling, kontaktes definitionsopdateringskilder i den angivne rækkefølge. Når der er hentet definitionsopdateringer fra én angivet kilde, kontaktes de resterende kilder på listen ikke.
+    For eksempel: { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kontaktes definitionsopdateringskilder i en standardrækkefølge.</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU">Tillad definitionsopdateringer fra Microsoft Update</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Med denne politikindstilling kan du aktivere hentning af definitionsopdateringer fra Microsoft Update, også selv om standardserveren med automatiske opdateringer er konfigureret til en anden overførselskilde, f.eks. Windows Update.
+    Hvis du aktiverer denne politikindstilling, kontaktes opdateringskilderne til sikkerhedsintelligens i den angivne rækkefølge. Når opdateringerne til sikkerhedsintelligens er downloadet fra én angivet kilde, kontaktes de resterende kilder på listen ikke.
 
-Hvis du aktiverer denne politikindstilling, hentes definitionsopdateringer fra Microsoft Update.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kontaktes sikkerhedsopdaterings kilder i en standardrækkefølge.</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU">Tillad opdateringer til sikkerhedsintelligens fra Microsoft Update</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Med denne politikindstilling kan du aktivere download af opdateringer til sikkerhedsintelligens fra Microsoft Update, selvom standardserveren til automatiske opdateringer er konfigureret til en anden downloadkilde, f.eks. Windows Update.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, hentes definitionsopdateringer fra den konfigurerede overførselskilde.</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery">Tillad definitionsopdateringer i realtid baseret på rapporter til Microsoft MAPS</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Med denne politikindstilling kan du aktivere definitionsopdateringer i realtid som svar på rapporter, der er sendt til Microsoft MAPS. Hvis tjenesten rapporterer en fil som ukendt, og Microsoft MAPS finder, at den nyeste definitionsopdatering har definitioner for en trussel, der involverer denne fil, modtager tjenesten straks alle de nyeste definitioner for denne trussel. Din computer skal være konfigureret til at deltage i Microsoft MAPS, hvis denne funktionalitet skal virke.
+    Hvis du aktiverer denne politikindstilling, downloades opdateringer til sikkerhedsintelligens fra Microsoft Update.
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, aktiveres definitionsopdateringer i realtid.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, downloades opdateringer til sikkerhedsintelligens fra den konfigurerede downloadkilde.</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery">Tillad opdateringer af sikkerhedsintelligens i realtid baseret på rapporter til Microsoft MAPS</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Du kan bruge denne politikindstilling til at aktivere opdateringer i realtid til sikkerheds Intelligence som følge af rapporter, der sendes til Microsoft MAPS. Hvis tjenesten rapporterer en fil som en ukendt, og Microsoft MAPS finder, at den nyeste opdatering til sikkerhedsintelligens for en trussel, som involverer denne fil, vil tjenesten straks modtage den nyeste sikkerhedsintelligens til denne trussel. Din computer skal være konfigureret til at deltage i Microsoft MAPS, for at denne funktionalitet virker.
 
-Hvis du deaktiverer denne politikindstilling, deaktiveres definitionsopdateringer i realtid.</string>
-    <string id="SignatureUpdate_ScheduleDay">Angiv, hvilken dag i ugen der skal søges efter definitionsopdateringer</string>
-    <string id="SignatureUpdate_ScheduleDay_Explain">Med denne politikindstilling kan du angive den dag i ugen, hvor der skal søges efter definitionsopdateringer. Søgningen kan også konfigureres til at køre hver dag eller til aldrig at køre.
+    Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, aktiveres opdateringer til sikkerhedsintelligens i realtid.
 
-Denne politikindstilling kan konfigureres med følgende ordenstalværdier:
-(0x0) Hver dag (standard)
-(0x1) Søndag 
-(0x2) Mandag
-(0x3) Tirsdag
-(0x4) Onsdag
-(0x5) Torsdag
-(0x6) Fredag
-(0x7) Lørdag
-(0x8) Aldrig (standard)
+    Hvis du deaktiverer denne politikindstilling, deaktiveres opdateringer til sikkerhedsintelligens i realtid.</string>
+    <string id="SignatureUpdate_ScheduleDay">Angiv den dag i ugen, hvor der skal tjekkes for opdateringer til sikkerhedsintelligens</string>
+    <string id="SignatureUpdate_ScheduleDay_Explain">Med denne politikindstilling kan du angive den dag i ugen, hvor der skal tjekkes efter opdateringer til sikkerhedsintelligens. Du kan også konfigurere dette tjek til at køre hver dag eller til aldrig at køre.
 
-Hvis du aktiverer denne politikindstilling, sker søgningen efter definitionsopdateringer med den angivne hyppighed.
+    Du kan konfigurere denne indstilling med følgende talværdier:
+    (0x0) Hver dag (standard)
+    (0x1) Søndag 
+    (0x2) Mandag
+    (0x3) Tirsdag
+    (0x4) Onsdag
+    (0x5) Torsdag
+    (0x6) Fredag
+    (0x7) Lørdag
+    (0x8) Aldrig
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sker søgningen efter definitionsopdateringer med en standardhyppighed.</string>
+    Hvis du aktiverer denne indstilling, sker tjekket efter opdateringer til sikkerhedsintelligens med den angivne hyppighed.
+
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sker tjekket efter opdateringer til sikkerhedsintelligens med en standardhyppighed.</string>
     <string id="SignatureUpdate_ScheduleDay_0">Aldrig</string>
     <string id="SignatureUpdate_ScheduleDay_1">Hver dag</string>
     <string id="SignatureUpdate_ScheduleDay_2">Søndag</string>
@@ -625,24 +633,24 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sker
     <string id="SignatureUpdate_ScheduleDay_6">Torsdag</string>
     <string id="SignatureUpdate_ScheduleDay_7">Fredag</string>
     <string id="SignatureUpdate_ScheduleDay_8">Lørdag</string>
-    <string id="SignatureUpdate_ScheduleTime">Angiv det tidspunkt, hvor der skal søges efter definitionsopdateringer</string>
-    <string id="SignatureUpdate_ScheduleTime_Explain">Med denne politikindstilling kan du angive det tidspunkt på dagen, hvor der skal søges efter definitionsopdateringer. Tidsværdien repræsenteres som antallet af minutter efter midnat (00:00).  For eksempel svarer 120 (0x78) til 02:00. Som standard er denne politikindstilling konfigureret til at søge efter definitionsopdateringer 15 minutter før det planlagte scanningstidspunkt. Tidsplanen er baseret på det tidspunkt, lokal tid, på computeren, hvor søgningen udføres.
+    <string id="SignatureUpdate_ScheduleTime">Angiv det tidspunkt, hvor der skal tjekkes efter opdateringer til sikkerhedsintelligens</string>
+    <string id="SignatureUpdate_ScheduleTime_Explain">Med denne politikindstilling kan du angive det tidspunkt på dagen, hvor der skal søges efter opdateringer til sikkerhedsintelligens. Tidsværdien repræsenteres som antallet af minutter efter midnat (00:00). For eksempel er 120 (0x78) lig med 02:00 AM. Som standard er denne indstilling konfigureret til at undersøge, om der er opdateringer til sikkerhedsintelligens 15 minutter før det planlagte scanningstidspunkt. Tidsplanen er baseret på den lokale tid på den computer, hvor tjekket foregår.
 
-Hvis du aktiverer denne politikindstilling, udføres søgningen efter definitionsopdateringer på det angivne tidspunkt på dagen.
+    Hvis du aktiverer denne indstilling, sker tjekket efter opdateringer til sikkerhedsintelligens på det angivne tidspunkt på dagen.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sker søgningen efter definitionsopdateringer på standardtidspunktet.</string>
-    <string id="SignatureUpdate_SignatureDisableNotification">Tillad, at meddelelser deaktiverer definitioner baseret på rapporter til Microsoft MAPS</string>
-    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Med denne politikindstilling kan du konfigurere antimalwaretjenesten til at modtage meddelelser om deaktivering af individuelle definitioner som svar på rapporter, den sender til Microsoft MAPS. Microsoft MAPS bruger disse meddelelser til at deaktivere definitioner, som giver falske positive rapporter. Din computer skal være konfigureret til at deltage i Microsoft MAPS, hvis denne funktionalitet skal virke.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sker tjekket af opdateringer til sikkerhedsintelligens på standardtidspunktet.</string>
+    <string id="SignatureUpdate_SignatureDisableNotification">Tillad beskeder om at deaktivere sikkerhedsintelligens-baserede rapporter i Microsoft MAPS</string>
+    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Med denne politikindstilling kan du konfigurere antimalwaretjenesten til at modtage beskeder om at deaktivere individuel sikkerhedsintelligens som svar på rapporter, den sender til Microsoft MAPS. Microsoft MAPS bruger disse meddelelser til at deaktivere sikkerhedsintelligens, der forårsager falske positive rapporter. Din computer skal være konfigureret til at deltage i Microsoft MAPS, for at denne funktionalitet virker.
 
-Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, modtager antimalwaretjenesten meddelelser om deaktivering af definitioner.
+    Hvis du aktiverer denne indstilling eller undlader at konfigurere, modtager antimalwaretjenesten besked om at deaktivere sikkerhedsintelligens.
 
-Hvis du deaktiverer denne politikindstilling, modtager antimalwaretjenesten ikke meddelelser om deaktivering af definitioner.</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Definer det antal dage, efter hvilke der skal udføres en opfølgningsdefinitionsopdatering</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Med denne politikindstilling kan du definere det antal dage, efter hvilke det er nødvendigt at udføre en opfølgningsdefinitionsopdatering. Som standard er værdien for denne politikindstilling 1 dag.
+    Hvis du deaktiverer denne indstilling, modtager antimalwaretjenesten ikke besked om at deaktivere sikkerhedsintelligens.</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Definer det antal dage, efter hvilke der skal foretages en opfølgning af opdatering til sikkerhedsintelligens</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Med denne politikindstilling kan du definere det antal dage, efter hvilke der kræves en opfølgning af opdatering til sikkerhedsintelligens. Værdien for denne indstilling er som standard 1 dag.
 
-Hvis du aktiverer denne politikindstilling, udføres en opfølgningsdefinitionsopdatering efter det angivne antal dage.
+    Hvis du aktiverer denne indstilling, sker der en opfølgning af opdatering til sikkerhedsintelligens efter det angivne antal dage.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er det nødvendigt at udføre en opfølgningsdefinitionsopdatering efter det antal dage, der er standard.</string>
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kræves der en opfølgning af opdatering til sikkerhedsintelligens efter standardantallet af dage.</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays">Angiv intervallet for besked om udløb</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays_Explain">
     Denne politikindstilling gør det muligt at angive et interval (i dage) for besked om udløb.
@@ -650,28 +658,28 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er d
 
     Værdien skal være større end nul, for at politikken er aktiv.
     </string>
-    <string id="SignatureUpdate_SignatureUpdateInterval">Angiv intervallet for søgning efter definitionsopdateringer</string>
-    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Med denne politikindstilling kan du angive et interval for søgning efter definitionsopdateringer. Tidsværdien repræsenteres som antallet af timer mellem søgninger efter opdateringer. Gyldige værdier går fra 1 (hver time) til 24 (én gang pr. dag).
+    <string id="SignatureUpdate_SignatureUpdateInterval">Angiv intervallet for tjek af opdateringer til sikkerhedsintelligens</string>
+    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Med denne politikindstilling kan du angive et interval for søgning efter opdateringer til sikkerhedsintelligens. Tidsværdien repræsenteres som antallet af timer mellem tjekket for opdateringer. Gyldige værdier går fra 1 (hver time) til 24 (én gang pr. dag).
 
-Hvis du aktiverer denne politikindstilling, udføres søgninger efter definitionsopdateringer med det angivne interval.
+    Hvis du aktiverer denne politikindstilling, sker der et forsøg på at tjekke for opdateringer til sikkerhedsintelligens med det angivne interval.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sker søgninger efter definitionsopdateringer med standardintervallet.</string>
-    <string id="SignatureUpdate_UpdateOnStartup">Søg efter de seneste virus- og spywaredefinitioner ved start</string>
-    <string id="SignatureUpdate_UpdateOnStartup_Explain">Med denne politikindstilling kan du styre, om der skal søges efter nye virus- og spywaredefinitioner umiddelbart efter, at tjenesten starter.
+    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sker der en fejl, når der søges efter opdateringer til sikkerhedsintelligens med standardintervallet.</string>
+    <string id="SignatureUpdate_UpdateOnStartup">Søg efter den seneste sikkerhedsintelligens for virus og spyware ved start</string>
+    <string id="SignatureUpdate_UpdateOnStartup_Explain">Du kan bruge denne politikindstilling til at angive, om der skal tjekkes efter ny sikkerhedsintelligens til virus og spyware umiddelbart efter, at tjenesten er startet.
 
-Hvis du aktiverer denne politikindstilling, søges der efter nye definitioner, når tjenesten er startet.
+    Hvis du aktiverer denne indstilling, tjekkes der efter ny sikkerhedsintelligens, når tjenesten er startet.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, søges der ikke efter nye definitioner efter start af tjenesten.</string>
+    Hvis du deaktiverer indstillingen eller undlader at konfigurere denne politikindstilling, tjekkes der ikke efter ny sikkerhedsintelligens efter start af tjenesten.</string>
     <string id="DisableBlockAtFirstSeen">Konfigurer funktionen "Bloker, når den ses første gang"</string>
-    <string id="DisableBlockAtFirstSeen_Explain">Denne funktion sikrer, at enheden kontrollerer i realtid med MAPS (Microsoft Active Protection Service), inden der køres eller opnås adgang til indhold. Hvis denne funktion deaktiveres, sker der ingen kontrol, hvilket medfører, at enheden får en lavere beskyttelsesstatus.
-	Aktiveret – Indstillingen Bloker, når den ses første gang er aktiveret.
-	Deaktiveret – Indstillingen Bloker, når den ses første gang er deaktiveret.
-	
-	Denne funktion kræver, at disse indstillinger for gruppepolitik indstilles på følgende måde:
-	MAPS -&gt; "Deltag i Microsoft MAPS" skal være aktiveret, ellers fungerer funktionen "Bloker, når den ses første gang" ikke.
-	MAPS -&gt; "Send fileksempler, når der kræves yderligere analyse" skal indstilles til 1 (Send automatisk sikre eksempler) eller 3 (Send alle eksempler). Hvis du indstiller denne til 0 (Spørg altid), får enheden en lavere beskyttelsesstatus. Hvis du indstiller den til 2 (Send aldrig) medfører det, at funktionen "Bloker, når den ses første gang" ikke fungerer.
-	Beskyttelse i realtid -&gt; Politikken "Scan alle hentede filer og vedhæftede filer" skal være aktiveret, ellers fungerer funktionen "Bloker, når den ses første gang" ikke.
-	Beskyttelse i realtid -&gt; Aktiver ikke politikken "Deaktiver beskyttelse i realtid", ellers fungerer funktionen "Bloker, når den ses første gang" ikke.</string>
+    <string id="DisableBlockAtFirstSeen_Explain">Denne funktion sikrer, at enheden tjekker i realtid med MAPS (Microsoft Active Protection Service), inden der kan køres eller opnås adgang til et bestemt indhold. Hvis denne funktion er deaktiveret, foretages der intet tjek, der reducerer enhedens beskyttelsestilstand.
+    Aktiveret – indstillingen Bloker, når den ses første gang er aktiveret.
+    Deaktiveret – indstillingen Bloker, når den ses første gang er slået fra.
+    
+    Denne funktion kræver, at disse indstillinger for Gruppepolitik indstilles på følgende måde:
+    MAPS-&gt; "Deltag i Microsoft MAPS" skal være aktiveret, ellers fungerer funktionen "Bloker, når den ses første gang" ikke.
+    MAPS-&gt; "Send fileksempler, når der kræves yderligere analyse" skal indstilles til 1 (Send sikre eksempler) eller 3 (Send alle eksempler). Hvis du sætter den til 0 (Spørg altid), reduceres enhedens beskyttelsestilstand. Hvis du angiver 2 (Send aldrig), betyder det, at funktionen "Bloker, når den ses første gang" ikke fungerer.
+    Fuldtidsbeskyttelse -&gt; Politikken "Scan alle downloadede filer og vedhæftede filer" skal være aktiveret, ellers fungerer funktionen "Bloker, når den ses første gang" ikke.
+    Beskyttelse i realtid-&gt; Aktivér ikke politikken "Slå Beskyttelse i realtid fra", ellers fungerer funktionen "Bloker, når den ses første gang" ikke.</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting">Konfigurer tilsidesættelse af lokal indstilling for at rapportere til Microsoft MAPS</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting_Explain">Denne politikindstilling konfigurerer en lokal tilsidesættelse af konfigurationen med henblik på deltagelse i Microsoft MAPS. Denne politikindstilling kan kun indstilles af gruppepolitikken.
 
@@ -695,24 +703,24 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, tils
     <string id="SubmitSamplesConsent_Send_All">Send alle eksempler</string>
 
     <string id="SpynetReporting">Deltag i Microsoft MAPS</string>
-    <string id="SpynetReporting_Explain">Med denne politikindstilling kan du deltage i Microsoft MAPS. Microsoft MAPS er et onlinefællesskab, hvor du kan få hjælp til at vælge, hvordan du skal reagere på potentielle trusler. I fællesskabet kan du også få hjælp til at stoppe spredningen af nye skadelige softwareinficeringer.
+    <string id="SpynetReporting_Explain">Med denne politikindstilling kan du deltage i Microsoft MAPS. Microsoft MAPS er det online-community, som hjælper dig med at vælge, hvordan der skal reageres på potentielle trusler. Community'et hjælper også med at stoppe spredningen af nye skadelige softwareinfektioner.
 
-    Du kan vælge at sende de grundlæggende eller yderligere oplysninger om den registrerede software. Hvis du sender flere oplysninger, hjælper du Microsoft med at oprette nye definitioner, så din computer er bedre beskyttet. Disse oplysninger kan omfatte ting som placeringen af de fundne elementer på computeren, hvis der blev fjernet skadelig software. Disse oplysninger indsamles og sendes automatisk. I nogle tilfælde kan der utilsigtet blive sendt personlige oplysninger til Microsoft. Microsoft bruger dog ikke disse oplysninger til at identificere eller kontakte dig.
+    Du kan vælge at sende grundlæggende eller yderligere oplysninger om registreret software. Flere oplysninger hjælper Microsoft med at skabe ny sikkerhedsintelligens og hjælper med at beskytte din computer. Disse oplysninger kan omfatte elementer som placering af registrerede elementer på computeren, hvis skadelig software er blevet fjernet. Oplysningerne indsamles og sendes automatisk. I nogle tilfælde sendes personlige oplysninger utilsigtet til Microsoft. Microsoft vil imidlertid ikke bruge disse oplysninger til at identificere dig eller kontakte dig.
 
-    Der er følgende muligheder:
+    Mulige indstillinger er:
     (0x0) Deaktiveret (standard)
     (0x1) Basismedlemskab
     (0x2) Avanceret medlemskab
 
-    Basismedlemskab sender grundlæggende oplysninger til Microsoft om den software, der er fundet, herunder hvor softwaren kom fra, de handlinger, du anvender, eller som anvendes automatisk, og om handlingerne kunne gennemføres.
+    Basismedlemskab sender grundlæggende oplysninger til Microsoft om software, der er fundet, herunder hvor softwaren kom fra, de handlinger, du skal anvende, eller som anvendes automatisk, og om handlingerne er udført.
 
-    Ud over de grundlæggende oplysninger sender Avanceret medlemskab flere oplysninger til Microsoft om skadelig software, spyware og potentielt uønsket software, herunder placeringen af softwaren, filnavne, hvordan softwaren fungerer, og hvordan softwaren har påvirket computeren.
+    Avanceret medlemskab sender, ud over de grundlæggende oplysninger, flere oplysninger til Microsoft om skadelig software, spyware og potentielt uønsket software, herunder placeringen af softwaren, filnavne, hvordan softwaren fungerer, og hvordan det har påvirket computeren.
 
-    Hvis du aktiverer denne politikindstilling, deltager du i Microsoft MAPS med det angivne medlemskab.
+    Hvis du aktiverer denne indstilling, deltager du i Microsoft MAPS med det angivne medlemskab.
 
     Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, deltager du ikke i Microsoft MAPS.
   
-    I Windows 10 er basismedlemskabet ikke længere tilgængeligt, så hvis du angiver værdien til 1 eller 2, bliver enheden tilmeldt Avanceret medlemskab.</string>
+    I Windows 10 er basismedlemskabet ikke længere tilgængeligt, så hvis du angiver værdien til 1 eller 2, meldes enheden til det avancerede medlemskab.</string>
     <string id="SpynetReporting_Disabled">Deaktiveret</string>
     <string id="SpynetReporting_Basic">Grundlæggende MAPS</string>
     <string id="SpynetReporting_Advanced">Avanceret MAPS</string>
@@ -1048,32 +1056,37 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Angiv det tidspunkt på dagen, hvor der skal køres en planlagt scanning</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definer antallet af dage, før spywaredefinitioner anses for at være forældede</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definer antallet af dage, før spywarens sikkerhedsintelligens anses for at være forældet</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definer antallet af dage, før virusdefinitioner anses for at være forældede</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definer antallet af dage, før virussens sikkerhedsintelligens anses for at være forældet</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
-        <label>Definer filshares til hentning af definitionsopdateringer</label>
+        <label>Definer filshares til download af opdateringer til sikkerhedsintelligens</label>
+    </textBox>
+    </presentation>
+    <presentation id="SignatureUpdate_SharedSignaturesLocation">
+    <textBox refId="SignatureUpdate_SharedSignaturesLocation">
+        <label>Definer filshare til download af opdateringer til sikkerhedsintelligens i virtuelle miljøer</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_FallbackOrder">
     <textBox refId="SignatureUpdate_FallbackOrder">
-        <label>Definer rækkefølgen af kilder til hentning af definitionsopdateringer</label>
+        <label>Definer rækkefølgen af kilder til download af opdateringer til sikkerhedsintelligens</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleDay">
-    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Angiv, hvilken dag i ugen der skal søges efter definitionsopdateringer</dropdownList>
+    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Angiv den dag i ugen, hvor der skal tjekkes for opdateringer til sikkerhedsintelligens</dropdownList>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleTime">
-    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Angiv det tidspunkt, hvor der skal søges efter definitionsopdateringer</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Angiv det tidspunkt, hvor der skal tjekkes efter opdateringer til sikkerhedsintelligens</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateCatchupInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Definer det antal dage, efter hvilke der skal udføres en opfølgningsdefinitionsopdatering</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Definer det antal dage, efter hvilke der skal foretages en opfølgning af opdatering til sikkerhedsintelligens</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Angiv intervallet for søgning efter definitionsopdateringer</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Angiv intervallet for tjek af opdateringer til sikkerhedsintelligens</decimalTextBox>
     </presentation>
     <presentation id="SpynetReporting">
     <dropdownList refId="SpynetReporting" noSort="true" defaultItem="0">Deltag i Microsoft MAPS</dropdownList>

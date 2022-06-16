@@ -64,7 +64,7 @@ Mit dieser Einstellung können Sie festlegen, ob auf dem Computer automatische U
 
         2 = Vor dem Herunterladen und Installieren von Updates benachrichtigen.
 
-        Wenn Windows Updates ermittelt, die auf den Computer angewendet werden können, werden Benutzer darüber informiert, dass Updates heruntergeladen werden können. Unter Windows Update können Benutzer alle verfügbaren Updates herunterladen und installieren.
+        Wenn Windows Updates findet, die auf den Computer angewendet werden können, werden Benutzer darüber informiert, dass Updates heruntergeladen werden können. Unter Windows Update können Benutzer alle verfügbaren Updates herunterladen und installieren.
 
         3 = (Standardeinstellung) Updates automatisch herunterladen und über installierbare Updates benachrichtigen
 
@@ -74,15 +74,11 @@ Mit dieser Einstellung können Sie festlegen, ob auf dem Computer automatische U
 
         Wenn "Automatisch" als die geplante Installationszeit angegeben ist, führt Windows das Prüfen, Herunterladen und Installieren von Updates automatisch durch. Das Gerät wird gemäß Windows-Standardeinstellungen neu gestartet, sofern keine Gruppenrichtlinie konfiguriert ist. (Gilt für Windows 10, Version 1809, und höher.)
 
-        Geben Sie den Zeitplan mithilfe der Optionen in der Gruppenrichtlinieneinstellung an. Standardmäßig sind Installationen täglich für 3 Uhr morgens geplant, falls kein Zeitplan angegeben wird. Wenn zum Abschluss der Updateinstallation ein Neustart erforderlich ist, startet Windows den Computer automatisch neu. (Falls ein Benutzer am Computer angemeldet ist, wenn Windows neu gestartet werden soll, wird der Benutzer benachrichtigt und kann den Neustart verzögern.)
+        Geben Sie den Zeitplan mithilfe der Optionen in der Gruppenrichtlinieneinstellung an. Ab Version 1709 gibt es die zusätzliche Möglichkeit, die Aktualisierung auf ein wöchentliches, zweiwöchentliches oder monatliches Ereignis zu beschränken. Standardmäßig sind Installationen täglich für 3 Uhr morgens geplant, falls kein Zeitplan angegeben wird. Wenn zum Abschluss der Updateinstallation ein Neustart erforderlich ist, startet Windows den Computer automatisch neu. (Falls ein Benutzer am Computer angemeldet ist, wenn Windows neu gestartet werden soll, wird der Benutzer benachrichtigt und kann den Neustart verzögern.)
 
         Unter Windows 8 und höher können Sie festlegen, dass Updates nicht nach einem bestimmten Zeitplan, sondern während der automatischen Wartung installiert werden. Die automatische Wartung installiert Updates, wenn der Computer nicht verwendet wird; befindet sich der Computer im Akkubetrieb, werden keine Updates installiert. Wenn Updates zwei Tage lang nicht von der automatischen Wartung installiert werden können, werden Updates von Windows Update sofort installiert. Benutzer werden über einen bevorstehenden Neustart benachrichtigt, und der Neustart wird nur durchgeführt, wenn keine Gefahr für zufällige Datenverluste besteht.
 
-        Die automatische Wartung kann mit diesen Gruppenrichtlinien weiter konfiguriert werden: Computerkonfiguration-&gt;Administrative Vorlagen-&gt;Windows-Komponenten-&gt;Wartungszeitplan
-
-        5 = Lokalen Administratoren erlauben, über automatische Updates den Konfigurationsmodus für die Updateinstallation auszuwählen.
-
-        Hinweis: Diese Option wird in Windows 10 nicht unterstützt.
+        5 = Lokalen Administratoren erlauben, den Konfigurationsmodus für "Automatische Updates" auszuwählen. (Diese Option wurde nicht auf andere Win 10-Versionen übertragen).
 
         Mit dieser Option wird es lokalen Administratoren ermöglicht, über die Systemsteuerung von Windows Update eine Konfigurationsoption auszuwählen. Lokalen Administratoren wird nicht gestattet, die Konfiguration für "Automatische Updates" zu deaktivieren.
 
@@ -321,50 +317,49 @@ Bei Auswahl von "Vorabversionen aktivieren" werden Vorabversionen auf dem Gerät
       <string id="PreviewBuildFastFeatureUpdates">Preview Build – Fast</string>
       <string id="PreviewBuildSlowFeatureUpdates">Preview Build – Slow</string>
       <string id="ReleasePreviewBranchFeatureUpdates">Release Preview</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">Semi-Annual Channel (Targeted)</string>
       <string id="SemiAnnualChannelFeatureUpdates">Semi-Annual Channel</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Halbjährlicher Kanal für 1809 und früher (veraltet)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Halbjährlicher Kanal (gezielt) für 1809 und früher (veraltet)</string>
       <string id="DeferFeatureUpdates_Title">Zeitpunkt für den Empfang von Vorabversionen und Funktionsupdates auswählen</string>
       <string id="DeferFeatureUpdates_Help">Aktivieren Sie diese Richtlinie, um anzugeben, welche Stufe von Vorabversionen oder Funktionsupdates Sie wann empfangen möchten.
 
 * Preview Build – Fast: Geräte, für die diese Stufe festgelegt wurde, erhalten als erste neue Windows-Builds mit Features, die noch nicht für die allgemeine Öffentlichkeit freigegeben wurden. Wählen Sie "Fast", um den Build zu testen, Probleme an Microsoft zu melden und Vorschläge für neue Funktionen einzureichen.
 * Preview Build – Slow: Geräte, für die diese Stufe festgelegt wurde, erhalten neue Windows-Builds, bevor sie für die allgemeine Öffentlichkeit freigegeben werden, aber später als die Benutzer der Fast-Option. Außerdem sind die Änderungen und Korrekturen, die für frühere Builds ermittelt wurden, bereits implementiert.
-* Release Preview: Erhalten Sie Windows-Builds, kurz bevor sie von Microsoft für die allgemeine Öffentlichkeit freigegeben werden.
-* Semi-Annual Channel (Targeted): Erhalten Sie Funktionsupdates sofort, wenn sie für die allgemeine Öffentlichkeit freigegeben werden.
-* Semi-Annual Channel: Builds, die als Semi-Annual Channel deklariert werden, enthalten Funktionsupdates. Semi-Annual Channel beginnt in der Regel vier Monate nach Semi-Annual Channel (Targeted) und deutet darauf hin, dass Microsoft, unabhängige Softwarehersteller, Partner und Kunden die Version als geeignet für die allgemeine Bereitstellung betrachten.
+*  Release Preview: Erhalten Sie Windows-Builds, kurz bevor sie von Microsoft für die allgemeine Öffentlichkeit freigegeben werden.
+* Halbjährlicher Kanal: Erhalten Sie Funktionsupdates sofort, wenn sie für die allgemeine Öffentlichkeit freigegeben werden.
+
+Die folgenden Windows-Bereitschaftsniveaus sind veraltet und gelten nur für 1809 und frühere Versionen:
+* Halbjährlicher Kanal (gezielt) für 1809 und früher: Funktionsupdates wurden veröffentlicht.
+* Halbjährlicher Kanal für 1809 und früher: Funktionsupdates wurden als halbjährlicher Kanal deklariert, was darauf hindeutet, dass die Version als für die allgemeine Bereitstellung geeignet betrachtet wird.
+Überprüfen Sie die Seite mit den Versionsinformationen unter http://aka.ms/ReleaseInformationPage auf die Freigabedaten von "Halbjährlicher Kanal (gezielt)" und "Halbjährlicher Kanale".
 
 Bei Auswahl einer Vorabversion:
-    – Sie können den Empfang von Vorabversionen bis zu 14 Tage zurückstellen.
-    – Um zu verhindern, dass Vorabversionen zum geplanten Zeitpunkt empfangen werden, können Sie den Empfang vorübergehend aussetzen. Die Aussetzung ist ab der angegebenen Startzeit 35 Tage gültig.
-    – Um den Empfang ausgesetzter Funktionsupdates wieder aufzunehmen, löschen Sie den Eintrag im Startdatumsfeld.
+    - Sie können den Empfang von Vorabversionen bis zu 14 Tage zurückstellen.
+    - Um zu verhindern, dass Vorabversionen zum geplanten Zeitpunkt empfangen werden, können Sie den Empfang vorübergehend aussetzen. Die Aussetzung ist ab der angegebenen Startzeit 35 Tage gültig.
+    - Um den Empfang ausgesetzter Funktionsupdates wieder aufzunehmen, löschen Sie den Eintrag im Startdatumsfeld.
 
 Die Registrierung für Vorabversionen erfordert mindestens die Telemetriestufeneinstellung 2, und Ihre Domäne muss unter insider.windows.com registriert sein. Zusätzliche Informationen zu Vorabversionen erhalten Sie unter: https://aka.ms/wipforbiz
 
-Bei Auswahl von Semi-Annual Channel (Targeted) oder Semi-Annual Channel:
-    – Sie können den Empfang von Funktionsupdates bis zu 365 Tage zurückstellen.
-    – Um zu verhindern, dass Funktionsupdates zum geplanten Zeitpunkt empfangen werden, können Sie den Empfang vorübergehend aussetzen. Die Aussetzung ist ab der angegebenen Startzeit 35 Tage gültig.
-    – Um den Empfang ausgesetzter Funktionsupdates wieder aufzunehmen, löschen Sie den Eintrag im Startdatumsfeld.
-
-Zur Konfiguration von Funktionsupdates benötigen Sie mindestens Telemetriestufeneinstellung 1. 
+Bei Auswahl von "Halbjährlicher Kanal":
+    - Sie können den Empfang von Funktionsupdates bis zu 365 Tage zurückstellen.
+    - Um zu verhindern, dass Funktionsupdates zum geplanten Zeitpunkt empfangen werden, können Sie den Empfang vorübergehend aussetzen. Die Aussetzung ist ab der angegebenen Startzeit 35 Tage gültig.
+    - Um den Empfang ausgesetzter Funktionsupdates wieder aufzunehmen, löschen Sie den Eintrag im Startdatumsfeld.
 
 Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, bleibt das Verhalten von Windows Update unverändert.</string>
       <string id="DeferQualityUpdates_Title">Beim Empfang von Qualitätsupdates auswählen</string>
       <string id="DeferQualityUpdates_Help">Aktivieren Sie diese Richtlinie, um anzugeben, wann Sie Qualitätsupdates empfangen möchten.
 
-Sie können können den Empfang von Qualitätsupdates maximal 30 Tage zurückstellen.
+Sie können den Empfang von Qualitätsupdates maximal 30 Tage zurückstellen.
 
 Um den Empfang von Qualitätsupdates zum geplanten Zeitpunkt zu verhindern, können Sie Qualitätsupdates vorübergehend aussetzen. Die Pause gilt für 35 Tage, oder bis Sie das Datum aus dem Feld "Startdatum" löschen.
 
-Um ausgesetzte Qualitätsupdates wieder zu empfangen, löschen Sie das Datum aus dem Feld "Startdatum".
+Um ausgesetzte Qualitätsupdates wieder zu empfangen, löschen Sie das Datum aus dem Feld Startdatumsfeld.
 
-Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird das Verhalten von Windows Update nicht geändert.
-
-Hinweis: Wenn die Richtlinie "Telemetrie zulassen" auf 0 festgelegt ist, hat diese Richtlinie keine Auswirkung.</string>
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird das Verhalten von Windows Update nicht geändert.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Keine Treiber in Windows-Updates einschließen</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Aktivieren Sie diese Richtlinie, um Treiber aus Windows-Qualitätsupdates auszuschließen.
 
-Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Updates mit Treiberklassifizierung von Windows Update eingeschlossen.
-
-Hinweis: Auf Geräten mit Windows 10, Version 1607, oder Windows Server 2016 wird diese Richtlinie nur bei aktivierter Telemetrie wirksam (d. h., die Richtlinie "Telemetrie zulassen" ist nicht auf 0 festgelegt). Bei Geräten ab Windows 10, Version 1703, oder ab Windows Server, Version 1709, muss keine Telemetrie aktiviert werden, damit diese Richtlinie wirksam wird.</string>
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Updates, die über die Klassifizierung "Treiber" verfügen, von Windows Update eingeschlossen.</string>
       <string id="ActiveHours_Title">Automatischen Neustart nach Updates während der Nutzungszeit deaktivieren</string>
       <string id="ActiveHours_Help">Wenn Sie diese Richtlinie aktivieren, wird der PC nach Updates während der Nutzungszeit nicht automatisch neu gestartet. Der PC versucht, einen Neustart außerhalb der Nutzungszeit auszuführen.
 
@@ -592,11 +587,57 @@ Hinweis: Diese Richtlinie gilt nur, wenn der Microsoft-Intranetupdatedienst, an 
 
 Mit dieser Richtlinie können Sie definieren, welche Windows Update-Benachrichtigungen für Benutzer angezeigt werden. Mit dieser Richtlinie wird nicht gesteuert, wie und wann Updates heruntergeladen und installiert werden.
 
-Wichtig! Wenn Sie entscheiden, keine Updatebenachrichtigungen zu erhalten und außerdem die Richtlinie "Automatische Updates konfigurieren" so definieren, dass Geräte keine automatischen Updates erhalten, sind weder Sie noch Gerätebenutzer darüber informiert, dass wichtige Sicherheits-, Qualitäts- oder Featureupdates verfügbar sind, wodurch Ihre Geräte möglicherweise gefährdet sind.
+Wichtig: Wenn Sie entscheiden, keine Updatebenachrichtigungen zu erhalten und außerdem die andere Gruppenrichtlinie so definieren, dass Geräte keine automatischen Updates erhalten, sind weder Sie noch Gerätebenutzer darüber informiert, dass wichtige Sicherheits-, Qualitäts- oder Featureupdates verfügbar sind, wodurch Ihre Geräte möglicherweise gefährdet sind.
       </string>
       <string id="DefaultNotification">0 (Standard): Standardmäßige Windows Update-Betriebssystembenachrichtigungen</string>
       <string id="ExcludingRebootWarnings">1: Deaktivieren aller Benachrichtigungen, mit Ausnahme von Neustartwarnungen</string>
       <string id="IncludingRebootWarnings">2: Deaktivieren aller Benachrichtigungen, einschließlich Neustartwarnungen</string>
+      <string id="ComplianceDeadline_Title">Fristen für automatische Updates und Neustarts angeben</string>
+      <string id="ComplianceDeadline_Help">Mit dieser Richtlinie können Sie die Anzahl der Tage angeben, die einem Benutzer zustehen, bevor die Qualitäts- und Funktionsaktualisierungen automatisch auf den Geräten installiert werden. Außerdem wird eine Karenzzeit festgelegt, nach der die erforderlichen Neustarts automatisch durchgeführt werden. Aktualisierungen und Neustarts werden unabhängig von der Nutzungszeit ausgeführt, und der Benutzer kann keine Neuplanung durchführen.
+
+Fristen für Funktionsaktualisierungen und Qualitätsupdates können bis zu 30 Tage betragen. Die Zeitspanne für den automatischen Neustart kann zwischen 0 und 7 Tagen liegen.
+
+Sie können den automatischen Neustart auch bis zum Ende des Aktivierungszeitraums für den automatischen Neustart deaktivieren.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, erhalten die Geräte Updates und werden gemäß dem Standardzeitplan neu gestartet.
+
+Diese Richtlinie setzt die folgenden Richtlinien außer Kraft:
+1. Termin für den automatischen Neustart der Updateinstallation festlegen
+2. Zeitplan für erzwungenen Neustart und Benachrichtigungen für Updates angeben
+3. Immer automatisch zum geplanten Zeitpunkt neu starten
+4. Kein automatischer Neustart mit angemeldeten Benutzern für die Installation geplanter automatischer Updates
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -727,6 +768,16 @@ Wichtig! Wenn Sie entscheiden, keine Updatebenachrichtigungen zu erhalten und au
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Anzeigeoptionen für Updatebenachrichtigungen angeben:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>Geben Sie die Anzahl der Tage (bis zu 30 Tage) an, die einem Benutzer zur Verfügung stehen, bevor Aktualisierungen unabhängig von der Nutzungszeit automatisch ausgeführt werden, ohne dass eine Neuplanung möglich ist.</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Qualitätsupdates (Tage):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Funktionsupdates (Tage):</dropdownList>
+        <text></text>
+        <text>Legen Sie eine Karenzzeit (0 bis 7 Tage) für den automatischen Neustart fest. Die Karenzzeit ist der Zeitraum zwischen dem Termin, an dem ein Neustart erforderlich ist, und dem automatischen Neustart des Geräts. Geräte werden unabhängig von der Nutzungszeit neu gestartet, ohne dass eine Neuplanung möglich ist.</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Karenzzeit (Tage)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Erst nach dem Ende der Karenzzeit automatisch neu starten</checkBox>
       </presentation>
     </presentationTable>
   </resources>

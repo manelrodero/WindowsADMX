@@ -639,49 +639,46 @@ Om du inaktiverar eller låter bli att konfigurera den här principinställninge
 
       <string id="RDVEDrive_Name">Konfigurera användning av maskinvarubaserad kryptering för flyttbara dataenheter</string>
 
-      <string id="OSEDrive_Help">Med den här principinställningen kan du hantera hur BitLocker använder maskinvarubaserad kryptering på operativsystemenheten och ange vilka krypteringsalgoritmer som det kan använda med maskinvarubaserad kryptering. Maskinvarubaserad kryptering kan öka enhetens prestanda vid frekventa läsningar från och skrivningar till enheten.
+      <string id="OSEDrive_Help">Med den här principinställningen kan du hantera hur BitLocker använder maskinvarubaserad kryptering på operativsystemenheter samt ange vilka krypteringsalgoritmer som det kan använda med maskinvarubaserad kryptering. Maskinvarubaserad kryptering kan förbättra prestanda för enhetsåtgärder som involverar frekvent läsning från och skrivning till enheten.
 
-Om du aktiverar den här principinställningen kan du ange ytterligare alternativ som bestämmer huruvida BitLockers programvarubaserade kryptering används i stället för maskinvarubaserad kryptering på datorer som inte stöder maskinvarubaserad kryptering och om du vill begränsa krypteringsalgoritmerna och de krypteringssviter som används med maskinvarubaserad kryptering.
+Om du aktiverar den här principinställningen kan du ange ytterligare alternativ som bestämmer huruvida BitLockers programvarubaserade kryptering används i stället för maskinvarubaserad kryptering på datorer som inte stöder maskinvarubaserad kryptering och om du vill begränsa de krypteringsalgoritmer och krypteringssviter som används med maskinvarubaserad kryptering.
 
-Om du inaktiverar den här principinställningen kan BitLocker inte använda maskinvarubaserad kryptering på operativsystemenheten och BitLockers programvarubaserade kryptering används som standard när enheten krypteras.
+Om du inaktiverar den här principinställningen kan BitLocker inte använda maskinvarubaserad kryptering på operativsystemenheter utan BitLockers programvarubaserade kryptering används som standard när enheten krypteras.
 
-Om du inte konfigurerar den här principinställningen används maskinvarubaserad kryptering med den krypteringsalgoritm som har angetts för enheten. Om maskinvarubaserad kryptering inte är tillgänglig används BitLockers programvarubaserade kryptering i stället.
+Om du inte konfigurerar den här principinställningen används programvarubaserad kryptering oavsett om maskinvarubaserad kryptering är tillgänglig.
 
-Obs! Principinställningen Välj metod och styrka för kryptering av enhet gäller inte maskinvarubaserad kryptering. Krypteringsalgoritmen som används vid maskinvarubaserad kryptering anges när enheten partitioneras. Som standard används den algoritm som har konfigurerats för enheten för att kryptera enheten. Med alternativet Begränsa vilka krypteringsalgoritmer och chiffersviter som tillåts vid maskinvarubaserad kryptering kan du begränsa de krypteringsalgoritmer som BitLocker kan använda vid maskinvarubaserad kryptering. Om algoritmen som har angetts för enheten inte är tillgänglig används inte maskinvarubaserad kryptering.
+Obs! Principinställningen Välj metod och styrka för kryptering av enhet gäller inte maskinvarubaserad kryptering. Krypteringsalgoritmen som används vid maskinvarubaserad kryptering anges när enheten partitioneras. Som standard använder BitLocker den algoritm som har konfigurerats för enheten för att kryptera enheten. Med alternativet Begränsa vilka krypteringsalgoritmer och chiffersviter som tillåts vid maskinvarubaserad kryptering kan du begränsa de krypteringsalgoritmer som BitLocker kan använda vid maskinvarubaserad kryptering. Om algoritmen som har angetts för enheten inte är tillgänglig används inte maskinvarubaserad kryptering.
 Krypteringsalgoritmen specificeras med objektidentifierare (OID). Exempel:
 - AES 128 i CBC-läge har OID: 2.16.840.1.101.3.4.1.2
 - AES 256 i CBC-läge har OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
-      <string id="FDVEDrive_Help">Med den här principinställningen kan du hantera hur BitLocker använder maskinvarubaserad kryptering på fasta dataenheter och ange vilka krypteringsalgoritmer som det kan använda med maskinvarubaserad kryptering. Maskinvarubaserad kryptering kan öka enhetens prestanda vid frekventa läsningar från och skrivningar till enheten.
+      <string id="FDVEDrive_Help">Med den här principinställningen kan du hantera hur BitLocker använder maskinvarubaserad kryptering på fasta dataenheter samt ange vilka krypteringsalgoritmer som det kan använda med maskinvarubaserad kryptering. Maskinvarubaserad kryptering kan förbättra prestanda för enhetsåtgärder som involverar frekvent läsning från och skrivning till enheten.
 
-Om du aktiverar den här principinställningen kan du ange ytterligare alternativ som bestämmer huruvida BitLockers programvarubaserade kryptering används i stället för maskinvarubaserad kryptering på datorer som inte stöder maskinvarubaserad kryptering och om du vill begränsa krypteringsalgoritmerna och de krypteringssviter som används med maskinvarubaserad kryptering.
+Om du aktiverar den här principinställningen kan du ange ytterligare alternativ som bestämmer huruvida BitLockers programvarubaserade kryptering används i stället för maskinvarubaserad kryptering på datorer som inte stöder maskinvarubaserad kryptering och om du vill begränsa de krypteringsalgoritmer och krypteringssviter som används med maskinvarubaserad kryptering.
 
-Om du inaktiverar den här principinställningen kan BitLocker inte använda maskinvarubaserad kryptering på operativsystemenheten och BitLockers programvarubaserade kryptering används som standard när enheten krypteras.
+Om du inaktiverar den här principinställningen kan BitLocker inte använda maskinvarubaserad kryptering på operativsystemenheter utan BitLockers programvarubaserade kryptering används som standard när enheten krypteras.
 
-Om du inte konfigurerar den här principinställningen används maskinvarubaserad kryptering med den krypteringsalgoritm som har angetts för enheten. Om maskinvarubaserad kryptering inte är tillgänglig används BitLockers programvarubaserade kryptering i stället.
+Om du inte konfigurerar den här principinställningen används programvarubaserad kryptering oavsett om maskinvarubaserad kryptering är tillgänglig.
 
-Obs! Principinställningen Välj metod och styrka för kryptering av enhet gäller inte maskinvarubaserad kryptering. Krypteringsalgoritmen som används vid maskinvarubaserad kryptering anges när enheten partitioneras. Som standard används den algoritm som har konfigurerats för enheten för att kryptera enheten. Med alternativet Begränsa vilka krypteringsalgoritmer och chiffersviter som tillåts vid maskinvarubaserad kryptering kan du begränsa de krypteringsalgoritmer som BitLocker kan använda vid maskinvarubaserad kryptering. Om algoritmen som har angetts för enheten inte är tillgänglig används inte maskinvarubaserad kryptering.
+Obs! Principinställningen Välj metod och styrka för kryptering av enhet gäller inte maskinvarubaserad kryptering. Krypteringsalgoritmen som används vid maskinvarubaserad kryptering anges när enheten partitioneras. Som standard använder BitLocker den algoritm som har konfigurerats för enheten för att kryptera enheten. Med alternativet Begränsa vilka krypteringsalgoritmer och chiffersviter som tillåts vid maskinvarubaserad kryptering kan du begränsa de krypteringsalgoritmer som BitLocker kan använda vid maskinvarubaserad kryptering. Om algoritmen som har angetts för enheten inte är tillgänglig används inte maskinvarubaserad kryptering.
 Krypteringsalgoritmen specificeras med objektidentifierare (OID). Exempel:
 - AES 128 i CBC-läge har OID: 2.16.840.1.101.3.4.1.2
 - AES 256 i CBC-läge har OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
-      <string id="RDVEDrive_Help">Med den här principinställningen kan du hantera hur BitLocker använder maskinvarubaserad kryptering på flyttbara dataenheter och ange vilka krypteringsalgoritmer som det kan använda med maskinvarubaserad kryptering. Maskinvarubaserad kryptering kan öka enhetens prestanda vid frekventa läsningar från och skrivningar till enheten.
+      <string id="RDVEDrive_Help">Med den här principinställningen kan du hantera hur BitLocker använder maskinvarubaserad kryptering på flyttbara dataenheter samt ange vilka krypteringsalgoritmer som det kan använda med maskinvarubaserad kryptering. Maskinvarubaserad kryptering kan förbättra prestanda för enhetsåtgärder som involverar frekvent läsning från och skrivning till enheten.
 
-Om du aktiverar den här principinställningen kan du ange ytterligare alternativ som bestämmer huruvida BitLockers programvarubaserade kryptering används i stället för maskinvarubaserad kryptering på datorer som inte stöder maskinvarubaserad kryptering och om du vill begränsa krypteringsalgoritmerna och de krypteringssviter som används med maskinvarubaserad kryptering.
+Om du aktiverar den här principinställningen kan du ange ytterligare alternativ som bestämmer huruvida BitLockers programvarubaserade kryptering används i stället för maskinvarubaserad kryptering på datorer som inte stöder maskinvarubaserad kryptering och om du vill begränsa de krypteringsalgoritmer och krypteringssviter som används med maskinvarubaserad kryptering.
 
-Om du inaktiverar den här principinställningen kan BitLocker inte använda maskinvarubaserad kryptering på operativsystemenheten och BitLockers programvarubaserade kryptering används som standard när enheten krypteras.
+Om du inaktiverar den här principinställningen kan BitLocker inte använda maskinvarubaserad kryptering på operativsystemenheter utan BitLockers programvarubaserade kryptering används som standard när enheten krypteras.
 
-Om du inte konfigurerar den här principinställningen används maskinvarubaserad kryptering med den krypteringsalgoritm som har angetts för enheten. Om maskinvarubaserad kryptering inte är tillgänglig används BitLockers programvarubaserade kryptering i stället.
+Om du inte konfigurerar den här principinställningen används programvarubaserad kryptering oavsett om maskinvarubaserad kryptering är tillgänglig.
 
-Obs! Principinställningen Välj metod och styrka för kryptering av enhet gäller inte maskinvarubaserad kryptering. Krypteringsalgoritmen som används vid maskinvarubaserad kryptering anges när enheten partitioneras. Som standard används den algoritm som har konfigurerats för enheten för att kryptera enheten. Med alternativet Begränsa vilka krypteringsalgoritmer och chiffersviter som tillåts vid maskinvarubaserad kryptering kan du begränsa de krypteringsalgoritmer som BitLocker kan använda vid maskinvarubaserad kryptering. Om algoritmen som har angetts för enheten inte är tillgänglig används inte maskinvarubaserad kryptering.
+Obs! Principinställningen Välj metod och styrka för kryptering av enhet gäller inte maskinvarubaserad kryptering. Krypteringsalgoritmen som används vid maskinvarubaserad kryptering anges när enheten partitioneras. Som standard använder BitLocker den algoritm som har konfigurerats för enheten för att kryptera enheten. Med alternativet Begränsa vilka krypteringsalgoritmer och chiffersviter som tillåts vid maskinvarubaserad kryptering kan du begränsa de krypteringsalgoritmer som BitLocker kan använda vid maskinvarubaserad kryptering. Om algoritmen som har angetts för enheten inte är tillgänglig används inte maskinvarubaserad kryptering.
 Krypteringsalgoritmen specificeras med objektidentifierare (OID). Exempel:
 - AES 128 i CBC-läge har OID: 2.16.840.1.101.3.4.1.2
 - AES 256 i CBC-läge har OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Aktivera användning av BitLocker-autentisering som kräver inmatning med tangentbord innan start på pekdatorer</string>

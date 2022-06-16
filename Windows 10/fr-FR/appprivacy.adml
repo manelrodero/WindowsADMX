@@ -294,6 +294,33 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employ
 
 Si une application est ouverte lorsque cet objet de stratégie de groupe est appliqué à un appareil, les employés doivent redémarrer l’application ou l’appareil pour que les modifications soient appliquées à l’application.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Permettre aux applications Windows d'être activées avec la voix</string>
+      <string id="LetAppsActivateWithVoice_Explain">Ce paramètre de stratégie spécifie si les applications Windows peuvent être activées par la voix.
+
+Si vous choisissez l’option « Sous le contrôle de l’utilisateur », les employés de votre organisation peuvent décider si les applications Windows peuvent être activées avec un mot-clé vocal dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si vous choisissez l’option « Forcer l’autorisation », les applications Windows sont autorisées à être activées avec un mot-clé vocal et les employés de votre organisation ne peuvent pas le modifier.
+
+Si vous choisissez l’option « Forcer le refus », les applications Windows ne sont pas autorisées à être activées avec un mot-clé vocal et les employés de votre organisation ne peuvent pas le modifier.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employés de votre organisation peuvent décider si les applications Windows peuvent être activées avec un mot-clé vocal dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Cette stratégie est appliquée aux applications Windows et à Cortana.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Permettre aux applications Windows d'être activées avec la voix alors que le système est verrouillé</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Ce paramètre de stratégie spécifie si les applications Windows peuvent être activées par la voix alors que le système est verrouillé.
+
+Si vous choisissez l’option « Sous le contrôle de l’utilisateur », les employés de votre organisation peuvent décider si les utilisateurs peuvent interagir avec les applications à l’aide de la voix alors que le système est verrouillé dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si vous choisissez l’option « Forcer l’autorisation », les utilisateurs peuvent interagir avec les applications à l’aide de la voix alors que le système est verrouillé et les employés de votre organisation ne peuvent pas le modifier.
+
+Si vous choisissez l’option « Forcer le refus », les utilisateurs ne peuvent pas interagir avec les applications à l’aide de la voix alors que le système est verrouillé les employés de votre organisation ne peuvent pas le modifier.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employés de votre organisation peuvent décider si les utilisateurs peuvent interagir avec les applications à l’aide de la voix alors que le système est verrouillé dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Cette stratégie est appliquée aux applications Windows et à Cortana. Elle est prioritaire sur la stratégie « Autoriser Cortana malgré le verrouillage ». Cette stratégie n’est applicable que lorsque la stratégie « Autoriser l’activation vocale » est configurée pour permettre aux applications d’être activées par la voix.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Si une application est ouverte lorsque cet objet de stratégie de groupe est app
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Forcer le refus pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Valeur par défaut pour toutes les applications :</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Valeur par défaut pour toutes les applications :</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

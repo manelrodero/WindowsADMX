@@ -638,49 +638,46 @@ Se você desabilitar ou não definir essa configuração de política, os usuár
 
       <string id="RDVEDrive_Name">Configurar uso da criptografia com base em hardware para unidades de dados removíveis</string>
 
-      <string id="OSEDrive_Help">Esta configuração de política permite gerenciar o uso da criptografia com base em hardware do BitLocker em unidades do sistema operacional e especificar quais algoritmos de criptografia poderão ser usados com a criptografia com base em hardware. O uso da criptografia com base em hardware pode melhorar o desempenho das operações de unidade que envolvem leitura ou gravação frequente de dados na unidade.
+      <string id="OSEDrive_Help">Essa configuração de política permite que você gerencie o uso de criptografia baseada em hardware do BitLocker em unidades do sistema operacional e especifique quais algoritmos de criptografia podem ser usados com a criptografia baseada em hardware. Usar a criptografia baseada em hardware pode melhorar o desempenho das operações de unidades que envolvem leitura ou gravação frequente de dados na unidade.
 
-Se você habilitar essa configuração de política, poderá especificar opções adicionais que controlam se a criptografia com base em software do BitLocker será usada no lugar da criptografia com base em hardware em computadores não compatíveis com a criptografia com base em hardware e se deseja restringir os algoritmos de criptografia e os pacotes de codificação usados com a criptografia com base em hardware.
+Se você habilitar essa configuração de política, poderá especificar opções adicionais que controlam se a criptografia baseada em software do BitLocker é usada em vez de criptografia baseada em hardware em computadores que não dão suporte à criptografia baseada em hardware e se você deseja restringir os algoritmos de criptografia e pacotes de codificação usados com criptografia baseada em hardware.
 
-Se você desabilitar essa configuração de política, o BitLocker não poderá usar a criptografia com base em hardware em unidades do sistema operacional e a criptografia com base em software do BitLocker será usada por padrão quando a unidade for criptografada.
+Se você desabilitar essa configuração de política, o BitLocker não poderá usar a criptografia baseada em hardware com unidades do sistema operacional, e a criptografia baseada em software do BitLocker será usada por padrão quando a unidade for criptografada.
 
-Se você não definir essa configuração de política, o BitLocker usará a criptografia com base em hardware com o algoritmo de criptografia definido para a unidade. Se a criptografia com base em hardware não estiver disponível, a criptografia com base em software do BitLocker será usada.
+Se você não definir essa configuração de política, o BitLocker usará a criptografia baseada em software, independentemente da disponibilidade da criptografia baseada em hardware.
 
-Observação: a configuração de política “Escolher método de criptografia da unidade e nível de codificação” não é aplicável à criptografia com base em hardware. O algoritmo usado pela criptografia com base em hardware é definido quando a unidade é particionada. Por padrão, o BitLocker usa o algoritmo configurado na unidade para criptografá-la. A opção “Restringir algoritmos de criptografia e pacotes de codificação permitidos para a criptografia com base em hardware” permite restringir os algoritmos de criptografia que o BitLocker pode usar com a criptografia de hardware. Se o algoritmo definido para a unidade não estiver disponível, o BitLocker desabilitará o uso da criptografia com base em hardware.
-Os algoritmos de criptografia são especificados por OIDs (Identificadores de Objetos). Por Exemplo:
-- OID do AES para chaves de 128 bits no modo CBC: 2.16.840.1.101.3.4.1.2
-- OID do AES para chaves de 256 bits no modo CBC: 2.16.840.1.101.3.4.1.42
-      
+Observação: a configuração de política "Escolher método de criptografia de unidade e nível de codificação" não se aplica à criptografia baseada em hardware. O algoritmo de criptografia usado pela criptografia baseada em hardware é definido quando a unidade é particionada. Por padrão, o BitLocker usa o algoritmo configurado na unidade para criptografar a unidade. A opção "Restringir algoritmos de criptografia e pacotes de codificação permitidos para criptografia baseada em hardware" permite que você restrinja os algoritmos de criptografia que o BitLocker pode usar com a criptografia de hardware. Se o conjunto de algoritmos da unidade não estiver disponível, o BitLocker desabilitará o uso de criptografia baseada em hardware.
+Algoritmos de criptografia especificados por identificadores de objeto (OID). Por exemplo:
+- AES 128 no OID de modo CBC: 2.16.840.1.101.3.4.1.2
+- AES 256 no OID de modo CBC: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="FDVEDrive_Help">Esta configuração de política permite gerenciar o uso da criptografia com base em hardware do BitLocker em unidades de dados fixas e especificar quais algoritmos de criptografia poderão ser usados com a criptografia com base em hardware. O uso da criptografia com base em hardware pode melhorar o desempenho das operações de unidade que envolvem leitura ou gravação frequente de dados na unidade.
+      <string id="FDVEDrive_Help">Essa configuração de política permite que você gerencie o uso de criptografia baseada em hardware do BitLocker em unidades de dados fixas e especifique quais algoritmos de criptografia podem ser usados com a criptografia baseada em hardware. Usar a criptografia baseada em hardware pode melhorar o desempenho das operações de unidades que envolvem leitura ou gravação frequente de dados na unidade.
 
-Se você habilitar essa configuração de política, poderá especificar opções adicionais que controlam se a criptografia com base em software do BitLocker será usada no lugar da criptografia com base em hardware em computadores não compatíveis com a criptografia com base em hardware e se deseja restringir os algoritmos de criptografia e os pacotes de codificação usados com a criptografia com base em hardware.
+Se você habilitar essa configuração de política, poderá especificar opções adicionais que controlam se a criptografia baseada em software do BitLocker é usada em vez de criptografia baseada em hardware em computadores que não dão suporte à criptografia baseada em hardware e se você deseja restringir os algoritmos de criptografia e pacotes de codificação usados com criptografia baseada em hardware.
 
-Se você desabilitar essa configuração de política, o BitLocker não poderá usar a criptografia com base em hardware em unidades do sistema operacional e a criptografia com base em software do BitLocker será usada por padrão quando a unidade for criptografada.
+Se você desabilitar essa configuração de política, o BitLocker não poderá usar a criptografia baseada em hardware com unidades do sistema operacional, e a criptografia baseada em software do BitLocker será usada por padrão quando a unidade for criptografada.
 
-Se você não definir essa configuração de política, o BitLocker usará a criptografia com base em hardware com o algoritmo de criptografia definido para a unidade. Se a criptografia com base em hardware não estiver disponível, a criptografia com base em software do BitLocker será usada.
+Se você não definir essa configuração de política, o BitLocker usará a criptografia baseada em software, independentemente da disponibilidade da criptografia baseada em hardware.
 
-Observação: a configuração de política “Escolher método de criptografia da unidade e nível de codificação” não é aplicável à criptografia com base em hardware. O algoritmo usado pela criptografia com base em hardware é definido quando a unidade é particionada. Por padrão, o BitLocker usa o algoritmo configurado na unidade para criptografá-la. A opção “Restringir algoritmos de criptografia e pacotes de codificação permitidos para a criptografia com base em hardware” permite restringir os algoritmos de criptografia que o BitLocker pode usar com a criptografia de hardware. Se o algoritmo definido para a unidade não estiver disponível, o BitLocker desabilitará o uso da criptografia com base em hardware.
-Os algoritmos de criptografia são especificados por OIDs (Identificadores de Objetos). Por Exemplo:
-- OID do AES para chaves de 128 bits no modo CBC: 2.16.840.1.101.3.4.1.2
-- OID do AES para chaves de 256 bits no modo CBC: 2.16.840.1.101.3.4.1.42
-      
+Observação: a configuração de política "Escolher método de criptografia de unidade e nível de codificação" não se aplica à criptografia baseada em hardware. O algoritmo de criptografia usado pela criptografia baseada em hardware é definido quando a unidade é particionada. Por padrão, o BitLocker usa o algoritmo configurado na unidade para criptografar a unidade. A opção "Restringir algoritmos de criptografia e pacotes de codificação permitidos para criptografia baseada em hardware" permite que você restrinja os algoritmos de criptografia que o BitLocker pode usar com a criptografia de hardware. Se o conjunto de algoritmos da unidade não estiver disponível, o BitLocker desabilitará o uso de criptografia baseada em hardware.
+Algoritmos de criptografia especificados por identificadores de objeto (OID). Por exemplo:
+- AES 128 no OID de modo CBC: 2.16.840.1.101.3.4.1.2
+- AES 256 no OID de modo CBC: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="RDVEDrive_Help">Esta configuração de política permite gerenciar o uso da criptografia com base em hardware do BitLocker em unidades de dados removíveis e especificar quais algoritmos de criptografia poderão ser usados com a criptografia com base em hardware. O uso da criptografia com base em hardware pode melhorar o desempenho das operações de unidade que envolvem leitura ou gravação frequente de dados na unidade.
+      <string id="RDVEDrive_Help">Essa configuração de política permite que você gerencie o uso de criptografia baseada em hardware do BitLocker em unidades de dados removíveis e especifique quais algoritmos de criptografia podem ser usados com a criptografia baseada em hardware. Usar a criptografia baseada em hardware pode melhorar o desempenho das operações de unidades que envolvem leitura ou gravação frequente de dados na unidade.
 
-Se você habilitar essa configuração de política, poderá especificar opções adicionais que controlam se a criptografia com base em software do BitLocker será usada no lugar da criptografia com base em hardware em computadores não compatíveis com a criptografia com base em hardware e se deseja restringir os algoritmos de criptografia e os pacotes de codificação usados com a criptografia com base em hardware.
+Se você habilitar essa configuração de política, poderá especificar opções adicionais que controlam se a criptografia baseada em software do BitLocker é usada em vez de criptografia baseada em hardware em computadores que não dão suporte à criptografia baseada em hardware e se você deseja restringir os algoritmos de criptografia e pacotes de codificação usados com criptografia baseada em hardware.
 
-Se você desabilitar essa configuração de política, o BitLocker não poderá usar a criptografia com base em hardware em unidades do sistema operacional e a criptografia com base em software do BitLocker será usada por padrão quando a unidade for criptografada.
+Se você desabilitar essa configuração de política, o BitLocker não poderá usar a criptografia baseada em hardware com unidades do sistema operacional, e a criptografia baseada em software do BitLocker será usada por padrão quando a unidade for criptografada.
 
-Se você não definir essa configuração de política, o BitLocker usará a criptografia com base em hardware com o algoritmo de criptografia definido para a unidade. Se a criptografia com base em hardware não estiver disponível, a criptografia com base em software do BitLocker será usada.
+Se você não definir essa configuração de política, o BitLocker usará a criptografia baseada em software, independentemente da disponibilidade da criptografia baseada em hardware.
 
-Observação: a configuração de política “Escolher método de criptografia da unidade e nível de codificação” não é aplicável à criptografia com base em hardware. O algoritmo usado pela criptografia com base em hardware é definido quando a unidade é particionada. Por padrão, o BitLocker usa o algoritmo configurado na unidade para criptografá-la. A opção “Restringir algoritmos de criptografia e pacotes de codificação permitidos para a criptografia com base em hardware” permite restringir os algoritmos de criptografia que o BitLocker pode usar com a criptografia de hardware. Se o algoritmo definido para a unidade não estiver disponível, o BitLocker desabilitará o uso da criptografia com base em hardware.
-Os algoritmos de criptografia são especificados por OIDs (Identificadores de Objetos). Por Exemplo:
-- OID do AES para chaves de 128 bits no modo CBC: 2.16.840.1.101.3.4.1.2
-- OID do AES para chaves de 256 bits no modo CBC: 2.16.840.1.101.3.4.1.42
-      
+Observação: a configuração de política "Escolher método de criptografia de unidade e nível de codificação" não se aplica à criptografia baseada em hardware. O algoritmo de criptografia usado pela criptografia baseada em hardware é definido quando a unidade é particionada. Por padrão, o BitLocker usa o algoritmo configurado na unidade para criptografar a unidade. A opção "Restringir algoritmos de criptografia e pacotes de codificação permitidos para criptografia baseada em hardware" permite que você restrinja os algoritmos de criptografia que o BitLocker pode usar com a criptografia de hardware. Se o conjunto de algoritmos da unidade não estiver disponível, o BitLocker desabilitará o uso de criptografia baseada em hardware.
+Algoritmos de criptografia especificados por identificadores de objeto (OID). Por exemplo:
+- AES 128 no OID de modo CBC: 2.16.840.1.101.3.4.1.2
+- AES 256 no OID de modo CBC: 2.16.840.1.101.3.4.1.42
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Habilitar uso da autenticação do BitLocker que exige entrada de teclado pré-inicialização em slates</string>

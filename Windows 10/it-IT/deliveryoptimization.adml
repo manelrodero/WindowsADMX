@@ -120,6 +120,8 @@ Opzioni disponibili:
 
 4 = Suffisso DNS. 
 
+5 = ID tenant AAD. 
+
 Se impostato, l'ID gruppo viene assegnato automaticamente dall'origine selezionata. Se si imposta questo criterio, il criterio GroupID viene ignorato. 
       
 Le opzioni impostate in questo criterio si applicano unicamente alla modalità di download Gruppo (2). Se Gruppo (2) non è impostato come modalità di download, il criterio viene ignorato. 
@@ -130,6 +132,7 @@ Per l'opzione 3 = ID opzione DHCP, il client interroga l'ID opzione DHCP 234 e u
       <string id="GroupIdSource_SID">SID di dominio autenticato (2)</string>
       <string id="GroupIdSource_DHCP">ID opzione DHCP (3)</string>
       <string id="GroupIdSource_DNS">Suffisso DNS (4)</string>
+      <string id="GroupIdSource_AAD">ID tenant AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Ritarda il download in background da http (in secondi)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Questo criterio consente di ritardare l'utilizzo di un'origine HTTP in un download in background che può utilizzare P2P.
       
@@ -146,6 +149,14 @@ Dopo aver raggiunto il ritardo massimo, il download riprenderà tramite HTTP, sc
 Nota che il download in attesa delle origini peer, verrà visualizzato come bloccato per l'utente finale.
       
 Il valore consigliato è 1 minuto (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Ritarda fallback da server cache del download in background (in secondi)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Imposta questo criterio per ritardare il fallback dal server di cache all'origine HTTP per il download di un contenuto in background di X secondi. 
+
+Nota: se imposti il criterio per il ritardo del download in background da http, verrà applicato per primo (per consentire il download dai peer prima).</string>
+      <string id="DelayCacheServerFallbackForeground">Ritarda fallback da server cache del download in primo piano (in secondi)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Imposta questo criterio per ritardare il fallback dal server di cache all'origine HTTP per il download di un contenuto in primo piano di X secondi. 
+
+Nota: se imposti il criterio per il ritardo del download in primo piano da http, verrà applicato per primo (per consentire il download dai peer prima).</string>
       <string id="RestrictPeerSelectionBy">Seleziona un metodo per limitare la selezione Peer</string>
       <string id="RestrictPeerSelectionBy_Help">Imposta questo criterio per limitare la selezione peer tramite l'opzione selezionata. 
       
@@ -263,7 +274,7 @@ L'opzione 1 (Subnet mask) si applica sia alla Modalità download LAN (1) che Gru
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">origine degli ID gruppo:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Origine degli ID gruppo:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Ritarda il download in background da http (in secondi):</decimalTextBox>
@@ -271,6 +282,14 @@ L'opzione 1 (Subnet mask) si applica sia alla Modalità download LAN (1) che Gru
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Ritarda il download in primo piano da http (in secondi):</decimalTextBox>
+        <text>Il valore predefinito è 0 (nessun ritardo)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Ritarda fallback da server cache del download in background (in sec):</decimalTextBox>
+        <text>Il valore predefinito è 0 (nessun ritardo)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Ritarda fallback da server cache del download in primo piano (in sec):</decimalTextBox>
         <text>Il valore predefinito è 0 (nessun ritardo)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

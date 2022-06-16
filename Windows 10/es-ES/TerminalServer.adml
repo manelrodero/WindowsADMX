@@ -418,21 +418,24 @@ Si habilita esta configuración de directiva, estas notificaciones no se mostrar
 
 Si deshabilita o no define esta configuración de directiva, estas notificaciones se mostrarán en el servidor host de sesión de Escritorio remoto después de que inicie sesión como administrador local.</string>
       <string id="TS_LICENSING_MODE">Establecer el modo de licencia de Escritorio remoto</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Esta configuración de directiva permite especificar el tipo de licencia de acceso de cliente de Servicios de Escritorio remoto (CAL de Escritorio remoto) que se necesita para establecer una conexión con este servidor host de sesión de Escritorio remoto.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Esta configuración de directiva te permite especificar el tipo de licencia de acceso de cliente de los Servicios de Escritorio remoto (CAL de RDS) que necesitas para conectarte a este servidor host de sesión de Escritorio remoto.
 
-Puede usar esta configuración de directiva para seleccionar uno de los dos modos de licencia: Por usuario y Por Dispositivo.
+        Puedes usar esta configuración de directiva para seleccionar uno de los tres modos de licencia: por usuario, por dispositivo y AAD por usuario.
 
-El modo de licencia Por usuario requiere que cada cuenta de usuario que se conecte a este servidor host de sesión de Escritorio remoto tenga una CAL Por usuario de Escritorio remoto.
+        El modo de licencia por usuario requiere que cada cuenta de usuario que se conecte a este servidor host de sesión de Escritorio remoto tenga una CAL por usuario de RDS emitida desde un servidor de licencias de escritorio remoto.
 
-El modo de licencia Por dispositivo requiere que cada dispositivo que se conecte a este servidor host de sesión de Escritorio remoto tenga una CAL Por dispositivo de Escritorio remoto.
+        El modo de licencia por dispositivo requiere que cada dispositivo que se conecte a este servidor host de sesión de Escritorio remoto tenga una CAL por dispositivo de RDS emitida desde un servidor de licencias de escritorio remoto.
 
-Si habilita esta configuración de directiva, el servidor de licencias de Escritorio remoto respetará el modo de licencia de Escritorio remoto que usted especifique.
+        El modo de licencia de AAD por usuario requiere que cada cuenta de usuario que se conecte a este servidor host de sesión de Escritorio remoto tenga un plan de servicio que admita licencias de RDS asignadas en AAD.
+        
+        Si habilitas esta configuración de Directiva, el servidor de licencias de Escritorio remoto podrá admitir el modo de licencia de Escritorio remoto que especifiques.
 
-Si deshabilita o no establece esta configuración de directiva, el modo de licencia no se especificará en el nivel de directiva de grupo.
-
-</string>
+        Si deshabilitas o no estableces esta configuración de directiva, el modo de licencia no se especificará en el nivel de directiva de grupo.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Por dispositivo</string>
       <string id="TS_LICENSING_MODE_PER_USER">Por usuario</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD por usuario</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Esta configuración de directiva especifica si se impide la redirección de datos a puertos LPT de cliente durante una sesión de Servicios de Escritorio remoto.
 
 Puede usar esta opción para impedir a los usuarios asignar puertos LPT locales y redirigir datos desde el equipo remoto a periféricos de puertos locales LPT. De forma predeterminada, Servicios de Escritorio remoto permite la redirección de puertos LPT.
@@ -1015,6 +1018,37 @@ Si deshabilita esta configuración de directiva, los programas RemoteApp que se 
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Usar el controlador de pantalla de gráficos WDDM para Conexión a Escritorio remoto</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Esta configuración de directiva permite habilitar el controlador de pantalla de gráficos WDDM para Conexión a Escritorio remoto.
+
+Si habilitas esta configuración de directiva, Conexión a Escritorio remoto usará el controlador de pantalla de gráficos WDDM.
+
+Si deshabilitas o no estableces esta configuración de directiva, Conexión a Escritorio remoto no usará el controlador de pantalla de gráficos WDDM. En este caso, usará el controlador de pantalla de gráficos XDDM.
+
+Para que este cambio surta efecto, debes reiniciar Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Esta configuración de directiva permite habilitar el controlador de pantalla de gráficos WDDM para Conexión a Escritorio remoto.
+
+Si habilitas o no estableces esta configuración de directiva, Conexión a Escritorio remoto usará el controlador de pantalla de gráficos WDDM.
+
+Si deshabilitas esta configuración de directiva, Conexión a Escritorio remoto no usará el controlador de pantalla de gráficos WDDM. En este caso, usarán el controlador de pantalla de gráficos XDDM.
+
+Para que este cambio surta efecto, debes reiniciar Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Esta configuración de directiva permite habilitar el controlador de pantalla de gráficos WDDM para Conexión a Escritorio remoto.
+
+Si habilitas esta configuración de directiva, Conexión a Escritorio remoto usará el controlador de pantalla de gráficos WDDM.
+
+Si deshabilitas esta configuración de directiva, Conexión a Escritorio remoto no usará el controlador de pantalla de gráficos WDDM. En este caso, usará el controlador de pantalla de gráficos XDDM.
+
+Si no estableces esta configuración de directiva, Conexión a Escritorio remoto en el servidor host de sesión de escritorio remoto no usará el controlador de pantalla de gráficos WDDM. En todos los demás casos, usará el controlador de pantalla de gráficos WDDM.
+
+Para que este cambio surta efecto, debes reiniciar Windows.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

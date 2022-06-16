@@ -294,6 +294,33 @@ Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, pracownicy Tw
 
 Jeśli aplikacja będzie otwarta w momencie zastosowania tego obiektu zasad grupy na urządzeniu, pracownicy będą musieli uruchomić ponownie aplikację lub urządzenie, aby zmiany zasad zostały zastosowane do danej aplikacji.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Zezwalaj na aktywowanie aplikacji systemu Windows za pomocą głosu</string>
+      <string id="LetAppsActivateWithVoice_Explain">To ustawienie zasad określa, czy aplikacje systemu Windows można aktywować za pomocą głosu.
+
+Jeśli wybierzesz opcję Pod kontrolą użytkownika, pracownicy Twojej organizacji będą mogli określać, wybierając kolejno pozycje Ustawienia &gt; Prywatność na urządzeniu, czy aplikacje systemu Windows będzie można aktywować za pomocą głosowego słowa kluczowego.
+
+Jeśli wybierzesz opcję Wymuś zezwalanie, aplikacje systemu Windows będzie można aktywować za pomocą głosowego słowa kluczowego, a pracownicy Twojej organizacji nie będą mogli zmienić tego ustawienia.
+
+Jeśli wybierzesz opcję Wymuś odmowę, aplikacji systemu Windows nie będzie można aktywować za pomocą głosowego słowa kluczowego, a pracownicy Twojej organizacji nie będą mogli zmienić tego ustawienia.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, pracownicy Twojej organizacji będą mogli określać, wybierając kolejno pozycje Ustawienia &gt; Prywatność na urządzeniu, czy aplikacje systemu Windows będzie można aktywować za pomocą głosowego słowa kluczowego.
+
+Ta zasada jest stosowana do aplikacji systemu Windows i Cortany.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Zezwalaj na aktywowanie aplikacji systemu Windows za pomocą głosu, gdy system jest zablokowany</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+To ustawienie zasad określa, czy aplikacje systemu Windows można aktywować za pomocą głosu, gdy system jest zablokowany.
+
+Jeśli wybierzesz opcję Pod kontrolą użytkownika, pracownicy Twojej organizacji będą mogli określać, wybierając kolejno pozycje Ustawienia &gt; Prywatność na urządzeniu, czy użytkownicy będą mogli wchodzić w interakcję z aplikacjami, używając mowy, gdy system będzie zablokowany.
+
+Jeśli wybierzesz opcję Wymuś zezwalanie, użytkownicy będą mogli wchodzić w interakcję z aplikacjami, używając mowy, gdy system będzie zablokowany, a pracownicy Twojej organizacji nie będą mogli zmienić tego ustawienia.
+
+Jeśli wybierzesz opcję Wymuś odmowę, użytkownicy nie będą mogli wchodzić w interakcję z aplikacjami, używając mowy, gdy system będzie zablokowany, a pracownicy Twojej organizacji nie będą mogli zmienić tego ustawienia.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, pracownicy Twojej organizacji będą mogli określać, wybierając kolejno pozycje Ustawienia &gt; Prywatność na urządzeniu, czy użytkownicy będą mogli wchodzić w interakcję z aplikacjami, używając mowy, gdy system będzie zablokowany.
+
+Ta zasada jest stosowana do aplikacji systemu Windows i Cortany. Ma ona pierwszeństwo przed zasadą „Zezwalaj na Cortanę na ekranie blokady”. Ta zasada ma zastosowanie tylko wtedy, gdy konfiguracja zasady „Zezwalaj na aktywację głosową” zezwala na aktywowanie aplikacji za pomocą głosu.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Jeśli aplikacja będzie otwarta w momencie zastosowania tego obiektu zasad grup
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Wymuś odmowę tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Domyślne dla wszystkich aplikacji:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Domyślne dla wszystkich aplikacji:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

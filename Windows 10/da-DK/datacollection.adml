@@ -10,7 +10,7 @@
       <string id="AllowTelemetry_1">1 – Standard</string>
       <string id="AllowTelemetry_2">2 - Forbedret</string>
       <string id="AllowTelemetry_3">3 - Fuld</string>
-      <string id="AllowTelemetry_Explain">Denne politikindstilling bestemmer det højeste niveau af Windows-diagnosticeringsdata, der sendes til Microsoft. Ved at konfigurere denne indstilling forhindrer du ikke brugerne i at ændre deres telemetriindstillinger. men du forhindrer dem i at vælge et højere niveau, end du har angivet for organisationen. Indstillingerne i diagnostikdata i Windows 10 gælder kun for Windows-operativsystemet og de apps, der leveres sammen med Windows. Disse indstillinger gælder ikke for tredjepartsapps, der kører på Windows 10.
+      <string id="AllowTelemetry_Explain">Denne politikindstilling bestemmer det højeste niveau af Windows-diagnosticeringsdata, der sendes til Microsoft. Ved at konfigurere denne indstilling forhindrer du ikke brugerne i at ændre deres telemetriindstillinger. men du forhindrer dem i at vælge et højere niveau, end du har angivet for organisationen. Indstillingerne i diagnostiske Windows 10-data gælder kun for Windows-operativsystemet og de apps, der leveres sammen med Windows. Disse indstillinger gælder ikke for tredjepartsapps, der kører på Windows 10.
 
 Hvis du aktiverer denne indstilling, kan du bestemme, hvilket niveau af diagnosticeringsdata der skal sendes til Microsoft, herunder:
 
@@ -58,10 +58,10 @@ Hvis du aktiverer udvidede diagnosticeringsdata i politikindstillingen Tillad te
 Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, afgøres niveauet for de diagnosticeringsdata, der sendes til Microsoft, af politikindstillingen Tillad telemetri.
       </string>
 
-      <string id="AllowDeviceNameInDiagnosticData">Tillad, at enhedsnavnet sendes i Windows-diagnosticeringsdata</string>
-      <string id="AllowDeviceNameInDiagnosticData_Explain">Denne politikindstilling tillader, at enhedsnavnet kan sendes til Microsoft som del af Windows-diagnosticeringsdata.
+      <string id="AllowDeviceNameInDiagnosticData">Tillad, at enhedsnavnet sendes i diagnostiske Windows-data</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Denne politikindstilling tillader, at enhedsnavnet kan sendes til Microsoft som del af diagnostiske Windows-data.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bliver enhedsnavn ikke sendt til Microsoft som en del af Windows-diagnosticeringsdata.
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bliver enhedsnavn ikke sendt til Microsoft som en del af diagnostiske Windows-data.
       </string>
 
       <string id="ConfigureTelemetryOptInSettingsUx">Konfigurer tilmeldingsindstillinger for telemetri i brugergrænsefladen.</string>
@@ -100,11 +100,19 @@ Indstil politikindstillingen Tillad telemetri for at forhindre brugerne i at sen
           Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, aktiveres Diagnostisk Datafremviser på siden Indstillinger.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurer uploadslutpunkt til Microsoft 365 Update Readiness</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">Konfigurer slutpunkt for upload af diagnosticeringsdata for Desktop Analytics</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Denne politik angiver uploadslutpunktet for denne enheds diagnosticeringsdata som en del af Microsoft 365 Update Readiness-programmet.
-          Hvis din organisation deltager i programmet og er blevet bedt om at konfigurere et brugerdefineret uploadslutpunkt, kan du bruge denne indstilling til at definere slutpunktet.
-          Værdien for denne indstilling leveres af Microsoft som en del af onboardingprocessen til programmet. 
+          Denne politik angiver slutpunktet for upload for denne enheds diagnosticeringsdata som en del af Desktop Analytics-programmet.
+          Hvis din organisation deltager i programmet og er blevet bedt om at konfigurere et brugerdefineret slutpunkt for upload, skal du bruge denne indstilling til at angive slutpunktet.
+          Værdien for denne indstilling vil blive angivet af Microsoft som del af programmets Onboarding-proces. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Tillad erhvervsmæssig datapipeline</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          AllowCommercialDataPipeline vælger enheden til Windows Enterprise-data pipelinen.
+          Hvis du aktiverer denne indstilling, vil data, der er indsamlet fra enheden, blive valgt i datapipelinen i Windows Enterprise.
+          Hvis du deaktiverer eller undlader at konfigurere denne indstilling, indsamles og behandles alle data fra enheden i overensstemmelse med vores politikker for pipelinen til Windows-standarddata.
+          Hvis du konfigurerer indstillingen, ændres indsamlingsniveauet for telemetri eller brugerens mulighed for at ændre niveauet ikke. Denne indstilling gælder kun for Windows-operativsystemet og apps, der leveres sammen med Windows, og ikke tredjepartsprogrammer eller -tjenester, der kører på Windows 10.
       </string>
     </stringTable>
     <presentationTable>
@@ -135,7 +143,7 @@ Indstil politikindstillingen Tillad telemetri for at forhindre brugerne i at sen
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>Tilpasset uploadslutpunkt til Microsoft 365 Update Readiness:</label>
+          <label>Brugerdefineret slutpunkt for upload for Desktop Analytics:</label>
         </textBox>
       </presentation>
     </presentationTable>

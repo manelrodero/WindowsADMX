@@ -56,39 +56,35 @@ Hvis denne politik er aktiveret i Windows 8 og Windows RT, vises kun beskeder i 
       <string id="RemoveWindowsUpdateModeAll">0 - Vis ingen beskeder</string>
       <string id="RemoveWindowsUpdateModeReboot">1 - Vis beskeder om, at genstart er nødvendig</string>
       <string id="AutoUpdateCfg">Konfigurer automatiske opdateringer</string>
-      <string id="AutoUpdateCfg_Help">Angiver, om denne computer skal modtage sikkerhedsopdateringer og andre vigtige downloads via den automatiske Windows-opdateringstjeneste.
+      <string id="AutoUpdateCfg_Help">Angiver, om denne computer modtager sikkerhedsopdateringer og andre vigtige opdateringer via tjenesten Windows automatiske opdateringer.
 
-Bemærk! Denne politik gælder ikke for Windows RT.
+Bemærk! Denne politikindstilling gælder ikke for Windows RT.
 
-Med denne indstilling kan du angive, om automatiske opdateringer er aktiveret på denne computer. Hvis tjenesten er aktiveret, skal du vælge en af de fire indstillinger i gruppepolitikindstillingen:
+Med denne indstilling kan du angive, om automatiske opdateringer er aktiveret på denne computer. Hvis tjenesten er aktiveret, skal du vælge en af de fire indstillinger i indstillingen for GruppePolitik:
 
-2 = Giv besked, før opdateringer downloades og installeres.
+        2 = Giv besked, før der hentes og installeres opdateringer.
 
-        Når Windows finder opdateringer, der gælder for denne computer, får brugerne besked om, at opdateringerne er klar til at blive downloadet. Når brugerne går til Windows Update, kan de downloade og installere alle tilgængelige opdateringer.
+        Når Windows finder opdateringer, der gælder for denne computer, får brugerne besked om, at opdateringerne er klar til at blive downloadet. Når brugerne starter til Windows Update, kan de downloade og installere alle tilgængelige opdateringer.
 
         3 = (standardindstilling) Download opdateringerne automatisk, og giv besked, når de er klar til at blive installeret
 
-Windows finder de opdateringer, der gælder for computeren, og downloader dem i baggrunden (brugeren bliver ikke underrettet eller afbrudt under denne proces). Når downloaden er fuldført, får brugerne besked om, at de er klar til at blive installeret. Når brugerne er gået til Windows Update, kan de installere dem.
+        Windows finder opdateringer, der gælder for computeren og downloader dem i baggrunden (brugeren underrettes ikke og bliver ikke afbrudt). Når downloaden er fuldført, får brugerne besked om, at de er klar til at blive installeret. Efter at have startet Windows Update kan brugerne installere dem.
 
-        4 = Download automatisk opdateringer, og installér dem efter den tidsplan, der er angivet nedenfor.
+        4 = Download automatisk opdateringer, og installer dem efter planen, der er angivet nedenfor.
 
-        Når der er valgt "Automatisk" som det planlagte installationstidspunkt, vil Windows automatisk kontrollere, downloade og installere opdateringer. Enheden genstartes i henhold til standardindstillingerne i Windows, medmindre noget andet er konfigureret i gruppepolitikken (gælder for Windows 10, version 1809 og nyere).
+        Når "automatisk" er valgt som den planlagte installationstid, vil Windows automatisk kontrollere, downloade og installere opdateringer. Enheden genstartes ifølge Windows-standardindstillinger, medmindre det er konfigureret af gruppepolitik. (Gælder for Windows 10, version 1809 og højere)
 
-        Angiv tidsplanen vha. indstillingerne i Gruppepolitikindstilling. Hvis der ikke er angivet en tidsplan, vil standardplanen for alle installationer være hver dag kl. 03:00. Hvis opdateringer kræver, at computeren skal genstartes for at installationen kan fuldføres, genstarter Windows computeren automatisk. (Hvis en bruger er logget på computeren, når Windows er klar til at genstarte, får brugeren besked om det og får mulighed for at udsætte genstarten.)
+        Angiv tidsplanen ved hjælp af indstillingerne i Indstilling for gruppepolitik. For version 1709 og senere er der et ekstra valg til at begrænse opdatering til en ugentlig, to-ugentlig eller månedlig forekomst. Hvis der ikke angives en tidsplan, vil standardplanen for alle installationer være hver dag kl. 3:00. Hvis opdateringer kræver genstart for at fuldføre installationen, vil Windows genstarte computeren automatisk. (Hvis en bruger er logget på computeren, når Windows er klar til at genstarte, får brugeren besked, og får mulighed for at udskyde genstarten).
 
-        I Windows 8 og nyere versioner kan du indstille, at opdateringer installeres under automatisk vedligeholdelse i stedet for efter en bestemt tidsplan. Automatisk vedligeholdelse vil installere opdateringer, når computeren ikke bruges, og undgå at gøre det, når computeren kører på batteristrøm. Hvis automatisk vedligeholdelse ikke kan installere opdateringer i løbet af 2 dage, installerer Windows Update opdateringerne med det samme. Brugere vil derefter blive underrettet om en kommende genstart, og at genstart kun finder sted, hvis der ikke er nogen risiko for utilsigtet datatab.
+        I Windows 8 og nyere versioner kan du angive opdateringer, der skal installeres under automatisk vedligeholdelse i stedet for en bestemt tidsplan. Automatisk vedligeholdelse installerer opdateringer, når computeren ikke er i brug og undgår at gøre det, når computeren kører på batteristrøm. Hvis automatisk vedligeholdelse ikke kan installere opdateringer i 2 dage, installerer Windows Update dem med det samme. Brugerne får derefter besked om en kommende genstart, og genstart vil kun finde sted, hvis der ikke er nogen mulighed for at miste data.
 
-        Automatisk vedligeholdelse kan konfigureres yderligere vha. gruppepolitikindstillinger her: Computerkonfiguration -&gt; Administrative skabeloner -&gt; Windows-komponenter -&gt; Vedligeholdelsesplanlægning
+        5 = Giv lokale administratorer tilladelse til at vælge den konfigurationstilstand, hvor automatiske opdateringer giver besked om og installerer opdateringer. (Denne indstilling er ikke overført til nogen version på Windows 10)
 
-        5 = Tillad, at lokale administratorer vælger den konfigurationstilstand, hvor Automatiske opdateringer skal give besked og installere opdateringer.
+        Med denne indstilling vil lokale administratorer have tilladelse til at bruge Windows Update-kontrolpanelet til at vælge deres egen konfigurationsindstilling. Lokale administratorer vil ikke have tilladelse til at deaktivere konfigurationen for automatiske opdateringer.
 
-        Bemærk! Denne indstilling understøttes ikke på Windows 10.
+Hvis status for denne politik er deaktiveret, skal alle opdateringer, der er tilgængelige på Windows Update, downloades og installeres manuelt. Det kan du gøre ved at søge efter Windows Update vha. Start.
 
-        Med denne indstilling har lokale administratorer mulighed for at bruge kontrolpanelet Windows Update til at angive en konfigurationsindstilling efter eget valg. Lokale administratorer har ikke mulighed for at deaktivere konfigurationen for Automatiske opdateringer.
-
-Hvis statussen for denne politik angives til Deaktiveret, skal opdateringer, der er tilgængelige på Windows Update, downloades og installeres manuelt. Det gør du ved at søge efter Windows Update fra Start.
-
-Hvis status er angivet til Ikke konfigureret, er brug af Automatiske opdateringer ikke angivet på gruppepolitikniveau. Men en administrator kan stadig konfigurere Automatiske opdateringer via Kontrolpanel.</string>
+Hvis status er angivet til Ikke konfigureret, er brug af automatiske opdateringer ikke angivet på Gruppepolitikniveau. En administrator kan dog stadig konfigurere automatiske opdateringer via kontrolpanel.</string>
 
       <string id="AutoUpdateModeAdminChooses">5 – Tillad, at en lokal administrator vælger indstillingen</string>
       <string id="AutoUpdateModeAuto">4 – Hent automatisk, og planlæg installationen</string>
@@ -321,50 +317,49 @@ Hvis du vælger "Slå eksempelbuilds til", bliver der installeret eksempelbuilds
       <string id="PreviewBuildFastFeatureUpdates">Eksempelbuild - Hurtig</string>
       <string id="PreviewBuildSlowFeatureUpdates">Eksempelbuild - Langsom</string>
       <string id="ReleasePreviewBranchFeatureUpdates">Release-eksempel</string>
-      <string id="SemiAnnualChannelTargetedFeatureUpdates">Halvårlig kanal (målrettet)</string>
       <string id="SemiAnnualChannelFeatureUpdates">Halvårlig kanal</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Halvårlig kanal for 1809 og derunder (frarådet)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Halvårlig kanal (målrettet) til 1809 og derunder (frarådet)</string>
       <string id="DeferFeatureUpdates_Title">Vælg, hvornår eksempelbuilds og funktionsopdateringer skal modtages</string>
-      <string id="DeferFeatureUpdates_Help">Aktivér denne politik for at angive niveauet af de Eksempelbuilds eller funktionsopdateringer skal modtage, og hvornår.
+      <string id="DeferFeatureUpdates_Help">Aktivér denne politik for at angive niveauet af de Eksempelbuilds eller Funktionsopdateringer, der skal modtages, og hvornår.
 
-* Eksempelbuild - hurtig: Enheder, der er indstillet til dette niveau, bliver først til at modtage nye builds af Windows med funktioner, der er endnu ikke er tilgængelige for offentligheden. Vælg hurtigt for at deltage i at identificere og rapportere problemer til Microsoft og Foreslå nye funktioner.
-* Eksempelbuild - langsom: Enheder, der er indstillet til dette niveau, modtager nye builds af Windows, før de er tilgængelige for offentligheden, men med en langsommere hastighed end dem, der er indstillet til hurtig, og med ændringer og rettelser, der er identificeret i tidligere builds.
+* Eksempelbuild - Hurtig: Enheder, der er indstillet til dette niveau, vil være de første til at modtage nye builds af Windows med funktioner, der endnu ikke er tilgængelige for offentligheden. Vælg Hurtig for at deltage i at identificere og rapportere problemer til Microsoft og give forslag til nye funktioner.
+* Eksempelbuild - Langsom: Enheder, der er indstillet til dette niveau, modtager nye builds af Windows, før de er tilgængelige for offentligheden, men med en langsommere hastighed end dem, der er indstillet til Hurtig, og med ændringer og rettelser, der er identificeret i tidligere builds.
 * Release-eksempel: Modtag builds af Windows, lige før Microsoft frigiver dem til offentligheden.
-* Halvårlig kanal (målrettet): Modtag funktionsopdateringer, når de er frigivet til offentligheden.
-* Halvårlig kanal: funktionsopdateringer ankommer, når de er erklæret halvårlig kanal. Dette normal sker ca. 4 måneder efter halvårlig kanal (målrettet), hvilket betyder, at Microsoft, uafhængige softwareleverandører (ISVs), partnere og kunder mener, at udgaven er klar til omfattende installation.
+* Halvårlig kanal: Modtag funktionsopdateringer, når de frigives til offentligheden.
 
-Når du vælger et Eksempelbuild:
-    -Du kan udskyde modtagelsen af Eksempelbuilds i op til 14 dage.
-    -Hvis du vil undgå, at Eksempelbuilds modtages på det planlagte tidspunkt, kan du midlertidigt afbryde. Denne pause forbliver aktiv i 35 dage fra det angivne starttidspunkt.
+Følgende niveauer af Windows-parathed er blevet frarådet og er kun tilgængelig for 1809 og herunder:
+* Halvårlig kanal (målrettet) til 1809 og tidligere: Funktionsopdateringer er blevet frigivet.
+* Halvårlig kanal for 1809 og tidligere: Funktionsopdateringer er erklæret halvårlig kanal, og det er en betegnelse, der angiver, at udgivelsen er klar til omfattende installation.
+Gennemse siden med versionsoplysninger på http://aka.ms/ReleaseInformationPage for den halvårlige kanal (målrettet) og halvårlig kanalens udgivelsesdatoer.
+
+Når du vælger et eksempelbuild:
+    -Du kan udskyde modtagelsen af eksempelbuilds i op til 14 dage.
+    -Hvis du vil undgå, at eksempelbuilds modtages på det planlagte tidspunkt, kan du midlertidigt afbryde dem. Pausen vil forblive i kraft i 35 dage fra det angivne starttidspunkt.
     -Hvis du vil genoptage modtagelsen af funktionsopdateringer, som er stoppet midlertidigt, skal du rydde feltet Startdato.
 
-Tilmelding af Eksempelbuild kræver en telemetriniveauindstilling på 2 eller højere, og domænet, der er registreret på insider.windows.com. Yderligere oplysninger om Eksempelbuilds finder du under: https://aka.ms/wipforbiz
+Tilmelding af eksempelbuild kræver en telemetriniveauindstilling på 2 eller højere, og dit domæne skal være registreret på insider.windows.com. Yderligere oplysninger om eksempelbuilds finder du under: https://aka.ms/wipforbiz
 
-Når du vælger Halvårlig kanal (målrettet) eller halvårlig kanal:
+Ved valg af halvårlig kanal:
     -Du kan udskyde modtagelsen af funktionsopdateringer i op til 365 dage.
-    -Hvis du vil forhindre, at funktionsopdateringer modtages på det planlagte tidspunkt, kan du midlertidigt afbryde. Denne pause forbliver aktiv i 35 dage fra det angivne starttidspunkt.
+    -Hvis du vil forhindre, at funktionsopdateringer modtages på det planlagte tidspunkt, kan du midlertidigt afbryde midlertidigt. Pausen vil forblive i kraft i 35 dage fra det angivne starttidspunkt.
     -Hvis du vil genoptage modtagelsen af funktionsopdateringer, som er stoppet midlertidigt, skal du rydde feltet Startdato.
 
-Hvis du vil konfigurere funktionsopdateringer skal du have en telemetriniveauindstilling på 1 eller højere.
-
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows Update ikke ændre sin funktion.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politik, vil Windows Update ikke ændre funktionsmåden.</string>
       <string id="DeferQualityUpdates_Title">Vælg, hvornår kvalitetsopdateringer skal modtages</string>
-      <string id="DeferQualityUpdates_Help">Aktivér denne politikindstilling for at angive, hvornår du vil modtage kvalitetsopdateringer.
+      <string id="DeferQualityUpdates_Help">Aktivér denne politik for at angive, hvornår du vil modtage kvalitetsopdateringer.
 
 Du kan udsætte modtagelsen af kvalitetsopdateringer i op til 30 dage.
 
-For at forhindre, at kvalitetsopdateringer modtages på det planlagte tidspunkt, kan du midlertidigt afbryde kvalitetsopdateringer. Afbrydelsen forbliver aktiv i 35 dage, eller indtil du rydder feltet Startdato.
+Hvis du vil forhindre, at kvalitetsopdateringer modtages på det planlagte tidspunkt, kan du midlertidigt afbryde kvalitetsopdateringer. Denne pause vil forblive aktiv i 35 dage, eller indtil du rydder feltet Startdato.
 
-For at fortsætte modtagelsen af afbrudte kvalitetsopdateringer skal du rydde feltet Startdato.
+Hvis du vil genoptage modtagelsen af kvalitetsopdateringer, der er midlertidigt afbrudt, skal du rydde feltet Startdato.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politik, vil Windows Update ikke ændre funktionsmåden.
-
-Bemærk! Hvis politikken "Tillad Telemetri" er angivet til 0, har denne politik ingen effekt.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows Update ikke ændre funktionsmåden.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Medtag ikke drivere i Windows-opdateringer</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Aktivér denne politik for ikke at medtage drivere sammen Windows-kvalitetsopdateringer.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politik, vil Windows Update indeholde opdateringer, som har en driverklassifikation.
-
-Bemærk! For enheder, der kører Windows 10 version 1607 eller Windows Server 2016, træder denne politik først i kraft, hvis du aktiverer telemetri (det vil sige, hvis politikken "Tillad telemetri" ikke er 0). For enheder, der kører Windows 10 version 1703 (eller nyere) eller Windows Server version 1709 (eller nyere), behøver telemetri ikke at være aktiveret, for at denne politik kan træde i kraft.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politik, vil Windows Update indeholde opdateringer, som har en driverklassifikation.</string>
       <string id="ActiveHours_Title">Deaktiver automatisk genstart efter opdateringer i aktive timer</string>
       <string id="ActiveHours_Help">Hvis du aktiverer denne politik, genstarter pc'en ikke automatisk efter opdateringer under aktive timer. Pc'en forsøger at genstarte uden for de aktive timer.
 
@@ -592,11 +587,57 @@ Bemærk: Denne politik gælder kun, når Microsoft Update-tjenesten på intranet
 
 Du kan bruge denne politik til at definere, hvad brugere af Windows Update-meddelelser ser. Politikken kontrollerer ikke, hvordan og hvornår opdateringer downloades og installeres.
 
-Vigtigt! Hvis du vælger ikke at få opdateringsmeddelelser og også definerer politikken "Konfigurer automatiske opdateringer", så enheder ikke automatisk får opdateringer, vil hverken du eller enhedsbrugerne være opmærksomme på vigtige sikkerheds-, kvalitets- eller funktionsopdateringer, og enhederne kan måske være i fare.
+Vigtigt! Hvis du vælger ikke at få opdateringsmeddelelser og også definerer en anden gruppepolitik, så enheder ikke automatisk får opdateringer, vil hverken du eller enhedsbrugerne være opmærksomme på vigtige sikkerheds-, kvalitets- eller funktionsopdateringer, og enhederne kan måske være i fare.
       </string>
       <string id="DefaultNotification">0 (standard) – Standardmeddelelser fra operativsystemet i Windows Update</string>
       <string id="ExcludingRebootWarnings">1 – Deaktiver alle meddelelser på nær advarsler om genstart</string>
       <string id="IncludingRebootWarnings">2 – Deaktiver alle meddelelser, også advarsler om genstart</string>
+      <string id="ComplianceDeadline_Title">Angiv deadlines for automatiske opdateringer og genstarter</string>
+      <string id="ComplianceDeadline_Help">Med denne politikindstilling kan du angive det antal dage, som en bruger har, før kvalitets- og funktionsopdateringer automatisk installeres på deres enheder, og en respitperiode, hvorefter de nødvendige genstarter udføres automatisk. Opdateringer og genstarter udføres, uanset de aktive timer, og brugeren kan ikke planlægge igen.
+
+Deadlines for funktions- og kvalitetsopdateringer kan være op til 30 dage. Respitperioden for automatisk genstart kan være fra 0 til 7 dage.
+
+Du kan også deaktivere automatisk genstart indtil afslutningen af respitperioden for automatisk genstart.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politik, vil enheder hente opdateringer og genstarte i henhold til standardplanen.
+
+Denne politik tilsidesætter følgende politikker:
+1. Angiv deadline før automatisk genstart for opdateringsinstallation
+2. Angiv genstartstidspunktets overgang og beskedtidsplan for opdateringer
+3. Genstart altid automatisk på det planlagte tidspunkt
+4. Ingen automatisk genstart hos brugere, der er logget på, for planlagte installationer af automatiske opdateringer
+      </string>
+      <string id="ComplianceDeadlineDay0">0</string>
+      <string id="ComplianceDeadlineDay1">1</string>
+      <string id="ComplianceDeadlineDay2">2</string>
+      <string id="ComplianceDeadlineDay3">3</string>
+      <string id="ComplianceDeadlineDay4">4</string>
+      <string id="ComplianceDeadlineDay5">5</string>
+      <string id="ComplianceDeadlineDay6">6</string>
+      <string id="ComplianceDeadlineDay7">7</string>
+      <string id="ComplianceDeadlineDay8">8</string>
+      <string id="ComplianceDeadlineDay9">9</string>
+      <string id="ComplianceDeadlineDay10">10</string>
+      <string id="ComplianceDeadlineDay11">11</string>
+      <string id="ComplianceDeadlineDay12">12</string>
+      <string id="ComplianceDeadlineDay13">13</string>
+      <string id="ComplianceDeadlineDay14">14</string>
+      <string id="ComplianceDeadlineDay15">15</string>
+      <string id="ComplianceDeadlineDay16">16</string>
+      <string id="ComplianceDeadlineDay17">17</string>
+      <string id="ComplianceDeadlineDay18">18</string>
+      <string id="ComplianceDeadlineDay19">19</string>
+      <string id="ComplianceDeadlineDay20">20</string>
+      <string id="ComplianceDeadlineDay21">21</string>
+      <string id="ComplianceDeadlineDay22">22</string>
+      <string id="ComplianceDeadlineDay23">23</string>
+      <string id="ComplianceDeadlineDay24">24</string>
+      <string id="ComplianceDeadlineDay25">25</string>
+      <string id="ComplianceDeadlineDay26">26</string>
+      <string id="ComplianceDeadlineDay27">27</string>
+      <string id="ComplianceDeadlineDay28">28</string>
+      <string id="ComplianceDeadlineDay29">29</string>
+      <string id="ComplianceDeadlineDay30">30</string>
     </stringTable>
 
     <presentationTable>
@@ -727,6 +768,16 @@ Vigtigt! Hvis du vælger ikke at få opdateringsmeddelelser og også definerer p
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Angiv indstillinger for visning af opdateringsmeddelelser:</dropdownList>
+      </presentation>
+      <presentation id="ComplianceDeadline_Title">
+        <text>Angiv det antal dage (op til 30 dage), som en bruger har, før opdateringer køres automatisk, uanset aktive timer, uden mulighed for at planlægge igen.</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Kvalitetsopdateringer (dage):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Funktionsopdateringer (dage):</dropdownList>
+        <text></text>
+        <text>Angiv en udvidet periode for automatisk genstart (0 til 7 dage), fra det tidspunkt, hvor en genstart kræves, indtil enheden automatisk genstarter. Enheder genstartes uafhængigt af de aktive timer, og det er ikke muligt at ændre tidsplanen.</text>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Respitperiode (dage)</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Genstart ikke automatisk, før fristen er udløbet</checkBox>
       </presentation>
     </presentationTable>
   </resources>

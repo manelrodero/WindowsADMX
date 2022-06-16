@@ -639,49 +639,46 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
 
       <string id="RDVEDrive_Name">Konfiguruj używanie szyfrowania sprzętowego dla wymiennych dysków danych</string>
 
-      <string id="OSEDrive_Help">To ustawienie zasad umożliwia zarządzanie szyfrowaniem sprzętowym dysków z systemem operacyjnym w ramach funkcji BitLocker i określenie algorytmu szyfrowania, który ma być używany do szyfrowania sprzętowego. Zastosowanie szyfrowania sprzętowego może zwiększyć wydajność operacji, które wymagają częstego odczytywania lub zapisywania danych na dysku.
+      <string id="OSEDrive_Help">To ustawienie zasad umożliwia zarządzanie użyciem szyfrowania sprzętowego w ramach funkcji BitLocker w celu szyfrowania dysków z systemem operacyjnym i określenie algorytmów szyfrowania, które mają być używane do szyfrowania sprzętowego. Użycie szyfrowania sprzętowego może zwiększyć wydajność operacji, które wymagają częstego odczytywania lub zapisywania danych na dysku.
 
-Jeśli to ustawienie zasad zostanie włączone, można określić dodatkowe opcje, aby określić, czy na komputerach, które nie obsługują szyfrowania sprzętowego, ma być stosowane szyfrowanie za pomocą oprogramowania w ramach funkcji BitLocker oraz czy należy ograniczyć algorytmy i mechanizmy szyfrowania używane podczas szyfrowania sprzętowego.
+Jeśli włączysz to ustawienie zasad, będzie można wybrać dodatkowe opcje określające, czy na komputerach, które nie obsługują szyfrowania sprzętowego, ma być używane szyfrowanie programowe w ramach funkcji BitLocker oraz czy należy ograniczyć algorytmy i zestawy szyfrowania używane podczas szyfrowania sprzętowego.
 
-Jeśli to ustawienie zasad jest wyłączone, funkcja BitLocker nie może używać szyfrowania sprzętowego na dyskach z systemem operacyjnym, a w przypadku szyfrowania dysku domyślnie jest stosowane szyfrowanie za pomocą oprogramowania w ramach funkcji BitLocker.
+Jeśli wyłączysz to ustawienie zasad, funkcja BitLocker nie będzie mogła używać szyfrowania sprzętowego na dyskach z systemem operacyjnym, a w przypadku szyfrowania dysku domyślnie będzie używane szyfrowanie programowe w ramach funkcji BitLocker.
 
-Jeśli to ustawienie zasad nie zostanie skonfigurowane, funkcja BitLocker będzie korzystać z szyfrowania sprzętowego i z algorytmu szyfrowania ustawionego dla danego typu dysku. Jeśli szyfrowanie sprzętowe nie jest dostępne, funkcja BitLocker zastosuje szyfrowanie przy użyciu oprogramowania.
+Jeśli nie skonfigurujesz tego ustawienia zasad, funkcja BitLocker będzie używać szyfrowania programowego, niezależnie od dostępności szyfrowania sprzętowego.
 
-Uwaga: ustawienie zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania” nie ma zastosowania w przypadku szyfrowania sprzętowego. Algorytm szyfrowania sprzętowego jest ustawiany na etapie dzielenia dysku na partycje. Domyślnie do szyfrowania dysku funkcja BitLocker używa algorytmu skonfigurowanego na danym dysku. Opcja „Ogranicz algorytmy i mechanizmy szyfrowania dozwolone w ramach szyfrowania sprzętowego” umożliwia ograniczenie algorytmów szyfrowania, z których funkcja BitLocker może korzystać podczas szyfrowania sprzętowego. Jeśli algorytm ustawiony dla danego dysku jest niedostępny, funkcja BitLocker wyłączy możliwość korzystania z szyfrowania sprzętowego.
+Uwaga: Ustawienie zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania” nie ma zastosowania w przypadku szyfrowania sprzętowego. Algorytm szyfrowania sprzętowego jest ustawiany na etapie dzielenia dysku na partycje. Domyślnie do szyfrowania dysku funkcja BitLocker używa algorytmu skonfigurowanego na danym dysku. Opcja „Ogranicz algorytmy i zestawy szyfrowania dozwolone w ramach szyfrowania sprzętowego” umożliwia ograniczenie algorytmów szyfrowania, z których funkcja BitLocker może korzystać w przypadku szyfrowania sprzętowego. Jeśli algorytm ustawiony dla danego dysku będzie niedostępny, funkcja BitLocker wyłączy możliwość korzystania z szyfrowania sprzętowego.
 Algorytmy szyfrowania są określone przez identyfikatory obiektów (OID). Na przykład:
-- AES 128 w trybie CBC, OID: 2.16.840.1.101.3.4.1.2
-- AES 256 w trybie CBC, OID: 2.16.840.1.101.3.4.1.42
-      
+- Identyfikator OID algorytmu AES 128 w trybie CBC: 2.16.840.1.101.3.4.1.2
+- Identyfikator OID algorytmu AES 256 w trybie CBC: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="FDVEDrive_Help">To ustawienie zasad umożliwia zarządzanie szyfrowaniem sprzętowym stałych dysków danych w ramach funkcji BitLocker i określenie algorytmu szyfrowania, który ma być używany do szyfrowania sprzętowego. Zastosowanie szyfrowania sprzętowego może zwiększyć wydajność operacji, które wymagają częstego odczytywania lub zapisywania danych na dysku.
+      <string id="FDVEDrive_Help">To ustawienie zasad umożliwia zarządzanie użyciem szyfrowania sprzętowego w ramach funkcji BitLocker w celu szyfrowania stałych dysków danych i określenie algorytmów szyfrowania, które mają być używane do szyfrowania sprzętowego. Użycie szyfrowania sprzętowego może zwiększyć wydajność operacji, które wymagają częstego odczytywania lub zapisywania danych na dysku.
 
-Jeśli to ustawienie zasad zostanie włączone, można określić dodatkowe opcje, aby określić, czy na komputerach, które nie obsługują szyfrowania sprzętowego, ma być stosowane szyfrowanie za pomocą oprogramowania w ramach funkcji BitLocker oraz czy należy ograniczyć algorytmy i mechanizmy szyfrowania używane podczas szyfrowania sprzętowego.
+Jeśli włączysz to ustawienie zasad, będzie można wybrać dodatkowe opcje określające, czy na komputerach, które nie obsługują szyfrowania sprzętowego, ma być używane szyfrowanie programowe w ramach funkcji BitLocker oraz czy należy ograniczyć algorytmy i zestawy szyfrowania używane podczas szyfrowania sprzętowego.
 
-Jeśli to ustawienie zasad jest wyłączone, funkcja BitLocker nie może używać szyfrowania sprzętowego na dyskach z systemem operacyjnym, a w przypadku szyfrowania dysku domyślnie jest stosowane szyfrowanie za pomocą oprogramowania w ramach funkcji BitLocker.
+Jeśli wyłączysz to ustawienie zasad, funkcja BitLocker nie będzie mogła używać szyfrowania sprzętowego na dyskach z systemem operacyjnym, a w przypadku szyfrowania dysku domyślnie będzie używane szyfrowanie programowe w ramach funkcji BitLocker.
 
-Jeśli to ustawienie zasad nie zostanie skonfigurowane, funkcja BitLocker będzie korzystać z szyfrowania sprzętowego i z algorytmu szyfrowania ustawionego dla danego typu dysku. Jeśli szyfrowanie sprzętowe nie jest dostępne, funkcja BitLocker zastosuje szyfrowanie przy użyciu oprogramowania.
+Jeśli nie skonfigurujesz tego ustawienia zasad, funkcja BitLocker będzie używać szyfrowania programowego, niezależnie od dostępności szyfrowania sprzętowego.
 
-Uwaga: ustawienie zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania” nie ma zastosowania w przypadku szyfrowania sprzętowego. Algorytm szyfrowania sprzętowego jest ustawiany na etapie dzielenia dysku na partycje. Domyślnie do szyfrowania dysku funkcja BitLocker używa algorytmu skonfigurowanego na danym dysku. Opcja „Ogranicz algorytmy i mechanizmy szyfrowania dozwolone w ramach szyfrowania sprzętowego” umożliwia ograniczenie algorytmów szyfrowania, z których funkcja BitLocker może korzystać podczas szyfrowania sprzętowego. Jeśli algorytm ustawiony dla danego dysku jest niedostępny, funkcja BitLocker wyłączy możliwość korzystania z szyfrowania sprzętowego.
+Uwaga: Ustawienie zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania” nie ma zastosowania w przypadku szyfrowania sprzętowego. Algorytm szyfrowania sprzętowego jest ustawiany na etapie dzielenia dysku na partycje. Domyślnie do szyfrowania dysku funkcja BitLocker używa algorytmu skonfigurowanego na danym dysku. Opcja „Ogranicz algorytmy i zestawy szyfrowania dozwolone w ramach szyfrowania sprzętowego” umożliwia ograniczenie algorytmów szyfrowania, z których funkcja BitLocker może korzystać w przypadku szyfrowania sprzętowego. Jeśli algorytm ustawiony dla danego dysku będzie niedostępny, funkcja BitLocker wyłączy możliwość korzystania z szyfrowania sprzętowego.
 Algorytmy szyfrowania są określone przez identyfikatory obiektów (OID). Na przykład:
-- AES 128 w trybie CBC, OID: 2.16.840.1.101.3.4.1.2
-- AES 256 w trybie CBC, OID: 2.16.840.1.101.3.4.1.42
-      
+- Identyfikator OID algorytmu AES 128 w trybie CBC: 2.16.840.1.101.3.4.1.2
+- Identyfikator OID algorytmu AES 256 w trybie CBC: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="RDVEDrive_Help">To ustawienie zasad umożliwia zarządzanie szyfrowaniem sprzętowym wymiennych dysków danych w ramach funkcji BitLocker i określenie algorytmu szyfrowania, który ma być używany do szyfrowania sprzętowego. Zastosowanie szyfrowania sprzętowego może zwiększyć wydajność operacji, które wymagają częstego odczytywania lub zapisywania danych na dysku.
+      <string id="RDVEDrive_Help">To ustawienie zasad umożliwia zarządzanie użyciem szyfrowania sprzętowego w ramach funkcji BitLocker w celu szyfrowania wymiennych dysków danych i określenie algorytmów szyfrowania, które mają być używane do szyfrowania sprzętowego. Użycie szyfrowania sprzętowego może zwiększyć wydajność operacji, które wymagają częstego odczytywania lub zapisywania danych na dysku.
 
-Jeśli to ustawienie zasad zostanie włączone, można określić dodatkowe opcje, aby określić, czy na komputerach, które nie obsługują szyfrowania sprzętowego, ma być stosowane szyfrowanie za pomocą oprogramowania w ramach funkcji BitLocker oraz czy należy ograniczyć algorytmy i mechanizmy szyfrowania używane podczas szyfrowania sprzętowego.
+Jeśli włączysz to ustawienie zasad, będzie można wybrać dodatkowe opcje określające, czy na komputerach, które nie obsługują szyfrowania sprzętowego, ma być używane szyfrowanie programowe w ramach funkcji BitLocker oraz czy należy ograniczyć algorytmy i zestawy szyfrowania używane podczas szyfrowania sprzętowego.
 
-Jeśli to ustawienie zasad jest wyłączone, funkcja BitLocker nie może używać szyfrowania sprzętowego na dyskach z systemem operacyjnym, a w przypadku szyfrowania dysku domyślnie jest stosowane szyfrowanie za pomocą oprogramowania w ramach funkcji BitLocker.
+Jeśli wyłączysz to ustawienie zasad, funkcja BitLocker nie będzie mogła używać szyfrowania sprzętowego na dyskach z systemem operacyjnym, a w przypadku szyfrowania dysku domyślnie będzie używane szyfrowanie programowe w ramach funkcji BitLocker.
 
-Jeśli to ustawienie zasad nie zostanie skonfigurowane, funkcja BitLocker będzie korzystać z szyfrowania sprzętowego i z algorytmu szyfrowania ustawionego dla danego typu dysku. Jeśli szyfrowanie sprzętowe nie jest dostępne, funkcja BitLocker zastosuje szyfrowanie przy użyciu oprogramowania.
+Jeśli nie skonfigurujesz tego ustawienia zasad, funkcja BitLocker będzie używać szyfrowania programowego, niezależnie od dostępności szyfrowania sprzętowego.
 
-Uwaga: ustawienie zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania” nie ma zastosowania w przypadku szyfrowania sprzętowego. Algorytm szyfrowania sprzętowego jest ustawiany na etapie dzielenia dysku na partycje. Domyślnie do szyfrowania dysku funkcja BitLocker używa algorytmu skonfigurowanego na danym dysku. Opcja „Ogranicz algorytmy i mechanizmy szyfrowania dozwolone w ramach szyfrowania sprzętowego” umożliwia ograniczenie algorytmów szyfrowania, z których funkcja BitLocker może korzystać podczas szyfrowania sprzętowego. Jeśli algorytm ustawiony dla danego dysku jest niedostępny, funkcja BitLocker wyłączy możliwość korzystania z szyfrowania sprzętowego.
+Uwaga: Ustawienie zasad „Wybierz metodę szyfrowania dysków i siłę szyfrowania” nie ma zastosowania w przypadku szyfrowania sprzętowego. Algorytm szyfrowania sprzętowego jest ustawiany na etapie dzielenia dysku na partycje. Domyślnie do szyfrowania dysku funkcja BitLocker używa algorytmu skonfigurowanego na danym dysku. Opcja „Ogranicz algorytmy i zestawy szyfrowania dozwolone w ramach szyfrowania sprzętowego” umożliwia ograniczenie algorytmów szyfrowania, z których funkcja BitLocker może korzystać w przypadku szyfrowania sprzętowego. Jeśli algorytm ustawiony dla danego dysku będzie niedostępny, funkcja BitLocker wyłączy możliwość korzystania z szyfrowania sprzętowego.
 Algorytmy szyfrowania są określone przez identyfikatory obiektów (OID). Na przykład:
-- AES 128 w trybie CBC, OID: 2.16.840.1.101.3.4.1.2
-- AES 256 w trybie CBC, OID: 2.16.840.1.101.3.4.1.42
-      
+- Identyfikator OID algorytmu AES 128 w trybie CBC: 2.16.840.1.101.3.4.1.2
+- Identyfikator OID algorytmu AES 256 w trybie CBC: 2.16.840.1.101.3.4.1.42
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Włącz używanie uwierzytelniania funkcji BitLocker wymagającego wprowadzenia danych wejściowych z klawiatury podczas rozruchu na komputerach typu slate</string>

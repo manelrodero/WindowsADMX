@@ -108,28 +108,31 @@ La valeur 0 signifie « non limité ». La valeur du service cloud définie p
       <string id="CacheHost">[Réservé à un usage futur] Nom d’hôte du serveur de cache</string>
       <string id="CacheHost_Help">[Réservé à un usage futur]</string>
       <string id="GroupIdSource">Sélectionnez la source des ID de groupe</string>
-      <string id="GroupIdSource_Help">Définissez cette stratégie pour restreindre la sélection d'homologues à une source spécifique. 
+      <string id="GroupIdSource_Help">Configurez cette stratégie pour limiter la sélection d'homologues à une source spécifique. 
       
 Les options disponibles sont : 
 
-1 = Site AD.
+1 = AD Site.
 
-2 = SID de domaine authentifié.
+2 =  SID de domaine authentifié.
 
-3 = ID d'option DHCP.
+3 = ID facultatif DHCP.
 
-4 = Suffixe DNS. 
+4 = suffixe DNS. 
 
-Lorsqu'il est défini, l'ID de groupe est automatiquement assigné à partir de la source sélectionnée. Si vous définissez cette stratégie, la stratégie GroupID est ignorée. 
+5 = ID de client AAD. 
+
+Lorsqu'il est défini, l'ID de groupe est automatiquement assigné à partir de la source sélectionnée. Si vous activez cette stratégie, la stratégie GroupID est ignorée. 
       
-Les options définies dans cette stratégie ne s'appliquent qu'au mode de téléchargement du groupe (2). Si le groupe (2) n'est pas défini en tant que mode de téléchargement, cette stratégie est ignorée. 
+Les options définies dans cette stratégie ne s'appliquent qu'au mode de téléchargement de Groupe (2). Si le Groupe (2) n'est pas défini en tant que mode de téléchargement, cette stratégie est ignorée. 
 
-Pour l'option 3 - ID d'option DHCP, le client interroge l'ID d'option DHCP 234 et utilise la valeur du GUID retournée comme ID de groupe.</string>
+Pour l'option 3 - ID facultatif DHCP, le client interroge l'ID facultatif DHCP 234 et utilise la valeur GUID retournée comme ID de groupe.</string>
       <string id="GroupIdSource_Unset">Non défini (0)</string>
       <string id="GroupIdSource_AD">Site AD (1)</string>
       <string id="GroupIdSource_SID">SID de domaine authentifié (2)</string>
       <string id="GroupIdSource_DHCP">ID d'option DHCP (3)</string>
       <string id="GroupIdSource_DNS">Suffixe DNS (4)</string>
+      <string id="GroupIdSource_AAD">ID de client AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Retarder le téléchargement en arrière-plan à partir de http (en secondes)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Cette stratégie permet de retarder l'utilisation d’une source HTTP dans un téléchargement en arrière-plan autorisé à utiliser P2P.
       
@@ -146,6 +149,14 @@ Une fois le délai maximal atteint, le téléchargement reprend à l'aide de HTT
 Notez qu'un téléchargement qui attend des sources homologues semblera bloqué pour l'utilisateur final.
       
 La valeur recommandée est 1 minute (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Délai de base du serveur de cache de téléchargement en arrière-plan (en secondes)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Définir cette stratégie pour retarder le passage du serveur de cache à la source HTTP d'un téléchargement de contenu en arrière-plan de X secondes. 
+
+Remarque : si vous choisissez de retarder le téléchargement en arrière-plan à partir de http, ce paramètre s'applique en premier (pour permettre les téléchargements à partir des homologues en premier).</string>
+      <string id="DelayCacheServerFallbackForeground">Délai de base du serveur de cache de téléchargement au premier plan</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Définir cette stratégie pour retarder le basculement du serveur de cache à la source HTTP d'un téléchargement de contenu en premier plan de X secondes. 
+
+Remarque : si vous configurez la stratégie pour retarder le téléchargement du premier plan à partir de http, cette stratégie s'applique en premier (pour permettre les téléchargements d'abord à partir des homologues).</string>
       <string id="RestrictPeerSelectionBy">Sélectionner une méthode pour limiter la sélection d'homologues</string>
       <string id="RestrictPeerSelectionBy_Help">Définissez cette stratégie pour limiter la sélection d'homologue avec l’option sélectionnée. 
       
@@ -263,7 +274,7 @@ L'option 1 (Masque de sous-réseau) s’applique au mode de téléchargement LA
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">source des ID de groupe :</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Source des ID de groupe :</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Retarder le téléchargement en arrière-plan à partir de http (en secondes) :</decimalTextBox>
@@ -272,6 +283,14 @@ L'option 1 (Masque de sous-réseau) s’applique au mode de téléchargement LA
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Retarder le téléchargement au premier plan à partir de http (en secondes) :</decimalTextBox>
         <text>La valeur par défaut est 0 (aucun délai)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Délai du serveur de cache de téléchargement en arrière-plan (en secondes) :</decimalTextBox>
+        <text>La valeur par défaut est 0 (aucun délai)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Retarder le cache de téléchargement au premier plan (en secondes) :</decimalTextBox>
+        <text>La valeur par défaut est 0 (aucun délai)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
         <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Limiter la sélection d'homologues :</dropdownList>

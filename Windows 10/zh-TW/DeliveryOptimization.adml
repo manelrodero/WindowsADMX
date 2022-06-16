@@ -108,28 +108,31 @@
       <string id="CacheHost">[保留後供未來使用] 快取伺服器主機名稱</string>
       <string id="CacheHost_Help">[保留後供未來使用]</string>
       <string id="GroupIdSource">選取群組識別碼的來源</string>
-      <string id="GroupIdSource_Help">設定此原則，以將對等選取項目限制在特定來源。 
+      <string id="GroupIdSource_Help">設定此原則可限制對特定來源的對等選取。
       
-可用選項有: 
+可用的選項有: 
 
 1 = AD 站台。
 
-2 = 經驗證的網域 SID。
+2 = 已驗證網域 SID。
 
 3 = DHCP 選項識別碼。
 
-4 = DNS 尾碼。 
+4 = DNS 尾碼。
 
-設定後，就會自動從選取的來源指派群組識別碼。若您設定此原則，則會略過 GroupID 原則。 
+5 = AAD 租用戶識別碼。
+
+設定後，會從選取的來源自動指派群組識別碼。如果您設定此原則，則 GroupID 原則將受到忽略。
       
-此原則中設定的選項只會套用到群組 (2) 下載模式。若群組 (2) 未設為下載模式，則會略過此原則。
+在此原則中設定的選項僅適用於群組 (2) 下載模式。若群組 (2) 非設定為下載模式，則此原則會受到忽略。 
 
-針對選項 3 - DHCP 選項識別碼，用戶端會查詢 DHCP 選項識別碼 234，並使用傳回的 GUID 值作為群組識別碼。</string>
+關於選項 3 - DHCP 選項識別碼，用戶端會查詢DHCP 選項識別碼 234，並將傳回的 GUID 值用作群組識別碼。</string>
       <string id="GroupIdSource_Unset">取消設定 (0)</string>
       <string id="GroupIdSource_AD">AD 站台 (1)</string>
       <string id="GroupIdSource_SID">已驗證的網域 SID (2)</string>
       <string id="GroupIdSource_DHCP">DHCP 選項識別碼 (3)</string>
       <string id="GroupIdSource_DNS">DNS 尾碼 (4)</string>
+      <string id="GroupIdSource_AAD">AAD 租用戶識別碼 (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">延遲來自 http 的背景下載 (單位為秒)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">此原則可讓您在可使用 P2P 的背景下載中延遲使用 HTTP 來源。
       
@@ -146,6 +149,14 @@
 請注意，對終端使用者而言，等候同儕節點來源的下載會呈現停頓的狀態。
       
 建議值為 1 分鐘 (60)。</string>
+      <string id="DelayCacheServerFallbackBackground">延遲背景下載快取伺服器後援 (單位: 秒)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">設定此原則來延遲從快取伺服器到 HTTP 來源的背景內容下載，延遲 X 秒。
+
+注意: 若您設定原則為延遲 http 背景下載，則其會優先套用 (以優先允許來自對等的下載)。</string>
+      <string id="DelayCacheServerFallbackForeground">延遲前景下載快取伺服器後援 (單位: 秒)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">設定此原則來延遲從快取伺服器到 HTTP 來源的前景內容下載，延遲 X 秒。
+
+注意: 若您設定原則為延遲 http 前景下載，則其會優先套用 (以優先允許來自對等的下載)。</string>
       <string id="RestrictPeerSelectionBy">選取一種方法來限制同儕節點選取項目</string>
       <string id="RestrictPeerSelectionBy_Help">設定此原則，以限制透過所選選項進行的對等選取。
       
@@ -263,7 +274,7 @@
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">群組識別碼來源:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">群組識別碼的來源:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">延遲來自 http 的背景下載 (單位為秒):</decimalTextBox>
@@ -271,6 +282,14 @@
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">延遲來自 http 的幕前下載 (單位為秒):</decimalTextBox>
+        <text>預設值為 0 (無延遲)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">延遲背景下載快取伺服器後援 (秒):</decimalTextBox>
+        <text>預設值為 0 (無延遲)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">延遲前景下載快取伺服器後援 (秒):</decimalTextBox>
         <text>預設值為 0 (無延遲)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

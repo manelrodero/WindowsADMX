@@ -645,13 +645,12 @@ Se ativar esta definição de política, poderá especificar opções adicionais
 
 Se desativar esta definição de política, o BitLocker não poderá utilizar encriptação baseada em hardware com unidades de sistema operativo, sendo que a encriptação baseada em software BitLocker será utilizada por predefinição quando a unidade estiver encriptada.
 
-Se não configurar esta definição de política, o BitLocker utilizará a encriptação baseada em hardware com o algoritmo de encriptação definido para a unidade. Se a encriptação baseada em hardware não estiver disponível, será utilizada a encriptação baseada em software BitLocker.
+Se não configurar esta definição de política, o BitLocker utilizará a encriptação baseada em software independentemente da disponibilidade da encriptação baseada em hardware.
 
 Nota: a definição de política “Escolher método de encriptação da unidade e força de cifra” não é aplicável à encriptação baseada em hardware. O algoritmo de encriptação utilizado pela encriptação baseada em hardware é definido aquando da partição da unidade. Por predefinição, o BitLocker utiliza o algoritmo configurado na unidade para encriptar a unidade. A opção “Restringir algoritmos de encriptação e conjuntos de cifras permitidos para encriptação baseada em hardware” permite-lhe restringir os algoritmos de encriptação que o BitLocker pode utilizar com a encriptação de hardware. Se o algoritmo definido para a unidade não estiver disponível, o BitLocker desativará a utilização de encriptação baseada em hardware.
 Os algoritmos de encriptação são especificados por identificadores de objeto (OID). Por exemplo:
 - AES 128 em modo CBC, OID: 2.16.840.1.101.3.4.1.2
 - AES 256 em modo CBC, OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="FDVEDrive_Help">Esta definição de política permite gerir a utilização de encriptação baseada em hardware por parte do BitLocker em unidades de dados fixas, bem como especificar os algoritmos de encriptação que o BitLocker pode utilizar com a encriptação baseada em hardware. A utilização de encriptação baseada em hardware pode melhorar o desempenho de operações de unidade que envolvam a leitura ou escrita frequente de dados na unidade.
@@ -660,13 +659,12 @@ Se ativar esta definição de política, poderá especificar opções adicionais
 
 Se desativar esta definição de política, o BitLocker não poderá utilizar encriptação baseada em hardware com unidades de sistema operativo, sendo que a encriptação baseada em software BitLocker será utilizada por predefinição quando a unidade estiver encriptada.
 
-Se não configurar esta definição de política, o BitLocker utilizará a encriptação baseada em hardware com o algoritmo de encriptação definido para a unidade. Se a encriptação baseada em hardware não estiver disponível, será utilizada a encriptação baseada em software BitLocker.
+Se não configurar esta definição de política, o BitLocker utilizará a encriptação baseada em software independentemente da disponibilidade da encriptação baseada em hardware.
 
 Nota: a definição de política “Escolher método de encriptação da unidade e força de cifra” não é aplicável à encriptação baseada em hardware. O algoritmo de encriptação utilizado pela encriptação baseada em hardware é definido aquando da partição da unidade. Por predefinição, o BitLocker utiliza o algoritmo configurado na unidade para encriptar a unidade. A opção “Restringir algoritmos de encriptação e conjuntos de cifras permitidos para encriptação baseada em hardware” permite-lhe restringir os algoritmos de encriptação que o BitLocker pode utilizar com a encriptação de hardware. Se o algoritmo definido para a unidade não estiver disponível, o BitLocker desativará a utilização de encriptação baseada em hardware.
 Os algoritmos de encriptação são especificados por identificadores de objeto (OID). Por exemplo:
 - AES 128 em modo CBC, OID: 2.16.840.1.101.3.4.1.2
 - AES 256 em modo CBC, OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="RDVEDrive_Help">Esta definição de política permite gerir a utilização de encriptação baseada em hardware por parte do BitLocker em unidades de dados amovíveis, bem como especificar os algoritmos de encriptação que o BitLocker pode utilizar com a encriptação baseada em hardware. A utilização de encriptação baseada em hardware pode melhorar o desempenho de operações de unidade que envolvam a leitura ou escrita frequente de dados na unidade.
@@ -675,13 +673,12 @@ Se ativar esta definição de política, poderá especificar opções adicionais
 
 Se desativar esta definição de política, o BitLocker não poderá utilizar encriptação baseada em hardware com unidades de sistema operativo, sendo que a encriptação baseada em software BitLocker será utilizada por predefinição quando a unidade estiver encriptada.
 
-Se não configurar esta definição de política, o BitLocker utilizará a encriptação baseada em hardware com o algoritmo de encriptação definido para a unidade. Se a encriptação baseada em hardware não estiver disponível, será utilizada a encriptação baseada em software BitLocker.
+Se não configurar esta definição de política, o BitLocker utilizará a encriptação baseada em software independentemente da disponibilidade da encriptação baseada em hardware.
 
 Nota: a definição de política “Escolher método de encriptação da unidade e força de cifra” não é aplicável à encriptação baseada em hardware. O algoritmo de encriptação utilizado pela encriptação baseada em hardware é definido aquando da partição da unidade. Por predefinição, o BitLocker utiliza o algoritmo configurado na unidade para encriptar a unidade. A opção “Restringir algoritmos de encriptação e conjuntos de cifras permitidos para encriptação baseada em hardware” permite-lhe restringir os algoritmos de encriptação que o BitLocker pode utilizar com a encriptação de hardware. Se o algoritmo definido para a unidade não estiver disponível, o BitLocker desativará a utilização de encriptação baseada em hardware.
 Os algoritmos de encriptação são especificados por identificadores de objeto (OID). Por exemplo:
 - AES 128 em modo CBC, OID: 2.16.840.1.101.3.4.1.2
 - AES 256 em modo CBC, OID: 2.16.840.1.101.3.4.1.42
-      
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Ativar utilização de autenticação BitLocker que exija introdução por teclado de pré-arranque em slates</string>

@@ -416,21 +416,24 @@ Als u deze beleidsinstelling inschakelt, worden deze meldingen niet weergegeven 
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, worden deze meldingen weergegeven op de hostserver voor extern-bureaubladsessies nadat u zich als lokale beheerder hebt aangemeld.</string>
       <string id="TS_LICENSING_MODE">Licentiemodus van Extern bureaublad instellen</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Met deze beleidsinstelling kunt u het type clienttoeganglicenties voor Extern bureaublad-services (RDS CAL) opgeven dat vereist is om een verbinding te maken met deze hostserver voor extern-bureaubladsessies.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Met deze beleidsinstelling kunt u het RDS CAL-type (Client Access License voor Extern bureaublad-services) opgeven dat nodig is om verbinding te maken met deze Extern bureaublad-sessiehostserver.
 
-U kunt deze beleidsinstelling gebruiken om een van de beschikbare licentieverleningsmodi te kiezen: Per gebruiker of Per apparaat.
+        U kunt deze beleidsinstelling gebruiken om een van de volgende drie licentiemodi te selecteren: per gebruiker, per apparaat en AAD per gebruiker.
 
-Voor de licentieverleningsmodus Per gebruiker is vereist dat elk gebruikersaccount dat verbinding maakt met deze hostserver voor extern-bureaubladsessies beschikt over een RDS CAL voor clienttoegang per gebruiker.
+        De licentiemodus per gebruiker vereist dat elke gebruikersaccount die verbinding maakt met deze Extern bureaublad-sessiehostserver een RDS CAL per gebruiker heeft die is uitgegeven door een Extern bureaublad-licentieserver.
 
-Voor de licentieverleningsmodus Per apparaat is vereist dat elk apparaat dat verbinding maakt met deze hostserver voor extern-bureaubladsessies beschikt over een RDS CAL voor clienttoegang per apparaat.
+        De licentiemodus per apparaat vereist dat elk apparaat dat verbinding maakt met deze Extern bureaublad-sessiehostserver een RDS CAL per apparaat heeft die is uitgegeven door een Extern bureaublad-licentieserver.
 
-Als u deze beleidsinstelling inschakelt, wordt de Remote Desktop-licentiemodus die u opgeeft gerespecteerd door de Remote Desktop-licentieserver.
+        De licentiemodus AAD per gebruiker vereist dat elke gebruikersaccount die verbinding maakt met deze Extern bureaublad-sessiehostserver een serviceplan heeft waarbij RDS-licenties in AAD zijn toegewezen.
+        
+        Als u deze beleidsinstelling inschakelt, wordt de opgegeven Extern bureaublad-licentiemodus gebruikt door de Extern bureaublad-licentieserver en RD-sessiehost.
 
-Als u deze beleidsinstelling uitschakelt of niet configureert, is de licentiemodus niet gedefinieerd in Groepsbeleid.
-
-</string>
+        Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de licentiemodus niet opgegeven in Groepsbeleid.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Per apparaat</string>
       <string id="TS_LICENSING_MODE_PER_USER">Per gebruiker</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD per gebruiker</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Deze beleidsinstelling bepaalt of het omleiden van gegevens tijdens een sessie met Extern bureaublad-services naar LPT-poorten van clients moet worden geblokkeerd.
 
 Met deze instelling kunt u voorkomen dat gebruikers lokale LPT-poorten toewijzen en gegevens omleiden van de externe computer naar apparaten die op lokale LPT-poorten zijn aangesloten. Standaard is omleiding naar LPT-poorten in Extern bureaublad-services toegestaan.
@@ -1013,6 +1016,37 @@ Als u deze beleidsinstelling uitschakelt, maken RemoteApp-programma's die vanuit
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Grafisch WDDM-beeldschermstuurprogramma gebruiken voor externe bureaubladverbindingen</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Met deze beleidsinstelling kunt u het grafische WDDM-beeldschermstuurprogramma inschakelen voor verbindingen met een extern bureaublad.
+
+Als u deze beleidsinstelling inschakelt, gebruiken externe bureaubladverbindingen het grafische WDDM-beeldschermstuurprogramma.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het grafische WDDM-beeldschermstuurprogramma niet gebruikt voor externe bureaubladverbindingen. In dit geval zullen de externe bureaubladverbindingen gebruikmaken van het grafische XDDM-beeldschermstuurprogramma.
+
+Als u deze wijziging wilt uitvoeren, moet u Windows opnieuw starten.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Met deze beleidsinstelling kunt u het grafische WDDM-beeldschermstuurprogramma inschakelen voor verbindingen met een extern bureaublad.
+
+Als u deze beleidsinstelling inschakelt of niet configureert, gebruiken externe bureaubladverbindingen het grafische WDDM-beeldschermstuurprogramma.
+
+Als u deze beleidsinstelling uitschakelt, wordt het grafische WDDM-beeldschermstuurprogramma NIET gebruikt voor externe bureaubladverbindingen. In dit geval zullen de externe bureaubladverbindingen gebruikmaken van het grafische XDDM-beeldschermstuurprogramma.
+
+Als u deze wijziging wilt uitvoeren, moet u Windows opnieuw starten.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Met deze beleidsinstelling kunt u het grafische WDDM-beeldschermstuurprogramma inschakelen voor verbindingen met een extern bureaublad.
+
+Als u deze beleidsinstelling inschakelt, gebruiken externe bureaubladverbindingen het grafische WDDM-beeldschermstuurprogramma.
+
+Als u deze beleidsinstelling uitschakelt, wordt het grafische WDDM-beeldschermstuurprogramma NIET gebruikt voor externe bureaubladverbindingen op de RD-sessiehost. In dit geval zullen de externe bureaubladverbindingen gebruikmaken van het grafische XDDM-beeldschermstuurprogramma..
+
+Als u deze beleidsinstelling niet configureert wordt het grafische WDDM-beeldschermstuurprogramma NIET gebruikt voor externe bureaubladverbindingen op de RD-sessiehost. In alle andere gevallen zullen de externe bureaubladverbindingen gebruikmaken van het grafische WDDM-beeldschermstuurprogramma.
+
+Als u deze wijziging wilt uitvoeren, moet u Windows opnieuw starten.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

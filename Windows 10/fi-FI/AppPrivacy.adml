@@ -294,6 +294,33 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, or
 
 Jos sovellus on avoinna, kun tämä ryhmäkäytäntöobjekti otetaan käyttöön laitteessa, työntekijöiden on käynnistettävä sovellus tai laite uudelleen, jotta käytäntömuutokset tulevat käyttöön sovelluksessa.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Salli Windows-sovellusten aktivointi äänikomennolla</string>
+      <string id="LetAppsActivateWithVoice_Explain">Tämä käytäntöasetus määrittää, voiko Windows-sovelluksia aktivoida äänikomennoilla.
+
+Jos valitset Hallinta on käyttäjällä -vaihtoehdon, organisaation työntekijät voivat laitteen Asetukset &gt; Tietosuoja -kohdassa määrittää, voiko Windows-sovelluksia aktivoida äänikomennoilla.
+
+Jos valitset Pakota salliminen -vaihtoehdon, Windows-sovelluksia voi aktivoida äänikomennoilla. Organisaation työntekijät eivät voi muuttaa asetusta.
+
+Jos valitset Pakota estäminen -vaihtoehdon, Windows-sovelluksia ei voi aktivoida äänikomennoilla eivätkä organisaation työntekijät voi muuttaa asetusta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, organisaation työntekijät voivat laitteen Asetukset &gt; Tietosuoja -kohdassa määrittää, voiko Windows-sovelluksia aktivoida äänikomennoilla.
+
+Tämä käytäntö koskee Windows-sovelluksia ja Cortanaa.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Salli Windows-sovellusten aktivointi äänikomennolla, kun järjestelmä on lukittuna</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Tämä käytäntöasetus määrittää, voiko Windows-sovelluksia aktivoida äänikomennoilla, kun järjestelmä on lukittuna.
+
+Jos valitset Hallinta on käyttäjällä -vaihtoehdon, organisaation työntekijät voivat laitteen Asetukset &gt; Tietosuoja -kohdassa määrittää, voivatko käyttäjät käyttää sovelluksia äänikomennoilla, kun järjestelmä on lukittuna.
+
+Jos valitset Pakota salliminen -vaihtoehdon, käyttäjät voivat käyttää sovelluksia äänikomennoilla, kun järjestelmä on lukittuna. Organisaation työntekijät eivät voi muuttaa asetusta.
+
+Jos valitset Pakota estäminen -vaihtoehdon, käyttäjät eivät voi käyttää sovelluksia äänikomennoilla, kun järjestelmä on lukittuna, eivätkä organisaation työntekijät voi muuttaa asetusta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai jätät sen määrittämättä, organisaation työntekijät voivat laitteen Asetukset &gt; Tietosuoja -kohdassa määrittää, voivatko käyttäjät käyttää sovelluksia äänikomennoilla, kun järjestelmä on lukittuna.
+
+Tämä käytäntö koskee Windows-sovelluksia ja Cortanaa. Se ohittaa Salli Cortana lukitusnäytön päällä -käytännön. Tämä käytäntö on käytettävissä vain, jos Salli ääniaktivointi -käytännössä on määritetty, että sovelluksia voi aktivoida äänikomennoilla.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Jos sovellus on avoinna, kun tämä ryhmäkäytäntöobjekti otetaan käyttöön
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Pakota näiden tiettyjen sovellusten estäminen (käytä pakettiperheiden nimiä):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Oletusarvo kaikille sovelluksille:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Oletusarvo kaikille sovelluksille:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

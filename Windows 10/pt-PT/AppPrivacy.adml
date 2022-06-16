@@ -294,6 +294,33 @@ Se desativar esta definição de política ou não a configurar, os colaboradore
 
 Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for aplicado a um dispositivo, os colaboradores têm de reiniciar a aplicação ou o dispositivo para que as alterações de política sejam aplicadas à aplicação.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Permitir a ativação de aplicações do Windows por voz</string>
+      <string id="LetAppsActivateWithVoice_Explain">Esta definição de política especifica se as aplicações do Windows podem ser ativadas por voz.
+
+Se escolher a opção "O controlo está a cargo do utilizador", os colaboradores da sua organização podem decidir se as aplicações do Windows podem ser ativadas com uma palavra-chave por voz, através de Definições &gt; Privacidade no dispositivo.
+
+Se escolher a opção "Forçar Permissão", as aplicações do Windows podem ser ativadas com uma palavra-chave por voz e os colaboradores da sua organização não podem alterá-la.
+
+Se escolher a opção "Forçar Negação", as aplicações do Windows não podem ser ativadas com uma palavra-chave por voz e os colaboradores da sua organização não podem alterá-la.
+
+Se desativar ou não configurar esta definição de política, os colaboradores da sua organização podem decidir se as aplicações do Windows podem ser ativadas com uma palavra-chave por voz, através de Definições &gt; Privacidade no dispositivo.
+
+Esta política é aplicável a aplicações do Windows e à Cortana.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Permitir a ativação de aplicações do Windows por voz com o sistema bloqueado</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Esta definição de política especifica se as aplicações do Windows podem ser ativadas por voz com o sistema bloqueado.
+
+Se escolher a opção "O controlo está a cargo do utilizador", os colaboradores da sua organização podem decidir se os utilizadores podem interagir com aplicações por voz com o sistema bloqueado, através de Definições &gt; Privacidade no dispositivo.
+
+Se escolher a opção "Forçar Permissão", os utilizadores podem interagir com aplicações por voz com o sistema bloqueado e os colaboradores da sua organização não podem alterá-la.
+
+Se escolher a opção "Forçar Negação", os utilizadores não podem interagir com aplicações por voz com o sistema bloqueado e os colaboradores da sua organização não podem alterá-la.
+
+Se desativar ou não configurar esta definição de política, os colaboradores da sua organização podem decidir se os utilizadores podem interagir com aplicações por voz com o sistema bloqueado, através de Definições &gt; Privacidade no dispositivo.
+
+Esta política é aplicável a aplicações do Windows e à Cortana. Prevalece sobre a política "Permitir Cortana acima do bloqueio". Esta política apenas é aplicável quando a política "Permitir ativação por voz" estiver configurada para permitir que as aplicações sejam ativadas por voz.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for 
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Predefinição para todas as aplicações:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Predefinição para todas as aplicações:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

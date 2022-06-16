@@ -120,6 +120,8 @@
 
 4 = DNS 접미사입니다. 
 
+5 = AAD 테넌트 ID. 
+
 설정할 경우 그룹 ID가 선택한 원본에서 자동으로 할당됩니다. 이 정책을 설정하면 GroupID 정책이 무시됩니다. 
       
 이 정책에 설정된 옵션은 그룹 (2) 다운로드 모드에만 적용됩니다. 그룹 (2)가 다운로드 모드로 설정되지 않은 경우 이 정책이 무시됩니다. 
@@ -130,6 +132,7 @@
       <string id="GroupIdSource_SID">인증된 도메인 SID (2)</string>
       <string id="GroupIdSource_DHCP">DHCP 옵션 ID (3)</string>
       <string id="GroupIdSource_DNS">DNS 접미사 (4)</string>
+      <string id="GroupIdSource_AAD">AAD 테넌트 ID (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">HTTP에서 백그라운드 다운로드 지연(초)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">이 정책을 사용하면 P2P를 사용할 수 있는 백그라운드 다운로드에서 HTTP 소스 사용을 지연시킬 수 있습니다.
       
@@ -146,6 +149,14 @@
 피어 소스를 대기하는 다운로드는 최종 사용자에게는 중단된 것으로 나타납니다.
       
 권장 값은 1분(60)입니다.</string>
+      <string id="DelayCacheServerFallbackBackground">백그라운드 다운로드 캐시 서버 대체 지연(초)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">이 정책을 설정하면 백그라운드 콘텐츠 다운로드를 위해 캐시 서버에서 HTTP 원본으로의 대체를 X초 지연합니다. 
+
+참고: http로부터의 백그라운드 다운로드를 지연하도록 정책을 설정하면 먼저 피어로부터의 다운로드가 허용될 수 있도록 이 정책이 먼저 적용됩니다.</string>
+      <string id="DelayCacheServerFallbackForeground">포그라운드 다운로드 캐시 서버 대체 지연(초)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">이 정책을 설정하면 포그라운드 콘텐츠 다운로드를 위해 캐시 서버에서 HTTP 원본으로의 대체를 X초 지연합니다. 
+
+참고: http로부터의 포그라운드 다운로드를 지연하도록 정책을 설정하면 먼저 피어로부터의 다운로드가 허용될 수 있도록 이 정책이 먼저 적용됩니다.</string>
       <string id="RestrictPeerSelectionBy">피어 선택을 제한할 방법 선택</string>
       <string id="RestrictPeerSelectionBy_Help">선택한 옵션을 통해 피어 선택을 제한하려면 이 정책을 설정하세요. 
       
@@ -271,6 +282,14 @@
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">HTTP에서 포그라운드 다운로드 지연(초):</decimalTextBox>
+        <text>기본값은 0(지연 없음)입니다.</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">백그라운드 다운로드 캐시 서버 대체 지연(초):</decimalTextBox>
+        <text>기본값은 0(지연 없음)입니다.</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">포그라운드 다운로드 캐시 서버 대체 지연(초):</decimalTextBox>
         <text>기본값은 0(지연 없음)입니다.</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

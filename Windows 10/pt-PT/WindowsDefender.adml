@@ -1,4 +1,4 @@
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/Policysecurity intelligence">
 <displayName>introduza o nome a apresentar aqui</displayName>
 <description>introduza a descrição aqui</description>
 <resources>
@@ -17,7 +17,7 @@
     <string id="Remediation">Remediação</string>
     <string id="Reporting">Relatórios</string>
     <string id="Scan">Análise</string>
-    <string id="SignatureUpdate">Atualizações de Assinaturas</string>
+    <string id="SignatureUpdate">Atualizações de Informações de Segurança</string>
     <string id="Spynet">MAPS</string>
     <string id="Threats">Ameaças</string>
     <string id="ClientInterface">Interface de Cliente</string>
@@ -51,10 +51,14 @@ Se desativar esta definição, o serviço antimalware será carregado como uma t
     </string>
     <string id="DisableAntiSpywareDefender">Desativar o Antivírus do Windows Defender</string>
     <string id="DisableAntiSpywareDefender_Explain">Esta definição de política desativa o Antivírus do Windows Defender.
+    
+    Se ativar esta definição de política, o Antivírus do Windows Defender não é executado e não analisa os computadores quanto à existência de malware ou outro software potencialmente indesejável.
 
-    Se ativar esta definição de política, o Antivírus do Windows Defender não é executado e não é verificada a existência de software maligno ou outro software potencialmente indesejável nos computadores.
+    Se desativar esta definição de política, o Antivírus do Windows Defender é executado independentemente de qualquer outro produto de antivírus instalado.
 
-    Se desativar ou não configurar esta definição de política, por predefinição, o Antivírus do Windows Defender é executado e é verificada a existência de software maligno e outro software potencialmente indesejável nos computadores.</string>
+    Se não configurar esta definição de política, o Windows gere internamente o Antivírus do Windows Defender. Se instalar outro programa antivírus, o Windows desativa automaticamente o Antivírus do Windows Defender. Caso contrário, o Antivírus do Windows Defender analisa os computadores quanto à presença de malware e outro software potencialmente indesejável.
+
+    A ativação ou desativação desta política pode levar a comportamento inesperado ou não suportado. Recomenda-se que deixe esta definição de política por configurar.</string>
     <string id="DisableLocalAdminMerge">Configurar comportamento de intercalação de listas do administrador local</string>
     <string id="DisableLocalAdminMerge_Explain">Esta definição de política controla se as definições de listas complexas configuradas por um administrador local são ou não intercaladas com as definições da Política de Grupo. Esta definição é aplicável a listas tais como ameaças e exclusões.
 
@@ -82,40 +86,40 @@ Se ativar esta definição, o servidor proxy será ignorado para os endereços e
 
 Se desativar ou não configurar esta definição, o servidor proxy não será ignorado para os endereços especificados.</string>
     <string id="ProxyPacUrl">Definir configuração automática do proxy (.pac) para ligar à rede</string>
-    <string id="ProxyPacUrl_Explain">Esta definição de política define o URL de um ficheiro de proxy .pac que deve ser utilizado quando o cliente tenta ligar à rede para atualizações de definição e relatórios MAPS. Se a configuração automática do proxy falhar ou se não houver nenhuma configuração automática do proxy especificada, o cliente utilizará as opções alternativas de contingência (por ordem):
+    <string id="ProxyPacUrl_Explain">Esta definição de política define o URL de um ficheiro .pac de proxy que deve ser utilizado quando o cliente tenta estabelecer ligação a uma rede para atualizações de informações de segurança e relatórios MAPS. Se a configuração automática do proxy falhar ou se não existir qualquer configuração automática especificada, o cliente regressará às opções alternativas (por ordem):
       1. Servidor proxy (se especificado)
-      2. URL de proxy .pac (se especificado)
-      3. Nenhum
-      4. Configurações de proxy do Internet Explorer
-      5. Deteção automática
-
-      Caso ative esta definição, a definição do proxy será definida para utilizar o ficheiro de proxy .pac especificado de acordo com a ordem especificada acima.
-
-      Caso desative ou não configure esta definição, o proxy irá ignorar este passo de contingência de acordo com a ordem especificada acima.</string>
-    <string id="ProxyServer">Definir o servidor proxy para ligação à rede</string>
-    <string id="ProxyServer_Explain">Esta definição de política permite configurar o proxy nomeado que deve ser utilizado quando o cliente tenta ligar à rede para receber atualizações de definição e relatórios MAPS. Se o proxy nomeado falhar ou se não houver nenhum proxy especificado, o cliente utilizará as opções alternativas de contingência (por ordem):
-      1. Servidor Proxy (se especificado)
-      2. URL de proxy .pac (se especificado)
+      2. URL de .pac de proxy (se especificado)
       3. Nenhum
       4. Definições de proxy do Internet Explorer
       5. Deteção automática
 
-      Caso ative esta definição, o proxy será definido como o URL especificado de acordo com a ordem especificada acima. O URL deve ser precedido por http:// ou https://.
+      Se ativar esta definição, a definição de proxy será configurada para utilizar o .pac de proxy especificado de acordo com a ordem especificada acima.
 
-      Caso desative ou não configure esta definição, o proxy irá ignorar este passo de contingência de acordo com a ordem especificada acima.
+      Se desativar ou não configurar esta definição, o proxy ignora este passo de contingência de acordo com a ordem especificada acima.</string>
+    <string id="ProxyServer">Definir o servidor proxy para ligação à rede</string>
+    <string id="ProxyServer_Explain">Esta definição de política permite-lhe configurar o proxy nomeado que deve ser utilizado quando o cliente tenta estabelecer ligação a uma rede para atualizações de informações de segurança e relatórios MAPS. Se o proxy nomeado falhar ou se não existir nenhum proxy especificado, o cliente regressará às opções alternativas (por ordem):
+      1. Servidor proxy (se especificado)
+      2. URL de .pac de proxy (se especificado)
+      3. Nenhum
+      4. Definições de proxy do Internet Explorer
+      5. Deteção automática
+
+      Se ativar esta definição, o proxy será configurado para o URL especificado de acordo com a ordem especificada acima. O URL deve ser seguido com http:// ou https://.
+
+      Se desativar ou não configurar esta definição, o proxy ignora este passo de contingência de acordo com a ordem especificada acima.
     </string>
     <string id="RandomizeScheduleTaskTimes">Aleatorizar horário das tarefas agendadas</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Esta definição de política permite ativar ou desativar a aleatoriedade da hora de início da análise agendada e a hora de início da atualização de definições agendada. Esta definição é utilizada para distribuir o impacto da análise nos recursos. Pode ser utilizada por exemplo em máquinas virtuais do convidado que partilhem um anfitrião, para impedir múltiplas máquinas virtuais do convidado de efetuarem simultaneamente uma operação que exija uma utilização intensiva do disco.
+    <string id="RandomizeScheduleTaskTimes_Explain">Esta definição de política permite-lhe ativar ou desativar a aleatoriedade da hora de início da análise programada e da hora de início da atualização das informações de segurança programada. Esta definição é utilizada para distribuir o impacto de recursos de análise. Por exemplo, pode ser utilizada em máquinas virtuais convidadas que partilham um anfitrião, para impedir que várias máquinas virtuais convidadas realizem uma operação que exija uma utilização excessiva do disco ao mesmo tempo.
 
-Se ativar ou não configurar esta definição, as tarefas agendadas serão iniciadas num horário aleatório, com um intervalo de 30 minutos antes e depois da hora de início especificada.
+    Se ativar ou não configurar esta definição, as tarefas agendadas serão iniciadas a uma hora aleatória, num intervalo de 30 minutos antes e depois da hora de início especificada.
 
-Se desativar esta definição, as tarefas agendadas serão iniciadas no horário especificado.</string>
+    Se desativar esta definição, as tarefas agendadas começarão à hora de início especificada.</string>
     <string id="ServiceKeepAlive">Permitir que o serviço antimalware esteja sempre em execução</string>
-    <string id="ServiceKeepAlive_Explain">Esta definição de política permite configurar se o serviço antimalware se manterá ou não em execução quando as definições de antivírus e antispyware estiverem desativadas. É recomendado manter esta definição desativada.
+    <string id="ServiceKeepAlive_Explain">Esta definição de política permite configurar se o serviço antimalware se manterá ou não em execução quando as informações de segurança de antivírus e antispyware estiverem desativadas. É recomendado manter esta definição desativada.
 
-Se ativar esta definição, o serviço antimalware continuará em execução, mesmo que as definições de antivírus e antispyware sejam desativadas.
+    Se ativar esta definição, o serviço antimalware continuará sempre em execução, mesmo que as informações de segurança de antivírus e antispyware sejam desativadas.
 
-Se desativar ou não configurar esta definição, o serviço antimalware será parado quando as definições de antivírus e antispyware forem desativadas. Se o computador for reiniciado, o serviço será iniciado se o Arranque automático estiver configurado. Após o serviço ser iniciado, será verificado se as definições de antivírus e antispyware se encontram ativas. Se pelo menos uma das definições estiver ativa, o serviço continuará em execução. Se estiverem ambas desativadas, o serviço será parado.</string>
+    Se desativar ou não configurar esta definição, o serviço antimalware será parado quando as informações de segurança de antivírus e antispyware forem desativadas. Se o computador for reiniciado, o serviço será iniciado se o Arranque automático estiver configurado. Após o serviço ser iniciado, será verificado se as informações de segurança de antivírus e antispyware se encontram ativadas. Se pelo menos uma das definições estiver ativada, o serviço continuará em execução. Se estiverem ambas desativadas, o serviço será parado.</string>
     <string id="Root_PUAProtection">Configurar deteção de aplicações potencialmente indesejáveis</string>
     <string id="Root_PUAProtection_Explain">
         Ativar ou desativar a deteção de aplicações potencialmente indesejáveis. Pode optar por bloquear, auditar ou permitir o software potencialmente indesejável quando este está a ser transferido ou tenta instalar-se no seu computador.
@@ -144,13 +148,13 @@ Se ativar ou não configurar esta definição, o reconhecimento de protocolos se
 
 Se desativar esta definição, o reconhecimento de protocolos será desativado.</string>
     <string id="Nis_Consumers_IPS_DisableSignatureRetirement">Ativar abandono de definições</string>
-    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Esta definição de política permite configurar o abandono de definições para proteção da rede contra exploits de vulnerabilidades conhecidas. O abandono de definições verifica se o computador possui as atualizações de segurança necessárias para o proteger contra uma vulnerabilidade específica. Se o sistema não estiver vulnerável ao exploit detetado por uma definição, essa definição será "abandonada". Se todas as definições de determinado protocolo forem abandonadas, esse protocolo deixará de ser processado. A ativação desta funcionalidade ajuda a melhorar o desempenho. Num computador com as mais recentes atualizações de segurança, a proteção de rede não terá qualquer impacto no desempenho da rede.
+    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Esta definição de política permite configurar a extinção de definições para proteção da rede contra exploits de vulnerabilidades conhecidas. A extinção de definições verifica se o computador possui as atualizações de segurança necessárias para o proteger contra uma vulnerabilidade específica. Se o sistema não estiver vulnerável ao exploit detetado por uma definição, essa definição será "extinta". Se todas as informações de segurança de um determinado protocolo forem extintas, esse protocolo deixará de ser processado. A ativação desta funcionalidade ajuda a melhorar o desempenho. Num computador com as mais recentes atualizações de segurança, a proteção de rede não terá qualquer impacto no desempenho da rede.
 
-Se ativar ou não configurar esta definição, o abandono de definições será ativado.
+    Se ativar ou não configurar esta definição, a extinção de definições será ativada.
 
-Se desativar esta definição, o abandono de definições será desativado.</string>
+    Se desativar esta definição, a extinção de definições será desativada.</string>
     <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">Especificar conjuntos adicionais de definições para a inspeção de tráfego de rede</string>
-    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Esta definição de política define os conjuntos adicionais de definições a ativar para a inspeção de tráfego de rede. Os GUIDs dos conjuntos de definições para esta definição deverão ser adicionados nas Opções. Cada entrada deverá ser listada como um par nome-valor, em que o nome deverá ser uma representação de cadeia de um GUID de conjunto de definições. Por exemplo, o GUID do conjunto de definições para ativar definições de teste é definido como: “{b54b6ac9-a737-498e-9120-6616ad3bf590}”. O valor não é utilizado, sendo recomendado defini-lo como 0.</string>
+    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Esta definição de política define os conjuntos de definições adicionais a ativar para a inspeção de tráfego de rede. Os GUIDs dos conjuntos de definições para esta definição devem ser adicionados nas Opções. Cada entrada tem de ser listada como um par nome-valor, em que o nome deve ser uma representação de cadeia de um GUID de conjunto de definições. Por exemplo, o GUID do conjunto de definições para ativar informações de segurança de teste é definido como: "{b54b6ac9-a737-498e-9120-6616ad3bf590}". O valor não é utilizado, sendo recomendado defini-lo como 0.</string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay">Configurar ignorar definição local para a remoção de itens da pasta Quarentena</string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay_Explain">Esta definição de política configura ignorar uma definição local para a configuração do número de dias que os itens deverão ser mantidos na pasta Quarentena antes de serem removidos. A definição só pode ser configurada pela Política de Grupo.
 
@@ -358,14 +362,14 @@ Se desativar ou não configurar esta definição, os ficheiros de arquivo serão
 Se ativar esta definição, a utilização da CPU não excederá a percentagem especificada.
 
 Se desativar ou não configurar esta definição, a utilização da CPU não excederá o valor predefinido.</string>
-    <string id="CheckForSignaturesBeforeRunningScan">Verificar as mais recentes definições antivírus e antispyware antes de executar uma análise agendada</string>
-    <string id="CheckForSignaturesBeforeRunningScan_Explain">Esta definição de política permite gerir se as definições antivírus e antispyware deverão ser verificadas antes de executar uma análise. 
+    <string id="CheckForSignaturesBeforeRunningScan">Verificar as mais recentes informações de segurança de vírus e spyware antes de executar uma análise agendada</string>
+    <string id="CheckForSignaturesBeforeRunningScan_Explain">Esta definição de política permite gerir se as novas informações de segurança de vírus e spyware deverão ser verificadas antes de executar uma análise. 
 
-Esta definição é aplicável às análises agendadas e à linha de comandos "mpcmdrun -SigUpdate", mas não afeta as análises iniciadas manualmente a partir da interface do utilizador.
+    Esta definição é aplicável às análises agendadas e à linha de comandos "mpcmdrun -SigUpdate", mas não afeta as análises iniciadas manualmente a partir da interface do utilizador.
 
-Se ativar esta definição, serão procuradas novas definições antes da execução de uma análise.
+    Se ativar esta definição, serão procuradas novas informações de segurança antes da execução de uma análise.
 
-Se desativar ou não configurar esta definição, a análise será iniciada utilizando as definições existentes.</string>
+    Se desativar ou não configurar esta definição, a análise será iniciada utilizando as informações de segurança existentes.</string>
     <string id="Scan_DisableArchiveScanning">Analisar ficheiros de arquivo</string>
     <string id="Scan_DisableArchiveScanning_Explain">Esta definição de política permite configurar análises de software malicioso ou indesejável em ficheiros de arquivo, tais como ficheiros .ZIP ou .CAB.
 
@@ -543,79 +547,83 @@ Se desativar ou não configurar esta definição, será executada uma análise a
 
         Se desativar ou não configurar esta definição, não serão realizadas alterações à prioridade da CPU durante análises agendadas.
     </string>
-    <string id="SignatureUpdate_ASSignatureDue">Definir o número de dias até que as definições de spyware sejam consideradas desatualizadas</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as definições de spyware sejam consideradas desatualizadas. Se as definições forem consideradas desatualizadas, este estado poderá acionar diversas ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido como 14 dias.
+    <string id="SignatureUpdate_ASSignatureDue">Definir o número de dias até que as informações de segurança de spyware sejam consideradas desatualizadas</string>
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as informações de segurança de spyware sejam consideradas desatualizadas. Se as informações de segurança forem consideradas desatualizadas, este estado poderá acionar diversas ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido como 14 dias.
 
-Se ativar esta definição, as definições de spyware serão consideradas desatualizadas após ter passado o número de dias especificado sem atualizações.
+    Se ativar esta definição, as informações de segurança de spyware serão consideradas desatualizadas após ter passado o número de dias especificado sem atualizações.
 
-Se desativar ou não configurar esta definição, as definições de spyware serão consideradas desatualizadas após ter passado o número de dias predefinido sem atualizações.</string>
-    <string id="SignatureUpdate_AVSignatureDue">Definir o número de dias até que as definições de vírus sejam consideradas desatualizadas</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as definições de vírus sejam consideradas desatualizadas. Se as definições forem consideradas desatualizadas, este estado poderá acionar diversas ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido como 14 dias.
+    Se desativar ou não configurar esta definição, as informações de segurança de spyware serão consideradas desatualizadas após ter passado o número de dias predefinido sem atualizações.</string>
+    <string id="SignatureUpdate_AVSignatureDue">Definir o número de dias até que as informações de segurança de vírus sejam consideradas desatualizadas</string>
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Esta definição de política permite definir o número de dias que terão de passar até que as informações de segurança de vírus sejam consideradas desatualizadas. Se as informações de segurança forem consideradas desatualizadas, este estado poderá acionar diversas ações adicionais, incluindo reverter para uma origem de atualização alternativa ou apresentar um ícone de aviso na interface do utilizador. Por predefinição, este valor é definido como 14 dias.
 
-Se ativar esta definição, as definições de vírus serão consideradas desatualizadas após ter passado o número de dias especificado sem atualizações.
+    Se ativar esta definição, as informações de segurança de vírus serão consideradas desatualizadas após ter passado o número de dias especificado sem atualizações.
 
-Se desativar ou não configurar esta definição, as definições de vírus serão consideradas desatualizadas após ter passado o número de dias predefinido sem atualizações.</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definir partilhas de ficheiros para transferência das atualizações de definições</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Esta definição de política permite configurar as origens de partilha de ficheiros UNC para transferência de atualizações de definições. As origens serão contactadas pela ordem especificada. O valor desta definição deverá ser introduzido como uma cadeia separada por pipes que enumere as origens de atualização de definições. Por exemplo: "{\\unc1 | \\unc2 }". Por predefinição, a lista encontra-se vazia.
+    Se desativar ou não configurar esta definição, as informações de segurança de vírus serão consideradas desatualizadas após ter passado o número de dias predefinido sem atualizações.</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Definir partilhas de ficheiros para transferência das atualizações de informações de segurança</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Esta definição de política permite configurar as origens de partilha de ficheiros UNC para transferência de atualizações de informações de segurança. As origens serão contactadas pela ordem especificada. O valor desta definição deverá ser introduzido como uma cadeia separada por pipes que enumere as origens de atualização de informações de segurança. Por exemplo: "{\\unc1 | \\unc2 }". Por predefinição, a lista encontra-se vazia.
 
-Se ativar esta definição, as origens especificadas serão contactadas para atualizações das definições. Quando as atualizações de definições tiverem sido transferidas com êxito a partir de uma origem especificada, as origens restantes da lista não serão contactadas.
+    Se ativar esta definição, as origens especificadas serão contactadas para atualizações das informações de segurança. Quando as atualizações de informações de segurança tiverem sido transferidas com êxito a partir de uma origem especificada, as origens restantes da lista não serão contactadas.
 
-Se desativar ou não configurar esta definição, a lista continuará vazia por predefinição, não sendo contactadas quaisquer origens.</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate">Ativar análise após atualização de assinaturas</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Esta definição de política permite configurar o início automático de uma análise após a atualização das definições.
+    Se desativar ou não configurar esta definição, a lista continuará vazia por predefinição, não sendo contactadas quaisquer origens.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation">Defina a localização das informações de segurança para clientes VDI.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation_Explain">Esta definição de política permite definir a localização das informações de segurança para computadores configurados com VDI. 
 
-Se ativar ou não configurar esta definição, será executada uma análise após a atualização das definições.
+    Se desativar ou não configurar esta definição, as informações de segurança serão referenciadas a partir da origem de localização predefinida.</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate">Ativar análise após atualização das informações de segurança</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Esta definição de política permite configurar o início automático de uma análise após a atualização das informações de segurança.
 
-Se desativar esta definição, não será executada uma análise após a atualização das definições.</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Permitir atualizações de definições quando alimentado pela bateria</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Esta definição de política permite configurar atualizações de definições quando o computador estiver a ser alimentado pela bateria.
+    Se ativar ou não configurar esta definição, será executada uma análise após a atualização das informações de segurança.
 
-Se ativar ou não configurar esta definição, as atualizações de definições ocorrerão normalmente, independentemente do estado de alimentação.
+    Se desativar esta definição, não será executada uma análise após a atualização das informações de segurança.</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Permitir atualizações de informações de segurança com alimentação por bateria</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Esta definição de política permite configurar atualizações de informações de segurança quando o computador estiver a ser alimentado pela bateria.
 
-Se desativar esta definição, as atualizações de definições serão desativadas enquanto o computador estiver a ser alimentado pela bateria.</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Iniciar atualização de definições no arranque</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Esta definição de política permite configurar as atualizações de definições no arranque quando não estiver presente nenhum motor antimalware.
+    Se ativar ou não configurar esta definição, as atualizações de informações de segurança ocorrerão normalmente, independentemente do estado de alimentação.
 
-Se ativar ou não configurar esta definição, as atualizações de definições serão iniciadas no arranque se não estiver presente nenhum motor antimalware.
+    Se desativar esta definição, as atualizações de informações de segurança serão desativadas enquanto o computador estiver a ser alimentado pela bateria.</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Iniciar atualização das informações de segurança no arranque</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Esta definição de política permite configurar atualizações de informações de segurança no arranque quando não estiver presente nenhum motor antimalware.
 
-Se desativar esta definição, as atualizações de definições não serão iniciadas no arranque se não estiver presente nenhum motor antimalware.</string>
-    <string id="SignatureUpdate_FallbackOrder">Definir a ordem das origens para transferência das atualizações de definições</string>
-    <string id="SignatureUpdate_FallbackOrder_Explain">Esta definição de política permite definir a ordem pela qual as diversas origens de atualização de definições deverão ser contactadas. O valor desta definição deverá ser introduzido como uma cadeia separada por pipes que enumere as origens de atualização de definições por ordem. Os valores possíveis são: “InternalDefinitionUpdateServer”, “MicrosoftUpdateServer”, “MMPC” e “FileShares”
+    Se ativar ou não configurar esta definição, as atualizações de informações de segurança serão iniciadas no arranque se não estiver presente nenhum motor antimalware.
 
-Por exemplo: { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
+    Se desativar esta definição, as atualizações de informações de segurança não serão iniciadas no arranque se não estiver presente nenhum motor antimalware.</string>
+    <string id="SignatureUpdate_FallbackOrder">Definir a ordem das origens para transferência das atualizações de informações de segurança</string>
+    <string id="SignatureUpdate_FallbackOrder_Explain">Esta definição de política permite definir a ordem pela qual as diversas origens de atualização de informações de segurança deverão ser contactadas. O valor desta definição deverá ser introduzido como uma cadeia separada por pipes que enumere as origens de atualização de informações de segurança por ordem. Os valores possíveis são: "InternalDefinitionUpdateServer", "MicrosoftUpdateServer", "MMPC" e "FileShares"
 
-Se ativar esta definição, as origens de atualização de definições serão contactadas pela ordem especificada. Quando as atualizações de definições tiverem sido transferidas com êxito a partir de uma origem especificada, as origens restantes da lista não serão contactadas.
+    Por exemplo: { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
 
-Se desativar ou não configurar esta definição, as origens de atualização de definições serão contactadas por uma ordem predefinida.</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU">Permitir atualizações de definições a partir do Microsoft Update</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Esta definição de política permite ativar a transferência de atualizações de definições a partir do Microsoft Update, mesmo se o servidor predefinido das Atualizações Automáticas estiver configurado para outra origem de transferência, como por exemplo o Windows Update.
+    Se ativar esta definição, as origens de atualização de informações de segurança serão contactadas pela ordem especificada. Quando as atualizações de informações de segurança tiverem sido transferidas com êxito a partir de uma origem especificada, as origens restantes da lista não serão contactadas.
 
-Se ativar esta definição, as atualizações de definições serão transferidas a partir do Microsoft Update.
+    Se desativar ou não configurar esta definição, as origens de atualização de informações de segurança serão contactadas pela ordem predefinida.</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU">Permitir atualizações de informações de segurança a partir do Microsoft Update</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Esta definição de política permite ativar a transferência de atualizações de informações de segurança a partir do Microsoft Update, mesmo que o servidor predefinido das Atualizações Automáticas esteja configurado para outra origem de transferência, como por exemplo o Windows Update.
 
-Se desativar ou não configurar esta definição, as atualizações de definições serão transferidas a partir da origem de transferência configurada.</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery">Permitir atualizações de definições em tempo real com base em relatórios do Microsoft MAPS</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Esta definição de política permite ativar atualizações de definições em tempo real em resposta a relatórios enviados para o Microsoft MAPS. Se o serviço reportar um ficheiro como desconhecido e o Microsoft MAPS descobrir que a atualização de definições mais recente possui definições para uma ameaça que envolva esse ficheiro, o serviço receberá imediatamente todas as definições mais recentes para essa ameaça. Para utilizar esta funcionalidade, terá de ter configurado a adesão do computador ao Microsoft MAPS.
+    Se ativar esta definição, as atualizações de informações de segurança serão transferidas a partir do Microsoft Update.
 
-Se ativar ou não configurar esta definição, as atualizações de definições em tempo real serão ativadas.
+    Se desativar ou não configurar esta definição, as atualizações de informações de segurança serão transferidas a partir da origem de transferência configurada.</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery">Permitir atualizações de informações de segurança em tempo real com base em relatórios do Microsoft MAPS</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Esta definição de política permite ativar atualizações de informações de segurança em tempo real em resposta a relatórios enviados para o Microsoft MAPS. Se o serviço reportar um ficheiro como desconhecido e o Microsoft MAPS descobrir que a atualização de informações de segurança mais recente possui informações de segurança para uma ameaça que envolva esse ficheiro, o serviço receberá imediatamente todas as informações de segurança mais recentes para essa ameaça. Para utilizar esta funcionalidade, terá de ter configurado a adesão do computador ao Microsoft MAPS.
 
-Se desativar esta definição, as atualizações de definições em tempo real serão desativadas.</string>
-    <string id="SignatureUpdate_ScheduleDay">Especificar o dia da semana para procurar atualizações de definições</string>
-    <string id="SignatureUpdate_ScheduleDay_Explain">Esta definição de política permite especificar o dia da semana em que serão procuradas atualizações de definições. Também é possível configurar a procura para ser executada diariamente, ou para nunca ser executada.
+    Se ativar ou não configurar esta definição, as atualizações de informações de segurança em tempo real serão ativadas.
 
-Esta definição pode ser configurada com os seguintes valores de números ordinais:
-(0x0) Todos os Dias (predefinição)
-(0x1) Domingo
-(0x2) Segunda-feira
-(0x3) Terça-feira
-(0x4) Quarta-feira
-(0x5) Quinta-feira
-(0x6) Sexta-feira
-(0x7) Sábado
-(0x8) Nunca
+    Se desativar esta definição, as atualizações de informações de segurança em tempo real serão desativadas.</string>
+    <string id="SignatureUpdate_ScheduleDay">Especificar o dia da semana para procurar atualizações de informações de segurança</string>
+    <string id="SignatureUpdate_ScheduleDay_Explain">Esta definição de política permite especificar o dia da semana em que serão procuradas atualizações de informações de segurança. Também é possível configurar a procura para ser executada diariamente, ou para nunca ser executada.
 
-Se ativar esta definição, a procura de atualizações de definições ocorrerá com a frequência especificada.
+    Esta definição pode ser configurada com os seguintes valores de números ordinais:
+    (0x0) Todos os Dias (predefinição)
+    (0x1) Domingo 
+    (0x2) Segunda-feira
+    (0x3) Terça-feira
+    (0x4) Quarta-feira
+    (0x5) Quinta-feira
+    (0x6) Sexta-feira
+    (0x7) Sábado
+    (0x8) Nunca
 
-Se desativar ou não configurar esta definição, a procura de atualizações de definições ocorrerá com a frequência predefinida.</string>
+    Se ativar esta definição, a procura de atualizações de informações de segurança ocorrerá com a frequência especificada.
+
+    Se desativar ou não configurar esta definição, a procura de atualizações de informações de segurança ocorrerá com a frequência predefinida.</string>
     <string id="SignatureUpdate_ScheduleDay_0">Nunca</string>
     <string id="SignatureUpdate_ScheduleDay_1">Todos os Dias</string>
     <string id="SignatureUpdate_ScheduleDay_2">Domingo</string>
@@ -625,24 +633,24 @@ Se desativar ou não configurar esta definição, a procura de atualizações de
     <string id="SignatureUpdate_ScheduleDay_6">Quinta-feira</string>
     <string id="SignatureUpdate_ScheduleDay_7">Sexta-feira</string>
     <string id="SignatureUpdate_ScheduleDay_8">Sábado</string>
-    <string id="SignatureUpdate_ScheduleTime">Especificar a hora para procurar atualizações de definições</string>
-    <string id="SignatureUpdate_ScheduleTime_Explain">Esta definição de política permite especificar a hora a que serão procuradas atualizações de definições. O valor da hora é representado como o número de minutos após a meia-noite (00:00).  Por exemplo, 120 (0x78) é equivalente às 2:00 h. Por predefinição, esta definição encontra-se configurada para procurar atualizações de definições 15 minutos antes da hora da análise agendada. O horário é baseado na hora local do computador em que a procura ocorre.
+    <string id="SignatureUpdate_ScheduleTime">Especificar a hora para procurar atualizações de informações de segurança</string>
+    <string id="SignatureUpdate_ScheduleTime_Explain">Esta definição de política permite especificar a hora a que serão procuradas atualizações de informações de segurança. O valor da hora é representado como o número de minutos após a meia-noite (00:00). Por exemplo, 120 (0x78) é equivalente às 02:00. Por predefinição, esta definição encontra-se configurada para procurar atualizações de informações de segurança 15 minutos antes da hora da análise agendada. O horário é baseado na hora local do computador em que a procura ocorre.
 
-Se ativar esta definição, a procura de atualizações de definições ocorrerá à hora especificada.
+    Se ativar esta definição, a procura de atualizações de informações de segurança ocorrerá à hora especificada.
 
-Se desativar ou não configurar esta definição, a procura de atualizações de definições ocorrerá à hora predefinida.</string>
-    <string id="SignatureUpdate_SignatureDisableNotification">Permitir notificações para desativar definições com base em relatórios do Microsoft MAPS</string>
-    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Esta definição de política permite configurar o serviço antimalware para receber notificações para desativar definições individuais em resposta a relatórios enviados para o Microsoft MAPS. O Microsoft MAPS utiliza estas notificações para desativar as definições que resultam em relatórios de falsos positivos. Para utilizar esta funcionalidade, terá de ter configurado a adesão do computador ao Microsoft MAPS.
+    Se desativar ou não configurar esta definição, a procura de atualizações de informações de segurança ocorrerá à hora predefinida.</string>
+    <string id="SignatureUpdate_SignatureDisableNotification">Permitir notificações para desativar informações de segurança com base em relatórios do Microsoft MAPS</string>
+    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Esta definição de política permite configurar o serviço antimalware para receber notificações para desativar informações de segurança individuais em resposta a relatórios enviados para o Microsoft MAPS. O Microsoft MAPS utiliza estas notificações para desativar as informações de segurança que resultam em relatórios de falsos positivos. Para utilizar esta funcionalidade, terá de ter configurado a adesão do computador ao Microsoft MAPS.
 
-Se ativar ou não configurar esta definição, o serviço antimalware receberá notificações para desativar definições.
+    Se ativar ou não configurar esta definição, o serviço antimalware receberá notificações para desativar informações de segurança.
 
-Se desativar esta definição, o serviço antimalware não receberá notificações para desativar definições.</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Definir o número de dias após o qual é necessária uma atualização de definições de atualização</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Esta definição de política permite definir o número de dias após o qual será necessária uma atualização de definições de atualização. Por predefinição, o valor desta definição é de 1 dia.
+    Se desativar esta definição, o serviço antimalware não receberá notificações para desativar informações de segurança.</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Definir o número de dias após o qual é necessária uma atualização de informações de segurança de atualização</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Esta definição de política permite definir o número de dias após o qual será necessária uma atualização de informações de segurança de atualização. Por predefinição, o valor desta definição é de 1 dia.
 
-Se ativar esta definição, ocorrerá uma atualização de definições de atualização após o número de dias especificado.
+    Se ativar esta definição, ocorrerá uma atualização de informações de segurança de atualização após o número de dias especificado.
 
-Se desativar ou não configurar esta definição, será necessária uma atualização de definições de atualização após o número de dias predefinido.</string>
+    Se desativar ou não configurar esta definição, será necessária uma atualização de informações de segurança de atualização após o número de dias predefinido.</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays">Especificar o intervalo para as notificações de expiração</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays_Explain">
     Esta definição da política permite-lhe especificar um intervalo (em dias) para a notificação de expiração.
@@ -650,28 +658,28 @@ Se desativar ou não configurar esta definição, será necessária uma atualiza
 
     Para que a política esteja ativa, o valor tem de ser superior a zero.
     </string>
-    <string id="SignatureUpdate_SignatureUpdateInterval">Especificar o intervalo para procurar atualizações de definições</string>
-    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Esta definição de política permite especificar o intervalo em que serão procuradas atualizações de definições. O valor da hora é representado como o número de horas entre procuras de atualizações. Os valores válidos variam entre 1 (de hora em hora) e 24 (uma vez por dia).
+    <string id="SignatureUpdate_SignatureUpdateInterval">Especificar o intervalo para procurar atualizações de informações de segurança</string>
+    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Esta definição de política permite especificar o intervalo em que serão procuradas atualizações de informações de segurança. O valor da hora é representado como o número de horas entre procuras de atualizações. Os valores válidos variam entre 1 (de hora em hora) e 24 (uma vez por dia).
 
-Se ativar esta definição, as procuras de atualizações de definições ocorrerão no intervalo especificado.
+    Se ativar esta definição, as procuras de atualizações de informações de segurança ocorrerão no intervalo especificado.
 
-Se desativar ou não configurar esta definição, as procuras de atualizações de definições ocorrerão no intervalo predefinido.</string>
-    <string id="SignatureUpdate_UpdateOnStartup">Procurar definições mais recentes de vírus e spyware no arranque</string>
-    <string id="SignatureUpdate_UpdateOnStartup_Explain">Esta definição de política permite gerir se ocorrerá uma procura de novas definições de vírus e spyware imediatamente após o arranque do serviço.
+    Se desativar ou não configurar esta definição, as procuras de atualizações de informações de segurança ocorrerão no intervalo predefinido.</string>
+    <string id="SignatureUpdate_UpdateOnStartup">Procurar informações de segurança mais recentes de vírus e spyware no arranque</string>
+    <string id="SignatureUpdate_UpdateOnStartup_Explain">Esta definição de política permite gerir se ocorrerá uma procura de novas informações de segurança de vírus e spyware imediatamente após o arranque do serviço.
 
-Se ativar esta definição, serão procuradas novas definições após o arranque do serviço.
+    Se ativar esta definição, serão procuradas novas informações de segurança após o arranque do serviço.
 
-Se desativar ou não configurar esta definição, não ocorrerá uma procura de novas definições após o arranque do serviço.</string>
+    Se desativar ou não configurar esta definição, não ocorrerá uma procura de novas informações de segurança após o arranque do serviço.</string>
     <string id="DisableBlockAtFirstSeen">Configurar a funcionalidade 'Bloquear na Primeira Ocorrência'</string>
-    <string id="DisableBlockAtFirstSeen_Explain">Esta funcionalidade garante que o dispositivo faz a verificação em tempo real com o Serviço de Proteção Ativa Microsoft (MAPS) antes de permitir que se executem ou aceda a determinados conteúdos. Caso esta funcionalidade esteja desativada, a verificação não ocorrerá, o que diminuirá o estado de proteção do dispositivo.
-	Ativado – a definição Bloquear na Primeira Ocorrência está ligada.
-	Desativado – a definição Bloquear na Primeira Ocorrência está desligada.
-	
-	Esta funcionalidade requer que estas definições de Política de Grupo sejam definidas da seguinte forma:
-	MAPS -&gt; "Aderir ao Microsoft MAPS" tem de estar ativado ou a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.
-	MAPS -&gt; "Enviar amostras de ficheiros quando for necessária uma análise adicional" deve estar definido como 1 (Enviar amostras seguras) ou 3 (Enviar todas as amostras). Definir como 0 (Perguntar sempre) diminuirá o estado de proteção do dispositivo. Definir como 2 (Nunca enviar) significa que a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.
-	Proteção em Tempo Real -&gt; A política "Analisar todos os anexos e ficheiros transferidos" deve ser ativada ou a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.
-	Proteção em Tempo Real -&gt; Não ative a política "Desativar a proteção em tempo real" ou a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.</string>
+    <string id="DisableBlockAtFirstSeen_Explain">Esta funcionalidade garante que o dispositivo faz a verificação em tempo real com o Serviço de Proteção Ativa Microsoft (MAPS) antes de permitir que se executem ou se aceda a determinados conteúdos. Caso esta funcionalidade esteja desativada, a verificação não ocorrerá, o que diminuirá o estado de proteção do dispositivo.
+    Ativado – a definição Bloquear na Primeira Ocorrência está ativada.
+    Desativado – a definição Bloquear na Primeira Ocorrência está desativada.
+    
+    Esta funcionalidade requer que estas definições de Política de Grupo sejam definidas da seguinte forma:
+    MAPS -&gt; "Aderir ao Microsoft MAPS" tem de estar ativado ou a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.
+    MAPS -&gt; "Enviar amostras de ficheiros quando for necessária uma análise adicional" deve estar definido como 1 (Enviar amostras seguras) ou 3 (Enviar todas as amostras). Definir como 0 (Perguntar Sempre) diminuirá o estado de proteção do dispositivo. Definir como 2 (Nunca enviar) significa que a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.
+    Proteção em Tempo Real -&gt; A política "Analisar todos os anexos e ficheiros transferidos" tem de estar ativada ou a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.
+    Proteção em Tempo Real -&gt; Não ative a política "Desativar proteção em tempo real" ou a funcionalidade "Bloquear na Primeira Ocorrência" não funcionará.</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting">Configurar ignorar definição local dos relatórios do Microsoft MAPS</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting_Explain">Esta definição de política configura ignorar a definição local para configuração da adesão ao Microsoft MAPS. A definição só pode ser configurada pela Política de Grupo.
 
@@ -697,7 +705,7 @@ Se desativar ou não configurar esta definição, a Política de Grupo terá pri
     <string id="SpynetReporting">Aderir ao Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Esta definição de política permite-lhe aderir ao Microsoft MAPS. O Microsoft MAPS é a comunidade online que o ajuda a escolher a forma de responder a possíveis ameaças. A comunidade também ajuda a travar a disseminação de novas infeções de software malicioso.
 
-    Pode optar por enviar informações básicas ou adicionais acerca de software detetado. As informações adicionais ajudam a Microsoft a criar novas definições e a ajudar a proteger o seu computador. Estas informações podem incluir, por exemplo, a localização dos itens detetados no seu computador, caso tenha sido removido software nocivo. As informações serão recolhidas e enviadas automaticamente. Em alguns casos, poderão ser inadvertidamente enviadas informações pessoais para a Microsoft. Contudo, a Microsoft não utilizará essas informações para o identificar ou contactar.
+    Pode optar por enviar informações básicas ou adicionais acerca de software detetado. As informações adicionais ajudam a Microsoft a criar novas informações de segurança e a ajudar a proteger o seu computador. Estas informações podem incluir, por exemplo, a localização dos itens detetados no seu computador, caso tenha sido removido software nocivo. As informações serão recolhidas e enviadas automaticamente. Em alguns casos, poderão ser inadvertidamente enviadas informações pessoais para a Microsoft. Contudo, a Microsoft não utilizará essas informações para o identificar ou contactar.
 
     As opções possíveis são:
     (0x0) Desativado (predefinição)
@@ -712,7 +720,7 @@ Se desativar ou não configurar esta definição, a Política de Grupo terá pri
 
     Se desativar ou não configurar esta definição, não irá aderir ao Microsoft MAPS.
   
-    No Windows 10, a Adesão básica já não está disponível, pelo que definir o valor como 1 ou 2 inscreve o dispositivo na adesão avançada.</string>
+    No Windows 10, a Adesão básica já não está disponível, pelo que definir o valor como 1 ou 2 inscreve o dispositivo na Adesão avançada.</string>
     <string id="SpynetReporting_Disabled">Desativado</string>
     <string id="SpynetReporting_Basic">MAPS Básico</string>
     <string id="SpynetReporting_Advanced">MAPS Avançado</string>
@@ -1048,32 +1056,37 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Especificar a hora de execução de uma análise agendada</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definir o número de dias até que as definições de spyware sejam consideradas desatualizadas</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Definir o número de dias até que as informações de segurança de spyware sejam consideradas desatualizadas</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definir o número de dias até que as definições de vírus sejam consideradas desatualizadas</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Definir o número de dias até que as informações de segurança de vírus sejam consideradas desatualizadas</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
-        <label>Definir partilhas de ficheiros para transferência das atualizações de definições</label>
+        <label>Definir partilhas de ficheiros para transferência das atualizações de informações de segurança</label>
+    </textBox>
+    </presentation>
+    <presentation id="SignatureUpdate_SharedSignaturesLocation">
+    <textBox refId="SignatureUpdate_SharedSignaturesLocation">
+        <label>Definir a partilha de ficheiros para transferir atualizações de informações de segurança em ambientes virtuais</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_FallbackOrder">
     <textBox refId="SignatureUpdate_FallbackOrder">
-        <label>Definir a ordem das origens para transferência das atualizações de definições</label>
+        <label>Definir a ordem das origens para transferência das atualizações de informações de segurança</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleDay">
-    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Especificar o dia da semana para procurar atualizações de definições</dropdownList>
+    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Especificar o dia da semana para procurar atualizações de informações de segurança</dropdownList>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleTime">
-    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Especificar a hora para procurar atualizações de definições</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Especificar a hora para procurar atualizações de informações de segurança</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateCatchupInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Definir o número de dias após o qual é necessária uma atualização de definições de atualização</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Definir o número de dias após o qual é necessária uma atualização de informações de segurança de atualização</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Especificar o intervalo para procurar atualizações de definições</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Especificar o intervalo para procurar atualizações de informações de segurança</decimalTextBox>
     </presentation>
     <presentation id="SpynetReporting">
     <dropdownList refId="SpynetReporting" noSort="true" defaultItem="0">Aderir ao Microsoft MAPS</dropdownList>

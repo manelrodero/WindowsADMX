@@ -1,4 +1,4 @@
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/Policysecurity intelligence">
 <displayName>entrer le nom complet ici</displayName>
 <description>entrer la description ici</description>
 <resources>
@@ -17,7 +17,7 @@
     <string id="Remediation">Mise à jour</string>
     <string id="Reporting">Création d’un rapport</string>
     <string id="Scan">Analyse</string>
-    <string id="SignatureUpdate">Mises à jour des signatures</string>
+    <string id="SignatureUpdate">Mises à jour de la veille de sécurité</string>
     <string id="Spynet">MAPS</string>
     <string id="Threats">Menaces</string>
     <string id="ClientInterface">Interface client</string>
@@ -50,11 +50,15 @@ Si vous désactivez ce paramètre, le service anti-programme malveillant est cha
     Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Endpoint Protection s'exécute par défaut et la recherche de programmes malveillants et autres programmes potentiellement indésirables sur les ordinateurs est effectuée.
     </string>
     <string id="DisableAntiSpywareDefender">Désactiver l’antivirus Windows Defender</string>
-    <string id="DisableAntiSpywareDefender_Explain">Ce paramètre de stratégie désactive l’antivirus Windows Defender.
+    <string id="DisableAntiSpywareDefender_Explain">Ce paramètre de stratégie désactive l’Antivirus Windows Defender.
+    
+    Si vous activez ce paramètre de stratégie, l’Antivirus Windows Defender ne s’exécute pas et ne recherche pas de programmes malveillants ou autres logiciels potentiellement indésirables.
 
-    Si vous activez ce paramètre de stratégie, l’antivirus Windows Defender ne s’exécute pas, et la recherche de programmes malveillants et d’autres programmes potentiellement indésirables sur les ordinateurs n’est pas effectuée.
+    Si vous désactivez ce paramètre de stratégie, l’Antivirus Windows Defender s’exécute, indépendamment d’éventuels autres antivirus installés.
 
-    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’antivirus Windows Defender s’exécute par défaut, et la recherche de programmes malveillants et d’autres programmes potentiellement indésirables sur les ordinateurs est effectuée.</string>
+    Si vous ne configurez pas ce paramètre de stratégie, Windows gère en interne l’Antivirus Windows Defender. Si vous installez un autre antivirus, Windows désactive automatiquement l’Antivirus Windows Defender. Dans le cas contraire, l’Antivirus Windows Defender analyse vos ordinateurs pour y rechercher des programmes malveillants ou autres logiciels potentiellement indésirables.
+
+    L’activation ou la désactivation de cette stratégie peut entraîner un comportement inattendu ou non pris en charge. Nous vous recommandons de ne pas configurer ce paramètre de stratégie.</string>
     <string id="DisableLocalAdminMerge">Configurer le comportement de fusion de l’administrateur local pour les listes</string>
     <string id="DisableLocalAdminMerge_Explain">Ce paramètre de stratégie détermine si les paramètres de listes complexes configurés par un administrateur local sont fusionnés ou non avec les paramètres de stratégie de groupe. Ce paramètre s’applique aux listes telles que les menaces et les exclusions.
 
@@ -82,7 +86,7 @@ Si vous activez ce paramètre, le serveur proxy est ignoré pour les adresses sp
 
 Si vous désactivez ou ne configurez pas ce paramètre, le serveur proxy n’est pas ignoré pour les adresses spécifiées.</string>
     <string id="ProxyPacUrl">Définir la configuration automatique de proxy (.pac) pour la connexion au réseau</string>
-    <string id="ProxyPacUrl_Explain">Ce paramètre de stratégie définit l’URL d’un fichier .pac de proxy qui doit être utilisé lorsque le client tente de se connecter au réseau pour les mises à jour des définitions et les rapports MAPS. Si la configuration automatique de proxy échoue ou si aucune configuration automatique de proxy n’est spécifiée, le client utile les options de remplacement (dans l’ordre) :
+    <string id="ProxyPacUrl_Explain">Ce paramètre de stratégie définit l’URL d’un fichier .pac de proxy qui doit être utilisé lorsque le client tente de se connecter au réseau pour les mises à jour de la veille de sécurité et les rapports MAPS. Si la configuration automatique de proxy échoue ou si aucune configuration automatique de proxy n’est spécifiée, le client utilise les options de remplacement (dans l’ordre) :
       1. Serveur proxy (si spécifié)
       2. URL du fichier .pac de proxy (si spécifiée)
       3. Aucune
@@ -91,9 +95,9 @@ Si vous désactivez ou ne configurez pas ce paramètre, le serveur proxy n’est
 
       Si vous activez ce paramètre, le paramètre du proxy est défini pour utiliser le fichier .pac de proxy en respectant l’ordre spécifié ci-dessus.
 
-      Si vous désactivez ce paramètre ou ne le configurez pas, le proxy ignore cette étape de remplacement en respectant l’ordre spécifié ci-dessus.</string>
+      Si vous désactivez ce paramètre ou que vous ne le configurez pas, le proxy ignore cette étape de remplacement en respectant l’ordre spécifié ci-dessus.</string>
     <string id="ProxyServer">Définir un serveur proxy pour la connexion au réseau</string>
-    <string id="ProxyServer_Explain">Ce paramètre de stratégie vous permet de configurer le proxy nommé qui doit être utilisé lorsque le client tente de se connecter au réseau pour les mises à jour des définitions et les rapports MAPS. Si le proxy nommé échoue ou si aucun proxy n’est spécifié, le client utilise les options de remplacement (dans l’ordre) :
+    <string id="ProxyServer_Explain">Ce paramètre de stratégie vous permet de configurer le proxy nommé qui doit être utilisé lorsque le client tente de se connecter au réseau pour les mises à jour de la veille de sécurité et les rapports MAPS. Si le proxy nommé échoue ou si aucun proxy n’est spécifié, le client utilise les options de remplacement (dans l’ordre) :
       1. Serveur proxy (si spécifié)
       2. URL du fichier .pac de proxy (si spécifiée)
       3. Aucune
@@ -102,20 +106,20 @@ Si vous désactivez ou ne configurez pas ce paramètre, le serveur proxy n’est
 
       Si vous activez ce paramètre, le proxy est défini sur l’URL spécifiée en respectant l’ordre spécifié ci-dessus. L’URL doit utiliser http:// ou https://.
 
-      Si vous désactivez ce paramètre ou ne le configurez pas, le proxy ignore cette étape de remplacement en respectant l’ordre spécifié ci-dessus.
+      Si vous désactivez ce paramètre ou que vous ne le configurez pas, le proxy ignore cette étape de remplacement en respectant l’ordre spécifié ci-dessus.
     </string>
     <string id="RandomizeScheduleTaskTimes">Rendre aléatoires les heures des tâches planifiées</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Ce paramètre de stratégie vous permet d’activer ou de désactiver la randomisation de l’heure de début de l’analyse planifiée et de l’heure de début de la mise à jour de définition planifiée. Ce paramètre permet de répartir l’impact de l’analyse sur les ressources. Par exemple, il peut être utilisé sur les ordinateurs virtuels invités qui partagent un hôte, pour empêcher plusieurs d’entre eux d’entreprendre une opération sollicitant le disque de manière intensive en même temps.
+    <string id="RandomizeScheduleTaskTimes_Explain">Ce paramètre de stratégie vous permet d’activer ou de désactiver la randomisation de l’heure de début de l’analyse planifiée et de l’heure de début de la mise à jour de la veille de sécurité planifiée. Ce paramètre permet de répartir l’impact de l’analyse sur les ressources. Par exemple, il peut être utilisé sur les ordinateurs virtuels invités qui partagent un hôte, pour empêcher plusieurs d’entre eux d’entreprendre une opération sollicitant le disque de manière intensive en même temps.
 
-Si vous activez ou ne configurez pas ce paramètre, les tâches planifiées débutent à une heure aléatoire située dans un intervalle de 30 minutes avant et après l’heure de début indiquée.
+Si vous activez ce paramètre ou que vous ne le configurez pas, les tâches planifiées débutent à une heure aléatoire située dans un intervalle de 30 minutes avant et après l’heure de début indiquée.
 
 Si vous désactivez ce paramètre, les tâches planifiées débutent à l’heure de début indiquée.</string>
     <string id="ServiceKeepAlive">Autoriser le service anti-programme malveillant à rester constamment actif</string>
-    <string id="ServiceKeepAlive_Explain">Ce paramètre de stratégie vous permet de configurer si le service anti-programme malveillant reste ou non actif lorsque les définitions de logiciels anti-espions et antivirus sont désactivées. Il est recommandé que ce paramètre reste désactivé.
+    <string id="ServiceKeepAlive_Explain">Ce paramètre de stratégie vous permet de configurer si le service anti-programme malveillant reste ou non actif lorsque la veille de sécurité anti-espions et la veille de sécurité antivirus sont désactivées. Il est recommandé que ce paramètre reste désactivé.
 
-Si vous activez ce paramètre, le service anti-programme malveillant reste constamment actif même si les définitions de logiciels anti-espions et antivirus sont toutes deux désactivées.
+Si vous activez ce paramètre, le service anti-programme malveillant reste constamment actif même si la veille de sécurité anti-espions et la veille de sécurité antivirus sont toutes deux désactivées.
 
-Si vous désactivez ou ne configurez pas ce paramètre, le service anti-programme malveillant est arrêté lorsque les définitions de logiciels anti-espions et antivirus sont toutes deux désactivées. Si l’ordinateur est redémarré, le service est démarré si son démarrage automatique est défini. Une fois le service démarré, une vérification est effectuée pour déterminer si les définitions de logiciels anti-espions et antivirus sont activées. Si au moins l’une d’elles est activée, le service reste actif. Si les deux sont désactivées, le service est arrêté.</string>
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, le service anti-programme malveillant est arrêté lorsque la veille de sécurité anti-espions et antivirus est désactivée. Si l’ordinateur est redémarré, le service est démarré si son démarrage automatique est défini. Une fois le service démarré, une vérification est effectuée pour déterminer si la veille de sécurité anti-espions et la veille de sécurité antivirus sont activées. Si au moins l’une d’elles est activée, le service reste actif. Si les deux sont désactivées, le service est arrêté.</string>
     <string id="Root_PUAProtection">Configurer la détection pour les applications potentiellement indésirables</string>
     <string id="Root_PUAProtection_Explain">
         Activer ou désactiver la détection pour les applications potentiellement indésirables. Vous pouvez choisir de bloquer, d'auditer ou d'autoriser lorsque des logiciels potentiellement indésirables sont téléchargés ou tentent de s'installer sur votre ordinateur.
@@ -144,13 +148,13 @@ Si vous activez ou ne configurez pas ce paramètre, la reconnaissance de protoco
 
 Si vous désactivez ce paramètre, la reconnaissance de protocole est désactivée.</string>
     <string id="Nis_Consumers_IPS_DisableSignatureRetirement">Activer le retrait de définition</string>
-    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Ce paramètre de stratégie vous permet de configurer le retrait de définition pour la protection réseau contre les attaques des vulnérabilités connues. Le retrait de définition vérifie si un ordinateur dispose des mises à jour de sécurité requises pour le protéger contre une vulnérabilité particulière. Si le système n’est pas vulnérable à l’attaque détectée par une définition, celle-ci est « retirée ». Si toutes les définitions pour un protocole donné sont retirées, ce protocole n’est plus analysé. L’activation de cette fonctionnalité permet d’améliorer les performances. Sur un ordinateur à jour avec toutes les dernières mises à jour de sécurité, la protection réseau n’a aucun impact sur les performances réseau.
+    <string id="Nis_Consumers_IPS_DisableSignatureRetirement_Explain">Ce paramètre de stratégie vous permet de configurer le retrait de définition pour la protection réseau contre les attaques des vulnérabilités connues. Le retrait de définition vérifie si un ordinateur dispose des mises à jour de sécurité requises pour le protéger contre une vulnérabilité particulière. Si le système n’est pas vulnérable à l’attaque détectée par une définition, celle-ci est « retirée ». Si toute la veille de sécurité pour un protocole donné sont retirées, ce protocole n’est plus analysé. L’activation de cette fonctionnalité permet d’améliorer les performances. Sur un ordinateur à jour avec toutes les dernières mises à jour de sécurité, la protection réseau n’a aucun impact sur les performances réseau.
 
-Si vous activez ou ne configurez pas ce paramètre, le retrait de définition est activé.
+Si vous activez ce paramètre ou que vous ne le configurez pas, le retrait de définition est activé.
 
 Si vous désactivez ce paramètre, le retrait de définition est désactivé.</string>
     <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">Spécifier d’autres jeux de définitions pour l’inspection du trafic réseau</string>
-    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Ce paramètre de stratégie définit d’autres jeux de définitions à activer pour l’inspection du trafic réseau. Les GUID des jeux de définitions doivent être ajoutés sous Options pour ce paramètre. Chaque entrée doit être répertoriée en tant que paire nom/valeur, où le nom doit être une représentation sous forme de chaîne d’un GUID de jeu de définitions. Par exemple, le GUID de jeu de définitions pour activer les définitions de tests est défini en tant que « {b54b6ac9-a737-498e-9120-6616ad3bf590} ». La valeur n’est pas utilisée et il est recommandé qu’elle soit égale à 0.</string>
+    <string id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid_Explain">Ce paramètre de stratégie définit d’autres jeux de définitions à activer pour l’inspection du trafic réseau. Les GUID des jeux de définitions doivent être ajoutés sous Options pour ce paramètre. Chaque entrée doit être répertoriée en tant que paire nom/valeur, où le nom doit être une représentation sous forme de chaîne d’un GUID de jeu de définitions. Par exemple, le GUID de jeu de définitions pour activer la veille de sécurité de tests est défini en tant que « {b54b6ac9-a737-498e-9120-6616ad3bf590} ». La valeur n’est pas utilisée et il est recommandé qu’elle soit égale à 0.</string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay">Configurer une valeur de remplacement de paramètre locale pour la suppression des éléments dans le dossier Quarantaine</string>
     <string id="Quarantine_LocalSettingOverridePurgeItemsAfterDelay_Explain">Ce paramètre de stratégie configure une valeur de remplacement locale pour la configuration du nombre de jours pendant lesquels les éléments doivent être conservés dans le dossier Quarantaine avant d’être supprimés. Ce paramètre peut uniquement être défini par une stratégie de groupe.
 
@@ -358,14 +362,14 @@ Si vous désactivez ou ne configurez pas ce paramètre, les fichiers archivés s
 Si vous activez ce paramètre, l’utilisation processeur ne dépasse pas le pourcentage spécifié.
 
 Si vous désactivez ou ne configurez pas ce paramètre, l’utilisation processeur ne dépasse pas la valeur par défaut.</string>
-    <string id="CheckForSignaturesBeforeRunningScan">Rechercher les dernières définitions de virus et de logiciels espions avant l’exécution d’une analyse planifiée</string>
-    <string id="CheckForSignaturesBeforeRunningScan_Explain">Ce paramètre de stratégie vous permet de gérer si une recherche de nouvelles définitions de virus et de logiciels espions est effectuée avant l’exécution d’une analyse. 
+    <string id="CheckForSignaturesBeforeRunningScan">Rechercher la veille de sécurité de virus et de logiciels espions avant l’exécution d’une analyse planifiée</string>
+    <string id="CheckForSignaturesBeforeRunningScan_Explain">Ce paramètre de stratégie vous permet de gérer si une recherche d’veille de sécurité de virus et de logiciels espions est effectuée avant l’exécution d’une analyse. 
 
-Ce paramètre s’applique aux analyses planifiées ainsi qu’à la ligne de commande mpcmdrun -SigUpdate, mais n’a aucun effet sur les analyses lancées manuellement depuis l’interface utilisateur.
+Ce paramètre s’applique aux analyses planifiées ainsi qu’à la ligne de commande mpcmdrun -SigUpdate, mais n’a aucun effet sur les analyses lancées manuellement à partir de l’interface utilisateur.
 
-Si vous activez ce paramètre, une recherche de nouvelles définitions est effectuée avant l’exécution d’une analyse.
+Si vous activez ce paramètre, une recherche de nouvelle veille de sécurité est effectuée avant l’exécution d’une analyse.
 
-Si vous désactivez ou ne configurez pas ce paramètre, l’analyse démarre avec les définitions existantes.</string>
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, l’analyse démarre avec la veille de sécurité existante.</string>
     <string id="Scan_DisableArchiveScanning">Analyser les fichiers archivés</string>
     <string id="Scan_DisableArchiveScanning_Explain">Ce paramètre de stratégie vous permet de configurer des recherches de logiciels malveillants et programmes indésirables dans des fichiers archivés, tels que les fichiers .ZIP ou .CAB.
 
@@ -543,64 +547,68 @@ Si vous désactivez ou ne configurez pas ce paramètre, une analyse planifiée e
 
         Si vous désactivez ou ne configurez pas ce paramètre, aucune modification n'est apportée à la priorité de l'UC pour les analyses planifiées.
     </string>
-    <string id="SignatureUpdate_ASSignatureDue">Définir le nombre de jours avant que les définitions de logiciels espions ne soient considérées comme périmées</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que les définitions de logiciels espions ne soient considérées comme périmées. Si les définitions sont considérées comme périmées, cet état peut déclencher plusieurs actions supplémentaires, y compris le rétablissement d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est égale à 14 jours.
+    <string id="SignatureUpdate_ASSignatureDue">Définir le nombre de jours avant que la veille de sécurité des logiciels espions soit considérée comme périmée</string>
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que la veille de sécurité des logiciels espions soit considérée comme périmée. Si la veille de sécurité est considérée comme périmée, cet état peut déclencher plusieurs actions supplémentaires, y compris le rétablissement d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est égale à 14 jours.
 
-Si vous activez ce paramètre, les définitions de logiciels espions sont considérées comme périmées une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
+Si vous activez ce paramètre, la veille de sécurité des logiciels espions est considérée comme périmée une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
 
-Si vous désactivez ou ne configurez pas ce paramètre, les définitions de logiciels espions sont considérées comme périmées une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
-    <string id="SignatureUpdate_AVSignatureDue">Définir le nombre de jours avant que les définitions de virus ne soient considérées comme périmées</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que les définitions de virus ne soient considérées comme périmées. Si les définitions sont considérées comme périmées, cet état peut déclencher plusieurs actions supplémentaires, y compris le rétablissement d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est égale à 14 jours.
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, la veille de sécurité des logiciels espions est considérée comme périmée une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
+    <string id="SignatureUpdate_AVSignatureDue">Définir le nombre de jours avant que la veille de sécurité des virus soit considérée comme périmée</string>
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours qui doivent s’écouler avant que la veille de sécurité de virus soit considéré comme périmée. Si la veille de sécurité est considérée comme périmée, cet état peut déclencher plusieurs actions supplémentaires, y compris le rétablissement d’une autre source de mise à jour ou l’affichage d’une icône d’avertissement dans l’interface utilisateur. Par défaut, cette valeur est égale à 14 jours.
 
-Si vous activez ce paramètre, les définitions de virus sont considérées comme périmées une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
+Si vous activez ce paramètre, la veille de sécurité de virus est considérée comme périmée une fois que le nombre spécifié de jours s’est écoulé sans mise à jour.
 
-Si vous désactivez ou ne configurez pas ce paramètre, les définitions de virus sont considérées comme périmées une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Définir les partages de fichiers pour le téléchargement des mises à jour des définitions</string>
-    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Ce paramètre de stratégie vous permet de configurer des sources de partages de fichiers UNC pour le téléchargement des mises à jour des définitions. Les sources sont contactées dans l’ordre spécifié. La valeur de ce paramètre doit être entrée sous la forme d’une chaîne séparée par des barres verticales énumérant les sources des mises à jour des définitions. Par exemple : « {\\unc1 | \\unc2 } ». La liste est vide par défaut.
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, la veille de sécurité de virus est considérée comme périmée une fois que le nombre par défaut de jours s’est écoulé sans mise à jour.</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Définir les partages de fichiers pour le téléchargement des mises à jour de la veille de sécurité</string>
+    <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Ce paramètre de stratégie vous permet de configurer des sources de partages de fichiers UNC pour le téléchargement des mises à jour de la veille de sécurité. Les sources sont contactées dans l’ordre spécifié. La valeur de ce paramètre doit être entrée sous la forme d’une chaîne séparée par des barres verticales énumérant les sources des mises à jour de la veille de sécurité. Par exemple : « {\\unc1 | \\unc2 } ». La liste est vide par défaut.
 
-Si vous activez ce paramètre, les sources spécifiées sont contactées pour les mises à jour des définitions. Une fois que les mises à jour des définitions ont été correctement téléchargées à partir d’une source spécifiée, les sources restantes dans la liste ne sont pas contactées.
+Si vous activez ce paramètre, les sources spécifiées sont contactées pour les mises à jour de la veille de sécurité. Une fois que les mises à jour de la veille de sécurité ont été correctement téléchargées à partir d’une source spécifiée, les sources restantes dans la liste ne sont pas contactées.
 
-Si vous désactivez ou ne configurez pas ce paramètre, la liste reste vide par défaut et aucune source n’est contactée.</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate">Activer l’analyse après la mise à jour des signatures</string>
-    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Ce paramètre de stratégie vous permet de configurer l’analyse automatique qui démarre après une mise à jour des définitions.
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, la liste reste vide par défaut et aucune source n’est contactée.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation">Définissez l’emplacement de la veille de sécurité pour les clients VDI.</string>
+    <string id="SignatureUpdate_SharedSignaturesLocation_Explain">Ce paramètre de stratégie vous permet de définir l’emplacement de la veille de sécurité pour les ordinateurs configurés pour VDI.
 
-Si vous activez ou ne configurez pas ce paramètre, une analyse démarre à la suite d’une mise à jour des définitions.
+    Si vous désactivez ce paramètre ou que vous ne le configurez pas, la source locale par défaut fera référence à la veille de sécurité.</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate">Activer l’analyse après la mise à jour de l’emplacement de la veille de sécurité</string>
+    <string id="SignatureUpdate_DisableScanOnUpdate_Explain">Ce paramètre de stratégie vous permet de configurer l’analyse automatique qui démarre après une mise à jour de la veille de sécurité.
 
-Si vous désactivez ce paramètre, aucune analyse ne démarre à la suite d’une mise à jour des définitions.</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Autoriser les mises à jour des définitions lors du fonctionnement sur batterie</string>
-    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Ce paramètre de stratégie vous permet de configurer les mises à jour des définitions lorsque l’ordinateur fonctionne sur batterie.
+Si vous activez ce paramètre ou que vous ne le configurez pas, une analyse démarre à la suite d’une mise à jour de la veille de sécurité.
 
-Si vous activez ou ne configurez pas ce paramètre, les mises à jour des définitions ont lieu comme d’habitude quel que soit l’état d’alimentation.
+Si vous désactivez ce paramètre, aucune analyse ne démarre à la suite d’une mise à jour de la veille de sécurité.</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery">Autoriser les mises à jour de la veille de sécurité lors du fonctionnement sur batterie</string>
+    <string id="SignatureUpdate_DisableScheduledSignatureUpdateonBattery_Explain">Ce paramètre de stratégie vous permet de configurer les mises à jour de la veille de sécurité lorsque l’ordinateur fonctionne sur batterie.
 
-Si vous désactivez ce paramètre, les mises à jour des définitions sont désactivées pendant que l’ordinateur fonctionne sur batterie.</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Lancer les mises à jour des définitions au démarrage</string>
-    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Ce paramètre de stratégie vous permet de configurer les mises à jour des définitions au démarrage lorsqu’aucun moteur du logiciel anti-programme malveillant n’est présent.
+Si vous activez ce paramètre ou que vous ne le configurez pas, les mises à jour de la veille de sécurité ont lieu comme d’habitude quel que soit l’état d’alimentation.
 
-Si vous activez ou ne configurez pas ce paramètre, les mises à jour des définitions sont lancées au démarrage lorsqu’aucun moteur du logiciel anti-programme malveillant n’est présent.
+Si vous désactivez ce paramètre, les mises à jour de la veille de sécurité sont désactivées pendant que l’ordinateur fonctionne sur batterie.</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine">Lancer la mise à jour de la veille de sécurité au démarrage</string>
+    <string id="SignatureUpdate_DisableUpdateOnStartupWithoutEngine_Explain">Ce paramètre de stratégie vous permet de configurer les mises à jour de la veille de sécurité au démarrage lorsqu’aucun moteur du logiciel anti-programme malveillant n’est présent.
 
-Si vous désactivez ce paramètre, les mises à jour des définitions ne sont pas lancées au démarrage lorsqu’aucun moteur du logiciel anti-programme malveillant n’est présent.</string>
-    <string id="SignatureUpdate_FallbackOrder">Définir l’ordre des sources pour le téléchargement des mises à jour des définitions</string>
-    <string id="SignatureUpdate_FallbackOrder_Explain">Ce paramètre de stratégie vous permet de définir l’ordre dans lequel les différentes sources des mises à jour des définitions doivent être contactées. La valeur de ce paramètre doit être entrée sous la forme d’une chaîne séparée par des barres verticales énumérant les sources des mises à jour des définitions dans l’ordre. Les valeurs possibles sont les suivantes : « InternalDefinitionUpdateServer », « MicrosoftUpdateServer », « MMPC » et « FileShares »
+Si vous activez ce paramètre ou que vous ne le configurez pas, les mises à jour de la veille de sécurité sont lancées au démarrage lorsqu’aucun moteur du logiciel anti-programme malveillant n’est présent.
 
-Par exemple : { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
+Si vous désactivez ce paramètre, les mises à jour de la veille de sécurité ne sont pas lancées au démarrage lorsqu’aucun moteur du logiciel anti-programme malveillant n’est présent.</string>
+    <string id="SignatureUpdate_FallbackOrder">Définir l’ordre des sources pour le téléchargement des mises à jour de la veille de sécurité</string>
+    <string id="SignatureUpdate_FallbackOrder_Explain">Ce paramètre de stratégie vous permet de définir l’ordre dans lequel les différentes sources des mises à jour de la veille de sécurité doivent être contactées. La valeur de ce paramètre doit être entrée sous la forme d’une chaîne séparée par des barres verticales énumérant les sources des mises à jour de la veille de sécurité dans l’ordre. Les valeurs possibles sont les suivantes : « InternalDefinitionUpdateServer », « MicrosoftUpdateServer », « MMPC » et « FileShares »
 
-Si vous activez ce paramètre, les sources des mises à jour des définitions sont contactées dans l’ordre spécifié. Une fois que les mises à jour des définitions ont été correctement téléchargées à partir d’une source spécifiée, les sources restantes dans la liste ne sont pas contactées.
+    Par exemple : { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }
 
-Si vous désactivez ou ne configurez pas ce paramètre, les sources des mises à jour des définitions sont contactées dans un ordre par défaut.</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU">Autoriser les mises à jour des définitions provenant de Microsoft Update</string>
-    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Ce paramètre de stratégie vous permet d’activer le téléchargement des mises à jour des définitions provenant de Microsoft Update même si le serveur par défaut des mises à jour automatiques est configuré pour une autre source de téléchargement telle que Windows Update.
+    Si vous activez ce paramètre, les sources des mises à jour de la veille de sécurité sont contactées dans l’ordre spécifié. Une fois que les mises à jour de la veille de sécurité ont été correctement téléchargées à partir d’une source spécifiée, les sources restantes dans la liste ne sont pas contactées.
 
-Si vous activez ce paramètre, les mises à jour des définitions sont téléchargées à partir de Microsoft Update.
+    Si vous désactivez ce paramètre ou que vous ne le configurez pas, les sources des mises à jour de la veille de sécurité sont contactées dans un ordre par défaut.</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU">Autoriser les mises à jour de la veille de sécurité provenant de Microsoft Update</string>
+    <string id="SignatureUpdate_ForceUpdateFromMU_Explain">Ce paramètre de stratégie vous permet d’activer le téléchargement des mises à jour de la veille de sécurité provenant de Microsoft Update même si le serveur par défaut des mises à jour automatiques est configuré pour une autre source de téléchargement telle que Windows Update.
 
-Si vous désactivez ou ne configurez pas ce paramètre, les mises à jour des définitions sont téléchargées à partir de la source de téléchargement configurée.</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery">Autoriser les mises à jour des définitions en temps réel selon les rapports à Microsoft MAPS</string>
-    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Ce paramètre de stratégie vous permet d’activer les mises à jour des définitions en temps réel en réponse aux rapports envoyés à Microsoft MAPS. Si le service signale un fichier comme inconnu et que Microsoft MAPS découvre que la dernière mise à jour des définitions a des définitions pour une menace impliquant ce fichier, le service reçoit immédiatement toutes les dernières définitions pour cette menace. Vous devez avoir configuré votre ordinateur pour rejoindre Microsoft MAPS pour que cette fonctionnalité fonctionne.
+    Si vous activez ce paramètre, les mises à jour de la veille de sécurité sont téléchargées à partir de Microsoft Update.
 
-Si vous activez ou ne configurez pas ce paramètre, les mises à jour des définitions en temps réel sont activées.
+   Si vous désactivez ce paramètre ou que vous ne le configurez pas, les mises à jour de la veille de sécurité sont téléchargées à partir de la source de téléchargement configurée.</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery">Autoriser les mises à jour de la veille de sécurité en temps réel selon les rapports à Microsoft MAPS</string>
+    <string id="SignatureUpdate_RealtimeSignatureDelivery_Explain">Ce paramètre de stratégie vous permet d’activer les mises à jour de la veille de sécurité en temps réel en réponse aux rapports envoyés à Microsoft MAPS. Si le service signale un fichier comme inconnu et que Microsoft MAPS découvre que la dernière mise à jour de la veille de sécurité a la veille de sécurité pour une menace impliquant ce fichier, le service reçoit immédiatement toute la dernière veille de sécurité pour cette menace. Vous devez avoir configuré votre ordinateur pour rejoindre Microsoft MAPS pour que cette fonctionnalité fonctionne.
 
-Si vous désactivez ce paramètre, les mises à jour des définitions en temps réel sont désactivées.</string>
-    <string id="SignatureUpdate_ScheduleDay">Spécifier le jour de la semaine pour rechercher des mises à jour des définitions</string>
-    <string id="SignatureUpdate_ScheduleDay_Explain">Ce paramètre de stratégie vous permet de spécifier le jour de la semaine pour rechercher des mises à jour des définitions. La recherche peut également être configurée pour être exécutée tous les jours ou jamais.
+    Si vous activez ce paramètre ou que vous ne le configurez pas, les mises à jour de la veille de sécurité en temps réel sont activées.
+
+    Si vous désactivez ce paramètre, les mises à jour de la veille de sécurité en temps réel sont désactivées.</string>
+    <string id="SignatureUpdate_ScheduleDay">Spécifier le jour de la semaine au cours duquel rechercher des mises à jour de la veille de sécurité</string>
+    <string id="SignatureUpdate_ScheduleDay_Explain">Ce paramètre de stratégie vous permet de spécifier le jour de la semaine pour rechercher des mises à jour de la veille de sécurité. La recherche peut également être configurée pour être exécutée tous les jours ou jamais.
 
 Ce paramètre peut être configuré avec les valeurs de nombre ordinal suivantes :
 (0x0) Tous les jours (valeur par défaut)
@@ -613,9 +621,9 @@ Ce paramètre peut être configuré avec les valeurs de nombre ordinal suivantes
 (0x7) Samedi
 (0x8) Jamais
 
-Si vous activez ce paramètre, la recherche des mises à jour des définitions a lieu à la fréquence spécifiée.
+Si vous activez ce paramètre, la recherche des mises à jour de la veille de sécurité a lieu à la fréquence spécifiée.
 
-Si vous désactivez ou ne configurez pas ce paramètre, la recherche des mises à jour des définitions a lieu à une fréquence par défaut.</string>
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, la recherche des mises à jour de la veille de sécurité a lieu à une fréquence par défaut.</string>
     <string id="SignatureUpdate_ScheduleDay_0">Jamais</string>
     <string id="SignatureUpdate_ScheduleDay_1">Tous les jours</string>
     <string id="SignatureUpdate_ScheduleDay_2">Dimanche</string>
@@ -625,24 +633,24 @@ Si vous désactivez ou ne configurez pas ce paramètre, la recherche des mises �
     <string id="SignatureUpdate_ScheduleDay_6">Jeudi</string>
     <string id="SignatureUpdate_ScheduleDay_7">Vendredi</string>
     <string id="SignatureUpdate_ScheduleDay_8">Samedi</string>
-    <string id="SignatureUpdate_ScheduleTime">Spécifier l’heure à laquelle rechercher des mises à jour des définitions</string>
-    <string id="SignatureUpdate_ScheduleTime_Explain">Ce paramètre de stratégie vous permet de spécifier l’heure de la journée à laquelle rechercher des mises à jour des définitions. La valeur de l’heure est représentée sous la forme du nombre de minutes après minuit (00:00).  Par exemple, 120 (0x78) est équivalent à 02:00. Par défaut, ce paramètre est configuré pour rechercher des mises à jour des définitions 15 minutes avant l’heure de l’analyse planifiée. La planification est basée sur l’heure locale de l’ordinateur où la recherche a lieu.
+    <string id="SignatureUpdate_ScheduleTime">Spécifier l’heure à laquelle rechercher des mises à jour de la veille de sécurité</string>
+    <string id="SignatureUpdate_ScheduleTime_Explain">Ce paramètre de stratégie vous permet de spécifier l’heure de la journée à laquelle rechercher des mises à jour de la veille de sécurité. La valeur de l’heure est représentée sous la forme du nombre de minutes après minuit (00:00).  Par exemple, 120 (0x78) est équivalent à 02:00. Par défaut, ce paramètre est configuré pour rechercher des mises à jour de la veille de sécurité 15 minutes avant l’heure de l’analyse planifiée. La planification est basée sur l’heure locale de l’ordinateur où la recherche a lieu.
 
-Si vous activez ce paramètre, la recherche des mises à jour des définitions a lieu à l’heure de la journée spécifiée.
+Si vous activez ce paramètre, la recherche des mises à jour de la veille de sécurité a lieu à l’heure de la journée spécifiée.
 
-Si vous désactivez ou ne configurez pas ce paramètre, la recherche des mises à jour des définitions a lieu à l’heure par défaut.</string>
-    <string id="SignatureUpdate_SignatureDisableNotification">Autoriser les notifications pour désactiver les définitions selon les rapports à Microsoft MAPS</string>
-    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Ce paramètre de stratégie vous permet de configurer le service anti-programme malveillant afin de recevoir des notifications pour désactiver les définitions individuelles en réponse aux rapports envoyés à Microsoft MAPS. Microsoft MAPS utilise ces notifications pour désactiver les définitions qui aboutissent à des rapports faux positifs. Vous devez avoir configuré votre ordinateur pour rejoindre Microsoft MAPS pour que cette fonctionnalité fonctionne.
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, la recherche des mises à jour de la veille de sécurité a lieu à l’heure par défaut.</string>
+    <string id="SignatureUpdate_SignatureDisableNotification">Autoriser les notifications pour désactiver les rapports basés sur la veille de sécurité à Microsoft MAPS</string>
+    <string id="SignatureUpdate_SignatureDisableNotification_Explain">Ce paramètre de stratégie vous permet de configurer le service anti-programme malveillant afin de recevoir des notifications pour désactiver la veille de sécurité individuelle en réponse aux rapports envoyés à Microsoft MAPS. Microsoft MAPS utilise ces notifications pour désactiver la veille de sécurité qui aboutit à des rapports faux positifs. Vous devez avoir configuré votre ordinateur pour rejoindre Microsoft MAPS pour que cette fonctionnalité fonctionne.
 
-Si vous activez ou ne configurez pas ce paramètre, le service anti-programme malveillant reçoit des notifications pour désactiver les définitions.
+    Si vous activez ce paramètre ou que vous ne le configurez pas, le service anti-programme malveillant reçoit des notifications pour désactiver la veille de sécurité.
 
-Si vous désactivez ce paramètre, le service anti-programme malveillant ne reçoit pas de notifications pour désactiver les définitions.</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Définir le nombre de jours après lequel une mise à jour des définitions de rattrapage est requise</string>
-    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours après lequel une mise à jour des définitions de rattrapage est requise. Par défaut, la valeur de ce paramètre est de 1 jour.
+    Si vous désactivez ce paramètre, le service anti-programme malveillant ne reçoit pas de notifications pour désactiver la veille de sécurité.</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval">Définir le nombre de jours après lequel une mise à jour de la veille de sécurité de rattrapage est requise</string>
+    <string id="SignatureUpdate_SignatureUpdateCatchupInterval_Explain">Ce paramètre de stratégie vous permet de définir le nombre de jours après lequel une mise à jour de rattrapage de la veille de sécurité est requise. Par défaut, la valeur de ce paramètre est de 1 jour.
 
-Si vous activez ce paramètre, une mise à jour des définitions de rattrapage est effectuée après le nombre de jours spécifié.
+Si vous activez ce paramètre, une mise à jour de rattrapage de la veille de sécurité est effectuée après le nombre de jours spécifié.
 
-Si vous désactivez ou ne configurez pas ce paramètre, une mise à jour des définitions de rattrapage est requise après le nombre de jours par défaut.</string>
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, une mise à jour de rattrapage de la veille de sécurité est requise après le nombre de jours par défaut.</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays">Spécifier l'intervalle de notification d'expiration</string>
     <string id="SignatureUpdate_ExpiryNotificationIntervalDays_Explain">
     Ce paramètre de stratégie vous permet de spécifier un intervalle (en jours) pour les notifications d'expiration.
@@ -650,28 +658,28 @@ Si vous désactivez ou ne configurez pas ce paramètre, une mise à jour des dé
 
     La valeur doit être supérieure à zéro pour que la stratégie soit active.
     </string>
-    <string id="SignatureUpdate_SignatureUpdateInterval">Spécifier l’intervalle de recherche des mises à jour des définitions</string>
-    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Ce paramètre de stratégie vous permet de spécifier un intervalle en fonction duquel rechercher des mises à jour des définitions. La valeur de l’heure est représentée sous la forme du nombre d’heures entre les recherches de mises à jour. Les valeurs valides sont comprises entre 1 (toutes les heures) et 24 (une fois par jour).
+    <string id="SignatureUpdate_SignatureUpdateInterval">Spécifier l’intervalle auquel rechercher des mises à jour de la veille de sécurité</string>
+    <string id="SignatureUpdate_SignatureUpdateInterval_Explain">Ce paramètre de stratégie vous permet de spécifier un intervalle en fonction duquel rechercher des mises à jour de la veille de sécurité. La valeur de l’heure est représentée sous la forme du nombre d’heures entre les recherches de mises à jour. Les valeurs valides sont comprises entre 1 (toutes les heures) et 24 (une fois par jour).
 
-Si vous activez ce paramètre, les recherches des mises à jour des définitions ont lieu selon l’intervalle spécifié.
+Si vous activez ce paramètre, les recherches des mises à jour de la veille de sécurité ont lieu selon l’intervalle spécifié.
 
-Si vous désactivez ou ne configurez pas ce paramètre, les recherches des mises à jour des définitions ont lieu selon l’intervalle par défaut.</string>
-    <string id="SignatureUpdate_UpdateOnStartup">Rechercher les dernières définitions de virus et de logiciels espions au démarrage</string>
-    <string id="SignatureUpdate_UpdateOnStartup_Explain">Ce paramètre de stratégie vous permet de gérer si une recherche de nouvelles définitions de virus et de logiciels espions est effectuée immédiatement après le démarrage du service.
+Si vous désactivez ce paramètre ou que vous ne le configurez pas, les recherches des mises à jour de la veille de sécurité ont lieu selon l’intervalle par défaut.</string>
+    <string id="SignatureUpdate_UpdateOnStartup">Rechercher la dernière veille de sécurité de virus et de logiciels espions au démarrage</string>
+    <string id="SignatureUpdate_UpdateOnStartup_Explain">Ce paramètre de stratégie vous permet de gérer si une recherche de nouvelle veille de sécurité de virus et de logiciels espions est effectuée immédiatement après le démarrage du service.
 
-Si vous activez ce paramètre, une recherche de nouvelles définitions est effectuée après le démarrage du service.
+    Si vous activez ce paramètre, une recherche de nouvelle veille de sécurité est effectuée après le démarrage du service.
 
-Si vous désactivez ou ne configurez pas ce paramètre, une recherche de nouvelles définitions n’est pas effectuée après le démarrage du service.</string>
+    Si vous désactivez ce paramètre ou que vous ne le configurez pas, aucune recherche de nouvelle veille de sécurité n’est effectuée après le démarrage du service.</string>
     <string id="DisableBlockAtFirstSeen">Configurer la fonctionnalité « Bloquer à la première consultation »</string>
     <string id="DisableBlockAtFirstSeen_Explain">Cette fonctionnalité garantit que l’appareil vérifie en temps réel auprès du Microsoft Active Protection Service (MAPS) avant d’autoriser l’exécution ou l’accès à certains contenus. Si cette fonctionnalité est désactivée, la vérification n’est pas effectuée, ce qui diminue l’état de protection de l’appareil.
-	Activé : le paramètre Bloquer à la première consultation est activé.
-	Désactivé : le paramètre Bloquer à la première consultation est désactivé.
-	
-	Cette fonctionnalité exige que les paramètres de cette stratégie de groupe soient définis comme suit :
-	MAPS -&gt; L’option « Rejoindre Microsoft MAPS » doit être activée, sans quoi la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.
-	MAPS -&gt; L’option « Envoyer des exemples de fichier lorsqu’une analyse supplémentaire est nécessaire » doit être définie sur 1 (Envoyer des échantillons sécurisés) ou 3 (Envoyer tous les échantillons). Si l’option est définie sur 0 (Toujours demander), l’état de protection de l’appareil diminue. Si l’option est définie sur 2 (Ne jamais envoyer), la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.
-	Protection en temps réel -&gt; La stratégie « Analyser tous les fichiers et pièces jointes téléchargés » doit être activée, sans quoi la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.
-	Protection en temps réel -&gt; N’activez pas la stratégie « Désactiver la protection en temps réel », sans quoi la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.</string>
+    Activé : le paramètre Bloquer à la première consultation est activé.
+    Désactivé : le paramètre Bloquer à la première consultation est désactivé.
+    
+    Cette fonctionnalité exige que les paramètres de cette stratégie de groupe soient définis comme suit :
+    MAPS -&gt; L’option « Rejoindre Microsoft MAPS » doit être activée, sans quoi la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.
+    MAPS -&gt; L’option « Envoyer des exemples de fichier lorsqu’une analyse supplémentaire est nécessaire » doit être définie sur 1 (Envoyer des échantillons sécurisés) ou 3 (Envoyer tous les échantillons). Si l’option est définie sur 0 (Toujours demander), l’état de protection de l’appareil diminue. Si l’option est définie sur 2 (Ne jamais envoyer), la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.
+    Protection en temps réel -&gt; La stratégie « Analyser tous les fichiers et pièces jointes téléchargés » doit être activée, sans quoi la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.
+    Protection en temps réel -&gt; N’activez pas la stratégie « Désactiver la protection en temps réel », sans quoi la fonctionnalité « Bloquer à la première consultation » ne fonctionnera pas.</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting">Configurer une valeur de remplacement de paramètre locale pour l’envoi de rapports à Microsoft MAPS</string>
     <string id="Spynet_LocalSettingOverrideSpynetReporting_Explain">Ce paramètre de stratégie configure une valeur de remplacement locale pour la configuration permettant de rejoindre Microsoft MAPS. Ce paramètre peut uniquement être défini par une stratégie de groupe.
 
@@ -695,9 +703,9 @@ Si vous désactivez ou ne configurez pas ce paramètre, la stratégie de groupe 
     <string id="SubmitSamplesConsent_Send_All">Envoyer tous les échantillons</string>
 
     <string id="SpynetReporting">Rejoindre Microsoft MAPS</string>
-    <string id="SpynetReporting_Explain">Ce paramètre de stratégie vous permet de rejoindre Microsoft MAPS. Microsoft MAPS est la communauté en ligne qui vous aide à choisir comment répondre aux menaces potentielles. Elle contribue également à enrayer la propagation des infections de nouveaux programmes malveillants.
+    <string id="SpynetReporting_Explain">Ce paramètre de stratégie vous permet de rejoindre Microsoft MAPS. Microsoft MAPS est la communauté en ligne qui vous aide à choisir comment répondre aux menaces potentielles. Elle contribue également à enrayer la propagation des infections par de nouveaux programmes malveillants.
 
-    Vous avez le choix d’envoyer des informations de base ou des informations complémentaires sur les logiciels détectés. Grâce aux informations complémentaires, Microsoft peut créer de nouvelles définitions et ainsi mieux protéger votre ordinateur. Ces informations peuvent par exemple contenir l’emplacement des éléments détectés sur votre ordinateur si un logiciel dangereux a été supprimé. Ces informations sont automatiquement recueillies et envoyées. Dans certains cas, des informations personnelles peuvent être accidentellement envoyées à Microsoft. Cependant, Microsoft n’utilise pas ces informations pour vous identifier ni vous contacter.
+    Vous avez le choix d’envoyer des informations de base ou des informations complémentaires sur les logiciels détectés. Grâce aux informations complémentaires, Microsoft peut créer une nouvelle la veille de sécurité et ainsi mieux protéger votre ordinateur. Ces informations peuvent par exemple contenir l’emplacement des éléments détectés sur votre ordinateur si un logiciel dangereux a été supprimé. Ces informations sont automatiquement recueillies et envoyées. Dans certains cas, des informations personnelles peuvent être accidentellement envoyées à Microsoft. Cependant, Microsoft n’utilise pas ces informations pour vous identifier ni vous contacter.
 
     Les options possibles sont les suivantes :
     (0x0) Désactivé (valeur par défaut)
@@ -710,7 +718,7 @@ Si vous désactivez ou ne configurez pas ce paramètre, la stratégie de groupe 
 
     Si vous activez ce paramètre, vous rejoignez Microsoft MAPS avec l’abonnement spécifié.
 
-    Si vous désactivez ou ne configurez pas ce paramètre, vous ne rejoignez pas Microsoft MAPS.
+    Si vous désactivez pas ce paramètre ou que vous ne le configurez pas, vous ne rejoignez pas Microsoft MAPS.
   
     Avec Windows 10, l’option Abonnement de base n’est plus disponible, la valeur 1 ou 2 inscrit donc l’appareil pour l’option Abonnement avancé.</string>
     <string id="SpynetReporting_Disabled">Désactivé</string>
@@ -1048,32 +1056,37 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Spécifier l’heure de la journée à laquelle exécuter une analyse planifiée</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Définir le nombre de jours avant que les définitions de logiciels espions ne soient considérées comme périmées</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Définir le nombre de jours avant que la veille de sécurité des logiciels espions soit considérée comme périmée</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Définir le nombre de jours avant que les définitions de virus ne soient considérées comme périmées</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Définir le nombre de jours avant que la veille de sécurité des virus soit considérée comme périmée</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
-        <label>Définir les partages de fichiers pour le téléchargement des mises à jour des définitions</label>
+        <label>Définir les partages de fichiers pour le téléchargement des mises à jour de la veille de sécurité</label>
+    </textBox>
+    </presentation>
+    <presentation id="SignatureUpdate_SharedSignaturesLocation">
+    <textBox refId="SignatureUpdate_SharedSignaturesLocation">
+        <label>Définir le partage de fichiers pour le téléchargement des mises à jour de la veille de sécurité dans des environnements virtuels</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_FallbackOrder">
     <textBox refId="SignatureUpdate_FallbackOrder">
-        <label>Définir l’ordre des sources pour le téléchargement des mises à jour des définitions</label>
+        <label>Définir l’ordre des sources pour le téléchargement des mises à jour de la veille de sécurité</label>
     </textBox>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleDay">
-    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Spécifier le jour de la semaine pour rechercher des mises à jour des définitions</dropdownList>
+    <dropdownList refId="SignatureUpdate_ScheduleDay" noSort="true" defaultItem="0">Spécifiez le jour de la semaine au cours duquel rechercher des mises à jour de la veille de sécurité</dropdownList>
     </presentation>
     <presentation id="SignatureUpdate_ScheduleTime">
-    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Spécifier l’heure à laquelle rechercher des mises à jour des définitions</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ScheduleTime">Spécifier l’heure à laquelle rechercher des mises à jour de la veille de sécurité</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateCatchupInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Définir le nombre de jours après lequel une mise à jour des définitions de rattrapage est requise</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateCatchupInterval" defaultValue="1">Définir le nombre de jours après lequel une mise à jour de la veille de sécurité de rattrapage est requise</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_SignatureUpdateInterval">
-    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Spécifier l’intervalle de recherche des mises à jour des définitions</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_SignatureUpdateInterval">Spécifiez l’intervalle de recherche des mises à jour de la veille de sécurité</decimalTextBox>
     </presentation>
     <presentation id="SpynetReporting">
     <dropdownList refId="SpynetReporting" noSort="true" defaultItem="0">Rejoindre Microsoft MAPS</dropdownList>

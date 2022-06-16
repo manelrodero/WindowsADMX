@@ -60,10 +60,10 @@ Ha a Telemetria engedélyezése házirend-beállításban engedélyezi a Közepe
 Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a Microsoftnak elküldött diagnosztikai adatok szintjét a Telemetria engedélyezése házirend-beállítás határozza meg.
       </string>
 
-      <string id="AllowDeviceNameInDiagnosticData">Eszköznév elküldésének engedélyezése a Windows diagnosztikai adatai között </string>
-      <string id="AllowDeviceNameInDiagnosticData_Explain">Ez a házirend lehetővé teszi az eszköznév elküldését a Microsoftnak a Windows diagnosztikai adatai részeként.
+      <string id="AllowDeviceNameInDiagnosticData">Eszköznév elküldésének engedélyezése a Windows diagnosztikai adatok között</string>
+      <string id="AllowDeviceNameInDiagnosticData_Explain">Ez a házirend lehetővé teszi az eszköznév elküldését a Microsoftnak a Windows diagnosztikai adatok részeként.
 
-Ha letiltja vagy nem konfigurálja a házirend-beállítást, az eszköznév nem lesz elküldve a Microsoftnak a Windows diagnosztikai adatai között.
+Ha letiltja vagy nem konfigurálja a házirend-beállítást, az eszköznév nem lesz elküldve a Microsoftnak a Windows diagnosztikai adatok között.
       </string>
 
       <string id="ConfigureTelemetryOptInSettingsUx">Telemetria-jóváhagyási beállítás felhasználói felületének konfigurálása.</string>
@@ -102,11 +102,19 @@ Megjegyzés:
           Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Diagnosztikai adatok megjelenítője engedélyezve lesz a Beállítások lapon.
       </string>
 
-      <string id="ConfigureMicrosoft365UploadEndpoint">A Microsoft 365 Update Readiness feltöltési végpontjának konfigurálása</string>
+      <string id="ConfigureMicrosoft365UploadEndpoint">A diagnosztikai adatok feltöltési végpontjának konfigurálása az Asztali elemzés szolgáltatáshoz</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">
-          Ez a házirend a Microsoft 365 Update Readiness program részeként beállítja az eszköz diagnosztikai adatainak feltöltési végpontját.
-          Ha a szervezet részt vesz a programban, és utasítást kapott arra, hogy egyéni feltöltési végpontot állítson be, akkor ezzel a beállítással definiálhatja a végpontot.
-          A beállítás értékét a Microsoft adja meg a program előkészítési folyamata során. 
+          Ezzel a házirenddel beállíthatja az eszköz diagnosztikai adatainak feltöltési végpontját az Asztali elemzés program részeként.
+          Ha a szervezet részt vesz a programban, és utasítást kapott az egyéni feltöltési végpont konfigurálására, akkor ezzel a beállítással meghatározhatja ezt a végpontot.
+          A beállítás értékét a Microsoft fogja biztosítani a program előkészítési folyamatában. 
+      </string>
+
+      <string id="AllowCommercialDataPipeline">Kereskedelmi adatfolyamat engedélyezése</string>
+      <string id="AllowCommercialDataPipeline_Explain">
+          Az AllowCommercialDataPipeline engedélyezi az eszközt a Windows nagyvállalati adatfolyamatában.
+          Ha engedélyezi ezt a beállítást, az eszközről gyűjtött adatok megjelennek a Windows nagyvállalati adatfolyamatában.
+          Ha letiltja vagy nem konfigurálja ezt a beállítást, az eszközről származó összes adatot a Windows szabványos adatfolyamatára vonatkozó házirendjeinkkel összhangban gyűjtjük össze és dolgozzuk fel.
+          A beállítás konfigurálása nem módosítja a telemetriai adatok gyűjtési szintjét, vagy a felhasználónak a szint módosítására vonatkozó képességét. Ez a beállítás csak a Windows operációs rendszerre és a Windowshoz tartozó alkalmazásokra vonatkozik, a Windows 10-en futó, harmadik féltől származó alkalmazásokra és szolgáltatásokra nem.
       </string>
     </stringTable>
     <presentationTable>
@@ -137,7 +145,7 @@ Megjegyzés:
       </presentation>
       <presentation id="ConfigureMicrosoft365UploadEndpoint">
         <textBox refId="ConfigureMicrosoft365UploadEndpointValue">
-          <label>A Microsoft 365 Update Readiness egyéni feltöltési végpontja:</label>
+          <label>Asztali elemzés egyéni feltöltési végpontja:</label>
         </textBox>
       </presentation>
     </presentationTable>

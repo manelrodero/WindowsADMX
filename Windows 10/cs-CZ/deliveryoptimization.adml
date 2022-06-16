@@ -120,16 +120,19 @@ Hodnota 0 znamená, že není nastavené žádné omezení, ale použije se výc
 
 4 = přípona DNS 
 
+5 = ID tenanta AAD 
+
 Pokud je nastavené ID skupiny, přiřadí se automaticky z vybraného zdroje. Pokud tuto zásadu povolíte, budou se zásady pro GroupID ignorovat. 
       
 Možnosti nastavené u této zásady platí jen pro režim stahování Skupina (2). Pokud jako režim stahování není nastavená Skupina (2), bude se tato zásada ignorovat. 
 
 Pro možnost 3 – ID možnosti DHCP se bude klient dotazovat na ID možnosti DHCP 234 a použije vrácenou hodnotu GUID jako ID skupiny.</string>
       <string id="GroupIdSource_Unset">Zrušit nastavení: (0)</string>
-      <string id="GroupIdSource_AD">Lokalita služby AD (1)</string>
-      <string id="GroupIdSource_SID">SID ověřené domény (2)</string>
+      <string id="GroupIdSource_AD">Lokalita služby Active Directory (1)</string>
+      <string id="GroupIdSource_SID">Ověřené domény SID (2)</string>
       <string id="GroupIdSource_DHCP">ID možnosti DHCP (3)</string>
       <string id="GroupIdSource_DNS">Přípona DNS (4)</string>
+      <string id="GroupIdSource_AAD">ID tenanta AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Zpozdit stahování na pozadí z http (v sekundách)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Tato zásada umožňuje zpozdit použití zdroje HTTP ve stahování na pozadí, které smí používat P2P.
       
@@ -146,6 +149,14 @@ Po dosažení maximálního zpoždění bude stahování přes HTTP pokračovat,
 Mějte na paměti, že stahování, které čeká na partnerské zdroje, se bude koncovému uživateli jevit jako zablokované.
       
 Doporučená hodnota je 1 hodina (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Zpozdit přepnutí ze serveru mezipaměti na náhradní zdroj při stahování na pozadí (v sekundách)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Nastavením této zásady můžete při stahování obsahu na pozadí zpozdit přepnutí ze serveru mezipaměti na náhradní zdroj HTTP o X sekund. 
+
+Poznámka: Pokud nastavíte zásadu pro zpoždění stahování na pozadí z HTTP, použije se jako první (aby se nejprve umožnilo stahování z partnerských zařízení).</string>
+      <string id="DelayCacheServerFallbackForeground">Zpozdit přepnutí ze serveru mezipaměti na náhradní zdroj při stahování na popředí (v sekundách)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Nastavením této zásady můžete při stahování obsahu na popředí zpozdit přepnutí ze serveru mezipaměti na náhradní zdroj HTTP o X sekund. 
+
+Poznámka: Pokud nastavíte zásadu pro zpoždění stahování na popředí z HTTP, použije se jako první (aby se nejprve umožnilo stahování z partnerských zařízení).</string>
       <string id="RestrictPeerSelectionBy">Vyberte způsob omezení výběru partnerských zařízení.</string>
       <string id="RestrictPeerSelectionBy_Help">Nastavením této zásady můžete omezit výběr partnerských uzlů prostřednictvím vybrané možnosti. 
       
@@ -263,7 +274,7 @@ Možnost 1 (maska podsítě) platí pro režim stahování LAN (1) a skupiny (2)
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">zdroj ID skupin:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Zdroj ID skupin:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Zpozdit stahování na pozadí z http (v sekundách):</decimalTextBox>
@@ -271,6 +282,14 @@ Možnost 1 (maska podsítě) platí pro režim stahování LAN (1) a skupiny (2)
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Zpozdit stahování na popředí z http (v sekundách):</decimalTextBox>
+        <text>Výchozí hodnota je 0 (bez zpoždění).</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Zpozdit přepnutí ze serveru mezipaměti na náhradní zdroj při stahování na pozadí (v sekundách):</decimalTextBox>
+        <text>Výchozí hodnota je 0 (bez zpoždění).</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Zpozdit přepnutí ze serveru mezipaměti na náhradní zdroj při stahování na popředí (v sekundách):</decimalTextBox>
         <text>Výchozí hodnota je 0 (bez zpoždění).</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

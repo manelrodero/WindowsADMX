@@ -294,6 +294,33 @@ Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou zaměstnanci ve vaš
 
 Pokud je při použití tohoto objektu zásad skupiny na zařízení některá aplikace otevřená, zaměstnanci musí restartovat tuto aplikaci nebo zařízení, aby se u ní tato změna zásad projevila.
       </string>
+      <string id="LetAppsActivateWithVoice_Name">Umožnit aplikacím pro Windows aktivaci hlasem</string>
+      <string id="LetAppsActivateWithVoice_Explain">Nastavení této zásady určuje, jestli se aplikace pro Windows dají aktivovat hlasem.
+
+Pokud zvolíte možnost „Určuje uživatel“, zaměstnanci ve vaší organizaci budou moct rozhodnout, jestli bude možné aplikace pro Windows aktivovat pomocí hlasového klíčového slova, a to v nabídce Nastavení &gt; Soukromí na daném zařízení.
+
+Pokud zvolíte možnost Vynutit povolení, aplikace pro Windows bude možné aktivovat pomocí hlasového klíčového slova a zaměstnanci ve vaší organizaci to nebudou moct změnit.
+
+Pokud zvolíte možnost Vynutit odepření, aplikace pro Windows nebude možné aktivovat pomocí hlasového klíčového slova a zaměstnanci ve vaší organizaci to nebudou moct změnit.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, zaměstnanci ve vaší organizaci budou moct rozhodnout, jestli bude možné aplikace pro Windows aktivovat pomocí hlasového klíčového slova, a to v nabídce Nastavení &gt; Soukromí na daném zařízení.
+
+Tato zásada se vztahuje na aplikace pro Windows a Cortanu.
+      </string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Name">Umožnit aplikacím pro Windows aktivaci hlasem, když je systém zamčený</string>
+      <string id="LetAppsActivateWithVoiceAboveLock_Explain">
+Nastavení této zásady určuje, jestli se aplikace pro Windows dají aktivovat hlasem, když je systém zamčený.
+
+Pokud zvolíte možnost „Určuje uživatel“, zaměstnanci ve vaší organizaci budou moct rozhodnout, jestli bude možná uživatelská interakce s aplikacemi pomocí řečových funkcí, když je systém zamčený, a to v nabídce Nastavení &gt; Soukromí na daném zařízení.
+
+Pokud zvolíte možnost Vynutit povolení, uživatelská interakce s aplikacemi pomocí řečových funkcí, když je systém zamčený, bude možná a zaměstnanci ve vaší organizaci to nebudou moct změnit.
+
+Pokud zvolíte možnost Vynutit odepření, uživatelská interakce s aplikacemi pomocí řečových funkcí, když je systém zamčený, nebude možná a zaměstnanci ve vaší organizaci to nebudou moct změnit.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, zaměstnanci ve vaší organizaci budou moct rozhodnout, jestli bude možná uživatelská interakce s aplikacemi pomocí řečových funkcí, když je systém zamčený, a to v nabídce Nastavení &gt; Soukromí na daném zařízení.
+
+Tato zásada se vztahuje na aplikace pro Windows a Cortanu. Má přednost před zásadou Povolit Cortanu nad zamykací obrazovkou. Tato zásada platí jen v případě, že je nakonfigurováno nastavení Povolit aktivaci hlasem.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LetAppsAccessCalendar">
@@ -466,6 +493,12 @@ Pokud je při použití tohoto objektu zásad skupiny na zařízení některá a
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
         <text>Vynutit odepření těchto konkrétních aplikací (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoice">
+        <dropdownList refId="LetAppsActivateWithVoice_Enum" noSort="true" defaultItem="0">Výchozí pro všechny aplikace:</dropdownList>
+      </presentation>
+      <presentation id="LetAppsActivateWithVoiceAboveLock">
+        <dropdownList refId="LetAppsActivateWithVoiceAboveLock_Enum" noSort="true" defaultItem="0">Výchozí pro všechny aplikace:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

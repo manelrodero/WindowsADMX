@@ -108,7 +108,7 @@
       <string id="CacheHost">[今後の使用のため予約済み] キャッシュ サーバーのホスト名</string>
       <string id="CacheHost_Help">[今後の使用のため予約済み]</string>
       <string id="GroupIdSource">グループ ID のソースを選択します</string>
-      <string id="GroupIdSource_Help">ピア選択を特定のソースに制限するには、このポリシーを設定します。
+      <string id="GroupIdSource_Help">ピアの選択を特定のソースに制限するには、このポリシーを設定します。
       
 使用可能なオプション: 
 
@@ -120,6 +120,8 @@
 
 4 = DNS サフィックス。
 
+5 = AAD テナント ID。
+
 設定すると、選択したソースからグループ ID が自動的に割り当てられます。このポリシーを設定した場合、GroupID ポリシーは無視されます。
       
 このポリシーで設定したオプションは、グループ (2) ダウンロード モードにのみ適用されます。グループ (2) がダウンロード モードとして設定されていない場合、このポリシーは無視されます。
@@ -130,6 +132,7 @@
       <string id="GroupIdSource_SID">認証済みドメイン SID (2)</string>
       <string id="GroupIdSource_DHCP">DHCP オプション ID (3)</string>
       <string id="GroupIdSource_DNS">DNS サフィックス (4)</string>
+      <string id="GroupIdSource_AAD">AAD テナント ID (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">http からのバックグラウンド ダウンロードを延期 (秒) </string>
       <string id="DelayBackgroundDownloadFromHttp_Help">このポリシーでは、P2P を使用することが許可されているバックグラウンドでのダウンロードで HTTP ソースの使用を遅らせることができます。
       
@@ -146,6 +149,14 @@
 ピア ソースを待機しているダウンロードは、エンド ユーザーには停止しているように見えることに注意してください。
       
 推奨値は 1 分 (60) です。</string>
+      <string id="DelayCacheServerFallbackBackground">バックグラウンド ダウンロードのキャッシュ サーバー フォールバックを延期 (秒)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">このポリシーを設定すると、バックグラウンドでコンテンツをダウンロードする場合にキャッシュ サーバーから HTTP ソースへのフォールバックが X 秒延期されます。
+
+注: http からのバックグラウンド ダウンロードを延期するようにポリシーを設定した場合は、その延期が最初に適用されます (ピアから最初にダウンロードできるようになります)。</string>
+      <string id="DelayCacheServerFallbackForeground">フォアグラウンド ダウンロードのキャッシュ サーバー フォールバックを延期 (秒)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">このポリシーを設定すると、バックグラウンドでコンテンツをダウンロードする場合にキャッシュ サーバーから HTTP ソースへのフォールバックが X 秒延期されます。
+
+注: http からのフォアグラウンド ダウンロードを延期するようにポリシーを設定した場合は、そのポリシーが最初に適用されます (ピアから最初にダウンロードできるようになります)。</string>
       <string id="RestrictPeerSelectionBy">ピアの選択を制限する方法を選択します</string>
       <string id="RestrictPeerSelectionBy_Help">選択したオプションを使用してピア選択を制限するには、このポリシーを設定します。
       
@@ -271,6 +282,14 @@
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">http からのフォアグラウンド ダウンロードを延期 (秒):</decimalTextBox>
+        <text>既定値は 0 (延期なし) です</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">バックグラウンド ダウンロードのキャッシュ サーバー フォールバックを延期 (秒):</decimalTextBox>
+        <text>既定値は 0 (延期なし) です</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">フォアグラウンド ダウンロードのキャッシュ サーバー フォールバックを延期 (秒):</decimalTextBox>
         <text>既定値は 0 (延期なし) です</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

@@ -419,21 +419,24 @@ Pokud toto nastavení povolíte, tato upozornění se nebudou na serveru hostite
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se tato upozornění zobrazovat na serveru hostitele relací VP poté, co se přihlásíte jako místní správce.</string>
       <string id="TS_LICENSING_MODE">Nastavit licenční režim služby Vzdálená plocha</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Nastavení této zásady umožňuje určit typ licence pro klientský přístup k Vzdálené ploše (VP CAL), který se vyžaduje pro připojení k tomuto serveru hostitele relací VP.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Nastavení této zásady umožňuje určit typ licence pro klientský přístup k Vzdálené ploše (licence VP CAL), který je vyžadován pro připojení k tomuto serveru Hostitele relace VP.
 
-Nastavení této zásady lze použít k výběru jednoho ze dvou režimů licencí: vázaných na uživatele nebo vázaných na zařízení.
+        Pomocí této zásady můžete vybrat jeden ze tří režimů licencování: Vázaná na uživatele, Vázaná na zařízení a Vázaná na uživatele podle AAD.
 
-Režim licence vázané na uživatele vyžaduje, aby měl každý uživatelský účet připojující se k tomuto serveru hostitele relací VP licenci VP CAL vázanou na uživatele.
+        Licencování v režimu Vázaná na uživatele vyžaduje, aby byla pro každý uživatelský účet připojující se k tomuto serveru Hostitele relace VP vystavena licence VP CAL vázaná na uživatele ze serveru Licencování VP.
 
-Režim licence vázané na zařízení vyžaduje, aby mělo každé zařízení připojující se k tomuto serveru hostitele relací VP licenci VP CAL vázanou na zařízení.
+        Licencování v režimu Vázaná na zařízení vyžaduje, aby byla pro každé zařízení připojující se k tomuto serveru Hostitele relace VP vystavena licence VP CAL vázaná na zařízení.
 
-Pokud nastavení této zásady povolíte, bude licenční server Vzdálené plochy respektovat zadaný režim licencování Vzdálené plochy.
+        Licencování v režimu Vázaná na uživatele podle AAD vyžaduje, aby měl každý uživatelský účet připojující se k tomuto serveru Hostitele relace VP plán služeb, který podporuje licence na VP přiřazené v AAD.
+        
+        Pokud tuto zásadu povolíte, bude vámi zadaný režim licencování Vzdálené plochy respektován licenčním serverem Vzdálené plochy a Hostitelem relace VP.
 
-Pokud nastavení této zásady zakážete nebo nenakonfigurujete, nebude režim licencování určen na úrovni zásad skupiny.
-
-</string>
+        Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebude režim licencování určen na úrovni zásad skupiny.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Podle zařízení</string>
       <string id="TS_LICENSING_MODE_PER_USER">Podle uživatele</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Vázaná na uživatele podle AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Nastavení této zásady určuje, zda má být v relaci služby Vzdálená plocha zakázáno přesměrování dat na porty LPT klientů.
 
 Pomocí tohoto nastavení lze uživatelům zabránit v mapování místních portů LPT a přesměrování dat ze vzdáleného počítače na periferní zařízení připojená k místnímu portu LPT. Služba Vzdálená plocha ve výchozím nastavení umožňuje přesměrování na port LPT.
@@ -1015,6 +1018,37 @@ Pokud toto nastavení zásad zakážete, nebudou aplikace RemoteApp publikované
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Používat ovladač pro zobrazení grafiky WDDM u připojení ke Vzdálené ploše</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Nastavení této zásady umožňuje povolit ovladač pro zobrazení grafiky WDDM u připojení ke Vzdálené ploše.
+
+Pokud tuto zásadu povolíte, budou připojení ke Vzdálené ploše používat ovladač pro zobrazení grafiky WDDM.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, NEBUDOU připojení ke Vzdálené ploše používat ovladač pro zobrazení grafiky WDDM. V tomto případě budou tato připojení používat ovladač pro zobrazení grafiky XDDM.
+
+Tato změna se projeví až po restartování Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Nastavení této zásady umožňuje povolit ovladač pro zobrazení grafiky WDDM u připojení ke Vzdálené ploše.
+
+Pokud tuto zásadu povolíte nebo nenakonfigurujete, budou připojení ke Vzdálené ploše používat ovladač pro zobrazení grafiky WDDM.
+
+Pokud tuto zásadu zakážete, NEBUDOU připojení ke Vzdálené ploše používat ovladač pro zobrazení grafiky WDDM. V tomto případě budou tato připojení používat ovladač pro zobrazení grafiky XDDM.
+
+Tato změna se projeví až po restartování Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Nastavení této zásady umožňuje povolit ovladač pro zobrazení grafiky WDDM u připojení ke Vzdálené ploše.
+
+Pokud tuto zásadu povolíte, budou připojení ke Vzdálené ploše používat ovladač pro zobrazení grafiky WDDM.
+
+Pokud tuto zásadu zakážete, NEBUDOU připojení ke Vzdálené ploše používat ovladač pro zobrazení grafiky WDDM. V tomto případě budou tato připojení používat ovladač pro zobrazení grafiky XDDM.
+
+Pokud tuto zásadu nenakonfigurujete, ovladač pro zobrazení grafiky WDDM NEBUDOU používat připojení ke Vzdálené ploše na serveru Hostitele relace VP. Ve všech ostatních případech budou tato připojení tento ovladač používat.
+
+Tato změna se projeví až po restartování Windows.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

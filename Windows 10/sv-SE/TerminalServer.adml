@@ -419,21 +419,24 @@ Om du aktiverar den här principinställningen visas inte meddelandena på värd
 
 Om du inaktiverar eller låter bli att konfigurera den här principinställningen visas meddelandena på värdservern för fjärrskrivbordssessioner efter att du har loggat in som en lokal administratör.</string>
       <string id="TS_LICENSING_MODE">Ange licensieringsläge för fjärrskrivbord</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Med den här principinställningen kan du ange vilken typ av RDS-klientåtkomstlicens (RDS CAL) som krävs för anslutning till värdservern för fjärrskrivbordssessioner.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Med den här principinställningen kan du ange vilken typ av klientåtkomstlicens för Fjärrskrivbordstjänster som krävs för att ansluta till värdservern för fjärrskrivbordssessioner.
 
-Du kan använda den här principinställningen för att välja ett av två möjliga licensieringslägen: Per användare eller Per enhet.
+        Du kan använda den här principinställningen för att välja ett av tre möjliga licenslägen: Per användare, Per enhet eller Per användare i AAD.
 
-Licensieringsläget Per användare kräver att varje användarkonto till värdservern för fjärrskrivbordssessioner har RDS-klientåtkomstlicensen Per användare.
+        Licensläget Per användare kräver att varje användarkonto som ansluter till värdservern för fjärrskrivbordssessioner har en klientåtkomstlicens per användare för Fjärrskrivbordstjänster utfärdad från en server för Fjärrskrivbordslicensiering.
 
-Licensieringsläget Per enhet kräver att varje enhet som ansluter till värdservern för fjärrskrivbordssessioner har RDS-klientåtkomstlicensen Per enhet.
+        Licensläget Per enhet kräver att varje enhet som ansluter till värdservern för fjärrskrivbordssessioner har en klientåtkomstlicens per enhet för Fjärrskrivbordstjänster utfärdad från en server för Fjärrskrivbordslicensiering.
 
-Om du aktiverar den här principinställningen används det licensieringsläge för Fjärrskrivbord som du anger av licensservern för Fjärrskrivbord.
+        Licensläget Per användare i AAD kräver att varje användarkonto som ansluter till värdservern för fjärrskrivbordssessioner har en tjänstplan som stöder licenser för Fjärrskrivbordstjänster tilldelade i AAD.
+        
+        Om du aktiverar den här principinställningen använder servern för fjärrskrivbordslicenser och värden för fjärrskrivbordssessioner det licensläge för Fjärrskrivbord som du anger.
 
-Om du inaktiverar eller låter bli att konfigurera den här principinställningen anges inte licensieringsläget på grupprincipnivå.
-
-</string>
+        Om du inaktiverar eller låter bli att konfigurera den här principinställningen anges inte licensläget på grupprincipnivå.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Per enhet</string>
       <string id="TS_LICENSING_MODE_PER_USER">Per användare</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Per användare i AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Den här principinställningen bestämmer huruvida omdirigering av data till LPT-portar på klienten under en fjärrskrivbordstjänstsession tillåts eller inte.
 
 Du kan använda den här inställningen för att förhindra att användare mappar lokala LPT-portar och omdirigerar data från fjärrdatorn till kringutrustning som är ansluten till lokala LPT-portar. Som standard tillåter Fjärrskrivbordstjänster omdirigering av LPT-portar.
@@ -1015,6 +1018,37 @@ Om du inaktiverar den här principinställningen använder RemoteApp-program som
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Använd WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Med den här principinställningen kan du aktivera WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar.
+
+Om du aktiverar principinställningen så används WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar.
+
+Om du inaktiverar eller låter bli att konfigurera principinställningen så används INTE WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar. Då används i stället XDDM-grafikdrivrutinen.
+
+Du måste starta om Windows för att ändringen ska gälla.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Med den här principinställningen kan du aktivera WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar.
+
+Om du aktiverar eller låter bli att konfigurera principinställningen så används WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar.
+
+Om du inaktiverar principinställningen så används INTE WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar. Då används i stället XDDM-grafikdrivrutinen.
+
+Du måste starta om Windows för att ändringen ska gälla.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Med den här principinställningen kan du aktivera WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar.
+
+Om du aktiverar principinställningen så används WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar.
+
+Om du inaktiverar principinställningen så används INTE WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar. Då används i stället XDDM-grafikdrivrutinen.
+
+Om du låter bli att konfigurera principinställningen så används INTE WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar på värdservern för fjärrskrivbordssessioner. I alla andra fall används WDDM-grafikdrivrutinen för fjärrskrivbordsanslutningar.
+
+Du måste starta om Windows för att ändringen ska gälla.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

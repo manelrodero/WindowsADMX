@@ -419,21 +419,24 @@ Se você habilitar esta configuração de diretiva, essas notificações não se
 
 Se a desabilitar ou não a definir, essas notificações serão exibidas no servidor Host de Sessão da Área de Trabalho Remota quando você fizer logon como administrador local.</string>
       <string id="TS_LICENSING_MODE">Definir o modo de licenciamento da Área de Trabalho Remota</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Esta configuração de política permite especificar o tipo de RDS CALs (CALs para Serviços de Área de Trabalho Remota) necessário para se conectar a esse servidor Host da Sessão RD (Área de Trabalho Remota).
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Esta configuração de política permite especificar o tipo de licença de acesso para cliente aos Serviços de Área de Trabalho Remota necessário para se conectar a esse servidor Host da Sessão da Área de Trabalho Remota.
 
-Você pode usar esta configuração de política para selecionar um dos dois modos de licenciamento: Por Usuário ou Por Dispositivo.
+        Você pode usar esta configuração de política para selecionar um dos três modos de licenciamento: Por Usuário, Por Dispositivo e Por Usuário do AAD.
 
-O modo de licenciamento Por Usuário exige que cada conta de usuário que se conecte a esse servidor Host da Sessão RD tenha uma CAL por Usuário aos Serviços de Área de Trabalho Remota.
+        O modo de licenciamento Por Usuário exige que cada conta de usuário que se conecte a esse servidor Host da Sessão da Área de Trabalho Remota tenha uma CAL por Usuário aos Serviços de Área de Trabalho Remota emitida por um Servidor de Licenciamento de Área de Trabalho Remota.
 
-O modo de licenciamento Por Dispositivo exige que cada dispositivo que se conecte a esse servidor Host da Sessão RD tenha uma CAL por Dispositivo aos Serviços de Área de Trabalho Remota.
+        O modo de licenciamento Por Dispositivo exige que cada dispositivo que se conecte a esse servidor Host da Sessão da Área de Trabalho Remota tenha uma CAL por Dispositivo aos Serviços de Área de Trabalho Remota emitida por um Servidor de Licenciamento de Área de Trabalho Remota.
 
-Se você habilitar esta configuração de política, o modo de licenciamento de Área de Trabalho Remota especificado será respeitado pelo servidor de licenças da Área de Trabalho Remota.
+        O modo de licenciamento Por Usuário do AAD requer que cada conta de usuário que se conecta a este servidor Host da Sessão da Área de Trabalho Remota tenha um plano de serviço que dê suporte a licenças do RDS atribuídas no AAD.
+        
+        Se você habilitar esta configuração de política, o modo de licenciamento de Área de Trabalho Remota especificado será respeitado pelo servidor de licenças da Área de Trabalho Remota e o Host da Sessão da Área de Trabalho Remota.
 
-Se você desabilitar ou não definir esta configuração de política, o modo de licenciamento não será especificado no nível da Política de Grupo.
-
-</string>
+        Se você desabilitar ou não definir esta configuração de política, o modo de licenciamento não será especificado no nível da Política de Grupo.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Por Dispositivo</string>
       <string id="TS_LICENSING_MODE_PER_USER">Por Usuário</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD por Usuário</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Esta configuração de política especifica se deve ser impedido o redirecionamento de dados para portas LPT cliente durante uma sessão dos Serviços de Área de Trabalho Remota.
 
 Você pode usar esta configuração para impedir que os usuários mapeiem as portas LPT locais e redirecionem dados do computador remoto para periféricos da porta LPT local. Por padrão, os Serviços de Área de Trabalho Remota permitem esse redirecionamento da porta LPT.
@@ -1015,6 +1018,37 @@ Quando você desabilita essa configuração de política, os programas RemoteApp
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Usar driver de vídeo WDDM para Conexões de Área de Trabalho Remota</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Esta configuração de política permite habilitar o driver de vídeo WDDM para Conexões de Área de Trabalho Remota.
+
+Se você habilitar esta configuração de política, as Conexões de Área de Trabalho Remota usarão o driver de vídeo WDDM.
+
+Se você desabilitar ou não definir esta configuração de política, as Conexões de Área de Trabalho Remota NÃO usarão o driver de vídeo WDDM. Neste caso, as Conexões de Área de Trabalho Remota usarão o driver de vídeo XDDM.
+
+Para que esta alteração entre em vigor, você deve reiniciar o Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Esta configuração de política permite habilitar o driver de vídeo WDDM para Conexões de Área de Trabalho Remota.
+
+Se você habilitar ou não definir esta configuração de política, as Conexões de Área de Trabalho Remota usarão o driver de vídeo WDDM.
+
+Se você desabilitar esta configuração de política, as Conexões de Área de Trabalho Remota NÃO usarão o driver de vídeo WDDM. Neste caso, as Conexões de Área de Trabalho Remota usarão o driver de vídeo XDDM.
+
+Para que esta alteração entre em vigor, você deve reiniciar o Windows.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Esta configuração de política permite habilitar o driver de vídeo WDDM para Conexões de Área de Trabalho Remota.
+
+Se você habilitar esta configuração de política, as Conexões de Área de Trabalho Remota usarão o driver de vídeo WDDM.
+
+Se você desabilitar esta definição de política, as Conexões de Área de Trabalho Remota NÃO usarão o driver de vídeo WDDM. Neste caso, as Conexões de Área de Trabalho Remota usarão o driver de vídeo XDDM.
+
+Se você não definir esta configuração de política, as Conexões de Área de Trabalho Remota no servidor Host da Sessão da Área de Trabalho Remota NÃO usarão o driver de vídeo WDDM. Em todos os outros casos, as Conexões de Área de Trabalho Remota usarão o driver de vídeo WDDM.
+
+Para que esta alteração entre em vigor, você deve reiniciar o Windows.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

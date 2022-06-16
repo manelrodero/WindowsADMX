@@ -419,21 +419,24 @@ Si vous activez ce paramètre de stratégie, ces notifications ne s’affichent 
 
 Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, ces notifications s’affichent sur le serveur Hôte de la session Bureau à distance une fois que vous avez ouvert une session en tant qu’administrateur local.</string>
       <string id="TS_LICENSING_MODE">Définir le mode de concession de licences des services Bureau à distance</string>
-      <string id="TS_LICENSING_MODE_EXPLAIN">Ce paramètre de stratégie permet de spécifier le type de licence d’accès client aux services Bureau à distance nécessaire à la connexion à ce serveur Hôte de session Bureau à distance.
+      <string id="TS_LICENSING_MODE_EXPLAIN">
+        Ce paramètre de stratégie vous permet de spécifier le type de licence d'accès client aux services Bureau à distance, nécessaire à la connexion à ce serveur hôte de session Bureau à distance.
 
-Vous pouvez utiliser ce paramètre de stratégie pour sélectionner un des deux modes de licence : Par utilisateur ou Par périphérique.
+        Vous pouvez utiliser ce paramètre de stratégie pour sélectionner l'un des trois modes de licence : par utilisateur, par périphérique et AAD par utilisateur.
 
-Le mode de licence par utilisateur exige que chaque compte d’utilisateur qui se connecte à ce serveur Hôte de session Bureau à distance dispose d’une licence d’accès client aux services Bureau à distance par utilisateur.
+        Le mode de licence par utilisateur exige que chaque compte d'utilisateur se connectant à ce serveur hôte de session Bureau à distance dispose d'une licence d'accès client aux services Bureau à distance par utilisateur émise par un serveur de licences des services Bureau.
 
-Le mode de licence par périphérique exige que chaque périphérique qui se connecte à ce serveur Hôte de session Bureau à distance dispose d’une licence d’accès client aux services Bureau à distance par périphérique.
+        Le mode de licence par périphérique nécessite que chaque appareil se connectant à ce serveur hôte de session Bureau à distance dispose d'une licence d'accès client aux services Bureau à distance par périphérique émise par un serveur de licences des services Bureau.
 
-Si vous activez ce paramètre de stratégie, le mode de licence des services Bureau à distance que vous spécifiez est honoré par le serveur de licences des services Bureau à distance.
+        Le mode de licence AAD par utilisateur exige que chaque compte d'utilisateur qui se connecte à ce serveur hôte de session Bureau à distance dispose d'un plan de service qui prend en charge les licences RDS attribuées dans AAD.
+        
+        Si vous activez ce paramètre de stratégie, le mode de licence des services Bureau à distance que vous spécifiez est honoré par le serveur de licences des services Bureau à distance et l'hôte de la session Bureau à distance.
 
-Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le mode de licence n’est pas spécifié au niveau de la stratégie de groupe.
-
-</string>
+        Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, le mode de licence n'est pas spécifié au niveau de la stratégie de groupe.
+      </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Par périphérique</string>
       <string id="TS_LICENSING_MODE_PER_USER">Par utilisateur</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD par utilisateur</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Ce paramètre de stratégie indique s’il faut ou non empêcher la redirection de données vers les ports LPT client lors d’une session de services Bureau à distance.
 
 Vous pouvez utiliser ce paramètre pour empêcher les utilisateurs de mapper les ports LPT locaux et de rediriger les données à partir de l’ordinateur distant vers les périphériques de port LPT locaux. Par défaut, les services Bureau à distance autorisent la redirection du port LPT.
@@ -1015,6 +1018,37 @@ Si vous désactivez ce paramètre de stratégie, les programmes RemoteApp publi�
 
      
 
+    </string>
+
+    <!--WDDM Graphics Driver Mode; Introduced Win10+-->
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER">Utiliser le pilote d'écran WDDM pour les connexions Bureau à distance</string>
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_OFF_EXPLAIN">Ce paramètre de stratégie vous permet d'activer le pilote d'affichage graphique WDDM pour les connexions Bureau à distance.
+
+Si vous activez ce paramètre de stratégie, les connexions Bureau à distance utilisent le pilote d'affichage graphique WDDM.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les connexions Bureau à distance n'utilisent pas le pilote d'écran vidéo WDDM. Dans ce cas, les connexions Bureau à distance utilisent le pilote d'affichage graphique XDDM.
+
+Vous devez redémarrer Windows pour que cette modification prenne effet.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_EXPLAIN">Ce paramètre de stratégie vous permet d'activer le pilote d'affichage graphique WDDM pour les connexions Bureau à distance.
+
+Si vous activez ce paramètre de stratégie ou si vous ne le configurez pas, les connexions Bureau à distance utilisent le pilote d'affichage graphique WDDM.
+
+Si vous désactivez ce paramètre de stratégie, les connexions Bureau à distance n'utilisent pas le pilote d'affichage graphique WDDM. Dans ce cas, les connexions Bureau à distance utilisent le pilote d'affichage graphique XDDM.
+
+Vous devez redémarrer Windows pour que cette modification prenne effet.
+    </string>
+
+    <string id="TS_SERVER_WDDM_GRAPHICS_DRIVER_DEFAULT_ON_SINGLEUSER_EXPLAIN">Ce paramètre de stratégie vous permet d'activer le pilote d'affichage graphique WDDM pour les connexions Bureau à distance.
+
+Si vous activez ce paramètre de stratégie, les connexions Bureau à distance utilisent le pilote d'affichage graphique WDDM.
+
+Si vous désactivez ce paramètre de stratégie, les connexions Bureau à distance n'utilisent pas le pilote d'affichage graphique WDDM. Dans ce cas, les connexions Bureau à distance utilisent le pilote d'affichage graphique XDDM.
+
+Si vous ne configurez pas ce paramètre de stratégie, les connexions Bureau à distance sur le serveur hôte de session Bureau à distance n'utilisent pas le pilote d'écran vidéo WDDM. Dans tous les autres cas, les connexions Bureau à distance utiliseront le pilote d'affichage graphique WDDM.
+
+Vous devez redémarrer Windows pour que cette modification prenne effet.
     </string>
 
     <!--AVC HW Encode Preferred Mode; Introduced Win10+-->

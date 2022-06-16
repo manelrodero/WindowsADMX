@@ -639,49 +639,46 @@ Si deshabilita o no establece esta configuración de directiva, se permitirá a 
 
       <string id="RDVEDrive_Name">Configurar el uso de cifrado basado en hardware para unidades de datos extraíbles</string>
 
-      <string id="OSEDrive_Help">Esta configuración de directiva le permite administrar el uso por parte de BitLocker de cifrado basado en hardware en unidades de sistema operativo y especificar qué algoritmos de cifrado puede usar para cifrado basado en hardware. El uso de cifrado basado en hardware puede mejorar el rendimiento de las operaciones de unidades que involucran la lectura o escritura frecuente de datos en la unidad.
+      <string id="OSEDrive_Help">Esta configuración de directiva permite administrar el uso del cifrado basado en hardware de BitLocker en unidades del sistema operativo y especificar qué algoritmos de cifrado puede usar BitLocker con el cifrado basado en hardware. El uso del cifrado basado en hardware puede mejorar el rendimiento de aquellas operaciones de las unidades que implican la lectura o escritura frecuentes de datos en la unidad.
 
-Si habilita esta configuración de directiva, puede especificar opciones adicionales que controlen si se usará cifrado basado en software de BitLocker en lugar del cifrado basado en hardware en equipos que no son compatibles con cifrado basado en hardware, y definir si desea limitar los algoritmos de cifrado y los conjuntos de cifrado usados con el cifrado basado en hardware.
+Si habilitas esta configuración de directiva, puedes especificar opciones adicionales que controlan si se usará el cifrado basado en software de BitLocker en lugar del cifrado basado en hardware en equipos que no son compatibles con el cifrado basado en hardware, así como definir si quieres limitar los algoritmos de cifrado y los conjuntos de cifrado que se usan con el cifrado basado en hardware.
 
-Si deshabilita esta configuración de directiva, BitLocker no puede usar cifrado basado en hardware con unidades de sistema operativo, y se usará cifrado basado en software de BitLocker en forma predeterminada al cifrar la unidad.
+Si deshabilitas esta configuración de directiva, BitLocker no podrá usar el cifrado basado en hardware con unidades del sistema operativo, por lo que, de forma predeterminada, se usará el cifrado basado en software de BitLocker cuando la unidad esté cifrada.
 
-Si no establece esta configuración de directiva, BitLocker usará cifrado basado en hardware con el algoritmo de cifrado establecido para la unidad. Si no está disponible el cifrado basado en hardware, se usará cifrado basado en software de BitLocker en su lugar.
+Si no estableces esta configuración de directiva, BitLocker usará el cifrado basado en software independientemente de la disponibilidad del cifrado basado en hardware.
 
-Nota: la configuración de directiva "Elegir método de cifrado e intensidad de cifrado de unidad" no se aplica al cifrado basado en hardware. El algoritmo de cifrado que usa el cifrado basado en hardware se define al particionar la unidad. En forma predeterminada, BitLocker usa el algoritmo configurado en la unidad para cifrarla. La opción "Limitar los algoritmos de cifrado y conjuntos de cifrado permitidos para cifrado basado en hardware" le permite limitar los algoritmos de cifrado que BitLocker puede usar con cifrado por hardware. Si el algoritmo definido para la unidad no está disponible, BitLocker deshabilita el uso de cifrado basado en hardware
-Los algoritmos de cifrado se especifican por identificadores de objetos (OID). Por ejemplo:
-- AES 128 en OID modo CBC: 2.16.840.1.101.3.4.1.2
-- AES 256 en OID modo CBC: 2.16.840.1.101.3.4.1.42
-      
+Nota: La configuración de directiva "Elegir método de cifrado e intensidad de cifrado de unidad" no se aplica al cifrado basado en hardware. El algoritmo de cifrado usado por el cifrado basado en hardware se establece cuando se particiona la unidad. De forma predeterminada, BitLocker usa el algoritmo configurado en la unidad para cifrar la unidad. La opción "Limitar los algoritmos de cifrado y conjuntos de cifrado permitidos para cifrado basado en hardware" te permite restringir los algoritmos de cifrado que puede usar BitLocker con el cifrado de hardware. Si el algoritmo establecido para la unidad no está disponible, BitLocker deshabilitará el uso del cifrado basado en hardware.
+Los algoritmos de cifrado se especifican mediante identificadores de objeto (OID). Por ejemplo:
+- AES 128 en modo CBC OID: 2.16.840.1.101.3.4.1.2
+- AES 256 en modo CBC OID: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="FDVEDrive_Help">Esta configuración de directiva le permite administrar el uso por parte de BitLocker de cifrado basado en hardware en unidades de datos fijas y especificar qué algoritmos de cifrado puede usar para cifrado basado en hardware. El uso de cifrado basado en hardware puede mejorar el rendimiento de las operaciones de unidades que involucran la lectura o escritura frecuente de datos en la unidad.
+      <string id="FDVEDrive_Help">Esta configuración de directiva permite administrar el uso del cifrado basado en hardware de BitLocker en unidades de datos fijas y especificar qué algoritmos de cifrado puede usar BitLocker con el cifrado basado en hardware. El uso del cifrado basado en hardware puede mejorar el rendimiento de las operaciones de la unidad que implican la lectura o escritura frecuentes de datos en la unidad.
 
-Si habilita esta configuración de directiva, puede especificar opciones adicionales que controlen si se usará cifrado basado en software de BitLocker en lugar del cifrado basado en hardware en equipos que no son compatibles con cifrado basado en hardware, y definir si desea limitar los algoritmos de cifrado y los conjuntos de cifrado usados con el cifrado basado en hardware.
+Si habilitas esta configuración de directiva, puedes especificar opciones adicionales que controlan si se usará el cifrado basado en software de BitLocker en lugar del cifrado basado en hardware en equipos que no son compatibles con el cifrado basado en hardware, así como definir si quieres limitar los algoritmos de cifrado y los conjuntos de cifrado que se usan con el cifrado basado en hardware.
 
-Si deshabilita esta configuración de directiva, BitLocker no puede usar cifrado basado en hardware con unidades de sistema operativo, y se usará cifrado basado en software de BitLocker en forma predeterminada al cifrar la unidad.
+Si deshabilitas esta configuración de directiva, BitLocker no podrá usar el cifrado basado en hardware con unidades del sistema operativo, por lo que, de forma predeterminada, se usará el cifrado basado en software de BitLocker cuando la unidad esté cifrada.
 
-Si no establece esta configuración de directiva, BitLocker usará cifrado basado en hardware con el algoritmo de cifrado establecido para la unidad. Si no está disponible el cifrado basado en hardware, se usará cifrado basado en software de BitLocker en su lugar.
+Si no estableces esta configuración de directiva, BitLocker usará el cifrado basado en software independientemente de la disponibilidad del cifrado basado en hardware.
 
-Nota: la configuración de directiva "Elegir método de cifrado e intensidad de cifrado de unidad" no se aplica al cifrado basado en hardware. El algoritmo de cifrado que usa el cifrado basado en hardware se define al particionar la unidad. En forma predeterminada, BitLocker usa el algoritmo configurado en la unidad para cifrarla. La opción "Limitar los algoritmos de cifrado y conjuntos de cifrado permitidos para cifrado basado en hardware" le permite limitar los algoritmos de cifrado que BitLocker puede usar con cifrado por hardware. Si el algoritmo definido para la unidad no está disponible, BitLocker deshabilita el uso de cifrado basado en hardware
-Los algoritmos de cifrado se especifican por identificadores de objetos (OID). Por ejemplo:
-- AES 128 en OID modo CBC: 2.16.840.1.101.3.4.1.2
-- AES 256 en OID modo CBC: 2.16.840.1.101.3.4.1.42
-      
+Nota: La configuración de directiva "Elegir método de cifrado e intensidad de cifrado de unidad" no se aplica al cifrado basado en hardware. El algoritmo de cifrado usado por el cifrado basado en hardware se establece cuando se particiona la unidad. De forma predeterminada, BitLocker usa el algoritmo configurado en la unidad para cifrar la unidad. La opción "Limitar los algoritmos de cifrado y conjuntos de cifrado permitidos para cifrado basado en hardware" te permite restringir los algoritmos de cifrado que puede usar BitLocker con el cifrado de hardware. Si el algoritmo establecido para la unidad no está disponible, BitLocker deshabilitará el uso del cifrado basado en hardware.
+Los algoritmos de cifrado se especifican mediante identificadores de objeto (OID). Por ejemplo:
+- AES 128 en modo CBC OID: 2.16.840.1.101.3.4.1.2
+- AES 256 en modo CBC OID: 2.16.840.1.101.3.4.1.42
       </string>
 
-      <string id="RDVEDrive_Help">Esta configuración de directiva le permite administrar el uso por parte de BitLocker de cifrado basado en hardware en unidades de datos extraíbles y especificar qué algoritmos de cifrado puede usar para cifrado basado en hardware. El uso de cifrado basado en hardware puede mejorar el rendimiento de las operaciones de unidades que involucran la lectura o escritura frecuente de datos en la unidad.
+      <string id="RDVEDrive_Help">Esta configuración de directiva permite administrar el uso del cifrado basado en hardware de BitLocker en unidades de datos extraíbles y especificar qué algoritmos de cifrado puede usar BitLocker con el cifrado basado en hardware. El uso del cifrado basado en hardware puede mejorar el rendimiento de las operaciones de la unidad que implican la lectura o escritura frecuentes de datos en la unidad.
 
-Si habilita esta configuración de directiva, puede especificar opciones adicionales que controlen si se usará cifrado basado en software de BitLocker en lugar del cifrado basado en hardware en equipos que no son compatibles con cifrado basado en hardware, y definir si desea limitar los algoritmos de cifrado y los conjuntos de cifrado usados con el cifrado basado en hardware.
+Si habilitas esta configuración de directiva, puedes especificar opciones adicionales que controlan si se usará el cifrado basado en software de BitLocker en lugar del cifrado basado en hardware en equipos que no son compatibles con el cifrado basado en hardware, así como definir si quieres limitar los algoritmos de cifrado y los conjuntos de cifrado que se usan con el cifrado basado en hardware.
 
-Si deshabilita esta configuración de directiva, BitLocker no puede usar cifrado basado en hardware con unidades de sistema operativo, y se usará cifrado basado en software de BitLocker en forma predeterminada al cifrar la unidad.
+Si deshabilitas esta configuración de directiva, BitLocker no podrá usar el cifrado basado en hardware con unidades del sistema operativo, por lo que, de forma predeterminada, se usará el cifrado basado en software de BitLocker cuando la unidad esté cifrada.
 
-Si no establece esta configuración de directiva, BitLocker usará cifrado basado en hardware con el algoritmo de cifrado establecido para la unidad. Si no está disponible el cifrado basado en hardware, se usará cifrado basado en software de BitLocker en su lugar.
+Si no estableces esta configuración de directiva, BitLocker usará el cifrado basado en software independientemente de la disponibilidad del cifrado basado en hardware.
 
-Nota: la configuración de directiva "Elegir método de cifrado e intensidad de cifrado de unidad" no se aplica al cifrado basado en hardware. El algoritmo de cifrado que usa el cifrado basado en hardware se define al particionar la unidad. En forma predeterminada, BitLocker usa el algoritmo configurado en la unidad para cifrarla. La opción "Limitar los algoritmos de cifrado y conjuntos de cifrado permitidos para cifrado basado en hardware" le permite limitar los algoritmos de cifrado que BitLocker puede usar con cifrado por hardware. Si el algoritmo definido para la unidad no está disponible, BitLocker deshabilita el uso de cifrado basado en hardware
-Los algoritmos de cifrado se especifican por identificadores de objetos (OID). Por ejemplo:
-- AES 128 en OID modo CBC: 2.16.840.1.101.3.4.1.2
-- AES 256 en OID modo CBC: 2.16.840.1.101.3.4.1.42
-      
+Nota: La configuración de directiva "Elegir método de cifrado e intensidad de cifrado de unidad" no se aplica al cifrado basado en hardware. El algoritmo de cifrado usado por el cifrado basado en hardware se establece cuando se particiona la unidad. De forma predeterminada, BitLocker usa el algoritmo configurado en la unidad para cifrar la unidad. La opción "Limitar los algoritmos de cifrado y conjuntos de cifrado permitidos para cifrado basado en hardware" te permite restringir los algoritmos de cifrado que puede usar BitLocker con el cifrado de hardware. Si el algoritmo establecido para la unidad no está disponible, BitLocker deshabilitará el uso del cifrado basado en hardware.
+Los algoritmos de cifrado se especifican mediante identificadores de objeto (OID). Por ejemplo:
+- AES 128 en modo CBC OID: 2.16.840.1.101.3.4.1.2
+- AES 256 en modo CBC OID: 2.16.840.1.101.3.4.1.42
       </string>
 
       <string id="EnablePrebootInputProtectorsOnSlates_Name">Habilitar el uso de autenticación BitLocker que requiera entrada de teclado de prearranque en pizarras</string>

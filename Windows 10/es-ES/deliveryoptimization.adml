@@ -108,28 +108,31 @@ El valor 0 significa "sin límites". Se usará el valor predeterminado estableci
       <string id="CacheHost">[reservado para uso futuro] Nombre de host del servidor de caché</string>
       <string id="CacheHost_Help">[Reservado para uso futuro]</string>
       <string id="GroupIdSource">Seleccionar el origen de los id. de grupo</string>
-      <string id="GroupIdSource_Help">Establece esta directiva para restringir la selección de pares a un origen específico. 
+      <string id="GroupIdSource_Help">Establece esta directiva para restringir la selección del mismo nivel a un origen específico. 
       
 Las opciones disponibles son: 
 
-1 = sitio de AD.
+1 = Sitio de AD.
 
 2 = SID de dominio autenticado.
 
-3 = Id. de opción DHCP.
+3 = Id. de opción de DHCP.
 
-4 = sufijo DNS. 
+4 = Sufijo DNS. 
 
-Cuando se establece, el identificador de grupo se asignará automáticamente desde la fuente seleccionada. Si estableces esta directiva, se omitirá la directiva GroupID. 
+5 = Id. de inquilino de AAD. 
+
+Cuando se establece, el id. de grupo se asigna automáticamente desde el origen seleccionado. Si estableces esta directiva, se ignora la directiva GroupID. 
       
-Las opciones establecidas en esta directiva sólo se aplican al modo de descarga de Grupo (2). Si Grupo (2) no está configurado como modo de descarga, esta directiva se omitirá. 
+Las opciones establecidas en esta directiva solo se aplican al modo de descarga Grupo (2). Si Grupo (2) no está definido como el modo de descarga, se ignorará esta directiva. 
 
-Para la opción 3 - Id. de opción DHCP, el cliente consultará el id. de opción DHCP 234 y usará el valor GUID devuelto como identificador de grupo.</string>
+Para la opción 3 (id. de opción de DHCP), el cliente consultará el id. de opción de DHCP 234 y usará el valor GUID devuelto como id. de grupo.</string>
       <string id="GroupIdSource_Unset">Anular (0)</string>
       <string id="GroupIdSource_AD">Sitio de AD (1)</string>
       <string id="GroupIdSource_SID">SID de dominio autenticado (2)</string>
       <string id="GroupIdSource_DHCP">Id. de opción de DHCP (3)</string>
       <string id="GroupIdSource_DNS">Sufijo DNS (4)</string>
+      <string id="GroupIdSource_AAD">Id. de inquilino de AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Retrasar descarga en segundo plano de HTTP (en segundos)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Esta directiva permite retrasar el uso de un origen HTTP en una descarga en segundo plano que puede usar P2P.
       
@@ -146,6 +149,14 @@ Una vez alcanzado el retraso máximo, se reanudará la descarga mediante HTTP, y
 Ten en cuenta que una descarga en espera de orígenes del mismo nivel se mostrará bloqueada para el usuario final.
       
 El valor recomendado es 1 minuto (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Retrasar la reserva del servidor de caché en la descarga de segundo plano (en segundos)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Puedes establecer esta directiva para retrasar durante X segundos la reserva del servidor de caché en el origen HTTP de una descarga de contenido en segundo plano. 
+
+Nota: Si estableces la directiva para retrasar la descarga en segundo plano en HTTP, esta se aplicará primero para permitir descargas desde los equipos del mismo nivel.</string>
+      <string id="DelayCacheServerFallbackForeground">Retrasar la reserva del servidor de caché en la descarga de primer plano (en segundos)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Puedes establecer esta directiva para retrasar durante X segundos la reserva del servidor de caché en el origen HTTP de una descarga de contenido en primer plano. 
+
+Nota: Si estableces la directiva para retrasar la descarga en primer plano en HTTP, esta se aplicará primero para permitir descargas desde los equipos del mismo nivel.</string>
       <string id="RestrictPeerSelectionBy">Seleccionar un método para restringir la selección de pares</string>
       <string id="RestrictPeerSelectionBy_Help">Establece esta directiva para limitar la selección de nodos del mismo nivel a través de la opción seleccionada. 
       
@@ -263,7 +274,7 @@ La opción 1 (Máscara de subred) se aplica a ambos modos de descarga: LAN (1) y
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">origen de los id. de grupo:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Origen de los id. de grupo:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Retrasar descarga en segundo plano de HTTP (en segundos):</decimalTextBox>
@@ -271,6 +282,14 @@ La opción 1 (Máscara de subred) se aplica a ambos modos de descarga: LAN (1) y
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Retrasar descarga en primer plano de HTTP (en segundos):</decimalTextBox>
+        <text>El valor predeterminado es 0 (sin retraso)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Retrasar la reserva del servidor de caché en la descarga de segundo plano (en segundos):</decimalTextBox>
+        <text>El valor predeterminado es 0 (sin retraso)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Retrasar la reserva del servidor de caché en la descarga de primer plano (en segundos):</decimalTextBox>
         <text>El valor predeterminado es 0 (sin retraso)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">

@@ -120,7 +120,9 @@ As opções disponíveis são:
 
 4 = Sufixo DNS. 
 
-Quando definido, o ID de Grupo será atribuído automaticamente a partir da origem selecionada. Se definir esta política, a política do ID de Grupo será ignorada. 
+5 = ID de Inquilino do AAD. 
+
+Quando definido, o GroupID será atribuído automaticamente a partir da origem selecionada. Se definir esta política, a política do GroupID será ignorada. 
       
 As opções definidas nesta política apenas se aplicam ao modo de transferência do Grupo (2). Caso o Grupo (2) não esteja definido para o modo de Transferência, esta política será ignorada. 
 
@@ -130,6 +132,7 @@ Para a opção 3 - ID de Opção de DHCP, o cliente irá consultar o ID da Opç�
       <string id="GroupIdSource_SID">SID de domínio autenticado (2)</string>
       <string id="GroupIdSource_DHCP">ID de Opção de DHCP (3)</string>
       <string id="GroupIdSource_DNS">Sufixo DNS (4)</string>
+      <string id="GroupIdSource_AAD">ID de Inquilino do AAD (5)</string>
       <string id="DelayBackgroundDownloadFromHttp">Atrasar transferência em segundo plano de http (em segundos)</string>
       <string id="DelayBackgroundDownloadFromHttp_Help">Esta política permite-lhe atrasar a utilização de uma origem HTTP numa transferência em segundo plano que tenha permissão para utilizar P2P.
       
@@ -146,6 +149,14 @@ Depois de o atraso máximo ser atingido, a transferência será retomada utiliza
 Tenha em conta que uma transferência que esteja a aguardar por origens de elemento da rede será apresentada como estando bloqueada para o utilizador final.
       
 O valor recomendado é de 1 minuto (60).</string>
+      <string id="DelayCacheServerFallbackBackground">Atrasar a contingência do Servidor de Cache em transferências em Segundo plano (em segundos)</string>
+      <string id="DelayCacheServerFallbackBackground_Help">Defina esta política para atrasar em X segundos a contingência do Servidor de Cache para a fonte HTTP relativamente a uma transferência de conteúdo em segundo plano. 
+
+Nota: se definir a política para atrasar a transferência em segundo plano a partir de http, será aplicada primeiro (para permitir transferências a partir de elementos em primeiro lugar).</string>
+      <string id="DelayCacheServerFallbackForeground">Atrasar a contingência do Servidor de Cache em transferências em Primeiro plano (em segundos)</string>
+      <string id="DelayCacheServerFallbackForeground_Help">Defina esta política para atrasar em X segundos a contingência do Servidor de Cache para a fonte HTTP relativamente a uma transferência de conteúdo em primeiro plano. 
+
+Nota: se definir a política para atrasar a transferência em primeiro plano a partir de http, será aplicada primeiro (para permitir transferências a partir de elementos em primeiro lugar).</string>
       <string id="RestrictPeerSelectionBy">Selecione um método para limitar a Seleção de Elemento da Rede</string>
       <string id="RestrictPeerSelectionBy_Help">Defina esta política para limitar a seleção do elemento da rede através da opção selecionada. 
       
@@ -263,7 +274,7 @@ A opção 1 (Máscara de sub-rede) aplica-se à LAN (1) e ao Grupo (2) do Modo d
         </textBox>
       </presentation>
       <presentation id="GroupIdSource">
-        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">origem de IDs de Grupo:</dropdownList>        
+        <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Origem de IDs de Grupo:</dropdownList>        
       </presentation>
       <presentation id="DelayBackgroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayBackgroundDownloadFromHttp">Atrasar transferência em segundo plano de http (em segundos):</decimalTextBox>
@@ -271,6 +282,14 @@ A opção 1 (Máscara de sub-rede) aplica-se à LAN (1) e ao Grupo (2) do Modo d
       </presentation>
       <presentation id="DelayForegroundDownloadFromHttp">
         <decimalTextBox defaultValue="0" refId="DelayForegroundDownloadFromHttp">Atrasar transferência em primeiro plano de http (em segundos):</decimalTextBox>
+        <text>O valor predefinido é 0 (sem atraso)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackBackground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackBackground">Atrasar a contingência do Servidor de Cache em transferências em Segundo plano (em segundos):</decimalTextBox>
+        <text>O valor predefinido é 0 (sem atraso)</text>
+      </presentation>
+      <presentation id="DelayCacheServerFallbackForeground">
+        <decimalTextBox defaultValue="0" refId="DelayCacheServerFallbackForeground">Atrasar a contingência do Servidor de Cache em transferências em Primeiro plano (em segundos):</decimalTextBox>
         <text>O valor predefinido é 0 (sem atraso)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
