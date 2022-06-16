@@ -224,6 +224,20 @@
           </or>
       </definition>
 
+      <!--At least Windows 10 RS7 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_RS7_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_RS7_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="15"/>
+        </or>
+      </definition>
+
+      <!--At least Windows 10 20H1 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_20H1_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_20H1_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="15" maxVersionIndex="15"/>
+        </or>
+      </definition>
+
       <!--At least Windows Threshold no ARM-->
       <definition name="SUPPORTED_Windows_10_0_NOARM" displayName="$(string.SUPPORTED_Windows_10_0_NOARM)">
           <or>

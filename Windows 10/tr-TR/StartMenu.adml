@@ -207,6 +207,19 @@ Dosya Gezgini'nde, Arama öğesi Standart düğmeler araç çubuğunda görünme
 Bu ilke ayarı yalnızca belirtilen kullanıcı arabirimi öğelerini etkiler. Internet Explorer'ı etkilemeyeceği gibi kullanıcıların arama yapmak için diğer yöntemleri kullanmalarını da engellemez.
 
 Bu ilke ayarını devre dışı bırakırsanız ya da yapılandırmazsanız, Başlat menüsünde Arama bağlantısı kullanılabilir.</string>
+      <string id="ShowOrHideMostUsedApps">"En çok kullanılan" listesini bu listeden Başlat menüsü</string>
+      <string id="ShowOrHideMostUsedApps_Help">Bu ilke ayarını etkinleştirirseniz, Başlat menüsünü kullanıcı ayarlarına bakılmaksızın kullanıcının en çok kullandığı uygulamaların listesini gösterecek veya gizleyecek şekilde yapılandırabilirsiniz.
+
+"Göster" seçeneğinin belirtilmesi "En çok kullanılan" listesinin gösterilmesini zorlar; kullanıcı Ayarlar uygulamasını kullanarak bu seçimi değiştirip listeyi gizleyemez.
+
+"Gizle" seçeneğinin belirtilmesi "En çok kullanılan" listesinin gizlenmesini zorlar; kullanıcı Ayarlar uygulamasını kullanarak bu seçimi değiştirip listeyi görüntüleyemez.
+
+"Yapılandırılmadı" seçeneğini belirtirseniz ya da bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, kullanıcılara Ayarlar uygulamasını kullanarak "En çok kullanılan" listesinin görüntülenmesini açma veya kapatma olanağı sağlanır. Bu, varsayılan davranıştır.
+
+Not: Bu ilkenin, Windows 10'un desteklenen sürümlerinde "Göster" veya "Gizle" olarak yapılandırılması, "Sık kullanılan programlar listesini Başlat Menüsü'nden kaldır" (Başlat menüsünün aynı bölümünü yöneten, ancak daha az seçeneğe sahip) ilke ayarının yerini alır.</string>
+      <string id="MFU_NotConfigured">Yapılandırılmadı</string>
+      <string id="MFU_Show">Göster</string>
+      <string id="MFU_Hide">Gizle</string>
       <string id="NoFrequentUsedPrograms">Sık kullanılan programlar listesini Başlat Menüsü'nden kaldır</string>
       <string id="NoFrequentUsedPrograms_Help">Bu ayarı etkinleştirirseniz sık kullanılan programlar listesi Başlat menüsünden kaldırılır.
 
@@ -628,6 +641,9 @@ Bu ilkeyi etkinleştirirseniz Başlat Menüsü içinde içerik menülerinin baş
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Aşağıdaki boyutlardan birini seçin</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Aşağıdaki eylemlerden birini seçin</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

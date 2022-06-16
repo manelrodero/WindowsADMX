@@ -20,7 +20,7 @@
       <string id="WS4Only">A Microsoft Windows bármelyik verziója a Windows Search 4.0 verziójával</string>
       <string id="Win8Only">Microsoft Windows 8 vagy újabb</string>
       <string id="WinBlueOnly">Microsoft Windows 8.1 vagy újabb</string>
-      <string id="WinBlueExclusive">Microsoft Windows 8.1. Nem támogatott Windows 10 vagy újabb rendszerben</string>
+      <string id="WinBlueExclusive">Microsoft Windows 8.1. Nem támogatott Windows 10 vagy újabb rendszeren.</string>
       <string id="ExplainAllowUsingDiacritics">Ez a házirend-beállítás lehetővé teszi a mellékjeleket tartalmazó szavak különálló szavakként történő kezelését. Ha engedélyezi a házirend-beállítást, a csupán mellékjelekben különböző szavakat is külön szavakként fogja kezelni a rendszer. Ha letiltja, akkor a mellékjeleket tartalmazó és mellékjeleket nem tartalmazó szavakat azonos szóként kezeli a program. Ez a házirend-beállítás alapértelmezés szerint nincs beállítva. Ha nem állítja be, a rendszer a Vezérlőpulton keresztül megadott helyi beállítást alkalmazza. Megjegyzés: A Vezérlőpulton keresztül megadott beállítás alapértelmezés szerint a csupán a mellékjelekben különböző szavakat nem különbözteti meg egymástól.</string>
       <string id="AlwaysUseAutoLangDetection">Automatikus nyelvfelismerés használata a tartalom és a tulajdonságok indexelésekor</string>
       <string id="ExplainAlwaysUseAutoLangDetection">Ezzel a házirend-beállítással megadhatja, hogy a Windows mikor használja az automatikus nyelvfelismerés eredményeit és az indexelési előzményeket. Ha engedélyezi ezt a házirend-beállítást, a Windows (ahogy a Windows 7 rendszerben is) mindig használni fogja az automatikus nyelvfelismerést az indexeléshez. Az automatikus nyelvfelismerés a memóriahasználat megnövekedését eredményezheti. Azt javasoljuk, hogy csak azokon a számítógépeken engedélyezze ezt a házirend-beállítást, ahol a dokumentumokat több nyelvi verzióban tárolják. Ha letiltja vagy nem konfigurálja a házirend-beállítást, a Windows csak akkor fogja használni az automatikus nyelvfelismerést, ha a dokumentum nyelvét nagy biztonsággal felismeri.</string>
@@ -71,11 +71,11 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Keresés fun
 
 Ha engedélyezi ezt a házirend-beállítást, akkor az alábbi három Biztonságos keresés beállítás közül választhat, amelyet a felhasználók nem módosíthatnak:
 
-    – Szigorú: Kiszűri a felnőtteknek szóló szövegeket, képeket és videókat a keresési eredmények közül.
+ – Szigorú: Kiszűri a felnőtteknek szóló szövegeket, képeket és videókat a keresési eredmények közül.
 
-    – Mérsékelt: Kiszűri a felnőtteknek szóló képeket és videókat a keresési eredmények közül, azonban a szövegeket nem.
+ – Mérsékelt: Kiszűri a felnőtteknek szóló képeket és videókat a keresési eredmények közül, azonban a szövegeket nem.
 
-    – Kikapcsolva: Nem szűri ki a felnőtteknek szánt tartalmakat a keresési eredmények közül.
+ – Kikapcsolva: Nem szűri ki a felnőtteknek szánt tartalmakat a keresési eredmények közül.
 
 Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználók állíthatják be a Biztonságos keresés beállítást.
 
@@ -246,13 +246,13 @@ Ha le van tiltva vagy nincs beállítva a házirend, a Windows asztali kereső a
 
 Ha le van tiltva vagy nincs beállítva a házirend, a kiterjesztések alapértelmezett listája a következő: .bmp;.emf;.gif;.jpg;.jpeg;.png;.wmf;.wrn;.txt;.err;.xml;.cpp;.c;.h;.cxx;.hxx;.idl;.cs;.vb;.idl;.xsd;.doc;.docx;.xls;.xlsx;.ppt;.pptx;.vsd;.xlsb;.xltx;.dot;.rtf</string>
       <string id="PreventUnwantedAddins">Nemkívánatos iFilter szűrők és protokollkezelők vezérlése</string>
-      <string id="PreventUnwantedAddins_Explain">Ha engedélyezi ezt a házirendet, a Windows asztali kereső csak akkor használhat iFilter szűrőket és protokollkezelőket, ha azok szerepelnek a biztonságos elemek listájában. A házirend azonban nem akadályozza meg iFilter szűrők és protokollkezelők telepítését, és azt sem tiltja, hogy más alkalmazások vagy szolgáltatások használják azokat. 
-A biztonságos beépülő modulok listája a classID vagy a ProgId karakterlánc megadásával is megadható: ha például egy adott iFilter szűrőt szeretne telepíteni központilag, győződjön meg arról, hogy a szűrő szerepel a biztonságos elemek listájában, akár GUID azonosítóként (például kapcsos zárójelek közötti {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} alakban), akár ProgID elemként (például VisFilter.CFilter.1).
+      <string id="PreventUnwantedAddins_Explain">Ha engedélyezi ezt a házirendet, a Windows asztali kereső csak akkor használhat iFilter szűrőket és protokollkezelőket, ha azok szerepelnek az engedélyezési listában. A házirend azonban nem akadályozza meg iFilter szűrők és protokollkezelők telepítését, és azt sem tiltja, hogy más alkalmazások vagy szolgáltatások használják azokat. 
+A biztonságos beépülő modulok listája a classID vagy a ProgId karakterlánc megadásával is megadható: ha például egy adott iFilter szűrőt szeretne telepíteni központilag, győződjön meg arról, hogy a szűrő szerepel az engedélyezési listában, akár GUID azonosítóként (például kapcsos zárójelek közötti {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} alakban), akár ProgID elemként (például VisFilter.CFilter.1).
 
 Zárolt asztali környezet alkalmazása esetén nem szükséges ez a beállítás, mivel a rendszergazdai jogosultságokkal nem rendelkező felhasználók nem jogosultak új összetevőket telepíteni. Rendszergazdai vagy szoftvertelepítési engedélyekkel rendelkező felhasználók esetén ezzel a házirenddel akadályozhatja meg, hogy e felhasználók a Windows asztali keresőhöz kapcsolódó bővítményeket használjanak.
 
-Megjegyzés: a Csoportházirend-szerkesztő egyik korlátozásának következtében a biztonságos elemek listájához legalább egy elemet hozzá kell adni még akkor is, ha ilyen lista nélkül szeretné engedélyezni a házirendet. Listabejegyzés készítéséhez írjon be egy szóközt a névmezőbe és az értékmezőbe, és mentse a változtatásokat. Ezzel a módszerrel olyan helyőrző bejegyzés hozható létre, amelyet a program figyelmen kívül hagy.</string>
-      <string id="PreventUnwantedAddins_AllowList">Biztonságos elemek listája</string>
+Megjegyzés: a Csoportházirend-szerkesztő egyik korlátozásának következtében az engedélyezési listához legalább egy elemet hozzá kell adni még akkor is, ha ilyen lista nélkül szeretné engedélyezni a házirendet. Listabejegyzés készítéséhez írjon be egy szóközt a névmezőbe és az értékmezőbe, és mentse a változtatásokat. Ezzel a módszerrel olyan helyőrző bejegyzés hozható létre, amelyet a program figyelmen kívül hagy.</string>
+      <string id="PreventUnwantedAddins_AllowList">Engedélyezési lista</string>
       <string id="ExcludedExtensionsMultiline">Egyes fájltípusok indexelésének letiltása</string>
       <string id="ExcludedExtensionsMultiline_Explain">E házirend engedélyezésével szerkeszthető az indexelésből kizárandó fájltípusok listája. A végfelhasználók nem módosíthatják a listát. Az egyes kiterjesztéstípusokat pontosvesszővel kell elválasztani.
 
@@ -275,6 +275,8 @@ Ha letiltja vagy nem konfigurálja a házirend-beállítást, a felhasználók s
 Ha nem engedélyezi vagy nem konfigurálja ezt a beállítást, Cortana be lesz kapcsolva az eszközön. Ha letiltja a beállítást, Cortana ki lesz kapcsolva. 
  
 Ha Cortana ki van kapcsolva, a felhasználók továbbra is kereshetnek az eszközön.</string>
+      <string id="EnableDynamicContentInWSB">Kiemeltek keresésének engedélyezése</string>
+      <string id="ExplainEnableDynamicContentInWSB">A beállítás letiltásával kikapcsolja a keresési kiemeléseket a tálca keresőmezőjében és a keresési kezdőlapon. Ha engedélyezi vagy nem konfigurálja ezt a beállítást, azzal bekapcsolja a keresési kiemeléseket a tálca keresőmezőjében és a keresési kezdőlapon.</string>
       <string id="AllowCortanaAboveLock">Cortana zárolt állapotban is működhet</string>
       <string id="ExplainAllowCortanaAboveLock">Ez a házirend-beállítás szabja meg, hogy zárolt eszköz esetén is működnek-e Cortana beszédfelismerési funkciói.
 
@@ -333,7 +335,7 @@ Ha ez a beállítás engedélyezve van, a keresés és a Cortana hozzáférhet a
         <decimalTextBox refId="LimitEnableThrottlingOnlineMailboxes" defaultValue="120">Elemek száma percenként</decimalTextBox>
       </presentation>
       <presentation id="PreventUnwantedAddins">
-        <listBox refId="PreventUnwantedAddins_AllowList">Biztonságos elemek listája</listBox>
+        <listBox refId="PreventUnwantedAddins_AllowList">Engedélyezési lista</listBox>
       </presentation>
       <presentation id="PreventIndexingCertainPaths_1">
         <listBox refId="PreventIndexingCertainPaths">Egyes elérési utak indexelésének letiltása</listBox>

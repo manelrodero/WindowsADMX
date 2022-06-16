@@ -207,6 +207,19 @@ No Explorador de Ficheiros, o item Procurar continua a aparece na barra de ferra
 Esta definição de política só afeta os elementos da interface de utilizador especificados. Não afeta o Internet Explorer e não impede que o utilizador use outros métodos de pesquisa.
 
 Se desativar ou não configurar esta definição de política, a ligação Procurar fica disponível no menu Iniciar.</string>
+      <string id="ShowOrHideMostUsedApps">Mostrar ou ocultar a lista "mais utilizados" do menu iniciar</string>
+      <string id="ShowOrHideMostUsedApps_Help">Se ativar esta definição de política, pode configurar o menu iniciar para mostrar ou ocultar as aplicações mais usadas pelo utilizador, independentemente das definições do utilizador.
+
+Selecionar "Mostrar" irá forçar a apresentação da lista "Mais utilizados" e o utilizador não poderá altera-la para ocultá-la utilizando a aplicação Definições.
+
+Ao selecionar "Ocultar", vai forçar a lista "Mais utilizados" para ser ocultada e o utilizador não pode alterar para apresentá-la utilizando a aplicação Definições.
+
+Ao selecionar "Não configurado", ou se desativar ou não configurar esta definição de política, todos permitirão os utilizadores a ativar ou desativar a apresentação da lista "Mais utilizados" utilizando a aplicação Definições. Este é o comportamento predefinido.
+
+Nota: a configuração desta política para "Mostrar" ou "Ocultar" em versões suportadas do Windows 10 vai substituir qualquer definição de política do menu "Remover lista de programas frequentes do menu iniciar" (que gere a mesma parte do menu iniciar, mas com menos opções).</string>
+      <string id="MFU_NotConfigured">Não Configurado</string>
+      <string id="MFU_Show">Mostrar</string>
+      <string id="MFU_Hide">Ocultar</string>
       <string id="NoFrequentUsedPrograms">Remover lista de programas utilizados frequentemente do Menu Iniciar</string>
       <string id="NoFrequentUsedPrograms_Help">Se ativar esta definição, a lista de programas utilizados com frequência será removida do menu Iniciar.
 
@@ -636,6 +649,9 @@ Se ativar esta política, as invocações de menus de contexto dentro do Menu In
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Escolher um dos seguintes tamanhos</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Escolher uma das seguintes ações</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

@@ -5,7 +5,7 @@
   <description>indtast beskrivelsen her</description>
   <resources>
     <stringTable>
-      <string id="SUPPORTED_Win7UntilThreshold">Som minimum Windows Server 2008 R2 eller Windows 7. Er ikke understøttet på Windows 10 eller senere</string>
+      <string id="SUPPORTED_Win7UntilThreshold">Mindst Windows Server 2008 R2 eller Windows 7. Understøttes ikke på Windows 10 eller nyere</string>
       <string id="SUPPORTED_Win7AndRedstone2">Windows 7 og Windows 10</string>
       <string id="ClearRecentProgForNewUserInStartMenu">Ryd listen over senest anvendte programmer for nye brugere</string>
       <string id="ClearRecentProgForNewUserInStartMenu_Help">Hvis du aktiverer denne politikindstilling, bliver listen over senest anvendte programmer tom for hver ny bruger.
@@ -207,6 +207,19 @@ I Stifinder vises knappen Søg stadig på standardværktøjslinjen, men systemet
 Denne politikindstilling har kun indflydelse på elementer på den angivne brugergrænseflade. Indstillingen har ikke indflydelse på Internet Explorer og forhindrer ikke brugeren i at søge ved hjælp af andre metoder.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er linket Søg tilgængeligt i menuen Start.</string>
+      <string id="ShowOrHideMostUsedApps">Vis eller skjul listen "Mest anvendte" fra menuen Start</string>
+      <string id="ShowOrHideMostUsedApps_Help">Hvis du aktiverer denne politikindstilling, kan du konfigurere menuen Start til at vise eller skjule listen over brugerens mest anvendte apps, uanset brugerindstillinger.
+
+Hvis du vælger "Vis", tvinges listen "Mest brugt" til at blive vist, og brugeren kan ikke ændre den for at skjule den ved hjælp af appen Indstillinger.
+
+Hvis du vælger "Skjul", tvinges listen "Mest brugt" til at være skjult, og brugeren kan ikke ændre den, så den vises ved hjælp af appen Indstillinger.
+
+Hvis du vælger "Ikke konfigureret", eller hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, giver alle brugere mulighed for at slå visningen af listen "Mest anvendte" til eller fra ved hjælp af appen Indstillinger. Dette er standardfunktionsmåden.
+
+Bemærk! Hvis du konfigurerer denne politik til "Vis" eller "Skjul" i understøttede versioner af Windows 10 tilsidesættes alle politikindstillinger i "Fjern listen over ofte anvendte programmer fra menuen Start" (som administrerer den samme del af menuen Start, men med færre indstillinger).</string>
+      <string id="MFU_NotConfigured">Ikke konfigureret</string>
+      <string id="MFU_Show">Vis</string>
+      <string id="MFU_Hide">Skjul</string>
       <string id="NoFrequentUsedPrograms">Fjern listen over ofte anvendte programmer fra menuen Start</string>
       <string id="NoFrequentUsedPrograms_Help">Hvis du aktiverer denne indstilling, fjernes listen over ofte anvendte programmer fra menuen Start.
 
@@ -636,6 +649,9 @@ Hvis du aktiverer denne politik, ignoreres start af genvejsmenuer i menuen Start
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Vælg en af følgende størrelser</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Vælg en af følgende handlinger</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

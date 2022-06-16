@@ -207,6 +207,19 @@ In Esplora file la voce Cerca viene comunque visualizzata sulla barra dei pulsan
 Questa impostazione dei criteri interessa solo gli elementi dell'interfaccia utente specificati. Non si applica a Internet Explorer e non impedisce all'utente di utilizzare altri metodi di ricerca.
 
 Se si disabilita o non si configura questa impostazione dei criteri, il collegamento Cerca sarà disponibile dal menu Start.</string>
+      <string id="ShowOrHideMostUsedApps">Mostra o nasconde l'elenco "Più usati" dal menu Start</string>
+      <string id="ShowOrHideMostUsedApps_Help">Se si abilita questa impostazione dei criteri, sarà possibile configurare menu Start per visualizzare o nascondere l'elenco delle app più usate dell'utente, indipendentemente dalle impostazioni utente.
+
+Se si seleziona "Mostra", verrà forzato la visualizzazione dell'elenco "Più usati" e l'utente non può modificare per nasconderlo usando l'app Impostazioni.
+
+Se si seleziona "Nascondi", l'elenco "Più usati" verrà nascosto e l'utente non potrà modificare per visualizzarlo usando l'app Impostazioni.
+
+Se si seleziona "Non configurato", oppure se si disabilita o non si configura questa impostazione dei criteri, tutti gli utenti potranno attivare o disattivare la visualizzazione dell'elenco "Più usati" usando l'app Impostazioni. Questo è il comportamento predefinito.
+
+Nota: se si configura questo criterio su "Mostra" o "Nascondi" nelle versioni supportate di Windows 10 verrà superata qualsiasi impostazione dei criteri "Rimuovi l'elenco dei programmi frequenti dal menu Start" (che gestisce la stessa parte di menu Start ma con meno opzioni).</string>
+      <string id="MFU_NotConfigured">Non configurato</string>
+      <string id="MFU_Show">Mostra</string>
+      <string id="MFU_Hide">Nascondi</string>
       <string id="NoFrequentUsedPrograms">Rimuovi l'elenco dei programmi più utilizzati dal menu Start</string>
       <string id="NoFrequentUsedPrograms_Help">Se si abilita questa impostazione, l'elenco dei programmi utilizzati di frequente verrà rimosso dal menu Start.
 
@@ -635,6 +648,9 @@ Se abiliti questo criterio, le chiamate dei menu contestuali all'interno del men
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Scegliere una delle seguenti dimensioni</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Scegli una delle azioni seguenti</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

@@ -69,15 +69,19 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wir
       <string id="SafeSearch">Festlegen der SafeSearch-Einstellung für die Suche</string>
       <string id="ExplainSafeSearch">Mit dieser Richtlinieneinstellung können Sie die SafeSearch-Einstellung steuern, die in der Suche beim Durchführen einer Abfrage verwendet wird. 
 
-Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie eine der drei SafeSearch-Einstellungen festlegen, die von Benutzern nicht geändert werden können:
+Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie eine der drei SafeSearch-Einstellungen festlegen, die von Benutzern nicht geändert werden können: 
 
-    - Streng: Ausfiltern von Text, Bildern und Videos mit sexuellen Inhalten aus den Suchergebnissen
+ - Streng: Ausfiltern von Text, Bildern und Videos mit sexuellen Inhalten aus den Suchergebnissen
 
-    - Moderat: Ausfiltern von Bildern und Videos mit sexuellen Inhalten aus den Suchergebnissen, jedoch keine Texte
 
-    - Aus: kein Filtern der Suchergebnisse nach sexuellen Inhalten
+- Moderat: Ausfiltern von Bildern und Videos mit sexuellen Inhalten aus den Suchergebnissen, jedoch keine Texte
+
+
+ - Aus: kein Ausfiltern von sexuellen Inhalten aus den Suchergebnissen
+
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können die Benutzer die SafeSearch-Einstellung festlegen.
+
 
 Windows 10-Benutzer sollten Suche/DoNotUseWebResults verwenden.</string>
       <string id="SharePrivacyAllAndLocation">Benutzerinformationen und Standort</string>
@@ -247,7 +251,7 @@ Wenn diese Richtlinie deaktiviert oder nicht konfiguriert ist, verwaltet die Win
 Wenn diese Richtlinie deaktiviert oder nicht konfiguriert ist, besteht die Standardeinstellung aus folgenden Dateitypen:  .bmp;.emf;.gif;.jpg;.jpeg;.png;.wmf;.wrn;.txt;.err;.xml;.cpp;.c;.h;.cxx;.hxx;.idl;.cs;.vb;.idl;.xsd;.doc;.docx;.xls;.xlsx;.ppt;.pptx;.vsd;.xlsb;.xltx;.dot;.rtf</string>
       <string id="PreventUnwantedAddins">Unerwünschte iFilter und Protokollhandler verhindern</string>
       <string id="PreventUnwantedAddins_Explain">Das Aktivieren dieser Richtlinie verhindert die Verwendung von iFiltern und Protokollhandlern durch die Windows-Desktopsuche, sofern sie nicht in der Zulassungsliste angegeben sind. Diese Richtlinie verhindert jedoch nicht die Installation von iFiltern oder Protokollhandlern, noch verhindert sie ihre Verwendung durch andere Anwendungen oder Dienste. 
-Außerdem kann eine Liste zugelassener Add-Ins durch Angabe der classID- oder ProgId-Zeichenfolge angegeben werden. Wenn Sie beispielsweise planen, einen bestimmten iFilter bereitzustellen, stellen Sie sicher, dass dieser iFilter sich in der Zulassungsliste befindet, entweder als GUID, wie etwa {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (einschließlich der geschweiften Klammern) oder als ProgID, wie etwa 'VisFilter.CFilter.1'.
+Außerdem kann eine Zulassungsliste von Add-Ins durch Angabe der classID- oder ProgId-Zeichenfolge angegeben werden. Wenn Sie beispielsweise planen, einen bestimmten iFilter bereitzustellen, stellen Sie sicher, dass dieser iFilter sich in der Zulassungsliste befindet, entweder als GUID, wie etwa {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (einschließlich der geschweiften Klammern) oder als ProgID, wie etwa 'VisFilter.CFilter.1'.
 
 Wenn Sie eine Umgebung mit gesperrten Desktops verwalten, ist diese Einstellung überflüssig, weil Benutzer ohne Administratorberechtigungen keine neuen Komponenten installieren können. Wenn Ihre Benutzer über Administratorberechtigungen verfügen oder Software installieren können, hindert sie diese Richtlinie spezifisch an der Verwendung von Add-Ins für die Windows-Desktopsuche.
 
@@ -275,6 +279,8 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, erh
 Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, wird Cortana auf dem Gerät zugelassen. Wenn Sie die Einstellung deaktivieren, wird Cortana ausgeschaltet. 
  
 Wenn Cortana ausgeschaltet ist, können Benutzer mithilfe der Suchfunktion trotzdem Informationen auf dem Gerät suchen.</string>
+      <string id="EnableDynamicContentInWSB">Suchhervorhebungen zulassen</string>
+      <string id="ExplainEnableDynamicContentInWSB">Wenn Sie diese Einstellung deaktivieren, werden Suchhighlights im Suchfeld der Taskleiste und im Suchstartfeld deaktiviert. Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, werden die Suchhighlights im Suchfeld der Taskleiste und im Suchstartfeld aktiviert.</string>
       <string id="AllowCortanaAboveLock">Cortana auf Sperrbildschirm zulassen</string>
       <string id="ExplainAllowCortanaAboveLock">Die Richtlinieneinstellung bestimmt, ob der Benutzer mittels Sprache mit Cortana interagieren kann, während das System gesperrt ist.
 

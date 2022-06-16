@@ -3966,6 +3966,16 @@ If you enable this policy, "Save Target As" will show up in the Internet Explore
 If you disable or do not configure this policy setting, "Save Target As" will not show up in the Internet Explorer mode context menu.
 
 For more information, see https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Enable global window list in Internet Explorer mode</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">This setting allows Internet Explorer mode to use the global window list that enables sharing state with other applications.
+The setting will take effect only when Internet Explorer 11 is disabled as a standalone browser.
+
+If you enable this policy, Internet Explorer mode will use the global window list.
+
+If you disable or don’t configure this policy, Internet Explorer mode will continue to maintain a separate window list.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2102921
+To learn more about disabling Internet Explorer 11 as a standalone browser, see https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Enable extended hot keys in Internet Explorer mode</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">This policy setting lets admins enable extended Microsoft Edge Internet Explorer mode hotkeys, such as "Ctrl+S" to have "Save as" functionality.
 
@@ -3992,6 +4002,12 @@ If you enable this policy, it:
 - Overrides any other policies that redirect to Internet Explorer 11.
 
 If you disable, or don’t configure this policy, all sites are opened using the current active browser settings. Note: Microsoft Edge Stable Channel must be installed for this policy to take effect.</string>
+      <string id="DisableIEAppDeprecationNotification">Hide Internet Explorer 11 retirement notification</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">This policy setting allows you to manage whether the notification bar reminder that Internet Explorer is being retired is displayed. By default, the Notification bar is displayed in Internet Explorer 11.
+
+If you enable this policy setting, the Notification bar will not be displayed in Internet Explorer 11.
+
+If you disable, or do not configure, this policy setting, the Notification bar will be displayed in Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Never</string>
       <string id="NotifyDisableIEOptions_Always">Always</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Once per user</string>

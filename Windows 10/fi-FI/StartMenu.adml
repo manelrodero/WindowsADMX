@@ -207,6 +207,19 @@ Etsi-linkki näkyy yhä Resurssienhallinnan vakiotyökalurivillä, mutta järjes
 Tämä käytäntöasetus vaikuttaa vain määritettyihin käyttöliittymän osiin. Se ei vaikuta Internet Exploreriin tai estä käyttäjää käyttämästä muita hakutapoja.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Etsi-linkki on käytettävissä Käynnistä-valikossa.</string>
+      <string id="ShowOrHideMostUsedApps">Näytä tai piilota aloitusvalikon Eniten käytetty -luettelo</string>
+      <string id="ShowOrHideMostUsedApps_Help">Jos otat tämän käytäntöasetuksen käyttöön, voit määrittää aloitusvalikko näyttämään tai piilottamaan käyttäjän eniten käyttämien sovellusten luettelon käyttäjäasetuksista riippumatta.
+
+Jos valitset Näytä, eniten käytettyjen luettelo näytetään, käyttäjä ei voi muuttaa sen piilottamiseen Asetukset-sovelluksen avulla.
+
+Jos valitset Piilota, Eniten käytetty -luettelo piilotetaan, käyttäjä ei voi muuttaa sitä Asetukset-sovelluksen avulla.
+
+Jos valitset Ei määritetty tai jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, kaikki käyttäjät voivat ottaa Eniten käytetyt-luettelon käyttöön tai poistaa sen käytöstä Asetukset-sovelluksen avulla. Tämä on oletustoiminta.
+
+Huomautus: jos määrität tämän käytäntöasetuksen arvoksi Näytä tai Piilota Windows 10 tuetuissa versioissa, kaikki Poista usein käytetyt ohjelmat Käynnistä-valikosta -käytäntöasetuksen (joka hallitsee samaa aloitusvalikko osaa mutta jossa on vähemmän vaihtoehtoja).</string>
+      <string id="MFU_NotConfigured">Ei määritetty</string>
+      <string id="MFU_Show">Näytä</string>
+      <string id="MFU_Hide">Piilota</string>
       <string id="NoFrequentUsedPrograms">Poista usein käytetyt ohjelmat Käynnistä-valikosta</string>
       <string id="NoFrequentUsedPrograms_Help">Jos otat tämän asetuksen käyttöön, viimeksi käytettyjen ohjelmien luettelo poistetaan Käynnistä-valikosta.
 
@@ -636,6 +649,9 @@ Jos otat tämän käytännön käyttöön, aloitusvalikon pikavalikoiden kutsut 
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Valitse jokin seuraavista kokovaihtoehdoista</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Valitse jokin seuraavista toiminnoista</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

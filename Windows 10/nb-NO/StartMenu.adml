@@ -5,7 +5,7 @@
   <description>skriv inn beskrivelse her</description>
   <resources>
     <stringTable>
-      <string id="SUPPORTED_Win7UntilThreshold">Minst Windows Server 2008 R2 eller Windows 7. Støttes ikke i Windows 10 eller nyere</string>
+      <string id="SUPPORTED_Win7UntilThreshold">Minst Windows Server 2008 R2 eller Windows 7. Støttes ikke i Windows 10 eller nyere.</string>
       <string id="SUPPORTED_Win7AndRedstone2">Windows 7 og Windows 10</string>
       <string id="ClearRecentProgForNewUserInStartMenu">Slett listen over nylig brukte programmer for nye brukere</string>
       <string id="ClearRecentProgForNewUserInStartMenu_Help">Hvis du aktiverer denne policyinnstillingen, vil de nylig brukte programlistene i startmenyen være tomme for hver ny bruker.
@@ -207,6 +207,19 @@ I Filutforsker vises fortsatt elementet Søk på verktøylinjen for standardknap
 Denne policyinnstillingen påvirker bare de angitte brukergrensesnittelementene. Den påvirker ikke Internet Explorer og forhindrer ikke brukerne i å bruke andre metoder til å søke.
 
 Hvis du deaktiverer denne policyinnstillingen eller ikke konfigurerer den, er elementet Søk tilgjengelig fra Start-menyen.</string>
+      <string id="ShowOrHideMostUsedApps">Vis eller skjul Mest brukt-listen fra Start-menyen</string>
+      <string id="ShowOrHideMostUsedApps_Help">Hvis du aktiverer denne policyinnstillingen, kan du konfigurere Start-meny vise eller skjule listen over brukerens mest brukte apper, uavhengig av brukerinnstillinger.
+
+Hvis du velger Vis, tvinges listen Mest brukt til å vises, og brukeren kan ikke endre til å skjule den ved hjelp av Innstillinger-appen.
+
+Hvis du velger Skjul, tvinges listen Mest brukt til å skjules, og brukeren kan ikke endre til å vise den ved hjelp av Innstillinger-appen.
+
+Hvis du velger Ikke konfigurert, eller hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, tillater alle at brukerne aktiverer eller deaktiverer visningen av listen Mest brukt ved hjelp av Innstillinger-appen. Dette er standard virkemåte.
+
+Obs! Hvis du konfigurerer denne policyen til Vis eller Skjul på støttede versjoner av Windows 10, erstattes alle policyinnstillinger for Fjern listen over ofte brukte programmer fra Start-menyen (som administrerer samme del av Start-meny, men med færre alternativer).</string>
+      <string id="MFU_NotConfigured">Ikke konfigurert</string>
+      <string id="MFU_Show">Vis</string>
+      <string id="MFU_Hide">Skjul</string>
       <string id="NoFrequentUsedPrograms">Fjern listen over ofte brukte programmer fra Start-menyen</string>
       <string id="NoFrequentUsedPrograms_Help">Hvis du aktiverer denne innstillingen, fjernes listen over ofte brukte programmer fra Start-menyen.
 
@@ -636,6 +649,9 @@ Hvis du aktiverer denne policyen, ignoreres start av hurtigmenyer i Start-menyen
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Velg en av følgende størrelser</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Velg én av følgende handlinger</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

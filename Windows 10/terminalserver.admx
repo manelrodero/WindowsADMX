@@ -208,6 +208,16 @@
   </categories>
 
   <policies>
+    <policy name="AutoSubscription" class="User" displayName="$(string.TS_AUTOSUBSCRIPTION_NAME)" explainText="$(string.TS_AUTOSUBSCRIPTION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="AutoSubscription">
+      <parentCategory ref="AutoSubscription" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="TS_CLIENT_DISABLE_PASSWORD_SAVING_1" class="User" displayName="$(string.TS_CLIENT_DISABLE_PASSWORD_SAVING)" explainText="$(string.TS_CLIENT_DISABLE_PASSWORD_SAVING_USER_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="DisablePasswordSaving">
       <parentCategory ref="TS_CLIENT" />
       <supportedOn ref="windows:SUPPORTED_WindowsXPSP2_Or_WindowsNETSP1" />

@@ -207,6 +207,19 @@ En el Explorador de archivos, el elemento Buscar sigue apareciendo en la barra d
 Esta configuración de directiva afecta solo a los elementos de la interfaz de usuario especificados. No afecta a Internet Explorer y no impide que el usuario utilice otros métodos para buscar.
 
 Si deshabilita o no establece esta configuración de directiva, el vínculo Buscar está disponible en el menú Inicio.</string>
+      <string id="ShowOrHideMostUsedApps">Mostrar u ocultar la lista de "Más usados" del menú Inicio</string>
+      <string id="ShowOrHideMostUsedApps_Help">Si se habilita esta configuración de directiva, se puede configurar el menú Inicio para mostrar u ocultar la lista de las aplicaciones más usadas del usuario, independientemente de la configuración del usuario.
+
+Al seleccionar "Mostrar", se forzará que se muestre la lista "Más usados" y el usuario no podrá cambiar para ocultarla mediante la aplicación Configuración.
+
+Si se selecciona "Ocultar", se forzará que la lista "Más usados" quede oculta y el usuario no podrá cambiar para mostrarla mediante la aplicación Configuración.
+
+Al seleccionar "No configurado" o deshabilitar o no establecer esta configuración de directiva, todos los usuarios podrán activar o desactivar la visualización de la lista "Más usados" mediante la aplicación Configuración. Este es el comportamiento predeterminado.
+
+Nota: si se configura esta directiva como "Mostrar" u "Ocultar" en versiones compatibles de Windows 10, se reemplazará cualquier configuración de directiva de "Quitar la lista de programas usados frecuentemente del menú Inicio" (que administra la misma parte del menú Inicio pero con menos opciones).</string>
+      <string id="MFU_NotConfigured">Sin configurar</string>
+      <string id="MFU_Show">Mostrar</string>
+      <string id="MFU_Hide">Ocultar</string>
       <string id="NoFrequentUsedPrograms">Quitar del menú Inicio la lista de programas de uso frecuente</string>
       <string id="NoFrequentUsedPrograms_Help">Si habilita esta opción, la lista de programas usados con frecuencia se quitará del menú Inicio.
 
@@ -636,6 +649,9 @@ Si habilita esta directiva, se omitirán invocaciones de menús contextuales en 
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Elija uno de los siguientes tamaños</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Elige una de las siguientes acciones</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>
