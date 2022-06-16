@@ -9,29 +9,35 @@
       <string id="VirtualizationBasedSecurity">Activer la sécurité basée sur la virtualisation</string>
       <string id="VirtualizationBasedSecurityHelp">Spécifie si la sécurité basée sur la virtualisation est activée.
 
-La sécurité basée sur la virtualisation utilise l’hyperviseur Windows pour prendre en charge les services de sécurité. La sécurité basée sur la virtualisation nécessite le démarrage sécurisé et peut éventuellement être activée à l’aide des protections DMA. Les protections DMA nécessitent une prise en charge matérielle et ne seront activées que sur les périphériques correctement configurés.
+La sécurité basée sur la virtualisation utilise l’hyperviseur Windows pour prendre en charge les services de sécurité. La sécurité basée sur la virtualisation nécessite le démarrage sécurisé et peut éventuellement être activée à l’aide des protections DMA. Les protections DMA nécessitent une prise en charge matérielle et ne seront activées que sur les appareils correctement configurés.
 
 Protection basée sur la virtualisation de l’intégrité du code
 
-Ce paramètre permet la protection basée sur la virtualisation de l’intégrité du code en mode noyau. Lorsque cette option est activée, les protections de mémoire en mode noyau sont appliquées, et le chemin de validation de l’intégrité du code est protégé par la fonctionnalité de sécurité basée sur la virtualisation.
+Ce paramètre permet la protection basée sur la virtualisation de l’intégrité du code en mode noyau. Lorsque cette option est activée, les protections de mémoire en mode noyau sont appliquées et le chemin de validation de l’intégrité du code est protégé par la fonctionnalité de sécurité basée sur la virtualisation.
 
 L’option Désactivé désactive la protection basée sur la virtualisation de l’intégrité du code à distance si elle a été préalablement activée à l’aide de l’option Activé sans verrouillage.
+ 
+L’option Activé avec le verrouillage UEFI garantit que la protection basée sur la virtualisation de l’intégrité du code ne peut pas être désactivée à distance. Pour pouvoir la désactiver, vous devez définir la Stratégie de groupe sur Désactivé et supprimer la fonction de sécurité de chaque ordinateur avec un utilisateur présent physiquement afin d’effacer la configuration incluse dans UEFI.
+ 
+L’option Activé sans verrouillage permet de désactiver la protection basée sur la virtualisation de l’intégrité du code à distance à l’aide de la Stratégie de groupe. 
 
-L’option Activé avec le verrouillage UEFI garantit que la protection basée sur la virtualisation de l’intégrité du code ne peut pas être désactivée à distance. Pour pouvoir la désactiver, vous devez définir la Stratégie de groupe sur Désactivé et supprimer la fonction de sécurité de chaque ordinateur, avec un utilisateur présent physiquement, afin d’effacer la configuration incluse dans UEFI.
+L’option Non configuré laisse le paramètre de stratégie non défini. La stratégie de groupe n’écrit pas le paramètre de stratégie dans le Registre et n’a donc pas de répercussions sur les ordinateurs ou les utilisateurs. Si un paramètre existe dans le Registre, il n’est pas modifié.
 
-L’option Activé sans verrouillage permet de désactiver la protection basée sur la virtualisation de l’intégrité du code à distance à l’aide de la Stratégie de groupe.
+L'option Demander la table des attributs de mémoire UEFI n'active la protection basée sur la virtualisation de l'intégrité du code que sur les appareils prenant en charge le microprogramme UEFI pour la table des attributs de mémoire. Les appareils sans table des attributs de mémoire peuvent disposer d'un microprogramme non compatible avec la protection basée sur la virtualisation de l'intégrité du code, ce qui, dans certains cas, peut provoquer un blocage ou la perte de données, voire une incompatibilité avec certaines rubriques de plug-in. Si cette option n'est pas définie, les appareils ciblés doivent être testés pour vérifier la compatibilité.
 
-Avertissement : tous les pilotes du système doivent être compatibles avec cette fonctionnalité, sinon le système peut se bloquer. Assurez-vous que ce paramètre de stratégie est uniquement déployé sur les ordinateurs qui sont réputés compatibles
+Avertissement : tous les pilotes du système doivent être compatibles avec cette fonctionnalité, sinon le système peut se bloquer. Assurez-vous que ce paramètre de stratégie est uniquement déployé sur les ordinateurs qui sont réputés compatibles. 
 
 Credential Guard
 
-Ce paramètre vous permet de décider si les utilisateurs activent Credential Guard avec sécurité basée sur la virtualisation afin de protéger les informations d’identification.
+Ce paramètre permet aux utilisateurs d’activer Credential Guard avec sécurité basée sur la virtualisation afin de protéger les informations d’identification.
 
 L’option Désactivé désactive Credential Guard à distance si elle a été préalablement activée à l’aide de l’option Activé sans verrouillage.
 
-L’option Activé avec le verrouillage UEFI garantit que Credential Guard ne peut pas être désactivé à distance. Pour pouvoir le désactiver, vous devez définir la Stratégie de groupe sur Désactivé et supprimer la fonction de sécurité de chaque ordinateur, avec un utilisateur présent physiquement, afin d’effacer la configuration incluse dans UEFI.
+L’option Activé avec le verrouillage UEFI garantit que Credential Guard ne peut pas être désactivé à distance. Pour pouvoir le désactiver, vous devez définir la Stratégie de groupe sur Désactivé et supprimer la fonction de sécurité de chaque ordinateur avec un utilisateur présent physiquement afin d’effacer la configuration incluse dans UEFI.
 
-L’option Activé sans verrouillage permet de désactiver Credential Guard à distance à l’aide de la Stratégie de groupe. Les périphériques utilisant ce paramètre doivent exécuter au moins Windows 10 (Version 1511).
+L’option Activé sans verrouillage permet de désactiver Credential Guard à distance à l’aide de la Stratégie de groupe. Les appareils utilisant ce paramètre doivent exécuter au moins Windows 10 (version 1511).
+
+L’option Non configuré laisse le paramètre de stratégie non défini. La stratégie de groupe n’écrit pas le paramètre de stratégie dans le Registre et n’a donc pas de répercussions sur les ordinateurs ou les utilisateurs. Si un paramètre existe dans le Registre, il n’est pas modifié.
       </string>
       <string id="SecureBoot">Démarrage sécurisé</string>
       <string id="SecureBootAndDmaProtection">Démarrage sécurisé et protection contre les DMA</string>
@@ -39,6 +45,7 @@ L’option Activé sans verrouillage permet de désactiver Credential Guard à d
       <string id="Enabled">Activé</string>
       <string id="EnabledWithoutLock">Activé sans verrouillage</string>
       <string id="EnabledWithUefiLock">Activé avec le verrouillage UEFI</string>
+      <string id="NotConfigured">Non configuré</string>
       <string id="ConfigCIPolicy">Déployer la stratégie d'intégrité du code</string>
       <string id="ConfigCIPolicyHelp">Déployer la stratégie d'intégrité du Code
 
@@ -57,8 +64,9 @@ Si vous utilisez une stratégie signée et protégée, la désactivation de ce p
     <presentationTable>
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="1">Sélectionner le niveau de sécurité de plateforme :</dropdownList>
-        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="0">Protection basée sur la virtualisation de l’intégrité du code :</dropdownList>
-        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Configuration Credential Guard :</dropdownList>
+        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">Protection basée sur la virtualisation de l’intégrité du code :</dropdownList>        
+        <checkBox refId="CheckboxMAT">Demander la table des attributs de mémoire UEFI</checkBox>        
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="3">Configuration Credential Guard :</dropdownList>                
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

@@ -3,7 +3,7 @@
 <description>Sem zadejte popis.</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Windows Defender</string>
+    <string id="AntiSpywareDefender">Antivirová ochrana v programu Windows Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Vyloučení</string>
     <string id="NetworkRealtimeInspection">Systém kontroly sítě</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">Komunita MAPS</string>
     <string id="Threats">Hrozby</string>
     <string id="ClientInterface">Rozhraní klienta</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">Povolit antimalwarové službě spuštění s normální prioritou</string>
     <string id="AllowFastServiceStartup_Explain">Toto nastavení zásad určuje prioritu zavádění antimalwarové služby. Zvýšení priority zavádění umožní rychlejší spuštění služby, ale může mít vliv na výkon.
 
@@ -33,12 +34,12 @@ Pokud toto nastavení zásad povolíte, Endpoint Protection se nespustí a na po
 
 Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Endpoint Protection bude standardně spuštěný a na počítačích se bude provádět kontrola přítomnosti malwaru a dalšího potenciálně nežádoucího softwaru.
     </string>
-    <string id="DisableAntiSpywareDefender">Vypnout Windows Defender</string>
-    <string id="DisableAntiSpywareDefender_Explain">Toto nastavení zásad vypne program Windows Defender.
+    <string id="DisableAntiSpywareDefender">Vypnout Antivirovou ochranu v programu Windows Defender</string>
+    <string id="DisableAntiSpywareDefender_Explain">Toto nastavení zásad vypne Antivirovou ochranu v programu Windows Defender.
 
-    Pokud toto nastavení zásad povolíte, program Windows Defender se nespustí a na počítačích se nebude provádět kontrola přítomnosti malwaru nebo dalšího potenciálně nežádoucího softwaru.
+ Pokud toto nastavení zásad povolíte, Antivirová ochrana v programu Windows Defender  se nespustí a na počítačích se nebude provádět kontrola přítomnosti malwaru nebo dalšího potenciálně nežádoucího softwaru.
 
-    Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Windows Defender bude standardně spuštěný a na počítačích se bude provádět kontrola přítomnosti malwaru a dalšího potenciálně nežádoucího softwaru.</string>
+ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Antivirová ochrana v programu Windows Defender bude standardně spuštěná a na počítačích se bude provádět kontrola přítomnosti malwaru a dalšího potenciálně nežádoucího softwaru</string>
     <string id="DisableLocalAdminMerge">Konfigurovat sloučení nastavení seznamů provedeného místním správcem</string>
     <string id="DisableLocalAdminMerge_Explain">Toto nastavení zásad určuje, zda má být nastavení složitých seznamů nakonfigurované místním správcem sloučeno s nastavením zásad skupiny či nikoli. Toto nastavení platí pro takové seznamy, jako jsou hrozby a vyloučení.
 
@@ -47,11 +48,11 @@ Pokud toto nastavení povolíte nebo nenakonfigurujete, budou jedinečné polož
 Pokud toto nastavení zakážete, budou ve výsledných platných zásadách použity pouze položky definované v zásadách skupiny. Nastavení zásad skupiny bude mít přednost před nastavením předvoleb nakonfigurovaným místním správcem.</string>
     <string id="DisableRoutinelyTakingAction">Vypnout pravidelné odstraňování problémů</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    Toto nastavení zásad umožňuje nakonfigurovat, jestli program Windows Defender automaticky provede akci u všech zjištěných hrozeb. Akce, která se má provést u konkrétní hrozby, je určená kombinací akce definované zásadami, akce definované uživatelem a akce definované signaturou.
+    Toto nastavení zásad umožňuje nakonfigurovat, jestli Antivirová ochrana v programu Windows Defender automaticky provede akci u všech zjištěných hrozeb. Akce, která se má provést u konkrétní hrozby, je určená kombinací akce definované zásadami, akce definované uživatelem a akce definované podpisem.
 
-    Pokud toto nastavení zásad povolíte, Windows Defender nebude u zjištěných hrozeb provádět automaticky žádné akce, ale vyzve uživatele, aby zvolili jednu z akcí, které jsou k dispozici pro jednotlivé hrozby.
+    Pokud toto nastavení zásad povolíte, nebude Antivirová ochrana v programu Windows Defender u zjištěných hrozeb provádět automaticky žádné akce, ale vyzve uživatele, aby zvolili jednu z akcí, které jsou k dispozici pro jednotlivé hrozby.
 
-    Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Windows Defender bude provádět akci automaticky u všech zjištěných hrozeb po uplynutí nenakonfigurovatelné prodlevy v délce přibližně 5 sekund.</string>
+    Pokud toto nastavení zásad vypnete nebo nenakonfigurujete, Antivirová ochrana v programu Windows Defender provede akci automaticky u všech zjištěných hrozeb po uplynutí nenakonfigurovatelné prodlevy v délce přibližně 5 sekund.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         Toto nastavení zásad umožňuje nakonfigurovat, jestli Endpoint Protection automaticky provede akci u všech zjištěných hrozeb. Akce, která se má provést u konkrétní hrozby, je určená kombinací akce definované zásadami, akce definované uživatelem a akce definované signaturou.
 
@@ -157,13 +158,13 @@ Pokud toto nastavení povolíte nebo nenakonfigurujete, budou oznámení o zápi
 
 Pokud toto nastavení zakážete, budou oznámení o zápisu na neformátovaný svazek vypnuta.</string>
     <string id="DisableRealtimeMonitoring">Vypnout ochranu v reálném čase</string>
-    <string id="DisableRealtimeMonitoringDefender_Explain">Toto nastavení zásad vypne výzvy ochrany v reálném čase při zjištění známého malwaru.
+    <string id="DisableRealtimeMonitoringDefender_Explain">Toto nastavení zásad vypne výzvy ochrany v reálném čase při zjištění známého malwaru.
 
-    Program Windows Defender zobrazuje upozornění, pokud se malware nebo potenciálně nežádoucí software na vašem počítači pokusí sám nainstalovat nebo spustit.
+    Antivirová ochrana v programu Windows Defender zobrazuje upozornění, pokud se malware nebo potenciálně nežádoucí software na vašem počítači pokusí sám nainstalovat nebo spustit.
 
-    Pokud toto nastavení zásad povolíte, nezobrazí program Windows Defender uživatelům výzvu k provedení konkrétních akcí v souvislosti s detekcí malwaru.
+    Pokud toto nastavení zásad povolíte, nezobrazí Antivirová ochrana v programu Windows Defender uživatelům výzvu k provedení konkrétních akcí v souvislosti s detekcí malwaru.
 
-    Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zobrazí program Windows Defender uživatelům výzvu k provedení konkrétních akcí v souvislosti s detekcí malwaru.</string>
+    Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zobrazí Antivirová ochrana v programu Windows Defender uživatelům výzvu k provedení konkrétních akcí v souvislosti s detekcí malwaru.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     Toto nastavení zásad vypne výzvy ochrany v reálném čase při zjištění známého malwaru.
 
@@ -289,13 +290,21 @@ Pokud toto nastavení zakážete, události programu Watson se nebudou odesílat
     <string id="Reporting_WppTracingComponents_Explain">Tato zásada konfiguruje komponenty preprocesoru trasování softwaru systému Windows (Trasování softwaru WPP).</string>
     <string id="Reporting_WppTracingLevel">Konfigurovat úroveň trasování WPP</string>
     <string id="Reporting_WppTracingLevel_Explain">Tato zásada umožňuje konfigurovat úrovně trasování preprocesoru trasování softwaru systému Windows (Trasování softwaru WPP). 
+    Úrovně trasování jsou definovány takto:
+    1 – Chyba
+    2 – Upozornění
+    3 – Informace
+    4 – Ladění</string>
+    <string id="Reporting_DisableEnhancedNotifications">Vypnout rozšířená oznámení</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      Nastavením této zásady můžete určit, jestli se mají na klientech zobrazovat rozšířená oznámení Antivirové ochrany v programu Windows Defender.
+      
+      Pokud toto nastavení vypnete nebo nenakonfigurujete, rozšířená oznámení Antivirové ochrany v programu Windows Defender se budou na klientech zobrazovat.
+      
+      Pokud toto nastavení povolíte, rozšířená oznámení antivirového programu Windows Defender se na klientech zobrazovat nebudou.
+    </string>
 
-Úrovně trasování jsou definovány takto:
-1 – Chyba
-2 – Upozornění
-3 – Informace
-4 – Ladění</string>
-    <string id="Scan_AllowPause">Povolit uživatelům pozastavit kontrolu</string>
+      <string id="Scan_AllowPause">Povolit uživatelům pozastavit kontrolu</string>
     <string id="Scan_AllowPause_Explain">Toto nastavení zásad umožňuje určit, zda mohou koncoví uživatelé pozastavit probíhající kontrolu.
 
 Pokud toto nastavení povolíte nebo nenakonfigurujete, bude k ikoně v oznamovací oblasti na hlavním panelu přidána nová místní nabídka, která uživateli umožní pozastavit kontrolu.
@@ -701,10 +710,10 @@ Platné hodnoty nápravné akce jsou:
       Pokud toto nastavení povolíte, nebudou se v uživatelském rozhraní AM UI zobrazovat oznámení o restartování.
     </string>
     <string id="UX_Configuration_Notification_Suppress">Potlačit všechna oznámení</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">Nastavením této zásady můžete určit, jestli se mají na klientech zobrazovat oznámení Windows Defenderu:
-      Pokud toto nastavení zakážete nebo nenakonfigurujete, na klientech se budou oznámení Windows Defenderu zobrazovat.
+    <string id="UX_Configuration_Notification_Suppress_Explain">Nastavením této zásady můžete určit, jestli se mají na klientech zobrazovat oznámení Antivirové ochrany v programu Windows Defender.
+      Pokud toto nastavení vypnete nebo nenakonfigurujete, na klientech se budou oznámení Antivirové ochrany v programu Windows Defender zobrazovat.
 
-      Pokud toto nastavení povolíte, oznámení Windows Defenderu se na klientech zobrazovat nebudou.
+      Pokud toto nastavení povolíte, oznámení Antivirové ochrany v programu Windows Defender se na klientech zobrazovat nebudou.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Zobrazit klientům další text, když je potřeba provést akci</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">Toto nastavení zásady umožňuje konfigurovat, zda se má klientům zobrazit další text, když je třeba, aby provedli akci. Zobrazený text je vlastní řetězec definovaný správcem. Jedná se například o telefonní číslo linky podpory společnosti. V rozhraní klienta se zobrazí maximálně 1 024 znaků. Delší řetězce budou před zobrazením zkráceny.
@@ -712,6 +721,32 @@ Platné hodnoty nápravné akce jsou:
 Pokud toto nastavení povolíte, bude zobrazen další zadaný text.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text zobrazen nebude.</string>
+    <string id="MpCloudBlockLevel">Vybrat úroveň ochrany cloudu</string>
+    <string id="MpCloudBlockLevel_Explain">
+      Toto nastavení zásad určuje, jak intenzivně bude Antivirová ochrana v programu Windows Defender blokovat a kontrolovat podezřelé soubory.
+
+      Pokud je toto nastavení zapnuté, Antivirová ochrana v programu Windows Defender bude při identifikaci podezřelých souborů pro blokování a kontrolu agresivnější. Pokud je vypnuté, bude méně agresivní a k blokování a kontrolám bude docházet méně často. 
+      
+      Více informací o konkrétních podporovaných hodnotách naleznete na webu s dokumentací o Antivirové ochraně v programu Windows Defender.
+
+      Poznámka: Aby tato funkce fungovala, musí být povoleno nastavení „Připojit se ke komunitě Microsoft MAPS“.
+
+      Možnosti jsou:
+      (0x0) Výchozí úroveň blokování Antivirové ochrany v programu Windows Defender
+      (0x2) Vysoká úroveň blokování      
+    </string>
+    <string id="MpBafsExtendedTimeout">Konfigurovat prodlouženou kontrolu cloudu</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      Tato funkce dovoluje Antivirové ochraně v programu Windows Defender zablokovat podezřelý soubor až na 60 sekund a zkontrolovat ho v cloudu, aby se ujistil, že je bezpečný.
+      
+      Typický časový limit kontroly cloudu je 10 sekund. Pro povolení funkce prodloužené kontroly cloudu zadejte prodloužený čas v sekundách. Lze zadat až 50 sekund navíc.
+
+      Pokud je například požadovaný limit 60 sekund, zadejte v tomto nastavení 50 sekund, čímž povolíte funkci prodloužené kontroly cloudu a zvýšíte celkový čas na 60 sekund.
+
+      Poznámka: Tato funkce závisí na třech dalších nastaveních MAPS – Je nutné povolit nastavení „Konfigurovat funkci Blokovat při prvním zobrazení“, „Připojit se ke komunitě Microsoft MAPS“ a „Posílat vzorky souborů, pokud se vyžaduje další analýza“.
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">Výchozí úroveň blokování Antivirové ochrany v programu Windows Defender</string>
+    <string id="MpCloudBlockLevel_High_Level">Vysoká úroveň blokování</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">Zadat interval pro oznámení o vypršení platnosti</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">Vybrat úroveň blokování cloudu</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">Zadejte prodlouženou dobu kontroly cloudu v sekundách</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

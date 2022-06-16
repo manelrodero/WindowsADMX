@@ -7,12 +7,12 @@
       <string id="DeliveryOptimizationCat">Kézbesítésoptimalizálás</string>
       <string id="DownloadMode">Letöltési mód</string>
       <string id="DownloadMode_Help">Ezzel a beállítással adható meg, hogy milyen módon töltheti le a kézbesítésoptimalizálási szolgáltatás a Windows frissítéseit, az alkalmazásokat és azok frissítéseit. A választható értékek a következők: 0 = csak HTTP (nincs társviszony), 1 = HTTP és az ugyanazon a helyi hálózaton lévő társak, 2 = HTTP és privát csoportos társviszony. Alapértelmezés szerint az egyazon Active Directory-helyen (ha van ilyen hely) működő vagy az egyazon tartományban lévő gépek között létesül társviszony. Ha a 2-es lehetőséget választja, a társviszony minden helyi hálózatra kiterjed. Amennyiben egyéni csoportot szeretne létrehozni, használjon csoportazonosítót a 2-es lehetőséggel együtt. 3 = HTTP és internetes társviszony. 99 = egyszerű letöltési mód társviszony nélkül. A kézbesítésoptimalizálási szolgáltatás csak HTTP-kapcsolattal végzi a letöltéseket, és nem próbál meg csatlakozni a kézbesítésoptimalizálási felhőszolgáltatásokhoz. 100 = megkerülő mód (a BITS használata a kézbesítésoptimalizálási szolgáltatás helyett).</string>
-      <string id="DownloadMode_CdnOnly">Csak HTTP</string>
-      <string id="DownloadMode_Lan">LAN</string>
-      <string id="DownloadMode_Group">Csoport</string>
-      <string id="DownloadMode_Internet">Internet</string>
-      <string id="DownloadMode_Simple">Egyszerű</string>
-      <string id="DownloadMode_Bypass">Megkerülés</string>
+      <string id="DownloadMode_CdnOnly">Csak HTTP (0)</string>
+      <string id="DownloadMode_Lan">LAN (1)</string>
+      <string id="DownloadMode_Group">Csoport (2)</string>
+      <string id="DownloadMode_Internet">Internet (3)</string>
+      <string id="DownloadMode_Simple">Egyszerű (99)</string>
+      <string id="DownloadMode_Bypass">Megkerülés (100)</string>
       <string id="GroupId">Csoportazonosító</string>
       <string id="GroupId_Help">A csoportazonosítót GUID azonosítóként kell beállítani. Ezzel a házirenddel tetszés szerinti csoportazonosító rendelhető ahhoz a csoporthoz, amelyhez az eszköz tartozik. Akkor ajánlott ezt a házirendet használni, ha közös csoportot kell létrehozni helyi hálózati társviszony létesítése végett a különböző tartományokban vagy különböző helyi hálózatokon működő ágakhoz. Megjegyzés: Ez egy gyakorlati optimalizáló eljárás, amelyre identitáshitelesítés céljából nem tanácsos hagyatkozni.</string>
       <string id="MaxUploadBandwidth">Maximális feltöltési sávszélesség (KB/s)</string>
@@ -33,10 +33,20 @@
       <string id="MaxDownloadBandwidth_Help">Ezzel a beállítással adható meg, hogy kézbesítésoptimalizálás használatakor mekkora lehet az eszköz (kilobájt/másodpercben kifejezett) maximális letöltési sávszélessége az egyidejű letöltések közben. Az alapértelmezett érték 0 (nulla). Ez azt jelenti, hogy a kézbesítésoptimalizálási szolgáltatás dinamikusan állítja be a rendelkezésre álló sávszélesség letöltés közbeni felhasználását.</string>
       <string id="PercentageMaxDownloadBandwidth">Maximális letöltési sávszélesség (%)</string>
       <string id="PercentageMaxDownloadBandwidth_Help">Ezzel a beállítással adható meg, hogy kézbesítésoptimalizálás használatakor mekkora lehet a rendelkezésre álló letöltési sávszélesség százalékos arányaként kifejezett maximális letöltési sávszélesség az egyidejű letöltések közben. Az alapértelmezett érték 0 (nulla). Ez azt jelenti, hogy a kézbesítésoptimalizálási szolgáltatás dinamikusan állítja be a rendelkezésre álló sávszélesség letöltés közbeni felhasználását.</string>
+      <string id="MinFileSizeToCache">Társ-gyorsítótárazáshoz megengedett minimális tartalomfájlméret (MB):</string>
+      <string id="MinFileSizeToCache_Help">Itt adhatja meg a társ-gyorsítótárazás használatához minimálisan szükséges fájlméretet (MB-ban). A 0 érték azt jelenti, hogy nincs ilyen korlát, és a rendszer a felhőszolgáltatásban megadott alapértéket fogja használni. Javasolt értékek: 1–100 000 MB.</string>
+      <string id="AllowVPNPeerCaching">Társ-gyorsítótárazás engedélyezése, ha az eszköz VPN-en csatlakozik</string>
+      <string id="AllowVPNPeerCaching_Help">Az Igaz értékkel engedélyezheti az eszköz számára a társ-gyorsítótárazásban való részvételt, ha VPN-en keresztül csatlakozik a tartományi hálózathoz. Ilyenkor az eszköz a VPN-en vagy a céges tartományi hálózaton tölthet le adatokat a tartományi hálózaton lévő többi eszközről, illetve tölthet fel azokra.</string>
+      <string id="MinRAMAllowedToPeer">Társ-gyorsítótárazás engedélyezéséhez szükséges minimális RAM-kapacitás (GB):</string>
+      <string id="MinRAMAllowedToPeer_Help">Itt adhatja meg a társ-gyorsítótárazás használatához minimálisan szükséges RAM-mennyiséget (GB-ban). A 0 érték azt jelenti, hogy nincs ilyen korlát, és a rendszer a felhőszolgáltatásban megadott alapértéket fogja használni. Ha például a minimumérték 1 GB, akkor az 1 GB vagy annál több RAM-mal ellátott eszközök használhatják a társ-gyorsítótárazást. Javasolt értékek: 1–4 GB.</string>
+      <string id="MinDiskSizeAllowedToPeer">Társ-gyorsítótárazáshoz megengedett minimális lemezméret (GB):</string>
+      <string id="MinDiskSizeAllowedToPeer_Help">Itt adhatja meg a társ-gyorsítótárazás használatához minimálisan szükséges lemezméretet (GB-ban). A 0 érték azt jelenti, hogy nincs ilyen korlát, és a rendszer a felhőszolgáltatásban megadott alapértéket fogja használni. Javasolt értékek: 64–256 GB. Megjegyzés: Ha a DOModifyCacheDrive házirend meg van adva, a lemezméret-ellenőrzés a nevezett házirend által megadott új munkamappára fog vonatkozni.</string>
+      <string id="MinBatteryPercentageAllowedToUpload">Feltöltések engedélyezése akkumulátorral történő használat során a beállított akkumulátortöltöttségi szint alatt (%)</string>
+      <string id="MinBatteryPercentageAllowedToUpload_Help">Adjon meg bármilyen, 1 és 100 közötti értéket (százalékban) annak engedélyezéséhez, hogy az eszköz adatokat tölthessen fel a LAN hálózatra és a csoporttársaknak akkumulátorral történő használat során. A feltöltések automatikusan szünetelnek az előre beállított minimális akkumulátortöltöttségi szint átlépésekor. Ha engedélye‎zni szeretné a feltöltést akkumulátoros üzemmódban, akkor a javasolt érték 40 (40%). Az eszköz a beállítástól függetlenül le tud tölteni a társaktól akkumulátoros üzemmódban. A 0 érték azt jelenti, hogy nincs korlát. A rendszer a felhőszolgáltatás által alkalmazott alapértéket használja.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DownloadMode">
-        <dropdownList defaultItem="1" refId="DownloadMode">Letöltési mód:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="DownloadMode">Letöltési mód:</dropdownList>
       </presentation>
       <presentation id="GroupId">
         <textBox refId="GroupId">
@@ -78,6 +88,25 @@
       </presentation>
       <presentation id="PercentageMaxDownloadBandwidth">
         <decimalTextBox defaultValue="0" refId="PercentageMaxDownloadBandwidth">Maximális letöltési sávszélesség (%):</decimalTextBox>
+        <text>Az alapértelmezett érték 0 (nincs korlátozás).</text>
+      </presentation>
+      <presentation id="MinFileSizeToCache">
+        <decimalTextBox defaultValue="100" refId="MinFileSizeToCache">Társ-gyorsítótárazáshoz megengedett minimális tartalomfájlméret (MB):</decimalTextBox>
+        <text>Az alapértelmezett érték 100 MB.</text>
+      </presentation>
+      <presentation id="AllowVPNPeerCaching">
+        <checkBox defaultChecked="false" refId="AllowVPNPeerCaching">Társ-gyorsítótárazás engedélyezése, ha az eszköz VPN-en csatlakozik</checkBox>
+      </presentation>
+      <presentation id="MinRAMAllowedToPeer">
+        <decimalTextBox defaultValue="4" refId="MinRAMAllowedToPeer">Társ-gyorsítótárazás engedélyezéséhez szükséges minimális RAM-kapacitás (GB):</decimalTextBox>
+        <text>Az alapértelmezett érték 4 GB.</text>
+      </presentation>
+      <presentation id="MinDiskSizeAllowedToPeer">
+        <decimalTextBox defaultValue="32" refId="MinDiskSizeAllowedToPeer">Társ-gyorsítótárazáshoz megengedett minimális lemezméret (GB):</decimalTextBox>
+        <text>Az alapértelmezett érték 32 GB.</text>
+      </presentation>
+      <presentation id="MinBatteryPercentageAllowedToUpload">
+        <decimalTextBox defaultValue="0" refId="MinBatteryPercentageAllowedToUpload">Akkumulátor minimális töltöttségi szintje (%):</decimalTextBox>
         <text>Az alapértelmezett érték 0 (nincs korlátozás).</text>
       </presentation>
     </presentationTable>

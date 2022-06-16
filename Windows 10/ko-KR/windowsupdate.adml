@@ -89,7 +89,7 @@ Windows 8 및 Windows RT에서는 이 정책을 사용하면 다시 시작과 �
       <string id="AutoUpdateModeAdminChooses">5 - 로컬 관리자가 설정을 선택할 수 있음</string>
       <string id="AutoUpdateModeAuto">4 - 자동으로 다운로드하고 설치를 예약</string>
       <string id="AutoUpdateModeDownload">3 - 자동으로 다운로드하고 설치할 때 알림</string>
-      <string id="AutoUpdateModeNotify">뎝헭갵瀁2 - Notify for download and auto install</string>
+      <string id="AutoUpdateModeNotify">2 - 다운로드 및 자동 설치 알림</string>
       <string id="AutoUpdateSchDay_Everyday">0 - 매일</string>
       <string id="AutoUpdateSchDay_Friday">6 - 매주 금요일</string>
       <string id="AutoUpdateSchDay_Monday">2 - 매주 월요일</string>
@@ -124,23 +124,27 @@ Windows 8 및 Windows RT에서는 이 정책을 사용하면 다시 시작과 �
       <string id="AutoUpdateSchTime9">09:00</string>
       <string id="CorpWuURL">인트라넷 Microsoft 업데이트 서비스 위치 지정</string>
       <string id="CorpWuURL_Help">
-        瀁줡선俺Specifies an intranet server to host updates from Microsoft Update. You can then use this update service to automatically update computers on your network.
+        Microsoft 업데이트의 업데이트 항목을 호스트할 인트라넷 서버를 지정합니다. 그런 다음 이 업데이트 서비스를 사용하여 네트워크의 컴퓨터를 자동으로 업데이트할 수 있습니다.
 
-땔쾖윜呂        This setting lets you specify a server on your network to function as an internal update service. The Automatic Updates client will search this service for updates that apply to the computers on your network.
+        이 설정을 사용하면 내부 업데이트 서비스로 작동할 네트워크 서버를 지정할 수 있습니다. 자동 업데이트 클라이언트는 이 서비스에서 네트워크 컴퓨터에 적용되는 업데이트 항목을 검색합니다.
 
-俺댛리冶        To use this setting, you must set two server name values: the server from which the Automatic Updates client detects and downloads updates, and the server to which updated workstations upload statistics. You can set both values to be the same server. An optional server name value can be specified to configure Windows Update Agent to download updates from an alternate download server instead of WSUS Server.
+        이 설정을 사용하려면 두 개의 서버 이름 값(자동 업데이트 클라이언트가 업데이트 항목을 검색 및 다운로드하는 서버와 업데이트된 워크스테이션이 통계를 업로드하는 서버)을 설정해야 합니다. 두 값을 동일한 서버로 설정할 수 있습니다. 선택적 서버 이름 값을 지정하여 인트라넷 업데이트 서비스 대신 대체 다운로드 서버에서 업데이트 항목을 다운로드하도록 Windows 업데이트 에이전트를 구성할 수 있습니다.
 
-詰뎝줡줡        If the status is set to Enabled, the Automatic Updates client connects to the specified intranet Microsoft update service (or alternate download server), instead of Windows Update, to search for and download updates. Enabling this setting means that end users in your organization don't have to go through a firewall to get updates, and it gives you the opportunity to test updates before deploying them.
+        상태가 [사용]으로 설정되어 있으면 자동 업데이트 클라이언트가 Windows 업데이트 대신 지정된 인트라넷 Microsoft 업데이트 서비스(또는 대체 다운로드 서버)에 연결하여 업데이트 항목을 검색하고 다운로드합니다. 이 설정을 사용하면 조직의 최종 사용자가 업데이트 항목을 다운로드하기 위해 방화벽을 통과할 필요가 없으며, 업데이트 항목을 배포하기 전에 테스트할 수 있습니다.
 
-쾖윜詰줡        If the status is set to Disabled or Not Configured, and if Automatic Updates is not disabled by policy or user preference, the Automatic Updates client connects directly to the Windows Update site on the Internet.
+        상태가 [사용 안 함] 또는 [구성되지 않음]으로 설정되어 있고 정책이나 사용자 기본 설정에 따라 자동 업데이트가 사용되지 않는 경우에는 자동 업데이트 클라이언트가 인터넷의 Windows 업데이트 사이트에 직접 연결합니다.
 
-선댛괕윜        The alternate download server Configures the Windows Update Agent to download files from an alternative download server instead of the WSUS Server.
+        대체 다운로드 서버는 인트라넷 업데이트 서비스 대신 대체 다운로드 서버에서 파일을 다운로드하도록 Windows 업데이트 에이전트를 구성합니다.
 
-괕쾖댛呂        Note: If the "Configure Automatic Updates" policy is disabled, then this policy has no effect.
+        Url 없는 파일을 다운로드하는 옵션을 사용하면 업데이트 메타데이터에 파일 다운로드 Url이 없는 경우 대체 다운로드 서버에서 콘텐츠를 다운로드할 수 있습니다. 이 옵션은 인트라넷 업데이트 서비스가 대체 다운로드 서버에 있는 파일의 업데이트 메타데이터에 다운로드 Url을 제공하지 않는 경우에만 사용해야 합니다.
 
-쾖흝詰윜        Note: If the "Alternate Download Server" is not set, it will use the WSUS server by default to download updates.
+        참고: "자동 업데이트 구성" 정책이 사용되지 않는 경우에는 이 정책이 적용되지 않습니다.
 
-걖땔걖갂        Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.</string>
+        참고: "대체 다운로드 서버"가 설정되어 있지 않으면 기본적으로 인트라넷 업데이트 서비스를 사용하여 업데이트 항목을 다운로드합니다.
+
+        참고: "Url이 없는 파일을 다운로드..."하는 옵션은 "대체 다운로드 서버"가 설정된 경우에만 사용됩니다.
+
+        참고: 이 정책은 Windows RT에서 지원되지 않습니다. 이 정책을 설정해도 Windows RT PC에는 영향을 주지 않습니다.</string>
       <string id="DetectionFrequency_Help">Windows에서 업데이트를 확인하기 전에 기다리는 시간을 지정합니다. 정확한 대기 시간은 여기서 지정한 시간에서 사용자가 지정한 시간의 0-20%를 뺀 값입니다. 예를 들어 이 정책을 사용하여 20시간 검색 주기를 지정한 경우 이 정책이 적용되는 모든 클라이언트가 16-20 시간 사이에 업데이트 항목을 확인합니다.
 
 상태가 사용으로 설정되어 있으면 Windows에서 지정한 간격으로 업데이트를 확인합니다.
@@ -303,35 +307,35 @@ Windows 업데이트는 업데이트를 자동으로 설치하도록 구성된 �
       <string id="CurrentBranchFeatureUpdates">현재 분기</string>
       <string id="BusinessReadyFeatureUpdates">비즈니스용 현재 분기</string>
       <string id="DeferFeatureUpdates_Title">기능 업데이트를 받는 경우 선택</string>
-      <string id="DeferFeatureUpdates_Help">뎝詰呂리Enable this policy to specify what type of feature updates to receive, and when.
+      <string id="DeferFeatureUpdates_Help">수신할 기능 업데이트 유형 및 시기를 지정하려면 이 정책을 사용하도록 설정합니다.
 
-춝댛걖瀁The branch readiness level for each new Windows 10 feature update is initially considered a "Current Branch" (CB) release, to be used by organizations for initial deployments. Once Microsoft has verified the feature update should be considered for enterprise deployment, it will be declared a branch readiness level of "Current Branch for Business" (CBB).
+새로운 각 Windows 10 기능 업데이트의 분기 준비 수준은 초기에 조직의 초기 배포에 사용되는 "CB(현재 분기)" 릴리스로 간주됩니다. Microsoft에서 기능 업데이트가 엔터프라이즈 배포용으로 간주되어야 한다고 확인된 후에는 분기 준비 수준이 "CBB(비즈니스용 현재 분기)"로 선언됩니다.
 
-쾖윜헭뭕You can defer receiving feature updates for up to 180 days.
+기능 업데이트 수신을 최대 365일 동안 연기할 수 있습니다.
 
-뎝갵詰흝To prevent feature updates from being received on their scheduled time, you can temporarily pause feature updates. The pause will remain in effect for 60 days or until you clear the start date field.
+기능 업데이트가 예약된 시간에 수신되지 않도록 기능 업데이트를 일시 중지할 수 있습니다. 일시 중지는 60일 동안 또는 시작 날짜 필드를 지울 때까지 유효합니다.
 
-에에뭕俺To resume receiving Feature Updates which are paused, clear the start date field.
+일시 중지된 기능 업데이트 수신을 다시 시작하려면 시작 날짜 필드를 지우세요.
 
-갵윜뭕선If you disable or do not configure this policy, Windows Update will not alter its behavior.
+이 정책을 사용하지 않거나 구성하지 않으면 Windows 업데이트에서 해당 동작을 변경하지 않습니다.
 
-쾖괕흝걂Note: If the "Allow Telemetry" policy is set to 0, this policy will have no effect.</string>
+참고: "원격 분석 허용" 정책이 0으로 설정된 경우에는 이 정책이 적용되지 않습니다.</string>
       <string id="DeferQualityUpdates_Title">품질 업데이트를 받는 경우 선택</string>
-      <string id="DeferQualityUpdates_Help">걖줡뎝쾖Enable this policy to specify when to receive quality updates.
+      <string id="DeferQualityUpdates_Help">품질 업데이트 수신 시기를 지정하려면 이 정책을 사용하도록 설정합니다.
 
-흝줡瀁뭕You can defer receiving quality updates for up to 30 days.
+품질 업데이트 수신을 최대 30일 동안 연기할 수 있습니다.
 
-선쾖댃선To prevent quality updates from being received on their scheduled time, you can temporarily pause quality updates. The pause will remain in effect for 35 days or until you clear the start date field.
+품질 업데이트가 예약된 시간에 수신되지 않도록 품질 업데이트를 일시적으로 중지할 수 있습니다. 일시 중지는 35일 동안 또는 시작 날짜 필드를 지울 때까지 유효합니다.
 
-詰리닼걂To resume receiving Quality Updates which are paused, clear the start date field.
+일시 중지된 품질 업데이트 수신을 다시 시작하려면 시작 날짜 필드를 지우세요.
 
-俺리걖흐If you disable or do not configure this policy, Windows Update will not alter its behavior.
+이 정책을 사용하지 않거나 구성하지 않으면 Windows 업데이트에서 해당 동작을 변경하지 않습니다.
 
-뎝선흝춝Note: If the "Allow Telemetry" policy is set to 0, this policy will have no effect.</string>
+참고: "원격 분석 허용" 정책이 0으로 설정된 경우에는 이 정책이 적용되지 않습니다.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Windows 업데이트에 드라이버를 포함하지 않음</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">윜뭕댃흝Enable this policy to not include drivers with Windows quality updates.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Windows 품질 업데이트에 드라이버를 포함하지 않으려면 이 정책을 사용하도록 설정합니다.
 
-헭흝괕걖If you disable or do not configure this policy, Windows Update will include updates that have a Driver classification.</string>
+이 정책을 사용하지 않거나 구성하지 않으면 Windows 업데이트에서 드라이버로 분류된 업데이트를 포함합니다.</string>
       <string id="ActiveHours_Title">사용 시간 중 업데이트를 위한 자동 다시 시작 끄기</string>
       <string id="ActiveHours_Help">이 정책을 사용하면 사용 시간 중에 업데이트 후 자동으로 PC를 다시 시작하지 않습니다. 사용 시간이 아닐 때 PC를 다시 시작합니다.
 
@@ -395,11 +399,27 @@ Windows 업데이트는 업데이트를 자동으로 설치하도록 구성된 �
       <string id="AutoRestartDeadlineDay12">12</string>
       <string id="AutoRestartDeadlineDay13">13</string>
       <string id="AutoRestartDeadlineDay14">14</string>
+      <string id="AutoRestartDeadlineDay15">15</string>
+      <string id="AutoRestartDeadlineDay16">16</string>
+      <string id="AutoRestartDeadlineDay17">17</string>
+      <string id="AutoRestartDeadlineDay18">18</string>
+      <string id="AutoRestartDeadlineDay19">19</string>
+      <string id="AutoRestartDeadlineDay20">20</string>
+      <string id="AutoRestartDeadlineDay21">21</string>
+      <string id="AutoRestartDeadlineDay22">22</string>
+      <string id="AutoRestartDeadlineDay23">23</string>
+      <string id="AutoRestartDeadlineDay24">24</string>
+      <string id="AutoRestartDeadlineDay25">25</string>
+      <string id="AutoRestartDeadlineDay26">26</string>
+      <string id="AutoRestartDeadlineDay27">27</string>
+      <string id="AutoRestartDeadlineDay28">28</string>
+      <string id="AutoRestartDeadlineDay29">29</string>
+      <string id="AutoRestartDeadlineDay30">30</string>
 
       <string id="DisableUXWUAccess_Title">모든 Windows 업데이트 기능을 사용할 수 있는 권한 제거</string>
       <string id="DisableUXWUAccess_Help">이 설정을 통해 Windows 업데이트를 검색할 수 있는 권한을 제거할 수 있습니다.
 
-이 설정을 사용하면 Windows 업데이트 검색 권한이 제거됩니다.
+이 설정을 사용하면 Windows 업데이트 검색, 다운로드 및 설치할 사용자 권한이 제거됩니다.
       </string>
       <string id="ActiveHoursMaxRange_Title">자동 다시 시작의 사용 시간 범위 지정</string>
       <string id="ActiveHoursMaxRange_Help">이 정책을 사용하면 사용자가 시작 시간부터 사용 시간을 설정할 수 있는 최대 시간을 지정할 수 있습니다.
@@ -420,27 +440,23 @@ Windows 업데이트는 업데이트를 자동으로 설치하도록 구성된 �
       <string id="ActiveHoursMaxRange17">17</string>
       <string id="ActiveHoursMaxRange18">18</string>
 
-      <string id="AutoRestartRequiredNotificationDismissal_Title">줡닼리詰Configure auto-restart required notification for updates</string>
-      <string id="AutoRestartRequiredNotificationDismissal_Help">춝걂呂쾖Enable this policy to specify the method by which the auto-restart required notification is dismissed. When a restart is required to install updates, the auto-restart required notification is displayed. By default, the notification is automatically dismissed after 25 seconds.
+      <string id="AutoRestartRequiredNotificationDismissal_Title">업데이트에 대한 자동 다시 시작 필요 알림 구성</string>
+      <string id="AutoRestartRequiredNotificationDismissal_Help">자동 다시 시작 필요 알림을 해제하는 방법을 지정하려면 이 정책을 사용하세요. 업데이트 설치를 위해 다시 시작해야 하는 경우 자동 다시 시작 필요 알림이 표시됩니다. 기본적으로 알림은 25초 후에 자동으로 해제됩니다.
 
-선헭흐괕The method can be set to require user action to dismiss the notification.
+알림을 해제하기 위해 사용자 작업이 필요하도록 방법을 설정할 수 있습니다.
 
-뎝갵詰줡If you disable or do not configure this policy, the default method will be used.
+이 정책을 사용하지 않거나 구성하지 않으면 기본 방법이 사용됩니다.
       </string>
       <string id="AutoDismissal">1 - 자동</string>
       <string id="UserAction">2 - 사용자 작업</string>
 
       <string id="AutoRestartNotificationConfig_Title">업데이트에 대한 자동 다시 시작 미리 알림 구성</string>
-      <string id="AutoRestartNotificationConfig_Help">이 정책을 사용하면 자동 다시 시작 미리 알림에 사용되는 알림 유형과 표시 시기를 지정할 수 있습니다.
-
-업데이트 설치를 위해 예약된 다시 시작을 사용자에게 알릴 때 사용할 알림 유형을 지정합니다.
+      <string id="AutoRestartNotificationConfig_Help">이 정책을 사용하면 자동 다시 시작 미리 알림이 표시되는 시기를 지정할 수 있습니다.
 
 예약된 다시 시작 전에 사용자에게 알릴 시간을 지정할 수 있습니다.
 
-이 정책을 사용하지 않거나 구성하지 않으면 기본 스타일과 기간이 사용됩니다.
+이 정책을 사용하지 않거나 구성하지 않으면 기본 기간이 사용됩니다.
       </string>
-      <string id="AutoRestartNotificationStyleFull">1 - 전체 화면</string>
-      <string id="AutoRestartNotificationStylePartial">2 - 부분 화면</string>
       <string id="AutoRestartNotificationSchd15">15</string>
       <string id="AutoRestartNotificationSchd30">30</string>
       <string id="AutoRestartNotificationSchd60">60</string>
@@ -472,6 +488,59 @@ Windows 업데이트는 업데이트를 자동으로 설치하도록 구성된 �
       <string id="RestartWarnMins15">15</string>
       <string id="RestartWarnMins30">30</string>
       <string id="RestartWarnMins60">60</string>
+      <string id="EngagedRestartTransitionSchedule_Title">업데이트에 대해 개입형 다시 시작 전환 및 미리 알림 일정 지정</string>
+      <string id="EngagedRestartTransitionSchedule_Help">이 정책을 사용하면 비활성 시간에 자동으로 다시 시작에서 개입형 다시 시작으로 전환하는 시간을 제어할 수 있으며, 이 경우 사용자가 일정을 지정해야 합니다. 기간은 다시 시작이 보류 중이 되는 시간에서부터 2일에서 30일 사이로 설정할 수 있습니다.
+
+사용자가 개입형 다시 시작 미리 알림을 다시 알릴 일 수를 지정할 수 있습니다. 다시 알림 기간은 1일에서 3일 사이로 설정할 수 있습니다.
+
+보류 중인 비활성 시간 다시 시작을 자동으로 예약 및 실행하려는 기한(일)을 지정할 수 있습니다. 구성하면 보류 중인 다시 시작이 자동 다시 시작에서 개입형 다시 시작(보류 중인 사용자 일정)으로 전환되어 지정한 기간 내에 자동으로 수행됩니다.
+
+기한이 지정되지 않거나 0으로 지정되어 있으면 다시 시작이 자동으로 실행되지 않고 개입형 다시 시작으로 유지됩니다(예: 보류 중인 사용자 일정).
+
+이 정책을 구성하지 않거나 사용하지 않으면 기본 동작이 사용됩니다.
+
+다음 정책 중 하나가 구성되면 이 정책은 적용되지 않습니다.
+    1. 예약된 자동 업데이트 설치를 위해 로그온한 사용자의 경우 자동 다시 시작 안 함
+    2. 예약된 시간에 항상 자동으로 다시 시작
+    3. 업데이트 설치를 위해 자동으로 다시 시작할 기한 지정
+      </string>
+      <string id="EngagedRestart_0">0</string>
+      <string id="EngagedRestart_2">2</string>
+      <string id="EngagedRestart_3">3</string>
+      <string id="EngagedRestart_4">4</string>
+      <string id="EngagedRestart_5">5</string>
+      <string id="EngagedRestart_6">6</string>
+      <string id="EngagedRestart_7">7</string>
+      <string id="EngagedRestart_8">8</string>
+      <string id="EngagedRestart_9">9</string>
+      <string id="EngagedRestart_10">10</string>
+      <string id="EngagedRestart_11">11</string>
+      <string id="EngagedRestart_12">12</string>
+      <string id="EngagedRestart_13">13</string>
+      <string id="EngagedRestart_14">14</string>
+      <string id="EngagedRestart_15">15</string>
+      <string id="EngagedRestart_16">16</string>
+      <string id="EngagedRestart_17">17</string>
+      <string id="EngagedRestart_18">18</string>
+      <string id="EngagedRestart_19">19</string>
+      <string id="EngagedRestart_20">20</string>
+      <string id="EngagedRestart_21">21</string>
+      <string id="EngagedRestart_22">22</string>
+      <string id="EngagedRestart_23">23</string>
+      <string id="EngagedRestart_24">24</string>
+      <string id="EngagedRestart_25">25</string>
+      <string id="EngagedRestart_26">26</string>
+      <string id="EngagedRestart_27">27</string>
+      <string id="EngagedRestart_28">28</string>
+      <string id="EngagedRestart_29">29</string>
+      <string id="EngagedRestart_30">30</string>
+      <string id="EngagedRestartSnooze_1">1</string>
+      <string id="EngagedRestartSnooze_2">2</string>
+      <string id="EngagedRestartSnooze_3">3</string>
+      
+      <string id="SetEDURestart_Title">카트 다시 시작의 업데이트 전원 정책</string>
+      <string id="SetEDURestart_Help">하루 이상 카트에 있는 EDU 장치에 대해 이 정책을 사용하면 전원 확인을 건너 뛰어 예정된 설치 시간에 업데이트 재부팅이 일어나도록 해줍니다.</string>
+
     </stringTable>
 
     <presentationTable>
@@ -494,9 +563,10 @@ Windows 업데이트는 업데이트를 자동으로 설치하도록 구성된 �
           <label>인트라넷 통계 서버 설정:</label>
         </textBox>
         <textBox refId="CorpWUContentHost_Name">
-          <label>쾖걂흝뎝Set the alternate download server:</label>
+          <label>대체 다운로드 서버 설정:</label>
         </textBox>
         <text>(예: http://IntranetUpd01)</text>
+        <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">대체 다운로드 서버가 설정된 경우 메타데이터에 Url이 없는 파일을 다운로드합니다.</checkBox>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>업데이트 검색</text>
@@ -535,16 +605,16 @@ Windows 업데이트는 업데이트를 자동으로 설치하도록 구성된 �
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">수신하려는 기능 업데이트의 분기 준비 수준 선택:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">기능 업데이트가 릴리스된 후 다음 기간(일) 동안 기능 업데이트 수신 연기:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>걂선헭冶Pause Feature Updates starting</label>
+          <label>기능 업데이트 일시 중지 시작</label>
         </textBox>
-        <text>詰걂흞윜(format yyyy-mm-dd example: 2016-09-16)</text>
+        <text>(형식 yyyy-mm-dd 예: 2016-09-16)</text>
       </presentation>
       <presentation id="DeferQualityUpdates">
         <decimalTextBox refId="DeferQualityUpdatesPeriodId" defaultValue="0">품질 업데이트가 릴리스된 후 다음 기간(일) 동안 품질 업데이트 수신 연기:</decimalTextBox>
         <textBox refId="PauseQualityUpdatesStartId">
-          <label>춝걂닼俺Pause Quality Updates starting</label>
+          <label>품질 업데이트 일시 중지 시작</label>
         </textBox>
-        <text>댃呂닼댃(format yyyy-mm-dd example: 2016-09-16)</text>
+        <text>(형식 yyyy-mm-dd 예: 2016-09-16)</text>
       </presentation>
       <presentation id="ActiveHours_Title">
         <text>사용 시간</text>
@@ -560,19 +630,25 @@ Windows 업데이트는 업데이트를 자동으로 설치하도록 구성된 �
       </presentation>
       <presentation id="AutoRestartRequiredNotificationDismissal_Title">
         <text>자동 다시 시작 필요 알림 해제 방법 지정:</text>
-        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">갂갂瀁흝Method: </dropdownList>
+        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">방법: </dropdownList>
       </presentation>
       <presentation id="AutoRestartNotificationConfig_Title">
-        <text>자동 다시 시작 미리 알림에 사용할 스타일 지정:</text>
-        <dropdownList refId="AutoRestartNotificationStyle" noSort="true" defaultItem="0">스타일: </dropdownList>
         <text>자동 다시 시작 미리 알림 기간 지정:</text>
         <dropdownList refId="AutoRestartNotificationSchd" noSort="true" defaultItem="0">기간(분): </dropdownList>
       </presentation>
       <presentation id="RestartWarningSchd_Title">
         <text>자동 다시 시작 경고 미리 알림 기간 구성:</text>
-        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">미리 알림(시간):</dropdownList>
+        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">미리 알림(시간): </dropdownList>
         <text>자동 다시 시작 임박 경고 알림 기간 지정:</text>
         <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">경고(분): </dropdownList>
+      </presentation>
+      <presentation id="EngagedRestartTransitionSchedule_Title">
+        <text>자동 다시 시작을 개입형 다시 시작(보류 중인 사용자 일정)으로 전환하려는 시간을 지정하세요.</text>
+        <dropdownList refId="EngagedRestartTransitionSchedule" noSort="true" defaultItem="5">전환(일): </dropdownList>
+        <text>개입형 다시 시작 미리 알림의 다시 알림을 지정하세요.</text>
+        <dropdownList refId="EngagedRestartSnoozeSchedule" noSort="true" defaultItem="2">다시 알림(일):     </dropdownList>
+        <text>사용 시간이 아닐 때 보류 중인 다시 시작을 자동으로 실행하려는 기한을 지정하세요.</text>
+        <dropdownList refId="EngagedRestartDeadline" noSort="true" defaultItem="0">기한(일):  </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

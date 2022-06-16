@@ -50,15 +50,25 @@
 
 
 </string>
-      <string id="EnableCDP">Continue experiences on this device</string>
+      <string id="EnableCDP">Poursuivre les expériences sur cet appareil</string>
       <string id="EnableCDP_Help">
-This policy setting determines whether the Windows device is allowed to participate in cross-device experiences (continue experiences).
+Ce paramètre de stratégie détermine si l’appareil Windows est autorisé à participer à des actions interappareils (expériences continues).
 
-If you enable this policy setting, the Windows device is discoverable by other Windows devices that belong to the same user, and can participate in cross-device experiences.
+Si vous activez ce paramètre de stratégie, l’appareil Windows devient détectable par d’autres appareils Windows appartenant au même utilisateur et peut participer à des expériences interappareils.
 
-If you disable this policy setting, the Windows device is not discoverable by other devices, and cannot participate in cross-device experiences.
+Si vous désactivez ce paramètre de stratégie, l’appareil Windows n’est pas détectable par d’autres appareils et ne peut pas participer à des expériences interappareils..
 
-If you do not configure this policy setting, the default behavior depends on the Windows edition. Changes to this policy take effect on reboot.
+Si vous ne configurez pas ce paramètre de stratégie, le comportement par défaut dépend de l’édition Windows. Les modifications apportées à cette stratégie entrent en vigueur après le redémarrage.
+      </string>
+      <string id="EnableAppUriHandlers">Configurer les liaisons web-application avec les gestionnaires d'URI d'applications</string>
+      <string id="EnableAppUriHandlers_Help">
+Ce paramètre de stratégie détermine si Windows prend en charge les liaisons web-application avec les gestionnaires d'URI d'applications.
+
+L'activation de ce paramètre de stratégie active les liaisons web-application afin que les applications puissent être lancées avec un URI http(s).
+
+La désactivation de cette stratégie désactive les liaisons web-application et les URI http(s) sont ouverts dans le navigateur par défaut au lieu de l'application associée.
+
+Si vous ne configurez pas ce paramètre de stratégie, le comportement par défaut dépend de l'édition de Windows. Les changements apportés à cette stratégie prennent effet au redémarrage.
       </string>
       <string id="Fonts">Polices</string>
       <string id="EnableFontProviders">Activer les fournisseurs de polices</string>

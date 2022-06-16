@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Device Guard do Microsoft Windows</displayName>
+  <description>Segurança do Device Guard do Windows</description>
+  <resources>
+    <stringTable>
+      <string id="DeviceGuard">Device Guard</string>
+      <string id="VirtualizationBasedSecurity">Ativar Segurança Baseada em Virtualização</string>
+      <string id="VirtualizationBasedSecurityHelp">Especifica se a Segurança Baseada em Virtualização está habilitada.
+
+A Segurança Baseada em Virtualização usa o Hipervisor do Windows para dar suporte a serviços de segurança. A Segurança Baseada em Virtualização requer a Inicialização Segura e, opcionalmente, pode ser habilitada com o uso de Proteções DMA. As Proteções DMA requerem suporte de hardware e serão habilitadas somente em dispositivos configurados corretamente.
+
+Proteção com Base em Virtualização de Integridade de Código
+
+Essa configuração permite a proteção com base em virtualização de Integridade do Código de Modo Kernel. Quando essa configuração é habilitada, as proteções de memória de modo kernel são impostas e o caminho de validação de Integridade do Código é protegido pelo recurso Segurança Baseada em Virtualização.
+
+A opção "Desabilitada" desativa a Proteção com Base em Virtualização de Integridade de Código remotamente caso ela tenha sido ativada anteriormente com a opção "Habilitada sem bloqueio".
+ 
+A opção "Habilitada com o bloqueio UEFI" garante que a Proteção com Base em Virtualização de Integridade de Código não seja desabilitada remotamente. Para desabilitar o recurso, é necessário definir a Política de Grupo como "Desabilitada", além de remover a funcionalidade de segurança de cada computador, com um usuário fisicamente presente, para limpar a configuração persistente em UEFI.
+ 
+A opção "Habilitada sem bloqueio" permite que a Proteção com Base em Virtualização de Integridade de Código seja desabilitada remotamente com o uso da Política de Grupo. 
+
+A opção "Não Configurada" deixa a configuração de política indefinida. A Política de Grupo não grava a configuração de política no Registro e, portanto, não tem impacto nos computadores ou usuários. Se houver uma configuração atual no Registro, ela não será modificada.
+
+A opção "Exigir Tabela de Atributos de Memória UEFI" habilitará a Proteção com Base em Virtualização de Integridade de Código em dispositivos com suporte para firmware UEFI da Tabela de Atributos de Memória. Os dispositivos sem a Tabela de Atributos de Memória UEFI podem ter firmware incompatível com a Proteção com Base em Virtualização de Integridade de Código, o que, em alguns casos, pode resultar em falhas, perda de dados ou incompatibilidade com certos cartões de plug-in. Se essa opção não for configurada, os dispositivos-alvo deverão ser testados para garantir a compatibilidade.
+
+Aviso: todos os drivers no sistema devem ser compatíveis com esse recurso. Caso contrário, o sistema poderá falhar. Essa configuração de política deve ser implantada somente em computadores reconhecidamente compatíveis. 
+
+Credential Guard
+
+Essa configuração permite que os usuários ativem o recurso Credential Guard com segurança baseada em virtualização para ajudar a proteger credenciais.
+
+A opção "Desabilitada" desativa o Credential Guard remotamente caso ele tenha sido ativado anteriormente com a opção "Habilitada sem bloqueio".
+
+A opção "Habilitada com o bloqueio UEFI" garante que o Credential Guard não seja desabilitado remotamente. Para desabilitar o recurso, defina a Política de Grupo como "Desabilitada" e remova a funcionalidade de segurança de cada computador, com um usuário fisicamente presente, para limpar a configuração persistente em UEFI.
+
+A opção "Habilitada sem bloqueio" permite que o Credential Guard seja desabilitado remotamente com o uso da Política de Grupo. Os dispositivos que usam essa configuração devem executar pelo menos o Windows 10 (Versão 1511).
+
+A opção "Não Configurada" deixa a configuração de política indefinida. A Política de Grupo não grava a configuração de política no Registro e, portanto, não tem impacto nos computadores ou usuários. Se houver uma configuração atual no Registro, ela não será modificada.
+      </string>
+      <string id="SecureBoot">Inicialização Segura</string>
+      <string id="SecureBootAndDmaProtection">Inicialização segura e a proteção de DMA</string>
+      <string id="Disabled">Desabilitado</string>
+      <string id="Enabled">Habilitado</string>
+      <string id="EnabledWithoutLock">Habilitada sem bloqueio</string>
+      <string id="EnabledWithUefiLock">Habilitada com o bloqueio UEFI</string>
+      <string id="NotConfigured">Não Configurado</string>
+      <string id="ConfigCIPolicy">Implantar política de integridade de código</string>
+      <string id="ConfigCIPolicyHelp">Implantar política de integridade de código
+
+Essa configuração de política permite que você implante a política de integridade de código em uma máquina para controlar o que pode ser executado nesta máquina.
+
+Se você implantar a política de integridade de código, o Windows restringirá o que pode ser executado no modo de kernel e na área de trabalho do Windows com base na política. Para habilitar esta política, o computador deve ser reinicializado. 
+
+O caminho do arquivo deve ser um caminho UNC (por exemplo, \\ServerName\ShareName\SIPolicy.p7b), ou de um local válido (por exemplo, C:\FolderName\SIPolicy.p7b).  A conta de computador local (SISTEMA LOCAL) deve ter a permissão de acesso para o arquivo de política.
+ 
+Se usar uma política protegida e assinada, desabilitar essa configuração de política não remove o recurso do computador. Em vez disso, você deve:
+
+   1) primeiro atualizar a política para uma política não protegida e, em seguida, desabilite a configuração, ou
+   2) desabilitar a configuração e, em seguida, remover a política de cada computador, com um usuário fisicamente presente.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="VirtualizationBasedSecurity">
+        <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="1">Selecione o Nível de Segurança da Plataforma:</dropdownList>
+        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">Proteção com Base em Virtualização de Integridade de Código:</dropdownList>        
+        <checkBox refId="CheckboxMAT">Exigir Tabela de Atributos de Memória UEFI</checkBox>        
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="3">Configuração do Credential Guard:</dropdownList>                
+      </presentation>
+      <presentation id="ConfigCIPolicy">
+        <textBox refId="ConfigCIPolicyFilePathText">
+          <label>Caminho do arquivo de Política de Integridade de Código:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

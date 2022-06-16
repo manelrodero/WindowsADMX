@@ -6,18 +6,18 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Leveringsoptimering</string>
       <string id="DownloadMode">Downloadtilstand</string>
-      <string id="DownloadMode_Help">Angiver den downloadmetode, som Leveringsoptimering kan bruge til downloads af Windows-opdateringer, apps og appopdateringer. Følgende liste viser de understøttede værdier: 0=Kun HTTP, ingen peering. 1=HTTP blandet med peering bag samme NAT-enhed. 2=HTTP blandet med peering i en privat gruppe. Peering forekommer som standard på enheder på samme Active Directory-netværk (hvis der findes et) eller i samme domæne. Når denne indstilling vælges, krydser peering NAT-enheder. Hvis du vil oprette en tilpasset gruppe, skal du bruge gruppe-id sammen med tilstand 2. 3=HTTP blandet med peering via internettet. 99=Simpel downloadtilstand uden peering. Leveringsoptimering downloader kun ved brug af HTTP og forsøger ikke at kontakte cloudtjenester for Leveringsoptimering. 100=Tilstanden Omgå. Brug ikke Leveringsoptimering, og brug i stedet for BITS.</string>
-      <string id="DownloadMode_CdnOnly">Kun HTTP</string>
-      <string id="DownloadMode_Lan">LAN</string>
-      <string id="DownloadMode_Group">Gruppe</string>
-      <string id="DownloadMode_Internet">Internet</string>
-      <string id="DownloadMode_Simple">Simpel</string>
-      <string id="DownloadMode_Bypass">Omgå</string>
+      <string id="DownloadMode_Help">Angiver den downloadmetode, som Leveringsoptimering kan bruge til downloads af Windows-opdateringer, apps og appopdateringer. Følgende liste viser de understøttede værdier: 0=Kun HTTP, ingen peering. 1=HTTP blandet med peering bag samme NAT-enhed. 2=HTTP blandet med peering i en privat gruppe. Peering forekommer som standard på enheder på samme Active Directory-netværk (hvis der findes et) eller i samme domæne. Når denne indstilling vælges, krydser peering NAT-enheder. Hvis du vil oprette en tilpasset gruppe, skal du bruge gruppe-id sammen med tilstand 2. 3=HTTP blandet med peering via internettet. 99=Simpel downloadtilstand uden peering. Leveringsoptimering downloader kun ved brug af HTTP og forsøger ikke at kontakte skytjenester for Leveringsoptimering. 100=Tilstanden Omgå. Brug ikke Leveringsoptimering, og brug i stedet for BITS.</string>
+      <string id="DownloadMode_CdnOnly">Kun HTTP (0)</string>
+      <string id="DownloadMode_Lan">LAN (1)</string>
+      <string id="DownloadMode_Group">Gruppe (2)</string>
+      <string id="DownloadMode_Internet">Internet (3)</string>
+      <string id="DownloadMode_Simple">Simpel (99)</string>
+      <string id="DownloadMode_Bypass">Omgå (100)</string>
       <string id="GroupId">Gruppe-id</string>
       <string id="GroupId_Help">Gruppe-id'et skal angives som et GUID. Denne politik angive et vilkårligt gruppe-id, som enheden tilhører. Brug dette, hvis du vil oprette en enkelt gruppe til lokal netværkspeering for de grene, der er på forskellige domæner, eller der ikke er på samme LAN. Bemærk! Dette er en bedste procedure-optimering og skal ikke bruges til identitetsgodkendelse.</string>
       <string id="MaxUploadBandwidth">Maksimal uploadbåndbredde (i KB/sek.)</string>
       <string id="MaxUploadBandwidth_Help">Angiver den maksimale båndbredde, som Leveringsoptimering bruger på tværs af alle samtidige uploadaktiviteter, i KB/sekund. Standardværdien 0 (nul) tillader en ubegrænset anvendelse, hvor uploads dynamisk optimeres til minimal anvendelse af uploadbåndbredde.</string>
-      <string id="MaxCacheSize">Maks. cachestørrelse (procentdel)</string>
+      <string id="MaxCacheSize">Maks. cachestørrelse (procent)</string>
       <string id="MaxCacheSize_Help">Angiver den maksimale cachestørrelse, som Leveringsoptimering bruger, som en procentdel af den tilgængelige diskstørrelse (1-100).</string>
       <string id="AbsoluteMaxCacheSize">Absolut maks. cachestørrelse (i GB)</string>
       <string id="AbsoluteMaxCacheSize_Help">Angiver den maksimale størrelse i GB for cachen for Leveringsoptimering. Denne politik tilsidesætter politikken DOMaxCacheSize. Værdien 0 (nul) betyder "ubegrænset" cache. Leveringsoptimering rydder cachen, når enheden løber tør for diskplads.</string>
@@ -31,12 +31,22 @@
       <string id="ModifyCacheDrive_Help">Angiver det drev, som Leveringsoptimering skal bruge til cachen. %SystemDrive% bruges som standard til cachen. Drevplaceringen kan angives ved hjælp af miljøvariabler, drevbogstav eller ved hjælp af en fuldstændig sti.</string>
       <string id="MaxDownloadBandwidth">Maksimal downloadbåndbredde (i KB/sek.)</string>
       <string id="MaxDownloadBandwidth_Help">Angiver den maksimale downloadbåndbredde i kilobyte/sekund, som enheden kan bruge på tværs af alle samtidige downloadaktiviteter ved hjælp af Leveringsoptimering. Standardværdien 0 (nul) betyder, at Leveringsoptimering justeres dynamisk til at bruge den tilgængelige båndbredde til downloads.</string>
-      <string id="PercentageMaxDownloadBandwidth">Maksimal downloadbåndbredde (procentdel)</string>
+      <string id="PercentageMaxDownloadBandwidth">Maksimal downloadbåndbredde (procent)</string>
       <string id="PercentageMaxDownloadBandwidth_Help">Angiver den maksimale downloadbåndbredde, som Leveringsoptimering bruger på tværs af alle samtidige downloadaktiviteter, som en procentdel af tilgængelig downloadbåndbredde. Standardværdien 0 (nul) betyder, at Leveringsoptimering justeres dynamisk til at bruge den tilgængelige båndbredde til downloads.</string>
+      <string id="MinFileSizeToCache">Min. indholdsfilstørrelse ved peer-cachelagring (i MB)</string>
+      <string id="MinFileSizeToCache_Help">Angiver den mindste indholdsfilstørrelse i MB, der er aktiveret til at bruge peer-cachelagring. Værdien 0 betyder "ubegrænset", hvilket indebærer, at skytjenestens standardværdi benyttes. Anbefalede værdier: 1 MB til 100000 MB.</string>
+      <string id="AllowVPNPeerCaching">Aktivér peer-cachelagring, mens enheden har forbindelse via VPN</string>
+      <string id="AllowVPNPeerCaching_Help">Angiv "true" for at tillade, at enheden deltager i peer-cachelagring, når den er tilsluttet til domænenetværket via VPN. Det betyder, at enheden kan downloade fra eller uploade til andre domænenetværksenheder, enten på VPN eller på virksomhedens domænenetværk.</string>
+      <string id="MinRAMAllowedToPeer">Min. RAM-kapacitet (inklusive), der kræves for at aktivere brugen af peer-cachelagring (i GB)</string>
+      <string id="MinRAMAllowedToPeer_Help">Angiver den mindste RAM-størrelse i GB, der kræves for at bruge peer-cachelagring. Værdien 0 betyder "ikke-begrænset", hvilket indebærer, at skytjenestens standardværdi benyttes. Hvis minimumværdien for eksempel er 1 GB, vil enheder med 1 GB eller mere tilgængelig RAM kunne bruge peer-cachelagring. Anbefalede værdier: 1 GB til 4 GB.</string>
+      <string id="MinDiskSizeAllowedToPeer">Mindste diskstørrelse, der må bruge peer-cachelagring (i GB)</string>
+      <string id="MinDiskSizeAllowedToPeer_Help">Angiver den påkrævede mindste diskstørrelse (kapacitet i GB), der kræves, for at enheden kan benytte peer-cachelagring. Værdien 0 betyder "ikke-begrænset". Skytjenestens standardværdi blive brugt. Anbefalede værdier: 64 GB til 256 GB. Bemærk! Hvis politikken DOMoidfyCacheDrive er angivet, vil kontrol af diskstørrelsen gælde for nye arbejdsmapper, der angives vha. denne politik.</string>
+      <string id="MinBatteryPercentageAllowedToUpload">Tillad uploads, mens enheden kører på batteri, mens den er under det angivne batteriniveau (procent)</string>
+      <string id="MinBatteryPercentageAllowedToUpload_Help">Du kan angive en værdi mellem 1 og 100 (i procent) for at tillade enheden at uploade data til LAN- og gruppepeers, når computeren kører på jævnstrøm (batteri). Uploads afbrydes automatisk, når batteriniveauet falder til under det angivne minimum. Det anbefales, at du angiver en værdi på 40 (dvs. 40 %), hvis du tillader uploads på batteri. Enheden kan downloade fra peers, når computeren kører på batteri, uanset denne politik. Værdien 0 betyder "ikke-begrænset". Den standardværdi, der er angivet for skyen, bliver brugt.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DownloadMode">
-        <dropdownList defaultItem="1" refId="DownloadMode">Downloadtilstand:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="DownloadMode">Downloadtilstand:</dropdownList>
       </presentation>
       <presentation id="GroupId">
         <textBox refId="GroupId">
@@ -78,6 +88,25 @@
       </presentation>
       <presentation id="PercentageMaxDownloadBandwidth">
         <decimalTextBox defaultValue="0" refId="PercentageMaxDownloadBandwidth">Maksimal downloadbåndbredde (procentdel):</decimalTextBox>
+        <text>Standardværdien er 0 (ubegrænset)</text>
+      </presentation>
+      <presentation id="MinFileSizeToCache">
+        <decimalTextBox defaultValue="100" refId="MinFileSizeToCache">Min. indholdsfilstørrelse ved peer-cachelagring (i MB):</decimalTextBox>
+        <text>Standardværdien er 100 MB</text>
+      </presentation>
+      <presentation id="AllowVPNPeerCaching">
+        <checkBox defaultChecked="false" refId="AllowVPNPeerCaching">Aktivér peer-cachelagring, mens enheden har forbindelse via VPN</checkBox>
+      </presentation>
+      <presentation id="MinRAMAllowedToPeer">
+        <decimalTextBox defaultValue="4" refId="MinRAMAllowedToPeer">Min. RAM-kapacitet (inklusive), der kræves for at aktivere brugen af peer-cachelagring (i GB):</decimalTextBox>
+        <text>Standardværdien er 4 GB</text>
+      </presentation>
+      <presentation id="MinDiskSizeAllowedToPeer">
+        <decimalTextBox defaultValue="32" refId="MinDiskSizeAllowedToPeer">Mindste diskstørrelse, der må bruge peer-cachelagring (i GB):</decimalTextBox>
+        <text>Standardværdien er 32 GB</text>
+      </presentation>
+      <presentation id="MinBatteryPercentageAllowedToUpload">
+        <decimalTextBox defaultValue="0" refId="MinBatteryPercentageAllowedToUpload">Minimum batteriniveau (procent):</decimalTextBox>
         <text>Standardværdien er 0 (ubegrænset)</text>
       </presentation>
     </presentationTable>

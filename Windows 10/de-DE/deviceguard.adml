@@ -19,7 +19,11 @@ Durch die Option "Deaktiviert" wird der virtualisierungsbasierte Schutz der Code
  
 Die Option "Mit UEFI-Sperre aktiviert" stellt sicher, dass der virtualisierungsbasierte Schutz der Codeintegrität nicht remote deaktiviert werden kann. Um das Feature zu deaktivieren, müssen Sie die Gruppenrichtlinie auf "Deaktiviert" festlegen und die Sicherheitsfunktionen von jedem Computer entfernen, um die in UEFI persistent gespeicherte Konfiguration zu löschen. Bei diesem Vorgang muss ein Benutzer physisch anwesend sein.
  
-Durch die Option "Ohne Sperre aktiviert" kann der virtualisierungsbasierte Schutz der Codeintegrität mithilfe der Gruppenrichtlinie remote deaktiviert werden. 
+Durch die Option "Ohne Sperre aktiviert" kann der virtualisierungsbasierte Schutz der Codeintegrität mithilfe der Gruppenrichtlinie remote deaktiviert werden.
+
+Durch die Option "Nicht konfiguriert" bleibt die Richtlinieneinstellung undefiniert. Die Richtlinieneinstellung wird durch die Gruppenrichtlinie nicht in die Registrierung geschrieben, sodass sie keine Auswirkungen auf Computer oder Benutzer hat. Wenn die Registrierung eine aktuelle Einstellung enthält, wird sie nicht geändert.
+
+Durch die Option "UEFI-Speicherattributtabelle erforderlich" wird der virtualisierungsbasierte Schutz der Codeintegrität nur auf Geräten aktiviert, die UEFI-Firmwareunterstützung für die Speicherattributtabelle bieten. Geräte ohne UEFI-Speicherattributtabelle verfügen u. U. über Firmware, die mit dem virtualisierungsbasierten Schutz der Codeintegrität nicht kompatibel ist, was manchmal zu Abstürzen, Datenverlust oder Inkompatibilitäten mit bestimmten Steckkarten führen kann. Wenn diese Option nicht festgelegt wird, sollten die Zielgeräte auf Kompatibilität geprüft werden.
 
 Warnung: Alle Treiber im System müssen mit diesem Feature kompatibel sein, da das System andernfalls abstürzen kann. Stellen Sie sicher, dass diese Richtlinieneinstellung nur für Computer bereitgestellt wird, die bekanntermaßen kompatibel sind. 
 
@@ -32,6 +36,8 @@ Durch die Option "Deaktiviert" wird Credential Guard remote deaktiviert, wenn si
 Die Option "Mit UEFI-Sperre aktiviert" stellt sicher, dass Credential Guard nicht remote deaktiviert werden kann. Um das Feature zu deaktivieren, müssen Sie die Gruppenrichtlinie auf "Deaktiviert" festlegen und die Sicherheitsfunktionen von jedem Computer entfernen, um die in UEFI persistent gespeicherte Konfiguration zu löschen. Bei diesem Vorgang muss ein Benutzer physisch anwesend sein.
 
 Durch die Option "Ohne Sperre aktiviert" kann Credential Guard mithilfe der Gruppenrichtlinie remote deaktiviert werden. Auf Geräten, die diese Einstellung verwenden, muss mindestens Windows 10 (Version 1511) ausgeführt werden.
+
+Durch die Option "Nicht konfiguriert" bleibt die Richtlinieneinstellung undefiniert. Die Richtlinieneinstellung wird durch die Gruppenrichtlinie nicht in die Registrierung geschrieben, sodass sie keine Auswirkungen auf Computer oder Benutzer hat. Wenn die Registrierung eine aktuelle Einstellung enthält, wird sie nicht geändert.
       </string>
       <string id="SecureBoot">Sicherer Start</string>
       <string id="SecureBootAndDmaProtection">Sicherer Start und DMA-Schutz</string>
@@ -39,6 +45,7 @@ Durch die Option "Ohne Sperre aktiviert" kann Credential Guard mithilfe der Grup
       <string id="Enabled">Aktiviert</string>
       <string id="EnabledWithoutLock">Ohne Sperre aktiviert</string>
       <string id="EnabledWithUefiLock">Mit UEFI-Sperre aktiviert</string>
+      <string id="NotConfigured">Nicht konfiguriert</string>
       <string id="ConfigCIPolicy">Codeintegritätsrichtlinie bereitstellen</string>
       <string id="ConfigCIPolicyHelp">Codeintegritätsrichtlinie bereitstellen
 
@@ -57,8 +64,9 @@ Bei Verwendung einer signierten, geschützten Richtlinie wird die Funktion nicht
     <presentationTable>
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="1">Plattform-Sicherheitsstufe auswählen:</dropdownList>
-        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="0">Virtualisierungsbasierter Schutz der Codeintegrität:</dropdownList>
-        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Credential Guard-Konfiguration:</dropdownList>
+        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">Virtualisierungsbasierter Schutz der Codeintegrität:</dropdownList>        
+        <checkBox refId="CheckboxMAT">UEFI-Speicherattributtabelle erforderlich</checkBox>        
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="3">Credential Guard-Konfiguration:</dropdownList>                
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

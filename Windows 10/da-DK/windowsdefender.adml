@@ -3,7 +3,7 @@
 <description>indtast beskrivelsen her</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Endpoint Protection</string>
+    <string id="AntiSpywareDefender">Windows Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Udeladelser</string>
     <string id="NetworkRealtimeInspection">Network Inspection System</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">MAPS</string>
     <string id="Threats">Trusler</string>
     <string id="ClientInterface">Klientens brugergrænseflade</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">Tillad antimalwaretjeneste at starte med normal prioritet</string>
     <string id="AllowFastServiceStartup_Explain">Denne politikindstilling styrer indlæsningsprioriteten for antimalwaretjenesten. En forøgelse af indlæsningsprioriteten muliggør en hurtigere start af tjenesten, men kan påvirke kørslen.
 
@@ -33,12 +34,12 @@ Hvis du aktiverer denne politikindstilling, køres Endpoint Protection ikke, og 
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, køres Endpoint Protection som standard og computerne scannes for malware og andet potentielt uønsket software.
     </string>
-    <string id="DisableAntiSpywareDefender">Deaktiver Endpoint Protection</string>
-    <string id="DisableAntiSpywareDefender_Explain">Denne politikindstilling deaktiverer Endpoint Protection.
+    <string id="DisableAntiSpywareDefender">Slå Windows Defender Antivirus fra</string>
+    <string id="DisableAntiSpywareDefender_Explain">Denne politikindstilling slå Windows Defender Antivirus fra.
 
-    Hvis du aktiverer denne politikindstilling, køres Endpoint Protection ikke, og computerne scannes ikke for malware og andet potentielt uønsket software.
+    Hvis du slår denne politikindstilling til, køres Windows Defender Antivirus ikke, og computerne scannes ikke for malware og andet potentielt uønsket software.
 
-    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, køres Endpoint Protection som standard, og computerne scannes for malware og andet potentielt uønsket software.</string>
+    Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, køres Windows Defender Antivirus som standard, og computerne scannes for malware og andet potentielt uønsket software.</string>
     <string id="DisableLocalAdminMerge">Konfigurer lokal administrators fletteadfærd for lister</string>
     <string id="DisableLocalAdminMerge_Explain">Denne politikindstilling styrer, om komplekse listeindstillinger, som er konfigureret af en lokal administrator, skal flettes med gruppepolitikindstillinger. Denne politikindstilling gælder for lister som trusler og udeladelser.
 
@@ -47,11 +48,11 @@ Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, indfle
 Hvis du deaktiverer denne politikindstilling, bruges kun elementer, der er defineret af gruppepolitikken, i den politikindstilling, der træder i kraft. Gruppepolitikindstillinger tilsidesætter foretrukne indstillinger, som er konfigureret af administratoren.</string>
     <string id="DisableRoutinelyTakingAction">Deaktiver rutinemæssig afhjælpning</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    Denne indstilling gør det muligt at konfigurere, om Endpoint Protection automatisk håndterer alle fundne trusler. Den handling, der skal foretages i forhold til en bestemt trussel, bestemmes af kombinationen af den politikdefinerede handling, den brugerdefinerede handling og den signaturdefinerede handling.
+    Denne indstilling gør det muligt at konfigurere, om Windows Defender Antivirus automatisk håndterer alle fundne trusler. Den handling, der skal foretages i forhold til en bestemt trussel, bestemmes af kombinationen af den politikdefinerede handling, den brugerdefinerede handling og den signaturdefinerede handling.
 
-    Hvis du aktiverer denne politikindstilling, håndterer Endpoint Protection ikke automatisk fundne trusler, men beder i stedet brugeren vælge ud fra de handlinger, der er mulige for den enkelte trussel.
+    Hvis du slår denne politikindstilling til, håndterer Windows Defender Antivirus ikke automatisk fundne trusler, men beder i stedet brugeren vælge ud fra de handlinger, der er mulige for den enkelte trussel.
 
-    Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vil Endpoint Protection automatisk reagere over for alle de fundne trusler efter en ikkekonfigurerbar forsinkelse på ca. fem sekunder.</string>
+    Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, vil Windows Defender Antivirus automatisk reagere over for alle de fundne trusler efter en ikke-konfigurerbar forsinkelse på ca. fem sekunder.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         Denne politikindstilling gør det muligt at konfigurere, om Endpoint Protection reagerer automatisk på alle de fundne trusler. Den handling, der tages over for en bestemt trussel, bestemmes af kombinationen af den politikdefinerede handling, den brugerdefinerede handling og den signaturdefinerede handling.
 
@@ -157,13 +158,13 @@ Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, aktive
 
 Hvis du deaktiverer denne politikindstilling, deaktiveres råbeskeder om skrivning.</string>
     <string id="DisableRealtimeMonitoring">Deaktiver beskyttelse i realtid</string>
-    <string id="DisableRealtimeMonitoringDefender_Explain">Denne politikindstilling slår beskeder om beskyttelse i realtid fra, når der registreres malware, som allerede kendes.
+    <string id="DisableRealtimeMonitoringDefender_Explain">Denne politikindstilling slår beskeder om beskyttelse i realtid fra, når der registreres allerede kendt malware.
 
-    Endpoint Protection giver dig besked, når malware eller potentielt uønsket software forsøger at installere sig selv eller forsøger at køre på computeren.
+    Windows Defender Antivirus giver dig besked, når malware eller potentielt uønsket software forsøger at installere sig selv eller forsøger at køre på computeren.
 
-    Hvis du aktiverer denne politikindstilling, bliver brugere ikke bedt om at udføre nogen handlinger i forbindelse med registrering af skadelig software.
+    Hvis du slår denne politikindstilling til, beder Windows Defender Antivirus ikke brugere om at udføre nogen handlinger i forbindelse med registrering af skadelig software.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bliver brugere bedt om at udføre en handling i forbindelse med registrering af skadelig software.</string>
+    Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, beder Windows Defender Antivirus brugere om at udføre en handling i forbindelse med registrering af skadelig software.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     Denne politikindstilling slår beskeder om beskyttelse i realtid fra, når der registreres malware, som allerede kendes.
 
@@ -289,13 +290,21 @@ Hvis du deaktiverer denne politikindstilling, sendes Watson-hændelser ikke.</st
     <string id="Reporting_WppTracingComponents_Explain">Denne politikindstilling konfigurer preprocessorkomponenter til Windows-softwaresporing (WPP Software Tracing).</string>
     <string id="Reporting_WppTracingLevel">Konfigurer WPP-sporingsniveau</string>
     <string id="Reporting_WppTracingLevel_Explain">Med denne politikindstilling kan du konfigurere sporingsniveauer for Windows-softwaresporingspreprocessor (WPP Software Tracing). 
+    Sporingsniveauer defineres som:
+    1 - Fejl
+    2 - Advarsel
+    3 - Oplysninger
+    4 - Fejlfinding</string>
+    <string id="Reporting_DisableEnhancedNotifications">Slå udvidede meddelelser fra</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      Brug denne politikindstilling til at angive, om udvidede Windows Defender Antivirus-meddelelser skal vises på klienter.
+      
+      Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, vises udvidede Windows Defender Antivirus-meddelelser på klienter.
+      
+      Hvis du slår denne indstilling til, vises udvidede Windows Defender Antivirus-meddelelser ikke på klienter.
+    </string>
 
-Sporingsniveauer defineres som:
-1 - Fejl
-2 - Advarsel
-3 - Oplysninger
-4 - Fejlfinding</string>
-    <string id="Scan_AllowPause">Tillad brugere at stoppe scanning midlertidigt</string>
+      <string id="Scan_AllowPause">Tillad brugere at stoppe scanning midlertidigt</string>
     <string id="Scan_AllowPause_Explain">Med denne politikindstilling kan du styre, om slutbrugere skal kunne stoppe en igangværende scanning midlertidigt.
 
 Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, føjes en ny genvejsmenu til proceslinjeikonet, som brugeren kan bruge til at stoppe scanningen midlertidigt.
@@ -701,10 +710,10 @@ Gyldige handlingsværdier for afhjælpning er:
       Hvis du aktiverer denne indstilling, viser AM-brugergrænsefladen ikke beskeder om genstart.
     </string>
     <string id="UX_Configuration_Notification_Suppress">Undertrykke alle meddelelser</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">Brug denne politikindstilling til at angive, om Windows Defender-meddelelser skal vises på klienter.
-      Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vises Windows Defender-meddelelser på klienter.
+    <string id="UX_Configuration_Notification_Suppress_Explain">Brug denne politikindstilling til at angive, om Windows Defender Antivirus-meddelelser skal vises på klienter.
+      Hvis du slår denne politikindstilling fra eller undlader at konfigurere den, vises Windows Defender Antivirus-meddelelser på klienter.
 
-      Hvis du aktiverer denne indstilling, vises Windows Defender-meddelelser ikke på klienter.
+      Hvis du slår denne indstilling til, vises Windows Defender Antivirus-meddelelser ikke på klienter.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Vis yderligere tekst til klienter, når de skal udføre en handling</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">Med denne politikindstilling kan du konfigurere, om der skal vises yderligere tekst til klienter, når de har brug for at udføre en handling. Den viste tekst er en tilpasset, administratordefineret streng. For eksempel telefonnummeret til virksomhedens helpdesk. Brugergrænsefladen i klienten viser højst 1024 tegn. Længere strenge afkortes før visning.
@@ -712,6 +721,32 @@ Gyldige handlingsværdier for afhjælpning er:
 Hvis du aktiverer denne politikindstilling, vises den yderligere tekst, der er angivet.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vises der ingen yderligere tekst.</string>
+    <string id="MpCloudBlockLevel">Vælg skybeskyttelsesniveau</string>
+    <string id="MpCloudBlockLevel_Explain">
+      Denne politikindstilling bestemmer, hvor aggressiv Windows Defender Antivirus skal være ved blokering og scanning af mistænkelige filer.
+
+      Hvis indstillingen er slået til, vil Windows Defender Antivirus være mere aggressiv ved identifikation af mistænkelige filer, der skal blokeres og scannes. Ellers vil programmet være mindre aggressivt og derfor blokere og scanne sjældnere. 
+      
+      På websitet med dokumentation til Windows Defender Antivirus finder du flere oplysninger om bestemte værdier, der understøttes.
+
+      Bemærk! Denne funktion kræver, at indstillingen "Deltag i Microsoft MAPS" er slået til, for at kunne fungere.
+
+      Følgende indstillinger er gyldige:
+      (0x0) Standardblokeringsniveau i Windows Defender Antivirus
+      (0x2) Højeste blokeringsniveau      
+    </string>
+    <string id="MpBafsExtendedTimeout">Konfigurer udvidet skykontrol</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      Denne funktion giver Windows Defender Antivirus mulighed for at blokere en mistænkelig fil i op til 60 sekunder og scanne den i clouden for at kontrollere, at den er sikker.
+      
+      Standardtimeout for kontrol i clouden er 10 sekunder. Hvis du vil slå den udvidede cloud-kontrol til, skal du angive den udvidede tid i sekunder, op til yderligere 50 sekunder.
+
+      Hvis den ønskede timeout er 60 sekunder, skal du f.eks. angive 50 sekunder i denne indstilling. Herved slås den udvidede cloud-kontrolfunktion til, og det samlede tidsforbrug bliver 60 sekunder.
+
+      Bemærk! Denne funktion afhænger af, at tre andre MAPS-indstillinger er slået til "Konfigurer funktionen 'Bloker, når den ses første gang'", "Deltag i Microsoft MAPS" og "Send fileksempler, når der kræves yderligere analyse".
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">Standardblokeringsniveau i Windows Defender Antivirus</string>
+    <string id="MpCloudBlockLevel_High_Level">Højt blokeringsniveau</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">Angiv intervallet for besked om udløb</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">Vælg skyblokeringsniveau</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">Angiv den udvidede skykontroltid i sekunder</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

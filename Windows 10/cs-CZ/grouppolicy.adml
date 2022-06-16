@@ -50,15 +50,25 @@
 
 
 </string>
-      <string id="EnableCDP">Continue experiences on this device</string>
+      <string id="EnableCDP">Používat na tomto zařízení spojitá prostředí</string>
       <string id="EnableCDP_Help">
-This policy setting determines whether the Windows device is allowed to participate in cross-device experiences (continue experiences).
+Nastavení této zásady určuje, jestli se toto zařízení s Windows může zapojit do prostředí napříč zařízeními (spojitá prostředí).
 
-If you enable this policy setting, the Windows device is discoverable by other Windows devices that belong to the same user, and can participate in cross-device experiences.
+Pokud toto nastavení povolíte, bude toto zařízení s Windows zjistitelné pro jiná zařízení s Windows, která patří stejnému uživateli, a může se zapojit do prostředí napříč zařízeními.
 
-If you disable this policy setting, the Windows device is not discoverable by other devices, and cannot participate in cross-device experiences.
+Pokud toto nastavení zakážete, nebude toto zařízení s Windows zjistitelné pro jiná zařízení a nebude se moct zapojit do prostředí napříč zařízeními.
 
-If you do not configure this policy setting, the default behavior depends on the Windows edition. Changes to this policy take effect on reboot.
+Pokud toto nastavení nenakonfigurujete, bude výchozí chování záviset na edici Windows. Změny této zásady se projeví po restartování.
+      </string>
+      <string id="EnableAppUriHandlers">Nakonfigurovat propojení webu s aplikací pomocí obslužných rutin adres URL</string>
+      <string id="EnableAppUriHandlers_Help">
+Tato zásada určuje, zda systém Windows podporuje obslužné rutiny pro propojení webu s aplikací.
+
+Pokud tuto zásadu povolíte, bude fungovat propojování webů s aplikacemi, takže aplikace bude možné spouštět pomocí adres URL s protokolem http(s).
+
+Zákaz této zásady nepovolí propojování webů s aplikacemi, takže se adresy URL s protokolem http(s) budou otevírat ve webovém prohlížeči namísto v přidružených aplikacích.
+
+Pokud nastavení těchto zásad nenakonfigurujete, bude výchozí chování záviset na verzi systému Windows. Změny této zásady se projeví až po restartu.
       </string>
       <string id="Fonts">Písma</string>
       <string id="EnableFontProviders">Povolit poskytovatele písem</string>

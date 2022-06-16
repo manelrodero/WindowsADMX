@@ -506,11 +506,11 @@ Bemærk! Hvis et tilføjelsesprogram er opført i politikindstillingen Liste ove
 Hvis du aktiverer denne politikindstilling, vil et nedbrud i Internet Explorer have samme virkning som i Windows XP Professional Service Pack 1 og tidligere (starter Windows-fejlrapportering). Alle politikindstillinger i Windows-fejlrapportering gælder stadig.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, virker funktionen Registrering af nedbrud i Administration af tilføjelsesprogrammer.</string>
-      <string id="IE_ExplainAddonManagement_RestrictExtensionManagement">Du kan bruge denne politikindstilling til at angive, om brugerne skal have mulighed for at tillade eller afvise tilføjelsesprogrammer via Administration af tilføjelsesprogrammer.
+      <string id="IE_ExplainAddonManagement_RestrictExtensionManagement">Med denne politikindstilling kan du bestemme, om brugerne har mulighed for at tillade eller afvise tilføjelsesprogrammer via Administration af tilføjelsesprogrammer.
 
-Hvis du aktiverer denne politikindstilling, kan brugerne ikke aktivere eller deaktivere tilføjelsesprogrammer via programmet til administration af tilføjelsesprogrammer. Den eneste undtagelse er, hvis et tilføjelsesprogram er blevet angivet direkte på Liste over tilføjelsesprogrammer, så brugerne stadig har tilladelse til at administrere tilføjelsesprogrammet. I så fald kan brugeren stadig administrere tilføjelsesprogrammet via programmet til administration af tilføjelsesprogrammer.
+Hvis du aktiverer denne politikindstilling, kan brugere ikke aktivere eller deaktivere tilføjelsesprogrammer via Administration af tilføjelsesprogrammer.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil de relaterede kontrolelementer være tilgængelige for brugeren i programmet til administration af tilføjelsesprogrammer.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil de relevante indstillinger i Administration af tilføjelsesprogrammer vil være tilgængelige for brugeren.</string>
       <string id="IE_ExplainAddSearchProvider">Du kan bruge denne politikindstilling til at føje en liste med bestemte søgemaskiner til brugerens standardliste med søgemaskiner. Søgemaskiner kan normalt tilføjes fra værktøjslinjer fra tredjepart eller i konfigurationen. Brugeren kan også tilføje en søgemaskine fra udbyderens websted.
 
 Hvis du aktiverer denne politikindstilling, kan brugeren tilføje og fjerne søgemaskiner, men kun blandt de søgemaskiner, der er angivet i søgemaskinelistens politiknøgler (findes under [HKCU eller HKLM\Software\policies\Microsoft\Internet Explorer\SearchScopes]). Bemærk! Denne liste kan oprettes ud fra en brugerdefineret administrativ skabelonfil. Oplysninger om oprettelse af en brugerdefineret administrativ skabelonfil finder du i Internet Explorer-dokumentationen om søgemaskiner.
@@ -2886,6 +2886,34 @@ Hvis du aktiverer denne politikindstilling, kan websteder fra zoner, der har lav
 Hvis du deaktiverer denne politikindstilling, forhindres potentiel skadelig navigation. Sikkerhedsfunktionen i Internet Explorer er aktiveret for denne zone, som det er angivet i sikkerhedsfunktionen Beskyttelse mod zone-elevation.
 
 Hvis du undlader at konfigurere denne politikindstilling, vises en advarsel for brugeren om, at en potentiel skadelig navigation er ved at ske.</string>
+      <string id="IZ_PolicyAllowVBScript">Tillad, at VBScript kører i Internet Explorer</string>
+      <string id="IZ_PolicyAllowVBScript_ExplainDefaultDisable">Du kan bruge denne politikindstilling til at angive, om VBScript kan køres på sider fra den angivne zone i Internet Explorer.
+
+Hvis du vælger Aktivér på rullelisten, kan VBScript køre uden yderligere brugerinput.
+
+Hvis du vælger Spørg på rullelisten, bliver brugerne spurgt, om de vil tillade, at VBScript bliver kørt.
+
+Hvis du vælger Deaktiver på rullelisten, kan VBScript ikke køres.
+
+Hvis du undlader at konfigurere eller deaktiverer denne politikindstilling, kan VBScript ikke køres.</string>
+      <string id="IZ_PolicyAllowVBScript_ExplainDefaultEnable">Du kan bruge denne politikindstilling til at angive, om VBScript kan køres på sider fra den angivne zone i Internet Explorer.
+
+Hvis du vælger Aktivér på rullelisten, kan VBScript køre uden yderligere brugerinput.
+
+Hvis du vælger Spørg på rullelisten, bliver brugerne spurgt, om de vil tillade, at VBScript bliver kørt.
+
+Hvis du vælger Deaktiver på rullelisten, kan VBScript ikke køres.
+
+Hvis du undlader at konfigurere eller deaktiverer denne politikindstilling, køres VBScript uden brugerinput.</string>
+      <string id="IZ_PolicyAllowVBScript_ExplainDefaultPrompt">Du kan bruge denne politikindstilling til at angive, om VBScript kan køres på sider fra den angivne zone i Internet Explorer.
+
+Hvis du vælger Aktivér på rullelisten, kan VBScript køre uden yderligere brugerinput.
+
+Hvis du vælger Spørg på rullelisten, bliver brugerne spurgt, om de vil tillade, at VBScript bliver kørt.
+
+Hvis du vælger Deaktiver på rullelisten, kan VBScript ikke køres.
+
+Hvis du undlader at konfigurere eller deaktiverer denne politikindstilling, bliver brugerne spurgt, om de vil tillade, at VBScript køres.</string>
       <string id="IZ_ProxyByPass">Intranetwebsteder: Medtag alle de websteder, der ikke bruger proxyserveren</string>
       <string id="IZ_RestrictedSitesZone">Zonen Usikre websteder</string>
       <string id="IZ_RestrictedSitesZoneLockdown">Låsning af zonen Usikre websteder</string>
@@ -3095,6 +3123,14 @@ Hvis du aktiverer denne politikindstilling, deaktiveres jævn rulning. Brugeren 
 Hvis du deaktiverer denne politikindstilling, aktiveres jævn rulning. Brugeren kan ikke slå jævn rulning fra.
 
 Hvis du undlader at konfigurere denne politikindstilling, kan brugeren slå jævn rulning til og fra.</string>
+      <string id="HideNewEdgeButton">Skjul knappen (ved siden af knappen Ny fane), der åbner Microsoft Edge</string>
+      <string id="HideNewEdgeButton_Explain">Med denne politikindstilling kan du styre, om brugerne kan se knappen (ved siden af knappen Ny fane), der åbner Microsoft Edge.
+
+Hvis du aktiverer denne politikindstilling, skjules knappen til åbning af Microsoft Edge fra Internet Explorer.
+
+Hvis du deaktiverer denne politikindstilling, vises knappen til åbning af Microsoft Edge fra Internet Explorer.
+
+Hvis du undlader at konfigurere politikindstillingen, kan knappen til åbning af Microsoft Edge fra Internet Explorer konfigureres af brugeren.</string>
       <string id="SpecificSearchProvider">Begræns søgemaskiner til en bestemt liste</string>
       <string id="SQM_DisableCEIP">Bloker deltagelse i program til forbedring af kundeoplevelsen</string>
       <string id="SUPPORTED_IE4ONLY">Kun Internet Explorer 4.0</string>
@@ -3528,6 +3564,13 @@ For mindst Internet Explorer 11:
 Hvis du deaktiverer denne politikindstilling, sender Internet Explorer kun headeren Spor ikke (Do Not Track), hvis der bruges InPrivate-browsing.
 
 Hvis du undlader at konfigurere politikindstillingen, kan brugerne vælge indstillingen Send altid Spor ikke header i indstillingerne for Internet Explorer. Når denne indstilling vælges, sender Internet Explorer en DNT:1-header med alle HTTP- og HTTPS-anmodninger, medmindre brugeren tillader en områdespecifik undtagelse. Internet Explorer sender en DNT:0-header til alle områder, der har tilladelse til en undtagelse. Denne indstilling er som standard slået til.</string>
+      <string id="Content_ExplainShowContentAdvisor">Denne politikindstilling viser indstillingen Klassifikationsfilter under fanen Indhold i dialogboksen Internetindstillinger.
+
+Hvis du aktiverer denne politikindstilling, viser Internet Explorer indstillingen Klassifikationsfilter under fanen Indhold i dialogboksen Internetindstillinger. Brugere kan ændre indstillingerne for Klassifikationsfilter.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, viser Internet Explorer ikke indstillingen Klassifikationsfilter under fanen Indhold i dialogboksen Internetindstillinger.
+
+Bemærk! Denne politik understøttes ikke længere fra og med Windows 10 Version 1607.</string>
       <string id="Protocols_None">Brug ingen sikre protokoller</string>
       <string id="Protocols_SSL2">Brug kun SSL 2.0</string>
       <string id="Protocols_SSL3">Brug kun SSL 3.0</string>
@@ -3565,6 +3608,7 @@ Hvis du undlader at konfigurere politikindstillingen, kan brugerne vælge indsti
       <string id="NewTab_AboutBlank">about:blank</string>
       <string id="NewTab_AboutTabs">Ny faneside</string>
       <string id="NewTab_Homepage">Startside</string>
+      <string id="NewTab_AboutNewsFeed">Ny faneside med mit nyhedsfeed</string>
       <string id="NewTabAction">Angiv standardfunktionsmåde for en ny fane</string>
       <string id="SecondaryHomePages">Deaktiver ændring af indstillinger for sekundær startside</string>
       <string id="SetCommandLabels">Tilpas kommandoknapper</string>
@@ -3607,9 +3651,9 @@ Hvis du deaktiverer denne politikindstilling, er knapperne Stop og Opdater place
 Hvis du undlader at konfigurere denne politikindstilling, er knapperne Stop og Opdater som standard placeret ved siden af adresselinjen, og brugeren kan vælge at flytte dem.</string>
       <string id="IE_ExplainNewTabAction">Du kan bruge denne politikindstilling til at angive, hvad der vises, når brugeren åbner en ny fane.
 
-Hvis du aktiverer denne politikindstilling, kan du vælge, hvilken side der skal vises, når brugeren åbner en ny fane: en tom side (about:blank), den første startside eller en ny faneside.
+Hvis du aktiverer denne politikindstilling, kan du vælge, hvilken side der skal vises, når brugeren åbner en ny fane: en tom side (about:blank), den første startside, den nye faneside eller den nye faneside med mit nyhedsfeed.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan brugerne vælge deres præferencer for denne funktionalitet. Ny faneside er standardindstillingen.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan brugerne vælge deres præferencer for denne funktionalitet.</string>
       <string id="IE_ExplainSecondaryHomePages">Sekundære startsider er de standardwebsider, som Internet Explorer indlæser på separate faner fra startsiden, når browseren køres. Politikindstillingen giver dig mulighed for at indstille sekundære standardstartsider.
 
 Hvis du aktiverer politikindstillingen, kan du angive, hvilke standardstartsider der skal indlæses som sekundære startsider. Brugeren kan ikke indstille tilpassede standardstartsider.
@@ -4013,7 +4057,9 @@ Hvis du aktiverer denne politikindstilling, aktiveres automatisk opgradering af 
 
 Hvis du deaktiverer denne politikindstilling, vil automatisk opgradering af Internet Explorer være slået fra.
 
-Hvis ud ikke konfigurerer denne politik, kan brugere slå automatisk opdateringer til eller fra i dialogboksen Om Internet Explorer.</string>
+Hvis ud ikke konfigurerer denne politik, kan brugere slå automatisk opdateringer til eller fra i dialogboksen Om Internet Explorer.
+
+Bemærk! Denne politik frarådes fra og med Windows 10 version 1703.</string>
       <string id="TurnOffFormatDetectionPhone">Slå identifikation af telefonnumre fra</string>
       <string id="TurnOffFormatDetectionPhone_Explain">Denne politikindstilling bestemmer, om telefonnumre skal genkendes og gøres til hyperlinks, som kan bruges til at starte systemets standardtelefonprogram.
 
@@ -4503,6 +4549,15 @@ Der er flere oplysninger under "Out-of-date ActiveX control blocking" i TechNet-
       <presentation id="IZ_PolicyZoneElevationURLaction_5">
         <dropdownList refId="IZ_Partname2101" noSort="true" defaultItem="2">Websteder i en webindholdszone, der har lavere sikkerhed, kan navigere til denne zone</dropdownList>
       </presentation>
+      <presentation id="IZ_PolicyAllowVBScript_1">
+        <dropdownList refId="IZ_Partname140C" noSort="true" defaultItem="0">Tillad, at VBScript kører i Internet Explorer</dropdownList>
+      </presentation>
+      <presentation id="IZ_PolicyAllowVBScript_2">
+        <dropdownList refId="IZ_Partname140C" noSort="true" defaultItem="1">Tillad, at VBScript kører i Internet Explorer</dropdownList>
+      </presentation>
+      <presentation id="IZ_PolicyAllowVBScript_3">
+        <dropdownList refId="IZ_Partname140C" noSort="true" defaultItem="2">Tillad, at VBScript kører i Internet Explorer</dropdownList>
+      </presentation>
       <presentation id="IZ_Zonemaps_1">
         <listBox refId="IZ_ZonemapPrompt">Angiv zonetildelingerne her.</listBox>
       </presentation>
@@ -4662,7 +4717,7 @@ Der er flere oplysninger under "Out-of-date ActiveX control blocking" i TechNet-
         <dropdownList refId="Advanced_EnableSSL3FallbackOptions" noSort="true" defaultItem="0">Tillad usikker fallback for:</dropdownList>
       </presentation>
       <presentation id="NewTabAction_1">
-        <dropdownList refId="NewTabActionOptions" noSort="true" defaultItem="2">Funktionalitet for Ny fane</dropdownList>
+        <dropdownList refId="NewTabActionOptions" noSort="true" defaultItem="0">Funktionalitet for Ny fane</dropdownList>
       </presentation>
       <presentation id="SecondaryHomePages">
         <listBox refId="SecondaryHomePagesList">Sekundære startsider</listBox>

@@ -89,7 +89,7 @@ Si el estado se establece en No configurado, no se especifica el uso de Actualiz
       <string id="AutoUpdateModeAdminChooses">5 - Permitir que el administrador local elija la opción</string>
       <string id="AutoUpdateModeAuto">4 - Descargar automáticamente y programar la instalación</string>
       <string id="AutoUpdateModeDownload">3 - Descargar automáticamente y notificar instalación</string>
-      <string id="AutoUpdateModeNotify">2 - Ńθťîƒŷ ƒόѓ δóẃņłǿάð áпđ ãûţо îñśţάľļ</string>
+      <string id="AutoUpdateModeNotify">2 - Notificar la descarga e instalar automáticamente</string>
       <string id="AutoUpdateSchDay_Everyday">0 - Todos los días</string>
       <string id="AutoUpdateSchDay_Friday">6 - Todos los viernes</string>
       <string id="AutoUpdateSchDay_Monday">2 - Todos los lunes</string>
@@ -124,23 +124,27 @@ Si el estado se establece en No configurado, no se especifica el uso de Actualiz
       <string id="AutoUpdateSchTime9">09:00</string>
       <string id="CorpWuURL">Especificar la ubicación del servicio Windows Update en la intranet</string>
       <string id="CorpWuURL_Help">
-        Ѕρèсîƒīéŝ âй іņţѓăпěŧ şèŗνзř тŏ ĥŏśτ μφďäŧеś ƒѓоm Мĩçřøşοƒτ Ŭφδãτё. ¥ǿū čäń ţћëň ûšé тħїš υрðãτε ş℮яνĭ¢е ţô άυŧõmаťįсǻℓŀÿ ϋρđåτē ćømρŭť℮řš ŏň γőΰŕ йėťŵőŕĸ.
+        Especifica un servidor de la intranet que hospede actualizaciones de Microsoft Update. Puedes usar este servicio de actualización para actualizar automáticamente equipos de la red.
 
-        Ŧнίѕ śēţтįñğ ľєтŝ ÿôџ şрė¢ìƒŷ а śеŕνĕŗ ôñ уθцґ лέтŵбґĸ ţǿ ƒυй¢ţíóŋ åŝ åп îйťєřņâļ ύрďåŧ℮ šêřνĩςĕ. Ţĥэ Дúťòmàŧįĉ Ũрďåťεś ¢łìēⁿτ щĩļℓ şĕªѓ¢ĥ ţніś şêřνīςэ ƒǿя ϋφďâтěś τћãŧ арφľÿ ŧθ ťђė ¢őmρцŧēгŝ όπ γоûѓ ŋ℮ŧщóřк.
+        Esta opción te permite especificar un servidor en la red para que funcione como un servicio de actualización interno. El cliente Actualizaciones automáticas buscará en este servicio actualizaciones que se apliquen a los equipos de la red.
 
-        Ŧσ űŝê ťħīś šèţτįиġ, ýбϋ мũşţ şèт тώσ ŝ℮ґνĕř ňàмė νąℓΰέŝ: τнé šēяνėя ƒřőm ώħĩςћ τĥĕ Дŭŧõmăŧιć Üрđàťęš ĉľїēпτ δèťéçţѕ άⁿδ đòẃиŀοαδś ΰφðªтэś, άηď ťђё šĕѓνэř ťō ŵнí¢ĥ µρďâтεδ ώσякšťáţĩôпš µрĺőāð ѕŧąτιѕţΐςš. Ϋøũ ċάñ şĕт ъőτħ νªℓûëś ťб ъэ ţĥê ŝąm℮ ѕèяνέř. Λņ óφťϊσňăℓ ŝέѓνęг ñąмё νàľΰе сãñ ъě ŝрέ¢ΐƒíэð ťõ çοⁿƒϊĝûяэ Ŵϊπδőẃŝ Ūρďåτє Áġēñŧ тθ đòẁńŀõāð υрδªŧэş ƒѓоm áⁿ ąŀŧєѓπăŧε đőώήļбàđ ŝĕřνєř ίπśтεàđ ôƒ ẀЅÚŞ Ś℮ŕνэґ.
+        Para usar esta opción, debes establecer dos valores de nombre de servidor: el servidor desde el que el cliente Actualizaciones automáticas detecta y descarga las actualizaciones y el servidor en el que las estaciones de trabajo actualizadas cargan las estadísticas. Puedes establecer ambos valores en el mismo servidor. Se puede especificar un valor de nombre de servidor opcional para configurar el agente de Windows Update para que descargue actualizaciones desde un servidor de descargas alternativo, en lugar del servicio de actualización de la intranet.
 
-        Ìƒ ťћê ѕŧåтųś їś šëт ťŏ Σñåъŀěđ, τĥέ Áцťőmåτíć Űрðàτєѕ сłįēⁿţ ĉοⁿñëçτѕ ţø ŧђė śρεċϊƒíεđ ĭήтгáñет Μΐćŕōѕöƒţ ųρđǻτε śēгνïçё (óŕ åłţёŗήдτé ðóщńľσǻď ŝέѓνèř), іŉѕŧėǻď όƒ Ẅîńđőщś Űρđāτέ, ţο šêāřςĥ ƒōя άⁿδ đбщиŀøăđ ŭрðáτèš. Эиāьļϊиġ ťĥįѕ ŝĕτťіпġ мёªńš ťĥåţ ëйď úšĕѓş їπ уõŭя öгĝăⁿĩżāťіôп ðθπ'τ ĥãν℮ ťõ ģō тђгøūğн å ƒĩгёẃάłĺ ŧσ ģěт ųφđдťėѕ, аηð íţ ġινέŝ ÿǿŭ τĥє ôррöѓťũņĩťγ ťό ţėśţ ϋρđáτеś вěƒøяè ðēρľőŷīйĝ τħęм.
+        Si el estado se establece en Habilitado, el cliente Actualizaciones automáticas se conecta al servicio Microsoft Update de la intranet especificado (o al servidor de descargas alternativo), en lugar de Windows Update, para buscar y descargar las actualizaciones. Si habilitas esta configuración, los usuarios finales de la organización no tendrán que usar un firewall para obtener actualizaciones y, además, podrán probar las actualizaciones antes de implementarlas.
 
-        Ίƒ ŧнė šţατúŝ ίş šёť ţό Đîŝãвłēđ óґ ∏σт Ĉόñƒїġџŗęď, áπð îƒ Áũτǿmдťïĉ Ũφδãτєş їś ⁿбт ďΐšąвŀěδ ву φőľįсý òѓ μśęѓ ρř℮ƒėґэⁿć℮, ţђе Åύťòmαŧïĉ Џφδáţėš ċľіęŋť ςоπл℮стş ďīѓзĉťłγ ŧö тħê Ẅίŋðσщş Џρďāτè šĭτë бň ťђε Ϊⁿťέŗиэτ.
+        Si el estado se establece en Deshabilitado o No configurado y, si el cliente Actualizaciones automáticas no está deshabilitado según las preferencias del usuario o la directiva, este se conecta directamente al sitio de Windows Update en Internet.
 
-        Ŧнέ áℓţέŕлáŧе δòŵйľōãδ ŝĕŗνëя Сοŋƒĭğцґєš ťђ℮ Щíлδőẅŝ Ųрðáţє ∆ĝęⁿť ŧб đøẅйĺоàδ ƒïĺ℮ş ƒřǿm ăņ ªℓŧèяņατίνë đσẁñļòáð ѕєгνеѓ íпѕťєãď σƒ ŧĥè ШŞŪŜ Śěŕνёя.
+        El servidor de descargas alternativo configura el agente de Windows Update para descargar archivos desde un servidor de descargas alternativo, en lugar del servicio de actualización de la intranet.
 
-        Ņοťз: İƒ тђē "Ċθήƒīĝůгě Ацţôмâτιč Ũрďäтєѕ" φôℓїċÿ ϊѕ ďίśαвĺêđ, τнэŉ ŧĥιś φòľίçу ĥªѕ ňø èƒƒ℮čţ.
+        La opción Download files with no Url permite descargar contenido desde el servidor de descargas alternativo cuando no haya ninguna URL de descarga para los archivos de los metadatos de la actualización. Esta opción solo se debe usar cuando el servicio de actualización de la intranet no proporciona las URL de descarga en los metadatos de actualización para los archivos del servidor de descargas alternativo.
 
-        Ňǿťé: Іƒ τħè "Άłтэŗиåτε Ďоωήľőàð Şеŕνєґ" ïѕ йõť śėŧ, іť ωĩļļ υşĕ ŧђē ШŠЦŠ şєřνèř ву δéƒâùłţ τõ ðбẃпĺöаď μρđâŧěŝ.
+        Nota: Si la directiva "Configurar Actualizaciones automáticas" está deshabilitada, esta directiva no tiene ningún efecto.
 
-        Лöτε: Ţћįš φôŀîċγ ĭş ήôţ śџφρōѓţëð οń Ẃĩńďōẃš ЯΤ. Şέţŧîηĝ ťђĭѕ φóľĩćў ẃĩĺℓ ηōť ћåνε âйў έƒƒέčт σπ Ẅĭŉďσẃş ЃТ Ρ€ѕ.</string>
+        Nota: Si no está establecida la opción "Definir el servidor de descargas alternativo", se usará el servicio de actualización de la intranet de forma predeterminada para la descarga de actualizaciones.
+
+        Nota: La opción "Download files with no Url..." solo se usa si se establece la opción "Definir el servidor de descargas alternativo".
+
+        Nota: Esta directiva no es compatible con Windows RT. Si estableces esta directiva, no tendrá ningún efecto en equipos con Windows RT.</string>
       <string id="DetectionFrequency_Help">Especifica las horas que Windows usará para determinar cuánto debe esperar antes de comprobar si existen actualizaciones disponibles. El tiempo de espera exacto se determina sustrayendo del total de horas aquí especificadas entre un 0 y un 20% de las mismas. Por ejemplo, si se usa esta directiva para especificar una frecuencia de detección de 20 horas, todos los clientes a los que se aplique esta directiva buscarán actualizaciones entre 16 y 20 horas.
 
 Si el estado se establece en Habilitado, Windows buscará actualizaciones disponibles en el intervalo especificado.
@@ -303,35 +307,35 @@ Nota: esta directiva solo se aplica cuando el equipo está configurado para cone
       <string id="CurrentBranchFeatureUpdates">Rama actual</string>
       <string id="BusinessReadyFeatureUpdates">Rama actual para empresas</string>
       <string id="DeferFeatureUpdates_Title">Selecciona cuándo quieres recibir actualizaciones de características</string>
-      <string id="DeferFeatureUpdates_Help">Èńäьℓé тђϊŝ ρóℓϊçý ŧǿ ѕρèĉĭƒÿ ώћåţ τŷφē øƒ ƒεаτűŕє ΰρδǻťзş ŧó ŕεċёίνё, āņď шћэи.
+      <string id="DeferFeatureUpdates_Help">Habilita esta directiva para especificar qué tipo de actualizaciones de características se van a recibir y cuándo.
 
-Ţђέ вřåņćĥ яëάδιή℮šš ŀеνёł ƒòг ℮åςĥ ηéщ Ẁϊŋδоώś 10 ƒёåţűгë µφδāτé ĩѕ ĭйΐţįăļľу сôлşΐđèŕέđ â "Ċüѓŕëηт βŕǻñςħ" (Сβ) гзłёāśė, ŧö ье ύśěδ ьý őŕĝâηїžдτїøпš ƒθѓ ίňíťіàļ ðєφłőỳмзлťš. Őлčé Μìсгόśóƒť ĥάś νёгìƒĭзð ŧħê ƒëªţúŕé ϋрδāŧè şĥøµĺđ ъε сοⁿśĭðέřēđ ƒбř ęητêřφřīśë δëрľöýмзŉť, įŧ ẁϊłł ъě δęćℓăŕêď ă ъŗåņçћ яĕдđіⁿ℮şѕ łеνзℓ òƒ "Ćũґѓεŋţ Ъґãŉċĥ ƒōѓ βϋŝīŉэśŝ" (€ΒЪ).
+El nivel de preparación de rama para cada actualización de características nueva de Windows 10 inicialmente se considera una versión del tipo "Rama actual" (CB), que deben usar las organizaciones para las implementaciones iniciales. Una vez que Microsoft haya comprobado que la actualización de características debe considerarse para la implementación de empresa, se declarará un nivel de preparación de rama del tipo "Rama actual para empresas" (CBB).
 
-¥θΰ çăń đзƒэѓ ŗěćĕìνĭпğ ƒėàţûґε űφďāτέŝ ƒоŕ úφ тŏ 180 δãўѕ.
+Puedes posponer la recepción de actualizaciones de características hasta 365 días.
 
-Ŧо φяэνєņτ ƒеαŧџřэ µρδåтεŝ ƒѓòm вėΐйĝ яėċзįνēđ όñ тћėΐя śĉĥęðůļёδ ŧїмэ, ÿσũ čāń ťêmφŏŕäŕϊℓў ραΰşë ƒėāтųŗе ΰρđàťěś. Τħê рăüѕė щīℓľ яёmдìп īи ℮ƒƒεςţ ƒоґ 60 δдýş σř ūπţìļ ŷōύ ¢ĺêαř ťħέ ѕтåŗτ ðăтę ƒΐёłď.
+Para impedir la recepción de actualizaciones de características en la fecha programada, puedes poner en pausa temporalmente las actualizaciones de características. La pausa se mantendrá en vigor durante 60 días o hasta que desactives el campo de fecha de inicio.
 
-Тǿ гěšųmē ŕεĉêíνіпġ ₣ēãţúŕě Ūφδâŧέş ẁĥίçħ ªяĕ рāűšєđ, čℓэдŗ ţнę şťǻгť ðąτє ƒįëłð.
+Para reanudar la recepción de actualizaciones de características que has puesto en pausa, desactiva el campo de fecha de inicio.
 
-Įƒ γöû ðĭѕąвļё ǿř δõ ήøт çσⁿƒįġŭґè τђïѕ рοľίĉỳ, Ŵĩñđόώş Ŭφďаŧë ωïŀľ ⁿǿţ ăłŧęŕ ϊţѕ ъēђâνίøѓ.
+Si desactivas o no configuras esta directiva, Windows Update no modificará su comportamiento.
 
-Ņóŧë: Íƒ ťħê "Ãŀĺøώ Ťêłęmēтѓγ" рöłϊςŷ ιѕ ş℮τ ťø 0, τћїŝ ρóľі¢у ώīĺł нäνé ňό ěƒƒėĉť.</string>
+Nota: Si la directiva "Permitir telemetría" está establecida en 0, la directiva no tendrá efecto.</string>
       <string id="DeferQualityUpdates_Title">Selecciona cuándo quieres recibir actualizaciones de calidad</string>
-      <string id="DeferQualityUpdates_Help">Èήāвļе ţђīś ρθłϊçỳ тø ŝρ℮ċîƒÿ ẁђεŉ ţо ѓэ¢éїνè qϋǻľîŧŷ цρďдŧєѕ.
+      <string id="DeferQualityUpdates_Help">Habilita esta directiva para especificar si deseas recibir actualizaciones de calidad.
 
-Υбµ ċāⁿ ðєƒёř ŕēĉэΐνιпğ qύăłΐτý цρδäтéś ƒôѓ μρ ŧο 30 ďâÿš.
+Puedes posponer la recepción de actualizaciones de calidad hasta 30 días.
 
-Ţó φřзνёпť qŭаℓïţỳ ūρđдţёŝ ƒгõm вèìņĝ ѓėсзίνзđ ōń τђεĭŗ ŝсћëðυļèð τìmё, γŏΰ ćăп ťεmφöяāřįŀý ρåūśè qúãℓĭŧÿ ūρðăτêś. Тђė φãúş℮ ẁĭłł ґєmàīń їň ęƒƒė¢т ƒõř 35 ðǻỳŝ ǿѓ ųņţíļ γõű сĺеǻя тнё šτåґτ đдţę ƒĩзŀđ.
+Para impedir la recepción de actualizaciones de calidad en la fecha programada, puedes detener temporalmente estas actualizaciones. La pausa se mantendrá en vigor durante 35 días o hasta que desactives el campo de fecha de inicio.
 
-Ţŏ řēšŭmě ґĕçєįνĭлġ Qūåľіţу Úрδǻтёś ŵħΐ¢ĥ âгë рàůşèð, ĉℓéąґ ťнэ şţдřτ δåтё ƒіέļδ.
+Para reanudar la recepción de actualizaciones de calidad que has puesto en pausa, desactiva el campo de fecha de inicio.
 
-Ϊƒ ÿõū ďīŝдьĺё όř δò лŏτ ¢όŉƒíġµгэ ťĥίş рŏĺιĉγ, Ẅíńðõщš Џφďáτê ώіĺļ ŋöţ ąľŧęř іτş ъēћáνισѓ.
+Si desactivas o no configuras esta directiva, Windows Update no modificará su comportamiento.
 
-Иőτε: Íƒ тħ℮ "Αℓļσẃ Ťëľēмěŧŗÿ" ρоľíсỳ ΐś şеţ ŧσ 0, ťћìš ρõŀïςγ ẃΐℓŀ ћäνê иō ēƒƒеčţ.</string>
+Nota: si la directiva "Permitir telemetría" está establecida en 0, la directiva no tendrá efecto.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">No incluyas controladores con las actualizaciones de Windows</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Σŉąьŀě ťнΐѕ φбĺīċý ŧø ņôт îⁿčŀűðê ďřїνēŗş ẁίťђ Шίπđòωš qµǻłïтγ џρďåτэš.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Habilita esta directiva para no incluir controladores con las actualizaciones de calidad de Windows.
 
-Íƒ ÿôµ δіѕаъℓę óѓ ďő ήοţ ĉόηƒĩĝúяė τђíś ρŏłΐĉÿ, Ẁîπðôẅš Ųрδąтз ẃĭľĺ ίŋсℓцďę црđǻτеš ťĥáţ ђàνė ā Ďяīνёг ¢ļǻśŝíƒιćǻτΐöл.</string>
+Si deshabilitas o no configuras esta directiva, Windows Update incluirá las actualizaciones que tengan una clasificación de controlador.</string>
       <string id="ActiveHours_Title">Desactivar el reinicio automático de actualizaciones durante las horas activas</string>
       <string id="ActiveHours_Help">Si habilitas esta directiva, el equipo no se reiniciará automáticamente durante las horas activas después de que realices las actualizaciones, sino que intentará reiniciarse fuera de ellas.
 
@@ -395,11 +399,27 @@ Si cualquiera de las siguientes dos directivas están habilitadas, esta directiv
       <string id="AutoRestartDeadlineDay12">12</string>
       <string id="AutoRestartDeadlineDay13">13</string>
       <string id="AutoRestartDeadlineDay14">14</string>
+      <string id="AutoRestartDeadlineDay15">15</string>
+      <string id="AutoRestartDeadlineDay16">16</string>
+      <string id="AutoRestartDeadlineDay17">17</string>
+      <string id="AutoRestartDeadlineDay18">18</string>
+      <string id="AutoRestartDeadlineDay19">19</string>
+      <string id="AutoRestartDeadlineDay20">20</string>
+      <string id="AutoRestartDeadlineDay21">21</string>
+      <string id="AutoRestartDeadlineDay22">22</string>
+      <string id="AutoRestartDeadlineDay23">23</string>
+      <string id="AutoRestartDeadlineDay24">24</string>
+      <string id="AutoRestartDeadlineDay25">25</string>
+      <string id="AutoRestartDeadlineDay26">26</string>
+      <string id="AutoRestartDeadlineDay27">27</string>
+      <string id="AutoRestartDeadlineDay28">28</string>
+      <string id="AutoRestartDeadlineDay29">29</string>
+      <string id="AutoRestartDeadlineDay30">30</string>
 
       <string id="DisableUXWUAccess_Title">Quitar el acceso a todas las características de Windows Update</string>
-      <string id="DisableUXWUAccess_Help">Este ajuste te permite quitar el acceso al análisis de Windows Update.
+      <string id="DisableUXWUAccess_Help">Esta configuración te permite quitar el acceso al análisis de Windows Update.
 
-Si habilitas este ajuste, se quitará el acceso al análisis de Windows Update.
+Si habilitas esta configuración, se quitará el acceso al análisis, descarga e instalación de Windows Update.
       </string>
       <string id="ActiveHoursMaxRange_Title">Especificar el intervalo de horas activas para los reinicios automáticos</string>
       <string id="ActiveHoursMaxRange_Help">Habilita esta directiva para especificar el número máximo de horas desde la hora de inicio en las que los usuarios pueden establecer sus horas activas.
@@ -420,27 +440,23 @@ Si deshabilitas o no configuras esta directiva, se recurrirá al intervalo máxi
       <string id="ActiveHoursMaxRange17">17</string>
       <string id="ActiveHoursMaxRange18">18</string>
 
-      <string id="AutoRestartRequiredNotificationDismissal_Title">Ćöиƒíğџґє åŭŧõ-яęşŧªґţ řęqµίřёď пθťïƒïçãţĩōп ƒǿř ůφđǻтεŝ</string>
-      <string id="AutoRestartRequiredNotificationDismissal_Help">∑ⁿǻвļë тħīѕ ρбŀіĉÿ ťø śφĕçìƒÿ ťћэ м℮τђσð вý щђìςн тђе дŭťŏ-řéşťαѓт ѓêqџΐŕέδ ήőţįƒįčäŧĩøи ίş ďīѕмΐśšеď. Шĥêл ą řεšтåґť ĩѕ яéqϋіґěð ţо їήśтáĺĺ ūрδáτěś, ťĥę дūťσ-ŕéšτãґţ яĕqüîřēď ņŏţĭƒї¢άŧîбñ ΐş đîşрłàуėð. Βу ďзƒăųℓŧ, ťђе ńøŧįƒίćāτϊōŉ іѕ áυťőmäťïςăľĺý ðΐśмιśѕêδ ªƒťěѓ 25 šęĉŏńðŝ.
+      <string id="AutoRestartRequiredNotificationDismissal_Title">Configurar las notificaciones necesarias sobre el reinicio automático para realizar actualizaciones</string>
+      <string id="AutoRestartRequiredNotificationDismissal_Help">Habilita esta directiva para especificar el método por el que se descartará la notificación necesaria sobre el reinicio automático. Cuando se deba reiniciar el equipo para instalar actualizaciones, se mostrará la notificación necesaria de reinicio automático. De forma predeterminada, la notificación se descartará automáticamente después de 25 segundos.
 
-Ťђε мéŧħøď ςªπ ьé şεť τό ŕěqũιŕē ΰѕęг ă¢тїόŉ ţο đίşmϊşś ťђз ηøтîƒі¢αţîőń.
+El método puede establecerse de forma que tenga que intervenir el usuario para descartar la notificación.
 
-Ĭƒ уőύ δíşавľè οŕ ðσ ňоτ сōňƒíĝūřé тђιš φбĺϊĉÿ, τĥë ďèƒаϋŀτ мėţħőđ ωϊŀł ьę ΰśеð.
+Si deshabilitas o no configuras esta directiva, se usará el método predeterminado.
       </string>
       <string id="AutoDismissal">1: Automático</string>
       <string id="UserAction">2: Acción del usuario</string>
 
       <string id="AutoRestartNotificationConfig_Title">Configurar las notificaciones de aviso de reinicio automático para las actualizaciones</string>
-      <string id="AutoRestartNotificationConfig_Help">Habilita esta directiva para especificar el tipo de notificaciones que se usará para los avisos de reinicio automático y el momento en el que se deberán mostrar.
+      <string id="AutoRestartNotificationConfig_Help">Habilita esta directiva para especificar cuándo se muestran los avisos de reinicio automático.
 
-Especifica el tipo de notificación que se usará con el fin de avisar al usuario de un reinicio programado para instalar actualizaciones.
+Puedes especificar el tiempo de antelación con el que se notificará un reinicio programado al usuario.
 
-Puedes establecer con cuánta antelación con respecto al reinicio programado recibirá el usuario la notificación.
-
-Si deshabilitas o no configuras esta directiva, se recurrirá al estilo y plazo predeterminados.
+Si deshabilitas o no configuras esta directiva, se usará el periodo predeterminado.
       </string>
-      <string id="AutoRestartNotificationStyleFull">1: Pantalla completa</string>
-      <string id="AutoRestartNotificationStylePartial">2: Pantalla parcial</string>
       <string id="AutoRestartNotificationSchd15">15</string>
       <string id="AutoRestartNotificationSchd30">30</string>
       <string id="AutoRestartNotificationSchd60">60</string>
@@ -472,6 +488,59 @@ Si deshabilitas o no configuras esta directiva, se recurrirá a los comportamien
       <string id="RestartWarnMins15">15</string>
       <string id="RestartWarnMins30">30</string>
       <string id="RestartWarnMins60">60</string>
+      <string id="EngagedRestartTransitionSchedule_Title">Especificar la programación de notificaciones y la transición del Reinicio establecido para las actualizaciones</string>
+      <string id="EngagedRestartTransitionSchedule_Help">Habilita esta directiva para controlar el tiempo antes de realizar la transición de los Reinicios automáticos programados fuera de las horas activas al Reinicio establecido, que requiere programación del usuario. El periodo puede establecerse entre 2 y 30 días después que el reinicio empiece a estar pendiente.
+
+Puedes especificar el número de días en que un usuario puede posponer las notificaciones de aviso del Reinicio establecido. El periodo de posposición puede establecerse entre 1 y 3 días.
+
+Puedes especificar la fecha límite, en días, antes de programar y ejecutar automáticamente un reinicio pendiente fuera de las horas activas. La fecha límite puede establecerse entre 2 y 30 días después que el reinicio empiece a estar pendiente. Si se configura, el reinicio pendiente realizará la transición de Reinicio automático a Reinicio establecido (programación del usuario pendiente) para ejecutarse automáticamente, dentro del periodo especificado.
+
+Si no se especifica ninguna fecha límite o se establece en 0, el reinicio no se ejecutará automáticamente y se mantendrá como Reinicio establecido (p. ej., pendiente de programación del usuario).
+
+Si deshabilitas o no configuras esta directiva, se usarán los comportamientos predeterminados.
+
+Si se configura alguna de las directivas siguientes, esta directiva no tendrá ningún efecto:
+    1. No realizar el reinicio automático si hay usuarios con la sesión iniciada para las instalaciones de actualizaciones automáticas programadas
+    2. Reiniciar siempre automáticamente en la hora programada
+    3. Especificar fecha límite antes del reinicio automático para la instalación de actualizaciones
+      </string>
+      <string id="EngagedRestart_0">0</string>
+      <string id="EngagedRestart_2">2</string>
+      <string id="EngagedRestart_3">3</string>
+      <string id="EngagedRestart_4">4</string>
+      <string id="EngagedRestart_5">5</string>
+      <string id="EngagedRestart_6">6</string>
+      <string id="EngagedRestart_7">7</string>
+      <string id="EngagedRestart_8">8</string>
+      <string id="EngagedRestart_9">9</string>
+      <string id="EngagedRestart_10">10</string>
+      <string id="EngagedRestart_11">11</string>
+      <string id="EngagedRestart_12">12</string>
+      <string id="EngagedRestart_13">13</string>
+      <string id="EngagedRestart_14">14</string>
+      <string id="EngagedRestart_15">15</string>
+      <string id="EngagedRestart_16">16</string>
+      <string id="EngagedRestart_17">17</string>
+      <string id="EngagedRestart_18">18</string>
+      <string id="EngagedRestart_19">19</string>
+      <string id="EngagedRestart_20">20</string>
+      <string id="EngagedRestart_21">21</string>
+      <string id="EngagedRestart_22">22</string>
+      <string id="EngagedRestart_23">23</string>
+      <string id="EngagedRestart_24">24</string>
+      <string id="EngagedRestart_25">25</string>
+      <string id="EngagedRestart_26">26</string>
+      <string id="EngagedRestart_27">27</string>
+      <string id="EngagedRestart_28">28</string>
+      <string id="EngagedRestart_29">29</string>
+      <string id="EngagedRestart_30">30</string>
+      <string id="EngagedRestartSnooze_1">1</string>
+      <string id="EngagedRestartSnooze_2">2</string>
+      <string id="EngagedRestartSnooze_3">3</string>
+      
+      <string id="SetEDURestart_Title">Actualizar directiva de energía para los reinicios del carro</string>
+      <string id="SetEDURestart_Help">Si habilitas esta directiva para los dispositivos EDU que permanecen en los carros durante la noche, se omitirán las comprobaciones de energía para garantizar que los reinicios de actualizaciones tienen lugar en las horas de instalación programadas.</string>
+
     </stringTable>
 
     <presentationTable>
@@ -494,9 +563,10 @@ Si deshabilitas o no configuras esta directiva, se recurrirá a los comportamien
           <label>Establecer el servidor de estadísticas de la intranet:</label>
         </textBox>
         <textBox refId="CorpWUContentHost_Name">
-          <label>Şěт τĥę âŀţěґиǻтē ðощήľόäď ŝєяνεґ:</label>
+          <label>Definir el servidor de descargas alternativo:</label>
         </textBox>
         <text>(por ejemplo, http://IntranetUpd01)</text>
+        <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Descarga archivos sin URL en los metadatos si se estableció un servidor de descargas alternativo.</checkBox>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Comprobar actualizaciones con el siguiente</text>
@@ -535,16 +605,16 @@ Si deshabilitas o no configuras esta directiva, se recurrirá a los comportamien
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Selecciona el nivel de preparación de rama de las actualizaciones de características que quieres recibir:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Después del lanzamiento de una actualización de características, aplazar su recepción por la siguiente cantidad de días:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>Ρāûѕэ ₣ėάтυŗê Ůρðªţèş şťǻŕŧîпĝ</label>
+          <label>Iniciándose la pausa de actualizaciones de características</label>
         </textBox>
-        <text>(ƒοřмáŧ ỳўýγ-mм-ðδ ęжаmρĺè: 2016-09-16)</text>
+        <text>(formato aaaa-mm-dd ejemplo: 2016-09-16)</text>
       </presentation>
       <presentation id="DeferQualityUpdates">
         <decimalTextBox refId="DeferQualityUpdatesPeriodId" defaultValue="0">Después del lanzamiento de una actualización de calidad, aplazar su recepción por la siguiente cantidad de días:</decimalTextBox>
         <textBox refId="PauseQualityUpdatesStartId">
-          <label>Ρãΰŝе Qùäŀĭτγ Űρďâţéš şτąŕτіпğ</label>
+          <label>Iniciándose la pausa de actualizaciones de calidad</label>
         </textBox>
-        <text>(ƒǿгmâт ÿÿўÿ-mm-đđ ě×ăмрĺε: 2016-09-16)</text>
+        <text>(formato aaaa-mm-dd ejemplo: 2016-09-16)</text>
       </presentation>
       <presentation id="ActiveHours_Title">
         <text>Horas activas</text>
@@ -560,19 +630,25 @@ Si deshabilitas o no configuras esta directiva, se recurrirá a los comportamien
       </presentation>
       <presentation id="AutoRestartRequiredNotificationDismissal_Title">
         <text>Especifica el método por el que se descartarán las notificaciones necesarias sobre el reinicio automático:</text>
-        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Μēτђøδ: </dropdownList>
+        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Método: </dropdownList>
       </presentation>
       <presentation id="AutoRestartNotificationConfig_Title">
-        <text>Especifica el estilo que se usará para las notificaciones de aviso sobre el reinicio automático:</text>
-        <dropdownList refId="AutoRestartNotificationStyle" noSort="true" defaultItem="0">Estilo: </dropdownList>
         <text>Especifica el periodo de las notificaciones de aviso del reinicio automático:</text>
         <dropdownList refId="AutoRestartNotificationSchd" noSort="true" defaultItem="0">Plazo (minutos): </dropdownList>
       </presentation>
       <presentation id="RestartWarningSchd_Title">
         <text>Especifica el periodo de las notificaciones de aviso advirtiendo del reinicio automático:</text>
-        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Aviso (horas):</dropdownList>
+        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Aviso (horas): </dropdownList>
         <text>Especifica el periodo de las notificaciones que advierten de un reinicio automático inminente:</text>
         <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">Advertencia (minutos): </dropdownList>
+      </presentation>
+      <presentation id="EngagedRestartTransitionSchedule_Title">
+        <text>Especifica el tiempo antes de realizar la transición del Reinicio automático al Reinicio establecido (pendiente de programación del usuario):</text>
+        <dropdownList refId="EngagedRestartTransitionSchedule" noSort="true" defaultItem="5">Transición (días): </dropdownList>
+        <text>Especifica que se pospongan las notificaciones de aviso del Reinicio establecido:</text>
+        <dropdownList refId="EngagedRestartSnoozeSchedule" noSort="true" defaultItem="2">Posponer (días):     </dropdownList>
+        <text>Especifica la fecha límite antes de que se ejecute automáticamente un reinicio pendiente fuera de las horas activas:</text>
+        <dropdownList refId="EngagedRestartDeadline" noSort="true" defaultItem="0">Fecha límite (días):  </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

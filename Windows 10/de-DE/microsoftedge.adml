@@ -10,6 +10,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge unter Windows 10 höher</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge unter Windows 10, Version 1511 oder höher</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge unter Windows 10, Version 1607 oder höher</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge unter Windows 10, Version 1703 oder höher</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge-Kategorie</string>
 
@@ -18,12 +19,37 @@
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
       <string id="HomePages">Startseiten konfigurieren</string>
-      <string id="HomePages_Explain">Mit dieser Richtlinieneinstellung können Sie mehrere Startseiten für Geräte konfigurieren, die einer Domäne beigetreten sind. Die Einstellung kann danach von den Mitarbeitern nicht geändert werden.
+      <string id="HomePages_Explain">Mit dieser Richtlinieneinstellung können Sie eine oder mehrere Startseiten für Geräte konfigurieren, die in die Domäne eingebunden sind. Ihre Mitarbeiter können die Einstellung nicht ändern, nachdem Sie sie festgelegt haben.
 
-Wenn Sie die Einstellung aktivieren, können Sie eine oder mehrere Startseiten konfigurieren. Wenn die Einstellung aktiviert ist, müssen Sie auch URLs zu den Seiten hinzufügen und mehrere Seiten durch spitze Klammern im folgenden Format trennen:
+Wenn Sie die Einstellung aktivieren, können Sie eine oder mehrere Startseiten konfigurieren. Wenn die Einstellung aktiviert ist, müssen Sie auch URLs zu den Seiten hinzufügen. Mehrere Seiten müssen durch spitze Klammern im folgenden Format unterteilt werden:
      &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
-Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, wird die in den App-Einstellungen angegebene Webseite als standardmäßige Startseite festgelegt.
+
+Version 1703 oder höher: Wenn Sie keinen Datenverkehr an Microsoft senden möchten, können Sie den &lt;about:blank&gt;-Wert verwenden, der sowohl für Computer berücksichtigt wird, die in die Domäne eingebunden sind, als auch solche, die nicht eingebunden sind, sofern es sich um die einzige konfigurierte URL handelt.
+
+Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, entsprechen die Standardstartseiten den in den App-Einstellungen angegebenen Webseiten.
 </string>
+
+      <string id="DisableLockdownOfStartPages">Sperrung von Startseiten deaktivieren</string>
+      <string id="DisableLockdownOfStartPages_Explain">Mit dieser Richtlinieneinstellung können Sie die Sperrung von Startseiten deaktivieren, wodurch Benutzer die Startseiten ändern können, wenn die Einstellung "Startseiten konfigurieren" aktiv ist.
+
+        Hinweis
+        Diese Einstellung gilt nur bei Verwendung der Einstellung "Startseiten konfigurieren".
+
+        Wichtig
+        Diese Einstellung kann nur bei Geräten verwendet werden, die in die Domäne eingebunden oder bei MDM registriert sind. Weitere Informationen finden Sie unter der Richtlinie für Microsoft-Browsererweiterungen (aka.ms/browserpolicy). 
+
+Wenn Sie die Einstellung aktivieren, können Sie Startseiten, die mit der Einstellung "Startseiten konfigurieren" konfiguriert sind, nicht sperren. Folglich können sie von Benutzern geändert werden.
+
+Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, können Benutzer Startseiten, die mit der Einstellung "Startseiten konfigurieren" konfiguriert wurden, nicht ändern. Die Startseiten bleiben gesperrt.</string>
+
+      <string id="AllowAddressBarDropdown">Vorschläge in Dropdownliste der Adressleiste zulassen</string>
+      <string id="AllowAddressBarDropdown_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob die Dropdownfunktionalität der Adressleiste in Microsoft Edge verfügbar ist. Es wird empfohlen, diese Einstellung zu deaktivieren, wenn Sie Netzwerkverbindungen von Microsoft Edge zu Microsoft-Diensten minimieren möchten.
+
+        Hinweis: Durch das Deaktivieren dieser Einstellung wird die Dropdownfunktionalität der Adressleiste deaktiviert. Da in der Dropdownliste Suchvorschläge angezeigt werden, hat diese Einstellung folglich Vorrang vor der Einstellung "Suchvorschläge in Adressleiste konfigurieren".
+
+        Wenn Sie die Einstellung aktivieren oder nicht konfigurieren, steht die Dropdownfunktionalität der Adressleiste Mitarbeitern in Microsoft Edge zur Verfügung.
+
+        Wenn Sie die Einstellung deaktivieren, steht die Dropdownfunktionalität der Adressleiste Mitarbeitern in Microsoft Edge nicht zur Verfügung. Durch diese Einstellung wird auch die benutzerdefinierte Einstellung "Such- und Websitevorschläge während der Eingabe anzeigen" deaktiviert.</string>
       <string id="AllowAutofill">AutoAusfüllen konfigurieren</string>
       <string id="AllowAutofill_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob Mitarbeiter AutoAusfüllen bei Verwendung von Microsoft Edge verwenden können, um Formularfelder automatisch auszufüllen. Standardmäßig können die Mitarbeiter auswählen, ob sie AutoAusfüllen verwenden möchten.
 
@@ -68,6 +94,15 @@ Wenn Sie die Einstellung aktivieren, wird der Popupblocker eingeschaltet, wodurc
 Wenn Sie die Einstellung deaktivieren, wird der Popupblocker ausgeschaltet, und Popupfenster können angezeigt werden.
 
 Wenn Sie die Einstellung nicht konfigurieren, können die Mitarbeiter entscheiden, ob sie den Popupblocker verwenden möchten.</string>
+      <string id="AllowSearchEngineCustomization">Anpassung der Suchmaschine zulassen</string>
+      <string id="AllowSearchEngineCustomization_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob Benutzer ihre Suchmaschine ändern können. Wenn Sie die Einstellung deaktivieren, können Benutzer keine neuen Suchmaschinen hinzufügen oder die in der Adressleiste verwendete Standardsuchmaschine ändern.
+
+Wichtig
+Diese Einstellung kann nur bei Geräten verwendet werden, die in die Domäne eingebunden oder bei MDM registriert sind. Weitere Informationen finden Sie unter der Richtlinie für Microsoft-Browsererweiterungen (aka.ms/browserpolicy).
+
+Wenn Sie die Richtlinie aktivieren oder nicht konfigurieren, können Benutzer neue Suchmaschinen hinzufügen und die in der Adressleiste verwendete Standardsuchmaschine in den Microsoft Edge-Einstellungen ändern.
+
+Wenn Sie die Einstellung deaktivieren, können Benutzer keine Suchmaschinen hinzufügen und die in der Adressleiste verwendete Standardsuchmaschine nicht ändern.</string>
       <string id="AllowSearchSuggestionsinAddressBar">Suchvorschläge in Adressleiste konfigurieren</string>
       <string id="AllowSearchSuggestionsinAddressBar_Explain">Mit dieser Richtlinieneinstellung legen Sie fest, ob Suchvorschläge in der Adressleiste von Microsoft Edge angezeigt werden. Standardmäßig können die Mitarbeiter entscheiden, ob Suchvorschläge in der Adressleiste von Microsoft Edge angezeigt werden sollen.
 
@@ -76,14 +111,14 @@ Wenn Sie die Einstellung aktivieren, werden den Mitarbeitern Suchvorschläge in 
 Wenn Sie die Einstellung deaktivieren, werden den Mitarbeitern keine Suchvorschläge in der Adressleiste von Microsoft Edge angezeigt.
 
 Wenn Sie die Einstellung nicht konfigurieren, können die Mitarbeiter entscheiden, ob Suchvorschläge in der Adressleiste von Microsoft Edge angezeigt werden sollen.</string>
-      <string id="AllowSmartScreen">SmartScreen-Filter konfigurieren</string>
-      <string id="AllowSmartScreen_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob SmartScreen-Filter aktiviert wird. SmartScreen-Filter gibt Warnmeldungen aus, um Ihre Mitarbeiter vor potenziellen betrügerischen Phishing-Versuchen und Schadsoftware zu schützen. Standardmäßig ist SmartScreen-Filter aktiviert.
+      <string id="AllowSmartScreen">Windows Defender SmartScreen konfigurieren</string>
+      <string id="AllowSmartScreen_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob Windows Defender SmartScreen aktiviert wird. Windows Defender SmartScreen gibt Warnmeldungen aus, um Ihre Mitarbeiter vor potenziellen betrügerischen Phishing-Versuchen und Schadsoftware zu schützen. Standardmäßig ist Windows Defender SmartScreen aktiviert.
 
-Wenn Sie die Einstellung aktivieren, ist SmartScreen-Filter aktiviert und kann von den Mitarbeitern nicht deaktiviert werden.
+Wenn Sie die Einstellung aktivieren, ist Windows Defender SmartScreen aktiviert und kann von den Mitarbeitern nicht deaktiviert werden.
 
-Wenn Sie die Einstellung deaktivieren, ist SmartScreen-Filter deaktiviert und kann von den Mitarbeitern nicht aktiviert werden.
+Wenn Sie die Einstellung deaktivieren, ist Windows Defender SmartScreen deaktiviert und kann von den Mitarbeitern nicht aktiviert werden.
 
-Wenn Sie die Einstellung nicht konfigurieren, können die Mitarbeiter entscheiden, ob sie SmartScreen-Filter verwenden möchten.</string>
+Wenn Sie die Einstellung nicht konfigurieren, können die Mitarbeiter entscheiden, ob sie Windows Defender SmartScreen verwenden möchten.</string>
       <string id="AllowWebContentOnNewTabPage">Webinhalte auf der Seite "Neuer Tab" zulassen</string>
       <string id="AllowWebContentOnNewTabPage_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, was angezeigt wird, wenn Microsoft Edge einen neuen Tab öffnet. Standardmäßig öffnet Microsoft Edge die Seite "Neuer Tab".
 
@@ -124,18 +159,45 @@ Wenn Sie die Einstellung aktivieren, werden LocalHost-IP-Adressen bei Telefonanr
 Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, werden LocalHost-IP-Adressen bei Telefonanrufen über das WebRTC-Protokoll angezeigt.</string>
       <string id="ItemNameDisable">Deaktivieren</string>
       <string id="ItemNameEnable">Aktivieren</string>
-      <string id="PreventSmartScreenPromptOverride">Umgehung der SmartScreen-Aufforderungen für Websites verhindern</string>
-      <string id="PreventSmartScreenPromptOverride_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob die Mitarbeiter SmartScreen-Filterwarnungen über potenziell schädliche Websites überschreiben können.
+      <string id="PreventSmartScreenPromptOverride">Umgehung der Windows Defender SmartScreen-Aufforderungen für Websites verhindern</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob die Mitarbeiter Windows Defender SmartScreen-Warnungen über potenziell schädliche Websites überschreiben können.
 
-Wenn Sie die Einstellung aktivieren, können die Mitarbeiter SmartScreen-Filterwarnungen nicht ignorieren und werden daran gehindert, die Website aufzurufen.
+Wenn Sie die Einstellung aktivieren, können die Mitarbeiter Windows Defender SmartScreen-Warnungen nicht ignorieren und werden daran gehindert, die Website aufzurufen.
 
-Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, können die Mitarbeiter SmartScreen-Filterwarnungen ignorieren und die Website aufrufen.</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles">Umgehung der SmartScreen-Aufforderungen für Dateien verhindern</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob Mitarbeiter die SmartScreen-Filterwarnungen zum Herunterladen nicht überprüfter Dateien überschreiben können.
+Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, können die Mitarbeiter Windows Defender SmartScreen-Warnungen ignorieren und die Website aufrufen.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">Umgehung der Windows Defender SmartScreen-Aufforderungen für Dateien verhindern</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob Mitarbeiter die Windows Defender SmartScreen-Warnungen zum Herunterladen nicht überprüfter Dateien überschreiben können.
 
-Wenn Sie die Einstellung aktivieren, können die Mitarbeiter SmartScreen-Filterwarnungen nicht ignorieren und werden daran gehindert, nicht überprüfte Dateien herunterzuladen.
+Wenn Sie die Einstellung aktivieren, können die Mitarbeiter Windows Defender SmartScreen-Warnungen nicht ignorieren und werden daran gehindert, nicht überprüfte Dateien herunterzuladen.
 
-Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, können die Mitarbeiter SmartScreen-Filterwarnungen ignorieren und den Downloadvorgang fortsetzen.</string>
+Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, können die Mitarbeiter Windows Defender-SmartScreen-Warnungen ignorieren und den Downloadvorgang fortsetzen.</string>
+      <string id="SetDefaultSearchEngine">Standardsuchmaschine festlegen</string>
+      <string id="SetDefaultSearchEngine_Explain">Mit dieser Richtlinieneinstellung können Sie die Standardsuchmaschine für Ihre Mitarbeiter konfigurieren. Ihre Mitarbeiter können die Standardsuchmaschine jederzeit ändern.
+
+Wichtig
+Diese Einstellung kann nur bei Geräten verwendet werden, die in die Domäne eingebunden oder bei MDM registriert sind. Weitere Informationen finden Sie unter der Richtlinie für Microsoft-Browsererweiterungen (aka.ms/browserpolicy).
+
+Wenn Sie die Einstellung aktivieren, können Sie eine Standardsuchmaschine für Ihre Mitarbeiter auswählen. Wenn die Einstellung aktiviert ist, müssen Sie die Standardsuchmaschine auch der Einstellung "Standardsuchmaschine festlegen" hinzufügen, indem Sie der OpenSearch-XML-Datei einen Link hinzufügen, der mindestens den Kurznamen und die HTTPS-URL der Suchmaschine enthält. Weitere Informationen zum Erstellen der OpenSearch-XML-Datei finden Sie im Thema zu den Grundlagen von OpenSearch-Standards (https://msdn.microsoft.com/en-us/library/dd163546.aspx). Verwenden Sie folgendes Format, um den hinzuzufügenden Link anzugeben: &lt;https://fabrikam.com/opensearch.xml&gt;
+
+Hinweis
+Wenn Ihre Mitarbeiter für jeden Markt die Standardeinstellungen von Microsoft Edge verwenden sollen, können Sie die Zeichenfolge auf EDGEDEFAULT festlegen. Wenn Ihre Mitarbeiter Microsoft Bing als Standardsuchmaschine verwenden sollen, können Sie die Zeichenfolge auf EDGEBING festlegen.
+
+Mitarbeiter können die Standardsuchmaschine jederzeit ändern, es sei denn, Sie deaktivieren die Einstellung "Anpassung der Suchmaschine zulassen", wodurch Änderungen unterbunden werden.
+
+Wenn Sie die Einstellung deaktivieren, wird die durch die Richtlinie festgelegte Standardsuchmaschine entfernt. Wenn es sich dabei gleichzeitig um die aktuell verwendete Standardeinstellung handelt, wird die Maschine in die in Microsoft Edge angegebene Suchmaschine für den Markt geändert.
+
+Wenn Sie die Einstellung nicht konfigurieren, wird die Standardsuchmaschine auf die in den App-Einstellungen angegebene Maschine festgelegt.</string>
+      <string id="ConfigureAdditionalSearchEngines">Zusätzliche Suchmaschinen konfigurieren</string>
+      <string id="ConfigureAdditionalSearchEngines_Explain">Mit dieser Richtlinieneinstellung können Sie bis zu 5 zusätzliche Suchmaschinen hinzufügen, die von Ihren Mitarbeitern zwar nicht entfernt, aber als persönliche Standardsuchmaschine konfiguriert werden können. Durch die Einstellung wird nicht die Standardsuchmaschine festgelegt. Dazu müssen Sie die Einstellung "Standardsuchmaschine festlegen" verwenden.
+
+Wichtig
+Diese Einstellung kann nur bei Geräten verwendet werden, die in die Domäne eingebunden oder bei MDM registriert sind. Weitere Informationen finden Sie unter der Richtlinie für Microsoft-Browsererweiterungen (aka.ms/browserpolicy).
+
+Wenn Sie die Einstellung aktivieren, können Sie bis zu 5 zusätzliche Suchmaschinen hinzufügen. Für jede zusätzliche Suchmaschine müssen Sie der OpenSearch-XML-Datei auch einen Link hinzufügen, der mindestens den Kurznamen und die HTTPS-URL der Suchmaschine enthält. Weitere Informationen zum Erstellen der OpenSearch-XML-Datei finden Sie im Thema zu den Grundlagen von OpenSearch-Standards (https://msdn.microsoft.com/en-us/library/dd163546.aspx). Verwenden Sie folgendes Format, um die hinzuzufügenden Links anzugeben: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;
+
+Wenn Sie die Einstellung deaktivieren, werden alle hinzugefügten Suchmaschinen von den Geräten Ihrer Mitarbeiter entfernt.
+
+Wenn Sie die Einstellung nicht konfigurieren, enthält die Liste der Suchmaschinen die in den App-Einstellungen angegebenen Suchmaschinen.</string>
       <string id="ProvisionedFavorites">Favoriten konfigurieren</string>
       <string id="ProvisionedFavorites_Explain">Mit dieser Richtlinieneinstellung können Sie die Standardliste der Favoriten konfigurieren, die Ihren Mitarbeitern angezeigt werden. Die Mitarbeiter können ihre Favoriten ändern und jederzeit Elemente hinzufügen oder entfernen.
 
@@ -160,6 +222,58 @@ Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, verhält sich di
 Wenn Sie diese Richtlinieneinstellung aktivieren, können Mitarbeiter nicht auf die Seite „about:flags“ zugreifen.
 
 Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, können Mitarbeiter auf die Seite „about:flags“ zugreifen.</string>
+      <string id="PreventLiveTileDataCollection">Verhindern, dass Microsoft Edge Live-Kachel-Informationen erfasst, wenn eine Website an das Startmenü angeheftet wird</string>
+      <string id="PreventLiveTileDataCollection_Explain">Mit dieser Richtlinie können Sie festlegen, ob Microsoft Edge Live-Kachel-Metadaten vom Dienst „ieonline.microsoft.com“ erfassen kann, um die Benutzererfahrung beim Anheften einer Live-Kachel an das Startmenü zu optimieren.
+
+Bei aktivierter Einstellung erfasst Microsoft Edge keine Live-Kachel-Metadaten und bietet beim Anheften einer Live-Kachel an das Startmenü nur eine minimale Benutzererfahrung.
+
+Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, erfasst Microsoft Edge die Live-Kachel-Metadaten und bietet beim Anheften einer Live-Kachel an das Startmenü eine umfassendere Benutzererfahrung.</string>
+      <string id="PreventFirstRunPage">Verhindern, dass die Einrichtungs-Webseite in Microsoft Edge geöffnet wird</string>
+      <string id="PreventFirstRunPage_Explain">
+Mit dieser Richtlinieneinstellung können Sie festlegen, ob Mitarbeitern die Einrichtungs-Webseite von Microsoft angezeigt wird, wenn sie Microsoft Edge zum ersten Mal öffnen.
+
+Bei aktivierter Einstellung wird den Mitarbeiter die Einrichtungs-Webseite von Microsoft nicht angezeigt, wenn sie Microsoft Edge zum ersten Mal öffnen.
+
+Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird den Mitarbeitern die Einrichtungs-Webseite von Microsoft angezeigt, wenn sie Microsoft Edge zum ersten Mal öffnen.</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge">Favoriten zwischen Internet Explorer und Microsoft Edge synchronisieren</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge_Explain">Mit dieser Einstellung können Sie festlegen, ob Benutzer ihre Favoriten zwischen Internet Explorer und Microsoft Edge synchronisieren können.
+
+Wenn Sie die Einstellung aktivieren, können Mitarbeiter ihre Favoriten zwischen Internet Explorer und Microsoft Edge synchronisieren.
+
+Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, können Mitarbeiter ihre Favoriten zwischen Internet Explorer und Microsoft Edge nicht synchronisieren.
+      </string>
+
+      <string id="AllowFlashClickToRun">Klick-und-Los-Einstellung für Adobe Flash konfigurieren</string>
+      <string id="AllowFlashClickToRun_Explain">
+        Wenn Sie die Klick-und-Los-Einstellung für Adobe Flash aktivieren oder nicht konfigurieren, muss ein Benutzer in Microsoft Edge auf die Schaltfläche "Klick-und-Los" klicken, um auf Inhalte zu klicken, oder damit die Website in die Liste automatisch zugelassener Websites aufgenommen wird, bevor die Inhalte geladen und ausgeführt werden. 
+
+Websites werden aufgrund von Benutzerfeedback in die Liste automatisch zugelassener Websites aufgenommen und insbesondere basierend darauf, wie häufig das Laden und Ausführen der Inhalte zugelassen wird.
+      </string>
+
+      <string id="AllowClearingBrowsingDataOnExit">Löschen von Browserdaten beim Beenden zulassen</string>
+      <string id="AllowClearingBrowsingDataOnExit_Explain">Diese Richtlinieneinstellung ermöglicht es, Browserdaten beim Schließen von Microsoft Edge automatisch zu löschen.
+
+Wenn Sie die Richtlinieneinstellung aktivieren, ist das Löschen des Browserverlaufs beim Beenden aktiviert.
+
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann sie unter "Einstellungen" in den Optionen zum Löschen von Browserdaten von Mitarbeitern aktiviert und konfiguriert werden.
+      </string>
+
+      <string id="AllowFlash">Adobe Flash zulassen</string>
+      <string id="AllowFlash_Explain">Mit dieser Einstellung können Sie festlegen, ob Mitarbeiter Adobe Flash in Microsoft Edge ausführen können.
+
+Wenn Sie die Einstellung aktivieren oder nicht konfigurieren, können die Mitarbeiter Adobe Flash verwenden.
+
+Wenn Sie die Einstellung deaktivieren, können die Mitarbeiter Adobe Flash nicht verwenden.
+
+      </string>
+
+      <string id="AllowCVList">Microsoft-Kompatibilitätsliste zulassen</string>
+      <string id="AllowCVList_Explain">Mit dieser Richtlinieneinstellung können Sie festlegen, ob die Microsoft-Kompatibilitätsliste in Microsoft Edge verwendet werden soll (hierbei handelt es sich um eine von Microsoft bereitgestellte Liste, mit deren Hilfe Websites, die bekannte Kompatibilitätsprobleme aufweisen, ordnungsgemäß angezeigt werden können). Die Microsoft-Kompatibilitätsliste ist standardmäßig aktiviert und kann über "about:compat" angezeigt werden.
+
+Wenn Sie die Einstellung aktivieren oder nicht konfigurieren, lädt Microsoft Edge regelmäßig die neueste Version der Liste von Microsoft herunter und wendet die Updates während der Browsernavigation an. Wenn ein Mitarbeiter eine in der Microsoft-Kompatibilitätsliste enthaltene Website aufruft, wird er aufgefordert, Internet Explorer 11 zu verwenden. Dort wird die Website automatisch in der IE-Version gerendert, die erforderlich ist, um die Website ordnungsgemäß darzustellen.
+
+Wenn Sie die Einstellung deaktivieren, wird die Microsoft-Kompatibilitätsliste während der Browsernavigation nicht verwendet.</string>
+
     </stringTable>
 
     <!-- Presentation -->
@@ -177,6 +291,16 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, können Mitarb
       <presentation id="HomePages_Presentation">
         <textBox refId="HomePagesPrompt">
           <label>Verwenden Sie dieses Format: &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="SetDefaultSearchEngine_Presentation">
+        <textBox refId="SetDefaultSearchEngine_Prompt">
+          <label>Verwenden Sie folgendes Format, um den hinzuzufügenden Link anzugeben: &lt;https://fabrikam.com/opensearch.xml&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ConfigureAdditionalSearchEngines_Presentation">
+        <textBox refId="ConfigureAdditionalSearchEngines_Prompt">
+          <label>Verwenden Sie folgendes Format, um den oder die hinzuzufügenden Links anzugeben: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;</label>
         </textBox>
       </presentation>
       <presentation id="ProvisionedFavorites_Presentation">

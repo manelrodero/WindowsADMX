@@ -3,7 +3,7 @@
 <description>여기에 설명 입력</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Windows Defender</string>
+    <string id="AntiSpywareDefender">Windows Defender 바이러스 백신</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">제외 사항</string>
     <string id="NetworkRealtimeInspection">네트워크 검사 시스템</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">MAPS</string>
     <string id="Threats">위협</string>
     <string id="ClientInterface">클라이언트 인터페이스</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">Allow antimalware service to startup with normal priority(맬웨어 방지 서비스가 보통 우선 순위로 시작될 수 있도록 허용)</string>
     <string id="AllowFastServiceStartup_Explain">이 정책 설정은 맬웨어 방지 서비스에 대한 로드 우선 순위를 제어합니다. 로드 우선 순위를 높이면 서비스 시작 속도가 더 빨라지며 성능에는 영향이 없습니다.
 
@@ -33,12 +34,12 @@
 
     이 정책 설정을 사용하지 않거나 구성하지 않으면 기본적으로 Endpoint Protection이 실행되고 맬웨어나 사용자 동의 없이 설치된 소프트웨어를 컴퓨터에서 검색합니다.
     </string>
-    <string id="DisableAntiSpywareDefender">Windows Defender 끄기</string>
-    <string id="DisableAntiSpywareDefender_Explain">이 정책 설정은 Windows Defender를 끕니다.
+    <string id="DisableAntiSpywareDefender">Windows Defender 바이러스 백신 사용 안 함</string>
+    <string id="DisableAntiSpywareDefender_Explain">이 정책 설정은 Windows Defender 바이러스 백신을 끕니다.
 
-    이 정책 설정을 사용하면 Windows Defender가 실행되지 않으며 스파이웨어나 사용자 동의 없이 설치된 소프트웨어를 컴퓨터에서 검색하지 않습니다.
+    이 정책 설정을 사용하면 Windows Defender 바이러스 백신이 실행되지 않으며 스파이웨어나 사용자 동의 없이 설치된 소프트웨어를 컴퓨터에서 검색하지 않습니다.
 
-    이 정책 설정을 사용하지 않거나 구성하지 않으면 기본적으로 Windows Defender가 실행되고 맬웨어나 사용자 동의 없이 설치된 소프트웨어를 컴퓨터에서 검색합니다.</string>
+    이 정책 설정을 사용하지 않거나 구성하지 않으면 기본적으로 Windows Defender 바이러스 백신이 실행되고 맬웨어나 사용자 동의 없이 설치된 소프트웨어를 컴퓨터에서 검색합니다.</string>
     <string id="DisableLocalAdminMerge">Configure local administrator merge behavior for lists(로컬 관리자의 목록 병합 동작 구성)</string>
     <string id="DisableLocalAdminMerge_Explain">이 정책 설정은 로컬 관리자가 구성한 복합 목록 설정을 그룹 정책 설정을 사용하여 병합하는지 여부를 제어합니다. 이 설정은 위협 및 제외 사항과 같은 목록에 적용됩니다.
 
@@ -47,11 +48,11 @@
 이 설정을 사용하지 않으면 그룹 정책에서 정의된 항목만 결과 실제 정책에서 사용됩니다. 그룹 정책 설정은 로컬 관리자가 구성한 기본 설정을 재정의합니다.</string>
     <string id="DisableRoutinelyTakingAction">일상적인 수정 끄기</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    이 정책 설정을 통해 Windows Defender에서 검색된 모든 위협에 자동으로 조치를 취할지를 구성할 수 있습니다. 특정 위협에 대해 수행되는 조치는 정책 정의 동작, 사용자 정의 동작 및 서명 정의 동작의 조합을 통해 결정됩니다.
+    이 정책 설정을 통해 Windows Defender 바이러스 백신에서 검색된 모든 위협에 자동으로 조치를 취할지를 구성할 수 있습니다. 특정 위협에 대해 수행되는 조치는 정책 정의 동작, 사용자 정의 동작 및 서명 정의 동작의 조합을 통해 결정됩니다.
 
-    이 정책 설정을 사용하면 Windows Defender에서 검색된 위협에 대해 자동으로 작업을 수행하지 않지만, 각 위협에 대해 사용할 수 있는 작업을 선택하도록 묻는 메시지가 표시됩니다.
+    이 정책 설정을 사용하면 Windows Defender 바이러스 백신에서 검색된 위협에 대해 자동으로 작업을 수행하지 않지만, 각 위협에 대해 사용할 수 있는 작업을 선택하도록 묻는 메시지가 표시됩니다.
 
-    이 정책 설정을 사용하지 않거나 구성하지 않으면 구성할 수 없는 지연 시간인 약 5초 후에 Windows Defender에서 검색된 모든 위협에 대해 자동으로 작업을 수행합니다.</string>
+    이 정책 설정을 사용하지 않거나 구성하지 않으면 구성할 수 없는 지연 시간인 약 5초 후에 Windows Defender 바이러스 백신에서 검색된 모든 위협에 대해 자동으로 작업을 수행합니다.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         이 정책 설정을 통해 Endpoint Protection에서 검색된 모든 위협에 대해 자동으로 조치를 수행할지 여부를 구성할 수 있습니다. 특정 위협에 대해 수행되는 조치는 정책 정의 동작, 사용자 정의 동작 및 서명 정의 동작의 조합을 통해 결정됩니다.
 
@@ -159,11 +160,11 @@
     <string id="DisableRealtimeMonitoring">실시간 보호 끄기</string>
     <string id="DisableRealtimeMonitoringDefender_Explain">이 정책 설정은 알려진 맬웨어 검색에 대해 실시간 보호 메시지를 표시하지 않습니다.
 
-    Windows Defender는 스파이웨어나 사용자가 원하지 않는 맬웨어가 컴퓨터에 설치되거나 실행되려고 할 경우 이를 경고합니다.
+    Windows Defender 바이러스 백신은 스파이웨어나 사용자가 원하지 않는 맬웨어가 컴퓨터에 설치되거나 실행되려고 할 경우 이를 경고합니다.
 
-    이 정책 설정을 사용하면 Windows Defender에서 사용자에게 맬웨어 검색에 대한 조치를 취하라는 메시지를 표시하지 않습니다.
+    이 정책 설정을 사용하면 Windows Defender 바이러스 백신에서 사용자에게 맬웨어 검색에 대한 조치를 취하라는 메시지를 표시하지 않습니다.
 
-    이 정책 설정을 사용하지 않거나 구성하지 않으면 Windows Defender에서 사용자에게 맬웨어 검색에 대한 조치를 취하라는 메시지를 표시합니다.</string>
+    이 정책 설정을 사용하지 않거나 구성하지 않으면 Windows Defender 바이러스 백신에서 사용자에게 맬웨어 검색에 대한 조치를 취하라는 메시지를 표시합니다.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     이 정책 설정은 알려진 맬웨어 검색에 대해 실시간 보호 메시지를 표시하지 않습니다.
 
@@ -289,13 +290,21 @@
     <string id="Reporting_WppTracingComponents_Explain">이 정책은 Windows 소프트웨어 추적 전처리기(WPP 소프트웨어 추적) 구성 요소를 구성합니다.</string>
     <string id="Reporting_WppTracingLevel">Configure WPP tracing level(WPP 추적 수준 구성)</string>
     <string id="Reporting_WppTracingLevel_Explain">이 정책을 사용하면 소프트웨어 추적 전처리기(WPP 소프트웨어 추적)의 추적 수준을 구성할 수 있습니다. 
+    추적 수준은 다음과 같이 정의됩니다.
+    1 - 오류
+    2 - 경고
+    3 - 정보
+    4 - 디버그</string>
+    <string id="Reporting_DisableEnhancedNotifications">고급 알림 사용 안 함</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      이 정책 설정을 통해 Windows Defender 바이러스 백신 고급 알림을 클라이언트에 표시할지 여부를 지정할 수 있습니다.
+      
+      이 설정을 사용하지 않거나 구성하지 않으면 Windows Defender 바이러스 백신 고급 알림이 클라이언트에 표시됩니다.
+      
+      이 설정을 사용하면 Windows Defender 바이러스 백신 고급 알림이 클라이언트에 표시되지 않습니다.
+    </string>
 
-추적 수준은 다음과 같이 정의됩니다.
-1 - 오류
-2 - 경로
-3 - 정보
-4 - 디버그</string>
-    <string id="Scan_AllowPause">Allow users to pause scan(사용자가 검사를 일시 중지할 수 있도록 허용)</string>
+      <string id="Scan_AllowPause">Allow users to pause scan(사용자가 검사를 일시 중지할 수 있도록 허용)</string>
     <string id="Scan_AllowPause_Explain">이 정책 설정을 사용하면 최종 사용자가 진행 중인 검사를 일시 중지할 수 있는지 여부를 관리할 수 있습니다.
 
 이 설정을 사용하거나 구성하지 않으면 사용자가 검색을 일시 중지할 수 있도록 상황에 맞는 메뉴가 작업 표시줄 아이콘에 추가됩니다.
@@ -701,10 +710,10 @@
       이 설정을 사용하면 AM UI에 다시 부팅 알림이 표시되지 않습니다.
     </string>
     <string id="UX_Configuration_Notification_Suppress">모든 알림 표시 안 함</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">이 정책 설정을 통해 Windows Defender 알림을 클라이언트에 표시할지 여부를 지정할 수 있습니다.
-      이 설정을 사용하지 않거나 구성하지 않으면 Windows Defender 알림이 클라이언트에 표시됩니다.
+    <string id="UX_Configuration_Notification_Suppress_Explain">이 정책 설정을 통해 Windows Defender 바이러스 백신 알림을 클라이언트에 표시할지 여부를 지정할 수 있습니다.
+      이 설정을 사용하지 않거나 구성하지 않으면 Windows Defender 바이러스 백신 알림이 클라이언트에 표시됩니다.
 
-      이 설정을 사용하면 Windows Defender 알림이 클라이언트에 표시되지 않습니다.
+      이 설정을 사용하면 Windows Defender 바이러스 백신 알림이 클라이언트에 표시되지 않습니다.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Display additional text to clients when they need to perform an action(작업을 수행해야 할 때 클라이언트에 추가 텍스트 표시)</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">이 정책 설정을 사용하면 작업을 수행해야 할 때 클라이언트에 추가 텍스트를 표시하는지 여부를 구성할 수 있습니다. 표시되는 텍스트는 관리자가 정의하는 사용자 지정 문자열입니다. 예를 들어 회사 지원 센터에 전화할 수 있는 전화 번호를 사용할 수 있습니다. 클라이언트 인터페이스에는 최대 1024자만 표시됩니다. 이보다 긴 문자열은 표시되기 전에 잘립니다.
@@ -712,6 +721,32 @@
 이 설정을 사용하면 지정된 추가 텍스트가 표시됩니다.
 
 이 설정을 사용하지 않거나 구성하지 않으면 추가 텍스트가 표시되지 않습니다.</string>
+    <string id="MpCloudBlockLevel">클라우드 보호 수준 선택</string>
+    <string id="MpCloudBlockLevel_Explain">
+      이 정책 설정은 Windows Defender 바이러스 백신 프로그램이 어느 만큼 적극적으로 의심 파일을 차단하고 스캔할지를 결정합니다.
+
+      이 설정이 켜져 있으면 Windows Defender 바이러스 백신 프로그램이 보다 적극적으로 의심 파일을 식별하여 차단 및 스캔합니다. 꺼져 있으면 덜 적극적으로 작업을 수행하여 차단하고 스캔하는 횟수가 적어집니다. 
+      
+      지원되는 특정 값에 대한 자세한 내용은 Windows Defender 바이러스 백신 프로그램 설명서 사이트를 참조하세요.
+
+      참고: 이 기능이 작동하려면 "Microsoft MAPS에 가입" 설정을 사용해야 합니다.
+
+      가능한 값:
+      (0x0) 기본 Windows Defender 바이러스 백신 차단 수준
+      (0x2) 높은 차단 수준      
+    </string>
+    <string id="MpBafsExtendedTimeout">확장 클라우드 확인 구성</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      이 기능은 Windows Defender 바이러스 백신 프로그램이 최대 60초 동안 의심 파일을 차단하고 이를 클라우드에서 스캔하여 안전한지 확인하도록 해줍니다.
+      
+      일반적인 클라우드 확인 제한 시간은 10초입니다. 확장 클라우드 확인 기능을 사용하려면, 추가 50초까지 확장 시간(초)을 지정하세요.
+
+      예를 들어, 원하는 제한 시간이 60초인 경우, 이 설정에서 50초를 지정하면 확장 클라우드 확인 기능이 사용되어 전체 시간이 60초로 늘어납니다.
+
+      참고: 이 기능은 3가지 다른 MAPS 설정인 "'즉각적 차단' 기능 구성", "Microsoft MAPS에 가입"; "추가 분석이 필요한 경우 파일 샘플 보내기"에 따라 달라지며, 이 3가지 기능을 모두 사용해야 합니다.
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">기본 Windows Defender 바이러스 백신 차단 수준</string>
+    <string id="MpCloudBlockLevel_High_Level">높은 차단 수준</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">만료 알림 간격 지정</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">클라우드 차단 수준 선택</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">확장 클라우드 확인 시간(초) 지정</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

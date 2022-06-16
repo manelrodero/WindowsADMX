@@ -10,6 +10,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge Windows 10 vagy újabb rendszeren</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge 1511-es verziójú Windows 10 vagy újabb rendszeren</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge a Windows 10 1607-es vagy újabb verzióján</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge a Windows 10 1703-as vagy újabb verzióján</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge-kategória</string>
 
@@ -18,12 +19,37 @@
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
       <string id="HomePages">Kezdőlapok konfigurálása</string>
-      <string id="HomePages_Explain">A házirend-beállítás lehetővé teszi, hogy egy vagy több kezdőlapot konfiguráljon a tartományhoz csatlakoztatott eszközök számára. Miután bekapcsolja ezt a beállítást, az alkalmazottak nem módosíthatják.
+      <string id="HomePages_Explain">Ez a házirend-beállítás lehetővé teszi, hogy egy vagy több kezdőlapot konfiguráljon a tartományhoz csatlakoztatott eszközök számára. A konfigurálása után az alkalmazottak nem módosíthatják ezt a beállítást.
 
-Ha bekapcsolja a beállítást, konfigurálhat egy vagy több kezdőlapot. Ilyenkor meg kell adnia a lapok URL-címét is. Ha több lapot ad meg, csúcsos zárójelekkel, a következő formátumban tagolja őket:
-    &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
-Ha kikapcsolja vagy nem konfigurálja ezt a beállítást, akkor a rendszer az Alkalmazásbeállítások között megadott alapértelmezett kezdőlapot használja.
+Ha engedélyezi ezt a beállítást, konfigurálhat egy vagy több kezdőlapot. E beállítás engedélyezése esetén meg kell adnia a lapok URL-jét is, több lap esetén csúcsos zárójelekkel elválasztva azokat a következő formátumban:
+     &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
+
+1703-as vagy újabb verzió: Ha nem szeretne forgalmat generálni a Microsoft felé, használhatja az &lt;about:blank&gt; értéket, amelyet a rendszer tartományhoz csatlakoztatott és tartományhoz nem csatlakoztatott eszközök esetén is elfogad, ha ez az egyetlen konfigurált URL.
+
+Ha letiltja vagy nem konfigurálja ezt a beállítást, akkor a rendszer az Alkalmazásbeállítások között megadott weblapokat használja alapértelmezett kezdőlapként.
 </string>
+
+      <string id="DisableLockdownOfStartPages">Kezdőlapok zárolásának letiltása</string>
+      <string id="DisableLockdownOfStartPages_Explain">Ez a házirend-beállítás lehetővé teszi, hogy letiltsa a kezdőlapok zárolását, és engedélyezze a felhasználóknak a kezdőlapok megváltoztatását, amikor érvényben van a „Kezdőlapok konfigurálása” beállítás.
+
+        Megjegyzés
+        Ez a beállítás csak a „Kezdőlapok konfigurálása” beállítás használata esetén jut érvényre.
+
+        Fontos
+        Ez a beállítás csak tartományhoz csatlakoztatott vagy a mobileszköz-kezelési rendszerben regisztrált eszközökön használható. További információért tekintse át a Microsoft böngészőbővítményekre vonatkozó szabályzatát (aka.ms/browserpolicy). 
+
+Ha engedélyezi ezt a beállítást, nem zárolhatja a „Kezdőlapok konfigurálása” beállítással megadott kezdőlapokat, vagyis a felhasználók megváltoztathatják azokat.
+
+Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználók nem változtathatják meg a „Kezdőlapok konfigurálása” beállítással megadott kezdőlapokat. A kezdőlapok beállítása zárolva marad.</string>
+
+      <string id="AllowAddressBarDropdown">Legördülő címsorban megjelenő javaslatok engedélyezése</string>
+      <string id="AllowAddressBarDropdown_Explain">Ezzel a házirend-beállítással adható meg, hogy a Legördülő címsor funkció elérhető-e a Microsoft Edge-ben. Javasoljuk, hogy tiltsa le ezt a beállítást, ha minimálisra szeretné csökkenteni a Microsoft Edge és a Microsoft-szolgáltatások közötti hálózati kapcsolódásokat.
+
+        Megjegyzés: E beállítás letiltásával kikapcsolja a Legördülő címsor funkciót. Ezért – minthogy a keresési javaslatok a legördülő listán jelennek meg – ez a beállítás elsőbbséget élvez a „Címsorbeli keresési javaslatok beállítása” nevű beállítással szemben.
+
+        Ha engedélyezi vagy nem konfigurálja ezt a beállítást, az alkalmazottak láthatják a legördülő címsort a Microsoft Edge-ben.
+
+        Ha letiltja ezt a beállítást, az alkalmazottak nem láthatják a legördülő címsort a Microsoft Edge-ben. Ez a beállítás letiltja a felhasználó által megadott „Keresési és webhelyjavaslatok megjelenítése gépelés közben” beállítást is.</string>
       <string id="AllowAutofill">Automatikus kitöltés beállítása</string>
       <string id="AllowAutofill_Explain">Ezzel a házirend-beállítással adható meg, hogy az alkalmazottak használhatják-e az Automatikus kitöltés funkciót a Microsoft Edge-ben az űrlapmezők kitöltésére. Alapértelmezés szerint az alkalmazottak választhatnak, hogy használják-e az automatikus kitöltést.
 
@@ -39,13 +65,13 @@ Ha bekapcsolja vagy nem konfigurálja a beállítást, akkor az F12 fejlesztői 
 
 Ha kikapcsolja a beállítást, az F12 fejlesztői eszközök nem érhetők el a Microsoft Edge-ben.</string>
       <string id="AllowDoNotTrack">Követés letiltásának beállítása</string>
-      <string id="AllowDoNotTrack_Explain">Ezzel a házirend-beállítással az adható meg, hogy az alkalmazottak küldhetnek-e Do Not Track (Követés letiltása) kérelmeket a követési információkat kérő webhelyeknek. Alapértelmezés szerint a böngésző nem küld Do Not Track kérelmeket, de az alkalmazottak dönthetnek úgy, hogy bekapcsolják a kérelmek küldését.
+      <string id="AllowDoNotTrack_Explain">Ezzel a házirend-beállítással adható meg, hogy az alkalmazottak küldhetnek-e Követés letiltása kérelmeket a követési információkat kérő webhelyeknek. Alapértelmezés szerint a böngésző nem küld Követés letiltása kérelmeket, de az alkalmazottak dönthetnek úgy, hogy bekapcsolják a kérelmek küldését.
 
-A beállítás bekapcsolása esetén a böngésző minden esetben küld Do Not Track kérelmeket a követési információkat kérő webhelyeknek.
+Ha engedélyezi ezt a beállítást, a böngésző minden esetben küld Követés letiltása kérelmeket a követési információkat kérő webhelyeknek.
 
-A beállítás kikapcsolása esetén a böngésző soha nem küld Do Not Track kérelmeket a követési információkat kérő webhelyeknek.
+Ha letiltja ezt a beállítást, a böngésző soha nem küld Követés letiltása kérelmeket a követési információkat kérő webhelyeknek.
 
-A beállítás konfigurálatlanul hagyása esetén az alkalmazottak választhatnak, hogy küldenek-e Do Not Track kérelmeket a követési információkat kérő webhelyeknek.</string>
+Ha nem konfigurálja ezt a beállítást, az alkalmazottak választhatnak, hogy küldenek-e Követés letiltása kérelmeket a követési információkat kérő webhelyeknek.</string>
       <string id="AllowInPrivate">InPrivate-böngészés engedélyezése</string>
       <string id="AllowInPrivate_Explain">Ezzel a házirend-beállítással az adható meg, hogy használhatják-e az alkalmazottak az InPrivate-böngészést a webhelyek megtekintésére.
 
@@ -68,6 +94,15 @@ A beállítás bekapcsolása esetén aktiválódik az előugró ablakok blokkol�
 A beállítás kikapcsolása leállítja az előugró ablakok blokkolását, más szóval engedélyezi az előugró ablakok megjelenését.
 
 A beállítás konfigurálatlanul hagyása esetén az alkalmazottak választhatnak, hogy használják-e az előugró ablakok blokkolását.</string>
+      <string id="AllowSearchEngineCustomization">Keresőmotor testreszabásának engedélyezése</string>
+      <string id="AllowSearchEngineCustomization_Explain">Ezzel a házirend-beállítással adható meg, hogy a felhasználók megváltoztathatják-e a keresőmotort. Ha letiltja ezt a beállítást, a felhasználók nem vehetnek fel új keresőmotorokat, és nem változtathatják meg a címsorban használt alapértelmezett motort.
+
+Fontos
+Ez a beállítás csak tartományhoz csatlakoztatott vagy a mobileszköz-kezelési rendszerben regisztrált eszközökön használható. További információért tekintse át a Microsoft böngészőbővítményekre vonatkozó szabályzatát (aka.ms/browserpolicy).
+
+Ha engedélyezi vagy nem konfigurálja ezt a házirendet, a felhasználók a Microsoft Edge beállításai között felvehetnek új keresőmotorokat, és megváltoztathatják a címsorban használt alapértelmezett motort.
+
+Ha letiltja ezt a beállítást, a felhasználók nem vehetnek fel keresőmotorokat, és nem változtathatják meg a címsorban használt alapértelmezett motort.</string>
       <string id="AllowSearchSuggestionsinAddressBar">Címsorbeli keresési javaslatok beállítása</string>
       <string id="AllowSearchSuggestionsinAddressBar_Explain">Ezzel a beállítással szabályozhatja, hogy megjelenjenek-e keresési javaslatok a Microsoft Edge címsorában. Alapértelmezés szerint az alkalmazottak választhatnak, hogy megjelenjenek-e keresési javaslatok a Microsoft Edge címsorában.
 
@@ -76,14 +111,14 @@ A beállítás bekapcsolása esetén az alkalmazottak láthatnak keresési javas
 A beállítás kikapcsolása esetén az alkalmazottak nem láthatnak keresési javaslatokat a Microsoft Edge címsorában.
 
 A beállítás konfigurálatlanul hagyása esetén az alkalmazottak választhatnak, hogy megjelenjenek-e keresési javaslatok a Microsoft Edge címsorában.</string>
-      <string id="AllowSmartScreen">SmartScreen szűrő beállítása</string>
-      <string id="AllowSmartScreen_Explain">Ezzel a házirend-beállítással konfigurálható a SmartScreen szűrő bekapcsolása. A SmartScreen szűrő figyelmeztető üzenetekkel óvja az alkalmazottakat a gyanítható adathalász támadásoktól és a kártékony szoftverektől. A SmartScreen szűrő alapértelmezés szerint be van kapcsolva.
+      <string id="AllowSmartScreen">A Windows Defender SmartScreen konfigurálása</string>
+      <string id="AllowSmartScreen_Explain">Ezzel a házirend-beállítással konfigurálható a Windows Defender SmartScreen bekapcsolása. A Windows Defender SmartScreen figyelmeztető üzenetekkel óvja az alkalmazottakat a gyanítható adathalász támadásoktól és a kártevő szoftverektől. A Windows Defender SmartScreen alapértelmezés szerint be van kapcsolva.
 
-Ha engedélyezi a beállítást, a SmartScreen szűrő be lesz kapcsolva, és az alkalmazottak nem kapcsolhatják ki.
+Ha engedélyezi a beállítást, a Windows Defender SmartScreen be lesz kapcsolva, és az alkalmazottak nem kapcsolhatják ki.
 
-Ha letiltja a beállítást, a SmartScreen szűrő ki lesz kapcsolva, és az alkalmazottak nem kapcsolhatják be.
+Ha letiltja a beállítást, a Windows Defender SmartScreen ki lesz kapcsolva, és az alkalmazottak nem kapcsolhatják be.
 
-Ha nem konfigurálja a beállítást, az alkalmazottak választhatnak, hogy használják-e a SmartScreen szűrőt.</string>
+Ha nem konfigurálja a beállítást, az alkalmazottak választhatnak, hogy használják-e a Windows Defender SmartScreent.</string>
       <string id="AllowWebContentOnNewTabPage">Webes tartalom engedélyezése az új lapokon</string>
       <string id="AllowWebContentOnNewTabPage_Explain">Ez a házirend-beállítás adja meg, hogy mi történjen, ha a Microsoft Edge új lapot nyit meg. Alapértelmezés szerint a Microsoft Edge az Új lap oldalt jeleníti meg.
 
@@ -124,18 +159,45 @@ A beállítás bekapcsolásával elrejti az alkalmazottak LocalHost IP-címét a
 A beállítás kikapcsolásával vagy konfigurálatlanul hagyásával megjeleníti az alkalmazottak LocalHost IP-címét a WebRTC protokollal indított telefonhívások során.</string>
       <string id="ItemNameDisable">Letiltás</string>
       <string id="ItemNameEnable">Engedélyezés</string>
-      <string id="PreventSmartScreenPromptOverride">A SmartScreen szűrő webhelyekkel kapcsolatos figyelmeztetései nem kerülhetők meg</string>
-      <string id="PreventSmartScreenPromptOverride_Explain">Ezzel a házirend-beállítással adható meg, hogy az alkalmazottak felülbírálhatják-e a SmartScreen szűrő vélhetően rosszindulatú webhelyekkel kapcsolatos figyelmeztetéseit.
+      <string id="PreventSmartScreenPromptOverride">A Windows Defender SmartScreen webhelyekre vonatkozó kérdései megkerülésének megakadályozása</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Ezzel a házirend-beállítással adható meg, hogy az alkalmazottak felülbírálhatják-e a Windows Defender SmartScreen vélhetően rosszindulatú webhelyekkel kapcsolatos figyelmeztetéseit.
 
-A beállítás bekapcsolása után az alkalmazottak nem hagyhatják figyelmen kívül a SmartScreen szűrő figyelmeztetéseit, és nem nyithatják meg a kérdéses webhelyet.
+Ha engedélyezi ezt a beállítást, az alkalmazottak nem hagyhatják figyelmen kívül a Windows Defender SmartScreen figyelmeztetéseit, és nem nyithatják meg a kérdéses webhelyet.
 
-Ha kikapcsolja vagy nem konfigurálja a beállítást, akkor az alkalmazottak figyelmen kívül hagyhatják a SmartScreen szűrő figyelmeztetéseit, és megnyithatják a webhelyet.</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles">A SmartScreen szűrő fájlokkal kapcsolatos figyelmeztetései nem kerülhetők meg</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Ezzel a házirend-beállítással adható meg, hogy az alkalmazottak felülbírálhatják-e a SmartScreen szűrő ellenőrizetlen fájlok letöltésével kapcsolatos figyelmeztetéseit.
+Ha letiltja vagy nem konfigurálja a beállítást, akkor az alkalmazottak figyelmen kívül hagyhatják a Windows Defender SmartScreen figyelmeztetéseit, és megnyithatják a webhelyet.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">A Windows Defender SmartScreen fájlokra vonatkozó kérdései megkerülésének megakadályozása</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Ezzel a házirend-beállítással adható meg, hogy az alkalmazottak felülbírálhatják-e a Windows Defender SmartScreen ellenőrizetlen fájlok letöltésével kapcsolatos figyelmeztetéseit.
 
-A beállítás bekapcsolása után az alkalmazottak nem hagyhatják figyelmen kívül a SmartScreen szűrő figyelmeztetéseit, és nem tölthetnek le ellenőrizetlen fájlokat.
+A beállítás engedélyezése esetén az alkalmazottak nem hagyhatják figyelmen kívül a Windows Defender SmartScreen figyelmeztetéseit, és nem tölthetnek le ellenőrizetlen fájlokat.
 
-Ha kikapcsolja vagy nem konfigurálja a beállítást, akkor az alkalmazottak figyelmen kívül hagyhatják a SmartScreen szűrő figyelmeztetéseit, és folytathatják a letöltést.</string>
+Ha letiltja vagy nem konfigurálja a beállítást, akkor az alkalmazottak figyelmen kívül hagyhatják a Windows Defender SmartScreen figyelmeztetéseit, és folytathatják a letöltést.</string>
+      <string id="SetDefaultSearchEngine">Alapértelmezett keresőmotor beállítása</string>
+      <string id="SetDefaultSearchEngine_Explain">Ezzel a házirend-beállítással konfigurálhatja az alapértelmezett keresőmotort az alkalmazottak számára. Az alkalmazottak bármikor megváltoztathatják az alapértelmezett keresőmotort.
+
+Fontos
+Ez a beállítás csak tartományhoz csatlakoztatott vagy a mobileszköz-kezelési rendszerben regisztrált eszközökön használható. További információért tekintse át a Microsoft böngészőbővítményekre vonatkozó szabályzatát (aka.ms/browserpolicy).
+
+Ha engedélyezi ezt a beállítást, kiválaszthat egy alapértelmezett keresőmotort az alkalmazottak számára. E beállítás engedélyezése esetén meg kell adnia az alapértelmezett motort az „Alapértelmezett keresőmotor beállítása” nevű beállításban is, ehhez fel kell vennie egy hivatkozást az OpenSearch XML-fájlba, és meg kell adnia legalább a keresőmotor rövid nevét és https: kezdetű URL-jét. Az OpenSearch XML-fájl létrehozásáról az „Understanding OpenSearch Standards” (Az OpenSearch szabványok ismertetése) (https://msdn.microsoft.com/hu-hu/library/dd163546.aspx) című témakörben olvashat bővebben. A következő formátumot használja a felvenni kívánt hivatkozás megadásához: &lt;https://fabrikam.com/opensearch.xml&gt;
+
+Megjegyzés
+Ha azt szeretné, hogy az alkalmazottak minden piacon az alapértelmezett Microsoft Edge-beállításokat használják, beállíthatja a karakterláncot az EDGEDEFAULT értékre. Ha azt szeretné, hogy az alkalmazottak a Microsoft Bing szolgáltatást használják alapértelmezett keresőmotorként, beállíthatja a karakterláncot az EDGEBING értékre.
+
+Az alkalmazottak bármikor megváltoztathatják az alapértelmezett keresőmotort, kivéve, ha letiltja a „Keresőmotor testreszabásának engedélyezése” beállítást, és ezzel megakadályozza a módosítást.
+
+Ha letiltja ezt a beállítást, nem lesz házirendben beállított alapértelmezett keresőmotor. Ha ez a jelenleg használatban levő alapértelmezés, akkor a motor módosul a Microsoft Edge által az adott piac számára megadott motorra.
+
+Ha nem konfigurálja ezt a beállítást, az alapértelmezett keresőmotor az Alkalmazásbeállítások között megadott motorra lesz beállítva.</string>
+      <string id="ConfigureAdditionalSearchEngines">További keresőmotorok konfigurálása</string>
+      <string id="ConfigureAdditionalSearchEngines_Explain">Ezzel a házirend-beállítással felvehet legfeljebb 5 további keresőmotort, amelyeket az alkalmazottak nem távolíthatnak el, de amelyeket beállíthatnak személyes alapértelmezett motorként. Ez a beállítás nem adja meg az alapértelmezett keresőmotort. Ahhoz az „Alapértelmezett keresőmotor beállítása” nevű beállítást kell használnia.
+
+Fontos
+Ez a beállítás csak tartományhoz csatlakoztatott vagy a mobileszköz-kezelési rendszerben regisztrált eszközökön használható. További információért tekintse át a Microsoft böngészőbővítményekre vonatkozó szabályzatát (aka.ms/browserpolicy).
+
+Ha engedélyezi ezt a beállítást, felvehet legfeljebb 5 további keresőmotort. Mindegyik további motorhoz fel kell vennie egy hivatkozást az OpenSearch XML-fájlba, és meg kell adnia legalább a keresőmotor rövid nevét és https: kezdetű URL-jét. Az OpenSearch XML-fájl létrehozásáról az „Understanding OpenSearch Standards” (Az OpenSearch szabványok ismertetése) (https://msdn.microsoft.com/hu-hu/library/dd163546.aspx) című témakörben olvashat bővebben. A következő formátumot használja a felvenni kívánt hivatkozás(ok) megadásához: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;
+
+Ha letiltja ezt a beállítást, az esetleg felvett keresőmotorok el lesznek távolítva az alkalmazottak eszközeiről.
+
+Ha nem konfigurálja ezt a beállítást, a keresőmotorok listája az Alkalmazásbeállítások között megadott listára lesz beállítva.</string>
       <string id="ProvisionedFavorites">Kedvencek konfigurálása</string>
       <string id="ProvisionedFavorites_Explain">Ezzel a házirend-beállítással konfigurálhatja az alkalmazottak számára megjelenő kedvencek alapértelmezett listáját. Az alkalmazottak bármikor módosíthatják ezt a beállítást, tehát hozzáadhatnak és eltávolíthatnak kedvenceket.
 
@@ -160,6 +222,58 @@ Ha kikapcsolja vagy nem konfigurálja a beállítást, az alkalmazás az alapér
 Ha engedélyezi ezt a beállítást, a dolgozók nem érhetik el az about:flags lapot.
 
 Ha letiltja vagy nem konfigurálja ezt a beállítást, a dolgozók elérhetik az about:flags lapot.</string>
+      <string id="PreventLiveTileDataCollection">Az élő csempére vonatkozó adatok összegyűjtésének megakadályozása a Microsoft Edge-ben webhelyek Startra történő kitűzése közben</string>
+      <string id="PreventLiveTileDataCollection_Explain">A házirend segítségével meghatározhatja, hogy a Microsoft Edge összegyűjtheti-e az élő csempe metaadatait az ieonline.microsoft.com szolgáltatásból, hogy hatékonyabb szolgáltatást nyújtson az élő csempe Start menüben történő rögzítése közben.
+
+Ha engedélyezi ezt a beállítást, a Microsoft Edge nem gyűjti össze az élő csempe metaadatait, és minimális szolgáltatást nyújt, amikor a felhasználó rögzíti az élő csempét a Start menüben.
+
+Ha letiltja, vagy nem konfigurálja ezt a beállítást, a Microsoft Edge összegyűjti az élő csempe metaadatait, és teljes körűbb szolgáltatást nyújt, amikor a felhasználó rögzíti az élő csempét a Start menüben.</string>
+      <string id="PreventFirstRunPage">Az első futtatáskor megjelenő weblap megnyitásának megakadályozása a Microsoft Edge-ben</string>
+      <string id="PreventFirstRunPage_Explain">
+Ezzel a házirend-beállítással megadhatja, hogy az alkalmazottak lássák-e a Microsoft első futtatáskor megjelenített weblapját, amikor első alkalommal megnyitják a Microsoft Edge-et.
+
+Ha engedélyezi ezt a beállítást, az alkalmazottak nem látják az első futtatáskor megjelenő lapot, amikor első alkalommal megnyitják a Microsoft Edge-et.
+
+Ha letiltja, vagy nem konfigurálja ezt a beállítást, az alkalmazottak látni fogják az első futtatáskor megjelenő lapot, amikor első alkalommal megnyitják a Microsoft Edge-et.</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge">Kedvencek szinkronizálása az Internet Explorer és a Microsoft Edge között</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge_Explain">Ezzel a beállítással adható meg, hogy a felhasználók szinkronizálhatják-e a kedvenceiket az Internet Explorer és a Microsoft Edge között.
+
+Ha engedélyezi ezt a beállítást, az alkalmazottak szinkronizálhatják a kedvenceiket az Internet Explorer és a Microsoft Edge között.
+
+Ha letiltja vagy nem konfigurálja ezt a beállítást, az alkalmazottak nem szinkronizálhatják a kedvenceiket az Internet Explorer és a Microsoft Edge között.
+      </string>
+
+      <string id="AllowFlashClickToRun">Az Adobe Flash Office Kattintásra beállításának konfigurálása</string>
+      <string id="AllowFlashClickToRun_Explain">
+        Ha engedélyezi vagy nem konfigurálja az Adobe Flash Office Kattintásra beállítását, a Microsoft Edge a tartalom betöltéséhez és futtatásához megköveteli majd, hogy a felhasználó az Office Kattintásra gombra kattintson, a tartalomra kattintson, vagy hogy a webhely szerepeljen az automatikusan engedélyezett helyek listáján.
+
+A webhelyek a felhasználók visszajelzései alapján kerülnek fel az automatikusan engedélyezett helyek listájára, egészen pontosan az alapján, hogy milyen gyakran engedélyezik a tartalmuk betöltését és futtatását.
+      </string>
+
+      <string id="AllowClearingBrowsingDataOnExit">Böngészési adatok kilépéskori törlésének engedélyezése</string>
+      <string id="AllowClearingBrowsingDataOnExit_Explain">Ez a házirend-beállítás lehetővé teszi a böngészési adatok automatikus törlését a Microsoft Edge bezárásakor.
+
+Ha engedélyezi ezt a házirend-beállítást, azzal bekapcsolja a böngészési előzmények kilépéskori törlését.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor az alkalmazottak kapcsolhatják be és konfigurálhatják azt a Beállítások képernyőn található Előzmények és adatok törlése szakaszban.
+      </string>
+
+      <string id="AllowFlash">Adobe Flash engedélyezése</string>
+      <string id="AllowFlash_Explain">Ezzel a beállítással adható meg, hogy az alkalmazottak futtathatják-e az Adobe Flasht a Microsoft Edge-ben.
+
+Ha engedélyezi vagy nem konfigurálja ezt a beállítást, az alkalmazottak használhatják az Adobe Flasht.
+
+Ha letiltja ezt a beállítást, az alkalmazottak nem használhatják az Adobe Flasht.
+
+      </string>
+
+      <string id="AllowCVList">A Microsoft kompatibilitási listájának engedélyezése</string>
+      <string id="AllowCVList_Explain">Ezzel a házirend-beállítással megadhatja, hogy alkalmazni kívánja-e a Microsoft kompatibilitási listáját (a Microsoft által kiadott lista, amely segíti az ismert kompatibilitási problémákat jelző webhelyek megfelelő megjelenítését) a Microsoft Edge-ben. Alapértelmezés szerint a Microsoft kompatibilitási listája engedélyezve van, és az about:compat címen tekinthető meg.
+
+Ha engedélyezi, vagy nem konfigurálja ezt a beállítást, a Microsoft Edge rendszeres időközönként letölti a lista legújabb verzióját a Microsoft webhelyéről, és a böngészés során alkalmazza a frissítéseket. Ha az alkalmazott felkeresi a Microsoft kompatibilitási listáján szereplő bármelyik webhelyet, a rendszer kéri, hogy Internet Explorer 11 böngészőt használjon, amelyben a webhely automatikusan úgy jelenik meg, mintha a helyes megjelenéséhez szükséges bármelyik IE-verziót használnák.
+
+Ha letiltja ezt a beállítást, a program nem használja a Microsoft kompatibilitási listáját a böngészés során.</string>
+
     </stringTable>
 
     <!-- Presentation -->
@@ -177,6 +291,16 @@ Ha letiltja vagy nem konfigurálja ezt a beállítást, a dolgozók elérhetik a
       <presentation id="HomePages_Presentation">
         <textBox refId="HomePagesPrompt">
           <label>A következő formátumot használja: &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="SetDefaultSearchEngine_Presentation">
+        <textBox refId="SetDefaultSearchEngine_Prompt">
+          <label>E formátum használatával adhatja meg a felvenni kívánt hivatkozást: &lt;https://fabrikam.com/opensearch.xml&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ConfigureAdditionalSearchEngines_Presentation">
+        <textBox refId="ConfigureAdditionalSearchEngines_Prompt">
+          <label>E formátum használatával adhatja meg a felvenni kívánt hivatkozás(oka)t: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;</label>
         </textBox>
       </presentation>
       <presentation id="ProvisionedFavorites_Presentation">

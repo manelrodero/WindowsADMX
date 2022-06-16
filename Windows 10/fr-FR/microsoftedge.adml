@@ -10,6 +10,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge sur Windows 10 ou version ultérieure</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge sur Windows 10, version 1511 ou ultérieure</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge sur Windows 10, version 1607 ou ultérieure</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge sur Windows 10, version 1703 ou ultérieure</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Catégorie Microsoft Edge</string>
 
@@ -17,13 +18,38 @@
 
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
-      <string id="HomePages">Configurer les pages d’accueil</string>
-      <string id="HomePages_Explain">Ce paramètre de stratégie vous permet de configurer une ou plusieurs pages d’accueil pour les périphériques joints à un domaine. Vos employés ne pourront pas modifier ce paramètre une fois que vous l’aurez défini.
+      <string id="HomePages">Configurer des pages de démarrage</string>
+      <string id="HomePages_Explain">Ce paramètre de stratégie vous permet de configurer une ou plusieurs pages de démarrage pour les appareils joints à un domaine. Vos employés ne pourront pas modifier ce paramètre une fois que vous l’aurez défini.
 
-Si vous activez ce paramètre, vous pouvez configurer une ou plusieurs pages d’accueil. Si ce paramètre est activé, vous devez également inclure l’URL aux pages, en séparant les différentes pages à l’aide de crochets angulaires et de ce format :
+Si vous activez ce paramètre, vous pouvez configurer une ou plusieurs pages de démarrage. Si ce paramètre es activé, vous devez également inclure des URL vers les pages, en séparant plusieurs pages à l’aide de crochets angulaires dans le format suivant :
      &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
-Si vous désactivez ce paramètre ou si vous ne le configurez pas, votre page d’accueil par défaut est la page web que vous avez spécifiée dans les paramètres d’application.
+
+Version 1703 ou ultérieure : si vous ne souhaitez pas envoyer le trafic vers Microsoft, vous pouvez utiliser la valeur &lt;about:blank&gt;, qui est reconnue pour les ordinateurs joints et non joints à un domaine, s’il s’agit de la seule URL configurée.
+
+Si vous désactivez ce paramètre ou ne le configurez pas, vos pages de démarrage par défaut sont les pages web spécifiées dans Paramètres de l’application.
 </string>
+
+      <string id="DisableLockdownOfStartPages">Désactiver le verrouillage des pages de démarrage</string>
+      <string id="DisableLockdownOfStartPages_Explain">Ce paramètre de stratégie vous permet de désactiver le verrouillage des pages de démarrage, ce qui permet aux utilisateurs de les modifier lorsque le paramètre « Configurer des pages de démarrage » est activé.
+
+        Remarque
+        Ce paramètre s’applique uniquement si vous utilisez le paramètre « Configurer des pages de démarrage ».
+
+        Important
+        Ce paramètre ne peut être utilisé qu’avec des appareils joints à un domaine ou inscrits à GPM. Pour plus d’informations, consultez la stratégie d’extension de navigateur Microsoft (aka.ms/browserpolicy). 
+
+Si vous activez ce paramètre, vous ne pouvez pas verrouiller les pages de démarrage configurées à l’aide du paramètre « Configurer des pages de démarrage », ce qui signifie que les utilisateurs peuvent les modifier.
+
+Si vous désactivez ce paramètre ou ne le configurez pas, les utilisateurs ne peuvent pas modifier les pages de démarrage configurées à l’aide du paramètre « Configurer des pages de démarrage ». Les pages de démarrage restent verrouillées.</string>
+
+      <string id="AllowAddressBarDropdown">Autoriser les suggestions de liste déroulante de la barre d’adresse</string>
+      <string id="AllowAddressBarDropdown_Explain">Ce paramètre de stratégie vous permet de déterminer si la fonctionnalité déroulante de la barre d’adresse est disponible dans Microsoft Edge. Nous vous recommandons de désactiver ce paramètre si vous souhaitez réduire les connexions de Microsoft Edge aux services Microsoft.
+
+        Remarque : la désactivation de ce paramètre désactive la fonctionnalité déroulante de la barre d’adresse. Par conséquent, comme les suggestions de recherche sont affichées dans la liste déroulante, ce paramètre est prioritaire sur le paramètre « Configurer les suggestions de recherche dans la barre d’adresse ».
+
+        Si vous activez ce paramètre ou ne le configurez pas, les employés peuvent observer la fonctionnalité déroulante de la barre d’adresse dans Microsoft Edge.
+
+        Si vous désactivez ce paramètre, les employés ne voient pas la fonctionnalité déroulante de la barre d’adresse dans Microsoft Edge. Ce paramètre désactive également le paramètre défini par l’utilisateur, « Afficher les suggestions de recherche et de site à mesure que je tape ».</string>
       <string id="AllowAutofill">Configurer la saisie automatique</string>
       <string id="AllowAutofill_Explain">Ce paramètre de stratégie vous permet de décider si les employés peuvent utiliser la saisie automatique pour remplir automatiquement des champs de formulaires tout en utilisant Microsoft Edge. Par défaut, les employés peuvent décider d’utiliser la saisie automatique.
 
@@ -39,13 +65,13 @@ Si vous activez ce paramètre ou si vous ne le configurez pas, les outils de dé
 
 Si vous désactivez ce paramètre, les outils de développement F12 ne sont pas disponibles sur Microsoft Edge.</string>
       <string id="AllowDoNotTrack">Configurer Ne pas suivre</string>
-      <string id="AllowDoNotTrack_Explain">Ce paramètre de stratégie vous permet de décider si les employés peuvent envoyer des demandes Ne pas suivre à des sites web demandant des informations de suivi. Par défaut, les demandes Ne pas suivre ne sont pas envoyées, mais les employés peuvent décider d’activer ce paramètre et d’envoyer des demandes.
+      <string id="AllowDoNotTrack_Explain">Ce paramètre de stratégie vous permet de déterminer si les employés peuvent envoyer des demandes Ne pas me suivre aux sites web demandant des informations de suivi. Par défaut, des demandes Ne pas me suivre ne sont pas envoyées, mais les employés peuvent décider d’activer ce paramètre et d’envoyer des demandes.
 
-Si vous activez ce paramètre, des demandes Ne pas suivre sont toujours envoyées à des sites web demandant des informations de suivi.
+Si vous activez ce paramètre, des demandes Ne pas me suivre sont toujours envoyées aux sites web demandant des informations de suivi.
 
-Si vous désactivez ce paramètre, des demandes Ne pas suivre ne sont jamais envoyées à des sites web demandant des informations de suivi.
+Si vous désactivez ce paramètre, des demandes Ne pas me suivre ne sont jamais envoyées aux sites web demandant des informations de suivi.
 
-Si vous ne configurez pas ce paramètre, les employés peuvent décider d’envoyer des demandes Ne pas suivre à des sites web demandant des informations de suivi.</string>
+Si vous ne configurez pas ce paramètre, les employés peuvent décider d’envoyer des demandes Ne pas me suivre aux sites web demandant des informations de suivi.</string>
       <string id="AllowInPrivate">Autoriser la navigation InPrivate</string>
       <string id="AllowInPrivate_Explain">Ce paramètre de stratégie vous permet de décider si les employés peuvent naviguer à l’aide de la navigation de site web InPrivate.
 
@@ -68,6 +94,15 @@ Si vous activez ce paramètre, le bloqueur de fenêtres publicitaires est activ�
 Si vous désactivez ce paramètre, le bloqueur de fenêtres publicitaires est désactivé, autorisant l’affichage des fenêtres publicitaires.
 
 Si vous ne configurez pas ce paramètre, les employés peuvent choisir d’utiliser le bloqueur de fenêtres publicitaires.</string>
+      <string id="AllowSearchEngineCustomization">Autoriser la personnalisation du moteur de recherche</string>
+      <string id="AllowSearchEngineCustomization_Explain">Ce paramètre de stratégie vous permet de déterminer si les utilisateurs peuvent modifier leur moteur de recherche. Si vous désactivez ce paramètre, les utilisateurs ne peuvent pas ajouter de nouveaux moteurs de recherche ni changer le moteur utilisé par défaut dans la barre d’adresse.
+
+Important
+Ce paramètre ne peut être utilisé qu’avec des appareils joints à un domaine ou inscrits à GPM. Pour plus d’informations, consultez la stratégie d’extension de navigateur Microsoft (aka.ms/browserpolicy).
+
+Si vous activez ce paramètre de stratégie ou ne le configurez pas, les utilisateurs peuvent ajouter de nouveaux moteurs de recherche et changer le moteur utilisé par défaut dans la barre d’adresse dans Paramètres de Microsoft Edge.
+
+Si vous désactivez ce paramètre, les utilisateurs ne peuvent pas ajouter de moteurs de recherche ni modifier le moteur utilisé par défaut dans la barre d’adresse.</string>
       <string id="AllowSearchSuggestionsinAddressBar">Configurer les suggestions de recherche dans la barre d’adresse</string>
       <string id="AllowSearchSuggestionsinAddressBar_Explain">Ce paramètre de stratégie vous permet de décider si les suggestions de recherche doivent apparaître dans la barre d’adresse de Microsoft Edge. Par défaut, les employés peuvent décider si les suggestions de recherche doivent apparaître dans la barre d’adresse de Microsoft Edge.
 
@@ -76,14 +111,14 @@ Si vous activez ce paramètre, les employés peuvent voir les suggestions de rec
 Si vous désactivez ce paramètre, les employés ne peuvent pas voir les suggestions de recherche dans la barre d’adresse de Microsoft Edge.
 
 Si vous ne configurez pas ce paramètre, les employés peuvent décider si les suggestions de recherche doivent apparaître dans la barre d’adresse de Microsoft Edge.</string>
-      <string id="AllowSmartScreen">Configurer le filtre SmartScreen</string>
-      <string id="AllowSmartScreen_Explain">Ce paramètre de stratégie vous permet de configurer si le filtre SmartScreen est activé. Le filtre SmartScreen renvoie des messages d’avertissement pour protéger vos employés contre d’éventuels courriers indésirables d’hameçonnage et logiciels malveillants. Par défaut, le filtre SmartScreen est activé.
+      <string id="AllowSmartScreen">Configurer Windows Defender SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Ce paramètre de stratégie vous permet de configurer si Windows Defender SmartScreen est activé. Windows Defender SmartScreen renvoie des messages d’avertissement pour protéger vos employés contre d’éventuels courriers indésirables d’hameçonnage et logiciels malveillants. Par défaut, Windows Defender SmartScreen est activé.
 
-Si vous activez ce paramètre, le filtre SmartScreen est activé et les employés peuvent le désactiver.
+Si vous activez ce paramètre, Windows Defender SmartScreen est activé et les employés ne peuvent pas le désactiver.
 
-Si vous désactivez ce paramètre, le filtre SmartScreen est désactivé et les employés peuvent l’activer.
+Si vous désactivez ce paramètre, Windows Defender SmartScreen est désactivé et les employés ne peuvent pas l’activer.
 
-Si vous ne configurez pas ce paramètre, les employés peuvent décider d’utiliser le filtre SmartScreen.</string>
+Si vous ne configurez pas ce paramètre, les employés peuvent décider d’utiliser ou non Windows Defender SmartScreen.</string>
       <string id="AllowWebContentOnNewTabPage">Autoriser le contenu web dans une page de nouvel onglet</string>
       <string id="AllowWebContentOnNewTabPage_Explain">Ce paramètre de stratégie vous permet de configurer ce qui s’affiche lorsque Microsoft Edge ouvre un nouvel onglet. Par défaut, Microsoft Edge ouvre la page de nouvel onglet.
 
@@ -124,18 +159,45 @@ Si vous activez ce paramètre, les adresses IP d’hôte local sont masquées lo
 Si vous désactivez ce paramètre ou si vous ne le configurez pas, les adresses IP d’hôte local sont affichées lors d’un appel téléphonique à l’aide du protocole WebRTC.</string>
       <string id="ItemNameDisable">Désactiver</string>
       <string id="ItemNameEnable">Activer</string>
-      <string id="PreventSmartScreenPromptOverride">Empêcher les substitutions d’avertissement du filtre SmartScreen pour les sites</string>
-      <string id="PreventSmartScreenPromptOverride_Explain">Ce paramètre de stratégie vous permet de décider si les employés peuvent ignorer les avertissements du filtre SmartScreen sur les sites web potentiellement malveillants.
+      <string id="PreventSmartScreenPromptOverride">Empêcher le contournement des avertissements de Windows Defender SmartScreen pour les sites</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Ce paramètre de stratégie vous permet de décider si les employés peuvent ignorer les avertissements de Windows Defender SmartScreen sur les sites web potentiellement malveillants.
 
-Si vous activez ce paramètre, les employés ne peuvent pas ignorer les avertissements du filtre SmartScreen ni accéder au site.
+Si vous activez ce paramètre, les employés ne peuvent pas ignorer les avertissements de Windows Defender SmartScreen ni accéder au site.
 
-Si vous désactivez ce paramètre ou si vous ne le configurez pas, les employés peuvent ignorer les avertissements du filtre SmartScreen et continuer sur le site.</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles">Empêcher les substitutions d’avertissement du filtre SmartScreen pour les fichiers</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Ce paramètre de stratégie vous permet de décider si les employés peuvent ignorer les avertissements du filtre SmartScreen sur le téléchargement de fichiers non vérifiés.
+Si vous désactivez ce paramètre ou si vous ne le configurez pas, les employés peuvent ignorer les avertissements de Windows Defender SmartScreen et continuer sur le site.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">Empêcher le contournement des avertissements de Windows Defender SmartScreen pour les fichiers</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Ce paramètre de stratégie vous permet de décider si les employés peuvent ignorer les avertissements de Windows Defender SmartScreen sur le téléchargement de fichiers non vérifiés.
 
-Si vous activez ce paramètre, les employés ne peuvent pas ignorer les avertissements du filtre SmartScreen ni télécharger des fichiers non vérifiés.
+Si vous activez ce paramètre, les employés ne peuvent pas ignorer les avertissements de Windows Defender SmartScreen ni télécharger des fichiers non vérifiés.
 
-Si vous désactivez ce paramètre ou si vous ne le configurez pas, les employés peuvent ignorer les avertissements du filtre SmartScreen et continuer le processus de téléchargement.</string>
+Si vous désactivez ce paramètre ou si vous ne le configurez pas, les employés peuvent ignorer les avertissements de Windows Defender SmartScreen et continuer le processus de téléchargement.</string>
+      <string id="SetDefaultSearchEngine">Définir le moteur de recherche par défaut</string>
+      <string id="SetDefaultSearchEngine_Explain">Ce paramètre de stratégie vous permet de configurer le moteur de recherche par défaut de vos employés. Vos employés peuvent en changer à tout moment.
+
+Important
+Ce paramètre ne peut être utilisé qu’avec des appareils joints à un domaine ou inscrits à GPM. Pour plus d’informations, consultez la stratégie d’extension de navigateur Microsoft (aka.ms/browserpolicy).
+
+Si vous activez ce paramètre, vous pouvez choisir un moteur de recherche par défaut pour vos employés. Si ce paramètre est activé, vous devez également ajouter le moteur par défaut au paramètre « Définir le moteur de recherche par défaut », en ajoutant un lien à votre fichier XML OpenSearch, incluant au moins le nom court et l’URL https: du moteur de recherche. Pour en savoir plus sur la création du fichier XML OpenSearch, consultez la rubrique Présentation des normes OpenSearch (https://msdn.microsoft.com/fr-fr/library/dd163546.aspx). Utilisez ce format pour spécifier le lien à ajouter : &lt;https://fabrikam.com/opensearch.xml&gt;
+
+Remarque
+Si vous souhaitez que vos employés utilisent les paramètres par défaut de Microsoft Edge pour chaque marché, vous pouvez définir la chaîne sur EDGEDEFAULT. Si vous souhaitez qu’ils utilisent Microsoft Bing comme moteur de recherche par défaut, vous pouvez définir la chaîne sur EDGEBING.
+
+Les employés peuvent changer le moteur de recherche par défaut à tout moment, à moins que vous ne désactiviez le paramètre « Autoriser la personnalisation du moteur de recherche », ce qui limite les éventuelles modifications.
+
+Si vous désactivez ce paramètre, le moteur de recherche par défaut défini par la stratégie est supprimé. S’il s’agit également du moteur par défaut utilisé actuellement, le moteur est remplacé par celui qui est spécifié par Microsoft Edge pour le marché.
+
+Si vous ne configurez pas ce paramètre, le moteur de recherche par défaut est défini sur celui qui est spécifié dans Paramètres de l’application.</string>
+      <string id="ConfigureAdditionalSearchEngines">Configurer des moteurs de recherche supplémentaires</string>
+      <string id="ConfigureAdditionalSearchEngines_Explain">Ce paramètre de stratégie vous permet d’ajouter jusqu’à 5 moteurs de recherche supplémentaires, qui ne pourront pas être supprimés par vos employés, mais qui pourront être définis comme moteur par défaut personnel. Ce paramètre ne définit pas le moteur de recherche par défaut. Pour ce faire, vous devez utiliser le paramètre « Définir le moteur de recherche par défaut ».
+
+Important
+Ce paramètre ne peut être utilisé qu’avec des appareils joints à un domaine ou inscrits à GPM. Pour plus d’informations, consultez la stratégie d’extension de navigateur Microsoft (aka.ms/browserpolicy).
+
+Si vous activez ce paramètre, vous pouvez ajouter jusqu’à 5 moteurs de recherche supplémentaires. Pour chaque moteur supplémentaire, vous devez également ajouter un lien à votre fichier XML OpenSearch, incluant au moins le nom court et l’URL https: du moteur de recherche. Pour en savoir plus sur la création du fichier XML OpenSearch, consultez la rubrique Présentation des normes OpenSearch (https://msdn.microsoft.com/fr-fr/library/dd163546.aspx). Utilisez ce format pour spécifier les liens à ajouter : &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;
+
+Si vous désactivez ce paramètre, les moteurs de recherche ajoutés sont supprimés des appareils de vos employés
+
+Si vous ne configurez pas ce paramètre, la liste des moteurs de recherche est définie sur ce qui est spécifié dans Paramètres de l’application.</string>
       <string id="ProvisionedFavorites">Configurer les Favoris</string>
       <string id="ProvisionedFavorites_Explain">Ce paramètre de stratégie vous permet de configurer la liste des Favoris qui s’affichent pour vos employés par défaut. Vos employés peuvent modifier leurs Favoris en ajoutant ou en supprimant des Favoris à tout moment.
 
@@ -160,6 +222,58 @@ Si vous désactivez ce paramètre ou si vous ne le configurez pas, le comporteme
 Si vous activez ce paramètre, les employés ne peuvent pas accéder à la page about:flags.
 
 Si vous le désactivez ou ne le configurez pas, les employés peuvent accéder à la page about:flags.</string>
+      <string id="PreventLiveTileDataCollection">Empêcher Microsoft Edge de rassembler des données sur les vignettes dynamiques lors de l’épinglage d’un site sur le menu Démarrer</string>
+      <string id="PreventLiveTileDataCollection_Explain">Cette stratégie vous permet de déterminer si le navigateur Microsoft Edge peut rassembler les métadonnées des vignettes dynamiques à partir du service ieonline.microsoft.com afin d’améliorer l’expérience lors de l’épinglage d’une vignette dynamique sur le menu Démarrer.
+
+Si vous activez ce paramètre, Microsoft Edge ne pourra pas rassembler ces métadonnées ; l’expérience de l’utilisateur sera moins satisfaisante lorsqu’il épinglera une vignette dynamique sur le menu Démarrer.
+
+Si vous le désactivez, le navigateur rassemblera ces métadonnées, ce qui permettra à l’utilisateur de bénéficier d’une expérience plus enrichissante lors de cette opération.</string>
+      <string id="PreventFirstRunPage">Empêcher la page web de première exécution de s’ouvrir dans Microsoft Edge</string>
+      <string id="PreventFirstRunPage_Explain">
+Ce paramètre de stratégie vous permet de déterminer si les collaborateurs voient apparaître la page web de première exécution de Microsoft lorsqu’ils lancent le navigateur Microsoft Edge pour la première fois.
+
+Si vous activez ce paramètre, cette page web ne s’affiche pas lors du premier lancement de Microsoft Edge.
+
+Si vous désactivez ce paramètre ou ne le configurez pas, les collaborateurs voient apparaître cette page lorsqu’ils démarrent ce navigateur pour la première fois.</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge">Maintenir vos favoris synchronisés entre Internet Explorer et Microsoft Edge</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge_Explain">Ce paramètre vous permet de déterminer si les utilisateurs peuvent synchroniser leurs favoris entre Internet Explorer et Microsoft Edge.
+
+Si vous activez ce paramètre, les employés peuvent synchroniser leurs favoris entre Internet Explorer et Microsoft Edge.
+
+Si vous désactivez ce paramètre ou ne le configurez pas, les employés ne peuvent pas synchroniser leurs favoris entre Internet Explorer et Microsoft Edge.
+      </string>
+
+      <string id="AllowFlashClickToRun">Configurer le paramètre Démarrer en un clic Adobe Flash</string>
+      <string id="AllowFlashClickToRun_Explain">
+        Si vous activez le paramètre Démarrer en un clic Adobe Flash ou ne le configurez pas, Microsoft Edge requiert que l’utilisateur clique sur le bouton Démarrer en clic, pour cliquer sur le contenu ou pour que le site figure sur la liste autorisée automatiquement avant le chargement et l’exécution du contenu.
+
+Les sites sont répertoriés dans cette liste suite aux commentaires utilisateur, qui indiquent notamment la fréquence à laquelle le chargement et l’exécution du contenu sont autorisés.
+      </string>
+
+      <string id="AllowClearingBrowsingDataOnExit">Autoriser l’effacement des données de navigation en quittant</string>
+      <string id="AllowClearingBrowsingDataOnExit_Explain">Ce paramètre de stratégie autorise l’effacement automatique des données de navigation à la fermeture de Microsoft Edge.
+
+Si vous activez ce paramètre de stratégie, l’effacement de l’historique de navigation en quittant est activé.
+
+Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, il peut être activé et configuré par les employés dans les options Effacer les données de navigation sous Paramètres.
+      </string>
+
+      <string id="AllowFlash">Autoriser Adobe Flash</string>
+      <string id="AllowFlash_Explain">Ce paramètre vous permet de décider si les employés peuvent exécuter Adobe Flash dans Microsoft Edge.
+
+Si vous activez ce paramètre ou ne le configurez pas, les employés peuvent utiliser Adobe Flash.
+
+Si vous désactivez ce paramètre, les employés ne peuvent pas utiliser Adobe Flash.
+
+      </string>
+
+      <string id="AllowCVList">Autoriser la liste de compatibilité Microsoft</string>
+      <string id="AllowCVList_Explain">Ce paramètre de stratégie vous permet de décider d'utiliser ou non la liste de compatibilité Microsoft (une liste fournie par Microsoft qui contribue à un affichage correct des sites présentant des problèmes de compatibilité connus) dans Microsoft Edge. Par défaut, la liste de compatibilité Microsoft est activée et peut être consultée en visitant about:compat.
+
+Si vous activez ou ne configurez pas ce paramètre, Microsoft Edge télécharge périodiquement la version la plus récente de la liste de compatibilité Microsoft et applique les mises à jour durant la navigation. Lorsqu'un employé visite un site figurant sur la liste de compatibilité Microsoft, il est invité à utiliser Internet Explorer 11, où le site s'affiche automatiquement de manière correcte comme s'il était consulté dans la version d'IE qu'il exige.
+
+Si vous désactivez ce paramètre, la liste de compatibilité Microsoft n'est pas utilisée durant la navigation.</string>
+
     </stringTable>
 
     <!-- Presentation -->
@@ -177,6 +291,16 @@ Si vous le désactivez ou ne le configurez pas, les employés peuvent accéder �
       <presentation id="HomePages_Presentation">
         <textBox refId="HomePagesPrompt">
           <label>Utilisez ce format :  &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="SetDefaultSearchEngine_Presentation">
+        <textBox refId="SetDefaultSearchEngine_Prompt">
+          <label>Spécifiez le lien à ajouter en respectant ce format : &lt;https://fabrikam.com/opensearch.xml&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ConfigureAdditionalSearchEngines_Presentation">
+        <textBox refId="ConfigureAdditionalSearchEngines_Prompt">
+          <label>Spécifiez le ou les liens à ajouter en respectant ce format : &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;</label>
         </textBox>
       </presentation>
       <presentation id="ProvisionedFavorites_Presentation">

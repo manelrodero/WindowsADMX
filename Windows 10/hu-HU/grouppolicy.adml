@@ -50,15 +50,25 @@
 
 
 </string>
-      <string id="EnableCDP">Continue experiences on this device</string>
+      <string id="EnableCDP">Megkezdett tevékenység folytatása ezen az eszközön</string>
       <string id="EnableCDP_Help">
-This policy setting determines whether the Windows device is allowed to participate in cross-device experiences (continue experiences).
+Ezzel a házirend-beállítással adhatja meg, hogy a windowsos eszköz részt vehet-e többeszközös környezetben (megkezdett tevékenység másik eszközön való folytatásában).
 
-If you enable this policy setting, the Windows device is discoverable by other Windows devices that belong to the same user, and can participate in cross-device experiences.
+Ha engedélyezi ezt a házirend-beállítást, a windowsos eszközt észlelheti a felhasználó többi windowsos eszköze, és részt vehet többeszközös környezetekben.
 
-If you disable this policy setting, the Windows device is not discoverable by other devices, and cannot participate in cross-device experiences.
+Ha letiltja ezt a házirend-beállítást, a windowsos eszközt nem észlelheti a felhasználó többi windowsos eszköze, és nem vehet részt többeszközös környezetekben.
 
-If you do not configure this policy setting, the default behavior depends on the Windows edition. Changes to this policy take effect on reboot.
+Ha nem konfigurálja ezt a házirend-beállítást, az alapértelmezett működés a Windows adott kiadásától függ. A házirend módosítása az eszköz újraindításakor lép életbe.
+      </string>
+      <string id="EnableAppUriHandlers">A web és az alkalmazások közötti hivatkozások konfigurálása az alkalmazások URI-kezelőivel</string>
+      <string id="EnableAppUriHandlers_Help">
+Ez a házirend-beállítás meghatározza, hogy a Windows támogatja-e a web és az alkalmazások között hivatkozásokat az alkalmazások URI-kezelőivel.
+
+A házirend-beállítás engedélyezésével engedélyezi a web és az alkalmazások közötti hivatkozásokat, így az alkalmazásokat el lehet indítani egy http(s) URI-címmel.
+
+A házirend-beállítás letiltásával letiltja a web és az alkalmazások közötti hivatkozásokat, és a http(s) URI-címek az alapértelmezett böngészőben nyílnak meg a társított alkalmazás elindítása helyett.
+
+Ha nem konfigurálja a házirend-beállítást, az alapértelmezett működés a Windows-kiadástól függ. A házirend módosítása a rendszer újraindítása után lép életbe.
       </string>
       <string id="Fonts">Betűkészletek</string>
       <string id="EnableFontProviders">Betűkészlet-szolgáltatók engedélyezése</string>

@@ -10,6 +10,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge på Windows 10 eller nyere</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge på Windows 10, version 1511 eller nyere</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge på Windows 10, version 1607 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge på Windows 10, version 1703 eller nyere</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Microsoft Edge-kategori</string>
 
@@ -18,12 +19,37 @@
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
       <string id="HomePages">Konfigurer startsider</string>
-      <string id="HomePages_Explain">Denne politikindstilling gør det muligt at konfigurere en eller flere startsider for domænetilknyttede enheder. Dine medarbejdere kan ikke ændre indstillingen, efter at du har angivet den.
+      <string id="HomePages_Explain">Med denne politikindstilling kan du konfigurere en eller flere startsider for enheder, der er tilsluttet et domæne. Dine medarbejdere kan ikke ændre dette, når du har angivet det.
 
-Hvis du aktiverer denne indstilling, kan du konfigurere en eller flere startsider. Hvis denne indstilling er aktiveret, skal du også medtage URL-adresser til siderne, og hvis der er flere sider, skal de adskilles med vinkelparenteser i følgende format:
+Hvis du aktiverer denne indstilling, kan du konfigurere en eller flere startsider. Hvis indstillingen er aktiveret, skal du også medtage URL-adresser til siderne og adskille flere sider ved hjælp af vinkelparenteser i følgende format:
      &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
-Hvis du deaktiverer eller ikke konfigurerer denne indstilling, indstilles din standardstartside til den side, du har angivet under appindstillingerne.
+
+Version 1703 eller nyere: Hvis du ikke vil sende trafik til Microsoft, kan du bruge værdien &lt;about:blank&gt;, som accepteres på alle computere, uanset om de er tilsluttet et domæne eller ej, når det er den eneste konfigurerede URL-adresse.
+
+Hvis du deaktiverer eller undlader at konfigurere indstillingen, er standardstartsiderne de websider, der er angivet i appindstillingerne.
 </string>
+
+      <string id="DisableLockdownOfStartPages">Deaktiver låsning af startsider</string>
+      <string id="DisableLockdownOfStartPages_Explain">Denne politikindstilling gør det muligt at deaktivere låsning af startsider, så brugerne kan ændre startsiderne, når indstillingen "Konfigurer startsider" er aktiveret.
+
+        Bemærk!
+        Denne indstilling gælder kun, når du bruger indstillingen "Konfigurer startsider".
+
+        Vigtigt!
+        Indstillingen kan kun bruges med enheder, der er tilsluttet et domæne eller er MDM-tilmeldt. Få flere oplysninger ved at se Microsofts politik for browserudvidelse (aka.ms/browserpolicy). 
+
+Hvis du aktiverer denne indstilling, kan du ikke låse nogen startsider, der er konfigureret ved hjælp af indstillingen "Konfigurer startsider", hvilket betyder, at brugerne kan ændre dem.
+
+Hvis du deaktiverer eller undlader at konfigurere indstillingen, kan brugerne ikke ændre nogen startsider, der er konfigureret ved hjælp af indstillingen "Konfigurer startsider" indstilling. Startsiderne vil forblive låst.</string>
+
+      <string id="AllowAddressBarDropdown">Tillad rullelisteforslag på adresselinjen</string>
+      <string id="AllowAddressBarDropdown_Explain">Denne politikindstilling gør det muligt at bestemme, om rullelisten er tilgængelig for adresselinjen i Microsoft Edge. Det anbefales, at du deaktiverer denne indstilling, hvis du vil minimere netværksforbindelser fra Microsoft Edge Microsoft-tjenester.
+
+        Bemærk! Hvis du deaktiverer denne indstilling, bliver rullelisten slået fra for adresselinjen, og da søgeforslag vises på rullelisten, vil denne indstilling tilsidesætte indstillingen "Konfigurer søgeforslag i adresselinjen".
+
+        Hvis du aktiverer eller undlader at konfigurere denne indstilling, kan medarbejderne se rullelisten på adresselinjen i Microsoft Edge.
+
+        Hvis du deaktiverer denne indstilling, vil medarbejderne ikke kunne se rullelisten på adresselinjen i Microsoft Edge. Denne indstilling deaktiverer også den brugerdefinerede indstilling "Vis forslag til søgninger og websites, mens jeg skriver".</string>
       <string id="AllowAutofill">Konfigurer Autofyld</string>
       <string id="AllowAutofill_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan bruge Autofyld til automatisk at udfylde formularfelter under brug af Microsoft Edge. Medarbejderne kan som standard vælge at bruge Autofyld.
 
@@ -39,13 +65,13 @@ Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, er F12
 
 Hvis du deaktiverer denne indstilling, er F12-udviklerværktøj ikke tilgængeligt i Microsoft Edge.</string>
       <string id="AllowDoNotTrack">Konfigurer Do Not Track</string>
-      <string id="AllowDoNotTrack_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan sende Do Not Track-anmodninger til websteder, der anmoder om sporing af oplysninger. Som standard sendes der ikke Do Not Track-anmodninger, men medarbejderne kan vælge at slå indstillingen til, så der sendes anmodninger.
+      <string id="AllowDoNotTrack_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan sende Do Not Track-anmodninger til websites, der anmoder om sporingsoplysninger. Som standard sendes der ikke Do Not Track-anmodninger, men medarbejderne kan vælge at slå indstillingen til, så der sendes anmodninger.
 
-Hvis du aktiverer denne indstilling, sendes der altid Do Not Track-anmodninger til websteder, der anmoder om sporing af oplysninger.
+Hvis du aktiverer denne indstilling, sendes der altid Do Not Track-anmodninger til websites, der anmoder om sporingsoplysninger.
 
-Hvis du deaktiverer denne indstilling, sendes der aldrig Do Not Track-anmodninger til websteder, der anmoder om sporing af oplysninger.
+Hvis du deaktiverer denne indstilling, sendes der aldrig Do Not Track-anmodninger til websites, der anmoder om sporingsoplysninger.
 
-Hvis du ikke konfigurerer denne indstilling, kan medarbejderne vælge, om de vil sende Do Not Track-anmodninger til websteder, der anmoder om sporing af oplysninger.</string>
+Hvis du undlader at konfigurere indstillingen, kan medarbejderne vælge, om de vil sende Do Not Track-anmodninger til websites, der anmoder om sporingsoplysninger.</string>
       <string id="AllowInPrivate">Tillad InPrivate-browsing</string>
       <string id="AllowInPrivate_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan bruge InPrivate-browsing på webstedet.
 
@@ -68,6 +94,15 @@ Hvis du aktiverer denne indstilling, slås Blokering af pop op-vinduer til, så 
 Hvis du deaktiverer denne indstilling, slås Blokering af pop op-vinduer fra, så pop op-vinduer vises.
 
 Hvis du ikke konfigurerer denne indstilling, kan medarbejderne vælge, om de vil bruge Blokering af pop op-vinduer.</string>
+      <string id="AllowSearchEngineCustomization">Tillad tilpasning af søgemaskine</string>
+      <string id="AllowSearchEngineCustomization_Explain">Denne politikindstilling gør det muligt at bestemme, om brugerne kan ændre deres søgemaskine. Hvis du deaktiverer denne indstilling, kan brugerne ikke tilføje nye søgemaskiner eller ændre den standardindstilling, der bruges på adresselinjen.
+
+Vigtigt!
+Denne indstilling kan kun bruges med enheder, der er tilsluttet et domæne eller er MDM-tilmeldt. Få flere oplysninger ved at se Microsofts politik for browserudvidelse (aka.ms/browserpolicy)
+
+Hvis du aktiverer eller undlader at konfigurere denne politik, kan brugerne i Microsoft Edge-indstillingerne tilføje nye søgemaskiner og ændre den standardindstilling, der bruges på adresselinjen.
+
+Hvis du deaktiverer denne indstilling, kan brugerne ikke tilføje søgemaskiner eller ændre standardindstillingen, der bruges på adresselinjen.</string>
       <string id="AllowSearchSuggestionsinAddressBar">Konfigurer søgeforslag i adresselinjen</string>
       <string id="AllowSearchSuggestionsinAddressBar_Explain">Denne politikindstilling gør det muligt at bestemme, om der skal vises søgeforslag i adresselinjen i Microsoft Edge. Medarbejderne kan som standard vælge, om der skal vises søgeforslag i adresselinjen i Microsoft Edge.
 
@@ -76,14 +111,14 @@ Hvis du aktiverer denne indstilling, kan medarbejderne se søgeforslag i adresse
 Hvis du deaktiverer denne indstilling, kan medarbejderne ikke se søgeforslag i adresselinjen i Microsoft Edge.
 
 Hvis du undlader at konfigurere denne indstilling, kan medarbejderne vælge, om der skal vises søgeforslag i adresselinjen i Microsoft Edge.</string>
-      <string id="AllowSmartScreen">Konfigurer SmartScreen-filter</string>
-      <string id="AllowSmartScreen_Explain">Denne politikindstilling gør det mulig at konfigurere, om du vil slå SmartScreen-filteret til. SmartScreen-filteret viser advarselsmeddelelser for at beskytte dine medarbejdere mod potentielle forsøg på phishing og skadelig software. SmartScreen-filteret er som standard slået til.
+      <string id="AllowSmartScreen">Konfigurer Windows Defender SmartScreen</string>
+      <string id="AllowSmartScreen_Explain">Denne politikindstilling gør det mulig at konfigurere, om du vil slå Windows Defender SmartScreen til. Windows Defender SmartScreen viser advarselsmeddelelser for at beskytte dine medarbejdere mod potentielle forsøg på phishing og skadelig software. Windows Defender SmartScreen er som standard slået til.
 
-Hvis du aktiverer denne indstilling, slås SmartScreen-filteret til, og medarbejderne kan ikke slå det fra.
+Hvis du aktiverer denne indstilling, slås Windows Defender SmartScreen til, og medarbejderne kan ikke slå det fra.
 
-Hvis du deaktiverer denne indstilling, slås SmartScreen-filteret fra, og medarbejderne kan ikke slå det til.
+Hvis du deaktiverer denne indstilling, slås Windows Defender SmartScreen fra, og medarbejderne kan ikke slå det til.
 
-Hvis du ikke konfigurerer denne indstilling, kan medarbejderne vælge, om de vil bruge SmartScreen-filteret.</string>
+Hvis du ikke konfigurerer denne indstilling, kan medarbejderne vælge, om de vil bruge Windows Defender SmartScreen.</string>
       <string id="AllowWebContentOnNewTabPage">Tillad webindhold på siden Ny fane</string>
       <string id="AllowWebContentOnNewTabPage_Explain">Denne politikindstilling gør det muligt at konfigurere, hvad der vises, når der åbnes en ny fane i Microsoft Edge. Microsoft Edge åbner som standard siden Ny fane.
 
@@ -124,18 +159,45 @@ Hvis du aktiverer denne indstilling, skjules LocalHost IP-adresser, når der for
 Hvis du deaktiverer eller undlader at konfigurere denne indstilling, vises LocalHost-IP-adresser, når der foretages opkald ved hjælp af WebRTC-protokollen.</string>
       <string id="ItemNameDisable">Deaktiver</string>
       <string id="ItemNameEnable">Aktivér</string>
-      <string id="PreventSmartScreenPromptOverride">Bloker omgåelse af SmartScreen-webstedsprompter</string>
-      <string id="PreventSmartScreenPromptOverride_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan tilsidesætte advarsler fra SmartScreen-filteret om potentielt skadelige websteder.
+      <string id="PreventSmartScreenPromptOverride">Bloker omgåelse af Windows Defender SmartScreen-filprompter for websteder</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan tilsidesætte advarsler fra Windows Defender SmartScreen om potentielt skadelige websteder.
 
-Hvis du aktiverer denne indstilling, kan medarbejderne ikke ignorere advarsler fra SmartScreen-filteret, og de forhindres i at fortsætte til webstedet.
+Hvis du aktiverer denne indstilling, kan medarbejderne ikke ignorere advarsler fra Windows Defender SmartScreen, og de forhindres i at fortsætte til webstedet.
 
-Hvis du deaktiverer eller undlader at konfigurere denne indstilling, kan medarbejderne ignorere advarsler fra SmartScreen-filteret og fortsætte til webstedet.</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles">Bloker omgåelse af SmartScreen-filprompter</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan tilsidesætte advarsler fra SmartScreen-filteret om overførsel af filer, der ikke er bekræftet.
+Hvis du deaktiverer eller undlader at konfigurere denne indstilling, kan medarbejderne ignorere advarsler fra Windows Defender SmartScreen og fortsætte til webstedet.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">Bloker omgåelse af Windows Defender SmartScreen-filprompter</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Denne politikindstilling gør det muligt at bestemme, om medarbejderne kan tilsidesætte advarsler fra Windows Defender SmartScreen om download af filer, der ikke er bekræftet.
 
-Hvis du aktiverer denne indstilling, kan medarbejderne ikke ignorere advarsler fra SmartScreen-filteret, og de forhindres i at hente filer, der ikke er bekræftet.
+Hvis du aktiverer denne indstilling, kan medarbejderne ikke ignorere advarsler fra Windows Defender SmartScreen, og de forhindres i at downloade filer, der ikke er bekræftet.
 
-Hvis du deaktiverer eller ikke konfigurerer denne indstilling, kan medarbejderne ignorere advarsler fra SmartScreen-filteret og fortsætte overførslen.</string>
+Hvis du deaktiverer eller ikke konfigurerer denne indstilling, kan medarbejderne ignorere advarsler fra Windows Defender SmartScreen og fortsætte downloaden.</string>
+      <string id="SetDefaultSearchEngine">Angiv standardsøgemaskine</string>
+      <string id="SetDefaultSearchEngine_Explain">Med denne politikindstilling kan du konfigurere standardsøgemaskinen for dine medarbejdere. Medarbejderne kan når som helst ændre standardsøgemaskinen.
+
+Vigtigt!
+Denne indstilling kan kun bruges med enheder, der er tilsluttet et domæne eller er MDM-tilmeldt. Få flere oplysninger ved at se Microsofts politik for browserudvidelse (aka.ms/browserpolicy).
+
+Hvis du aktiverer denne politikindstilling, kan du vælge en standardsøgemaskine for dine medarbejdere. Hvis indstillingen er aktiveret, skal du også føje standardprogrammet til indstillingen "Angiv standardsøgemaskine" ved at føje et link til din OpenSearch XML-fil, der som minimum omfatter det korte navn og URL-adressen til søgemaskinen (https:-format). Du finder flere oplysninger om oprettelse af OpenSearch XML-filen i emnet Understanding OpenSearch Standards (https://msdn.microsoft.com/en-us/library/dd163546.aspx). Brug dette format til at angive det link, du vil tilføje: &lt;https://fabrikam.com/opensearch.xml&gt;
+
+Bemærk!
+Hvis du ønsker, at medarbejderne skal bruge standardindstillingerne i Microsoft Edge for hvert marked, kan du angive strengen til EDGEDEFAULT. Hvis du ønsker, at medarbejderne skal bruge Microsoft Bing som standardsøgemaskine, kan du angive strengen til EDGEBING.
+
+Medarbejderne kan ændre standardsøgemaskinen når som helst, medmindre du deaktiverer indstillingen "Tillad tilpasning af søgemaskine", hvilket begrænser alle muligheder for at foretage ændringer.
+
+Hvis du deaktiverer denne indstilling, fjernes den politikdefinerede standardsøgemaskine. Hvis dette også er den aktuelt anvendte standardindstilling, skifter søgemaskinen til den søgemaskine, som er angivet i Microsoft Edge for markedet.
+
+Hvis du undlader at konfigurere denne indstilling, angives standardsøgemaskinen til den, der er angivet i appindstillingerne.</string>
+      <string id="ConfigureAdditionalSearchEngines">Konfigurer yderligere søgemaskiner</string>
+      <string id="ConfigureAdditionalSearchEngines_Explain">Denne politikindstilling giver dig mulighed for at tilføje op til 5 yderligere søgemaskiner, der ikke kan fjernes af dine medarbejdere, men kan gøres til personlige standardsøgemaskiner. Denne indstilling angiver ikke standardsøgemaskinen. Til det formål skal du bruge indstillingen "Angiv standardsøgemaskine".
+
+Vigtigt!
+Denne indstilling kan kun bruges med enheder, der er tilsluttet et domæne eller er MDM-tilmeldt. Få flere oplysninger ved at se Microsofts politik for browserudvidelse (aka.ms/browserpolicy).
+
+Hvis du aktiverer indstillingen, kan du tilføje op til 5 yderligere søgemaskiner. For hver yderligere søgemaskine skal du også føje et link til din OpenSearch XML-fil, der som minimum omfatter det korte navn og URL-adressen til søgemaskinen (https:-format). Du finder flere oplysninger om oprettelse af OpenSearch XML-filen i emnet Understanding OpenSearch Standards (https://msdn.microsoft.com/en-us/library/dd163546.aspx). Brug dette format til at angive de links, du vil tilføje: &lt;https://fabrikam.com/opensearch.xml&gt;
+
+Hvis du deaktiverer denne indstilling, vil alle tilføjede søgemaskiner blive fjernet fra dine medarbejders enheder.
+
+Hvis du undlader at konfigurere indstillingen, viser listen over søgemaskiner det, der er angivet i appindstillingerne.</string>
       <string id="ProvisionedFavorites">Konfigurer favoritter</string>
       <string id="ProvisionedFavorites_Explain">Denne politikindstilling gør det muligt at konfigurere den standardliste over favoritter, dine medarbejdere kan se. Medarbejderne kan ændre deres favoritter når som helst ved at tilføje eller fjerne elementer.
 
@@ -160,6 +222,58 @@ Hvis du deaktiverer eller undlader at konfigurere denne indstilling, anvendes ap
 Hvis du aktiverer denne politikindstilling, kan medarbejderne få adgang til siden om:flag.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan medarbejderne få adgang til siden om:flag.</string>
+      <string id="PreventLiveTileDataCollection">Undgå, at Microsoft Edge indsamler oplysninger om dynamiske felter ved fastgørelse af et website til Start</string>
+      <string id="PreventLiveTileDataCollection_Explain">Denne politik gør det muligt at bestemme, om Microsoft Edge må indsamle metadata om dynamiske felter fra tjenesten ieonline.microsoft.com for at opnå en bedre oplevelse under fastgørelse af et dynamisk felt til menuen Start.
+
+Hvis du aktiverer denne indstilling, vil Microsoft Edge ikke indsamle metadata om dynamiske felter, hvilket medfører en minimal oplevelse, når en bruger fastgør et dynamisk felt til menuen Start.
+
+Hvis du deaktiverer eller undlader at konfigurere indstillingen, indsamler Microsoft Edge metadata om dynamiske felter, hvilket medfører en bedre og mere komplet oplevelse, når en bruger fastgør et dynamisk felt til menuen Start.</string>
+      <string id="PreventFirstRunPage">Undgå, at websiden om første kørsel åbnes på Microsoft Edge</string>
+      <string id="PreventFirstRunPage_Explain">
+Denne politikindstilling gør det muligt at bestemme, om medarbejderne skal se Microsofts webside om første kørsel, når de åbner Microsoft Edge for første gang.
+
+Hvis du aktiverer denne indstilling, vil medarbejderne ikke se siden om første kørsel, når de åbner Microsoft Edge for første gang.
+
+Hvis du deaktiverer eller undlader at konfigurere indstillingen, ser medarbejderne siden om første kørsel, når de åbner Microsoft Edge for første gang.</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge">Hold favoritter synkroniseret mellem Internet Explorer og Microsoft Edge</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge_Explain">Denne indstilling gør det muligt at bestemme, om brugerne kan synkronisere deres favoritter mellem Internet Explorer og Microsoft Edge.
+
+Hvis du aktiverer denne indstilling, kan medarbejderne synkronisere deres favoritter mellem Internet Explorer og Microsoft Edge.
+
+Hvis du deaktiverer eller undlader at konfigurere indstillingen, kan medarbejderne ikke synkronisere deres favoritter mellem Internet Explorer og Microsoft Edge.
+      </string>
+
+      <string id="AllowFlashClickToRun">Konfigurer indstillingen for Klik og kør for Adobe Flash</string>
+      <string id="AllowFlashClickToRun_Explain">
+        Hvis du aktiverer eller undlader at konfigurere indstillingen Klik og kør for Adobe Flash, kræver Microsoft Edge, at brugerne klikker på Klik og kør eller på indholdet, eller at websitet findes på listen over tilladte websteder, inden indholdet indlæses og køres.
+
+Websites kommer på listen over tilladte websites, ud fra hvor ofte brugerne tillader, at indholdet indlæses og køres.
+      </string>
+
+      <string id="AllowClearingBrowsingDataOnExit">Tillad fjernelse af browsingdata ved afslutning</string>
+      <string id="AllowClearingBrowsingDataOnExit_Explain">Denne politikindstilling giver mulighed for automatisk sletning af browserdata, når Microsoft Edge lukkes.
+
+Hvis du aktiverer politikindstillingen, fjernes browserdata ved afslutning.
+
+Hvis du deaktiverer eller undlader at konfigurere politikindstillingen, kan medarbejderen slå den til og konfigurere den under indstillingerne for browserdata i Indstillinger.
+      </string>
+
+      <string id="AllowFlash">Tillad Adobe Flash</string>
+      <string id="AllowFlash_Explain">Denne indstilling gør det muligt at bestemme, om medarbejderne kan køre Adobe Flash i Microsoft Edge.
+
+Hvis du aktiverer eller undlader at konfigurere denne indstilling, kan medarbejderne bruge Adobe Flash.
+
+Hvis du deaktiverer denne indstilling, kan medarbejderne ikke bruge Adobe Flash.
+
+      </string>
+
+      <string id="AllowCVList">Tillad Microsofts kompatibilitetsliste</string>
+      <string id="AllowCVList_Explain">Med denne politikindstilling har du mulighed for at bestemme, om du vil bruge Microsofts kompatibilitetsliste (en liste, som Microsoft udarbejder for at gøre det muligt at vise websites med kendte kompatibilitetsproblemer korrekt) i Microsoft Edge. Som standard er Microsofts kompatibilitetsliste aktiveret og kan ses ved at gå til about:compat.
+
+Hvis du aktiverer eller undlader at konfigurere denne politikindstilling, downloader Microsoft Edge jævnligt den nyeste version af listen fra Microsoft og anvender opdateringerne under navigation i browseren. Ved besøg på et website på Microsofts kompatibilitetsliste bliver medarbejderen opfordret til at bruge Internet Explorer 11, hvor websitet automatisk gengives, som om der bruges en version af Internet Explorer, der gør det muligt at vise det korrekt.
+
+Hvis du deaktiverer denne indstilling, bruges Microsofts kompatibilitetsliste ikke under navigation i browseren.</string>
+
     </stringTable>
 
     <!-- Presentation -->
@@ -177,6 +291,16 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan 
       <presentation id="HomePages_Presentation">
         <textBox refId="HomePagesPrompt">
           <label>Brug dette format: &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="SetDefaultSearchEngine_Presentation">
+        <textBox refId="SetDefaultSearchEngine_Prompt">
+          <label>Brug dette format til at angive det link, du vil tilføje: &lt;https://fabrikam.com/opensearch.xml&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ConfigureAdditionalSearchEngines_Presentation">
+        <textBox refId="ConfigureAdditionalSearchEngines_Prompt">
+          <label>Brug dette format til at angive det eller de links, du vil tilføje: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;</label>
         </textBox>
       </presentation>
       <presentation id="ProvisionedFavorites_Presentation">

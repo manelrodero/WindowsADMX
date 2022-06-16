@@ -219,6 +219,21 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employ
 
 Si une application est ouverte lorsque cet objet de stratégie de groupe est appliqué à un appareil, les employés doivent redémarrer l’application ou l’appareil pour que les modifications de stratégie soient appliquées à l’application.
       </string>
+      <string id="LetAppsAccessTasks_Name">Permettre aux applications Windows d’accéder aux tâches</string>
+      <string id="LetAppsAccessTasks_Explain">Ce paramètre de stratégie spécifie si les applications Windows peuvent accéder aux tâches.
+
+Vous pouvez spécifier un paramètre par défaut pour toutes les applications ou un seul paramètre par application en spécifiant un nom de la famille de packages. Vous pouvez obtenir le nom de la famille de packages pour une application à l’aide de l’applet de commande Get-AppPackage Windows PowerShell. Un paramètre par application remplace le paramètre par défaut.
+
+Si vous choisissez l’option Sous le contrôle de l’utilisateur, les employés de votre organisation peuvent décider si les applications Windows peuvent accéder aux tâches dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si vous choisissez l’option Forcer l’autorisation, les applications Windows sont autorisées à accéder aux tâches, et les employés de votre organisation ne peuvent pas les modifier.
+
+Si vous choisissez l’option Forcer le refus, les applications Windows ne sont pas autorisées à accéder aux tâches, et les employés de votre organisation ne peuvent pas les modifier.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employés de votre organisation peuvent décider si les applications Windows peuvent accéder aux tâches dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si une application est ouverte lorsque cet objet de stratégie de groupe est appliqué à un appareil, les employés doivent redémarrer l’application ou l’appareil pour que les modifications de stratégie soient appliquées à l’application.
+      </string>
       <string id="LetAppsAccessTrustedDevices_Name">Permettre aux applications Windows d’accéder aux appareils approuvés</string>
       <string id="LetAppsAccessTrustedDevices_Explain">Ce paramètre de stratégie spécifie si les applications Windows peuvent accéder aux appareils approuvés.
 
@@ -231,6 +246,36 @@ Si vous choisissez l’option Forcer l’autorisation, les applications Windows 
 Si vous choisissez l’option Forcer le refus, les applications Windows ne sont pas autorisées à accéder aux appareils approuvés, et les employés de votre organisation ne peuvent pas la modifier.
 
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employés de votre organisation peuvent décider si les applications Windows peuvent accéder aux appareils approuvés dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si une application est ouverte lorsque cet objet de stratégie de groupe est appliqué à un appareil, les employés doivent redémarrer l’application ou l’appareil pour que les modifications de stratégie soient appliquées à l’application.
+      </string>
+      <string id="LetAppsRunInBackground_Name">Permettre aux applications Windows de s’exécuter en arrière-plan</string>
+      <string id="LetAppsRunInBackground_Explain">Ce paramètre de stratégie indique si les applications Windows peuvent s’exécuter en arrière-plan.
+
+Vous pouvez spécifier un paramètre par défaut pour toutes les applications ou un paramètre par application en indiquant le nom de la famille de packages. Vous pouvez obtenir le nom de la famille de packages pour une application à l’aide de l’applet de commande Windows PowerShell Get-AppPackage. Un paramètre par application remplace le paramètre par défaut.
+
+Si vous choisissez l’option Sous le contrôle de l’utilisateur, les employés de votre organisation peuvent décider si les applications Windows peuvent s’exécuter en arrière-plan dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si vous choisissez l’option Forcer l’autorisation, les applications Windows sont autorisées à s’exécuter en arrière-plan, et les employés de votre organisation ne peuvent pas la modifier.
+
+Si vous choisissez l’option Forcer le refus, les applications Windows ne sont pas autorisées à s’exécuter en arrière-plan, et les employés de votre organisation ne peuvent pas la modifier.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employés de votre organisation peuvent décider si les applications Windows peuvent s’exécuter en arrière-plan dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si une application est ouverte lorsque cet objet de stratégie de groupe est appliqué à un appareil, les employés doivent redémarrer l’application ou l’appareil pour que les modifications de stratégie soient appliquées à l’application.
+      </string>
+      <string id="LetAppsGetDiagnosticInfo_Name">Permettre aux applications Windows d’accéder aux informations de diagnostic d’autres applications</string>
+      <string id="LetAppsGetDiagnosticInfo_Explain">Ce paramètre de stratégie spécifie si les applications Windows peuvent accéder aux informations de diagnostic d’autres applications Windows, notamment au nom d’utilisateur
+
+Vous pouvez spécifier un paramètre par défaut pour toutes les applications ou un paramètre par application en spécifiant un nom de la famille de packages. Vous pouvez obtenir le nom de la famille de packages pour une application à l’aide de l’applet de commande Windows PowerShell Get-AppPackage. Un paramètre par application remplace le paramètre par défaut.
+
+Si vous choisissez l’option Sous le contrôle de l’utilisateur, les employés de votre organisation peuvent décider si les applications Windows peuvent accéder aux informations de diagnostic d’autres applications dans Paramètres &gt; Confidentialité sur l’appareil.
+
+Si vous choisissez l’option Forcer l’autorisation, les applications Windows sont autorisées à accéder aux informations de diagnostic d’autres applications, et les employés de votre organisation ne peuvent pas la modifier.
+
+Si vous choisissez l’option Forcer le refus, les applications Windows ne sont pas autorisées à accéder aux informations de diagnostic d’autres applications, et les employés de votre organisation ne peuvent pas la modifier.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les employés de votre organisation peuvent décider si les applications Windows peuvent accéder aux informations de diagnostic d’autres applications dans Paramètres &gt; Confidentialité sur l’appareil.
 
 Si une application est ouverte lorsque cet objet de stratégie de groupe est appliqué à un appareil, les employés doivent redémarrer l’application ou l’appareil pour que les modifications de stratégie soient appliquées à l’application.
       </string>
@@ -362,14 +407,41 @@ Si une application est ouverte lorsque cet objet de stratégie de groupe est app
         <text>Forcer le refus pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
         <multiTextBox refId="LetAppsSyncWithDevices_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessTasks">
+        <dropdownList refId="LetAppsAccessTasks_Enum" noSort="true" defaultItem="0">Valeur par défaut pour toutes les applications :</dropdownList>
+        <text>Sous le contrôle de l’utilisateur pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsAccessTasks_UserInControlOfTheseApps_List"/>
+        <text>Forcer l’autorisation pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsAccessTasks_ForceAllowTheseApps_List"/>
+        <text>Forcer le refus pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsAccessTasks_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessTrustedDevices">
         <dropdownList refId="LetAppsAccessTrustedDevices_Enum" noSort="true" defaultItem="0">Valeur par défaut pour toutes les applications :</dropdownList>
-        <text>Sous le contrôle de l’utilisateur pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <text>Sous le contrôle de l’utilisateur pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_UserInControlOfTheseApps_List"/>
         <text>Forcer l’autorisation pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceAllowTheseApps_List"/>
         <text>Forcer le refus pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsRunInBackground">
+        <dropdownList refId="LetAppsRunInBackground_Enum" noSort="true" defaultItem="0">Valeur par défaut pour toutes les applications :</dropdownList>
+        <text>Sous le contrôle de l’utilisateur pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsRunInBackground_UserInControlOfTheseApps_List"/>
+        <text>Forcer l’autorisation pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsRunInBackground_ForceAllowTheseApps_List"/>
+        <text>Forcer le refus pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsRunInBackground_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsGetDiagnosticInfo">
+        <dropdownList refId="LetAppsGetDiagnosticInfo_Enum" noSort="true" defaultItem="0">Valeur par défaut pour toutes les applications :</dropdownList>
+        <text>Sous le contrôle de l’utilisateur pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsGetDiagnosticInfo_UserInControlOfTheseApps_List"/>
+        <text>Forcer l’autorisation pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceAllowTheseApps_List"/>
+        <text>Forcer le refus pour ces applications spécifiques (utiliser les noms de la famille de packages) :</text>
+        <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>
   </resources>

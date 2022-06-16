@@ -1008,7 +1008,7 @@ Si no se configura esta directiva, no se copiará ningún estado de reversión d
       <string id="SyncMethodNone">Ninguno</string>
       <string id="SyncMethodExternal">Externo</string>
       <string id="EnableUEV">Habilitar UEV</string>
-      <string id="EnableUEV_Help">Esta configuración de directiva permite habilitar o deshabilitar la característica de virtualización de experiencia del usuario (UE-V). Es necesario reiniciar para que la habilitación surta efecto.</string>
+      <string id="EnableUEV_Help">Esta configuración de directiva te permite habilitar o deshabilitar la característica Virtualización de la experiencia de usuario (UE-V). Es necesario reiniciar para que la habilitación surta efecto. Con las plantillas de la bandeja de entrada de registro automático habilitadas, las plantillas de la bandeja de entrada de UE-V como Office 2016 se registrarán automáticamente cuando se habilite el servicio UE-V. Si se cambia esta opción, solo surtirá efecto cuando el servicio UE-V se vuelva a activar.</string>
     </stringTable>
     <presentationTable>
       <presentation id="RepositoryTimeout">
@@ -1066,6 +1066,9 @@ Si no se configura esta directiva, no se copiará ningún estado de reversión d
         <textBox refId="ContactITURL">
           <label>Dirección URL de Contactar con TI</label>
         </textBox>
+      </presentation>
+      <presentation id="EnableUEV">
+        <checkBox refId="RegisterInboxTemplates" defaultChecked="true">Plantillas de la bandeja de entrada de registro automático</checkBox>
       </presentation>
     </presentationTable>
   </resources>

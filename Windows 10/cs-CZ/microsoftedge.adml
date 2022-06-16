@@ -10,6 +10,7 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10_DisplayName">Microsoft Edge ve Windows 10 nebo novější</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge ve Windows 10, verze 1511 nebo novější</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge ve Windows 10, verze 1607 nebo novější</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge ve Windows 10, verze 1703 nebo novější</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Kategorie prohlížeče Microsoft Edge</string>
 
@@ -17,13 +18,38 @@
 
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
-      <string id="HomePages">Nakonfigurovat domovské stránky</string>
-      <string id="HomePages_Explain">Toto nastavení zásad umožňuje nakonfigurovat jednu nebo několik domovských stránek. Když ho nastavíte, vaši zaměstnanci to nebudou moct změnit.
+      <string id="HomePages">Konfigurovat úvodní stránky</string>
+      <string id="HomePages_Explain">Toto nastavení zásad vám umožňuje nakonfigurovat jednu nebo více úvodních stránek pro zařízení připojená k doméně. Po jeho nastavení ho vaši zaměstnanci nebudou moci změnit.
 
-Při zapnutí tohoto nastavení získáte možnost nakonfigurovat jednu nebo víc domovských stránek. Pokud je toto nastavení zapnuté, musíte taky zahrnout adresy URL příslušných stránek, přičemž víc stránek je třeba oddělit lomenými závorkami v tomto formátu:
-    &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
-Pokud toto nastavení vypnete nebo nenakonfigurujete, vaše výchozí domovská stránka se nastaví na webovou stránku, kterou jste zadali v nastavení aplikace.
+Pokud toto nastavení povolíte, můžete nakonfigurovat jednu nebo více úvodních stránek. Pokud je nastavení povoleno, musíte také zadat URL těchto stránek a jednotlivé stránky oddělit ostrými závorkami v tomto formátu:
+     &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
+
+Verze 1703 nebo novější: Pokud nechcete Microsoftu odesílat data, můžete použít hodnotu &lt;about:blank&gt;, která, pokud se jedná o jedinou nakonfigurovanou URL, platí pro zařízení připojená i nepřipojená k doméně.
+
+Pokud toto nastavení zakážete nebo nenakonfigurujete, vaše výchozí úvodní stránky budou webové stránky nastavené v Nastavení aplikací.
 </string>
+
+      <string id="DisableLockdownOfStartPages">Zakázat uzamčení úvodních stránek</string>
+      <string id="DisableLockdownOfStartPages_Explain">Toto nastavení zásad vám umožňuje zakázat uzamčení úvodních stránek a povolit uživatelům upravovat úvodní stránky, když je povoleno nastavení „Konfigurovat úvodní stránky“.
+
+        Poznámka
+        Toto nastavení platí, pouze když používáte nastavení „Konfigurovat úvodní stránky“
+
+        Důležité
+        Toto nastavení lze použít pouze u zařízení připojených k doméně nebo zaregistrovaných do MDM. Více informací naleznete v zásadách rozšíření prohlížeče Microsoft (aka.ms/browserpolicy). 
+
+Pokud toto nastavení povolíte, nebudete moci uzamknout žádné úvodní stránky nakonfigurované v nastavení „Konfigurovat úvodní stránky“, což znamená, že je uživatelé budou moci upravovat.
+
+Pokud toto nastavení zakážete nebo nenakonfigurujete, uživatelé nebudou moci měnit úvodní stránky nakonfigurované v rámci nastavení „Konfigurovat úvodní stránky“. Úvodní stránky zůstanou uzamčené.</string>
+
+      <string id="AllowAddressBarDropdown">Povolit rozbalovací seznam návrhů panelu Adresa</string>
+      <string id="AllowAddressBarDropdown_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda je v Microsoft Edgi k dispozici rozbalovací funkce panelu Adresa. Doporučujeme toto nastavení zakázat, pokud chcete minimalizovat síťová připojení z Microsoft Edge ke službám Microsoft.
+
+        Poznámka: Zakázáním tohoto nastavení vypnete rozbalovací funkci panelu Adresa. Jelikož se v této rozbalovací nabídce zobrazují návrhy hledání, má toto nastavení přednost před nastavením „Konfigurovat návrhy hledání na panelu Adresa“.
+
+        Pokud toto nastavení povolíte nebo nenakonfigurujete, zaměstnanci budou moci rozbalovací funkci panelu Adresa v Microsoft Edgi využívat.
+
+        Pokud toto nastavení zakážete, zaměstnanci nebudou moci rozbalovací funkci panelu Adresa v Microsoft Edgi využívat. Toto nastavení také zakáže uživatelem definované nastavení „Zobrazovat návrhy hledání a webů při psaní“.</string>
       <string id="AllowAutofill">Konfigurovat automatické vyplňování</string>
       <string id="AllowAutofill_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli zaměstnanci budou moct využívat automatické vyplňování u polí formulářů v Microsoft Edgi. Ve výchozím nastavení se můžou rozhodnout zaměstnanci, jestli chtějí automatické vyplňování používat.
 
@@ -39,13 +65,13 @@ Pokud toto nastavení zapnete nebo nenakonfigurujete, umožní zaměstnancům po
 
 Pokud toto nastavení vypnete, nebudou zaměstnanci moct Vývojářské nástroje F12 v Microsoft Edgi používat.</string>
       <string id="AllowDoNotTrack">Konfigurovat Do Not Track</string>
-      <string id="AllowDoNotTrack_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli budou zaměstnanci moct posílat žádosti DNT (Do Not Track) na weby, které vyžadují sledování informací. Ve výchozím nastavení se žádosti DNT neposílají, zaměstnanci se ale můžou rozhodnout nastavení zapnout a žádosti posílat.
+      <string id="AllowDoNotTrack_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda budou zaměstnanci moci posílat žádosti DNT (Do Not Track) na weby, které vyžadují sledovací informace. Ve výchozím nastavení se žádosti DNT neposílají, zaměstnanci se ale mohou rozhodnout nastavení zapnout a žádosti posílat.
 
-Pokud toto nastavení zapnete, budou se žádosti DNT webům vyžadujícím sledování informací posílat vždycky.
+Pokud toto nastavení povolíte, budou se žádosti DNT webům vyžadujícím sledovací informace posílat vždy.
 
-Pokud toto nastavení vypnete, nebudou se žádosti DNT webům vyžadujícím sledování informací posílat nikdy.
+Pokud toto nastavení zakážete, nebudou se žádosti DNT webům vyžadujícím sledovací informace posílat nikdy.
 
-Pokud toto nastavení nenakonfigurujete, zaměstnanci se můžou rozhodnout, jestli chtějí webům vyžadujícím informace žádosti DNT posílat.</string>
+Pokud toto nastavení nenakonfigurujete, zaměstnanci se mohou rozhodnout, zda chtějí webům vyžadujícím informace žádosti DNT posílat.</string>
       <string id="AllowInPrivate">Povolit funkci Procházení InPrivate</string>
       <string id="AllowInPrivate_Explain">Toto nastavení zásad umožňuje rozhodnout, jestli zaměstnanci můžou procházet weby v režimu InPrivate.
 
@@ -68,6 +94,15 @@ Pokud toto nastavení zapnete, blokování automaticky otevíraných oken se zap
 Pokud toto nastavení vypnete, blokování automaticky otevíraných oken se vypne a automaticky otevíraná okna se začnou zobrazovat.
 
 Pokud toto nastavení nenakonfigurujete, zaměstnanci se můžou rozhodnout, jestli chtějí blokování automaticky otevíraných oken používat.</string>
+      <string id="AllowSearchEngineCustomization">Povolit přizpůsobení vyhledávacího webu</string>
+      <string id="AllowSearchEngineCustomization_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda uživatelé mohou změnit svůj vyhledávací web. Pokud toto nastavení zakážete, uživatelé nebudou moci přidávat nové vyhledávací weby nebo měnit výchozí web použitý v panelu Adresa.
+
+Důležité
+Toto nastavení lze použít pouze u zařízení připojených k doméně nebo zaregistrovaných do MDM. Více informací naleznete v zásadách rozšíření prohlížeče Microsoft (aka.ms/browserpolicy).
+
+Pokud tuto zásadu povolíte nebo nenakonfigurujete, uživatelé budou moci přidávat nové vyhledávací weby a měnit výchozí web použitý v panelu Adresa v nastavení Microsoft Edge.
+
+Pokud toto nastavení zakážete, uživatelé nebudou moci přidávat nové vyhledávací weby nebo měnit výchozí web použitý v panelu Adresa.</string>
       <string id="AllowSearchSuggestionsinAddressBar">Konfigurovat návrhy hledání na panelu Adresa</string>
       <string id="AllowSearchSuggestionsinAddressBar_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli se mají na panelu Adresa v Microsoft Edgi zobrazovat návrhy hledání. Ve výchozím nastavení se zaměstnanci můžou rozhodnout, jestli se mají návrhy hledání na panelu Adresa v Microsoft Edgi zobrazovat.
 
@@ -76,14 +111,14 @@ Pokud toto nastavení zapnete, budou se zaměstnancům na panelu Adresa v Micros
 Pokud toto nastavení vypnete, návrhy hledání se jim na panelu Adresa v Microsoft Edgi zobrazovat nebudou.
 
 Pokud toto nastavení nenakonfigurujete, můžou se zaměstnanci sami rozhodnout, jestli se mají návrhy hledání na panelu Adresa v Microsoft Edgi zobrazovat.</string>
-      <string id="AllowSmartScreen">Konfigurovat filtr SmartScreen</string>
-      <string id="AllowSmartScreen_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli se má zapnout filtr SmartScreen. Ten zobrazuje upozornění, která zvyšují ochranu zaměstnanců před potenciálními phishingovými podvody a škodlivým softwarem. Filtr SmartScreen je ve výchozím nastavení zapnutý.
+      <string id="AllowSmartScreen">Konfigurovat filtr SmartScreen v programu Windows Defender</string>
+      <string id="AllowSmartScreen_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli se má zapnout filtr SmartScreen v programu Windows Defender. Ten zobrazuje upozornění, která zvyšují ochranu zaměstnanců před potenciálními phishingovými podvody a škodlivým softwarem. Filtr SmartScreen v programu Windows Defender je ve výchozím nastavení zapnutý.
 
-Pokud toto nastavení zapnete, zapne se filtr SmartScreen a zaměstnanci ho nemůžou vypnout.
+Pokud toto nastavení zapnete, filtr SmartScreen v programu Windows Defender se zapne a zaměstnanci ho nemohou vypnout.
 
-Pokud toto nastavení vypnete, filtr SmartScreen se vypne a zaměstnanci ho nemůžou zapnout.
+Pokud toto nastavení vypnete, filtr SmartScreen v programu Windows Defender se vypne a zaměstnanci ho nemohou zapnout.
 
-Pokud toto nastavení nenakonfigurujete, zaměstnanci se sami můžou rozhodnout, jestli chtějí filtr SmartScreen používat.</string>
+Pokud toto nastavení nenakonfigurujete, zaměstnanci se sami mohou rozhodnout, zda chtějí filtr SmartScreen v programu Windows Defender používat.</string>
       <string id="AllowWebContentOnNewTabPage">Povolit webový obsah na stránce Nová záložka</string>
       <string id="AllowWebContentOnNewTabPage_Explain">Toto nastavení zásad vám umožňuje nakonfigurovat, co se zobrazí, když Microsoft Edge otevře novou záložku. Ve výchozím nastavení otevře Microsoft Edge stránku Nová záložka.
 
@@ -124,18 +159,45 @@ Pokud toto nastavení zapnete, bude IP adresa LocalHost daného zaměstnance bě
 Pokud toto nastavení vypnete nebo nenakonfigurujete, IP adresa LocalHost se při těchto telefonátech zobrazí.</string>
       <string id="ItemNameDisable">Zakázat</string>
       <string id="ItemNameEnable">Povolit</string>
-      <string id="PreventSmartScreenPromptOverride">Zabránit obcházení upozornění filtru SmartScreen pro weby</string>
-      <string id="PreventSmartScreenPromptOverride_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli zaměstnancům umožníte přepsat upozornění filtru SmartScreen na potenciálně nebezpečné weby.
+      <string id="PreventSmartScreenPromptOverride">Zabránit obcházení upozornění filtru SmartScreen v programu Windows Defender pro weby</string>
+      <string id="PreventSmartScreenPromptOverride_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli zaměstnancům umožníte obejít upozornění filtru SmartScreen v programu Windows Defender na potenciálně nebezpečné weby.
 
-Pokud toto nastavení zapnete, znemožníte, aby zaměstnanci upozornění filtru SmartScreen ignorovali, a zablokujete jim na daný web přístup.
+Pokud toto nastavení zapnete, znemožníte, aby zaměstnanci ignorovali upozornění filtru SmartScreen v programu Windows Defender, a zablokujete jim na daný web přístup.
 
-Pokud toto nastavení vypnete nebo nenakonfigurujete, umožníte, aby zaměstnanci upozornění filtru SmartScreen na potenciálně nebezpečné weby ignorovali a pokračovali v přechodu na daný web.</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles">Zabránit obcházení upozornění filtru SmartScreen pro soubory</string>
-      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli zaměstnancům umožníte ignorování upozornění filtru SmartScreen na stahování neověřených souborů.
+Pokud toto nastavení vypnete nebo nenakonfigurujete, umožníte, aby zaměstnanci ignorovali upozornění filtru SmartScreen v programu Windows Defender na potenciálně nebezpečné weby a pokračovali v přechodu na daný web.</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles">Zabránit obcházení upozornění filtru SmartScreen v programu Windows Defender pro soubory</string>
+      <string id="PreventSmartScreenPromptOverrideForFiles_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda zaměstnancům umožníte obejít upozornění filtru SmartScreen v programu Windows Defender na stahování neověřených souborů.
 
-Pokud toto nastavení zapnete, znemožníte, aby zaměstnanci upozornění filtru SmartScreen ignorovali, a stahování neověřených souborů pro ně zablokujete.
+Pokud toto nastavení zapnete, nebudou moci zaměstnanci ignorovat upozornění filtru SmartScreen v programu Windows Defender a stahování neověřených souborů jim zablokujete.
 
-Pokud toto nastavení vypnete nebo nenakonfigurujete, umožníte, aby zaměstnanci upozornění filtru SmartScreen týkající se neověřených souborů ignorovali a v procesu stahování pokračovali.</string>
+Pokud toto nastavení vypnete nebo nenakonfigurujete, umožníte, aby zaměstnanci ignorovali upozornění filtru SmartScreen v programu Windows Defender týkající se neověřených souborů a v procesu stahování pokračovali.</string>
+      <string id="SetDefaultSearchEngine">Nastavit výchozí vyhledávací web</string>
+      <string id="SetDefaultSearchEngine_Explain">Toto nastavení zásad vám umožňuje nakonfigurovat výchozí vyhledávací web pro vaše zaměstnance. Vaši zaměstnanci ho mohou kdykoli změnit.
+
+Důležité
+Toto nastavení lze použít pouze u zařízení připojených k doméně nebo zaregistrovaných do MDM. Více informací naleznete v zásadách rozšíření prohlížeče Microsoft (aka.ms/browserpolicy).
+
+Pokud toto nastavení povolíte, můžete zvolit výchozí vyhledávací web pro své zaměstnance. Pokud je toto nastavení povoleno, musíte také přidat výchozí vyhledávací web do nastavení „Nastavit výchozí vyhledávací web“ přidáním odkazu na váš soubor XML OpenSearch včetně aspoň krátkého názvu a https: URL vyhledávacího webu. Více informací o vytvoření souboru XML OpenSearch naleznete v tématu Vysvětlení standardů OpenSearch (https://msdn.microsoft.com/en-us/library/dd163546.aspx). Pro zadání odkazu, který chcete přidat, použijte tento formát: &lt;https://fabrikam.com/opensearch.xml&gt;
+
+Poznámka
+Pokud chcete, aby vaši zaměstnanci používali výchozí nastavení Microsoft Edge pro každý trh, můžete nastavit řetězec EDGEDEFAULT. Pokud chcete, aby vaši zaměstnanci jako výchozí vyhledávací web používali Microsoft Bing, můžete nastavit řetězec EDGEBING.
+
+Zaměstnanci mohou výchozí vyhledávací web kdykoli změnit, pokud nezakážete nastavení „Povolit přizpůsobení vyhledávacího webu“, které brání provádění změn.
+
+Pokud toto nastavení zakážete, výchozí vyhledávací web nastavený zásadami se odstraní. Pokud se zároveň jedná o aktuálně používaný výchozí web, změní se výchozí web na web určený prohlížečem Microsoft Edge pro daný trh.
+
+Pokud toto nastavení nenakonfigurujete, výchozí vyhledávací web se nastaví na web určený v Nastavení aplikací.</string>
+      <string id="ConfigureAdditionalSearchEngines">Konfigurovat další vyhledávací weby</string>
+      <string id="ConfigureAdditionalSearchEngines_Explain">Toto nastavení zásad vám umožňuje přidat až 5 dalších vyhledávacích webů, které vaši zaměstnanci nemohou odstranit, ale mohou je nastavit jako osobní výchozí vyhledávací web. Toto nastavení nenastavuje výchozí vyhledávací web. K tomu je nutné použít nastavení „Nastavit výchozí vyhledávací web“.
+
+Důležité
+Toto nastavení lze použít pouze u zařízení připojených k doméně nebo zaregistrovaných do MDM. Více informací naleznete v zásadách rozšíření prohlížeče Microsoft (aka.ms/browserpolicy).
+
+Pokud toto nastavení povolíte, můžete přidat až 5 dalších vyhledávacích webů. Pro každý další web také musíte přidat odkaz na váš soubor XML OpenSearch včetně aspoň krátkého názvu a https: URL vyhledávacího webu. Více informací o vytvoření souboru XML OpenSearch naleznete v tématu Vysvětlení standardů OpenSearch (https://msdn.microsoft.com/en-us/library/dd163546.aspx). Pro zadání odkazů, které chcete přidat, použijte tento formát: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;
+
+Pokud toto nastavení zakážete, jakékoli přidané vyhledávací weby na zařízeních vašich zaměstnanců budou odstraněny.
+
+Pokud toto nastavení nenakonfigurujete, seznam vyhledávacích webů se nastaví podle Nastavení aplikací.</string>
       <string id="ProvisionedFavorites">Konfigurovat oblíbené položky</string>
       <string id="ProvisionedFavorites_Explain">Toto nastavení zásad umožňuje nakonfigurovat výchozí seznam oblíbených položek, který se zobrazí vašim zaměstnancům. Ti můžou toto nastavení kdykoliv změnit, a to přidáním nebo odebráním jejich položek.
 
@@ -160,6 +222,58 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, bude se aplikace chovat
 Pokud tuto zásadu povolíte, zaměstnanci nebudou mít ke stránce about:flags přístup.
 
 Pokud ji zakážete nebo nenakonfigurujete, zaměstnanci budou mít ke stránce about:flags přístup.</string>
+      <string id="PreventLiveTileDataCollection">Zakázat prohlížeči Microsoft Edge shromažďování informací o Živé dlaždici při připojení webu k nabídce Start</string>
+      <string id="PreventLiveTileDataCollection_Explain">Tyto zásady vám umožňují během připojování Živé dlaždice k nabídce Start rozhodnout, zda může prohlížeč Microsoft Edge shromažďovat metadata Živé dlaždice ze služby ieonline.microsoft.com a zajistit tak lepší možnosti.
+
+Pokud toto nastavení povolíte, prohlížeč Microsoft Edge nebude shromažďovat metadata Živé dlaždice a poskytne minimální možnosti, když uživatel připojí Živou dlaždici k nabídce Start.
+
+Pokud toto nastavení zakážete nebo ho nenakonfigurujete, bude Microsoft Edge metadata Živé dlaždice shromažďovat a když uživatel připojí Živou dlaždici k nabídce Start, poskytne mu bohatší a úplnější možnosti.</string>
+      <string id="PreventFirstRunPage">Zakázat otevření webové stránky při prvním spuštění v prohlížeči Microsoft Edge</string>
+      <string id="PreventFirstRunPage_Explain">
+Pomocí těchto zásad můžete rozhodnout, zda se zaměstnancům při prvním otevření prohlížeče Microsoft Edge zobrazí webová stránka Microsoft při prvním spuštění.
+
+Pokud toto nastavení povolíte, zaměstnancům se při prvním otevření prohlížeče Microsoft Edge nezobrazí webová stránka při prvním spuštění.
+
+Pokud toto nastavení zakážete nebo nenakonfigurujete, zaměstnancům se při prvním otevření prohlížeče Microsoft Edge webová stránka při prvním spuštění zobrazí.</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge">Synchronizovat oblíbené položky mezi Internet Explorerem a Microsoft Edgem</string>
+      <string id="SyncFavoritesBetweenIEAndMicrosoftEdge_Explain">Pomocí tohoto nastavení můžete rozhodnout, zda si uživatelé mohou synchronizovat oblíbené položky mezi aplikacemi Internet Explorer a Microsoft Edge.
+
+Pokud toto nastavení povolíte, zaměstnanci budou moci své oblíbené položky mezi aplikacemi Internet Explorer a Microsoft Edge synchronizovat.
+
+Pokud toto nastavení zakážete nebo nenakonfigurujete, zaměstnanci nebudou moci své oblíbené položky aplikacemi Internet Explorer a Microsoft Edge synchronizovat.
+      </string>
+
+      <string id="AllowFlashClickToRun">Nakonfigurovat nastavení spuštění kliknutím Adobe Flash</string>
+      <string id="AllowFlashClickToRun_Explain">
+        Pokud povolíte nebo nenakonfigurujete nastavení spuštění kliknutím Adobe Flash, bude Microsoft Edge před načtením a spuštěním obsahu vyžadovat, aby uživatel kliknul na spouštěcí tlačítko nebo na obsah nebo aby se web objevil na seznamu automaticky povolených webů.
+
+Weby se na seznam automaticky povolených webů dostanou na základě uživatelské zpětné vazby, konkrétně na základě toho, jak často je načtení a spuštění obsahu dovoleno.
+      </string>
+
+      <string id="AllowClearingBrowsingDataOnExit">Povolit vymazání údajů o procházení při ukončení</string>
+      <string id="AllowClearingBrowsingDataOnExit_Explain">Toto nastavení zásad umožňuje automatické vymazání údajů o procházení při zavření Microsoft Edge.
+
+Pokud toto nastavení zásad povolíte, vymazání údajů o procházení při zavření bude zapnuto.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude ho moci zapnout a nakonfigurovat zaměstnanec v možnostech Vymazat údaje o procházení v Nastavení.
+      </string>
+
+      <string id="AllowFlash">Povolit Adobe Flash</string>
+      <string id="AllowFlash_Explain">Toto nastavení vám umožňuje rozhodnout, zda budou zaměstnanci moci spouštět Adobe Flash v Microsoft Edgi.
+
+Pokud toto nastavení povolíte nebo nenakonfigurujete, mohou zaměstnanci Adobe Flash používat.
+
+Pokud toto nastavení zakážete, zaměstnanci Adobe Flash používat nemohou.
+
+      </string>
+
+      <string id="AllowCVList">Povolit seznam kompatibility od Microsoftu</string>
+      <string id="AllowCVList_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda se má v Microsoft Edgi používat seznam kompatibility od Microsoftu (Microsoftem poskytovaný seznam, který pomáhá se správným zobrazováním webů, které mají známé problémy s kompatibilitou). Ve výchozím nastavení je seznam kompatibility od Microsoftu povolen a lze ho zobrazit zadáním adresy about:compat.
+
+Pokud toto nastavení povolíte nebo nenakonfigurujete, Microsoft Edge bude pravidelně stahovat nejnovější verze seznamu od Microsoftu a tyto aktualizace uplatní při používání prohlížeče. Při návštěvě jakéhokoli webu ze seznamu kompatibility od Microsoftu bude zaměstnanec vyzván k použití Internet Exploreru 11, kde se web automaticky vykreslí tak, jako by byl prohlížen v té verzi IE, která je ke správnému zobrazení potřeba.
+
+Pokud toto nastavení zakážete, seznam kompatibility od Microsoftu nebude při používání prohlížeče použit.</string>
+
     </stringTable>
 
     <!-- Presentation -->
@@ -177,6 +291,16 @@ Pokud ji zakážete nebo nenakonfigurujete, zaměstnanci budou mít ke stránce 
       <presentation id="HomePages_Presentation">
         <textBox refId="HomePagesPrompt">
           <label>Použijte tento formát: &lt;support.contoso.com&gt;&lt;https://support.microsoft.com/&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="SetDefaultSearchEngine_Presentation">
+        <textBox refId="SetDefaultSearchEngine_Prompt">
+          <label>Pro zadání odkazu, který chcete přidat, použijte tento formát: &lt;https://fabrikam.com/opensearch.xml&gt;</label>
+        </textBox>
+      </presentation>
+      <presentation id="ConfigureAdditionalSearchEngines_Presentation">
+        <textBox refId="ConfigureAdditionalSearchEngines_Prompt">
+          <label>Pro zadání odkazů, které chcete přidat, použijte tento formát: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;</label>
         </textBox>
       </presentation>
       <presentation id="ProvisionedFavorites_Presentation">

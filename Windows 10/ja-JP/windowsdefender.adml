@@ -3,7 +3,7 @@
 <description>説明をここに入力する</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Endpoint Protection</string>
+    <string id="AntiSpywareDefender">Windows Defender ウイルス対策</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">除外</string>
     <string id="NetworkRealtimeInspection">ネットワーク検査システム</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">MAPS</string>
     <string id="Threats">脅威</string>
     <string id="ClientInterface">クライアント インターフェイス</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">マルウェア対策サービスが通常の優先順位でスタートアップすることを許可する</string>
     <string id="AllowFastServiceStartup_Explain">このポリシー設定は、マルウェア対策サービスの読み込みの優先順位を制御します。読み込みの優先順位が高くなると、サービスはより速くスタートアップできますが、パフォーマンスに影響する可能性があります。
 
@@ -33,12 +34,12 @@
 
 このポリシー設定を無効にした場合、または構成しなかった場合、既定で Endpoint Protection が実行され、マルウェアなどの悪影響を与える可能性のあるソフトウェアに対するスキャンがコンピューター上で実行されます。
     </string>
-    <string id="DisableAntiSpywareDefender">Endpoint Protection を無効にする</string>
-    <string id="DisableAntiSpywareDefender_Explain">このポリシー設定は、Endpoint Protection を無効にします。
+    <string id="DisableAntiSpywareDefender">Windows Defender ウイルス対策を無効にします</string>
+    <string id="DisableAntiSpywareDefender_Explain">このポリシー設定は、Windows Defender ウイルス対策を無効にします。
 
-    このポリシー設定を有効にした場合、Endpoint Protection は実行されず、マルウェアなどの悪影響を与える可能性のあるソフトウェアに対するスキャンがコンピューター上で実行されなくなります。
+    このポリシー設定を有効にした場合、Windows Defender ウイルス対策は実行されず、マルウェアなどの悪影響を与える可能性のあるソフトウェアに対するスキャンがコンピューター上で実行されなくなります。
 
-    このポリシー設定を無効にした場合、または構成しなかった場合、既定で Endpoint Protection が実行され、マルウェアなどの悪影響を与える可能性のあるソフトウェアに対するスキャンがコンピューター上で実行されます。</string>
+    このポリシー設定を無効にした場合、または構成しなかった場合、既定で Windows Defender ウイルス対策が実行され、マルウェアなどの悪影響を与える可能性のあるソフトウェアに対するスキャンがコンピューター上で実行されます。</string>
     <string id="DisableLocalAdminMerge">一覧に関するローカル管理者の統合動作を構成する</string>
     <string id="DisableLocalAdminMerge_Explain">このポリシー設定は、ローカル管理者によって構成された複雑な一覧の設定をグループ ポリシー設定を使用して統合するかどうかを制御します。この設定は、脅威や除外などの一覧に適用されます。
 
@@ -47,11 +48,11 @@
 この設定を無効にすると、作成される有効なポリシーではグループ ポリシーで定義された項目だけが使用されます。グループ ポリシー設定が、ローカル管理者によって構成された基本設定よりも優先されます。</string>
     <string id="DisableRoutinelyTakingAction">定期的な修復を無効にする</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    このポリシー設定を使用すると、検出されたすべての脅威に対する自動の操作を Endpoint Protection で実行するかどうかを設定できます。特定の脅威に対して実行される操作は、ポリシー定義の操作、ユーザー定義の操作、および署名定義の操作の組み合わせで決定されます。
+    このポリシー設定を使用すると、検出されたすべての脅威に対する自動の操作を Windows Defender ウイルス対策で実行するかどうかを設定できます。特定の脅威に対して実行される操作は、ポリシー定義の操作、ユーザー定義の操作、および署名定義の操作の組み合わせで決定されます。
 
-    このポリシー設定を有効にした場合は、Endpoint Protection は、検出された脅威に対する自動の操作を実行しなくなります。ただし、ユーザーは、それぞれの脅威に対して実行可能な操作を選択するように要求されます。
+    このポリシー設定を有効にした場合は、Windows Defender ウイルス対策は、検出された脅威に対する自動の操作を実行しなくなります。ただし、ユーザーは、それぞれの脅威に対して実行可能な操作を選択するように要求されます。
 
-    このポリシー設定を無効にするか、または構成しない場合、Endpoint Protection は、検出されたすべての脅威に対する自動の操作を、約 5 秒 (設定不可) 遅れで行います。</string>
+    このポリシー設定を無効にするか、または構成しない場合、Windows Defender ウイルス対策は、検出されたすべての脅威に対する自動の操作を、約 5 秒 (設定不可) 遅れで行います。</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         このポリシー設定を使用すると、検出されたすべての脅威に対する自動の操作を Endpoint Protection で実行するかどうかを設定できます。特定の脅威に対して実行される操作は、ポリシー定義の操作、ユーザー定義の操作、および署名定義の操作の組み合わせで決定されます。
 
@@ -159,11 +160,11 @@
     <string id="DisableRealtimeMonitoring">リアルタイム保護を無効にする</string>
     <string id="DisableRealtimeMonitoringDefender_Explain">このポリシー設定は、既知のマルウェアを検出するリアルタイム保護プロンプトを無効にします。
 
-    マルウェアや望ましくない可能性のあるソフトウェアがコンピューターでインストールまたは実行されようとすると、Endpoint Protection から警告が送られます。
+    マルウェアや望ましくない可能性のあるソフトウェアがコンピューターでインストールまたは実行されようとすると、Windows Defender ウイルス対策から警告が送られます。
 
-    このポリシー設定を有効にすると、Endpoint Protection は、マルウェアの検出に対する操作の実行を要求しなくなります。
+    このポリシー設定を有効にすると、Windows Defender ウイルス対策は、マルウェアの検出に対する操作の実行を要求しなくなります。
 
-    このポリシー設定を無効にするか、または構成しない場合、Endpoint Protection は、マルウェアの検出に対する操作の実行を要求します。</string>
+    このポリシー設定を無効にするか、または構成しない場合、Windows Defender ウイルス対策は、マルウェアの検出に対する操作の実行を要求します。</string>
     <string id="DisableRealtimeMonitoring_Explain">
     このポリシー設定は、既知のマルウェアを検出するリアルタイム保護プロンプトを無効にします。
 
@@ -289,13 +290,21 @@
     <string id="Reporting_WppTracingComponents_Explain">このポリシーでは、Windows ソフトウェア トレース プリプロセッサ (WPP ソフトウェア トレース) コンポーネントを構成します。</string>
     <string id="Reporting_WppTracingLevel">WPP トレース レベルを構成する</string>
     <string id="Reporting_WppTracingLevel_Explain">このポリシーを使用すると、Windows ソフトウェア トレース プリプロセッサ (WPP ソフトウェア トレース) のトレース レベルを構成できます。
+    トレース レベルの定義は次のとおりです。
+    1 - エラー
+    2 - 警告
+    3 - 情報
+    4 - デバッグ</string>
+    <string id="Reporting_DisableEnhancedNotifications">拡張通知をオフにする</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      このポリシー設定では、Windows Defender ウイルス対策の拡張通知をクライアントに表示するかどうかを指定します。
+      
+      この設定を無効にした場合、または構成しなかった場合、Windows Defender ウイルス対策の拡張通知がクライアントに表示されます。
+      
+      この設定を有効にした場合、Windows Defender ウイルス対策の拡張通知はクライアントに表示されません。
+    </string>
 
-トレース レベルの定義は次のとおりです。
-1 - エラー
-2 - 警告
-3 - 情報
-4 - デバッグ</string>
-    <string id="Scan_AllowPause">スキャンの一時停止をユーザーに許可する</string>
+      <string id="Scan_AllowPause">スキャンの一時停止をユーザーに許可する</string>
     <string id="Scan_AllowPause_Explain">このポリシー設定を使用すると、進行中のスキャンをエンド ユーザーが一時停止できるかどうかを管理できます。
 
 この設定を有効にした場合、または構成しなかった場合、タスク トレイ アイコンに新しいコンテキスト メニューが追加され、ユーザーがスキャンを一時停止できるようになります。
@@ -701,10 +710,10 @@
       この設定を有効にした場合は、AM UI は再起動の通知を表示しません。
     </string>
     <string id="UX_Configuration_Notification_Suppress">すべての通知を非表示にする</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">このポリシー設定では、Windows Defender の通知をクライアントに表示するかどうかを指定します。
-      この設定を無効にした場合、または構成しなかった場合、Windows Defender の通知がクライアントに表示されます。
+    <string id="UX_Configuration_Notification_Suppress_Explain">このポリシー設定では、Windows Defender ウイルス対策の通知をクライアントに表示するかどうかを指定します。
+      この設定を無効にした場合、または構成しなかった場合、Windows Defender ウイルス対策の通知がクライアントに表示されます。
 
-      この設定を有効にした場合、Windows Defender の通知はクライアントに表示されません。
+      この設定を有効にした場合、Windows Defender ウイルス対策の通知はクライアントに表示されません。
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">操作を実行する必要があるときにクライアントに追加のテキストを表示する</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">このポリシー設定を使用すると、クライアントが操作を実行する必要がある場合に、追加のテキストを表示するかどうかを構成できます。表示されるテキストは、管理者が定義したカスタムの文字列です。たとえば、会社のヘルプ デスクを呼び出すための電話番号などです。クライアント インターフェイスには、最大で 1,024 文字まで表示できます。これよりも長い文字列は切り捨てられてから表示されます。
@@ -712,6 +721,32 @@
 この設定を有効にした場合、指定した追加のテキストが表示されます。
 
 この設定を無効にした場合、または構成しなかった場合、追加のテキストは表示されません。</string>
+    <string id="MpCloudBlockLevel">クラウドの保護レベルを選択します</string>
+    <string id="MpCloudBlockLevel_Explain">
+      このポリシー設定では、不審なファイルのブロック時やスキャン時に、Windows Defender ウイルス対策をどれくらい強力に機能させるかを決定します。
+
+      この設定をオンにすると、Windows Defender ウイルス対策はブロックやスキャンの対象となる不審なファイルをより厳格に識別します。オフにした場合は、識別のレベルが緩和されるため、ブロックやスキャンの頻度が減ります。
+      
+      サポートされる値の詳細については、Windows Defender ウイルス対策のドキュメント サイトを参照してください。
+
+      注意: この機能を使用するには、"Microsoft MAPS に参加する" 設定を有効にする必要があります。
+
+      使用できるオプション:
+      (0x0) 既定の Windows Defender ウイルス対策ブロック レベル
+      (0x2) 高いブロック レベル      
+    </string>
+    <string id="MpBafsExtendedTimeout">拡張クラウド チェックを構成します</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      この機能を使用すると、Windows Defender ウイルス対策で不審なファイルを最大 60 秒間ブロックし、そのファイルをクラウド上でスキャンして、安全を確保することができます。
+      
+      クラウド チェックの通常のタイムアウトは 10 秒間です。クラウド チェックの拡張機能を有効にするには、延長時間を秒数で指定します (追加できる秒数は最大 50 秒です)。
+
+      たとえば、希望のタイムアウトが 60 秒である場合、この設定で 50 秒と指定すると、クラウド チェックの拡張機能が有効になり、合計時間が 60 秒になります。
+
+      注意: この機能は、他の 3 つの MAPS 設定 ("'事前ブロック' 機能を構成する"、"Microsoft MAPS に参加する"、"詳細な分析が必要な場合はファイルのサンプルを送信する") に依存しているため、それらの設定をすべて有効にする必要があります。
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">既定の Windows Defender ウイルス対策ブロック レベル</string>
+    <string id="MpCloudBlockLevel_High_Level">高いブロック レベル</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">期限切れ通知の間隔を指定する</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">クラウド ブロック レベルを選択します</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">拡張クラウド チェック時間を秒数で指定します</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

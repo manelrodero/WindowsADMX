@@ -3,7 +3,7 @@
 <description>escriba aquí la descripción</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Endpoint Protection</string>
+    <string id="AntiSpywareDefender">Antivirus de Windows Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusiones</string>
     <string id="NetworkRealtimeInspection">Sistema de inspección de red</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">MAPS</string>
     <string id="Threats">Amenazas</string>
     <string id="ClientInterface">Interfaz de cliente</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">Permitir que el servicio antimalware se inicie con prioridad normal</string>
     <string id="AllowFastServiceStartup_Explain">Esta configuración de directiva controla la prioridad de carga del servicio antimalware. Si se aumenta la prioridad de carga, el servicio se iniciará más rápidamente, pero esto puede repercutir en el rendimiento.
 
@@ -33,12 +34,12 @@ Si habilita esta configuración de directiva, no se ejecuta Endpoint Protection 
 
 Si deshabilita o no define esta configuración de directiva, de manera predeterminada, se ejecuta Endpoint Protection y se busca malware y otro software potencialmente no deseado en los equipos.
     </string>
-    <string id="DisableAntiSpywareDefender">Desactivar Endpoint Protection</string>
-    <string id="DisableAntiSpywareDefender_Explain">Esta configuración de directiva desactiva Endpoint Protection.
+    <string id="DisableAntiSpywareDefender">Desactivar Antivirus de Windows Defender</string>
+    <string id="DisableAntiSpywareDefender_Explain">Esta configuración de directiva desactiva Antivirus de Windows Defender.
 
-    Si habilita esta configuración de directiva, no se ejecuta Endpoint Protection y no se busca malware u otro software potencialmente no deseado en los equipos.
+    Si habilitas esta configuración de directiva, no se ejecuta Antivirus de Windows Defender y no se busca malware u otro software potencialmente no deseado en los equipos.
 
-Si deshabilita o no define esta configuración de directiva, de manera predeterminada, se ejecuta Endpoint Protection y se busca malware y otro software potencialmente no deseado en los equipos.</string>
+    Si deshabilitas o no estableces esta configuración de directiva, de manera predeterminada, se ejecuta Antivirus de Windows Defender y se busca malware y otro software potencialmente no deseado en los equipos.</string>
     <string id="DisableLocalAdminMerge">Configurar el comportamiento de combinación de las listas de administrador local</string>
     <string id="DisableLocalAdminMerge_Explain">Esta configuración de directiva controla si la configuración de lista compleja establecida por un administrador local se va a combinar con la configuración de la directiva de grupo. Esta configuración es válida en listas como las amenazas y las exclusiones.
 
@@ -47,11 +48,11 @@ Si habilita o no establece esta configuración, los elementos únicos definidos 
 Si deshabilita esta configuración, la directiva vigente resultante solo usará los elementos definidos en la directiva de grupo. La configuración de directiva de grupo reemplazará la configuración de preferencias establecida por el administrador local.</string>
     <string id="DisableRoutinelyTakingAction">Desactivar corrección de rutina</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    Esta configuración de directiva permite configurar si Endpoint Protection automáticamente lleva a cabo acciones en todas las amenazas detectadas. La acción que debe tomarse en una amenaza determinada está determinada por la combinación de la acción definida por la directiva, la acción definida por el usuario y la acción definida por la firma.
+    Esta configuración de directiva permite configurar si Antivirus de Windows Defender realiza automáticamente acciones en todas las amenazas detectadas. La acción que debe realizarse en una amenaza en concreto está determinada por la combinación de la acción definida por la directiva, la acción definida por el usuario y la acción definida por la firma.
 
-Si habilita a esta configuración de directiva, Endpoint Protection no automáticamente actuar en las amenazas detectadas, pero avisa a los usuarios para elegir entre las acciones disponibles para cada amenaza.
+    Si habilitas esta configuración de directiva, Antivirus de Windows Defender no realizará ninguna acción automáticamente en las amenazas detectadas, sino que pedirá a los usuarios que elijan una de las acciones disponibles para cada amenaza.
 
-    Si deshabilita o no establece esta configuración de directiva, Endpoint Protection automáticamente lleva a cabo acciones en todas las amenazas detectadas tras un retraso configurable de aproximadamente cinco segundos.</string>
+    Si deshabilitas o no estableces esta configuración de directiva, Antivirus de Windows Defender realizará automáticamente acciones en todas las amenazas detectadas tras un retraso no configurable de aproximadamente cinco segundos.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         Esta configuración de directiva le permite configurar si Endpoint Protection toma medidas automáticamente acerca de todas las amenazas detectadas. La medida que se debe tomar acerca de una amenaza en particular se determina mediante la combinación de las medidas definidas por la directiva, el usuario y la firma.
 
@@ -159,11 +160,11 @@ Si deshabilita esta configuración, las notificaciones de escritura de volumen s
     <string id="DisableRealtimeMonitoring">Desactivar protección en tiempo real</string>
     <string id="DisableRealtimeMonitoringDefender_Explain">Esta configuración de directiva desactiva los avisos de protección en tiempo real sobre la detección de malware.
 
-Endpoint Protection le avisa cuando malware o software posiblemente no deseado intenta instalarse o ejecutarse en su equipo.
+    Antivirus de Windows Defender te avisa cuando malware o software posiblemente no deseado intenta instalarse o ejecutarse en tu equipo.
 
-Si habilita esta configuración de directiva, Endpoint Protection no avisará a los usuarios sobre la detección de malware para que tomen medidas.
+    Si habilitas esta configuración de directiva, Antivirus de Windows Defender no avisará a los usuarios sobre la detección de malware para que tomen medidas.
 
-Si deshabilita o no establece esta configuración de directiva, Endpoint Protection avisará a los usuarios sobre la detección de malware para que tomen medidas.</string>
+    Si deshabilitas o no estableces esta configuración de directiva, Antivirus de Windows Defender avisará a los usuarios sobre la detección de malware para que tomen medidas.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     Esta configuración de directiva desactiva los avisos de protección en tiempo real sobre la detección de malware.
 
@@ -288,14 +289,22 @@ Si deshabilita esta configuración, no se enviarán eventos Watson.</string>
     <string id="Reporting_WppTracingComponents">Configurar componentes de preprocesador de seguimiento de software de Windows</string>
     <string id="Reporting_WppTracingComponents_Explain">Esta directiva configura componentes de preprocesador de seguimiento de software de Windows (seguimiento de software WPP).</string>
     <string id="Reporting_WppTracingLevel">Configurar nivel de seguimiento de WPP</string>
-    <string id="Reporting_WppTracingLevel_Explain">Esta directiva permite configurar los niveles de seguimiento de preprocesador de seguimiento de software de Windows (seguimiento de software WPP). 
+    <string id="Reporting_WppTracingLevel_Explain">Esta directiva permite configurar los niveles de seguimiento del preprocesador de seguimiento de software de Windows (seguimiento de software WPP). 
+    Los niveles de seguimiento se definen del siguiente modo:
+    1: Error
+    2: Advertencia
+    3: Información
+    4: Depuración</string>
+    <string id="Reporting_DisableEnhancedNotifications">Desactivar notificaciones mejoradas</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      Usa esta configuración de directiva para especificar si quieres que las notificaciones mejoradas de Antivirus de Windows Defender se muestren en los clientes.
+      
+      Si deshabilitas o no estableces esta configuración, las notificaciones mejoradas de Antivirus de Windows Defender se mostrarán en los clientes.
+      
+      Si habilitas esta configuración, las notificaciones mejoradas de Antivirus de Windows Defender no se mostrarán en los clientes.
+    </string>
 
-Los niveles de seguimiento se definen del siguiente modo:
-1: Error
-2: Advertencia 
-3: Información
-4: Depuración</string>
-    <string id="Scan_AllowPause">Permitir a los usuarios pausar un examen</string>
+      <string id="Scan_AllowPause">Permitir a los usuarios pausar un examen</string>
     <string id="Scan_AllowPause_Explain">Esta configuración de directiva permite administrar si los usuarios finales pueden pausar un examen en curso.
 
 Si habilita o no establece esta configuración, aparecerá un nuevo menú contextual en el icono de la bandeja de tareas que permita pausar un examen.
@@ -701,10 +710,10 @@ Los valores de acción de corrección válidos son:
       Si habilita a esta configuración, la interfaz de usuario de AM no mostrará las notificaciones de reinicio.
     </string>
     <string id="UX_Configuration_Notification_Suppress">Suprimir todas las notificaciones</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">Usa esta configuración de directiva para especificar si quieres que las notificaciones de Windows Defender se muestren en los clientes.
-      Si deshabilitas o no estableces esta configuración, las notificaciones de Windows Defender se mostrarán en los clientes.
+    <string id="UX_Configuration_Notification_Suppress_Explain">Usa esta configuración de directiva para especificar si quieres que las notificaciones de Antivirus de Windows Defender se muestren en los clientes.
+      Si deshabilitas o no estableces esta configuración, las notificaciones de Antivirus de Windows Defender se mostrarán en los clientes.
 
-      Si habilitas esta configuración, las notificaciones de Windows Defender no se mostrarán en los clientes.
+      Si habilitas esta configuración, las notificaciones de Antivirus de Windows Defender no se mostrarán en los clientes.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Mostrar más texto a los clientes cuando deban realizar una acción</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">Esta configuración de directiva permite configurar si se va a mostrar o no más texto a los clientes cuando deban realizar una acción. El texto que se muestra es una cadena definida por el administrador personalizada (por ejemplo, el número de teléfono para llamar al servicio de asistencia de la compañía). La interfaz de cliente solo mostrará un máximo de 1024 caracteres. Las cadenas que sean más largas se truncarán antes de mostrarse.
@@ -712,6 +721,32 @@ Los valores de acción de corrección válidos son:
 Si habilita esta configuración, se mostrará el texto extra especificado.
 
 Si deshabilita o no establece esta configuración, no se mostrará ningún texto extra.</string>
+    <string id="MpCloudBlockLevel">Selecciona el nivel de protección de la nube</string>
+    <string id="MpCloudBlockLevel_Explain">
+      Esta configuración de directiva determina la agresividad de Antivirus de Windows Defender en lo que respecta al bloqueo y examen de archivos sospechosos.
+
+      Si esta configuración está activada, Antivirus de Windows Defender será más agresivo al identificar archivos sospechosos que se deben bloquear y examinar; de lo contrario, será menos agresivo y, por tanto, bloqueará y examinará archivos con menos frecuencia. 
+      
+      Para obtener más información sobre los valores específicos que se admiten, consulta el sitio de la documentación de Antivirus de Windows Defender.
+
+      Nota: esta característica requiere que la configuración "Únete a Microsoft MAPS" esté habilitada para funcionar.
+
+      Las opciones posibles son:
+      (0x0) Nivel de bloqueo predeterminado de Antivirus de Windows Defender
+      (0x2) Nivel de bloqueo alto      
+    </string>
+    <string id="MpBafsExtendedTimeout">Configura la comprobación de la nube extendida</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      Esta característica permite que Antivirus de Windows Defender bloquee un archivo sospechoso durante un máximo de 60 segundos y lo examine en la nube para comprobar que es seguro.
+      
+      El tiempo de espera de la comprobación de la nube habitual es de 10 segundos. Para habilitar la característica de comprobación de la nube extendida, especifica el tiempo extendido en segundos, hasta un máximo de 50 segundos adicionales.
+
+      Por ejemplo, si el tiempo de espera deseado es de 60 segundos, especifica 50 segundos en esta configuración y se habilitará la característica de comprobación de la nube extendida, que aumentará el tiempo total en 60 segundos.
+
+      Nota: esta característica depende de otras tres opciones de configuración de MAPS: característica "Bloqueo a primera vista"; "Únete a Microsoft MAPS"; "Enviar muestras de archivos cuando se requieran más análisis" (todas ellas deben estar activadas).
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">Nivel de bloqueo predeterminado de Antivirus de Windows Defender</string>
+    <string id="MpCloudBlockLevel_High_Level">Nivel de bloqueo alto</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">Especificar el intervalo para la notificación de expiración</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">Selecciona nivel de bloqueo de la nube</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">Especifica el tiempo de comprobación de la nube extendido en segundos</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

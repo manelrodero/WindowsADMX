@@ -3,7 +3,7 @@
 <description>itt adja meg a leírást</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Windows Defender</string>
+    <string id="AntiSpywareDefender">Windows Defender víruskereső</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Kizárások</string>
     <string id="NetworkRealtimeInspection">Hálózatvizsgáló rendszer</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">MAPS</string>
     <string id="Threats">Veszélyforrások</string>
     <string id="ClientInterface">Ügyféloldali felület</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">A kártevőirtó szolgáltatás normál prioritással való indításának engedélyezése</string>
     <string id="AllowFastServiceStartup_Explain">Ez a házirend-beállítás szabályozza a kártevőirtó szolgáltatás betöltési prioritását. A betöltési prioritás értékének növelésével gyorsítható a szolgáltatás indítása, de ez negatív hatással lehet a teljesítményre.
 
@@ -33,12 +34,12 @@ Ha letiltja a beállítást, a kártevőirtó szolgáltatás alacsony prioritás
 
     Ha letiltja vagy nem konfigurálja a házirend-beállítást, az Endpoint Protection alapértelmezés szerint elindul, és megvizsgálja, hogy található-e kártevő vagy egyéb, vélhetően nemkívánatos szoftver a számítógépeken.
     </string>
-    <string id="DisableAntiSpywareDefender">A Windows Defender kikapcsolása</string>
-    <string id="DisableAntiSpywareDefender_Explain">Ez a házirend-beállítás kikapcsolja a Windows Defender szolgáltatást.
+    <string id="DisableAntiSpywareDefender">A Windows Defender víruskereső kikapcsolása</string>
+    <string id="DisableAntiSpywareDefender_Explain">Ez a házirend-beállítás kikapcsolja a Windows Defender víruskeresőt.
 
-    A házirend-beállítás engedélyezése esetén a Windows Defender nem fut, és nem vizsgálja meg, nincsenek-e a számítógépen kártevők és más, vélhetően nemkívánatos szoftverek.
+    Ha engedélyezi ezt a házirend-beállítást, a Windows Defender víruskereső nem fut, és nem vizsgálja meg, hogy vannak-e a számítógépen kártevők és más, vélhetően nemkívánatos szoftverek.
 
-    Ha a házirend-beállítás le van tiltva vagy nincs konfigurálva, a Windows Defender alapértelmezés szerint fut, és megvizsgálja, hogy vannak-e a számítógépen kártevők és más, vélhetően nemkívánatos szoftverek.</string>
+    Ha letiltja, vagy nem konfigurálja a házirend-beállítást, a Windows Defender víruskereső alapértelmezés szerint fut, és megvizsgálja, hogy vannak-e a számítógépen kártevők és más, vélhetően nemkívánatos szoftverek.</string>
     <string id="DisableLocalAdminMerge">A helyi rendszergazda által megadott listabeállítások és a csoportházirend egyesítése</string>
     <string id="DisableLocalAdminMerge_Explain">Ez a házirend-beállítás a helyi rendszergazda által megadott összetett listabeállítások és a csoportházirend-beállítások egyesítését szabályozza. Ez a beállítás többek között a veszélyforrások és a kizárások listáját érinti.
 
@@ -47,11 +48,11 @@ Ha engedélyezi vagy nem konfigurálja ezt a beállítást, a csoportházirendbe
 Ha letiltja a beállítást, az érvényes eredő házirend csak a csoportházirendben definiált elemeket fogja használni. A csoportházirend-beállítások felülírják a helyi rendszergazda által konfigurált beállításokat.</string>
     <string id="DisableRoutinelyTakingAction">A rutinszerű szervizelés kikapcsolása</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    Ez a házirend-beállítás lehetővé teszi annak konfigurálását, hogy a Windows Defender eltávolítsa-e automatikusan az összes észlelt veszélyforrást. Az adott veszélyforrással kapcsolatban elvégzendő művelet függ a házirend, a felhasználó és az aláírás által definiált művelettől.
+    Ezzel a házirend-beállítással konfigurálhatja, hogy a Windows Defender víruskereső automatikusan intézkedjen-e az összes észlelt veszélyforrással szemben. Az adott veszélyforrással kapcsolatban elvégzendő művelet a házirend, a felhasználó és az aláírás által definiált művelettől függ.
 
-    Ha engedélyezi ezt a házirend-beállítást, a Windows Defender nem távolítja el automatikusan az észlelt veszélyforrásokat, hanem megkéri a felhasználót, hogy az egyes veszélyforrásokra vonatkozóan válassza ki a kívánt műveletet az elérhető műveletek közül.
+    Ha engedélyezi ezt a házirend-beállítást, a Windows Defender víruskereső nem intézkedik automatikusan az észlelt veszélyforrásokkal szemben, hanem minden egyes veszélyforrás esetében megkéri a felhasználót, hogy válasszon az elérhető műveletek közül.
 
-    Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a Windows Defender kb. öt másodperc múlva automatikusan elkezdi eltávolítani az összes észlelt veszélyforrást (a késleltetés nem konfigurálható).</string>
+    Ha letiltja, vagy nem konfigurálja ezt a házirend-beállítást, a Windows Defender víruskereső kb. öt másodperc késleltetés után (amely nem konfigurálható) automatikusan megteszi a szükséges intézkedéseket az összes észlelt veszélyforrással szemben.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         Ezzel a házirend-beállítással konfigurálható, hogy az Endpoint Protection automatikusan reagáljon-e az összes észlelt veszélyforrásra. Egy adott veszélyforrás esetén az elvégzendő műveletet a házirend által definiált művelet, a felhasználó által definiált művelet és az aláírás által definiált művelet kombinációja határozza meg.
 
@@ -159,11 +160,11 @@ Ha kikapcsolja a beállítást, a nyerskötet írásával kapcsolatos értesít�
     <string id="DisableRealtimeMonitoring">Valós idejű védelem kikapcsolása</string>
     <string id="DisableRealtimeMonitoringDefender_Explain">Ez a házirend-beállítás kikapcsolja a valós idejű védelemre vonatkozó kérdéseket ismert kártevő észlelésekor.
 
-    A Windows Defender riasztást jelenít meg, amikor kártevő vagy egyéb, vélhetően nemkívánatos szoftver megkísérli magát telepíteni vagy futtatni a számítógépen.
+    A Windows Defender víruskereső riasztást jelenít meg, amikor kártevő vagy vélhetően nemkívánatos szoftver megkísérli telepíteni vagy futtatni magát a számítógépen.
 
-    Ha engedélyezi ezt a házirend-beállítást, a Windows Defender nem fogja megkérdezni, hogy eltávolítsa-e az észlelt kártevőket.
+    Ha engedélyezi ezt a házirend-beállítást, a Windows Defender víruskereső nem kérdezi meg a felhasználót, hogy intézkedjen-e az észlelt kártevőkkel szemben.
 
-    Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Windows Defender meg fogja kérdezni, hogy eltávolítsa-e az észlelt kártevőket.</string>
+    Ha letiltja, vagy nem konfigurálja ezt a házirend-beállítást, a Windows Defender víruskereső megkérdezi a felhasználót, hogy intézkedjen-e az észlelt kártevőkkel szemben.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     Ezzel a házirend-beállítással kikapcsolhatók a valós idejű védelem ismert kártevők észlelését jelző értesítései.
 
@@ -289,13 +290,21 @@ Ha letiltja a beállítást, a rendszer nem küldi el a Watson-eseményeket.</st
     <string id="Reporting_WppTracingComponents_Explain">Ez a házirend a Windows-szoftverek nyomkövetési előfeldolgozójának (WPP-szoftvernyomkövetés) összetevőit konfigurálja.</string>
     <string id="Reporting_WppTracingLevel">WPP-myomkövetési szint konfigurálása</string>
     <string id="Reporting_WppTracingLevel_Explain">Ez a házirend-beállítással a Windows-szoftverek nyomkövetési előfeldolgozójának (WPP-szoftvernyomkövetés) nyomkövetési szintjeit konfigurálhatja. 
+    Az alábbi szinteket definiálhatja:
+    1 - Hiba
+    2 - Figyelmeztetés
+    3 - Információ
+    4 - Hibakeresés</string>
+    <string id="Reporting_DisableEnhancedNotifications">Bővített értesítések kikapcsolása</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      Ezzel a házirend-beállítással megadhatja, hogy megjelenjenek-e az ügyfélgépeken a Windows Defender víruskereső bővített értesítései.
+      
+      Ha letiltja, vagy nem konfigurálja ezt a beállítást, az ügyfélgépeken megjelennek a Windows Defender víruskereső bővített értesítései.
+      
+      Ha engedélyezi ezt a beállítást, az ügyfélgépeken nem jelennek meg a Windows Defender víruskereső bővített értesítései.
+    </string>
 
-Az alábbi szinteket definiálhatja:
-1 - Hiba
-2 - Figyelmeztetés
-3 - Információ
-4 - Hibakeresés</string>
-    <string id="Scan_AllowPause">Az ellenőrzés szüneteltetésének engedélyezése a felhasználóknak</string>
+      <string id="Scan_AllowPause">Az ellenőrzés szüneteltetésének engedélyezése a felhasználóknak</string>
     <string id="Scan_AllowPause_Explain">Ezzel a házirend-beállítással azt szabályozhatja, hogy a végfelhasználók szüneteltethessék-e a folyamatban lévő ellenőrzéseket.
 
 Ha engedélyezi vagy nem konfigurálja ezt a beállítást, egy új parancs jelenik meg a feladat tálcaikonjának helyi menüjében, amely lehetővé teszi, hogy a felhasználó szüneteltesse az ellenőrzést.
@@ -701,10 +710,10 @@ A szervizelési műveletként megadható értékek a következők:
       A beállítás engedélyezése esetén nem jelennek meg az újraindítási értesítések az AM felhasználói felületén.
     </string>
     <string id="UX_Configuration_Notification_Suppress">Az összes értesítés elrejtése</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">Ezzel a házirend-beállítással azt konfigurálhatja, hogy megjelenjenek-e az ügyfélgépeken a Windows Defender értesítései.
-      Ha letiltja vagy nem konfigurálja ezt a beállítást, az ügyfélgépeken megjelennek a Windows Defender értesítései.
+    <string id="UX_Configuration_Notification_Suppress_Explain">Ezzel a házirend-beállítással megadhatja, hogy megjelenjenek-e az ügyfélgépeken a Windows Defender víruskereső értesítései.
+      Ha letiltja, vagy nem konfigurálja ezt a beállítást, az ügyfélgépeken megjelennek a Windows Defender víruskereső értesítései.
 
-      Ha engedélyezi ezt a beállítást, az ügyfélgépeken nem jelennek meg a Windows Defender értesítései.
+      Ha engedélyezi ezt a beállítást, az ügyfélgépeken nem jelennek meg a Windows Defender víruskereső értesítései.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Kiegészítő szöveg megjelenítése, ha az ügyfélnek műveleteket kell végrehajtania</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">Ezzel a házirend-beállítással azt konfigurálhatja, hogy megjelenjen-e kiegészítő szöveg, ha az ügyfélnek műveletet kell végrehajtania. A megjelenített szöveg egy rendszergazda által megadott egyéni karakterlánc, például a vállalat ügyfélszolgálatának telefonszáma. Az ügyfél kezelőfelülete csak legfeljebb 1024 karaktert tud megjeleníteni. Az ennél hosszabb karakterláncok csonkolva jelennek meg.
@@ -712,6 +721,32 @@ A szervizelési műveletként megadható értékek a következők:
 Ha engedélyezi a beállítást, megjelenik a megadott kiegészítő szöveg.
 
 Ha letiltja vagy nem konfigurálja a beállítást, nem jelenik meg kiegészítő szöveg.</string>
+    <string id="MpCloudBlockLevel">Felhővédelem szintjének kiválasztása</string>
+    <string id="MpCloudBlockLevel_Explain">
+      Ezzel a házirend-beállítással megadhatja, hogy a Windows Defender víruskereső mennyire agresszíven blokkolja és vizsgálja meg a gyanús fájlokat.
+
+      Ha a beállítás engedélyezve van, a Windows Defender víruskereső agresszívebben végzi a blokkolandó és vizsgálandó gyanús fájlok azonosítását; ellenkező esetben kevésbé lesz agresszív, vagyis ritkábban végez blokkolást és vizsgálatot. 
+      
+      A támogatott értékekkel kapcsolatban további információt olvashat a Windows Defender víruskereső dokumentációs webhelyén.
+
+      Megjegyzés: A funkció működéséhez engedélyezni kell a „Csatlakozás a Microsoft MAPS közösséghez” beállítást.
+
+      Választható lehetőségek:
+      (0x0) A Windows Defender víruskereső alapértelmezett blokkolási szintje
+      (0x2) Magas blokkolási szint      
+    </string>
+    <string id="MpBafsExtendedTimeout">Felhőben történő bővített vizsgálat konfigurálása</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      Ez a funkció lehetővé teszi, hogy a Windows Defender víruskereső akár 60 másodpercig blokkolja a gyanús fájlokat, és a felhőben vizsgálja meg, hogy biztonságosak-e.
+      
+      A felhőben történő vizsgálat jellemzően 10 másodpercet vesz igénybe. A felhőben történő bővített ellenőrzés engedélyezéséhez adja meg a bővített ellenőrzés idejét másodpercben (legfeljebb 50 másodperc).
+
+      Ha például 60 másodperc időtúllépést szeretne beállítani, adjon meg 50 másodpercet ebben a beállításban, amivel engedélyezi a felhőben történő bővített vizsgálatot, és a teljes vizsgálati időt 60 másodpercre növeli.
+
+      Megjegyzés: Ez a funkció három másik MAPS-beállítástól függ: a működéséhez engedélyezni kell a „Blokkolás első látásra funkció konfigurálása”, a „Csatlakozás a Microsoft MAPS közösséghez”, valamint a „Fájlminták küldése további elemzési igény esetén” beállítást.
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">A Windows Defender víruskereső alapértelmezett blokkolási szintje</string>
+    <string id="MpCloudBlockLevel_High_Level">Magas blokkolási szint</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@ Ha letiltja vagy nem konfigurálja a beállítást, nem jelenik meg kiegészít�
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">Adja meg a lejárati értesítések időközét</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">Felhő blokkolási szintjének kiválasztása</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">Adja meg a felhőben történő bővített ellenőrzés idejét másodpercben</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

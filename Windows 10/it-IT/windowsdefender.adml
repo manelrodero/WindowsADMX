@@ -3,7 +3,7 @@
 <description>immettere qui la descrizione</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Windows Defender</string>
+    <string id="AntiSpywareDefender">Windows Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Esclusioni</string>
     <string id="NetworkRealtimeInspection">Network Inspection System</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">MAPS</string>
     <string id="Threats">Minacce</string>
     <string id="ClientInterface">Interfaccia client</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">Consenti avvio del servizio antimalware con priorità normale</string>
     <string id="AllowFastServiceStartup_Explain">Questa impostazione dei criteri controlla la priorità di caricamento per il servizio antimalware. L'aumento della priorità di caricamento consentirà un avvio più rapido del servizio, ma potrebbe influire negativamente sulle prestazioni.
 
@@ -33,12 +34,12 @@ Se si disabilita questa impostazione dei criteri, il servizio antimalware verrà
 
     Se si disabilita o non si configura questa impostazione dei criteri, Endpoint Protection verrà eseguito per impostazione predefinita e verrà eseguita la ricerca di malware o altro software potenzialmente indesiderato nei computer.
     </string>
-    <string id="DisableAntiSpywareDefender">Disattiva Windows Defender</string>
-    <string id="DisableAntiSpywareDefender_Explain">Questa impostazione dei criteri disabilita Windows Defender.
+    <string id="DisableAntiSpywareDefender">Disabilita Windows Defender Antivirus</string>
+    <string id="DisableAntiSpywareDefender_Explain">Questa impostazione dei criteri disabilita Windows Defender Antivirus.
 
-    Se si abilita questa impostazione dei criteri, Windows Defender non verrà eseguito e non verrà eseguita la ricerca di malware o altro software potenzialmente indesiderato nei computer.
+    Se si abilita questa impostazione dei criteri, Windows Defender Antivirus non verrà eseguito e non verrà eseguita la ricerca di malware o altro software potenzialmente indesiderato nei computer.
 
-    Se si disabilita o non si configura questa impostazione dei criteri, Windows Defender verrà eseguito per impostazione predefinita e verrà eseguita la ricerca di malware o altro software potenzialmente indesiderato nei computer.</string>
+    Se si disabilita o non si configura questa impostazione dei criteri, Windows Defender Antivirus verrà eseguito per impostazione predefinita e verrà eseguita la ricerca di malware o altro software potenzialmente indesiderato nei computer.</string>
     <string id="DisableLocalAdminMerge">Configura comportamento di unione per elenchi di amministratori locali</string>
     <string id="DisableLocalAdminMerge_Explain">Questa impostazione dei criteri determina se le impostazioni di elenco complesse configurate da un amministratore locale vengono o meno unite con le impostazioni di Criteri di gruppo. Questa impostazione dei criteri si applica a elenchi come quelli delle minacce e delle esclusioni.
 
@@ -47,11 +48,11 @@ Se si abilita o non si configura questa impostazione dei criteri, gli elementi u
 Se si disabilita questa impostazione dei criteri, nei criteri validi risultanti verranno utilizzati solo gli elementi definiti da Criteri di gruppo. Le impostazioni di Criteri di gruppo saranno prioritarie rispetto alle impostazioni delle preferenze configurate dall'amministratore locale.</string>
     <string id="DisableRoutinelyTakingAction">Disattiva monitoraggio e aggiornamento di routine</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    Questa impostazione dei criteri consente di specificare se Windows Defender interverrà automaticamente per tutte le minacce rilevate. L'intervento da eseguire per una particolare minaccia sarà determinato dalla combinazione dell'azione definita dal criterio, dell'azione definita dall'utente e dall'azione definita dalla firma.
+    Questa impostazione dei criteri consente di specificare se Windows Defender Antivirus interverrà automaticamente per tutte le minacce rilevate. L'intervento da eseguire per una particolare minaccia sarà determinato dalla combinazione dell'azione definita dal criterio, dell'azione definita dall'utente e dall'azione definita dalla firma.
 
-Se si abilita questa impostazione dei criteri, Windows Defender non interverrà automaticamente per le minacce rilevate, ma chiederà all'utente di scegliere tra le azioni disponibili per ciascuna minaccia.
+    Se si abilita questa impostazione dei criteri, Windows Defender Antivirus non interverrà automaticamente per le minacce rilevate, ma chiederà all'utente di scegliere tra le azioni disponibili per ciascuna minaccia.
 
-Se si disabilita o non si configura questa impostazione dei criteri, Windows Defender interverrà automaticamente per tutte le minacce rilevate dopo un ritardo non configurabile di circa cinque secondi.</string>
+    Se si disabilita o non si configura questa impostazione dei criteri, Windows Defender Antivirus interverrà automaticamente per tutte le minacce rilevate dopo un ritardo non configurabile di circa cinque secondi.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         Questa impostazione dei criteri consente di specificare se Endpoint Protection interverrà automaticamente per tutte le minacce rilevate. L'intervento da eseguire per una particolare minaccia sarà determinato dalla combinazione dell'azione definita dal criterio, dell'azione definita dall'utente e dall'azione definita dalla firma.
 
@@ -157,13 +158,13 @@ Se si abilita o non si configura questa impostazione dei criteri, le notifiche d
 
 Se si disabilita questa impostazione dei criteri, le notifiche di scrittura non elaborate verranno disabilitate.</string>
     <string id="DisableRealtimeMonitoring">Disattiva protezione in tempo reale</string>
-    <string id="DisableRealtimeMonitoringDefender_Explain">Questa impostazione dei criteri disattiva gli avvisi della protezione in tempo reale relativi al rilevamento di malware noto.
+    <string id="DisableRealtimeMonitoringDefender_Explain">Questa impostazione dei criteri disabilita gli avvisi della protezione in tempo reale relativi al rilevamento di malware noto.
 
-    Windows Defender invia avvisi quando rileva tentativi di installazione o esecuzione automatica di malware o software potenzialmente indesiderato nel computer dell'utente.
+    Windows Defender Antivirus invia avvisi quando rileva tentativi di installazione o esecuzione automatica di malware o software potenzialmente indesiderato nel computer dell'utente.
 
-    Se si abilita questa impostazione dei criteri, Windows Defender non richiederà all'utente se intervenire quando viene rilevata la presenza di malware.
+    Se si abilita questa impostazione dei criteri, Windows Defender Antivirus non richiederà all'utente se intervenire quando viene rilevata la presenza di malware.
 
-    Se si disabilita o non si configura questa impostazione dei criteri, Windows Defender richiederà all'utente se intervenire quando viene rilevata la presenza di malware.</string>
+    Se si disabilita o non si configura questa impostazione dei criteri, Windows Defender Antivirus richiederà all'utente se intervenire quando viene rilevata la presenza di malware.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     Questa impostazione dei criteri disattiva gli avvisi della protezione in tempo reale relativi al rilevamento di malware noto.
 
@@ -289,13 +290,21 @@ Se si disabilita questa impostazione dei criteri, gli eventi del Dr Watson non v
     <string id="Reporting_WppTracingComponents_Explain">Questa impostazione dei criteri consente di configurare i componenti del preprocessore di traccia software Windows.</string>
     <string id="Reporting_WppTracingLevel">Configura livello di traccia preprocessore Windows</string>
     <string id="Reporting_WppTracingLevel_Explain">Questa impostazione dei criteri consente di configurare i livelli di traccia per il preprocessore di traccia software Windows. 
+livelli di traccia definiti sono i seguenti:
+ 1- Errore
+ 2 - Avviso
+ 3 - Informazioni
+ 4 - Debug</string>
+    <string id="Reporting_DisableEnhancedNotifications">Disattiva notifiche avanzate</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      Usa questa impostazione dei criteri per specificare se visualizzare nei client le notifiche avanzate di Windows Defender Antivirus.
+      
+      Se si disabilita o non si configura questa impostazione, le notifiche avanzate di Windows Defender Antivirus verranno visualizzate nei client.
+      
+      Se si abilita questa impostazione, le notifiche avanzate di Windows Defender Antivirus non verranno visualizzate nei client.
+    </string>
 
-I livelli di traccia definiti sono i seguenti:
-1 - Errore
-2 - Avviso
-3 - Informazioni
-4 - Debug</string>
-    <string id="Scan_AllowPause">Consenti agli utenti di sospendere l'analisi</string>
+      <string id="Scan_AllowPause">Consenti agli utenti di sospendere l'analisi</string>
     <string id="Scan_AllowPause_Explain">Questa impostazione dei criteri consente di stabilire se gli utenti possono o meno sospendere un'analisi in corso.
 
 Se si abilita o non si configura questa impostazione dei criteri, verrà aggiunto un nuovo menu di scelta rapida all'icona della barra delle applicazioni per consentire agli utenti di sospendere un'analisi.
@@ -701,10 +710,10 @@ I valori validi per l'azione di correzione sono:
       Se si abilita questa impostazione l'interfaccia utente AM non visualizzerà notifiche di riavvio del sistema.
     </string>
     <string id="UX_Configuration_Notification_Suppress">Elimina tutte le notifiche</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">Usa questa impostazione dei criteri per specificare se visualizzare nei client le notifiche di Windows Defender.
-      Se si disabilita o non si configura questa impostazione, le notifiche di Windows Defender verranno visualizzate nei client.
+    <string id="UX_Configuration_Notification_Suppress_Explain">Usa questa impostazione dei criteri per specificare se visualizzare nei client le notifiche di Windows Defender Antivirus.
+      Se si disabilita o non si configura questa impostazione, le notifiche di Windows Defender Antivirus verranno visualizzate nei client.
 
-      Se si abilita questa impostazione, le notifiche di Windows Defender non verranno visualizzate nei client.
+      Se si abilita questa impostazione, le notifiche di Windows Defender Antivirus non verranno visualizzate nei client.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Visualizza testo aggiuntivo per i client quando devono eseguire un'azione</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">Questa impostazione dei criteri consente di specificare se visualizzare o meno testo aggiuntivo ai client quando devono eseguire un'azione. Il testo visualizzato è una stringa personalizzata definita dall'amministratore. Ad esempio, il numero di telefono per chiamare l'help desk aziendale. Nell'interfaccia client verranno visualizzati al massimo 1024 caratteri. Le stringhe più lunghe verranno troncate prima della visualizzazione.
@@ -712,6 +721,32 @@ I valori validi per l'azione di correzione sono:
 Se si abilita questa impostazione dei criteri, verrà visualizzato il testo aggiuntivo specificato.
 
 Se si disabilita o non si configura questa impostazione dei criteri, non verrà visualizzato alcun testo aggiuntivo.</string>
+    <string id="MpCloudBlockLevel">Seleziona livello di protezione su cloud</string>
+    <string id="MpCloudBlockLevel_Explain">
+      Questa impostazione dei criteri determina l'aggressività di Windows Defender Antivirus nel bloccare e scansionare file sospetti.
+
+      Se questa impostazione è abilitata, Windows Defender Antivirus sarà più aggressivo nell'identificare file sospetti da bloccare e scansionare; in caso contrario, sarà meno aggressivo e pertanto bloccherà e scansionerà con minore frequenza. 
+      
+      Per maggiori informazioni su valori specifici supportati, consultare il sito della documentazione di Windows Defender Antivirus.
+
+      Nota: affinché questa funzionalità sia operativa, deve essere abilitata l'impostazione "Partecipa a Microsoft MAPS".
+
+      Le possibili opzioni sono:
+      (0x0) Livello di blocco Windows Defender Antivirus predefinito
+      (0x2) Livello blocco elevato      
+    </string>
+    <string id="MpBafsExtendedTimeout">Configura controllo cloud esteso</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      Questa funzionalità consente a Windows Defender Antivirus di bloccare un file sospetto per un massimo di 60 secondi e scansionarlo nel cloud per garantire che sia sicuro.
+      
+      Il timeout tipico per il controllo su cloud è 10 secondi. Per abilitare la funzionalità di controllo su cloud esteso, specificare l'estensione in secondi, fino a un massimo di 50 secondi aggiuntivi.
+
+      Ad esempio, se il timeout desiderato è 60 secondi, specificare 50 secondi in questa impostazione, che abiliterà la funzione di controllo su cloud esteso e porterà il tempo totale a 60 secondi.
+
+      Nota: questa funzionalità dipende da altre tre impostazioni MAPS - "Configura la funzionalità 'Blocco al primo rilevamento'; "Partecipa a Microsoft MAPS"; "Invia campioni di file se sono necessarie ulteriori analisi" devono essere tutte abilitate.
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">Livello di blocco Windows Defender Antivirus predefinito</string>
+    <string id="MpCloudBlockLevel_High_Level">Livello blocco elevato</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">Specifica l'intervallo per la notifica di scadenza</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">Seleziona livello di blocco su cloud</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">Specifica il tempo di controllo su cloud esteso in secondi</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

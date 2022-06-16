@@ -50,15 +50,25 @@
 
 
 </string>
-      <string id="EnableCDP">Continue experiences on this device</string>
+      <string id="EnableCDP">このデバイスでのエクスペリエンスを続行する</string>
       <string id="EnableCDP_Help">
-This policy setting determines whether the Windows device is allowed to participate in cross-device experiences (continue experiences).
+このポリシー設定は、Windows デバイスがクロスデバイス エクスペリエンス (エクスペリエンス続行) に参加できるかどうかを決定します。
 
-If you enable this policy setting, the Windows device is discoverable by other Windows devices that belong to the same user, and can participate in cross-device experiences.
+このポリシー設定を有効にした場合、Windows デバイスは、同じユーザーに属している他の Windows デバイスによって検出可能になり、クロスデバイス エクスペリエンスに参加できます。
 
-If you disable this policy setting, the Windows device is not discoverable by other devices, and cannot participate in cross-device experiences.
+このポリシー設定を無効にした場合、Windows デバイスは他のデバイスによって検出できず、クロスデバイス エクスペリエンスに参加できません。
 
-If you do not configure this policy setting, the default behavior depends on the Windows edition. Changes to this policy take effect on reboot.
+このポリシー設定を構成しない場合の既定の動作は、Windows のエディションに依存します。このポリシーに対する変更は、再起動時に反映されます。
+      </string>
+      <string id="EnableAppUriHandlers">アプリ URI ハンドラーを使用した Web とアプリのリンクを構成します</string>
+      <string id="EnableAppUriHandlers_Help">
+このポリシー設定は、アプリ URI ハンドラーを使用した Web とアプリのリンクを Windows がサポートするかどうかを決定します。
+
+このポリシー設定を有効にすると、Web とアプリのリンクが有効になり、http(s) の URI を使用してアプリを起動できます。
+
+このポリシーを無効にすると、Web とアプリのリンクは無効になり、http(s) の URI は既定のブラウザーで開かれます。関連付けられたアプリは起動しません。
+
+このポリシー設定を構成しない場合の既定の動作は、Windows のエディションに依存します。このポリシーに対する変更は、再起動時に反映されます。
       </string>
       <string id="Fonts">フォント</string>
       <string id="EnableFontProviders">フォント プロバイダーを有効にします</string>

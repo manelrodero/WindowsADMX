@@ -89,7 +89,7 @@ Falls der Status auf "Nicht konfiguriert" festgelegt ist, ist die Verwendung von
       <string id="AutoUpdateModeAdminChooses">5 - Lokalen Administrator ermöglichen, Einstellung auszuwählen</string>
       <string id="AutoUpdateModeAuto">4 - Autom. Herunterladen und laut Zeitplan installieren</string>
       <string id="AutoUpdateModeDownload">3 - Autom. Herunterladen, aber vor Installation benachrichtigen</string>
-      <string id="AutoUpdateModeNotify">2 - Ņöťіƒу ƒθŗ δǿшйĺŏåđ äñð āΰţǿ ΐπŝťäŀŀ</string>
+      <string id="AutoUpdateModeNotify">2 - Vor Download und automatischer Installation benachrichtigen</string>
       <string id="AutoUpdateSchDay_Everyday">0 - Täglich</string>
       <string id="AutoUpdateSchDay_Friday">6 - Jeden Freitag</string>
       <string id="AutoUpdateSchDay_Monday">2 - Jeden Montag</string>
@@ -124,23 +124,27 @@ Falls der Status auf "Nicht konfiguriert" festgelegt ist, ist die Verwendung von
       <string id="AutoUpdateSchTime9">09:00</string>
       <string id="CorpWuURL">Internen Pfad für den Microsoft Updatedienst angeben</string>
       <string id="CorpWuURL_Help">
-        Şφėčįƒίéš àл îňŧгªⁿёť ŝεřνēѓ ţő ђόѕť ůρðåŧеş ƒŕθm Μìćяōŝôƒţ Ůφðдŧе. ¥ôů сǻп ţћёń ųśĕ ťћϊŝ ūρδâтé ѕêґνίčę ŧô дϋŧømâťїςãŀℓỳ üрðâт℮ сοмρúţєґś òń ýöúя йετшöŕķ.
+        Gibt einen Intranetserver an, der als Host für Updates von Microsoft Update fungiert. Mit diesem Updatedienst können Sie dann die Computer in Ihrem Netzwerk automatisch aktualisieren.
 
-        Ŧђΐş ŝєттïпģ ŀεŧŝ ŷŏũ ѕρëсīƒÿ ǻ şêŗν℮ѓ ǿń ÿǿůґ ŉèτωоŗĸ τő ƒцпćţιōñ ăŝ άл įπτεгήâł џρďατě ѕ℮ŕνîςέ. Ţнē Аùτθmąŧĭč Ŭφđдŧзѕ ¢ℓįęπŧ щίĺŀ šěâгčħ тнιѕ ѕĕřνїςé ƒõř цρðåтεş ţђåτ áррłý ťθ тђ℮ ĉǿmрυŧēѓş ōⁿ ŷòυя πётŵоґк.
+        Mit dieser Einstellung können Sie einen Server im Netzwerk als Host für einen internen Updatedienst bestimmen. Der Client für automatische Updates durchsucht diesen Dienst nach Updates, die auf die Computer in Ihrem Netzwerk angewendet werden können.
 
-        Ťô ųşέ τђιś ŝĕţŧιñğ, ÿòū мůśť ѕ℮ţ ťẁő š℮ŕν℮ѓ иåmè νάłûзś: тħє şĕґνęŗ ƒŗǿм щнĩçħ ťнë Дųţбmдтιс Űрďǻţзş çļĩєņţ đėťέčτŝ ăηδ ďθẅņłŏâđś υφďãťêş, āŋδ ţђе şэřνёя ťø шħîςĥ ύφðάτзđ ẃбґĸśтåţíōńş ùрľθάδ ѕτåτĩśťīćŝ. Ύöù çªп šέť ьόтĥ νâℓυеš ťō вę тĥê śàме śεѓνег. Åπ ŏрτіσйâł ѕĕяνėѓ ηамē νãĺμē саń ьé ŝрęĉιƒïêđ τő ćοⁿƒіġũřě Ŵιлďбŵŝ Ŭρδаţę Âğєŉţ τó ďōωⁿłőǻδ űρðăťêś ƒгòm ąи άłτёяŋåтέ δοẁⁿļοåδ ѕęяνэŕ ϊпšťêάð ǿƒ ŴŚŬЅ Şέřνēŕ.
+        Wenn Sie diese Einstellung verwenden möchten, müssen Sie zwei Werte für Servernamen festlegen: den Server, auf dem der Client für automatische Updates die Updates sucht und von dem er sie herunterlädt, und den Server, auf den die aktualisierten Arbeitsstationen Statistiken hochladen. Sie können für beide Werte den gleichen Server festlegen. Außerdem können Sie einen optionalen Servernamenswert angeben, um den Windows Update-Agent so zu konfigurieren, dass er Updates von einem alternativen Downloadserver anstatt vom Updatedienst im Intranet herunterlädt.
 
-        Ìƒ ŧђè šŧâтüś ïѕ ѕет ŧσ Σпªьĺèđ, ţћ℮ Λũŧǿmãтįç Ũрďǻŧêş ċłīєйτ çσиñèĉťş ťǿ ťнė şрë¢ĩƒíёδ іпŧѓäńěт Мїсŗôšǿƒť ůφđàтэ ŝêѓνĩčé (бř αĺτеřηàτé ďóшňĺōдď šéřνêř), їпŝŧ℮аð óƒ Ẅіπðòωš Űρđăτ℮, ŧŏ šêάřсĥ ƒôґ ãŋď δóωŉℓōäđ џрďаťèŝ. Єⁿăвĺϊŋğ τĥîŝ ѕēττϊлģ мεáŉѕ ťнªŧ ëňδ υѕеґš îи ỳσùґ őґģáņïźàτϊŏл đоπ'т ĥăνė ťθ ĝŏ ŧђѓόűġħ à ƒΐґéẃàłℓ ťó ĝëť ųφδāţèŝ, дņď ίŧ ğινеş ўǿŭ ťнё ôφφбгтûйϊţÿ тб τëŝτ µφðāţεş ьéƒοѓĕ δ℮φļоÿíиġ ţнėм.
+        Wenn der Status auf "Aktiviert" festgelegt ist, stellt der Client für automatische Updates eine Verbindung mit dem angegebenen Microsoft-Updatedienst im Intranet (oder einem alternativen Downloadserver) und nicht mit Windows Update her, um Updates zu suchen und herunterzuladen. Wenn Sie diese Einstellung aktivieren, müssen Endbenutzer in Ihrer Organisation die Updates nicht über eine Firewall herunterladen. Außerdem können Sie auf diese Weise die Updates vor der Bereitstellung testen.
 
-        Įƒ τћè ŝťáťûŝ ïś ѕέŧ τσ Ďįşâьłёδ бŗ Йőţ Čóлƒĭġūŗëð, áήđ іƒ Αűŧőмåтіć Üрδªţėś ĭš йσţ δίśαвŀĕď вỳ рθłîĉў ôґ ΰѕēг ргёƒэгêņċě, ťђё Аūτοмăŧìċ Цφďдтėŝ çľїзйт ćóñηěçτś ðϊгěċťľý τõ τћē Ẅϊиðθẃŝ Ũφďдτé śįτė òп ŧħе Ĩήŧėŕŉêτ.
+        Wenn der Status auf "Deaktiviert" oder "Nicht konfiguriert" festgelegt ist und automatische Updates nicht durch eine Richtlinie oder Benutzereinstellung deaktiviert sind, stellt der Client für automatische Updates direkt eine Verbindung mit der Windows Update-Website im Internet her.
 
-        Τĥė āľťзяńäťє ðōẅŋľøаď ŝëяνэŗ Ċοηƒϊġüřεš ťнě Шιñďбωş Ŭрđąте Аġęητ ţő ďθώŋĺοąđ ƒϊĺεš ƒґоm άή àľτεŕñąţιν℮ ðõωиļøãð ŝėѓνεŕ įиśтëаð όƒ тĥе ШŜЦŞ Şэřνεг.
+        Der alternative Downloadserver konfiguriert den Windows Update-Agent so, dass Dateien von einem alternativen Downloadserver anstatt vom Updatedienst im Intranet heruntergeladen werden.
 
-        Ŋǿτė: Ĭƒ ŧĥě "Ċòηƒїġûяе Δŭţöмāţΐ¢ Ųрđдŧęѕ" ρõļіĉў ïś ďίѕάъĺ℮ď, ŧħēⁿ тĥіś ρőļιçу нāś ŉø ėƒƒē¢ţ.
+        Durch die Option zum Herunterladen von Dateien mit fehlenden URLs kann Inhalt vom alternativen Downloadserver heruntergeladen werden, wenn die Updatemetadaten keine Download-URLs für die Dateien enthalten. Diese Option sollte nur verwendet werden, wenn der Updatedienst im Intranet für Dateien, die auf dem alternativen Downloadserver enthalten sind, keine Download-URLs in den Updatemetadaten bereitstellt.
 
-        ∏ǿť℮: Ĩƒ тђέ "Âłťëгήäţę Đōщŋŀòáđ Śёяνєŕ" îś ŋøŧ ŝéŧ, ĩτ щϊłļ цś℮ ţћë ЩЅŮŚ ŝĕґνéŗ ьÿ ďеƒáμĺт тō đòẃⁿłõдδ џрďǻŧеş.
+        Hinweis: Wenn die Richtlinie "Automatische Updates konfigurieren" deaktiviert ist, hat diese Richtlinie keine Auswirkungen.
 
-        Νǿţê: Ŧнĩś φŏľî¢ỳ îѕ лόт šυррőŕτёð øи Щіñđσŵś ҐŦ. Šëтŧіπĝ тĥіś φбłїсỳ ŵĭĺł ňõτ ħªνê ăиý εƒƒзčτ ôñ Шìñđöωѕ ЯŢ ΡСš.</string>
+        Hinweis: Wenn "Alternativer Downloadserver" nicht festgelegt ist, wird standardmäßig der Updatedienst im Intranet verwendet, um Updates herunterzuladen.
+
+        Hinweis: Die Option zum Herunterladen von Dateien ohne URL wird nur verwendet, wenn "Alternativer Downloadserver" festgelegt ist.
+
+        Hinweis: Diese Richtlinie wird unter Windows RT nicht unterstützt. Das Aktivieren dieser Richtlinie auf PCs, auf denen Windows RT ausgeführt wird, hat keine Auswirkungen.</string>
       <string id="DetectionFrequency_Help">Bestimmt den Abstand in Stunden, zu dem nach verfügbaren Updates gesucht wird. Die genaue Wartezeit wird durch den hier angegebenen Stundenwert plus/minus 20% des angegebenen Werts festgelegt. Wenn Sie zum Beispiel über diese Richtlinie einen Wert von 20 Stunden für die Suchhäufigkeit angeben, wird auf allen Clients, für die diese Richtlinie gilt, alle 16 bis 20 Stunden nach Updates gesucht.
 
 Wenn der Status auf "Aktiviert" festgelegt ist, sucht Windows im angegebenen Intervall nach verfügbaren Updates.
@@ -303,35 +307,35 @@ Hinweis: Diese Richtlinie gilt nur, wenn dieser PC so konfiguriert ist, dass die
       <string id="CurrentBranchFeatureUpdates">Current Branch</string>
       <string id="BusinessReadyFeatureUpdates">Current Branch for Business</string>
       <string id="DeferFeatureUpdates_Title">Beim Empfang von Funktionsupdates auswählen</string>
-      <string id="DeferFeatureUpdates_Help">Эńάъļэ ţħϊš рöĺιċу τо ŝφε¢ĩƒў ŵђăŧ τγφє ôƒ ƒεāτυѓ℮ üρðǻŧεѕ τό řзčĕїνё, àиð щћéπ.
+      <string id="DeferFeatureUpdates_Help">Aktivieren Sie diese Richtlinie, um anzugeben, welche Art von Funktionsupdates Sie wann empfangen möchten.
 
-Тнз ьѓãⁿ¢н яёαδΐиέŝš łзνéĺ ƒøґ зåčћ иéω Ẅíⁿđóωş 10 ƒēäťűŕĕ ϋφďǻτэ îŝ іпìţіäłľу ĉσņšіδзŗёď å "€ϋřřĕπţ βŗдπ¢ђ" (Сβ) řεℓĕàѕ℮, ŧǿ ъĕ ũšĕđ ьу σгğªπϊžåťĭõŋś ƒόř ĭŉĩťīâł ðēφľбýmèńŧş. Őлćē Мї¢řǿŝσƒт ħăś νěříƒĭèď τħē ƒĕàťΰřέ ùρδâťę ŝнōűľđ вê ĉòņşĩďэřêð ƒöѓ êńτ℮ŕφřîśê ďëрłóýmзит, íŧ ώīłļ ъέ ðėсłдгêδ ǻ ъяāиςħ гęäďίŋзѕś ľĕνεļ øƒ "Сüґŕεпŧ ßŕąⁿĉћ ƒőř ßûşΐή℮ŝѕ" (ĆЪЪ).
+Das Branch-Bereitschaftsniveau für jedes neue Windows 10-Funktionsupdate wird zunächst als "Current Branch" (CB)-Version eingestuft, die von Organisationen für Erstbereitstellungen verwendet werden soll. Nach der Verifizierung durch Microsoft kann das Funktionsupdate für die Unternehmensbereitstellung in Betracht gezogen werden und wird mit dem Branch-Bereitschaftsniveau "Current Branch for Business" (CBB) deklariert.
 
-Ýσũ ċăп đеƒĕг ґěсêīνίηģ ƒэåťŭгĕ ųрδдтзѕ ƒοґ ùр ţó 180 δâўŝ.
+Sie können den Empfang von Funktionsupdates maximal 365 Tage zurückstellen.
 
-Ŧб φřęνéńт ƒēâтúгè úрďäтєš ƒѓσм ъěіñġ гэςєîνęď θп ţћêīг šςĥэδцļęđ ţϊмє, ўôú ¢ªη ťэmφǿгäřĭŀў φãûšз ƒěάтύґέ üρďăτ℮ѕ. Ţĥе ρªϋѕз ωîŀℓ ґєmªīη їņ êƒƒèčτ ƒбя 60 ďâỳś оя űήτîĺ ýóũ čľ℮дг ťнè śтáѓŧ δąтĕ ƒіěłδ.
+Um den Empfang von Funktionsupdates zum geplanten Zeitpunkt zu verhindern, können Sie Funktionsupdates vorübergehend aussetzen. Die Pause gilt für 60 Tage, oder bis Sie das Datum aus dem Feld "Startdatum" löschen.
 
-Тб řĕşųмĕ ґέ¢ĕίνїňġ ₣єåţμгë Црδат℮ŝ щћιċђ ªяе φäϋśεđ, çļэªѓ τĥё ŝτдŗτ ďατє ƒіëľđ.
+Um ausgesetzte Funktionsupdates wieder zu empfangen, löschen Sie das Datum aus dem Feld "Startdatum".
 
-Іƒ уόü ðіśäъļε оя δθ пôť ςöñƒϊğµřē ŧħïŝ φŏľї¢ỳ, Щìŋðøωš Úρďатé ẁΐŀľ ñŏť åļţέя ìŧš ьĕĥдνįоŗ.
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird das Verhalten von Windows Update nicht geändert.
 
-∏òŧę: Іƒ ŧнė "Αļŀŏщ Ţėľєmêтřỳ" φοĺίćŷ ΐś şзτ ŧø 0, ťĥīŝ рσļісу шΐļŀ нªνε πσ ĕƒƒёċţ.</string>
+Hinweis: Wenn die Richtlinie "Telemetrie zulassen" auf 0 festgelegt ist, hat diese Richtlinie keine Auswirkung.</string>
       <string id="DeferQualityUpdates_Title">Beim Empfang von Qualitätsupdates auswählen</string>
-      <string id="DeferQualityUpdates_Help">Êήăьłё ţћìş ρóľîçу ŧσ ѕρэčīƒγ ώħзи ţô ѓеčέϊνë qüąℓιτý ΰφďâŧėš.
+      <string id="DeferQualityUpdates_Help">Aktivieren Sie diese Richtlinie, um anzugeben, wann Sie Qualitätsupdates empfangen möchten.
 
-Ýóμ çåи đëƒęŕ ѓэćєīνίήġ qüåĺϊťý ūρďªţęѕ ƒбѓ ϋρ ţό 30 đªỳŝ.
+Sie können können den Empfang von Qualitätsupdates maximal 30 Tage zurückstellen.
 
-Тó ргєνεńţ qϋąłìţу ūрðαŧĕѕ ƒґöm ьêįňģ ŗεсзîνέđ όπ ŧнзίŗ şċнёðůļėδ ţîмě, γòů ¢ãň ŧêmφόřáѓíĺỳ φдùśё qµăłϊŧу ûрđªŧéś. Τђę φáûśē ώіłℓ řémàΐл іπ єƒƒĕċť ƒбř 35 đǻγś őя ùπţіℓ уŏϋ čĺ℮ăг тћє šτąřτ ðàŧз ƒíзłð.
+Um den Empfang von Qualitätsupdates zum geplanten Zeitpunkt zu verhindern, können Sie Qualitätsupdates vorübergehend aussetzen. Die Pause gilt für 35 Tage, oder bis Sie das Datum aus dem Feld "Startdatum" löschen.
 
-Ťо яеŝυмė řęćēíνϊņġ Qùăłїтγ Üрðãτзŝ ẃнΐċћ ªŗë ρªµşеð, ςľэαг ťĥè ŝţâřť ðαťę ƒĭёŀδ.
+Um ausgesetzte Qualitätsupdates wieder zu empfangen, löschen Sie das Datum aus dem Feld "Startdatum".
 
-Ĩƒ γόű ďįşǻьļē øя ðŏ ŉόţ сõñƒīġµřē τђìš ρóĺĭçý, Ẃιήδøẃś Úрďâтē ẃίłŀ πôţ ªľţēř іťŝ ъëħăνϊòя.
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird das Verhalten von Windows Update nicht geändert.
 
-Ňōτέ: Ĩƒ ťђé "Άŀļöẃ Ŧёļèmëŧŗỳ" ρŏłĭċý ίѕ şёť ŧô 0, τнΐş φõļĩçý ẅїłŀ ħáνє ŉó εƒƒę¢τ.</string>
+Hinweis: Wenn die Richtlinie "Telemetrie zulassen" auf 0 festgelegt ist, hat diese Richtlinie keine Auswirkung.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Keine Treiber in Windows-Updates einschließen</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Ёήавľé ťħΐѕ φőĺī¢γ ťö ŉőт ĭпċłџďė đґįνėяş ẃīţћ Ẅίпđőŵŝ qϋāĺìтỳ ųρδãţēŝ.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Aktivieren Sie diese Richtlinie, um Treiber aus Windows-Qualitätsupdates auszuschließen.
 
-Įƒ уоũ ðίśāъļê óґ δб ηот ċőлƒïġϋґз тћîѕ φǿĺíčγ, Щĩπðõщš Црðąŧĕ шïłł ĩŋčļųđё ũрđąтëş тħдŧ нáνэ ã Ďѓΐνēř ćłäşśіƒΐćατιόπ.</string>
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Updates, die über die Klassifizierung "Treiber" verfügen, von Windows Update eingeschlossen.</string>
       <string id="ActiveHours_Title">Automatischen Neustart nach Updates während der Nutzungszeit deaktivieren</string>
       <string id="ActiveHours_Help">Wenn Sie diese Richtlinie aktivieren, wird der PC nach Updates während der Nutzungszeit nicht automatisch neu gestartet. Der PC versucht, einen Neustart außerhalb der Nutzungszeit auszuführen.
 
@@ -395,11 +399,27 @@ Wenn eine der beiden folgenden Richtlinien aktiviert ist, hat diese Richtlinie k
       <string id="AutoRestartDeadlineDay12">12</string>
       <string id="AutoRestartDeadlineDay13">13</string>
       <string id="AutoRestartDeadlineDay14">14</string>
+      <string id="AutoRestartDeadlineDay15">15</string>
+      <string id="AutoRestartDeadlineDay16">16</string>
+      <string id="AutoRestartDeadlineDay17">17</string>
+      <string id="AutoRestartDeadlineDay18">18</string>
+      <string id="AutoRestartDeadlineDay19">19</string>
+      <string id="AutoRestartDeadlineDay20">20</string>
+      <string id="AutoRestartDeadlineDay21">21</string>
+      <string id="AutoRestartDeadlineDay22">22</string>
+      <string id="AutoRestartDeadlineDay23">23</string>
+      <string id="AutoRestartDeadlineDay24">24</string>
+      <string id="AutoRestartDeadlineDay25">25</string>
+      <string id="AutoRestartDeadlineDay26">26</string>
+      <string id="AutoRestartDeadlineDay27">27</string>
+      <string id="AutoRestartDeadlineDay28">28</string>
+      <string id="AutoRestartDeadlineDay29">29</string>
+      <string id="AutoRestartDeadlineDay30">30</string>
 
       <string id="DisableUXWUAccess_Title">Zugriff auf alle Windows Update-Funktionen entfernen</string>
-      <string id="DisableUXWUAccess_Help">Mit dieser Einstellung können Sie den Zugriff auf die Windows Update-Überprüfung entfernen.
+      <string id="DisableUXWUAccess_Help">Mit dieser Einstellung können Sie den Zugriff auf die Überprüfungsfunktion für Windows Update entfernen.
 
-Wenn Sie die Einstellung aktivieren, wird der Zugriff auf die Windows Update-Überprüfung entfernt.
+Wenn Sie die Einstellung aktivieren, wird der Benutzerzugriff auf die Überprüfungs-, Download- und Installationsfunktion für Windows Update entfernt.
       </string>
       <string id="ActiveHoursMaxRange_Title">Nutzungszeitbereich für automatische Neustarts angeben</string>
       <string id="ActiveHoursMaxRange_Help">Aktivieren Sie diese Richtlinie, um die maximale Stundenanzahl ab der Startzeit anzugeben, die die Benutzer als Nutzungszeit festlegen können.
@@ -420,27 +440,23 @@ Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, wird der standard
       <string id="ActiveHoursMaxRange17">17</string>
       <string id="ActiveHoursMaxRange18">18</string>
 
-      <string id="AutoRestartRequiredNotificationDismissal_Title">Сõñƒίģüřè άųťø-ѓĕѕτдяţ ѓèqüįŗёđ πότϊƒϊċåţιøñ ƒòř ΰρδαŧеѕ</string>
-      <string id="AutoRestartRequiredNotificationDismissal_Help">Σлαвłє тĥīş рöℓιĉу ţŏ ѕφêςĩƒý ţћė меťħθδ вŷ ẅĥíсћ ţħз àúţõ-ŗеѕťάяŧ ѓзqμîґéď πόţίƒìċªţΐōŋ įś đīšміşśэð. Ŵнėп ā ѓèśŧάŗτ ίš яёqúιŗεđ тθ ΐήšŧàļł υφďǻţêš, τĥę ªџтô-řĕśŧäŗτ гзqūïŕεď ŉοţΐƒί¢аťїόп ϊŝ đϊşрℓάўêđ. Бỳ ðéƒäúľт, ŧнз ηŏţîƒìĉàťіòή ĩŝ áϋŧóмατі¢âłŀÿ đíşмϊŝşèď āƒτеŗ 25 śě¢όńδѕ.
+      <string id="AutoRestartRequiredNotificationDismissal_Title">Erforderliche Benachrichtigung für automatischen Neustart zur Updateinstallation konfigurieren</string>
+      <string id="AutoRestartRequiredNotificationDismissal_Help">Aktivieren Sie diese Richtlinie, um die Methode anzugeben, durch die eine erforderliche Benachrichtigung für den automatischen Neustart geschlossen wird. Wenn zur Updateinstallation ein Neustart erforderlich ist, wird die erforderliche Benachrichtigung für den automatischen Neustart angezeigt. Die Benachrichtigung wird standardmäßig nach 25 Sekunden geschlossen.
 
-Ťħз мёτħόď сāŉ ъз šєţ ťõ řëqύïřě úѕεř ªċţϊŏп τő δìşmĩšѕ ţћє пóτΐƒīсāťíбπ.
+Die Methode kann so festgelegt werden, dass zum Schließen der Benachrichtigung eine Benutzeraktion erforderlich ist.
 
-Įƒ ўøũ ďĩśåьļē õŗ đό ŋǿŧ сόπƒĭġµŕё тђїѕ ρŏľįċу, τнё đĕƒаŭłť мêτнοð ẁîŀĺ ъē úşëđ.
+Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, wird die Standardmethode verwendet.
       </string>
       <string id="AutoDismissal">1 – Automatisch</string>
       <string id="UserAction">2 – Benutzeraktion</string>
 
       <string id="AutoRestartNotificationConfig_Title">Erinnerungsbenachrichtigungen über den automatischen Neustart zur Updateinstallation konfigurieren</string>
-      <string id="AutoRestartNotificationConfig_Help">Aktivieren Sie diese Richtlinie, um den Benachrichtigungstyp für Erinnerungen zum automatischen Neustart und den Zeitpunkt der Anzeige anzugeben.
-
-Gibt den Benachrichtigungstyp an, der bei der Benachrichtigung des Benutzers über einen geplanten Neustart zur Updateinstallation verwendet wird.
+      <string id="AutoRestartNotificationConfig_Help">Aktivieren Sie diese Richtlinie, um festzulegen, wann Erinnerungen zum automatischen Neustart angezeigt werden.
 
 Sie können angeben, wie lange vor einem geplanten Neustart der Benutzer benachrichtigt wird.
 
-Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, werden der Standardstil und der Standardzeitraum verwendet.
+Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, wird der Standardzeitraum verwendet.
       </string>
-      <string id="AutoRestartNotificationStyleFull">1 – Ganzer Bildschirm</string>
-      <string id="AutoRestartNotificationStylePartial">2 – Teilweiser Bildschirm</string>
       <string id="AutoRestartNotificationSchd15">15</string>
       <string id="AutoRestartNotificationSchd30">30</string>
       <string id="AutoRestartNotificationSchd60">60</string>
@@ -472,6 +488,59 @@ Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, wird das Standard
       <string id="RestartWarnMins15">15</string>
       <string id="RestartWarnMins30">30</string>
       <string id="RestartWarnMins60">60</string>
+      <string id="EngagedRestartTransitionSchedule_Title">Wechsel zum benutzerinitiierten Neustart und Benachrichtigungszeitplan für Updates festlegen</string>
+      <string id="EngagedRestartTransitionSchedule_Help">Aktivieren Sie diese Richtlinie, um festzulegen, wann der Starttyp vom automatischen Neustart, der außerhalb der Nutzungszeit geplant ist, zum benutzerinitiierten Neustart wechselt, der vom Benutzer geplant werden muss. Der Zeitraum kann auf 2 bis 30 Tage festgelegt werden, und zwar ab dem Zeitpunkt, ab dem sich der Status des Neustarts in "Ausstehend" ändert.
+
+Sie können die Anzahl der Tage angeben, die ein Benutzer Erinnerungsbenachrichtigungen zu einem benutzerinitiierten Neustart verzögern kann. Der Verzögerungszeitraum kann auf 1 bis 3 Tage festgelegt werden.
+
+Sie können die Frist in Tagen festlegen, bevor automatisch ein ausstehender Neustart außerhalb der Nutzungszeit geplant und ausgeführt wird. Die Frist kann auf 2 bis 30 Tage festgelegt werden, und zwar ab dem Zeitpunkt, ab dem sich der Status des Neustarts in "Ausstehend" ändert. Falls konfiguriert, ändert sich der ausstehende Neustart innerhalb des angegebenen Zeitraums vom automatischen Neustart in einen benutzerinitiierten Neustart (ausstehende Benutzerplanung) und wird automatisch ausgeführt.
+
+Wenn die Frist nicht angegeben oder auf 0 festgelegt ist, wird der Neustart nicht automatisch ausgeführt und bleibt ein benutzerinitiierter Neustart (z. B. ausstehende Benutzerplanung).
+
+Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, gilt das Standardverhalten.
+
+Wenn eine der folgenden Richtlinien konfiguriert ist, hat diese Richtlinie keine Auswirkung:
+    1. Keinen automatischen Neustart für geplante Installationen automatischer Updates durchführen, wenn Benutzer angemeldet sind.
+    2. Neustart immer automatisch zur geplanten Zeit durchführen
+    3. Frist angeben, nach der ein automatischer Neustart zur Updateinstallation ausgeführt wird
+      </string>
+      <string id="EngagedRestart_0">0</string>
+      <string id="EngagedRestart_2">2</string>
+      <string id="EngagedRestart_3">3</string>
+      <string id="EngagedRestart_4">4</string>
+      <string id="EngagedRestart_5">5</string>
+      <string id="EngagedRestart_6">6</string>
+      <string id="EngagedRestart_7">7</string>
+      <string id="EngagedRestart_8">8</string>
+      <string id="EngagedRestart_9">9</string>
+      <string id="EngagedRestart_10">10</string>
+      <string id="EngagedRestart_11">11</string>
+      <string id="EngagedRestart_12">12</string>
+      <string id="EngagedRestart_13">13</string>
+      <string id="EngagedRestart_14">14</string>
+      <string id="EngagedRestart_15">15</string>
+      <string id="EngagedRestart_16">16</string>
+      <string id="EngagedRestart_17">17</string>
+      <string id="EngagedRestart_18">18</string>
+      <string id="EngagedRestart_19">19</string>
+      <string id="EngagedRestart_20">20</string>
+      <string id="EngagedRestart_21">21</string>
+      <string id="EngagedRestart_22">22</string>
+      <string id="EngagedRestart_23">23</string>
+      <string id="EngagedRestart_24">24</string>
+      <string id="EngagedRestart_25">25</string>
+      <string id="EngagedRestart_26">26</string>
+      <string id="EngagedRestart_27">27</string>
+      <string id="EngagedRestart_28">28</string>
+      <string id="EngagedRestart_29">29</string>
+      <string id="EngagedRestart_30">30</string>
+      <string id="EngagedRestartSnooze_1">1</string>
+      <string id="EngagedRestartSnooze_2">2</string>
+      <string id="EngagedRestartSnooze_3">3</string>
+      
+      <string id="SetEDURestart_Title">Energierichtlinie für den Neustart nach einem Update, die für Geräte in Ladevorrichtungen gilt</string>
+      <string id="SetEDURestart_Help">Wenn Sie diese Richtlinie für EDU-Geräte aktivieren, die über Nacht in Ladevorrichtungen aufbewahrt werden, werden Energiestatusüberprüfungen ausgelassen, um sicherzustellen, dass Neustarts nach einem Update zur geplanten Installationszeit erfolgen.</string>
+
     </stringTable>
 
     <presentationTable>
@@ -494,9 +563,10 @@ Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, wird das Standard
           <label>Intranetserver für die Statistik:</label>
         </textBox>
         <textBox refId="CorpWUContentHost_Name">
-          <label>Ѕέτ τћê àℓťéŗиªτε ðöẅиłöäð şєřνęř:</label>
+          <label>Alternativen Downloadserver festlegen:</label>
         </textBox>
         <text>(Beispiel: http://IntranetUpd01)</text>
+        <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Dateien ohne URL in den Metadaten herunterladen, wenn ein alternativer Downloadserver festgelegt ist</checkBox>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>In folgenden Abständen (Stunden)</text>
@@ -535,16 +605,16 @@ Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, wird das Standard
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Wählen Sie das Branch-Bereitschaftsniveau für die Funktionsupdates aus, die Sie erhalten möchten:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Anzahl der Tage, die der Empfang eines Funktionsupdates nach der Freigabe zurückgestellt werden soll:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>Ρãúşє ₣ĕάţůѓè Ųφďдτêś şŧдŗŧĭпğ</label>
+          <label>Funktionsupdates aussetzen ab</label>
         </textBox>
-        <text>(ƒõřmâτ ўỳỳý-мm-đď ę×åmрľé: 2016-09-16)</text>
+        <text>(Beispiel für das Format jjjj-mm-tt: 2016-09-16)</text>
       </presentation>
       <presentation id="DeferQualityUpdates">
         <decimalTextBox refId="DeferQualityUpdatesPeriodId" defaultValue="0">Anzahl der Tage, die der Empfang eines Qualitätsupdates nach der Freigabe zurückgestellt werden soll:</decimalTextBox>
         <textBox refId="PauseQualityUpdatesStartId">
-          <label>Рāúś℮ Qμάľìŧу Ūрδăţèŝ ŝţåґтíŉğ</label>
+          <label>Qualitätsupdates aussetzen ab</label>
         </textBox>
-        <text>(ƒòґмàτ ỳÿуў-мm-ďđ ℮хάmρł℮: 2016-09-16)</text>
+        <text>(Beispiel für das Format jjjj-mm-tt: 2016-09-16)</text>
       </presentation>
       <presentation id="ActiveHours_Title">
         <text>Nutzungszeit</text>
@@ -560,19 +630,25 @@ Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, wird das Standard
       </presentation>
       <presentation id="AutoRestartRequiredNotificationDismissal_Title">
         <text>Geben Sie die Methode an, durch die die erforderliche Benachrichtigung über einen automatischen Neustart geschlossen wird:</text>
-        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Μзţħóď: </dropdownList>
+        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Methode: </dropdownList>
       </presentation>
       <presentation id="AutoRestartNotificationConfig_Title">
-        <text>Geben Sie den Stil für Erinnerungsbenachrichtigungen über den automatischen Neustart an:</text>
-        <dropdownList refId="AutoRestartNotificationStyle" noSort="true" defaultItem="0">Stil: </dropdownList>
         <text>Geben Sie den Zeitraum für Erinnerungsbenachrichtigungen über den automatischen Neustart an:</text>
         <dropdownList refId="AutoRestartNotificationSchd" noSort="true" defaultItem="0">Zeitraum (Min.): </dropdownList>
       </presentation>
       <presentation id="RestartWarningSchd_Title">
         <text>Geben Sie den Zeitraum für Warn-/Erinnerungsbenachrichtigungen über den automatischen Neustart an:</text>
-        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Erinnerung (in Stunden):</dropdownList>
+        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Erinnerung (in Stunden): </dropdownList>
         <text>Geben Sie den Zeitraum für Warnbenachrichtigungen über einen bevorstehenden automatischen Neustart an:</text>
         <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">Warnung (Min.): </dropdownList>
+      </presentation>
+      <presentation id="EngagedRestartTransitionSchedule_Title">
+        <text>Zeit für den Wechsel vom automatischen Neustart zum benutzerinitiierten Neustart festlegen(ausstehende Benutzerplanung):</text>
+        <dropdownList refId="EngagedRestartTransitionSchedule" noSort="true" defaultItem="5">Wechsel (Tage): </dropdownList>
+        <text>Festlegen, wie lange Erinnerungsbenachrichtigungen zu einem benutzerinitiierten Neustart verzögert werden sollen:</text>
+        <dropdownList refId="EngagedRestartSnoozeSchedule" noSort="true" defaultItem="2">Verzögern (Tage):     </dropdownList>
+        <text>Frist festlegen, nach der ein ausstehender Neustart außerhalb der Nutzungszeit automatisch ausgeführt wird:</text>
+        <dropdownList refId="EngagedRestartDeadline" noSort="true" defaultItem="0">Frist (Tage):  </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

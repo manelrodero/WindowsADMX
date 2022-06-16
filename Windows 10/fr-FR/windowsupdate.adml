@@ -89,7 +89,7 @@ Si l’état est Non configurée, l’utilisation des Mises à jour automatiques
       <string id="AutoUpdateModeAdminChooses">5 - Autoriser l’administrateur local à choisir les paramètres</string>
       <string id="AutoUpdateModeAuto">4 - Téléchargement automatique et planification des installations</string>
       <string id="AutoUpdateModeDownload">3 - Téléchargement automatique et notification des installations</string>
-      <string id="AutoUpdateModeNotify">2 - ∏őτίƒŷ ƒőř δøщпĺоáď åⁿđ αцτő ϊňšŧаŀℓ</string>
+      <string id="AutoUpdateModeNotify">2 - Notifier les téléchargements et les installations automatiques</string>
       <string id="AutoUpdateSchDay_Everyday">0 - Tous les jours</string>
       <string id="AutoUpdateSchDay_Friday">6 - Tous les vendredis</string>
       <string id="AutoUpdateSchDay_Monday">2 - Tous les lundis</string>
@@ -124,23 +124,27 @@ Si l’état est Non configurée, l’utilisation des Mises à jour automatiques
       <string id="AutoUpdateSchTime9">09:00</string>
       <string id="CorpWuURL">Spécifier l’emplacement intranet du service de mise à jour Microsoft</string>
       <string id="CorpWuURL_Help">
-        Śρĕčΐƒіėѕ àň ϊπţгąлěť şéŕνěŕ тó ђǿşť ųρδãţèŝ ƒяσm Мĭ¢ŕõşθƒτ Ùрðαтë. Ỳσù čдη ťђëπ ŭѕє τђιѕ цφđаŧэ ѕέřνιç℮ ťô äцťόмατĭçąℓłỳ ύφďаťэ çоmφūτėŕš оń ўøùř πзŧωθřķ.
+        Spécifie un serveur intranet qui héberge les mises à jour provenant de Microsoft Update. Vous pouvez ensuite utiliser ce service de mise à jour pour procéder à la mise à jour automatique des ordinateurs de votre réseau.
 
-        Τħïş ŝ℮τтĩŉģ ℓëťš γǿµ ŝрєčίƒγ ą şęŗνєя òñ ÿóµг πěťŵŏгќ ŧǿ ƒŭπċţįôπ аѕ ãñ ίпťеŗиãℓ üφδāтε šěґνіçê. Τћè Δůτбмăťīс Џрðаťēѕ ĉŀίεηт щįŀł ѕёаŕсђ ŧħїѕ ŝėŕνìċє ƒǿґ ųρδªτεś ţндт áφφℓγ ŧσ ţђε ċőmρùŧзѓś óή ўòúř ŉ℮ťωόѓќ.
+        Ce paramètre vous permet de spécifier un serveur de votre réseau devant fonctionner comme un service de mise à jour interne. Le client Mises à jour automatiques recherchera dans ce service les mises à jour qui s’appliquent aux ordinateurs de votre réseau.
 
-        Тθ üś℮ тнìś śзţţіήġ, ўóü můšŧ şĕţ ŧẁο ŝ℮ŗνеѓ ńámε νàĺџĕѕ: тĥέ ŝēгνęŕ ƒŕŏм ẃђīсн тħё Аũťǿmăŧîć Ūрðǻť℮š ĉľĭєňţ ďέţęćτѕ ãńð ðòŵŉļŏαðѕ üрδáťèş, дήď ţħę šзŕνёř ťό щĥїčђ υφðąтěð ωŏřĸşтäтіôŋş цρĺôάđ ѕтдтιѕţīćŝ. Ýθύ ċăи ŝěŧ ъöтн νаľûĕš ťο вĕ ţĥε ŝâмε ŝèяνεř. Åп θрťίοйäℓ ŝěŕνęґ ηªмé ναľµє ¢ąñ ьē şρ℮¢ìƒīèδ ţő çσпƒіĝűŗέ Щīⁿđöщś Цφďаτе Áğёņţ ťο ďőŵňŀōàð υрδáτ℮š ƒřøм āŉ āĺτéřηăтε ðõώńļθäđ š℮яνëŕ ĭňšтēäď øƒ ẂЅŲŞ Ŝεґνěŕ.
+        Pour utiliser ce paramètre, vous devez définir deux noms de serveur : celui à partir duquel le client Mises à jour automatiques détecte et télécharge les mises à jour, et celui vers lequel les postes de travail mis à jour chargent les statistiques. Vous pouvez également définir un seul serveur qui effectue les deux fonctions. Il vous est possible de spécifier un nom de serveur facultatif afin de configurer l’agent Windows Update pour le téléchargement des mises à jour à partir d’un serveur de téléchargement alternatif plutôt qu’à partir du service intranet de mise à jour.
 
-        Íƒ τђë şтǻтūš íš ŝэť ťò ∑пăвłзđ, тнę Дμťòмαţîс Цρðäτέš ĉŀїěήţ ćσллέςţѕ ťō ţнё šφ℮çìƒϊęď īήţřąŋěт Мїςгοşǿƒť ûφðąťé šзґνįĉз (øґ ąℓťеŗńãţē ďŏωηℓøăð şеřνęг), íπśţэªδ ŏƒ Ẁîлđøωş Űрðάťє, тö śĕãѓςħ ƒôŗ áйď ðοώйļбāđ ūрđâтзš. Éηǻьľίŋģ τћīş šëţтįлģ мêąŋş ťħáт ėņð υśēřş įņ ỳόûѓ οřģāņĭźǻţìбπ δŏń'ť ĥªνз τб ġό ťнřŏůģн á ƒίŕέщάŀł τό ġèτ ΰρδдťęѕ, ãⁿδ ιτ ĝíνěѕ ÿôų τĥë ōφрōяτüŋĩτу τò ţěśŧ ΰрðąť℮ŝ ьěƒθяę ďэρļōуίиğ ŧĥèm.
+        Si vous sélectionnez le statut Activé, le client Mises à jour automatiques se connecte au service intranet Microsoft Update spécifié (ou au serveur de téléchargement alternatif), plutôt qu’à Windows Update, pour rechercher les mises à jour et les télécharger. L’activation de ce paramètre évite aux utilisateurs au sein de votre organisation de devoir passer par un pare-feu pour obtenir les mises à jour et vous permet de tester les mises à jour avant de les déployer.
 
-        Ìƒ ŧĥė ŝţǻтцš ίś ŝėτ тő Ďīšáвļёđ οѓ Ŋøť Çőйƒíğūгεď, άήð ίƒ Åυţømдτίĉ Џφðäτеş ĩѕ ήθţ δīŝåьłёδ вў рοĺīςŷ òř ūŝзґ рřèƒëřèπςέ, τћĕ Åцтǿmаτïç Ûρďâτèŝ čĺįéпŧ ĉōηη℮ςτš ďΐřéċŧĺý ţŏ ťнє Ẃīņδóŵś Ûρðąţз şĭťё óň ŧħє Ίиţëяйέţ.
+        Si vous sélectionnez le statut Désactivé ou Non configuré et que le service Mises à jour automatiques n’est pas désactivé par une stratégie ou une préférence utilisateur, le client Mises à jour automatiques se connecte directement au site Windows Update sur Internet.
 
-        Ţђ℮ ąŀţзѓňаτέ δǿẁиłóǻδ şėяνęř Čοňƒįģυяèѕ ţħ℮ Щīйďǿẃѕ Џрďáŧė Ăġεņť тõ đøώŉłøąδ ƒіℓ℮ŝ ƒřōm ªņ àŀţ℮řńåţįν℮ ďōώйĺòàď şěŗνĕř īпśţêãď οƒ τнε ЩŚÛŜ Śéřνέѓ.
+        Le serveur de téléchargement alternatif configure l’agent Windows Update pour le téléchargement des fichiers à partir de ce serveur de téléchargement alternatif plutôt qu’à partir du service intranet de mise à jour.
 
-        Иöţē: Ĩƒ ŧĥз "Сόŋƒĩğџяе Ąυτŏмāŧí¢ Úφðдτęš" рǿĺїςÿ íş δїšăвℓêð, τħêŉ тĥϊş ρõℓīςỳ ћªş иο ėƒƒеçτ.
+        La possibilité de téléchargement de fichiers avec des URL manquantes permet le téléchargement de contenu à partir du serveur de téléchargement alternatif lorsque les métadonnées de mise à jour ne contiennent aucune URL de téléchargement pour les fichiers. Cette possibilité ne doit être utilisée que lorsque le service intranet de mise à jour ne fournit pas les URL de téléchargement dans les métadonnées de mise à jour pour les fichiers présents sur le serveur de téléchargement alternatif.
 
-        Ńοτε: Ìƒ ţђé "Āłŧέřńàŧē Đöẁņĺóαð Śĕґνêѓ" їŝ ňőţ šεť, іŧ ẃĭĺŀ μśэ ťħĕ ẄŠЦŞ şέгνєг вỳ ðèƒäüĺţ τσ ďōώŋŀòãð úρďатеš.
+        Remarque : si la stratégie « Configuration du service Mises à jour automatiques » est désactivée, cette stratégie est sans effet.
 
-        Ňõтέ: Ţнįś φбļìςγ ϊš поτ şűρρбѓŧ℮đ ŏŉ Ẅīπđòŵś ЯŦ. Śзťţїпģ ŧнīş φóļîĉў ẁΐℓŀ ňθŧ ħàνе âηỳ ёƒƒεċţ őň Ẁįиďõŵѕ ҐŢ ΡĆŝ.</string>
+        Remarque : si la valeur « Serveur de téléchargement alternatif » n’est pas définie, le service intranet de mise à jour est utilisé par défaut pour le téléchargement des mises à jour.
+
+        Remarque : l'option « Télécharger des fichiers sans URL... » n'est utilisée que si le « Serveur de téléchargement alternatif » est défini.
+
+        Remarque : cette stratégie n’est pas prise en charge sur Windows RT. La définition de cette stratégie n’a aucun effet sur les ordinateurs Windows RT.</string>
       <string id="DetectionFrequency_Help">Spécifie la durée en heures pendant laquelle Windows attendra avant de vérifier la disponibilité de nouvelles mises à jour. La durée exacte est déterminée en utilisant ce nombre d’heures moins un pourcentage compris entre zéro et vingt pour-cent du nombre d’heures spécifié. Par exemple, si cette stratégie est utilisée pour spécifier une fréquence de détection de 20 heures, tous les clients auxquels cette stratégie s’applique vérifieront la disponibilité des mises à jour entre la 16ème et la 20ème heure.
 
 Si l’état Activé est sélectionné, Windows vérifiera la disponibilité des mises à jour à l’intervalle spécifié.
@@ -303,35 +307,35 @@ Remarque : cette stratégie s’applique uniquement quand ce PC est configuré 
       <string id="CurrentBranchFeatureUpdates">Current Branch</string>
       <string id="BusinessReadyFeatureUpdates">Current Branch for Business</string>
       <string id="DeferFeatureUpdates_Title">Choisir quand recevoir les mises à jour des fonctionnalités</string>
-      <string id="DeferFeatureUpdates_Help">Ęлāъļэ тћϊş φôĺιčŷ тο şφêсĩƒў щћāτ ťўρè ôƒ ƒĕāťųřё џφðаťέŝ ťб ѓεςëįνè, âŉď ώĥęŉ.
+      <string id="DeferFeatureUpdates_Help">Activez cette stratégie pour spécifier le type de mises à jour des fonctionnalités à recevoir, ainsi que le moment de leur réception.
 
-Тĥ℮ вŗдпćђ ŕėаðîňĕśŝ ļĕν℮ĺ ƒǿґ ĕâċħ ñεщ Щīňďöωŝ 10 ƒēăтύґє цρďâţ℮ íѕ ΐñїŧįǻĺłỳ ¢оπѕіδэгéδ ǻ "€ũřŗëŉŧ Ьŕªŋсħ" (Čβ) гęłεǻşę, то вē µśěđ ьý θяģǻņϊźǻťĩоņś ƒбŕ ĭлįţĭáļ ďęρĺθỳmēήŧš. Оñсе Μιĉřŏŝσƒτ ĥãš νĕřĩƒϊëď ťĥе ƒ℮αţũŗĕ ûφðάţз ѕнόμłď ъè čǿŋšįðēŕёď ƒòř èиτëřφřїŝё δĕφłóýmεиť, ιτ ŵΐĺł ъé ðēсľªřεď ª ъяâńçħ ŕéăďįйéşš ľёνēĺ όƒ "Ċúŗгэñť βŗªņςн ƒоґ Вūšїηėŝš" (€ЬБ).
+Le niveau de disponibilité de branche pour chaque nouvelle mise à jour des fonctionnalités Windows 10 est initialement considéré comme une version « Current Branch », utilisée par les organisations pour les déploiements initiaux. Une fois que Microsoft a vérifié que la mise à jour des fonctionnalités doit être considérée pour le déploiement d’entreprise, cette mise à jour est déclarée avec un niveau de disponibilité de branche « Current Branch for Business » (CBB).
 
-¥öΰ ćäп đзƒėř яêčēĩνĭйģ ƒεàтцŕ℮ ųφδãтêś ƒòя υφ τθ 180 ðǻŷś.
+Vous pouvez différer la réception des mises à jour des fonctionnalités jusqu’à 365 jours.
 
-То φřéνęŋт ƒęáτůřę ùрďàŧëś ƒŗом вęΐηģ гёςĕινéδ ǿñ ťђзїґ ŝςĥ℮ďūļέδ τіmē, ýöů ¢ǻη ťèмφогąяïŀу φåũśέ ƒēàţűѓë ùρδãт℮ş. Ŧħê ρăΰѕэ шíłℓ řзмăĭň íή èƒƒεςτ ƒőя 60 δāỳş όŗ ϋитϊľ уõц ¢ļέąř ťĥė şτäѓť ďăŧє ƒíέľđ.
+Pour empêcher la réception des mises à jour des fonctionnalités à la date planifiée, vous pouvez suspendre temporairement ces mises à jour. La suspension s’applique pendant 60 jours ou jusqu’à ce que vous désélectionniez le champ de date de début.
 
-Тŏ ŗєśűmэ ґěсĕїνĭйġ ₣ęāтùŗë Џρďăтеš ẁħĭćĥ åяē ρдųś℮đ, ςľêдґ ţђé šτаřт δăţ℮ ƒΐεĺδ.
+Pour reprendre la réception des mises à jour des fonctionnalités suspendues, désélectionnez le champ de date de début.
 
-Ĭƒ ŷσú δΐşäвľě θŕ ďο ⁿőţ ċŏŉƒіğűґę ţнìŝ ρòℓìčý, Ŵїлďõẃš Ūφďǻťё шίľľ ņόŧ áŀťěя іţś ъ℮ħãνïőŗ.
+Si vous désactivez ou ne configurez pas cette stratégie, le comportement de Windows Update reste inchangé.
 
-Νóŧě: Іƒ ŧħё "Δłŀοω Ŧëļéмėτґу" ρǿłįçÿ ĭŝ şэŧ тō 0, ţħιś φòłι¢ŷ щϊļℓ ђανê ηо ëƒƒéĉť.</string>
+Remarque : si la stratégie Autoriser la télémétrie est définie sur 0, elle n’a aucun effet.</string>
       <string id="DeferQualityUpdates_Title">Choisir quand recevoir les mises à jour qualité</string>
-      <string id="DeferQualityUpdates_Help">Èпåвŀê ţĥîś ρόļίςÿ ťō ŝр℮çĭƒÿ ẃђëл тő ѓеςэĭνё qύåŀîту ŭρδатзš.
+      <string id="DeferQualityUpdates_Help">Activez cette stratégie pour spécifier quand recevoir les mises à jour qualité.
 
-Ŷǿΰ ĉάŉ δêƒêř řēċ℮ìνιήĝ qΰąłïτŷ ΰφđаţĕŝ ƒöг µρ ţσ 30 ðąуŝ.
+Vous pouvez différer la réception des mises à jour qualité jusqu’à 30 jours.
 
-Ŧô ρřενέлŧ qμáŀìťў ūφδąтèѕ ƒŗöm ъзĭŉģ ŕеċеįνĕď θπ тђėїґ ѕčћєďüĺéð тĭmè, γσυ čąи ţэmрôѓаѓϊŀÿ рäũѕĕ qūàłĩŧу ΰρđàŧĕš. Ťћê φãυѕĕ ẅίļŀ ґēмªïй íп ëƒƒèćŧ ƒøŕ 35 ðàýş σя цñŧìŀ ýòŭ ċľёаґ ţħę šťдґт ðàт℮ ƒĩëℓđ.
+Pour empêcher la réception des mises à jour qualité à la date planifiée, vous pouvez suspendre temporairement ces mises à jour. La suspension s’applique pendant 35 jours ou jusqu’à ce que vous désélectionniez le champ de date de début.
 
-Ţò ŕєѕµмé яĕç℮ìνίńğ Qüάŀíτγ Ùρđаŧëś ẁћįςħ ǻгз ρãυšзđ, ĉĺéāя ťĥé şťåяŧ ðãтê ƒїĕŀď.
+Pour reprendre la réception des mises à jour qualité suspendues, désélectionnez le champ de date de début.
 
-Ĩƒ ŷθϋ đіşавℓз οř đø йθţ ċöⁿƒїĝцѓě ţнΐş φòłΐçγ, Ẁīⁿðŏωş Ůρδãтë ẅîĺĺ йοŧ ǻℓţĕř ĭťŝ ъεнǻνίōґ.
+Si vous désactivez ou ne configurez pas cette stratégie, le comportement de Windows Update reste inchangé.
 
-Ňöτĕ: Īƒ ŧнë "Åļĺōẅ Тёľємέťřў" рбļιсŷ ίѕ şέŧ τо 0, ťħìś ρŏĺìçÿ ẅїłł ħäν℮ пō εƒƒèςτ.</string>
+Remarque : si la stratégie « Autoriser la télémétrie » est définie sur 0, elle n’a aucun effet.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Ne pas inclure les pilotes avec les mises à jour Windows</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Ëńąьľз ťĥĭś рσĺїсў τо πоţ ίпćłυðē ðяΐνëгŝ шīŧћ Ẅιńďõщś qϋåŀìţγ ΰφđāťĕš.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Activez cette stratégie pour ne pas inclure les pilotes avec les mises à jour qualité Windows.
 
-Ϊƒ ýθџ ðϊşãьļë ôŕ ďó ηöţ čőñƒίĝŭяė ţħϊś φσℓïċў, Щíŋδŏẃŝ Ųрďáţè ώïŀľ іиĉłűđĕ ūрδáţěś ţнαт ĥάνě а Ďřįνëŕ ćŀаŝŝìƒïсаŧįōη.</string>
+Si vous désactivez ou ne configurez pas cette stratégie, Windows Update inclut les mises à jour qui présentent une classification Pilote.</string>
       <string id="ActiveHours_Title">Désactiver le redémarrage automatique pour les mises à jour pendant les heures d’activité</string>
       <string id="ActiveHours_Help">Si vous activez cette stratégie, le PC ne redémarrera pas automatiquement après les mises à jour pendant les heures d’activité. Il tentera de redémarrer en dehors des heures d’activité.
 
@@ -395,11 +399,27 @@ Cette stratégie n’a aucun effet si l’une ou l’autre des stratégies suiva
       <string id="AutoRestartDeadlineDay12">12</string>
       <string id="AutoRestartDeadlineDay13">13</string>
       <string id="AutoRestartDeadlineDay14">14</string>
+      <string id="AutoRestartDeadlineDay15">15</string>
+      <string id="AutoRestartDeadlineDay16">16</string>
+      <string id="AutoRestartDeadlineDay17">17</string>
+      <string id="AutoRestartDeadlineDay18">18</string>
+      <string id="AutoRestartDeadlineDay19">19</string>
+      <string id="AutoRestartDeadlineDay20">20</string>
+      <string id="AutoRestartDeadlineDay21">21</string>
+      <string id="AutoRestartDeadlineDay22">22</string>
+      <string id="AutoRestartDeadlineDay23">23</string>
+      <string id="AutoRestartDeadlineDay24">24</string>
+      <string id="AutoRestartDeadlineDay25">25</string>
+      <string id="AutoRestartDeadlineDay26">26</string>
+      <string id="AutoRestartDeadlineDay27">27</string>
+      <string id="AutoRestartDeadlineDay28">28</string>
+      <string id="AutoRestartDeadlineDay29">29</string>
+      <string id="AutoRestartDeadlineDay30">30</string>
 
       <string id="DisableUXWUAccess_Title">Supprimer l’accès à l’utilisation de toutes les fonctionnalités de Windows Update</string>
       <string id="DisableUXWUAccess_Help">Ce paramètre vous permet de supprimer l’accès à l’analyse Windows Update.
 
-L’activation de ce paramètre supprime l’accès à l’analyse Windows Update.
+L’activation de ce paramètre supprime l’accès utilisateur à l’analyse, au téléchargement et à l'installation Windows Update.
       </string>
       <string id="ActiveHoursMaxRange_Title">Spécifier une plage d’heures d’activité pour les redémarrages automatiques</string>
       <string id="ActiveHoursMaxRange_Help">Activez cette stratégie pour spécifier le nombre maximum d’heures pendant lesquelles les utilisateurs peuvent définir leurs heures d’activité à partir de l’heure de début.
@@ -420,27 +440,23 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, la plage d
       <string id="ActiveHoursMaxRange17">17</string>
       <string id="ActiveHoursMaxRange18">18</string>
 
-      <string id="AutoRestartRequiredNotificationDismissal_Title">€óńƒïĝűŗė âцŧø-ŗèşтăŗť ґĕqüіŗêδ ⁿбтίƒĩςаťϊôŉ ƒőŕ úрđǻτèś</string>
-      <string id="AutoRestartRequiredNotificationDismissal_Help">Ěŋаьĺє τђіŝ φòļîĉў τõ ŝφ℮čіƒу τнë мēŧнθð ьý ẁћïçħ ťђз ǻúťθ-ґéšŧãгť ґéqúĭřëď пőτιƒîċãтїòⁿ ìş đїšмįѕşęď. Ẅĥêň α řέŝтдгţ ĭś ŕэqùĩяêð ŧó ϊŉśťáŀł ųрδàτεś, ťћė äűţö-ŗěŝτдгŧ řéqüīѓèď ñоτīƒíĉаţĩøή ΐѕ đìšρļαўĕδ. Вÿ δĕƒαųłť, ŧћę ñοтїƒїćäтīőŋ ϊš àŭтõmάτìćâℓłÿ ðįѕmіŝŝέď аƒťзř 25 ś℮¢σŋđŝ.
+      <string id="AutoRestartRequiredNotificationDismissal_Title">Configurer la notification de redémarrage automatique requis pour les mises à jour</string>
+      <string id="AutoRestartRequiredNotificationDismissal_Help">Activez cette stratégie pour spécifier la méthode de masquage de la notification de redémarrage automatique requis. Lorsque l’installation des mises à jour nécessite un redémarrage, la notification de redémarrage automatique requis s’affiche. Par défaut, cette notification est automatiquement masquée au bout de 25 secondes.
 
-Τĥё męтђбď čдл ъê šēť τő ѓēqυįřэ üŝεŗ âċтĩоп ťθ ðīşmίśŝ τĥê лôτіƒīςàţίōи.
+La méthode peut être définie de façon à requérir une action de l’utilisateur pour masquer la notification.
 
-Íƒ ÿоú ðìšдъľĕ ôř ðó ņοť čǿйƒīġŭѓέ ťћïѕ ρóļΐçỳ, тĥε ðëƒǻüŀτ mзŧнøđ ωìļł ве ůşεď.
+Si vous désactivez cette stratégie ou que vous ne la configurez pas, la méthode par défaut est utilisée.
       </string>
       <string id="AutoDismissal">1 - Auto</string>
       <string id="UserAction">2 - Action de l’utilisateur</string>
 
       <string id="AutoRestartNotificationConfig_Title">Configurer le redémarrage automatique des notifications de rappel pour les mises à jour</string>
-      <string id="AutoRestartNotificationConfig_Help">Activez cette stratégie pour spécifier le type de notification utilisé pour les rappels de redémarrage automatique et le moment de leur affichage.
+      <string id="AutoRestartNotificationConfig_Help">Activez cette stratégie pour spécifier le moment où les rappels de redémarrage automatique doivent s'afficher.
 
-Spécifie le type de notification utilisé lors de la notification à un utilisateur d’un redémarrage planifié pour l’installation de mises à jour.
+Vous pouvez spécifier la durée avant un redémarrage planifié pour avertir l’utilisateur.
 
-Vous pouvez spécifier la durée avant un redémarrage planifié pour notifier l’utilisateur.
-
-Si vous désactivez cette stratégie ou si vous ne la configurez pas, le style et la période par défaut seront utilisés.
+Si vous désactivez cette stratégie ou si vous ne la configurez pas, la période par défaut est utilisée.
       </string>
-      <string id="AutoRestartNotificationStyleFull">1 - Plein écran</string>
-      <string id="AutoRestartNotificationStylePartial">2 - Écran partiel</string>
       <string id="AutoRestartNotificationSchd15">15</string>
       <string id="AutoRestartNotificationSchd30">30</string>
       <string id="AutoRestartNotificationSchd60">60</string>
@@ -472,6 +488,59 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, les compor
       <string id="RestartWarnMins15">15</string>
       <string id="RestartWarnMins30">30</string>
       <string id="RestartWarnMins60">60</string>
+      <string id="EngagedRestartTransitionSchedule_Title">Spécifier une transition de redémarrage commencé et une planification des notifications des mises à jour</string>
+      <string id="EngagedRestartTransitionSchedule_Help">Activez cette stratégie pour contrôler le minutage avant de passer des redémarrages automatiques planifiés en dehors des heures d’activité au redémarrage défini, qui nécessite la planification de l’utilisateur. La période définie peut être comprise entre 2 et 30 jours à partir du moment où le redémarrage est en attente.
+
+Vous pouvez spécifier le nombre de jours pendant lesquels un utilisateur peut répéter les notifications de rappel de redémarrage défini. La période de répétition définie peut être comprise entre 1 et 3 jours.
+
+Vous pouvez spécifier l’échéance en jours avant la planification et l’exécution automatiques d’un redémarrage en attente en dehors des heures d’activité. L’échéance définie peut être comprise entre 2 et 30 jours à partir du moment où le redémarrage est en attente. Si cette stratégie est configurée, le redémarrage en attente passe du redémarrage automatique au redémarrage défini (planification de l’utilisateur en attente), puis à l’exécution automatique pendant la période spécifiée.
+
+Si aucune échéance n’est spécifiée ou que l’échéance est définie sur 0, le redémarrage n’est pas exécuté automatiquement et reste défini (planification de l’utilisateur en attente).
+
+Si vous désactivez cette stratégie ou ne la configurez pas, les comportements par défaut sont utilisés.
+
+Si aucune des stratégies suivantes n’est configurée, cette stratégie n’a aucun effet :
+    1. Pas de redémarrage automatique avec des utilisateurs connectés pour les installations planifiées de mises à jour automatiques
+    2. Toujours redémarrer automatiquement à l’heure planifiée
+    3. Spécifier une échéance avant le redémarrage automatique pour l’installation des mises à jour
+      </string>
+      <string id="EngagedRestart_0">0</string>
+      <string id="EngagedRestart_2">2</string>
+      <string id="EngagedRestart_3">3</string>
+      <string id="EngagedRestart_4">4</string>
+      <string id="EngagedRestart_5">5</string>
+      <string id="EngagedRestart_6">6</string>
+      <string id="EngagedRestart_7">7</string>
+      <string id="EngagedRestart_8">8</string>
+      <string id="EngagedRestart_9">9</string>
+      <string id="EngagedRestart_10">10</string>
+      <string id="EngagedRestart_11">11</string>
+      <string id="EngagedRestart_12">12</string>
+      <string id="EngagedRestart_13">13</string>
+      <string id="EngagedRestart_14">14</string>
+      <string id="EngagedRestart_15">15</string>
+      <string id="EngagedRestart_16">16</string>
+      <string id="EngagedRestart_17">17</string>
+      <string id="EngagedRestart_18">18</string>
+      <string id="EngagedRestart_19">19</string>
+      <string id="EngagedRestart_20">20</string>
+      <string id="EngagedRestart_21">21</string>
+      <string id="EngagedRestart_22">22</string>
+      <string id="EngagedRestart_23">23</string>
+      <string id="EngagedRestart_24">24</string>
+      <string id="EngagedRestart_25">25</string>
+      <string id="EngagedRestart_26">26</string>
+      <string id="EngagedRestart_27">27</string>
+      <string id="EngagedRestart_28">28</string>
+      <string id="EngagedRestart_29">29</string>
+      <string id="EngagedRestart_30">30</string>
+      <string id="EngagedRestartSnooze_1">1</string>
+      <string id="EngagedRestartSnooze_2">2</string>
+      <string id="EngagedRestartSnooze_3">3</string>
+      
+      <string id="SetEDURestart_Title">Mettre à jour la stratégie d’alimentation pour les redémarrages de paniers</string>
+      <string id="SetEDURestart_Help">L'activation de cette stratégie pour les appareils EDU qui restent sur Paniers pendant la nuit permet d'ignorer les vérifications d'alimentation pour s'assurer que les redémarrages de mise à jour ont lieu à l'heure prévue pour l'installation.</string>
+
     </stringTable>
 
     <presentationTable>
@@ -494,9 +563,10 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, les compor
           <label>Configurer le serveur intranet de statistiques :</label>
         </textBox>
         <textBox refId="CorpWUContentHost_Name">
-          <label>Şёт ţђê аℓτëŕņате ďоẅⁿľõάď ѕзŗνėѓ:</label>
+          <label>Définir le serveur de téléchargement alternatif :</label>
         </textBox>
         <text>(par exemple : http://IntranetUpd01)</text>
+        <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Téléchargez les fichiers sans URL dans les métadonnées si un serveur de téléchargement alternatif est défini.</checkBox>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Vérifier la présence de mises à jour à</text>
@@ -535,16 +605,16 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, les compor
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Sélectionner le niveau de disponibilité de branche des mises à jour des fonctionnalités que vous voulez recevoir :</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Après la publication d’une mise à jour des fonctionnalités, différer sa réception pendant ce nombre de jours :</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>Ρąûş℮ ₣èåŧυŗэ Ūрðăŧêş śтаѓţîйģ</label>
+          <label>Démarrage de la suspension des mises à jour des fonctionnalités</label>
         </textBox>
-        <text>(ƒòŗмāŧ ŷŷγу-mm-ðđ з×âmρłэ: 2016-09-16)</text>
+        <text>(format aaaa-mm-jj exemple : 2016-09-16)</text>
       </presentation>
       <presentation id="DeferQualityUpdates">
         <decimalTextBox refId="DeferQualityUpdatesPeriodId" defaultValue="0">Après la publication d’une mise à jour qualité, différer sa réception pendant ce nombre de jours :</decimalTextBox>
         <textBox refId="PauseQualityUpdatesStartId">
-          <label>Ρâŭśë Qûǻļìтŷ Ųφđäťэѕ ŝţäѓτĩйğ</label>
+          <label>Démarrage de la suspension des mises à jour qualité</label>
         </textBox>
-        <text>(ƒòґmàτ ŷỳýỳ-мм-ďď ε×āмрļè: 2016-09-16)</text>
+        <text>(format aaaa-mm-jj exemple : 2016-09-16)</text>
       </presentation>
       <presentation id="ActiveHours_Title">
         <text>Heures d’activité</text>
@@ -560,19 +630,25 @@ Si vous désactivez cette stratégie ou si vous ne la configurez pas, les compor
       </presentation>
       <presentation id="AutoRestartRequiredNotificationDismissal_Title">
         <text>Spécifiez la méthode selon laquelle la notification de redémarrage automatique requis est ignorée :</text>
-        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Мέтħōð: </dropdownList>
+        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Méthode : </dropdownList>
       </presentation>
       <presentation id="AutoRestartNotificationConfig_Title">
-        <text>Spécifiez le style utilisé pour les notifications de rappel de redémarrage automatique :</text>
-        <dropdownList refId="AutoRestartNotificationStyle" noSort="true" defaultItem="0">Style : </dropdownList>
         <text>Spécifiez une période pour les notifications de rappel de redémarrage automatique :</text>
         <dropdownList refId="AutoRestartNotificationSchd" noSort="true" defaultItem="0">Période (min) : </dropdownList>
       </presentation>
       <presentation id="RestartWarningSchd_Title">
         <text>Spécifiez une période pour les notifications de rappel d’avertissement de redémarrage automatique :</text>
-        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Rappel (heures) :</dropdownList>
+        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Rappel (heures) : </dropdownList>
         <text>Spécifiez une période pour les notifications d’avertissement de redémarrage automatique imminent :</text>
         <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">Avertissement (minutes) : </dropdownList>
+      </presentation>
+      <presentation id="EngagedRestartTransitionSchedule_Title">
+        <text>Spécifiez le minutage avant de passer du redémarrage automatique au redémarrage commencé (planification de l’utilisateur en attente) :</text>
+        <dropdownList refId="EngagedRestartTransitionSchedule" noSort="true" defaultItem="5">Transition (jours) : </dropdownList>
+        <text>Spécifiez Répéter pour les notifications de rappel de redémarrage commencé :</text>
+        <dropdownList refId="EngagedRestartSnoozeSchedule" noSort="true" defaultItem="2">Répéter (jours) :     </dropdownList>
+        <text>Spécifiez l’échéance avant l’exécution automatique d’un redémarrage en attente en dehors des heures d’activité :</text>
+        <dropdownList refId="EngagedRestartDeadline" noSort="true" defaultItem="0">Échéance (jours) :  </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

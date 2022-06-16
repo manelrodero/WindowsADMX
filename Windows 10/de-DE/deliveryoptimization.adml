@@ -7,17 +7,17 @@
       <string id="DeliveryOptimizationCat">Übermittlungsoptimierung</string>
       <string id="DownloadMode">Downloadmodus</string>
       <string id="DownloadMode_Help">Gibt die Downloadmethode an, die die Übermittlungsoptimierung für Downloads von Windows-Updates, Apps und App-Updates verwenden kann. Die folgende Liste enthält die unterstützten Werte: 0 = Nur HTTP, kein Peering. 1 = HTTP kombiniert mit Peering hinter derselben NAT. 2 = HTTP kombiniert mit Peering über eine private Gruppe. Das Peering erfolgt standardmäßig auf Geräten am selben Active Directory-Standort (falls vorhanden) oder in derselben Domäne. Bei Auswahl dieser Option ist das Peering NAT-übergreifend. Um eine benutzerdefinierte Gruppe zu erstellen, verwenden Sie die Gruppen-ID in Kombination with Modus 2. 3 = HTTP kombiniert mit Internetpeering. 99 = Einfacher Downloadmodus ohne Peering. Downloads der Übermittlungsoptimierung verwenden nur HTTP. Es wird nicht versucht, Kontakt mit den Clouddiensten der Übermittlungsoptimierung aufzunehmen. 100 = Umgehungsmodus. Die Übermittlungsoptimierung wird nicht und stattdessen BITS verwendet.</string>
-      <string id="DownloadMode_CdnOnly">Nur HTTP</string>
-      <string id="DownloadMode_Lan">LAN</string>
-      <string id="DownloadMode_Group">Gruppe</string>
-      <string id="DownloadMode_Internet">Internet</string>
-      <string id="DownloadMode_Simple">Einfach</string>
-      <string id="DownloadMode_Bypass">Umgehen</string>
+      <string id="DownloadMode_CdnOnly">Nur HTTP (0)</string>
+      <string id="DownloadMode_Lan">LAN (1)</string>
+      <string id="DownloadMode_Group">Gruppe (2)</string>
+      <string id="DownloadMode_Internet">Internet (3)</string>
+      <string id="DownloadMode_Simple">Einfach (99)</string>
+      <string id="DownloadMode_Bypass">Überbrückung (100)</string>
       <string id="GroupId">Gruppen-ID</string>
       <string id="GroupId_Help">Die Gruppen-ID muss als GUID festgelegt werden. Mit dieser Richtlinie wird eine beliebige Gruppen-ID für das Gerät angegeben. Verwenden Sie die Einstellung zum Erstellen einer einzelnen Local Network Peering-Gruppe für Verzweigungen, die sich in unterschiedlichen Domänen bzw. nicht im selben LAN befinden. Hinweis: Dies ist eine "Best Effort"-Optimierung, die nicht zur Identitätsauthentifizierung verwendet werden sollte.</string>
       <string id="MaxUploadBandwidth">Max. Uploadbandbreite (in KB/s)</string>
       <string id="MaxUploadBandwidth_Help">Gibt die maximale Uploadbandbreite an, die von der Übermittlungsoptimierung für alle gleichzeitigen Uploadaktivitäten genutzt wird, in KB/s an. Der Standardwert 0 (null) lässt eine unbegrenzte Nutzung zu. Dabei werden Uploads dynamisch optimiert, um eine minimale Ausnutzung der Uploadbandbreite zu gewährleisten.</string>
-      <string id="MaxCacheSize">Max. Cachegröße (Prozentsatz)</string>
+      <string id="MaxCacheSize">Max. Cachegröße (in Prozent)</string>
       <string id="MaxCacheSize_Help">Gibt die maximale Cachegröße, die von der Übermittlungsoptimierung verwendet wird, als Prozentsatz der verfügbaren Datenträgergröße (1-100) an.</string>
       <string id="AbsoluteMaxCacheSize">Absolute max. Cachegröße (in GB)</string>
       <string id="AbsoluteMaxCacheSize_Help">Gibt die maximale Größe des Übermittlungsoptimierungscaches in GB an. Diese Richtlinie überschreibt die DOMaxCacheSize-Richtlinie. Der Wert 0 (null) steht für einen "unbegrenzten" Cache. Wenn der Speicherplatz auf dem Gerät knapp wird, bereinigt die Übermittlungsoptimierung den Cache.</string>
@@ -31,12 +31,22 @@
       <string id="ModifyCacheDrive_Help">Gibt das Laufwerk an, das die Übermittlungsoptimierung für den Cache verwenden soll. Standardmäßig wird %SystemDrive% zum Speichern des Caches verwendet. Der Speicherort des Laufwerks kann mit Umgebungsvariablen, dem Laufwerkbuchstaben oder einem vollständigen Pfad angegeben werden.</string>
       <string id="MaxDownloadBandwidth">Maximale Downloadbandbreite (in KB/s)</string>
       <string id="MaxDownloadBandwidth_Help">Gibt die maximale Downloadbandbreite in Kilobytes/Sekunde an, die das Gerät für alle gleichzeitigen Downloadaktivitäten unter Verwendung der Übermittlungsoptimierung nutzen kann. Der Standardwert 0 (null) bedeutet, dass die Übermittlungsoptimierung die Verwendung der verfügbaren Bandbreite für Downloads dynamisch anpasst.</string>
-      <string id="PercentageMaxDownloadBandwidth">Maximale Downloadbandbreite (Prozentsatz)</string>
+      <string id="PercentageMaxDownloadBandwidth">Maximale Downloadbandbreite (in Prozent)</string>
       <string id="PercentageMaxDownloadBandwidth_Help">Gibt die maximale Downloadbandbreite, die von der Übermittlungsoptimierung für alle gleichzeitigen Downloadaktivitäten genutzt wird, als Prozentsatz der verfügbaren Downloadbandbreite an. Der Standardwert 0 (null) bedeutet, dass die Übermittlungsoptimierung die Verwendung der verfügbaren Bandbreite für Downloads dynamisch anpasst.</string>
+      <string id="MinFileSizeToCache">Minimale Größe der Inhaltsdatei für das Peercaching (in MB)</string>
+      <string id="MinFileSizeToCache_Help">Gibt die minimale Größe der Inhaltsdatei in MB an, die für die Verwendung des Peercachings unterstützt wird. Der Wert 0 bedeutet "unbegrenzt" und bewirkt, dass der für den Clouddienst festgelegte Standardwert verwendet wird. Empfohlene Werte: 1 MB bis 100.000 MB.</string>
+      <string id="AllowVPNPeerCaching">Peercaching aktivieren, während das Gerät über ein VPN verbunden ist</string>
+      <string id="AllowVPNPeerCaching_Help">Geben Sie "true" an, um die Teilnahme am Peercaching zuzulassen, während das Gerät über ein VPN mit dem Domänennetzwerk verbunden ist. Das bedeutet, dass das Gerät Downloads von oder Uploads auf andere Geräte im Domänennetzwerk vornehmen kann, entweder im VPN oder im Domänennetzwerk des Unternehmens.</string>
+      <string id="MinRAMAllowedToPeer">Minimale RAM-Kapazität (einschließlich), die zur Verwendung des Peercachings erforderlich ist (in GB)</string>
+      <string id="MinRAMAllowedToPeer_Help">Gibt die für die Verwendung des Peercachings erforderliche minimale RAM-Größe in GB an. Der Wert 0 bedeutet "unbegrenzt" und bewirkt, dass der für den Clouddienst festgelegte Standardwert verwendet wird. Wenn die minimale Größe beispielsweise auf 1 GB festgelegt ist, können Geräte mit mindestens 1 GB verfügbarem RAM das Peercaching verwenden. Empfohlene Werte: 1 GB bis 4 GB.</string>
+      <string id="MinDiskSizeAllowedToPeer">Minimale Datenträgergröße, die zur Verwendung des Peercachings zulässig ist (in GB)</string>
+      <string id="MinDiskSizeAllowedToPeer_Help">Gibt die erforderliche minimale Datenträgergröße (Kapazität in GB) an, die das Gerät zur Verwendung des Peercachings aufweisen muss. Der Wert 0 bedeutet "unbegrenzt" und bewirkt, dass der für den Clouddienst festgelegte Standardwert verwendet wird. Empfohlene Werte: 64 GB bis 256 GB. Hinweis: Wenn die DOMoidfyCacheDrive-Richtlinie festgelegt ist, wird die Überprüfung der Datenträgergröße auf das neue, durch diese Richtlinie angegebene Arbeitsverzeichnis angewendet.</string>
+      <string id="MinBatteryPercentageAllowedToUpload">Uploads zulassen, während das Gerät im Akkubetrieb läuft und der minimale Akkustand (in Prozent) nicht erreicht ist</string>
+      <string id="MinBatteryPercentageAllowedToUpload_Help">Geben Sie einen Wert zwischen 1 und 100 (in Prozent) ein, um Datenuploads zwischen Gerät und LAN- und Gruppenpeers zuzulassen, während das Gerät im Akkubetrieb läuft. Uploads werden automatisch angehalten, wenn der Akkustand unter die festgelegte Mindestkapazität sinkt. Wenn Sie Uploads im Akkubetrieb zulassen, liegt der empfohlene Wert bei 40 (entspricht 40 %). Unabhängig von der Einstellung dieser Richtlinie kann das Gerät Downloads von Peers durchführen, während es im Akkubetrieb läuft. Der Wert 0 bedeutet, dass keine Beschränkung besteht und dass der für den Clouddienst festgelegte Wert verwendet wird.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DownloadMode">
-        <dropdownList defaultItem="1" refId="DownloadMode">Downloadmodus:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="DownloadMode">Downloadmodus:</dropdownList>
       </presentation>
       <presentation id="GroupId">
         <textBox refId="GroupId">
@@ -78,6 +88,25 @@
       </presentation>
       <presentation id="PercentageMaxDownloadBandwidth">
         <decimalTextBox defaultValue="0" refId="PercentageMaxDownloadBandwidth">Maximale Downloadbandbreite (Prozentsatz):</decimalTextBox>
+        <text>Der Standardwert ist 0 (unbegrenzt).</text>
+      </presentation>
+      <presentation id="MinFileSizeToCache">
+        <decimalTextBox defaultValue="100" refId="MinFileSizeToCache">Minimale Größe der Inhaltsdatei für das Peercaching (in MB):</decimalTextBox>
+        <text>Der Standardwert ist 100 MB.</text>
+      </presentation>
+      <presentation id="AllowVPNPeerCaching">
+        <checkBox defaultChecked="false" refId="AllowVPNPeerCaching">Peercaching aktivieren, während das Gerät über ein VPN verbunden ist</checkBox>
+      </presentation>
+      <presentation id="MinRAMAllowedToPeer">
+        <decimalTextBox defaultValue="4" refId="MinRAMAllowedToPeer">Minimale RAM-Kapazität (einschließlich), die zur Verwendung des Peercachings erforderlich ist (in GB):</decimalTextBox>
+        <text>Der Standardwert ist 4 GB.</text>
+      </presentation>
+      <presentation id="MinDiskSizeAllowedToPeer">
+        <decimalTextBox defaultValue="32" refId="MinDiskSizeAllowedToPeer">Minimale Datenträgergröße, die zur Verwendung des Peercachings zulässig ist (in GB):</decimalTextBox>
+        <text>Der Standardwert ist 32 GB.</text>
+      </presentation>
+      <presentation id="MinBatteryPercentageAllowedToUpload">
+        <decimalTextBox defaultValue="0" refId="MinBatteryPercentageAllowedToUpload">Minimaler Akkustand (in Prozent):</decimalTextBox>
         <text>Der Standardwert ist 0 (unbegrenzt).</text>
       </presentation>
     </presentationTable>

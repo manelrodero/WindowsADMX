@@ -3,7 +3,7 @@
 <description>entrer la description ici</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Windows Defender</string>
+    <string id="AntiSpywareDefender">Antivirus Windows Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusions</string>
     <string id="NetworkRealtimeInspection">Système NIS (Network Inspection System)</string>
@@ -17,6 +17,7 @@
     <string id="Spynet">MAPS</string>
     <string id="Threats">Menaces</string>
     <string id="ClientInterface">Interface client</string>
+    <string id="MpEngine">MpEngine</string>
     <string id="AllowFastServiceStartup">Autoriser le service anti-programme malveillant à démarrer avec une priorité normale</string>
     <string id="AllowFastServiceStartup_Explain">Ce paramètre de stratégie contrôle la priorité de la charge pour le service anti-programme malveillant. L’augmentation de la priorité de la charge permet un démarrage plus rapide du service, mais peut avoir un impact sur les performances.
 
@@ -33,12 +34,12 @@ Si vous désactivez ce paramètre, le service anti-programme malveillant est cha
 
     Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Endpoint Protection s'exécute par défaut et la recherche de programmes malveillants et autres programmes potentiellement indésirables sur les ordinateurs est effectuée.
     </string>
-    <string id="DisableAntiSpywareDefender">Désactiver Windows Defender</string>
-    <string id="DisableAntiSpywareDefender_Explain">Ce paramètre de stratégie désactive Windows Defender.
+    <string id="DisableAntiSpywareDefender">Désactiver l’antivirus Windows Defender</string>
+    <string id="DisableAntiSpywareDefender_Explain">Ce paramètre de stratégie désactive l’antivirus Windows Defender.
 
-    Si vous activez ce paramètre de stratégie, Windows Defender ne s'exécute pas et la recherche de programmes malveillants et autres programmes potentiellement indésirables sur les ordinateurs n'est pas effectuée.
+    Si vous activez ce paramètre de stratégie, l’antivirus Windows Defender ne s’exécute pas, et la recherche de programmes malveillants et d’autres programmes potentiellement indésirables sur les ordinateurs n’est pas effectuée.
 
-    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Windows Defender s'exécute par défaut et la recherche de programmes malveillants et autres programmes potentiellement indésirables sur les ordinateurs est effectuée.</string>
+    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’antivirus Windows Defender s’exécute par défaut, et la recherche de programmes malveillants et d’autres programmes potentiellement indésirables sur les ordinateurs est effectuée.</string>
     <string id="DisableLocalAdminMerge">Configurer le comportement de fusion de l’administrateur local pour les listes</string>
     <string id="DisableLocalAdminMerge_Explain">Ce paramètre de stratégie détermine si les paramètres de listes complexes configurés par un administrateur local sont fusionnés ou non avec les paramètres de stratégie de groupe. Ce paramètre s’applique aux listes telles que les menaces et les exclusions.
 
@@ -47,11 +48,11 @@ Si vous activez ou ne configurez pas ce paramètre, les éléments uniques défi
 Si vous désactivez ce paramètre, seuls les éléments définis par la stratégie de groupe sont utilisés dans la stratégie en cours produite. Les paramètres de stratégie de groupe remplacent les paramètres des préférences configurés par l’administrateur local.</string>
     <string id="DisableRoutinelyTakingAction">Désactiver la mise à jour de routine</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    Ce paramètre de stratégie vous permet de configurer si Windows Defender intervient automatiquement sur toutes les menaces détectées. L'action à entreprendre sur une menace particulière est déterminée par la combinaison d'action définie par la stratégie, d'action définie par l'utilisateur et d'action définie par la signature.
+    Ce paramètre de stratégie vous permet de déterminer si l’antivirus Windows Defender intervient automatiquement sur toutes les menaces détectées. L’action à entreprendre sur une menace particulière est déterminée par la combinaison de l’action définie par la stratégie, de l’action définie par l’utilisateur et de l’action définie par la signature.
 
-    Si vous activez ce paramètre de stratégie, Windows Defender n'intervient pas automatiquement sur les menaces détectées, mais invite les utilisateurs à choisir parmi les actions disponibles pour chaque menace.
+    Si vous activez ce paramètre de stratégie, l’antivirus Windows Defender n’intervient pas automatiquement sur les menaces détectées, mais invite les utilisateurs à choisir parmi les actions disponibles pour chaque menace.
 
-    Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Windows Defender intervient automatiquement sur toutes les menaces détectées après un délai non configurable d'environ cinq secondes.</string>
+    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’antivirus Windows Defender intervient automatiquement sur toutes les menaces détectées après un délai non configurable d’environ cinq secondes.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         Ce paramètre de stratégie permet de définir si Endpoint Protection effectue automatiquement une action pour chaque menace détectée. L'action à entreprendre pour une menace détectée est déterminée par la combinaison de l'action définie par la stratégie, de l'action définie par l'utilisateur et de l'action définie par la signature.
 
@@ -157,13 +158,13 @@ Si vous activez ou ne configurez pas ce paramètre, les notifications d’écrit
 
 Si vous désactivez ce paramètre, les notifications d’écriture sur un volume brut sont désactivées.</string>
     <string id="DisableRealtimeMonitoring">Désactiver la protection en temps réel</string>
-    <string id="DisableRealtimeMonitoringDefender_Explain">Ce paramètre de stratégie désactive les invites de protection en temps réel contre les programmes malveillants détectés.
+    <string id="DisableRealtimeMonitoringDefender_Explain">Ce paramètre de stratégie désactive les invites de protection en temps réel contre les programmes malveillants connus détectés.
 
-    Windows Defender vous avertit lorsque des programmes malveillants ou d'autres programmes potentiellement indésirables tentent de s'installer ou de s'exécuter sur votre ordinateur.
+    L’antivirus Windows Defender vous avertit lorsque des programmes malveillants ou potentiellement indésirables tentent de s’installer ou de s’exécuter sur votre ordinateur.
 
-    Si vous activez ce paramètre de stratégie, les utilisateurs ne sont pas avertis, afin de pouvoir entreprendre des actions, lorsque Windows Defender détecte des programmes malveillants.
+    Si vous activez ce paramètre de stratégie, l’antivirus Windows Defender n’invite pas les utilisateurs à entreprendre des actions lorsque des programmes malveillants sont détectés.
 
-    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, les utilisateurs sont avertis, afin de pouvoir entreprendre des actions, lorsque Windows Defender détecte des programmes malveillants.</string>
+    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’antivirus Windows Defender invite les utilisateurs à entreprendre des actions lorsque des programmes malveillants sont détectés.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     Ce paramètre de stratégie désactive les invites de protection en temps réel contre les programmes malveillants détectés.
 
@@ -289,13 +290,21 @@ Si vous désactivez ce paramètre, les événements Watson ne sont pas envoyés.
     <string id="Reporting_WppTracingComponents_Explain">Cette stratégie configure les composants du préprocesseur de trace du logiciel Windows (WPP).</string>
     <string id="Reporting_WppTracingLevel">Configurer le niveau de suivi WPP</string>
     <string id="Reporting_WppTracingLevel_Explain">Cette stratégie vous permet de configurer des niveaux de suivi pour le préprocesseur de trace du logiciel Windows (WPP). 
+    Les niveaux de suivi sont définis comme suit :
+    1 - Erreur
+    2 - Avertissement
+    3 - Informations
+    4 - Débogage</string>
+    <string id="Reporting_DisableEnhancedNotifications">Désactiver les notifications améliorées</string>
+    <string id="Reporting_DisableEnhancedNotifications_Explain">
+      Utilisez ce paramètre de stratégie pour indiquer si vous souhaitez que les notifications améliorées de l’antivirus Windows Defender s’affichent sur les clients.
+      
+      Si vous désactivez ce paramètre ou ne le configurez pas, les notifications améliorées de l’antivirus Windows Defender s’afficheront sur les clients.
+      
+      Si vous activez ce paramètre, les notifications améliorées de l’antivirus Windows Defender ne s’afficheront pas sur les clients.
+    </string>
 
-Les niveaux de suivi sont définis comme suit :
-1 - Erreur
-2 - Avertissement
-3 - Informations
-4 - Débogage</string>
-    <string id="Scan_AllowPause">Autoriser les utilisateurs à suspendre l’analyse</string>
+      <string id="Scan_AllowPause">Autoriser les utilisateurs à suspendre l’analyse</string>
     <string id="Scan_AllowPause_Explain">Ce paramètre de stratégie vous permet de définir si les utilisateurs finaux peuvent ou non suspendre une analyse en cours.
 
 Si vous activez ou ne configurez pas ce paramètre, un nouveau menu contextuel est ajouté à l’icône de la barre d’état des tâches pour autoriser l’utilisateur à suspendre une analyse.
@@ -701,10 +710,10 @@ Les valeurs de l’action de mise à jour valides sont les suivantes :
       Si vous activez ce paramètre, l'interface utilisateur du logiciel anti-programme malveillant n'affiche pas les notifications de redémarrage.
     </string>
     <string id="UX_Configuration_Notification_Suppress">Supprimer toutes les notifications</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">Utilisez ce paramètre de stratégie pour indiquer si vous souhaitez que les notifications Windows Defender s’affichent sur les clients.
-      Si vous désactivez ce paramètre ou ne le configurez pas, les notifications Windows Defender s’affichent sur les clients.
+    <string id="UX_Configuration_Notification_Suppress_Explain">Utilisez ce paramètre de stratégie pour indiquer si vous souhaitez que les notifications de l’antivirus Windows Defender s’affichent sur les clients.
+      Si vous désactivez ce paramètre ou ne le configurez pas, les notifications de l’antivirus Windows Defender s’afficheront sur les clients.
 
-      Si vous activez ce paramètre, les notifications Windows Defender ne s’affichent pas sur les clients.
+      Si vous activez ce paramètre, les notifications de l’antivirus Windows Defender ne s’afficheront pas sur les clients.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Afficher du texte supplémentaire pour les clients lorsqu’ils doivent effectuer une action</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">Ce paramètre de stratégie vous permet de configurer s’il convient ou non d’afficher du texte supplémentaire pour les clients lorsqu’ils doivent effectuer une action. Le texte affiché est une chaîne définie par l’administrateur personnalisée. Il peut s’agir, par exemple, du numéro de téléphone pour appeler l’assistance de la société. L’interface client affiche uniquement un maximum de 1 024 caractères. Les chaînes plus longues sont tronquées avant d’être affichées.
@@ -712,6 +721,32 @@ Les valeurs de l’action de mise à jour valides sont les suivantes :
 Si vous activez ce paramètre, le texte supplémentaire spécifié est affiché.
 
 Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémentaire n’est affiché.</string>
+    <string id="MpCloudBlockLevel">Sélectionner un niveau de protection du cloud</string>
+    <string id="MpCloudBlockLevel_Explain">
+      Ce paramètre de stratégie détermine l’agressivité de l’antivirus Windows Defender dans l’analyse et le blocage des fichiers suspects.
+
+      Si ce paramètre est activé, l’antivirus Windows Defender sera plus agressif lors de l’identification des fichiers suspects à bloquer et à analyser. Dans le cas contraire, il sera moins agressif et procèdera à des analyses et à des blocages moins fréquents. 
+      
+      Pour plus d’informations sur les valeurs spécifiques prises en charge, consultez le site de documentation de l’antivirus Windows Defender.
+
+      Remarque : le paramètre Rejoindre Microsoft MAPS doit être activé pour que cette fonctionnalité fonctionne.
+
+      Options possibles :
+      (0x0) Niveau de blocage par défaut de l’antivirus Windows Defender
+      (0x2) Niveau de blocage élevé      
+    </string>
+    <string id="MpBafsExtendedTimeout">Configurer la vérification du cloud étendue</string>
+    <string id="MpBafsExtendedTimeout_Explain">
+      Cette fonctionnalité permet à l’antivirus Windows Defender de bloquer un fichier suspect pendant 60 secondes au plus et de l’analyser dans le cloud pour s’assurer qu’il est sûr.
+      
+      Le délai d’expiration standard de la vérification du cloud dure 10 secondes. Pour activer la fonctionnalité de vérification du cloud étendue, spécifiez une durée étendue (en secondes) jusqu’à 50 secondes supplémentaires.
+
+      Par exemple, si le délai d’expiration souhaité est de 60 secondes, spécifiez 50 secondes dans ce paramètre, ce qui active la fonctionnalité de vérification du cloud étendue, et fait passer le temps total à 60 secondes.
+
+      Remarque : cette fonctionnalité dépend de trois autres paramètres MAPS : Configurer la fonctionnalité « Bloquer à la première consultation », Rejoindre Microsoft MAPS et Envoyer des exemples de fichier lorsqu’une analyse supplémentaire est nécessaire. Tous les trois doivent être activés.
+    </string>
+    <string id="MpCloudBlockLevel_Default_Level">Niveau de blocage par défaut de l’antivirus Windows Defender</string>
+    <string id="MpCloudBlockLevel_High_Level">Niveau de blocage élevé</string>    
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -851,6 +886,12 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     </presentation>
     <presentation id="SignatureUpdate_ExpiryNotificationIntervalDays">
         <decimalTextBox refId="SignatureUpdate_ExpiryNotificationIntervalDays">Spécifier l'intervalle de notification d'expiration</decimalTextBox>
+    </presentation>
+    <presentation id="MpCloudBlockLevel">
+     <dropdownList refId="MpCloudBlockLevel" noSort="true" defaultItem="0">Sélectionner un niveau de blocage du cloud</dropdownList>
+    </presentation>
+    <presentation id="MpBafsExtendedTimeout">
+     <decimalTextBox refId="MpBafsExtendedTimeout" defaultValue="0">Spécifier la durée de vérification du cloud étendue en secondes</decimalTextBox>
     </presentation>
     </presentationTable>
 </resources>

@@ -21,6 +21,10 @@
  
 [ロックなしで有効化] オプションを選択すると、グループ ポリシーを使用してコードの整合性に対する仮想化ベースの保護をリモートで無効化できます。
 
+[未構成] オプションは、ポリシー設定を未定義のままにします。グループ ポリシーはポリシー設定をレジストリに書き込まないので、コンピューターまたはユーザーに影響はありません。レジストリに現在の設定がある場合、変更されません。
+
+[UEFI メモリ属性テーブルを要求する] オプションによって [コードの整合性に対する仮想化ベースの保護] を有効にできるのは、UEFI ファームウェアでメモリ属性テーブルがサポートされているデバイスの場合のみです。UEFI メモリ属性テーブルがサポートされていないデバイスでは、使用されているファームウェアに [コードの整合性に対する仮想化ベースの保護] との互換性がない場合があり、クラッシュやデータの損失が生じることや、一部のプラグイン カードとの互換性が維持できなくことがあります。このオプションを設定しない場合は、対象のデバイスをテストして互換性を確認する必要があります。
+
 警告: システムのすべてのドライバーはこの機能と互換性がある必要があります。互換性がない場合は、システムがクラッシュする可能性があります。互換性があることがわかっているコンピューターのみにこのポリシー設定が展開されるようにしてください。
 
 Credential Guard
@@ -32,6 +36,8 @@ Credential Guard
 [UEFI ロックで有効化] オプションを選択すると、Credential Guard をリモートで無効化できなくなります。この機能を無効にするには、グループ ポリシーを [無効] に設定すると共に、UEFI に保存されている構成を消去するために、物理的に存在するユーザーが各コンピューターからこのセキュリティ機能を削除する必要があります。
 
 [ロックなしで有効化] オプションを選択すると、グループ ポリシーを使用して Credential Guard をリモートで無効化できます。この設定を使用しているデバイスは、Windows 10 (Version 1511) 以上を実行している必要があります。
+
+[未構成] オプションは、ポリシー設定を未定義のままにします。グループ ポリシーはポリシー設定をレジストリに書き込まないので、コンピューターまたはユーザーに影響はありません。レジストリに現在の設定がある場合、変更されません。
       </string>
       <string id="SecureBoot">セキュア ブート</string>
       <string id="SecureBootAndDmaProtection">セキュア ブートと DMA 保護</string>
@@ -39,6 +45,7 @@ Credential Guard
       <string id="Enabled">有効</string>
       <string id="EnabledWithoutLock">ロックなしで有効化</string>
       <string id="EnabledWithUefiLock">UEFI ロックで有効化</string>
+      <string id="NotConfigured">未構成</string>
       <string id="ConfigCIPolicy">コードの整合性ポリシーを展開する</string>
       <string id="ConfigCIPolicyHelp">コードの整合性ポリシーを展開する
 
@@ -57,8 +64,9 @@ Credential Guard
     <presentationTable>
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="1">プラットフォームのセキュリティ レベルを選択する:</dropdownList>
-        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="0">コードの整合性に対する仮想化ベースの保護:</dropdownList>
-        <dropdownList refId="CredentialIsolationDrop" defaultItem="0">Credential Guard の構成:</dropdownList>
+        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">コードの整合性に対する仮想化ベースの保護:</dropdownList>        
+        <checkBox refId="CheckboxMAT">UEFI メモリ属性テーブルを要求する</checkBox>        
+        <dropdownList refId="CredentialIsolationDrop" defaultItem="3">Credential Guard の構成:</dropdownList>                
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

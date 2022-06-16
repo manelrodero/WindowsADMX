@@ -89,7 +89,7 @@
       <string id="AutoUpdateModeAdminChooses">5 - Δυνατότητα επιλογής ρυθμίσεων από τοπικό διαχειριστή</string>
       <string id="AutoUpdateModeAuto">4 - Αυτόματη λήψη και προγραμματισμός εγκατάστασης</string>
       <string id="AutoUpdateModeDownload">3 - Αυτόματη λήψη και ειδοποίηση για εγκατάσταση</string>
-      <string id="AutoUpdateModeNotify">2 - Notify for download and auto install</string>
+      <string id="AutoUpdateModeNotify">2 - Ειδοποίηση για λήψη και αυτόματη εγκατάσταση</string>
       <string id="AutoUpdateSchDay_Everyday">0 - Κάθε ημέρα</string>
       <string id="AutoUpdateSchDay_Friday">6 - Κάθε Παρασκευή</string>
       <string id="AutoUpdateSchDay_Monday">2 - Κάθε Δευτέρα</string>
@@ -124,23 +124,27 @@
       <string id="AutoUpdateSchTime9">09:00</string>
       <string id="CorpWuURL">Καθορισμός θέσης της υπηρεσίας ενημέρωσης της Microsoft στο intranet</string>
       <string id="CorpWuURL_Help">
-        Specifies an intranet server to host updates from Microsoft Update. You can then use this update service to automatically update computers on your network.
+        Καθορίζει ένα διακομιστή intranet για τη φιλοξενία ενημερώσεων από το Microsoft Update. Στη συνέχεια, μπορείτε να χρησιμοποιήσετε αυτήν την υπηρεσία ενημέρωσης για την αυτόματη ενημέρωση υπολογιστών στο δίκτυό σας.
 
-        This setting lets you specify a server on your network to function as an internal update service. The Automatic Updates client will search this service for updates that apply to the computers on your network.
+        Αυτή η ρύθμιση σάς επιτρέπει να καθορίσετε ένα διακομιστή στο δίκτυό σας που θα λειτουργεί ως εσωτερική υπηρεσία ενημέρωσης. Το πρόγραμμα-πελάτης Αυτόματων ενημερώσεων θα αναζητά σε αυτήν την υπηρεσία ενημερώσεις που ισχύουν για υπολογιστές του δικτύου σας.
 
-        To use this setting, you must set two server name values: the server from which the Automatic Updates client detects and downloads updates, and the server to which updated workstations upload statistics. You can set both values to be the same server. An optional server name value can be specified to configure Windows Update Agent to download updates from an alternate download server instead of WSUS Server.
+        Για να χρησιμοποιήσετε αυτήν τη ρύθμιση, πρέπει να ορίσετε δύο τιμές ονομάτων διακομιστή: το διακομιστή από τον οποίο το πρόγραμμα-πελάτης Αυτόματων ενημερώσεων εντοπίζει και κάνει λήψη ενημερώσεων και το διακομιστή στον οποίο οι ενημερωμένοι σταθμοί εργασίας αποστέλλουν στατιστικά στοιχεία. Μπορείτε να ορίσετε τον ίδιο διακομιστή και για τις δύο τιμές. Μπορεί να καθοριστεί μια προαιρετική τιμή ονόματος διακομιστή, ώστε οι παράμετροι του Παράγοντα Windows Update να ρυθμιστούν για λήψη ενημερώσεων από έναν εναλλακτικό διακομιστή λήψεων αντί από την υπηρεσία ενημέρωσης intranet.
 
-        If the status is set to Enabled, the Automatic Updates client connects to the specified intranet Microsoft update service (or alternate download server), instead of Windows Update, to search for and download updates. Enabling this setting means that end users in your organization don't have to go through a firewall to get updates, and it gives you the opportunity to test updates before deploying them.
+        Αν αυτή η ρύθμιση οριστεί στην επιλογή "Ενεργό", το πρόγραμμα-πελάτης Αυτόματων ενημερώσεων συνδέεται με την καθορισμένη υπηρεσία ενημέρωσης της Microsoft στο intranet (ή στον εναλλακτικό διακομιστή λήψεων) αντί για το Windows Update, ώστε να αναζητήσει και να κάνει λήψη ενημερώσεων. Η ενεργοποίηση αυτής της ρύθμισης σημαίνει ότι οι τελικοί χρήστες στον οργανισμό σας δεν χρειάζεται να υπερβούν κάποιο τείχος προστασίας για να λάβουν ενημερώσεις, ενώ σας δίνει τη δυνατότητα να ελέγχετε τις ενημερώσεις προτού πραγματοποιήσετε την ανάπτυξή τους.
 
-        If the status is set to Disabled or Not Configured, and if Automatic Updates is not disabled by policy or user preference, the Automatic Updates client connects directly to the Windows Update site on the Internet.
+        Αν η κατάσταση έχει οριστεί σε "Ανενεργό" ή "Μη ρυθμισμένο" και αν οι Αυτόματες ενημερώσεις δεν έχουν απενεργοποιηθεί από πολιτική ή από προτιμήσεις του χρήστη, το πρόγραμμα-πελάτης Αυτόματων ενημερώσεων συνδέεται απευθείας με την τοποθεσία του Windows Update στο Internet.
 
-        The alternate download server Configures the Windows Update Agent to download files from an alternative download server instead of the WSUS Server.
+        Ο εναλλακτικός διακομιστής λήψης ρυθμίζει τις παραμέτρους του Παράγοντα του Windows Update για λήψη αρχείων από έναν εναλλακτικό διακομιστή λήψεων αντί από την υπηρεσία ενημέρωσης intranet.
 
-        Note: If the "Configure Automatic Updates" policy is disabled, then this policy has no effect.
+        Η επιλογή λήψης αρχείων με διευθύνσεις URL που λείπουν, επιτρέπει τη λήψη περιεχομένου από τον Εναλλακτικό διακομιστή λήψεων, όταν δεν υπάρχουν διευθύνσεις URL για αρχεία στα μετα-δεδομένα ενημέρωσης. Αυτή η επιλογή πρέπει να χρησιμοποιείται μόνο όταν η υπηρεσία ενημέρωσης intranet δεν παρέχει διευθύνσεις URL λήψης στα μετα-δεδομένα για αρχεία που βρίσκονται στον εναλλακτικό διακομιστή λήψεων.
 
-        Note: If the "Alternate Download Server" is not set, it will use the WSUS server by default to download updates.
+        Σημείωση: Αν η πολιτική "Ρύθμιση παραμέτρων αυτόματων ενημερώσεων" είναι απενεργοποιημένη, τότε αυτή η πολιτική δεν έχει ισχύ.
 
-        Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.</string>
+        Σημείωση: Αν δεν έχει οριστεί η τιμή "Εναλλακτικός διακομιστής λήψεων", θα χρησιμοποιείται από προεπιλογή η υπηρεσία ενημέρωσης intranet για τη λήψη ενημερώσεων.
+
+        Σημείωση: Η επιλογή για "Λήψη αρχείων χωρίς διευθύνσεις URL..." χρησιμοποιείται μόνο αν έχει οριστεί η τιμή "Εναλλακτικός διακομιστής λήψεων".
+
+        Σημείωση: Αυτή η πολιτική δεν υποστηρίζεται στα Windows RT. Η ρύθμιση αυτής της πολιτικής δεν θα επηρεάσει τους υπολογιστές με Windows RT.</string>
       <string id="DetectionFrequency_Help">Καθορίζει τη συχνότητα με την οποία ελέγχουν τα Windows για διαθέσιμες ενημερώσεις. Το ακριβές χρονικό διάστημα αναμονής υπολογίζεται από τις καθορισμένες ώρες μείον μηδέν έως είκοσι τοις εκατό αυτών. Για παράδειγμα, αν η πολιτική αυτή καθορίζει μια συχνότητα 20 ωρών, όλοι οι υπολογιστές-πελάτες που εφαρμόζουν αυτή την πολιτική θα πραγματοποιούν έλεγχο για ενημερώσεις κάθε 16 έως 20 ώρες.
 
 Εάν αυτή η ρύθμιση ενεργοποιηθεί, τα Windows θα πραγματοποιούν έλεγχο για διαθέσιμες ενημερώσεις στο καθορισμένο διάστημα.
@@ -303,47 +307,47 @@
       <string id="CurrentBranchFeatureUpdates">Τρέχων κλάδος</string>
       <string id="BusinessReadyFeatureUpdates">Τρέχων κλάδος για επιχειρήσεις</string>
       <string id="DeferFeatureUpdates_Title">Επιλογή χρόνου λήψης ενημερώσεων δυνατοτήτων</string>
-      <string id="DeferFeatureUpdates_Help">Enable this policy to specify what type of feature updates to receive, and when.
+      <string id="DeferFeatureUpdates_Help">Ενεργοποιήστε αυτήν την πολιτική, για να καθορίσετε ποιους τύπους ενημερώσεων δυνατοτήτων θα λαμβάνετε και πότε.
 
-The branch readiness level for each new Windows 10 feature update is initially considered a "Current Branch" (CB) release, to be used by organizations for initial deployments. Once Microsoft has verified the feature update should be considered for enterprise deployment, it will be declared a branch readiness level of "Current Branch for Business" (CBB).
+Το επίπεδο ετοιμότητας κλάδου για κάθε νέα ενημέρωση δυνατότητας των Windows 10 θεωρείται αρχικά κυκλοφορία "Τρέχοντος κλάδου" (CB), που θα χρησιμοποιηθεί από τους οργανισμούς για αρχικές αναπτύξεις. Αφού η Microsoft επαληθεύσει ότι η ενημέρωση δυνατοτήτων είναι κατάλληλη για εταιρική ανάπτυξη, το επίπεδο ετοιμότητας κλάδου θα δηλωθεί ως επίπεδο "Τρέχοντος κλάδου για επιχειρήσεις" (CBB).
 
-You can defer receiving feature updates for up to 180 days.
+Μπορείτε να αναβάλετε τη λήψη ενημερώσεων δυνατοτήτων για έως και 365 ημέρες.
 
-To prevent feature updates from being received on their scheduled time, you can temporarily pause feature updates. The pause will remain in effect for 60 days or until you clear the start date field.
+Για να αποτρέψετε τη λήψη ενημερώσεων δυνατοτήτων κατά τον προγραμματισμένο χρόνο, μπορείτε να θέσετε προσωρινά σε παύση τις ενημερώσεις δυνατοτήτων. Η παύση θα παραμείνει σε ισχύ για 60 ημέρες ή μέχρι να καταργήσετε την επιλογή στο πεδίο ημερομηνίας έναρξης.
 
-To resume receiving Feature Updates which are paused, clear the start date field.
+Για να συνεχίσετε τη λήψη ενημερώσεων δυνατοτήτων οι οποίες έχουν τεθεί σε παύση, καταργήστε την επιλογή στο πεδίο ημερομηνίας έναρξης.
 
-If you disable or do not configure this policy, Windows Update will not alter its behavior.
+Αν απενεργοποιήσετε αυτήν την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, το Windows Update δεν θα τροποποιήσει τη συμπεριφορά του.
 
-Note: If the "Allow Telemetry" policy is set to 0, this policy will have no effect.</string>
+Σημείωση: Αν η πολιτική "Αποδοχή τηλεμετρίας" οριστεί σε 0, αυτή η πολιτική δεν θα έχει ισχύ.</string>
       <string id="DeferQualityUpdates_Title">Επιλογή χρόνου λήψης ενημερώσεων ποιότητας</string>
-      <string id="DeferQualityUpdates_Help">Enable this policy to specify when to receive quality updates.
+      <string id="DeferQualityUpdates_Help">Ενεργοποιήστε αυτήν την πολιτική για να καθορίσετε πότε θα λαμβάνετε ενημερώσεις ποιότητας.
 
-You can defer receiving quality updates for up to 30 days.
+Μπορείτε να αναβάλετε τη λήψη ενημερώσεων ποιότητας για έως και 30 ημέρες.
 
-To prevent quality updates from being received on their scheduled time, you can temporarily pause quality updates. The pause will remain in effect for 35 days or until you clear the start date field.
+Για να αποτρέψετε τη λήψη ενημερώσεων ποιότητας κατά τον προγραμματισμένο χρόνο, μπορείτε να θέσετε προσωρινά σε παύση τις ενημερώσεις ποιότητας. Η παύση θα παραμείνει σε ισχύ για 35 ημέρες ή μέχρι να καταργήσετε την επιλογή στο πεδίο ημερομηνίας έναρξης.
 
-To resume receiving Quality Updates which are paused, clear the start date field.
+Για να συνεχίσετε τη λήψη ενημερώσεων ποιότητας οι οποίες έχουν τεθεί σε παύση, καταργήστε την επιλογή στο πεδίο ημερομηνίας έναρξης.
 
-If you disable or do not configure this policy, Windows Update will not alter its behavior.
+Αν απενεργοποιήσετε αυτήν την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, το Windows Update δεν θα τροποποιήσει τη συμπεριφορά του.
 
-Note: If the "Allow Telemetry" policy is set to 0, this policy will have no effect.</string>
+Σημείωση: Αν η πολιτική "Αποδοχή τηλεμετρίας" οριστεί σε 0, αυτή η πολιτική δεν θα έχει ισχύ.</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Μη συμπερίληψη προγραμμάτων οδήγησης με τις ενημερώσεις των Windows</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">Enable this policy to not include drivers with Windows quality updates.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Ενεργοποιήστε αυτήν την πολιτική για να μην περιλαμβάνονται προγράμματα οδήγησης με τις ενημερώσεις ποιότητας των Windows.
 
-If you disable or do not configure this policy, Windows Update will include updates that have a Driver classification.</string>
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, το Windows Update θα περιλαμβάνει ενημερώσεις με την ταξινόμηση "Πρόγραμμα οδήγησης".</string>
       <string id="ActiveHours_Title">Απενεργοποίηση αυτόματης επανεκκίνησης για ενημερώσεις κατά τις ώρες ενεργής χρήσης</string>
-      <string id="ActiveHours_Help">If you enable this policy, the PC will not automatically restart after updates during active hours. The PC will attempt to restart outside of active hours.
+      <string id="ActiveHours_Help">Αν ενεργοποιήσετε αυτήν την πολιτική, ο υπολογιστής δεν θα επανεκκινείται αυτόματα μετά τις ενημερώσεις κατά τις ώρες ενεργής χρήσης. Ο υπολογιστής θα επιχειρεί να επανεκκινηθεί εκτός των ωρών ενεργής χρήσης.
 
-Note that the PC must restart for certain updates to take effect.
+Λάβετε υπόψη ότι ο υπολογιστής πρέπει επανεκκινηθεί, για να τεθούν σε ισχύ ορισμένες ενημερώσεις.
 
-If you disable or do not configure this policy and have no other reboot group policies, the user selected active hours will be in effect.
+Αν απενεργοποιήσετε αυτήν την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της και δεν έχετε άλλες πολιτικές ομάδας επανεκκίνησης, θα εφαρμόζονται οι ώρες ενεργής χρήσης που έχουν επιλεχθεί από το χρήστη.
 
-If any of the following two policies are enabled, this policy has no effect:
-    1. No auto-restart with logged on users for scheduled automatic updates installations.
-    2. Always automatically restart at scheduled time.
+Αν ενεργοποιηθεί οποιαδήποτε από τις ακόλουθες δύο πολιτικές, αυτή η πολιτική δεν έχει αποτέλεσμα:
+    1. Χωρίς αυτόματη επανεκκίνηση με συνδεδεμένους χρήστες για προγραμματισμένες εγκαταστάσεις αυτόματων ενημερώσεων.
+    2. Πάντα αυτόματη επανεκκίνηση κατά την προγραμματισμένη ώρα.
 
-Note that the default max active hours range is 18 hours from the active hours start time unless otherwise configured via the Specify active hours range for auto-restarts policy.</string>
+Λάβετε υπόψη ότι η μέγιστη διάρκεια ωρών ενεργής χρήσης είναι 18 ώρες από την ώρα έναρξης ενεργής χρήσης, εκτός αν έχει γίνει διαφορετική ρύθμιση μέσω της πολιτικής "Καθορισμός περιοχής ωρών ενεργής χρήσης για τις αυτόματες επανεκκινήσεις".</string>
       <string id="ActiveHoursTime10AM">10 π.μ.</string>
       <string id="ActiveHoursTime10PM">10 μ.μ.</string>
       <string id="ActiveHoursTime11AM">11 π.μ.</string>
@@ -369,18 +373,18 @@ Note that the default max active hours range is 18 hours from the active hours s
       <string id="ActiveHoursTime9AM">9 π.μ.</string>
       <string id="ActiveHoursTime9PM">9 μ.μ.</string>
 
-      <string id="AutoRestartDeadline_Title">Specify deadline before auto-restart for update installation</string>
-      <string id="AutoRestartDeadline_Help">Specify the deadline in days before automatically executing a scheduled restart outside of active hours. The deadline can be set between 2 and 14 days from the time the restart is scheduled.
+      <string id="AutoRestartDeadline_Title">Καθορισμός διορίας πριν την αυτόματη επανεκκίνηση για την εγκατάσταση ενημερώσεων</string>
+      <string id="AutoRestartDeadline_Help">Καθορίστε τη διορία σε ημέρες πριν από την αυτόματη εκτέλεση μιας προγραμματισμένης επανεκκίνησης εκτός των ωρών ενεργής χρήσης. Η διορία μπορεί να οριστεί μεταξύ 2 και 14 ημερών από την ώρα προγραμματισμού της επανεκκίνησης.
 
-Note that the PC must restart for certain updates to take effect.
+Λάβετε υπόψη ότι ο υπολογιστής πρέπει επανεκκινηθεί, για να τεθούν σε ισχύ ορισμένες ενημερώσεις.
 
-If you enable this policy, a restart will automatically occur the specified number of days after the restart was scheduled.
+Εάν ενεργοποιήσετε αυτή την πολιτική, θα γίνεται αυτόματα επανεκκίνηση τον καθορισμένο αριθμό ημερών μετά την προγραμματισμένη επανεκκίνηση.
 
-If you disable or do not configure this policy, the PC will restart according to the default schedule.
+Αν απενεργοποιήσετε αυτή την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, ο υπολογιστής θα επανεκκινείται σύμφωνα με το προεπιλεγμένο χρονοδιάγραμμα.
 
-If any of the following two policies are enabled, this policy has no effect:
-    1. No auto-restart with logged on users for scheduled automatic updates installations.
-    2. Always automatically restart at scheduled time.
+nΑν ενεργοποιηθεί οποιαδήποτε από τις ακόλουθες δύο πολιτικές, αυτή η πολιτική δεν έχει αποτέλεσμα:
+    1. Χωρίς αυτόματη επανεκκίνηση με συνδεδεμένους χρήστες για προγραμματισμένες εγκαταστάσεις αυτόματων ενημερώσεων.
+    2. Πάντα αυτόματη επανεκκίνηση κατά την προγραμματισμένη ώρα.
       </string>
       <string id="AutoRestartDeadlineDay2">2</string>
       <string id="AutoRestartDeadlineDay3">3</string>
@@ -395,18 +399,34 @@ If any of the following two policies are enabled, this policy has no effect:
       <string id="AutoRestartDeadlineDay12">12</string>
       <string id="AutoRestartDeadlineDay13">13</string>
       <string id="AutoRestartDeadlineDay14">14</string>
+      <string id="AutoRestartDeadlineDay15">15</string>
+      <string id="AutoRestartDeadlineDay16">16</string>
+      <string id="AutoRestartDeadlineDay17">17</string>
+      <string id="AutoRestartDeadlineDay18">18</string>
+      <string id="AutoRestartDeadlineDay19">19</string>
+      <string id="AutoRestartDeadlineDay20">20</string>
+      <string id="AutoRestartDeadlineDay21">21</string>
+      <string id="AutoRestartDeadlineDay22">22</string>
+      <string id="AutoRestartDeadlineDay23">23</string>
+      <string id="AutoRestartDeadlineDay24">24</string>
+      <string id="AutoRestartDeadlineDay25">25</string>
+      <string id="AutoRestartDeadlineDay26">26</string>
+      <string id="AutoRestartDeadlineDay27">27</string>
+      <string id="AutoRestartDeadlineDay28">28</string>
+      <string id="AutoRestartDeadlineDay29">29</string>
+      <string id="AutoRestartDeadlineDay30">30</string>
 
       <string id="DisableUXWUAccess_Title">Κατάργηση πρόσβασης για χρήση όλων των δυνατοτήτων του Windows Update</string>
       <string id="DisableUXWUAccess_Help">Αυτή η ρύθμιση σας επιτρέπει να καταργήσετε την πρόσβαση για σάρωση του Windows Update.
 
-Αν ενεργοποιήσετε αυτήν τη ρύθμιση, η πρόσβαση για σάρωση του Windows Update θα καταργηθεί.
+Αν ενεργοποιήσετε αυτή τη ρύθμιση, θα καταργηθεί η πρόσβαση χρήστη για σάρωση, λήψη και εγκατάσταση του Windows Update.
       </string>
-      <string id="ActiveHoursMaxRange_Title">Specify active hours range for auto-restarts</string>
-      <string id="ActiveHoursMaxRange_Help">Enable this policy to specify the maximum number of hours from the start time that users can set their active hours.
+      <string id="ActiveHoursMaxRange_Title">Καθορισμός περιοχής ωρών ενεργής χρήσης για τις αυτόματες επανεκκινήσεις</string>
+      <string id="ActiveHoursMaxRange_Help">Ενεργοποιήστε αυτή την πολιτική για να καθορίσετε τον μέγιστο αριθμό ωρών από την ώρα έναρξης που μπορούν να ορίσουν οι χρήστες ως ώρες ενεργής χρήσης.
 
-The max active hours range can be set between 8 and 18 hours.
+Η μέγιστη περιοχή ωρών ενεργής χρήσης μπορεί να οριστεί μεταξύ 8 και 18 ωρών.
 
-If you disable or do not configure this policy, the default max active hours range will be used.
+Εάν απενεργοποιήσετε ή δεν ρυθμίσετε αυτή την πολιτική, θα χρησιμοποιηθεί η προεπιλεγμένη μέγιστη περιοχή ωρών ενεργής χρήσης.
       </string>
       <string id="ActiveHoursMaxRange8">8</string>
       <string id="ActiveHoursMaxRange9">9</string>
@@ -420,49 +440,45 @@ If you disable or do not configure this policy, the default max active hours ran
       <string id="ActiveHoursMaxRange17">17</string>
       <string id="ActiveHoursMaxRange18">18</string>
 
-      <string id="AutoRestartRequiredNotificationDismissal_Title">Configure auto-restart required notification for updates</string>
-      <string id="AutoRestartRequiredNotificationDismissal_Help">Enable this policy to specify the method by which the auto-restart required notification is dismissed. When a restart is required to install updates, the auto-restart required notification is displayed. By default, the notification is automatically dismissed after 25 seconds.
+      <string id="AutoRestartRequiredNotificationDismissal_Title">Ρύθμιση παραμέτρων ειδοποίησης απαίτησης αυτόματης επανεκκίνησης για ενημερώσεις</string>
+      <string id="AutoRestartRequiredNotificationDismissal_Help">Ενεργοποιήστε αυτήν την πολιτική, για να καθορίσετε τη μέθοδο με την οποία θα κλείνει η ειδοποίηση απαίτησης αυτόματης επανεκκίνησης. Όταν απαιτείται επανεκκίνηση για την εγκατάσταση ενημερώσεων, εμφανίζεται η ειδοποίηση απαίτησης αυτόματης επανεκκίνησης. Από προεπιλογή, η ειδοποίηση κλείνει αυτόματα έπειτα από 25 δευτερόλεπτα.
 
-The method can be set to require user action to dismiss the notification.
+Η μέθοδος μπορεί να οριστεί ώστε να απαιτεί ενέργεια από το χρήστη για το κλείσιμο της ειδοποίησης.
 
-If you disable or do not configure this policy, the default method will be used.
+Αν απενεργοποιήσετε αυτήν την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, θα χρησιμοποιηθεί η προεπιλεγμένη μέθοδος.
       </string>
-      <string id="AutoDismissal">1 - Auto</string>
-      <string id="UserAction">2 - User Action</string>
+      <string id="AutoDismissal">1 - Αυτόματα</string>
+      <string id="UserAction">2 - Ενέργεια χρήστη</string>
 
-      <string id="AutoRestartNotificationConfig_Title">Configure auto-restart reminder notifications for updates</string>
-      <string id="AutoRestartNotificationConfig_Help">Enable this policy to specify the type of notification used for auto-restart reminders and when they are displayed.
+      <string id="AutoRestartNotificationConfig_Title">Ρύθμιση ειδοποιήσεων υπενθύμισης αυτόματης επανεκκίνησης για ενημερώσεις</string>
+      <string id="AutoRestartNotificationConfig_Help">Ενεργοποιήστε αυτή την πολιτική για να καθορίσετε πότε θα εμφανίζονται υπενθυμίσεις αυτόματης επανεκκίνησης.
 
-Specifies the type of notification used when notifying the user about a scheduled restart to install updates.
+Μπορείτε να καθορίσετε το διάστημα ειδοποίησης των χρηστών πριν από την προγραμματισμένη επανεκκίνηση.
 
-You can specify the amount of time prior to a scheduled restart to notify the user.
-
-If you disable or do not configure this policy, the default style and period will be used.
+Εάν απενεργοποιήσετε αυτή την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, θα χρησιμοποιηθεί η προεπιλεγμένη περίοδος.
       </string>
-      <string id="AutoRestartNotificationStyleFull">1 - Full Screen</string>
-      <string id="AutoRestartNotificationStylePartial">2 - Partial Screen</string>
       <string id="AutoRestartNotificationSchd15">15</string>
       <string id="AutoRestartNotificationSchd30">30</string>
       <string id="AutoRestartNotificationSchd60">60</string>
       <string id="AutoRestartNotificationSchd120">120</string>
       <string id="AutoRestartNotificationSchd240">240</string>
 
-      <string id="AutoRestartNotificationDisable_Title">Turn off auto-restart notifications for update installations</string>
-      <string id="AutoRestartNotificationDisable_Help">This policy setting allows you to control whether users receive notifications for auto restarts for update installations including reminder and warning notifications.
+      <string id="AutoRestartNotificationDisable_Title">Απενεργοποίηση ειδοποιήσεων αυτόματης επανεκκίνησης για εγκαταστάσεις ενημερώσεων</string>
+      <string id="AutoRestartNotificationDisable_Help">Αυτή η ρύθμιση πολιτικής σάς επιτρέπει να ελέγχετε εάν οι χρήστες θα λαμβάνουν ειδοποιήσεις για αυτόματες επανεκκινήσεις για εγκαταστάσεις ενημερώσεων, συμπεριλαμβανομένων των ειδοποιήσεων υπενθύμισης και προειδοποίησης.
 
-Enable this policy to turn off all auto restart notifications.
+Ενεργοποιήστε αυτή την πολιτική για να απενεργοποιήσετε όλες τις ειδοποιήσεις αυτόματης επανεκκίνησης.
 
-If you disable or do not configure this policy, the default notification behaviors will be unchanged.
+Εάν απενεργοποιήσετε αυτή την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, δεν θα αλλάξει η προεπιλεγμένη συμπεριφορά ειδοποιήσεων.
       </string>
 
-      <string id="RestartWarningSchd_Title">Configure auto-restart warning notifications schedule for updates</string>
-      <string id="RestartWarningSchd_Help">Enable this policy to control when notifications are displayed to warn users about a scheduled restart for the update installation deadline. Users are not able to postpone the scheduled restart once the deadline has been reached and the restart is automatically executed.
+      <string id="RestartWarningSchd_Title">Ρύθμιση του χρονοδιαγράμματος προειδοποιήσεων αυτόματης επανεκκίνησης για ενημερώσεις</string>
+      <string id="RestartWarningSchd_Help">Ενεργοποιήστε αυτή την πολιτική για να ελέγχετε πότε θα εμφανίζονται ειδοποιήσεις για να προειδοποιούν τους χρήστες σχετικά με μια προγραμματισμένη επανεκκίνηση και τη διορία εγκατάστασης ενημερώσεων. Οι χρήστες δεν έχουν τη δυνατότητα να αναβάλουν την προγραμματισμένη επανεκκίνηση όταν παρέλθει η διορία και η επανεκκίνηση εκτελείται αυτόματα.
 
-Specifies the amount of time prior to a scheduled restart to display the warning reminder to the user.
+Καθορίζει το διάστημα πριν από μια προγραμματισμένη επανεκκίνηση που θα εμφανιστεί η προειδοποίηση στο χρήστη.
 
-You can specify the amount of time prior to a scheduled restart to notify the user that the auto restart is imminent to allow them time to save their work.
+Μπορείτε να καθορίσετε το διάστημα πριν από μια προγραμματισμένη επανεκκίνηση που θα ειδοποιηθεί ο χρήστης ότι επίκειται αυτόματη επανεκκίνηση ώστε να έχει το χρόνο να αποθηκεύσει την εργασία του.
 
-If you disable or do not configure this policy, the default notification behaviors will be used.
+Εάν απενεργοποιήσετε αυτή την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, θα χρησιμοποιηθούν οι προεπιλεγμένες συμπεριφορές.
       </string>
       <string id="RestartWarnRemindHours2">2</string>
       <string id="RestartWarnRemindHours4">4</string>
@@ -472,6 +488,59 @@ If you disable or do not configure this policy, the default notification behavio
       <string id="RestartWarnMins15">15</string>
       <string id="RestartWarnMins30">30</string>
       <string id="RestartWarnMins60">60</string>
+      <string id="EngagedRestartTransitionSchedule_Title">Καθορίστε το χρονοδιάγραμμα ειδοποίησης και μετάβασης ενεργοποιημένης επανεκκίνησης για τις ενημερώσεις</string>
+      <string id="EngagedRestartTransitionSchedule_Help">Ενεργοποιήστε αυτήν την πολιτική για να ελέγχετε το χρόνο πριν τη μετάβαση από αυτόματες επανεκκινήσεις που έχουν προγραμματιστεί εκτός ωρών ενεργής χρήσης σε ενεργοποιημένη επανεκκίνηση, η οποία απαιτεί προγραμματισμό από το χρήστη. Μπορείτε να ορίσετε την περίοδο μεταξύ 2 και 30 ημερών από την ώρα που η επανεκκίνηση θα αρχίσει να εκκρεμεί.
+
+Μπορείτε να καθορίσετε τον αριθμό των ημερών που ένας χρήστης θα μπορεί να αναβάλλει τις ειδοποιήσεις υπενθύμισης ενεργοποιημένων επανεκκινήσεων. Η περίοδος αναβολής μπορεί να οριστεί μεταξύ 1 και 3 ημερών.
+
+Μπορείτε να καθορίσετε την προθεσμία σε ημέρες πριν από τον αυτόματο προγραμματισμό και την εκτέλεση μιας επανεκκίνησης που εκκρεμεί εκτός ωρών ενεργής χρήσης. Η προθεσμία μπορεί να οριστεί μεταξύ 2 και 30 ημερών από την ώρα που μια επανεκκίνηση θα αρχίσει να εκκρεμεί. Αν ρυθμιστεί, η επανεκκίνηση που εκκρεμεί θα μεταβεί από Αυτόματη επανεκκίνηση σε Ενεργοποιημένη επανεκκίνηση (χρονοδιάγραμμα χρήστη που εκκρεμεί) σε αυτόματη εκτέλεση, εντός της καθορισμένης περιόδου.
+
+Αν δεν καθορίσετε προθεσμία ή αν η προθεσμία καθοριστεί σε 0, η επανεκκίνηση δεν θα εκτελεστεί αυτόματα και θα παραμείνει ως Ενεργοποιημένη επανεκκίνηση (για παράδειγμα, χρονοδιάγραμμα χρήστη που εκκρεμεί).
+
+Αν απενεργοποιήσετε αυτήν την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, θα χρησιμοποιηθούν οι προεπιλεγμένες συμπεριφορές.
+
+Αν ρυθμιστεί οποιαδήποτε από τις ακόλουθες πολιτικές, αυτή η πολιτική δεν έχει κανένα αποτέλεσμα:
+    1. Χωρίς αυτόματη επανεκκίνηση με συνδεδεμένους χρήστες για προγραμματισμένες εγκαταστάσεις αυτόματων ενημερώσεων
+    2. Πάντα αυτόματη επανεκκίνηση κατά την προγραμματισμένη ώρα
+    3. Καθορισμός προθεσμίας πριν από την αυτόματη επανεκκίνηση για την εγκατάσταση ενημερώσεων
+      </string>
+      <string id="EngagedRestart_0">0</string>
+      <string id="EngagedRestart_2">2</string>
+      <string id="EngagedRestart_3">3</string>
+      <string id="EngagedRestart_4">4</string>
+      <string id="EngagedRestart_5">5</string>
+      <string id="EngagedRestart_6">6</string>
+      <string id="EngagedRestart_7">7</string>
+      <string id="EngagedRestart_8">8</string>
+      <string id="EngagedRestart_9">9</string>
+      <string id="EngagedRestart_10">10</string>
+      <string id="EngagedRestart_11">11</string>
+      <string id="EngagedRestart_12">12</string>
+      <string id="EngagedRestart_13">13</string>
+      <string id="EngagedRestart_14">14</string>
+      <string id="EngagedRestart_15">15</string>
+      <string id="EngagedRestart_16">16</string>
+      <string id="EngagedRestart_17">17</string>
+      <string id="EngagedRestart_18">18</string>
+      <string id="EngagedRestart_19">19</string>
+      <string id="EngagedRestart_20">20</string>
+      <string id="EngagedRestart_21">21</string>
+      <string id="EngagedRestart_22">22</string>
+      <string id="EngagedRestart_23">23</string>
+      <string id="EngagedRestart_24">24</string>
+      <string id="EngagedRestart_25">25</string>
+      <string id="EngagedRestart_26">26</string>
+      <string id="EngagedRestart_27">27</string>
+      <string id="EngagedRestart_28">28</string>
+      <string id="EngagedRestart_29">29</string>
+      <string id="EngagedRestart_30">30</string>
+      <string id="EngagedRestartSnooze_1">1</string>
+      <string id="EngagedRestartSnooze_2">2</string>
+      <string id="EngagedRestartSnooze_3">3</string>
+      
+      <string id="SetEDURestart_Title">Ενημέρωση πολιτικής ενέργειας για επανεκκινήσεις σε καρότσι</string>
+      <string id="SetEDURestart_Help">Αν ενεργοποιήσετε αυτήν την πολιτική για συσκευές EDU που παραμένουν σε καροτσάκια τη νύχτα, θα παραλειφθούν οι έλεγχοι ενέργειας, ώστε να διασφαλιστεί ότι οι επανεκκινήσεις ενημερώσεων θα πραγματοποιηθούν κατά την προγραμματισμένη ώρα εγκατάστασης.</string>
+
     </stringTable>
 
     <presentationTable>
@@ -494,9 +563,10 @@ If you disable or do not configure this policy, the default notification behavio
           <label>Καθορισμός του διακομιστή στατιστικών στοιχείων στο intranet:</label>
         </textBox>
         <textBox refId="CorpWUContentHost_Name">
-          <label>Set the alternate download server:</label>
+          <label>Ορίστε τον εναλλακτικό διακομιστή λήψεων:</label>
         </textBox>
         <text>(παράδειγμα: http://IntranetUpd01)</text>
+        <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Λήψη αρχείων χωρίς διεύθυνση URL στα μετα-δεδομένα εάν δεν έχει οριστεί εναλλακτικός διακομιστής λήψεων.</checkBox>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Έλεγχος για ενημερώσεις στο ακόλουθο</text>
@@ -535,16 +605,16 @@ If you disable or do not configure this policy, the default notification behavio
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Επιλέξτε το επίπεδο ετοιμότητας κλάδου για τις ενημερώσεις δυνατοτήτων που θέλετε να λαμβάνετε:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Μετά την κυκλοφορία μιας ενημέρωσης δυνατοτήτων, να αναβάλλεται η λήψη της για τον εξής αριθμό ημερών:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>Pause Feature Updates starting</label>
+          <label>Εκκίνηση Παύσης ενημερώσεων δυνατοτήτων</label>
         </textBox>
-        <text>(format yyyy-mm-dd example: 2016-09-16)</text>
+        <text>(μορφοποίηση εεεε-μμ-ηη, παράδειγμα: 2016-09-16)</text>
       </presentation>
       <presentation id="DeferQualityUpdates">
         <decimalTextBox refId="DeferQualityUpdatesPeriodId" defaultValue="0">Μετά την κυκλοφορία μιας ενημέρωσης ποιότητας, να αναβάλλεται η λήψη της για τον εξής αριθμό ημερών:</decimalTextBox>
         <textBox refId="PauseQualityUpdatesStartId">
-          <label>Pause Quality Updates starting</label>
+          <label>Εκκίνηση Παύσης ενημερώσεων ποιότητας</label>
         </textBox>
-        <text>(format yyyy-mm-dd example: 2016-09-16)</text>
+        <text>(μορφοποίηση εεεε-μμ-ηη, παράδειγμα: 2016-09-16)</text>
       </presentation>
       <presentation id="ActiveHours_Title">
         <text>Ώρες ενεργής χρήσης</text>
@@ -552,27 +622,33 @@ If you disable or do not configure this policy, the default notification behavio
         <dropdownList refId="ActiveHoursEndTime" noSort="true" defaultItem="17">Λήξη:</dropdownList>
       </presentation>
       <presentation id="AutoRestartDeadline_Title">
-        <dropdownList refId="AutoRestartDeadline" noSort="true" defaultItem="5">Specify the number of days before a pending restart will automatically be executed outside of active hours: </dropdownList>
+        <dropdownList refId="AutoRestartDeadline" noSort="true" defaultItem="5">Καθορίστε τον αριθμό των ημερών έως την αυτόματη εκτέλεση μιας επανεκκίνησης που εκκρεμεί, εκτός των ωρών ενεργής χρήσης: </dropdownList>
       </presentation>
       <presentation id="ActiveHoursMaxRange_Title">
-        <text>Specify the max active hours range:</text>
-        <dropdownList refId="ActiveHoursMaxRange" noSort="true" defaultItem="10">Max range: </dropdownList>
+        <text>Καθορίστε τη μέγιστη περιοχή ωρών ενεργής λειτουργίας:</text>
+        <dropdownList refId="ActiveHoursMaxRange" noSort="true" defaultItem="10">Μέγιστη περιοχή: </dropdownList>
       </presentation>
       <presentation id="AutoRestartRequiredNotificationDismissal_Title">
-        <text>Specify the method by which the auto-restart required notification is dismissed:</text>
-        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Method: </dropdownList>
+        <text>Καθορίστε τη μέθοδο κλεισίματος της ειδοποίησης για απαιτούμενη αυτόματη επανεκκίνηση:</text>
+        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">Μέθοδος: </dropdownList>
       </presentation>
       <presentation id="AutoRestartNotificationConfig_Title">
-        <text>Specify the style used for auto-restart reminder notifications:</text>
-        <dropdownList refId="AutoRestartNotificationStyle" noSort="true" defaultItem="0">Style: </dropdownList>
-        <text>Specify the period for auto-restart reminder notifications:</text>
-        <dropdownList refId="AutoRestartNotificationSchd" noSort="true" defaultItem="0">Period (min): </dropdownList>
+        <text>Καθορίστε την περίοδο για τις ειδοποιήσεις υπενθύμισης για αυτόματη επανεκκίνηση:</text>
+        <dropdownList refId="AutoRestartNotificationSchd" noSort="true" defaultItem="0">Περίοδος (ελάχιστη): </dropdownList>
       </presentation>
       <presentation id="RestartWarningSchd_Title">
-        <text>Specify the period for auto-restart warning reminder notifications:</text>
-        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Reminder (hours):</dropdownList>
-        <text>Specify the period for auto-restart immiment warning notifications:</text>
-        <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">Warning (mins): </dropdownList>
+        <text>Καθορίστε την περίοδο για τις ειδοποιήσεις υπενθύμισης που προειδοποιούν για αυτόματη επανεκκίνηση:</text>
+        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">Υπενθύμιση (ώρες): </dropdownList>
+        <text>Καθορίστε την περίοδο για τις προειδοποιήσεις για άμεση αυτόματη επανεκκίνηση:</text>
+        <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">Προειδοποίηση (λεπτά): </dropdownList>
+      </presentation>
+      <presentation id="EngagedRestartTransitionSchedule_Title">
+        <text>Καθορίστε το χρονικό διάστημα πριν τη μετάβαση από αυτόματη επανεκκίνηση σε ενεργοποιημένη επανεκκίνηση (χρονοδιάγραμμα χρήστη που εκκρεμεί):</text>
+        <dropdownList refId="EngagedRestartTransitionSchedule" noSort="true" defaultItem="5">Μετάβαση (ημέρες): </dropdownList>
+        <text>Καθορίστε την αναβολή για τις ειδοποιήσεις υπενθύμισης ενεργοποιημένης επανεκκίνησης:</text>
+        <dropdownList refId="EngagedRestartSnoozeSchedule" noSort="true" defaultItem="2">Αναβολή (ημέρες):     </dropdownList>
+        <text>Καθορίστε την προθεσμία για την αυτόματη εκτέλεση μιας επανεκκίνησης που εκκρεμεί, εκτός ωρών ενεργής χρήσης:</text>
+        <dropdownList refId="EngagedRestartDeadline" noSort="true" defaultItem="0">Προθεσμία (ημέρες):  </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

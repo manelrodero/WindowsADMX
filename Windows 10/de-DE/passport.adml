@@ -9,6 +9,8 @@
         <string id="MSPassportForWorkPINComplexityCategory">PIN-Komplexität</string>
         <string id="MSPassportForWorkRemoteCategory">Anmeldung per Handy</string>
         <string id="MSPassport_UsePassportForWork">Windows Hello for Business verwenden</string>
+        <!-- Add support for certificate trust deployments -->
+        <string id="WHFB_UseCertificateForOnPremAuth">Zertifikat für die lokale Authentifizierung verwenden</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello for Business ist eine alternative Methode für die Anmeldung bei Windows. Dabei wird Ihr Active Directory- oder Azure Active Directory-Konto genutzt, um Kennwörter, Smartcards und virtuelle Smartcards zu ersetzen.
 
@@ -19,11 +21,11 @@ Wenn Sie die Richtlinie deaktivieren, stellt das Gerät Windows Hello for Busine
 Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, können Benutzer Windows Hello for Business als Komfortanmeldeinformationen bereitstellen, durch die ihr Domänenkennwort verschlüsselt wird.
         </string>
         <string id="MSPassport_RequireSecurityDevice">Gerät mit sicherer Hardware verwenden</string>
-        <string id="MSPassport_RequireSecurityDeviceExplain">Ein Trusted Platform Module (TPM) bietet zusätzliche Sicherheitsvorteile gegenüber Software, da die darin gespeicherten Daten nicht auf anderen Geräten verwendet werden können.
+        <string id="MSPassport_RequireSecurityDeviceExplain">Ein Trusted Platform Module (TPM) bietet zusätzliche Sicherheitsvorteile gegenüber Software, da die dadurch geschützten Daten nicht auf anderen Geräten verwendet werden können.
 
-Wenn Sie die Richtlinieneinstellung aktivieren, kann Windows Hello for Business nur von Geräten mit nutzbarem TPM bereitgestellt werden.
+Wenn Sie diese Richtlinieneinstellung aktivieren, wird Windows Hello for Business nur auf Geräten mit nutzbaren TPMs der Version 1.2 oder 2.0 bereitgestellt. Optional können Sicherheitsgeräte ausgeschlossen werden. Dadurch wird verhindert, dass diese Geräte durch die Bereitstellung von Windows Hello for Business verwendet werden.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird TPM weiterhin bevorzugt, aber alle Geräte können Windows Hello for Business mittels Software bereitstellen, falls TPM nicht funktioniert oder nicht verfügbar ist.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird weiterhin das TPM bevorzugt, allerdings kann Windows Hello for Business von allen Geräten unter Verwendung von Software bereitgestellt werden, wenn das TPM nicht funktioniert oder nicht verfügbar ist.
         </string>
         <string id="MSPassport_MinimumPINLength">Minimale PIN-Länge</string>
         <string id="MSPassport_MinimumPINLengthExplain">"Minimale PIN-Länge" konfiguriert die Mindestanzahl von Zeichen für die PIN. Die niedrigste Anzahl für diese Richtlinieneinstellung beträgt 4 Zeichen. Die größtmögliche Anzahl muss entweder kleiner als die in der Richtlinieneinstellung "Maximale PIN-Länge" konfigurierte Zahl oder gleich der Zahl 127 sein, je nachdem, welche Zahl kleiner ist.
@@ -44,32 +46,32 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, mus
 HINWEIS: Wenn die vorangehenden Bedingungen für die maximale PIN-Länge nicht erfüllt sind, werden sowohl für die maximale als auch für die minimale PIN-Länge Standardwerte verwendet.
         </string>
         <string id="MSPassport_UppercaseLetters">Großbuchstaben erforderlich</string>
-        <string id="MSPassport_UppercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Großbuchstaben für die PIN zu konfigurieren.
+        <string id="MSPassport_UppercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Großbuchstaben in der PIN zu konfigurieren.
 
-Wenn Sie die Richtlinieneinstellung aktivieren, verlangt Windows Hello for Business, dass die Benutzer mindestens einen Großbuchstaben in ihre PIN einschließen.
+Wenn Sie die Richtlinieneinstellung aktivieren, verlangt Windows, dass die Benutzer mindestens einen Großbuchstaben in ihre PIN einschließen.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Windows Hello for Business Benutzer daran, Großbuchstaben in ihrer PIN zu verwenden.
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Windows Benutzer daran, Großbuchstaben in ihrer PIN zu verwenden.
         </string>
         <string id="MSPassport_LowercaseLetters">Kleinbuchstaben erforderlich</string>
-        <string id="MSPassport_LowercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Kleinbuchstaben für die PIN zu konfigurieren.
+        <string id="MSPassport_LowercaseLettersExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Kleinbuchstaben in der PIN zu konfigurieren.
 
-Wenn Sie die Richtlinieneinstellung aktivieren, verlangt Windows Hello for Business, dass die Benutzer mindestens einen Kleinbuchstaben in ihre PIN einschließen.
+Wenn Sie die Richtlinieneinstellung aktivieren, verlangt Windows, dass die Benutzer mindestens einen Kleinbuchstaben in ihre PIN einschließen.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Windows Hello for Business Benutzer daran, Kleinbuchstaben in ihrer PIN zu verwenden.
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Windows Benutzer daran, Kleinbuchstaben in ihrer PIN zu verwenden.
         </string>
         <string id="MSPassport_SpecialCharacters">Sonderzeichen erforderlich</string>
-        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Sonderzeichen für die PIN zu konfigurieren. Zulässige Sonderzeichen sind: ! " # $ %  ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Sonderzeichen in der PIN zu konfigurieren. Zulässige Sonderzeichen sind: ! " # $ %  ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
 
-Wenn Sie die Richtlinieneinstellung aktivieren, verlangt Windows Hello for Business, dass die Benutzer mindestens ein Sonderzeichen in ihre PIN einschließen.
+Wenn Sie die Richtlinieneinstellung aktivieren, verlangt Windows, dass die Benutzer mindestens ein Sonderzeichen in ihre PIN einschließen.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Windows Hello for Business Benutzer daran, Sonderzeichen in ihrer PIN zu verwenden.]]>
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, hindert Windows Benutzer daran, Sonderzeichen in ihrer PIN zu verwenden.]]>
         </string>
         <string id="MSPassport_Digits">Ziffern erforderlich</string>
-        <string id="MSPassport_DigitsExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Ziffern für die PIN zu konfigurieren.
+        <string id="MSPassport_DigitsExplain">Verwenden Sie diese Richtlinieneinstellung, um die Verwendung von Ziffern in der PIN zu konfigurieren.
 
-Wenn Sie die Richtlinieneinstellung aktivieren oder nicht konfigurieren, verlangt Windows Hello for Business, dass die Benutzer mindestens eine Ziffer in ihre PIN einschließen.
+Wenn Sie die Richtlinieneinstellung aktivieren oder nicht konfigurieren, verlangt Windows, dass die Benutzer mindestens eine Ziffer in ihre PIN einschließen.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren, hindert Windows Hello for Business Benutzer daran, Ziffern in ihrer PIN zu verwenden.
+Wenn Sie die Richtlinieneinstellung deaktivieren, hindert Windows Benutzer daran, Ziffern in ihrer PIN zu verwenden.
         </string>
         <string id="MSPassport_PINHistory">Verlauf</string>
         <string id="MSPassport_PINHistoryExplain">Diese Einstellung gibt die Anzahl der letzten PINs an, die einem Benutzerkonto zugeordnet und nicht wiederverwendet werden können. Mithilfe dieser Richtlinie können Administratoren die Sicherheit erhöhen, da alte PINs nicht fortlaufend wiederverwendet werden. Der PIN-Verlauf wird nach dem Zurücksetzen der PIN nicht beibehalten.
@@ -99,10 +101,19 @@ Wenn Sie die Richtlinieneinstellung aktivieren, wird die Anmeldung per Handy akt
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Anmeldung per Handy deaktiviert, und es kann kein Telefon als Begleitgerät für die Desktopauthentifizierung verwendet werden.
         </string>
+        <!-- Explain Text for UseCertificateForOnPremAuth -->
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Verwenden Sie diese Richtlinieneinstellung, um Windows Hello for Business für die Registrierung eines Anmeldezertifikats zu konfigurieren, das für die lokale Authentifizierung verwendet wird.
+
+Wenn Sie die Richtlinieneinstellung aktivieren, registriert Windows Hello for Business ein Anmeldezertifikat, das für die lokale Authentifizierung verwendet wird.
+		
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, registriert Windows Hello for Business einen Schlüssel, der für die lokale Authentifizierung verwendet wird.
+
+HINWEIS: Wenn die Richtlinieneinstellung deaktiviert oder nicht konfiguriert und die Richtlinieneinstellung "Windows Hello for Business verwenden" aktiviert wird, muss die Umgebung mindestens einen Windows Server 2016-Domänencontroller enthalten, damit Fehler bei der Windows Hello for Business-Authentifizierung vermieden werden.
+        </string>
     </stringTable>
     <presentationTable>
         <presentation id="MSPassport_MinimumPINLengthControl">
-            <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="4">Minimale PIN-Länge</decimalTextBox>
+            <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="6">Minimale PIN-Länge</decimalTextBox>
         </presentation>
         <presentation id="MSPassport_MaximumPINLengthControl">
             <decimalTextBox refId="MSPassport_MaximumPINLengthDataType" spin="true" spinStep="1" defaultvalue="127">Maximale PIN-Länge</decimalTextBox>
@@ -125,6 +136,10 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird 
       <presentation id="MSPassport_PINExpirationControl">
         <decimalTextBox refId="MSPassport_PINExpirationDataType" spin="true" spinStep="1" defaultvalue="0">PIN-Ablauf</decimalTextBox>
       </presentation>
+	  <presentation id="MSPassport_ExcludeSecurityDevicesControl">
+		<text>Folgende Sicherheitsgeräte nicht verwenden:</text>
+		<checkBox refId="MSPassport_ExcludeTPM12DataType" defaultChecked="false">TPM 1.2</checkBox>
+	  </presentation>
 
     </presentationTable>
   </resources>

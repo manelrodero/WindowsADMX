@@ -1008,7 +1008,7 @@ UE-V Agent の既定では、コンピューターと設定の保存場所間で
       <string id="SyncMethodNone">なし</string>
       <string id="SyncMethodExternal">外部</string>
       <string id="EnableUEV">UEV の有効化</string>
-      <string id="EnableUEV_Help">このポリシー設定では、User Experience Virtualization (UE-V) 機能を有効または無効にすることができます。有効にする場合は、再起動が必要です。</string>
+      <string id="EnableUEV_Help">このポリシー設定では、User Experience Virtualization (UE-V) 機能を有効または無効にできます。設定を有効にするには、再起動が必要です。[受信トレイ テンプレートの自動登録] を有効にすると、UE-V サービスが有効なときに Office 2016 などの UE-V 受信トレイ テンプレートが自動的に登録されます。このオプションを変更した場合、有効になるのは、UE-V サービスが再度有効化された場合です。</string>
     </stringTable>
     <presentationTable>
       <presentation id="RepositoryTimeout">
@@ -1066,6 +1066,9 @@ UE-V Agent の既定では、コンピューターと設定の保存場所間で
         <textBox refId="ContactITURL">
           <label>[IT に問い合わせる] の URL</label>
         </textBox>
+      </presentation>
+      <presentation id="EnableUEV">
+        <checkBox refId="RegisterInboxTemplates" defaultChecked="true">受信トレイ テンプレートの自動登録</checkBox>
       </presentation>
     </presentationTable>
   </resources>

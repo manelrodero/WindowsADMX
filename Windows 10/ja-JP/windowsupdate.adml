@@ -89,7 +89,7 @@ Windows 8 および Windows RT では、このポリシーが有効な場合、�
       <string id="AutoUpdateModeAdminChooses">5 - ローカルの管理者の設定選択を許可</string>
       <string id="AutoUpdateModeAuto">4 - 自動ダウンロードしインストール日時を指定</string>
       <string id="AutoUpdateModeDownload">3 - 自動ダウンロードしインストールを通知</string>
-      <string id="AutoUpdateModeNotify">チ袢蕁穐2 - Notify for download and auto install</string>
+      <string id="AutoUpdateModeNotify">2 - ダウンロードと自動インストールを通知</string>
       <string id="AutoUpdateSchDay_Everyday">0 - 毎日</string>
       <string id="AutoUpdateSchDay_Friday">6 - 毎週金曜</string>
       <string id="AutoUpdateSchDay_Monday">2 - 毎週月曜</string>
@@ -124,23 +124,27 @@ Windows 8 および Windows RT では、このポリシーが有効な場合、�
       <string id="AutoUpdateSchTime9">09:00</string>
       <string id="CorpWuURL">イントラネットの Microsoft 更新サービスの場所を指定する</string>
       <string id="CorpWuURL_Help">
-        チ啓袷ダSpecifies an intranet server to host updates from Microsoft Update. You can then use this update service to automatically update computers on your network.
+        Microsoft Update からの更新プログラムをホストするイントラネット サーバーを指定します。この更新サービスを使用して、ネットワーク上のコンピューターを自動的に更新できます。
 
-ボダチミ        This setting lets you specify a server on your network to function as an internal update service. The Automatic Updates client will search this service for updates that apply to the computers on your network.
+        この設定を使うと、内部の更新サービスとして機能する、ネットワーク上のサーバーを指定できます。自動更新のクライアントは、このサービスにアクセスし、ネットワーク上のコンピューターに適用できる更新プログラムを検索します。
 
-袢ソボ晙        To use this setting, you must set two server name values: the server from which the Automatic Updates client detects and downloads updates, and the server to which updated workstations upload statistics. You can set both values to be the same server. An optional server name value can be specified to configure Windows Update Agent to download updates from an alternate download server instead of WSUS Server.
+        この設定を使用するには、2 つのサーバー名を設定する必要があります。自動更新のクライアントが更新プログラムを検出してダウンロードするためのサーバー、そして更新が完了したワークステーションが統計をアップロードするためのサーバーです。両方に同じサーバーを設定することもできます。オプションのサーバー名の値を指定することにより、イントラネットの更新サービスではなく代替ダウンロード サーバーから更新プログラムがダウンロードされるように Windows Update エージェントを構成することもできます。
 
-ゼ噂マ晙        If the status is set to Enabled, the Automatic Updates client connects to the specified intranet Microsoft update service (or alternate download server), instead of Windows Update, to search for and download updates. Enabling this setting means that end users in your organization don't have to go through a firewall to get updates, and it gives you the opportunity to test updates before deploying them.
+        状態が有効に設定されている場合、自動更新のクライアントは Windows Update ではなく、指定されたイントラネットの Microsoft 更新サービス (または代替ダウンロード サーバー) に接続し、更新プログラムの検索およびダウンロードを行います。この設定を有効にすると、組織内のエンド ユーザーはファイアウォール経由で更新プログラムを入手する必要がなくなります。また、管理者は更新プログラムを展開する前にテストできるようになります。
 
-蕁ゾ欺晙        If the status is set to Disabled or Not Configured, and if Automatic Updates is not disabled by policy or user preference, the Automatic Updates client connects directly to the Windows Update site on the Internet.
+        状態が無効または未構成に設定されている場合で、ポリシーまたはユーザー設定で自動更新が無効になっていない場合は、自動更新のクライアントは直接インターネットの Windows Update サイトにアクセスします。
 
-ポミチゼ        The alternate download server Configures the Windows Update Agent to download files from an alternative download server instead of the WSUS Server.
+        代替ダウンロード サーバーは、イントラネットの更新サービスではなく、ダウンロード代替サーバーからファイルをダウンロードする Windows Update エージェントを構成します。
 
-マ虍晙タ        Note: If the "Configure Automatic Updates" policy is disabled, then this policy has no effect.
+        URL がないファイルをダウンロードするオプションを使うと、更新プログラムのメタデータにファイル ダウンロード用 URL が示されていないときに、代替ダウンロード サーバーからダウンロードできます。このオプションは、イントラネットの更新サービスが、代替ダウンロード サーバー上に存在するファイルのダウンロード用 URL を更新プログラムのメタデータで提供しない場合にのみ使用してください。
 
-啓晙ソ蕁        Note: If the "Alternate Download Server" is not set, it will use the WSUS server by default to download updates.
+        注意: "自動更新を構成する" ポリシーが無効になっている場合、このポリシーには効力がありません。
 
-袢ゾ旭ゼ        Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.</string>
+        注意:  "代替ダウンロード サーバー" が設定されていない場合は、更新プログラムのダウンロードには既定でイントラネットの更新サービスが使用されます。
+
+        注意: "URL のないファイルをダウンロードする" オプションは、"代替ダウンロード サーバー" が設定されている場合にのみ使用されます。
+
+        注意: このポリシーは、Windows RT ではサポートされていません。このポリシーを設定しても、Windows RT PC に影響はありません。</string>
       <string id="DetectionFrequency_Help">利用可能な更新を確認する前の待機時間を決定するための時間を指定します。正確な待機時間は、指定した時間から 0 ～ 20% の時間を差し引いた時間になります。たとえば、このポリシーで検出頻度が 20 時間に指定されている場合、このポリシーが適用されるすべてのクライアントでは 16 ～ 20 時間の間で更新が確認されます。
 
 状態が有効に設定されている場合、指定した間隔で使用可能な更新が確認されます。
@@ -303,35 +307,35 @@ Windows Update は、更新を自動的にインストールするように構�
       <string id="CurrentBranchFeatureUpdates">Current Branch</string>
       <string id="BusinessReadyFeatureUpdates">Current Branch for Business</string>
       <string id="DeferFeatureUpdates_Title">機能更新プログラムをいつ受信するかを選択してください</string>
-      <string id="DeferFeatureUpdates_Help">ソ袷晙チEnable this policy to specify what type of feature updates to receive, and when.
+      <string id="DeferFeatureUpdates_Help">このポリシーを有効にすると、どのような種類の機能更新プログラムをいつ受け取るかを指定できます。
 
-晙衵衵ソThe branch readiness level for each new Windows 10 feature update is initially considered a "Current Branch" (CB) release, to be used by organizations for initial deployments. Once Microsoft has verified the feature update should be considered for enterprise deployment, it will be declared a branch readiness level of "Current Branch for Business" (CBB).
+新しい Windows 10 機能更新プログラムに対するブランチ準備レベルは、最初は "Current Branch" (CB) リリースと想定されます。これは、組織が初期展開に使用するリリースです。エンタープライズ展開に使用できることが確認された機能更新プログラムは、ブランチ準備レベル "Current Branch for Business" (CBB) として宣言されます。
 
-ｱ穐啓噂You can defer receiving feature updates for up to 180 days.
+機能更新プログラムの受信を最大 365 日間延長できます。
 
-晙噂袢虍To prevent feature updates from being received on their scheduled time, you can temporarily pause feature updates. The pause will remain in effect for 60 days or until you clear the start date field.
+スケジュールした時刻になっても機能更新プログラムが受信されないようにする場合は、機能更新プログラムを一時停止できます。一時停止は、60 日間または開始日フィールドをクリアするまで有効です。
 
-ダ袢ゾミTo resume receiving Feature Updates which are paused, clear the start date field.
+一時停止している機能更新プログラムの受信を再開するには、開始日フィールドをクリアします。
 
-噂ミ袷滌If you disable or do not configure this policy, Windows Update will not alter its behavior.
+このポリシーを無効にした場合、または構成しなかった場合は、Windows Update の動作は変更されません。
 
-ボｱ欺袢Note: If the "Allow Telemetry" policy is set to 0, this policy will have no effect.</string>
+注: "利用統計情報の許可" ポリシーが 0 に設定されている場合、このポリシーによる影響はありません。</string>
       <string id="DeferQualityUpdates_Title">品質更新プログラムをいつ受信するかを選択してください</string>
-      <string id="DeferQualityUpdates_Help">晙穐ゼ厓Enable this policy to specify when to receive quality updates.
+      <string id="DeferQualityUpdates_Help">品質更新プログラムを受信するときを指定するには、このポリシーを有効にします。
 
-ゾ噂漾虍You can defer receiving quality updates for up to 30 days.
+品質更新プログラムの受信を最大 30 日間延期することができます。
 
-ゾ穴ｱ穐To prevent quality updates from being received on their scheduled time, you can temporarily pause quality updates. The pause will remain in effect for 35 days or until you clear the start date field.
+品質更新プログラムをスケジュールされた日時に受信しないようにするには、品質更新プログラムを一時停止できます。一時停止の有効期間は、35 日または開始日フィールドを消去するまでです。
 
-旭厓啓虍To resume receiving Quality Updates which are paused, clear the start date field.
+一時停止している品質更新プログラムの受信を再開するには、開始日フィールドをクリアします。
 
-ダ滌チタIf you disable or do not configure this policy, Windows Update will not alter its behavior.
+このポリシーを無効にした場合、または構成しなかった場合は、Windows Update の動作は変更されません。
 
-ゾボ噂ｱNote: If the "Allow Telemetry" policy is set to 0, this policy will have no effect.</string>
+注意: "利用統計情報の許可" ポリシーが 0 に設定されていると、このポリシーは何も行いません。</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Windows Update からドライバーを除外する</string>
-      <string id="ExcludeWUDriversInQualityUpdate_Help">ｱゼ穴蕁Enable this policy to not include drivers with Windows quality updates.
+      <string id="ExcludeWUDriversInQualityUpdate_Help">Windows 品質更新プログラムにドライバーを含めないようにするには、このポリシーを有効にします。
 
-ｱ欺衵厓If you disable or do not configure this policy, Windows Update will include updates that have a Driver classification.</string>
+このポリシーを無効にした場合、または構成しなかった場合は、Windows Update にドライバー分類の更新プログラムが含まれます。</string>
       <string id="ActiveHours_Title">アクティブ時間内の更新プログラムの自動再起動をオフにします</string>
       <string id="ActiveHours_Help">このポリシーを有効にした場合、アクティブ時間内の更新後に PC の自動再起動を行いません。アクティブ時間外に PC の再起動を試みます。
 
@@ -395,11 +399,27 @@ Windows Update は、更新を自動的にインストールするように構�
       <string id="AutoRestartDeadlineDay12">12</string>
       <string id="AutoRestartDeadlineDay13">13</string>
       <string id="AutoRestartDeadlineDay14">14</string>
+      <string id="AutoRestartDeadlineDay15">15</string>
+      <string id="AutoRestartDeadlineDay16">16</string>
+      <string id="AutoRestartDeadlineDay17">17</string>
+      <string id="AutoRestartDeadlineDay18">18</string>
+      <string id="AutoRestartDeadlineDay19">19</string>
+      <string id="AutoRestartDeadlineDay20">20</string>
+      <string id="AutoRestartDeadlineDay21">21</string>
+      <string id="AutoRestartDeadlineDay22">22</string>
+      <string id="AutoRestartDeadlineDay23">23</string>
+      <string id="AutoRestartDeadlineDay24">24</string>
+      <string id="AutoRestartDeadlineDay25">25</string>
+      <string id="AutoRestartDeadlineDay26">26</string>
+      <string id="AutoRestartDeadlineDay27">27</string>
+      <string id="AutoRestartDeadlineDay28">28</string>
+      <string id="AutoRestartDeadlineDay29">29</string>
+      <string id="AutoRestartDeadlineDay30">30</string>
 
       <string id="DisableUXWUAccess_Title">Windows Update のすべての機能へのアクセスを削除する</string>
-      <string id="DisableUXWUAccess_Help">この設定では、Windows Update スキャン アクセス権を削除することができます。
+      <string id="DisableUXWUAccess_Help">この設定では、Windows Update スキャンに対するアクセス権を削除することができます。
 
-この設定を有効にした場合、Windows Update スキャン アクセス権が削除されます。
+この設定を有効にした場合は、Windows Update スキャン、ダウンロード、インストールに対するアクセス権が削除されます。
       </string>
       <string id="ActiveHoursMaxRange_Title">自動再起動のアクティブ時間範囲を指定する</string>
       <string id="ActiveHoursMaxRange_Help">このポリシーを有効にすると、ユーザーがアクティブ時間を設定できる、開始時刻からの最大時間数を指定できます。
@@ -420,27 +440,23 @@ Windows Update は、更新を自動的にインストールするように構�
       <string id="ActiveHoursMaxRange17">17</string>
       <string id="ActiveHoursMaxRange18">18</string>
 
-      <string id="AutoRestartRequiredNotificationDismissal_Title">ダｱ噂噂Configure auto-restart required notification for updates</string>
-      <string id="AutoRestartRequiredNotificationDismissal_Help">マゾ旭滌Enable this policy to specify the method by which the auto-restart required notification is dismissed. When a restart is required to install updates, the auto-restart required notification is displayed. By default, the notification is automatically dismissed after 25 seconds.
+      <string id="AutoRestartRequiredNotificationDismissal_Title">更新のための自動再起動必須通知を構成する</string>
+      <string id="AutoRestartRequiredNotificationDismissal_Help">このポリシーを有効にすると、自動再起動必須通知を閉じる方法を指定できます。更新プログラムをインストールするための再起動が必須の場合、自動再起動必須通知が表示されます。既定では、この通知は 25 秒後に自動的に閉じられます。
 
-ボ厓ゾ欺The method can be set to require user action to dismiss the notification.
+方法を設定することで、通知を閉じるために必要なユーザー操作を指定することができます。
 
-蕁マ衵欺If you disable or do not configure this policy, the default method will be used.
+このポリシーを無効にしたり、構成しなかった場合は、既定の方法が使用されます。
       </string>
       <string id="AutoDismissal">1 - 自動</string>
       <string id="UserAction">2 - ユーザー操作</string>
 
       <string id="AutoRestartNotificationConfig_Title">更新のための自動再起動リマインダー通知を構成する</string>
-      <string id="AutoRestartNotificationConfig_Help">このポリシーを有効にすると、自動再起動リマインダーに使用する通知の種類と、通知を表示するタイミングを指定できます。
-
-更新プログラムのインストール用にスケジュールされた再起動をユーザーに通知する際、どの種類の通知を使用するかを指定します。
+      <string id="AutoRestartNotificationConfig_Help">このポリシーを有効にすると、自動再起動リマインダーを表示するタイミングを指定できます。
 
 スケジュールされた再起動をユーザーに通知するまでの時間を指定できます。
 
-このポリシーを無効にしたり、構成しなかった場合は、既定のスタイルと期間が適用されます。
+このポリシーを無効にしたり、構成しなかった場合は、既定の時間が使用されます。
       </string>
-      <string id="AutoRestartNotificationStyleFull">1 - 全画面</string>
-      <string id="AutoRestartNotificationStylePartial">2- 画面の一部</string>
       <string id="AutoRestartNotificationSchd15">15</string>
       <string id="AutoRestartNotificationSchd30">30</string>
       <string id="AutoRestartNotificationSchd60">60</string>
@@ -472,6 +488,59 @@ Windows Update は、更新を自動的にインストールするように構�
       <string id="RestartWarnMins15">15</string>
       <string id="RestartWarnMins30">30</string>
       <string id="RestartWarnMins60">60</string>
+      <string id="EngagedRestartTransitionSchedule_Title">更新プログラムのための掛かり状態の再起動を移行および通知するスケジュールを指定します</string>
+      <string id="EngagedRestartTransitionSchedule_Help">このポリシーを有効にすると、アクティブ時間外にスケジュールされた自動再起動を掛かり状態の再起動に移行するタイミングを制御できます。期間は、再起動が保留状態になる日を基点に、2 ～ 30 日間の間で設定できます。
+
+掛かり状態の再起動のリマインダー通知をユーザーが再通知できる日数を指定できます。再通知の期間は 1 - 3 日間の間で設定できます。
+
+保留中の再起動をアクティブ時間外に自動的にスケジュールして実行するまでの期限を日数で指定できます。期限は、再起動が保留状態になる日を基点に、2 - 30 日間の間で設定できます。これを構成した場合、保留中の再起動は自動再起動から掛かり状態の再起動 (保留中のユーザー スケジュール) に移行され、指定された期間内に自動的に実行されます。
+
+期限が指定されなかった場合、再起動は自動的には実行されず、掛かり状態の再起動 (例: 保留中のユーザー スケジュール) のまま維持されます。
+
+このポリシーを無効にするか、または構成しなかった場合は、既定の動作が使用されます。
+
+次のポリシーが構成されている場合、このポリシーが影響を及ぼすことはありません。
+    1. スケジュールされた自動更新のインストールで、ログオンしているユーザーがいる場合には自動的に再起動しない
+    2. スケジュールされた時刻に常に自動的に再起動する
+    3. 更新プログラムをインストールするための自動再起動の期限を指定する
+      </string>
+      <string id="EngagedRestart_0">0</string>
+      <string id="EngagedRestart_2">2</string>
+      <string id="EngagedRestart_3">3</string>
+      <string id="EngagedRestart_4">4</string>
+      <string id="EngagedRestart_5">5</string>
+      <string id="EngagedRestart_6">6</string>
+      <string id="EngagedRestart_7">7</string>
+      <string id="EngagedRestart_8">8</string>
+      <string id="EngagedRestart_9">9</string>
+      <string id="EngagedRestart_10">10</string>
+      <string id="EngagedRestart_11">11</string>
+      <string id="EngagedRestart_12">12</string>
+      <string id="EngagedRestart_13">13</string>
+      <string id="EngagedRestart_14">14</string>
+      <string id="EngagedRestart_15">15</string>
+      <string id="EngagedRestart_16">16</string>
+      <string id="EngagedRestart_17">17</string>
+      <string id="EngagedRestart_18">18</string>
+      <string id="EngagedRestart_19">19</string>
+      <string id="EngagedRestart_20">20</string>
+      <string id="EngagedRestart_21">21</string>
+      <string id="EngagedRestart_22">22</string>
+      <string id="EngagedRestart_23">23</string>
+      <string id="EngagedRestart_24">24</string>
+      <string id="EngagedRestart_25">25</string>
+      <string id="EngagedRestart_26">26</string>
+      <string id="EngagedRestart_27">27</string>
+      <string id="EngagedRestart_28">28</string>
+      <string id="EngagedRestart_29">29</string>
+      <string id="EngagedRestart_30">30</string>
+      <string id="EngagedRestartSnooze_1">1</string>
+      <string id="EngagedRestartSnooze_2">2</string>
+      <string id="EngagedRestartSnooze_3">3</string>
+      
+      <string id="SetEDURestart_Title">カート再起動の電源ポリシーを更新します</string>
+      <string id="SetEDURestart_Help">一晩中カートに残っている EDU デバイスに対してこのポリシーを有効にすると、更新プログラムの再起動がスケジュールされたインストール時間に実行されるよう、電源チェックがスキップされます。</string>
+
     </stringTable>
 
     <presentationTable>
@@ -494,9 +563,10 @@ Windows Update は、更新を自動的にインストールするように構�
           <label>イントラネット統計サーバーの設定:</label>
         </textBox>
         <textBox refId="CorpWUContentHost_Name">
-          <label>啓ソゾ衵Set the alternate download server:</label>
+          <label>代替ダウンロード サーバーの設定:</label>
         </textBox>
         <text>(例: http://IntranetUpd01)</text>
+        <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">代替ダウンロード サーバーが設定されている場合は、メタデータに URL が示されていないファイルをダウンロードします。</checkBox>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>更新を確認する時間</text>
@@ -535,16 +605,16 @@ Windows Update は、更新を自動的にインストールするように構�
         <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">受信する機能更新プログラムのブランチ準備レベルを選択してください:</dropdownList>
         <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">機能更新プログラムがリリースされた後、受信を延期する日数:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
-          <label>厓噂啓マPause Feature Updates starting</label>
+          <label>機能更新プログラムの一時停止を開始しています</label>
         </textBox>
-        <text>袢ゼ厓ｱ(format yyyy-mm-dd example: 2016-09-16)</text>
+        <text>(形式 yyyy-mm-dd 例: 2016-09-16)</text>
       </presentation>
       <presentation id="DeferQualityUpdates">
         <decimalTextBox refId="DeferQualityUpdatesPeriodId" defaultValue="0">品質更新プログラムがリリースされた後、受信を延期する日数:</decimalTextBox>
         <textBox refId="PauseQualityUpdatesStartId">
-          <label>チ噂虍穴Pause Quality Updates starting</label>
+          <label>品質更新プログラムの一時停止を開始しています</label>
         </textBox>
-        <text>ポチボ穐(format yyyy-mm-dd example: 2016-09-16)</text>
+        <text>(形式 yyyy-mm-dd 例: 2016-09-16)</text>
       </presentation>
       <presentation id="ActiveHours_Title">
         <text>アクティブ時間</text>
@@ -560,19 +630,25 @@ Windows Update は、更新を自動的にインストールするように構�
       </presentation>
       <presentation id="AutoRestartRequiredNotificationDismissal_Title">
         <text>自動再起動必須通知を閉じる方法を指定します。</text>
-        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">滌チソｱMethod: </dropdownList>
+        <dropdownList refId="AutoRestartRequiredNotificationDismissal" noSort="true" defaultItem="0">方式: </dropdownList>
       </presentation>
       <presentation id="AutoRestartNotificationConfig_Title">
-        <text>自動再起動リマインダー通知に使用するスタイルを指定します。</text>
-        <dropdownList refId="AutoRestartNotificationStyle" noSort="true" defaultItem="0">スタイル: </dropdownList>
         <text>自動再起動リマインダー通知の期間を指定します。</text>
         <dropdownList refId="AutoRestartNotificationSchd" noSort="true" defaultItem="0">期間 (分): </dropdownList>
       </presentation>
       <presentation id="RestartWarningSchd_Title">
         <text>自動再起動警告リマインダー通知の期間を指定します。</text>
-        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">リマインダー (時間):</dropdownList>
+        <dropdownList refId="RestartWarnRemind" noSort="true" defaultItem="1">リマインダー (時間): </dropdownList>
         <text>自動再起動警告通知の期間を指定します。</text>
         <dropdownList refId="RestartWarn" noSort="true" defaultItem="0">警告 (分): </dropdownList>
+      </presentation>
+      <presentation id="EngagedRestartTransitionSchedule_Title">
+        <text>自動再起動から掛かり状態の再起動 (保留中のユーザー スケジュール) に移行するタイミングを指定します。</text>
+        <dropdownList refId="EngagedRestartTransitionSchedule" noSort="true" defaultItem="5">移行 (日数): </dropdownList>
+        <text>掛かり状態の再起動リマインダー通知の再通知を指定します。</text>
+        <dropdownList refId="EngagedRestartSnoozeSchedule" noSort="true" defaultItem="2">再通知 (日数):     </dropdownList>
+        <text>保留中の再起動がアクティブ時間外に自動実行されるまでの期限を指定します。</text>
+        <dropdownList refId="EngagedRestartDeadline" noSort="true" defaultItem="0">期限 (日数):  </dropdownList>
       </presentation>
     </presentationTable>
   </resources>

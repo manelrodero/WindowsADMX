@@ -7,12 +7,12 @@
       <string id="DeliveryOptimizationCat">Optimalizace doručení</string>
       <string id="DownloadMode">Režim stahování</string>
       <string id="DownloadMode_Help">Určuje metodu stahování, kterou může Optimalizace doručení používat při stahování aktualizací pro Windows, aplikací a aktualizací pro aplikace. Podporované hodnoty: 0=Jenom HTTP, žádný partnerský vztah. 1=HTTP v kombinaci s partnerskými počítači v rámci stejného překladu adres (NAT). 2=HTTP v kombinaci s partnerským vztahem soukromé skupiny. Ve výchozím nastavení vzniká partnerský vztah mezi počítači ve stejné lokalitě adresářové služby Active Directory (pokud existuje) nebo ve stejné doméně. Při výběru této možnosti jde partnerský vztah napříč překlady adres (NAT). Pokud chcete vytvořit vlastní skupinu, použijte ID skupiny v kombinaci s režimem 2. 3=HTTP v kombinaci s internetovým partnerským vztahem. 99=Režim jednoduchého stahování bez partnerského vztahu. Optimalizace doručení bude stahovat jenom pomocí HTTP a nepokusí se kontaktovat cloudové služby Optimalizace doručení. 100=Režim obejití. Místo Optimalizace doručení použije BITS.</string>
-      <string id="DownloadMode_CdnOnly">Jenom HTTP</string>
-      <string id="DownloadMode_Lan">LAN</string>
-      <string id="DownloadMode_Group">Skupina</string>
-      <string id="DownloadMode_Internet">Internet</string>
-      <string id="DownloadMode_Simple">Jednoduché</string>
-      <string id="DownloadMode_Bypass">Obejít</string>
+      <string id="DownloadMode_CdnOnly">Jenom HTTP (0)</string>
+      <string id="DownloadMode_Lan">LAN (1)</string>
+      <string id="DownloadMode_Group">Skupina (2)</string>
+      <string id="DownloadMode_Internet">Internet (3)</string>
+      <string id="DownloadMode_Simple">Jednoduché (99)</string>
+      <string id="DownloadMode_Bypass">Obejít (100)</string>
       <string id="GroupId">ID skupiny</string>
       <string id="GroupId_Help">ID skupiny musí být nastavené jako GUID. Tato zásada určuje libovolné ID skupiny, ke které má zařízení patřit. Tuto možnost použijte, pokud potřebujete vytvořit jednu skupinu pro partnerské vztahy v místní síti pro větve, které jsou v různých doménách a nespadají ve stejné síti LAN. Poznámka: Jedná se o optimalizaci na bázi přiměřeného úsilí a neměla by se používat pro ověřování identity.</string>
       <string id="MaxUploadBandwidth">Maximální šířka pásma pro nahrávání (kB/s)</string>
@@ -33,10 +33,20 @@
       <string id="MaxDownloadBandwidth_Help">Určuje maximální šířku pásma pro stahování v kilobajtech za sekundu, kterou může zařízení používat pro všechny souběžné aktivity stahování na pozadí přes službu Optimalizace doručení. Výchozí hodnota 0 (nula) znamená, že služba Optimalizace doručení dostupnou šířku pásma pro stahování dynamicky přizpůsobuje.</string>
       <string id="PercentageMaxDownloadBandwidth">Maximální šířka pásma pro stahování (procenta)</string>
       <string id="PercentageMaxDownloadBandwidth_Help">Určuje maximální šířku pásma pro stahování, kterou bude Optimalizace doručení využívat u všech souběžných aktivit stahování, jako procento dostupné šířky pásma pro stahování. Výchozí hodnota je 0 (nula) a znamená, že Optimalizace doručení se dynamicky přizpůsobuje dostupné šířce pásma pro stahování.</string>
+      <string id="MinFileSizeToCache">Minimální velikost souboru obsahu pro ukládání do sdílené mezipaměti (v MB)</string>
+      <string id="MinFileSizeToCache_Help">Určuje minimální velikost souboru obsahu v MB, který může používat ukládání do sdílené mezipaměti. Hodnota 0 znamená „neomezeno“, kdy se použije výchozí hodnota nastavená cloudovou službou. Doporučené hodnoty: 1 MB až 100000 MB.</string>
+      <string id="AllowVPNPeerCaching">Povolit ukládání do sdílené mezipaměti, když je zařízení připojené přes síť VPN</string>
+      <string id="AllowVPNPeerCaching_Help">Zadáním hodnoty true umožníte, aby se zařízení účastnilo ukládání do sdílené mezipaměti, když je k síti domény připojené přes síť VPN. To znamená, že zařízení může stahovat nebo nahrávat na jiná zařízení v síti domény, a to buď v síti VPN, nebo v síti firemní domény.</string>
+      <string id="MinRAMAllowedToPeer">Minimální kapacita paměti RAM (včetně) vyžadovaná k povolení ukládání do sdílené mezipaměti (v GB)</string>
+      <string id="MinRAMAllowedToPeer_Help">Určuje minimální velikost paměti RAM v GB vyžadovanou k použití ukládání do sdílené mezipaměti. Hodnota 0 znamená „neomezeno“, kdy se použije výchozí hodnota nastavená cloudovou službou. Pokud je například nastavené minimum 1 GB, budou moct ukládání do sdílené mezipaměti používat zařízení s pamětí RAM o kapacitě 1 GB nebo vyšší. Doporučené hodnoty: 1 GB až 4 GB.</string>
+      <string id="MinDiskSizeAllowedToPeer">Minimální velikost disku, při které se může používat ukládání do sdílené mezipaměti (v GB)</string>
+      <string id="MinDiskSizeAllowedToPeer_Help">Určuje požadovanou minimální velikost disku (v GB), aby zařízení mohlo používat ukládání do sdílené mezipaměti. Hodnota 0 znamená „neomezeno“; použije se výchozí hodnota nastavená cloudovou službou. Doporučené hodnoty: 64 GB až 256 GB. Poznámka: Pokud je nastavená zásada DOMoidfyCacheDrive, použije se u nového pracovního adresáře určeného touto zásadou kontrola velikosti disku.</string>
+      <string id="MinBatteryPercentageAllowedToUpload">Povolit nahrávání, když je zařízení napájené z baterie, která je pod nastavenou úrovní nabití (procenta)</string>
+      <string id="MinBatteryPercentageAllowedToUpload_Help">Zadejte hodnotu od 1 do 100 (procenta). Tím u zařízení povolíte nahrávání dat na partnerská zařízení v síti LAN a ve skupině při napájení stejnosměrným proudem (z baterie). Nahrávání se automaticky pozastaví, když nabití baterie klesne pod nastavenou minimální úroveň. Pokud nahrávání při napájení z baterie povolíte, doporučuje se nastavit 40 (tedy 40 %). Bez ohledu na tuto zásadu může zařízení při napájení z baterie stahovat obsah z partnerských zařízení. Hodnota 0 znamená, že není nastavené žádné omezení, ale použije se výchozí hodnota cloudové služby.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DownloadMode">
-        <dropdownList defaultItem="1" refId="DownloadMode">Režim stahování:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="DownloadMode">Režim stahování:</dropdownList>
       </presentation>
       <presentation id="GroupId">
         <textBox refId="GroupId">
@@ -78,6 +88,25 @@
       </presentation>
       <presentation id="PercentageMaxDownloadBandwidth">
         <decimalTextBox defaultValue="0" refId="PercentageMaxDownloadBandwidth">Maximální šířka pásma pro stahování (procenta):</decimalTextBox>
+        <text>Výchozí hodnota je 0 (neomezeno).</text>
+      </presentation>
+      <presentation id="MinFileSizeToCache">
+        <decimalTextBox defaultValue="100" refId="MinFileSizeToCache">Minimální velikost souboru obsahu pro ukládání do sdílené mezipaměti (v MB):</decimalTextBox>
+        <text>Výchozí hodnota je 100 MB.</text>
+      </presentation>
+      <presentation id="AllowVPNPeerCaching">
+        <checkBox defaultChecked="false" refId="AllowVPNPeerCaching">Povolit ukládání do sdílené mezipaměti, když je zařízení připojené přes síť VPN</checkBox>
+      </presentation>
+      <presentation id="MinRAMAllowedToPeer">
+        <decimalTextBox defaultValue="4" refId="MinRAMAllowedToPeer">Minimální kapacita paměti RAM (včetně) vyžadovaná k povolení ukládání do sdílené mezipaměti (v GB):</decimalTextBox>
+        <text>Výchozí hodnota jsou 4 GB.</text>
+      </presentation>
+      <presentation id="MinDiskSizeAllowedToPeer">
+        <decimalTextBox defaultValue="32" refId="MinDiskSizeAllowedToPeer">Minimální velikost disku, při které se může používat ukládání do sdílené mezipaměti (v GB):</decimalTextBox>
+        <text>Výchozí hodnota je 32 GB.</text>
+      </presentation>
+      <presentation id="MinBatteryPercentageAllowedToUpload">
+        <decimalTextBox defaultValue="0" refId="MinBatteryPercentageAllowedToUpload">Minimální úroveň nabití baterie (procenta):</decimalTextBox>
         <text>Výchozí hodnota je 0 (neomezeno).</text>
       </presentation>
     </presentationTable>
