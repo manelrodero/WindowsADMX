@@ -5,8 +5,6 @@
   <description>skriv inn beskrivelse her</description>
   <resources>
     <stringTable>
-      <string id="TS_AUTOSUBSCRIPTION_NAME">Aktiver automatisk abonnement</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Kontrollerer listen over URL-adresser som brukeren skal abonnere automatisk på</string>
       <string id="TS_SUPPORTED_Windows10">Minst Windows 10 eller Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Minst Windows 8 eller Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Minst Windows Server 2012</string>
@@ -28,7 +26,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Minst Windows XP og bare Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Minst Windows Server 2008 eller Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Bare Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 versjon 1903, Windows 10 versjon 1909 og Windows 10 versjon 2004</string>
       <string id="TS_TERMINAL_SERVER">Vert for ekstern skrivebordsøkt</string>
       <string id="TS_TERMINAL_SERVER_Help">Kontrollerer konfigurasjonen av en vertsserver for en ekstern skrivebordsøkt</string>
       <string id="TS_LICENSE_SERVER">RD-lisensiering</string>
@@ -147,7 +144,6 @@ Hvis du ikke konfigurerer denne policyinnstillingen, er ikke omadressering av kl
       <string id="TS_CLIENT_LPT">Ikke tillat omadressering av LPT-port</string>
       <string id="TS_CLIENT_PNP">Ikke tillat støttet omadressering av Plug and Play-enhet</string>
       <string id="TS_CAMERA_REDIRECTION">Ikke tillat omadressering av videoopptak</string>
-      <string id="TS_LOCATION_REDIRECTION">Ikke tillat omadressering av plassering</string>
       <string id="TS_CLIENT_PRINTER">Ikke tillat omadressering av klientskriver</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Denne policyinnstillingen angir om deling av innholdet på utklippstavlen (omadressering av utklippstavle) skal forhindres eller ikke mellom en ekstern datamaskin og en klientdatamaskin i en Remote Desktop Services-økt.
 
@@ -212,15 +208,6 @@ Hvis du aktiverer denne policyinnstillingen, kan ikke brukere omadressere videoo
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan brukere omadressere videoopptaksenhetene sine til den eksterne datamaskinen. Brukere kan bruke alternativet Mer på fanen Lokale ressurser i Tilkobling til eksternt skrivebord til å velge videoopptaksenhetene de vil omadressere til den eksterne datamaskinen.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Med denne policy innstillingen kan du kontrollere omadressering av steds data til den eksterne data maskinen i en Remote Desktop Services-økt.
-
-Som standard tillater Remote Desktop Services omadressering av steds data.
-
-Hvis du aktiverer denne policy innstillingen, kan ikke brukere omadressere plasserings dataene til den eksterne data maskinen.
-
-Hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen, kan brukere omadressere plasserings dataene til den eksterne data maskinen.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Med denne policyinnstillingen kan du begrense antallet skjermer som en bruker kan bruke til å vise en Remote Desktop Services-økt. Begrensning av antallet skjermer for visning av en Remote Desktop Services-økt kan gi raskere tilkobling, spesielt ved langsomme tilkoblinger, og redusere serverbelastningen.
 
@@ -433,20 +420,23 @@ Hvis du aktiverer denne policyinnstillingen, vises ikke disse varslene på verts
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, vises disse varslene på vertsserveren for den eksterne skrivebordsøkten etter at du logger deg på som lokal administrator.</string>
       <string id="TS_LICENSING_MODE">Angi lisensieringsmodus for Eksternt skrivebord</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Med denne policy innstillingen kan du angi typen klient adgangs lisens for Remote Desktop Services (RDS CAL) som kreves for å koble til denne vertsserveren for den eksterne skrivebordsøkten.
+        Med denne policyinnstillingen kan du angi typen klientadgangslisens for Eksterne skrivebordstjenester (RDS CAL) som kreves for å koble til denne vertsserveren for den eksterne skrivebordsøkten.
 
-        Du kan bruke denne policy innstillingen til å velge én av to lisensmoduser: per bruker eller per enhet.
+        Du kan bruke denne policyinnstillingen til å velge én av tre lisensmoduser: per bruker, per enhet og AAD per bruker.
 
-        Lisensieringsmodusen for hver bruker krever at hver brukerkonto som kobler seg til denne vertsserveren for den eksterne skrivebordsøkten har en RDS per bruker-CAL utstedt fra en RD-lisensserver.
+        Lisensmodusen for hver bruker krever at hver brukerkonto som kobler seg til denne vertsserveren for den eksterne skrivebordsøkten, har en RDS per bruker-CAL utstedt fra en RD-lisensserver.
 
-       Lisensieringsmodus for enheter krever at hver enhet som kobler seg til denne vertsserveren for den eksterne skrivebordsøkten har en RDS per enhet-CAL utstedt fra en RD-lisensserver.
+        Lisensmodusen per enhet krever at hver enhet som kobler seg til denne vertsserveren for den eksterne skrivebordsøkten, har en RDS per enhets-CAL utstedt fra en RD-lisensserver.
 
-        Hvis du aktiverer denne policyinnstillingen, beholdes den angitte lisensieringsmodusen for eksternt skrivebord av den eksterne skrivebordslisens- og RD-øktverten.
+        Lisensmodusen AAD per bruker krever at hver brukerkonto som kobler seg til denne vertsserveren for den eksterne skrivebordsøkten, har en tjenesteplan som støtter RDS-lisenser som er tilordnet i AAD.
+        
+        Hvis du aktiverer denne policyinnstillingen, blir lisensmodusen for eksternt skrivebord som du angir, utløst av eksternt skrivebord-lisensserveren og RD-øktens vert.
 
-        Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, er ikke lisensieringsmodusen angitt på gruppepolicy-nivå.
+        Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, er ikke lisensmodusen angitt på gruppepolicynivå.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Per enhet</string>
       <string id="TS_LICENSING_MODE_PER_USER">Per bruker</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD per bruker</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Denne policyinnstillingen angir om omadressering av data til klient-LPT-porter i en Remote Desktop Services-økt skal forhindres.
 
 Du kan bruke denne innstillingen til å hindre brukere fra å tilordne lokale LPT-porter og omadressere data fra den eksterne datamaskinen til eksterne enheter som er koblet til en lokal LPT-port. Som standard tillates omadressering av LPT-porter i Remote Desktop Services.
@@ -797,17 +787,6 @@ Hvis du aktiverer denne policyinnstillingen, vises skrivebordet alltid når en k
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan det angis et oppstartsprogram som kjører på den eksterne datamaskinen etter at klienten har koblet seg til den. Hvis det ikke angis noe oppstartsprogram, vises alltid skrivebordet på den eksterne datamaskinen etter at klienten har koblet seg til den.
 
 Obs: Hvis du aktiverer denne policyinnstillingen, ignoreres policyinnstillingen Start et program ved tilkobling.</string>
-      <string id="TS_UIA">Tillat omadressering for UI-automatisering</string>
-      <string id="TS_UIA_EXPLAIN">Denne policy innstillingen angir om automatiserings klient programmer for bruker grensesnitt (UI) som kjører på den lokale data maskinen, skal ha tilgang til UI-elementer på serveren.
-
-GRENSESNITT automatisering gir programmer tilgang til de fleste UI-elementer, som gjør at du kan bruke hjelpe teknologi produkter som forstørrelses program og skjerm leser som må samhandle med bruker grensesnittet for å kunne fungere som det skal. Bruker grensesnitt informasjon gjør det også mulig for automatiserte test skript å samhandle med bruker grensesnittet.
-
-Eksternt skrivebord-økter støtter for øyeblikket ikke omadressering av grensesnitt automatisering.
-
-Hvis du aktiverer eller ikke konfigurerer denne policy innstillingen, kan alle klienter for UI-automatisering på den lokale data maskinen samhandle med eksterne apper. Du kan for eksempel bruke den lokale data maskinens skjerm leser og forstørrelses-klienter til å samhandle med GRENSESNITTET på en webside du åpnet i en ekstern økt.
-
-Hvis du deaktiverer denne policy innstillingen, kan ikke klienter som bruker grensesnitt for automatisering som kjører på den lokale data maskinen, kommunisere med eksterne apper.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Denne policyinnstillingen lar deg angi om det skal kreves brukergodkjenning for eksterne tilkoblinger til vertsserveren for den eksterne skrivebordsøkten ved å bruke godkjenning på nettverksnivå. Denne policyinnstillingen forbedrer sikkerheten ved å kreve at brukergodkjenning skjer tidligere i prosessen for ekstern tilkobling.
 
 Hvis du aktiverer denne policyinnstillingen, kan bare klientdatamaskiner som støtter godkjenning på nettverksnivå, koble til vertsserveren for den eksterne skrivebordsøkten.

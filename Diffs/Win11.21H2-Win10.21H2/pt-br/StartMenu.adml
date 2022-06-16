@@ -207,19 +207,6 @@ No Explorador de Arquivos, o item Pesquisar ainda aparece na barra de ferramenta
 Essa configuração de política afeta apenas os elementos especificados da interface do usuário. Ela não afeta o Internet Explorer nem impede que o usuário utilize outros métodos para pesquisar.
 
 Se você desabilitar ou não definir essa configuração de política, o link Pesquisar estará disponível no menu Iniciar.</string>
-      <string id="ShowOrHideMostUsedApps">Mostrar ou ocultar a lista "mais usado" do menu iniciar</string>
-      <string id="ShowOrHideMostUsedApps_Help">Se você habilitar essa configuração de política, poderá configurar o menu Iniciar para mostrar ou ocultar a lista de aplicativos mais usados do usuário, independentemente das configurações do usuário.
-
-Selecionar "Mostrar" irá forçar a exibição da lista "mais usada", e o usuário não poderá alterar para ocultá-la usando o aplicativo configurações.
-
-Selecionar "Ocultar" forçará a lista "mais usado" a ficar oculta, e o usuário não poderá alterar para mostrá-la usando o aplicativo configurações.
-
-Selecionar "não configurado" ou se você desabilitar ou não definir essa configuração de política, tudo permitirá que os usuários ativem ou desativem a exibição da lista "mais usado" usando o aplicativo configurações. Esse é o comportamento padrão.
-
-Observação: a configuração dessa política para "Mostrar" ou "Ocultar" nas versões com suporte do Windows 10 prevalecerá sobre a configuração de política "remover lista de programas frequentes do menu Iniciar" (que gerencia a mesma parte do menu Iniciar, mas com menos opções).</string>
-      <string id="MFU_NotConfigured">Não Configurado</string>
-      <string id="MFU_Show">Mostrar</string>
-      <string id="MFU_Hide">Ocultar</string>        
       <string id="NoFrequentUsedPrograms">Remover a lista de programas frequentes do menu Iniciar</string>
       <string id="NoFrequentUsedPrograms_Help">Se esta configuração for habilitada, a lista dos programas usados frequentemente será removida do menu Iniciar.
 
@@ -645,14 +632,10 @@ Se você habilitar esta política, as invocações de menus de contexto no Menu 
           <label>Arquivo de layout de Iniciar</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Reaplicar layout a cada logon</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Escolha um dos tamanhos a seguir</dropdownList>
       </presentation>
-      <presentation id="ShowOrHideMostUsedApps">
-        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Escolha uma das ações a seguir</dropdownList>
-      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

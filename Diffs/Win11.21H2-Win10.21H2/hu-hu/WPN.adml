@@ -6,8 +6,6 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Értesítések</string>
-      <string id="WnsEndpoint">Csoportházirend engedélyezése a WNS FQDN-hez</string>
-      <string id="WnsEndpointExplain">Ez a házirend beállít egy különleges WNS FQDN-t adott környezetekhez.</string>
       <string id="NoTileNotification">A lapkaértesítések kikapcsolása</string>
       <string id="NoTileNotificationExplain">
           
@@ -127,11 +125,6 @@ A házirend-beállítás érvénybe léptetéséhez nem szükséges újraindíta
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Éjfél után ennyi perccel:</decimalTextBox>
-      </presentation>
-      <presentation id="WnsEndpoint">
-        <textBox refId="WnsEndpoint_FQDN">
-          <label>Teljes tartománynév a Windows leküldéses értesítéseket kezelő szolgáltatásához</label>
-        </textBox>
       </presentation>
     </presentationTable>
   </resources>

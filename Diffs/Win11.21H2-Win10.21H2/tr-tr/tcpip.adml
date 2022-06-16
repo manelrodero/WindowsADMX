@@ -27,17 +27,19 @@
       <string id="IPHTTPS_ClientState">IP-HTTPS Durumunu Ayarla</string>
       <string id="IPHTTPS_ClientUrl">IP-HTTPS URL'si</string>
 
-      <string id="ISATAP_State_Help">Bu ilke ayarı, bir IPv4 intraneti üzerinden IPv6 ana bilgisayarları arasında tek noktaya yayın IPv6 bağlantısı sağlamak için kullanılan, siteler arası Otomatik Tünel Adresleme Protokolü 'Nü (ıSATAP), bir adresten yönlendiriciye ve ana bilgisayardan ana bilgisayara, ana bilgisayardan yönlendiriciye ve yönlendiriciden ana bilgisayara otomatik tünel oluşturma teknolojisini yapılandırmanıza olanak tanır.
+      <string id="ISATAP_State_Help">Bu ilke ayarı, bir IPv4 intraneti genelinde IPv6 ana makineleri arasında tek noktadan yayın IPv6 bağlantısı sağlayan bir adresten yönlendiriciye ve ana makineden ana makineye, ana makineden ana makineye ve ana makineden yönlendiriciye otomatik tünel oluşturma teknolojisi olan Site İçi Otomatik Tünel Adresleme Protokolünü (ISATAP) yapılandırmanıza izin verir.
 
 Bu ilke ayarını devre dışı bırakırsanız ya da yapılandırmazsanız yerel ana makine ayarı kullanılır.
 
-Bu ilke ayarını etkinleştirirseniz ıSATAP 'ı aşağıdaki ayarlardan biriyle yapılandırabilirsiniz:
+Bu ilke ayarını etkinleştirirseniz ISATAP'ı aşağıdaki ayarlardan biriyle yapılandırabilirsiniz:
 
-İlke varsayılan durumu: ana bilgisayarda hiç ıSATAP arabirimi yok.
+İlke Varsayılan Durumu: ISATAP yönlendirici adı başarıyla çözümlenirse, ana makine ISATAP'yi bağlantıda yerel olan bir adres ve durum bilgisi olmayan adres otomatik yapılandırması üzerinden ISATAP yönlendiricisinden alınan her önek için bir adresle yapılandırtır. ISATAP yönlendirici adı başarıyla çözülmezse, ISATAP bağlantısı, karşılık gelen IPv4 adresini kullanan ana makinede bulunmaz.
 
-İlke etkin durumu: ıSATAP adı başarıyla çözümlendikten sonra ana bilgisayar ıSATAP 'yi bağlantı yerel adresiyle, durum bilgisi olmayan adres otomatik yapılandırması üzerinden ıSATAP yönlendiricisinden alınan her önek için bir adresle yapılandırtır. ISATAP adı başarılı bir şekilde çözümlenmemişse, ana bilgisayar bağlantı yerel adresiyle yapılandırılmış bir ıSATAP arabirimine sahip olur.
+İlke Etkin Durumu: ISATAP yönlendirici adı başarıyla çözülürse, ana makine ISATAP'yi bağlantıda yerel olan bir adres ve durum bilgisi olmayan adres otomatik yapılandırması üzerinden ISATAP yönlendiricisinden alınan her önek için bir adres ile yapılandırtır. ISATAP yönlendirici adı başarıyla çözülmezse, ana makine bir ISATAP arabirimini bağlantıda yerel olan bir adres ile yapılandırtır.
 
-İlke devre dışı durumu: ana bilgisayarda hiç ıSATAP arabirimi yok.
+İlke Devre Dışı Durumu: Ana makinede hiçbir ISATAP arabirimi bulunmaz.
+
+
 
 </string>
 
@@ -52,17 +54,19 @@ Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız yerel ana m
 </string>
 
 
-      <string id="6to4_State_Help">Bu ilke ayarı, IPv4 İnternet genelinde IPv6 siteleri ile ana makineleri arasında tek noktadan yayın yapan IPv6 bağlantı sistemini sağlamak için kullanılan bir adres atama ve yönlendiriciden yönlendiriciye otomatik tünel oluşturma teknolojisi olan 6to4'ü yapılandırmanıza izin verir. 6to4, küresel adres öneki olan 2002:WWXX:YYZZ::/48'i kullanır; burada harfler, siteye atanmış küresel IPv4 adresinin (w.x.y.z) onaltılık gösterimidir.
+      <string id="6to4_State_Help">Bu ilke ayarı, IPv4 Internet genelinde IPv6 siteleri ve ana makineleri arasında tek noktadan yayın IPv6 bağlantı sistemi sağlamak için kullanılan bir adres atama ve yönlendiriciden yönlendiriciye otomatik tünel oluşturma teknolojisi olan 6to4'ü yapılandırmanıza izin verir. 6to4, küresel adres öneki olan 2002:WWXX:YYZZ::/48'i kullanır; burada harfler, siteye atanmış küresel IPv4 adresinin (w.x.y.z) onaltılık gösterimidir.
 
 Bu ilke ayarını devre dışı bırakırsanız ya da yapılandırmazsanız yerel ana makine ayarı kullanılır.
 
-Bu ilke ayarını etkinleştirirseniz 6to4'ü aşağıdaki ayarlardan biri ile yapılandırabilirsiniz:
+Bu ilke ayarını etkinleştirirseniz 6to4 aşağıdaki ayarlardan biri ile yapılandırabilirsiniz:
 
-Varsayılan İlke Durumu: 6to4 kapalıdır ve 6to4 ile bağlantı kullanılamaz.
+İlke Varsayılan Durumu: Ana makinenin yalnızca bağlantıda yerel olan bir IPv6 bağlantı sistemi ve ortak bir IPv4 adresi varsa 6to4 etkinleştirilir. Hiçbir küresel IPv6 adresi ve küresel IPv4 adresi yoksa, ana makinenin bir 6to4 arabirimi olmaz. Hiçbir küresel IPv6 adresi ve küresel IPv4 adresi yoksa, ana makinenin bir 6to4 arabirimi olur.
 
- Etkin İlke Durumu: Genel bir IPv4 adresi mevcutsa ana makinenin 6to4 arabirimi olacaktır. Genel bir IPv4 adresi mevcut değilse ana makinenin 6to4 arabirimi olmayacaktır.
+İlke Devre Dışı Durumu: Küresel bir IPv4 adresi varsa, ana makinenin bir 6to4 arabirimi olur. Küresel bir IPv4 adresi varsa, ana makinenin bir 6to4 olmaz.
 
-Devre Dışı İlke Durumu: 6to4 kapalıdır ve 6to4 ile bağlantı kullanılamaz.
+İlke Devre Dışı Durumu: 6to4 kapalıdır ve 6to4 ile bağlantı kullanılamaz.
+
+
 
 </string>
 

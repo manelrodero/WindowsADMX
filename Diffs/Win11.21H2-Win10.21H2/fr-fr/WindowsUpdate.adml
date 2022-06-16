@@ -14,11 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Au minimum Windows XP Professionnel Service Pack 1 ou Windows 2000 Service Pack 3, à l’exclusion de Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Au minimum des systèmes d’exploitation Windows Server 2003 ou Windows XP Professionnel avec SP1, à l’exclusion de Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Au minimum Windows XP Professionnel Service Pack 1 ou Au moins Windows 2000 Service Pack 3 à Windows 8.1 ou Windows Server 2012 R2 avec le Service Pack le plus récent. Non pris en charge sur les Windows 10 et versions ultérieures.</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Au moins Windows Vista via Windows 8.1 ou Windows Server 2012 R2 avec le Service Pack le plus récent. Non pris en charge sur les Windows 10 et versions ultérieures.</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Au minimum Windows XP Professionnel Service Pack 1 ou Au moins Windows 2000 Service Pack 3 à Windows 8.1 ou Windows Server 2012 R2 avec le Service Pack le plus récent. Non pris en charge sur Windows 10 et versions ultérieures.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Au moins Windows Vista via Windows 8.1 ou Windows Server 2012 R2 avec le Service Pack le plus récent. Non pris en charge sur Windows 10 et versions ultérieures.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professionnel Service Pack 1 ou au minimum Windows 2000 Service Pack 3 
 Option 7 uniquement prise en charge sur les serveurs ou au moins édition Windows Server 2016</string>
-      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 via Windows Server 2022 ou Windows 10</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Au minimum Windows Server 2022 ou Windows 10 version 2004</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 à Windows Server 2022 ou Windows 10</string>
       <string id="AUDontShowUasHelp">Ce paramètre de stratégie permet d’indiquer si l’option « Installer les mises à jour et éteindre » doit s’afficher dans la boîte de dialogue Arrêt de Windows.
 
 Si vous activez ce paramètre de stratégie, l’option « Installer les mises à jour et éteindre » n’apparaîtra pas dans la boîte de dialogue Arrêt de Windows, même si des mises à jour à installer sont disponibles lorsque l’utilisateur sélectionne l’option Arrêter dans le menu Démarrer.
@@ -65,29 +66,29 @@ Remarque : cette stratégie ne s’applique pas à Windows RT.
 
 Ce paramètre de stratégie vous permet de spécifier si les mises à jour automatiques sont activées sur cet ordinateur. Si le service est activé, vous devez sélectionner l’une des quatre options du paramètre de stratégie de groupe :
 
-    2 = Avertir avant de télécharger et d’installer des mises à jour.
+ 2 = Avertir avant de télécharger et d’installer des mises à jour.
 
-    Lorsque Windows trouve des mises à jour s’appliquant à l’ordinateur, un message indique à l’utilisateur que des mises à jour sont prêtes pour le téléchargement. Après avoir accédé à Windows Update, les utilisateurs peuvent télécharger et installer les mises à jour disponibles.
+ Lorsque Windows trouve des mises à jour s’appliquant à l’ordinateur, un message indique à l’utilisateur que des mises à jour sont prêtes pour le téléchargement. Après avoir accédé à Windows Update, les utilisateurs peuvent télécharger et installer les mises à jour disponibles.
 
-    3 = (Valeur par défaut) Télécharger automatiquement les mises à jour et avertir l’utilisateur lorsqu’elles sont prêtes pour l’installation
+ 3 = (Valeur par défaut) Télécharger automatiquement les mises à jour et avertir l’utilisateur lorsqu’elles sont prêtes pour l’installation
 
-    Windows trouve des mises à jour s’appliquant à votre ordinateur et les télécharge en tâche de fond (l’utilisateur n’est ni averti ni interrompu au cours du processus). Une fois les téléchargements terminés, un message indique aux utilisateurs que les mises à jour sont prêtes à être installées. Après avoir accédé à Windows Update, les utilisateurs peuvent les installer.
+ Windows trouve des mises à jour s’appliquant à votre ordinateur et les télécharge en tâche de fond (l’utilisateur n’est ni averti ni interrompu au cours du processus). Une fois les téléchargements terminés, un message indique aux utilisateurs que les mises à jour sont prêtes à être installées. Après avoir accédé à Windows Update, les utilisateurs peuvent les installer.
 
-    4 = Télécharger automatiquement les mises à jour et les installer selon la planification spécifié.
+ 4 = Télécharger automatiquement les mises à jour et les installer selon la planification spécifié.
 
-    Lorsque « Automatique » est sélectionné comme heure d'installation planifiée, Windows vérifie, télécharge et installe automatiquement les mises à jour. L'appareil redémarrera conformément aux paramètres par défaut, à moins qu'il ait été configuré par une stratégie de groupe (s'applique à Windows 10, version 1809 et supérieure)
+ Lorsque « Automatique » est sélectionné comme heure d'installation planifiée, Windows vérifie, télécharge et installe automatiquement les mises à jour. L'appareil redémarrera conformément aux paramètres par défaut, à moins qu'il ait été configuré par une stratégie de groupe (s'applique à Windows 10, version 1809 et supérieure)
 
-    Spécifiez la planification à l’aide des options dans le paramètre de stratégie de groupe. Pour la version 1709 et ultérieures, vous pouvez également limiter la fréquence des mises à jour à hebdomadaire, bi-hebdomadaire ou mensuelle. Si aucune planification n’est spécifiée, la planification par défaut pour toutes les installations est chaque jour à 3h00. Si des mises à jour requièrent un démarrage pour terminer l’installation, Windows redémarre l’ordinateur automatiquement. (Si un utilisateur est connecté à l’ordinateur lorsque Windows est prêt à redémarrer, il en est informé par un message qui lui donne la possibilité de retarder le redémarrage).
+ Spécifiez la planification à l’aide des options dans le paramètre de stratégie de groupe. Pour la version 1709 et ultérieures, vous pouvez également limiter la fréquence des mises à jour à hebdomadaire, bi-hebdomadaire ou mensuelle. Si aucune planification n’est spécifiée, la planification par défaut pour toutes les installations est chaque jour à 3h00. Si des mises à jour requièrent un démarrage pour terminer l’installation, Windows redémarre l’ordinateur automatiquement. (Si un utilisateur est connecté à l’ordinateur lorsque Windows est prêt à redémarrer, il en est informé par un message qui lui donne la possibilité de retarder le redémarrage).
 
-     Sur Windows 8 et versions ultérieures, vous pouvez configurer l’installation des mises à jour durant la maintenance automatique plutôt que selon une planification spécifique. La maintenance automatique installe les mises à jour quand l’ordinateur n’est pas en cours d’utilisation et évite de le faire quand il fonctionne sur batterie. Si la maintenance automatique n’est pas en mesure d’installer les mises à jour pendant deux jours, Windows Update les installe immédiatement. Les utilisateurs sont informés quant à l’imminence d’un redémarrage, qui n’a lieu que s’il n’y a aucun risque de perte accidentelle de données.
+ Sur Windows 8 et versions ultérieures, vous pouvez configurer l’installation des mises à jour durant la maintenance automatique plutôt que selon une planification spécifique. La maintenance automatique installe les mises à jour quand l’ordinateur n’est pas en cours d’utilisation et évite de le faire quand il fonctionne sur batterie. Si la maintenance automatique n’est pas en mesure d’installer les mises à jour pendant deux jours, Windows Update les installe immédiatement. Les utilisateurs sont informés quant à l’imminence d’un redémarrage, qui n’a lieu que s’il n’y a aucun risque de perte accidentelle de données.
 
-     5 = Autoriser les administrateurs locaux à sélectionner le mode configuration selon lequel les Mises à jour automatiques doivent informer l’utilisateur et installer les mises à jour. (Cette option n'est prise en charge par aucune des versions de Windows 10).
+ 5 = Autoriser les administrateurs locaux à sélectionner le mode configuration selon lequel les Mises à jour automatiques doivent informer l’utilisateur et installer les mises à jour. (Cette option n'est prise en charge par aucune des versions de Windows 10).
 
-      Avec cette option, les administrateurs locaux sont autorisés à utiliser le Panneau de configuration Windows Update pour sélectionner l’option de configuration de leur choix. En revanche, ils ne sont pas autorisés à désactiver la configuration des mises à jour automatiques.
+ Avec cette option, les administrateurs locaux sont autorisés à utiliser le Panneau de configuration Windows Update pour sélectionner l’option de configuration de leur choix. En revanche, ils ne sont pas autorisés à désactiver la configuration des mises à jour automatiques.
 
  7 = Notifier pour installation et notifier pour redémarrage. (Serveur Windows uniquement)
 
-        Avec cette option de Windows Server 2016, applicable uniquement aux serveurs SKU, les administrateurs locaux sont autorisés à utiliser Windows Update pour réaliser manuellement des installations ou des redémarrages.
+ Avec cette option de Windows Server 2016, applicable uniquement aux serveurs SKU, les administrateurs locaux sont autorisés à utiliser Windows Update pour réaliser manuellement des installations ou des redémarrages.
 
 Si l’état de cette stratégie est Désactivée, les mises à jour disponibles sur Windows Update doivent être téléchargées et installées manuellement. Pour cela, vous devez rechercher Windows Update par le biais de l’écran de démarrage.
 
@@ -315,12 +316,6 @@ Remarque : cette stratégie ne s’applique que lorsque le service intranet de M
 Remarque : cette stratégie n’est pas prise en charge sur Windows RT. La définition de cette stratégie n’aura aucun effet sur les ordinateurs Windows RT.</string>
       <string id="TargetGroup_Title">Autoriser le ciblage côté client</string>
       <string id="WindowsUpdateCat">Windows Update</string>
-      <!--Category sub-folders-->
-      <string id="WindowsUpdateOffering">Gérer les mises à jour proposées de Windows Update</string>
-      <string id="WSUSOffering">Gérer les mises à jour proposées de Windows Server Update Service</string>
-      <string id="WindowsUpdateExperience">Gérer l’expérience utilisateur final</string>
-      <string id="PreSV">Stratégies héritées</string>
-
       <string id="TrustedPublisher_Title">Autoriser les mises à jour signées provenant d’un emplacement intranet du service de Mise à jour Microsoft  </string>
       <string id="TrustedPublisher_Help">Ce paramètre de stratégie permet de définir si le service Mises à jour automatiques accepte les mises à jour signées par des entités autres que Microsoft lorsqu’elles proviennent d’un emplacement intranet du service de Mise à jour Microsoft. 
 
@@ -336,30 +331,48 @@ Remarque : cette stratégie n’est pas prise en charge sur Windows RT. La dé
 L’activation de cette stratégie désactive cette fonctionnalité et peut provoquer le non-fonctionnement de la connexion à des services publics tels que le Windows Store.
 
 Remarque : cette stratégie s’applique uniquement quand ce PC est configuré pour se connecter à un service de mise à jour intranet à l’aide de la stratégie « Spécifier l’emplacement intranet du service de Mise à jour Microsoft ».</string>
+      <string id="DeferUpdateCat">Windows Update pour entreprises</string>
       <string id="ManagePreviewBuilds_Title">Gérer les versions d’évaluation</string>
-      <string id="ManagePreviewBuilds_Help">Activez cette stratégie pour gérer les mises à jour reçues avant la publication de la mise à jour dans le monde entier.
+      <string id="ManagePreviewBuilds_Help">Sélectionner Désactiver les versions d’évaluation empêchera les versions d’évaluation de s’installer sur l’appareil. Cela empêchera les utilisateurs de s’abonner au Programme Windows Insider, via Paramètres &gt; Mise à jour et sécurité.
 
-Canal de développement
-Idéal pour les utilisateurs hautement techniques. Les participants au programme Windows Insider dans le canal de développement recevront les builds de notre branche de développement active qui est la plus ancienne dans un cycle de développement. Ces builds ne correspondent pas à une version spécifique de Windows 10.
+Sélectionner Désactiver les versions d’évaluation une fois que la prochaine version est publique empêchera les versions d’évaluation de s’installer sur l’appareil lors de la sortie de la prochaine version commerciale de Windows. Cette option est utile si votre appareil est configuré pour installer les versions d’évaluation et que vous souhaitez désabonner l’appareil pour ne plus recevoir de versions d’évaluation. Cette option permet de disposer des versions d’évaluation jusqu’à ce que l’appareil puisse recevoir la nouvelle version commerciale.
 
-Canal bêta
-Idéal pour les explorateurs de fonctionnalités qui souhaitent afficher les prochaines fonctionnalités Windows 10. Vos commentaires sont particulièrement importants ici, car ils aident nos ingénieurs à résoudre les problèmes de clé avant de publier une version majeure.
-
-Canal de version préliminaire (par défaut)
-Les participants au programme Windows Insider du Canal de version préliminaire auront accès à la version à venir de Windows 10 avant sa publication mondiale. Ces Builds sont prises en charge par Microsoft. Le Canal de version préliminaire est celui que nous recommandons aux entreprises pour prévisualiser et valider les prochaines versions de Windows 10 avant un déploiement étendu au sein de leur organisation.
-
-Remarque : l’inscription à la version préliminaire nécessite un paramètre de niveau de télémétrie de 2 ou supérieur et l’enregistrement de votre domaine sur insider.windows.com. Pour obtenir plus d’informations sur les versions préliminaires, voir : https://aka.ms/wipforbiz
-
-Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows Update ne propose aucune mise à jour en pré-version et vous recevrez un tel contenu une fois publié dans le monde entier. Si cette stratégie est désactivée, tous les appareils actuellement connectés à une pré-version peuvent se désabonner et rester sur la dernière mise à jour des fonctionnalités une fois libérée.</string>
-      <string id="DevChannel">Canal Développeur</string>
-      <string id="BetaChannel">Canal Bêta</string>
-      <string id="ReleasePreviewChannel">Publier le canal de préversion</string>
+Sélectionner Activer les versions d’évaluation permet aux versions d’installation de s’installer sur l’appareil. Les utilisateurs peuvent télécharger et installer les versions d’évaluation Windows sur leurs appareils en s’abonnant via Paramètres -&gt; Mise à jour et sécurité -&gt; Programme Windows Insider. Lorsque cette valeur est définie, les administrateurs peuvent également utiliser d’autres stratégies pour gérer les paramètres des versions d’évaluation pour le compte des utilisateurs.</string>
+      <string id="DisablePreviewBuilds">Désactiver les versions d'évaluation</string>
+      <string id="DisablePreviewBuildsAndOptOut">Désactiver les versions d'évaluation une fois que la prochaine version est publique</string>
+      <string id="EnablePreviewBuilds">Activer les versions d'évaluation</string>
+      <string id="PreviewBuildFastFeatureUpdates">Version d'évaluation - Rapide</string>
+      <string id="PreviewBuildSlowFeatureUpdates">Version d'évaluation - Lente</string>
+      <string id="ReleasePreviewBranchFeatureUpdates">Aperçu de la version</string>
+      <string id="SemiAnnualChannelFeatureUpdates">Canal semi-annuel</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Canal semi-annuel pour 1809 et inférieur (déconseillé)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Canal semi-annuel (ciblé) pour 1809 et inférieur (déconseillé)</string>
       <string id="DeferFeatureUpdates_Title">Choisir quand recevoir les versions d'évaluation et les mises à jour des fonctionnalités</string>
-      <string id="DeferFeatureUpdates_Help">Activez cette stratégie pour spécifier quand recevoir les mises à jour des fonctionnalités.
+      <string id="DeferFeatureUpdates_Help">Activez cette stratégie pour spécifier le niveau de la version d’évaluation ou des mises à jour de fonctionnalités à recevoir ainsi que le moment de leur réception.
 
-Différer les mises à jour | Cela permet aux appareils de différer de 14 jours (durée maximale pour un canal de version préliminaire) à 365 jours (pour un canal semi-annuel). Ou, si l’appareil est mis à jour à partir d’un canal semi-annuel, vous pouvez également spécifier une version à laquelle l’appareil peut passer ou à laquelle il doit rester, jusqu’à ce que la stratégie soit mise à jour ou que l’appareil atteigne sa date de fin de service. Remarque : si vous définissez les deux stratégies, la version spécifiée devient prioritaire et les reports ne sont pas appliqués. Si vous souhaitez obtenir des informations sur la version du système d’exploitation, consultez la page Informations sur les versions de Windows.
+* Version d’évaluation - Rapide : les appareils définis sur ce niveau seront les premiers à recevoir les nouvelles builds de Windows avec des fonctionnalités qui ne sont pas encore à la disposition du grand public. Sélectionnez Rapide pour participer à l’identification et au signalement des problèmes à Microsoft et fournir des suggestions pour les nouvelles fonctionnalités.
+* Version d’évaluation - Lente : les appareils définis sur ce niveau reçoivent les nouvelles builds de Windows avant qu’elles soient à la disposition du grand public, mais à une cadence plus lente que ceux définis sur Rapide, et avec les modifications et les correctifs identifiés dans les builds antérieures.
+* Version d’évaluation : recevez les builds de Windows juste avant que Microsoft les mette à la disposition du grand public.
+* Canal semi-annuel : recevez les mises à jour des fonctionnalités dès qu’elles sont mises à la disposition du grand public.
 
-Interrompre les mises à jour | Pour empêcher la réception des mises à jour des fonctionnalités à l’heure planifiée, vous pouvez suspendre temporairement les mises à jour des fonctionnalités. Cette interruption reste effective pendant 35 jours à partir de la date de début spécifiée ou jusqu’à ce que le champ soit effacé (les mises à jour qualité seront toujours proposées).</string>
+Les états de préparation de Windows suivants ont été déconseillés et ne s’appliquent qu’à 1809 et inférieur :
+* Canal semi-annuel (ciblé) pour 1809 et inférieur : les mises à jour des fonctionnalités ont été publiées.
+* Canal semi-annuel pour 1809 et inférieur : les mises à jour des fonctionnalités ont été déclarées Canal semi-annuel, désignation indiquant que la publication est prête pour un déploiement étendu.
+Consultez la page d’informations de version à l’adresse http://aka.ms/ReleaseInformationPage pour connaître les dates de publication des options Canal semi-annuel (ciblé) et Canal semi-annuel.
+
+Pendant la sélection d’une version d’évaluation :
+    - Vous pouvez différer la réception des versions d’évaluation de 14 jours, au maximum.
+    - Pour empêcher la réception des versions d’évaluation au moment prévu, vous pouvez les suspendre temporairement. La suspension reste en vigueur pendant 35 jours à compter de l’heure de début indiquée.
+    - Pour reprendre la réception des mises à jour des fonctionnalités qui ont été suspendues, effacez la date de début dans le champ.
+
+L’inscription à la version d’évaluation nécessite un paramètre de télémétrie de niveau 2 ou supérieur et l’inscription de votre domaine sur insider.windows.com. Pour plus d’informations sur les versions d’évaluation, consultez : https://aka.ms/wipforbiz
+
+Pendant la sélection de l’option Canal semi-annuel :
+    - Vous pouvez différer la réception des mises à jour des fonctionnalités de 365 jours, au maximum.
+    - Pour empêcher la réception des mises à jour des fonctionnalités au moment prévu, vous pouvez les suspendre temporairement. La suspension reste en vigueur pendant 35 jours à compter de l’heure de début indiquée.
+    - Pour reprendre la réception des mises à jour des fonctionnalités qui ont été suspendues, effacez la date de début dans le champ.
+
+Si vous désactivez ou ne configurez pas cette stratégie, Windows Update ne change pas de comportement.</string>
       <string id="DeferQualityUpdates_Title">Choisir quand recevoir les mises à jour qualité</string>
       <string id="DeferQualityUpdates_Help">Activez cette stratégie pour spécifier quand recevoir les mises à jour qualité.
 
@@ -705,7 +718,7 @@ Cette stratégie remplacera les stratégies suivantes :
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Sélectionnez le comportement du proxy pour le client Windows Update pour la détection des mises à jour :</dropdownList>
       </presentation>
       <presentation id="UpdateClassPolicySource_Title">
-        <text>Spécifiez le service source pour les classes suivantes de mises à jour Windows :</text>
+        <text>Spécifiez le service source pour les classes suivantes de mises à jour Windows :</text>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Mises à jour des fonctionnalités</dropdownList>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Mises à jour qualité</dropdownList>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Mises à jour du pilote</dropdownList>
@@ -716,11 +729,13 @@ Cette stratégie remplacera les stratégies suivantes :
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">l’intervalle suivant (heures) :  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Patientez pendant la période suivante avant d’entrer de nouveau une planification</text>
+        <text>Attendre pendant la durée</text>
+        <text>suivante avant de redemander en cas de redémarrage</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">planifié (minutes) :  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Patientez pendant la période suivante avant de procéder à une planification</text>
+        <text>Attendre pendant la durée</text>
+        <text>suivante avant un redémarrage</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">planifié (minutes) :  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -732,8 +747,14 @@ Cette stratégie remplacera les stratégies suivantes :
           <label>Nom du groupe cible de cet ordinateur</label>
         </textBox>
       </presentation>
+      <presentation id="IdleShutdownTimerDuration_Title">
+        <text>Attendre pendant la durée</text>
+        <text>avant de fermer le service en cas</text>
+        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">d’inactivité (minutes) :  </decimalTextBox>
+      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>Le minuteur de redémarrage permet aux utilisateurs de gagner du temps</text>
+        <text>Le minuteur de redémarrage accordera aux utilisateurs</text>
+        <text>ce délai pour enregistrer leur</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">travail (minutes) :  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
@@ -745,10 +766,11 @@ Cette stratégie remplacera les stratégies suivantes :
         </textBox>
       </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Sélectionner le niveau de disponibilité de Windows pour les mises à jour que vous voulez recevoir :</dropdownList>
+        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Définir le comportement pour recevoir les versions d’évaluation :</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Combien de jours, après la publication d’une mise à jour de fonctionnalité, voulez-vous différer la mise à jour avant qu’elle ne soit proposée à l’appareil ?</decimalTextBox>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Sélectionner le niveau de disponibilité de Windows pour les mises à jour que vous voulez recevoir :</dropdownList>
+        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Après la publication d’une version d'évaluation ou d'une mise à jour des fonctionnalités, différer sa réception pendant ce nombre de jours :</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Démarrage de l'interruption des versions d'évaluation et des mises à jour des fonctionnalités :</label>
         </textBox>

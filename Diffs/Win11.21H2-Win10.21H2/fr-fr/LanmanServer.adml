@@ -59,26 +59,24 @@ Version de hachage prise en charge :
 
 - Pour prendre en charge les informations de contenu V1 et V2, définissez « Version de hachage prise en charge » sur la valeur 3.</string>
       <string id="Pol_CipherSuiteOrder_Name">Ordre des suites de chiffrement</string>
-      <string id="Pol_CipherSuiteOrder_Help">Ce paramètre de stratégie détermine les suites de chiffrement utilisés par le serveur SMB.
+      <string id="Pol_CipherSuiteOrder_Help">Ce paramètre de stratégie détermine les suites de chiffrement utilisés par le serveur SMB.
 
 Si vous activez ce paramètre de stratégie, les suites de chiffrement sont définies dans l'ordre spécifié.
 
 Si vous activez ce paramètre de stratégie et que vous ne spécifiez pas au moins une suite de chiffrement prise en charge, ou si vous désactivez ou ne configurez pas ce paramètre de stratégie, l'ordre des suites de chiffrement par défaut sont utilisé.
 
-suites de chiffrement SMB 3.11 :
+Suites de chiffrement SMB 3.1 :
 
 AES_128_GCM
 AES_128_CCM
-AES_256_GCM
-AES_256_CCM
 
-suites de chiffrement SMB 3.0 et 3.02 :
+Suites de chiffrement SMB 3.0 et 3.02 :
 
 AES_128_CCM
 
 Comment modifier ce paramètre :
 
-Réorganiser les suites de chiffrement souhaité dans la zone d'édition, d'une suite d'un chiffrement par ligne, dans l'ordre, du plus au moins favori, à la suite de chiffrement favorite en haut. Supprimer toutes les suites de chiffrement que vous ne voulez pas utiliser.
+Réorganiser les suites de chiffrement souhaité dans la zone d'édition, d'une suite d'un chiffrement par ligne, dans l'ordre, du plus au moins favori, à la suite de chiffrement favorie en haut. Supprimer toutes les suites de chiffrement que vous ne voulez pas utiliser.
 
 Remarque : lorsque vous configurez ce paramètre de sécurité, les modifications ne prendront effet qu'après le redémarrage de Windows.</string>
       <string id="HonorCipherSuiteOrder_Name">Respecter l'ordre des suites de chiffrement</string>

@@ -57,17 +57,15 @@ Obs! Ändringar av den här inställningen börjar gälla först när användare
       <string id="L_TurnOffCustomDictionary">Inaktivera egen ordlista</string>
       <string id="L_TurnOffCustomDictionaryExplain">Med den här principinställningen kan du inaktivera möjligheten att använda en egen ordlista.
 
-Om du aktiverar den här principinställningen kan du inte lägga till, redigera eller ta bort ord i den egna ordlistan, varken med GUI-verktyg eller API:er. Ett ord som är registrerat i den egna ordlistan innan du aktiverar den här principinställningen kan även fortsättningsvis användas för konvertering.
+Om du aktiverar principinställningen kan du inte lägga till, redigera eller ta bort ord i den egna ordlistan, vare sig med GUI-verktyg eller API:er. Ord som registreras i en egen ordlista innan principinställningen aktiveras kan även fortsättningsvis användas vid konvertering.
 
-Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan den egna ordlistan användas som standard.
+Om du inaktiverar eller låter bli att konfigurera principinställningen kan den egna ordlistan användas som standard.
 
-[Rensa automatisk justering av information] tar bort självjusterade ord från den egna ordlistan, även om en grupprincipinställning är aktiverad. Det gör du genom att välja inställningar och tid och språk och japanska alternativ och Microsoft IME-alternativ. Om kompatibilitetsläge är aktiverat väljer du avancerade alternativ och ordlista/automatisk justering och [Rensa automatisk justering av information].
+För Japanese Microsoft IME fungerar [Rensa automatisk justeringsinformation] även om principinställningen aktiveras, och automatiskt justerade ord rensas från den egna ordlistan.
 
-[Rensa inmatningshistorik] tar bort självjusterade ord från den egna ordlistan, även om en grupprincipinställning är aktiverad. Det gör du genom att välja inställningar och tid och språk och japanska alternativ och Microsoft IME-alternativ och inlärning och ordlista och [Rensa inmatningshistorik].
+Den här principinställningen gäller för Japanese Microsoft IME.
 
-Den här principinställningen tillämpas på japanska Microsoft IME.
-
-Obs! ändringar av den här inställningen börjar gälla först när användaren loggar ut.</string>
+Obs! Ändringar av den här inställningen börjar gälla först när användaren loggar ut.</string>
       <string id="L_RestrictCharacterCodeRangeOfConversion">Begränsat teckenkodsintervall för konvertering</string>
       <string id="L_RestrictCharacterCodeRangeOfConversionExplain">Med den här principinställningen kan du begränsa teckenkodsintervall för konvertering, med hjälp av teckenfilter.
 
@@ -120,6 +118,26 @@ Om du inaktiverar principinställningen inaktiveras molnförslagsfunktionen och 
 Om du inte konfigurerar principinställningen inaktiveras den som standard och användaren kan välja om molnförslagsfunktionen ska vara aktiv eller inte.
 
 Den här principinställningen gäller endast för Microsoft CHS Pinyin IME.</string>
+      <string id="L_TurnOnLiveSticker">Aktivera live-dekaler</string>
+      <string id="L_TurnOnLiveStickerExplain">Med den här principinställningen styr du live-dekalfunktionen som använder en onlinetjänst för att tillhandahålla dekaler online.
+
+Om du aktiverar principinställningen aktiveras den här funktionen och användarens tangentbordsinmatning skickas till Microsoft för att generera live-dekaler, och användaren kan inte inaktivera den.
+
+Om du inaktiverar principinställningen inaktiveras funktionen och användaren kan inte aktivera den.
+
+Om du inte konfigurerar principinställningen inaktiveras den som standard och användaren kan välja om live-dekalfunktionen ska vara aktiverad eller inaktiverad.
+
+Den här principinställningen gäller endast för Microsoft CHS Pinyin IME.</string>
+      <string id="L_TurnOnLexiconUpdate">Aktivera lexikonuppdatering</string>
+      <string id="L_TurnOnLexiconUpdateExplain">Med den här principinställningen hanterar du funktionen för lexikonuppdatering som laddar ned lexikon med populära ord till den lokala datorn.
+
+Om du aktiverar den här principinställningen aktiveras funktionen och lexikon med populära ord kan laddas ned till den lokala datorn och användaren kan välja att inaktivera eller aktivera den i inställningarna.
+
+Om du inaktiverar principinställningen inaktiveras funktionen för lexikonuppdatering och användaren kan inte aktivera den.
+
+Om du låter bli att konfigurera principinställningen aktiveras funktionen för lexikonuppdatering som standard och användaren kan välja att inaktivera eller aktivera den.
+
+Den här principinställningen gäller endast för Microsoft CHS Pinyin IME.</string>
       <string id="L_ConfigureSimplifiedChineseImeVersion">Konfigurera IME-version för förenklad kinesiska</string>
       <string id="L_ConfigureSimplifiedChineseImeVersionExplain">Med den här principinställningen styr du vilken version av Microsoft IME som används.
 
@@ -154,18 +172,6 @@ Om du aktiverar principinställningen kan användaren inte styra vilken IME-vers
 Om du inaktiverar principinställningen kan användaren inte styra vilken IME-version som ska användas. Den nya versionen av Microsoft IME är då alltid vald.
 
 Den här principinställningen gäller endast för Microsoft IME för japanska.
-
-Obs! Ändringar av den här inställningen börjar gälla först när användaren loggar ut.</string>
-      <string id="L_ConfigureKoreanImeVersion">Konfigurera IME-version för koreanska</string>
-      <string id="L_ConfigureKoreanImeVersionExplain">Med den här principinställningen styr du vilken version av Microsoft IME som används.
-
-Om du inte konfigurerar principinställningen kan användaren styra vilken IME-version som ska användas. Den nya versionen av Microsoft IME används som standard.
-
-Om du aktiverar principinställningen kan användaren inte styra vilken IME-version som ska användas. Den tidigare versionen av Microsoft IME är då alltid vald.
-
-Om du inaktiverar principinställningen kan användaren inte styra vilken IME-version som ska användas. Den nya versionen av Microsoft IME är då alltid vald.
-
-Den här principinställningen gäller endast för Microsoft IME för koreanska.
 
 Obs! Ändringar av den här inställningen börjar gälla först när användaren loggar ut.</string>
     </stringTable>

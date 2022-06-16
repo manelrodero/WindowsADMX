@@ -135,11 +135,11 @@ Määritä ohjauskoneen paikantimen DNS-tietueiden elinaika valitsemalla Käytö
 
 Jos käytäntöasetusta ei määritetä, sitä ei käytetä missään ohjauskoneessa, ja ohjauskoneet käyttävät paikallista kokoonpanoaan.</string>
       <string id="Netlogon_ExpectedDialupDelay">Määritä odotettu soittoviive kirjauduttaessa</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">Tämä käytäntöasetus määrittää lisäajan, jonka tietokone odottaa toimialueen ohjauskoneen vastausta verkkoon kirjauduttaessa.
+      <string id="Netlogon_ExpectedDialupDelay_Help">Tämä käytäntöasetus määrittää lisäajan, jonka tietokone odottaa ohjauskoneen vastausta verkkoon kirjauduttaessa.
 
-Määritä kirjautumisen odotettu soittoviive valitsemalla Käytössä ja antamalla haluamasi arvo sekunteina. (Esimerkiksi arvo 60 tarkoittaa yhtä minuuttia.)
+Määritä odotettu soittoviive kirjauduttaessa valitsemalla Ota käyttöön ja antamalla haluamasi arvo sekunteina (esimerkiksi arvo 60 on yksi minuutti).
 
-Jos käytäntöasetusta ei määritetä, sitä ei käytetä missään tietokoneissa, vaan tietokoneet käyttävät paikallisia määrityksiä.</string>
+Jos käytäntöasetusta ei määritetä, sitä ei käytetä missään tietokoneessa, ja tietokoneet käyttävät paikallista kokoonpanoaan.</string>
       <string id="Netlogon_GcSiteCoverage">Määritä yleisen luettelon paikantimen DNS SRV -tietueiden kattamat sivustot</string>
       <string id="Netlogon_GcSiteCoverage_Help">Tämä käytäntöasetus määrittää sivustot, joille yleisten luettelojen pitäisi rekisteröidä sivustokohtaiset yleisen luettelon paikantimen DNS SRV -resurssitietueet. Nämä tietueet rekisteröidään yleisen luettelon toimipaikoille rekisteröityjen toimipaikkakohtaisten SRV-tietueiden lisäksi ja sellaisen yleisen luettelon rekisteröimien tietueiden lisäksi, joka on määritetty lähimpien ilman yleistä luetteloa olevien toimipaikkojen yleisen luettelon paikantimen DNS SRV -tietueiden rekisteröintiä varten. 
 
@@ -337,22 +337,6 @@ Asetuksen sallitut arvot saavat aikaan seuraavat toiminnat:
 Voit määrittää tämän toiminnan valitsemalla Käytössä ja antamalla arvon. Arvoalue on 1–2.
 
 Jos käytäntöasetusta ei määritetä, sitä ei käytetä missään tietokoneessa, ja tietokoneet käyttävät paikallista kokoonpanoaan.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Käytä pienellä kirjoitettuja DNS-isäntänimiä toimialueen ohjauskoneen SRV-tietueita rekisteröitäessä</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Tämä käytäntö asetus määrittää, kirjataanko tämän asetuksen kohteena olevat toimi alueen ohjaus koneet pieniksi DNS-isäntä nimensä, kun SRV-tietueita rekisteröidään.
-
-Jos tämä asetus on käytössä, toimi alueen ohjaus koneet tekevät DNS-isäntä nimen pieniksi kirjaimiksi rekisteröimisen SRV-tietueita. Paras mahdollinen yritys poistaa aiemmin rekisteröidyt SRV-tietueet, joissa on monijärjestelmätapausten DNS-isäntä nimiä. Katso lisä tietoja ja mahdollisesti manuaalisia puhdistus toimintoja alla olevasta linkistä.
-
-Jos tämä asetus poistetaan käytöstä, toimi alueen ohjaus koneet käyttävät määritettyä DNS-isäntä nimeä sellaisenaan, kun toimi alueen ohjaus koneen SRV-tietueita rekisteröidään.
-
-Jos tätä ei määritetä, toimi alueen ohjaus koneet käyttävät Oletus arvon mukaan paikallista kokoonpanoa.
-
-Paikallinen oletus määritys on käytössä.
-
-Tämän asetuksen muutosten voimaan tuleminen ei edellytä uudelleenkäynnistystä.
-
-Lisä tietoja on saatavilla osoitteessa https://aka.ms/lowercasehostnamesrvrecord
-      </string>
 
     </stringTable>
     <presentationTable>

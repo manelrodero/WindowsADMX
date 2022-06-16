@@ -120,22 +120,24 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Windows ne
 REMARQUE : cette stratégie ne s'applique qu'aux appareils enregistrés auprès d'Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Utilisez ce paramètre de stratégie pour configurer Windows Hello entreprise de sorte qu’il inscrive un certificat de connexion utilisé pour l’authentification locale.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Utilisez ce paramètre de stratégie pour configurer Windows Hello Entreprise pour inscrire un certificat de connexion utilisé pour l’authentification locale.
 
-Si vous activez ce paramètre de stratégie, Windows Hello entreprise inscrit un certificat de connexion qui est utilisé pour l’authentification locale.
+Si vous activez ce paramètre de stratégie, Windows Hello Entreprise inscrit un certificat de connexion utilisé pour l’authentification locale.
 
-Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows Hello entreprise utilisera une clé ou un ticket Kerberos (en fonction des autres paramètres de stratégie) pour l’authentification locale.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows Hello Entreprise utilisera une clé ou un ticket Kerberos (en fonction d’autres paramètres de stratégie) pour l’authentification locale.
 
-Remarque : Si vous désactivez ce paramètre de stratégie ou ne le configurez pas et que vous activez le paramètre de stratégie « utiliser Windows Hello entreprise », l’environnement doit disposer d’un ou de plusieurs contrôleurs de domaine Windows Server 2016 pour empêcher l’échec de l’authentification Windows Hello entreprise.
+REMARQUE : la désactivation ou la non-configuration de ce paramètre de stratégie et l’activation du paramètre de stratégie « Utiliser Windows Hello Entreprise » nécessitent que l’environnement ait un ou plusieurs contrôleurs de domaine Windows Server 2016 pour empêcher Windows Hello Entreprise’échec de l’authentification.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Utilisez ce paramètre de stratégie pour configurer Windows Hello entreprise de sorte qu’il utilise Azure AD Kerberos pour l’authentification locale.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Utilisez ce paramètre de stratégie pour configurer Windows Hello Entreprise afin d’utiliser Azure AD Kerberos pour l’authentification locale.
 
-Si vous activez ce paramètre de stratégie, Windows Hello entreprise utilisera un ticket Kerberos récupéré de l’authentification auprès d’Azure pour l’authentification locale.
+Si vous activez ce paramètre de stratégie, Windows Hello Entreprise utilisera un ticket Kerberos récupéré lors de l’authentification sur Azure pour l’authentification locale.
 
-Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows Hello entreprise utilise une clé ou un certificat (selon d’autres paramètres de stratégie) pour l’authentification locale. 
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Windows Hello Entreprise utilisera une clé ou un certificat (en fonction d’autres paramètres de stratégie) pour l’authentification locale. 
  
-Remarque : un environnement qui active à la fois ce paramètre de stratégie et le paramètre de stratégie « utiliser Windows Hello entreprise » nécessite un ou plusieurs contrôleurs de domaine Windows Server 2016. Sinon, l’authentification Windows Hello entreprise échouera.
+REMARQUE : un environnement qui active ce paramètre de stratégie et le paramètre de stratégie « Utiliser Windows Hello Entreprise » nécessite un ou plusieurs contrôleurs de domaine Windows Server 2016. Sinon, l’authentification Windows Hello Entreprise échouera.
+
+Cette stratégie n’est prise en charge que sur Windows 10, version 21H2 et ultérieure.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configurer les facteurs de déverrouillage de l’appareil</string>

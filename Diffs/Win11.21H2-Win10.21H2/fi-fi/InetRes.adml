@@ -298,6 +298,7 @@ Jos poistat tämän käytäntöasetuksen käytöstä luettelossa olevalta sovell
 Jos jätät tämän käytäntöasetuksen määrittämättä, sovelluksen tai prosessin nykyiset luettelossa olevat URL-toiminnon arvot ovat voimassa.</string>
       <string id="FavImportExport">Poista asetusten ohjattu tuominen ja vieminen käytöstä</string>
       <string id="GeolocationDisable">Poista selaimen maantieteellisen sijainnin ominaisuus käytöstä</string>
+      <string id="DisableFlashInIE">Poista Adobe Flash käytöstä Internet Explorerissa ja estä sovelluksia käyttämästä Internet Explorer -tekniikkaa Flash-objektien käyttöön</string>
       <string id="File_NoBrowserClose">Tiedosto-valikko: Estä selaimen ja Explorer-ikkunoiden sulkeminen</string>
       <string id="File_NoBrowserSaveAs">Tiedosto-valikko: Poista Tallenna nimellä -komento käytöstä</string>
       <string id="File_NoBrowserSaveWebComplete">Tiedosto-valikko: Poista Tallenna nimellä -komennon Kokonainen WWW-sivu -vaihtoehto käytöstä</string>
@@ -333,7 +334,7 @@ Jos poistat tämän käytäntöasetuksen käytöstä, käyttäjän kohdattaessa 
 Jos jätät tämän käytäntöasetuksen määrittämättä, käyttäjä voi ottaa näiden virhesanomien yksityiskohtaiset tiedot käyttöön tai poistaa ne käytöstä.</string>
       <string id="General_Zooming">Poista sivun zoomaus-toiminto käytöstä</string>
       <string id="GeneralColors">Yleisvärit</string>
-      <string id="Help_NoFeedback">Ohje-valikko: Poista Palautteen lähettäminen -komento käytöstä</string>
+      <string id="Help_NoFeedback">Ohje-valikko: Poista Lähetä palautetta -komento käytöstä</string>
       <string id="Help_NoNetscapeHelp">Ohje-valikko: Poista Netscapen käyttäjille -komento käytöstä</string>
       <string id="Help_NoTip">Ohje-valikko: Poista Päivän vihje -komento käytöstä</string>
       <string id="Help_NoTutorial">Ohje-valikko: Poista esittelyvaihtoehto</string>
@@ -725,6 +726,13 @@ Jos otat tämän käytäntöasetuksen käyttöön, selaimen maantieteellisen sij
 Jos poistat tämän käytäntöasetuksen käytöstä, selaimen maantieteellisen sijainnin tuki otetaan käyttöön.
 
 Jos jätät tämän käytäntöasetuksen määrittämättä, selaimen maantieteellisen sijainnin tuen voi ottaa käyttöön tai poistaa käytöstä Internet-asetukset-valintaikkunan Tietosuoja-välilehdessä.</string>
+      <string id="IE_ExplainDisableFlashInIE">Tämän käytäntöasetuksen avulla voit poistaa Adobe Flashin käytöstä Internet Explorerissa ja estää sovelluksia käyttämästä Internet Explorer -tekniikkaa Flash-objektien käyttöön.
+
+Jos otat tämän käytäntöasetuksen käyttöön, Flash poistetaan käytöstä Internet Explorerissa, eivätkä sovellukset voi käyttää Internet Explorer -tekniikkaa Flash-objektien käyttöön. Flash-tilana Lisäosien hallinta -valintaikkunassa näkyy Ei käytössä, eivätkä käyttäjät voi ottaa Flashia käyttöön. Jos otat tämän käytäntöasetuksen käyttöön, Internet Explorer ohittaa Adobe Flashille Lisäosaluettelo- ja Estä kaikki lisäosat, joita ei ole nimenomaisesti sallittu lisäosaluettelossa -käytäntöasetuksen perusteella määritetyt asetukset.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Flash otetaan käyttöön Internet Explorerissa ja sovellukset voivat käyttää Internet Explorer -tekniikkaa Flash-objektien käyttöön. Käyttäjät voivat ottaa Flashin käyttöön tai poistaa sen käytöstä Lisäosien hallinta -valintaikkunassa.
+
+Huomaa, että Adobe Flash voidaan silti poistaa käytöstä käyttämällä Lisäosaluettelo- ja Estä kaikki lisäosat, joita ei ole nimenomaisesti sallittu lisäosaluettelossa -käytäntöasetuksia, vaikka tätä käytäntöasetusta ei olisi otettu käyttöön tai sitä ei olisi määritetty. Jos Adobe Flash on poistettu käytöstä käyttämällä tämän käytäntöasetuksen sijaan Lisäosaluettelo- ja Estä kaikki lisäosat, joita ei ole nimenomaisesti sallittu lisäosaluettelossa -käytäntöasetuksia, kaikki Internet Explorer -tekniikkaa Flash-objektien käyttöön käyttävät sovellukset voivat yhä toimia näin. Lisätietoja on Internet Explorer -aiheisen TechNet-kirjaston ohjeaiheessa Ryhmäkäytäntöasetukset Internet Explorer 10:ssä.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Estää käyttäjiä sulkemasta Microsoft Internet Exploreria ja Resurssienhallintaa.
 
 Jos tämä käytäntöasetus otetaan käyttöön, Tiedosto-valikon Sulje-komento on himmennetty.
@@ -781,9 +789,9 @@ Voit määrittää järjestelmänvalvojan hyväksymien komponenttien käsittelyt
 Jos otat tämän käytäntöasetuksen käyttöön, MSHTML:ää isännöivät sovellukset eivät vastaa käyttäjän syötteisiin, jotka aiheuttaisivat tekstin hahmontamisen uudelleen eri koossa.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai jätät sen määrittämättä, MSHTML:ää isännöivät sovellukset vastaavat käyttäjän syötteisiin, jotka aiheuttavat tekstin hahmontamisen uudelleen eri koossa.</string>
-      <string id="IE_ExplainHelp_NoFeedback">Estää käyttäjiä lähettämästä palautetta Microsoftille Ohje-valikon Palautteen lähettäminen -komennolla.
+      <string id="IE_ExplainHelp_NoFeedback">Estää käyttäjiä lähettämästä palautetta Microsoftille Ohje-valikon Lähetä palautetta -komennolla.
 
-Jos tämä käytäntöasetus otetaan käyttöön, Palautteen lähettäminen -komento poistetaan Ohje-valikosta.
+Jos tämä käytäntöasetus otetaan käyttöön, Lähetä palautetta -komento poistetaan Ohje-valikosta.
 
 Jos tätä käytäntöä ei oteta käyttöön tai sen asetuksia ei muuteta, käyttäjät voivat täyttää Internet-lomakkeen, jolla he voivat lähettää palautetta Microsoft-tuotteista.</string>
       <string id="IE_ExplainHelp_NoNetscapeHelp">Estää käyttäjiä tarkastelemasta Netscape-käyttäjille tarkoitettuja vihjeitä.
@@ -3161,8 +3169,8 @@ Jos et määritä tätä käytäntöasetusta, käyttäjä voi määrittää pain
       <string id="SUPPORTED_IE11WIN8">Vähintään Internet Explorer 11.0 Windows 8.1:ssä</string>
       <string id="SUPPORTED_IE11WIN8ONLY">Vain Internet Explorer 11.0 Windows 8.1:ssä</string>
       <string id="SUPPORTED_IE11WIN10">Vähintään Internet Explorer 11.0 Windows 10:ssä</string>
-      <string id="SUPPORTED_IE11WIN10_1607">Vähintään Internet Explorer 11.0 Windows 10:lla, versio 1607 tai uudempi</string>
-      <string id="SUPPORTED_IE11WIN10_1703">Vähintään Internet Explorer 11.0 Windows 10:lla, versio 1703 tai uudempi</string>
+      <string id="SUPPORTED_IE11WIN10_1607">Vähintään Internet Explorer 11.0 Windows 10:ssä, versio 1607 tai uudempi</string>
+      <string id="SUPPORTED_IE11WIN10_1703">Vähintään Internet Explorer 11.0 Windows 10:ssä, versio 1703 tai uudempi</string>
       <string id="SUPPORTED_IE11">Vähintään Internet Explorer 11.0</string>
       <string id="SUPPORTED_IE7_NONVISTA">Vähintään Internet Explorer 7.0. Ei Windows Vista -tukea</string>
       <string id="SUPPORTED_IE7VISTA">Vähintään Internet Explorer 7.0 Windows Vistassa</string>
@@ -3569,7 +3577,7 @@ Jos otat tämän käytäntöasetuksen käyttöön, Internet Explorer näyttää 
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Internet Explorer ei näytä Sisällönvalvonta-asetusta Internet-asetukset-valintaikkunan Sisältö-välilehdessä.
 
-Huomautus: tätä käytäntöä ei enää tueta Windows 10:n versiosta 1607 alkaen.</string>
+Huomautus: tätä käytäntöä ei enää tueta Windows 10 -versiosta 1607 alkaen.</string>
       <string id="Protocols_None">Älä käytä suojausprotokollia</string>
       <string id="Protocols_SSL2">Käytä vain SSL 2.0:aa</string>
       <string id="Protocols_SSL3">Käytä vain SSL 3.0:aa</string>
@@ -3900,7 +3908,7 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, k�
 Jos otat tämän asetuksen käyttöön, käyttäjät pystyvät näkemään Työkalut-valikon Yritystila-vaihtoehdon ja käyttämään sitä. Jos otat tämän asetuksen käyttöön mutta et määritä raporttisijaintia, käyttäjät pystyvät edelleen käyttämään yritystilaa, mutta sinä et saa raportteja.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai jätät sen määrittämättä, valikkovaihtoehto ei tule näkyviin, eivätkä käyttäjät pysty käyttämään sivustoja yritystilassa.</string>
-      <string id="RestrictInternetExplorer">Lähetä kaikki yritystilan sivustoluetteloon kuulumattomat sivustot Microsoft Edgeen</string>
+      <string id="RestrictInternetExplorer">Lähetä kaikki Microsoft Edgen yritystilan sivustoluetteloon kuulumattomat sivustot.</string>
       <string id="IE_ExplainRestrictInternetExplorer">Tämä asetus antaa sinun määrittää, avataanko kaikki Microsoft Edgen yritystilan sivustoluetteloon kuulumattomat sivustot. Jos käytät tätä asetusta, sinun on otettava käyttöön myös Hallintamallit\Windowsin osat\Internet Explorer\Käytä IE:n yritystilan sivustoluetteloa -käytäntöasetus ja lisättävä vähintään yksi sivusto yritystilan sivustoluetteloon.
 
 Tämän asetuksen ottaminen käyttöön avaa automaattisesti kaikki Microsoft Edgen yritystilan sivustoluetteloon kuulumattomat sivustot.
@@ -3920,19 +3928,19 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, sovellus toim
 Jos Windows Updaten kautta saatavilla oleva seuraava Microsoft Edge* -versio sekä stabiili Microsoft Edge -kanava ovat asennettuina, toimintaperiaate on seuraava:
 - Jos poistat tämän käytännön käytöstä tai et määritä sitä, stabiili Microsoft Edge -kanava on käytössä. Tämä on oletusasetus.
 - Jos otat tämän käytännön käyttöön, voit määrittää uudelleenohjattujen sivustojen avaamisessa käytettäviksi versioiksi enintään kolme seuraavista vaihtoehdoista:
-    1 = stabiili Microsoft Edge
-    2 = Microsoft Edge Beta -versio 77 tai uudempi
-    3 = Microsoft Edge Dev -versio 77 tai uudempi
-    4 = Microsoft Edge Canary -versio 77 tai uudempi.
+ 1 = stabiili Microsoft Edge
+ 2 = Microsoft Edge Beta -versio 77 tai uudempi
+ 3 = Microsoft Edge Dev -versio 77 tai uudempi
+ 4 = Microsoft Edge Canary -versio 77 tai uudempi.
 
 Jos Windows Updaten kautta saatavilla olevaa seuraavaa Microsoft Edge* -versiota tai stabiilia Microsoft Edge -kanavaa ei ole asennettuna, toimintaperiaate on seuraava:
 - Jos poistat tämän käytännön käytöstä tai et määritä sitä, Microsoft Edge -versio 45 tai sitä aiempi versio on automaattisesti käytössä. Tämä on oletusasetus.
 - Jos otat tämän käytännön käyttöön, voit määrittää uudelleenohjattujen sivustojen avaamisessa käytettäviksi versioiksi enintään kolme seuraavista vaihtoehdoista:
-    0 = Microsoft Edge -versio 45 tai aiempi
-    1 = stabiili Microsoft Edge
-    2 = Microsoft Edge Beta -versio 77 tai uudempi
-    3 = Microsoft Edge Dev -versio 77 tai uudempi
-    4 = Microsoft Edge Canary -versio 77 tai uudempi.
+ 0 = Microsoft Edge -versio 45 tai aiempi
+ 1 = stabiili Microsoft Edge
+ 2 = Microsoft Edge Beta -versio 77 tai uudempi
+ 3 = Microsoft Edge Dev -versio 77 tai uudempi
+ 4 = Microsoft Edge Canary -versio 77 tai uudempi.
 
 *Lisätietoja Windows Updaten kautta saatavilla olevasta seuraavasta Microsoft Edge -versiosta sekä siitä, kuinka se voidaan poistaa käytöstä, on osoitteessa https://go.microsoft.com/fwlink/?linkid=2102115. Tämä päivitys koskee vain Windows 10 -versiota 1709 ja sitä uudempia versioita.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3971,6 +3979,14 @@ Jos tämä käytäntöasetus otetaan käyttöön, laajennetut pikanäppäintoimi
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, laajennetut pikanäppäimet eivät toimi Internet Explorer -tilassa.
 
 Lisätietoja on osoitteessa https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Palauta html-valintaikkunoiden oletuszoomaus Internet Explorer -tilassa</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Tämän käytäntöasetuksen avulla järjestelmänvalvojat voivat palauttaa HTML-valintaikkunoiden zoomausasetukset oletusasetuksiin Internet Explorer tilassa.
+
+Jos otat tämän käytäntöasetuksen käyttöön, Internet Explorer-tilassa olevan HTML-valintaikkunan zoomausta ei välitetä sen pääsivulta.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, HTML-valintaikkunan zoomaus Internet Explorer tilassa määritetään pääsivun zoomauksen perusteella.
+
+Lisätietoja on https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Poista Internet Explorer 11 käytöstä erillisenä selaimena</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Tällä käytännöllä voit rajoittaa Internet Explorerin käynnistämistä erillisenä selaimena.
 
@@ -3984,12 +4000,6 @@ Jos poistat tämän käytännön käytöstä tai et määritä sitä, kaikki siv
       <string id="NotifyDisableIEOptions_Never">Ei koskaan</string>
       <string id="NotifyDisableIEOptions_Always">Aina</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Yksi kerta käyttäjäkohtaisesti</string>
-      <string id="JScriptReplacement">Korvaa JScript lataamalla JScript9Legacy JScriptin tilalle MSHTML/WebOC:n kautta.</string>
-      <string id="IE_ExplainJScriptReplacement">Tämä käytäntöasetus määrittää, ladataanko JScript vai JScript9Legacy MSHTML/WebOC pohjaisille kutsuille.
-      
-Jos otat tämän käytäntöasetuksen käyttöön, JScript9Legacy ladataan tilanteissa, jossa JScript-esiintymä on luotu.
-
-JScriptiä käytetään, jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä.</string>
       <string id="VerMgmtDisable">Poista käytöstä vanhentuneiden Internet Explorerin ActiveX-komponenttien estäminen</string>
       <string id="IE_ExplainVerMgmtDisable">Tämä käytäntöasetus määrittää, estääkö Internet Explorer tietyt vanhentuneet ActiveX-komponentit. ActiveX-komponentteja ei koskaan estetä Intranet-vyöhykkeellä.
 
@@ -4134,7 +4144,7 @@ Jos poistat tämän käytäntöasetuksen käytöstä, Internet Explorerin automa
 
 Jos et määritä tätä käytäntöasetusta, käyttäjät voivat ottaa käyttöön tai poistaa käytöstä automaattiset päivitykset Tietoja Internet Explorerista -valintaikkunassa.
 
-Huomautus: tämä käytäntö on vanhentunut Windows 10:n versiosta 1703 alkaen.</string>
+Huomautus: tämä käytäntö on vanhentunut Windows 10 -versiosta 1703 alkaen.</string>
       <string id="TurnOffFormatDetectionPhone">Poista puhelinnumeron tunnistus käytöstä</string>
       <string id="TurnOffFormatDetectionPhone_Explain">Tämä käytäntöasetus määrittää, tunnistetaanko puhelinnumerot ja muunnetaanko ne hyperlinkeiksi, joita voidaan käyttää järjestelmän oletuspuhelinsovelluksen käynnistämiseen.
 

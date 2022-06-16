@@ -5,8 +5,6 @@
   <description>kirjoita kuvaus tähän</description>
   <resources>
     <stringTable>
-      <string id="TS_AUTOSUBSCRIPTION_NAME">Ota automaattinen tilaus käyttöön</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Määrittää luettelon URL-osoitteista, jotka käyttäjä tilaa automaattisesti</string>
       <string id="TS_SUPPORTED_Windows10">Vähintään Windows 10 tai Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Vähintään Windows 8 tai Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Vähintään Windows Server 2012</string>
@@ -28,7 +26,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Vähintään Windows XP ja vain Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Vähintään Windows Server 2008 tai Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Vain Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10:n versio 1903, Windows 10:n versio 1909 ja Windows 10:n versio 2004</string>
       <string id="TS_TERMINAL_SERVER">Etätyöpöytäistunnon isäntä</string>
       <string id="TS_TERMINAL_SERVER_Help">Ohjaa etätyöpöytäistunnon palvelimen määrittämistä</string>
       <string id="TS_LICENSE_SERVER">Etätyöpöydän lisensointi</string>
@@ -147,7 +144,6 @@ Jos et määritä tätä käytäntöasetusta, asiakkaan aseman ja leikepöydän 
       <string id="TS_CLIENT_LPT">Älä salli LPT-portin uudelleenohjausta</string>
       <string id="TS_CLIENT_PNP">Älä salli tuettujen Plug and Play -laitteiden uudelleenohjausta</string>
       <string id="TS_CAMERA_REDIRECTION">Älä salli videosieppauksen uudelleenohjausta</string>
-      <string id="TS_LOCATION_REDIRECTION">Älä salli sijainnin uudelleenohjausta</string>
       <string id="TS_CLIENT_PRINTER">Älä salli asiakkaan tulostimen uudelleenohjausta</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, estetäänkö leikepöydän sisällön jakaminen (leikepöydän uudelleenohjaus) etätietokoneen ja asiakastietokoneen välillä etätyöpöytäpalveluiden istunnon aikana.
 
@@ -212,15 +208,6 @@ Jos otat tämän käytäntöasetuksen käyttöön, käyttäjät eivät pysty ohj
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttäjät voivat ohjata videosieppauslaitteensa etätietokoneeseen. Käyttäjät voivat etätyöpöytäyhteyden Paikalliset resurssit -välilehden Lisää-vaihtoehdon avulla valita videosieppauslaitteet, jotka ohjataan etätietokoneeseen.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Tämän käytäntö asetuksen avulla voit hallita sijainti tietojen uudelleenohjausta etätietokoneesta etätyöpöytäpalveluiden istunnossa.
-
-Oletus arvon mukaan Etätyöpöytäpalvelut sallii sijainti tietojen uudelleenohjauksen.
-
-Jos otat tämän käytäntö asetuksen käyttöön, käyttäjät eivät voi uudelleenohjata sijainti tietoja etätietokoneeseen.
-
-Jos poistat tämän käytäntö asetuksen käytöstä tai et määritä sitä, käyttäjät voivat uudelleenohjata sijainti tietonsa etätietokoneeseen.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Tämän käytäntöasetuksen avulla voit rajoittaa niiden näyttöjen määrää, joita käyttäjä voi käyttää etätyöpöytäpalveluiden istunnon näyttämiseen. Etätyöpöytäpalveluiden istunnon näyttämiseen käytettävien näyttöjen määrän rajoittaminen voi parantaa yhteyden toimintaa etenkin silloin, kun yhteys on hidas, ja pienentää palvelimen kuormitusta.
 
@@ -433,20 +420,23 @@ Jos otat tämän käytäntöasetuksen käyttöön, näitä ilmoituksia ei näyte
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, nämä ilmoitukset näytetään etätyöpöytäistunnon isäntäpalvelimessa sen jälkeen, kun olet kirjautunut sisään paikallisena järjestelmänvalvojana.</string>
       <string id="TS_LICENSING_MODE">Määritä etätyöpöydän käyttöoikeuksien myöntämisen tila</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Tämän käytäntöasetuksen avulla voit määrittää, minkä tyyppistä etätyöpöytäpalveluiden Client Access -käyttöoikeutta (RDS CAL) tarvitaan yhteyden muodostamiseen tähän etätyöpöytäistunnon isäntäpalvelimeen.
+        Tämän käytäntöasetuksen avulla voit määrittää etätyöpöytäpalveluiden Client Access -käyttöoikeuden (RDS CAL) tyypin, joka tarvitaan muodostettaessa yhteyttä tähän etätyöpöytäistunnon isäntäpalvelimeen.
 
-        Tämän käytäntöasetuksen avulla voit valita jommankumman kahdesta käyttöoikeustilasta: käyttäjäkohtainen tai laitekohtainen.
+        Tämän käytäntöasetuksen avulla voit valita jonkin kolmesta käyttöoikeustilasta: Käyttäjäkohtainen, Laitekohtainen tai Käyttäjäkohtainen AAD.
 
-         Käyttäjäkohtainen käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhdistettävällä käyttäjätilillä on etätyöpöydän käyttöoikeuspalvelimesta annettu RDS-käyttäjäkohtainen CAL-käyttöoikeus.
+        Käyttäjäkohtainen-käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavalla käyttäjätilillä on etätyöpöydän käyttöoikeuspalvelimesta myönnetty etätyöpöytäpalvelujen käyttäjäkohtainen CAL-käyttöoikeus.
 
-       Laitekohtainen käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhdistettävällä laitteella on etätyöpöydän käyttöoikeuspalvelimesta annettu RDS-laitekohtainen CAL-käyttöoikeus.
+        Laitekohtainen-käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavalla laitteella on etätyöpöydän käyttöoikeuspalvelimesta myönnetty etätyöpöytäpalvelujen laitekohtainen CAL-käyttöoikeus.
 
-       Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöydän käyttöoikeuspalvelin ja etätyöpöytäistunnon isäntä käyttävät määrittämääsi etätyöpöydän käyttöoikeustilaa.
+        Käyttäjäkohtainen AAD -käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhteyden muodostavalla käyttäjätilillä on palvelumalli, joka tukee AAD-palvelussa määritettyjä etätyöpöytäpalveluiden käyttöoikeuksia.
+        
+        Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöydän käyttöoikeuspalvelin ja etätyöpöytäistunnon isäntä käyttävät määrittämääsi etätyöpöydän käyttöoikeustilaa.
 
         Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttöoikeustilaa ei määritetä ryhmäkäytäntötasolla.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Laitekohtainen</string>
       <string id="TS_LICENSING_MODE_PER_USER">Käyttäjäkohtainen</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Käyttäjäkohtainen AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, estetäänkö tietojen uudelleenohjaus asiakkaan LPT-portteihin etätyöpöytäpalveluiden istunnossa.
 
 Tämän asetuksen avulla voit estää käyttäjiä yhdistämästä paikallisia LPT-portteja ja ohjaamasta etätietokoneen tietoja paikallisiin LPT-portteihin liitettyihin laitteisiin. Oletusarvon mukaan etätyöpöytäpalvelut sallivat uudelleenohjauksen LPT-portteihin.
@@ -797,17 +787,6 @@ Jos otat tämän käytäntöasetuksen käyttöön, työpöytä näytetään aina
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, voidaan määrittää ohjelma, joka suoritetaan etätietokoneessa sen jälkeen, kun asiakas on muodostanut yhteyden etätietokoneeseen. Jos käynnistettävää ohjelmaa ei määritetä, työpöytä näytetään aina sen jälkeen, kun asiakas on muodostanut yhteyden etätietokoneeseen.
 
 Huomautus: jos tämä käytäntöasetus on käytössä, Käynnistä ohjelma yhteyden muodostamisen yhteydessä -asetus ohitetaan.</string>
-      <string id="TS_UIA">Salli käyttöliittymäautomaation uudelleenohjaus</string>
-      <string id="TS_UIA_EXPLAIN">Tämä käytäntö asetus määrittää, voivatko paikallisessa tieto koneessa käynnissä olevat asiakas sovellukset tämän palvelimen käyttö liittymä-elementtien avulla.
-
-Käyttö liittymän automaatio mahdollistaa sovellus käyttö LIITTYMÄN osien käytön, jonka avulla voit käyttää käyttöä helpottavalle ohjelmistolle Technology tuotteita, kuten suurennus lasin ja lukijan toimia, jotta käyttö liittymä toimii oikein. Käyttö liittymä tietojen avulla voit myös käyttää automaattista testi komento sarjoja käyttö liittymän kanssa.
-
-Etätyöpöytä-istunnot eivät tällä hetkellä tue käyttö liittymän automaatio uudelleenohjausta.
-
-Jos otat tämän käytäntö asetuksen käyttöön tai et määritä sitä, paikallisen tieto koneen käyttö liittymä Automation-asiakkaat voivat olla vuoro vaikutuksessa etäyhteyksiä varten. Voit esimerkiksi käyttää paikallisen tieto koneen lukijaa ja suurennus lasi-asiakkaita, jotka ovat yhteydessä sellaisen verkko sivun käyttö liittymään, jonka olet avannut etäistunnon kanssa.
-
-Jos poistat tämän käytäntö asetuksen käytöstä, paikallisessa tieto koneessa käynnissä olevat käyttö liittymä Automation-asiakkaat eivät voi käyttää Remote-sovelluksia.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, edellytetäänkö käyttäjiltä verkkotason todennuksen avulla toteutettua etätyöpöytäistunnon isäntäpalvelimeen muodostettavien etäyhteyksien todennusta. Tämä käytäntöasetus parantaa suojausta, koska se edellyttää, että käyttäjän todentaminen tapahtuu jo aiemmin etäyhteyden muodostamisprosessissa.
 
 Jos otat tämän käytäntöasetuksen käyttöön, vain verkkotason todennusta tukevat asiakastietokoneet voivat muodostaa yhteyksiä etätyöpöytäistunnon isäntäpalvelimeen.

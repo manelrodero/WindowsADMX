@@ -6,8 +6,6 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Notifiche</string>
-      <string id="WnsEndpoint">Abilita criteri di gruppo per il FQDN WNS</string>
-      <string id="WnsEndpointExplain">Questo criterio imposta un nome di dominio completo WNS speciale per ambienti specifici.</string>
       <string id="NoTileNotification">Disattiva tutte le notifiche di tipo riquadro</string>
       <string id="NoTileNotificationExplain">
           
@@ -127,11 +125,6 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minuti dopo la mezzanotte:</decimalTextBox>
-      </presentation>
-      <presentation id="WnsEndpoint">
-        <textBox refId="WnsEndpoint_FQDN">
-          <label>FQDN per WNS</label>
-        </textBox>
       </presentation>
     </presentationTable>
   </resources>

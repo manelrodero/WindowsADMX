@@ -207,19 +207,6 @@ V Průzkumníkovi souborů bude položka Hledat stále k dispozici na standardn�
 Toto nastavení zásad ovlivní pouze uvedené prvky uživatelského rozhraní. Neovlivní aplikaci Internet Explorer a nebrání uživateli použít k hledání jiné metody.
 
 Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude příkaz Hledat v nabídce Start dostupný.</string>
-      <string id="ShowOrHideMostUsedApps">Zobrazit nebo skrýt seznam nejčastěji používaných položek z nabídky Start</string>
-      <string id="ShowOrHideMostUsedApps_Help">Pokud toto nastavení zásad povolíte, můžete nakonfigurovat nabídku Start a zobrazit nebo skrýt seznam aplikací, které jsou pro uživatele nejčastěji používány, a to bez ohledu na uživatelská nastavení.
-
-Výběrem možnosti Zobrazit vynutíte zobrazení seznamu nejčastěji používaných položek a uživatel ho nebude moci změnit, aby ho skryl pomocí nastavení aplikace.
-
-Výběrem možnosti skrýt vynutíte skrytí seznamu nejčastěji používaných položek a uživatel ho nebude moci změnit a zobrazit pomocí aplikace nastavení.
-
-Vyberete-li možnost není nakonfigurováno, nebo pokud toto nastavení zásad zakážete nebo nenakonfigurujete, budou všichni uživatelé moci zapnout nebo vypnout zobrazení seznamu nejčastěji používaných položek pomocí aplikace nastavení. Toto je výchozí chování.
-
-Poznámka: konfigurace této zásady na Zobrazit nebo skrýt v podporovaných verzích Windows 10 nahrazuje všechna nastavení zásad odebrat seznam častých programů z nabídky Start (který spravuje stejnou část nabídky Start, ale s menším počtem možností).</string>
-      <string id="MFU_NotConfigured">Nekonfigurováno</string>
-      <string id="MFU_Show">Zobrazit</string>
-      <string id="MFU_Hide">Skrýt</string>        
       <string id="NoFrequentUsedPrograms">Odebrat seznam často používaných programů z nabídky Start</string>
       <string id="NoFrequentUsedPrograms_Help">Pokud toto nastavení povolíte, bude z nabídky Start odebrán seznam často používaných programů.
 
@@ -645,14 +632,10 @@ Pokud tuto zásadu povolíte, bude se vyvolávání místních nabídek v nabíd
           <label>Soubor rozložení úvodní obrazovky</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Použít rozložení znovu při každém přihlášení</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Vyberte jednu z následujících velikostí:</dropdownList>
       </presentation>
-      <presentation id="ShowOrHideMostUsedApps">
-        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Zvolit jednu z následujících akcí</dropdownList>
-      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

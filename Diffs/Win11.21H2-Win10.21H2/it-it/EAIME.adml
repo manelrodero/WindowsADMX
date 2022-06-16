@@ -55,17 +55,15 @@ Questa impostazione dei criteri si applica a Microsoft IME per il giapponese.
 
 Nota: le modifiche a questa impostazione diventeranno effettive solo dopo la disconnessione dell'utente.</string>
       <string id="L_TurnOffCustomDictionary">Disattiva dizionario personalizzato</string>
-      <string id="L_TurnOffCustomDictionaryExplain">Questa impostazione dei criteri consente di disattivare la possibilità di utilizzare un dizionario personalizzato.
+      <string id="L_TurnOffCustomDictionaryExplain">Questa impostazione dei criteri consente di disattivare la possibilità di usare un dizionario personalizzato.
 
-Se si abilita questa impostazione dei criteri, non sarà possibile aggiungere modificare ed eliminare parole nel dizionario personalizzato né tramite interfaccia utente grafica né tramite API. Una parola registrata nel dizionario personalizzato prima dell'abilitazione di questa impostazione dei criteri non verrà utilizzata per la conversione
+Se abiliti questa impostazione dei criteri, non potrai aggiungere, modificare ed eliminare parole nel dizionario personalizzato né tramite interfaccia utente grafica né tramite API. Una parola registrata nel dizionario personalizzato prima dell'abilitazione di questa impostazione dei criteri potrà continuare a essere usata per la conversione.
 
-Se si disabilita o non si configura questa impostazione dei criteri, sarà possibile utilizzare il dizionario personalizzato per impostazione predefinita.
+Se disabiliti o non configuri questa impostazione dei criteri, sarà possibile usare il dizionario personalizzato per impostazione predefinita.
 
-[Cancella le informazioni di ottimizzazione automatica] rimuove le parole con ottimizzazione automatica dal dizionario personalizzato, anche se è attivata un'impostazione dei criteri di gruppo. A tale scopo, seleziona Impostazioni &gt; Tempo &amp; Lingua &gt; Opzioni giapponesi &gt; opzioni Microsoft IME. Se la modalità di compatibilità è attivata, seleziona Opzioni avanzate &gt; Dizionario/regolazione automatica &gt;[Cancella cronologia input].
+Per Microsoft IME per il giapponese, l'opzione [Clear auto-tuning information] funzionerà anche se questa impostazione dei criteri è abilitata e le parole con ottimizzazione automatica verranno cancellate dal dizionario personalizzato.
 
-[Cancella le informazioni di ottimizzazione automatica] rimuove le parole con ottimizzazione automatica dal dizionario personalizzato, anche se è attivata un'impostazione dei criteri di gruppo. A tale scopo, seleziona Impostazioni &gt; Tempo &amp; Lingua &gt; Opzioni giapponesi &gt; opzioni Microsoft IME &gt; Apprendimento e dizionario &gt; [Cancella cronologia input].
-
-Questa impostazione dei criteri si applica a Microsoft IME per il giapponese.
+Questa impostazione dei criteri si applica a Microsoft IME per il giapponese
 
 Nota: le modifiche a questa impostazione diventeranno effettive solo dopo la disconnessione dell'utente.</string>
       <string id="L_RestrictCharacterCodeRangeOfConversion">Limita intervallo codici di carattere della conversione</string>
@@ -120,6 +118,26 @@ Se disabiliti questa impostazione dei criteri, la funzionalità dei candidati da
 Se non configuri questa impostazione dei criteri, sarà disattivata per impostazione predefinita e l'utente potrà attivare e disattivare la funzionalità dei candidati dal cloud.
 
 Questa impostazione si applica solo all'IME Microsoft CHS Pinyin.</string>
+      <string id="L_TurnOnLiveSticker">Attiva Adesivo live</string>
+      <string id="L_TurnOnLiveStickerExplain">Questa impostazione dei criteri gestisce la funzionalità relativa agli adesivi live, che usa un servizio online per fornire adesivi online.
+
+Se abiliti questa impostazione dei criteri, la funzionalità associata verrà attivata, l'input da tastiera dell'utente verrà inviato a Microsoft per la generazione di adesivi live e l'utente non potrà disattivarla.
+
+Se disabiliti questa impostazione dei criteri, la funzionalità associata verrà disattivata e l'utente non potrà attivarla.
+
+Se non configuri questa impostazione dei criteri, sarà disattivata per impostazione predefinita e l'utente potrà attivare e disattivare la funzionalità relativa agli adesivi live.
+
+Questa impostazione si applica solo all'IME Microsoft CHS Pinyin.</string>
+      <string id="L_TurnOnLexiconUpdate">Attiva aggiornamento lessico</string>
+      <string id="L_TurnOnLexiconUpdateExplain">Questa impostazione dei criteri gestisce la funzionalità di aggiornamento del lessico che consente di scaricare un lessico di parole più richieste o popolari sul PC.
+
+Se abiliti questa impostazione dei criteri, la funzionalità di aggiornamento del lessico verrà attivata, il lessico di parole più richieste o popolari verrà scaricato sul PC locale e l'utente sarà in grado di attivarlo o disattivarlo nelle impostazioni.
+
+Se disabiliti questa impostazione dei criteri, la funzionalità di aggiornamento del lessico verrà disattivata e l'utente non sarà in grado di attivarla.
+
+Se non configuri questa impostazione dei criteri, sarà attivata per impostazione predefinita e l'utente potrà attivare e disattivare la funzionalità di aggiornamento del lessico.
+
+Questa impostazione si applica solo all'IME Microsoft CHS Pinyin.</string>
       <string id="L_ConfigureSimplifiedChineseImeVersion">Configura la versione IME in cinese semplificato</string>
       <string id="L_ConfigureSimplifiedChineseImeVersionExplain">Questa impostazione dei criteri controlla la versione di Microsoft IME.​
 
@@ -154,18 +172,6 @@ Se abiliti questa impostazione, all'utente non è consentito controllare la vers
 Se disabiliti questa impostazione, all'utente non è consentito controllare la versione IME da usare. Verrà sempre selezionata la nuova versione di Microsoft IME.​
 
 Questa impostazione dei criteri si applica solo a Microsoft IME in giapponese.
-
-Nota: le modifiche a questa impostazione non avranno effetto finché l'utente non si disconnette.</string>
-      <string id="L_ConfigureKoreanImeVersion">Configura la versione IME in coreano</string>
-      <string id="L_ConfigureKoreanImeVersionExplain">Questa impostazione dei criteri controlla la versione di Microsoft IME.​
-
-Se non configuri questa impostazione dei criteri, l'utente può controllare la versione IME da usare. Per impostazione predefinita, è attiva la nuova versione di Microsoft IME.​
-
-Se abiliti questa impostazione, all'utente non è consentito controllare la versione IME da usare. Verrà sempre selezionata la versione precedente di Microsoft IME.​
-
-Se disabiliti questa impostazione, all'utente non è consentito controllare la versione IME da usare. Verrà sempre selezionata la nuova versione di Microsoft IME.​
-
-Questa impostazione dei criteri si applica solo a Microsoft IME in coreano.
 
 Nota: le modifiche a questa impostazione non avranno effetto finché l'utente non si disconnette.</string>
     </stringTable>

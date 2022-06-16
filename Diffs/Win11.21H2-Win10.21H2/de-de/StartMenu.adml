@@ -207,19 +207,6 @@ Der Eintrag "Suchen" wird zwar im Datei-Explorer nach wie vor auf der Symbolleis
 Diese Richtlinieneinstellung betrifft ausschließlich die angegebenen Elemente der Benutzeroberfläche. Internet Explorer ist davon nicht betroffen, und die Verwendung anderer Suchmethoden wird nicht verhindert.
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ist der Link "Suchen" im Startmenü verfügbar.</string>
-      <string id="ShowOrHideMostUsedApps">Liste „am häufigsten verwendet“ im Startmenü ein- oder ausblenden</string>
-      <string id="ShowOrHideMostUsedApps_Help">Wenn Sie diese Richtlinieneinstellung aktivieren, können Sie das Startmenü so konfigurieren, dass die Liste der vom Benutzer am häufigsten verwendeten Apps ein- oder ausgeblendet wird, unabhängig von den Benutzereinstellungen.
-
-Wenn Sie „Einblenden“ auswählen, wird die Liste „Am häufigsten verwendet“ angezeigt, und der Nutzer kann sie nicht über die Einstellungen ausblenden.
-
-Wenn Sie „Ausblenden“ auswählen, wird die Liste „Am häufigsten verwendet“ ausgeblendet, und der Benutzer kann sie nicht über die Einstellungen einblenden.
-
-Indem Sie „Nicht konfiguriert“ auswählen, oder diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ermöglichen Sie es dem Benutzer, die Liste „Am häufigsten verwendet“ in den Einstellungen ein- oder auszublenden. Dabei handelt es sich um das Standardverhalten.
-
-Hinweis: Die Konfiguration dieser Richtlinie zu „Einblenden“ oder „Ausblenden“ in unterstützten Windows 10-Versionen ersetzt sämtliche Einstellungen der Richtlinie „Liste häufig verwendeter Programme aus dem Startmenü entfernen“ (welche denselben Teil des Startmenüs verwaltet, jedoch weniger Optionen bietet).</string>
-      <string id="MFU_NotConfigured">Nicht konfiguriert</string>
-      <string id="MFU_Show">Anzeigen</string>
-      <string id="MFU_Hide">Ausblenden</string>        
       <string id="NoFrequentUsedPrograms">Liste häufig verwendeter Programme aus dem Startmenü entfernen</string>
       <string id="NoFrequentUsedPrograms_Help">Wenn Sie diese Einstellung aktivieren, wird die Liste häufig verwendeter Programme aus dem Startmenü entfernt.
 
@@ -614,7 +601,7 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wir
       <string id="ForceStartSize_DisplayName">Volle Bildschirm- oder Menügröße für "Start" erzwingen</string>
       <string id="ForceStartSize_ExplainText">Wenn Sie diese Richtlinie aktivieren und auf das Startmenü oder "'Start' im Vollbildmodus" festlegen, weist "Start" die entsprechende Größe auf, und die Benutzer sind nicht in der Lage, die Größe von "Start" in den Einstellungen zu ändern. 
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wählt Windows die Größe automatisch nach dem Hardwareformfaktor aus, und die Benutzer sind in der Lage, die Größe von "Start" in den Einstellungen zu ändern.</string>
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wählt Windows die Größe automatisch nach dem Hardwareformfaktor aus, und die Benutzer sind in der Lage, die Größe von "Start" in den Einstelllungen zu ändern.</string>
       <string id="ForceLauncherSize_Collapsed">Startmenü</string>
       <string id="ForceLauncherSize_Expanded">"Start" im Vollbildmodus</string>
       <string id="HidePeopleBar_DisplayName">Kontakteleiste von der Taskleiste entfernen</string>
@@ -645,14 +632,10 @@ Wenn Sie die Richtlinie aktivieren, werden Aufrufe der Kontextmenüs innerhalb d
           <label>Startlayoutdatei</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Layout bei jeder Anmeldung erneut anwenden</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Eine der folgenden Größen auswählen</dropdownList>
       </presentation>
-      <presentation id="ShowOrHideMostUsedApps">
-        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Wählen Sie eine der folgenden Aktionen aus</dropdownList>
-      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

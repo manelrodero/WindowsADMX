@@ -30,28 +30,6 @@
 
 이 설정을 사용하지 않으면 맬웨어 방지 서비스가 낮은 우선 순위 작업으로 로드됩니다.</string>
 
-    <string id="MeteredConnectionUpdates">Microsoft Defender 바이러스 백신이 데이터 통신 연결을 통해 업데이트하고 통신할 수 있도록 합니다.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    사용 안 함(기본값): 
-    데이터 통신 연결을 통해 업데이트 및 통신은 허용되지 않습니다.
-
-사용: 
-    관리되는 장치에서 데이터 요금 연결을 통해 업데이트하도록 허용합니다. 데이터 요금이 부과될 수 있습니다.</string>
-    <string id="AllowNetworkProtectionOnWinServer">이 설정은 Windows Server의 차단 또는 감사 모드로 네트워크 보호를 구성할 수 있는지 여부를 제어합니다.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    사용 안 함(기본값): 
-    이 설정을 구성하지 않거나 구성하지 않으면 네트워크 보호를 Windows Server에서 차단 또는 감사 모드로 구성할 수 없습니다.
-
-사용: 
-    이 설정을 사용하면 관리자가 Windows Server에서 네트워크 보호를 블록 또는 감사 모드로 구성할 수 있는지 여부를 제어할 수 있습니다.
-    이 구성은 EnableNetworkProtection 구성에 종속되므로 참고합니다. 이 구성이 false이면 EnableNetworkProtection을 무시하고, 그렇지 않으면 EnableNetworkProtection 값에 따라 Windows Server에서 네트워크 보호를 시작합니다.</string>
-    <string id="DisableDatagramProcessing">이 설정은 네트워크 보호를 위한 데이터그램 처리를 제어합니다.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    사용(기본값) 
-    구성 이렇게 구성하지 않거나 사용하지 않으면 네트워크 보호에 데이터그램 처리가 사용됩니다.
-
-사용: 
-    이 정책을 사용하면 네트워크 보호를 위해 데이터그램 처리를 사용하지 않도록 설정됩니다.</string>
     <string id="DisableAutoExclusions">자동 제외 끄기</string>
     <string id="DisableAutoExclusions_Explain">
         관리자가 서버 SKU에 대한 자동 제외 기능을 꺼야 하는지 여부를 지정하도록 허용합니다.
@@ -83,11 +61,11 @@
 
     이 정책을 사용 또는 사용 안 함으로 설정하면 예기치 않거나 지원되지 않는 동작이 발생할 수 있습니다. 이 정책 설정은 구성되지 않은 상태로 두는 것이 좋습니다.</string>
     <string id="DisableLocalAdminMerge">Configure local administrator merge behavior for lists(로컬 관리자의 목록 병합 동작 구성)</string>
-    <string id="DisableLocalAdminMerge_Explain">이 정책 설정은 로컬 관리자가 구성한 복합 목록 설정을 그룹 정책 설정과 병합할지 여부를 제어합니다. 이 설정은 위협 및 제외 등의 목록에 적용됩니다.
+    <string id="DisableLocalAdminMerge_Explain">이 정책 설정은 로컬 관리자가 구성한 복합 목록 설정을 그룹 정책 설정을 사용하여 병합하는지 여부를 제어합니다. 이 설정은 위협 및 제외 사항과 같은 목록에 적용됩니다.
 
-이 설정을 사용하지 않거나 구성하지 않으면 그룹 정책 및 로컬 관리자가 구성한 기본 설정에 정의된 고유한 항목이 결과 실제 정책으로 병합됩니다. 충돌의 경우 그룹 정책 설정에서 기본 설정을 재정의합니다.
+이 설정을 사용하거나 구성하지 않으면 그룹 정책 및 로컬 관리자가 구성한 기본 설정에 정의된 고유한 항목이 결과 실제 정책으로 병합됩니다. 충돌이 발생하는 경우 그룹 정책 설정이 기본 설정을 재정의합니다.
 
-이 설정을 사용하면 그룹 정책에서 정의된 항목만 결과 유효 정책에서 사용됩니다. 그룹 정책 설정은 로컬 관리자가 구성한 기본 설정을 재정의합니다.</string>
+이 설정을 사용하지 않으면 그룹 정책에서 정의된 항목만 결과 실제 정책에서 사용됩니다. 그룹 정책 설정은 로컬 관리자가 구성한 기본 설정을 재정의합니다.</string>
     <string id="DisableRoutinelyTakingAction">일상적인 수정 끄기</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     이 정책 설정을 통해 Microsoft Defender 바이러스 백신에서 검색된 모든 위협에 자동으로  조치를 취할지를 구성할 수 있습니다. 특정 위협에 대해 취해지는 조치는 정책 정의 작업, 사용자 정의 작업 및 서명 정의 작업의 조합을 통해 결정됩니다.
@@ -132,15 +110,11 @@
       이 설정을 사용하지 않거나 구성하지 않으면 프록시가 위에서 지정된 순서에 따라 이 대체 단계를 건너뜁니다.
     </string>
     <string id="RandomizeScheduleTaskTimes">Randomize scheduled task times(예약된 작업 시간 임의대로)</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">이 정책 설정을 사용하면 예약 검사를 구성하고 예약 보안 인텔리전스 업데이트, 시작 시간 창을 시간 단위로 구성할 수 있습니다.
+    <string id="RandomizeScheduleTaskTimes_Explain">이 정책 설정을 사용하면 예약된 검사 시작 시간 및 예약된 보안 인텔리전스 업데이트 시작 시간 불규칙화를 사용하거나 사용하지 않도록 설정할 수 있습니다. 이 설정은 검사로 인해 리소스에 미치는 영향을 분산하는 데 사용됩니다. 예를 들어 호스트를 공유하는 게스트 가상 머신에서 이 설정을 사용하여 여러 게스트 가상 머신이 디스크를 많이 사용하는 작업을 동시에 수행할 수 없도록 합니다.
 
-    이 설정을 사용하지 않거나 구성하지 않으면 예약된 작업이 작업 스케줄러에서 지정된 시간 이후 4시간 이내 임의 시간에 시작됩니다.
-    이 설정을 사용하여 이 임의 지정 기간을 넓히거나 좁힐 수 있습니다. 1시간에서 23시간 사이의 임의 지정 창을 지정하세요.</string>
-    <string id="SchedulerRandomizationTime">예약된 작업 시간 임의화 창 구성</string>
-    <string id="SchedulerRandomizationTime_Explain">이 정책 설정을 사용하면 예약 검사 시작 시간과 예약 보안 인텔리전스 업데이트 시작 시간 창을 시간 단위로 구성할 수 있습니다.
+    이 설정을 사용하거나 구성하지 않으면 예약된 작업이 지정된 시작 시간 전과 후 30분 간격 아내의 임의의 시간에 시작됩니다.
 
-    이 설정을 사용하지 않거나 구성하지 않으면 예약된 작업이 지정된 시간 이후 4시간 이내로 임의 시간에 시작됩니다.
-    이 설정을 사용하려면 임의 지정 창(시간)을 선택해야 합니다. 임의 지정 창 간격(시간)은 1시간에서 23시간까지 선택 가능합니다.</string>
+    이 설정을 사용하지 않으면 예약된 작업이 지정된 시작 시간에 시작됩니다.</string>
     <string id="ServiceKeepAlive">Allow antimalware service to remain running always(맬웨어 방지 서비스가 항상 실행되도록 허용)</string>
     <string id="ServiceKeepAlive_Explain">이 정책 설정을 사용하면 바이러스 백신 및 스파이웨어 방지 보안 인텔리전스를 사용하지 않을 때 맬웨어 방지 서비스를 계속 실행하는지 여부를 구성할 수 있습니다. 이 설정은 사용 안 함 상태로 유지하는 것이 좋습니다.
 
@@ -162,20 +136,12 @@
         구성하지 않음:
         사용 안 함과 동일합니다.
     </string>
-    <string id="SupportLogLocation">지원 로그 파일을 복사 할 디렉터리 경로를 정의합니다.</string>
-    <string id="SupportLogLocation_Explain">이 정책 설정을 통해 지원 로그 파일을 복사할 디렉터리 경로를 구성할 수 있습니다. 이 설정 값은 올바른 디렉터리 경로여야 합니다.
-
-이 설정을 사용하면 지원 로그 파일이 지정된 지원 로그 위치 경로로 복사됩니다.
-
-이 설정을 사용하지 않거나 구성하지 않으면 지원 로그 파일이 어떤 위치에도 복사되지 않습니다.</string>
     <string id="Exclusions_Extensions">Extension Exclusions(확장명 제외 사항)</string>
     <string id="Exclusions_Extensions_Explain">이 정책 설정을 사용하면 예약, 사용자 지정 및 실시간 검사에서 제외할 파일 형식의 목록을 지정할 수 있습니다. 파일 형식은 이 설정의 옵션에서 추가해야 합니다. 각 항목은 이름 값 쌍으로 나열해야 하며, 이때 이름은 파일 형식 확장명의 문자열 표현입니다(예: "obj" 또는 "lib"). 값은 사용되지 않으며 0으로 설정하는 것이 좋습니다.</string>
     <string id="Exclusions_Paths">Path Exclusions(경로 제외 사항)</string>
     <string id="Exclusions_Paths_Explain">이 정책 설정을 사용하면 지정된 경로 아래의 파일 또는 지정된 정규화된 리소스에 대해 예약된 검사 및 실시간 검사를 사용하지 않도록 설정할 수 있습니다. 경로는 이 설정의 옵션에서 추가해야 합니다. 각 항목은 이름 값 쌍으로 나열해야 하며, 이때 이름은 경로 또는 정규화된 리소스 이름의 문자열 표현입니다. 예를 들어 경로를 "c:\Windows"로 정의하여 이 디렉터리의 모든 파일을 제외하는 경우 정규화된 리소스 이름을 "C:\Windows\App.exe"로 정의할 수 있습니다. 값은 사용되지 않으며 0으로 설정하는 것이 좋습니다.</string>
     <string id="Exclusions_Processes">Process Exclusions(프로세스 제외 사항)</string>
-    <string id="Exclusions_Processes_Explain">이 정책 설정을 사용하면 지정한 프로세스중 이 프로세스에서 열린 파일에 대한 실시간 검사를 사용하지 않도록 설정할 수 있습니다. 이 정책은 예약된 검사에 적용되지 않습니다. 프로세스 자체가 제외되지 않습니다. 프로세스를 제외하려면 경로 제외를 사용하십시오. 이 설정의 옵션아래에 프로세스를 추가해야 합니다. 각 항목은 이름 값 쌍으로 나열되어야 하는데, 이름은 프로세스 이미지에 대한 경로의 문자열 표현이어야 합니다. 실행 파일만 제외할 수 있습니다. 예를 들어 프로세스가 "c:\windows\app.exe"(으)로 정의될 수 있습니다. 값은 사용되지 않으며 이 값을 0으로 설정하는 것이 좋습니다.</string>
-    <string id="Exclusions_IpAddresses">IP 주소 제외</string>
-    <string id="Exclusions_IpAddresses_Explain">관리자가 IP 주소의 특정 IP 주소 집합에서 wdnisdrv가 수행한 네트워크 패킷 검사를 명시적으로 비활성화할 수 있게 합니다.</string>
+    <string id="Exclusions_Processes_Explain">이 정책 설정을 사용하면 지정된 프로세스에서 열린 파일에 대해 예약된 검사 및 실시간 검사를 사용하지 않도록 설정할 수 있습니다. 프로세스 자체는 제외되지 않습니다. 프로세스를 제외하려면 Path Exclusion(경로 제외 사항)을 사용하십시오. 프로세스는 이 설정의 옵션에서 추가해야 합니다. 각 항목은 이름 값 쌍으로 나열해야 하며, 이때 이름은 프로세스 이미지 경로의 문자열 표현입니다. 실행 파일만 제외할 수 있습니다. 예를 들어 프로세스를 "c:\windows\app.exe"로 정의할 수 있습니다. 값은 사용되지 않으며 0으로 설정하는 것이 좋습니다.</string>
     <string id="Nis_DisableProtocolRecognition">Turn on protocol recognition(프로토콜 인식 켜기)</string>
     <string id="Nis_DisableProtocolRecognition_Explain">이 정책 설정을 사용하면 네트워크의 알려진 취약성 악용 방지를 위해 프로토콜 인식을 구성할 수 있습니다.
 
@@ -202,14 +168,6 @@
 이 설정을 사용하면 지정된 시간(일) 후에 격리 폴더에서 항목이 제거됩니다.
 
 이 설정을 사용하지 않거나 구성하지 않으면 항목이 무기한으로 격리 폴더에 유지되며 자동으로 제거되지 않습니다.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">스크립트 검사 켜기</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">이 정책 설정을 통해 스크립트 검사를 구성할 수 있습니다.
-
-이 설정을 사용 하거나 구성 하지 않으면 스크립트 검색이 사용 됩니다.
-
-이 설정을 사용 하지 않으면 스크립트 검색이 사용 되지 않습니다.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Turn on behavior monitoring(동작 모니터링 켜기)</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">이 정책 설정을 사용하면 동작 모니터링을 구성할 수 있습니다.
 
@@ -443,6 +401,12 @@
 이 설정을 사용하거나 구성하지 않으면 경험적 접근이 사용됩니다.
 
 이 정책 설정을 사용하지 않으면 경험적 접근이 사용되지 않습니다.</string>
+    <string id="Scan_DisablePackedExeScanning">Scan packed executables(압축된 실행 파일 검사)</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">이 정책 설정을 사용하면 압축된 실행 파일에 대한 검사를 구성할 수 있습니다. 이 유형의 검사는 계속 사용하는 것이 좋습니다.
+
+이 설정을 사용하거나 구성하지 않으면 압축된 실행 파일이 검사됩니다.
+
+이 설정을 사용하지 않으면 압축된 실행 파일이 검사되지 않습니다.</string>
     <string id="Scan_DisableRemovableDriveScanning">이동식 드라이브 검사</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">이 정책 설정을 사용하면 전체 검사를 실행할 때 USB 플래시 드라이브와 같은 이동식 드라이브에 있는 콘텐츠에서 악성 소프트웨어 및 사용자 동의 없이 설치된 소프트웨어를 검사할지 여부를 관리할 수 있습니다.
 
@@ -510,11 +474,11 @@
 
 이 설정을 사용하지 않거나 구성하지 않으면 항목이 기본 시간(일) 동안 검사 기록 폴더에 유지됩니다.</string>
     <string id="Scan_QuickScanInterval">Specify the interval to run quick scans per day(일별 빠른 검사를 실행하는 간격 지정)</string>
-    <string id="Scan_QuickScanInterval_Explain">이 정책 설정을 사용하면 빠른 검사를 수행할 간격을 지정할 수 있습니다. 시간 값은 빠른 검색 사이의 시간으로 표시됩니다. 유효한 값 범위는 1(시간)에서 24사(매주 24)까지입니다. 0으로 설정하면 간격 빠른 검사가 수행되지 않습니다. 기본적으로 이 설정은 0으로 설정됩니다.
+    <string id="Scan_QuickScanInterval_Explain">이 정책 설정을 사용하면 빠른 검사를 수행하는 간격을 지정할 수 있습니다. 시간 값은 빠른 검사 사이의 시간 수로 표현됩니다. 유효한 값 범위는 1(1시간마다)에서 24(하루에 한 번)입니다. 0으로 설정하면 간격 빠른 검사가 발생하지 않습니다. 기본적으로 이 설정은 0으로 설정됩니다.
 
 이 설정을 사용하면 지정된 간격으로 빠른 검사가 실행됩니다.
 
-이 설정을 사용하지 않거나 구성하지 않으면 이 구성에 의해 제어되는 빠른 검사가 실행되지 않습니다.</string>
+이 설정을 사용하지 않거나 구성하지 않으면 기본 시간에 빠른 검사가 실행됩니다.</string>
     <string id="Scan_ScanOnlyIfIdle">Start the scheduled scan only when computer is on but not in use(컴퓨터가 켜져 있으며 사용되지 않을 때만 예약 검사 시작)</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">이 정책 설정을 사용하면 컴퓨터가 켜져 있지만 사용되지 않을 때만 시작되도록 예약된 검사를 구성할 수 있습니다.
 
@@ -558,11 +522,11 @@
     <string id="Scan_ScheduleDay_7">금요일</string>
     <string id="Scan_ScheduleDay_8">토요일</string>
     <string id="Scan_ScheduleQuickScantime">Specify the time for a daily quick scan(일일 빠른 검사 시간 지정)</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">이 정책 설정을 통해 일일 빠른 검사를 수행하는 기간을 지정할 수 있습니다. 시간 값은 자정(00:00) 시간(분)으로 표현됩니다.  예를 들어 120(0x78)는 02:00과 동일합니다. 기본적으로 이 설정은 [사용 안 함]으로 설정됩니다. 일정은 검색이 실행되는 컴퓨터에서 로컬 시간을 기준으로 합니다.
+    <string id="Scan_ScheduleQuickScantime_Explain">이 정책 설정을 사용하면 일일 빠른 검사를 수행하는 시간을 지정할 수 있습니다. 시간 값은 자정(00:00) 이후의 분 수로 표현됩니다.  예를 들어 120 (0x78)은 02:00 AM에 해당합니다. 기본적으로 이 설정은 시간 값 2:00 AM으로 설정됩니다. 일정은 검사를 실행하는 컴퓨터의 로컬 시간을 기준으로 합니다.
 
 이 설정을 사용하면 지정된 시간에 일일 빠른 검사가 실행됩니다.
 
-이 설정을 사용하지 않거나 구성하지 않으면 이 구성에서 매일 빠른 검사 제어가 실행되지 않습니다.</string>
+이 설정을 사용하지 않거나 구성하지 않으면 기본 시간에 일일 빠른 검사가 실행됩니다.</string>
     <string id="Scan_ScheduleTime">Specify the time of day to run a scheduled scan(예약된 검사를 실행할 시간 지정)</string>
     <string id="Scan_ScheduleTime_Explain">이 정책 설정을 사용하면 예약된 검사를 수행하는 시간을 지정할 수 있습니다. 시간 값은 자정(00:00) 이후의 분 수로 표현됩니다.  예를 들어 120 (0x78)은 02:00 AM에 해당합니다. 기본적으로 이 설정은 시간 값 2:00 AM으로 설정됩니다. 일정은 검사를 실행하는 컴퓨터의 로컬 시간을 기준으로 합니다.
 
@@ -585,13 +549,13 @@
         이 설정을 사용하지 않거나 구성하지 않으면 예약 검사에 대한 CPU 우선 순위가 변경되지 않습니다.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">스파이웨어 보안 인텔리전스가 최신 상태가 아니라고 생각하는 기간(일)을 정의합니다.</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">이 정책 설정을 사용하면 스파이웨어 보안 인텔리전스가 최신 상태가 아니라고 간주되기 전에 지나야 하는 일수를 정의할 수 있습니다. 보안 인텔리전스가 최신 상태가 아니라고 확인되면 이 상태로 인해 대체 업데이트 원본으로 변경 또는 사용자 인터페이스에서 경고 아이콘 표시 등을 포함한 다수의 추가 작업이 트리거될 수 있습니다. 기본적으로 이 값은 7일로 설정됩니다.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">이 정책 설정을 사용하면 스파이웨어 보안 인텔리전스가 최신 상태가 아니라고 간주되기 전에 지나야 하는 일수를 정의할 수 있습니다. 보안 인텔리전스가 최신 상태가 아니라고 확인되면 이 상태로 인해 대체 업데이트 원본으로 변경 또는 사용자 인터페이스에서 경고 아이콘 표시 등을 포함한 다수의 추가 작업이 트리거될 수 있습니다. 기본적으로 이 값은 14일로 설정됩니다.
 
     이 설정을 사용하면 지정된 일수 동안 업데이트가 이루어지지 않으면 스파이웨어 보안 인텔리전스가 최신 상태가 아니라고 간주됩니다.
 
     이 설정을 사용하지 않거나 구성하지 않으면 기본 일수 동안 업데이트가 이루어지지 않으면 스파이웨어 보안 인텔리전스가 최신 상태가 아니라고 간주됩니다.</string>
     <string id="SignatureUpdate_AVSignatureDue">바이러스 보안 인텔리전스가 최신 상태가 아니라고 간주되는 기간(일) 정의</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">이 정책 설정을 사용하면 바이러스 보안 인텔리전스가 최신 상태가 아니라고 간주되기 전에 지나야 하는 일수를 정의할 수 있습니다. 보안 인텔리전스가 최신 상태가 아니라고 확인되면 이 상태로 인해 대체 업데이트 원본으로 변경 또는 사용자 인터페이스에서 경고 아이콘 표시 등을 포함한 다수의 추가 작업이 트리거될 수 있습니다. 기본적으로 이 값은 7일로 설정됩니다.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">이 정책 설정을 사용하면 바이러스 보안 인텔리전스가 최신 상태가 아니라고 간주되기 전에 지나야 하는 일수를 정의할 수 있습니다. 보안 인텔리전스가 최신 상태가 아니라고 확인되면 이 상태로 인해 대체 업데이트 원본으로 변경 또는 사용자 인터페이스에서 경고 아이콘 표시 등을 포함한 다수의 추가 작업이 트리거될 수 있습니다. 기본적으로 이 값은 14일로 설정됩니다.
 
     이 설정을 사용하면 지정된 일수 동안 업데이트가 이루어지지 않으면 바이러스 보안 인텔리전스가 최신 상태가 아니라고 간주됩니다.
 
@@ -742,22 +706,22 @@
     <string id="SpynetReporting">Microsoft MAPS에 가입</string>
     <string id="SpynetReporting_Explain">이 정책 설정을 사용하면 Microsoft MAPS에 가입할 수 있습니다. Microsoft MAPS는 잠재적인 위협을 처리하는 방법을 선택하는 데 유용한 온라인 커뮤니티입니다. 또한 새 악성 소프트웨어 감염의 확산을 막을 수 있도록 도움을 줍니다.
 
-    검색된 소프트웨어에 대한 기본 정보나 추가 정보를 보내도록 선택할 수 있습니다. 추가 정보는 Microsoft에서 새로운 보안 인텔리전스를 만들고 컴퓨터를 보호하는 데 도움을 줍니다. 이러한 정보에는 해로운 소프트웨어를 제거한 경우 컴퓨터에서 검색된 항목의 위치 등이 포함될 수 있습니다. 이러한 정보는 자동으로 수집되고 전송됩니다. 경우에 따라 의도치 않게 개인 정보가 Microsoft로 전송될 수 있습니다. 그러나 Microsoft는 사용자를 식별하거나 사용자에게 연락을 취하는 데 이 정보를 사용하지 않습니다.
+ 검색된 소프트웨어에 대한 기본 정보나 추가 정보를 보내도록 선택할 수 있습니다. 추가 정보는 Microsoft에서 새로운 보안 인텔리전스를 만들고 컴퓨터를 보호하는 데 도움을 줍니다. 이러한 정보에는 해로운 소프트웨어를 제거한 경우 컴퓨터에서 검색된 항목의 위치 등이 포함될 수 있습니다. 이러한 정보는 자동으로 수집되고 전송됩니다. 경우에 따라 의도치 않게 개인 정보가 Microsoft로 전송될 수 있습니다. 그러나 Microsoft는 사용자를 식별하거나 사용자에게 연락을 취하는 데 이 정보를 사용하지 않습니다.
 
-    가능한 옵션은 다음과 같습니다.
-    (0x0) 사용 안 함(기본값)
-    (0x1) 일반 회원
-    (0x2) 고급 회원
+ 가능한 옵션은 다음과 같습니다.
+ (0x0) 사용 안 함(기본값)
+ (0x1) 일반 회원
+ (0x2) 고급 회원
 
-    일반 회원은 검색된 소프트웨어에 대해 소프트웨어 출처, 직접 적용하거나 자동으로 적용된 작업, 작업 성공 여부 등을 포함한 기본 정보를 Microsoft에 보냅니다.
+ 일반 회원은 검색된 소프트웨어에 대해 소프트웨어 출처, 직접 적용하거나 자동으로 적용된 작업, 작업 성공 여부 등을 포함한 기본 정보를 Microsoft에 보냅니다.
 
-    고급 회원은 기본 정보 외에 악성 소프트웨어, 스파이웨어 및 사용자 동의 없이 설치된 소프트웨어와 해당 위치, 파일 이름, 소프트웨어의 작동 방식 및 컴퓨터에 영향을 미치는 방식 등의 추가 정보를 Microsoft에 보냅니다.
+ 고급 회원은 기본 정보 외에 악성 소프트웨어, 스파이웨어 및 사용자 동의 없이 설치된 소프트웨어와 해당 위치, 파일 이름, 소프트웨어의 작동 방식 및 컴퓨터에 영향을 미치는 방식 등의 추가 정보를 Microsoft에 보냅니다.
 
-    이 설정을 사용하면 지정된 회원 자격으로 Microsoft MAPS에 가입됩니다.
+ 이 설정을 사용하면 지정된 회원 자격으로 Microsoft MAPS에 가입됩니다.
 
-    이 설정을 사용하지 않거나 구성하지 않으면 Microsoft MAPS에 가입되지 않습니다.
-  
-    Windows 10에서는 일반 회원을 더 이상 사용할 수 없으므로 값을 1 또는 2로 설정하면 디바이스가 고급 회원에 등록됩니다.</string>
+ 이 설정을 사용하지 않거나 구성하지 않으면 Microsoft MAPS에 가입되지 않습니다.
+ 
+ Windows 10에서는 일반 회원을 더 이상 사용할 수 없으므로 값을 1 또는 2로 설정하면 디바이스가 고급 회원에 등록됩니다.</string>
     <string id="SpynetReporting_Disabled">사용 안 함</string>
     <string id="SpynetReporting_Basic">기본 MAPS</string>
     <string id="SpynetReporting_Advanced">고급 MAPS</string>
@@ -884,43 +848,36 @@
     </string>
     <string id="ExploitGuard_ASR_Rules">공격에 대한 취약성 감소 규칙 구성</string>
     <string id="ExploitGuard_ASR_Rules_Explain">
-    각 ASR(공격 표면 감소) 규칙의 상태를 설정합니다. 
+    각 ASR(Attack Surface Reduction) 규칙의 상태를 설정합니다.
 
-    이 기능을 사용하도록 설정한 후, 옵션 섹션에서 각 규칙을 다음과 같이 설정할 수 있습니다.
+    이 기능을 사용하도록 설정하면 [옵션] 섹션에서 각 규칙을 다음과 같이 설정할 수 있습니다:
     - 차단: 규칙이 적용됨
-     - 감사 모드: 규칙이 일반적으로 이벤트를 발생시키게 되면(실제로 규칙이 적용되지 않더라도) 기록됨
-   - 해제: 규칙이 적용되지 않음
-    - 구성되지 않음: 기본값으로 규칙을 사용하도록 설정됨
- - 경고: 규칙이 적용되고 최종 사용자에게 차단을 우회할 수 있는 옵션이 주어지게 됨
+    - 감사 모드: 규칙이 이벤트를 발생시키게 되면 (실제로 규칙이 적용되지 않더라도) 기록됨
+    - 해제: 규칙이 적용되지 않음
 
-   ASR 규칙을 사용하지 않도록 설정하지 않은 한, ASR 규칙에 대한 감사 이벤트의 하위 샘플이 구성되지 않음 값으로 수집됩니다.
-
-   사용:
-   이 설정의 옵션 섹션에서 각 ASR 규칙의 상태를 지정합니다.
-   각 규칙을 새 라인에 이름-값 쌍으로 입력합니다.
+    사용:
+    이 설정에 대한 [옵션] 섹션에서 각 ASR 규칙의 상태를 지정합니다.
+    각 규칙을 새 라인에 이름-값 쌍으로 입력합니다.
     - 이름 열: 유효한 ASR 규칙 ID 입력
-   - 값 열: 연관된 규칙에 지정하려는 상태와 관련된 상태 ID 를 입력
+    - 값 열: 연관된 규칙에 지정하려는 상태와 관련된 상태 ID 입력
 
-  다음의 상태 ID가 값 열 아래 허용됩니다.
-  - 1(차단)
-   - 0(해제)
-   - 2(감사)
-   - 5(구성되지 않음)
-    - 6(경고)
+    값 열에 허용되는 상태 ID는 다음과 같습니다.
+    - 1(차단)
+    - 0 (해제)
+    - 2 (감사)
+    
+    예:
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
 
-   
-  예:
-   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx    0
- xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx    1    
- xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx    2
-
-사용 안 함:
+    사용 안 함:
     ASR 규칙이 구성되지 않습니다.
 
     구성되지 않음:
-   사용 안 함과 동일.
+    사용 안 함과 동일.
 
-  "공격 표면 감소 규칙에서 파일 및 경로 제외" GP 설정에서 폴더 또는 파일을 제외시킬 수 있습니다.
+    "Attack Surface Reduction에서 폴더 또는 파일 및 리소스 제외" GP 설정에서 폴더 또는 파일 및 리소스를 제외시킬 수 있습니다.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">제어된 폴더 액세스 구성</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
@@ -1028,7 +985,7 @@
     </string>
     <string id="DeviceControl_PolicyRules">장치 제어 정책 규칙 정의</string>
     <string id="DeviceControl_PolicyRules_Explain">
-        장치 제어 정책 규칙 xml 스키마를 따라 정책 규칙 데이터를 채우십시오.
+        장치 제어 정책 규칙 XML 스키마를 따라 정책 규칙 데이터를 채우십시오.
     </string>
     </stringTable>
     <presentationTable>
@@ -1047,11 +1004,6 @@
         <label>Define proxy server for connecting to the network(네트워크 연결용 프록시 서버 정의)</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>지원 로그 파일을 복사 할 디렉터리 경로를 정의합니다.</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Extension Exclusions(확장명 제외 사항)</listBox>
     </presentation>
@@ -1060,9 +1012,6 @@
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Process Exclusions(프로세스 제외 사항)</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">IP 주소 제외</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Specify additional definition sets for network traffic inspection(네트워크 트래픽 검사에 대한 추가 정의 집합 지정)</listBox>
@@ -1131,10 +1080,10 @@
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Specify the time of day to run a scheduled scan(예약된 검사를 실행할 시간 지정)</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">스파이웨어 보안 인텔리전스가 최신 상태가 아니라고 생각하는 기간(일)을 정의합니다.</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">스파이웨어 보안 인텔리전스가 최신 상태가 아니라고 생각하는 기간(일)을 정의합니다.</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">바이러스 보안 인텔리전스가 최신 상태가 아니라고 간주되는 기간(일) 정의</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">바이러스 보안 인텔리전스가 최신 상태가 아니라고 간주되는 기간(일) 정의</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1219,9 +1168,6 @@
     <textBox refId="DeviceControl_PolicyRules">
         <label>여기에서 정책 규칙 정의</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">시간 내 일정 수립자 무작위화 창을 지정합니다.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

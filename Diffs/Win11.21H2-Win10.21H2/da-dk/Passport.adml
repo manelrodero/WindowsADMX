@@ -122,20 +122,22 @@ Bemærk! Denne politik kan kun anvendes på enheder, som er registreret i Azure 
         <!-- Explain Text for UseCertificateForOnPremAuth -->
         <string id="WHFB_UseCertificateForOnPremAuthExplain">Brug denne politikindstilling til at konfigurere Windows Hello til virksomheder til at registrere et logoncertifikat, der bruges til lokal godkendelse.
 
-Hvis du aktiverer denne politikindstilling, registrerer Windows Hello til virksomheder et logoncertifikat, der bruges til lokal godkendelse.
+Hvis du aktiverer denne politikindstilling, Windows Hello til virksomheder registrere et logoncertifikat, der bruges til lokal godkendelse.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows Hello til virksomheder bruge en nøgle eller en Kerberos-billet (afhængigt af andre politikindstillinger) for godkendelse i det lokale miljø.
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger Windows Hello til virksomheder en nøgle eller en Kerberos-billet (afhængigt af andre politikindstillinger) til lokal godkendelse.
 
-Bemærk! Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, og du aktiverer politikindstillingen "Brug Windows Hello til virksomheder", skal du have en eller flere Windows Server 2016-domænecontrollere for at forhindre, at Windows Hello til virksomheder-godkendelse mislykkes.
+BEMÆRK! Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling og aktiverer politikindstillingen "Brug Windows Hello til virksomheder", kræver det, at miljøet har en eller flere Windows Server 2016-domænecontrollere for at forhindre, at Windows Hello til virksomheder godkendelse mislykkes.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
         <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Brug denne politikindstilling til at konfigurere Windows Hello til virksomheder til at bruge Azure AD Kerberos til lokal godkendelse.
 
 Hvis du aktiverer denne politikindstilling, bruger Windows Hello til virksomheder en Kerberos-billet, der er hentet fra godkendelse til Azure til lokal godkendelse.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger Windows Hello til virksomheder en nøgle eller et certifikat (afhængigt af andre politikindstillinger) for godkendelse i det lokale miljø. 
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruger Windows Hello til virksomheder en nøgle eller et certifikat (afhængigt af andre politikindstillinger) til lokal godkendelse. 
  
-Bemærk! et miljø, der aktiverer denne politikindstilling, og politikindstillingen "Brug Windows Hello til virksomheder" kræver en eller flere Windows Server 2016-domænecontrollere. Ellers vil Windows Hello til virksomheder-godkendelse ikke fungere korrekt.
+BEMÆRK! Et miljø, der aktiverer både denne politikindstilling og politikindstillingen "Brug Windows Hello til virksomheder", kræver en eller flere Windows Server 2016-domænecontrollere. Ellers mislykkes Windows Hello til virksomheder godkendelse.
+
+Denne politik understøttes kun på Windows 10 version 21H2 og nyere.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Konfigurer faktorer for at låse enhed op</string>

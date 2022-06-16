@@ -129,13 +129,15 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwe
 HINWEIS: Wenn die Richtlinieneinstellung deaktiviert oder nicht konfiguriert und die Richtlinieneinstellung "Windows Hello for Business verwenden" aktiviert wird, muss die Umgebung mindestens einen Windows Server 2016-Domänencontroller enthalten, damit Fehler bei der Windows Hello for Business-Authentifizierung vermieden werden.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Verwenden Sie diese Richtlinien Einstellung, um Windows Hello for Business für die Verwendung von Azure AD-Kerberos für die lokale Authentifizierung zu konfigurieren.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Verwenden Sie diese Richtlinieneinstellung, um Windows Hello for Business für die Verwendung Azure AD Kerberos für die lokale Authentifizierung zu konfigurieren.
 
-Wenn Sie die Richtlinien Einstellung aktivieren, verwendet Windows Hello for Business ein Kerberos-Ticket, das von der Authentifizierung mit Azure für die lokale Authentifizierung abgerufen wurde.
+Wenn Sie diese Richtlinieneinstellung aktivieren, verwendet Windows Hello for Business ein Kerberos-Ticket, das aus der Authentifizierung bei Azure für die lokale Authentifizierung abgerufen wurde.
 
-Wenn Sie die Richtlinien Einstellung deaktivieren oder nicht konfigurieren, verwendet Windows Hello for Business einen Schlüssel oder ein Zertifikat (abhängig von anderen Richtlinien Einstellungen) für die lokale Authentifizierung. 
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwendet Windows Hello for Business (abhängig von anderen Richtlinieneinstellungen) einen Schlüssel oder ein Zertifikat für die lokale Authentifizierung. 
  
-Hinweis: eine Umgebung, die sowohl diese Richtlinien Einstellung aktiviert, und die Richtlinien Einstellung "Windows Hello for Business verwenden" erfordert mindestens einen Windows Server 2016-Domänen Controller. Andernfalls schlägt Windows Hello for Business-Authentifizierung fehl.
+HINWEIS: Für eine Umgebung, die sowohl diese Richtlinieneinstellung als auch die Richtlinieneinstellung "Windows Hello for Business verwenden" aktiviert, ist mindestens ein Windows Server 2016-Domänencontroller erforderlich. Andernfalls tritt bei Windows Hello for Business Authentifizierung ein Fehler auf.
+
+Diese Richtlinie wird nur für Windows 10, Version 21H2 und höher unterstützt.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Faktoren für die Geräteentsperrung konfigurieren</string>

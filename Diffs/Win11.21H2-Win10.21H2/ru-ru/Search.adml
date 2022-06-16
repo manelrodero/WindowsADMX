@@ -252,7 +252,7 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
 Если используется среда рабочего стола с ограничениями по доступу, то этот параметр является лишним, поскольку пользователи, не обладающие правами администратора, не имеют разрешения на установку новых компонентов. Если пользователи обладают правами администратора или могут устанавливать программное обеспечение, то эта политика запрещает им использовать надстройки, связанные с панелью поиска Windows.
 
 Примечание. Ввиду ограничений редактора политик группы в список разрешений необходимо добавить хотя бы одну запись, даже если требуется включить эту политику без указания списка разрешений. Создайте запись в списке, введя пробел в поле имени и пробел в поле значения, и сохраните ее. При этом создается пустая запись, которая игнорируется программой.</string>
-      <string id="PreventUnwantedAddins_AllowList">Список разрешенных</string>
+      <string id="PreventUnwantedAddins_AllowList">Список разрешений</string>
       <string id="ExcludedExtensionsMultiline">Запретить индексирование определенных типов файлов</string>
       <string id="ExcludedExtensionsMultiline_Explain">Если эта политика включена, можно изменить список типов файлов, которые будут исключаться из процедуры индексирования. Конечный пользователь не может изменять этот список. Типы расширений файлов следует указывать через точку с запятой.
 
@@ -333,7 +333,7 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
         <decimalTextBox refId="LimitEnableThrottlingOnlineMailboxes" defaultValue="120">Количество элементов в минуту</decimalTextBox>
       </presentation>
       <presentation id="PreventUnwantedAddins">
-        <listBox refId="PreventUnwantedAddins_AllowList">Список разрешенных</listBox>
+        <listBox refId="PreventUnwantedAddins_AllowList">Список разрешений</listBox>
       </presentation>
       <presentation id="PreventIndexingCertainPaths_1">
         <listBox refId="PreventIndexingCertainPaths">Запретить индексирование по заданным путям</listBox>

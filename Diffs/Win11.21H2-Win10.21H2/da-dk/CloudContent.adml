@@ -9,13 +9,13 @@
       <string id="ConfigureWindowsSpotlight">Konfigurer Windows Spotlys på låseskærmen</string>
       <string id="ConfigureWindowsSpotlight_Help">Denne politikindstilling gør det muligt at konfigurere Windows Spotlys på låseskærmen.
 
-Hvis du aktiverer denne politikindstilling, angives "Windows Spotlys" som låseskærmsudbyderen, og brugerne vil ikke kunne ændre deres låseskærm. "Windows Spotlys" viser daglige billeder fra Microsoft på låseskærmen.
+Hvis du aktiverer denne politikindstilling, angives "Windows Spotlys" som låseskærmsprovideren, og brugerne vil ikke kunne ændre deres låseskærm. "Windows Spotlys" viser daglige billeder fra Microsoft på låseskærmen.
 
 , Hvis du markerer afkrydsningsfeltet "Medtag indhold fra Enterprise-spotlys", og din organisation har installeret Enterprise-spotlysindholdstjenesten i Azure, viser låseskærmen interne meddelelser og meddelelser, der er konfigureret i denne tjeneste, når den er tilgængelig. Hvis din organisation ikke har et Enterprise-spotlysindholdscenter, har afkrydsningsfeltet ingen virkning.
 
 Hvis du deaktiverer denne politikindstilling, deaktiveres Windows Spotlys, og brugerne vil ikke længere kunne vælge den som deres låseskærm. Brugere ser standardbilledet til låseskærmen og kan vælge et andet billede, medmindre du har aktiveret politikken "Undgå ændring af låseskærmbillede".
 
-Hvis du undlader at konfigurere denne politik, vises Windows Spotlys på låseskærmen og markeres som standard, medmindre du har konfigureret et andet standardbillede til låseskærmen ved hjælp af politikken "Gennemtving et bestemt standardlåseskærm og logonbillede".
+Hvis du undlader at konfigurere denne politik, vises Windows Spotlys på låseskærmen og markeres som standard, medmindre du har konfigureret et andet standardbillede til låseskærmen ved hjælp af politikken "Gennemtving et bestemt standardbillede til låseskærmen".
 
 Bemærk! denne politik er kun tilgængelig for Enterprise-SKU'er</string>
       <string id="DisableWindowsSpotlightFeatures">Deaktiver alle Windows Spotlys-funktioner</string>
@@ -68,24 +68,12 @@ Hvis du aktiverer denne politik, bliver velkomstskærmen til Windows ikke længe
 
 Hvis du deaktiverer eller undlader at konfigurere politikken, vises velkomstskærmen til Windows for at hjælpe brugerne i gang med Windows og fortælle om nyheder, ændringer og forslag.</string>
       <string id="DisableCloudOptimizedContent">Slå skyoptimeret indhold fra</string>
-      <string id="DisableCloudOptimizedContent_Help">Denne politikindstilling gør det muligt at slå Cloud-optimeret indhold fra i alle Windows-oplevelser.
+      <string id="DisableCloudOptimizedContent_Help">Denne politikindstilling muliggør at slå skyoptimeret indhold fra i alle Windows-oplevelser.
 
-Hvis du aktiverer denne politik, vil Windows-oplevelser, der anvender komponenten Cloud optimeret indholds klient, i stedet vise standard-fallback-indholdet.
+Hvis du aktiverer denne politik, vil Windows-oplevelser, der anvender komponenten skyoptimeret indholdsklient, i stedet vise standard-fallback-indholdet.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politik, kan Windows-oplevelser bruge indhold, der er optimeret til skyen.</string>
-      <string id="DisableSpotlightCollectionOnDesktop">Slå spotlys-samling fra på skrivebord</string>
-      <string id="DisableSpotlightCollectionOnDesktop_Help">Denne politikindstilling fjerner spotlys-samlingen i Personlige indstillinger, så brugeren ikke kan vælge og efterfølgende downloade daglige billeder fra Microsoft til skrivebordet.
-
-Hvis du aktiverer denne politik, vil "Spotlys-samling" ikke være tilgængelig som en indstilling i Personlige indstillinger.
-
-Hvis du deaktiverer eller undlader at konfigurere denne politik, vises "Spotlys-samling" som en indstilling i Personlige indstillinger, og derved får brugeren mulighed for at vælge "Spotlys-samling" som skrivebordsudbyder og få vist daglige billeder fra Microsoft på skrivebordet.</string>
-      <string id="DisableConsumerAccountStateContent">Slå indhold af Cloud-forbrugerkontotilstand fra</string>
-      <string id="DisableConsumerAccountStateContent_Help">Med denne politikindstilling kan du deaktivere indhold i Cloud-forbruger konto tilstand i alle Windows-oplevelser.
-
-Hvis du aktiverer denne politik, vil Windows-oplevelser, der bruger klientkomponenten til Cloud-forbruger konto tilstand, i stedet vise standard-fallback-indholdet.
-
-Hvis du deaktiverer eller undlader at konfigurere denne politik, kan Windows-oplevelsen bruge tilstands indhold for Cloud-forbruger kontoen.
-        </string>
+Hvis du deaktiverer eller undlader at konfigurere denne politik, er Windows-oplevelser i stand til at bruge skyoptimeret indhold.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

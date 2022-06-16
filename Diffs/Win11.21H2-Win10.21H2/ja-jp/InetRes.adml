@@ -298,6 +298,7 @@ Windows Vista、Windows 7、Internet Explorer 7、および Internet Explorer 8 
 このポリシー設定を構成しない場合は、一覧のアプリケーションまたはプロセスに対する URL 動作の現在の値が使用されます。</string>
       <string id="FavImportExport">設定のインポート/エクスポート ウィザードを無効にする</string>
       <string id="GeolocationDisable">ブラウザーの地理位置情報を無効にする</string>
+      <string id="DisableFlashInIE">Internet Explorer で Adobe Flash をオフにし、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できないようにする</string>
       <string id="File_NoBrowserClose">[ファイル] メニュー: ブラウザー ウィンドウおよびエクスプローラー ウィンドウの [閉じる] コマンドの使用を許可しない</string>
       <string id="File_NoBrowserSaveAs">[ファイル] メニュー: [名前を付けて保存] コマンドの使用を許可しない</string>
       <string id="File_NoBrowserSaveWebComplete">[ファイル] メニュー: [名前を付けて保存] で [Web ページ、完全] 形式の保存を許可しない</string>
@@ -723,6 +724,13 @@ Microsoft エージェントとは、Microsoft Windows のインターフェイ�
 このポリシー設定を無効にすると、ブラウザーの地理位置情報のサポートは有効になります。
 
 このポリシー設定を構成しない場合、[インターネット オプション] の [プライバシー] タブでブラウザーの地理位置情報のサポートを有効または無効にできます。</string>
+      <string id="IE_ExplainDisableFlashInIE">このポリシー設定は、Internet Explorer 上で Adobe Flash をオフにし、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できないようにします。
+
+このポリシー設定を有効にすると、Internet Explorer で Flash がオフになり、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できなくなります。[アドオンの管理] ダイアログ ボックスで、Flash のステータスは [無効] になり、ユーザーは Flash を有効にできません。このポリシー設定を有効にすると、[アドオンの一覧] ポリシー設定および [アドオンの一覧で許可されたものを除き、アドオンはすべて拒否する] ポリシー設定を通じた Adobe Flash に対する設定を Internet Explorer は無視します。
+
+このポリシー設定を無効にした場合、または構成しなかった場合、Internet Explorer で Flash がオンになり、アプリケーションが Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化できます。ユーザーは [アドオンの管理] ダイアログ ボックスで、Flash を有効または無効にできます。
+
+このポリシー設定を無効にした場合、または構成しなかった場合でも、[アドオンの一覧] ポリシー設定および [アドオンの一覧で許可されたものを除き、アドオンはすべて拒否する] ポリシー設定を通じて Adobe Flash を無効にできます。ただし、このポリシー設定ではなく、[アドオンの一覧] ポリシー設定および [アドオンの一覧で許可されたものを除き、アドオンはすべて拒否する] ポリシー設定を通じて Adobe Flash を無効にした場合は、Internet Explorer テクノロジを使用して Flash オブジェクトをインスタンス化するすべてのアプリケーションでそれまでと同じくインスタンス化できます。詳細については、Internet Explorer TechNet ライブラリの Internet Explorer 10 のグループ ポリシー設定に関するページを参照してください。</string>
       <string id="IE_ExplainFile_NoBrowserClose">Microsoft Internet Explorer およびエクスプローラーを閉じることができないようにします。
 
 このポリシーを有効にすると、ユーザーは、[ファイル] メニューの [閉じる] コマンドが使用できなくなります。
@@ -779,7 +787,7 @@ Microsoft エージェントとは、Microsoft Windows のインターフェイ�
 このポリシー設定を有効にすると、MSHTML をホストしているアプリケーションは、ページの表示倍率を変更するためのユーザー入力を受け付けません。
 
 このポリシー設定を無効にするか、構成しない場合、MSHTML をホストしているアプリケーションは、ページの表示倍率を変更するためのユーザー入力を受け付けます。</string>
-      <string id="IE_ExplainHelp_NoFeedback">Internet Explorer の [ヘルプ] メニューの [フィードバックの送信] コマンドを使用した Microsoft へのフィードバックを送信できないようにします。
+      <string id="IE_ExplainHelp_NoFeedback">[ヘルプ] メニューの [フィードバックの送信] コマンドを使用した Microsoft へのフィードバックを送信できないようにします。
 
 このポリシーを有効にすると、[ヘルプ] メニューから [フィードバックの送信] コマンドが削除されます。
 
@@ -3897,7 +3905,7 @@ InPrivate フィルターを使用すると、ユーザーが訪れた Web サ�
 このポリシー設定を有効にした場合、[ツール] メニューにエンタープライズ モードが表示され、ユーザーはエンタープライズ モードを有効にできます。この設定を有効にしてもレポートの場所を指定しなかった場合、ユーザーはエンタープライズ モードを使用できますが、レポートは通知されません。
 
 このポリシー設定を無効にした場合、または構成しなかった場合、メニュー オプションは表示されず、ユーザーが Web サイトをエンタープライズ モードで実行することはできません。</string>
-      <string id="RestrictInternetExplorer">エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します</string>
+      <string id="RestrictInternetExplorer">エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します。</string>
       <string id="IE_ExplainRestrictInternetExplorer">この設定では、Microsoft Edge でエンタープライズ モード サイト一覧に含まれていないすべてのサイトを開くかどうかを決定できます。この設定を使用する場合は、"管理用テンプレート\Windows コンポーネント\Internet Explorer\エンタープライズ モード IE の Web サイト一覧を使用する" ポリシー設定を有効にし、エンタープライズ モード サイト一覧に少なくとも 1 つのサイトを含める必要もあります。
 
 この設定を有効にすると、エンタープライズ モード サイト一覧に含まれていないすべてのサイトが Microsoft Edge で自動的に開かれます。
@@ -3917,19 +3925,19 @@ InPrivate フィルターを使用すると、ユーザーが訪れた Web サ�
 Microsoft Edge* の次期バージョンの Windows Update と Microsoft Edge 安定チャネルの両方がインストールされている場合、動作は次のようになります。
 - このポリシーを無効にするか、未構成にした場合、Microsoft Edge 安定チャネルが使用されます。これが既定の動作です。
 - このポリシーを有効にすると、リダイレクトされたサイトを次のうち最大 3 つのチャネルで開くように構成できます。
-    1 = Microsoft Edge 安定
-    2 = Microsoft Edge Beta version 77 またはそれ以降
-    3 = Microsoft Edge Dev version 77 またはそれ以降
-    4 = Microsoft Edge Canary version 77 またはそれ以降
+ 1 = Microsoft Edge 安定
+ 2 = Microsoft Edge Beta version 77 またはそれ以降
+ 3 = Microsoft Edge Dev version 77 またはそれ以降
+ 4 = Microsoft Edge Canary version 77 またはそれ以降
 
 Microsoft Edge* の次期バージョンの Windows Update がインストールされていない場合、または Microsoft Edge 安定チャネルがインストールされていない場合、動作は次のようになります。
 - このポリシーを無効にするか、未構成にした場合、Microsoft Edge version 45 またはそれ以前が自動的に使用されます。これが既定の動作です。
 - このポリシーを有効にすると、リダイレクトされたサイトを次のうち最大 3 つのチャネルで開くように構成できます。
-    0 = Microsoft Edge version 45 またはそれ以前
-    1 = Microsoft Edge 安定
-    2 = Microsoft Edge Beta version 77 またはそれ以降
-    3 = Microsoft Edge Dev version 77 またはそれ以降
-    4 = Microsoft Edge Canary version 77 またはそれ以降
+ 0 = Microsoft Edge version 45 またはそれ以前
+ 1 = Microsoft Edge 安定
+ 2 = Microsoft Edge Beta version 77 またはそれ以降
+ 3 = Microsoft Edge Dev version 77 またはそれ以降
+ 4 = Microsoft Edge Canary version 77 またはそれ以降
 
 *無効にする方法を含めて Microsoft Edge の次期バージョンの Windows Update については、https://go.microsoft.com/fwlink/?linkid=2102115 を参照してください。この更新は Windows 10 version 1709 およびそれ以降にのみ適用されます。</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3968,6 +3976,14 @@ Microsoft Edge* の次期バージョンの Windows Update がインストール
 このポリシーを無効にした場合、または構成しなかった場合は、Internet Explorer モードでは拡張ホットキーは動作しません。
 
 詳細については、「https://go.microsoft.com/fwlink/?linkid=2102115」を参照してください。</string>
+      <string id="ResetZoomForDialogInIEMode">Internet Explorer モードの HTML ダイアログのズームを既定値にリセットする</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">このポリシー設定を使用すると、管理者は、Internet Explorer モードの HTML ダイアログのズームを既定値にリセットできます。
+
+このポリシーを有効にした場合、Internet Explorer モードの HTML ダイアログのズームは親ページから反映されません。
+
+このポリシーを無効にした場合、または構成しなかった場合、Internet Explorer モードの HTML ダイアログのズームは、親ページのズームに基づいて設定されます。
+
+詳細については、https://go.microsoft.com/fwlink/?linkid=2102115を参照してください</string>
       <string id="DisableInternetExplorerApp">Internet Explorer 11 をスタンドアロンブラウザーとして無効にする</string>
       <string id="IE_ExplainDisableInternetExplorerApp">このポリシーを使用すると、Internet Explorer をスタンドアロン ブラウザーとして起動することを制限できます。
 
@@ -3981,12 +3997,6 @@ Microsoft Edge* の次期バージョンの Windows Update がインストール
       <string id="NotifyDisableIEOptions_Never">しない</string>
       <string id="NotifyDisableIEOptions_Always">常時</string>
       <string id="NotifyDisableIEOptions_OncePerUser">ユーザーごとに 1 回</string>
-      <string id="JScriptReplacement">JScript9Legacy を MSHTML/WebOC 経由で JScript の代わりに読み込み、JScript を置換します。</string>
-      <string id="IE_ExplainJScriptReplacement">このポリシー設定では、JScript または JScript9Legacy を使用して MSHTML/WebOC ベースの呼び出しを読み込むかどうかを指定します。
-      
-このポリシー設定を有効にした場合、JScript9Legacy は JScript がインスタンス化される場合に読み込まれます。
-
-このポリシーを無効にするか、または構成しない場合は、JScript が使用されます。</string>
       <string id="VerMgmtDisable">Internet Explorer の古い ActiveX コントロールのブロックを無効する</string>
       <string id="IE_ExplainVerMgmtDisable">このポリシー設定では、Internet Explorer で特定の古い ActiveX コントロールをブロックするかどうかを決定します。イントラネット ゾーンでは、古い ActiveX コントロールがブロックされません。
 

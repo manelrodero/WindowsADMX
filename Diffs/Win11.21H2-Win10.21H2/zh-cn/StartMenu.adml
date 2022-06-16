@@ -207,19 +207,6 @@ Windows 可以通过将最近使用的菜单项移至菜单顶部，并且隐藏
 此策略设置只影响指定的用户界面元素,不影响 Internet Explorer，也不会阻止用户使用其他方法进行搜索。
 
 如果禁用或未配置此策略设置，则“开始”菜单中可显示“搜索”链接。</string>
-      <string id="ShowOrHideMostUsedApps">从“开始”菜单显示或隐藏“最常用”列表</string>
-      <string id="ShowOrHideMostUsedApps_Help">如果启用此策略设置，则可以配置 "开始" 菜单以显示或隐藏用户最使用的应用列表（与用户设置无关）。
-
-选择 "显示" 将强制显示 "最常用" 列表，用户无法更改此设置以使用 "设置" 应用隐藏它。
-
-选择 "隐藏" 将强制 "最常用" 列表处于隐藏状态，用户无法使用 "设置" 应用更改为显示它。
-
-选择 "未配置"，或者如果禁用或未配置此策略设置，则所有用户都将允许用户使用 "设置" 应用打开或关闭 "最常用" 列表的显示。这是默认行为。
-
-注意：在支持的 Windows 10 版本中，将此策略配置为 "显示" 或 "隐藏" 将取代任何策略设置 "从 ' 开始 ' 菜单中删除常用程序列表" (该策略设置可管理同一部分 "开始" 菜单，但是) 较少的选项。</string>
-      <string id="MFU_NotConfigured">未配置</string>
-      <string id="MFU_Show">显示</string>
-      <string id="MFU_Hide">隐藏</string>        
       <string id="NoFrequentUsedPrograms">从“开始”菜单中删除常用程序列表</string>
       <string id="NoFrequentUsedPrograms_Help">如果启用此设置，常用的程序列表将从“开始”菜单中删除。
 
@@ -645,14 +632,10 @@ Windows 更新是 Windows 的联机扩展，提供软件更新以使用户的系
           <label>“开始”屏幕布局文件</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">每次登录时重新应用布局</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">在下面选择一种大小</dropdownList>
       </presentation>
-      <presentation id="ShowOrHideMostUsedApps">
-        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">请选择下列操作之一</dropdownList>
-      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

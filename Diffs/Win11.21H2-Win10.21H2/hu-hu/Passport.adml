@@ -129,13 +129,15 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Vállalati W
 Megjegyzés: Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, és engedélyezi „A Vállalati Windows Hello használata“ házirend-beállítást, akkor a Vállalati Windows Hello hitelesítésének megfelelő működéséhez a környezetben lenni kell legalább egy Windows Server 2016 rendszerű tartományvezérlőnek.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Ezzel a házirend-beállítással megadhatja, hogy a Vállalati Windows Hello Azure Active Directory Kerberost használjon a helyszíni hitelesítéshez.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Ezzel a házirend-beállítással megadhatja, hogy a Vállalati Windows Hello Azure AD Kerberost használjon a helyszíni hitelesítéshez.
 
 Ha engedélyezi ezt a házirend-beállítást, a Vállalati Windows Hello olyan Kerberos jegyet fog használni, amelyet az Azure-hoz kapcsolódó hitelesítéskor kért le a rendszer a helyszíni hitelesítéshez.
 		
 Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Vállalati Windows Hello kulcsot vagy tanúsítványt használ (más házirend-beállításoktól függően) a helyszíni hitelesítéshez.
 
-Megjegyzés: Egy olyan környezet, amely mindkettő házirend-beállítást engedélyezi, és „A Vállalati Windows Hello használata házirend-beállítás“ egy vagy több Windows Server 2016 rendszerű tartományvezérlőt igényel. Másképp a Vállalati Windows Hello hitelesítése meghiúsul.
+Megjegyzés: Egy olyan környezet, amely mindkettő házirend-beállítást engedélyezi, és A Vállalati Windows Hello használata házirend-beállítás“ egy vagy több Windows Server 2016 rendszerű tartományvezérlőt igényel. Másképp a Vállalati Windows Hello hitelesítése meghiúsul.
+
+Ez a házirend csak a Windows 10 21H2 vagy újabb verzió esetén támogatott.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Eszközfeloldási tényezők beállítása</string>

@@ -6,8 +6,6 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Notifications</string>
-      <string id="WnsEndpoint">Active la stratégie de groupe pour le nom de domaine complet WNS</string>
-      <string id="WnsEndpointExplain">Cette stratégie définit un nom de domaine complet WNS spécial pour des environnements spécifiques.</string>
       <string id="NoTileNotification">Désactiver les notifications par vignette</string>
       <string id="NoTileNotificationExplain">
           Ce paramètre de stratégie désactive les notifications par vignette.
@@ -125,11 +123,6 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minutes après minuit :</decimalTextBox>
-      </presentation>
-      <presentation id="WnsEndpoint">
-        <textBox refId="WnsEndpoint_FQDN">
-          <label>FQDN pour WNS</label>
-        </textBox>
       </presentation>
     </presentationTable>
   </resources>

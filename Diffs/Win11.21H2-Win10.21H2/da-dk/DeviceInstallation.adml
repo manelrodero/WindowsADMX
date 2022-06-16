@@ -35,13 +35,13 @@ Hvis du aktiverer denne politikindstilling på en server for fjernskrivebord, p�
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, og ingen andre politikindstillinger beskriver enheden, bestemmer politikindstillingen "Forbyd installation af enheder, der ikke er beskrevet af andre politikindstillinger", om enheden kan installeres.</string>
       <string id="DeviceInstall_Classes_Deny">Forbyd installation af enheder, der bruger drivere, som svarer til disse enhedskonfigurationsklasser</string>
-      <string id="DeviceInstall_Classes_Deny_Help">Du kan bruge denne politikindstilling til at angive en liste over enhedskonfigurationsklasse-GUID'er (GUID) for driverpakker, som Windows ikke kan installere. Denne politikindstilling har som standard højere prioritet i forhold til andre politikindstillinger, der gør det muligt for Windows at installere en enhed.
+      <string id="DeviceInstall_Classes_Deny_Help">Med denne politikindstilling kan du angive en liste over enhedsklassekonfigurations-GUID'er (Globally Unique Identifiers) for driverpakker, som Windows ikke kan installere. Denne politikindstilling tilsidesætter som standard andre politikindstillinger, der gør det muligt for Windows at installere en enhed.
 
-Bemærk! Hvis du vil aktivere politikindstillingen "Tillad installation af enheder, der svarer til et af disse enhed-id'er" og "Tillad installation af enheder, der svarer til en af disse enhedsforekomst-id'er", skal du aktivere politikindstillingen "Anvend lagdelt rækkefølge for Tillad og Forbyd enheds installations politikker på tværs af alle enheds søgekriterier".
+Bemærk! Hvis du vil aktivere politikindstillingen "Tillad installation af enheder, der svarer til et af disse enheds-id'er" og "Tillad installation af enheder, der svarer til et af disse enhedsforekomst-id'er", for at tilsidesætte denne politikindstilling for relevante enheder, skal du aktivere politikindstillingen "Anvend lagdelt rækkefølge af evaluering for Tillad og Forbyd installation af enhedsinstallationspolitikker på tværs af alle kriterier for enhedsmatch".
  
-Hvis du aktiverer denne politikindstilling, kan der ikke installeres eller opdateres driverpakker, hvis enhedsinstallationsklasse-GUID'ER vises på den liste, du opretter. Hvis du aktiverer denne politikindstilling på en fjernskrivebordsserver, påvirker politikindstillingen omdirigering af de angivne enheder fra en Fjernskrivebordsklient til fjernskrivebordsserveren.
+Hvis du aktiverer denne politikindstilling, forhindres Windows i at installere eller opdatere driverpakker, hvis enhedskonfigurationsklasse-GUID'er vises på den liste, du opretter. Hvis du aktiverer denne politikindstilling på en fjernskrivebordsserver, påvirker politikindstillingen omdirigering af de angivne enheder fra en fjernskrivebordsklient til fjernskrivebordsserveren.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan enheder installeres og opdateres, som den er tilladt eller forhindret af andre politikindstillinger.</string>
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan Windows installere og opdatere enheder som tilladt eller forhindret af andre politikindstillinger.</string>
       <string id="DeviceInstall_Help">Politikindstillinger, der kontrollerer installation af enheder.</string>
       <string id="DeviceInstall_IDs_Allow">Tillad installation af enheder, der svarer til en af disse enhed-id'er</string>
       <string id="DeviceInstall_IDs_Allow_Help">Du kan bruge denne politikindstilling til at angive en liste med plug and Play hardware-id'er og kompatible id'er for enheder, som Windows har tilladelse til at installere. Denne politikindstilling er beregnet til kun at blive brugt, når politikindstillingen "Anvend lagdelt rækkefølge af evaluering af tilladelse og forhindring af enhedsinstallation" på "tværs af alle enhedens søgekriterier" er aktiveret, men den kan også bruges sammen med politikindstillingen "Forbyd installation af enheder, der ikke er beskrevet af andre politikindstillinger", for gamle politikdefinitioner.
@@ -164,7 +164,7 @@ Hvis du deaktiverer eller undlader at konfigurere denne indstilling, vises der e
 Hvis du aktiverer denne politikindstilling, må medlemmer af brugergruppen installere nye drivere for de angivne enhedskonfigurationsklasser. Driverne skal være signeret ifølge politikken Windows-driversignering eller være signeret af de udgivere, der allerede er lageret til udgivere, der er tillid til.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er det kun medlemmer af administratorgruppen, der må installere nye driverpakker på systemet.</string>
-      <string id="DriverInstall_Help">Politikindstillinger styrer installationen af driverpakker på systemet.</string>
+      <string id="DriverInstall_Help">Politikindstillinger, som kontrollerer installation af drivere på systemet.</string>
       <string id="DriverSign_Block">Bloker</string>
       <string id="DriverSign_None">Ignorer</string>
       <string id="DriverSign_Warn">Advar</string>

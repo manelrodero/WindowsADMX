@@ -18,12 +18,15 @@
 
 3=сочетание HTTP с интернет-пирингом.
 
-99=режим простого скачивания без пиринга. Служба оптимизации доставки скачивает файлы только с помощью HTTP и не пытается связаться со своими облачными службами.</string>
+99=режим простого скачивания без пиринга. Служба оптимизации доставки скачивает файлы только с помощью HTTP и не пытается связаться со своими облачными службами.
+
+100=режим обхода. Вместо службы оптимизации доставки следует использовать BITS.</string>
       <string id="DownloadMode_CdnOnly">Только HTTP (0)</string>
       <string id="DownloadMode_Lan">Локальная сеть (1)</string>
       <string id="DownloadMode_Group">Группа (2)</string>
       <string id="DownloadMode_Internet">Интернет (3)</string>
       <string id="DownloadMode_Simple">Простой (99)</string>
+      <string id="DownloadMode_Bypass">Обход (100)</string>
       <string id="GroupId">ИД группы</string>
       <string id="GroupId_Help">Идентификатор группы необходимо задать как идентификатор GUID. Эта политика указывает произвольный идентификатор группы, к которому относится устройство.
 
@@ -169,16 +172,11 @@
       <string id="RestrictPeerSelectionBy_Help">Настройте эту политику, чтобы ограничить выбор узла на основе выбранного параметра.
 
 Доступные варианты:
-0 = NAT.
-1 = маска подсети.
-2 = локальное обнаружение (DNS-SD).
+1 = маска подсети (в будущих выпусках появятся дополнительные параметры).
 
-Значение по умолчанию было изменено с 0 (без ограничений) на 1 (ограничение до подсети).
-
-Эти параметры применяются к режимам скачивания "Локальная сеть" (1) и "Группа" (2).</string>
-      <string id="RestrictPeerSelectionBy_None">Преобразование сетевых адресов (NAT)</string>
+Параметр 1 (маска подсети) применяется к режимам скачивания "Локальная сеть" (1) и "Группа" (2).</string>
+      <string id="RestrictPeerSelectionBy_None">Нет</string>
       <string id="RestrictPeerSelectionBy_Subnet">Подсеть</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Локальное обнаружение</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Задать рабочее время, чтобы ограничить пропускную способность для фонового скачивания</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Указывает максимальную пропускную способность для фонового скачивания, которая применяется в рамках функции "Оптимизация доставки" в рабочее и нерабочее время ко всем параллельным действиям по скачиванию, в процентах от доступной для него пропускной способности.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Задать рабочее время, чтобы ограничить пропускную способность для интерактивного скачивания</string>
@@ -305,7 +303,7 @@
         <text>Стандартное значение — 0 (без задержки)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Ограничить выбор одноранговых узлов по следующему критерию:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Ограничить выбор одноранговых узлов по следующему критерию:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

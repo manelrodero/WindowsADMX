@@ -135,11 +135,11 @@ DC Konum Belirleyici DNS kayıtlarına ilişkin TTL'yi belirlemek için, Etkin'i
 
 Bu ayarı yapılandırmazsanız, ayar hiçbir DC'ye uygulanmaz ve DC'ler kendi yerel yapılandırmalarını kullanır.</string>
       <string id="Netlogon_ExpectedDialupDelay">Oturum açmada beklenen çevirme gecikmesini belirt</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">Bu ilke ayarı, ağda oturum açarken etki alanı denetleyicisinin (DC) yanıtını beklemek için bilgisayara ek süre belirtir.
+      <string id="Netlogon_ExpectedDialupDelay_Help">Bu ilke ayarı ağa oturum açarken, etki alanı denetleyicisinin (DC) yanıtını beklemek için bilgisayara ek süre verir.
 
-Oturum açmada beklenen çevirme gecikmesini belirtmek için Etkin'e tıklayıp istenen değeri saniye cinsinden (örneğin, "60" değeri 1 dakikadır) girin.
+Beklenen çevirmeli oturum açma gecikmemesini belirtmek için Etkin'i tıklatıp istenen değeri saniye cinsinden (örneğin "60" değeri 1 dakikadır) girin.
 
-Bu ilke ayarını yapılandırmazsanız hiçbir bilgisayara uygulanmaz ve bilgisayarlar kendi yerel yapılandırmalarını kullanır.</string>
+Bu ilke ayarını yapılandırmazsanız hiçbir bilgisayara uygulanmaz ve bilgisayarlar kendi yerel yapılandırmasını kullanır.</string>
       <string id="Netlogon_GcSiteCoverage">GC Konum Belirleyici DNS SRV Kayıtları tarafından kapsanan siteleri belirt</string>
       <string id="Netlogon_GcSiteCoverage_Help">Bu ilke ayarı genel katalogların (GC), siteye özel GC konum belirleyici DNS SRV kaynak kayıtlarının hangi siteler için kaydedeceğini belirtir. Bu kayıtlar, GC'nin bulunduğu site için kaydedilen siteye özel SRV kayıtları ve kendilerine en yakın GC olmayan siteler için GC Konum Belirleyici DNS SRV kayıtlarını kaydetmek üzere yapılandırılmış bir GC tarafından kaydedilen kayıtlara ek olarak kaydedilir. 
 
@@ -337,22 +337,6 @@ Bu ayar için izin verilen değerler aşağıdaki davranışlarla sonuçlanır:
 Bu davranışı belirtmek için, Etkin öğesini tıklatıp bir değer girin. Değer aralığı 1-2'dir.
 
 Bu ilke ayarını yapılandırmazsanız hiçbir bilgisayara uygulanmaz ve bilgisayarlar kendi yerel yapılandırmasını kullanır.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Etki alanı denetleyicisi SRV kayıtlarını kaydederken küçük harfli DNS ana bilgisayar adları kullanın</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Bu ilke ayarı, bu ayarın uygulandığı etki alanı denetleyicilerinin SRV kayıtlarını kaydederken DNS ana bilgisayar adını küçük harf olarak ayarlayıp ayarlamayacağını yapılandırır.
-
-Etkinleştirilirse etki alanı denetleyicileri, etki alanı denetleyicisi SRV kayıtlarını kaydederken DNS ana bilgisayar adlarını küçük harf olarak ayarlar. En iyi seçenek, büyük ve küçük harfli DNS ana bilgisayar adı içeren önceden kaydedilmiş SRV kayıtlarını silmektir. Daha fazla bilgi ve olası manuel temizleme işlemleri için aşağıdaki bağlantıya bakın.
-
-Devre dışı bırakılırsa etki alanı denetleyicileri, etki alanı denetleyicisi SRV kayıtlarını kaydederken sahip oldukları yapılandırılmış DNS ana bilgisayar adlarını kullanırlar.
-
-Yapılandırılmazsa etki alanı denetleyicileri varsayılan olarak yerel yapılandırmalarını kullanır.
-
-Varsayılan yerel yapılandırma etkindir.
-
-Bu ayarda yapılan değişikliklerin etkili olması için sistemin yeniden başlatılması gerekmez.
-
-Daha fazla bilgi için https://aka.ms/lowercasehostnamesrvrecord adresine bakabilirsiniz
-      </string>
 
     </stringTable>
     <presentationTable>

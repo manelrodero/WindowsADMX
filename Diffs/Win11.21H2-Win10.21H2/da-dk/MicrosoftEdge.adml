@@ -11,8 +11,8 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1511_DisplayName">Microsoft Edge på Windows 10, version 1511 eller nyere</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1607_DisplayName">Microsoft Edge på Windows 10, version 1607 eller nyere</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge på Windows 10, version 1703 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge på Windows 10, Version 1709 eller nyere</string>
-      <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge på Windows 10, Version 1708 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge på Windows 10, version 1709 eller nyere</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge på Windows 10, version 1708 eller nyere</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge på Windows 10, version 1803 eller nyere</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge på Windows 10, version 1809 eller nyere</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
@@ -161,17 +161,17 @@ Hvis du undlader at konfigurere denne indstilling, kan medarbejderne vælge, om 
       <string id="AllowSideloadingOfExtensions">Tillad indlæsning af udvidelse</string>
       <string id="AllowSideloadingOfExtensions_Explain">Indlæsning installerer og kører ubekræftede udvidelser i Microsoft Edge. Med denne politik kan du angive, om ubekræftede udvidelser kan indlæses i Microsoft Edge.
 
-Hvis indlæsning er aktiveret eller ikke er konfigureret, er indlæsning af ubekræftede udvidelser i Microsoft Edge tilladt.
+Hvis indlæsning er aktiveret eller ikke konfigureret, er indlæsning af ubekræftede udvidelser i Microsoft Edge tilladt.
 
-Hvis indlæsning er deaktiveret, er indlæsning af ubekræftede udvidelser i Microsoft Edge ikke tilladt. Udvidelser kan kun installeres via Microsoft Store (herunder en butik for virksomheder), virksomhedens facade (f. eks. firmaportalen) eller PowerShell (ved hjælp af Add-AppxPackage). Når denne politik er deaktiveret, forhindrer den ikke indlæsning af udvidelser ved hjælp af Add-AppxPackage via PowerShell. Hvis du vil forhindre det, skal du i redigeringsprogrammet til gruppepolitik tillade udvikling af Microsoft Store-apps og installere dem fra et IDE-system, som findes på:
+Hvis indlæsning er deaktiveret, er indlæsning af ubekræftede udvidelser i Microsoft Edge ikke tilladt. Udvidelser kan kun installeres via Microsoft Store (herunder en butik til virksomheder), virksomhedens webside (f.eks. en firmaportal) eller PowerShell (ved hjælp af Add-AppxPackage). Når denne politik er deaktiveret, forhindrer den ikke indlæsning af udvidelser ved hjælp af Add-AppxPackage via PowerShell. Hvis du vil forhindre det, skal du i Editor til gruppepolitik aktivere Tillader udvikling af Microsoft Store-apps og installation af dem fra et IDE (integreret udviklingsmiljø), som findes på:
 
-Computerkonfiguration &gt; Administrative skabeloner &gt; Windows-komponenter &gt; Installation af app-pakke
+Computerkonfiguration &gt; Administrative skabeloner &gt; Windows-komponenter &gt; Udrulning af app-pakke
 
 Understøttede versioner: Microsoft Edge på Windows 10, version 1809
 Standardindstilling: Deaktiveret eller ikke konfigureret
 Relaterede politikker:
-- Gør det muligt at udvikle Microsoft Store-apps og installere dem fra et integreret udviklingsmiljø (IDE)
-- Tillad alle betroede apps at installere</string>
+– Tillader udvikling af Microsoft Store-apps og installation af dem fra et IDE (integreret udviklingsmiljø)
+– Tillad installation af alle betroede apps​</string>
       <string id="AllowSmartScreen">Konfigurer Windows Defender SmartScreen</string>
       <string id="AllowSmartScreen_Explain">Denne politikindstilling gør det mulig at konfigurere, om du vil slå Windows Defender SmartScreen til. Windows Defender SmartScreen viser advarselsmeddelelser for at beskytte dine medarbejdere mod potentielle forsøg på phishing og skadelig software. Windows Defender SmartScreen er som standard slået til.
 
@@ -441,9 +441,9 @@ Relateret politik:
 -Angiv URL-adresse til startsideknap</string>
       <string id="AllowFlashClickToRun">Konfigurer indstillingen for Klik og kør for Adobe Flash</string>
       <string id="AllowFlashClickToRun_Explain">
-        Hvis du aktiverer eller undlader at konfigurere indstillingen Klik og kør for Adobe Flash, kræver Microsoft Edge, at brugerne klikker på Klik og kør eller på indholdet, eller at websitet findes på listen over tilladte websteder, inden indholdet indlæses og køres.
+        Hvis du aktiverer eller undlader at konfigurere indstillingen Klik og kør for Adobe Flash, kræver Microsoft Edge, at brugerne klikker på Klik og kør eller på indholdet, eller at webstedet findes på listen over automatisk tilladte websteder, inden indholdet indlæses og køres.
 
-Websites kommer på listen over tilladte websites, ud fra hvor ofte brugerne tillader, at indholdet indlæses og køres.
+Websteder kommer på listen over automatisk tilladte websteder baseret på brugerfeedback og mere specifikt, hvor ofte brugerne tillader, at indholdet indlæses og køres.
       </string>
 
       <string id="AllowClearingBrowsingDataOnExit">Tillad fjernelse af browsingdata ved afslutning</string>
@@ -479,10 +479,10 @@ Hvis du forhindrer forudindlæsning, vil Microsoft Edge ikke indlæse siden Star
       <string id="AllowTabPreloadingDropdown_AllowTabPreloading">Tillad forudindlæsning af fane</string>
       <string id="AllowTabPreloadingDropdown_PreventTabPreloading">Undgå forudindlæsning af fane</string>
       <string id="ConfigureTelemetryForMicrosoft365Analytics">Konfigurer indsamling af browserdata til Desktop Analytics</string>
-      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">Du kan kun konfigurere Microsoft Edge til kun at sende intranetoversigt, kun internetoversigt eller begge til Desktop Analytics til virksomhedsenheder med et konfigureret kommercielt id. Hvis du deaktiverer eller undlader at konfigurere denne, sender Microsoft Edge ikke data til browseroversigten til Desktop Analytics.
+      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">Du kan konfigurere Microsoft Edge til kun at sende intranetoversigt, kun internetoversigt eller begge til Desktop Analytics for virksomhedsenheder med et konfigureret kommercielt id. Hvis det er deaktiveret eller ikke konfigureret, sender Microsoft Edge ikke data om browseroversigten til Desktop Analytics.
 
 Understøttede versioner: Microsoft Edge på Windows 10, version 1809
-Standardindstilling: Deaktiveret eller ikke konfigureret (ingen data indsamles eller afsendes)</string>
+Standardindstilling: Deaktiveret eller ikke konfigureret (ingen data indsamles eller sendes)</string>
       <string id="ZonesList_IntranetOnly">Tillad kun afsendelse af intranetoversigt</string>
       <string id="ZonesList_InternetOnly">Tillad kun afsendelse af internetoversigt</string>
       <string id="ZonesList_Both">Tillad afsendelse af både intranet- og internetoversigt</string>
@@ -518,9 +518,14 @@ Hvis du angiver denne politik til 0, bruger Microsoft Edge ikke en timer for ina
 Hvis indstillingen er deaktiveret eller ikke er konfigureret, er standardværdien 5 minutter.
 
 Hvis du undlader at konfigurere Microsoft Edge i tildelt adgang, træder denne politik ikke i kraft.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Slet meddelelse om visning af forældet Edge</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">Du kan konfigurere Microsoft Edge til at slette den meddelelsesvisning, der informerer brugere om, at understøttelse af denne version af Microsoft Edge blev afsluttet den 9. marts 2021. Hvis indstillingen er aktiveret, vises meddelelsen ikke.
 
+Hvis indstillingen er deaktiveret eller ikke er konfigureret, vises meddelelsen, hver gang Microsoft Edge startes. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

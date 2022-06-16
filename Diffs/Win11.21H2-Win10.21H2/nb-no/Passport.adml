@@ -120,22 +120,24 @@ Hvis du deaktiverer eller lar være å konfigurere denne policyinnstillingen, bl
 Obs! Denne policyen gjelder bare for enheter som er registrert i Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Bruk denne policy innstillingen til å konfigurere Windows Hello for bedrifter for å registrere et påloggings sertifikat som brukes til lokal godkjenning.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Bruk denne policyinnstillingen til å konfigurere Windows Hello for bedrifter registrere et påloggingssertifikat som brukes til lokal godkjenning.
 
-Hvis du aktiverer denne policy innstillingen, registrerer Windows Hello for bedrifter et påloggings sertifikat som brukes til lokal godkjenning.
+Hvis du aktiverer denne policyinnstillingen, registrerer Windows Hello for bedrifter et påloggingssertifikat som brukes til lokal godkjenning.
 
-Hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen, bruker Windows Hello for bedrifter en nøkkel eller en Kerberos-billett (avhengig av andre policy innstillinger) for lokal godkjenning.
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, bruker Windows Hello for bedrifter en nøkkel- eller Kerberos-billett (avhengig av andre policyinnstillinger) for lokal godkjenning.
 
-Obs! hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen og aktiverer policy innstillingen bruk Windows Hello for bedrifter, trenger du en eller flere Windows Server 2016-domene kontrollere for å hindre at godkjenning av Windows Hello for bedrifter mislykkes.
+Obs! Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen og aktiverer policyinnstillingen Bruk Windows Hello for bedrifter, må miljøet ha én eller flere Windows Server 2016-domenekontrollere for å hindre at Windows Hello for bedrifter godkjenning mislykkes.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Bruk denne policy innstillingen til å konfigurere Windows Hello for bedrifter til å bruke Azure AD Kerberos for lokal godkjenning.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Bruk denne policyinnstillingen til å konfigurere Windows Hello for bedrifter til å bruke Azure AD Kerberos for lokal godkjenning.
 
-Hvis du aktiverer denne policy innstillingen, bruker Windows Hello for bedrifter en Kerberos-billett som er Hentet fra godkjenning til Azure for lokal godkjenning.
+Hvis du aktiverer denne policyinnstillingen, bruker Windows Hello for bedrifter en Kerberos-billett som hentes fra godkjenning til Azure for lokal godkjenning.
 
-Hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen, vil Windows Hello for bedrifter bruke en nøkkel eller et sertifikat (avhengig av andre policy innstillinger) for lokal godkjenning. 
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, bruker Windows Hello for bedrifter en nøkkel eller et sertifikat (avhengig av andre policyinnstillinger) for lokal godkjenning. 
  
-Obs! et miljø som aktiverer både denne policy innstillingen og policy innstillingen bruk Windows Hello for bedrifter, krever én eller flere Windows Server 2016-domene kontrollere. Hvis ikke, vil godkjenning av Windows Hello for bedrifter mislykkes.
+Obs! Et miljø som aktiverer både denne policyinnstillingen og policyinnstillingen Bruk Windows Hello for bedrifter, krever én eller flere Windows Server 2016-domenekontrollere. Hvis ikke mislykkes Windows Hello for bedrifter godkjenning.
+
+Denne policyen støttes bare på Windows 10, versjon 21H2 og nyere.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Konfigurer opplåsingsfaktorer for enhet</string>

@@ -18,6 +18,7 @@
       <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minimaal Windows Vista via Windows 8.1 of Windows Server 2012 R2 met het meest recente servicepack. Niet ondersteund op Windows 10 en hoger.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 of minstens Windows 2000 Service Pack 3
 Optie 7 alleen ondersteund op servers met minimaal Windows Server 2016 Edition</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Minimaal Windows Server 2022 of Windows 10 versie 2004</string>
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 tot en met Windows Server 2022 of Windows 10</string>
       <string id="AUDontShowUasHelp">Met deze beleidsinstelling kunt u aangeven of de optie Updates installeren en computer afsluiten moet worden weergegeven in het dialoogvenster Windows afsluiten.
 
@@ -65,29 +66,29 @@ Opmerking: Dit beleid is niet van toepassing op Windows RT.
 
 Met deze optie geeft u aan of het gebruik van automatische updates is ingeschakeld op deze computer. Als de service is ingeschakeld, moet u een van de drie opties kiezen voor de groepsbeleidsinstelling:
 
-        2 = Vraag mij of ik updates wil downloaden en installeren.
+ 2 = Vraag mij of ik updates wil downloaden en installeren.
 
-        Wanneer er updates worden gevonden die van toepassing zijn op de computer, wordt de gebruiker gewaarschuwd dat er updates zijn gedownload. Als de gebruiker naar Windows Update gaat, kan deze de beschikbare updates downloaden en installeren.
+ Wanneer er updates worden gevonden die van toepassing zijn op de computer, wordt de gebruiker gewaarschuwd dat er updates zijn gedownload. Als de gebruiker naar Windows Update gaat, kan deze de beschikbare updates downloaden en installeren.
 
-        3 = (standaardinstelling) Updates automatisch downloaden. Vraag mij na het downloaden of ik de updates wil installeren
+ 3 = (standaardinstelling) Updates automatisch downloaden. Vraag mij na het downloaden of ik de updates wil installeren
 
-        Er wordt gezocht naar updates die bestemd zijn voor uw computer. Deze updates worden op de achtergrond gedownload (de gebruiker krijgt geen meldingen en wordt niet gestoord tijdens dit proces). Wanneer de downloads zijn voltooid, krijgen gebruikers het bericht dat de updates kunnen worden geïnstalleerd. Nadat gebruikers naar Windows Update zijn gegaan, kunnen ze de updates installeren.
+ Er wordt gezocht naar updates die bestemd zijn voor uw computer. Deze updates worden op de achtergrond gedownload (de gebruiker krijgt geen meldingen en wordt niet gestoord tijdens dit proces). Wanneer de downloads zijn voltooid, krijgen gebruikers het bericht dat de updates kunnen worden geïnstalleerd. Nadat gebruikers naar Windows Update zijn gegaan, kunnen ze de updates installeren.
 
-        4 = Updates automatisch downloaden en installeren volgens de opgegeven planning.
+ 4 = Updates automatisch downloaden en installeren volgens de opgegeven planning.
 
-        Wanneer 'Automatisch' is geselecteerd als de geplande installatietijd, controleert Windows automatisch op updates en worden deze automatisch gedownload en geïnstalleerd. Het apparaat wordt opnieuw opgestart volgens de standaardinstellingen van Windows, tenzij deze zijn geconfigureerd met Groepsbeleid. (Van toepassing op Windows 10 versie 1809 en hoger)
+ Wanneer 'Automatisch' is geselecteerd als de geplande installatietijd, controleert Windows automatisch op updates en worden deze automatisch gedownload en geïnstalleerd. Het apparaat wordt opnieuw opgestart volgens de standaardinstellingen van Windows, tenzij deze zijn geconfigureerd met Groepsbeleid. (Van toepassing op Windows 10 versie 1809 en hoger)
 
-        Geef de gewenste planning op met behulp van de opties in de groepsbeleidsinstelling. Voor versie 1709 en hoger is er een extra keuze waarbij u het bijwerken kunt beperken tot wekelijks, tweewekelijks of maandelijks. Als er geen planning is opgegeven, wordt de standaardplanning voor alle installaties gebruikt (elke nacht om 3:00 uur). Als een update vereist dat de computer opnieuw wordt opgestart, gebeurt dit automatisch. (Als een gebruiker is aangemeld op de computer wanneer deze opnieuw moet worden opgestart, wordt de gebruiker hiervan op de hoogte gesteld en kan deze het opstarten uitstellen.)
+ Geef de gewenste planning op met behulp van de opties in de groepsbeleidsinstelling. Voor versie 1709 en hoger is er een extra keuze waarbij u het bijwerken kunt beperken tot wekelijks, tweewekelijks of maandelijks. Als er geen planning is opgegeven, wordt de standaardplanning voor alle installaties gebruikt (elke nacht om 3:00 uur). Als een update vereist dat de computer opnieuw wordt opgestart, gebeurt dit automatisch. (Als een gebruiker is aangemeld op de computer wanneer deze opnieuw moet worden opgestart, wordt de gebruiker hiervan op de hoogte gesteld en kan deze het opstarten uitstellen.)
 
-        In Windows 8 en later kunt u instellen dat updates worden geïnstalleerd tijdens automatisch onderhoud in plaats van volgens een specifieke planning. Via Automatisch onderhoud worden updates geïnstalleerd wanneer de computer niet in gebruik is en wordt de installatie van updates voorkomen wanneer de computer op een batterij werkt. Als updates 2 dagen niet via Automatisch onderhoud kunnen worden geïnstalleerd, installeert Windows Update de updates onmiddellijk. Gebruikers krijgen een bericht dat de computer opnieuw wordt opgestart. Deze procedure wordt uitsluitend uitgevoerd als er geen risico op gegevensverlies is.
+ In Windows 8 en hoger kunt u instellen dat updates worden geïnstalleerd tijdens automatisch onderhoud in plaats van volgens een specifieke planning. Via Automatisch onderhoud worden updates geïnstalleerd wanneer de computer niet in gebruik is en wordt de installatie van updates voorkomen wanneer de computer op een batterij werkt. Als updates 2 dagen niet via Automatisch onderhoud kunnen worden geïnstalleerd, installeert Windows Update de updates onmiddellijk. Gebruikers krijgen een bericht dat de computer opnieuw wordt opgestart. Deze procedure wordt uitsluitend uitgevoerd als er geen risico op gegevensverlies is.
 
-        5 = Lokale administrators kunnen de configuratiemodus voor Automatische updates voor berichtgeving en installatie van updates zelf kiezen. (Deze optie is niet overgenomen door Win 10-versies)
+ 5 = Lokale administrators kunnen de configuratiemodus voor Automatische updates voor berichtgeving en installatie van updates zelf kiezen. (Deze optie is niet overgenomen door Win 10-versies)
 
-        Met deze optie kunnen lokale administrators in het configuratiescherm Automatische updates een configuratieoptie naar keuze selecteren. Lokale administrators kunnen de configuratie voor Automatische updates niet uitschakelen.
+ Met deze optie kunnen lokale administrators in het configuratiescherm voor Automatische updates een configuratieoptie naar keuze selecteren. Lokale administrators kunnen de configuratie voor Automatische updates niet uitschakelen.
 
-        7 = Vraag mij of ik de updates wil installeren en of ik opnieuw wil opstarten. (Alleen Windows Server)
+ 7 = Vraag mij of ik de updates wil installeren en of ik opnieuw wil opstarten. (Alleen Windows Server)
 
-        Met deze optie van Windows Server 2016, die alleen geschikt voor Server SKU-apparaten, kunnen lokale administrators Windows Update gebruiken om door te gaan met installaties of handmatig opnieuw op te starten.
+ Met deze optie van Windows Server 2016, die alleen geschikt voor Server SKU-apparaten, kunnen lokale administrators Windows Update gebruiken om door te gaan met installaties of handmatig opnieuw op te starten.
 
 Als de status voor dit beleid is ingesteld op Uitgeschakeld, moeten alle updates die beschikbaar zijn op de Windows Update-website handmatig worden gedownload en geïnstalleerd. Hiertoe zoekt u via Start naar Windows Update.
 
@@ -133,43 +134,43 @@ Als de waarde is ingesteld op Niet-geconfigureerd, wordt het gebruik van Automat
       <string id="AutoUpdateSchTimeAuto">Automatisch</string>
       <string id="CorpWuURL">Locatie van Microsoft-updateservice in intranet</string>
       <string id="CorpWuURL_Help">
-        Hier geeft u een intranetserver op voor de updates van Microsoft Update. Vervolgens kunt u de computers in het netwerk met behulp van deze updateservice automatisch bijwerken.
+        Hier geeft u een intranetserver op voor de updates van Microsoft Update. Vervolgens kunt u de computers in het netwerk met behulp deze updateservice automatisch bijwerken.
 
         Met deze instelling wijst u een server in het netwerk aan als interne updateservice. De Automatische updates-client zoekt in deze service naar updates die van toepassing zijn op de computers in het netwerk.
 
-        Om deze instelling te kunnen gebruiken, moet u twee waarden voor de servernaam opgeven: de server waarvan de Automatische updates-client updates detecteert en downloadt en de server waarnaar de bijgewerkte werkstations statistische informatie uploaden. U kunt beide waarden instellen als dezelfde server. U kunt een optionele waarde voor de servernaam opgeven om te configureren dat de Windows Update-agent updates van een alternatieve downloadserver downloadt in plaats van de intranet-updateservice.
+        Om deze instelling te kunnen gebruiken, moet u twee naamwaarden voor servers opgeven: de server waarvan de Automatische updates-client updates detecteert en downloadt, en de server waarnaar de bijgewerkte werkstations statistische informatie uploaden. U kunt beide waarden instellen op dezelfde server. U kunt een aanvullende servernaam opgeven om te configureren dat de Windows Update-agent updates van een andere downloadserver downloadt in plaats van de intranetupdateservice.
 
-        Als de status is ingesteld op Ingeschakeld, maakt de Automatische updates-client verbinding met de opgegeven Microsoft-updateservice op het intranet (of alternatieve downloadserver), in plaats van met Windows Update, om updates te zoeken en te downloaden. Met deze instelling ingeschakeld, hoeven de eindgebruikers in uw organisatie geen firewall te passeren om updates te downloaden en hebt u de mogelijkheid om updates te testen voor ze te implementeren.
+        Als de status is ingesteld op Ingeschakeld, maakt de Automatische updates-client verbinding met de opgegeven Microsoft-updateservice op het intranet (of alternatieve downloadserver), in plaats van met Windows Update, om updates te zoeken en te downloaden. In dat geval hoeven de eindgebruikers in uw organisatie geen firewall te passeren om updates op te halen en krijgt u de gelegenheid om updates te testen alvorens deze te implementeren.
 
-        Als de status is ingesteld op Uitgeschakeld of Niet geconfigureerd en als Automatische updates niet is uitgeschakeld door een beleidsinstelling of gebruikersvoorkeur, maakt de Automatische updates-client rechtstreeks verbinding met de Windows Update-site op internet.
+        Als de status is ingesteld op Uitgeschakeld of Niet geconfigureerd, en als Automatische updates niet is uitgeschakeld door een beleidsinstelling of gebruikersvoorkeur, brengt Automatische updates een rechtstreekse verbinding tot stand met de Windows Update-site op internet.
 
-        De alternatieve downloadserver configureert de Windows Update-agent om bestanden te downloaden van een alternatieve downloadserver in plaats van de intranet-updateservice.
+        De alternatieve downloadserver configureert dat de Windows Update-agent bestanden downloadt van een alternatieve downloadserver in plaats van de intranetupdateservice.
 
-        Dankzij de optie om bestanden met ontbrekende URL's te downloaden, kan inhoud worden gedownload van de alternatieve downloadserver wanneer er geen download-URL's voor bestanden zijn in de update-metadata. Deze optie moet alleen worden gebruikt als de intranet-updateservice geen download-URL's vermeldt in de update-metadata voor bestanden die aanwezig zijn op de alternatieve downloadserver.
+        Dankzij de optie om bestanden met ontbrekende URL's te downloaden kan inhoud worden gedownload van de alternatieve downloadserver wanneer er geen download-URL's voor bestanden zijn in de update-metadata. Deze optie moet alleen worden gebruikt wanneer de intranetupdateservice geen download-URL's geeft in de update-metadata voor bestanden die aanwezig zijn op de alternatieve downloadserver
 
         Opmerking: als het beleid 'Automatische updates configureren' is uitgeschakeld, heeft deze beleidsinstelling geen effect.
 
-        Opmerking: als er geen 'alternatieve downloadserver' is ingesteld, wordt standaard de intranet-updateservice gebruikt voor het downloaden van updates.
+        Opmerking: als er geen 'alternatieve downloadserver' is ingesteld, wordt standaard de intranetupdateservice gebruikt voor het downloaden van updates.
 
-        Opmerking: de optie om 'bestanden zonder URL te downloaden' wordt alleen gebruikt als de 'alternatieve downloadserver' is ingesteld.
+        Opmerking: de optie om 'bestanden zonder URL te downloaden' wordt alleen gebruikt als er een 'alternatieve downloadserver' is ingesteld.
 
         Opmerking: deze beleidsinstelling wordt niet ondersteund in Windows RT en heeft dan ook geen effect op computers met Windows RT.
 
-        Om het hoogste beveiligingsniveau te garanderen, raadt Microsoft aan om WSUS te beveiligen met het TLS/SSL-protocol, waarbij gebruik wordt gemaakt van HTTPS- intranetservers om systemen veilig te houden. Als er een proxy nodig is, raden we aan om de systeemproxy te configureren. Om de hoogste beveiligingsniveaus te garanderen, maakt u bovendien gebruik van WSUS TLS-certificaatkoppeling op alle apparaten.
+        Microsoft wil het hoogste niveau van beveiliging garanderen en raadt daarom aan om WSUS te beveiligen met het TLS/SSL-protocol, waarbij gebruik wordt gemaakt van HTTPS- intranetservers om systemen veilig te houden. Als er een proxy nodig is, raden we aan om de systeemproxy te configureren. Om de hoogste beveiligingsniveaus te garanderen, maakt u bovendien gebruik van WSUS TLS-certificaatpinning op alle apparaten. 
 
-        Om klanten inherent veilig te houden, staan we niet langer toe dat intranetservers standaard gebruikmaken van een gebruikersproxy voor het detecteren van updates. Als u gebruik moet maken van een gebruikersproxy voor het detecteren van updates terwijl u een intranetserver gebruikt, ondanks de kwetsbaarheden die dit met zich meebrengt, moet u het proxygedrag instellen op 'Toestaan om de gebruikersproxy te gebruiken om op terug te vallen als detectie met de systeemproxy mislukt'.
+                Om klanten inherent veilig te houden, staan we niet langer toe dat intranetservers standaard gebruikmaken van een gebruikersproxy voor het detecteren van updates. Als u gebruik moet maken van een gebruikersproxy voor het detecteren van updates terwijl u een intranetserver gebruikt, ondanks de kwetsbaarheden die deze met zich meebrengt, moet u het proxygedrag instellen op 'Toestaan om de gebruikersproxy te gebruiken als noodoplossing als detectie met de systeemproxy mislukt'.
 
-        Detectie van updates tegen intranetservers mislukt wanneer een gebruikersproxy nodig is om op terug te vallen en het alternatieve proxygedrag niet is geconfigureerd.</string>
+        Detectie van updates tegen intranetservers mislukt wanneer een gebruikersproxy nodig is als een fallback en het alternatieve proxygedrag niet is geconfigureerd.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Alleen systeemproxy gebruiken voor het detecteren van updates (standaard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Toestaan dat gebruikers proxy als terugval gebruiken als detectie met systeemproxy mislukt</string>
       <string id="UpdateClassPolicySource_Title">Bronservice opgeven voor specifieke klassen van Windows-updates</string>
-      <string id="UpdateClassPolicySource_Help">Als dit beleid is ingeschakeld, ontvangen apparaten Windows-updates voor de klassen die zijn opgenomen in de opgegeven updatebron: Windows Update of Windows Server Update service. 
+      <string id="UpdateClassPolicySource_Help">Als dit beleid is ingeschakeld, ontvangen apparaten Windows-updates voor de klassen die worden vermeld uit de opgegeven updatebron: Windows Update of Windows Server Update Service. 
 
-Opmerking: als u updates van de Windows Server Update-service wilt ontvangen, moet u de locatie van een Microsoft-Update service op het intranet juist hebben geconfigureerd via het beleid ' locatie van Microsoft-Update service op intranet '.
+Opmerking: als u updates wilt ontvangen van de Windows Server Update-service, moet u de locatie van een Microsoft-updateservice op het intranet correct hebben geconfigureerd via het beleid Locatie van Microsoft-updateservice voor intranet.
 
-Als dit beleid niet is geconfigureerd of is uitgeschakeld, gaat het apparaat door met het detecteren van updates per uw andere beleidsconfiguraties. 
+Als dit beleid niet is geconfigureerd of is uitgeschakeld, blijft het apparaat updates detecteren volgens uw andere beleidsconfiguraties. 
 
-Opmerking: als u het beleid ' uitstelbeleid niet toestaan voor scans op Windows Update ' momenteel gebruikt om ervoor te zorgen dat apparaten alleen controleren op de opgegeven server, raden we u aan om dit beleid te configureren in plaats van of als aanvulling op een dergelijk beleid.</string>
+Opmerking: als u momenteel 'Uitstelbeleid niet toestaan om scans op Windows Update te veroorzaken' gebruikt om ervoor te zorgen dat apparaten alleen worden gescand op de opgegeven server, raden we u aan dit beleid te configureren of naast dit beleid te configureren.</string>
       <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
       <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Hiermee geeft u het aantal uren op dat Windows wacht voordat wordt gezocht naar beschikbare updates. De exacte wachttijd is de som van de opgegeven waarde en een willekeurige periode van 0-4 uur.
@@ -315,12 +316,6 @@ Opmerking: deze beleidsinstelling is alleen van toepassing wanneer de Microsoft-
 Opmerking: deze beleidsinstelling wordt niet ondersteund in Windows RT. Als u deze beleidsinstelling opgeeft, heeft dit geen effect op een computer met Windows RT.</string>
       <string id="TargetGroup_Title">Clientdoelgroepen gebruiken toestaan</string>
       <string id="WindowsUpdateCat">Windows Update</string>
-      <!--Category sub-folders-->
-      <string id="WindowsUpdateOffering">Updates beheren die worden aangeboden vanuit Windows Update</string>
-      <string id="WSUSOffering">Updates beheren die worden aangeboden vanuit de Windows Server Update-service</string>
-      <string id="WindowsUpdateExperience">Eindgebruikerservaring beheren</string>
-      <string id="PreSV">Verouderd beleid</string>
-
       <string id="TrustedPublisher_Title">Ondertekende updates vanaf de locatie van de Microsoft-updateservice op een intranet toestaan  </string>
       <string id="TrustedPublisher_Help">Met deze beleidsinstelling wordt opgeven of updates die niet door Microsoft zijn ondertekend, moeten worden geaccepteerd wanneer de updates afkomstig zijn van een locatie van een Microsoft-updateservice op een intranet.
 
@@ -336,30 +331,48 @@ Opmerking: Deze beleidsinstelling wordt niet ondersteund in Windows RT. Als u de
 Als u dit beleid inschakelt, wordt die functionaliteit uitgeschakeld. Dit kan ertoe leiden dat verbindingen met openbare services zoals de Windows Store niet meer werken.
 
 Opmerking: dit beleid is alleen van toepassing wanneer de PC is geconfigureerd voor verbinding met een updateservice op het intranet via het beleid "Locatie van Microsoft-updateservice in intranet".</string>
+      <string id="DeferUpdateCat">Windows Update voor Bedrijven</string>
       <string id="ManagePreviewBuilds_Title">Preview-builds beheren</string>
-      <string id="ManagePreviewBuilds_Help">Schakel dit beleid in om te beheren welke updates u ontvangt voordat de update algemeen wordt vrijgegeven.
+      <string id="ManagePreviewBuilds_Help">Als u 'Preview-builds uitschakelen' selecteert, worden geen preview-builds op het apparaat geïnstalleerd. Hierdoor kunnen gebruikers zich niet aanmelden voor het Windows Insider Program, via Instellingen -&gt; Bijwerken en beveiliging.
 
-Dev-kanaal
-Ideaal voor zeer technische gebruikers. Insiders in het Dev-kanaal ontvangen builds van onze branch voor actieve ontwikkeling, die zeer vroeg in de ontwikkelingscyclus ligt. Deze builds komen niet overeen met een specifieke Windows 10-release.
+Als u 'Preview-builds uitschakelen zodra de volgende release openbaar wordt gemaakt' selecteert, worden geen preview-builds geïnstalleerd zodra de volgende Windows-release openbaar wordt gemaakt. Deze optie is nuttig wanneer uw apparaat is ingesteld op het installeren van preview en u het apparaat gereed wilt maken voor flighting. Met deze optie krijgt u preview-builds totdat de volgende openbare release wordt bereikt.
 
-Bèta-kanaal
-Ideaal voor functieverkenners die de aankomende functies van Windows 10 willen ontdekken. Uw feedback is met name belangrijk voor de technici die ervoor zorgen dat belangrijke problemen worden opgelost voordat een hoofd-release wordt uitgebracht.
-
-Versie preview-kanaal (standaard)
-Insiders in het Versie preview-kanaal krijgen toegang tot de aankomende release van Windows 10 voordat deze algemeen wordt vrijgegeven. Deze builds worden ondersteund door Microsoft. Het Versie preview-kanaal wordt aanbevolen voor bedrijven om binnen de organisatie een preview van aankomende Windows 10-releases te bekijken en valideren.
-
-Opmerking: Voor inschrijving voor preview-builds is een telemetrieniveau-instelling van 2 of hoger vereist en moet uw domein zijn geregistreerd op insider.windows.com. Meer informatie over preview-builds: https://aka.ms/wipforbiz
-
-Als u dit beleid uitschakelt of niet configureert, biedt Windows Update u geen pre-release-updates en ontvangt u dergelijke inhoud pas zodra deze algemeen is vrijgegeven. Als u dit beleid uitschakelt, worden alle apparaten die momenteel een pre-release-build gebruiken, afgemeld en blijven ze de nieuwste onderdelenupdate gebruiken zodra deze is uitgebracht.</string>
-      <string id="DevChannel">Dev-kanaal</string>
-      <string id="BetaChannel">Bèta-kanaal</string>
-      <string id="ReleasePreviewChannel">Voorbeeldkanaal vrijgeven</string>
+Als u 'Preview-builds inschakelen' selecteert, worden preview-builds op het apparaat geïnstalleerd. Gebruikers kunnen preview-builds van Windows downloaden en installeren op hun apparaten door zich hiervoor aan te melden via Instellingen -&gt; Bijwerken en beveiliging -&gt; Windows Insider-programma. Beheerders kunnen ook ander beleid gebruiken om namens gebruikers flight-instellingen te beheren wanneer deze waarde is ingesteld.</string>
+      <string id="DisablePreviewBuilds">Preview-builds uitschakelen</string>
+      <string id="DisablePreviewBuildsAndOptOut">Preview-builds uitschakelen zodra de volgende release openbaar wordt gemaakt</string>
+      <string id="EnablePreviewBuilds">Preview-builds inschakelen</string>
+      <string id="PreviewBuildFastFeatureUpdates">Preview-versie - Snel</string>
+      <string id="PreviewBuildSlowFeatureUpdates">Preview-versie - Langzaam</string>
+      <string id="ReleasePreviewBranchFeatureUpdates">Release Preview</string>
+      <string id="SemiAnnualChannelFeatureUpdates">Semi-Annual-kanaal</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Semi-Annual-kanaal voor 1809 en lager (afgeschaft)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Semi-Annual-kanaal (targeted) voor 1809 en lager (afgeschaft)</string>
       <string id="DeferFeatureUpdates_Title">Selecteren wanneer preview-builds en onderdelenupdates worden ontvangen</string>
-      <string id="DeferFeatureUpdates_Help">Schakel dit beleid in om op te geven wanneer u onderdelenupdates wilt ontvangen.
+      <string id="DeferFeatureUpdates_Help">Schakel dit beleid in om op te geven welk type Preview-versie of Onderdelenupdates u wilt ontvangen en wanneer.
 
-Updates uitstellen | Hiermee kan installatie op uw apparaten van de volgende beschikbare onderdelenupdate voor uw kanaal tot 14 dagen worden uitgesteld voor alle pre-releasekanalen, en tot 365 dagen voor het Semi-Annual-kanaal. Of, als het apparaat wordt bijgewerkt vanaf het Semi-Annual-kanaal, kan een versie worden opgegeven waarnaar het apparaat moet worden bijgewerkt en/of waarop het apparaat moet blijven, totdat het beleid is bijgewerkt of het apparaat het einde van service bereikt. Opmerking: Als u beide beleidsregels instelt, heeft de opgegeven versie voorrang en wordt uitstel niet toegepast. Raadpleeg de Windows Release-informatiepagina voor informatie over de OS-versie.
+* Preview-versie - snel: Apparaten die zijn ingesteld op dit niveau, worden als eerste gebruikt voor het ontvangen van nieuwe builds van Windows met functies die nog niet beschikbaar zijn voor het grote publiek. Selecteer Snel als u wilt helpen problemen op te sporen en bij Microsoft te melden en om suggesties te doen voor nieuwe functionaliteit.
+* Preview-versie - Langzaam: Apparaten die zijn ingesteld op dit niveau ontvangen nieuwe builds van Windows voordat ze beschikbaar zijn voor het grote publiek, maar minder snel dan apparaten die zijn ingesteld op Snel en met wijzigingen en oplossingen van fouten die zijn opgespoord in eerdere builds.
+* Release Preview: Ontvangen builds van Windows vlak voordat Microsoft ze uitbrengt voor het grote publiek.
+* Semi-Annual-kanaal: Ontvangen onderdelenupdates wanneer deze worden uitgebracht voor het grote publiek.
 
-Updates onderbreken | Om te voorkomen dat onderdelenupdates op de geplande tijd worden ontvangen, kunt u onderdelenupdates tijdelijk onderbreken. De onderbreking blijft 35 dagen van kracht vanaf de opgegeven begindatum of totdat het veld wordt leeggemaakt (er worden nog steeds kwaliteitsupdates aangeboden).</string>
+De volgende Windows Readiness-niveaus zijn verouderd en zijn alleen van toepassing op 1809 en lager:
+* Semi-Annual-kanaal (targeted) voor 1809 en lager: Onderdelenupdates zijn vrijgegeven.
+* Semi-Annual-kanaal voor 1809 en lager: Onderdelenupdates zijn gedeclareerd als Semi-Annual-kanaal, een aanduiding die aangeeft dat de release is gemaakt voor een brede implementatie.
+Raadpleeg de pagina met releasegegevens op http://aka.ms/ReleaseInformationPage voor het Semi-Annual-kanaal (Targeted) en releasedatums van het Semi-Annual-kanaal.
+
+Wanneer u een preview-versie selecteert:
+    -U kunt de ontvangst van Preview-versies maximaal 14 dagen uitstellen.
+    - Als u wilt voorkomen dat Preview-versies op de geplande tijd worden ontvangen, kunt u ze tijdelijk onderbreken. De onderbreking blijft 35 dagen na de opgegeven begintijd van toepassing.
+    - Als u het ontvangen van onderbroken Onderdelenupdates wilt hervatten, maakt u het veld met de begindatum leeg.
+
+Voor de inschrijving van preview-versies is een telemetrieniveau van 2 of hoger vereist en moet uw domein zijn geregistreerd op insider.windows.com. Ga voor meer informatie over preview-versies naar: https://aka.ms/wipforbiz
+
+Als u Semi-Annual-kanaal selecteert:
+    - U kunt de ontvangst van Onderdelenupdates maximaal 365 dagen uitstellen.
+    - Als u wilt voorkomen dat Onderdelenupdates op de geplande tijd worden ontvangen, kunt u ze tijdelijk onderbreken. De onderbreking blijft 35 dagen na de opgegeven begintijd van toepassing.
+    - Als u het ontvangen van onderbroken Onderdelenupdates wilt hervatten, maakt u het veld met de begindatum leeg.
+
+Als u dit beleid uitschakelt of niet configureert, wordt het gedrag niet gewijzigd door Windows Update.</string>
       <string id="DeferQualityUpdates_Title">Selecteren wanneer kwaliteitsupdates worden ontvangen</string>
       <string id="DeferQualityUpdates_Help">Schakel dit beleid in om aan te geven wanneer kwaliteitsupdates moeten worden ontvangen.
 
@@ -701,11 +714,11 @@ Dit beleid heeft voorrang op de volgende beleidsregels:
         </textBox>
         <text>(voorbeeld: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Download bestanden zonder URL in de metadata als er een alternatieve downloadserver is ingesteld.</checkBox>
-        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Geen TLS-certificaatkoppeling afdwingen voor de Windows Update-client voor het detecteren van updates.</checkBox>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Geen TLS-certificaat afdwingen voor Windows Update-client voor het detecteren van updates.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecteer het proxy gedrag voor Windows Update-client voor het detecteren van updates:</dropdownList>
       </presentation>
       <presentation id="UpdateClassPolicySource_Title">
-        <text>Geef de bron service op voor de volgende klassen van Windows-updates:</text>
+        <text>Geef de bronservice op voor de volgende klassen Windows-updates:</text>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Functie-updates</dropdownList>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Kwaliteitsupdates</dropdownList>
         <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Stuurprogramma-updates</dropdownList>
@@ -716,11 +729,13 @@ Dit beleid heeft voorrang op de volgende beleidsregels:
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">interval (uren):  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Wacht de volgende periode voordat u opnieuw begint met een geplande</text>
+        <text>Wacht het volgende aantal minuten alvorens na een geplande installatie</text>
+        <text>nogmaals te waarschuwen dat de computer</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">op te starten:  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Wacht de volgende periode voordat u doorgaat met een geplande</text>
+        <text>Wacht het volgende aantal minuten na een geplande</text>
+        <text>installatie alvorens opnieuw</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">op te starten:  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -732,8 +747,14 @@ Dit beleid heeft voorrang op de volgende beleidsregels:
           <label>Doelgroepnaam voor deze computer</label>
         </textBox>
       </presentation>
+      <presentation id="IdleShutdownTimerDuration_Title">
+        <text>Wacht het volgende aantal minuten alvorens na een geplande installatie</text>
+        <text>de service af te sluiten wanneer deze</text>
+        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">niet-actief is (minuten):  </decimalTextBox>
+      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>De timer voor opnieuw opstarten geeft gebruikers zo veel tijd voor het opslaan van hun</text>
+        <text>De timer voor opnieuw opstarten geeft gebruikers</text>
+        <text>deze tijd om hun werk</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">op te slaan (minuten):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
@@ -745,10 +766,11 @@ Dit beleid heeft voorrang op de volgende beleidsregels:
         </textBox>
       </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Selecteer het niveau van Windows-gereedheid voor de updates die u wilt ontvangen:</dropdownList>
+        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">De werking definiëren om preview-builds te ontvangen:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Hoeveel dagen nadat een onderdelenupdate is uitgebracht, wilt u de update uitstellen voordat deze aan het apparaat wordt aangeboden?</decimalTextBox>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Selecteer het niveau van Windows-gereedheid voor de updates die u wilt ontvangen:</dropdownList>
+        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Aantal dagen dat een onderdelenupdate wordt uitgesteld na een preview-versie of onderdelenupdate:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Preview-builds en onderdelenupdates onderbreken vanaf:</label>
         </textBox>

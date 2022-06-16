@@ -207,19 +207,6 @@ I Stifinder vises knappen Søg stadig på standardværktøjslinjen, men systemet
 Denne politikindstilling har kun indflydelse på elementer på den angivne brugergrænseflade. Indstillingen har ikke indflydelse på Internet Explorer og forhindrer ikke brugeren i at søge ved hjælp af andre metoder.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er linket Søg tilgængeligt i menuen Start.</string>
-      <string id="ShowOrHideMostUsedApps">Viser eller skjuler "mest anvendte"-liste fra menuen Start</string>
-      <string id="ShowOrHideMostUsedApps_Help">Hvis du aktiverer denne politikindstilling, kan du konfigurere menuen Start til at vise eller skjule listen over brugerens mest anvendte apps, uanset brugerindstillinger.
-
-Hvis du vælger "Vis", gennemtvinges den "mest anvendte" liste, og brugeren kan ikke ændre den ved hjælp af appen indstillinger.
-
-Hvis du vælger "Skjul", gennemtvinges den "mest brugte" liste til at være skjult, og brugeren kan ikke skifte til at vise det ved hjælp af appen indstillinger.
-
-Hvis du vælger "ikke konfigureret", eller hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, tillader alle brugere at slå visning af listen "mest brugte" til eller fra ved hjælp af appen indstillinger. Dette er standardfunktionsmåden.
-
-Bemærk! Hvis du konfigurerer denne politik til "Vis" eller "Skjul" på understøttede versioner af Windows 10, tilsidesættes alle politikindstillinger for listen "Fjern hyppige programmer fra menuen Start" (som administrerer den samme del af menuen Start, men med færre indstillinger).</string>
-      <string id="MFU_NotConfigured">Ikke konfigureret</string>
-      <string id="MFU_Show">Vis</string>
-      <string id="MFU_Hide">Skjul</string>        
       <string id="NoFrequentUsedPrograms">Fjern listen over ofte anvendte programmer fra menuen Start</string>
       <string id="NoFrequentUsedPrograms_Help">Hvis du aktiverer denne indstilling, fjernes listen over ofte anvendte programmer fra menuen Start.
 
@@ -645,14 +632,10 @@ Hvis du aktiverer denne politik, ignoreres start af genvejsmenuer i menuen Start
           <label>Startlayoutfil</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Genanvend layout ved hvert logon</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Vælg en af følgende størrelser</dropdownList>
       </presentation>
-      <presentation id="ShowOrHideMostUsedApps">
-        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Vælg en af følgende handlinger</dropdownList>
-      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

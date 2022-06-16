@@ -171,7 +171,7 @@
 默认设置:
 - 已禁用或未配置相关策略:
 - 允许开发 Microsoft Store 应用并从集成开发环境(IDE)进行安装
-- 允许安装所有受信任的应用</string>
+- 允许安装所有受信任的应用​</string>
       <string id="AllowSmartScreen">配置 Windows Defender SmartScreen</string>
       <string id="AllowSmartScreen_Explain">此策略设置让你配置是否启用 Windows Defender SmartScreen。Windows Defender SmartScreen 提供警告消息，可确保员工免受潜在的网络钓鱼诈骗和恶意软件的危害。默认情况下，Windows Defender SmartScreen 处于启用状态。
 
@@ -443,7 +443,7 @@
       <string id="AllowFlashClickToRun_Explain">
         如果启用或不配置“Adobe Flash 即点即用”设置，则 Microsoft Edge 将需要用户单击“即点即用”按钮以单击内容或让站点出现在自动允许列表中，然后再加载和运行内容。
 
-站点将基于用户反馈，按照允许加载并运行内容的频度显示在自动允许列表中。
+可基于用户反馈(特别是允许内容加载并运行的频率)，将站点加入自动允许列表中。
       </string>
 
       <string id="AllowClearingBrowsingDataOnExit">允许退出时清除浏览数据</string>
@@ -518,9 +518,14 @@
 如果禁用或未配置，默认值为 5 分钟。
 
 如果未在“分配的访问权限”中配置 Microsoft Edge，则此策略不会生效。</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">禁止显示 Microsoft Edge 弃用通知</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">你可以将 Microsoft Edge 配置为禁止显示用于告知用户对此版本的 Microsoft Edge 的支持将于 2021 年 3 月 9 日结束的通知。如果启用此选项，则将不会显示通知。
 
+如果禁用或未配置此选项，则在每次启动 Microsoft Edge 时都会显示此通知。 </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

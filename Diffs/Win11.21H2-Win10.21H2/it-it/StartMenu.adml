@@ -207,19 +207,6 @@ In Esplora file la voce Cerca viene comunque visualizzata sulla barra dei pulsan
 Questa impostazione dei criteri interessa solo gli elementi dell'interfaccia utente specificati. Non si applica a Internet Explorer e non impedisce all'utente di utilizzare altri metodi di ricerca.
 
 Se si disabilita o non si configura questa impostazione dei criteri, il collegamento Cerca sarà disponibile dal menu Start.</string>
-      <string id="ShowOrHideMostUsedApps">Mostra o Nascondi l'elenco "più utilizzati" dal menu Start</string>
-      <string id="ShowOrHideMostUsedApps_Help">Abilitando questa impostazione dei criteri, sarà possibile configurare il menù di Avvio in modo che questo mostra o nasconda l’elenco delle applicazioni più usate dall’utente, indipendentemente dalle impostazioni dell’utente stesso. 
-
-Selezionando "Mostra", l’elenco verrà mostrato e l’utente non potrà cambiare l’opzione usando le impostazioni.
-
-Selezionando "Nascondi" l’elenco verrà mostrato e l’utente non potrà cambiare l’opzione usando le impostazioni.
-
-Selezionando "Non Configurato", o disabilitando o non configurando questa impostazione dei criteri gli utenti potranno scegliere, tramite le impostazioni, di mostrare o meno l’elenco dei “Più Usati”. Ciò avviene di default. 
-
-Nota: la configurazione di questo criterio con “Mostra” o “Nascondi” su una versione supportata di Windows 10 ha sempre la meglio su qualsiasi altra impostazione di “Rimuovi l’elenco dei programmi più usati dal menù di Avvio” (che gestisce la stessa parte del menù di Avvio ma con meno opzioni).</string>
-      <string id="MFU_NotConfigured">Non configurato</string>
-      <string id="MFU_Show">Mostra</string>
-      <string id="MFU_Hide">Nascondi</string>        
       <string id="NoFrequentUsedPrograms">Rimuovi l'elenco dei programmi più utilizzati dal menu Start</string>
       <string id="NoFrequentUsedPrograms_Help">Se si abilita questa impostazione, l'elenco dei programmi utilizzati di frequente verrà rimosso dal menu Start.
 
@@ -644,14 +631,10 @@ Se abiliti questo criterio, le chiamate dei menu contestuali all'interno del men
           <label>File layout Start</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Riapplica layout a ogni accesso</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Scegliere una delle seguenti dimensioni</dropdownList>
       </presentation>
-      <presentation id="ShowOrHideMostUsedApps">
-        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Scegli una delle azioni seguenti</dropdownList>
-      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

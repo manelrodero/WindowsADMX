@@ -30,28 +30,6 @@ Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, wird der AntiMal
 
 Wenn Sie diese Einstellung deaktivieren, wird der AntiMalware-Dienst als Aufgabe mit niedriger Priorität geladen.</string>
 
-    <string id="MeteredConnectionUpdates">Ermöglicht Microsoft Defender Antivirus die Aktualisierung und Kommunikation über eine getaktete Verbindung.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    Deaktiviert (Standard): 
-    Updates und Kommunikation sind über getaktete Verbindungen nicht zulässig.
-
-Aktiviert 
-    Ermöglicht das Aktualisieren verwalteter Geräte über getaktete Verbindungen. Es können Daten Gebühren anfallen.</string>
-    <string id="AllowNetworkProtectionOnWinServer">Mit diesen Einstellungen wird gesteuert, ob der Netzwerkschutz für den Block-oder Überwachungsmodus unter Windows Server konfiguriert werden darf.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    Deaktiviert (Standard): 
-    Falls nicht konfiguriert oder deaktiviert, darf der Netzwerk Schutz nicht für den Block-oder Überwachungs Modus unter Windows Server konfiguriert werden.
-
-Aktiviert 
-    Wenn diese Option aktiviert ist, können Administratoren steuern, ob der Netzwerk Schutz für den Block-oder Überwachungs Modus unter Windows Server konfiguriert werden darf.
-    Hinweis, dass diese Konfiguration von der EnableNetworkProtection-Konfiguration abhängig ist. Wenn diese Konfiguration falsch ist, wird EnableNetworkProtection ignoriert. andernfalls wird der Netzwerk Schutz auf Windows Server abhängig von dem Wert "EnableNetworkProtection" gestartet.</string>
-    <string id="DisableDatagramProcessing">Mit dieser Einstellung wird die Datagramm-Verarbeitung für den Netzwerk Schutz gesteuert.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    Aktiviert (Standard): 
-    Wenn diese Einstellung nicht konfiguriert oder deaktiviert ist, wird die datagrammverarbeitung für den Netzwerk Schutz aktiviert.
-
-Aktiviert 
-    Wenn diese Option aktiviert ist, wird die datagrammverarbeitung für den Netzwerk Schutz deaktiviert.</string>
     <string id="DisableAutoExclusions">Automatische Ausschlüsse deaktivieren</string>
     <string id="DisableAutoExclusions_Explain">
         Ermöglicht einem Administrator, anzugeben, ob das Feature "Automatische Ausschlüsse" für Server-SKUs deaktiviert werden soll.
@@ -83,11 +61,11 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wir
 
     Das Aktivieren oder Deaktivieren dieser Richtlinie kann zu unerwartetem oder nicht unterstütztem Verhalten führen. Es wird empfohlen, diese Richtlinieneinstellung nicht zu konfigurieren.</string>
     <string id="DisableLocalAdminMerge">Konfigurieren des Zusammenführungsverhaltens von lokalen Administratoren für Listen</string>
-    <string id="DisableLocalAdminMerge_Explain">Mit dieser Richtlinien Einstellung wird gesteuert, ob komplexe Listen Einstellungen, die von einem lokalen Administrator konfiguriert wurden, mit Gruppen Richtlinien Einstellungen zusammen geführt werden. Diese Einstellung gilt für Listen wie Bedrohungen und Ausschlüsse.
+    <string id="DisableLocalAdminMerge_Explain">Mit dieser Richtlinieneinstellung wird gesteuert, ob komplexe Listeneinstellungen, die von einem lokalen Administrator konfiguriert werden, mit Gruppenrichtlinieneinstellungen zusammengeführt werden. Diese Einstellung gilt für Listen wie Bedrohungen und Ausschlüsse.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, werden in der Gruppen Richtlinie und in vom lokalen Administrator konfigurierten eindeutigen Elemente in der effektiven Richt Linie zusammen geführt. Im Falle von Konflikten werden die Gruppen Richtlinien Einstellungen außer Kraft gesetzt.
+Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, werden eindeutige Elemente, die in der Gruppenrichtlinie und in vom lokalen Administrator konfigurierten Einstellungen definiert sind, zu einer effektiven Richtlinie zusammengeführt. Bei Konflikten werden die Einstellungen von den Gruppenrichtlinieneinstellungen außer Kraft gesetzt.
 
-Wenn Sie diese Einstellung aktivieren, werden nur von der Gruppen Richtlinie definierte Elemente in der effektiven Richt Linie verwendet. Durch die Gruppen Richtlinien Einstellungen werden die vom lokalen Administrator konfigurierten Einstellungs Einstellungen außer Kraft gesetzt.</string>
+Wenn diese Einstellung deaktiviert wird, werden nur von der Gruppenrichtlinie definierte Elemente in der effektiven Richtlinie verwendet. Vom lokalen Administrator konfigurierte Einstellungen werden von den Gruppenrichtlinieneinstellungen außer Kraft gesetzt.</string>
     <string id="DisableRoutinelyTakingAction">Regelmäßige Wartung deaktivieren</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     Mit dieser Richtlinieneinstellung können Sie konfigurieren, ob Microsoft Defender Antivirus bei allen erkannten Bedrohungen automatisch Maßnahmen ergreift. Die Maßnahme, die für eine bestimmte Bedrohung ergriffen wird, hängt von der Kombination aus richtliniendefinierter Maßnahme, benutzerdefinierter Maßnahme und signaturdefinierter Maßnahme ab.
@@ -132,15 +110,11 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Proxys
       Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, überspringt der Proxy diesen Fallbackschritt (gemäß der oben angegebenen Reihenfolge).
     </string>
     <string id="RandomizeScheduleTaskTimes">Zufälliges Festlegen von Zeiten für geplante Aufgaben</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Diese Richtlinieneinstellung ermöglicht es Ihnen, die planmäßige Überprüfung und das Startzeitfenster in Stunden des geplanten Security Intelligence-Updates zu konfigurieren.
+    <string id="RandomizeScheduleTaskTimes_Explain">Mit dieser Richtlinieneinstellung können Sie die zufällige Festlegung der geplanten Scanstartzeit und der geplanten Startzeit für Updates der Sicherheitsinformationen aktivieren oder deaktivieren. Mit dieser Einstellung wird die durch Scanvorgänge entstehende Ressourcenauslastung verteilt. Beispiel: Die Einstellung kann auf virtuellen Gastmaschinen, die gemeinsam einen Host nutzen, verwendet werden, um zu verhindern, dass mehrere virtuelle Gastmaschinen gleichzeitig einen Vorgang ausführen, der eine hohe Speicherkapazität erfordert.
 
-    Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, beginnen geplante Vorgänge zu einem zufälligen Zeitpunkt innerhalb von 4 Stunden nach der in der Aufgabenplanung angegebenen Zeit.
-    Wenn Sie diese Einstellung aktivieren, können Sie den Randomisierungszeitraum verlängern oder verkürzen. Geben Sie ein Randomisierungsfenster zwischen 1 und 23 Stunden an.</string>
-    <string id="SchedulerRandomizationTime">Konfigurieren des zufälligen Zeitfensters für geplante Aufgaben</string>
-    <string id="SchedulerRandomizationTime_Explain">Diese Richtlinieneinstellung ermöglicht es Ihnen, die Startzeit für die planmäßige Überprüfung und das Startzeitfenster in Stunden des geplanten Security Intelligence-Updates zu konfigurieren.
+    Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, beginnen geplante Aufgaben zu einem zufälligen Zeitpunkt innerhalb eines Intervalls von 30 Minuten vor und nach der angegebenen Startzeit.
 
-    Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, beginnen geplante Vorgänge zu einem zufälligen Zeitpunkt innerhalb eines Intervalls von 4 Stunden nach der angegebenen Startzeit.
-    Wenn Sie diese Einstellung aktivieren, müssen Sie ein Randomisierungsfenster in Stunden auswählen. Das mögliche Intervall für das Randomisierungsfenster liegt zwischen 1 und 23 Stunden.</string>
+    Wird diese Einstellung deaktiviert, beginnen geplante Aufgaben zur angegebenen Startzeit.</string>
     <string id="ServiceKeepAlive">Zulassen der ständigen Ausführung von AntiMalware-Diensten</string>
     <string id="ServiceKeepAlive_Explain">Mit dieser Richtlinieneinstellung kann konfiguriert werden, ob der Antimalware-Dienst weiterhin ausgeführt werden soll, wenn Antiviren- und Antispyware-Sicherheitsinformationen deaktiviert werden. Es wird empfohlen, dass diese Einstellung deaktiviert bleibt.
 
@@ -162,20 +136,12 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird der Proxys
         Nicht konfiguriert:
         Wie bei "Deaktiviert".
     </string>
-    <string id="SupportLogLocation">Definieren Sie den Verzeichnispfad zum Kopieren von Support-Protokolldateien</string>
-    <string id="SupportLogLocation_Explain">Mit dieser Richtlinien Einstellung können Sie den Verzeichnis Pfad konfigurieren, in dem die Support Protokoll Dateien kopiert werden sollen. Der Wert dieser Einstellung muss ein gültiger Verzeichnis Pfad sein.
-
-Wenn Sie diese Einstellung aktivieren, werden die Support Protokoll Dateien in den angegebenen Support Protokoll Pfad kopiert.
-
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, werden die Support Protokoll Dateien nicht an einen Speicherort kopiert.</string>
     <string id="Exclusions_Extensions">Erweiterungsausschlüsse</string>
     <string id="Exclusions_Extensions_Explain">Diese Richtlinieneinstellung ermöglicht die Angabe einer Liste von Dateitypen, die aus geplanten, benutzerdefinierten und in Echtzeit stattfindenden Scanvorgängen ausgeschlossen werden sollen. Dateitypen sollten unter den Optionen für diese Einstellung hinzugefügt werden. Jeder Eintrag muss als Name/Wert-Paar aufgeführt werden, wobei der Name eine Zeichenfolgendarstellung der Dateityperweiterung sein sollte (zum Beispiel "obj" oder "lib"). Der Wert wird nicht verwendet und sollte auf 0 festgelegt werden.</string>
     <string id="Exclusions_Paths">Pfadausschlüsse</string>
     <string id="Exclusions_Paths_Explain">Die Richtlinieneinstellung ermöglicht die Deaktivierung der geplanten und in Echtzeit stattfindenden Scanvorgänge für Dateien unter den angegebenen Pfaden oder für die angegebenen vollqualifizierten Ressourcen. Pfade sollten unter den Optionen für diese Einstellung hinzugefügt werden. Jeder Eintrag muss als Name/Wert-Paar aufgelistet werden, wobei der Name eine Zeichenfolgendarstellung eines Pfads oder eines vollqualifizierten Ressourcennamens sein sollte. Beispielsweise kann ein Pfad folgendermaßen definiert werden: "c:\Windows", um alle Dateien in diesem Verzeichnis auszuschließen. Ein vollqualifizierter Ressourcenname kann folgendermaßen definiert werden: "C:\Windows\App.exe". Der Wert wird nicht verwendet und sollte auf 0 festgelegt werden.</string>
     <string id="Exclusions_Processes">Prozessausschlüsse</string>
-    <string id="Exclusions_Processes_Explain">Diese Richtlinieneinstellung ermöglicht Ihnen das Deaktivieren der Echtzeitüberprüfung aller Dateien, die in einem der angegebenen Prozesse geöffnet werden. Diese Richtlinie gilt nicht für geplante Überprüfungen. Der Prozess selbst wird nicht ausgeschlossen. Verwenden Sie den Pfadausschluss, um den Prozess auszuschließen. Prozesse sollten unter den Optionen für diese Einstellung hinzugefügt werden. Jeder Eintrag muss als Name/Wert-Paar aufgelistet werden, wobei der Name eine Zeichenfolgendarstellung des Pfads zum Prozessbild sein sollte. Beachten Sie, dass nur ausführbare Dateien ausgeschlossen werden können. Zum Beispiel könnte ein Prozess folgendermaßen definiert werden: "c:\windows\app.exe". Der Wert wird nicht verwendet und es wird empfohlen, ihn als 0 festzulegen.</string>
-    <string id="Exclusions_IpAddresses">Ausschlüsse von IP-Adressen</string>
-    <string id="Exclusions_IpAddresses_Explain">Ermöglicht es einem Administrator, die durch wdnisdrv für einen bestimmten Satz von IP-Adressen vorgenommene Netzwerkpaket-Prüfung zu deaktivieren.</string>
+    <string id="Exclusions_Processes_Explain">Diese Richtlinieneinstellung ermöglicht die Deaktivierung der geplanten und in Echtzeit stattfindenden Scanvorgänge für alle Dateien, die in einem beliebigen der angegebenen Prozesse geöffnet werden. Der Prozess selbst wird nicht ausgeschlossen. Verwenden Sie den Pfadausschluss, um den Prozess auszuschließen. Prozesse sollten unter den Optionen für diese Einstellung hinzugefügt werden. Jeder Eintrag muss als Name/Wert-Paar aufgelistet werden, wobei der Name eine Zeichenfolgendarstellung des Pfads zum Prozessbild sein sollte. Nur ausführbare Dateien können ausgeschlossen werden. Zum Beispiel kann ein Prozess folgendermaßen definiert werden: "c:\windows\app.exe". Der Wert wird nicht verwendet und sollte auf 0 festgelegt werden.</string>
     <string id="Nis_DisableProtocolRecognition">Aktivieren der Protokollerkennung</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Diese Richtlinieneinstellung ermöglicht die Konfiguration der Protokollerkennung für den Schutz des Netzwerks vor Angriffen auf bekannte Schwachstellen.
 
@@ -202,14 +168,6 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, besitzt die Gru
 Wenn diese Einstellung aktiviert wird, werden die Elemente nach Angabe der Dauer in Tagen aus dem Quarantäneordner entfernt.
 
 Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, verbleiben die Elemente für unbegrenzte Zeit im Quarantäneordner und werden nicht automatisch entfernt.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">Skriptüberprüfung aktivieren.</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">Mit dieser Richtlinien Einstellung können Sie die Skript Überprüfung konfigurieren.
-
-Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, wird die Skript Überprüfung aktiviert.
-
-Wenn Sie diese Einstellung deaktivieren, wird die Skript Überprüfung deaktiviert.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Aktivieren der Verhaltensüberwachung</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Mit dieser Richtlinieneinstellung kann die Verhaltensüberwachung konfiguriert werden.
 
@@ -443,6 +401,12 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden E-Mail-S
 Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, werden Heuristiken aktiviert.
 
 Wenn diese Einstellung deaktiviert wird, werden Heuristiken deaktiviert.</string>
+    <string id="Scan_DisablePackedExeScanning">Scannen von gepackten ausführbaren Dateien</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">Mit dieser Richtlinieneinstellung kann das Scannen von gepackten ausführbaren Dateien konfiguriert werden. Es wird empfohlen, dass dieser Scantyp aktiviert bleibt.
+
+Wenn diese Einstellung aktiviert oder nicht konfiguriert wird, werden gepackte ausführbare Dateien gescannt.
+
+Wenn diese Einstellung deaktiviert wird, werden keine gepackten ausführbaren Dateien gescannt.</string>
     <string id="Scan_DisableRemovableDriveScanning">Scannen von Wechseldatenträgern</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Mit dieser Richtlinieneinstellung wird verwaltet, ob bei vollständigen Scanvorgängen auf Wechseldatenträgern wie USB-Flashlaufwerken nach Schadsoftware und unerwünschter Software gesucht werden soll.
 
@@ -510,11 +474,11 @@ Wenn diese Einstellung aktiviert wird, werden die Elemente nach Angabe der Dauer
 
 Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, verbleiben die Elemente für die standardmäßige Anzahl von Tagen im Scanverlaufsordner.</string>
     <string id="Scan_QuickScanInterval">Angeben des Intervalls für die Ausführung von Schnellscans pro Tag</string>
-    <string id="Scan_QuickScanInterval_Explain">Mit dieser Richtlinien Einstellung können Sie ein Intervall angeben, in dem ein schnell Scan ausgeführt werden soll. Der Zeitwert wird als Anzahl der Stunden zwischen schnell Scans dargestellt. Gültiger Werte Bereich von 1 (jede Stunde) bis 24 (einmal pro Tag). Wenn NULL fest gelegt wird, werden keine schnell Scans im Intervall ausgeführt. Diese Einstellung ist Standard mäßig auf 0 fest gelegt.
+    <string id="Scan_QuickScanInterval_Explain">Diese Richtlinieneinstellung ermöglicht die Angabe eines Intervalls, in dem ein Schnellscan ausgeführt werden soll. Der Zeitwert wird als Anzahl der Stunden zwischen Schnellscans dargestellt. Gültige Werte reichen von 1 (jede Stunde) bis 24 (einmal pro Tag). Wenn null festgelegt wird, werden keine Schnellscans in Intervallen ausgeführt. Standardmäßig wird diese Einstellung auf null festgelegt.
 
-Wenn Sie diese Einstellung aktivieren, wird im angegebenen Intervall ein schnell Scan ausgeführt.
+Wenn diese Einstellung festgelegt wird, wird im angegebenen Intervall ein Schnellscan ausgeführt.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird die von dieser Konfiguration gesteuerte schnelle über Prüfung nicht ausgeführt.</string>
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird zu einer Standardzeit ein Schnellscan ausgeführt.</string>
     <string id="Scan_ScanOnlyIfIdle">Starten des geplanten Scans ausschließlich zu dem Zeitpunkt, zu dem der Computer eingeschaltet ist, aber nicht verwendet wird</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">Mit dieser Richtlinieneinstellung kann konfiguriert werden, dass geplante Scanvorgänge nur gestartet werden, wenn der Computer eingeschaltet ist, jedoch nicht verwendet wird.
 
@@ -558,11 +522,11 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird mit einer 
     <string id="Scan_ScheduleDay_7">Freitag</string>
     <string id="Scan_ScheduleDay_8">Samstag</string>
     <string id="Scan_ScheduleQuickScantime">Angeben der Zeit für einen täglichen Schnellscan</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">Mit dieser Richtlinien Einstellung kann die Tageszeit angegeben werden, zu der ein täglicher schnell Scan ausgeführt werden soll. Der Zeitwert wird als die Anzahl der Minuten nach Mitternacht (00:00) dargestellt.  Z. b. 120 (0x78) entspricht der 02:00. Diese Einstellung ist Standard mäßig auf "deaktiviert" fest gelegt. Der Zeitplan basiert auf der lokalen Zeit des Computers, auf dem der Scan ausgeführt wird.
+    <string id="Scan_ScheduleQuickScantime_Explain">Mit dieser Richtlinieneinstellung kann die Tageszeit angegeben werden, zu der ein täglicher Schnellscan ausgeführt werden soll. Der Zeitwert wird als die Anzahl der Minuten nach Mitternacht (00:00) dargestellt.  Zum Beispiel entspricht 120 (0x78) der Uhrzeit 02:00. Standardmäßig wird diese Einstellung auf den Zeitwert "2:00" festgelegt. Der Zeitplan basiert auf der lokalen Zeit des Computers, auf dem der Scan ausgeführt wird.
 
-Wenn Sie diese Einstellung aktivieren, wird zur angegebenen Tageszeit ein täglicher schnell Scan ausgeführt.
+Wenn Sie diese Einstellung aktivieren, wird zur angegebenen Tageszeit ein täglicher Schnellscan ausgeführt.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird die tägliche schnell Überprüfung, die von dieser Konfiguration gesteuert wird, nicht ausgeführt.</string>
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird zu einer Standardzeit ein täglicher Schnellscan ausgeführt.</string>
     <string id="Scan_ScheduleTime">Angeben der Tageszeit zur Ausführung eines geplanten Scans</string>
     <string id="Scan_ScheduleTime_Explain">Mit dieser Richtlinieneinstellung kann die Tageszeit angegeben werden, zu der ein geplanter Scan ausgeführt werden soll. Der Zeitwert wird als die Anzahl der Minuten nach Mitternacht (00:00) dargestellt.  Zum Beispiel entspricht 120 (0x78) der Uhrzeit 02:00. Standardmäßig wird diese Einstellung auf den Zeitwert "2:00" festgelegt. Der Zeitplan basiert auf der lokalen Zeit des Computers, auf dem der Scan ausgeführt wird.
 
@@ -585,17 +549,17 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, wird zu einer S
         Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, werden für geplante Scans keine Änderungen an der CPU-Priorität vorgenommen.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Festlegen, nach welcher Anzahl von Tagen Spyware-Sicherheitsinformationen als veraltet gelten</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Mithilfe dieser Richtlinieneinstellung können Sie die Anzahl der Tage festlegen, die vergehen müssen, bevor die Sicherheitsintelligenz von Spyware als veraltet angesehen wird. Wenn die Sicherheitsintelligenz als veraltet gilt, kann dieser Zustand mehrere zusätzliche Aktionen auslösen, z. B. das Fallback auf eine alternative Aktualisierungsquelle oder das Anzeigen eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig ist dieser Wert auf 7 Tage festgelegt.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl der Tage angegeben werden, die vergehen müssen, bevor Spyware-Sicherheitsinformationen als veraltet eingestuft werden. Wenn Sicherheitsinformationen als veraltet eingestuft werden, können durch diesen Zustand mehrere zusätzliche Aktionen ausgelöst werden, einschließlich eines Fallbacks auf eine alternative Updatequelle oder der Anzeige eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig wird der Wert auf 14 Tage festgelegt.
 
-Wenn Sie diese Einstellung aktivieren, wird die Spywaresicherheitsintelligenz als veraltet angesehen, nachdem die Anzahl der angegebenen Tage ohne Aktualisierung erfolgt ist.
+    Wenn diese Einstellung aktiviert wird, werden Spyware-Sicherheitsinformationen als veraltet eingestuft, wenn die angegebene Anzahl von Tagen ohne Update verstrichen ist.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird die Spywaresicherheitsintelligenz als veraltet angesehen, nachdem die Standardanzahl von Tagen ohne Aktualisierung vergangen ist.</string>
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Spyware-Sicherheitsinformationen als veraltet eingestuft, wenn die standardmäßige Anzahl von Tagen ohne Update verstrichen ist.</string>
     <string id="SignatureUpdate_AVSignatureDue">Festlegen, nach welcher Anzahl von Tagen Virus-Sicherheitsinformationen als veraltet gelten</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Mit dieser Richtlinieneinstellung können Sie die Anzahl der Tage festlegen, die vergehen müssen, bevor die Virensicherheitsintelligenz als veraltet angesehen wird. Wenn die Sicherheitsintelligenz als veraltet gilt, kann dieser Zustand mehrere zusätzliche Aktionen auslösen, z. B. das Fallback auf eine alternative Aktualisierungsquelle oder das Anzeigen eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig ist dieser Wert auf 7 Tage festgelegt.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Mit dieser Richtlinieneinstellung kann die Anzahl der Tage angegeben werden, die vergehen müssen, bevor Virus-Sicherheitsinformationen als veraltet eingestuft werden. Wenn Sicherheitsinformationen als veraltet eingestuft werden, können durch diesen Zustand mehrere zusätzliche Aktionen ausgelöst werden, einschließlich eines Fallbacks auf eine alternative Updatequelle oder der Anzeige eines Warnsymbols auf der Benutzeroberfläche. Standardmäßig wird der Wert auf 14 Tage festgelegt.
 
-Wenn Sie diese Einstellung aktivieren, wird die Virensicherheitsintelligenz als veraltet angesehen, nachdem die Anzahl der angegebenen Tage ohne Aktualisierung erfolgt ist.
+    Wenn diese Einstellung aktiviert wird, werden Virus-Sicherheitsinformationen als veraltet eingestuft, wenn die angegebene Anzahl von Tagen ohne Update verstrichen ist.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird die Virensicherheitsintelligenz als veraltet angesehen, nachdem die Standardanzahl von Tagen ohne Aktualisierung vergangen ist.</string>
+    Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, werden Virus-Sicherheitsinformationen als veraltet eingestuft, wenn die standardmäßige Anzahl von Tagen ohne Update verstrichen ist.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Dateifreigaben für das Herunterladen von Updates der Sicherheitsinformationen festlegen</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Mit dieser Richtlinieneinstellung können UNC-Dateifreigabequellen für das Herunterladen von Updates der Sicherheitsinformationen konfiguriert werden. Quellen werden in der angegebenen Reihenfolge abgefragt. Der Wert dieser Einstellung sollte als durch senkrechte Striche getrennte Zeichenfolge eingegeben werden, in der die Updates der Sicherheitsinformationen aufgeführt werden. Zum Beispiel: "{\\unc1 | \\unc2 }". Die Liste ist standardmäßig leer.
 
@@ -741,22 +705,22 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, besitzt die Gru
     <string id="SpynetReporting">Beitritt zu Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Diese Richtlinieneinstellung ermöglicht den Beitritt zu Microsoft MAPS. Microsoft MAPS ist die Onlinecommunity, die Ihnen bei der Entscheidung hilft, wie Sie auf mögliche Bedrohungen reagieren. Die Community hilft auch dabei, die Verbreitung neuer Infektionen durch Schadsoftware zu verhindern.
 
-    Sie können entscheiden, ob Sie allgemeine oder zusätzliche Informationen zu erkannter Software senden. Zusätzliche Informationen helfen Microsoft bei der Erstellung neuer Sicherheitsinformationen und beim Schutz Ihres Computers. Diese Informationen können z. B. angeben, wo schädliche Elemente auf dem Computer erkannt wurden, falls Schadsoftware entfernt wurde. Die Informationen werden automatisch erfasst und gesendet. In einigen Fällen können unbeabsichtigt personenbezogene Informationen an Microsoft gesendet werden. Microsoft wird diese Informationen jedoch nicht dazu verwenden, Sie zu identifizieren oder zu kontaktieren.
+ Sie können entscheiden, ob Sie allgemeine oder zusätzliche Informationen zu erkannter Software senden. Zusätzliche Informationen helfen Microsoft bei der Erstellung neuer Sicherheitsinformationen und beim Schutz Ihres Computers. Diese Informationen können z. B. angeben, wo schädliche Elemente auf dem Computer erkannt wurden, falls Schadsoftware entfernt wurde. Die Informationen werden automatisch erfasst und gesendet. In einigen Fällen können unbeabsichtigt personenbezogene Informationen an Microsoft gesendet werden. Microsoft wird diese Informationen jedoch nicht dazu verwenden, Sie zu identifizieren oder zu kontaktieren.
 
-    Optionen:
-    (0x0) Deaktiviert (Standard)
-    (0x1) Einfache Mitgliedschaft
-    (0x2) Erweiterte Mitgliedschaft
+ Optionen:
+ (0x0) Deaktiviert (Standard)
+ (0x1) Einfache Mitgliedschaft
+ (0x2) Erweiterte Mitgliedschaft
 
-    Bei der einfachen Mitgliedschaft werden grundlegende Informationen zu erkannter Software an Microsoft gesendet. Dazu zählen der Ursprungsort der Software, die vom Benutzer oder automatisch ausgeführten Aktionen und Angaben dazu, ob die Aktionen erfolgreich verlaufen sind.
+ Bei der einfachen Mitgliedschaft werden grundlegende Informationen zu erkannter Software an Microsoft gesendet. Dazu zählen der Ursprungsort der Software, die vom Benutzer oder automatisch ausgeführten Aktionen und Angaben dazu, ob die Aktionen erfolgreich verlaufen sind.
 
-    Bei der erweiterten Mitgliedschaft werden neben den grundlegenden Informationen weitere Informationen zu Schadsoftware, Spyware und potenziell unerwünschter Software an Microsoft gesendet. Dazu zählen der Speicherort der Software, Dateinamen, die Ausführungsweise der Software und deren Auswirkungen auf Ihren Computer.
+ Bei der erweiterten Mitgliedschaft werden neben den grundlegenden Informationen weitere Informationen zu Schadsoftware, Spyware und potenziell unerwünschter Software an Microsoft gesendet. Dazu zählen der Speicherort der Software, Dateinamen, die Ausführungsweise der Software und deren Auswirkungen auf Ihren Computer.
 
-    Wenn Sie diese Einstellung aktivieren, treten Sie Microsoft MAPS mit der angegebenen Mitgliedschaft bei.
+ Wenn Sie diese Einstellung aktivieren, treten Sie Microsoft MAPS mit der angegebenen Mitgliedschaft bei.
 
-    Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, erfolgt kein Beitritt zu Microsoft MAPS.
+ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, erfolgt kein Beitritt zu Microsoft MAPS.
 
-    Da in Windows 10 keine einfache Mitgliedschaft mehr angeboten wird, wird das Gerät als erweitertes Mitglied registriert, wenn Sie den Wert auf 1 oder 2 festlegen.</string>
+ Da in Windows 10 keine einfache Mitgliedschaft mehr angeboten wird, wird das Gerät als erweitertes Mitglied registriert, wenn Sie den Wert auf 1 oder 2 festlegen.</string>
     <string id="SpynetReporting_Disabled">Deaktiviert</string>
     <string id="SpynetReporting_Basic">MAPS (Basis)</string>
     <string id="SpynetReporting_Advanced">MAPS (erweitert)</string>
@@ -886,15 +850,11 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird kein zus�
     Legen Sie den Zustand der einzelnen Regeln zur Verringerung der Angriffsfläche (Attack Surface Reduction, ASR) fest.
 
     Nach dem Aktivieren dieser Einstellung können Sie die einzelnen Regeln im Abschnitt "Optionen" wie folgt festlegen:
-    – Blockieren: Die Regel wird angewendet
-    – Überwachungsmodus: Wenn die Regel normalerweise ein Ereignis auslösen würde, wird sie aufgezeichnet (obwohl die Regel tatsächlich nicht angewendet wird)
-    – Aus: Die Regel wird nicht angewendet
-Nicht konfiguriert: Die Regel wird mit Standardwerten angewendet
-    – Warnung:  Die Regel wird angewendet und der Endbenutzer wird die Option haben, den Block zu umgehen
+    – Blockieren: Die Regel wird angewendet.
+    – Überwachungsmodus: Wenn die Regel normalerweise ein Ereignis auslösen würde, wird sie aufgezeichnet (obwohl die Regel tatsächlich nicht angewendet wird).
+    – Aus: Die Regel wird nicht angewendet.
 
-    Sofern die ASR-Regel nicht deaktiviert ist, wird eine Teilstichprobe von Audit-Ereignissen für ASR-Regeln mit dem Wert von nicht konfiguriert gesammelt.
-
-   Aktiviert:
+    Aktiviert:
     Geben Sie den Zustand der einzelnen ASR-Regeln im Abschnitt "Optionen" für diese Einstellung an.
     Geben Sie jede Regel als Name/Wert-Paar in eine neue Zeile ein:
     – Namensspalte: Geben Sie eine gültige ID für die ASR-Regel ein.
@@ -903,12 +863,9 @@ Nicht konfiguriert: Die Regel wird mit Standardwerten angewendet
     Die folgenden Status-IDs sind in der Wertespalte zulässig:
     – 1 (Blockieren)
     – 0 (Aus)
-   – 2 (Überwachen)
- – 5 (nicht konfiguriert) 
- – 6 (Warnung) 
-
-
- Beispiel: 
+    – 2 (Überwachen)
+    
+    Beispiel:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            1
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            2
@@ -917,7 +874,7 @@ Nicht konfiguriert: Die Regel wird mit Standardwerten angewendet
     Es werden keine ASR-Regeln konfiguriert.
 
     Nicht konfiguriert:
-    Identisch mit deaktiviert.
+    Identisch mit "Deaktiviert".
 
     Sie können Ordner oder Dateien in der Gruppenrichtlinieneinstellung "Dateien und Pfade aus Regeln zur Verringerung der Angriffsfläche ausschließen" ausschließen.
     </string>
@@ -1046,11 +1003,6 @@ Nicht konfiguriert: Die Regel wird mit Standardwerten angewendet
         <label>Definieren des Proxyservers für das Herstellen einer Verbindung mit dem Netzwerk</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>Definieren Sie den Verzeichnispfad zum Kopieren von Support-Protokolldateien</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Erweiterungsausschlüsse</listBox>
     </presentation>
@@ -1059,9 +1011,6 @@ Nicht konfiguriert: Die Regel wird mit Standardwerten angewendet
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Prozessausschlüsse</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">Ausschlüsse von IP-Adressen</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Angeben zusätzlicher Definitionssätze für die Überprüfung von Netzwerkdatenverkehr</listBox>
@@ -1130,10 +1079,10 @@ Nicht konfiguriert: Die Regel wird mit Standardwerten angewendet
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Angeben der Tageszeit zur Ausführung eines geplanten Scans</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Festlegen, nach welcher Anzahl von Tagen Spyware-Sicherheitsinformationen als veraltet gelten</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Festlegen, nach welcher Anzahl von Tagen Spyware-Sicherheitsinformationen als veraltet gelten</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Festlegen, nach welcher Anzahl von Tagen Virus-Sicherheitsinformationen als veraltet gelten</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Festlegen, nach welcher Anzahl von Tagen Virus-Sicherheitsinformationen als veraltet gelten</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1218,9 +1167,6 @@ Nicht konfiguriert: Die Regel wird mit Standardwerten angewendet
     <textBox refId="DeviceControl_PolicyRules">
         <label>Hier die Richtlinienregeln definieren</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Angeben des Fensters für zufälliges Planen in Stunden.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

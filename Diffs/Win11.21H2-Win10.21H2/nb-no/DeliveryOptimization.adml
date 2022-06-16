@@ -6,24 +6,27 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">Leveringsoptimalisering</string>
       <string id="DownloadMode">Nedlastingsmodus</string>
-      <string id="DownloadMode_Help">Angir nedlastingsprosessen som leverings optimalisering kan bruke i nedlastinger av Windows-oppdateringer, oppdateringer av apper og apper.
+      <string id="DownloadMode_Help">Angir nedlastingsmetoden Leveringsoptimalisering kan bruke til nedlasting av Windows-oppdateringer, apper og appoppdateringer.
 
-Følgende liste viser verdiene som støttes:
+I følgende liste vises verdiene som støttes:
 
-0 = bare HTTP, ingen mot part.
+0 = bare HTTP, ingen nodefordeling.
 
-1 = HTTP blandet med node bak samme NAT.
+1 = HTTP blandet med nodefordeling bak samme NAT.
 
-2 = HTTP blandet med mot part over en privat gruppe. Node foregår på enheter i samme Active Directory-område (hvis finnes) eller det samme domenet som standard. Når det er merket av for dette alternativet, vil mot parten styre styrere. Hvis du vil opprette en egen definert gruppe, bruker du gruppe-ID i kombinasjon med modus 2.
+2 = HTTP blandet med nodefordeling innad i en lukket gruppe. Som standard foregår nodefordelingen på enheter i samme Active Directory-område (hvis disse finnes) eller på det samme domenet. Når dette alternativet er valgt, foregår nodefordelingen på tvers av NAT-er. Hvis du vil opprette en egendefinert gruppe, bruker du gruppe-ID-en sammen med modus 2.
 
-3 = HTTP blandet med Internett-node.
+3 = HTTP blandet med nodefordeling via Internett. 
 
-99 = enkel nedlastingspakken uten mot parts modus. Nedlastinger av leverings optimalisering bruker bare HTTP, og prøver ikke å kontakte Sky tjenestene for leverings optimalisering.</string>
+99 = enkel nedlastingsmodus uten nodefordeling. Leveringsoptimalisering laster ned ved hjelp av HTTP og vil ikke prøve å kontakte skytjenestene for Leveringsoptimalisering.
+
+100 = bypass-modus. Ikke bruk Leveringsoptimalisering. Bruk BITS i stedet.</string>
       <string id="DownloadMode_CdnOnly">Bare HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Gruppe (2)</string>
       <string id="DownloadMode_Internet">Internett (3)</string>
       <string id="DownloadMode_Simple">Enkelt (99)</string>
+      <string id="DownloadMode_Bypass">Omgå (100)</string>
       <string id="GroupId">Gruppe-ID</string>
       <string id="GroupId_Help">Gruppe-ID må angis som en GUID. Denne policyen angir en vilkårlig gruppe-ID som enheten tilhører.
 
@@ -166,19 +169,14 @@ Obs!  Hvis du angir at policyen skal utsette bakgrunnsnedlasting fra http, akti
 
 Obs!  Hvis du angir at policyen skal utsette forgrunnsnedlasting fra http, aktiveres den først (for å tillate nedlastinger fra motparter først).</string>
       <string id="RestrictPeerSelectionBy">Velg en metode for å begrense valg av motpart</string>
-      <string id="RestrictPeerSelectionBy_Help">Konfigurer denne policyen til å begrense valg av mot part via valgt alternativ.
+      <string id="RestrictPeerSelectionBy_Help">Konfigurer denne policyen for å begrense motpartvalg via valgt alternativ.
 
-Tilgjengelige alternativer:
-0 = NAT.
-1 = nettverks maske.
-2 = lokalt søk (DNS-SD).
+Alternativene er:
+1 = nettverksmaske (flere alternativer blir lagt til i en fremtidig versjon).
 
-Standard verdien er endret fra 0 (ingen begrensning) til 1 (Begrens til del nettet).
-
-Disse alternativene gjelder både for nedlastingsinnstillinger LAN (1) og gruppe (2).</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+Alternativ 1 (nettverksmaske) gjelder både Nedlastingsmodus LAN (1) og Gruppe (2).</string>
+      <string id="RestrictPeerSelectionBy_None">Ingen</string>
       <string id="RestrictPeerSelectionBy_Subnet">Delnett</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Lokalt søk</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Angi arbeidstid for å begrense båndbredde for bakgrunnsnedlasting</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Angir maksimal båndbredde for bakgrunnsnedlasting som bruker leveringsoptimalisering under og utenfor vanlig arbeidstid på tvers av alle samtidige nedlastingsaktiviteter som en prosent av tilgjengelig nedlastingsbåndbredde.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Angi arbeidstid for å begrense båndbredde for forgrunnsnedlasting</string>
@@ -305,7 +303,7 @@ Disse alternativene gjelder både for nedlastingsinnstillinger LAN (1) og gruppe
         <text>Standardverdien er 0 (ingen forsinkelse)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Begrens valg av motpart med:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Begrens valg av motpart med:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

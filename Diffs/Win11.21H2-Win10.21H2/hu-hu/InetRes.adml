@@ -298,6 +298,7 @@ Ha letiltja ezt a házirend-beállítást a listában szereplő alkalmazásra va
 Ha nem konfigurálja ezt a házirend-beállítást, akkor megmaradnak a listán lévő alkalmazás vagy folyamat aktuális URL-művelet értékei.</string>
       <string id="FavImportExport">A Beállítások importálása és exportálása varázsló letiltása</string>
       <string id="GeolocationDisable">Böngésző tartózkodási hellyel kapcsolatos támogatásának kikapcsolása</string>
+      <string id="DisableFlashInIE">Az Adobe Flash kikapcsolása az Internet Explorer böngészőben és annak megakadályozása, hogy az alkalmazások az Internet Explorer-technológia használatával Flash-objektumpéldányokat hozzanak létre</string>
       <string id="File_NoBrowserClose">Fájl menü: A böngésző- és Intéző-ablakok bezárásának letiltása</string>
       <string id="File_NoBrowserSaveAs">Fájl menü: A Mentés másként parancs letiltása</string>
       <string id="File_NoBrowserSaveWebComplete">Fájl menü: A Mentés teljes weblapként lehetőség letiltása</string>
@@ -725,6 +726,13 @@ Ha engedélyezi ezt a házirend-beállítást, azzal kikapcsolja a böngésző t
 Ha letiltja ezt a házirend-beállítást, azzal bekapcsolja a böngésző tartózkodási hellyel kapcsolatos támogatását.
 
 Ha nem konfigurálja a házirend-beállítást, a böngésző tartózkodási hellyel kapcsolatos támogatása ki- és bekapcsolható az Internetbeállítások párbeszédpanel Adatvédelem lapján.</string>
+      <string id="IE_ExplainDisableFlashInIE">Ezzel a házirend-beállítással letiltható az Adobe Flash bővítmény használata az Internet Explorer böngészőben, és megakadályozható, hogy az alkalmazások az Internet Explorer-technológia használatával Flash-objektumpéldányokat hozzanak létre
+
+E házirend-beállítás engedélyezésével letiltja a Flash használatát az Internet Explorer böngészőben, az alkalmazások pedig nem hozhatnak létre Flash-objektumpéldányokat az Internet Explorer-technológia használatával. A Bővítmények kezelése párbeszédpanelen a Flash letiltott állapotú lesz, és a felhasználók nem engedélyezhetik a Flash bővítményt. Ha engedélyezi a házirend-beállítást, az Internet Explorer figyelmen kívül hagyja az Adobe Flash bővítményre vonatkozó „Bővítménylista” és „Az összes bővítmény tiltása a bővítménylistában külön engedélyezett bővítmények kivételével” beállítást.
+
+Ha letiltja vagy nem konfigurálja a házirend-beállítást, engedélyezi a Flash használatát az Internet Explorer böngészőben, az alkalmazások pedig létrehozhatnak Flash-objektumpéldányokat az Internet Explorer-technológia használatával. A felhasználók a Bővítmények kezelése párbeszédpanelen engedélyezhetik vagy tilthatják le a Flash bővítményt.
+
+Ha letiltja vagy nem konfigurálja a házirend-beállítást, az Adobe Flash továbbra is letiltható a „Bővítménylista” és „Az összes bővítmény tiltása a bővítménylistában külön engedélyezett bővítmények kivételével” beállítással. Ha azonban az Adobe Flash bővítményt nem ezzel, hanem a „Bővítménylista” vagy „Az összes bővítmény tiltása a bővítménylistában külön engedélyezett bővítmények kivételével” beállítással tiltja le, az alkalmazások továbbra is létrehozhatnak Flash-objektumpéldányokat az Internet Explorer-technológia használatával. További információért olvassa el az Internet Explorer 10 csoportházirend-beállításait ismertető dokumentumot az Internet Explorer TechNet-webhelyén.</string>
       <string id="IE_ExplainFile_NoBrowserClose">A felhasználók nem zárhatják be a Microsoft Internet Explorer programot és a Fájlkezelőt.
 
 Ha engedélyezi ezt a házirendet, a Fájl menün a Bezárás parancs halványan jelenik meg.
@@ -3915,19 +3923,19 @@ Ha letiltja a beállítást, vagy nem konfigurálja azt, az alapértelmezett mó
 Ha telepítve van a Microsoft Edge következő verziójához kapcsolódó Windows Update-frissítés* és a Microsoft Edge stabil csatorna egyaránt, az alábbi viselkedés figyelhető meg:
 – Ha letiltja vagy nem konfigurálja ezt a házirendet, a rendszer a Microsoft Edge stabil csatornát használja. Ez az alapértelmezett viselkedés.
 – Ha engedélyezi ezt a házirendet, az átirányított webhelyek megnyitásához konfigurálhat legfeljebb hármat az alábbi csatornákból, ahol:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta, 77-es vagy újabb verzió
-    3 = Microsoft Edge Dev, 77-es vagy újabb verzió
-    4 = Microsoft Edge Canary, 77-es vagy újabb verzió
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta, 77-es vagy újabb verzió
+ 3 = Microsoft Edge Dev, 77-es vagy újabb verzió
+ 4 = Microsoft Edge Canary, 77-es vagy újabb verzió
 
 Ha nincs telepítve a Microsoft Edge következő verziójához kapcsolódó Windows Update-frissítés* vagy a Microsoft Edge stabil csatorna, az alábbi viselkedés figyelhető meg:
 – Ha letiltja vagy nem konfigurálja ezt a házirendet, a rendszer automatikusan a Microsoft Edge 45-ös vagy korábbi verzióját használja. Ez az alapértelmezett viselkedés.
 – Ha engedélyezi ezt a házirendet, az átirányított webhelyek megnyitásához konfigurálhat legfeljebb hármat az alábbi csatornákból, ahol:
-    0 = Microsoft Edge, 45-ös vagy korábbi verzió
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta, 77-es vagy újabb verzió
-    3 = Microsoft Edge Dev, 77-es vagy újabb verzió
-    4 = Microsoft Edge Canary, 77-es vagy újabb verzió
+ 0 = Microsoft Edge, 45-ös vagy korábbi verzió
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta, 77-es vagy újabb verzió
+ 3 = Microsoft Edge Dev, 77-es vagy újabb verzió
+ 4 = Microsoft Edge Canary, 77-es vagy újabb verzió
 
 *A Microsoft Edge következő verziójához kapcsolódó Windows-frissítéssel, illetve annak letiltásával kapcsolatos további információért lásd: https://go.microsoft.com/fwlink/?linkid=2102115. Ez a frissítés kizárólag a Windows 10 1709-es és újabb verzióira érvényes.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3966,6 +3974,14 @@ Ha engedélyezi ezt a házirendet, a bővített gyorsbillentyű-funkciók enged�
 Ha letiltja vagy nem konfigurálja ezt a házirendet, a bővített gyorsbillentyűk nem fognak működni az Internet Explorer üzemmódban.
 
 További információ: https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">A nagyítás alapértelmezettre állítása HTML párbeszédpanelek esetén Internet Explorer módban</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Ez a házirend-beállítás lehetővé teszi a rendszergazdák számára, hogy Internet Explorer módban a HTML párbeszédpanelek nagyítását alapértelmezettre állítsák vissza.
+
+Ha engedélyezi ezt a házirendet, egy HTML párbeszédpanel nagyítása Internet Explorer módban nem továbbítódik a szülőoldalról.
+
+Ha letiltja, vagy nem konfigurálja ezt a házirendet, az Internet Explorer módban lévő HTML párbeszédpanel nagyítása a szülőoldal nagyítása alapján kerül beállításra.
+
+További információért lásd: https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Az Internet Explorer 11 letiltása önálló böngészőként</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Ezzel a házirenddel korlátozhatja az Internet Explorer indítását önálló böngészőként.
 
@@ -3979,12 +3995,6 @@ Ha letiltja vagy nem konfigurálja ezt a házirendet, az összes webhely az aktu
       <string id="NotifyDisableIEOptions_Never">Soha</string>
       <string id="NotifyDisableIEOptions_Always">Mindig</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Felhasználónként egyszer</string>
-      <string id="JScriptReplacement">Cserélje le a JScript-t a JScript9Legacy betöltésével a JScript helyett a MSHTML/WebOC használatával.</string>
-      <string id="IE_ExplainJScriptReplacement">Ezzel a házirend-beállítással megadhatja, hogy a JScript vagy JScript9Legacy legyen-e betöltve a MSHTML/WebOC-alapú rendszerben.
-      
-Ha engedélyezi ezt a házirend-beállítást, a rendszer a JScript9Legacy-t tölti be, amikor JScript-példány jön létre.
-
-Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor JScript lesz használva.</string>
       <string id="VerMgmtDisable">Elavult ActiveX-vezérlők blokkolásának kikapcsolása az Internet Explorerben</string>
       <string id="IE_ExplainVerMgmtDisable">Ez a házirend-beállítás meghatározza, hogy az Internet Explorer blokkol-e bizonyos elavult ActiveX-vezérlőket. Az Intranet zónában soha nincsenek blokkolva az elavult ActiveX-vezérlők.
 

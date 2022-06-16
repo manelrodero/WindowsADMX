@@ -18,12 +18,15 @@ Die folgende Liste enthält die unterstützten Werte:
 
 3 = HTTP kombiniert mit Internetpeering.
 
-99 = Einfacher Downloadmodus ohne Peering. Downloads der Übermittlungsoptimierung verwenden nur HTTP. Es wird nicht versucht, Kontakt mit den Clouddiensten der Übermittlungsoptimierung aufzunehmen.</string>
+99 = Einfacher Downloadmodus ohne Peering. Downloads der Übermittlungsoptimierung verwenden nur HTTP. Es wird nicht versucht, Kontakt mit den Clouddiensten der Übermittlungsoptimierung aufzunehmen.
+
+100 = Umgehungsmodus. Die Übermittlungsoptimierung wird nicht und stattdessen BITS verwendet.</string>
       <string id="DownloadMode_CdnOnly">Nur HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Gruppe (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Einfach (99)</string>
+      <string id="DownloadMode_Bypass">Überbrückung (100)</string>
       <string id="GroupId">Gruppen-ID</string>
       <string id="GroupId_Help">Die Gruppen-ID muss als GUID festgelegt werden. Mit dieser Richtlinie wird eine beliebige Gruppen-ID für das Gerät angegeben.
 
@@ -166,19 +169,14 @@ Hinweis: Wenn Sie die Richtlinie zum Verzögern von Hintergrund-Downloads von HT
 
 Hinweis: Wenn Sie die Richtlinie zum Verzögern von Vordergrund-Downloads von HTTP festlegen, wird sie zuerst angewendet (um zuerst Downloads von Peers zuzulassen).</string>
       <string id="RestrictPeerSelectionBy">Methode zum Einschränken der Peerauswahl auswählen</string>
-      <string id="RestrictPeerSelectionBy_Help">Legen Sie diese Richtlinie fest, um die Peerauswahl über ausgewählte Option einzuschränken.
+      <string id="RestrictPeerSelectionBy_Help">Legen Sie diese Richtlinie fest, um die Peerauswahl über die ausgewählte Option einzuschränken.
 
-Verfügbare Optionen:
-0 = NAT.
-1 = Subnetzmaske.
-2 = lokale Ermittlung (DNS-SD).
+Die verfügbaren Optionen sind:
+1 = Subnetzmaske (in einer zukünftigen Version werden weitere Optionen hinzugefügt).
 
-Der Standardwert hat sich von 0 (ohne Einschränkung) auf 1 geändert (Einschränkung auf das Subnetz).
-
-Diese Optionen gelten sowohl für den Downloadmodus LAN (1) als auch für die Gruppe (2).</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+Option 1 (Subnetzmaske) gilt für beide Downloadmodi: "LAN" (1) und "Gruppe "(2).</string>
+      <string id="RestrictPeerSelectionBy_None">Keine</string>
       <string id="RestrictPeerSelectionBy_Subnet">Subnetz</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Lokale Ermittlung</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Geschäftszeiten festlegen, um die Bandbreite von Hintergrunddownloads zu begrenzen</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Gibt die maximale Bandbreite für Hintergrunddownloads, die von der Übermittlungsoptimierung während und außerhalb der Geschäftszeiten für alle gleichzeitigen Downloadaktivitäten genutzt wird, als Prozentsatz der verfügbaren Downloadbandbreite an.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Geschäftszeiten festlegen, um die Bandbreite von Vordergrunddownloads zu begrenzen</string>
@@ -305,7 +303,7 @@ Diese Optionen gelten sowohl für den Downloadmodus LAN (1) als auch für die Gr
         <text>Der Standardwert ist 0 (keine Verzögerung).</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Peerauswahl einschränken durch:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Peerauswahl einschränken durch:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

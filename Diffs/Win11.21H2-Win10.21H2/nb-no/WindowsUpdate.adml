@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Minst Windows XP Professional Service Pack 1 eller Windows 2000 Service Pack 3, unntatt Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Minst Windows Server 2003-operativsystemer eller Windows XP Professional med SP1, unntatt Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minst Windows XP Professional Service Pack 1 eller Minst Windows 2000 Service Pack 3 til og med Windows 8.1 eller Windows Server 2012 R2 med den nyeste oppdateringspakken. Støttes ikke på Windows 10 og senere.</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minst Windows Vista til og med Windows 8.1 eller Windows Server 2012 R2 med den nyeste oppdateringspakken. Støttes ikke på Windows 10 og senere.</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minst Windows XP Professional Service Pack 1 eller minst Windows 2000 Service Pack 3 til og med Windows 8.1 eller Windows Server 2012 R2 med den nyeste oppdateringspakken. Støttes ikke på Windows 10 og senere.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minst Windows Vista via Windows 8.1 eller Windows Server 2012 R2 med den nyeste oppdateringspakken. Støttes ikke på Windows 10 og senere.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 eller minst Windows 2000 Service Pack 3
 Alternativ 7 støttes bare på servere med minst Windows Server 2016-utgaven</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Minst Windows Server 2022 eller Windows 10 versjon 2004</string>
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 til Windows Server 2022 eller Windows 10</string>
       <string id="AUDontShowUasHelp">Denne policyen tillater at du kan velge om alternativet Installer oppdateringer og avslutt skal vises i dialogboksen Avslutt Windows.
 
@@ -61,37 +62,37 @@ Hvis denne policyen er aktivert i Windows 8 og Windows RT, vises bare varslinger
       <string id="AutoUpdateCfg">Konfigurer automatiske oppdateringer</string>
       <string id="AutoUpdateCfg_Help">Angir om denne datamaskinen skal motta sikkerhetsoppdateringer og andre viktige nedlastinger via Windows-tjenesten for automatisk oppdatering.
 
-Obs!  Denne policyen gjelder ikke Windows RT.
+Obs! Denne policyen gjelder ikke Windows RT.
 
 Med denne innstillingen kan du angi om automatiske oppdateringer skal aktiveres på denne datamaskinen. Hvis tjenesten er aktivert, må du velge ett av de fire alternativene i gruppepolicyinnstillingen:
 
-        2 = Varsle før nedlasting og installasjon av oppdateringer.
+ 2 = Varsle før nedlasting og installasjon av oppdateringer.
 
-        Når Windows finner oppdateringer som gjelder for denne datamaskinen, blir brukerne varslet om at oppdateringer er klare til nedlasting. Når brukerne har gått til Windows Update, kan de laste ned og installere alle tilgjengelige oppdateringer.
+ Når Windows finner oppdateringer som gjelder for denne datamaskinen, blir brukerne varslet om at oppdateringer er klare til nedlasting. Når brukerne har gått til Windows Update, kan de laste ned og installere alle tilgjengelige oppdateringer.
 
-        3 = (standardinnstilling) Last ned oppdateringene automatisk, og varsle når de er klare til å installeres
+ 3 = (standardinnstilling) Last ned oppdateringene automatisk, og varsle når de er klare til å installeres
 
-        Windows finner oppdateringer som gjelder for datamaskinen, og laster dem ned i bakgrunnen (brukeren blir ikke varslet eller avbrutt under denne prosessen). Når nedlastingene er fullført, blir brukerne varslet om at de er klare til å installeres. Når brukerne har gått til Windows Update, kan de installere dem.
+ Windows finner oppdateringer som gjelder for datamaskinen, og laster dem ned i bakgrunnen (brukeren blir ikke varslet eller avbrutt under denne prosessen). Når nedlastingen er fullført, blir brukerne varslet om at de er klare til å installeres. Når brukerne har gått til Windows Update, kan de installere dem.
 
-        4 = Last ned oppdateringer automatisk, og installer dem i tidsplanen som er angitt nedenfor.
+ 4 = Last ned oppdateringer automatisk, og installer dem i tidsplanen som er angitt nedenfor.
 
-        Når «automatisk» velges som planlagt installasjons tid, vil Windows automatisk kontrollere, laste ned og installere oppdateringer. Enheten starter på nytt i henhold til standardinnstillingene for Windows, med mindre den er konfigurert av gruppepolicy. (Gjelder Windows 10, versjon 1809 og nyere)
+ Når «Automatisk» velges som planlagt installasjonstid, vil Windows automatisk kontrollere, laste ned og installere oppdateringer. Enheten starter på nytt i henhold til standardinnstillingene for Windows med mindre den er konfigurert av en gruppepolicy. (Gjelder Windows 10 versjon 1809 og nyere.)
 
-        Angi tidsplanen ved hjelp av alternativene i gruppepolicyinnstillingen. For versjon 1709 og nyere er det et ekstra valg for begrensning av oppdatering til en ukentlig, annenhver uke eller månedlig forekomst. Hvis det ikke er angitt noen tidsplan, vil standard tidsplan for alle installasjoner være hver dag kl. 03:00. Hvis noen oppdateringer krever omstart for at installasjonen skal fullføres, starter Windows automatisk datamaskinen på nytt. (Hvis en bruker er logget på datamaskinen når Windows er klar til å starte på nytt, blir brukeren varslet og få muligheten til å forsinke omstarten.)
+ Angi tidsplanen ved hjelp av alternativene i gruppepolicyinnstillingen. For versjon 1709 og nyere er det et ekstra valg for begrensning av oppdatering til ukentlig, annenhver uke eller månedlig. Hvis det ikke er angitt noen tidsplan, vil standard tidsplan for alle installasjoner være hver dag kl. 03:00. Hvis noen oppdateringer krever omstart for at installasjonen skal fullføres, starter Windows automatisk datamaskinen på nytt. (Hvis en bruker er logget på datamaskinen når Windows er klar til å starte på nytt, blir brukeren varslet og får muligheten til å utsette omstarten.)
 
-        I Windows 8 og nyere kan du konfigurere oppdateringer som skal installeres under automatisk vedlikehold i stedet for en bestemt tidsplan. Automatisk vedlikehold vil installere oppdateringer når datamaskinen ikke er i bruk, og unngå å gjøre det når datamaskinen kjører på batteristrøm. Hvis automatisk vedlikehold ikke kan installere oppdateringer i to dager, vil Windows Update installere oppdateringer umiddelbart. Brukerne blir deretter varslet om en kommende omstart, og denne omstarten foregår bare hvis det ikke er mulig å miste data.
+ I Windows 8 og nyere kan du angi at oppdateringer skal installeres under automatisk vedlikehold i stedet for i henhold til en bestemt tidsplan. Automatisk vedlikehold vil installere oppdateringer når datamaskinen ikke er i bruk, og unngå å gjøre det når datamaskinen kjører på batteristrøm. Hvis automatisk vedlikehold ikke kan installere oppdateringer i to dager, vil Windows Update installere oppdateringer umiddelbart. Brukerne blir deretter varslet om en kommende omstart, og denne omstarten utføres bare hvis det ikke er mulig at du mister data.
 
-        5 = Tillat lokale administratorer å velge konfigurasjonsmodusen som automatiske oppdateringer skal varsle og installere oppdateringer. (Dette alternativet er ikke overført til noen av Win 10-versjonene)
+ 5 = Tillat lokale administratorer å velge konfigurasjonsmodusen som Automatiske oppdateringer skal varsle og installere oppdateringer. (Dette alternativet er ikke overført til noen av Windows 10-versjonene.)
 
-        Med dette alternativet kan lokale administratorer bruke kontrollpanelet for Windows Update til å velge et konfigurasjonsalternativ som er valgt. Lokale administratorer har ikke tillatelse til å deaktivere konfigurasjonen for automatiske oppdateringer.
+ Med dette alternativet kan lokale administratorer bruke kontrollpanelet for Windows Update til å velge et konfigurasjonsalternativ. Lokale administratorer har ikke tillatelse til å deaktivere konfigurasjonen for Automatiske oppdateringer.
 
-        7 = Varsle om installasjon og varsle om omstart. (Bare Windows Server)
+ 7 = Varsle om installasjon og varsle om omstart. (Bare Windows Server)
 
-        Med dette alternativet fra Windows Server 2016, som bare gjelder for server-SKU-enheter, kan lokale administratorer bruke Windows Update til å fortsette installasjoner eller starte på nytt manuelt.
+ Med dette alternativet fra Windows Server 2016, som bare gjelder for Server-SKU-enheter, kan lokale administratorer bruke Windows Update til å fortsette installasjoner eller starte på nytt manuelt.
 
-Hvis statusen for denne policyen er satt til deaktivert, må alle oppdateringer som er tilgjengelige på Windows Update, lastes ned og installeres manuelt. Hvis du vil gjøre dette, søker du etter Windows Update med Start.
+Hvis statusen for denne policyen er satt til Deaktivert, må alle oppdateringer som er tilgjengelige på Windows Update, lastes ned og installeres manuelt. Hvis du vil gjøre dette, søker du etter Windows Update med Start.
 
-Hvis statusen er satt til ikke konfigurert, er ikke bruk av automatiske oppdateringer angitt på gruppepolicynivå. En administrator kan imidlertid fortsatt konfigurere automatiske oppdateringer via Kontrollpanel.</string>
+Hvis statusen er satt til Ikke konfigurert, er ikke bruk av Automatiske oppdateringer angitt på gruppepolicynivå. En administrator kan imidlertid fortsatt konfigurere Automatiske oppdateringer via kontrollpanelet.</string>
 
       <string id="AutoUpdateModeNotifyToInstallNotifyToReboot">7 – Automatisk nedlasting, Varsle om installasjon, Varsle om omstart</string>
       <string id="AutoUpdateModeAdminChooses">5 – Tillat administratorer å velge innstilling</string>
@@ -133,7 +134,7 @@ Hvis statusen er satt til ikke konfigurert, er ikke bruk av automatiske oppdater
       <string id="AutoUpdateSchTimeAuto">Automatisk</string>
       <string id="CorpWuURL">Angi en plassering på intranettet for Microsofts oppdateringstjeneste</string>
       <string id="CorpWuURL_Help">
-        Angir en intranett-server som skal være vert for oppdateringer fra Microsoft Update. Du kan deretter bruke denne oppdateringstjenesten til å automatisk oppdatere datamaskiner på nettverket.
+        Angir en intranett-server som skal være vert for oppdateringer fra Microsoft Update. Du kan deretter bruke denne oppdateringstjenesten til automatisk å oppdatere datamaskiner på nettverket.
 
         Med denne innstillingen kan du angi at en server på nettverket skal fungere som en intern oppdateringstjeneste. Klienten for automatiske oppdateringer bruker denne tjenesten til å søke etter oppdateringer som gjelder for datamaskinene på nettverket.
 
@@ -149,7 +150,7 @@ Hvis statusen er satt til ikke konfigurert, er ikke bruk av automatiske oppdater
 
         Obs! Hvis policyen Konfigurer automatiske oppdateringer er deaktivert, har ikke denne policyen noen virkning.
 
-        Obs! Hvis Alternativ nedlastingsserver ikke er angitt, brukes oppdateringstjenesten på intranett som standard til å laste ned oppdateringer.
+        Obs!  Hvis Alternativ nedlastingsserver ikke er angitt, brukes oppdateringstjenesten på intranett som standard til å laste ned oppdateringer.
 
         Obs! Alternativet Last ned filer uten nettadresse brukes bare hvis Alternativ nedlastingsserver er angitt.
 
@@ -157,19 +158,19 @@ Hvis statusen er satt til ikke konfigurert, er ikke bruk av automatiske oppdater
 
         For å sikre det høyeste nivået av sikkerhet anbefaler Microsoft at du sikrer WSUS med TLS/SSL-protokoll, og dermed bruker HTTPS-baserte intranett-servere for å holde systemene sikre. Hvis proxy er nødvendig, anbefaler vi å konfigurere systemproxy. For å sikre høyst mulig sikkerhetsnivåer brukes WSUS TLS-sertifikatfesting på alle enheter.
 
-        For å holde klientene trygge tillater vi ikke lenger intranettservere å dra nytte av bruker-proxy som standard for å oppdage oppdateringer. Hvis du trenger å dra nytte av bruker-proxy for å oppdage oppdateringer mens du bruker en intranettserver på tross av de svakhetene dette representerer, må du konfigurere proxyens virkemåte til «Tillat bruk av bruker-proxy som basis hvis oppdaging ved bruk av system-proxy mislykkes».
+        For å holde klientene trygge tillater vi ikke lenger intranett-servere å dra nytte av bruker-proxy som standard for å oppdage oppdateringer. Hvis du trenger å dra nytte av bruker-proxy for å oppdage oppdateringer mens du bruker en intranett-server på tross av de svakhetene dette representerer, må du konfigurere proxyens virkemåte til «Tillat bruk av bruker-proxy som basis hvis oppdaging ved bruk av system-proxy mislykkes».
 
         Oppdaging for oppdateringer mot intranettservere feiler når brukerproxy kreves som en fallback og alternativ proxy-virkemåte ikke er konfigurert.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Bruk bare system-proxy for å oppdage oppdateringer (standard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillat at bruker-proxy brukes som reserve hvis gjenkjenning av system-proxy mislykkes</string>
       <string id="UpdateClassPolicySource_Title">Angi kildetjeneste for bestemte klasser av Windows Updates</string>
-      <string id="UpdateClassPolicySource_Help">Når denne policyen er aktivert, vil enheter motta Windows-oppdateringer for klassene som er oppført fra den angitte oppdaterings kilden: Windows Update eller Windows Server Update Service. 
+      <string id="UpdateClassPolicySource_Help">Når denne policyen er aktivert, vil enheter motta Windows-oppdateringer for klassene som er oppført fra den angitte oppdateringskilden: enten Windows Update eller Windows Server Update Service. 
 
-Obs! hvis du vil motta oppdateringer fra Windows Server Update-tjenesten, må du konfigurere en plassering for Microsoft Update-tjenesten på riktig måte via policyen angi intranett plassering for Microsoft Update.
+Obs! Hvis du vil motta oppdateringer fra Windows Server Update Service, må du ha riktig konfigurert en Microsoft-oppdateringstjenesteplassering på intranettet via policyinnstillingen Angi plassering av Microsoft-oppdateringstjeneste på intranettet.
 
-Hvis denne policyen ikke er konfigurert eller er deaktivert, vil enheten fortsette å oppdage oppdateringer per andre policy konfigurasjoner. 
+Hvis denne policyen ikke er konfigurert eller er deaktivert, fortsetter enheten å oppdage oppdateringer i henhold til andre policykonfigurasjoner. 
 
-Obs! hvis du bruker ikke Tillat at utsettelses policyer for år saker skanninger mot Windows Update, anbefaler vi at du konfigurerer denne policyen i stedet for å sikre at enheter bare skannes mot den angitte serveren.</string>
+Obs! Hvis du bruker Ikke tillat at utsettelsespolicyer forårsaker skanninger mot Windows Update for øyeblikket for å sikre at enheter bare skannes mot den angitte serveren, anbefaler vi at du konfigurerer denne policyen i stedet eller i tillegg til slike.</string>
       <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
       <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Angir antallet timer det tar å avgjøre hvor lenge det skal ventes før det søkes etter tilgjengelige oppdateringer. Den nøyaktige ventetiden er en sum av den bestemte verdien og en tilfeldig variant av 0-4 timer.
@@ -315,12 +316,6 @@ Obs!  Denne policyen gjelder bare når Microsoft-oppdateringstjenesten på intra
 Obs!  Denne policyen støttes ikke på Windows RT. Angivelse av denne policyen har ingen innvirkning på PCer med Windows RT.</string>
       <string id="TargetGroup_Title">Aktiver målgrupperettet klientside</string>
       <string id="WindowsUpdateCat">Windows Update</string>
-      <!--Category sub-folders-->
-      <string id="WindowsUpdateOffering">Administrer oppdateringer som tilbys fra Windows Update</string>
-      <string id="WSUSOffering">Administrer oppdateringer som tilbys fra Windows Server Update Service</string>
-      <string id="WindowsUpdateExperience">Administrer sluttbrukeropplevelse</string>
-      <string id="PreSV">Eldre policyer</string>
-
       <string id="TrustedPublisher_Title">Tillat signerte oppdateringer fra en Microsoft-oppdateringstjeneste på intranettet  </string>
       <string id="TrustedPublisher_Help">Med denne policyinnstillingen kan du angi om Automatiske oppdateringer godtar oppdateringer signert av andre enn Microsoft når oppdateringen finnes på en Microsoft-oppdateringstjeneste på intranettet.
 
@@ -336,30 +331,48 @@ Obs!  Denne policyen støttes ikke på Windows RT. Angivelse av denne policyen h
 Hvis du aktiverer denne policyen, deaktiveres denne funksjonaliteten, og tilkoblingen til offentlige tjenester, for eksempel Windows Store, kan slutte å fungere.
 
 Obs!  Denne policyen gjelder bare når denne PCen er konfigurert slik at den kobler til en oppdateringstjeneste på intranettet ved hjelp av policyen Angi en plassering på intranettet for Microsofts oppdateringstjeneste.</string>
+      <string id="DeferUpdateCat">Windows Update for bedrifter</string>
       <string id="ManagePreviewBuilds_Title">Administrer forhåndsversjonsbygg</string>
-      <string id="ManagePreviewBuilds_Help">Aktiver denne policyen for å administrere hvilke oppdateringer du mottar før oppdateringen lanseres i verden.
+      <string id="ManagePreviewBuilds_Help">Hvis du velger Deaktiver forhåndsversjonsbygg, blir forhåndsversjonsbygg hindret fra å installere på denne enheten. Dette hindrer at brukere kan velg Windows Insider Program gjennom Innstillinger -&gt; Oppdatering og sikkerhet.
 
-Utviklerkanal
-Ideell for svært tekniske brukere. Insider-deltakere i utviklerkanalen mottar bygg fra den aktive utviklingsgrenen vår som er tidligst i en utviklingssyklus. Disse byggene samsvarer ikke med en bestemt Windows 10-utgave.
+Hvis du velger Deaktiver forhåndsversjonsbygg når den neste versjonen offentliggjøres, hindrer det at forhåndsversjonsbygg installeres når neste Windows-versjon offentliggjøres. Dette alternativet er nyttig når enheten er konfigurert til å installere forhåndsversjonen og du vil si nei takk til å bruke testversjonen på enheten. Dette alternativet gir forhåndsversjonsbygg til enheten når den neste offentlige versjonen.
 
-Betakanal
-Ideell for funksjonsutforskere som ønsker å se kommende Windows 10-funksjoner. Tilbakemelding fra deg er spesielt viktig her siden den hjelper teknikerne med å sikre at viktige problemer løses før en større utgivelse.
-
-Release Preview-kanal (standard)
-Insider-deltakere i Release Preview-kanalen får tilgang til den kommende versjonen av Windows 10 før den lanseres i verden. Disse byggene støttes av Microsoft. Vi anbefaler at selskaper forhåndsviser og validerer kommende Windows 10-utgaver i denne kanalen før omfattende distribusjon i organisasjonen.
-
-Obs! Registrering for forhåndsversjonsbygg krever en telemetrinivåinnstilling på 2 eller høyere og at domenet ditt registreres i insider.windows.com. Hvis du vil ha mer informasjon om forhåndsversjonsbygg, kan du se: https://aka.ms/wipforbiz
-
-Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil ikke Windows Update tilby oppdateringer for forhåndsversjonen, og du vil motta denne typen innhold etter verdenslanseringen. Hvis du deaktiverer denne policyen, blir alle enheter med et forhåndsversjonsbygg meldt av og forblir på den nyeste funksjonsoppdateringen etter lanseringen.</string>
-      <string id="DevChannel">Utviklerkanal</string>
-      <string id="BetaChannel">Betakanal</string>
-      <string id="ReleasePreviewChannel">Frigi forhåndsvisningskanal</string>
+Hvis du velger Aktiver forhåndsversjonsbygg, kan forhåndsversjonsbygg installeres på enheten. Brukere kan laste ned og installere Windows forhåndsversjonsbygg på enhetene sine ved å takke ja gjennom Innstillinger -&gt; Oppdatering og sikkerhet -&gt; Windows Insider Program. Administratorer kan også bruke andre policyer til å administrere testversjonsinnstillinger på vegne av brukere når denne verdien er angitt.</string>
+      <string id="DisablePreviewBuilds">Deaktiver forhåndsversjonsbuilds</string>
+      <string id="DisablePreviewBuildsAndOptOut">Deaktiver forhåndsversjonsbuilds når den neste versjonen offentliggjøres</string>
+      <string id="EnablePreviewBuilds">Aktiver forhåndsversjonsbuilds</string>
+      <string id="PreviewBuildFastFeatureUpdates">Forhåndsversjonsbygg – rask</string>
+      <string id="PreviewBuildSlowFeatureUpdates">Forhåndsversjonsbygg – treg</string>
+      <string id="ReleasePreviewBranchFeatureUpdates">Release Preview</string>
+      <string id="SemiAnnualChannelFeatureUpdates">Halvårskanal</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Halvårskanal for 1809 og eldre (avskrevet)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Halvårskanal (målrettet) for 1809 og eldre (avskrevet)</string>
       <string id="DeferFeatureUpdates_Title">Velg når forhåndsversjonsbygg og funksjonsoppdateringer skal mottas</string>
-      <string id="DeferFeatureUpdates_Help">Aktiver denne policyen for å angi når funksjonsoppdateringer skal mottas.
+      <string id="DeferFeatureUpdates_Help">Aktiver denne policyen for å angi nivået av forhåndsversjonsbygg eller funksjonsoppdateringer som skal mottas, og når.
 
-Utsett oppdateringer | Dette gjør det mulig for enheter å utsette å ta neste funksjonsoppdatering som er tilgjengelig for kanalen, i opptil 14 dager for alle forhåndsversjonskanaler og opptil 365 dager for halvårskanalen. Hvis enheten oppdateres fra halvårskanalen, kan det angis en versjon som enheten kan flytte til og/eller bli værende på til policyen er oppdatert, eller til enheten har nådd sluttdatoen for tjenesten. Obs! Hvis du angir begge policyene, prioriteres versjonen som er angitt, og utsettelser vil ikke være gyldige. Se informasjonssiden for Windows-utgivelser for informasjon om operativsystemversjoner.
+* Forhåndsversjonsbygg – rask: Enheter som er angitt til dette nivået, blir de første som mottar nye versjoner av Windows med funksjoner som ikke ennå er tilgjengelige for offentligheten. Velg Rask for å delta i identifisering og rapportering av problemer til Microsoft, og gi forslag til nye funksjoner.
+* Forhåndsversjonsbygg – treg: Enheter som er angitt til dette nivået, mottar nye versjoner av Windows før de er tilgjengelige for offentligheten, men ved langsommere intervaller enn de angitt til Rask, og med endringer og rettinger identifisert i tidligere versjoner.
+* Release Preview: Motta versjoner av Windows like før Microsoft utgir dem for offentligheten.
+* Halvårskanal: Motta funksjonsoppdateringer når de utgis til offentligheten.
 
-Stans oppdateringer midlertidig | Hvis du vil hindre at funksjonsoppdateringer mottas på det planlagte tidspunktet, kan du stoppe dem midlertidig. Pausen vil gjelde 35 dager fra angitt startdato eller til feltet er tømt (du vil fortsatt få tilbud om kvalitetsoppdateringer).</string>
+Følgende nivåer for Windows-beredskap er foreldet og gjelder bare for 1809 og eldre:
+* Halvårskanal (målrettet) for 1809 og eldre: Funksjonsoppdateringer er utgitt.
+* Halvårskanal for 1809 og eldre: Funksjonsoppdateringer er deklarert i halvårskanal, en angivelse som indikerer at utgivelsen er klar for bred distribusjon.
+Se gjennom utgivelsesinformasjonssiden på http://aka.ms/ReleaseInformationPage for halvårskanalen (målrettet) og halvårskanalens utgivelsesdatoer.
+
+Ved valg av forhåndsversjonsbygg:
+    – Du kan utsette mottak av forhåndsversjonsbygg i opptil 14 dager.
+    – Hvis du vil hindre at forhåndsversjonsbygg blir mottatt til planlagt tid, kan du midlertidig stanse dem. Pausen vil være aktiv i 35 dager fra starttiden som er oppgitt.
+    – Hvis du vil gjenoppta mottak av funksjonsoppdateringer som er stanset midlertidig, tømmer du startdatofeltet.
+
+Forhåndsversjonsregistrering krever en telemetri med innstillingen 2 eller høyere, og domenet som er registrert på insider.windows.com. Hvis du vil ha mer informasjon om forhåndsversjonsbygg, kan du se: https://aka.ms/wipforbiz
+
+Ved valg av halvårskanal:
+    – Du kan utsette mottak av funksjonsoppdateringer i opptil 365 dager.
+    – Hvis du vil hindre at funksjonsoppdateringer mottas til planlagt tid, kan du midlertidig stanse dem. Pausen vil være aktiv i 35 dager fra starttiden som er oppgitt.
+    – Hvis du vil gjenoppta mottak av funksjonsoppdateringer som er stanset midlertidig, tømmer du startdatofeltet.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil ikke Windows Update endre virkemåte.</string>
       <string id="DeferQualityUpdates_Title">Velg når kvalitetsoppdateringer skal mottas</string>
       <string id="DeferQualityUpdates_Help">Aktiver denne policyen for å angi når du vil motta kvalitetsoppdateringer.
 
@@ -716,11 +729,13 @@ denne policyen overstyrer følgende policyer:
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervall (timer):  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Vent i følgende periode før du ber om en planlagt</text>
+        <text>Vent angitt tidsrom før</text>
+        <text>det på nytt varsles om planlagt</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">omstart (minutter):  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Vent den følgende perioden før du fortsetter med en planlagt</text>
+        <text>Vent angitt tidsrom før</text>
+        <text>den planlagte</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">omstart (minutter):  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -732,8 +747,14 @@ denne policyen overstyrer følgende policyer:
           <label>Målgruppenavn for denne datamaskinen</label>
         </textBox>
       </presentation>
+      <presentation id="IdleShutdownTimerDuration_Title">
+        <text>Vent angitt tidsrom før</text>
+        <text>Avslutte tjenesten når</text>
+        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">inaktiv (minutter):  </decimalTextBox>
+      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>Tidtakeren for omstart gir brukerne så mye tid til å lagre deres</text>
+        <text>Omstartstidtakeren gir brukerne</text>
+        <text>følgende antall minutter til å</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">lagre arbeidet:  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
@@ -745,10 +766,11 @@ denne policyen overstyrer følgende policyer:
         </textBox>
       </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Velg Windows-klargjøringsnivå for oppdateringene du ønsker å motta:</dropdownList>
+        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Angi hvordan du vil motta forhåndsversjonsbygg:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Hvor mange dager etter at en funksjons oppdatering frigis, vil du utsette oppdateringen før den blir tilbudt enheten?</decimalTextBox>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Velg Windows-klargjøringsnivå for oppdateringene du ønsker å motta:</dropdownList>
+        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Når et forhåndsversjonsbygg eller en funksjonsoppdatering lanseres, utsetter du mottaket av den i så mange dager:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Stans forhåndsversjonsbygg eller funksjonsoppdateringer midlertidig fra:</label>
         </textBox>

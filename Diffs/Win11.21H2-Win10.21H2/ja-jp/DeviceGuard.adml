@@ -15,9 +15,9 @@
 
 この設定により、カーネル モードのコードの整合性に対する仮想化ベースの保護が有効になります。この設定を有効にすると、カーネル モードのメモリ保護が強制され、コードの整合性の検証パスが仮想化ベースのセキュリティ機能によって保護されます。
 
-オプションを使用してコードの整合性に対する仮想化ベースの保護が有効化されていた場合、[無効] オプションを選択すると、コードの整合性に対する仮想化ベースの保護がリモートで無効になります。
+[ロックなしで有効化] オプションを使用してコードの整合性に対する仮想化ベースの保護が有効化されていた場合、[無効] オプションを選択すると、コードの整合性に対する仮想化ベースの保護がリモートで無効になります。
  
-オプションを選択すると、コードの整合性に対する仮想化ベースの保護をリモートで無効化できなくなります。この機能を無効にするには、グループ ポリシーを [無効] に設定すると共に、UEFI に保存されている構成を消去するために、ユーザーが物理的に存在する各コンピューターからこのセキュリティ機能を削除する必要があります。
+[UEFI ロックで有効化] オプションを選択すると、コードの整合性に対する仮想化ベースの保護をリモートで無効化できなくなります。この機能を無効にするには、グループ ポリシーを [無効] に設定すると共に、UEFI に保存されている構成を消去するために、ユーザーが物理的に存在する各コンピューターからこのセキュリティ機能を削除する必要があります。
  
 [ロックなしで有効化] オプションを選択すると、グループ ポリシーを使用してコードの整合性に対する仮想化ベースの保護をリモートで無効化できます。
 
@@ -77,7 +77,7 @@ Credential Guard
         <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">コードの整合性に対する仮想化ベースの保護:</dropdownList>        
         <checkBox refId="CheckboxMAT">UEFI メモリ属性テーブルを要求する</checkBox>        
         <dropdownList refId="CredentialIsolationDrop" defaultItem="3">Credential Guard の構成:</dropdownList>
-        <dropdownList refId="SystemGuardDrop" defaultItem="2">セキュア起動の構成:</dropdownList>                
+        <dropdownList refId="SystemGuardDrop" defaultItem="2">セキュリティで保護された起動構成:</dropdownList>                
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

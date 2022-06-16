@@ -99,36 +99,6 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan 
 
 Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal medarbejdere genstarte appen eller enheden, for at politikændringerne kan træde i kraft i appen.
       </string>
-      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">Lad Windows-apps tage skærmbilleder af forskellige vinduer eller skærme</string>
-      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">Denne politikindstilling angiver, om Windows-apps kan tage skærmbilleder af forskellige vinduer eller skærme.
-
-Du kan angive enten en standardindstilling for alle apps eller en pr. app-indstilling ved at angive et pakkefamilienavn. Du kan få pakkefamilienavnet for en app ved at bruge cmdletten Get-AppPackage Windows PowerShell. En pr. app-indstilling tilsidesætter standardindstillingen.
-
-Hvis du vælger indstillingen "Brugeren har kontrol", kan medarbejdere i din organisation bestemme, om Windows-apps kan tage skærmbilleder af forskellige vinduer eller skærme via Indstillinger – Beskyttelse af personlige oplysninger på enheden.
-
-Hvis du vælger indstillingen "Gennemtving tilladelse", kan Windows-apps tage skærmbilleder af forskellige vinduer eller skærme, og medarbejdere i din organisation kan ikke ændre det.
-
-Hvis du vælger indstillingen "Gennemtving afvisning", kan Windows-apps ikke tage skærmbilleder af forskellige vinduer eller skærme, og medarbejdere i din organisation kan ikke ændre det.
-
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan medarbejdere i din organisation bestemme, om Windows-apps kan tage skærmbilleder af forskellige vinduer eller skærme via Indstillinger – Beskyttelse af personlige oplysninger på enheden.
-
-Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal medarbejdere genstarte appen eller enheden, for at politikændringerne kan træde i kraft i appen.
-      </string>
-      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">Lad Windows-apps slå kanten af skærmbilledet fra</string>
-      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">Denne politikindstilling angiver, om Windows-apps kan slå skærmbilledkant fra.
-
-Du kan angive enten en standardindstilling for alle apps eller en pr. app-indstilling ved at angive et pakkefamilienavn. Du kan få pakkefamilienavnet for en app ved at bruge cmdlet Get-AppPackage Windows PowerShell. En pr. app-indstilling tilsidesætter standardindstillingen.
-
-Hvis du vælger indstillingen "Brugeren har kontrol", kan medarbejdere i din organisation bestemme, om Windows-apps kan slå skærmbilledkant fra via Indstillinger – Beskyttelse af personlige oplysninger på enheden.
-
-Hvis du vælger indstillingen "Gennemtving tilladelse", har Windows-apps tilladelse til at slå skærmbilledkant fra, og medarbejdere i din organisation kan ikke ændre det.
-
-Hvis du vælger indstillingen "Gennemtving afvisning", har Windows-apps ikke tilladelse til at slå skærmbilledkant fra, og medarbejdere i din organisation kan ikke ændre det.
-
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan medarbejdere i din organisation bestemme, om Windows-apps kan slå skærmbilledkant fra via Indstillinger – Beskyttelse af personlige oplysninger på enheden.
-
-Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal medarbejdere genstarte appen eller enheden, for at politikændringerne kan træde i kraft i appen.
-      </string>
       <string id="LetAppsAccessLocation_Name">Lad Windows-apps få adgang til placering</string>
       <string id="LetAppsAccessLocation_Explain">Denne politikindstilling angiver, om Windows-apps har adgang til placering.
 
@@ -422,24 +392,6 @@ Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal
         <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
       </presentation>
-      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
-        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">Standard for alle apps:</dropdownList>
-        <text>Giv brugeren kontrol over disse bestemte apps (brug pakkefamilienavne):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
-        <text>Gennemtving tilladelse af disse bestemte apps (brug pakkefamilienavne):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
-        <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
-      </presentation>
-      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
-        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">Standard for alle apps:</dropdownList>
-        <text>Giv brugeren kontrol over disse bestemte apps (brug pakkefamilienavne):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
-        <text>Gennemtving tilladelse af disse bestemte apps (brug pakkefamilienavne):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
-        <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
-      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Standard for alle apps:</dropdownList>
         <text>Giv brugeren kontrol over disse bestemte apps (brug pakkefamilienavne):</text>
@@ -473,7 +425,7 @@ Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal
         <multiTextBox refId="LetAppsAccessMotion_UserInControlOfTheseApps_List"/>
         <text>Gennemtving tilladelse af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessMotion_ForceAllowTheseApps_List"/>
-        <text>Gennemtving afvisning af disse bestemte apps (brug Pakkefamilienavne):</text>
+        <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessMotion_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessNotifications">
@@ -491,7 +443,7 @@ Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal
         <multiTextBox refId="LetAppsAccessRadios_UserInControlOfTheseApps_List"/>
         <text>Gennemtving tilladelse af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessRadios_ForceAllowTheseApps_List"/>
-        <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
+        <text>Gennemtving afvisning af disse bestemte apps (brug Pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessRadios_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessAccountInfo">

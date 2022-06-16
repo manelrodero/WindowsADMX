@@ -6,24 +6,27 @@
     <stringTable>
       <string id="DeliveryOptimizationCat">传递优化</string>
       <string id="DownloadMode">下载模式</string>
-      <string id="DownloadMode_Help">指定传递优化在 Windows 更新、应用和应用程序更新的下载中可使用的下载方法。
+      <string id="DownloadMode_Help">指定在下载 Windows 更新、应用和应用更新时传递优化可以使用的下载方法。
 
-下面的列表显示了支持的值：
+以下列表显示了支持的值:
 
-0 = 仅 HTTP，无对等。
+0 = 仅限 HTTP，无对等互连。
 
-1 = 与同一 NAT 后面的对等互连的 HTTP 混合。
+1 = 与相同 NAT 后面的对等互连混合的 HTTP。
 
-2 = 在专用组中与对等互连混合的 HTTP。对等互连发生在相同 Active Directory 站点（如果存在）或相同域（默认情况下）上的设备上。选择此选项后，对等将跨越 Nat。若要创建自定义组，请将组 ID 与模式2结合使用。
+2 = 与跨专用组的对等互连混合的 HTTP。默认情况下，在同一 Active Directory 站点(如果存在)或同一域中的设备上进行对等互连。选择此选项时，对等互连将跨 NAT。若要创建自定义组，请将组 ID 与模式 2 结合使用。
 
-3 = 与 Internet 对等互连的 HTTP。
+3 = 与 Internet 对等互连混合的 HTTP。
 
-99 = 简单下载模式，无对等。传递优化仅使用 HTTP 下载，不尝试联系传递优化云服务。</string>
+99 = 简单下载模式，无对等互连。传递优化将仅使用 HTTP 进行下载，而不会尝试联系传递优化云服务。
+
+100 = 旁路模式。不使用传递优化，而改用 BITS。</string>
       <string id="DownloadMode_CdnOnly">仅限 HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">组(2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">简单(99)</string>
+      <string id="DownloadMode_Bypass">旁路(100)</string>
       <string id="GroupId">组 ID</string>
       <string id="GroupId_Help">组 ID 必须设置为 GUID。此策略指定设备所属的任意组 ID。
 
@@ -166,19 +169,14 @@
 
 注意: 如果将此策略设置为延迟从 http 的前台下载，则将先应用该策略(以允许先从对等端下载)。</string>
       <string id="RestrictPeerSelectionBy">选择一种方法来限制对等方选择</string>
-      <string id="RestrictPeerSelectionBy_Help">将此策略设置为通过选定选项限制对等选择。
+      <string id="RestrictPeerSelectionBy_Help">设置此策略以通过选定选项限制对等选择。
 
-可用选项包括：
-0 = NAT。
-1 = 子网掩码。
-2 = 本地发现（DNS-SD）。
+可用的选项有:
+1 = 子网掩码(未来版本中将添加更多选项)。
 
-默认值已从0（无限制）更改为1（限制为子网）。
-
-这些选项适用于下载模式 LAN （1）和组（2）。</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+选项 1 (子网掩码)适用于下载模式 LAN (1)和组(2)。</string>
+      <string id="RestrictPeerSelectionBy_None">无</string>
       <string id="RestrictPeerSelectionBy_Subnet">子网</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">本地发现</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">设置工作时间以限制后台下载带宽</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">以可用下载带宽百分比形式指定传递优化在工作时间内外跨所有并发下载活动使用的最大后台下载带宽。</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">设置工作时间以限制前台下载带宽</string>
@@ -305,7 +303,7 @@
         <text>默认值为 0 (无延迟)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">通过以下方式限制对等方选择:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">通过以下方式限制对等方选择:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

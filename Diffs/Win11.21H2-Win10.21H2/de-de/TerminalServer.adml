@@ -5,8 +5,6 @@
   <description>Beschreibung hier eingeben</description>
   <resources>
     <stringTable>
-      <string id="TS_AUTOSUBSCRIPTION_NAME">Automatisches Abonnement aktivieren</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Steuert die Liste der URLs, denen der Benutzer automatisch abonniert werden soll</string>
       <string id="TS_SUPPORTED_Windows10">Mindestens Windows 10 oder Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Mindestens Windows 8 oder Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Mindestens Windows Server 2012</string>
@@ -28,7 +26,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Mindestens Windows XP und nur Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Mindestens Windows Server 2008 oder Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Nur Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10, Version 1903, Windows 10, Version 1909 und Windows 10, Version 2004</string>
       <string id="TS_TERMINAL_SERVER">Remotedesktopsitzungs-Host</string>
       <string id="TS_TERMINAL_SERVER_Help">Steuert die Konfiguration eines Remotedesktopsitzungs-Hostservers.</string>
       <string id="TS_LICENSE_SERVER">Remotedesktoplizenzierung</string>
@@ -147,7 +144,6 @@ Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, werden die Umleitung 
       <string id="TS_CLIENT_LPT">LPT-Anschlussumleitung nicht zulassen</string>
       <string id="TS_CLIENT_PNP">Umleitung bei unterstützten Plug &amp; Play-Geräten nicht zulassen</string>
       <string id="TS_CAMERA_REDIRECTION">Keine Umleitung von Videoaufnahmen zulassen</string>
-      <string id="TS_LOCATION_REDIRECTION">Standortumleitung nicht zulassen</string>
       <string id="TS_CLIENT_PRINTER">Clientdruckerumleitung nicht zulassen</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Diese Richtlinieneinstellung legt fest, ob die Freigabe von Inhalten der Zwischenablage (Zwischenablageumleitung) zwischen Remote- und Clientcomputern während einer Remotedesktopdienste-Sitzung verhindert werden soll.
 
@@ -212,15 +208,6 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, können Benutzer ihre Videoauf
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer ihre Videoaufnahmegeräte zum Remotecomputer umleiten. Um die Videoaufnahmegeräte auszuwählen, die zum Remotecomputer umgeleitet werden sollen, können Benutzer unter "Remotedesktopverbindung" auf der Registerkarte "Lokale Ressourcen" die Option "Weitere" verwenden.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Mit dieser Richtlinien Einstellung können Sie die Umleitung von Standort Daten an den Remote Computer in einer Remote Desktop Dienste-Sitzung steuern.
-
-Remote Desktop Dienste ermöglicht Standard mäßig die Umleitung von Standort Daten.
-
-Wenn Sie diese Richtlinien Einstellung aktivieren, können Benutzer Ihre Standort Daten nicht an den Remote Computer umleiten.
-
-Wenn Sie diese Richtlinien Einstellung deaktivieren oder nicht konfigurieren, können Benutzer Ihre Standort Daten an den Remote Computer umleiten.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Mit dieser Richtlinieneinstellung können Sie die Anzahl Überwachungen begrenzen, die ein Benutzer zur Anzeige einer Remotedesktopdienste-Sitzung verwenden kann. Durch die Begrenzung der Anzahl Überwachungen zum Anzeigen einer Remotedesktopdienste-Sitzung lässt sich die Verbindungsleistung (insbesondere für langsame Verbindungen) verbessern und die Serverauslastung reduzieren.
 
@@ -433,20 +420,23 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, werden diese Benachrichtigunge
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Benachrichtigungen auf dem Remotedesktopsitzungs-Hostserver angezeigt, nachdem Sie sich als lokaler Administrator angemeldet haben.</string>
       <string id="TS_LICENSING_MODE">Remotedesktop-Lizenzierungsmodus festlegen</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Mit dieser Richtlinieneinstellung können Sie den Typ der Remotedesktopdienste-Clientzugriffslizenz (RDS-CAL) festlegen, die erforderlich ist, um eine Verbindung mit diesem RD-Sitzungshost-Server herzustellen.
+        Mit dieser Richtlinieneinstellung können Sie den Typ der Clientzugriffslizenz für Remotedesktopdienste (RDS-CAL) festlegen, die erforderlich ist, um eine Verbindung mit diesem RD-Sitzungshostserver herzustellen.
 
         Sie können diese Richtlinieneinstellung verwenden, um einen von zwei Lizenzierungsmodi auszuwählen: "Pro Benutzer" oder "Pro Gerät".
 
-        Der Lizenzierungsmodus "Pro Benutzer" erfordert, dass jedes Benutzerkonto, das eine Verbindung mit diesem RD-Sitzungshost-Server herstellt, über eine "Pro Benutzer"-Clientzugriffslizenz für Remotedesktopdienste verfügt, die von einem RD-Lizenzierungsserver ausgestellt wurde.
+        Der Lizenzierungsmodus "Pro Benutzer" erfordert, dass für jedes Benutzerkonto, das eine Verbindung zu diesem Server mit dem RD-Sitzungshost herstellt, eine "Pro-Benutzer"-RDS-CAL von einem RD-Lizenzierungsserver ausgestellt wird.
 
-        Der Lizenzierungsmodus "Pro Gerät" erfordert, dass jedes Gerät, das eine Verbindung mit diesem RD-Sitzungshost-Server herstellt, über eine "Pro Gerät"-Clientzugriffslizenz für Remotedesktopdienste verfügt, die von einem RD-Lizenzierungsserver ausgestellt wurde.
+        Der Lizenzierungsmodus "Pro Gerät" erfordert, dass für jedes Benutzerkonto, das eine Verbindung zu diesem Server mit dem RD-Sitzungshost herstellt, eine "Pro-Gerät"-RDS-CAL von einem RD-Lizenzierungsserver ausgestellt wird.
 
-        Wenn Sie diese Richtlinieneinstellung aktivieren, wird der von Ihnen angegebene Remotedesktop-Lizenzierungsmodus vom Remotedesktop-Lizenzserver und RD Sitzungshost berücksichtigt.
+        Der AAD-Lizenzierungsmodus "Pro Benutzer" erfordert, dass jedes Benutzerkonto, das eine Verbindung zu diesem RD-Sitzungshostserver herstellt, über einen Dienstplan verfügt, der in AAD zugewiesene RDS-Lizenzen unterstützt.
+        
+        Wenn Sie diese Richtlinieneinstellung aktivieren, wird der von Ihnen angegebene Remotedesktop-Lizenzierungsmodus vom Remotedesktop-Lizenzserver und vom RD-Sitzungshost berücksichtigt.
 
-        Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Lizenzierungsmodus nicht auf Gruppenrichtlinienebene festgelegt.
+        Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Lizenzierungsmodus nicht auf Gruppenrichtlinienebene angegeben.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Pro Gerät</string>
       <string id="TS_LICENSING_MODE_PER_USER">Pro Benutzer</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD pro Benutzer</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Diese Richtlinieneinstellung legt fest, ob die Umleitung von Daten an LPT-Clientanschlüsse während einer Remotedesktopdienste-Sitzung unterbunden wird.
 
 Durch diese Einstellung kann verhindert werden, dass Benutzer lokale LPT-Anschlüsse zuordnen und Daten vom Remotecomputer an lokale LPT-Anschlüsse umleiten. Standardmäßig ist die LPT-Anschlussumleitung für Remotedesktopdienste zulässig.
@@ -797,17 +787,6 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, wird der Desktop immer angezei
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann ein Startprogramm festgelegt werden, das nach dem Verbinden des Clients mit dem Remotecomputer auf dem Remotecomputer ausgeführt wird. Wenn kein Startprogramm angegeben wird, wird immer der Desktop auf dem Remotecomputer angezeigt, nachdem der Client eine Verbindung mit dem Remotecomputer hergestellt hat.
 
 Hinweis: Wenn diese Richtlinieneinstellung aktiviert ist, wird die Richtlinieneinstellung "Ein Programm beim Herstellen der Verbindung ausführen" ignoriert.</string>
-      <string id="TS_UIA">Umleitung von Benutzeroberflächenautomatisierung zulassen</string>
-      <string id="TS_UIA_EXPLAIN">Diese Richtlinieneinstellung legt fest, ob Clientanwendungen für die Automatisierung der Benutzeroberfläche (User Interface, UI), die auf dem lokalen Computer ausgeführt werden, auf UI-Elemente auf dem Server zugreifen können.
-
-Die UI-Automatisierung ermöglicht Programmen den Zugriff auf die meisten Elemente der Benutzeroberfläche, wodurch Sie Produkte für unterstützende Technologien wie Bildschirmlupe und Sprachausgabe verwenden können, die mit der Benutzeroberfläche interagieren müssen, um richtig zu funktionieren. UI-Informationen ermöglichen auch automatisierten Testskripten die Interaktion mit der Benutzeroberfläche.
-
-Remotedesktop-Sitzungen unterstützen derzeit keine Umleitung der UI-Automatisierung.
-
-Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, können alle UI-Automatisierungsclients auf Ihrem lokalen Computer mit Remote-Apps interagieren. Sie können beispielsweise die Clients Bildschirmlupe und die Sprachausgabe Ihres lokalen Computers verwenden, um mit der Benutzeroberfläche auf einer Webseite zu interagieren, die Sie in einer Remotesitzung geöffnet haben.
-
-Wenn Sie diese Richtlinieneinstellung deaktivieren, können UI -Automatisierungsclients, die auf Ihrem lokalen Computer ausgeführt werden, nicht mit Remote-Apps interagieren.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Mit dieser Richtlinieneinstellung können Sie festlegen, ob für Benutzerauthentifizierungen bei Remoteverbindungen mit dem Remotedesktopsitzungs-Hostserver eine Authentifizierung auf Netzwerkebene erforderlich ist. Diese Richtlinieneinstellung erhöht die Sicherheit, da die Benutzerauthentifizierung zu einem früheren Zeitpunkt im Remoteverbindungsprozess stattfindet.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, können nur Clientcomputer, die die Authentifizierung auf Netzwerkebene unterstützen, eine Verbindung mit dem Remotedesktopsitzungs-Hostserver herstellen.

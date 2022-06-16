@@ -5,8 +5,6 @@
   <description>introduzir a descrição aqui</description>
   <resources>
     <stringTable>
-      <string id="TS_AUTOSUBSCRIPTION_NAME">Ativar a subscrição automática</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Controla a lista de URLs a que o utilizador deve estar subscrito automaticamente para</string>
       <string id="TS_SUPPORTED_Windows10">Pelo menos Windows 10 ou Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Pelo menos, Windows 8 ou Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Pelo menos, Windows Server 2012</string>
@@ -28,7 +26,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Pelo menos, Windows XP e apenas Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Pelo menos o Windows Server 2008 ou o Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Apenas Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 versão 1903, Windows 10 versão 1909 e Windows 10 versão 2004</string>
       <string id="TS_TERMINAL_SERVER">Anfitrião de Sessões de Ambiente de Trabalho Remoto</string>
       <string id="TS_TERMINAL_SERVER_Help">Controla a configuração de um servidor Anfitrião de Sessões de Ambiente de Trabalho Remoto</string>
       <string id="TS_LICENSE_SERVER">Licenciamento de RD</string>
@@ -147,7 +144,6 @@ Se não configurar esta definição de política, o redirecionamento de unidades
       <string id="TS_CLIENT_LPT">Não permitir redirecionamento da porta LPT</string>
       <string id="TS_CLIENT_PNP">Não permitir redirecionamento de dispositivos Plug and Play suportados</string>
       <string id="TS_CAMERA_REDIRECTION">Não permitir o redirecionamento da captura de vídeo</string>
-      <string id="TS_LOCATION_REDIRECTION">Não permitir redirecionamento</string>
       <string id="TS_CLIENT_PRINTER">Não permitir redirecionamento de impressoras de cliente</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Esta definição de política especifica se a partilha de conteúdo da Área de Transferência (redirecionamento da Área de Transferência) deve ser impedida entre um computador remoto e um computador cliente durante uma sessão de Serviços de Ambiente de Trabalho Remoto.
 
@@ -212,15 +208,6 @@ Se ativar esta definição de política, os utilizadores não poderão redirecio
 
 Se desativar ou não configurar esta definição de política, os utilizadores podem redirecionar os dispositivos de captura de vídeo para o computador remoto. Os utilizadores podem usar a opção Mais no separador Recursos Locais da Ligação ao Ambiente de Trabalho Remoto, para escolher os dispositivos de captura de vídeo a redirecionar para o computador remoto.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Esta definição de política permite-lhe controlar o redirecionamento de dados de localização para o computador remoto numa sessão dos Serviços de Ambiente de Trabalho remoto.
-
-Por predefinição, os Serviços de Ambiente de Trabalho Remoto permitem o redirecionamento de dados de localização.
-
-Se ativar esta definição de política, os utilizadores não poderão redirecionar os respetivos dados de localização para o computador remoto.
-
-Se desativar ou não configurar esta definição de política, os utilizadores poderão redirecionar os respetivos dados de localização para o computador remoto.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Esta definição de política permite limitar o número de monitores que um utilizador pode utilizar para apresentar uma sessão de Serviços de Ambiente de Trabalho Remoto. A limitação do número de monitores para apresentação de uma sessão de Serviços de Ambiente de Trabalho Remoto pode melhorar o desempenho da ligação, especialmente através de ligações lentas, e reduzir a carga do servidor.
 
@@ -435,18 +422,21 @@ Se desativar ou não configurar esta definição de política, estas notificaç�
       <string id="TS_LICENSING_MODE_EXPLAIN">
         Esta definição de política permite especificar o tipo de licença de acesso de cliente para Serviços de Ambiente de Trabalho Remoto (CAL de RDS) necessária para ligar a este servidor de Anfitrião de Sessões de RD.
 
-        Pode utilizar esta definição de política para selecionar um de dois modos de licenciamento: Por Utilizador ou Por Dispositivo.
+        Pode utilizar esta definição de política para selecionar um de três modos de licenciamento: Por Utilizador, Por Dispositivo ou AAD Por Utilizador.
 
         O modo de licenciamento Por Utilizador exige que cada conta de utilizador que se ligue a este servidor de Anfitrião de Sessões de RD tenha uma CAL de RDS Por Utilizador emitida por um servidor de Licenciamento de RD.
 
         O modo de licenciamento Por Dispositivo exige que cada dispositivo que se ligue a este servidor de Anfitrião de Sessões de RD tenha uma CAL de RDS Por Dispositivo emitida por um servidor de Licenciamento de RD.
 
+        O modo de licenciamento AAD Por Utilizador exige que cada conta de utilizador que se ligue a este servidor de Anfitrião de Sessões de RD tenha um plano de serviço compatível com licenças RDS atribuídas em AAD.
+        
         Se ativar esta definição de política, o modo de licenciamento de Ambiente de Trabalho Remoto que especificar será honrado pelo servidor de licenças de Ambiente de Trabalho Remoto e pelo Anfitrião de Sessões de RD.
 
         Se desativar ou não configurar esta definição de política, o modo de licenciamento não será especificado ao nível da Política de Grupo.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Por Dispositivo</string>
       <string id="TS_LICENSING_MODE_PER_USER">Por Utilizador</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD Por Utilizador</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Esta definição de política especifica se deve ser impedido o redirecionamento de dados para portas LPT de cliente durante uma sessão de Serviços de Ambiente de Trabalho Remoto.
 
 Pode utilizar esta definição para impedir os utilizadores de mapear portas LPT locais e de redirecionar dados do computador remoto para periféricos de portas LPT locais. Por predefinição, os Serviços de Ambiente de Trabalho Remoto permitem o redirecionamento de porta LPT.
@@ -797,17 +787,6 @@ Se ativar esta definição de política, o ambiente de trabalho será sempre apr
 Se desativar ou não configurar esta definição de política, pode ser especificada a execução de um programa inicial no computador remoto depois de o cliente ligar ao computador remoto. Se não for especificado um programa inicial, o ambiente de trabalho será sempre apresentado no computador remoto depois de o cliente ligar ao computador remoto.
 
 Nota: Se esta definição de política estiver ativada, a definição de política "Iniciar um programa ao ligar" é ignorada.</string>
-      <string id="TS_UIA">Permitir redirecionamento de Automatização da IU</string>
-      <string id="TS_UIA_EXPLAIN">Esta definição de política determina se as aplicações cliente de Automatização da Interface de Utilizador (IU) em execução no computador local podem aceder a elementos de IU no servidor.
-
-A Automatização da IU permite aos programas aceder aos elementos da IU mais utilizados, o que permite utilizar produtos de tecnologia de apoio como a Lupa e o Narrador que precisam de interagir com a IU para funcionar corretamente. As informações de IU também permitem que os scripts de teste automatizados interajam com a IU.
-
-As sessões de ambiente de trabalho remoto não suportam atualmente o redirecionamento de Automatização da IU.
-
-Se ativar esta definição de política, quaisquer clientes de automatização da IU no computador local poderão interagir com aplicações remotas. Por exemplo, pode utilizar os clientes do Narrador e da Lupa do seu computador local para interagir com a IU numa página Web aberta numa sessão remota.
-
-Se desativar esta definição de política, os clientes de Automatização da IU em execução no computador local não poderão interagir com aplicações remotas.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Esta definição de política permite-lhe especificar se deve ser exigida autenticação de utilizador para ligações remotas ao servidor de Anfitrião de Sessões de RD utilizando a Autenticação de Nível de Rede. Esta definição de política melhora a segurança ao exigir que a autenticação de utilizador ocorra mais cedo no processo de ligação remota.
 
 Se ativar esta definição de política, apenas os computadores cliente que suportem Autenticação de Nível de Rede poderão ligar ao servidor de Anfitrião de Sessões de RD.

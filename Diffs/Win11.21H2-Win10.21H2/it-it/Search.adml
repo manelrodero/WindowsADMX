@@ -246,13 +246,13 @@ Se il criterio è disabilitato o non è configurato, Windows Desktop Search gest
 
 Se il criterio è disabilitato o non è configurato, le impostazioni predefinite verranno impostate su bmp;emf;gif;jpg;jpeg;png;wmf;wrn;txt;err;xml;cpp;c;h;cxx;hxx;idl;cs;vb;idl;xsd;doc;docx;xls;xlsx;ppt;pptx;vsd;xlsb;xltx;dot;rtf.</string>
       <string id="PreventUnwantedAddins">Impedisci iFilter e gestori di protocollo indesiderati</string>
-      <string id="PreventUnwantedAddins_Explain">L'abilitazione di questo criterio impedisce a Windows Desktop Search di utilizzare iFilter e gestori di protocollo a meno che non siano stati specificati come autorizzati in un apposito elenco. Tuttavia, questo criterio non impedirà l'installazione di iFilter o gestori di protocollo, né impedirà che vengano utilizzati da altre applicazioni o altri servizi. 
-È inoltre possibile specificare un elenco di componenti aggiuntivi autorizzati fornendo la stringa dell'ID di classe (classID) o dell'ID di programma (ProgId). Ad esempio, se si intende distribuire uno specifico iFilter, assicurarsi che tale iFilter sia incluso nell'elenco di quelli autorizzati, come una GUID quale {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (includere le parentesi graffe) o un ProgID quale VisFilter.CFilter.1.
+      <string id="PreventUnwantedAddins_Explain">L'abilitazione di questo criterio impedisce a Windows Desktop Search di utilizzare iFilter e gestori di protocollo a meno che non siano stati specificati come consentiti in un apposito elenco. Tuttavia, questo criterio non impedirà l'installazione di iFilter o gestori di protocollo, né impedirà che vengano utilizzati da altre applicazioni o altri servizi. 
+È inoltre possibile specificare un elenco di componenti aggiuntivi consentiti fornendo la stringa dell'ID di classe (classID) o dell'ID di programma (ProgId). Ad esempio, se si intende distribuire uno specifico iFilter, assicurarsi che tale iFilter sia incluso nell'elenco di quelli consentiti, come una GUID quale {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (includere le parentesi graffe) o un ProgID quale VisFilter.CFilter.1.
 
 Se si gestisce un ambiente desktop bloccato, questa impostazione è ridondante perché gli utenti che non dispongono delle autorizzazioni di amministrazione non potranno installare nuovi componenti. Se gli utenti dispongono delle autorizzazioni come amministratore o sono in grado di installare software, questo criterio impedirà loro specificatamente di utilizzare componenti aggiuntivi relativi a Windows Desktop Search.
 
-Nota: a causa di una limitazione nell'Editor Criteri di gruppo, è necessario aggiungere almeno una voce nell'elenco dei componenti aggiuntivi autorizzati, anche se si desidera abilitare il criterio senza un simile elenco. Creare una voce di elenco inserendo uno spazio nel campo del nome e uno spazio nel campo del valore, quindi salvarla. In tal modo verrà creata una voce di segnaposto che sarà ignorata dal programma.</string>
-      <string id="PreventUnwantedAddins_AllowList">Elenco Autorizzati</string>
+Nota: a causa di una limitazione nell'Editor Criteri di gruppo, è necessario aggiungere almeno una voce nell'elenco dei componenti aggiuntivi consentiti, anche se si desidera abilitare il criterio senza un simile elenco. Creare una voce di elenco inserendo uno spazio nel campo del nome e uno spazio nel campo del valore, quindi salvarla. In tal modo verrà creata una voce di segnaposto che sarà ignorata dal programma.</string>
+      <string id="PreventUnwantedAddins_AllowList">Elenco Consentiti</string>
       <string id="ExcludedExtensionsMultiline">Impedisci l'indicizzazione di alcuni tipi di file</string>
       <string id="ExcludedExtensionsMultiline_Explain">L'abilitazione di questo criterio consente di modificare l'elenco dei tipi di file da escludere dall'indicizzazione. L'utente finale non potrà modificare tale elenco. È necessario separare ogni tipo di estensione con un punto e virgola.
 
@@ -333,7 +333,7 @@ Se questa impostazione è abilitata, la ricerca e Cortana possono accedere a inf
         <decimalTextBox refId="LimitEnableThrottlingOnlineMailboxes" defaultValue="120">Numero di elementi al minuto</decimalTextBox>
       </presentation>
       <presentation id="PreventUnwantedAddins">
-        <listBox refId="PreventUnwantedAddins_AllowList">Elenco Autorizzati</listBox>
+        <listBox refId="PreventUnwantedAddins_AllowList">Elenco Consentiti</listBox>
       </presentation>
       <presentation id="PreventIndexingCertainPaths_1">
         <listBox refId="PreventIndexingCertainPaths">Impedisci l'indicizzazione di alcuni percorsi</listBox>

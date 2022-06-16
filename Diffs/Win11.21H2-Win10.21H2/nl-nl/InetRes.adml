@@ -298,6 +298,7 @@ Als u deze beleidsinstelling uitschakelt voor een toepassing of proces in de lij
 Als u deze beleidsinstelling niet configureert, hebben de huidige waarden van de URL-actie voor een toepassing of proces in de lijst voorrang.</string>
       <string id="FavImportExport">Wizard Instellingen voor importeren/exporteren uitschakelen</string>
       <string id="GeolocationDisable">Schakel de optie Geolocatie van de browser uit</string>
+      <string id="DisableFlashInIE">Adobe Flash in Internet Explorer uitschakelen en voorkomen dat er in toepassingen een exemplaar van Flash-objecten wordt gemaakt met behulp van Internet Explorer-technologie</string>
       <string id="File_NoBrowserClose">Menu Bestand: het sluiten van de browser- en Internet Explorer-vensters uitschakelen</string>
       <string id="File_NoBrowserSaveAs">Menu Bestand: de menu-optie Opslaan als... uitschakelen</string>
       <string id="File_NoBrowserSaveWebComplete">Menu Bestand: Opslaan als volledige website uitschakelen</string>
@@ -725,6 +726,13 @@ Als u deze beleidsinstelling inschakelt, wordt de ondersteuning van de Geolocati
 Als u deze beleidsinstelling uitschakelt, wordt de ondersteuning van de Geolocatie van de browser ingeschakeld.
 
 Als u deze beleidsinstelling niet configureert, kan de ondersteuning van de Geolocatie van de browser onder Internetopties in het tabblad Privacy in- of uitgeschakeld worden.</string>
+      <string id="IE_ExplainDisableFlashInIE">Met deze beleidsinstelling wordt Adobe Flash in Internet Explorer uitgeschakeld en wordt voorkomen dat toepassingen Internet Explorer-technologie gebruiken om Flash-objecten te instantiëren.
+ 
+Als u deze beleidsinstelling inschakelt, wordt Flash uitgeschakeld voor Internet Explorer en kunnen toepassingen Internet Explorer-technologie niet gebruiken om Flash-objecten te instantiëren. In het dialoogvenster Invoegtoepassingen beheren is de Flash-status 'Uitgeschakeld' en kunnen gebruikers Flash niet inschakelen. Als u deze beleidsinstelling inschakelt, worden in Internet Explorer instellingen genegeerd die voor Adobe Flash zijn geconfigureerd via de beleidsinstellingen 'Lijst met invoegtoepassingen' en 'Alle invoegtoepassingen negeren, tenzij deze specifiek zijn toegestaan in de lijst met invoegtoepassingen'. 
+ 
+Als u deze beleidsinstelling uitschakelt of niet configureert, wordt Flash ingeschakeld voor Internet Explorer en mogen toepassingen Internet Explorer-technologie gebruiken om Flash-objecten te instantiëren. Gebruikers kunnen Flash in- of uitschakelen in het dialoogvenster Invoegtoepassingen beheren. 
+
+Adobe Flash kan nog altijd worden uitgeschakeld via de beleidsinstellingen 'Lijst met invoegtoepassingen' en 'Alle invoegtoepassingen negeren, tenzij deze specifiek is toegestaan in de lijst met invoegtoepassingen', zelfs als deze beleidsinstelling is uitgeschakeld of niet is geconfigureerd. Als Adobe Flash echter is uitgeschakeld via de beleidsinstellingen 'Lijst met invoegtoepassingen' en 'Alle invoegtoepassingen negeren, tenzij deze specifiek is toegestaan in de lijst met invoegtoepassingen', en niet via deze beleidsinstelling, kunnen alle toepassingen waarin Internet Explorer-technologie wordt gebruikt om Flash-objecten te instantiëren, dit nog altijd doen. Zie 'Groepsbeleidsinstellingen in Internet Explorer 10' in de TechNet-bibliotheek van Internet Explorer voor meer informatie.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Hiermee voorkomt u dat gebruikers Microsoft Internet Explorer en Bestandenverkenner sluiten.
 
 Als u deze beleidsinstelling inschakelt, wordt de opdracht Sluiten in het menu Bestand grijs weergegeven.
@@ -1476,13 +1484,13 @@ Dit beleid is bedoeld voor beheerders die softwaredistributiekanalen willen gebr
 Als u deze beleidsinstelling inschakelt, kan de gebruiker de lijst met zoekmachines op zijn of haar computer niet configureren en worden standaardzoekmachines die zijn geïnstalleerd (inclusief zoekmachines die vanuit andere toepassingen zijn geïnstalleerd), niet weergegeven. De enige zoekmachines die verschijnen zijn die, die in de lijst met beleidssleutels voor zoekmachines staan. Opmerking: u kunt deze lijst samenstellen met behulp van een aangepast beheersjabloon. Raadpleeg de documentatie van Internet Explorer over zoekmachines voor meer informatie over het maken van een aangepast beheersjabloon.
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, kan de gebruiker zelf zijn of haar zoekmachines instellen.</string>
-      <string id="IE_ExplainSQM_DisableCEIP">Met deze beleidsinstelling kunt u voorkomen dat de gebruiker deelneem aan het programma voor verbetering van de gebruikerservaring (CEIP (Customer Experience Improvement Program)).
+      <string id="IE_ExplainSQM_DisableCEIP">Met deze beleidsinstelling kunt u voorkomen dat de gebruiker deelneem aan het programma voor kwaliteitsverbetering (CEIP (Customer Experience Improvement Program)).
 
-Als u deze beleidsinstelling inschakelt, kan de gebruiker niet deelnemen aan het programma voor verbetering van de gebruikerservaring en verschijnt het item Opties voor gebruikersfeedback niet in het menu Help.
+Als u deze beleidsinstelling inschakelt, kan de gebruiker niet deelnemen aan het programma voor kwaliteitsverbetering en verschijnt het item Opties voor gebruikersfeedback niet in het menu Help.
 
-Als u deze beleidsinstelling inschakelt, moet de gebruiker deelnemen aan het programma voor verbetering van de gebruikerservaring en verschijnt het item Opties voor gebruikersfeedback niet in het menu Help.
+Als u deze beleidsinstelling uitschakelt, moet de gebruiker deelnemen aan het programma voor kwaliteitsverbetering en verschijnt het item Opties voor gebruikersfeedback niet in het menu Help.
 
-Als u deze beleidsinstelling niet configureert, kan de gebruiker zelf bepalen of hij of zij deelneemt aan het programma voor verbetering van de gebruikerservaring.</string>
+Als u deze beleidsinstelling niet configureert, kan de gebruiker zelf bepalen of hij of zij deelneemt aan het programma voor kwaliteitsverbetering.</string>
       <string id="IE_ExplainSurvey">Hiermee wordt het Microsoft Survey-besturingselement aangemerkt als een door de beheerder goedgekeurd besturingselement.
 
 Als u deze beleidsinstelling inschakelt, kan dit besturingselement worden uitgevoerd in beveiligingszones waarvoor u hebt opgegeven dat daarin door de beheerder goedgekeurde besturingselementen mogen worden uitgevoerd.
@@ -3147,14 +3155,14 @@ Als u deze instelling niet configureert, kan de gebruiker zelf configureren of d
       <string id="SUPPORTED_IE8">Minimaal Internet Explorer 8.0</string>
       <string id="SUPPORTED_IE8ONLY">Alleen Internet Explorer 8.0</string>
       <string id="SUPPORTED_IE9">Ten minste Internet Explorer 9.0</string>
-      <string id="SUPPORTED_IE9_IE11NONWIN10">Alleen Internet Explorer 9.0 t/m 11.0. Wordt niet ondersteund door Windows 10</string>
+      <string id="SUPPORTED_IE9_IE11NONWIN10">Alleen Internet Explorer 9.0 tot en met 11.0. Wordt niet ondersteund in Windows 10</string>
       <string id="SUPPORTED_IE10">Ten minste Internet Explorer 10.0</string>
       <string id="SUPPORTED_IE10WIN8">Ten minste Internet Explorer 10.0 en Windows 8</string>
       <string id="SUPPORTED_IE11WIN8">Minimaal Internet Explorer 11.0 op Windows 8.1</string>
       <string id="SUPPORTED_IE11WIN8ONLY">Alleen Internet Explorer 11.0 onder Windows 8.1</string>
-      <string id="SUPPORTED_IE11WIN10">Minimaal Internet Explorer 11.0 op Windows 10</string>
-      <string id="SUPPORTED_IE11WIN10_1607">Ten minste Internet Explorer 11.0 in Windows 10, versie 1607 of later</string>
-      <string id="SUPPORTED_IE11WIN10_1703">Ten minste Internet Explorer 11.0 in Windows 10, versie 1703 of later</string>
+      <string id="SUPPORTED_IE11WIN10">Minimaal Internet Explorer 11.0 in Windows 10</string>
+      <string id="SUPPORTED_IE11WIN10_1607">Minimaal Internet Explorer 11.0 in Windows 10, versie 1607 of hoger</string>
+      <string id="SUPPORTED_IE11WIN10_1703">Minimaal Internet Explorer 11.0 in Windows 10, versie 1703 of hoger</string>
       <string id="SUPPORTED_IE11">Ten minste Internet Explorer 11.0</string>
       <string id="SUPPORTED_IE7_NONVISTA">Ten minste Internet Explorer 7.0. Niet ondersteund in Windows Vista</string>
       <string id="SUPPORTED_IE7VISTA">Ten minste Internet Explorer 7.0 in Windows Vista</string>
@@ -3516,11 +3524,11 @@ Dit beleid heeft geen invloed op de beveiligingsprotocollen die zijn ingeschakel
 
 Als u dit beleid uitschakelt, worden de standaardwaarden van het systeem gebruikt.
 </string>
-      <string id="Advanced_ExplainSetWinInetProtocols">Met deze beleidsinstelling kunt u de ondersteuning van Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 of SSL 3.0 uitschakelen in de browser. TLS en SSL zijn protocollen die helpen bij het beveiligen van de communicatie tussen de browser en de doelserver. Als in de browser wordt geprobeerd een beveiligde communicatie met de doelserver in te stellen, onderhandelen de browser en de server over het te gebruiken protocol en de protocolversie. De browser en server proberen in elkaars lijst met ondersteunde protocollen en versies een overeenkomst te vinden en zij kiezen de meest geschikte overeenkomst.
+      <string id="Advanced_ExplainSetWinInetProtocols">Met deze beleidsinstelling kunt u de ondersteuning van Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 of SSL 3.0 uitschakelen in de browser. TLS en SSL zijn protocollen die helpen bij het beveiligen van de communicatie tussen de browser en de doelserver. Als in de browser wordt geprobeerd beveiligde communicatie met de doelserver tot stand te brengen, onderhandelen de browser en de server over het te gebruiken protocol en de protocolversie. De browser en server proberen in elkaars lijst met ondersteunde protocollen en versies een overeenkomst te vinden en zij kiezen de meest geschikte overeenkomst.
 
 Als u deze beleidsinstelling inschakelt, wordt in de browser al dan niet onderhandeld over het opzetten van een versleutelingstunnel met de versleutelingsmethoden die u in de vervolgkeuzelijst selecteert.
 
-Als u deze beleidsinstelling uitschakelt of niet configureert, kan de gebruiker kiezen welke versleutelingsmethode door de browser wordt ondersteund.
+Als u deze beleidsinstelling uitschakelt of niet configureert, kan de gebruiker kiezen welke versleutelingsmethode in de browser wordt ondersteund.
 
 Opmerking: SSL 2.0 is standaard uitgeschakeld en wordt vanaf Windows 10 versie 1607 niet meer ondersteund. SSL 2.0 is een verouderd beveiligingsprotocol en door het inschakelen van SSL 2.0 worden de prestaties en de functionaliteit van TLS 1.0 ondermijnd.</string>
       <string id="IE_ExplainNoPrinting">Met deze beleidsinstelling bepaalt u of gebruikers toegang hebben tot het menu Afdrukken. Wanneer wordt gestart met Windows 8, kunt u met behulp van deze beleidsinstelling tevens beheren of gebruikers toegang hebben tot de afdruk-flyout voor Internet Explorer en alle printers onder de charm Apparaten.
@@ -3555,11 +3563,11 @@ Voor Internet Explorer 11 of hoger:
 als u deze beleidsinstelling uitschakelt, verzendt Internet Explorer de Niet volgen-header alleen als er een Traceerbeveiligingslijst is ingeschakeld of InPrivate-navigatie wordt gebruikt.
 
 Als u deze beleidsinstelling niet configureert, kunnen gebruikers de optie Verstuur altijd een Niet volgen-header selecteren in de instellingen van Internet Explorer. Als u deze optie selecteert, verzendt Internet Explorer een DNT:1-header voor alle HTTP- en HTTPS-verzoeken, tenzij de gebruiker een site-specifieke uitzondering toekent. Internet Explorer verzendt een DNT:0-header naar sites waaraan een uitzondering is toegekend. Deze optie is standaard ingeschakeld.</string>
-      <string id="Content_ExplainShowContentAdvisor">Deze beleidsinstelling toont de instelling Internetrestricties op het tabblad Inhoud van het dialoogvenster Internetopties.
+      <string id="Content_ExplainShowContentAdvisor">Deze beleidsinstelling toont de instelling Internet-restricties op het tabblad Inhoud van het dialoogvenster Internetopties.
 
-Als u deze beleidsinstelling inschakelt, toont Internet Explorer de instelling Internetrestricties op het tabblad Inhoud van het dialoogvenster Internetopties. Gebruikers kunnen de instellingen voor Internetrestricties wijzigen.
+Als u deze beleidsinstelling inschakelt, wordt de instelling Internet-restricties in Internet Explorer weergegeven op het tabblad Inhoud van het dialoogvenster Internetopties. Gebruikers kunnen de instellingen voor Internet-restricties wijzigen.
 
-Als u deze beleidsinstelling uitschakelt of niet configureert, toont Internet Explorer niet de instelling Internetrestricties op het tabblad Inhoud van het dialoogvenster Internetopties.
+Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de instelling Internet-restricties in Internet Explorer niet weergegeven op het tabblad Inhoud van het dialoogvenster Internetopties.
 
 Opmerking: dit beleid wordt met ingang van Windows 10 versie 1607 niet meer ondersteund.</string>
       <string id="Protocols_None">Geen veilige protocollen</string>
@@ -3907,24 +3915,24 @@ Als u deze instelling inschakelt, kunnen werknemers een extra pagina zien in Int
 
 Als u deze instelling uitschakelt of niet configureert, past de app de standaardprocedures toe en wordt er geen extra pagina weergegeven.</string>
       <string id="NeedEdgeBrowser">Configureer welk kanaal van Microsoft Edge moet worden gebruikt voor het openen van omgeleide sites</string>
-      <string id="IE_ExplainNeedEdgeBrowser">Hiermee kunt u tot drie versies van Microsoft Edge configureren voor het openen van een omgeleide site (in volgorde van voorkeur). Gebruik dit beleid als in uw omgeving is geconfigureerd dat sites van Internet Explorer 11 worden omgeleid naar Microsoft Edge. Als een gekozen versie niet is geïnstalleerd op het apparaat, worden die voorkeur overgeslagen.
+      <string id="IE_ExplainNeedEdgeBrowser">Hiermee kunt u tot drie versies van Microsoft Edge configureren voor het openen van een omgeleide site (in volgorde van voorkeur). Gebruik dit beleid als in uw omgeving is geconfigureerd dat sites van Internet Explorer 11 worden omgeleid naar Microsoft Edge. Als een gekozen versie niet is geïnstalleerd op het apparaat, wordt die voorkeur overgeslagen.
 
-Als zowel de Windows Update voor de volgende versie van Microsoft Edge* als stabiel Microsoft Edge-kanaal zijn geïnstalleerd, doet zich het volgende gedrag voor:
-- Als u dit beleid uitschakelt of niet configureert, wordt stabiel Microsoft Edge-kanaal gebruikt. Dit is het standaardgedrag.
+Als zowel de Windows-update voor de volgende versie van Microsoft Edge* als Microsoft Edge Stable-kanaal zijn geïnstalleerd, doet zich het volgende gedrag voor:
+- Als u dit beleid uitschakelt of niet configureert, wordt Microsoft Edge Stable-kanaal gebruikt. Dit is het standaardgedrag.
 - Als u dit beleid inschakelt, kunt u configureren dat omgeleide sites worden geopend in tot drie van de volgende kanalen, waarbij:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versie 77 of hoger
-    3 = Microsoft Edge Dev versie 77 of hoger
-    4 = Microsoft Edge Canary versie 77 of hoger
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versie 77 of hoger
+ 3 = Microsoft Edge Dev versie 77 of hoger
+ 4 = Microsoft Edge Canary versie 77 of hoger
 
-Als de Windows Update voor de volgende versie van Microsoft Edge* of stabiel Microsoft Edge-kanaal niet zijn geconfigureerd, doet zich het volgende gedrag voor:
+Als de Windows-updates voor de volgende versie van Microsoft Edge* of Microsoft Edge Stable-kanaal niet zijn geconfigureerd, doet zich het volgende gedrag voor:
 - Als u dit beleid uitschakelt of niet configureert, wordt Microsoft Edge versie 45 of lager automatisch gebruikt. Dit is het standaardgedrag.
 - Als u dit beleid inschakelt, kunt u configureren dat omgeleide sites worden geopend in tot drie van de volgende kanalen, waarbij:
-    0 = Microsoft Edge versie 45 of lager
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta versie 77 of hoger
-    3 = Microsoft Edge Dev versie 77 of hoger
-    4 = Microsoft Edge Canary versie 77 of hoger
+ 0 = Microsoft Edge versie 45 of lager
+ 1 = Microsoft Edge Stable
+ 2 = Microsoft Edge Beta versie 77 of hoger
+ 3 = Microsoft Edge Dev versie 77 of hoger
+ 4 = Microsoft Edge Canary versie 77 of hoger
 
 *Voor meer informatie over de Windows-update voor de volgende versie van Microsoft Edge inclusief hoe deze kan worden uitgeschakeld, zie https://go.microsoft.com/fwlink/?linkid=2102115. Deze update is alleen van toepassing op Windows 10 versie 1709 en hoger.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
@@ -3963,6 +3971,14 @@ Als u dit beleid inschakelt, is uitgebreide sneltoetsfunctionaliteit ingeschakel
 Als u dit beleid uitschakelt of niet configureert, werken uitgebreide sneltoetsen niet in de modus Internet Explorer.
 
 Raadpleeg https://go.microsoft.com/fwlink/?linkid=2102115 voor meer informatie</string>
+      <string id="ResetZoomForDialogInIEMode">Zoomen opnieuw instellen op de standaardwaarde voor HTML-dialoogvensters in Internet Explorer-modus</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Met deze beleidsinstelling kunnen beheerders de zoomfunctie opnieuw instellen op de standaardwaarde voor HTML-dialoogvensters in Internet Explorer modus.
+
+Als u dit beleid inschakelt, wordt het in-/uitzoomen van een HTML-dialoogvenster in Internet Explorer modus niet doorgegeven vanaf de bovenliggende pagina.
+
+Als u dit beleid uitschakelt of niet configureert, wordt de zoomfunctie van een HTML-dialoogvenster in Internet Explorer modus ingesteld op basis van de zoomfunctie van de bovenliggende pagina.
+
+Zie https://go.microsoft.com/fwlink/?linkid=2102115 voor meer informatie</string>
       <string id="DisableInternetExplorerApp">Internet Explorer 11 uitschakelen als een zelfstandige browser</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Met dit beleid kunt u het starten van Internet Explorer als zelfstandige browser beperken.
 
@@ -3976,12 +3992,6 @@ Als u dit beleid uitschakelt of niet configureert, worden alle sites geopend met
       <string id="NotifyDisableIEOptions_Never">Nooit</string>
       <string id="NotifyDisableIEOptions_Always">Altijd</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Eén keer per gebruiker</string>
-      <string id="JScriptReplacement">Vervang JScript door JScript9Legacy te laden in plaats van JScript via MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">Met deze beleidsinstelling kunt u opgeven of JScript of JScript9Legacy wordt geladen voor aanroepen op basis van MSHTML/WebOC.
-      
-Als u deze beleidsinstelling inschakelt, wordt JScript9Legacy geladen in situaties waarin JScript is gestart.
-
-Als u dit beleid uitschakelt of niet configureert, wordt JScript gebruikt.</string>
       <string id="VerMgmtDisable">Blokkering van verouderde ActiveX-besturingselementen voor Internet Explorer uitschakelen</string>
       <string id="IE_ExplainVerMgmtDisable">Met deze beleidsinstelling wordt bepaald of in Internet Explorer specifieke verouderde ActiveX-besturingselementen worden geblokkeerd. Verouderde ActiveX-besturingselementen worden nooit geblokkeerd in de intranetzone.
 
@@ -4124,7 +4134,7 @@ Als u deze beleidsinstelling inschakelt, wordt het automatisch upgraden van Inte
 
 Als u deze beleidsinstelling uitschakelt, wordt het automatisch upgraden van Internet Explorer uitgeschakeld.
 
-Als u deze beleidsinstelling niet configureert, kunnen gebruikers het automatisch updaten vanuit het dialoogvenster Over Internet Explorer in- of uitschakelen.
+Als u deze beleidsinstelling niet configureert, kunnen gebruikers automatische updates vanuit het dialoogvenster Over Internet Explorer in- of uitschakelen.
 
 Opmerking: dit beleid is afgeschaft vanaf Windows 10, versie 1703.</string>
       <string id="TurnOffFormatDetectionPhone">Nummerherkenning uitschakelen</string>

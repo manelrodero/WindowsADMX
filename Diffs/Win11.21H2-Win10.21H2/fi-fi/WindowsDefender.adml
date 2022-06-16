@@ -30,28 +30,6 @@ Jos otat tämän käytäntöasetuksen käyttöön tai et määritä sitä, haitt
 
 Jos poistat tämän käytäntöasetuksen käytöstä, haittaohjelmien torjuntapalvelu latautuu pienen prioriteetin tehtävänä.</string>
 
-    <string id="MeteredConnectionUpdates">Sallii Microsoft Defenderin virustentorjunnan päivittää ja viestiä käytön mukaan laskutettavan yhteyden kautta.</string>
-    <string id="MeteredConnectionUpdates_Explain">
-    Poistettu käytöstä (oletus): 
-    Päivityksiä ja viestintää ei sallita käytön mukaan laskutettavia yhteyksiä käytettäessä.
-
-Käytössä 
-    Salli hallittujen laitteiden päivittäminen käytön mukaan laskutettavia yhteyksiä käytettäessä. Data yhteyden käytöstä saatetaan veloittaa.</string>
-    <string id="AllowNetworkProtectionOnWinServer">Tämä asetus määrittää, voidaanko verkon suojaus määrittää Windows-palvelimen estämis- tai valvontatilaan.</string>
-    <string id="AllowNetworkProtectionOnWinServer_Explain">
-    Poistettu käytöstä (oletus): 
-    Jos asetusta ei ole määritetty tai poistettu käytöstä, verkon suojausta ei voi määrittää estämään esto-tai valvonta-tilassa Windows Serverissä.
-
-Käytössä 
-    Jos tämä asetus on käytössä, järjestelmänvalvojat voivat määrittää, voiko verkko suojaus määrittää esto-tai valvonta tilaan Windows Serverissä.
-    Huomaa, että tämä määritys on riippuvainen EnableNetworkProtection kokoonpanosta. Jos tämä määritys on EPÄTOSI, EnableNetworkProtection ohitetaan. muussa tapa uksessa verkon suojaus käynnistetään Windows Serverissä sen EnableNetworkProtection arvon mukaan.</string>
-    <string id="DisableDatagramProcessing">Tämä asetus hallitsee verkon suojauksen datagrammin käsittelyä.</string>
-    <string id="DisableDatagramProcessing_Explain">
-    Käytössä (oletus): 
-    Jos et ole määrittänyt tai poistanut käytöstä, datagrammin käsittely otetaan käyttöön verkon suoja uksen osalta.
-
-Käytössä 
-    Jos käytäntö otetaan käyttöön, datagrammin käsittely poistetaan käytöstä verkon suoja uksen osalta.</string>
     <string id="DisableAutoExclusions">Ota käyttöön automaattiset poikkeukset</string>
     <string id="DisableAutoExclusions_Explain">
         Sallii järjestelmänvalvojan määrittää, pitääkö palvelimen SKU:iden automaattisten poikkeuksien ominaisuus poistaa käytöstä.
@@ -132,15 +110,11 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, v�
       Jos poistat tämän asetuksen käytöstä tai et määritä sitä, välityspalvelin ohittaa tämän varavaiheen edellä mainitussa järjestyksessä.
     </string>
     <string id="RandomizeScheduleTaskTimes">Satunnaista ajoitettujen tehtävien ajat</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">Tämän käytäntöasetuksen avulla voit määrittää ajoitetun tarkistuksen alkamisajan ja ajoitetun suojaustietojen päivityksen aloitusaikaikkunan tunteina.
+    <string id="RandomizeScheduleTaskTimes_Explain">Tämän käytäntöasetuksen avulla voit ottaa käyttöön tai poistaa käytöstä aikataulun mukaisen tarkistuksen aloitusajan ja ajoitetun suojaustietopäivityksen aloitusajan satunnaistamisen. Tämän käytäntöasetuksen avulla voit jakaa tarkistuksen resurssivaikutuksen. Tätä käytäntöasetusta voidaan esimerkiksi käyttää vierasvirtuaalikoneissa, joilla on yhteinen isäntä. Sen avulla voidaan estää se, että useat vierasvirtuaalikoneet aloittavat paljon levyä käyttäviä toimintoja samanaikaisesti.
 
-    Jos poistat tämän asetuksen käytöstä tai et määritä sitä, ajoitetut tehtävät alkavat satunnaiseen aikaan neljän tunnin aikavälin sisällä Tehtävien ajoituksessa määritetystä aloitusajasta.
-    Jos otat tämän asetuksen käyttöön, voit laajentaa tai kaventaa satunnaistamisen ajanjaksoa. Määritä satunnaistamiselle aikaikkuna välille 1–23 tuntia.</string>
-    <string id="SchedulerRandomizationTime">Määritä ajoitettavien tehtäväaikojen satunnaistamisikkuna</string>
-    <string id="SchedulerRandomizationTime_Explain">Tämän käytäntöasetuksen avulla voit määrittää ajoitetun tarkistuksen alkamisajan ja ajoitetun suojaustietojen päivityksen aloitusaikaikkunan tunteina.
+    Jos otat tämän käytäntöasetuksen käyttöön tai et määritä sitä, ajoitetut tehtävät alkavat satunnaisena ajankohtana 30 minuutin välein ennen määritettyä aloitusaikaa ja sen jälkeen.
 
-    Jos poistat tämän asetuksen käytöstä tai et määritä sitä, ajoitetut tehtävät alkavat satunnaiseen aikaan neljän tunnin aikavälin sisällä määritetystä aloitusajasta.
-    Jos otat tämän asetuksen käyttöön, sinun on valittava satunnaistamisen ikkuna tunteina. Mahdollinen ikkunan aikaväli on 1–23 tuntia.</string>
+    Jos poistat tämän käytäntöasetuksen käytöstä, ajoitetut tehtävät alkavat määritettynä aloitusaikana.</string>
     <string id="ServiceKeepAlive">Salli haittaohjelmien torjuntapalvelun olla aina käynnissä</string>
     <string id="ServiceKeepAlive_Explain">Tämän käytäntöasetuksen avulla voit määrittää, pysyykö haittaohjelmien torjuntapalvelu käynnissä, kun virustentorjunnan ja vakoiluohjelmien suojaustiedot poistetaan käytöstä. Tämän käytäntöasetuksen on suositeltavaa olla poissa käytöstä.
 
@@ -162,20 +136,12 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, v�
         Ei määritetty:
         Sama kuin Ei käytössä.
     </string>
-    <string id="SupportLogLocation">Määritä hakemiston polku lokitiedostojen kopioimista varten</string>
-    <string id="SupportLogLocation_Explain">Tämän käytäntö asetuksen avulla voit määrittää hakemisto polun, johon tuki loki tiedostot kopioidaan. Tämän asetuksen arvon on oltava kelvollinen hakemisto polku.
-
-Jos otat tämän asetuksen käyttöön, tuki loki tiedostot kopioidaan määritettyyn tuki lokin sijainti polkuun.
-
-Jos poistat tämän asetuksen käytöstä tai et määritä sitä, tuki loki tiedostoja ei kopioida mihinkään sijaintiin.</string>
     <string id="Exclusions_Extensions">Tunnistepoikkeukset</string>
     <string id="Exclusions_Extensions_Explain">Tämän käytäntöasetuksen avulla voit määrittää niiden tiedostotyyppien luettelon, jotka on jätettävä pois aikataulun mukaisesta, mukautetusta ja reaaliaikaisesta tarkistuksesta. Tiedostotyypit on lisättävä tämän käytäntöasetuksen Asetukset-kohdassa. Kukin merkintä on lueteltava nimi-arvoparina, jossa nimi on esitettävä tiedostotyypin tunnisteen merkkijonona (kuten obj tai lib). Arvoa ei käytetä, ja tämän käytäntöasetuksen arvoksi on suositeltavaa määrittää arvo 0.</string>
     <string id="Exclusions_Paths">Polkupoikkeukset</string>
     <string id="Exclusions_Paths_Explain">Tämän käytäntöasetuksen avulla voit poistaa käytöstä määritetyissä poluissa olevien tiedostojen tai määritettyjen täydellisten resurssien aikataulun mukaisen ja reaaliaikaisen tarkistuksen. Polut on lisättävä tämän käytäntöasetuksen Asetukset-kohdassa. Kukin merkintä on lueteltava nimi-arvoparina, jossa nimi on esitettävä polun tai täydellisen resurssin nimen merkkijonona. Polku voidaan esimerkiksi määrittää muodossa c:\Windows, kun kyseisen hakemiston kaikki tiedostot halutaan jättää pois. Täydellinen resurssin nimi voidaan esimerkiksi määrittää muodossa C:\Windows\App.exe. Arvoa ei käytetä, ja tämän käytäntöasetuksen arvoksi on suositeltavaa määrittää arvo 0.</string>
     <string id="Exclusions_Processes">Prosessipoikkeukset</string>
-    <string id="Exclusions_Processes_Explain">Tämän käytäntöasetuksen avulla voit poistaa käytöstä minkä tahansa määritetyn prosessin avaaman tiedoston reaaliaikaisen tarkistuksen. Tämä käytäntö ei koske aikataulutettuja tarkistuksia. Itse prosessia ei jätetä pois. Voit jättää prosessin pois käyttämällä polkupoikkeusta. Prosessit on lisättävä tämän käytäntöasetuksen Asetukset-kohdassa. Kukin merkintä on lueteltava nimi-arvoparina, jossa nimi on esitettävä prosessivedoksen polun merkkijonona. Huomaa, että vain suoritettavat tiedostot voidaan jättää pois. Prosessi voidaan esimerkiksi määrittää muodossa c:\windows\app.exe. Arvoa ei käytetä, ja tämän käytäntöasetuksen arvoksi on suositeltavaa määrittää arvo 0.</string>
-    <string id="Exclusions_IpAddresses">IP-osoitteen poikkeukset</string>
-    <string id="Exclusions_IpAddresses_Explain">Sallii järjestelmänvalvojan poistaa käytöstä wdnisdrv tekemän verkkopakettien tarkistuksen, jotka on tehty tietyssä IP-osoitteissa.</string>
+    <string id="Exclusions_Processes_Explain">Tämän käytäntöasetuksen avulla voit poistaa käytöstä minkä tahansa määritetyn prosessin avaaman tiedoston aikataulun mukaisen ja reaaliaikaisen tarkistuksen. Itse prosessia ei jätetä pois. Voit jättää prosessin pois käyttämällä polkupoikkeusta. Prosessit on lisättävä tämän käytäntöasetuksen Asetukset-kohdassa. Kukin merkintä on lueteltava nimi-arvoparina, jossa nimi on esitettävä prosessivedoksen polun merkkijonona. Huomaa, että vain suoritettavat tiedostot voidaan jättää pois. Prosessi voidaan esimerkiksi määrittää muodossa c:\windows\app.exe. Arvoa ei käytetä, ja tämän käytäntöasetuksen arvoksi on suositeltavaa määrittää arvo 0.</string>
     <string id="Nis_DisableProtocolRecognition">Ota protokollan tunnistaminen käyttöön</string>
     <string id="Nis_DisableProtocolRecognition_Explain">Tämän käytäntöasetuksen avulla voit määrittää tunnetuilta heikkouksia hyödyntäviltä ohjelmilta suojaavan verkon suojauksen protokollan tunnistamisen.
 
@@ -202,14 +168,6 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, ry
 Jos otat tämän käytäntöasetuksen käyttöön, kohteet poistetaan karanteenikansiosta määritetyn päivien määrän jälkeen.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, kohteet säilytetään karanteenikansiossa toistaiseksi eikä niitä poisteta automaattisesti.</string>
-
-    <string id="RealtimeProtection_DisableSriptScanning">Ota komentosarjojen tarkistus käyttöön</string>
-    <string id="RealtimeProtection_DisableSriptScanning_Explain">Tämän käytäntö asetuksen avulla voit määrittää komento sarjojen tarkistuksen.
-
-Jos otat tämän käytäntö asetuksen käyttöön tai et määritä sitä, komento sarjojen tarkistus otetaan käyttöön.
-
-Jos poistat tämän asetuksen käytöstä, komento sarjojen tarkistus poistetaan käytöstä.</string>
-
     <string id="RealtimeProtection_DisableBehaviorMonitoring">Ota toiminnan valvonta käyttöön</string>
     <string id="RealtimeProtection_DisableBehaviorMonitoring_Explain">Tämän käytäntöasetuksen avulla voit määrittää toiminnan valvonnan.
 
@@ -443,6 +401,12 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, s�
 Jos otat tämän käytäntöasetuksen käyttöön tai et määritä sitä, heuristiikka otetaan käyttöön.
 
 Jos poistat tämän käytäntöasetuksen käytöstä, heuristiikka poistetaan käytöstä.</string>
+    <string id="Scan_DisablePackedExeScanning">Tarkista pakatut suoritettavat tiedostot</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">Tämän käytäntöasetuksen avulla voit määrittää pakattujen suoritettavien tiedostojen tarkistuksen. Tämäntyyppisen tarkistuksen on suositeltavaa olla käytössä.
+
+Jos otat tämän käytäntöasetuksen käyttöön tai et määritä sitä, pakatut suoritettavat tiedostot tarkistetaan.
+
+Jos poistat tämän käytäntöasetuksen käytöstä, pakattuja suoritettavia tiedostoja ei tarkisteta.</string>
     <string id="Scan_DisableRemovableDriveScanning">Tarkista siirrettävät asemat</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">Tämän käytäntöasetuksen avulla voit hallita sitä, tarkistetaanko siirrettävien asemien (kuten USB-muistitikkujen) sisältö haittaohjelmien ja ei-toivottujen ohjelmistojen varalta täyden tarkistuksen aikana.
 
@@ -585,17 +549,17 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, ai
         Jos tämä asetus poistetaan käytöstä tai sitä ei määritetä, ajoitettujen tarkistusten suoritinprioriteetti ei muutu.
     </string>
     <string id="SignatureUpdate_ASSignatureDue">Määritä niiden päivien määrä, jonka jälkeen vakoiluohjelmien suojaustietoja pidetään vanhentuneina</string>
-    <string id="SignatureUpdate_ASSignatureDue_Explain">Tämän käytäntö asetuksen avulla voit määrittää niiden päivien määrän, jonka jälkeen vakoilu ohjelmien suoja uksen tietoja pidetään vanhentuneina. Jos tieto suoja tiedot on määritetty vanhentuneiksi, tämä tila voi aiheuttaa useita lisä toimintoja, kuten palaamisen vaihtoehtoiseen päivitys lähteeseen tai varoitus kuvakkeen näyttämisen käyttö liittymässä. Oletus arvon mukaan arvoksi määritetään 7 päivää.
+    <string id="SignatureUpdate_ASSignatureDue_Explain">Tämän käytäntöasetuksen avulla voit määrittää niiden päivien määrän, jonka jälkeen vakoiluohjelmien suojaustietoja pidetään vanhentuneina. Jos suojaustiedot määritetään vanhentuneiksi, tämä tila voi aiheuttaa useita lisätoimintoja, kuten palaamisen vaihtoehtoiseen päivityslähteeseen tai varoituskuvakkeen näyttämisen käyttöliittymässä. Oletusarvon mukaan arvoksi määritetään 14 päivää.
 
-Jos otat tämän asetuksen käyttöön, vakoilu ohjelmien suoja uksen tietoja pidetään vanhentuneina, kun määritetty määrä päiviä on kulunut ilman päivitystä.
+    Jos otat tämän käytäntöasetuksen käyttöön, vakoiluohjelmien suojaustietoja pidetään vanhentuneina, kun määritetty määrä päiviä on kulunut ilman päivittämistä.
 
-Jos poistat tämän asetuksen käytöstä tai et määritä sitä, vakoilu ohjelmien suoja uksen tietoja pidetään vanhentuneina, kun oletus päivien määrä on kulunut ilman päivitystä.</string>
+    Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, vakoiluohjelmien suojaustietoja pidetään vanhentuneina, kun oletusmäärä päiviä on kulunut ilman päivittämistä.</string>
     <string id="SignatureUpdate_AVSignatureDue">Määritä niiden päivien määrä, jonka jälkeen virusten suojaustietoja pidetään vanhentuneina</string>
-    <string id="SignatureUpdate_AVSignatureDue_Explain">Tämän käytäntö asetuksen avulla voit määrittää, kuinka monta päivää ennen kuin virusten tieto suoja tietoja pidetään vanhentuneina. Jos tieto suoja tiedot on määritetty vanhentuneiksi, tämä tila voi aiheuttaa useita lisä toimintoja, kuten palaamisen vaihtoehtoiseen päivitys lähteeseen tai varoitus kuvakkeen näyttämisen käyttö liittymässä. Oletus arvon mukaan arvoksi määritetään 7 päivää.
+    <string id="SignatureUpdate_AVSignatureDue_Explain">Tämän käytäntöasetuksen avulla voit määrittää niiden päivien määrän, jonka jälkeen virusten suojaustietoja pidetään vanhentuneina. Jos suojaustiedot määritetään vanhentuneiksi, tämä tila voi aiheuttaa useita lisätoimintoja, kuten palaamisen vaihtoehtoiseen päivityslähteeseen tai varoituskuvakkeen näyttämisen käyttöliittymässä. Oletusarvon mukaan arvoksi määritetään 14 päivää.
 
-Jos otat tämän asetuksen käyttöön, virusten tieto suoja tietoja pidetään vanhentuneina, kun määritetty määrä päiviä on kulunut ilman päivitystä.
+    Jos otat tämän käytäntöasetuksen käyttöön, virusten suojaustietoja pidetään vanhentuneina, kun määritetty määrä päiviä on kulunut ilman päivittämistä.
 
-Jos poistat tämän asetuksen käytöstä tai et määritä sitä, virusten tieto suoja tietoja pidetään vanhentuneina, kun oletus päivien määrä on kulunut ilman päivitystä.</string>
+    Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, virusten suojaustietoja pidetään vanhentuneina, kun oletusmäärä päiviä on kulunut ilman päivittämistä.</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources">Määritä tiedostoresurssit suojaustietopäivitysten lataamista varten</string>
     <string id="SignatureUpdate_DefinitionUpdateFileSharesSources_Explain">Tämän käytäntöasetuksen avulla voit määrittää UNC-tiedostoresurssin lähteet suojaustietopäivitysten lataamista varten. Lähteisiin muodostetaan yhteys määritetyssä järjestyksessä. Tämän käytäntöasetuksen arvo on kirjoitettava pystyviivoin eroteltuna merkkijonona, jossa luetellaan suojaustietopäivityslähteet. Esimerkiksi {\\unc1 | \\unc2 }. Luettelo on oletusarvon mukaan tyhjä.
 
@@ -742,22 +706,22 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, ry
     <string id="SpynetReporting">Liity Microsoft MAPSiin</string>
     <string id="SpynetReporting_Explain">Tämän käytäntöasetuksen avulla voit liittyä Microsoft MAPSiin. Microsoft MAPS on verkkoyhteisö, joka auttaa valitsemaan reagointitavan mahdollisiin uhkiin. Yhteisö auttaa myös estämään uusien haittaohjelmatartuntojen leviämistä.
 
-    Voit valita, haluatko lähettää havaitusta ohjelmasta perustiedot vai lisätiedot. Lisätietojen avulla Microsoft voi luoda uusia suojaustietoja ja suojata tietokonettasi. Tiedot voivat ilmaista esimerkiksi havaittujen kohteiden sijainnin tietokoneessasi, jos haittaohjelma on poistettu. Tiedot kerätään ja lähetetään automaattisesti. Joissakin tapauksissa Microsoftille saatetaan lähettää henkilötietoja tahattomasti. Microsoft ei kuitenkaan käytä näitä tietoja henkilöllisyytesi tunnistamiseen tai ottaakseen sinuun yhteyttä.
+ Voit valita, haluatko lähettää havaitusta ohjelmasta perustiedot vai lisätiedot. Lisätietojen avulla Microsoft voi luoda uusia suojaustietoja ja suojata tietokonettasi. Tiedot voivat ilmaista esimerkiksi havaittujen kohteiden sijainnin tietokoneessasi, jos haittaohjelma on poistettu. Tiedot kerätään ja lähetetään automaattisesti. Joissakin tapauksissa Microsoftille saatetaan lähettää henkilötietoja tahattomasti. Microsoft ei kuitenkaan käytä näitä tietoja henkilöllisyytesi tunnistamiseen tai ottaakseen sinuun yhteyttä.
 
 Mahdolliset asetukset ovat seuraavat:
-    (0x0) Poistettu käytöstä (oletus)
-    (0x1) Perusjäsenyys
-    (0x2) Erityisjäsenyys
+ (0x0) Poistettu käytöstä (oletus)
+ (0x1) Perusjäsenyys
+ (0x2) Erityisjäsenyys
 
-    Perusjäsenyys lähettää Microsoftille perustiedot havaitusta ohjelmasta, kuten ohjelman lähteen, tekemäsi toimet tai automaattisesti tehdyt toimet ja tiedon toimien onnistumisesta tai epäonnistumisesta.
+ Perusjäsenyys lähettää Microsoftille perustiedot havaitusta ohjelmasta, kuten ohjelman lähteen, tekemäsi toimet tai automaattisesti tehdyt toimet ja tiedon toimien onnistumisesta tai epäonnistumisesta.
 
-    Erityisjäsenyys lähettää perustietojen lisäksi Microsoftille lisätietoja haittaohjelmista, vakoiluohjelmista ja mahdollisista ei-toivotuista ohjelmista. Tällaisia tietoja ovat esimerkiksi ohjelman sijainti, tiedostonimet, ohjelman toimintatapa ja sen vaikutus tietokoneeseesi.
+ Erityisjäsenyys lähettää perustietojen lisäksi Microsoftille lisätietoja haittaohjelmista, vakoiluohjelmista ja mahdollisista ei-toivotuista ohjelmista. Tällaisia tietoja ovat esimerkiksi ohjelman sijainti, tiedostonimet, ohjelman toimintatapa ja sen vaikutus tietokoneeseesi.
 
-    Jos otat tämän käytäntöasetuksen käyttöön, liityt Microsoft MAPSiin määritetyllä jäsenyydellä.
+ Jos otat tämän käytäntöasetuksen käyttöön, liityt Microsoft MAPSiin määritetyllä jäsenyydellä.
 
-    Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, et liity Microsoft MAPSiin.
-  
-      Perusjäsenyys ei ole enää saatavilla Windows 10:ssä, joten jos arvoksi valitaan 1 tai 2, laite rekisteröidään erityisjäsenyyteen.</string>
+ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, et liity Microsoft MAPSiin.
+ 
+ Perusjäsenyys ei ole enää saatavilla Windows 10:ssä, joten jos arvoksi valitaan 1 tai 2, laite rekisteröidään erityisjäsenyyteen.</string>
     <string id="SpynetReporting_Disabled">Poistettu käytöstä</string>
     <string id="SpynetReporting_Basic">MAPS-perusjäsenyys</string>
     <string id="SpynetReporting_Advanced">MAPS-erityisjäsenyys</string>
@@ -886,17 +850,13 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
     <string id="ExploitGuard_ASR_Rules_Explain">
     Määritä kunkin Attack Surface Reduction (ASR) -säännön tila.
 
-   Kun tämä asetus on otettu käyttöön, voit määrittää kullekin säännölle seuraavat tilat Valinnat-osiossa:
+    Kun tämä asetus on otettu käyttöön, voit määrittää kullekin säännölle seuraavat tilat Valinnat-osiossa:
     - Esto: Sääntö on käytössä.
     - Tarkistus-tila: Jos sääntö aiheuttaisi normaalisti tapahtuman, se tallennetaan (vaikka sääntöä ei käytännössä toteutetakaan).
-   - Pois päältä: Sääntö ei ole käytössä.
-    - Ei määritetty: sääntö on käytössä oletusarvoilla
- -Varoita: sääntö on käytössä ja käyttäjällä on mahdollisuus ohittaa esto
-
-    Jos ASR-sääntö on pois käytöstä, valvontatapahtumien osanäytteet kerätään ASR-säännöille määrittämättömillä arvoilla.
+    - Pois päältä: Sääntö ei ole käytössä.
 
     Käytössä:
-     Määritä kunkin ASR-säännön tila tämän asetuksen Valinnat-osiossa.
+    Määritä kunkin ASR-säännön tila tämän asetuksen Valinnat-osiossa.
     Määritä kukin sääntö uudella rivillä nimi-arvo-parina:
     - Nimi-sarake: Anna voimassa oleva ASR-säännön tunnus.
     - Arvo-sarake: Anna sen tilan tunnus, jonka haluat määrittää liitetylle säännölle.
@@ -905,9 +865,6 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
     - 1 (Esto)
     - 0 (Pois päältä)
     - 2 (Tarkistus)
-    - 5 (Ei määritetty)
-    - 6 (Varoita)
-
     
     Esimerkki:
     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx            0
@@ -1047,11 +1004,6 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
         <label>Määritä välityspalvelin verkkoyhteyden muodostamista varten</label>
     </textBox>
     </presentation>
-    <presentation id="SupportLogLocation">
-    <textBox refId="SupportLogLocation">
-        <label>Määritä hakemiston polku lokitiedostojen kopioimista varten</label>
-    </textBox>
-    </presentation>
     <presentation id="Exclusions_Extensions">
     <listBox refId="Exclusions_ExtensionsList">Tunnistepoikkeukset</listBox>
     </presentation>
@@ -1060,9 +1012,6 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
     </presentation>
     <presentation id="Exclusions_Processes">
     <listBox refId="Exclusions_ProcessesList">Prosessipoikkeukset</listBox>
-    </presentation>
-    <presentation id="Exclusions_IpAddresses">
-    <listBox refId="Exclusions_IpAddressesList">IP-osoitteen poikkeukset</listBox>
     </presentation>
     <presentation id="Nis_Consumers_IPS_sku_differentiation_Signature_Set_Guid">
     <listBox refId="Nis_Consumers_IPS_sku_differentiation_Signature_Set_GuidList">Määritä verkkoliikenteen tarkastuksen lisäkuvausjoukot</listBox>
@@ -1131,10 +1080,10 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
     <decimalTextBox refId="Scan_ScheduleTime" defaultValue="120">Määritä kellonaika, jolloin aikataulun mukainen tarkistus suoritetaan</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_ASSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="7">Määritä niiden päivien määrä, jonka jälkeen vakoiluohjelmien suojaustietoja pidetään vanhentuneina</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_ASSignatureDue" defaultValue="14">Määritä niiden päivien määrä, jonka jälkeen vakoiluohjelmien suojaustietoja pidetään vanhentuneina</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_AVSignatureDue">
-    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="7">Määritä niiden päivien määrä, jonka jälkeen virusten suojaustietoja pidetään vanhentuneina</decimalTextBox>
+    <decimalTextBox refId="SignatureUpdate_AVSignatureDue" defaultValue="14">Määritä niiden päivien määrä, jonka jälkeen virusten suojaustietoja pidetään vanhentuneina</decimalTextBox>
     </presentation>
     <presentation id="SignatureUpdate_DefinitionUpdateFileSharesSources">
     <textBox refId="SignatureUpdate_DefinitionUpdateFileSharesSources">
@@ -1219,9 +1168,6 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
     <textBox refId="DeviceControl_PolicyRules">
         <label>Määritä käytännön säännöt tässä</label>
     </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Määritä ajoituksen satunnaistamisikkuna tunneissa.</decimalTextBox>
     </presentation>
    </presentationTable>
 </resources>

@@ -99,36 +99,6 @@ Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız kuruluşunu
 
 Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan uygulama varsa, ilke değişikliklerinin cihaza uygulanabilmesi için çalışanların uygulamayı veya cihazı yeniden başlatmaları gerekecektir.
       </string>
-      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">Windows uygulamalarının çeşitli pencere ve ekranların ekran görüntülerini almasına izin ver</string>
-      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">Bu ilke ayarı, Windows uygulamalarının çeşitli pencerelerin veya ekranların ekran görüntülerini alıp alamayacağını belirtir.
-
-Bir Paket Aile Adı belirterek, tüm uygulamalar için varsayılan bir ayar veya her uygulama için bir ayar belirtebilirsiniz. Get-AppPackage Windows PowerShell cmdlet'ini kullanarak bir uygulama için Paket Aile Adını alabilirsiniz. Uygulama bazında bir ayar, varsayılan ayarı geçersiz kılar.
-
-"Kontrol kullanıcının elinde" seçeneğini belirlerseniz, kuruluşunuzdaki çalışanlar Windows uygulamalarının çeşitli pencerelerin ekran görüntüleri alıp alamayacağına veya cihazda Ayarlar &gt; Gizlilik seçeneği kullanılarak görüntülenir.
-
-"İzin Vermeye Zorla" seçeneğini belirlerseniz, Windows uygulamalarının çeşitli pencerelerin veya ekranların ekran görüntülerini almasına izin verilir ve kuruluşunuzdaki çalışanlar değiştiremez.
-
-"Zorla Reddet" seçeneğini seçerseniz, Windows uygulamalarının çeşitli pencerelerin veya ekranların ekran görüntülerini almasına izin verilmez ve kuruluşunuzdaki çalışanlar bunu değiştiremez.
-
-Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, kuruluşunuzdaki çalışanlar, cihazdaki Ayarlar &gt; Gizlilik seçeneğini kullanarak Windows uygulamalarının çeşitli pencerelerin veya ekranların ekran görüntülerini alıp alamayacağına karar verebilir.
-
-Bu Grup İlkesi nesnesi bir cihaza uygulandığında bir uygulama açıksa, ilke değişikliklerinin uygulamaya yansıması için çalışanların uygulamayı veya cihazı yeniden başlatması gerekir.
-      </string>
-      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">Windows uygulamalarının ekran görüntüsü kenarlığını kapatmasına izin ver</string>
-      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">Bu ilke ayarı Windows uygulamalarının ekran görüntüsü kenarlığını devre dışı bırakıp bırakamayacağını belirtir.
-
-Bütün uygulamalar için varsayılan bir ayar veya bir Paket Aile Adı belirleyerek uygulama başına bir ayar belirleyebilirsiniz. Get-AppPackage Windows PowerShell cmdlet kullanarak uygulamalar için Paket Aile Adı alabilirsiniz. Uygulama başına ayar varsayılan ayarı geçersiz kılar.
-
-"Kullanıcı denetiminde" seçeneğini belirlerseniz, kuruluşunuzdaki çalışanlar cihaz üzerinde Ayarlar &gt; Gizlilik seçeneğini kullanarak Windows uygulamalarının ekran görüntüsü kenarlığını devre dışı bırakıp bırakamayacağına karar verebilirler.
-
-"İzin Vermeye Zorla" seçeneğini belirlerseniz, Windows uygulamalarının ekran görüntüsü kenarlığını devre dışı bırakmasına izin verilir ve kuruluşunuzdaki çalışanlar bunu değiştiremez.
-
-"Reddetmeye Zorla" seçeneğini belirlerseniz, Windows uygulamalarının ekran görüntüsü kenarlığını devre dışı bırakmasına izin verilmez ve kuruluşunuzdaki çalışanlar bunu değiştiremez.
-
-Bu ilke ayarını devre dışı bıraktığınız veya yapılandırmadığınız takdirde, kuruluşunuzdaki çalışanlar cihaz üzerinde Ayarlar &gt; Gizlilik seçeneğini kullanarak Windows uygulamalarının ekran görüntüsü kenarlığını devre dışı bırakıp bırakamayacağına karar verebilirler.
-
-Bir cihazda bu Grup İlkesi nesnesi uygulandığında açık olan bir uygulama varsa, ilke değişikliklerinin uygulamaya yansıması için çalışanların uygulamayı veya cihazı yeniden başlatması gerekir.
-      </string>
       <string id="LetAppsAccessLocation_Name">Windows uygulamalarının konuma erişmesine izin ver</string>
       <string id="LetAppsAccessLocation_Explain">Bu ilke ayarı Windows uygulamalarının konuma erişip erişemeyeceğini belirtir.
 
@@ -422,27 +392,9 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
         <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
       </presentation>
-      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
-        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
-        <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
-        <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
-      </presentation>
-      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
-        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
-        <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
-        <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
-        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
-      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların denetimini kullanıcıya ver (Paket Aile Adlarını kullanın):</text>
+        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessLocation_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessLocation_ForceAllowTheseApps_List"/>
@@ -451,7 +403,7 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessMessaging">
         <dropdownList refId="LetAppsAccessMessaging_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların denetimini kullanıcıya ver (Paket Aile Adlarını kullanın):</text>
+        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessMessaging_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessMessaging_ForceAllowTheseApps_List"/>
@@ -469,7 +421,7 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessMotion">
         <dropdownList refId="LetAppsAccessMotion_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamalarrın (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
+        <text>Belirli uygulamaların denetimini kullanıcıya ver (Paket Aile Adlarını kullanın):</text>
         <multiTextBox refId="LetAppsAccessMotion_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessMotion_ForceAllowTheseApps_List"/>
@@ -478,7 +430,7 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessNotifications">
         <dropdownList refId="LetAppsAccessNotifications_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamalarrın (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
+        <text>Belirli uygulamaların denetimini kullanıcıya ver (Paket Aile Adlarını kullanın):</text>
         <multiTextBox refId="LetAppsAccessNotifications_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessNotifications_ForceAllowTheseApps_List"/>
@@ -487,7 +439,7 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessRadios">
         <dropdownList refId="LetAppsAccessRadios_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
+        <text>Belirli uygulamalarrın (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessRadios_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessRadios_ForceAllowTheseApps_List"/>
@@ -496,7 +448,7 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessAccountInfo">
         <dropdownList refId="LetAppsAccessAccountInfo_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
+        <text>Belirli uygulamalarrın (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessAccountInfo_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessAccountInfo_ForceAllowTheseApps_List"/>
@@ -552,9 +504,9 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
         <dropdownList refId="LetAppsAccessGazeInput_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
         <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessGazeInput_UserInControlOfTheseApps_List"/>
-        <text>Şu belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
+        <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
-        <text>Şu belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
+        <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsActivateWithVoice">
@@ -567,9 +519,9 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
         <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>Şu belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
+        <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Şu belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
+        <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

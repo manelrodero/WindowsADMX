@@ -120,22 +120,24 @@ Se disabiliti o non configuri questa impostazione di criterio, Windows non crea 
 NOTA: Il presente criterio è applicabile solo ai dispositivi che hanno eseguito la registrazione con Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Usa questa impostazione dei criteri per configurare Windows Hello for business per registrare un certificato di accesso per l'autenticazione locale.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Usare questa impostazione dei criteri per configurare Windows Hello for Business per registrare un certificato di accesso usato per l'autenticazione locale.
 
-Se abiliti questa impostazione dei criteri, Windows Hello for Business registra un certificato di accesso usato per l'autenticazione locale.
+Se si abilita questa impostazione dei criteri, Windows Hello for Business registra un certificato di accesso usato per l'autenticazione locale.
 
-Se si disabilita o non si configura questa impostazione dei criteri, Windows Hello per le aziende utilizzerà una chiave o un ticket Kerberos (in base ad altre impostazioni dei criteri) per l'autenticazione locale.
+Se si disabilita o non si configura questa impostazione dei criteri, Windows Hello for Business userà una chiave o un ticket Kerberos (a seconda di altre impostazioni dei criteri) per l'autenticazione locale.
 
-Nota: se si disabilita o non si configurando questa impostazione dei criteri e si Abilita l'impostazione "usa Windows Hello for business", l'ambiente deve disporre di uno o più controller di dominio Windows Server 2016 per impedire l'errore dell'autenticazione di Windows Hello for business.
+NOTA: la disabilitazione o la non configurazione di questa impostazione dei criteri e l'abilitazione dell'impostazione dei criteri "Usa Windows Hello for Business" richiede che l'ambiente abbia uno o più controller di dominio Windows Server 2016 per impedire l'esito negativo dell'autenticazione Windows Hello for Business.
         </string>
         <!-- Explain Text for UseCloudTrustForOnPremAuth -->
-        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Usa questa impostazione dei criteri per configurare Windows Hello for business per l'uso di Azure AD Kerberos per l'autenticazione locale.
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Usare questa impostazione dei criteri per configurare Windows Hello for Business per l'utilizzo di Azure AD Kerberos per l'autenticazione locale.
 
-Se si abilita questa impostazione dei criteri, Windows Hello per le aziende utilizzerà un ticket Kerberos recuperato dall'autenticazione in Azure per l'autenticazione locale.
+Se si abilita questa impostazione dei criteri, Windows Hello for Business userà un ticket Kerberos recuperato dall'autenticazione in Azure per l'autenticazione locale.
 
-Se si disabilita o non si configura questa impostazione dei criteri, Windows Hello per le aziende utilizzerà una chiave o un certificato (a seconda delle impostazioni di altri criteri) dell'autenticazione locale. 
+Se si disabilita o non si configura questa impostazione dei criteri, Windows Hello for Business userà una chiave o un certificato (a seconda di altre impostazioni dei criteri) per l'autenticazione locale. 
  
-Nota: un ambiente che attiva sia questa impostazione di criterio e l'impostazione dei criteri "usa Windows Hello for business" richiede uno o più controller di dominio di Windows Server 2016. In caso contrario, l'autenticazione di Windows Hello for business non riuscirà.
+NOTA: un ambiente che abilita questa impostazione dei criteri e l'impostazione dei criteri "Usa Windows Hello for Business" richiede uno o più controller di dominio Windows Server 2016. In caso contrario, l'autenticazione Windows Hello for Business avrà esito negativo.
+
+Questo criterio è supportato solo in Windows 10 versione 21H2 e successive.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configura fattori di sblocco del dispositivo</string>

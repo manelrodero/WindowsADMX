@@ -278,7 +278,7 @@ By default, Windows Ultimate, Professional and Home SKUs will continue to search
 
         If you disable this policy setting or do not configure it, then all printer extensions that have been installed will be allowed to run.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Change Microsoft XPS Document Writer (MXDW) default output format to the legacy Microsoft XPS format (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) generates OpenXPS (*.oxps) files by default in Windows 10, Windows 10 and Windows Server 2022.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) generates OpenXPS (*.oxps) files by default in Windows 10, Windows 10 and Windows Server 2019.
 
           If you enable this group policy setting, the default MXDW output format is the legacy Microsoft XPS (*.xps).
 
@@ -308,6 +308,16 @@ If you do not configure this setting, default printer management will not change
             When Device Control Printing is enabled, the system uses the specified list of vid/pid values to determine if the current USB connected printer is approved for local printing.
 
             Type all the approved vid/pid combinations (separated by commas) that correspond to approved USB printer models. When a user tries to print to a USB printer queue the device vid/pid will be compared to the approved list.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Limits print driver installation to Administrators</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Determines whether users that aren't Administrators can install print drivers on this computer.
+
+By default, users that aren't Administrators can't install print drivers on this computer.
+
+If you enable this setting or do not configure it, the system will limit installation of print drivers to Adminstrators of this computer.
+
+If you disable this setting, the system won't limit installation of print drivers to this computer.
         </string>
     </stringTable>
     <presentationTable>

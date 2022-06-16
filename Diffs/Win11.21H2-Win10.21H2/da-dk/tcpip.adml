@@ -27,17 +27,19 @@
       <string id="IPHTTPS_ClientState">Angiv IP-HTTPS-tilstand</string>
       <string id="IPHTTPS_ClientUrl">URL-adr. for IP-HTTPS</string>
 
-      <string id="ISATAP_State_Help">Med denne politikindstilling kan du konfigurere ISATAP (Intra-Site Automatic Tunnel Addressing Protocol), en automatisk tunnelføringsteknologi for adresse-til-router og vært-til-vært, vært-til-router og router-til-vært, som bruges til at angive unicast IPv6-forbindelse mellem IPv6-værter på tværs af et IPv4-intranet.
+      <string id="ISATAP_State_Help">Med denne politikindstilling kan du konfigurere ISATAP (Intra-Site Automatic Tunnel Addressing Protocol), en automatisk tunnelføringsteknologi for adresse-til-router og vært-til-vært, vært-til-router og router-til-vært, som bruges til at skabe unicast IPv6-forbindelse mellem IPv6-værter på tværs af et IPv4-intranet.
 
-Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, bruges den lokale værts indstilling.
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, benyttes den lokale værtsindstilling.
 
 Hvis du aktiverer denne politikindstilling, kan du konfigurere ISATAP med en af følgende indstillinger:
 
-Standardtilstand for politik: der findes ingen ISATAP-grænseflader på værten.
+Standardtilstand for politik: Hvis ISATAP-routernavnet fortolkes, vil ISATAP være konfigureret med en link-local adresse for værten og en adresse for hvert præfiks, der modtages fra ISATAP-routeren via automatisk adressekonfiguration uden tilstand. Hvis ISATAP-routernavnet ikke fortolkes korrekt, er ISATAP-forbindelsen ikke tilgængelig på værten, der bruger den tilsvarende IPv4-adresse.
 
-Aktiveret tilstand for politik: Hvis ISATAP-navnet fortolkes, vil ISATAP være konfigureret med en link-local-adresse og en adresse for hvert præfiks, der modtages fra ISATAP-routeren via automatisk adressekonfiguration uden tilstand. Hvis ISATAP-navnet ikke fortolkes korrekt, får værten en ISATAP-grænseflade, der er konfigureret med en link-local-adresse.
+Aktiveret tilstand for politik: Hvis ISATAP-navnet fortolkes korrekt, sørger værten for, at ISATAP konfigureres med en link-local-adresse og en adresse for hvert præfiks, der modtages fra ISATAP-routeren via stateless automatisk konfiguration af adressen. Hvis ISATAP-navnet ikke fortolkes korrekt, sørger værten for, at en ISATAP-grænseflade konfigureres med en link-local-adresse.
 
-Deaktiveret tilstand for politik: der findes ingen ISATAP-grænseflader på værten.
+Deaktiveret tilstand for politik: Der findes ingen ISATAP-grænseflader på værten.
+
+
 
 </string>
 
@@ -52,18 +54,19 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, beny
 </string>
 
 
-      <string id="6to4_State_Help">Denne politikindstilling giver dig mulighed at konfigurere 6to4, en adressetildeling og router til router-automatisk tunnelføringsteknologi, der bruges til at angive unicast IPv6-forbindelse mellem IPv6-websteder og -værter på tværs af IPv4-internettet. 6to4 anvender det globale adressepræfiks: 2002:WWXX:YYZZ::/48, hvori bogstaverne er en hexadecimal gengivelse af den globale IPv4-adresse (w.x.y.z), der er tildelt et websted.
+      <string id="6to4_State_Help">Med denne politikindstilling kan du konfigurere 6to4, en automatisk adressetildelings- og router-til-router-tunnelføringsteknologi, som bruges til at skabe unicast IPv6-forbindelse mellem IPv6-steder og værter på tværs af IPv4-internettet. 6to4 bruger det globale adressepræfiks: 2002:WWXX:YYZZ::/48, hvor bogstaverne er en hexadecimal repræsentation af den globale IPv4-adresse (w.x.y.z), der er tildelt et websted.
 
-Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, bruges indstillingen for lokal vært.
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, benyttes den lokale værtsindstilling.
 
 Hvis du aktiverer denne politikindstilling, kan du konfigurere 6to4 med en af følgende indstillinger:
 
-standardtilstand for 
-Politik: 6to4 er slået fra, og forbindelsen til 6to4 vil ikke være tilgængelig.
+Standardtilstand for politik: 6to4 er aktiverer, hvis værten kun har en link-local IPv6-forbindelse og en offentlig IPv4-adresse. Hvis der ikke findes en global IPv6-adresse og ingen global IPv4-adresse, får værten ikke en 6to4-grænseflade. Hvis der ikke findes en global IPv6-adresse og ingen global IPv4-adresse, får værten en 6to4-grænseflade.
 
-Aktiveret tilstand for politik: Hvis der findes en global IPv4-adresse, vil værten have en 6to4-grænseflade. Hvis der ikke findes en global IPv4-adresse, har værten ingen 6to4-grænseflade.
+Aktiveret tilstand for politik: Hvis der findes en global IPv4-adresse, får værten en 6to4-grænseflade. Hvis der ikke findes en global IPv4-adresse, får værten ikke en 6to4-grænseflade.
 
-Deaktiveret tilstand for politik: 6to4 er slået fra, og forbindelsen til 6to4 vil ikke være tilgængelig.
+Deaktiveret tilstand for politik: 6to4 er slået fra, og der er ikke mulighed for forbindelse med 6to4.
+
+
 
 </string>
 

@@ -18,12 +18,15 @@ A lista a seguir mostra os valores com suporte:
 
 3 = HTTP combinado com Emparelhamento de Internet.
 
-99 = Modo de download simples sem emparelhamento. A Otimização de Entrega baixa conteúdo usando somente HTTP e não tenta contatar serviços de nuvem de Otimização de Entrega.</string>
+99 = Modo de download simples sem emparelhamento. A Otimização de Entrega fará downloads usando somente HTTP e não tentará contatar serviços de nuvem de Otimização de Entrega.
+
+100 = Modo bypass. Não usar a Otimização de Entrega. Usar BITS.</string>
       <string id="DownloadMode_CdnOnly">Somente HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Grupo (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Simples (99)</string>
+      <string id="DownloadMode_Bypass">Bypass (100)</string>
       <string id="GroupId">ID do Grupo</string>
       <string id="GroupId_Help">A ID do Grupo deve ser definida como GUID. Essa Política especifica uma ID de grupo arbitrária à qual o dispositivo pertence.
 
@@ -166,19 +169,14 @@ Observação: se você configurar a política para atrasar o download em segundo
 
 Observação: se você configurar a política para atrasar o download em primeiro plano a partir de http, isso será aplicado primeiro (para permitir downloads de outros pontos primeiro).</string>
       <string id="RestrictPeerSelectionBy">Selecione um método para restringir a Seleção de Par</string>
-      <string id="RestrictPeerSelectionBy_Help">Defina esta política para restringir a seleção de par por meio da opção selecionada.
+      <string id="RestrictPeerSelectionBy_Help">Configure essa política para restringir a seleção do par por meio da opção selecionada.
 
 As opções disponíveis são:
-0 = NAT.
-1 = Máscara de sub-rede.
-2 = Descoberta local (DNS-SD).
+1 = Máscara de sub-rede (mais opções serão adicionadas em uma versão futura).
 
-O valor padrão foi alterado de 0 (sem restrição) para 1 (restringir à sub-rede).
-
-Estas opções aplicam-se ao Modo de Download LAN (1) e Grupo (2).</string>
-      <string id="RestrictPeerSelectionBy_None">NAT</string>
+Opção 1 (Máscara de sub-rede) aplica-se a LAN no Modo Download (1) e a Grupo (2).</string>
+      <string id="RestrictPeerSelectionBy_None">Nenhum</string>
       <string id="RestrictPeerSelectionBy_Subnet">Sub-rede</string>
-      <string id="RestrictPeerSelectionBy_LinkLocal">Descoberta local</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Definir Horário Comercial para Limitar a Largura de Banda para Download em Segundo Plano</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Especifica a largura de banda máxima para download em segundo plano que a Otimização de Entrega usa dentro e fora do horário comercial em todas as atividades de download simultâneas como uma porcentagem da largura de banda para download disponível.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Definir Horário Comercial para Limitar a Largura de Banda para Download em Primeiro Plano</string>
@@ -305,7 +303,7 @@ Estas opções aplicam-se ao Modo de Download LAN (1) e Grupo (2).</string>
         <text>O valor padrão é 0 (sem atraso)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Restringir Seleção de Par Por:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Restringir Seleção de Par Por:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

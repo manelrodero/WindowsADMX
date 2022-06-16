@@ -13,14 +13,6 @@
 如果启用此策略设置，则可以安装任何 LOB 或开发人员签名的 Windows 应用商店应用(该应用必须使用可由本地计算机成功验证的证书链签名)。
 
 如果禁用或未配置此策略设置，则无法安装 LOB 或开发人员签名的 Windows 应用商店应用。</string>
-      <string id="AllowAutomaticAppArchiving">存档不常用的应用</string>
-      <string id="AllowAutomaticAppArchivingExplanation">此策略设置控制系统是否可以存档不经常使用的应用。
-
-如果启用此策略设置，则系统将定期检查并存档不经常使用的应用。
-
-如果禁用此策略设置，则系统将不会存档任何应用。
-
-如果未配置此策略设置 (默认 ")"，则系统将遵循默认行为，该行为会定期检查并存档不经常使用的应用，并且用户将能够自己配置此设置。</string>
       <string id="AllowDeploymentInSpecialProfiles">允许使用特殊配置文件进行部署操作</string>
       <string id="AllowDeploymentInSpecialProfilesExplanation">使用此策略设置，可以管理用户使用特殊配置文件登录时的 Windows 应用商店应用的部署。特殊配置文件为以下用户配置文件，用户注销后会放弃其中所做更改：
 
@@ -42,7 +34,7 @@
 
         如果启用此设置并启用“允许安装所有受信任的应用程序”组策略，则可以开发 Microsoft Store 应用并直接从 IDE 进行安装。
 
-        如果禁用或未配置此设置，则无法开发 Microsoft Store 应用或直接从 IDE 进行安装。
+        如果禁用或不配置此设置，则无法开发 Microsoft Store 应用或直接从 IDE 进行安装。
       </string>
       <string id="DisableDeploymentToNonSystemVolumes">禁止将 Windows 应用安装到非系统卷</string>
       <string id="DisableDeploymentToNonSystemVolumesExplanation">
@@ -73,24 +65,6 @@
         如果启用此策略，则非管理员用户将无法启动 Windows 应用程序包的安装。想要安装应用的管理员需要从管理员上下文(例如，管理员 PowerShell 窗口)中执行此操作。如果其他策略允许，则所有用户仍可以通过 Microsoft Store 安装 Windows 应用程序包。
 
         如果禁用或未配置此策略，则所有用户都将能够启动 Windows 应用程序包的安装。
-      </string>
-      <string id="DisableBackgroundAutoUpdates">不允许旁加载应用在后台自动更新</string>
-      <string id="DisableBackgroundAutoUpdatesExplanation">管理旁加载应用在后台自动更新的能力。
-
-        如果启用此策略，旁加载应用将不会在后台自动更新。
-
-        如果禁用此策略，旁加载应用将在后台自动更新。
-
- 默认值为“禁用”（此键不存在）。
-      </string>
-      <string id="DisableMeteredNetworkBackgroundAutoUpdates">不允许旁加载应用在按流量计费的网络上在后台自动更新</string>
-      <string id="DisableMeteredNetworkBackgroundAutoUpdatesExplanation">管理旁加载应用在按流量计费的网络上在后台自动更新的能力。
-
-        如果启用此策略，旁加载应用将不会在按流量计费的网络上在后台自动更新。
-
-        如果禁用此策略，旁加载应用将在按流量计费的网络上在后台自动更新。
-
- 默认值为“禁用”（该键不存在）。
       </string>
     </stringTable>
   </resources>

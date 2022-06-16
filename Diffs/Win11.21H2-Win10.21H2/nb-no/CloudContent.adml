@@ -7,11 +7,11 @@
     <stringTable>
       <string id="CloudContent">Skyinnhold</string>
       <string id="ConfigureWindowsSpotlight">Konfigurer Windows-søkelys på låseskjermen</string>
-      <string id="ConfigureWindowsSpotlight_Help">Denne policyinnstillingen lar deg konfigurere Windows-søkelys på låseskjermen. 
+      <string id="ConfigureWindowsSpotlight_Help">Denne policyinnstillingen lar deg konfigurere Windows-søkelys på låseskjermen.
 
-Hvis du aktiverer denne policyinnstillingen, brukes Windows-søkelys som låseskjermleverandør, og brukerne kan ikke endre låseskjermen.
+Hvis du aktiverer denne policyinnstillingen, brukes Windows-søkelys som låseskjermleverandør, og brukerne kan ikke endre låseskjermen sin. Windows-søkelys viser daglige bilder fra Microsoft på låseskjermen.
 
-Windows-søkelys viser daglige bilder fra Microsoft på låseskjermen.Hvis du merker av for Ta med innhold fra Enterprise-søkelys og organisasjonen din har konfigurert en innholdstjeneste for Enterprise-søkelys i Azure, vil låseskjermen også vise interne meldinger og beskjeder som er konfigurert i denne tjenesten, når dette er tilgjengelig. Denne avmerkingsboksen har ingen effekt hvis organisasjonen ikke har noen innholdstjeneste for Enterprise-søkelys.
+Hvis du merker av for Ta med innhold fra Enterprise-søkelys og organisasjonen din har konfigurert en innholdstjeneste for Enterprise-søkelys i Azure, vil låseskjermen også vise interne meldinger og beskjeder som er konfigurert i denne tjenesten, når dette er tilgjengelig. Denne avmerkingsboksen har ingen effekt hvis organisasjonen ikke har noen innholdstjeneste for Enterprise-søkelys.
 
 Hvis du deaktiverer denne policyinnstillingen, deaktiveres Windows-søkelys, og brukerne kan ikke lenger velge dette som låseskjermen sin. Brukerne ser det standard låseskjermbildet og kan velge et annet bilde med mindre du har aktivert policyen Hindre endring av låseskjermbilde.
 
@@ -53,9 +53,9 @@ Denne innstillingen gjelder bare for Enterprise- og Education-SKU-er.</string>
 
 Hvis du aktiverer denne policyinnstillingen, vil ikke brukerne lenger se Windows-tips.
 
-Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan brukerne se kontekstavhengige popup-vinduer som forklarer hvordan de bruker Windows. Microsoft bruker diagnosedata til å bestemme hvilke tips som skal vises.
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan brukerne se kontekstavhengige popup-vinduer som forklarer hvordan de bruker Windows. Microsoft bruker diagnose- og bruksdata for å bestemme hvilke tips som skal vises.
 
-Obs! Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, men aktiverer policyinnstillingen Datamaskinkonfigurasjon\Administrative maler\Windows-komponenter\Datainnsamling og forhåndsversjonsbygg\Tillat telemetri med nivået Grunnleggende eller lavere, kan brukerne se et begrenset sett med tips.
+Obs! Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, men aktiverer policyinnstillingen Datamaskinkonfigurasjon\Administrative maler\Windows-komponenter\Datainnsamling og forhåndsversjonsbuilds\Tillat telemetri med nivået Grunnleggende eller lavere, kan brukerne se et begrenset sett med tips.
 I tillegg gjelder denne innstillingen bare for Enterprise- og Education-SKU-er.</string>
       <string id="DisableThirdPartySuggestions">Ikke foreslå tredjepartsinnhold i Windows-søkelys</string>
       <string id="DisableThirdPartySuggestions_Help">Hvis du aktiverer denne policyen, vil ikke funksjoner for Windows-søkelys, for eksempel søkelys på låseskjerm, foreslåtte apper på Start-menyen eller Windows-tips, lenger foreslå apper og innhold fra leverandører av programvare fra tredjeparter. Brukere ser kanskje fortsatt forslag og tips til hvordan de kan bruke funksjoner og apper for Windows mer effektivt.
@@ -68,24 +68,12 @@ Hvis du aktiverer denne policyen, vises ikke lenger Velkommen til Windows-opplev
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, startes Velkommen til Windows-opplevelsen for å hjelpe brukerne å komme i gang med Windows ved å fortelle dem om nyheter, endringer og forslag.</string>
       <string id="DisableCloudOptimizedContent">Slå av skyoptimalisert innhold</string>
-      <string id="DisableCloudOptimizedContent_Help">Denne policy innstillingen lar deg deaktivere Sky optimert innhold i alle Windows-opplevelser.
+      <string id="DisableCloudOptimizedContent_Help">Med denne policyinnstillingen kan du deaktivere skyeoptimalisert innhold i alle Windows-opplevelser.
 
-Hvis du aktiverer denne policyen, vil Windows-opplevelser som bruker Sky optimerte innholds klient komponenten, vises i stedet standard Reserve innhold.
+Aktivering av denne policyen viser i stedet standard sikkerhetskopiinnhold for Windows-opplevelser ved bruk av den skybaserte komponenten.
 
-Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil Windows-opplevelser kunne bruke Sky optimert innhold.</string>
-      <string id="DisableSpotlightCollectionOnDesktop">Deaktiver Søkelyssamling på skrivebordet</string>
-      <string id="DisableSpotlightCollectionOnDesktop_Help">Denne policyinnstillingen fjerner innstillingen for søkelyssamling i Persontilpasning, slik at brukeren ikke kan velge og deretter laste ned daglige bilder fra Microsoft til skrivebordet.
-
-Hvis du aktiverer denne policyen, vil ikke «Søkelyssamling» være tilgjengelig som et alternativ i innstillingene for Persontilpasning.
-
-Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil «Søkelyssamling» vises som et alternativ i innstillingene for Persontilpasning, slik at brukeren kan velge «Søkelyssamling» som skrivebordsleverandør og vise daglige bilder fra Microsoft på skrivebordet.</string>
-      <string id="DisableConsumerAccountStateContent">Deaktiver innhold for status på skyforbrukerkonto</string>
-      <string id="DisableConsumerAccountStateContent_Help">Denne policy innstillingen lar deg deaktivere innhold for konto status for Sky forbruker i alle Windows-opplevelser.
-
-Hvis du aktiverer denne policyen, vil Windows-opplevelser som bruker Sky komponenten for innholds klient komponenten for Sky forbruks konto, vises i stedet standard fallback-innhold.
-
-Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil Windows-opplevelser kunne bruke konto status innhold for Sky forbruker.
-        </string>
+Hvis du deaktiverer eller ikke konfigurerer policyen, kan Windows-opplevelser bruke skyeoptimalisert innhold.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

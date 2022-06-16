@@ -13,11 +13,11 @@ Se ativar esta definição de política, o "Destaque do Windows" será definido 
 
 Além disso, caso selecione a caixa de verificação "Incluir conteúdo de Destaque Enterprise" e a sua organização tenha definido um serviço de conteúdo de destaque Enterprise no Azure, o ecrã de bloqueio apresentará mensagens internas e comunicações configuradas nesse serviço, quando disponíveis. Caso a sua empresa não disponha de um serviço de conteúdo de destaque Enterprise, esta opção não terá qualquer efeito.
 
-Se desativar esta definição de política, o destaque do Windows será desativado e os utilizadores já não conseguirão selecioná-lo como ecrã de bloqueio. Os utilizadores verão a imagem de ecrã de bloqueio predefinida e poderão selecionar outra imagem, exceto se tiver ativado a política "Impedir a alteração da imagem do ecrã de bloqueio".
+Se desativar esta definição de política, o destaque do Windows será desativado e os utilizadores já não conseguirão selecioná-lo como ecrã de bloqueio. Os utilizadores visualizarão a imagem de ecrã de bloqueio predefinida e poderão selecionar outra imagem, exceto se tiver ativado a política "Impedir a alteração da imagem do ecrã de bloqueio".
 
-Caso não configure esta política, o destaque do Windows estará disponível no ecrã de bloqueio e será selecionado por predefinição, exceto se tiver configurado outra imagem para o ecrã de bloqueio utilizando a política "Forçar uma imagem específica de ecrã de bloqueio e início de sessão predefinido".
+Caso não configure esta política, o destaque do Windows estará disponível no ecrã de bloqueio e será selecionado por predefinição, exceto se tiver configurado outra imagem para o ecrã de bloqueio utilizando a política "Forçar uma imagem específica de ecrã de bloqueio predefinido".
 
-Nota: esta política apenas se encontra disponível para SKUs Enterprise.</string>
+Nota: Esta política apenas se encontra disponível para SKUs Enterprise.</string>
       <string id="DisableWindowsSpotlightFeatures">Desativar todas as funcionalidades de destaque do Windows</string>
       <string id="DisableWindowsSpotlightFeatures_Help">Esta definição de política permite desativar todas as funcionalidades de Destaque do Windows de uma só vez.
 
@@ -49,13 +49,13 @@ Se desativar ou não configurar esta definição de política, os utilizadores p
 
 Nota: Esta definição aplica-se apenas a SKUs do Enterprise e Education.</string>
       <string id="DisableSoftLanding">Não mostrar sugestões do Windows</string>
-      <string id="DisableSoftLanding_Help">Esta definição de política impede que sejam apresentadas sugestões do Windows aos utilizadores.&amp;#xD;
-&amp;#xD;
-Se ativar esta definição de política, os utilizadores deixarão de ver sugestões do Windows.&amp;#xD;
-&amp;#xD;
-Se desativar ou não configurar esta definição de política, os utilizadores poderão ver pop-ups de contexto que expliquem como utilizar o Windows. A Microsoft recorre a dados de utilização e diagnóstico para determinar as sugestões a apresentar.&amp;#xD;
-&amp;#xD;
-Nota: Se desativar ou não configurar esta definição de política, mas ativar a definição de política "Configuração do Computador\Modelos Administrativos\Componentes do Windows\Recolha de Dados e Compilações de Pré-Visualização\Permitir Telemetria" com um nível "Básico" ou inferior, os utilizadores poderão ver um conjunto limitado de sugestões.&amp;#xD;
+      <string id="DisableSoftLanding_Help">Esta definição de política impede que sejam apresentadas sugestões do Windows aos utilizadores.
+
+Se ativar esta definição de política, os utilizadores deixarão de ver sugestões do Windows.
+
+Se desativar ou não configurar esta definição de política, os utilizadores poderão ver pop-ups de contexto com explicações sobre como utilizar o Windows. A Microsoft recorre a dados de diagnóstico para determinar as sugestões a apresentar.
+
+Nota: Se desativar ou não configurar esta definição de política, mas ativar a definição de política "Configuração do Computador\Modelos Administrativos\Componentes do Windows\Recolha de Dados e Preview Builds\Permitir Telemetria" com um nível "Básico" ou inferior, os utilizadores poderão ver um conjunto limitado de sugestões.
 Além disso, esta definição aplica-se apenas a SKUs do Enterprise e Education.</string>
       <string id="DisableThirdPartySuggestions">Não sugerir conteúdo de terceiros no Destaque do Windows</string>
       <string id="DisableThirdPartySuggestions_Help">Se ativar esta política, as funcionalidades de Destaque do Windows como o destaque de ecrã de bloqueio, as aplicações sugeridas no menu Iniciar ou as dicas do Windows já não irão sugerir aplicações e conteúdos de fabricantes de software de terceiros. Os utilizadores poderão continuar a ver sugestões e dicas para aumentar a produtividade com as aplicações e funcionalidades da Microsoft.
@@ -68,24 +68,12 @@ Se ativar esta política, a Experiência de Boas-vindas do Windows já não ser�
 
 Se desativar ou não configurar esta política, a Experiência de Boas-vindas do Windows será iniciada para ajudar os novos utilizadores a divulgarem informações acerca do que é novo, o que foi alterado e que é sugerido.</string>
       <string id="DisableCloudOptimizedContent">Desativar conteúdo otimizado da nuvem</string>
-      <string id="DisableCloudOptimizedContent_Help">Esta definição de política permite desativar o conteúdo otimizado da nuvem em todas as experiências do Windows.
+      <string id="DisableCloudOptimizedContent_Help">Esta configuração da política permite-lhe desligar o conteúdo optimizado de nuvens em todas as experiências Windows.
 
-Se ativar esta política, as experiências do Windows que utilizam o componente cliente de conteúdo otimizado na nuvem, irão apresentar o conteúdo de contingência predefinido.
+Se activar esta política, as experiências Windows que utilizam o componente cliente de conteúdo optimizado em nuvem, apresentarão, em vez disso, o conteúdo padrão de recurso.
 
-Se desativar ou não configurar esta política, as experiências do Windows poderão utilizar conteúdo otimizado de nuvem.</string>
-      <string id="DisableSpotlightCollectionOnDesktop">Desativar a coleção de Destaques no Ambiente de Trabalho</string>
-      <string id="DisableSpotlightCollectionOnDesktop_Help">Esta definição de política remove a definição da coleção de destaques em Personalização, impossibilitando que o utilizador selecione e subsequentemente transfira imagens diárias da Microsoft para o ambiente de trabalho.
-
-Se ativar esta política, a "coleção de Destaques" não estará disponível como uma opção nas definições de Personalização.
-
-Se desativar ou não configurar esta política, a "coleção de Destaques" será apresentada como uma opção nas definições de Personalização, permitindo ao utilizador que selecione "coleção de destaque" como fornecedor do Ambiente de Trabalho e apresentará imagens diárias da Microsoft no ambiente de trabalho.</string>
-      <string id="DisableConsumerAccountStateContent">Desativar o conteúdo da conta de consumidor na nuvem</string>
-      <string id="DisableConsumerAccountStateContent_Help">Esta definição de política permite-lhe destivar o conteúdo do estado da conta de consumidor na nuvem em todas as experiências do Windows.
-
-Se ativar esta política, as experiências do Windows que utilizam o componente cliente de conteúdo do estado da conta de consumidor da nuvem apresentarão, em vez disso, o conteúdo de concorrência predefinido.
-
-Se desativar ou não configurar esta política, as experiências do Windows poderão utilizar o conteúdo do estado da conta de consumidor da nuvem.
-        </string>
+Se desactivar ou não configurar esta política, as experiências Windows poderão utilizar o conteúdo optimizado em nuvem.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

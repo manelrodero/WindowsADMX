@@ -21,7 +21,7 @@ L'option « activé avec verrouillage UEFI » garantit que la protection basé
  
 L'option « Activé sans verrou » permet à la protection basée sur la virtualisation de l'intégrité du code d'être désactivée à distance à l'aide de la stratégie de groupe. 
 
-TL'option « Non configuré » laisse le paramètre de stratégie non défini. La stratégie de groupe n'écrit pas le paramètre de stratégie dans le Registre et n'a donc aucune incidence sur les ordinateurs ou les utilisateurs. S'il y a un paramètre actuel dans le Registre, il ne sera pas modifié.
+L'option « Non configuré » laisse le paramètre de stratégie non défini. La stratégie de groupe n'écrit pas le paramètre de stratégie dans le Registre et n'a donc aucune incidence sur les ordinateurs ou les utilisateurs. S'il y a un paramètre actuel dans le Registre, il ne sera pas modifié.
 
 L'option « Exiger une table d'attributs de mémoire UEFI » permet uniquement la protection basée sur la virtualisation de l'intégrité du code sur les appareils avec support du microprogramme UEFI pour la table des attributs de mémoire. Les appareils sans la table des attributs de mémoire UEFI peuvent avoir des microprogrammes qui sont incompatibles avec la protection basée sur la virtualisation de l'intégrité du code qui, dans certains cas, peut entraîner des incidents, des pertes de données ou une incompatibilité avec certaines cartes de plug-in. Si cette option n'est pas paramétrée, les appareils ciblés doivent être testés pour assurer la compatibilité.
 
@@ -77,7 +77,7 @@ Si vous utilisez une stratégie signée et protégée, la désactivation de ce p
         <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">Protection basée sur la virtualisation de l’intégrité du code :</dropdownList>        
         <checkBox refId="CheckboxMAT">Demander la table des attributs de mémoire UEFI</checkBox>        
         <dropdownList refId="CredentialIsolationDrop" defaultItem="3">Configuration Credential Guard :</dropdownList>
-        <dropdownList refId="SystemGuardDrop" defaultItem="2">Configuration du Lancement sécurisé :</dropdownList>                
+        <dropdownList refId="SystemGuardDrop" defaultItem="2">Configuration de démarrage sécurisé :</dropdownList>                
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

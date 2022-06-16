@@ -207,19 +207,6 @@ XML 檔案產生並移到想要的檔案路徑之後，請輸入 XML 檔案的�
 這個原則設定只會影響指定的使用者介面項目。並不會影響 Internet Explorer，也不會防止使用者使用其他方法進行搜尋。
 
 如果您停用或未設定這個原則設定，則可在 [開始] 功能表中使用 [搜尋] 連結。</string>
-      <string id="ShowOrHideMostUsedApps">顯示或隱藏 [開始] 功能表中的 [最常用] 清單</string>
-      <string id="ShowOrHideMostUsedApps_Help">如果您啟用這個原則設定，您可以設定 [開始] 功能表以顯示或隱藏使用者最常使用之應用程式的清單（無論使用者設定為何）。
-
-選取 [顯示] 會強制顯示 [最常用] 清單，而且使用者無法使用 [設定] 應用程式變更為隱藏它。
-
-選取 [隱藏] 會強制隱藏 [最常用] 清單，而且使用者無法使用 [設定] 應用程式變更為顯示它。
-
-選取 [未設定]，如果您停用或未設定這個原則設定，則所有使用者都可以使用 [設定] 應用程式開啟或關閉 [最常用] 清單的顯示。這是預設行為。
-
-注意：在支援的 Windows 10 版本中，將此原則設定為 [顯示] 或 [隱藏]，將會取代 [從 [開始] 功能表中移除常用程式清單] 的任何原則設定，(可以管理與 [開始] 功能表相同的部分，但使用較少的選項)。</string>
-      <string id="MFU_NotConfigured">尚未設定</string>
-      <string id="MFU_Show">顯示</string>
-      <string id="MFU_Hide">隱藏</string>        
       <string id="NoFrequentUsedPrograms">從 [開始] 功能表中移除常用程式清單</string>
       <string id="NoFrequentUsedPrograms_Help">如果您啟用這個設定，則會從 [開始] 功能表中移除常用程式清單。
 
@@ -645,14 +632,10 @@ Windows Update 是 Windows 的線上延伸，提供軟體更新讓使用者的�
           <label>啟動配置檔案</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">每次登入時重新套用版面配置</checkBox>  
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">選擇下列其中一個大小</dropdownList>
       </presentation>
-      <presentation id="ShowOrHideMostUsedApps">
-        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">選擇下列其中一個動作</dropdownList>
-      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

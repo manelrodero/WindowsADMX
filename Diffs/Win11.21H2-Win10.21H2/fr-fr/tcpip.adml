@@ -33,11 +33,13 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, c’est le
 
 Si vous activez ce paramètre de stratégie, vous pouvez configurer le protocole ISATAP avec l’un des paramètres suivants :
 
-État par défaut de la stratégie : aucune interface présente sur l’hôte.
+État par défaut de la stratégie : si le nom du routeur ISATAP est correctement résolu, le protocole ISATAP est configuré sur l’hôte avec une adresse locale du lien et une adresse pour chaque préfixe reçu du routeur ISATAP via la configuration automatique d’adresse sans état. Si le nom du routeur ISATAP n’est pas correctement résolu, la connectivité ISATAP n’est pas disponible sur l’hôte utilisant l’adresse IPv4 correspondante.
 
 État activé de la stratégie : si le nom ISATAP est correctement résolu, le protocole ISATAP est configuré sur l’hôte avec une adresse locale du lien et une adresse pour chaque préfixe reçu du routeur ISATAP via la configuration automatique d’adresse sans état. Si le nom ISATAP n’est pas correctement résolu, l’hôte dispose d’une interface ISATAP configurée avec une adresse locale du lien.
 
 État désactivé de la stratégie : aucune interface ISATAP n’est présente sur l’hôte.
+
+
 
 </string>
 
@@ -58,11 +60,13 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, c’est le
 
 Si vous activez ce paramètre de stratégie, vous pouvez configurer le protocole 6to4 avec l’un des paramètres suivants :
 
-État par défaut de la stratégie : 6to4 est désactivé et la connectivité avec 6to4 n’est pas disponible.
+État par défaut de la stratégie : le protocole 6to4 est activé si l’hôte dispose uniquement d’une connectivité IPv6 locale du lien et d’une adresse IPv4 publique. En l’absence d’adresse IPv6 globale et d’adresse IPv4 globale, l’hôte ne dispose d’aucune interface 6to4. S’il n’existe aucune adresse IPv6 globale, mais qu’une adresse IPv4 est présente, l’hôte dispose d’une interface 6to4.
 
 État activé de la stratégie : si une adresse IPv4 globale est présente, l’hôte dispose d’une interface 6to4. En l’absence d’adresse IPv4 globale, l’hôte ne dispose d’aucune interface 6to4.
 
 État désactivé de la stratégie : le protocole 6to4 est désactivé et la connectivité à 6to4 n’est pas disponible.
+
+
 
 </string>
 

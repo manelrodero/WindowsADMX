@@ -135,11 +135,11 @@ Du kan ange TTL-värdet för DNS-poster genom att klicka på "Aktiverad" och sed
 
 Om du inte konfigurerar den här principinställningen kommer den inte att tillämpas på någon domänkontrollant. Domänkontrollanterna kommer att använda de lokalt konfigurerade inställningarna.</string>
       <string id="Netlogon_ExpectedDialupDelay">Ange förväntad anslutningsfördröjning vid inloggning</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">Den här principinställningen anger den ytterligare tid som datorn väntar på svar från domänkontrollanten vid inloggning i nätverket.
+      <string id="Netlogon_ExpectedDialupDelay_Help">Den här principinställningen anger den ytterligare tid som datorn väntar på svar från domänkontrollanten vid inloggning till nätverket.
 
-Du kan ange värdet för förväntad anslutningsfördröjning vid inloggning genom att klicka på Aktiverad och sedan ange ett värde i sekunder (t.ex. motsvarar värdet "60" 1 minut).
+Du kan ange värdet för förväntad anslutningsfördröjning vid inloggning genom att klicka på Aktiverad och sedan ange ett värde i sekunder (till exempel motsvarar värdet ”60” 1 minut).
 
-Om du inte konfigurerar den här principinställningen tillämpas den inte på någon dator. Datorerna använder då deras lokala konfiguration.</string>
+Om du inte konfigurerar den här principinställningen kommer den inte att tillämpas på någon dator. Datorerna kommer att använda de lokalt konfigurerade inställningarna.</string>
       <string id="Netlogon_GcSiteCoverage">Ange platser som täcks av DNS SRV-poster för lokalisering av global katalog</string>
       <string id="Netlogon_GcSiteCoverage_Help">Den här principinställningen anger för vilka platser som de globala katalogerna ska registrera platsspecifika DNS SRV-resursposter för lokalisering av global katalog. Dessa poster registreras utöver de platsspecifika SRV-poster som registreras för den plats där den globala katalogen finns och poster som registreras av en global katalog som konfigurerats för att registrera DNS SRV-resursposter för lokalisering av global katalog för de platser som ligger närmast och som inte har någon global katalog. 
 
@@ -337,20 +337,6 @@ De tillåtna värdena på den här inställningen ger följande beteenden:
 Klicka på Aktiverad och ange ett värde om du vill ange det här beteendet. Intervallet för värdena är 1 till 2.
 
 Om du inte konfigurerar den här principinställningen kommer den inte att tillämpas på någon dator. Datorerna kommer att använda de lokalt konfigurerade inställningarna.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Använd gemener i DNS-värdnamn vid registrering av SRV-poster för domänkontrollanter</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Den här principinställningen anger om de domänkontrollanter som inställningen tillämpas för ska använda gemener i sina DNS-värdnamn vid registrering av SRV-poster.
-
-Om den är aktiverad använder domänkontrollanter gemener i sina DNS-värdnamn vid registrering av SRV-poster. Ett bästa försök görs för att radera alla tidigare registrerade SRV-poster som innehåller DNS-värdnamn med både versaler och gemener. Klicka på nedanstående länk om du vill läsa mer och få anvisningar för manuell rensning.
-
-Om den är inaktiverad använder domänkontrollanter det konfigurerade DNS-värdnamnet som det är vid registrering av SRV-poster.
-
-Om den inte konfigureras använder domänkontrollanter deras lokala konfiguration. Den lokala standardkonfigurationen aktiveras då.
-
-Ingen omstart krävs för att verkställa ändringar av den här inställningen.
-
-Mer information finns på https://aka.ms/lowercasehostnamesrvrecord
-      </string>
 
     </stringTable>
     <presentationTable>

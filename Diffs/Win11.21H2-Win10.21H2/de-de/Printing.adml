@@ -46,22 +46,22 @@ Hinweise:
           Die Einstellungen "Klassische Shell aktivieren" und "Öffnen der Ordneroptionen mithilfe der Schaltfläche 'Optionen' auf der Registerkarte 'Ansicht' des Menübands nicht zulassen" unter "Benutzerkonfiguration\Administrative Vorlagen\Windows-Komponenten\Windows-Explorer" sowie die Einstellung "Active Desktop aktivieren" unter "Benutzerkonfiguration\Administrative Vorlagen\Desktop\Active Desktop" haben Auswirkungen auf die Webansicht.</string>
       <string id="DomainDisplayPrinters_Help">Wenn Sie diese Richtlinieneinstellung aktivieren, wird die maximale Anzahl von Druckern (jedes Typs) festgelegt, die vom Druckerinstallations-Assistenten auf einem Computer in einem verwalteten Netzwerk angezeigt wird (wenn der Computer eine Verbindung mit einem Domänencontroller herstellen kann, z. B. mit einem Laptop in einem Unternehmensnetzwerk, der einer Domäne angehört).
 
-          Wenn diese Richtlinieneinstellung deaktiviert ist, wird die Netzwerksuchseite nicht angezeigt.
+ Wenn diese Richtlinieneinstellung deaktiviert ist, wird die Netzwerksuchseite nicht angezeigt.
 
-          Wenn diese Richtlinieneinstellung nicht konfiguriert ist, zeigt der Druckerinstallations-Assistent die Standardanzahl von Druckern jedes Typs an:
-          Verzeichnisdrucker: 20
-          TCP/IP-Drucker: 0
-          Webdienstedrucker: 0
-          Bluetooth-Drucker: 10
-          Freigegebene Drucker: 0
+ Wenn diese Richtlinieneinstellung nicht konfiguriert ist, zeigt der Druckerinstallations-Assistent die Standardanzahl von Druckern jedes Typs an:
+ Verzeichnisdrucker: 20
+ TCP/IP-Drucker: 0
+ Webdienstedrucker: 0
+ Bluetooth-Drucker: 10
+ Freigegebene Drucker: 0
 
-          Wenn verfügbare Webdienstedrucker in Ihrem Netzwerk angezeigt werden sollen, vergewissern Sie sich, dass die Netzwerkerkennung aktiviert ist. Um die Netzwerkerkennung zu aktivieren, klicken Sie auf "Start", "Systemsteuerung" und dann auf "Netzwerk und Internet". Klicken Sie auf der Seite "Netzwerk und Internet" auf "Netzwerk- und Freigabecenter". Klicken Sie auf der Seite "Netzwerk- und Freigabecenter" auf "Erweiterte Freigabeeinstellungen ändern". Klicken Sie auf der Seite "Erweiterte Freigabeeinstellungen" auf den Pfeil neben "Domäne", auf "Netzwerkerkennung einschalten" und dann auf "Änderungen speichern".
+ Wenn verfügbare Webdienstedrucker in Ihrem Netzwerk angezeigt werden sollen, vergewissern Sie sich, dass die Netzwerkerkennung aktiviert ist. Um die Netzwerkerkennung zu aktivieren, klicken Sie auf "Start", "Systemsteuerung" und dann auf "Netzwerk und Internet". Klicken Sie auf der Seite "Netzwerk und Internet" auf "Netzwerk- und Freigabecenter". Klicken Sie auf der Seite "Netzwerk- und Freigabecenter" auf "Erweiterte Freigabeeinstellungen ändern". Klicken Sie auf der Seite "Erweiterte Freigabeeinstellungen" auf den Pfeil neben "Domäne", auf "Netzwerkerkennung einschalten" und dann auf "Änderungen speichern".
 
-          Wenn Drucker eines bestimmten Typs nicht angezeigt werden sollen, aktivieren Sie diese Richtlinie, und legen Sie die Anzahl anzuzeigender Drucker auf 0 fest.
+ Wenn Drucker eines bestimmten Typs nicht angezeigt werden sollen, aktivieren Sie diese Richtlinie, und legen Sie die Anzahl anzuzeigender Drucker auf 0 fest.
 
-          In Windows 10 und höher können nur TCP/IP-Drucker im Assistenten angezeigt werden. Wenn Sie diese Richtlinieneinstellung aktivieren, gelten nur Grenzwerte für TCP/IP-Drucker. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Standardgrenzwert angewendet (gilt nur für Windows 10).
-          
-          Da unter Windows 8 und höher keine Bluetooth-Drucker angezeigt werden, gilt der entsprechende Grenzwert nicht für diese Windows-Versionen.
+ In Windows 10 und höher können nur TCP/IP-Drucker im Assistenten angezeigt werden. Wenn Sie diese Richtlinieneinstellung aktivieren, gelten nur Grenzwerte für TCP/IP-Drucker. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Standardgrenzwert angewendet (gilt nur für Windows 10).
+ 
+ Da unter Windows 8 und höher keine Bluetooth-Drucker angezeigt werden, gilt der entsprechende Grenzwert nicht für diese Windows-Versionen.
       </string>
       <string id="DomainPrinters">Druckerinstallations-Assistent - Netzwerksuchseite (Verwaltetes Netzwerk)</string>
       <string id="DownlevelBrowse">Netzwerk nach Druckern durchsuchen</string>
@@ -147,7 +147,7 @@ Freigegebene Drucker: 50
 Wenn Drucker eines bestimmten Typs nicht angezeigt werden sollen, aktivieren Sie diese Richtlinie, und legen Sie die Anzahl anzuzeigender Drucker auf 0 fest.
 
 In Windows 10 und höher können nur TCP/IP-Drucker im Assistenten angezeigt werden. Wenn Sie diese Richtlinieneinstellung aktivieren, gelten nur Grenzwerte für TCP/IP-Drucker. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Standardgrenzwert angewendet (gilt nur für Windows 10).
-          
+ 
 Da unter Windows 8 und höher keine Bluetooth-Drucker angezeigt werden, gilt der entsprechende Grenzwert nicht für diese Windows-Versionen.</string>
       <string id="NonDomainPrinters">Druckerinstallations-Assistent - Netzwerksuchseite (Nicht verwaltetes Netzwerk)</string>
       <string id="PackagePointAndPrintOnly">Nur Point-and-Print für Pakete verwenden</string>
@@ -278,11 +278,11 @@ Windows Ultimate-, Professional- und Home-SKUs setzen die Suche nach kompatiblen
 
         Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, sind alle installierten Druckererweiterungen zur Ausführung zugelassen.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Das Standardausgabeformat von Microsoft XPS-Dokument-Generator auf das XPS-Vorgängerformat (*.xps) von Microsoft ändern</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS-Dokument-Writer (MXDW) generiert MXDW (*. oxps)-Dateien Standard mäßig in Windows 10, Windows 10 und Windows Server 2022.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Der Microsoft XPS-Dokument-Generator (MXDW) generiert unter Windows 10, Windows 10 und Windows Server 2019 standardmäßig OpenXPS-Dateien (*.oxps).
 
-Wenn Sie diese Gruppen Richtlinien Einstellung aktivieren, wird das Standard mäßige MXDW-Ausgabe Format die Vorgänger Versionen von Microsoft XPS (*. XPS).
+ Wenn Sie die Gruppenrichtlinieneinstellung aktivieren, entspricht das MXDW-Ausgabeformat dem älteren Microsoft XPS-Format (*.xps).
 
-Wenn Sie diese Richtlinien Einstellung deaktivieren oder nicht konfigurieren, wird das Standard mäßige MXDW-Ausgabe Format MXDW (*. oxps) angezeigt.</string>
+ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, entspricht das MXDW-Ausgabeformat standardmäßig OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Windows-Verwaltung des Standarddruckers deaktivieren</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Mit dieser Einstellung kann die Verwaltung des Standarddruckers geändert werden.
 
@@ -293,13 +293,13 @@ Wenn Sie diese Einstellung deaktivieren, wird der Standarddrucker von Windows ve
 Wenn Sie diese Einstellung nicht konfigurieren, bleibt die Verwaltung des Standarddruckers unverändert. </string>
       <string id="EnableDeviceControl">Druckbeschränkungen für die Gerätesteuerung aktivieren</string>
       <string id="EnableDeviceControl_Help">
-          Legt fest, ob auf diesem Computer über die Gerätesteuerung Druckeinschränkungen erzwungen werden.
+          Legt fest, ob Druck Einschränkungen für die Geräte Steuerung für den Druck auf diesem Computer erzwungen werden.
 
-          Standardmäßig gibt es keine Einschränkungen für den Druck auf Grundlage des Verbindungstyps oder des Herstellers/ des Modells des Druckers.
+Standard mäßig gibt es keine Einschränkungen für den Druck auf der Grundlage des Verbindungs Typs oder des Druckers/Modells.
 
-          Wenn Sie diese Einstellung aktivieren, beschränkt der Computer die Druckfunktion auf Druckerverbindungen im Unternehmensnetzwerk oder über genehmigte USB-Drucker.
+Wenn Sie diese Einstellung aktivieren, beschränkt der Computer den Druck auf Drucker Verbindungen im Unternehmens Netzwerk oder über genehmigte USB-Drucker.
 
-          Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, gelten für die Druckfunktion keine Einschränkungen auf Grundlage des Verbindungstyps oder des Herstellers/ des Modells des Druckers.</string>
+Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, gibt es keine Einschränkungen für den Druck auf der Grundlage des Verbindungs Typs oder des Druckers/Modells.</string>
         <string id="ApprovedUsbPrintDevices">Liste der zugelassenen, über USB angeschlossenen Druckergeräte</string>
         <string id="ApprovedUsbPrintDevices_Help">
 
@@ -308,6 +308,16 @@ Wenn Sie diese Einstellung nicht konfigurieren, bleibt die Verwaltung des Standa
 Wenn die Geräte Steuerung aktiviert ist, verwendet das System die angegebene Liste der VID-/PID-Werte, um zu bestimmen, ob der aktuelle USB-verbundene Drucker für den lokalen Druck genehmigt ist.
 
 Geben Sie alle genehmigten VID/PID-Kombi Nationen (durch Kommas getrennt) ein, die den genehmigten USB-Drucker Modellen entsprechen. Wenn ein Benutzer versucht, in einer USB-Drucker Warteschlange zu drucken, wird der Geräte-VID/PID mit der genehmigten Liste verglichen.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Beschränkt die Installation von Druckertreibern auf Administratoren</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Bestimmt, ob Benutzer, die keine Administratoren sind, Druckertreiber auf diesem Computer installieren können.
+
+Standardmäßig können Benutzer, die keine Administratoren sind, Druckertreiber auf diesem Computer nicht installieren.
+
+Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, beschränkt das System die Installation von Druckertreibern auf Administratoren dieses Computers.
+
+Wenn Sie diese Einstellung deaktivieren, schränkt das System die Installation von Druckertreibern auf diesem Computer nicht ein.
         </string>
     </stringTable>
     <presentationTable>

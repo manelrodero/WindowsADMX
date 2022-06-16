@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7、Windows Server 2008 R2、Windows Vista、Windows Server 2003、Windows XP SP2、Windows XP SP1、Windows 2000 SP4、Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">至少需要 Windows XP Professional Service Pack 1 或 Windows 2000 Service Pack 3，但不包含 Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">至少需要 Windows Server 2003 作業系統或 Windows XP Professional 含 SP1，但不包含 Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">至少需要 Windows XP Professional Service Pack 1 或至少需要 Windows 2000 Service Pack 3 到 Windows 8.1 或 Windows Server 2012 R2 含最新的 Service Pack。不支援 Windows 10 及更新版本。</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">至少需要 Windows Vista 到 Windows 8.1 或 Windows Server 2012 R2 以及最新的 service pack。在 Windows 10 或更新版本上不受支援。</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">至少需要 Windows XP Professional Service Pack 1 或至少 Windows 2000 Service Pack 3 到 Windows 8.1 或 Windows Server 2012 R2 搭配最新的 Service Pack。Windows 10以上版本不支援。</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">至少需要 Windows Vista 到 Windows 8.1 或具有最新 Service Pack 的 Windows Server 2012 R2。Windows 10以上版本不支援。</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 或至少 Windows 2000 Service Pack 3
 選項 7 最低只支援 Windows Server 2016 版本的伺服器</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">至少需要 Windows Server 2022、Windows 10 版本 2004​</string>
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 (經由 Windows Server 2022) 或 Windows 10​</string>
       <string id="AUDontShowUasHelp">這個原則設定允許您管理是否要在 [關閉 Windows] 對話方塊中顯示 [安裝更新並關機] 選項。
 
@@ -61,37 +62,37 @@
       <string id="AutoUpdateCfg">設定自動更新</string>
       <string id="AutoUpdateCfg_Help">指定此電腦是否透過 Windows 自動更新服務，接收安全性更新和其他重要下載。
 
-注意：此原則不適用於 Windows RT。
+注意: 此原則不適用於 Windows RT。
 
-此設定可讓您指定是否在此電腦上啟用自動更新。如果您啟用該服務，您必須在群組原則設定中選取以下四個選項之一：
+此設定可讓您指定是否在此電腦上啟用自動更新。如果您啟用該服務，您必須在群組原則設定中選取以下四個選項之一: 
 
-        2 = 下載和安裝任何更新之前先通知。
+ 2 = 下載和安裝任何更新之前先通知。
 
 當 Windows 找到適用於此電腦的更新時，將會通知使用者更新已準備好可以下載。前往 Windows Update 之後，使用者便可以下載和安裝任何可用更新。
 
-        3 = (預設設定) 自動下載更新，並在準備好安裝時通知
+ 3 = (預設設定) 自動下載更新，並在準備好安裝時通知
 
-Windows 會尋找適用於您電腦的更新，並於背景下載這些內容 (過程中使用者不會收到通知或受到打擾)。下載完成時，將會通知使用者更新已經準備好安裝。前往 Windows Update 後，使用者便可以進行安裝。
+Windows 會尋找適用於您電腦的更新，並在背景下載這些內容 (過程中使用者不會收到通知或受到打擾)。下載完成時，將會通知使用者更新已經準備好安裝。前往 Windows Update 後，使用者便可以進行安裝。
 
-        4 = 自動下載更新，並於以下指定的排程安裝更新。
+ 4 = 自動下載更新，並於以下指定的排程安裝更新。
 
-選擇排程安裝時間為「自動」時，Windows 將自動檢查、下載並安裝更新。除非群組原則設定，否則裝置將依照 Windows 預設設定重新開機。(適用於 Windows 10 版本 1809及更高版本) 
+選擇排程安裝時間為 [自動] 時，Windows 將自動檢查、下載並安裝更新。除非由群組原則設定，否則裝置將依照 Windows 預設設定重新開機。(適用於 Windows 10 1809 版更高版本) 
 
-        使用 [群組原則] 設定中的選項指定排程。對於版本 1709及更高版本，限制更新的其他選擇為每週、每兩週或每月進行。如果未指定排程，則所有安裝的預設排程將在每日的上午 3 點。如果有任何更新需要重新開機以完成安裝，Windows 會自動重新啟動電腦。(如果 Windows 準備重新開機時使用者已登入電腦，則使用者將會收到通知和延遲重新開機選項。) 
+ 使用 [群組原則] 設定中的選項指定排程。針對 1709 版與更高版本，有額外的選擇可將更新限制為每週、每兩週或每月進行。如果未指定排程，則所有安裝的預設排程將為每天的上午 3 點。如果有任何更新需要重新啟動以完成安裝，Windows 會自動重新啟動電腦。(如果 Windows 準備重新啟動時使用者已登入電腦，則使用者將會收到通知，而且系統會顯示延遲重新啟動選項。)
 
-        在 Windows 8 和更高版本中，您可以設定讓更新在自動維護期間安裝，而不是依照特定排程安裝。自動維護將在電腦未使用時安裝更新，並避免在電腦電力不足時執行這項作業。如果自動維護無法在 2 天內安裝更新，Windows Update 將立即安裝更新。使用者將收到即將重新啟動的通知，並在確認沒有潛在的意外資料遺失問題後，才會執行重新開機。
+ 在 Windows 8 與更高版本中，您可以設定讓更新在自動維護期間安裝，而不是依照特定排程安裝。自動維護將在電腦未使用時安裝更新，並避免在電腦電力不足時執行此作業。如果自動維護無法在 2 天內安裝更新，Windows Update 將立即安裝更新。使用者將收到即將重新啟動的通知，並在確認沒有潛在的意外資料遺失問題後，才會執行重新啟動。
 
-        5 = 允許本機系統管理員選擇自動更新應通知和安裝更新的設定模式。(此選項並未沿用至 Win 10 版本) 
+ 5 = 允許本機系統管理員選擇自動更新應通知和安裝更新的設定模式。(此選項並未沿用至 Win 10 版本) 
 
-        透過此選項，將允許本機系統管理員使用 Windows Update 控制台選取他們所選擇的設定選項。不允許本機系統管理員停用自動更新的設定。
+ 透過此選項，將允許本機系統管理員使用 Windows Update 控制台選取他們所選擇的設定選項。將不允許本機系統管理員停用自動更新的設定。
 
-        7 = 通知安裝並通知重新開機。(僅限 Windows Server) 
+ 7 = 通知安裝並通知重新開機。(僅限 Windows Server)
 
-        根據此來自 Windows Server 2016、僅適用於伺服器 SKU 裝置的選項，本機系統管理員將可以使用 Windows Update 繼續進行安裝，或以手動方式重新開機。
+ 根據此來自 Windows Server 2016、僅適用於伺服器 SKU 裝置的選項，本機系統管理員將可以使用 Windows Update 繼續進行安裝，或以手動方式重新開機。
 
-如果此原則狀態設定為 [停用]，則 Windows Update 的所有可用更新都必須手動下載並安裝。若要執行此動作，請透過 [開始] 搜尋 Windows Update。
+如果此原則狀態設定為 [已停用]，則 Windows Update 的所有可用更新都必須手動下載並安裝。若要執行此動作，請透過 [開始] 搜尋 Windows Update。
 
-如果狀態設定為 [未設定]，自動更新的使用將不會指定為群組原則層級。不過，系統管理員仍可以透過 [控制台] 設定自動更新。</string>
+如果狀態設定為 [尚未設定]，自動更新的使用將不會於群組原則層級指定。不過，系統管理員仍可以透過 [控制台] 設定自動更新。</string>
 
       <string id="AutoUpdateModeNotifyToInstallNotifyToReboot">7 - 自動下載，通知安裝，通知重新啟動</string>
       <string id="AutoUpdateModeAdminChooses">5 - 允許本機系統管理員選擇設定</string>
@@ -133,29 +134,29 @@ Windows 會尋找適用於您電腦的更新，並於背景下載這些內容 (�
       <string id="AutoUpdateSchTimeAuto">自動</string>
       <string id="CorpWuURL">指定近端內部網路 Microsoft 更新服務的位置</string>
       <string id="CorpWuURL_Help">
-        指定內部網路伺服器來裝載來自 Microsoft Update 的更新。接著，您可以使用此更新服務自動更新您網路上的電腦。
+        指定一部內部網路伺服器來裝載來自 Microsoft Update 的更新。接著，您可以使用此更新服務自動更新您網路上的電腦。
 
-        此設定可讓您指定網路上的伺服器做為內部更新服務用途。自動更新用戶端將搜尋此服務以尋找適用於網路上電腦的更新。
+        此設定可讓您指定您網路上的一部伺服器做為內部更新服務用途。自動更新用戶端將搜尋此服務以尋找適用於您網路上電腦的更新。
 
         若要使用此設定，您必須設定兩個伺服器名稱值: 自動更新用戶端偵測及下載更新的伺服器，以及已更新過的工作站上傳統計資料的伺服器。您可以將這兩個值設定為相同的伺服器。您也可指定選用的伺服器名稱值，以設定 Windows Update 代理程式從替代下載伺服器 (而非內部網路更新服務) 下載更新。
 
-        若狀態設定為 [啟用]，自動更新用戶端會連線到指定的內部網路 Microsoft 更新服務 (或替代下載伺服器) 而非 Windows Update，以搜尋及下載更新。啟用此設定表示公司中的使用者不用經由防火牆來取得更新，而且您將可以在部署更新之前先對更新進行測試。
+        若狀態設定為 [啟用]，自動更新用戶端會連線到指定的內部網路 Microsoft 更新服務 (或替代下載伺服器) 而非 Windows Update，以搜尋及下載更新。啟用此設定表示您公司中的使用者不用經由防火牆來取得更新，而且您將可以在部署更新之前先對更新進行測試。
 
-        若狀態設定為 [已停用] 或 [尚未設定]，且原則或使用者喜好設定未停用自動更新，則自動更新用戶端會直接連線到網際網路上的 Windows Update 網站。
+        若狀態設定為 [停用] 或 [未設定]，且原則或使用者喜好設定未停用自動更新，則自動更新用戶端會直接連線到網際網路上的 Windows Update 網站。
 
         替代下載伺服器會設定 Windows Update 代理程式，以從替代下載伺服器 (而非內部網路更新服務) 下載檔案。
 
-        下載遺漏 URL 之檔案的選項讓您能在更新中繼資料未提供檔案的下載 URL 時，從替代下載伺服器下載內容。僅當內部網路更新服務對於替代下載伺服器上的檔案並未在其更新中繼資料內提供下載 URL 時才應使用此選項。
+        下載遺漏 URL 之檔案的選項讓您能在更新中繼資料未提供檔案的下載 URL 時從替代下載伺服器下載內容。僅當內部網路更新服務對於替代下載伺服器上的檔案並未在其更新中繼資料內提供下載 URL 時才應使用此選項。
 
-        注意: 若停用 [設定自動更新] 原則，此原則將不會有任何作用。
+        注意: 若停用「設定自動更新」原則，此原則將不會有任何作用。
 
-        注意: 若未設定 [替代下載伺服器]，預設將會使用內部網路更新服務來下載更新。
+        注意: 若未設定「替代下載伺服器」，預設將會使用內部網路更新服務來下載更新。
 
-        注意: [下載遺漏 URL 的檔案] 選項僅限於已設定 [替代下載伺服器] 時才會使用。
+        注意: [下載遺漏 URL 的檔案] 選項僅限於已設定「替代下載伺服器」時才會使用。
 
         注意: Windows RT 不支援此原則。在 Windows RT 電腦上設定此原則將不會有任何作用。
 
-        為了確保最高等級的安全性，Microsoft 建議使用 TLS/SSL 通訊協定來保護 WSUS，藉以使用以 HTTPS 為基礎的內部網路伺服器來確保系統安全。如果需要 Proxy，建議您設定系統 Proxy。為了確保最高等級的安全性，請另外在所有裝置上使用 WSUS TLS 憑證關聯。
+        為了確保最高等級的安全性，Microsoft 建議使用 TLS/SSL 通訊協定保護 WSUS，藉以使用以 HTTPS 為基礎的內部網路伺服器來確保系統安全。如果需要 Proxy，建議您設定系統 Proxy。為了確保最高等級的安全性，請另外在所有裝置上使用 WSUS TLS 憑證釘選。
 
         為了確保用戶端固有的安全性，在預設的情況下，我們不再允許內部網路伺服器利用使用者 Proxy 來偵測更新。儘管使用內部網路伺服器時仍存在漏洞，如果仍需要利用使用者 Proxy 來偵測更新，則必須將 Proxy 行為設定為 [如果使用系統 Proxy 的偵測失敗，則允許將使用者 Proxy 作為遞補]。
 
@@ -315,12 +316,6 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
 注意: Windows RT 不支援這個原則。設定這個原則在 Windows RT 電腦上不會生效。</string>
       <string id="TargetGroup_Title">啟用用戶端目標鎖定</string>
       <string id="WindowsUpdateCat">Windows Update</string>
-      <!--Category sub-folders-->
-      <string id="WindowsUpdateOffering">管理 Windows Update 提供的更新</string>
-      <string id="WSUSOffering">管理 Windows Server Update Service 提供的更新</string>
-      <string id="WindowsUpdateExperience">管理使用者體驗</string>
-      <string id="PreSV">舊版原則</string>
-
       <string id="TrustedPublisher_Title">允許來自內部網路 Microsoft 更新服務位置的已簽署更新  </string>
       <string id="TrustedPublisher_Help">此原則設定可讓您管理當內部網路 Microsoft 更新服務位置有更新時，「自動更新」是否接受由 Microsoft 以外的實體所簽署的更新。
 
@@ -336,30 +331,48 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
 啟用這個原則將停用該功能，也可能造成 Windows 市集這類公用服務的連線停止運作。
 
 注意: 這部電腦設定為使用「指定內部網路 Microsoft 更新服務位置」原則連線到內部網路更新服務時，才適用這個原則。</string>
+      <string id="DeferUpdateCat">商務用 Windows Update</string>
       <string id="ManagePreviewBuilds_Title">管理預覽組建</string>
-      <string id="ManagePreviewBuilds_Help">啟用此原則可以管理在更新發行給全世界之前，您會優先收到哪些更新。
+      <string id="ManagePreviewBuilds_Help">選取 [停用預覽版] 將使裝置無法安裝預覽版。如此使用者便不能透過 [設定] -&gt; [更新與安全性] 選擇加入 Windows 測試人員計畫。
 
-開發人員通道
-適合高度技術性的使用者。開發人員通道的測試人員將會收到開發週期中最早開發中分支的組建。這些組建不會與特定的 Windows 10 版本相符。
+選取 [下一個版本公開後停用預覽版] 將使裝置在下一版 Windows 公開後無法安裝預覽版。若您的裝置設定成安裝預覽版且您希望裝置能適時退出正式發行前小眾測試，此選項即可派上用場。此選項將為裝置持續提供預覽版直到下一個版本公開為止。
 
-Beta 版通道
-適合想要查看 Windows 10 即將發行版本之功能的功能探險家。您的意見反應在此處特別重要，因為您的意見反應將會協助我們的工程師確認關鍵問題在主要版本發行前已修正。
-
-發行預覽通道 (預設)
-發行預覽通道的測試人員會在發行給全世界之前，優先擁有 Windows 10 即將發行版本的存取權。這些組建由 Microsoft 提供支援。我們建議公司行號在發行預覽通道預覽並檢驗 Windows 10 即將發行版本，然後才在組織中進行大範圍的部署。
-
-注意: 註冊預覽組建需要遙測層級的設定為 2 或以上，且已在 insider.windows.com 登錄您的網域。如需有關預覽組建的其他資訊，請參閱: https://aka.ms/wipforbiz
-
-如果您停用或未設定此原則，Windows Update 不會提供您任何發行前版本更新，您會在發行給全世界之後收到這類的內容。停用此原則會導致所有裝置退出目前所使用的發行前版本組建，然後停留在已發行的最新功能更新。</string>
-      <string id="DevChannel">開發人員通道</string>
-      <string id="BetaChannel">Beta 通道</string>
-      <string id="ReleasePreviewChannel">發行預覽通道</string>
+選取 [啟用預覽版] 將使裝置能夠安裝預覽版。使用者可透過 [設定] -&gt; [更新與安全性] -&gt; [Windows 測試人員計畫] 選擇加入後自其裝置下載並安裝 Windows 預覽版。設定此項時，系統管理員也可以使用其他原則代表使用者管理正式發行前小眾測試版設定。</string>
+      <string id="DisablePreviewBuilds">停用預覽版</string>
+      <string id="DisablePreviewBuildsAndOptOut">下一個版本公開後停用預覽版</string>
+      <string id="EnablePreviewBuilds">啟用預覽版</string>
+      <string id="PreviewBuildFastFeatureUpdates">預覽版 - 快速</string>
+      <string id="PreviewBuildSlowFeatureUpdates">預覽版 - 慢速</string>
+      <string id="ReleasePreviewBranchFeatureUpdates">發行預覽</string>
+      <string id="SemiAnnualChannelFeatureUpdates">半年通道</string>
+      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">1809 和以下版本的半年通道 (已過時)</string>
+      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">1809 和以下版本的半年通道 (目標) (已過時)</string>
       <string id="DeferFeatureUpdates_Title">選取接收預覽組建及功能更新的時機</string>
-      <string id="DeferFeatureUpdates_Help">啟用此原則可指定接收功能更新的時機。
+      <string id="DeferFeatureUpdates_Help">啟用此原則以指定預覽版或接收功能更新的層級以及時間。
 
-延遲更新 | 此選項可讓裝置延遲採用下一次提供給通道的功能更新，所有測試通道可延遲最多 14 天，半年通道可延遲最多 365 天。或者，如果裝置是從半年通道更新，則可以指定在原則獲更新或裝置到達終止服務之前，將裝置移動和/或停留的版本。注意: 如果您同時設定兩個原則，將會優先採用指定的版本，而且延遲不會生效。如需有關 OS 的版本資訊，請參閱 Windows 版本資訊頁面。
+* 預覽版 - 快速: 設定為此層級的裝置將會優先接收 Windows 的新版組建與尚未提供給一般大眾的功能。選取 [快速] 即可參與識別並回報問題給 Microsoft，並且針對新功能提供建議。
+* 預覽版 - 慢速: 設定為此層級的裝置會在正式發行給一般大眾前接收到 Windows 的新版組建，但步調會比設定為 [快速] 的使用者較慢，而且會包含舊版組建內識別的變更與修正。
+* 發行預覽: 在 Microsoft 發行給一般大眾前接收 Windows 組建。
+* 半年通道:發行給一般大眾時接收功能更新。
 
-暫停更新 | 為避免在排定的時間接收到功能更新，您可以暫時暫停功能更新。暫停會從指定日期開始持續 35 天，或是直到欄位清空為止 (仍會提供品質更新)。</string>
+下列的 Windows 整備層級已過時，且僅適用於 1809 以下: 
+* 1809 以下的半年通道 (目標): 功能更新已發行。
+* 1809 以下的半年通道: 功能更新已宣告半年通道，指定發行已可供廣泛部署。
+請在 http://aka.ms/ReleaseInformationPage 檢閱半年通道 (目標) 和半年通道發行日期的發行資訊頁面。
+
+選取預覽版時:
+    - 您最多可以延遲接收預覽版達 14 天。
+    - 若要避免預覽版在排定時間接收，您可以暫時暫停預覽版。暫停在提供的開始時間的 35 天內有效。
+    - 若要繼續接收已暫停的功能更新，請清除開始日期欄位。
+
+預覽版註冊需要 2 級以上的遙測層級，並在 insider.windows.com 上註冊您的網域。如需有關預覽版的詳細資訊，請參閱: https://aka.ms/wipforbiz 
+
+選取半年通道時:
+    - 您最多可以延遲接收功能更新達 365 天。
+    - 若要避免預覽版在排定時間接收，您可以暫時暫停預覽版。暫停在提供的開始時間的 35 天內有效。
+    - 若要繼續接收已暫停的功能更新，請清除開始日期欄位。
+
+如果您停用或未設定此原則，Windows Update 將不會變更其行為。</string>
       <string id="DeferQualityUpdates_Title">選取接收品質更新的時機</string>
       <string id="DeferQualityUpdates_Help">啟用此原則來指定收到品質更新的時機。
 
@@ -701,8 +714,8 @@ aka.ms/WindowsTargetVersioninfo
         </textBox>
         <text>(範例： https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">若已設定替代下載伺服器，即下載中繼資料內遺漏 URL 的檔案。</checkBox>
-        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">不要為 Windows Update 用戶端強制執行 TLS 憑證關聯來偵測更新。</checkBox>
-        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">選取 Windows Update 用戶端的 Proxy 行為來偵測更新:</dropdownList>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">請不要為 Windows Update 用戶端強制執行 TLS 憑證釘選來偵測更新。</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">選取 Windows Update 用戶端的 Proxy 行為來偵測更新：</dropdownList>
       </presentation>
       <presentation id="UpdateClassPolicySource_Title">
         <text>指定以下 Windows Update 類別的來源服務:</text>
@@ -716,11 +729,13 @@ aka.ms/WindowsTargetVersioninfo
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">間隔 (小時):  </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>請等候下列期間，再以排程的方式再次提示</text>
+        <text>再次提示</text>
+        <text>排程重新啟動前</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">的等候時間 (分鐘):  </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>請等候以下期間，再繼續進行排程</text>
+        <text>繼續</text>
+        <text>排程重新啟動前</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">的等候時間 (分鐘):  </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -732,23 +747,30 @@ aka.ms/WindowsTargetVersioninfo
           <label>此電腦的目標群組名稱</label>
         </textBox>
       </presentation>
+      <presentation id="IdleShutdownTimerDuration_Title">
+        <text>服務閒置時，</text>
+        <text>關閉這個服務前</text>
+        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">的等候時間 (分鐘):  </decimalTextBox>
+      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>重新啟動計時器將為使用者提供這麼長時間以儲存他們的</text>
+        <text>重新啟動計時器讓使用者</text>
+        <text>儲存他們的</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">工作的時間 (分鐘):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
         <textBox refId="ProductVersionId">
-          <label>您要在哪一個 Windows 產品版本上接收功能更新？例如，Windows 10</label>
+          <label>您要接收哪些 Windows 產品版本的功能更新？例如，Windows 10</label>
         </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>功能更新的目標版本</label>
         </textBox>
       </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">針對您要接收的更新選取 Windows 整備層級:</dropdownList>
+        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">設定接收預覽版的行為:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">[功能更新] 發行後多少天，您會願意在它供裝置使用前推遲更新?</decimalTextBox>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">針對您要接收的更新選取 Windows 整備層級:</dropdownList>
+        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">在預覽版或功能更新發行之後，延遲下列天數而不接收:</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>暫停預覽組建或功能更新的開始時間:</label>
         </textBox>

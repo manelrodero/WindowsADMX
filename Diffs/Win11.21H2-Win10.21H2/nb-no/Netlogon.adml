@@ -137,7 +137,7 @@ Hvis du ikke konfigurerer denne policyinnstillingen, brukes den ikke for noen do
       <string id="Netlogon_ExpectedDialupDelay">Angi forventet oppringingsforsinkelse ved pålogging</string>
       <string id="Netlogon_ExpectedDialupDelay_Help">Denne policyinnstillingen angir tilleggstiden som datamaskinen venter på domenekontrollerens (DC) svar ved pålogging på nettverket.
 
-Du angir forventet oppringingsforsinkelse ved pålogging ved å klikke på Aktivert og angi ønsket verdi i sekunder (verdien 60 er for eksempel 1 minutt).
+Du angir forventet oppringingsforsinkelse ved pålogging ved å klikke Aktivert og angi ønsket verdi i sekunder (verdien 60 er for eksempel 1 minutt).
 
 Hvis du ikke konfigurerer denne policyinnstillingen, brukes den ikke for noen datamaskiner, og datamaskinene bruker sine lokale konfigurasjoner.</string>
       <string id="Netlogon_GcSiteCoverage">Angi områder dekket av DNS SRV-oppføringer for GC-posisjonsindikator</string>
@@ -335,22 +335,6 @@ Hvis et miljø har et stort antall DCer som kjører både eldre og nye operativs
 Klikk Aktivert og og tast inn en verdi for å angi denne virkemåten. Verdiområdet er fra 1 til 2.
 
 Hvis du ikke konfigurerer denne policyinnstillingen, brukes den ikke for noen datamaskiner, og datamaskinene bruker sine lokale konfigurasjoner.</string>
-
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Bruk små bokstaver i DNS-vertsnavn ved registrering av SRV-oppføringer for domenekontroller</string>
-      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Denne policy innstillingen konfigurerer om domene kontrollerne som policy innstillingen gjelder for, skal ha små bokstaver i DNS-vertsnavnet ved registrering av SRV-oppføringer.
-
-Hvis dette er aktivert, vil domene kontrollere små bokstaver i DNS-vertsnavnet ved registrering av SRV-oppføringer for domene kontrollere. Det vil bli gjort et forsøk på å slette eventuelle tidligere registrerte SRV-poster som inneholder DNS-vertsnavn av typen Mixed Case. Hvis du vil ha mer informasjon og potensielle manuelle oppryddings prosedyrer, se koblingen nedenfor.
-
-Hvis dette er deaktivert, vil domene kontrollere bruke det konfigurerte DNS-vertsnavnet som det er ved registrering av SRV-oppføringer for domene kontroller.
-
-Hvis den ikke er konfigurert, vil domene kontrollere som standard bruke sine lokale konfigurasjoner.
-
-Standard lokal konfigurasjon er aktivert.
-
-Det er ikke nødvendig å starte på nytt for at endringer i denne innstillingen skal tre i kraft.
-
-Mer informasjon er tilgjengelig på https://aka.ms/lowercasehostnamesrvrecord
-      </string>
 
     </stringTable>
     <presentationTable>

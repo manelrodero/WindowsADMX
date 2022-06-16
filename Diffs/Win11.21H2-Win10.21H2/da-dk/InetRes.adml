@@ -270,7 +270,7 @@ Hvis du aktiverer denne politikindstilling, kan du angive en liste over webstede
 
 Hvis du deaktiverer denne indstilling og undlader at konfigurere den, vil du ikke kunne angive en standardundtagelsesliste til Blokering af pop op-vinduer.
 
-Bemærk! Du kan deaktivere brugere, så de ikke kan tilføje eller fjerne websteder på undtagelseslisten, ved at aktivere politikken Slå administration af tilladt-liste over pop-op-vinduer fra.</string>
+Bemærk! Du kan deaktivere brugere, så de ikke kan tilføje eller fjerne websteder på undtagelseslisten, ved at aktivere politikken Slå administration af liste over tilladte pop-op-vinduer fra.</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">Denne politikindstilling giver dig mulighed for at undgå spørgsmål, når scripts, der kører i en proces på computeren, prøver at udføre en handling med Udklipsholder (slet, kopiér eller sæt ind).
 
 Hvis du aktiverer denne politikindstilling, bliver brugeren ikke spurgt, når et script, der kører i en proces på computeren, udfører en handling med Udklipsholder. Dette betyder, at hvis zonefunktionen i øjeblikket er indstillet til Spørg, vil den blive sprunget over og aktiveret.
@@ -298,6 +298,7 @@ Hvis du deaktiverer denne politikindstilling for et program eller en proces på 
 Hvis du undlader at konfigurere denne politikindstilling, vil de aktuelle værdier for URL-handlingen for et program eller en proces på listen blive anvendt.</string>
       <string id="FavImportExport">Deaktiver guiden Import/eksport af indstillinger</string>
       <string id="GeolocationDisable">Slå geolokalisering i browseren fra</string>
+      <string id="DisableFlashInIE">Slå Adobe Flash fra i Internet Explorer, og sørg for, at programmer, der bruger Internet Explorer-teknologi, ikke starter Flash-objekter</string>
       <string id="File_NoBrowserClose">Menuen Filer: Deaktiver lukning af webbrowser- og Windows Stifinder-vinduer</string>
       <string id="File_NoBrowserSaveAs">Menuen Filer: Deaktiver menupunktet Gem som...</string>
       <string id="File_NoBrowserSaveWebComplete">Menuen Filer: Deaktiver Gem som fuldstændig webside</string>
@@ -333,7 +334,7 @@ Hvis du deaktiverer denne politikindstilling, vil brugeren få vist en detaljere
 Hvis du undlader at konfigurere denne politikindstilling, kan brugeren slå detaljer i disse fejlmeddelelser til eller fra.</string>
       <string id="General_Zooming">Slå funktionen for sidezooming fra</string>
       <string id="GeneralColors">Standardfarver</string>
-      <string id="Help_NoFeedback">Menuen Hjælp: Fjern menupunktet Send feedback</string>
+      <string id="Help_NoFeedback">Menuen Hjælp: Fjern menuindstillingen "Send feedback"</string>
       <string id="Help_NoNetscapeHelp">Menuen Hjælp: Fjern menupunktet Til Netscape-brugere</string>
       <string id="Help_NoTip">Menuen Hjælp: Fjern menupunktet Dagens tip</string>
       <string id="Help_NoTutorial">Menuen Hjælp: Fjern menupunktet Præsentation</string>
@@ -725,6 +726,13 @@ Hvis du aktiverer denne politikindstilling, slås understøttelse af geolokalise
 Hvis du deaktiverer denne politikindstilling, slås understøttelse af geolokalisering i browseren til.
 
 Hvis du undlader at konfigurere denne politikindstilling, kan understøttelse af geolokalisering i browseren slås til eller fra i Internetindstillinger under fanen Beskyttelse af personlige oplysninger.</string>
+      <string id="IE_ExplainDisableFlashInIE">Denne politikindstilling slår Adobe Flash fra i Internet Explorer, og forhindrer, at programmer, der bruger Internet Explorer-teknologi, starter Flash-objekter.
+
+Hvis du aktiverer denne politikindstilling, slås Flash fra i Internet Explorer, og programmer kan ikke bruge Internet Explorer-teknologi til at starte Flash-objekter. I dialogboksen Administrer tilføjelsesprogrammer er status for Flash deaktiveret, og brugerne kan ikke aktivere Flash. Hvis du aktiverer denne politikindstilling, ignorerer Internet Explorer de indstillinger, der er angivet for Adobe Flash via politikindstillingerne "Liste over tilføjelsesprogrammer" og "Afvis alle tilføjelsesprogrammer medmindre de specielt er tilladt på listen over tilføjelsesprogrammer".
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, slås Flash til i Internet Explorer, og programmer kan bruge Internet Explorer-teknologi til at starte Flash-objekter. Brugerne kan aktivere eller deaktivere Flash i dialogboksen Administrer tilføjelsesprogrammer.
+
+Bemærk, at Adobe Flash stadig kan deaktiveres via politikindstillingerne "Liste over tilføjelsesprogrammer" og "Afvis alle tilføjelsesprogrammer medmindre de specielt er tilladt på listen over tilføjelsesprogrammer", selvom denne politikindstilling er deaktiveret eller ikke er konfigureret. Men hvis Adobe Flash er deaktiveret via politikindstillingerne "Liste over tilføjelsesprogrammer" og "Afvis alle tilføjelsesprogrammer medmindre de specielt er tilladt på listen over tilføjelsesprogrammer" og ikke via denne politikindstilling, kan alle programmer, der benytter Internet Explorer-teknologi til at starte Flash-objekter, stadig gøre det. Du kan finde flere oplysninger i "Group Policies Settings in Internet Explorer 10" i Internet Explorer TechNet library.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Forhindrer brugerne i at lukke Microsoft Internet Explorer og Stifinder.
 
 Hvis du aktiverer denne politik, vises kommandoen Luk nedtonet i menuen Filer.
@@ -868,7 +876,7 @@ Udfør følgende trin for at angive, hvordan objekter, der er godkendt af admini
       <string id="IE_ExplainMenusCategory">Indeholder indstillinger til at vise eller skjule menuer og menupunkter i Internet Explorer.</string>
       <string id="IE_ExplainMicrosoft_Chat">Angiver, at ActiveX-objektet Microsoft Chat er godkendt af administratoren.
 
-Dette objekt bruges af webforfattere til at opbygge tekst- og grafikbaserede chatgrupper til onlinesamtaler på World Wide Web.
+Dette objekt bruges af webforfattere til at oprette tekst- og grafikbaserede chatgrupper til onlinesamtaler på internettet.
 
 Hvis du aktiverer denne politik, kan objektet køres i sikkerhedszoner, hvor du angiver, at objekter, der er godkendt af administratoren, kan køres.
 
@@ -1337,7 +1345,7 @@ Hvis du aktiverer denne politikindstilling, kan brugeren ikke tilføje eller fje
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan brugeren tilføje og fjerne websteder på undtagelseslisten.
 
-Bemærk! Du kan give tilladelse til en standardliste over websteder, som kan åbne pop op-vinduer uanset Internet Explorer-processens indstillinger for Blokering af pop op-vinduer, ved at aktivere politikindstillingen Angiv tilladt-liste for pop op-vinduer.</string>
+Bemærk! Du kan give tilladelse til en standardliste over websteder, som kan åbne pop op-vinduer uanset Internet Explorer-processens indstillinger for Blokering af pop op-vinduer, ved at aktivere politikindstillingen Angiv tilladelsesliste for pop op-vinduer.</string>
       <string id="IE_ExplainRestrictPopupManagement">Du kan bruge denne politikindstilling til at styre pop op-funktionaliteten i Internet Explorer.
 
 Hvis du aktiverer denne politikindstilling, vil Kontrolpanel-oplysningerne om pop op-styring ikke være tilgængelige (nedtonet), og alle andre kontrolelementer, meddelelser og dialogbokse for pop op-styring vises ikke. Pop op-vinduer vil stadig fungere, som de gør i Windows XP Service Pack 1 og tidligere versioner, men vinduer, der startes uden for skærmen, vil fortsat blive placeret på skærmen.
@@ -3519,13 +3527,13 @@ Denne politik påvirker ikke, hvilke sikkerhedsprotokoller der er aktiveret.
 
 Hvis du deaktiverer denne politik, anvendes systemstandarder.
 </string>
-      <string id="Advanced_ExplainSetWinInetProtocols">Denne politikindstilling giver dig mulighed for at slå understøttelse af TLS 1.0 (Transport Layer Security), TLS 1.1, TLS 1.2, SSL 2.0 (Secure Sockets Layer) eller SSL 3.0 fra i browseren. TLS og SSL er protokoller, der beskytter kommunikationen mellem browseren og målserveren. Når browseren forsøger at oprette en beskyttet kommunikation med målserveren, vil browseren og serveren forhandle om, hvilken protokol og udgave der skal bruges. Browseren og serveren forsøger at sammenligne hinandens lister over understøttede protokoller og versioner, og de vælger den mest foretrukne match.
+      <string id="Advanced_ExplainSetWinInetProtocols">Denne politikindstilling giver dig mulighed for at slå understøttelse af TLS 1.0 (Transport Layer Security), TLS 1.1, TLS 1.2, SSL 2.0 (Secure Sockets Layer) eller SSL 3.0 fra i browseren. TLS og SSL er protokoller, der beskytter kommunikationen mellem browseren og målserveren. Når browseren forsøger at oprette beskyttet kommunikation med målserveren, vil browseren og serveren forhandle om, hvilken protokol og udgave der skal bruges. Browseren og serveren forsøger at sammenligne hinandens lister over understøttede protokoller og versioner, og de vælger det mest foretrukne match.
 
 Hvis du aktiverer denne politikindstilling, vil browseren enten forhandle eller ikke forhandle en krypteret tunnel ved hjælp af de krypteringsmetoder, som du vælger på rullelisten.
 
 Hvis du deaktiverer eller undlader at konfigurere politikindstillingen, kan brugeren vælge, hvilken krypteringsmetode browseren understøtter.
 
-Bemærk! SSL 2.0 er som standard slået fra og understøttes ikke længere fra og med Windows 10 Version 1607. SSL 2.0 er en forældet sikkerhedsprotokol, og aktivering af SSL 2.0 hæmmer ydelse og funktionalitet af TLS 1.0.</string>
+Bemærk! SSL 2.0 er som standard slået fra og understøttes ikke længere fra og med Windows 10 version 1607. SSL 2.0 er en forældet sikkerhedsprotokol, og aktivering af SSL 2.0 hæmmer ydeevnen og funktionaliteten af TLS 1.0.</string>
       <string id="IE_ExplainNoPrinting">Denne politikindstilling giver dig mulighed for at styre, om brugere har adgang til menuen Udskriv. Fra og med Windows 8 kan du også bruge denne politikindstilling til at styre, om brugerne har adgang til pop op-vinduet Udskriv i Internet Explorer og alle printere under amuletten Enheder.
 
 Hvis du aktiverer denne politikindstilling, er menuen Udskriv ikke tilgængelig i Internet Explorer. Fra og med Windows 8 er pop op-vinduet Udskriv i Internet Explorer ikke tilgængeligt, og brugerne kan ikke se printere under amuletten Enheder.
@@ -3564,7 +3572,7 @@ Hvis du aktiverer denne politikindstilling, viser Internet Explorer indstillinge
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, viser Internet Explorer ikke indstillingen Klassifikationsfilter under fanen Indhold i dialogboksen Internetindstillinger.
 
-Bemærk! Denne politik understøttes ikke længere fra og med Windows 10 Version 1607.</string>
+Bemærk! Denne politik understøttes ikke længere fra og med Windows 10 version 1607.</string>
       <string id="Protocols_None">Brug ingen sikre protokoller</string>
       <string id="Protocols_SSL2">Brug kun SSL 2.0</string>
       <string id="Protocols_SSL3">Brug kun SSL 3.0</string>
@@ -3895,7 +3903,7 @@ Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, kan bruger
 Hvis du slår denne indstilling til, kan brugere se og bruge Enterprise-tilstand fra menuen Funktioner. Hvis du slår indstillingen til uden at angive en placering til rapporter, vil Enterprise-tilstand stadig være tilgængelig for dine brugere, men du vil ikke modtage nogen rapporter.
 
 Hvis du slår denne politikindstilling fra eller ikke konfigurerer den, vil menupunktet ikke blive vist, og brugere vil ikke kunne køre websteder i Enterprise-tilstand.</string>
-      <string id="RestrictInternetExplorer">Send alle de websteder, der ikke er inkluderet på listen over websteder i Enterprise-tilstand, til Microsoft Edge.</string>
+      <string id="RestrictInternetExplorer">Send alle de websteder, der ikke er inkluderet på listen over websteder i Enterprise-tilstand til Microsoft Edge.</string>
       <string id="IE_ExplainRestrictInternetExplorer">Med denne indstilling kan du angive, om du vil åbne alle de websteder, som ikke er angivet på listen over websteder i Enterprise-tilstand, i Microsoft Edge. Hvis du bruger denne indstilling, skal du også aktivere politikindstillingen Administrative skabeloner\Windows-komponenter\Internet Explorer\Brug listen over websteder, der skal åbnes i Enterprise-tilstand i IE, og du skal angive mindst ét websted på listen over websteder i Enterprise-tilstand.
 
 Når du aktiverer denne indstilling, åbnes alle de websteder, der ikke er medtaget på listen over websteder i Enterprise-tilstand, automatisk i Microsoft Edge.
@@ -3912,24 +3920,24 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anve
       <string id="NeedEdgeBrowser">Konfigurer, hvilken kanal i Microsoft Edge der skal bruges til at åbne omdirigerede websteder</string>
       <string id="IE_ExplainNeedEdgeBrowser">Giver dig mulighed for at konfigurere op til tre versioner af Microsoft Edge for at åbne et omdirigeret websted (i prioriteret rækkefølge). Brug denne politik, hvis dit miljø er konfigureret til at omdirigere websteder fra Internet Explorer 11 til Microsoft Edge. Hvis en eller flere af de valgte versioner ikke er installeret på enheden, vil denne indstilling blive ignoreret.
 
-Hvis der er installeret Windows Update til den næste version af Microsoft Edge* og den stabile Microsoft Edge-kanal, opstår der følgende problemer:
-- Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges den stabile Microsoft Edge-kanal. Det er standardfunktionsmåden.
-- Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta-version 77 eller nyere
-    3 = Microsoft Edge Dev-version 77 eller nyere
-    4 = Microsoft Edge Canary-version 77 eller nyere
+Hvis både Windows Update for den næste version af Microsoft Edge* og den stabile Microsoft Edge-kanal er installeret, opstår der følgende problemer:
+– Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges den stabile Microsoft Edge-kanal. Det er standardfunktionsmåden.
+– Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
+ 1 = Stabil Microsoft Edge
+ 2 = Microsoft Edge Beta-version 77 eller nyere
+ 3 = Microsoft Edge Dev-version 77 eller nyere
+ 4 = Microsoft Edge Canary-version 77 eller nyere
 
 Hvis Windows-opdateringen til den næste version af Microsoft Edge* eller den stabile Microsoft Edge-kanal ikke er installeret, opstår følgende funktionsmåder:
--Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges Microsoft Edge version 45 eller tidligere automatisk. Det er standardfunktionsmåden.
-- Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
-    0 = Microsoft Edge version 45 eller ældre
-    1 = Microsoft Edge Stable
-    2 = Microsoft Edge Beta-version 77 eller nyere
-    3 = Microsoft Edge Dev-version 77 eller nyere
-    4 = Microsoft Edge Canary-version 77 eller nyere
+– Hvis du deaktiverer eller undlader at konfigurere denne politik, bruges Microsoft Edge version 45 eller ældre automatisk. Det er standardfunktionsmåden.
+– Hvis du aktiverer denne politik, kan du konfigurere omdirigerede websteder til at blive åbnet på op til tre af følgende kanaler, hvor:
+ 0 = Microsoft Edge version 45 eller ældre
+ 1 = Stabil Microsoft Edge
+ 2 = Microsoft Edge Beta-version 77 eller nyere
+ 3 = Microsoft Edge Dev-version 77 eller nyere
+ 4 = Microsoft Edge Canary-version 77 eller nyere
 
-* Du kan finde flere oplysninger om Windows-opdateringen til den næste version af Microsoft Edge, herunder hvordan du deaktiverer den, i https://go.microsoft.com/fwlink/?linkid=2102115. Denne opdatering gælder kun for Windows 10 version 1709 og nyere.</string>
+* Du kan finde flere oplysninger om Windows-opdateringen til den næste version af Microsoft Edge, herunder hvordan du deaktiverer den, på https://go.microsoft.com/fwlink/?linkid=2102115. Denne opdatering gælder kun for Windows 10 version 1709 og nyere.</string>
       <string id="NeedEdgeBrowserChoice_None"></string>
       <string id="NeedEdgeBrowserChoice_ChromiumStable">Microsoft Edge Stable</string>
       <string id="NeedEdgeBrowserChoice_ChromiumBeta">Microsoft Edge Beta-version 77 eller nyere</string>
@@ -3966,6 +3974,14 @@ Hvis du aktiverer denne politik, aktiveres udvidet genvejstastfunktion i Interne
 Hvis du deaktiverer eller ikke konfigurerer denne politik, vil udvidede genvejstaster ikke fungere i Internet Explorer-tilstand.
 
 Du kan finde flere oplysninger under https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Nulstil zoom til standard for HTML-dialogbokse i Internet Explorer-tilstand</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Med denne politikindstilling kan administratorer nulstille zoom til standardindstillingen for HTML-dialogbokse i Internet Explorer-tilstand.
+
+Hvis du aktiverer denne politik, overføres zoomet i en HTML-dialogboks i Internet Explorer-tilstand ikke fra den overordnede side.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politik, indstilles zoomet på en HTML-dialogboks i Internet Explorer tilstand baseret på zoomet på den overordnede side.
+
+Du kan få flere oplysninger under https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Deaktiver Internet Explorer 11 som en separat browser</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Denne politik gør det muligt at begrænse start af Internet Explorer som en separat browser.
 
@@ -3979,12 +3995,6 @@ Hvis du deaktiverer eller undlader at konfigurere denne politik, åbnes alle web
       <string id="NotifyDisableIEOptions_Never">Aldrig</string>
       <string id="NotifyDisableIEOptions_Always">Altid</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Én gang pr. bruger</string>
-      <string id="JScriptReplacement">Erstat JScript ved at indlæse JScript9Legacy i stedet for JScript via MSHTML/WebOC.</string>
-      <string id="IE_ExplainJScriptReplacement">Denne politikindstilling angiver, om JScript-eller JScript9Legacy er indlæst for MSHTML/WebOC-baserede start aktiveringer.
-      
-Hvis du aktiverer denne politikindstilling, indlæses JScript9Legacy i de situationer, hvor der oprettes en forekomst af JScript.
-
-Hvis du deaktiverer denne politik eller undlader at konfigurere den, bliver JScript brugt.</string>
       <string id="VerMgmtDisable">Deaktiver blokering af forældede ActiveX-kontrolelementer til Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Denne politikindstilling bestemmer, om Internet Explorer blokerer specifikke forældede ActiveX-kontrolelementer. Forældede ActiveX-kontrolelementer blokeres aldrig i intranetzonen.
 
@@ -4127,9 +4137,9 @@ Hvis du aktiverer denne politikindstilling, aktiveres automatisk opgradering af 
 
 Hvis du deaktiverer denne politikindstilling, vil automatisk opgradering af Internet Explorer være slået fra.
 
-Hvis ud ikke konfigurerer denne politik, kan brugere slå automatisk opdateringer til eller fra i dialogboksen Om Internet Explorer.
+Hvis du ikke konfigurerer denne politik, kan brugerne slå automatisk opdateringer til eller fra i dialogboksen Om Internet Explorer.
 
-Bemærk! Denne politik frarådes fra og med Windows 10 version 1703.</string>
+Bemærk! Denne politik udfases fra og med Windows 10 version 1703.</string>
       <string id="TurnOffFormatDetectionPhone">Slå identifikation af telefonnumre fra</string>
       <string id="TurnOffFormatDetectionPhone_Explain">Denne politikindstilling bestemmer, om telefonnumre skal genkendes og gøres til hyperlinks, som kan bruges til at starte systemets standardtelefonprogram.
 

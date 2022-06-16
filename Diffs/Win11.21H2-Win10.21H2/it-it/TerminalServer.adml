@@ -5,8 +5,6 @@
   <description>immettere qui la descrizione</description>
   <resources>
     <stringTable>
-      <string id="TS_AUTOSUBSCRIPTION_NAME">Abilita sottoscrizione automatica</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Controlla l'elenco degli URL a cui l'utente deve essere sottoscritto automaticamente</string>
       <string id="TS_SUPPORTED_Windows10">Almeno Windows 10 o Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Almeno Windows 8 o Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Almeno Windows Server 2012</string>
@@ -28,7 +26,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Solo Windows XP e Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Almeno Windows Server 2008 o Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Solo Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 versione 1903, Windows 10 versione 1909 e Windows 10 versione 2004</string>
       <string id="TS_TERMINAL_SERVER">Host sessione di Desktop remoto</string>
       <string id="TS_TERMINAL_SERVER_Help">Controlla la configurazione di un server host sessione Desktop remoto</string>
       <string id="TS_LICENSE_SERVER">Servizio licenze Desktop remoto</string>
@@ -147,7 +144,6 @@ Se non si configura questa impostazione dei criteri, il reindirizzamento delle u
       <string id="TS_CLIENT_LPT">Non consentire il reindirizzamento della porta LPT</string>
       <string id="TS_CLIENT_PNP">Non consentire il reindirizzamento dei dispositivi Plug and Play supportati</string>
       <string id="TS_CAMERA_REDIRECTION">Non consentire reindirizzamento dell'acquisizione video</string>
-      <string id="TS_LOCATION_REDIRECTION">Non consentire il reindirizzamento della posizione</string>
       <string id="TS_CLIENT_PRINTER">Non consentire il reindirizzamento della stampante client</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Questa impostazione dei criteri specifica se impedire la condivisione del contenuto degli Appunti (reindirizzamento degli Appunti) tra un computer remoto e un computer client durante una sessione di Servizi Desktop remoto.
 
@@ -212,15 +208,6 @@ Se abiliti questa impostazione di criteri, gli utenti non potranno reindirizzare
 
 Se disabiliti o non configuri questa impostazione di criteri, gli utenti possono reindirizzare i dispositivi di acquisizione video al computer remoto. È possibile utilizzare l'opzione Altro nella scheda Risorse locali di Connessione Desktop remoto per scegliere i dispositivi di acquisizione video per il reindirizzamento al computer remoto.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Questa impostazione dei criteri consente di controllare il reindirizzamento dei dati sulla posizione nel computer remoto in una sessione di Servizi Desktop remoto.
-
-Per impostazione predefinita, Servizi Desktop remoto consente il reindirizzamento dei dati di posizione.
-
-Se si abilita questa impostazione dei criteri, gli utenti non potranno reindirizzare i dati relativi alla posizione al computer remoto.
-
-Se si disabilita o non si configura questa impostazione dei criteri, gli utenti potranno reindirizzare i dati relativi alla posizione al computer remoto.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Questa impostazione consente di limitare il numero dei monitor utilizzabili da un utente per visualizzare una sessione di Servizi Desktop remoto. In questo modo è possibile ottenere un miglioramento delle prestazioni della connessione, soprattutto in presenza di collegamenti lenti, e ridurre il carico del server.
 
@@ -433,20 +420,23 @@ Se si abilita questa impostazione, le notifiche non verranno visualizzate nel se
 Se si disabilita o non si configura questa impostazione, le notifiche verranno visualizzate nel server host sessione Desktop remoto dopo l'accesso come amministratore locale.</string>
       <string id="TS_LICENSING_MODE">Imposta modalità gestione licenze Desktop remoto</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Questa impostazione dei criteri ti consente di specificare il tipo di licenza CAL (Client Access License) di Servizi Desktop remoto necessaria per connetterti al server Host sessione Desktop remoto.
+        Questa impostazione dei criteri consente di specificare il tipo di licenza CAL (Client Access License) di Servizi Desktop remoto necessario per connettersi al server Host sessione Desktop remoto.
 
-        Puoi utilizzare questa impostazione dei criteri per selezionare una delle modalità di gestione licenze seguenti: per utente o per dispositivo.
+        Puoi utilizzare questa impostazione dei criteri per selezionare una delle modalità di gestione licenze seguenti: Per Utente, Per Dispositivo e AAD per utente.
 
-        La modalità di gestione licenze per utente richiede che ogni account utente che si connette al server Host sessione Desktop remoto disponga di una licenza CAL per utente di Servizi Desktop remoto emessa da un server licenze Desktop remoto.
+        La modalità di gestione licenze Per Utente richiede che ogni account utente che si connette al server Host sessione Desktop remoto disponga di una licenza CAL Per Utente di Servizi Desktop remoto.
 
-        PLa modalità di gestione licenze per dispositivo richiede che ogni dispositivo che si connette al server Host sessione Desktop remoto disponga di una licenza CAL per dispositivo di Servizi Desktop remoto emessa da un server licenze Desktop remoto.
+        La modalità di gestione licenze Per Dispositivo richiede che ogni dispositivo che si connette al server Host sessione Desktop remoto disponga di una licenza CAL Per Dispositivo di Servizi Desktop remoto.
 
-        Se abiliti questa impostazione dei criteri, la modalità di gestione licenze di desktop remoto specificata verrà rispettata dal server licenze Desktop remoto e dall'host sessione Desktop remoto.
+        La modalità di gestione licenze AAD per utente richiede che ogni account utente che si connettere a questo server Host sessione Desktop remoto disponga di un piano di servizio che supporta le licenze Servizi Desktop remoto assegnate in AAD.
+        
+        Se si abilita questa impostazione dei criteri, la modalità di gestione licenze di Desktop remoto specificata verrà utilizzata dal server licenze Desktop remoto.
 
-        Se disabiliti o non configuri questa impostazione dei criteri, la modalità di gestione licenze non sarà specificata a livello di criteri di gruppo.
+        Se si disabilita o non si configura questa impostazione dei criteri, la modalità di gestione licenze non sarà specificata a livello di Criteri di gruppo.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Per Dispositivo</string>
       <string id="TS_LICENSING_MODE_PER_USER">Per utente</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD per utente</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Questa impostazione dei criteri specifica se impedire il reindirizzamento dei dati alle porte LPT dei client durante una sessione di Servizi Desktop remoto.
 
 È possibile utilizzare questa impostazione per impedire agli utenti di eseguire il mapping delle porte LPT locali e di reindirizzare i dati dal computer remoto alle porte LPT locali. Per impostazione predefinita, Servizi Desktop remoto consente il reindirizzamento dei dati alle porte LPT.
@@ -797,17 +787,6 @@ Se si abilita questa impostazione, verrà sempre visualizzato il desktop quando 
 Se si disabilita o non si configura questa impostazione, sarà possibile specificare un programma iniziale che deve essere eseguito nel computer client dopo la connessione del client al computer remoto. Se non si specifica un programma iniziale, verrà sempre visualizzato il desktop sul computer remoto alla connessione del client al computer remoto.
 
 Nota: se si abilita questa impostazione, verrà ignorata l'impostazione "Avvia un programma alla connessione".</string>
-      <string id="TS_UIA">Consenti reindirizzamento automazione interfaccia utente</string>
-      <string id="TS_UIA_EXPLAIN">Questa impostazione dei criteri determina se le applicazioni client di automazione dell'interfaccia utente in esecuzione nel computer locale possono accedere agli elementi dell'interfaccia utente nel server.
-
-L'automazione interfaccia utente concede ai programmi l'accesso alla maggior parte degli elementi dell'interfaccia utente, che consente di utilizzare i prodotti di Assistive Technology come lente di ingrandimento e Assistente vocale che devono interagire con l'interfaccia utente per il corretto funzionamento. Le informazioni sull'interfaccia utente consentono inoltre gli script di test automatizzati per interagire con l'interfaccia utente.
-
-Le sessioni di desktop remoto non supportano attualmente il reindirizzamento dell'automazione dell'interfaccia utente.
-
-Se si Abilita o non si configura questa impostazione dei criteri, tutti i client di automazione interfaccia utente nel computer locale potranno interagire con le app Remote. È ad esempio possibile utilizzare i client Assistente vocale e lente di ingrandimento del computer locale per interagire con l'interfaccia utente in una pagina Web aperta in una sessione remota.
-
-Se si disabilita questa impostazione dei criteri, i client di automazione interfaccia utente in esecuzione nel computer locale non possono interagire con le app Remote.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Questa impostazione dei criteri consente di specificare se richiedere al server Host sessione Desktop remoto l'autenticazione utente tramite Autenticazione a livello di rete per le connessioni remote. Questa impostazione dei criteri migliora la sicurezza in quanto richiede che l'autenticazione dell'utente avvenga in una fase precedente del processo di connessione remota.
 
 Se si abilita questa impostazione dei criteri, solo i computer client che supportano Autenticazione a livello di rete potranno connettersi al server Host sessione Desktop remoto.

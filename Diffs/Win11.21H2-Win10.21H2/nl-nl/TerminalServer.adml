@@ -5,8 +5,6 @@
   <description>typ hier een beschrijving</description>
   <resources>
     <stringTable>
-      <string id="TS_AUTOSUBSCRIPTION_NAME">Automatisch abonnement inschakelen</string>
-      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Hiermee bepaalt u de lijst met URL's waarvoor de gebruiker zich automatisch moet abonneren</string>
       <string id="TS_SUPPORTED_Windows10">Minimaal Windows 10 of Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Minimaal Windows 8 of Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Minimaal Windows Server 2012</string>
@@ -28,7 +26,6 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Minimaal Windows XP en alleen Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Minimaal Windows Server 2008 of Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Alleen Windows Server 2008 R2</string>
-      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 versie 1903, Windows 10 versie 1909 en Windows 10 versie 2004</string>
       <string id="TS_TERMINAL_SERVER">Host extern-bureaubladsessie</string>
       <string id="TS_TERMINAL_SERVER_Help">Hiermee beheert u de configuratie van de hostserver voor een extern-bureaubladsessie.</string>
       <string id="TS_LICENSE_SERVER">RD-licentieverlening</string>
@@ -147,7 +144,6 @@ Als u deze beleidsinstelling niet configureert, is omleiding van clientstations 
       <string id="TS_CLIENT_LPT">Omleiding naar LPT-poort verbieden</string>
       <string id="TS_CLIENT_PNP">Omleiding naar ondersteunde Plug-and-Play-apparaten niet toestaan</string>
       <string id="TS_CAMERA_REDIRECTION">Omleiden van video-opname niet toestaan</string>
-      <string id="TS_LOCATION_REDIRECTION">Omleiding van locatie niet toestaan</string>
       <string id="TS_CLIENT_PRINTER">Omleiden van clientprinter niet toestaan</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Deze beleidsinstelling bepaalt of het delen van de klembordinhoud (klembordomleiding) tussen een externe computer en een clientcomputer al dan niet moet worden verhinderd tijdens een sessie met Extern bureaublad-services.
 
@@ -212,15 +208,6 @@ Als u deze beleidsinstelling inschakelt, kunnen gebruikers hun video-opnameappar
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers hun video-opnameapparaten omleiden naar de externe computer. Met de optie Meer op het tabblad Lokale bronnen van Verbinding met extern bureaublad kunnen gebruikers selecteren welke video-opnameapparaten worden omgeleid naar de externe computer.
 
-</string>
-      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Met deze beleidsinstelling kunt u bepalen hoe de locatiegegevens worden omgeleid naar de externe computer in een sessie met extern bureaublad-services.
-
-Standaard is het omleiden van locatiegegevens door Extern bureaublad-services toegestaan.
-
-Als u deze beleidsinstelling inschakelt, kunnen gebruikers hun locatiegegevens niet omleiden naar de externe computer.
-
-Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers hun locatiegegevens omleiden naar de externe computer.
-          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Met deze beleidsinstelling kunt u het aantal beeldschermen beperken dat een gebruiker kan gebruiken voor het weergeven van een sessie met Extern bureaublad-services. Het beperken van het aantal beeldschermen kan de prestaties van een verbinding verbeteren (vooral als er sprake is van langzame verbindingen) en de belasting van de server verminderen.
 
@@ -430,20 +417,23 @@ Als u deze beleidsinstelling inschakelt, worden deze meldingen niet weergegeven 
 Als u deze beleidsinstelling uitschakelt of niet configureert, worden deze meldingen weergegeven op de hostserver voor extern-bureaubladsessies nadat u zich als lokale beheerder hebt aangemeld.</string>
       <string id="TS_LICENSING_MODE">Licentiemodus van Extern bureaublad instellen</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Met deze beleidsinstelling kunt u het type van de RDS CAL (Client Access License) voor extern bureaublad-services opgeven die nodig is om verbinding te maken met deze hostserver voor extern bureaublad-sessies.
+        Met deze beleidsinstelling kunt u het RDS CAL-type (Client Access License voor Extern bureaublad-services) opgeven dat nodig is om verbinding te maken met deze Extern bureaublad-sessiehostserver.
 
-U kunt deze beleidsinstelling gebruiken om een van de volgende licentieverleningsmodi te selecteren: per gebruiker of per apparaat.
+        U kunt deze beleidsinstelling gebruiken om een van de volgende drie licentiemodi te selecteren: per gebruiker, per apparaat en AAD per gebruiker.
 
-Voor de licentiemodus per gebruiker is vereist dat elk gebruikersaccount dat verbinding maakt met deze hostserver voor extern bureaublad-sessies een RDS CAL per gebruiker heeft die is uitgegeven door een extern bureaublad-licentieserver.
+        De licentiemodus per gebruiker vereist dat elke gebruikersaccount die verbinding maakt met deze Extern bureaublad-sessiehostserver een RDS CAL per gebruiker heeft die is uitgegeven door een Extern bureaublad-licentieserver.
 
-Voor de licentiemodus per apparaat is vereist dat elk apparaat dat verbinding maakt met deze hostserver voor extern bureaublad-sessies een RDS CAL per apparaat heeft die is uitgegeven door een extern bureaublad-licentieserver.
+        De licentiemodus per apparaat vereist dat elk apparaat dat verbinding maakt met deze Extern bureaublad-sessiehostserver een RDS CAL per apparaat heeft die is uitgegeven door een Extern bureaublad-licentieserver.
 
-Als u deze beleidsinstelling inschakelt, wordt de Extern bureaublad-licentiemodus die u opgeeft gerespecteerd door de Extern bureaublad-licentieserver en de Extern bureaublad-sessiehost.
+        De licentiemodus AAD per gebruiker vereist dat elke gebruikersaccount die verbinding maakt met deze Extern bureaublad-sessiehostserver een serviceplan heeft waarbij RDS-licenties in AAD zijn toegewezen.
+        
+        Als u deze beleidsinstelling inschakelt, wordt de opgegeven Extern bureaublad-licentiemodus gebruikt door de Extern bureaublad-licentieserver en RD-sessiehost.
 
-Als u deze beleidsinstelling uitschakelt of niet configureert, is de licentiemodus niet gedefinieerd in Groepsbeleid.
+        Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de licentiemodus niet opgegeven in Groepsbeleid.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Per apparaat</string>
       <string id="TS_LICENSING_MODE_PER_USER">Per gebruiker</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD per gebruiker</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Deze beleidsinstelling bepaalt of het omleiden van gegevens tijdens een sessie met Extern bureaublad-services naar LPT-poorten van clients moet worden geblokkeerd.
 
 Met deze instelling kunt u voorkomen dat gebruikers lokale LPT-poorten toewijzen en gegevens omleiden van de externe computer naar apparaten die op lokale LPT-poorten zijn aangesloten. Standaard is omleiding naar LPT-poorten in Extern bureaublad-services toegestaan.
@@ -792,17 +782,6 @@ Als u deze instelling inschakelt, wordt het bureaublad altijd weergegeven wannee
 Als u deze instelling uitschakelt of niet configureert, kunt u opgeven welk programma als eerste op de externe computer wordt gestart nadat de verbinding tussen de client en de externe computer tot stand is gekomen. Hebt u een dergelijk programma niet opgegeven, dan wordt altijd het bureaublad op de externe computer weergegeven nadat de verbinding tot stand is gekomen.
 
 Opmerking: als deze instelling is ingeschakeld, wordt de instelling Een programma starten na het verbinden genegeerd.</string>
-      <string id="TS_UIA">Omleiding van UI Automation toestaan</string>
-      <string id="TS_UIA_EXPLAIN">Met deze beleidsinstelling bepaalt u of gebruikersinterface-clients (UI) die worden uitgevoerd op de lokale computer toegang hebben tot UI-elementen op de server.
-
-Met UI Automation hebben Programma's toegang tot de meeste UI-elementen, waarmee u hulpprogramma's voor productondersteuning, zoals Vergrootglas en verteller, kunt gebruiken die moeten communiceren met de GEBRUIKERSINTERFACE om goed te kunnen werken. Met UI-gegevens kunnen geautomatiseerde testscripts ook communiceren met de GEBRUIKERSINTERFACE.
-
-Extern bureaublad-sessies ondersteunen momenteel geen automatisering van automatische GEBRUIKERSINTERFACE.
-
-Als u deze beleidsinstelling inschakelt of niet configureert, kunnen UI-automatiserings clients op uw lokale computer communiceren met externe apps. U kunt bijvoorbeeld de verteller-en vergrootglas-clients van de lokale computer gebruiken om te communiceren met de GEBRUIKERSINTERFACE op een webpagina die u in een externe sessie hebt geopend.
-
-Als u deze beleidsinstelling uitschakelt, kunnen UI-automatiserings clients die op uw lokale computer worden uitgevoerd, niet werken met externe apps.
-</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Met deze beleidsinstelling kunt u opgeven of gebruikersverificatie is vereist voor externe verbindingen met de hostserver voor extern-bureaubladsessies met behulp van verificatie op netwerkniveau. Deze beleidsinstelling verbetert de beveiliging doordat wordt vereist dat de gebruikersverificatie eerder in het externe-verbindingsproces plaatsvindt.
 
 Als u deze beleidsinstelling inschakelt, kunnen alleen clientcomputers die ondersteuning bieden voor verificatie op netwerkniveau verbinding maken met de hostserver voor extern-bureaubladsessies.
