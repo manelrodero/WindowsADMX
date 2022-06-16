@@ -3919,6 +3919,20 @@ InPrivate フィルターを使用すると、ユーザーが訪れた Web サ�
 この設定を有効にした場合は、Microsoft Edge のエンタープライズ モードでサイトが開かれたことを示す追加ページが Internet Explorer 11 で従業員に表示されます。
 
 この設定を無効にした場合または構成しなかった場合、追加ページは表示されずアプリの既定動作が実行されます。</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Internet Explorer ですべてのイントラネット サイトを保持する</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Internet Explorer 以外のブラウザーでイントラネット サイトが開かれないようにします。ただし、このポリシーは、"エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します" ('RestrictIE') ポリシーが有効になっていない場合は無効です。
+
+このポリシーを有効にした場合、すべてのイントラネット サイトが Internet Explorer 11 で開かれます。唯一の例外は、エンタープライズ モード サイト一覧にリストされているサイトです。
+
+このポリシーを無効にした場合、または構成しなかった場合、すべてのイントラネット サイトは自動的に Microsoft Edge で開かれます。
+
+このポリシーと、"すべてのイントラネット サイトを Internet Explorer に送る" ('SendIntranetToInternetExplorer') ポリシーの同期を保つことを強くお勧めします。さらに、イントラネット サイトに Microsoft Edge との互換性に関する既知の問題がある場合にのみ、このポリシーを有効にすることをお勧めします。
+
+関連ポリシー:
+- すべてのイントラネット サイトを Internet Explorer に送る ('SendIntranetToInternetExplorer')
+- エンタープライズ モード サイト一覧に含まれていないすべてのサイトを Microsoft Edge に送信します ('RestrictIE')
+
+このポリシーを他の関連するポリシーと共に使用して、組織に最適な構成を作成する方法の詳細については、https://go.microsoft.com/fwlink/?linkid=2094210 を参照してください。</string>
       <string id="VerMgmtDisable">Internet Explorer の古い ActiveX コントロールのブロックを無効する</string>
       <string id="IE_ExplainVerMgmtDisable">このポリシー設定では、Internet Explorer で特定の古い ActiveX コントロールをブロックするかどうかを決定します。イントラネット ゾーンでは、古い ActiveX コントロールがブロックされません。
 

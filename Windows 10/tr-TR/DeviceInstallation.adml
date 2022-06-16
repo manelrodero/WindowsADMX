@@ -19,11 +19,11 @@ Bu ilke ayarını etkinleştirirseniz veya yapılandırmazsanız Microsoft Windo
 Bu ayarı devre dışı bırakırsanız, Microsoft Windows Publisher sertifikası tarafından imzalanmış sürücüler yükleme için diğer Authenticode sertifikaları tarafından imzalanmış sürücülerden önce seçilir.</string>
       <string id="DeviceInstall_Category">Aygıt Yükleme</string>
       <string id="DeviceInstall_Classes_Allow">Bu aygıt kurulum sınıflarıyla eşleşen sürücüleri kullanan aygıtların yüklenmesine izin ver</string>
-      <string id="DeviceInstall_Classes_Allow_Help">Bu ilke ayarı, Windows'un yüklemesine izin verilen aygıt sürücüleri için bir aygıt kurulum sınıfı evrensel tek kimliği (GUID) listesi belirlemenize izin verir. Bu ilke ayarını yalnızca "Başka ilke ayarları tarafından açıklanmayan aygıtların yüklenmesini engelle" ilke ayarı etkinleştirildiğinde kullanın. Aygıt yüklemesini engelleyen diğer ilke ayarları bundan önce gelir.
+      <string id="DeviceInstall_Classes_Allow_Help">Bu ilke ayarı, Windows'un yüklemesine izin verilen cihaz sürücüleri için bir cihaz kurulum sınıfı evrensel tek kimliği (GUID) listesi belirlemenize izin verir. Bu ilke ayarını yalnızca "Başka ilke ayarları tarafından açıklanmayan cihazların yüklenmesini engelle" ilke ayarı etkinleştirildiğinde kullanın. Cihaz yüklemesini engelleyen diğer ilke ayarları bu ilkeye göre daha önceliklidir.
 
-Bu ilke ayarını etkinleştirirseniz başka bir ilke ayarı ("Bu aygıt kimlikleri ile eşleşen aygıtların yüklenmesini engelle" ilke ayarı, "Bu aygıt sınıfının aygıtlarını yüklemeyi engelle" ilke ayarı ya da "Kaldırılabilir aygıtların yüklemesini engelle" ilke ayarı gibi) yüklemeyi özellikle engellemedikçe Windows'un, aygıt kurulum sınıfı GUID'leri oluşturduğunuz listede görülen aygıt sünücülerini yükleme ya da güncelleştirmesine izin verilir. Bu ilke ayarını bir uzak masaüstü sunucusunda etkinleştirirseniz ilke ayarı belirtilen aygıtların bir uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
+Bu ilke ayarını etkinleştirirseniz başka bir ilke ayarı ("Bu cihaz kimlikleri ile eşleşen cihazların yüklenmesini engelle" ilke ayarı, "Bu cihaz sınıflarındaki cihazların yüklenmesini engelle" ilke ayarı, "Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesini engelle" ilke ayarı ya da "Çıkarılabilir cihazların yüklenmesini engelle" ilke ayarı gibi) yüklemeyi özellikle engellemedikçe Windows'un, oluşturduğunuz listede cihaz kurulum sınıfı GUID'leri görülen cihaz sürücülerini yüklemesine ya da güncelleştirmesine izin verilir. Bu ilke ayarını bir uzak masaüstü sunucusunda etkinleştirirseniz ilke ayarı belirtilen cihazların bir uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
 
-Bu ilke ayarını devre dışı bırakır ya da yapılandırmazsanız Windows, diğer ilke ayarları tarafından izin verilen ya da engellenen aygıtları yükleyebilir ya da engelleyebilir.</string>
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız ve cihazı belirleyen başka bir ilke ayarı yoksa "Başka ilke ayarları tarafından açıklanmayan cihazların yüklenmesini engelle" ilke ayarı, cihazın yüklenip yüklenmeyeceğine karar verir.</string>
       <string id="DeviceInstall_Classes_Deny">Bu aygıt kurulum sınıflarıyla eşleşen sürücüleri kullanan aygıtların yüklenmesini engelle</string>
       <string id="DeviceInstall_Classes_Deny_Help">Bu ilke ayarı, Windows'un yüklemesinin engellendiği aygıt sürücüleri için bir aygıt kurulum sınıfı evrensel tek kimlik (GUID) listesi belirlemenize izin verir. bu ilke ayarı Windows'un bir aygıt yüklemesine izin veren diğer tüm ilke ayarlarından önce gelir.
  
@@ -32,17 +32,29 @@ Bu ilke ayarını etkinleştirirseniz Windows'un, aygıt kurulum sınıfı GUID'
 Bu ilke ayarını devre dışı bırakır ya da yapılandırmazsanız Windows, diğer ilke ayarları tarafından izin verilen ya da engellenen aygıtları yükleyebilir ya da engelleyebilir.</string>
       <string id="DeviceInstall_Help">Aygıtların yüklenmesini denetleyen ilke ayarları.</string>
       <string id="DeviceInstall_IDs_Allow">Bu aygıt Kimliklerinden herhangi biriyle eşleşen aygıtların yüklenmesine izin ver</string>
-      <string id="DeviceInstall_IDs_Allow_Help">Bu ilke ayarı, Windows'un yüklemesine izin verilen aygıtlar için bir Tak ve Çalıştır donanım kimlikleri ve uyumlu kimlikler listesi belirlemenizi sağlar. Bu ilke ayarını yalnızca, "Başka ilke ayarları ile açıklanmamış aygıtların yüklenmesini engelle" ilke ayarı etkin olduğunda kullanın. Aygıt yüklemesini engelleyen diğer ilke ayarları bu ilke ayarından önce gelir.
+      <string id="DeviceInstall_IDs_Allow_Help">Bu ilke ayarı, Windows'un yüklemesine izin verilen cihazlar için bir Tak ve Kullan donanım kimlikleri ve uyumlu kimlikler listesi belirlemenizi sağlar. Bu ilke ayarını yalnızca "Başka ilke ayarları ile açıklanmamış cihazların yüklenmesini engelle" ilke ayarı etkinleştirildiğinde kullanın. Cihaz yüklemesini engelleyen diğer ilke ayarları bu ilke ayarına göre daha önceliklidir.
 
-Bu ilke ayarını etkinleştirirseniz başka bir ilke ayarı ("Bu Aygıt Kimliklerinden herhangi biriyle eşleşen aygıtların yüklenmesini engelle" ilke ayarı, "Bu aygıt sınıflarının aygıtlarının yüklenmesini engelle" ilke ayarı ya da "Kaldırılabilir aygıtların yüklenmesini engelle" ilke ayarı gibi) yüklemeyi özel olarak engellemedikçe Windows'un, Tak ve Çalıştır donanım kimliği ya da uyumlu kimliği oluşturduğunuz listede görünen tüm aygıtları yüklemesine ya da güncelleştirmesine izin verilir. Bu ilke ayarını bir uzak masaüstü sunucusunda etkinleştirirseniz ilke ayarı belirtilen aygıtların bir uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
+Bu ilke ayarını etkinleştirirseniz başka bir ilke ayarı ("Bu cihaz kimlikleri ile eşleşen cihazların yüklenmesini engelle" ilke ayarı, "Bu cihaz sınıflarındaki cihazların yüklenmesini engelle" ilke ayarı, "Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesini engelle" ilke ayarı ya da "Çıkarılabilir cihazların yüklenmesini engelle" ilke ayarı gibi) yüklemeyi özellikle engellemedikçe Windows'un, oluşturduğunuz listede Tak ve Kullan donanım kimliği veya uyumlu kimliği görülen cihazları yüklemesine ya da güncelleştirmesine izin verilir. Bu ilke ayarını bir uzak masaüstü sunucusunda etkinleştirirseniz ilke ayarı belirtilen cihazların bir uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
 
-Bu ilke ayarını devre dışı bırakır ya da yapılandırmazsanız ve aygıtı açıklayan başka ilke ayarı yoksa, "Başka ilke ayarları tarafından açıklanmayan aygıtların yüklenmesini engelle" ilke ayarı, aygıtın yüklenip yüklenmeyeceğini belirler.</string>
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız ve cihazı belirleyen başka bir ilke ayarı yoksa "Başka ilke ayarları tarafından açıklanmayan cihazların yüklenmesini engelle" ilke ayarı, cihazın yüklenip yüklenmeyeceğine karar verir.</string>
       <string id="DeviceInstall_IDs_Deny">Bu aygıt kimliklerinden herhangi biriyle eşleşen aygıtların yüklenmesini engelle</string>
       <string id="DeviceInstall_IDs_Deny_Help">Bu ilke ayarı, Windows'un yüklemesinin engellendiği aygıtlar için bir Tak ve Çalıştır donanım kimliği ve uyumlu kimlik listesi belirlemenizi sağlar. Bu ilke ayarı, Windows'un bir aygıt yüklemesine izin veren diğer tüm ilke ayarlarından önce gelir.
 
 Bu ilke ayarını etkinleştirirseniz Windows'un, donanım kimliği ya da uyumlu kimliği oluşturduğunuz listede görünen bir aygıtı yüklemesi engellenir. Bu ilke ayarını bir uzak masaüstü sunucusunda etkinleştirirseniz ilke ayarı, belirtilen aygıtların bir uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
 
 Bu ilke ayarını devre dışı bırakırsanız ya da yapılandırmazsanız diğer ilke ayarları tarafından izin verilen ya da engellenen aygıtlar yüklenebilir ya da güncellenebilir.</string>
+      <string id="DeviceInstall_Instance_IDs_Allow">Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesine izin ver</string>
+      <string id="DeviceInstall_Instance_IDs_Allow_Help">Bu ilke ayarı, Windows'un yüklemesine izin verilen cihazlar için bir Tak ve Kullan cihaz örneği kimlikleri listesi belirlemenizi sağlar. Bu ilke ayarını yalnızca "Başka ilke ayarları ile açıklanmamış cihazların yüklenmesini engelle" ilke ayarı etkinleştirildiğinde kullanın. Cihaz yüklemesini engelleyen diğer ilke ayarları bu ilke ayarına göre daha önceliklidir.
+
+Bu ilke ayarını etkinleştirirseniz başka bir ilke ayarı ("Bu cihaz kimlikleri ile eşleşen cihazların yüklenmesini engelle" ilke ayarı, "Bu cihaz sınıflarındaki cihazların yüklenmesini engelle" ilke ayarı, "Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesini engelle" ilke ayarı ya da "Çıkarılabilir cihazların yüklenmesini engelle" ilke ayarı gibi) yüklemeyi özellikle engellemedikçe Windows'un, oluşturduğunuz listede Tak ve Kullan cihaz örneği kimliği görülen cihazları yüklemesine ya da güncelleştirmesine izin verilir. Bu ilke ayarını bir uzak masaüstü sunucusunda etkinleştirirseniz ilke ayarı belirtilen cihazların bir uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız ve cihazı belirleyen başka bir ilke ayarı yoksa "Başka ilke ayarları tarafından açıklanmayan cihazların yüklenmesini engelle" ilke ayarı, cihazın yüklenip yüklenmeyeceğine karar verir.</string>
+      <string id="DeviceInstall_Instance_IDs_Deny">Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesini engelle:</string>
+      <string id="DeviceInstall_Instance_IDs_Deny_Help">Bu ilke ayarı, Windows'un yüklemesi engellenen cihazlar için bir Tak ve Kullan cihaz örneği kimliği listesi belirlemenizi sağlar. Bu ilke ayarı, Windows'un bir cihazı yüklemesine izin veren herhangi bir ilke ayarına göre daha önceliklidir.
+
+Bu ilke ayarını etkinleştirirseniz Windows'un, oluşturduğunuz listede cihaz örnek kimliği görülen cihazı yüklemesi engellenir. Bu ilke ayarını bir uzak masaüstü sunucusunda etkinleştirirseniz ilke ayarı belirtilen cihazların bir uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız diğer ilke ayarları tarafından izin verilen veya engellenen cihazlar yüklenebilir veya güncelleştirilebilir.</string>
       <string id="DeviceInstall_InstallTimeout">Aygıt yüklemesi zaman aşımını yapılandır</string>
       <string id="DeviceInstall_InstallTimeout_Help">Bu ilke ayarı, bir cihaz yükleme görevinin tamamlanması için Windows'un beklediği zamanı saniye cinsinden yapılandırmanıza izin verir. 
 
@@ -70,11 +82,11 @@ Bu ilke ayarını etkinleştirirseniz Tak ve Çalıştır arabirimine uzaktan ba
 	  
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız Tak ve Çalıştır arabirimi uzaktan bağlantılara izin verilmez.</string>
       <string id="DeviceInstall_Unspecified_Deny">Başka ilke ayarları tarafından açıklanmayan aygıtların yüklenmesini engelle</string>
-      <string id="DeviceInstall_Unspecified_Deny_Help">Bu ilke ayarı, diğer herhangi bir ilke ayarı tarafından özellikle açıklanmayan aygıtların yüklenmesini engellemenizi sağlar.
+      <string id="DeviceInstall_Unspecified_Deny_Help">Bu ilke ayarı, diğer herhangi bir ilke ayarı tarafından özellikle açıklanmayan cihazların yüklenmesini engellemenizi sağlar.
 
-Bu ilke ayarını etkinleştirirseniz Windows'un, "Bu aygıt kimliklerinden herhangi biriyle eşleşen aygıtların yüklenmesine izin ver" ya da "Bu aygıt sınıflarındaki aygıtların yüklenmesine izin ver" ilke ayarıyla açıklanmayan tüm aygıtların aygıt sürücüsünü yüklemesi ya da güncelleştirmesi engellenir.
+Bu ilke ayarını etkinleştirirseniz Windows'un, "Bu cihaz kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesine izin ver", "Bu cihaz sınıflarındaki cihazların yüklenmesine izin ver" ya da "Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesine izin ver" ilke ayarıyla açıklanmayan tüm cihazların cihaz sürücüsünü yüklemesi ya da güncelleştirmesi engellenir.
 
-Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Windows'un, "Bu aygıt kimliklerinden herhangi biriyle eşleşen aygıtların yüklenmesini engelle", "Bu aygıt sınıflarındaki aygıtların yüklenmesini engelle" veya "Çıkarılabilir aygıtların yüklenmesini engelle" ilke ayarıyla açıklanmayan tüm aygıtların aygıt sürücüsünü yüklemesine ve güncelleştirmesine izin verilir.</string>
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Windows'un, "Bu cihaz kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesini engelle", "Bu cihaz sınıflarındaki cihazların yüklenmesini engelle", "Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesini engelle" ya da "Çıkarılabilir cihazların yüklenmesini engelle" ilke ayarıyla açıklanmayan tüm cihazların cihaz sürücüsünü yüklemesine ve güncelleştirmesine izin verilir.</string>
       <string id="DeviceInstall_DeniedPolicy_SimpleText">Aygıt yüklemesi bir ilke ayarı tarafından engellendiğinde özel bir ileti başlığı göster</string>
       <string id="DeviceInstall_DeniedPolicy_SimpleText_Help">Bu ilke ayarı bir aygıt yüklemesi denendiğinde ve bir ilke ayarı bu yüklemeyi engellediğinde bildirimde özel bir ileti başlığı görüntülemenizi sağlar.
 
@@ -147,6 +159,19 @@ Not: Yeniden başlatma zorunlu tutulmazsa, sistem yeniden başlatılana kadar ay
         <text>bir Tak ve Kullan donanımı kimliği veya uyumlu bir kimlik yazın</text>
         <text>(örneğin, gendisk, USB\COMPOSITE, USB\Class_ff).</text>
         <checkBox refId="DeviceInstall_IDs_Deny_Retroactive">Ayrıca zaten yüklü olan eşleşen aygıtlara da uygulayın.</checkBox>
+      </presentation>
+      <presentation id="DeviceInstall_Instance_IDs_Allow">
+        <listBox refId="DeviceInstall_Instance_IDs_Allow_List">Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesine izin ver:</listBox>
+        <text>Cihazların listesini oluşturmak için Göster'e tıklayın. İçeriği Göster iletişim kutusundaki Değer sütununa</text>
+        <text>bir Tak ve Kullan cihaz örneği kimliği yazın</text>
+        <text>(örneğin, USB\VID_045E&amp;&amp;PID_0123\01234567890123456789).</text>
+      </presentation>
+      <presentation id="DeviceInstall_Instance_IDs_Deny">
+        <listBox refId="DeviceInstall_Instance_IDs_Deny_List">Bu cihaz örneği kimliklerinden herhangi biriyle eşleşen cihazların yüklenmesini engelle:</listBox>
+        <text>Cihazların listesini oluşturmak için Göster'e tıklayın. İçeriği Göster iletişim kutusundaki Değer sütununa</text>
+        <text>bir Tak ve Kullan cihaz örneği kimliği yazın</text>
+        <text>(örneğin, USB\VID_045E&amp;&amp;PID_0123\01234567890123456789).</text>
+        <checkBox refId="DeviceInstall_Instance_IDs_Deny_Retroactive">Ayrıca zaten yüklü olan eşleşen cihazlara da uygulayın.</checkBox>
       </presentation>
       <presentation id="DeviceInstall_InstallTimeout">
         <decimalTextBox refId="DeviceInstall_InstallTimeout_Time" defaultValue="300" spinStep="15">Aygıt Yükleme Zaman Aşımı (saniye olarak)</decimalTextBox>

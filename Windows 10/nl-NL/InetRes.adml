@@ -3914,6 +3914,20 @@ Opmerking: als u ook de beleidsinstelling Beheersjablonen\Windows-onderdelen\Mic
 Als u deze instelling inschakelt, kunnen werknemers een extra pagina zien in Internet Explorer 11, met de melding dat een site is geopend in Microsoft Edge vanuit de Ondernemingsmodus.
 
 Als u deze instelling uitschakelt of niet configureert, past de app de standaardprocedures toe en wordt er geen extra pagina weergegeven.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Alle intranetsites in Internet Explorer houden</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Met deze beleidsregel kunt u voorkomen dat intranetpagina's worden geopend in andere browsers dan Internet Explorer. Houd er rekening mee dat deze beleidsregel geen effect heeft als de beleidsregel 'Alle sites die niet zijn opgenomen in de lijst met websites voor de ondernemingsmodus doorzenden naar Microsoft Edge' ('RestrictIE') niet is ingeschakeld.
+
+Als u deze beleidsregel inschakelt, worden alle intranetpagina's geopend in Internet Explorer 11. De enige uitzonderingen hierop zijn intranetsites die zijn vermeld in uw lijst met websites voor de Ondernemingsmodus.
+
+Als u deze beleidsregel uitschakelt of niet configureert, worden alle intranetsites automatisch geopend in Microsoft Edge.
+
+Het wordt sterk aanbevolen om deze beleidsregel te synchroniseren met de beleidsregel 'Alle intranetsites doorsturen naar Internet Explorer' (‘SendIntranetToInternetExplorer’). Het is ook beter om deze beleidsregel alleen in te schakelen als u weet dat uw intranetsites niet volledig compatibel zijn met Microsoft Edge.
+
+Gerelateerde beleidsregels:
+- Alle intranetsites doorsturen naar Internet Explorer ('SendIntranetToInternetExplorer')
+- Alle sites die niet zijn opgenomen in de lijst met websites voor de ondernemingsmodus doorzenden naar Microsoft Edge ('RestrictIE')
+
+Meer informatie over hoe u deze beleidsregel kunt combineren met gerelateerde beleidsregels om de optimale configuratie voor uw organisatie samen te stellen, vindt u in https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Blokkering van verouderde ActiveX-besturingselementen voor Internet Explorer uitschakelen</string>
       <string id="IE_ExplainVerMgmtDisable">Met deze beleidsinstelling wordt bepaald of in Internet Explorer specifieke verouderde ActiveX-besturingselementen worden geblokkeerd. Verouderde ActiveX-besturingselementen worden nooit geblokkeerd in de intranetzone.
 

@@ -3917,6 +3917,20 @@ Bemærk! Hvis du også aktiverer politikindstillingen Administrative skabeloner\
 Hvis du aktiverer denne indstilling, ser medarbejderne en ekstra side i Internet Explorer 11, der angiver, at et websted er blevet åbnet ved hjælp af Microsoft Edge i Enterprise-tilstand.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anvendes appens standardfunktionsmåde, og der vises ingen ekstra side.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Behold alle intranetwebsteder i Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Forhindrer, at intranetwebsteder åbnes i andre browsere end Internet Explorer. Bemærk dog, at denne politik ikke har nogen effekt, hvis politikken "Send alle de websteder, der ikke er inkluderet på listen over websteder i Enterprise-tilstand til Microsoft Edge" ("RestrictIE") ikke er aktiveret.
+
+Hvis du aktiverer denne politik, åbnes alle intranetwebsteder i Internet Explorer 11. De eneste undtagelser er webstederne på listen over websteder i Enterprise-tilstand.
+
+Hvis du deaktiverer eller ikke konfigurerer denne politik, åbnes alle intranetwebsteder automatisk i Microsoft Edge.
+
+Vi anbefaler på det kraftigste, at denne politik holdes synkroniseret med politikken "Send al intranettrafik til Internet Explorer" ("SendIntranetToInternetExplorer"). Desuden er det bedst kun at aktivere denne politik, hvis dine intranetwebsteder har kendte kompatibilitetsproblemer med Microsoft Edge.
+
+Relaterede politikker:
+- Send alle intranetwebsteder til Internet Explorer" ("SendIntranetToInternetExplorer")
+- Send alle de websteder, der ikke er inkluderet på listen over websteder i Enterprise-tilstand til Microsoft Edge ("RestrictIE")
+
+Du kan få flere oplysninger om, hvordan denne politik bruges sammen med andre relaterede politikker for at oprette den bedste konfiguration for din organisation, på https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Deaktiver blokering af forældede ActiveX-kontrolelementer til Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Denne politikindstilling bestemmer, om Internet Explorer blokerer specifikke forældede ActiveX-kontrolelementer. Forældede ActiveX-kontrolelementer blokeres aldrig i intranetzonen.
 

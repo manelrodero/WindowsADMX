@@ -3917,6 +3917,20 @@ Internet Explorer 9 和 10:
 若啟用此設定，員工會在 Internet Explorer 11 中看到額外的頁面，說明已使用 Microsoft Edge 搭配「企業模式」開啟網站。
 
 若停用或未設定此設定，會發生預設 App 行為，而且不會顯示額外的頁面。</string>
+      <string id="KeepIntranetSitesInInternetExplorer">保留 Internet Explorer 中所有的內部網路網站</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">防止在 Internet Explorer 之外的任何瀏覽器中開啟內部網路網站。但請注意，如果未啟用 [將未包含在企業模式網站清單中的所有網站，傳送到 Microsoft Edge] ([RestrictIE]) 原則，則此原則將無效。
+
+如果啟用此原則，則所有內部網路網站都將在 Internet Explorer 11 中開啟。僅企業模式網站清單中所列的網站除外。
+
+如果停用或未設定此原則，則所有內部網路網站都將自動在 Microsoft Edge 中開啟。
+
+我們強烈建議將此原則與 [將所有內部網路網站傳送到 Internet Explorer]([SendIntranetToInternetExplorer]) 原則保持同步。此外，最好僅在您的內部網路網站與 Microsoft Edge 存在已知的相容性問題時，才啟用此原則。
+
+相關原則: 
+-將所有內部網路網站傳送到 Internet Explorer ([SendIntranetToInternetExplorer]) 
+-將未包含在企業模式網站清單中的所有網站，傳送到 Microsoft Edge ([RestrictIE])
+
+有關如何將此原則與其他相關原則一起使用，以為您的組織建立最佳設定的詳細資訊，請參閱 https://go.microsoft.com/fwlink/?linkid=2094210。</string>
       <string id="VerMgmtDisable">為 Internet Explorer 關閉封鎖已過期的 ActiveX 控制項。</string>
       <string id="IE_ExplainVerMgmtDisable">這個原則設定決定 Internet Explorer 是否會封鎖特定已過期的 ActiveX 控制項。「內部網路區域」永不會封鎖已過期的 ActiveX 控制項。
 

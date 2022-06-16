@@ -3917,6 +3917,20 @@ Remarque : si vous avez également activé le paramètre de stratégie Modèles
 Si vous activez ce paramètre, les employés voient une page supplémentaire dans Internet Explorer 11, indiquant qu’un site a été ouvert avec Microsoft Edge en mode Entreprise.
 
 Si vous désactivez ce paramètre ou si vous ne le configurez pas, le comportement par défaut de l’application s’applique et aucune page supplémentaire n’apparaît.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Conserver tous les sites intranet dans Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Empêche l’ouverture des sites intranet dans un navigateur, à l’exception d’Internet Explorer. Mais, si la stratégie « Envoyer tous les sites non inclus dans la liste des sites en mode Entreprise vers Microsoft Edge » (« RestrictIE ») n’est pas activée, cette stratégie n’a aucun effet.
+
+Si vous activez cette stratégie, tous les sites intranet sont ouverts dans Internet Explorer 11. Les seules exceptions sont les sites répertoriés dans votre liste des sites en mode Entreprise.
+
+Si vous désactivez cette stratégie ou si vous ne la configurez pas, tous les sites intranet sont automatiquement ouverts dans Microsoft Edge.
+
+Nous vous recommandons vivement de garder cette stratégie synchronisée avec la stratégie « Envoyer tout le trafic intranet vers Internet Explorer » (« SendIntranetToInternetExplorer »). En outre, il est recommandé de n’activer cette stratégie que si vos sites intranet présentent des problèmes de compatibilité connus avec Microsoft Edge.
+
+Stratégies associées :
+- Envoyer tout le trafic intranet vers Internet Explorer (« SendIntranetToInternetExplorer »)
+- Envoyer tous les sites non inclus dans la liste des sites en mode Entreprise vers Microsoft Edge (« RestrictIE »)
+
+Pour plus d’informations sur l’utilisation de cette stratégie avec d’autres stratégies associées afin de créer la configuration optimale pour votre organisation, voir https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Désactiver le blocage des contrôles ActiveX obsolètes par Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Ce paramètre de stratégie détermine si Internet Explorer bloque certains contrôles ActiveX obsolètes. Les contrôles ActiveX obsolètes ne sont jamais bloqués dans la Zone Intranet.
 

@@ -3917,6 +3917,20 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果启用此设置，则员工会在 Internet Explorer 11 中看到一个指出某个站点已在企业模式下使用 Microsoft Edge 打开的附加页。
 
 如果禁用或未配置此设置，则会出现默认应用行为，不显示任何附加页。</string>
+      <string id="KeepIntranetSitesInInternetExplorer">在 Internet Explorer 中保留所有 Intranet 站点</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">阻止 Intranet 站点在除 Internet Explorer 以外的任何浏览器中打开。但请注意，如果“将企业模式站点列表中不包含的所有站点发送到 Microsoft Edge”("RestrictIE") 策略未启用，则此策略不起作用。
+
+如果启用此策略，则会在 Internet Explorer 11 中打开所有 Intranet 站点。唯一例外是在企业模式站点列表中列出的站点。
+
+如果禁用或未配置此策略，则会在 Microsoft Edge 中自动打开所有 Intranet 站点。
+
+强烈建议将此策略与“将所有 Intranet 站点发送到 Internet Explorer”("SendIntranetToInternetExplorer") 策略保持同步。此外，如果你的 Intranet 站点与 Microsoft Edge 之间存在已知的兼容性问题，最好启用此策略。
+
+相关策略:
+- 将所有 Intranet 站点发送到 Internet Explorer ("SendIntranetToInternetExplorer")
+- 将企业模式站点列表中不包含的所有站点发送到 Microsoft Edge ("RestrictIE")
+
+有关如何将此策略与其他相关策略结合使用以为你的组织创建最佳配置的详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2094210。</string>
       <string id="VerMgmtDisable">关闭 Internet explorer 的过时 ActiveX 控件的阻止功能</string>
       <string id="IE_ExplainVerMgmtDisable">此策略设置可确定 Internet Explorer 是否会阻止特定的过时 ActiveX 控件。过时的 ActiveX 控件在 Intranet 区域中不受阻止。
 

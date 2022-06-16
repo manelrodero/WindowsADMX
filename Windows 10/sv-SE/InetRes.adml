@@ -3921,6 +3921,20 @@ Obs! Om du även aktiverar principinställningen Administrativa mallar\Windows-k
 Om du aktiverar inställningen visas en extra sida i Internet Explorer 11 som indikerar att en webbplats har öppnats med Microsoft Edge i företagsläge.
 
 Om du inaktiverar eller låter bli att konfigurera inställningen visas ingen extra sida.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Behåll alla intranätplatser i Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Förhindrar att webbplatser öppnas i andra webbläsare än Internet Explorer. Observera att den här principen har ingen verkan om principen Skicka alla webbplatser som inte ingår i listan över webbplatser i företagsläge till Microsoft Edge (RestrictIE) inte är aktiverad.
+
+Om du aktiverar den här principen öppnas alla intranätplatser i Internet Explorer 11. De enda undantagen är webbplatserna i listan över webbplatser i företagsläge.
+
+Om du inaktiverar eller låter bli att konfigurera den här principen öppnas alla intranätplatser automatiskt i Microsoft Edge.
+
+Vi rekommenderar att du håller den här principen i synk med principen Skicka alla intranätplatser till Internet Explorer (SendIntranetToInternetExplorer). Det är också bäst att bara aktivera den här principen om dina intranätplatser har kända kompatibilitetsproblem med Microsoft Edge.
+
+Relaterade principer:
+- Skicka alla intranätplatser till Internet Explorer (SendIntranetToInternetExplorer)
+- Skicka alla webbplatser som inte ingår i listan över webbplatser i företagsläge till Microsoft Edge (RestrictIE)
+
+Mer information om hur du använder den här principen ihop med andra relaterade principer för att skapa den optimala konfigurationen för din organisation hittar du i https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Inaktivera blockering av inaktuella ActiveX-kontroller för Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Den här principinställningen anger om Internet Explorer blockerar specifika inaktuella ActiveX-kontroller. Inaktuella ActiveX-kontroller blockeras aldrig i zonen Intranät.
 

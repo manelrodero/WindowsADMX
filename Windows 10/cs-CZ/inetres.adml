@@ -248,7 +248,7 @@ Pokud toto nastavení zásad nenakonfigurujete, uživatel může ladicí prostř
       <string id="DisablePopupFilterLevel">Zabránit změně úrovně filtru automaticky otevíraných oken</string>
       <string id="DisableToolbarUpgrader">Vypnout aktualizační nástroj panelu nástrojů</string>
       <string id="DisplayScriptFailureUI">Při selhání načtení skriptu proxy serveru zobrazit chybové hlášení</string>
-      <string id="DisplaySettings">Nastavení zobrazení</string>
+      <string id="DisplaySettings">Nastavení obrazovky</string>
       <string id="Enable_Compat_Logging">Zapnout protokolování kompatibility</string>
       <string id="InternetCPL">Ovládací panel Možnosti Internetu</string>
       <string id="Encoding">Kódování URL</string>
@@ -3917,6 +3917,20 @@ Poznámka: Pokud jste zároveň povolili nastavení zásady Šablony pro správu
 Pokud toto nastavení zásad povolíte, uživatelům se v Internet Exploreru 11 zobrazí další stránka se zprávou, že web se otevřel v Microsoft Edgi v podnikovém režimu.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se aplikace chovat výchozím způsobem a žádná další stránka se nezobrazí.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Všechny intranetové weby otevírat výhradně v Internet Exploreru</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Zabrání otevírání intranetových webů v jiném prohlížeči než v Internet Exploreru. Je ale nutné myslet na to, že pokud není povolená zásada Posílat do Microsoft Edge všechny weby, které nejsou v seznamu webů podnikového režimu  (RestrictIE), nebude mít tato zásada žádný vliv.
+
+Pokud povolíte tuto zásadu, budou se všechny intranetové weby otevírat v Internet Exploreru 11. Jedinou výjimkou jsou weby, které máte uvedené v seznamu webů využívajících Režim rozlehlé sítě.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou se všechny intranetové weby automaticky otevírat v Microsoft Edgi.
+
+Důrazně doporučujeme mít tuto zásadu nastavenou v souladu s nastavením zásady Posílat všechny intranetové weby do Internet Exploreru (SendIntranetToInternetExplorer). Tuto zásadu je navíc nejvhodnější povolit pouze v případě, že mají vaše intranetové weby známé problémy s kompatibilitou v Microsoft Edgi.
+
+Související zásady:
+- Posílat všechny intranetové weby do Internet Exploreru (SendIntranetToInternetExplorer)
+- Posílat do Microsoft Edge všechny weby, které nejsou v seznamu webů podnikového režimu  (RestrictIE)
+
+Další informace o tom, jak vytvořit optimální konfiguraci pro vaši organizaci používáním této zásady společně s dalšími souvisejícími zásadami, najdete na https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Vypnout blokování zastaralých ovládacích prvků ActiveX pro Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Nastavení této zásady určuje, jestli bude Internet Explorer blokovat určité zastaralé ovládací prvky ActiveX. Zastaralé ovládací prvky ActiveX v zóně Intranet se nikdy neblokují.
 

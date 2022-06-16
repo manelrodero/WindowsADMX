@@ -3921,6 +3921,20 @@ Observação: se você também tiver habilitado a configuração de política Mo
 Se você habilitar essa configuração, os funcionários verão uma página adicional no Internet Explorer 11, indicando que um site foi aberto usando o Microsoft Edge com o Modo Empresarial.
 
 Se você desabilitar ou não definir essa configuração, o comportamento padrão do aplicativo ocorrerá e nenhuma página adicional será exibida.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Manter todos os sites da intranet no Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Impede que sites da intranet sejam abertos em qualquer navegador que não seja o Internet Explorer. Observe que, se a política "Enviar todos os sites não incluídos na Enterprise Mode Site List para o Microsoft Edge" ("RestrictIE") não estiver habilitada, esta política não terá efeito.
+
+Se você habilitar esta política, todos os sites da intranet serão abertos no Internet Explorer 11. As únicas exceções serão os sites relacionados na lista de sites do modo empresarial.
+
+Se você desabilitar ou não configurar esta política, todos os sites da intranet serão abertos automaticamente no Microsoft Edge.
+
+É altamente recomendável manter esta política em sincronia com a política "Enviar todos os sites da intranet para o Internet Explorer" ("SendIntranetToInternetExplorer"). Além disso, é recomendável habilitar esta política somente se os sites da intranet tiverem problemas de compatibilidade conhecidos com o Microsoft Edge.
+
+Políticas relacionadas:
+- Enviar todos os sites da intranet para o Internet Explorer (" SendIntranetToInternetExplorer")
+- Enviar todos os sites não incluídos na Enterprise Mode Site List para o Microsoft Edge ("RestrictIE")
+
+Para obter mais informações sobre como usar esta política em conjunto com outras políticas relacionadas para criar a configuração ideal para sua organização, consulte https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Desativar bloqueio de controles ActiveX desatualizados do Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Essa configuração de política determina se o Internet Explorer bloqueia controles ActiveX desatualizados específicos. Controles ActiveX desatualizados nunca são bloqueados na zona da Intranet.
 

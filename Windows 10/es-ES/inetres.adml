@@ -3911,6 +3911,20 @@ Nota: Si has habilitado también la configuración de directiva Plantillas admin
 Si habilitas esta configuración, los empleados verán una página adicional en Internet Explorer 11 que les indicará que se ha abierto un sitio mediante Microsoft Edge con el Modo de empresa.
 
 Si deshabilitas o no configuras esta opción, se aplicará el comportamiento predeterminado de la aplicación y no aparecerá ninguna página adicional.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Mantener todos los sitios de la intranet en Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Impide que los sitios de la intranet se abran en cualquier explorador, excepto en Internet Explorer. Sin embargo, ten en cuenta que si la directiva "Enviar todos los sitios que no están incluidos en la lista de sitios del modo de empresa a Microsoft Edge" ("RestrictIE") no está habilitada, esta directiva no tendrá ningún efecto.
+
+ Si habilitas esta directiva, todos los sitios de la intranet se abrirán en Internet Explorer 11. Las únicas excepciones son los sitios que se muestran en la lista de sitios del modo de empresa.
+
+Si deshabilitas o no configuras esta directiva, todos los sitios de la intranet se abrirán automáticamente en Microsoft Edge.
+
+ Recomendamos encarecidamente mantener esta directiva sincronizada con la directiva "Enviar todos los sitios de la intranet a Internet Explorer" ("SendIntranetToInternetExplorer"). Además, es mejor habilitar esta directiva solo si los sitios de la intranet tienen problemas de compatibilidad conocidos con Microsoft Edge.
+
+Directivas relacionadas:
+- Enviar todos los sitios de la intranet a Internet Explorer ("SendIntranetToInternetExplorer")
+- Enviar todos los sitios que no están incluidos en la lista de sitios del modo de empresa a Microsoft Edge ("RestrictIE")
+
+ Para obtener más información sobre cómo usar esta directiva junto con otras directivas relacionadas para crear la configuración óptima para la organización, consulta https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Desactivar el bloqueo de controles ActiveX obsoletos para Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Esta configuración de directiva determina si Internet Explorer bloquea determinados controles ActiveX obsoletos. Nunca se bloquean los controles ActiveX obsoletos en la zona de Intranet.
 

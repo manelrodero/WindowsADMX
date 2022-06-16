@@ -3917,6 +3917,20 @@ Nota: se è stata abilitata anche l'impostazione Modelli amministrativi\Componen
 Se si abilita questa impostazione, i dipendenti visualizzano una pagina aggiuntiva in Internet Explorer 11, in cui viene indicato che un sito è stato aperto tramite Microsoft Edge con la modalità Enterprise.
 
 Se si disabilita o non si configura questa impostazione, viene applicato il comportamento predefinito dell'app e non è visualizzata alcuna pagina aggiuntiva.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Mantieni tutti i siti Intranet in Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Impedisce ai siti Intranet di essere aperti da qualsiasi altro browser che non sia Internet Explorer. Nota che se i criteri "Invia a Microsoft Edge tutti i siti non inclusi nell'elenco siti modalità Enterprise" ("RestrictIE") non sono abilitati, questi criteri non hanno effetto.
+
+Se abiliti questi criteri, tutti i siti Intranet vengono aperti in Internet Explorer 11. Le uniche eccezioni sono i siti elencati nell'elenco dei siti in modalità Enterprise.
+
+Se questi criteri sono disabilitati o non configurati, tutti i siti Intranet vengono aperti automaticamente in Microsoft Edge.
+
+Ti consigliamo di mantenere sincronizzati questi criteri con i criteri "Invia tutti i siti Intranet a Internet Explorer" ("SendIntranetToInternetExplorer"). Inoltre, sarebbe opportuno abilitare questi criteri solo se i tuoi siti Intranet mostrano problemi di compatibilità noti con Microsoft Edge.
+
+Criteri correlati:
+- Invia tutti i siti Intranet a Internet Explorer ("SendIntranetToInternetExplorer")
+- Invia tutti i siti non inclusi nell'elenco siti in modalità Enterprise in Microsoft Edge ("RestrictIE")
+
+Per ulteriori informazioni sulla modalità di utilizzo di questi criteri insieme ad altri criteri per creare la configurazione ottimale per la tua organizzazione, vedi https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Disattiva blocco dei controlli ActiveX obsoleti per Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Questa impostazione dei criteri determina se Internet Explorer blocca specifici controlli ActiveX obsoleti. I controlli ActiveX obsoleti non vengono mai bloccati nell'area Intranet.
 

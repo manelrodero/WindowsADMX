@@ -3917,6 +3917,20 @@ Note: If you've also enabled the Administrative Templates\Windows Components\Mic
 If you enable this setting, employees see an additional page in Internet Explorer 11, stating that a site has been opened using Microsoft Edge with Enterprise Mode.
 
 If you disable or don't configure this setting, the default app behavior occurs and no additional page appears.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Keep all intranet sites in Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Prevents intranet sites from being opened in any browser except Internet Explorer. But note that If the ‘Send all sites not included in the Enterprise Mode Site List to Microsoft Edge’ (‘RestrictIE’) policy isn’t enabled, this policy has no effect.
+
+If you enable this policy, all intranet sites are opened in Internet Explorer 11. The only exceptions are sites listed in your Enterprise Mode Site List.
+
+If you disable or don’t configure this policy, all intranet sites are automatically opened in Microsoft Edge.
+
+We strongly recommend keeping this policy in sync with the ‘Send all intranet sites to Internet Explorer’ (‘SendIntranetToInternetExplorer’) policy. Additionally, it’s best to enable this policy only if your intranet sites have known compatibility problems with Microsoft Edge.
+
+Related policies:
+- Send all intranet sites to Internet Explorer (‘SendIntranetToInternetExplorer’)
+- Send all sites not included in the Enterprise Mode Site List to Microsoft Edge (‘RestrictIE’)
+
+For more info about how to use this policy together with other related policies to create the optimal configuration for your organization, see https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Turn off blocking of outdated ActiveX controls for Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">This policy setting determines whether Internet Explorer blocks specific outdated ActiveX controls. Outdated ActiveX controls are never blocked in the Intranet Zone.
 

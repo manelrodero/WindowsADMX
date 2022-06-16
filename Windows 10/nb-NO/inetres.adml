@@ -3917,6 +3917,20 @@ Obs!  Hvis du også har aktivert policyinnstillingen Administrative maler\Window
 Hvis du aktiverer denne innstillingen, ser de ansatte en tilleggsside i Internet Explorer 11 der det står at et område er åpnet med Microsoft Edge i organisasjonsmodus.
 
 Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, brukes standard virkemåte for appen, og ingen tilleggsside vises.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Behold alle intranettområder i Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Hindrer at intranettområder åpnes i andre nettlesere enn Internet Explorer. Vær imidlertid oppmerksom på at hvis policyen Send alle områder som ikke er inkludert i listen over nettstedsplasseringer for Organisasjonsmodus, til Microsoft Edge (RestrictIE) ikke er aktivert, har ikke denne policyen noen innvirkning.
+
+Hvis du aktiverer denne policyen, åpnes alle intranettområder i Internet Explorer 11. De eneste unntakene er oppført i nettstedslisten for organisasjonsmodus.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyen, åpnes alle intranettområder automatisk i Microsoft Edge.
+
+Vi anbefaler på det sterkeste at denne policyen er synkronisert med policyen Send alle intranettområder til Internet Explorer (SendIntranetToInternetExplorer). I tillegg er det best å aktivere denne policyen bare hvis intranettområdene har kjente kompatibilitetsproblemer med Microsoft Edge.
+
+Tilknyttede policyer:
+– Send alle intranettområder til Internet Explorer (SendIntranetToInternetExplorer)
+– Send alle områder som ikke er inkludert i listen over nettstedsplasseringer for Organisasjonsmodus, til Microsoft Edge (RestrictIE)
+
+Hvis du vil ha mer informasjon om bruk av denne policyen sammen med andre tilknyttede policyer for å opprette den optimale konfigurasjonen for organisasjonen, kan du se https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Deaktiver blokkering av utdaterte ActiveX-kontroller for Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">Denne policyinnstillingen fastslår om Internet Explorer blokkerer angitte, utdaterte ActiveX-kontroller. Utdaterte ActiveX-kontroller blir aldri blokkert i det lokale intranettet.
 

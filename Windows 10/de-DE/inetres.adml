@@ -3917,6 +3917,20 @@ Hinweis: Wenn Sie zusätzlich die Richtlinieneinstellung "Administrative Vorlage
 Wenn Sie diese Einstellung aktivieren, wird Mitarbeitern in Internet Explorer 11 eine zusätzliche Seite mit dem Hinweis angezeigt, dass eine Website unter Verwendung von Microsoft Edge im Unternehmensmodus geöffnet wurde.
 
 Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, verhält sich die App gemäß der Standardeinstellung, und es wird keine zusätzliche Seite angezeigt.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Alle Intranetsites in Internet Explorer beibehalten</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Verhindert, dass Intranetsites in jedem Browser, mit Ausnahme von Internet Explorer, geöffnet werden. Beachten Sie jedoch, dass diese Richtlinie keine Auswirkungen hat, wenn die Richtlinie ‘Alle Websites, die nicht in der Enterprise Mode Site List enthalten sind, an Microsoft Edge senden’ (‘RestrictIE’) nicht aktiviert ist.
+
+Wenn Sie diese Richtlinie aktivieren, werden alle Intranetsites in Internet Explorer 11 geöffnet. Hiervon ausgenommen sind lediglich die in der Enterprise Mode Site List aufgeführten Sites.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden alle Intranetsites automatisch in Microsoft Edge geöffnet.
+
+Es wird dringend empfohlen, diese Richtlinie mit der Richtlinie ‘Alle Intranetsites an Internet Explorer senden’ (‘SendIntranetToInternetExplorer’) synchron zu halten. Außerdem sollte diese Richtlinie nur dann aktiviert werden, wenn bei Ihren Intranetsites Kompatibilitätsprobleme mit Microsoft Edge vorliegen.
+
+Verwandte Richtlinien:
+- Alle Intranetsites an Internet Explorer senden (‘SendIntranetToInternetExplorer’)
+- Alle Websites, die nicht in der Enterprise Mode Site List enthalten sind, an Microsoft Edge senden (‘RestrictIE’)
+
+Weitere Informationen dazu, wie diese Richtlinie mit anderen verwandten Richtlinien zum Erstellen der optimalen Konfiguration für Ihre Organisation verwendet wird, finden Sie unter https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Blockieren von veralteten ActiveX-Steuerelementen für Internet Explorer ausschalten</string>
       <string id="IE_ExplainVerMgmtDisable">Mit dieser Richtlinieneinstellung wird bestimmt, ob Internet Explorer spezifische veraltete ActiveX-Steuerelemente blockiert. Veraltete ActiveX-Steuerelemente werden in der Intranetzone nie blockiert.
 

@@ -3917,6 +3917,20 @@ Uwaga: jeśli zostanie także włączone ustawienie zasad Szablony administracyj
 Jeśli to ustawienie zostanie włączone, pracownicy będą widzieć dodatkową stronę w programie Internet Explorer 11, zawierającą informację, że witryna została otwarta przy użyciu trybu przedsiębiorstwa w programie Microsoft Edge.
 
 Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, aplikacja będzie zachowywać się w sposób domyślny i nie będzie wyświetlana żadna dodatkowa strona.</string>
+      <string id="KeepIntranetSitesInInternetExplorer">Pozostaw wszystkie witryny intranetowe w przeglądarce Internet Explorer</string>
+      <string id="IE_ExplainKeepIntranetSitesInInternetExplorer">Uniemożliwia otwieranie witryn intranetowych w przeglądarkach innych niż Internet Explorer. Należy jednak pamiętać, że jeśli nie będzie włączona zasada „Wysyłaj wszystkie witryny spoza listy witryn trybu przedsiębiorstwa do programu Microsoft Edge” (RestrictIE), ta zasada nie będzie działać.
+
+Jeśli włączysz tę zasadę, wszystkie witryny intranetowe będą otwierane w przeglądarce Internet Explorer 11. Jedynym wyjątkiem będą witryny wymienione na liście witryn trybu przedsiębiorstwa.
+
+Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, wszystkie witryny intranetowe będą automatycznie otwierane w przeglądarce Microsoft Edge.
+
+Zdecydowanie zalecamy zsynchronizowanie tej zasady z zasadą „Otwieraj wszystkie witryny intranetowe w programie Internet Explorer” (SendIntranetToInternetExplorer). Ponadto najlepiej jest włączać tę zasadę tylko wtedy, gdy występują znane problemy ze zgodnością witryn intranetowych z przeglądarką Microsoft Edge.
+
+Powiązane zasady:
+- Otwieraj wszystkie witryny intranetowe w programie Internet Explorer (SendIntranetToInternetExplorer)
+- Wysyłaj wszystkie witryny spoza listy witryn trybu przedsiębiorstwa do programu Microsoft Edge (RestrictIE)
+
+Aby uzyskać więcej informacji dotyczących sposobu używania tej zasady wraz z innymi powiązanymi zasadami w celu utworzenia optymalnej konfiguracji dla swojej organizacji, zobacz https://go.microsoft.com/fwlink/?linkid=2094210.</string>
       <string id="VerMgmtDisable">Wyłącz blokowanie nieaktualnych kontrolek ActiveX w programie Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">To ustawienie zasad określa, czy program Internet Explorer ma blokować określone nieaktualne kontrolki ActiveX. Nieaktualne kontrolki ActiveX nie są nigdy blokowane w strefie intranetu.
 
