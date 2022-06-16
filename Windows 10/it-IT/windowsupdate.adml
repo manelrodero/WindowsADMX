@@ -134,7 +134,7 @@ Se lo stato di questa impostazione dei criteri è impostato su Disabilitato, sar
       <string id="CorpWuURL_Help">
         Specifica un server Intranet che ospita gli aggiornamenti provenienti da Microsoft Update. Potrai quindi usare questo servizio per aggiornare automaticamente i computer presenti nella rete.
 
-        Questa impostazione consente di specificare un server della rete in modo che funzioni come un servizio di aggiornamento interno. Il client Aggiornamenti automatici eseguirà una ricerca di aggiornamenti applicabili ai computer presenti sulla rete in questo servizio.
+        Questa impostazione consente di specificare un server della rete da usare come servizio di aggiornamento interno. Il client Aggiornamenti automatici eseguirà una ricerca di aggiornamenti applicabili ai computer presenti sulla rete in questo servizio.
 
         Per usare questa impostazione, devi impostare due valori relativi al nome server, ovvero il server da cui il client Aggiornamenti automatici scarica gli aggiornamenti e il server in cui le workstation aggiornate caricano le statistiche. Puoi impostare lo stesso valore per entrambi i server. Può essere specificato un valore per il nome di un server facoltativo per configurare l'agente di Windows Update in modo da scaricare gli aggiornamenti da un server di download alternativo anziché dal servizio di aggiornamento nella rete Intranet.
 
@@ -152,7 +152,17 @@ Se lo stato di questa impostazione dei criteri è impostato su Disabilitato, sar
 
         Nota: l'opzione "Scarica file senza URL..." viene utilizzata solo se è impostato il "server di download alternativo".
 
-        Nota: questo criterio non è supportato in Windows RT. L'impostazione di questo criterio non ha effetto sui PC in cui è installato Windows RT.</string>
+        Nota: questo criterio non è supportato in Windows RT. L'impostazione di questo criterio non ha effetto sui PC in cui è installato Windows RT.
+
+        Nota sui proxy: per garantire il massimo livello di sicurezza, Microsoft consiglia di proteggere WSUS con il protocollo TLS/SSL, in modo da usare i server Intranet basati su HTTPS per proteggere i sistemi. Se è necessario un proxy, è consigliabile configurare un proxy di sistema..
+
+        La selezione di un comportamento proxy non avrà alcun effetto sui client che usano server Intranet basati su HTTPS per rilevare gli aggiornamenti. 
+
+        Per mantenere i client intrinsecamente sicuri, non consentiamo più ai server Intranet basati su HTTP di utilizzare per impostazione predefinita il proxy utente per rilevare gli aggiornamenti. Se è necessario sfruttare il proxy utente per rilevare gli aggiornamenti quando si utilizza un server Intranet basato su HTTP nonostante le vulnerabilità che presenta, è necessario configurare il comportamento "Consenti utilizzo del proxy utente come fallback se il rilevamento tramite proxy di sistema non riesce".
+
+        Quando si utilizzano i server intranet basati su HTTP senza un proxy di sistema configurato, se non è configurato il criterio per l'utilizzo di un comportamento proxy alternativo, il rilevamento degli aggiornamenti avrà esito negativo.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Utilizza solo proxy di sistema per il rilevamento degli aggiornamenti (impostazione predefinita)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Consenti l’utilizzo del proxy utente come fallback se il rilevamento tramite proxy di sistema non è possibile</string>
       <string id="DetectionFrequency_Help">Specifica la frequenza di rilevamento di eventuali aggiornamenti disponibili. L'intervallo esatto è determinato dalla somma del valore specifico e una variante casuale di 0-4 ore.
 
         Se lo stato è impostato su Abilitato, Windows controllerà la disponibilità di aggiornamenti in base all'intervallo specificato.
@@ -680,8 +690,9 @@ Questo criterio sostituirà i criteri seguenti:
         <textBox refId="CorpWUContentHost_Name">
           <label>Imposta il server di download alternativo:</label>
         </textBox>
-        <text>(esempio: http://IntranetUpd01)</text>
+        <text>(esempio: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Scarica file senza URL nei metadati se è impostato il server di download alternativo.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selezionare il comportamento del proxy per il client Windows Update per il rilevamento degli aggiornamenti con il servizio basato su TLS (HTTP):</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Verifica aggiornamenti a</text>

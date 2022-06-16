@@ -7,18 +7,18 @@
     <stringTable>
       <string id="AllowTelemetry">允許遙測</string>
       <string id="AllowTelemetry_0">0 - 安全性 [僅限企業版]</string>
-      <string id="AllowTelemetry_1">1 - 基本</string>
+      <string id="AllowTelemetry_1">1 - 必要</string>
       <string id="AllowTelemetry_2">2 - 加強</string>
-      <string id="AllowTelemetry_3">3 - 完整</string>
+      <string id="AllowTelemetry_3">3 - 選用</string>
       <string id="AllowTelemetry_Explain">在 Windows 10 中設置此設定後，使用者將無法選擇加入比組織設定層級更高的遙測收集層級。此限制僅適用於 Windows 作業系統及 Windows 隨附的應用程式，並不適用於在 Windows 10 上執行的第三方應用程式。
 
-診斷資料被分成四個層級，如下所示: 
-  - 0 (安全性)。協助維持 Windows、Windows Server 和 System Center 安全的資訊，包括 [已連線使用者體驗與遙測] 的元件設定、惡意軟體移除工具以及 Windows Defender。
-  - 1 (基本)。基本裝置資訊，包括：品質相關資料、應用程式相容性以及安全性層級的資料。
-  - 2 (增強)。其他深入解析包括: Windows、Windows Server、System Center 和應用程式的使用方式、執行方式、進階可靠性資料，以及基本和安全性層級的資料。
-  - 3 (完整)。識別和協助修復問題所需的所有資料，以及來自安全性、基本和增強層級的資料。
+診斷資料分成四個層級，如下所示:
+  - 0 (安全性)。協助維持 Windows、Windows Server 和 System Center 安全所需的資訊，包括 [已連線使用者體驗與遙測] 元件設定、惡意軟體移除工具以及 Windows Defender 的相關資料。
+  - 1 (必要)。基本裝置資訊，包括: 品質相關資料、應用程式相容性以及來自 [安全性] 層級的資料。
+  - 2 (增強)。其他深入解析包括: Windows、Windows Server、System Center 和應用程式的使用方式、執行方式、進階可靠性資料，以及來自 [必要] 和 [安全性] 層級的資料。
+  - 3 (選用)。識別和協助修復問題所需的所有資料，以及來自 [安全性]、[必要] 和 [增強] 層級的資料。
 
-透過設置此設定，可以變更 [設定] 應用程式中使用者可用的選項，即使未設定，也可能會受到其他群組原則設定的影響。請注意，如果原則設定為允許安全性或基本的遙測設定，使用者將無法選取更高層級。
+透過設置此設定，可以變更 [設定] 應用程式中使用者可用的選項，即使未設定，也可能會受到其他群組原則設定的影響。請注意，如果原則設為允許 [安全性] 或 [基本] 的遙測設定，使用者將無法選取更高層級。
       </string>
 
       <string id="TelemetryProxy">設定已連線使用者體驗與遙測</string>
@@ -43,18 +43,18 @@
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">將增強診斷資料限制為 Windows Analytics 的最小必要值</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">啟用 Windows Analytics 收集</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">停用 Windows Analytics 收集</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">這個原則設定與 [允許遙測] 原則設定合併使用，可讓組織透過 Windows Analytics 服務將一組 IT 特定診斷資料傳送給 Microsoft。設定此設定並不會阻止使用者變更其遙測設定，但可防止使用者選擇高於您為組織設定的層級。
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">這個原則設定與 [允許遙測] 原則設定合併使用，可讓組織透過 Windows Analytics 服務將 IT 深入解析特定診斷資料集合傳送給 Microsoft。
 
 若要啟用這個行為，您必須完成兩個步驟:
 
     1. 啟用這個原則設定
     2. 將 [允許遙測] 設定為層級 2 (增強)
 
-如一起設定這些原則設定，將會傳送 [基本] 層級的診斷資料，加上 Windows Analytics 所需的任何其他事件給 Microsoft。這些其他事件記載在這裡: https://go.Microsoft.com/fwlink/?linked=847594。
+此設定對設定為傳送 [安全性] 或[必要] 診斷資料給 Microsoft 的裝置不會有影響。
 
-如在 [允許遙測] 原則設定中啟用 [增強] 診斷資料，但未設定這個原則設定，將會傳送 Windows Analytics 所需的事件，加上任何額外的 [增強] 層級遙測資料給 Microsoft。這個設定不會影響已設定成將 [完整]、[基本] 或 [安全性] 層級診斷資料傳送給 Microsoft 的電腦。
+設定這些原則設定時，診斷資料集合將僅限制於必要的診斷資料，和 Desktop Analytics 所需的事件。這些事件可在 https://go.microsoft.com/fwlink/?linkid=2116020 檢視。
 
-如果停用或未設定這個原則設定，則傳送給 Microsoft 的診斷資料層級會依 [允許遙測] 原則設定決定。
+ 如果停用或未設定此原則設定，則傳送到 Microsof 的診斷資料層級將由 [允許遙測] 原則設定 (如果已設定) 所決定 (例如，如果您透過“ [允許遙測] 原則設定啟用了 [增強] 診斷資料，但未設定此原則設定，則會將 Windows Analytics 的必要事件以及任何其他 [增強] 層級診斷資料傳送給 Microsoft)。
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">允許在 Windows 診斷資料中傳送裝置名稱</string>
@@ -104,6 +104,33 @@
           這個原則會設定此裝置診斷資料的上傳端點，作為電腦分析計劃的一部分。
           若您的組織正在參與計劃並且收到指示設定自訂上傳端點，請使用此設定定義端點。
           Microsoft 會提供此設定的值，作為計劃上線流程的一部分。 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">允許更新合規性處理</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          允許 IT 系統管理員啟用來自此裝置的診斷資料，以由更新合規性處理。
+            下列清單顯示支援的值:  
+              0 (預設)– 不會由更新合規性處理診斷資料。
+              16 – 更新合規性允許處理診斷資料。
+          如果您停用或未進行此原則設定，更新合規性將不會處理來自此裝置的診斷資料。
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">允許電腦分析處理</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          允許 IT 系統管理員啟用來自此裝置的診斷資料，以由電腦分析處理。
+            下列清單顯示支援的值:  
+              0 (預設)– 不會由電腦分析處理診斷資料。
+              2 – 電腦分析允許處理診斷資料。
+          如果您停用或未進行此原則設定，電腦分析將不會處理來自此裝置的診斷資料。 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">允許 WUfB 雲端處理</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          允許 IT 系統管理員啟用來自此裝置的診斷資料，並以商務用 Windows Update 雲處理。
+ 下列清單顯示支援的值： 
+              0 (預設值) – 不會由商務用 Windows Update 雲處理診斷資料.. 
+              8 – 商務用 Windows Update 雲允許處理診斷資料.. 
+          如果您停用或未進行此原則設定，商務用 Windows Update 雲將不會處理來自此裝置的診斷資料。 
       </string>
 
       <string id="AllowCommercialDataPipeline">允許商用資料管線</string>

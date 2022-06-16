@@ -26,6 +26,7 @@ A reindexação não é iniciada quando você habilita essa política e selecion
       <string id="OCR">OCR</string>
       <string id="OCREveryPage">Forçar TIFF IFilter a executar OCR de cada página em um documento TIFF</string>
       <string id="ExplainOCREveryPage">
+        
         Essa configuração de Diretiva de Grupo permite que os usuários desativem a otimização de desempenho de forma que o TIFF IFilter execute OCR de cada página em um documento TIFF, o que possibilita a indexação de todo o texto reconhecido. Por padrão, o TIFF IFilter otimiza seu desempenho ignorando o OCR das páginas do documento sem conteúdo textual (por exemplo, com imagens). Em alguns casos, as páginas que contêm texto podem ser classificadas incorretamente como páginas sem texto. Se esse for o caso, o texto nessas páginas não será indexado.
 
         Se você habilitar essa configuração, o TIFF IFilter executará o OCR de cada página em um documento TIFF para indexar todo o texto reconhecido. No entanto, o processo de OCR será mais lento. Essa redução em desempenho poderá ser significativa se existirem muitas páginas sem texto (com imagens) nos documentos TIFF do sistema.
@@ -88,7 +89,7 @@ A reindexação não é iniciada quando você habilita essa política e selecion
         <text>Página de código cirílico (1251)</text>
           <checkBox refId="Bulgarian" defaultChecked="false">Búlgaro</checkBox>
           <checkBox refId="Byelorussian" defaultChecked="false">Bielorrusso</checkBox>
-          <checkBox refId="MacedoniaFYRO" defaultChecked="false">Macedônio (Macedônia do Norte)</checkBox>
+          <checkBox refId="MacedoniaFYRO" defaultChecked="false">Macedônio (Macedônia, ARI da)</checkBox>
           <checkBox refId="Russian" defaultChecked="false">Russo</checkBox>
           <checkBox refId="Serbian" defaultChecked="false">Sérvio</checkBox>
           <checkBox refId="Ukrainian" defaultChecked="false">Ucraniano</checkBox>

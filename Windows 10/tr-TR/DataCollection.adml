@@ -7,18 +7,18 @@
     <stringTable>
       <string id="AllowTelemetry">Telemetriye izin ver</string>
       <string id="AllowTelemetry_0">0 - Güvenlik [Sadece Kurum]</string>
-      <string id="AllowTelemetry_1">1 - Temel</string>
+      <string id="AllowTelemetry_1">1 - Gerekli</string>
       <string id="AllowTelemetry_2">2 - Geliştirilmiş</string>
-      <string id="AllowTelemetry_3">3 - Tam</string>
-      <string id="AllowTelemetry_Explain">Bu ayar Windows 10'da yapılandırıldığında son kullanıcılar, kuruluşunuz için ayarlamış olduğunuz düzeyden daha yüksek düzeyli bir telemetri koleksiyonuna katılamayacaktır.  Bu sınırlama yalnızca Windows işletim sistemi ve Windows'ta bulunan uygulamalar için geçerlidir, Windows 10'da çalışan üçüncü taraf uygulamalar için geçerli değildir.
+      <string id="AllowTelemetry_3">3 - İsteğe bağlı</string>
+      <string id="AllowTelemetry_Explain">Bu ayar Windows 10'da yapılandırıldığında son kullanıcılar, kuruluşunuz için ayarlamış olduğunuz düzeyden daha yüksek düzeyli bir telemetri toplama işlemine katılamaz. Bu sınırlama yalnızca Windows işletim sistemi ve Windows'da bulunan uygulamalar için geçerlidir, Windows 10'da çalışan üçüncü taraf uygulamalar için geçerli değildir.
 
 Tanılama verileri, aşağıdaki şekilde dört düzeye ayrılır:
-  - 0 (Güvenlik). Bağlı Kullanıcı Deneyimleri ve Telemetrisi bileşeni ayarları ile ilgili veriler, Kötü Amaçlı Yazılımları Temizleme Aracı ve Microsoft Defender dâhil olmak üzere Windows, Windows Server ve System Center'ın güvenli kalmasına yardımcı olmak için gerekli bilgiler.
-  - 1 (Temel). Kaliteye ilişkin veriler, uygulama uyumluluğu ve Güvenlik düzeyinden veriler dâhil olmak üzere temel cihaz bilgileri.
-  - 2 (Gelişmiş). Windows, Windows Server, System Center ve uygulamaların nasıl kullanıldığı ve nasıl çalıştığına yönelik veriler, gelişmiş güvenilirlik verileri ve hem temel hem de Güvenlik düzeylerinden veriler dâhil olmak üzere ek bilgiler.
-  - 3 (Tam). Sorunları tanımlamak ve çözmek için gerekli olan tüm veriler ve Güvenlik düzeyleri, Temel düzeyler ve Gelişmiş düzeylerden veriler.
+ - 0 (Güvenlik). Bağlı Kullanıcı Deneyimleri ve Telemetrisi bileşeninin ayarları ile Kötü Amaçlı Yazılımları Temizleme Aracı ve Microsoft Defender ile ilgili veriler dahil olmak üzere Windows, Windows Server ve System Center'ın güvenli kalmasına yardımcı olmak için gerekli bilgiler.
+ - 1 (Gerekli). Kaliteye ilişkin veriler, uygulama uyumluluğu ve Güvenlik düzeyindeki veriler dahil olmak üzere temel cihaz bilgileri.
+ - 2 (Gelişmiş). Windows, Windows Server, System Center ile uygulamaların nasıl kullanıldığı ve nasıl çalıştığına yönelik veriler, gelişmiş güvenilirlik verileri ve hem Gerekli hem de Güvenlik düzeylerindeki veriler dahil olmak üzere ek bilgiler.
+ - 3 (İsteğe bağlı). Sorunları tanımlamak ve çözmek için gerekli olan tüm veriler ile Güvenlik, Gerekli ve Gelişmiş düzeylerindeki veriler.
 
-Ayarlar uygulamasında kullanıcıların kullanabileceği seçenekler, bu ayar yapılandırılarak değiştirilir; ayarlanmamış olsa da diğer grup ilkesi ayarlarından etkilenebilir.  Bu ilke, Güvenlik veya Temel bir telemetri ayarına izin verecek şekilde yapılandırılırsa son kullanıcılar, daha yüksek bir düzey seçemezler.
+Ayarlar uygulamasında kullanıcıların kullanabileceği seçenekler, bu ayar yapılandırılarak değiştirilir; ayarlanmamış olsa da diğer grup ilkesi ayarlarından etkilenebilir. Bu ilke, Güvenlik veya Temel bir telemetri ayarına izin verecek şekilde yapılandırılırsa son kullanıcılar, daha yüksek bir düzey seçemezler.
       </string>
 
       <string id="TelemetryProxy">Bağlı Kullanıcı Deneyimleri ve Telemetrisi'ni yapılandır</string>
@@ -43,18 +43,18 @@ Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, o zaman Mi
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Gelişmiş tanılama verilerini Windows Analytics'in gerektirdiği minimum seviyeye getirin</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics koleksiyonunu etkinleştir</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Windows Analytics koleksiyonunu devre dışı bırak</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Telemetriye İzin Ver ilke ayarıyla birlikte bu ilke ayarı, kuruluşların Windows Analytics hizmetleri aracılığıyla BT incelemeleri için Microsoft'a belirli bir tanılama verisi kümesi göndermesini sağlar. Bu ayarı yapılandırarak kullanıcıların Telemetri Ayarları'nı değiştirmelerini engellemezsiniz ancak kuruluş için ayarladığınızdan daha yüksek bir düzey seçmelerini engellersiniz.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Telemetriye izin ver ilke ayarı ile birlikte bu ilke ayarı, kuruluşların Microsoft'a Windows Analytics hizmetleri aracılığıyla BT içgörülerine dair belirli bir tanılama veri kümesi göndermesini sağlar.
 
-Bu davranışı etkinleştirmek için iki adımı tamamlamanız gerekir:
+Bu davranışı etkinleştirmek için şu iki adımı tamamlamalısınız:
 
     1. Bu ilke ayarını etkinleştirin
-    2. Telemetriye İzin Ver ayarını 2. düzeye (Gelişmiş) ayarlayın
+    2. Telemetriye izin ver'i düzey 2'ye (Gelişmiş) ayarlayın
 
-Bu ilke ayarlarını birlikte yapılandırırsanız tanılama verilerinin Temel düzeyini ve Windows Analytics için gerekli olan ek olayları Microsoft'a gönderirsiniz. Ek olaylar burada belgelenmiştir: https://go.Microsoft.com/fwlink/?linked=847594.
+Bu ayar Güvenlik veya Gerekli tanılama verilerini Microsoft'a göndermek üzere yapılandırılmış bilgisayarları etkilemez. 
 
-Telemetriye İzin Ver ilke ayarında Gelişmiş tanılama verilerini etkinleştirirseniz ancak bu ilke ayarını yapılandırmazsanız Windows Analytics için gerekli olayları ve Gelişmiş düzey ek telemetri verilerini Microsoft'a gönderirsiniz. Tam, Temel veya Güvenlik düzeyi tanılama verilerini Microsoft'a göndermek üzere yapılandırılan bilgisayarlarda bu ayarın bir etkisi olmaz.
+Bu ilkeleri yapılandırdığınızda, tanılama verilerinin toplanması Desktop Analytics için gereken tanılama verileri ve olaylar ile sınırlandırılır. Bu olaylar şurada görülebilir: https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Microsoft'a gönderilen tanılama verisi düzeyi Telemetriye İzin Ver ilke ayarına göre belirlenir.
+Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız Microsoft'a gönderilen tanılama verilerinin düzeyi, yapılandırıldığında Telemetriye izin ver ilkesi tarafından belirlenir (örneğin, bu ilkeyi yapılandırmadan Telemetriye izin ver ilkesindeki gelişmiş tanılama verilerini etkinleştirdiğinizde ek Gelişmiş düzey telemetri verilerinin yanı sıra, Windows Analytics için gerekli olaylar da Microsoft’a gönderilir).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Cihaz adının Windows tanılama verisinde gönderilmesine izin ver</string>
@@ -104,6 +104,33 @@ Kuruluşunuz tarafından Microsoft'a gönderilen tanılama verileri düzeyinde b
           Bu ilke, Masaüstü Analizi programının bir parçası olarak bu cihazın tanılama verileri için karşıya yükleme bitiş noktasını ayarlar.
           Kuruluşunuz programa katılıyorsa ve özel bir karşıya yükleme bitiş noktası yapılandırmak için talimat aldıysa bu bitiş noktasını tanımlamak için bu ayarı kullanın.
           Bu ayarın değeri, program için katılım işleminin bir parçası olarak Microsoft tarafından sağlanır. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Güncelleştirme Uyumluluğu İşlemesi'ne izin ver</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          BT yöneticilerinin bu cihazdan alınan tanılama verilerinin Güncelleştirme Uyumluluğu tarafından işlenmesini etkinleştirmesine olanak tanır. 
+            Aşağıdaki liste desteklenen değerleri gösterir:  
+              0 (varsayılan) – Tanılama verileri Güncelleştirme Uyumluluğu tarafından işlenmez. 
+              16 – Tanılama verilerinin Güncelleştirme Uyumluluğu tarafından işlenmesine izin verilir. 
+            Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, bu cihazdan alınan tanılama verileri Güncelleştirme Uyumluluğu tarafından işlenmez.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Desktop Analytics İşlemesi'ne izin ver</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          BT yöneticilerinin bu cihazdan alınan tanılama verilerinin Desktop Analytics tarafından işlenmesini etkinleştirmesine olanak tanır. 
+            Aşağıdaki liste desteklenen değerleri gösterir:  
+              0 (varsayılan) – Tanılama verileri Desktop Analytics tarafından işlenmez. 
+              2 – Tanılama verilerinin Desktop Analytics tarafından işlenmesine izin verilir. 
+            Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, bu cihazdan alınan tanılama verileri Desktop Analytics tarafından işlenmez. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">WUfB Bulut İşlemine İzin Ver</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          BT yöneticilerinin bu cihazdan, Iş bulutu için Windows Update tarafından işlenmek üzere tanılama verilerini etkinleştirmesine izin verir. 
+            Aşağıdaki liste desteklenen değerleri gösterir:  
+              0 (varsayılan) – tanılama verileri Iş bulutu için Windows Update tarafından işlenmiyor.. 
+              8 – tanılama verilerinin Iş bulutu için Windows Update tarafından işlenmesine izin verilir.. 
+          Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, bu cihazdaki Tanılama verileri Iş bulutu için Windows Update tarafından işlenmez. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Ticari veri ardışık düzenine izin ver</string>

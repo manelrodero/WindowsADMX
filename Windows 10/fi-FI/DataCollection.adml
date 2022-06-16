@@ -7,18 +7,18 @@
     <stringTable>
       <string id="AllowTelemetry">Salli telemetria</string>
       <string id="AllowTelemetry_0">0 – Tietoturva [vain yritys]</string>
-      <string id="AllowTelemetry_1">1 – Perus</string>
+      <string id="AllowTelemetry_1">1 – Pakollinen</string>
       <string id="AllowTelemetry_2">2 – Laajennetut</string>
-      <string id="AllowTelemetry_3">3 – Täydet</string>
-      <string id="AllowTelemetry_Explain">Kun tämä asetus määritetään Windows 10:ssä, loppukäyttäjät eivät voi valita korkeampaa telemetriatietojen keräystasoa kuin minkä olet määrittänyt organisaatiollesi. Tämä rajoitus koskee vain Windows-käyttöjärjestelmää ja Windowsiin sisältyviä sovelluksia, mutta ei Windows 10:ssä toimivia kolmansien osapuolten sovelluksia.
+      <string id="AllowTelemetry_3">3 – Valinnainen</string>
+      <string id="AllowTelemetry_Explain">Kun tämä asetus määritetään Windows 10:ssä, loppukäyttäjät eivät voi valita korkeampaa telemetriatietojen keräystasoa kuin minkä olet määrittänyt organisaatiollesi.  Tämä rajoitus koskee vain Windows-käyttöjärjestelmää ja Windowsiin sisältyviä sovelluksia mutta ei Windows 10:ssä toimivia kolmansien osapuolten sovelluksia.
 
 Diagnostiikkatiedoilla on neljä tasoa, jotka ovat seuraavat:
-  - 0 (Suojaus). Tietoja, joita tarvitaan Windowsin, Windows Serverin ja System Centerin suojaamiseen, muun muassa Yhdistetyt käyttökokemukset ja telemetria -komponentin asetuksiin, Haittaohjelmien poistotyökaluun ja Windows Defenderiin liittyviä tietoja.
-  - 1 (Perus). Laitteen perustiedot, muun muassa laatuun liittyviä tietoja, sovellusten yhteensopivuus ja Suojaus-tason tietoja.
-  - 2 (Parannettu). Lisätietoja muun muassa Windowsin, Windows Serverin, System Centerin ja sovellusten käytöstä ja toiminnasta, edistyksellisiä luotettavuustietoja sekä Perus- ja Suojaus-tasojen tietoja.
-  - 3 (Full). Kaikki ongelmien tunnistamiseen ja korjaamiseen tarvittavat tiedot sekä Perus-, Suojaus- ja Parannettu-tasojen tietoja.
+  – 0 (Suojaus). Tietoja, joita tarvitaan Windowsin, Windows Serverin ja System Centerin suojaamiseen, muun muassa Yhdistetyt käyttökokemukset ja telemetria -komponentin asetuksiin, Haittaohjelmien poistotyökaluun ja Windows Defenderiin liittyviä tietoja.
+  – 1 (Pakollinen). Laitteen perustiedot, muun muassa laatuun liittyviä tietoja, sovellusten yhteensopivuus ja Suojaus-tason tiedot.
+  – 2 (Parannettu). Lisätietoja muun muassa Windowsin, Windows Serverin, System Centerin ja sovellusten käytöstä ja toiminnasta, edistyksellisiä luotettavuustietoja sekä Pakollinen- ja Suojaus-tasojen tiedot.
+  – 3 (Valinnainen). Kaikki ongelmien tunnistamiseen ja korjaamiseen tarvittavat tiedot sekä Pakollinen-, Suojaus- ja Parannettu-tasojen tiedot.
 
-Asetukset-sovelluksessa käyttäjien käytettävissä olevia asetuksia voidaan muuttaa määrittämällä tämä asetus, ja vaikka asetusta ei olisi määritetty, muut ryhmäkäytäntöasetukset voivat vaikuttaa siihen. Huomaa, että tämä käytäntö on määritetty sallimaan Suojaus- tai Perus-tason telemetria-asetus, eivätkä käyttäjät voi valita korkeampaa tasoa.
+Asetukset-sovelluksessa käyttäjien käytettävissä olevia asetuksia voidaan muuttaa määrittämällä tämä asetus, ja vaikka asetusta ei olisi määritetty, muut ryhmäkäytäntöasetukset voivat vaikuttaa siihen.  Huomaa, että jos tämä käytäntö on määritetty sallimaan Suojaus- tai Pakollinen-tason telemetria-asetus, loppukäyttäjät eivät voi valita korkeampaa tasoa.
       </string>
 
       <string id="TelemetryProxy">Määritä yhdistetyt käyttökokemukset ja telemetria</string>
@@ -43,18 +43,18 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Mi
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Rajoita parannettuja diagnostiikkatietoja Windows Analyticsin vaatimaan vähimmäistasoon</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Salli Windows Analyticsin tietojenkeruu</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Poista Windows Analyticsin tietojenkeruu käytöstä</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Tämä käytäntöasetus yhdessä Salli telemetria -käytäntöasetuksen kanssa mahdollistaa sen, että organisaatiot voivat lähettää Microsoftille tietyn sarjan diagnostiikkatietoja IT-tietoja varten Windows Analytics -palveluiden kautta. Määrittämällä tämän asetuksen et estä ihmisiä muuttamasta telemetria-asetuksiaan, mutta estät heitä kuitenkin valitsemasta korkeampaa tasoa kuin minkä olet organisaatiollesi määrittänyt.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Tämä käytäntöasetus yhdessä Salli telemetria -käytäntöasetuksen kanssa mahdollistaa sen, että organisaatiot voivat lähettää Microsoftille tietyn sarjan diagnostisia tietoja IT-tietoja varten Windows Analytics -palveluiden kautta.
 
 Voit ottaa tämän käyttöön suorittamalla kaksi vaihetta:
 
- 1. Ota tämä käytäntöasetus käyttöön
- 2. Ota Salli telemetria käyttöön tasolla 2 (parannettu)
+    1. Ota tämä käytäntöasetus käyttöön
+    2. Ota Salli telemetria käyttöön tasolla 2 (Parannettu)
 
-Jos määrität nämä käytäntöasetukset yhdessä, lähetät Windows Analyticsin vaatimien diagnostiikkatietojen sekä lisätapahtumien perustason tiedot Microsoftille. Lisätapahtumat löytyvät täältä: https://go.Microsoft.com/fwlink/?linked=847594.
+Tämä asetus ei vaikuta laitteisiin, jotka on määritetty lähettämään Microsoftille Suojaus- tai Pakollinen-tason diagnostiikkatietoja. 
 
-Jos otat Parannetut diagnostiikkatiedot käyttöön Salli telemetria -käytäntöasetuksessa, mutta et määritä tätä käytäntöasetusta, lähetät Windows Analyticsin vaatimat tapahtumat sekä parannetun tason telemetriatietoja Microsoftille. Tällä asetuksella ei ole vaikutusta tietokoneisiin, jotka on määritetty lähettämään täydet, perustason tai turvallisuustason diagnostisia tietoja Microsoftille.
+Kun nämä käytäntöasetukset on määritetty, diagnostisten tietojen kerääminen rajoittuu pakollisiin diagnostiikkatietoihin ja Desktop Analyticsiin edellyttämiin tapahtumiin.  Nämä tapahtumat löytyvät osoitteesta https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Microsoftille lähetettyjen diagnostisten tietojen taso määrittyy Salli telemetria -käytäntöasetuksen mukaisesti.
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Microsoftille lähetettyjen diagnostisten tietojen taso määräytyy Salli telemetria -käytännön mukaisesti, jos se on määritetty (eli jos otat käyttöön parannetut diagnostiikkatiedot Salli telemetria -käytäntöasetuksen kautta mutta et määritä tätä käytäntöasetusta, lähetät vaaditut tapahtumat Windows Analyticsille sekä lisäksi Parannettu-tason telemetriatietoja Microsoftille).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Salli laitenimen lähettäminen Windowsin diagnostiikkatietojen mukana</string>
@@ -104,6 +104,33 @@ Käytä Salli telemetria -käytäntöasetusta, jos haluat määrittää organisa
           Tämä käytäntö määrittää tämän laitteen diagnostiikkatietojen latauksen päätepisteen osana Desktop Analytics -ohjelmaa.
           Jos organisaatiosi osallistuu ohjelmaan ja on neuvonut määrittämään mukautetun latauksen päätepisteen, määritä kyseinen päätepiste tämän asetuksen avulla.
           Microsoft antaa tämän asetuksen arvon osana ohjelman käyttöönottoprosessia. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Salli yhteensopivuuspäivityksen käsittely</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Mahdollistaa sen, että IT-järjestelmävalvojat voivat sallia tämän laitteen diagnostiikkatietojen käsittelyn yhteensopivuuspäivityksissä. 
+            Seuraavassa luettelossa näkyy tuetut arvot:  
+              0 (oletus)– Diagnostiikkatietoja ei käsitellä yhteensopivuuspäivityksissä. 
+              16 – Diagnostiikkatietoja voidaan käsitellä yhteensopivuuspäivityksissä. 
+            Jos otat tämän asetuksen pois käytöstä tai et määritä sitä, tämän laitteen diagnostiikkatietoja ei käsitellä yhteensopivuuspäivityksissä.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Salli Desktop Analytics -käsittely</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Antaa IT-järjestelmänvalvojien sallia Desktop Analyticsin käsittelevän tämän laitteen diagnostiikkatietoja. 
+            Seuraavassa luettelossa näkyy tuetut arvot:  
+              0 (oletus)– Desktop Analytics ei käsittele diagnostiikkatietoja. 
+              2 – Desktop Analytics voi käsitellä diagnostiikkatietoja. 
+          Jos otat tämän asetuksen pois käytöstä tai et määritä sitä, Desktop Analytics ei käsittele tämän laitteen diagnostiikkatietoja. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Salli WUfB-pilvipalvelun käsittely</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Sallii sen järjestelmänvalvojien ottaa käyttöön tämän laitteen diagnostiikka tiedot, jotka Windows Update for Business-pilvi palvelu käsittelee. 
+            Seuraavassa luettelossa näkyvät Tuetut arvot:  
+              0 (oletus) – Windows Update for Business-pilvi palvelu ei käsitellyt diagnostiikka tietoja. 
+              8 – diagnostiikka tietoja voi käsitellä Windows Update for Business-pilvi palvelussa. 
+          Jos poistat tämän käytäntö asetuksen käytöstä tai et määritä sitä, Windows Update for Business-pilvi palvelu ei käsittelee tämän laitteen diagnostiikka tietoja. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Salli kaupallisten tietojen putki</string>

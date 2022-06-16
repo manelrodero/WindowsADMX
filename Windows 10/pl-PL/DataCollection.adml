@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">Zezwalaj na telemetrię</string>
       <string id="AllowTelemetry_0">0 — zabezpieczenia [tylko przedsiębiorstwo]</string>
-      <string id="AllowTelemetry_1">1 — podstawowe</string>
+      <string id="AllowTelemetry_1">1 — wymagane</string>
       <string id="AllowTelemetry_2">2 — rozszerzone</string>
-      <string id="AllowTelemetry_3">3 — pełne</string>
+      <string id="AllowTelemetry_3">3 — opcjonalne</string>
       <string id="AllowTelemetry_Explain">Po skonfigurowaniu tego ustawienia w systemie Windows 10 użytkownicy końcowi nie będą mogli wybrać poziomu zbierania danych telemetrycznych wyższego niż poziom ustawiony dla organizacji. To ograniczenie dotyczy tylko systemu operacyjnego Windows oraz aplikacji wchodzących w skład systemu Windows. Nie dotyczy ono aplikacji innych firm uruchamianych w systemie Windows 10.
 
 Dane diagnostyczne są podzielone na cztery poziomy, tak jak opisano poniżej:
   - 0 (Zabezpieczenia). Informacje potrzebne do zapewnienia bezpieczeństwa oprogramowania Windows, Windows Server i System Center, w tym dane dotyczące ustawień składnika Środowiska i telemetria połączonego użytkownika, narzędzia do usuwania złośliwego oprogramowania oraz usługi Windows Defender.
-  - 1 (Podstawowe). Podstawowe informacje o urządzeniu, w tym dane związane z jakością i zgodnością aplikacji oraz dane z poziomu Zabezpieczenia.
-  - 2 (Rozszerzone). Dodatkowe szczegółowe dane, w tym dotyczące sposobu używania systemów Windows i Windows Server, programu System Center oraz aplikacji, a także ich wydajności, zaawansowane dane dotyczące niezawodności oraz dane z poziomów Podstawowe i Zabezpieczenia.
-  - 3 (Pełne). Wszystkie dane niezbędne do identyfikowania problemów i pomagania w ich rozwiązywaniu oraz dane z poziomów Zabezpieczenia, Podstawowe i Rozszerzone.
+  - 1 (Wymagane). Podstawowe informacje o urządzeniu, w tym dane związane z jakością i zgodnością aplikacji oraz dane z poziomu Zabezpieczenia.
+  - 2 (Rozszerzone). Dodatkowe szczegółowe dane, w tym dotyczące sposobu używania systemów Windows i Windows Server, programu System Center oraz aplikacji, a także ich wydajności, zaawansowane dane dotyczące niezawodności oraz dane z poziomów Wymagane i Zabezpieczenia.
+  - 3 (Opcjonalne). Wszystkie dane niezbędne do identyfikowania problemów i pomagania w ich rozwiązywaniu oraz dane z poziomów Zabezpieczenia, Wymagane i Rozszerzone.
 
 Skonfigurowanie tego ustawienia powoduje zmianę opcji dostępnych dla użytkowników w aplikacji Ustawienia. Nawet jeśli te opcje nie zostaną ustawione, ich wartości mogą być określane za pośrednictwem innych ustawień zasad grupy. Pamiętaj, że jeśli konfiguracja tego ustawienia będzie zezwalać na używanie ustawienia telemetrii o wartości Zabezpieczenia lub Podstawowe, użytkownicy końcowi nie będą mogli wybrać wyższego poziomu.
       </string>
@@ -43,18 +43,18 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Ogranicz rozszerzone dane diagnostyczne do minimum wymaganego przez usługę Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Włącz kolekcję usługi Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Wyłącz kolekcję usługi Windows Analytics</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">To ustawienie zasad, w połączeniu z ustawieniem zasad Zezwalaj na telemetrię, umożliwia organizacjom wysyłanie do firmy Microsoft określonego zestawu danych diagnostycznych, które są analizowane za pomocą usług Windows Analytics w celu utworzenia prognoz dotyczących infrastruktury informatycznej. Konfigurując to ustawienie, nie uniemożliwisz użytkownikom zmieniania ustawień telemetrii, ale uniemożliwisz im wybranie poziomu wyższego niż poziom ustawiony dla organizacji.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">To ustawienie zasad, w połączeniu z ustawieniem zasad Zezwalaj na telemetrię, umożliwia organizacjom wysyłanie do firmy Microsoft określonego zestawu danych diagnostycznych w celu analizy infrastruktury informatycznej za pośrednictwem usług Windows Analytics.
 
-Aby włączyć to zachowanie, musisz wykonać dwa kroki:
+Aby włączyć to zachowanie, należy wykonać dwa kroki:
 
-    1. Włącz to ustawienie zasad.
-    2. Określ w ustawieniu Zezwalaj na telemetrię poziom 2 (Rozszerzone).
+    1. Włącz to ustawienie zasad
+    2. Określ w ustawieniu Zezwalaj na telemetrię wartość Poziom 2 (rozszerzone)
 
-Gdy skonfigurujesz oba te ustawienia zasad, dane diagnostyczne na poziomie Podstawowe oraz dodatkowe zdarzenia wymagane przez usługę Windows Analytics będą wysyłane do firmy Microsoft. Dokumentacja tych dodatkowych zdarzeń znajduje się tutaj: https://go.Microsoft.com/fwlink/?linked=847594.
+To ustawienie nie przynosi efektu na urządzeniach skonfigurowanych do wysyłania do firmy Microsoft danych diagnostycznych na poziomie Zabezpieczenia lub Wymagane. 
 
-Włączenie ustawienia Rozszerzone dane diagnostyczne w ustawieniu zasad Zezwalaj na telemetrię w połączeniu z nieskonfigurowaniem tego ustawienia zasad spowoduje wysyłanie zdarzeń wymaganych przez usługę Windows Analytics wraz z dodatkowymi danymi telemetrii na poziomie Rozszerzone do firmy Microsoft. To ustawienie nie przynosi efektu na komputerach skonfigurowanych do wysyłania do firmy Microsoft danych diagnostycznych na poziomie Pełne, Podstawowe lub Zabezpieczenia.
+Gdy skonfigurujesz te zasady, zbieranie danych diagnostycznych będzie ograniczone do wymaganych danych diagnostycznych i zdarzeń wymaganych przez usługę Desktop Analytics. Te zdarzenia można wyświetlić pod adresem https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, poziom danych diagnostycznych wysyłanych do firmy Microsoft będzie ustalany na podstawie ustawienia zasad Zezwalaj na telemetrię.
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, poziom danych diagnostycznych wysyłanych do firmy Microsoft będzie ustalany na podstawie ustawienia zasad Zezwalaj na telemetrię, o ile zostało ono skonfigurowane (np. jeśli włączysz rozszerzone dane diagnostyczne za pośrednictwem ustawienia zasad Zezwalaj na telemetrię, ale nie skonfigurujesz tego ustawienia zasad, do firmy Microsoft będą wysyłane wymagane zdarzenia dla usługi Windows Analytics oraz wszelkie dodatkowe dane diagnostyczne na poziomie Rozszerzone).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Zezwalaj na wysyłanie nazwy urządzenia w danych diagnostycznych systemu Windows</string>
@@ -104,6 +104,33 @@ Aby ustawić limit poziomu danych diagnostycznych wysyłanych do firmy Microsoft
           Ta zasada ustawia punkt końcowy przekazywania danych diagnostycznych tego urządzenia w ramach programu Desktop Analytics.
           Jeśli Twoja organizacja uczestniczy w tym programie i zwrócono się do niej o skonfigurowanie niestandardowego punktu końcowego przekazywania, użyj tego ustawienia w celu zdefiniowania punktu końcowego.
           Wartość tego ustawienia zostanie dostarczona przez firmę Microsoft w ramach procesu dołączania do tego programu. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Zezwalaj na przetwarzanie w rozwiązaniu Update Compliance</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Pozwala administratorom IT na włączanie przetwarzania danych diagnostycznych z tego urządzenia przez funkcję Update Compliance. 
+         Na poniższej liście przedstawiono obsługiwane wartości:  
+           0 (wartość domyślna) — dane diagnostyczne nie są przetwarzane przez funkcję Update Compliance. 
+           16 — dane diagnostyczne mogą być przetwarzane przez funkcję Update Compliance. 
+           Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, dane diagnostyczne z tego urządzenia nie będą przetwarzane przez funkcję Update Compliance.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Zezwalaj na przetwarzanie w usłudze Desktop Analytics</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Pozwala administratorom IT na włączanie przetwarzania danych diagnostycznych z tego urządzenia przez funkcję Desktop Analytics. 
+         Na poniższej liście przedstawiono obsługiwane wartości:  
+           0 (wartość domyślna) — dane diagnostyczne nie są przetwarzane przez funkcję Desktop Analytics. 
+           2 — dane diagnostyczne mogą być przetwarzane przez funkcję Desktop Analytics. 
+           Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, dane diagnostyczne z tego urządzenia nie będą przetwarzane przez funkcję Desktop Analytics. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Zezwalaj na przetwarzanie chmury WUfB</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Umożliwia administratorom Zezwalanie na przetwarzanie danych diagnostycznych z tego urządzenia w chmurze usługi Windows Update dla firm. 
+            Na poniższej liście przedstawiono obsługiwane wartości:  
+              0 (wartość domyślna) — dane diagnostyczne nie są przetwarzane przez usługę Windows Update dla firmową chmurę. 
+              8 — dane diagnostyczne mogą być przetwarzane przez usługę Windows Update dla firm i chmurę. 
+          Jeśli to ustawienie zasad zostanie wyłączone lub pozostanie nieskonfigurowane, dane diagnostyczne z tego urządzenia nie będą przetwarzane przez usługę Windows Update dla firm w chmurze. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Zezwalaj na komercyjny potok danych</string>

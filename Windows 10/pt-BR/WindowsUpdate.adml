@@ -132,27 +132,37 @@ Se o status for definido como Não Configurado, o uso das Atualizações Automá
       <string id="AutoUpdateSchTimeAuto">Automático</string>
       <string id="CorpWuURL">Especificar o local do serviço de atualização na intranet da Microsoft</string>
       <string id="CorpWuURL_Help">
-        Especifica um servidor de intranet para hospedar atualizações do Microsoft Update. Em seguida, você pode usar esse serviço de atualização para atualizar computadores em sua rede automaticamente.
+        Especifica um servidor de intranet para hospedar atualizações do Microsoft Update. Em seguida você pode usar este serviço de atualização para atualizar automaticamente os computadores na sua rede.
 
-        Essa configuração permite que você especifique um servidor em sua rede para funcionar como um serviço interno de atualização. O cliente de Atualizações Automáticas pesquisará o serviço para ver se há atualizações aplicáveis aos computadores de sua rede.
+        Esta configuração permite que você especifique um servidor na sua rede para funcionar como um serviço de atualização interna. O cliente de Atualizações automáticas procurará neste serviço por atualizações que se apliquem aos computadores da sua rede.
 
-        Para usar essa configuração, você deve definir dois valores de nome de servidor: o servidor do qual o cliente de Atualizações Automáticas detecta e baixa atualizações e o servidor no qual estações de trabalho atualizadas carregam estatísticas. Você pode definir os dois valores para o mesmo servidor. Um valor de nome de servidor opcional pode ser especificado para configurar o Windows Update Agent para baixar as atualizações de um servidor de download alternativo, em vez do serviço de atualização da intranet.
+        Para usar esta configuração, é necessário definir dois valores de nome de servidor: o servidor de onde o cliente de Atualizações automáticas detecta e baixa atualizações, e o servidor para o qual as estações de trabalho atualizadas carregam estatísticas. Você pode definir ambos os valores para serem o mesmo servidor. Um valor opcional de nome de servidor pode ser especificado para configurar o Windows Update Agent para baixar atualizações de um servidor de download alternativo em vez do serviço de atualização da intranet.
 
-        Se o status estiver definido como Habilitado, o cliente de Atualizações Automáticas se conectará ao serviço de atualização na intranet da Microsoft especificado (ou servidor de download alternativo), em vez do Windows Update, para procurar e baixar as atualizações. Essa configuração habilitada significa que os usuários finais em sua organização não precisam passar por um firewall para obter atualizações, e oferece a oportunidade de testar atualizações antes de implantá-las.
+        Se o status estiver definido como Ativado, o cliente de Atualizações automáticas se conecta ao serviço de atualização especificado na intranet da Microsoft (ou servidor de download alternativo), em vez de Windows Update, para pesquisar e baixar atualizações. A ativação desta configuração significa que os usuários finais na sua organização não precisam passar por um firewall para obter atualizações e lhe dá a oportunidade de testar as atualizações antes de implementá-las.
 
-        Se o status estiver definido como Desabilitado ou Não Configurado, e se as Atualizações Automáticas não estiverem desabilitadas pela política ou preferência do usuário, o cliente de Atualizações Automáticas se conectará diretamente ao site do Windows Update na Internet.
+        Se o status estiver definido como Desabilitado ou Não configurado, e se as Atualizações automáticas não estiverem desabilitadas por política ou preferência do usuário, o cliente de Atualizações automáticas se conecta diretamente ao site de Atualizações do Windows na Internet.
 
-        O servidor de download alternativo configura o Windows Update Agent para baixar arquivos de um servidor de download alternativo, em vez do serviço de atualização da intranet.
+        O servidor de download alternativo configura o Windows Update Agent para baixar arquivos de um servidor de download alternativo em vez do serviço de atualização da intranet.
 
-        A opção para baixar arquivos sem URLs permite que o conteúdo seja baixado do Servidor de Download Alternativo quando não há nenhuma URL de download para arquivos nos metadados de atualização. Essa opção só deve ser usada quando o serviço de atualização da intranet não fornece URLs de download nos metadados de atualização para os arquivos que estão presentes no servidor alternativo de download.
+        A opção de baixar arquivos com Urls ausentes permite que o conteúdo seja baixado do Servidor de download alternativo quando não houver Urls de download para arquivos nos metadados de atualização.  Essa opção só deve ser usada quando o serviço de atualização da intranet não fornecer Urls de download nos metadados de atualização para arquivos que estiverem presentes no servidor de download alternativo.
 
-        Observação: se a política "Configurar Atualizações Automáticas" estiver desabilitada, ela não terá efeito.
+        Observação: se a política "Configurar Atualizações automáticas" estiver desativada, essa política não tem efeito.
 
-        Observação: se o "Servidor de Download Alternativo" não estiver definido, ele usará o serviço de atualização da intranet por padrão para baixar as atualizações.
+        Observação: se o "Servidor alternativo de download" não estiver configurado, ele usará o serviço de atualização da intranet por padrão para baixar atualizações.
 
-        Observação: a opção "Baixar arquivos sem URLs..." é usada somente quando o "Servidor de Download Alternativo" está definido.
+        Observação: a opção de "Baixar arquivos sem Url..." só é usada se o "Servidor de Download alternativo" estiver configurado.
 
-        Observação: essa política não tem suporte no Windows RT. A configuração dessa política não terá efeito em computadores Windows RT.</string>
+        Observação: esta política não é suportada no Windows RT. A definição desta política não terá qualquer efeito sobre os computadores com Windows RT.
+
+        Observações sobre os proxies: com o objetivo de garantir o mais alto nível de segurança, a Microsoft recomenda proteger o WSUS com o protocolo TLS/SSL usando os servidores de intranet baseados em HTTPS para manter os sistemas seguros. Se um proxy for necessário, recomendamos a configuração do proxy do sistema.
+
+        A seleção de um comportamento proxy não terá efeito sobre os clientes que utilizam servidores de intranet baseados em HTTPS para detectar atualizações. 
+
+        A fim de manter os clientes inerentemente seguros, não estamos mais permitindo que servidores de intranet baseados em HTTP utilizem proxy de usuário por padrão para detectar atualizações. Se você precisar aproveitar o proxy do usuário para detectar atualizações enquanto utiliza um servidor de intranet baseado em HTTP apesar das vulnerabilidades que ele apresenta, você deve configurar o comportamento do proxy para "Permitir que o proxy do usuário seja utilizado como um fallback se a detecção que estiver utilizando o proxy do sistema falhar".
+
+        A detecção de atualizações falhará quando servidores de intranet baseados em HTTP forem usados sem um proxy configurado do sistema se a política de usar um comportamento de proxy alternativo não estiver configurada.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Usar somente o proxy do sistema para detectar atualizações (padrão)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Permitir que o proxy do usuário seja usado como fallback se a detecção usando o proxy do sistema falhar</string>
       <string id="DetectionFrequency_Help">Especifica os horários que o Windows usará para determinar por quanto tempo esperar para verificar se há atualizações disponíveis. O tempo de espera exato é a soma do valor especificado e uma variante de 0 a 4 horas.
 
         Se o status estiver definido como Habilitado, o Windows verificará se há novas atualizações no intervalo especificado.
@@ -680,8 +690,9 @@ Esta política substituirá as seguintes políticas:
         <textBox refId="CorpWUContentHost_Name">
           <label>Defina o servidor de download alternativo:</label>
         </textBox>
-        <text>(exemplo: http://IntranetUpd01)</text>
+        <text>(exemplo: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Baixe arquivos sem URL nos metadados se o servidor de download alternativo estiver definido.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecione o comportamento do proxy para o cliente do Windows Update para detectar atualizações com serviço não TLS (HTTP):</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Verificar atualizações nos seguintes</text>

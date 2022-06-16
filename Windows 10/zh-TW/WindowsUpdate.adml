@@ -134,15 +134,15 @@ Windows 會尋找適用於您電腦的更新，並於背景下載這些內容 (�
       <string id="CorpWuURL_Help">
         指定一部內部網路伺服器來裝載來自 Microsoft Update 的更新。接著，您可以使用此更新服務自動更新您網路上的電腦。
 
-        此設定可讓您指定您網路上的一部伺服器做為內部更新服務用途。「自動更新」用戶端將搜尋此服務以尋找適用於您網路上電腦的更新。
+        此設定可讓您指定您網路上的一部伺服器做為內部更新服務用途。自動更新用戶端將搜尋此服務以尋找適用於您網路上電腦的更新。
 
-        若要使用此設定，您必須設定兩個伺服器名稱值:「自動更新」用戶端偵測及下載更新的伺服器，以及已更新過的工作站上傳統計資料的伺服器。您可以將這兩個值設定為相同的伺服器。您也可指定選用的伺服器名稱值，以設定「Windows Update 代理程式」從替代下載伺服器 (而非內部網路更新服務) 下載更新。
+        若要使用此設定，您必須設定兩個伺服器名稱值: 自動更新用戶端偵測及下載更新的伺服器，以及已更新過的工作站上傳統計資料的伺服器。您可以將這兩個值設定為相同的伺服器。您也可指定選用的伺服器名稱值，以設定 Windows Update 代理程式從替代下載伺服器 (而非內部網路更新服務) 下載更新。
 
-        若狀態設定為 [已啟用]，「自動更新」用戶端會連線到指定的內部網路 Microsoft 更新服務 (或替代下載伺服器) 而非 Windows Update，以搜尋及下載更新。啟用此設定表示您公司中的使用者不用經由防火牆來取得更新，而且您將可以在部署更新之前先對更新進行測試。
+        若狀態設定為 [已啟用]，自動更新用戶端會連線到指定的內部網路 Microsoft 更新服務 (或替代下載伺服器) 而非 Windows Update，以搜尋及下載更新。啟用此設定表示您公司中的使用者不用經由防火牆來取得更新，而且您將可以在部署更新之前先對更新進行測試。
 
-        若狀態設定為 [已停用] 或 [尚未設定]，且原則或使用者喜好設定未停用「自動更新」，則「自動更新」用戶端會直接連線到網際網路上的 Windows Update 網站。
+        若狀態設定為 [已停用] 或 [尚未設定]，且原則或使用者喜好設定未停用自動更新，則自動更新用戶端會直接連線到網際網路上的 Windows Update 網站。
 
-        替代下載伺服器會設定「Windows Update 代理程式」，以從替代下載伺服器 (而非內部網路更新服務) 下載檔案。 
+        替代下載伺服器會設定 Windows Update 代理程式，以從替代下載伺服器 (而非內部網路更新服務) 下載檔案。
 
         [下載遺漏 URL 的檔案] 選項讓您能在更新中繼資料未提供檔案的下載 URL 時從替代下載伺服器下載內容。僅當內部網路更新服務對於替代下載伺服器上的檔案並未在其更新中繼資料內提供下載 URL 時才應使用此選項。
 
@@ -150,9 +150,19 @@ Windows 會尋找適用於您電腦的更新，並於背景下載這些內容 (�
 
         注意: 若未設定「替代下載伺服器」，預設將會使用內部網路更新服務來下載更新。
 
-        注意: [下載遺漏 URL 的檔案] 選項僅限於已設定「替代下載伺服器」時才會使用。
+        注意: [下載遺漏 URL 的檔案...] 選項僅限於已設定「替代下載伺服器」時才會使用。
 
-        注意: Windows RT 不支援此原則。在 Windows RT 電腦上設定此原則將不會有任何作用。</string>
+        注意: Windows RT 不支援此原則。在 Windows RT 電腦上設定此原則將不會有任何作用。
+
+        Proxy 上的備註: 為了確保最高等級的安全性，Microsoft 建議使用 TLS/SSL 通訊協定保護 WSUS，藉以使用以 HTTPS 為基礎的內部網路伺服器來確保系統安全。如果需要 Proxy，建議您設定系統 Proxy。
+
+        選取 Proxy 行為對使用以 HTTPS 為基礎內部網路伺服器檢測更新的用戶端沒有影響。
+
+        為了確保用戶端固有的安全性，在預設的情況下，我們不再允許以 HTTP 為基礎的內部網路伺服器利用使用者 Proxy 來檢測更新。儘管使用以 HTTP 為基礎的內部網路伺服器時仍存在漏洞，如果仍需要利用使用者 Proxy 來檢測更新，則必須將 Proxy 行為設定為 [如果使用系統 Proxy 的偵測失敗，則允許將使用者 Proxy 做為遞補]。
+
+        如果未設定使用替代 Proxy 行為的原則，在沒有設定系統 Proxy 的情況下使用以 HTTP 為基礎的內部網路伺服器時，更新檢測將失敗。</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">只使用系統 proxy 偵測更新 (預設)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">如果使用系統 proxy 的偵測失敗，則允許將使用者 proxy 做為遞補</string>
       <string id="DetectionFrequency_Help">指定 Windows 將用幾小時來判定等候時間，再檢查是否有可用的更新。確切的等候時間是特定值和隨機變數 0-4 小時的加總。
 
 如果狀態設為 [已啟用]，Windows 將以指定的間隔檢查是否有可用的更新。
@@ -680,8 +690,9 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         <textBox refId="CorpWUContentHost_Name">
           <label>設定替代下載伺服器:</label>
         </textBox>
-        <text>(例如: http://IntranetUpd01)</text>
+        <text>(範例： https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">若已設定替代下載伺服器，即下載中繼資料內遺漏 URL 的檔案。</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">選取 Windows Update 用戶端的 proxy 行為，以偵測具是否有非 TLS (HTTP) 服務的更新：</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>檢查更新的</text>

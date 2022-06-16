@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">利用統計情報の許可</string>
       <string id="AllowTelemetry_0">0 - セキュリティ [Enterprise のみ]</string>
-      <string id="AllowTelemetry_1">1 - 基本</string>
+      <string id="AllowTelemetry_1">1 - 必須</string>
       <string id="AllowTelemetry_2">2 - 拡張</string>
-      <string id="AllowTelemetry_3">3 - フル</string>
+      <string id="AllowTelemetry_3">3 - 任意</string>
       <string id="AllowTelemetry_Explain">Windows 10 でこの設定を構成すると、エンド ユーザーは、管理者が組織に対して設定したレベルより高いレベルの利用統計情報の収集を選択できません。この制限は、Windows オペレーティング システムと、Windows に含まれるアプリのみに適用され、Windows 10 で実行されているサード パーティ アプリには適用されません。
 
 診断データは、次のように 4 つのレベルに分類されます。
   - 0 (セキュリティ)。Windows、Windows Server、および System Center を安全な状態に保つために必要な情報 (接続ユーザー エクスペリエンスと利用統計情報コンポーネントの設定、悪意のあるソフトウェアの削除ツール、Windows Defender に関するデータを含む)。
-  - 1 (基本)。基本的なデバイス情報 (品質に関連したデータ、アプリの互換性、およびセキュリティ レベルのデータを含む)。
-  - 2 (拡張)。追加のインサイト (Windows、Windows Server、System Center、アプリがどのように使用され、どのように実行されているか、詳細な信頼性データ、基本レベルとセキュリティ レベルの両方のデータを含む)。
-  - 3 (完全)。問題を特定して解決するために必要なすべてのデータに加えて、セキュリティ、基本、および拡張レベルのデータ。
+  - 1 (必須)。基本的なデバイス情報 (品質に関連したデータ、アプリの互換性、およびセキュリティ レベルのデータを含む)。
+  - 2 (拡張)。追加のインサイト (Windows、Windows Server、System Center、アプリがどのように使用され、どのように実行されているか、詳細な信頼性データ、必須レベルとセキュリティ レベルの両方のデータを含む)。
+  - 3 (任意)。問題を特定して解決するために必要なすべてのデータに加えて、セキュリティ、必須、および拡張レベルのデータ。
 
 設定アプリでユーザーが使用できるオプションは、この設定を構成することによって変更されます。未設定の場合でも、その他のグループ ポリシー設定によって影響されることがあります。セキュリティまたは基本の利用統計情報を設定できるようにこのポリシーを構成した場合、エンド ユーザーはより高いレベルを選択できなくなることに注意してください。
       </string>
@@ -43,18 +43,18 @@
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">拡張レベルの診断データを Windows Analytics の最小要件に制限する</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics による収集を有効にする</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Windows Analytics による収集を無効にする</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">このポリシー設定を [利用統計情報の許可] ポリシー設定と組み合わせることで、組織が Windows Analytics サービスを使ってマイクロソフトに特定の診断データのセットを送信し、IT に関する洞察を得ることができます。この設定を構成した場合、ユーザーは製品利用統計情報の設定を変更できますが、組織に対して設定されたレベルよりも上のレベルに変更することはできません。
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">このポリシー設定と [利用統計情報の許可] ポリシー設定を組み合わせることで、Windows Analytics サービスを使ってマイクロソフトに特定の診断データのセットを送信し、IT に関する洞察を得ることができます。
 
 この動作を有効にするには、次の 2 つの手順を完了してください。
 
     1. このポリシー設定を有効にする
     2. [利用統計情報の許可] をレベル 2 (拡張) に設定する
 
-これらのポリシー設定を一緒に構成すると、基本レベルの診断データのほかに、Windows Analytics が必要とする追加のイベントもマイクロソフトに送信されます。追加のイベントは https://go.Microsoft.com/fwlink/?linked=847594 に記載されています。
+この設定は、セキュリティまたは必須診断データを Microsoft に送信するように構成されたデバイスには影響しません。
 
-[利用統計情報の許可] ポリシー設定で拡張診断データを有効にして、このポリシー設定を構成しなかった場合は、Windows Analytics に必要なイベントと、拡張レベルの追加の製品利用統計情報がマイクロソフトに送信されます。この設定は、完全、基本、またはセキュリティ レベルの診断データをマイクロソフトに送信するように構成されているコンピューターには影響しません。
+これらのポリシーが構成されている場合、診断データの収集は、必須診断データと Desktop Analytics が必要とするイベントに制限されます。これらのイベントは、https://go.microsoft.com/fwlink/?linkid=2116020 で表示できます。
 
-このポリシー設定を無効にした場合または構成しなかった場合は、マイクロソフトに送信される診断データのレベルは [利用統計情報の許可] ポリシーによって決まります。
+このポリシー設定を無効にするか、未構成にした場合、Microsoft に送信される診断データのレベルは、[利用統計情報の許可] ポリシー設定 (構成されている場合) によって決定されます (たとえば、[利用統計情報の許可] ポリシー設定で拡張診断データを有効にし、このポリシー設定を構成しない場合、Windows Analytics に必要なイベントと追加の拡張レベル診断データを Microsoft に送信します)。
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Windows 診断データでデバイス名の送信を許可します</string>
@@ -104,6 +104,33 @@
           このポリシーでは、Desktop Analytics プログラムの一部として、このデバイスの診断データのアップロード エンドポイントを設定します。
           組織がそのプログラムに参加しようとしており、カスタム アップロード エンドポイントを構成するように指示されている場合は、この設定を使用してそのエンドポイントを定義します。
           この設定の値は、プログラムのオンボード プロセスの一部として Microsoft から提供されます。 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">コンプライアンス処理の更新を許可する</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          IT 管理者は、このデバイスからの診断データを更新プログラムのコンプライアンス別に処理できるようにすることができます。
+ 次のリストには、でサポートされている値が表示されています。
+ 0 (既定) –診断データは、更新プログラムのコンプライアンスによって処理されません。
+ 16 –診断データは、更新プログラムのコンプライアンスにより処理することができます。
+このポリシー設定を無効、または未構成にした場合、このデバイスからの診断データは、更新プログラムのコンプライアンスによって処理されません。
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Desktop Analytics 処理を許可する</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          IT 管理者は、このデバイスからの診断データをDesktop Analytics で処理できるようにすることができます。
+ 次のリストには、でサポートされている値が表示されています。
+ 0 (既定) –診断データは、Desktop Analytics で処理されません。
+ 2 –診断データは、Desktop Analytics で処理することができます。
+このポリシー設定を無効、または未構成にした場合、このデバイスからの診断データは、Desktop Analytics で処理されません。 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">WUfB クラウド処理を許可する</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          IT 管理者が、このデバイスからの診断データを Windows Update Business cloud で処理できるようにすることを許可します。
+            次の一覧は、サポートされている値を示しています: 
+              0 (既定値) – Business cloud の Windows Update で診断データが処理されません。
+              8– Windows Update for Business cloud で診断データを処理できるようになりました。
+          このポリシー設定を無効にした場合、または構成しなかった場合、このデバイスからの診断データは Windows Update Business cloud で処理されません。 
       </string>
 
       <string id="AllowCommercialDataPipeline">商用データ パイプラインを許可する</string>

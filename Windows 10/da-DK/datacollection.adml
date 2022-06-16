@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">Tillad telemetri</string>
       <string id="AllowTelemetry_0">0 - Sikkerhed [Kun Enterprise]</string>
-      <string id="AllowTelemetry_1">1 – Standard</string>
+      <string id="AllowTelemetry_1">1 - Obligatorisk</string>
       <string id="AllowTelemetry_2">2 - Forbedret</string>
-      <string id="AllowTelemetry_3">3 - Fuld</string>
+      <string id="AllowTelemetry_3">3 - Valgfri</string>
       <string id="AllowTelemetry_Explain">Ved at konfigurere denne indstilling i Windows 10 kan slutbrugere ikke vælge et højere niveau af telemetrisamlinger end det niveau, du har angivet for organisationen. Denne begrænsning gælder kun for Windows-operativsystemet og- apps, der leveres sammen med Windows, og gælder ikke for tredjepartsprogrammer, der kører på Windows 10.
 
 Diagnosticeringsdata kategoriseres i fire niveauer som følger:
-  - 0 (Sikkerhed). Oplysninger, der er nødvendige for at hjælpe med at beskytte Windows, Windows Server og System Center, herunder data om indstillingerne for komponenten Tilsluttede brugeroplevelser og telemetri, Værktøj til fjernelse af skadelig software og Microsoft Defender.
-  - 1 (Grundlæggende). Grundlæggende enhedsoplysninger, herunder: kvalitetsrelaterede data, appkompatibilitet og data fra sikkerhedsniveauet.
-  - 2 (Udvidet). Yderligere indsigt, herunder: hvordan Windows, Windows Server, System Center og apps bruges, hvordan de fungerer, avancerede overvågningsdata og data fra både det grundlæggende niveau og sikkerhedsniveauerne.
-  - 3 (Fuld). Alle de data, der er nødvendige for at identificere og hjælpe med at løse problemer, plus data fra niveauerne Sikkerhed, Grundlæggende og Udvidet.
+  - 0 (Sikkerhed). Oplysninger, der er nødvendige for at hjælpe med at beskytte Windows, Windows Server og System Center, herunder data om indstillingerne for komponenten Tilsluttede brugeroplevelser og telemetri, Værktøj til fjernelse af skadelig software og Windows Defender.
+  - 1 (Påkrævet). Grundlæggende enhedsoplysninger, herunder: kvalitetsrelaterede data, appkompatibilitet og data fra sikkerhedsniveauet.
+  - 2 (Udvidet). Yderligere indsigt, herunder: hvordan Windows, Windows Server, System Center og apps bruges, hvordan de fungerer, avancerede overvågningsdata og data fra både det udvidede niveau og sikkerhedsniveauet.
+  - 3 (Valgfri). Alle de data, der er nødvendige for at identificere og hjælpe med at løse problemer, plus data fra niveauerne Sikkerhed, Påkrævet og Udvidet.
 
 De indstillinger, der er tilgængelige for brugere i appen Indstillinger, ændres ved at konfigurere denne indstilling, og selvom de ikke er angivet, kan de påvirkes af andre gruppepolitikindstillinger. Bemærk, at hvis denne politik er konfigureret til at tillade en telemetriindstilling af Sikkerhed eller Grundlæggende, kan slutbrugere ikke vælge et højere niveau.
       </string>
@@ -43,18 +43,18 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil 
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Begræns udvidede diagnosticeringsdata til det minimum, der kræves af Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Aktivér Windows Analytics-samling</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Deaktiver Windows Analytics-samling</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Denne politikindstilling gør det sammen med politikindstillingen Tillad telemetri muligt for organisationer at sende et bestemt sæt diagnosticeringsdata til it-indsigt via Windows Analytics-tjenester til Microsoft. Ved at konfigurere denne indstilling forhindrer du ikke brugerne i at ændre deres telemetriindstillinger. men du forhindrer dem i at vælge et højere niveau, end du har angivet for organisationen.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Denne politikindstilling vil kombineret med politikindstillingen Tillad telemetri give organisationer lov til at sende et bestemt sæt af diagnosticeringsdata til Microsoft til it-indsigt via Windows Analytics-tjenester.
 
-Hvis du vil aktivere denne funktionsmåde, skal du udføre to trin:
+Du kan aktivere denne funktionalitet ved at fuldføre to trin:
 
     1. Aktivér denne politikindstilling
-    2. Indstil Tillad telemetri til niveau 2 (udvidet)
+    2. Indstil Tillad telemetri til niveau 2 (Udvidet)
 
-Hvis du konfigurerer disse politikindstillinger samlet, sender du det grundlæggende niveau af diagnosticeringsdata plus eventuelle yderligere hændelser, der kræves til Windows Analytics, til Microsoft. De yderligere hændelser er dokumenteret her: https://go.Microsoft.com/fwlink/?linked=847594.
+Denne indstilling påvirker enheder, der er konfigurerer til at sende sikkerhedsdata eller påkrævede diagnosticeringsdata til Microsoft. 
 
-Hvis du aktiverer udvidede diagnosticeringsdata i politikindstillingen Tillad telemetri, men du ikke konfigurerer denne politikindstilling, sender du de nødvendige hændelser til Windows Analytics plus eventuelle yderligere data om udvidede telemetrioplysninger til Microsoft. Denne indstilling har ingen indflydelse på computere, der er konfigureret til at sende diagnosticeringsdata på niveauet Fuld, Grundlæggende eller Sikkerhed til Microsoft.
+Når disse politikker er konfigureret, begrænses indsamling af diagnosticeringsdata til påkrævede diagnosticeringsdata og hændelser krævet af Desktop Analytics. Disse hændelser kan ses på https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, afgøres niveauet for de diagnosticeringsdata, der sendes til Microsoft, af politikindstillingen Tillad telemetri.
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vil det niveau af diagnosticeringsdata, der sendes til Microsoft, være bestemt af politikindstillingen Tillad telemetri, hvis den er konfigureret (hvis du f.eks. aktiverer udvidede diagnosticeringsdata ved hjælp af politikindstillingen Tillad telemetri, men ikke konfigurerer denne politikindstilling, sender du de påkrævede hændelser for Windows Analytics samt alle yderligere diagnosticeringsdata på udvidet niveau til Microsoft).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Tillad, at enhedsnavnet sendes i diagnostiske Windows-data</string>
@@ -104,6 +104,33 @@ Hvis du vil angive en grænse for niveauet af diagnosticeringsdata, der sendes t
           Denne politik angiver slutpunktet for upload for denne enheds diagnosticeringsdata som en del af Desktop Analytics-programmet.
           Hvis din organisation deltager i programmet og er blevet bedt om at konfigurere et brugerdefineret slutpunkt for upload, skal du bruge denne indstilling til at angive slutpunktet.
           Værdien for denne indstilling vil blive angivet af Microsoft som del af programmets Onboarding-proces. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Tillad opdatering af overholdelsesbehandling</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Tillad IT-administratorer at gøre det muligt, at diagnosticeringsdata fra denne enhed behandles af Opdateringsoverholdelse. 
+            Følgende liste viser de understøttede værdier:  
+              0 (standard)– Diagnosticeringsdata behandles ikke af Opdateringsoverholdelse. 
+              16 – Det tillades ikke, at overholdelsesdata behandles af Opdateringsoverholdelse. 
+            Hvis du slår denne politikindstilling fra eller ikke konfigurerer den, behandles diagnosticeringsdata ikke af Opdateringsoverholdelse.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Tillad behandling af skrivebordsanalyse</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Tillad IT-administratorer at gøre det muligt, at diagnosticeringsdata fra denne enhed behandles af Desktop Analytics. 
+            Følgende liste viser de understøttede værdier:  
+              0 (standard)– Diagnosticeringsdata behandles ikke af Desktop Analytics. 
+              2 – Det tillades ikke, at overholdelsesdata behandles af Desktop Analytics. 
+            Hvis du slår denne politikindstilling fra eller ikke konfigurerer den, behandles diagnosticeringsdata ikke af Desktop Analytics. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Tillad behandling af WUfB-Sky</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Gør det muligt for IT-administratorer at aktivere diagnosticeringsdata fra denne enhed for at blive behandlet af Windows Update for Business Cloud. 
+            Følgende liste viser de understøttede værdier:  
+              0 (standard) – diagnosticeringsdata behandles ikke af Windows Update for Business Cloud.. 
+              8 – diagnosticeringsdata kan behandles af Windows Update for Business Cloud.. 
+          Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil diagnosticeringsdata fra denne enhed ikke blive behandlet af Windows Update for Business Cloud. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Tillad erhvervsmæssig datapipeline</string>

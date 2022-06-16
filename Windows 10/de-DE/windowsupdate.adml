@@ -152,7 +152,17 @@ nFalls der Status auf "Nicht konfiguriert" festgelegt ist, ist die Verwendung vo
 
         Hinweis: Die Option zum Herunterladen von Dateien ohne URL wird nur verwendet, wenn "Alternativer Downloadserver" festgelegt ist.
 
-        Hinweis: Diese Richtlinie wird unter Windows RT nicht unterstützt. Das Aktivieren dieser Richtlinie auf PCs, auf denen Windows RT ausgeführt wird, hat keine Auswirkungen.</string>
+        Hinweis: Diese Richtlinie wird unter Windows RT nicht unterstützt. Das Aktivieren dieser Richtlinie auf PCs, auf denen Windows RT ausgeführt wird, hat keine Auswirkungen.
+
+        Hinweis zu Proxys: Microsoft empfiehlt zur Gewährleistung eines Höchstmaßes an Sicherheit, WSUS mit TLS/SSL-Protokollen zu sichern und dabei HTTP-basierte Intranetserver zu verwenden, um die Systemsicherheit aufrecht zu erhalten. Wenn ein Proxy erforderlich ist, empfiehlt es sich, einen Systemproxy zu konfigurieren.
+
+        Die Auswahl eines Proxyverhaltens hat keine Auswirkungen auf Clients, die HTTPS-basierte Intranetserver für die Ermittlung von Updates verwenden. 
+
+        Um den inhärenten Schutz von Clients aufrecht zu erhalten, können HTTP-basierte Intranetserver Benutzer-Proxys nicht mehr standardmäßig für die Ermittlung von Updates verwenden. Wenn Sie trotz der damit verbundenen Risiken für die Ermittlung von Updates Benutzer-Proxys unter Verwendung HTTP-basierter Intranetserver einsetzen müssen, wählen Sie als Proxyverhalten  "Verwendung eines Benutzer-Proxys als Fallback, falls die Erkennung mittels System-Proxy fehlschlägt, erlauben".
+
+        Die Updateermittlung schlägt fehl, wenn HTTP-basierte Intranetserver ohne konfigurierten Systemproxy verwendet werden und die Richtlinie für die Verwendung eines alternativen Proxys nicht konfiguriert ist.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Nur System-Proxy für die Erkennung von Aktualisierungen verwenden (Standard)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Verwendung eines Benutzer-Proxys als Fallback, falls die Erkennung mittels System-Proxy fehlschlägt, erlauben</string>
       <string id="DetectionFrequency_Help">Gibt die Anzahl der Stunden an, mit deren Hilfe Windows bestimmt, wie lange gewartet wird, bevor verfügbare Updates gesucht werden. Die genaue Wartezeit entspricht der Summe aus dem spezifischen Wert und einer Zufallsvariablen zwischen 0 und 4 Stunden.
 
         Wenn der Status auf "Aktiviert" festgelegt ist, sucht Windows im angegebenen Intervall nach verfügbaren Updates.
@@ -680,8 +690,9 @@ Diese Richtlinie setzt die folgenden Richtlinien außer Kraft:
         <textBox refId="CorpWUContentHost_Name">
           <label>Alternativen Downloadserver festlegen:</label>
         </textBox>
-        <text>(Beispiel: http://IntranetUpd01)</text>
+        <text>(Beispiel: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Dateien ohne URL in den Metadaten herunterladen, wenn ein alternativer Downloadserver festgelegt ist</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Proxy-Verhalten für den Windows Update-Client zur Erkennung von Updates mit einem nicht TLS (HTTP)-basierten Dienst wählen:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>In folgenden Abständen (Stunden)</text>

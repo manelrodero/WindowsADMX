@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">Tillåt telemetri</string>
       <string id="AllowTelemetry_0">0 - Säkerhet [endast företag]</string>
-      <string id="AllowTelemetry_1">1 - Grundläggande</string>
+      <string id="AllowTelemetry_1">1 – Obligatorisk</string>
       <string id="AllowTelemetry_2">2 - Utökad</string>
-      <string id="AllowTelemetry_3">3 - Fullständig</string>
+      <string id="AllowTelemetry_3">3 – Valfri</string>
       <string id="AllowTelemetry_Explain">Genom att konfigurera den här inställningen i Windows 10 hindrar du användarna från att välja en högre nivå av telemetriinsamling än den nivå som du ställer in för er organisation. Denna begränsning gäller endast operativsystemet Windows och apparna som ingår i Windows. Den gäller inte för tredjepartsappar som körs i Windows 10.
 
 Diagnostikdata kategoriseras i fyra nivåer:
-  - 0 (Säkerhet). Data som krävs för att skydda Windows, Windows Server och System Center, inklusive data om komponentinställningar för Enhetlig användarupplevelse och telemetri och data om Borttagning av skadlig programvara och Windows Defender.
-  - 1 (Grundläggande). Grundläggande enhetsinformation som kvalitetsrelaterade data, data om appkompatibilitet samt data från nivån Säkerhet.
-  - 2 (Utökad). Ytterligare insikter som hur Windows, Windows Server, System Center och appar används, hur de presterar, avancerade tillförlitlighetsdata samt data från båda nivåerna Grundläggande och Säkerhet.
-  - 3 (Fullständig). Alla data som krävs för att identifiera och åtgärda problem samt data från nivåerna Säkerhet, Grundläggande och Utökad.
+  – 0 (Säkerhet). Data som krävs för att skydda Windows, Windows Server och System Center, inklusive data om komponentinställningar för Enhetlig användarupplevelse och telemetri och data om Borttagning av skadlig programvara och Windows Defender.
+  – 1 (Grundläggande). Grundläggande enhetsinformation som kvalitetsrelaterade data, data om appkompatibilitet samt data från nivån Säkerhet.
+  – 2 (Utökad). Ytterligare insikter som hur Windows, Windows Server, System Center och appar används, hur de presterar, avancerade tillförlitlighetsdata samt data från båda nivåerna Grundläggande och Säkerhet.
+  – 3 (Fullständig). Alla data som krävs för att identifiera och åtgärda problem samt data från nivåerna Säkerhet, Grundläggande och Utökad.
 
 De alternativ som är tillgängliga för användarna i appen Inställningar påverkas när du konfigurerar den här inställningen. Även om du inte konfigurerar den kan alternativen påverkas av andra grupprinciper. Obs! Om du konfigurerar den här principen till att tillåta telemetriinställningen Säkerhet eller Grundläggande kommer användarna inte att kunna välja en högre nivå.
       </string>
@@ -43,18 +43,18 @@ Om du inaktiverar eller inte konfigurerar den här principinställningen kan Mic
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Begränsa utökade diagnostikdata till minimikraven för Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Aktivera Windows Analytics-insamling</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Inaktivera Windows Analytics-insamling</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Den här principinställningen i kombination med principinställningen Tillåt telemetri gör att organisationer kan skicka en specifik uppsättning diagnostikdata till Microsoft för analys med Windows Analytics-tjänster. Genom att konfigurera den här inställningen hindrar du inte användarna från att ändra sina telemetriinställningar, men du hindrar dem från välja en högre nivå än den du ställt in för organisationen.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Den här principinställningen i kombination med principinställningen Tillåt telemetri gör att organisationer kan skicka en specifik uppsättning diagnostikdata till Microsoft för analys med Windows Analytics-tjänster.
 
 För att aktivera detta måste du slutföra följande två steg:
 
     1. Aktivera principinställningen
     2. Sätt Tillåt telemetri till nivå 2 (utökad)
 
-Om du konfigurerar de här principinställningarna ihop skickas den grundläggande nivån av diagnostikdata plus eventuella ytterligare händelser som krävs för Windows Analytics till Microsoft. De ytterligare händelserna beskrivs här: https://go.Microsoft.com/fwlink/?linked=847594.
+Den här inställningen har ingen effekt på enheter som är konfigurerade att skicka Säkerhets- och obligatorisk data till Microsoft. 
 
-Om du aktiverar utökade diagnostikdata i principinställningen Tillåt telemetri och du inte konfigurerar den här principinställningen skickas även de diagnostikhändelser som krävs för Windows Analytics, plus ytterligare telemetridata på den utökade nivån till Microsoft. Den här inställningen har ingen verkan på datorer som är konfigurerade att skicka diagnostikdata på nivåerna Fullständig, Grundläggande eller Säkerhet till Microsoft.
+När du konfigurerar de här principerna skickas en grundläggande nivå av diagnostikdata plus ytterligare diagnostikhändelser som krävs för Desktop Analytics. Dessa händelser finns beskrivna här på https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Om du inaktiverar eller låter bli att konfigurera den här principinställningen bestäms vilken nivå av diagnostikdata som skickas till Microsoft av principinställningen Tillåt telemetri.
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen bestäms vilken nivå av diagnostikdata som skickas till Microsoft av principen Tillåt telemetri (t. ex. om du aktivera förbättrad diagnostisk data via principinställningen Tillåt telemetri men inte konfigurerar den här principinställningen kommer du att skicka obligatoriska händelser för Windows Analytics plus alla ytterligare diagnostiska data på förbättrad nivå till Microsoft).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Tillåt att enhetsnamnet skickas i Windows-diagnostikdata</string>
@@ -104,6 +104,33 @@ Använd principinställningen Tillåt telemetri om du vill begränsa nivån av d
           Med den här principen anger du uppladdningsslutpunkten för enhetens diagnostikdata som del i Desktop Analytics-programmet.
           Om din organisation deltar i programmet och har anvisats att konfigurera en anpassad uppladdningsslutpunkt kan du med den här inställningen ange den slutpunkten.
           Värdet för den här inställningen tillhandahålls av Microsoft som del i registreringsprocessen för programmet. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Tillåt bearbetning av Uppdateringsefterlevnad</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Tillåter IT-administratörer att använda diagnostikdata från denna enhet för bearbetning av Uppdateringsefterlevnad. 
+            Följande värden stöds:  
+              0 (standard) – Diagnostikdata bearbetas inte av Uppdateringsefterlevnad. 
+              16 – Diagnostikdata tillåts bearbetas av Uppdateringsefterlevnad. 
+            Om du inaktiverar eller avstår från att konfigurera denna principinställning bearbetas inte diagnostikdata från denna enhet av Uppdateringsefterlevnad.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Tillåt Desktop Analytics-bearbetning</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Gör att IT-administratörer kan använda diagnostikdata från denna enhet för bearbetning i Desktop Analytics. 
+            Följande lista visar de värden som stöds:  
+              0 (standard) – Diagnostikdata bearbetas inte i Desktop Analytics. 
+              2 – Diagnostikdata kan bearbetas i Desktop Analytics. 
+          Om du inaktiverar eller inte konfigurerar denna principinställning kommer diagnostikdata från den här enheten inte att bearbetas i Desktop Analytics. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Tillåt WUfB moln bearbetning</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Gör att IT-administratörer kan aktivera diagnostikdata från enheten som ska bearbetas av Windows Update för företag-molnet. 
+            Följande lista visar de värden som stöds:  
+              0 (standard) – diagnostiska data bearbetas inte av Windows Update för företag-molnet.. 
+              8 – diagnostiska data kan bearbetas av Windows Update för företag-molnet.. 
+          Om du inaktiverar eller låter bli att konfigurera den här princip inställningen bearbetas inte diagnostikdata från enheten av Windows Update för företag-molnet. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Tillåt datapipeline för kommersiella enheter</string>

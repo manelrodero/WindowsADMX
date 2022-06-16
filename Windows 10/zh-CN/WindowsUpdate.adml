@@ -152,7 +152,17 @@
 
         注意: 仅当设置了“备用下载服务器”时才会使用“下载没有 Url 的文件...”选项。
 
-        注意: Windows RT 不支持此策略。在 Windows RT 电脑上设置此策略不起任何作用。</string>
+        注意: Windows RT 不支持此策略。在 Windows RT 电脑上设置此策略不起任何作用。
+
+       有关代理的说明：为了确保最高级别的安全性，Microsoft建议使用TLS / SSL协议保护WSUS，从而使用基于 HTTPS 的 Intranet 服务器来确保系统安全。如果需要代理，我们建议配置系统代理。
+
+        选择代理行为对使用基于 HTTPS 的 Intranet 服务器来检测更新的客户端没有影响。
+
+       为了确保客户端固有的安全性，默认情况下，我们不再允许基于 HTTP 的 Intranet 服务器利用用户代理来检测更新。如果尽管存在安全漏洞，仍需要利用用户代理在使用基于 HTTP 的 Intranet 服务器时检测更新，必须将代理行为配置为“如果使用系统代理检测失败，允许用户代理用作回退”。
+
+        如果未配置使用备用代理行为的策略，则在没有配置系统代理的情况下使用基于 HTTP 的 Intranet 服务器时，更新检测将失败。</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">仅使用系统代理检测 (默认的更新)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">当使用系统代理进行检测时，允许将用户代理用作回退</string>
       <string id="DetectionFrequency_Help">指定 Windows 确定在检查可用更新前等待的时间(小时)。确切的等待时间是具体值和 0-4 小时之间的随机变量的总和。
 
         如果将状态设置为“启用”，Windows 将以指定的间隔检查可用更新。
@@ -680,8 +690,9 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
         <textBox refId="CorpWUContentHost_Name">
           <label>设置备用下载服务器:</label>
         </textBox>
-        <text>（例如：http://IntranetUpd01）</text>
+        <text>(示例： https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">如果设置了备用下载服务器，则下载元数据中没有 Url 的文件。</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">选择 Windows 更新客户端用于检测使用非 TLS (HTTP) 的更新的代理行为基于 HTTP 服务：</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>检查下列更新的</text>

@@ -131,27 +131,37 @@ Pokud bude nastavena na Nenakonfigurováno, používání automatických aktuali
       <string id="AutoUpdateSchTimeAuto">Automaticky</string>
       <string id="CorpWuURL">Určit umístění intranetového serveru služby Microsoft Update</string>
       <string id="CorpWuURL_Help">
-        Určuje intranetový server, který bude hostitelem aktualizací ze služby Microsoft Update. Pomocí této aktualizační služby je pak možné automaticky aktualizovat počítače v síti.
+        Určuje intranetový server, který bude hostitelem aktualizací ze služby Microsoft Update. Pomocí této aktualizační služby je pak možné automaticky aktualizovat počítače v síti.
 
-        Toto nastavení umožňuje určit server v síti, který bude fungovat jako interní aktualizační služba. Klient automatických aktualizací bude pomocí této služby hledat aktualizace, které jsou určené pro jednotlivé počítače v síti.
+        Toto nastavení umožňuje určit server v síti, který bude fungovat jako interní aktualizační služba. Klient automatických aktualizací bude pomocí této služby hledat aktualizace, které jsou určené pro jednotlivé počítače v síti.
 
-        Pokud chcete toto nastavení používat, je třeba nastavit názvy dvou serverů: serveru, na kterém klient automatických aktualizací zjišťuje aktualizace a ze kterého je stahuje, a serveru, na který předávají aktualizované pracovní stanice statistická data. U obou hodnot je možné zadat stejný server. Je možné zadat volitelnou hodnotu názvu serveru, čímž Windows Update Agenta nakonfigurujete na stahování aktualizací z alternativního serveru pro stahování namísto používání intranetové aktualizační služby.
+        Pokud chcete toto nastavení používat, je třeba nastavit názvy dvou serverů: serveru, na kterém klient automatických aktualizací zjišťuje aktualizace a ze kterého je stahuje, a serveru, na který předávají aktualizované pracovní stanice statistická data. U obou hodnot je možné zadat stejný server. Je možné zadat volitelnou hodnotu názvu serveru, čímž agenta služby Windows Update nakonfigurujete na stahování aktualizací z alternativního serveru pro stahování namísto používání intranetové aktualizační služby.
 
-        Při stavu Povoleno se klient automatických aktualizací namísto k webu Windows Update připojí k zadanému intranetovému serveru pro aktualizace od Microsoftu (neboli alternativnímu serveru pro stahování), na kterém bude hledat aktualizace a ze kterého bude nalezené aktualizace stahovat. Pokud toto nastavení povolíte, nebudou muset koncoví uživatelé v organizaci při získávání aktualizací překonávat bránu firewall a vy budete mít možnost aktualizace před nasazením nejprve otestovat.
+        Při stavu Povoleno se klient automatických aktualizací namísto k webu Windows Update připojí k zadanému intranetovému serveru pro aktualizace od Microsoftu (neboli alternativnímu serveru pro stahování), na kterém bude hledat aktualizace a ze kterého bude nalezené aktualizace stahovat. Pokud toto nastavení povolíte, nebudou muset koncoví uživatelé v organizaci při získávání aktualizací překonávat bránu firewall a vy budete mít možnost aktualizace před nasazením nejprve otestovat.
 
-        Pokud je nastavená možnost Zakázáno nebo Nenakonfigurováno a pokud automatické aktualizace nejsou zakázané v rámci zásad nebo uživatelských předvoleb, připojí se klient automatických aktualizací přímo k webu Windows Update na internetu.
+        Pokud je nastavená možnost Zakázáno nebo Nenakonfigurováno a pokud automatické aktualizace nejsou zakázané v rámci zásad nebo uživatelských předvoleb, připojí se klient automatických aktualizací přímo k webu Windows Update na internetu.
 
-        Alternativní server pro stahování nakonfiguruje Windows Update Agenta na stahování souborů z alternativního serveru namísto používání intranetové aktualizační služby.
+        Alternativní server pro stahování nakonfiguruje agenta služby Windows Update na stahování souborů z alternativního serveru namísto používání intranetové aktualizační služby.
 
-        Volba stahování souborů s chybějícími adresami URL umožňuje stahovat obsah z alternativního serveru pro stahování, když metadata aktualizace neobsahují adresy URL souborů. Tuto volbu byste měli použít jen v případě, kdy intranetová aktualizační služba neposkytne adresy URL pro stahování v metadatech u soborů, které se nacházejí na alternativním serveru pro stahování.
+        Volba stahování souborů s chybějícími adresami URL umožňuje stahovat obsah z alternativního serveru pro stahování, když metadata aktualizace neobsahují adresy URL souborů. Tuto volbu byste měli použít jen v případě, kdy intranetová aktualizační služba neposkytne adresy URL pro stahování v metadatech u soborů, které se nacházejí na alternativním serveru pro stahování.
 
         Poznámka: Pokud je zásada Konfigurace automatických aktualizací zakázaná, nemá tato zásada žádný vliv.
 
         Poznámka: Pokud alternativní server pro stahování není nastavený, použije se pro stahování aktualizací ve výchozím nastavení intranetová aktualizační služba.
 
-        Poznámka: Možnost „Stahovat soubory bez adresy URL…“ se použije jen v případě, kdy je nastaven „Alternativní server pro stahování“.
+        Poznámka: Možnost „Stahovat soubory bez adresy URL…“ se použije jen v případě, kdy je nastaven „Alternativní server pro stahování“.
 
-        Poznámka: Tato zásada není podporovaná ve Windows RT. Nastavení této zásady nemá na počítačích s Windows RT žádný účinek.</string>
+        Poznámka: Tato zásada není podporovaná ve Windows RT. Nastavení této zásady nemá na počítačích s Windows RT žádný účinek.
+
+        Poznámka ohledně proxy serverů: Pro nejvyšší úroveň zabezpečení doporučuje Microsoft zabezpečení služby WSUS pomocí protokolu TLS/SSL, a tedy používání intranetových serverů založených na HTTPS, díky kterým budou systémy zabezpečené. Pokud je vyžadována proxy, doporučujeme nakonfigurovat proxy systém.
+
+        Výběr chování proxy nijak neovlivní klienty, které pro zjišťování aktualizací používají intranetové servery založené na HTTPS. 
+
+        Aby byli klienti ve své podstatě zabezpečení, už nepovolujeme, aby intranetové servery založené na HTTP ve výchozím nastavení používaly proxy uživatele pro zjišťování aktualizací. Pokud potřebujete používat proxy uživatele pro zjišťování aktualizací, když používáte intranetový server založený na HTTP, ačkoli to může vést k ohrožení zabezpečení, musíte chování proxy nakonfigurovat na „Povolit použití uživatelského proxy serveru jako náhradního, pokud se nezdaří rozpoznávání pomocí systému proxy.“
+
+        Zjišťování aktualizací neuspěje, když se intranetové servery založené na HTTP používají bez nakonfigurovaného proxy systému, pokud není nakonfigurovaná zásada pro použití alternativního chování proxy.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Pro zjišťování aktualizací používat pouze systémový proxy server (výchozí)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Povolit použití uživatelského proxy serveru jako náhradního, pokud se nezdaří rozpoznávání pomocí systému proxy</string>
       <string id="DetectionFrequency_Help">Určuje počet hodin, pomocí kterých systém Windows zjistí dobu čekání před vyhledáním dostupných aktualizací. Přesná doba čekání je součtem zadané hodnoty a náhodné odchylky v rozsahu 0–4 hodin.
 
         Pokud je nastavený stav Povoleno, vyhledá systém Windows dostupné aktualizace v zadaném intervalu.
@@ -679,8 +689,9 @@ Tato zásada přepíše následující zásady:
         <textBox refId="CorpWUContentHost_Name">
           <label>Nastavte alternativní server pro stahování:</label>
         </textBox>
-        <text>(příklad: http://IntranetUpd01)</text>
+        <text>(příklad: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Umožňuje stahovat soubory bez adres URL, když je nastaven server pro alternativní stahování.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Vyberte chování serveru proxy pro klienta služby Windows Update pro zjišťování aktualizací pomocí služby nepoužívající protokol TLS (HTTP):</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Zjišťovat aktualizace v</text>

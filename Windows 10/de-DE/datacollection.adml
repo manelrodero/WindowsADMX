@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">Telemetrie zulassen</string>
       <string id="AllowTelemetry_0">0 – Sicherheit [Nur Enterprise]</string>
-      <string id="AllowTelemetry_1">1 – Einfach</string>
+      <string id="AllowTelemetry_1">1 - Erforderlich</string>
       <string id="AllowTelemetry_2">2 – Erweitert</string>
-      <string id="AllowTelemetry_3">3 – Vollständig</string>
+      <string id="AllowTelemetry_3">3 - Optional</string>
       <string id="AllowTelemetry_Explain">Wenn diese Einstellung in Windows 10 konfiguriert wird, können Endbenutzer keine höhere Ebene der Telemetriedatensammlung auswählen als diejenige, die Sie für Ihre Organisation festgelegt haben. Diese Beschränkung gilt nur für das Windows-Betriebssystem und für Apps, die in Windows enthalten sind, und nicht etwa für Drittanbieter-Apps, die unter Windows 10 ausgeführt werden.
 
 Diagnosedaten sind in die folgenden vier Ebenen kategorisiert:
-  - 0 (Sicherheit). Für den Schutz von Windows, Windows Server und System Center erforderliche Informationen – einschließlich Daten zu den Einstellungen der Komponente "Benutzererfahrungen und Telemetrie im verbundenen Modus", zum Tool zum Entfernen bösartiger Software sowie zu Microsoft Defender.
-  - 1 (Allgemein). Grundlegende Geräteinformationen, einschließlich qualitätsbezogener Daten, App-Kompatibilität und Daten zur Sicherheitsstufe.
-  - 2 (Erweitert). Zusätzliche Einblicke, etwa hinsichtlich der Nutzung und Leistung von Windows, Windows Server, System Center und Apps, erweiterter Daten zur Zuverlässigkeit sowie Daten der Ebenen "Allgemein" und "Sicherheit".
-  - 3 (Vollständig). Alle zum Identifizieren und Beheben von Problemen erforderlichen Daten, sowie Daten der Ebenen "Sicherheit", "Allgemein" und "Erweitert".
+  - 0 (Sicherheit). Für den Schutz von Windows, Windows Server und System Center erforderliche Informationen – einschließlich Daten zu den Einstellungen der Komponente "Benutzererfahrungen und Telemetrie im verbundenen Modus", zum Tool zum Entfernen bösartiger Software sowie zu Windows Defender.
+  - 1 (Erforderlich). Grundlegende Geräteinformationen, einschließlich qualitätsbezogener Daten, App-Kompatibilität und Daten zur Sicherheitsstufe.
+  - 2 (Erweitert). Zusätzliche Einblicke, etwa hinsichtlich der Nutzung und Leistung von Windows, Windows Server, System Center und Apps, erweiterter Daten zur Zuverlässigkeit sowie Daten der Ebenen "Erforderlich" und "Sicherheit".
+  - 3 (Optional). Alle zum Identifizieren und Beheben von Problemen erforderlichen Daten, sowie Daten der Ebenen "Sicherheit", "Erforderlich" und "Erweitert".
 
 Optionen, die Benutzern in der Einstellungs-App zur Verfügung stehen, werden durch die Konfiguration dieser Einstellung geändert und können selbst dann durch andere Gruppenrichtlinieneinstellungen beeinflusst werden, wenn sie nicht festgelegt wurden. Beachten Sie, dass Endbenutzer keine höhere Ebene auswählen können, wenn diese Richtlinie für die Telemetrieeinstellung "Sicherheit" oder "Allgemein" konfiguriert ist.
       </string>
@@ -43,18 +43,18 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann 
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Erweiterte Diagnosedaten auf die von Windows Analytics erforderlichen minimalen Daten beschränken</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics-Sammlung aktivieren</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Windows Analytics-Sammlung deaktivieren</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Diese Richtlinieneinstellung, in Kombination mit der Einstellung "Telemetrie-Richtlinie zulassen", ermöglicht es Organisationen, Microsoft einen bestimmten Satz von Diagnosedaten für IT-Einblicke über Windows Analytics-Dienste zu senden. Wenn Sie diese Einstellung konfigurieren, verhindern Sie, dass Benutzer ihre Telemetrie-Einstellungen ändern. Sie verhindern jedoch auch, dass sie eine höhere Ebene auswählen, als Sie für die Organisation festgelegt haben.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Diese Richtlinieneinstellung ermöglicht es Organisationen, in Verbindung mit der Richtlinieneinstellung "Telemetrie zulassen", Microsoft eine bestimmte Reihe von Diagnosedaten für IT-Einblicke über Windows Analytics-Dienste zu übermitteln.
 
 Um dieses Verhalten zu aktivieren, müssen Sie zwei Schritte ausführen:
 
-    1. Aktivieren Sie diese Richtlinieneinstellung
-    2. Legen Sie die Telemetrie auf Stufe 2 (Erweitert) fest
+ 1. Diese Richtlinieneinstellung aktivieren
+ 2.  Die Einstellung "Telemetrie zulassen" auf Ebene 2 (erweitert) festlegen
 
-Wenn Sie diese Richtlinieneinstellungen zusammen konfigurieren, senden Sie die grundlegende Ebene der Diagnosedaten sowie alle zusätzlichen Ereignisse, die für Windows Analytics erforderlich sind, an Microsoft. Die zusätzlichen Ereignisse sind hier dokumentiert: https://go.Microsoft.com/fwlink/?linked=847594.
+Diese Einstellung hat keine Auswirkungen auf Geräte, die für das Senden von Sicherheits-oder erforderlichen Diagnosedaten an Microsoft konfiguriert sind. 
 
-Wenn Sie in der Einstellung "Telemetrie-Richtlinie zulassen" die Option "Erweiterte Diagnosedaten" aktivieren, diese Richtlinieneinstellung jedoch nicht konfigurieren, senden Sie die erforderlichen Ereignisse für Windows Analytics sowie alle zusätzlichen Telemetrie-Daten für erweiterte Ebenen an Microsoft. Diese Einstellung hat keine Auswirkungen auf Computer, die zum Senden von vollständigen, grundlegenden oder Sicherheitsstufen-Diagnosedaten an Microsoft konfiguriert sind.
+Wenn diese Richtlinien konfiguriert sind, ist die Sammlung diagnostischer Daten auf erforderliche Diagnosedaten sowie für Desktop Analytics erforderliche Ereignisse beschränkt.  Diese Ereignisse können unter https://go.microsoft.com/fwlink/?linkid=2116020 eingesehen werden.
 
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Ebene der an Microsoft gesendeten Diagnosedaten durch die Einstellung "Telemetrie-Richtlinie zulassen" bestimmt.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Ebene der an Microsoft gesendeten Diagnosedaten durch die Richtlinieneinstellung "Telemetrie zulassen" bestimmt, sofern sie konfiguriert ist (wenn Sie z. B. erweiterte Diagnosedaten über die Richtlinieneinstellung "Telemetrie zulassen" aktivieren, diese Richtlinieneinstellung jedoch nicht konfigurieren, werden die für Windows Analytics erforderlichen Ereignisse sowie alle weiteren Diagnosedaten der Ebene "Erweitert" an Microsoft übermittelt).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Übermitteln des Gerätenamens in Windows-Diagnosedaten zulassen</string>
@@ -104,6 +104,33 @@ Verwenden Sie die Einstellung "Telemetrie-Richtlinie zulassen", um die Ebene der
           Diese Richtlinie legt als Teil des Desktop Analytics-Programms den Uploadendpunkt für die Diagnosedaten dieses Geräts fest.
           Wenn Ihre Organisation an dem Programm teilnimmt und angewiesen wurde, einen benutzerdefinierten Uploadendpunkt zu konfigurieren, verwenden Sie diese Einstellung, um den Endpunkt zu definieren.
           Der Wert für diese Einstellung wird von Microsoft als Teil des Onboardingprozesses für das Programm bereitgestellt. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Aktualisierung der Compliance-Verarbeitung zulassen</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Ermöglicht es IT-Administratoren, Diagnosedaten für dieses Gerät zur Verarbeitung durch die Updateüberwachung zur Verfügung zu stellen. 
+            Die folgende Liste beinhaltet die unterstützten Werte:  
+              0 (Standard)– Diagnosedaten werden nicht durch die Updateüberwachung verarbeitet. 
+              16 – Der Updateüberwachung ist es gestattet, Diagnosedaten zu verarbeiten. 
+            Falls Sie diese Richtlinieneinstellung abschalten oder nicht konfigurieren, werden Diagnosedaten von diesem Gerät nicht durch die Updateüberwachung verarbeitet.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Desktopanalyseverarbeitung zulassen</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Ermöglicht es IT-Administratoren, Diagnosedaten für dieses Gerät zur Verarbeitung durch Desktop Analytics zur Verfügung zu stellen. 
+            Die folgende Liste beinhaltet die unterstützten Werte:  
+              0 (Standard)– Diagnosedaten werden nicht durch Desktop Analytics verarbeitet. 
+              2 – Desktop Analytics ist es gestattet, Diagnosedaten zu verarbeiten. 
+            Falls Sie diese Richtlinieneinstellung abschalten oder nicht konfigurieren, werden Diagnosedaten von diesem Gerät nicht durch Desktop Analytics verarbeitet. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">WUfB-Cloud-Verarbeitung erlauben</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Ermöglicht es Administratoren, Diagnose Daten von diesem Gerät zu aktivieren, der von Windows Update for Business Cloud verarbeitet werden kann. 
+            Die folgende Liste enthält die unter stützten Werte:  
+              0 (Standard) – Diagnose Daten werden nicht von Windows Update for Business Cloud verarbeitet. 
+              8 – Diagnose Daten dürfen von Windows Update for Business Cloud verarbeitet werden. 
+          Wenn Sie diese Richtlinien Einstellung deaktivieren oder nicht konfigurieren, werden Diagnose Daten von diesem Gerät von Windows Update for Business Cloud nicht verarbeitet. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Kommerzielle Datenpipeline zulassen</string>

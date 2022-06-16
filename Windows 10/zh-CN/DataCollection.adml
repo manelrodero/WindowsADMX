@@ -7,18 +7,18 @@
     <stringTable>
       <string id="AllowTelemetry">允许遥测</string>
       <string id="AllowTelemetry_0">0 - 安全性 [仅企业]</string>
-      <string id="AllowTelemetry_1">1 - 基本</string>
+      <string id="AllowTelemetry_1">1 - 必需</string>
       <string id="AllowTelemetry_2">2 - 增强</string>
-      <string id="AllowTelemetry_3">3 - 完整</string>
+      <string id="AllowTelemetry_3">3 - 可选</string>
       <string id="AllowTelemetry_Explain">通过在 Windows 10 中配置此设置，最终用户将无法选择使用比你为组织设置的级别更高的遥测收集级别。此限制仅适用于 Windows 操作系统和 Windows 附带的应用，但不适用于在 Windows 10 上运行的第三方应用。
 
 诊断数据分为四个级别，如下所示:
   - 0 (安全)。保持 Windows、Windows Server 和 System Center 安全所需的信息，包括有关互联用户体验和遥测组件设置、恶意软件删除工具和 Windows Defender 的数据。
-  - 1 (基本)。基本设备信息，包括: 质量相关数据、应用兼容性以及来自安全级别的数据。
+  - 1 (必需)。基本设备信息，包括: 质量相关数据、应用兼容性以及来自安全级别的数据。
   - 2 (增强)。其他信息，包括: Windows、Windows Server、System Center 和应用的使用方式、它们的执行方式、高级可靠性数据以及来自基本和安全级别的数据。
-  - 3 (全面)。识别问题和解决问题所需的所有数据，以及来自“安全”、“基本”和“增强”级别的数据。
+  - 3 (可选)。识别问题和解决问题所需的所有数据，以及来自“安全”、“必需”和“增强”级别的数据。
 
-“设置”应用中用户可用的选项可通过配置此设置进行更改，即使未设置，也可能受到其他组策略设置的影响。请注意，如果将此策略配置为允许遥测设置为“安全”或“基本”，则最终用户将无法选择更高的级别。
+“设置”应用中用户可用的选项可通过配置此设置进行更改，即使未设置，也可能受到其他组策略设置的影响。请注意，如果将此策略配置为允许遥测设置为“安全”或“必需”，则最终用户将无法选择更高的级别。
       </string>
 
       <string id="TelemetryProxy">配置互连用户体验和遥测</string>
@@ -43,18 +43,20 @@
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">将增强诊断数据限制为 Windows 分析所需的最低水平</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">启用 Windows 分析集合</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">禁用 Windows 分析集合</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">此策略设置与“允许遥测”策略设置相结合，使组织能够通过 Windows Analytics 服务向 Microsoft 发送一组特定诊断数据以获取 IT 见解。通过配置此设置，你不会阻止他人更改其遥测设置；但是，你将阻止他们选择比你为组织设置的级别更高的级别。
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">此策略设置与“允许遥测”策略设置一起，可以让组织通过 Windows 分析服务向 Microsoft 发送一组特定的诊断数据以获得 IT 见解。
 
-要启用此行为，必须完成两个步骤:
+要启用此行为，必须完成两个步骤: 
 
     1. 启用此策略设置
     2. 将“允许遥测”设置为级别 2 (增强)
 
-如果将这些策略设置一起配置，你将向 Microsoft 发送基本级别的诊断数据以及 Windows Analytics 所需的任何其他事件。附加事件在此处记录: https://go.Microsoft.com/fwlink/?linked=847594。
+此设置对配置为将安全性或必需的诊断数据发送给 Microsoft 的设备无效。
 
-如果在“允许遥测”策略设置中启用增强型诊断数据，但不配置此策略设置，你将向 Microsoft 发送 Windows Analytics 所需的事件，外加任何其他增强级别的遥测数据。此设置对配置为向 Microsoft 发送“完全”、“基本”或“安全”级别诊断数据的计算机没有影响。
+配置这些策略后，诊断数据收集将仅限于所需的诊断数据和 Desktop Analytics 所需的事件。可以在https://go.microsoft.com/fwlink/?linkid=2116020上查看这些事件。
 
-如果禁用或不配置此策略设置，则发送到 Microsoft 的诊断数据级别由“允许遥测”策略设置确定。
+如果禁用或未配置此策略设置，则发送给 Microsoft 的诊断数据的级别由“允许遥测”策略设置（如果已配置）决定（例如，如果通过“允许遥测”策略设置启用了增强的诊断数据，但是如果没有配置此策略设置，则将 Windows Analytics 的必需事件以及所有其他增强级别的诊断数据发送给 Microsoft）。
+
+
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">允许发送 Windows 诊断数据中的设备名称</string>
@@ -104,6 +106,33 @@
           此策略将此设备诊断数据的上传终结点设置为桌面分析计划的一部分。
           如果你的组织正在参与该计划，并且已被指示配置自定义上传终结点，则使用此设置来定义该终结点。
           在加入计划的过程中，此设置的值将由 Microsoft 提供。 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">允许进行更新合规性处理</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          允许 IT 管理员启用此设备的诊断数据由更新合规中心处理。
+            下表现是支持的数值：
+              0 (默认)– 诊断数据不由更新合规中心处理。
+              16 – 允许诊断数据由更新合规中心处理。
+            如果禁用或未配置此策略设置，则更新合规中心将不会处理该设备的诊断数据。
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">允许进行桌面分析处理</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          允许 IT 管理员启用此设备的诊断数据由桌面分析处理。
+            下表现是支持的数值：
+              0 (默认)– 诊断数据不由桌面分析处理。
+              2 – 允许诊断数据由桌面分析处理。
+            如果禁用或未配置此策略设置，则桌面分析将不会处理该设备的诊断数据。 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">允许 WUfB 云处理</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          允许 IT 管理员启用此设备的诊断数据由适用于企业的 Windows 更新云处理。
+            下表现是支持的数值：
+              0 (默认)– 诊断数据不由适用于企业的 Windows 更新云处理。
+              8 – 允许诊断数据由适用于企业的 Windows 更新云处理。
+            如果禁用或未配置此策略设置，则适用于企业的 Windows 更新云将不会处理该设备的诊断数据。 
       </string>
 
       <string id="AllowCommercialDataPipeline">允许商业数据管道</string>

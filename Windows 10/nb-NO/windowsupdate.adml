@@ -132,7 +132,7 @@ Hvis statusen er satt til ikke konfigurert, er ikke bruk av automatiske oppdater
       <string id="AutoUpdateSchTimeAuto">Automatisk</string>
       <string id="CorpWuURL">Angi en plassering på intranettet for Microsofts oppdateringstjeneste</string>
       <string id="CorpWuURL_Help">
-        Angir en server på intranett som er vert for oppdateringer fra Microsoft Update. Du kan deretter bruke denne oppdateringstjenesten til automatisk å oppdatere datamaskiner på nettverket.
+        Angir en intranett-server til å være vert for oppdateringer fra Microsoft Update. Du kan deretter bruke denne oppdateringstjenesten til automatisk å oppdatere datamaskiner på nettverket.
 
         Med denne innstillingen kan du angi at en server på nettverket skal fungere som en intern oppdateringstjeneste. Klienten for automatiske oppdateringer bruker denne tjenesten til å søke etter oppdateringer som gjelder for datamaskinene på nettverket.
 
@@ -140,19 +140,29 @@ Hvis statusen er satt til ikke konfigurert, er ikke bruk av automatiske oppdater
 
         Hvis status er satt til Aktivert, kobler klienten for automatiske oppdateringer til den angitte Microsoft-oppdateringstjenesten på intranettet (eller alternativ nedlastingsserver), i stedet for Windows Update, for å søke etter og laste ned oppdateringer. Hvis du aktiverer denne innstillingen, innebærer dette at sluttbrukere i organisasjonen ikke trenger å gå gjennom en brannmur for å få oppdateringer, og du får muligheten til å teste oppdateringer før de distribueres.
 
-        Hvis status er satt til Deaktivert eller Ikke konfigurert, og hvis Automatiske oppdateringer ikke er deaktivert via policy eller brukerpreferanse, kobler klienten for automatiske oppdateringer direkte til området Windows Update på Internett.
+        Hvis status er satt til Deaktivert eller Ikke konfigurert, og hvis Automatiske oppdateringer ikke er deaktivert via policy eller brukerpreferanse, kobler klienten for automatiske oppdateringer direkte til Windows Update-området på Internett.
 
         Den alternative nedlastingsserveren konfigurerer Windows Update-agenten til å laste ned filer fra en alternativ nedlastingsserver i stedet for oppdateringstjenesten på intranett.
 
         Alternativet for å laste ned filer med manglende nettadresser gjør det mulig å laste ned innholdet fra den alternative nedlastingsserveren når det ikke finnes nettadresser for nedlasting for filer i oppdateringsmetadataene. Dette alternativet skal bare brukes når oppdateringstjenesten på intranettet ikke leverer nettadresser for nedlasting i oppdateringsmetadataene for filer som finnes på serveren for alternativ nedlasting.
 
-        Obs!  Hvis policyen Konfigurer Automatiske oppdateringer er deaktivert, har ikke denne policyen noen virkning.
+        Obs!  Hvis policyen Konfigurer automatiske oppdateringer er deaktivert, har ikke denne policyen noen virkning.
 
         Obs!  Hvis Alternativ nedlastingsserver ikke er angitt, brukes oppdateringstjenesten på intranett som standard til å laste ned oppdateringer.
 
         Obs!  Alternativet Last ned filer uten nettadresse brukes bare hvis Alternativ nedlastingsserver er angitt.
 
-        Obs!  Denne policyen støttes ikke på Windows RT. Angivelse av denne policyen har ingen innvirkning på PC-er med Windows RT.</string>
+        Obs!  Denne policyen støttes ikke på Windows RT. Angivelse av denne policyen har ingen innvirkning på PC-er med Windows RT. 
+
+        Obs! om proxyer: For å sikre det høyeste nivået av sikkerhet anbefaler Microsoft at du sikrer WSUS med TLS/SSL-protokoll, og dermed bruker HTTPS-baserte Internett-servere for å holde systemene sikre. Hvis proxy er nødvendig, anbefaler vi å konfigurere systemproxy.
+
+        Valg av en proxy-virkemåte vil ikke ha noen effekt på klienter som bruker HTTPS-baserte intranett-servere til å oppdage oppdateringer. 
+
+        For å holde klientene trygge tillater vi ikke lenger HTTP-baserte intranett-servere å dra nytte av bruker-proxy som standard for å oppdage oppdateringer. Hvis du trenger å dra nytte av bruker-proxy for å oppdage oppdateringer mens du bruker en HTTP-basert intranett-server på tross av de svakhetene dette representerer, må du konfigurere proxyens virkemåte til «Tillat bruk av bruker-proxy som basis hvis oppdaging ved bruk av system-proxy mislykkes».
+
+        Oppdaging for oppdateringer vil mislykkes når HTTP-baserte intranett-servere brukes uten en konfigurert system-proxy hvis policyen for å bruke en alternativ proxy-virkemåte ikke er konfigurert.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Bruk bare system-proxy for å oppdage oppdateringer (standard)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillat at bruker-proxy brukes som reserve hvis gjenkjenning av system-proxy mislykkes</string>
       <string id="DetectionFrequency_Help">Angir antallet timer det tar å avgjøre hvor lenge det skal ventes før det søkes etter tilgjengelige oppdateringer. Den nøyaktige ventetiden er en sum av den bestemte verdien og en tilfeldig variant av 0-4 timer.
 
         Hvis statusen er satt til Aktivert, søker Windows etter tilgjengelige oppdateringer ved angitt intervall.
@@ -680,8 +690,9 @@ Denne policyen overstyrer følgende policyer:
         <textBox refId="CorpWUContentHost_Name">
           <label>Angi den alternative nedlastingsserveren:</label>
         </textBox>
-        <text>(eksempel: http://IntranetUpd01)</text>
+        <text>(eksempel: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Last ned filer uten nettadresse i metadataene hvis det er angitt en alternativ nedlastingsserver.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Velg proxy-virke måten for Windows Update-klienten for å oppdage oppdateringer med ikke-TLS (HTTP)-basert tjeneste:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Søk etter oppdateringer ved følgende</text>

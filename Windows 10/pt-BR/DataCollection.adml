@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">Permitir Telemetria</string>
       <string id="AllowTelemetry_0">0 - Segurança [Somente Empresa]</string>
-      <string id="AllowTelemetry_1">1 - Básico</string>
+      <string id="AllowTelemetry_1">1 - Obrigatório</string>
       <string id="AllowTelemetry_2">2 - Aprimorado</string>
-      <string id="AllowTelemetry_3">3 - Total</string>
-      <string id="AllowTelemetry_Explain">Ao definir esta configuração no Windows 10, os usuários finais não poderão aceitar um nível mais alto de coleta de telemetria do que o nível definido para a sua organização. Essa limitação se aplica somente ao sistema operacional Windows e aos aplicativos incluídos no Windows, não sendo aplicável a aplicativos de terceiros em execução no Windows 10.
+      <string id="AllowTelemetry_3">3 - Opcional</string>
+      <string id="AllowTelemetry_Explain">Ao definir esta configuração no Windows 10, os usuários finais não poderão aceitar um nível mais alto de coleta de telemetria do que o nível definido para a sua organização. Essa limitação se aplica somente ao sistema operacional Windows e aos aplicativos incluídos no Windows, não sendo aplicável a aplicativos de terceiros em execução no Windows 10. 
 
 Os dados de diagnóstico são categorizados em quatro níveis, descritos a seguir:
-  - 0 (Segurança). Informações necessárias para ajudar a manter o Windows, o Windows Server e o System Center seguros, incluindo dados sobre as configurações dos componentes Experiências do Usuário Conectado e Telemetria, a Ferramenta de Remoção de Software Mal-Intencionado e o Microsoft Defender.
-  - 1 (Básico). Informações básicas do dispositivo, incluindo dados relacionados à qualidade, compatibilidade de aplicativos e dados do nível de Segurança.
-  - 2 (Avançado). Informações adicionais, incluindo como o Windows, o Windows Server, o System Center e os aplicativos são usados, como são executados, dados de confiabilidade avançados e dados dos níveis Básico e de Segurança.
-  - 3 (Completo). Todos os dados necessários para identificar e ajudar a corrigir problemas, além de dados dos níveis de Segurança, Básico e Avançado.
+  - 0 (Segurança). Informações necessárias para ajudar a manter o Windows, o Windows Server e o System Center seguros, incluindo dados sobre as configurações dos componentes Experiências do Usuário Conectado e Telemetria, a Ferramenta de Remoção de Software Mal-Intencionado e o Windows Defender.
+ - 1 (Obrigatório). Informações básicas do dispositivo, incluindo dados relacionados à qualidade, compatibilidade de aplicativos e dados do nível de Segurança.
+  - 2 (Avançado). Informações adicionais, incluindo como o Windows, o Windows Server, o System Center e os aplicativos são usados, como são executados, dados de confiabilidade avançados e dados dos níveis Obrigatório e de Segurança.
+  - 3 (Opcional). Todos os dados necessários para identificar e ajudar a corrigir problemas, além de dados dos níveis de Segurança, Obrigatório e Avançado. 
 
 As opções disponíveis para os usuários no aplicativo Configurações são alteradas por meio da definição desta configuração e, mesmo que não estejam definidas, podem ser afetadas por outras configurações de política de grupo.  Observe que, se esta política estiver definida para permitir uma configuração de telemetria no nível de Segurança ou Básico, os usuários finais não poderão selecionar um nível superior.
       </string>
@@ -43,18 +43,18 @@ Se você desabilitar ou não definir essa configuração de política, a Microso
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Limitar dados do diagnóstico avançado ao mínimo exigido pelo Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Habilitar coleção de Análise do Windows</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Desabilitar coleção de Análise do Windows</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Esta configuração de política, em combinação com a configuração de política Permitir Telemetria, permite que as organizações enviem à Microsoft um conjunto específico de dados de diagnóstico para insights de TI pelos serviços do Windows Analytics. Ao definir esta configuração, você não impede as pessoas de alterarem suas Configurações de Telemetria; no entanto, você as impede de escolher um nível mais alto do que você definiu para a organização.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Esta configuração de política, com a configuração de política Permitir Telemetria, permite que as organizações enviem para a Microsoft um conjunto específico de dados de diagnóstico para informações de TI por meio de serviços da Análise do Windows. 
 
 Para habilitar esse comportamento, você deve concluir duas etapas:
 
-    1. Habilite esta configuração de política
-    2. Defina Permitir Telemetria para o nível 2 (Avançado)
+    1. Habilitar essa configuração de política
+    2. Definir Permitir Telemetria no nível 2 (Avançado)
 
-Se você definir essas configurações de políticas ao mesmo tempo, enviará o nível Básico de dados de diagnóstico mais quaisquer eventos adicionais necessários para o Windows Analytics, à Microsoft. Os eventos adicionais são documentados aqui: https://go.Microsoft.com/fwlink/?linked=847594.
+Essa configuração não afeta dispositivos configurados para enviar dados de diagnóstico obrigatórios ou de segurança à Microsoft. 
 
-Se você habilitar os dados de diagnóstico no nível Avançado na configuração de política Permitir Telemetria, mas não configurar esta política, você enviará os eventos necessários para o Windows Analytics, mais quaisquer dados adicionais de telemetria de nível Avançado para a Microsoft. Esta configuração não tem efeito em computadores configurados para enviar dados de diagnóstico de nível Completo, Básico ou Segurança à Microsoft.
+Quando essas políticas estão configuradas, a coleta de dados de diagnóstico será limitada aos dados de diagnóstico obrigatórios e os eventos exigidos pela Análise de Área de Trabalho. Esses eventos podem ser exibidos em https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Se você desabilitar ou não configurar esta política, o nível dos dados de diagnóstico enviados à Microsoft será determinado pela configuração de política Permitir Telemetria.
+Se desabilitar e não configurar essa configuração de política, então o nível dos dados de diagnóstico enviados à Microsoft será determinada pela política Permitir Telemetria se estiver configurada (isto é, se você habilitar os dados de diagnóstico avançado pela configuração da política Permitir Telemetria, mas não definir a configuração desta política, você enviará os eventos obrigatórios para o Windows Analytics, além de qualquer dado de diagnóstico de nível avançado à Microsoft).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Permitir que o nome do dispositivo seja enviado nos dados de diagnóstico do Windows</string>
@@ -104,6 +104,33 @@ para definir um limite para o nível de dados de diagnóstico que são enviados 
           Essa política define o ponto de extremidade de upload para os dados de diagnóstico deste dispositivo como parte do programa Análise de Área de Trabalho.
           Se sua organização estiver participando do programa e tiver sido instruída a configurar um ponto de extremidade de upload personalizado, use essa configuração para definir esse ponto de extremidade.
           O valor dessa configuração será fornecido pela Microsoft como parte do processo de integração do programa. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Permitir Processamento de Conformidade da Atualização</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Permite que os administradores de TI habilitem dados de diagnóstico deste dispositivo para que eles sejam processados pela Conformidade de Atualizações. 
+            A lista a seguir mostra os valores com suporte:  
+              0 (padrão) – os dados de diagnóstico não são processados pela Conformidade de Atualizações. 
+              16 – os dados de diagnóstico têm permissão para serem processados pela Conformidade de Atualizações. 
+            Se você desabilitar ou não definir esta configuração de política, os dados de diagnóstico deste dispositivo não serão processados pela Conformidade de Atualizações.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Permitir Processamento da Análise de Área de Trabalho</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Permite que os administradores de TI habilitem os dados de diagnóstico deste dispositivo para que eles sejam processados pela Análise de Área de Trabalho. 
+            A lista a seguir mostra os valores com suporte:  
+              0 (padrão) – os dados de diagnóstico não são processados pela Análise de Área de Trabalho. 
+              2 – os dados de diagnóstico podem ser processados pela Análise de Área de Trabalho. 
+          Se você desabilitar ou não definir esta configuração de política, os dados de diagnóstico deste dispositivo não serão processados pela Análise de Área de Trabalho. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Permitir Processamento de Nuvem WUfB</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Permite que os administradores de ti habilitem os dados de diagnóstico deste dispositivo a serem processados pela nuvem do Windows Update para empresas. 
+            A lista a seguir mostra os valores com suporte:  
+              0 (padrão) – os dados de diagnóstico não são processados pela nuvem do Windows Update para empresas.. 
+              8 – os dados de diagnóstico têm permissão para serem processados pela nuvem do Windows Update para empresas. 
+          Se você desabilitar ou não definir essa configuração de política, os dados de diagnóstico deste dispositivo não serão processados pela nuvem do Windows Update para empresas. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Permitir pipeline de dados comerciais</string>

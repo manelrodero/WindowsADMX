@@ -150,9 +150,19 @@ Om statusen är Inte konfigurerad så används inte Automatiska uppdateringar p�
 
         Anmärkning: Om den alternativa nedladdningsservern inte anges används intranätuppdateringstjänsten som standard för att ladda ned uppdateringar.
 
-        Anmärkning: Alternativet "Ladda ned filer utan URL:er i metadata om en alternativ nedladdningsserver har angetts" används endast om "Alternativ nedladdningsserver" anges.
+        Anmärkning: Alternativet "Ladda ned filer utan URL:er ..." används endast om "Alternativ nedladdningsserver" anges.
 
-        Anmärkning: Den här principinställningen stöds inte på Windows RT, och om den anges har den ingen effekt på Windows RT-datorer.</string>
+        Anmärkning: Den här principen stöds inte på Windows RT, och om den anges har den ingen effekt på Windows RT-datorer.
+
+        Anmärkning om proxyservrar: För att säkerställa högsta säkerhetsnivå rekommenderar Microsoft att WSUS skyddas med TLS/SSL-protokoll, så att HTTPS-baserade intranätservrar används för att skydda systemen. Om en proxy krävs rekommenderar vi att en systemproxy konfigureras.
+
+        Val av proxybeteende har ingen effekt på klienter som använder HTTPS-baserade intranätservrar för att identifiera uppdateringar. 
+
+        För att skydda klienter tillåter vi inte längre HTTP-baserade intranätservrar att som standard utnyttja användarproxy för att identifiera uppdateringar. Om du behöver dra nytta av användarproxy för att identifiera uppdateringar vid användning av en HTTP-baserad intranätserver trots de sårbarheter som finns måste du konfigurera proxybeteendet till "Tillåt användarproxy att användas som reserv om identifiering med systemproxy misslyckas".
+
+        Om principen för att använda ett alternativt proxybeteende inte har konfigurerats misslyckas identifiering av uppdateringar när HTTP-baserade intranätservrar används utan en konfigurerad systemproxy.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Använd endast systemets proxy för identifiering av uppdateringar (standard)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillåt att proxyn används som reserv om identifieringen av systemproxyn misslyckas</string>
       <string id="DetectionFrequency_Help">Anger antalet timmar Windows använder för att avgöra väntetiden innan en sökning görs efter tillgängliga uppdateringar. Den exakta väntetiden är summan av det angivna värdet och ett slumpmässigt värde mellan 0 och 4 timmar.
 
         Om status är Aktiverad söker Windows efter tillgängliga uppdateringar enligt specificerat intervall.
@@ -680,8 +690,9 @@ Den här principen åsidosätter följande principer:
         <textBox refId="CorpWUContentHost_Name">
           <label>Ange en alternativ nedladdningsserver:</label>
         </textBox>
-        <text>(till exempel: http://IntranetUpd01)</text>
+        <text>(exempel: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Ladda ned filer utan URL:er i metadata om en alternativ nedladdningsserver har angetts.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Välj proxy-beteendet för Windows Update-klienten för identifiering av uppdateringar med en icke-TLS-baserad (HTTP) tjänst:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Sök efter uppdateringar enligt följande</text>

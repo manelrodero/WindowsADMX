@@ -7,9 +7,9 @@
     <stringTable>
       <string id="AllowTelemetry">Consenti telemetria</string>
       <string id="AllowTelemetry_0">0 - Sicurezza [solo enterprise]</string>
-      <string id="AllowTelemetry_1">1 - Dati di base</string>
+      <string id="AllowTelemetry_1">1 - Obbligatorio</string>
       <string id="AllowTelemetry_2">2 - Dati avanzati</string>
-      <string id="AllowTelemetry_3">3 - Dati completi</string>
+      <string id="AllowTelemetry_3">3 - Facoltativo</string>
       <string id="AllowTelemetry_Explain">Configurando questa impostazione in Windows 10, gli utenti finali non saranno in grado di utilizzare un livello più elevato di raccolta dei dati di telemetria rispetto al livello impostato per l'organizzazione. Questo limite si applica solo al sistema operativo Windows e alle app incluse in Windows e non si applica alle app di terze parti in esecuzione su Windows 10.
 
 I dati di diagnostica vengono categorizzati in quattro livelli, come segue:
@@ -43,18 +43,18 @@ Se si disabilita o non si configura questa impostazione dei criteri, Microsoft n
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Limita i dati diagnostici avanzati al minimo richiesto da Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Abilita la raccolta di Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Disabilita la raccolta di Windows Analytics</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Questa impostazione dei criteri, in combinazione con le impostazioni dei criteri Consenti telemetria, consente alle organizzazioni di inviare a Microsoft un set specifico di dati di diagnostica per IT insights tramite i servizi di Windows Analytics. Configurando questa impostazione non si impedisce agli utenti di modificare le impostazioni di telemetria ma si impedisce loro di scegliere un livello superiore a quello impostato per l'organizzazione.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Questa impostazione dei criteri, in combinazione con le impostazioni relative al criterio Consenti telemetria, consente alle organizzazioni di inviare a Microsoft un set specifico di dati diagnostici per IT insights tramite i servizi di Windows Analytics.
 
 Per abilitare questo comportamento, devi completare i seguenti due passaggi:
 
     1. Abilita questa impostazione dei criteri
-    2. Imposta Consenti telemetria sul livello 2 (Avanzato)
+    2. Imposta Consenti telemetria al livello 2 (Avanzato)
 
-Se configuri insieme queste impostazioni dei criteri, invierai a Microsoft il livello Base dei dati di diagnostica oltre ad eventi aggiuntivi necessari per Windows Analytics. Gli eventi aggiuntivi sono documentati qui: https://go.Microsoft.com/fwlink/?linked=847594.
+Queste impostazioni non hanno effetto sui dispositivi configurati per inviare dati di diagnostica relativi alla sicurezza o obbligatori a Microsoft. 
 
-Se abiliti il livello Avanzato di dati di diagnostica nell'impostazione dei criteri Consenti telemetria senza configurare questa impostazione dei criteri, invierai a Microsoft gli eventi necessari per Windows Analytics oltre ai dati di telemetria aggiuntivi del livello Avanzato. Questa impostazione non ha effetto sui computer configurati per inviare a Microsoft dati di diagnostica di livello Completo, Base o Sicurezza.
+Quando sono configurati questi criteri, la raccolta dei dati di diagnostica sarà limitata ai dati di diagnostica obbligatori e agli eventi richiesti da Desktop Analytics. Questi eventi possono essere visualizzati qui: https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Se disabiliti o non configuri questa impostazione dei criteri, il livello di dati di diagnostica inviati a Microsoft viene determinato dall'impostazione dei criteri Consenti telemetria.
+Se disabiliti o non configuri queste impostazioni dei criteri, il livello di dati di diagnostica inviati a Microsoft è determinato dalle impostazioni del criterio Consenti telemetria, se configurate. Ad esempio se abiliti i dati di diagnostica avanzati tramite le impostazioni del criterio Consenti telemetria, ma non configuri le impostazioni di questo criterio, invierai a Microsoft gli eventi richiesti per Windows Analytics, oltre ai dati di diagnostica livello avanzato aggiuntivi.
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Consenti l'invio del nome del dispositivo nei dati di diagnostica Windows</string>
@@ -104,6 +104,33 @@ utilizzare l'impostazione dei criteri Consenti telemetria per impostare un limit
           Questo tipo di criteri imposta l'endpoint di caricamento per i dati di diagnostica del dispositivo come parte del programma Desktop Analytics.
           Se l'organizzazione partecipa al programma e ha ricevuto istruzioni per configurare un endpoint di caricamento personalizzato, utilizza questa impostazione per definire l'endpoint.
           Il valore di questa impostazione verrà fornito da Microsoft come parte del processo di caricamento per il programma. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Consenti elaborazione conformità aggiornamento</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Consente agli amministratori IT di abilitare l'elaborazione dei dati di diagnostica di questo dispositivo tramite Conformità aggiornamenti. 
+            L'elenco seguente mostra i valori supportati:  
+              0 (impostazione predefinita) - I dati di diagnostica non vengono elaborati da Conformità aggiornamenti. 
+              16 - I dati di diagnostica possono essere elaborati da Conformità aggiornamenti. 
+Se disabiliti o non configuri questa impostazione di criteri, i dati di diagnostica di questo dispositivo non verranno elaborati da Conformità aggiornamenti.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Consenti elaborazione analisi desktop</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Consente agli amministratori IT di abilitare l'elaborazione dei dati di diagnostica di questo dispositivo tramite Desktop Analytics. 
+            L'elenco seguente mostra i valori supportati:  
+              0 (impostazione predefinita) - I dati di diagnostica non vengono elaborati da Desktop Analytics. 
+              2 - I dati di diagnostica possono essere elaborati da Desktop Analytics. 
+Se disabiliti o non configuri questa impostazione di criteri, i dati di diagnostica di questo dispositivo non verranno elaborati da Desktop Analytics. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Consenti l’elaborazione cloud WUfB</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Consente agli amministratori IT di abilitare i dati di diagnostica da questo dispositivo per l'elaborazione da parte del cloud di Windows Update for business. 
+            Nell'elenco seguente sono visualizzati i valori supportati:  
+              0 (predefinito): i dati di diagnostica non sono elaborati da Windows Update for Business Cloud. 
+              8-i dati di diagnostica possono essere elaborati da Windows Update for Business Cloud. 
+          Se si disabilita o non si configura questa impostazione dei criteri, i dati di diagnostica provenienti da questo dispositivo non verranno elaborati dal cloud di Windows Update for business. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Consenti pipeline dati commerciali</string>

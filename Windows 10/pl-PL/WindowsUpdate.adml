@@ -132,15 +132,15 @@ Jeśli ta zasada będzie mieć stan Nieskonfigurowane, użycie funkcji Aktualiza
       <string id="AutoUpdateSchTimeAuto">Automatycznie</string>
       <string id="CorpWuURL">Określ lokalizację intranetowej usługi aktualizującej firmy Microsoft</string>
       <string id="CorpWuURL_Help">
-        Określa serwer intranetowy, który będzie hostował aktualizacje z usługi Microsoft Update. Następnie możesz użyć tej usługi aktualizacji w celu automatycznego aktualizowania komputerów w swojej sieci.
+        Określa serwer intranetowy, który będzie hostował aktualizacje z usługi Microsoft Update. Następnie możesz używać tej usługi aktualizacji w celu automatycznego aktualizowania komputerów w swojej sieci.
 
-        To ustawienie umożliwia określenie serwera w swojej sieci, który będzie pełnił funkcję wewnętrznej usługi aktualizacji. Klient Aktualizacji automatycznych będzie wyszukiwał w tej usłudze aktualizacje przeznaczone dla komputerów w Twojej sieci.
+        To ustawienie umożliwia określenie serwera w Twojej sieci, który będzie pełnił funkcję wewnętrznej usługi aktualizacji. Klient Aktualizacji automatycznych będzie wyszukiwał w tej usłudze aktualizacje przeznaczone dla komputerów w Twojej sieci.
 
-        Aby użyć tego ustawienia, musisz ustawić dwie wartości nazwy serwera: serwer, na którym klient Aktualizacji automatycznych wykrywa aktualizacje i z którego je pobiera, oraz serwer, na który zaktualizowane stacje robocze przekazują statystyki. Obie te wartości mogą odpowiadać jednemu serwerowi. Można określić opcjonalną nazwę serwera, aby skonfigurować usługę Windows Update Agent do pobierania aktualizacji z alternatywnego serwera pobierania, a nie z intranetowej usługi aktualizacji.
+        Aby używać tego ustawienia, musisz ustawić dwie wartości nazwy serwera: serwer, na którym klient Aktualizacji automatycznych wykrywa aktualizacje i z którego je pobiera, oraz serwer, na który zaktualizowane stacje robocze przekazują statystyki. Obie te wartości mogą odpowiadać jednemu serwerowi. Możliwe jest określenie opcjonalnej nazwy serwera, aby skonfigurować usługę Windows Update Agent do pobierania aktualizacji z alternatywnego serwera pobierania, a nie z intranetowej usługi aktualizacji.
 
-        Jeśli stan ma wartość Włączone, klient Aktualizacji automatycznych łączy się z określoną intranetową usługą aktualizacji firmy Microsoft (lub alternatywnym serwerem pobierania), a nie z usługą Windows Update, w celu wyszukiwania i pobierania aktualizacji. Włączenie tego ustawienia spowoduje, że użytkownicy końcowi w organizacji nie będą musieli przechodzić przez zaporę, aby uzyskać aktualizacje, a jednocześnie umożliwia testowanie aktualizacji przed wdrożeniem.
+        Jeśli stan ma wartość Włączone, klient Aktualizacji automatycznych łączy się z określoną intranetową usługą aktualizacji firmy Microsoft (lub alternatywnym serwerem pobierania), a nie z usługą Windows Update, w celu wyszukiwania i pobierania aktualizacji. Włączenie tego ustawienia spowoduje, że użytkownicy końcowi w organizacji nie będą musieli przechodzić przez zaporę, aby uzyskiwać aktualizacje, a jednocześnie umożliwia testowanie aktualizacji przed ich wdrożeniem.
 
-        Jeśli stan ma wartość Wyłączone lub Nieskonfigurowane, a Aktualizacje automatyczne nie zostały wyłączone w zasadach lub preferencjach użytkownika, klient Aktualizacji automatycznych łączy się bezpośrednio w witryną Windows Update w Internecie.
+        Jeśli stan ma wartość Wyłączone lub Nieskonfigurowane, a Aktualizacje automatyczne nie zostały wyłączone w zasadach lub preferencjach użytkownika, klient Aktualizacji automatycznych łączy się bezpośrednio z witryną Windows Update w Internecie.
 
         Alternatywny serwer pobierania konfiguruje usługę Windows Update Agent do pobierania plików z alternatywnego serwera pobierania, a nie z intranetowej usługi aktualizacji.
 
@@ -148,11 +148,21 @@ Jeśli ta zasada będzie mieć stan Nieskonfigurowane, użycie funkcji Aktualiza
 
         Uwaga: jeśli zasada „Konfigurowanie aktualizacji automatycznych” jest wyłączona, ta zasada nie działa.
 
-        Uwaga: jeśli wartość „Alternatywny serwer pobierania” nie jest ustawiona, intranetowa usługa aktualizacji będzie używana domyślnie w celu pobierania aktualizacji.
+        Uwaga: jeśli wartość „Alternatywny serwer pobierania” nie jest ustawiona, w celu pobierania aktualizacji domyślnie używana jest intranetowa usługa aktualizacji.
 
-        Uwaga: opcja „Pobieraj pliki bez adresów URL...” jest używana tylko wtedy, gdy jest ustawiona wartość „Alternatywny serwer pobierania”.
+        Uwaga: opcja „Pobieraj pliki bez adresów URL...” jest używana tylko wtedy, gdy ustawiona jest wartość „Alternatywny serwer pobierania”.
 
-        Uwaga: Ta zasada nie jest obsługiwana w systemie Windows RT. Ustawienie tej zasady na komputerach z systemem Windows RT nie przyniesie żadnego efektu.</string>
+        Uwaga: ta zasada nie jest obsługiwana w systemie Windows RT. Ustawienie tej zasady na komputerach z systemem Windows RT nie przyniesie żadnego efektu.
+
+        Uwaga dotycząca serwerów proxy: W celu zapewnienia najwyższego bezpieczeństwa firma Microsoft zaleca zabezpieczenie WSUS protokołem TLS/SSL, co wymaga korzystania z serwerów intranetowych HTTPS i zabezpiecza systemy. Jeśli wymagany jest serwer proxy,  zalecamy konfigurację systemowego serwera proxy.
+
+        Wybór zachowania serwera proxy nie ma wpływu na klientów używających serwerów intranetowych HTTPS do wykrywania aktualizacji. 
+
+        W celu zapewnienia bezpieczeństwa klientów nie zezwalamy już serwerom intranetowym HTTP na domyślne korzystanie z serwera proxy użytkownika do wykrywania aktualizacji. W przypadku podjęcia decyzji o używaniu serwera proxy użytkownika do wykrywania aktualizacji i korzystaniu z serwera intranetowego HTTP pomimo luk w zabezpieczeniach, konieczne jest skonfigurowanie zachowania serwera proxy „Zezwalaj na używanie serwera proxy użytkownika jako rezerwy, jeśli wykrywanie za pomocą systemowego serwera proxy zakończy się niepowodzeniem”.
+
+        Wykrywanie aktualizacji zakończy się niepowodzeniem w przypadku, gdy serwery intranetowe HTTP są stosowane bez skonfigurowanego systemowego serwera proxy, jeśli nie jest skonfigurowana zasada używania alternatywnego zachowania serwera proxy.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Używaj tylko systemowego serwera proxy do wykrywania aktualizacji (domyślnie)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Zezwalaj na używanie serwera proxy użytkownika jako rezerwy, jeśli wykrywanie za pomocą systemowego serwera proxy zakończy się niepowodzeniem</string>
       <string id="DetectionFrequency_Help">Określa liczbę godzin używaną przez system Windows do ustalenia okresu oczekiwania przed sprawdzaniem, czy są dostępne aktualizacje. Dokładny czas stanowi sumę określonej wartości oraz losowej wartości z zakresu od 0 do 4 godzin.
 
         Jeśli ustawienie Stan ma wartość Włączone, system Windows będzie sprawdzać dostępność aktualizacji, korzystając z określonego interwału.
@@ -680,8 +690,9 @@ Ta zasada zastąpi następujące zasady:
         <textBox refId="CorpWUContentHost_Name">
           <label>Ustaw alternatywny serwer pobierania:</label>
         </textBox>
-        <text>(przykład: http://IntranetUpd01)</text>
+        <text>(przykład: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Pobieraj pliki bez adresów URL w metadanych, jeśli jest ustawiony alternatywny serwer pobierania.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Wybierz zachowanie serwera proxy dla klienta usługi Windows Update w celu wykrycia aktualizacji za pomocą usługi nie korzystającej z protokołu TLS (HTTP):</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Sprawdzaj, czy są aktualizacje przy użyciu następującego</text>

@@ -152,7 +152,17 @@ Jos tilana on Ei määritetty, automaattisten päivitysten käyttöä ei ole mä
 
         Huomautus: Lataa tiedostot ilman metatiedoissa annettua URL-osoitetta -asetusta käytetään vain silloin, kun Vaihtoehtoinen latauspalvelin -asetus on määritetty.
 
-        Huomautus: Windows RT ei tue tätä käytäntöä. Tämän käytännön määrittämisellä ei ole vaikutusta Windows RT -tietokoneissa.</string>
+        Huomautus: Windows RT ei tue tätä käytäntöä. Tämän käytännön määrittämisellä ei ole vaikutusta Windows RT -tietokoneissa.
+
+        Huomautus välityspalvelimista: Microsoft suosittelee varmistamaan korkeimman suojaustason suojaamalla WSUS-palvelut TLS-/SSL-protokollalla ja siten käyttämään järjestelmän suojaukseen HTTPS-pohjaisia intranet-palvelimia. Jos välityspalvelin vaaditaan, suosittelemme määrittämään järjestelmän välityspalvelimen.
+
+        Välityspalvelimen toiminnan valitseminen ei vaikuta HTTPS-pohjaisia intranet-palvelimia käyttävien käyttäjien päivitysten tunnistamiseen. 
+
+        Emme enää salli HTTP-pohjaisten intranet-palvelinten käyttää käyttäjän välityspalvelinta päivitysten tunnistamiseen pitääksemme asiakkaat suojattuna. Jos sinun on käytettävä HTTP-pohjaista intranet-palvelinta käyttäessäsi päivitysten tunnistamiseen käyttäjän välityspalvelinta sen heikkoudesta huolimatta, välityspalvelimen toiminnaksi on määritettävä “Salli käyttäjän välityspalvelimen käyttö varalla, jos tunnistus epäonnistuu järjestelmän välityspalvelimella”.
+
+        Päivitysten tunnistus epäonnistuu, kun HTTP-pohjaisia intranet-palvelimia käytetään ilman määritettyä järjestelmän välityspalvelinta, jos vaihtoehtoista välityspalvelimen toimintaa käyttävää käytäntöä ei ole määritetty.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Käytä päivitysten tunnistamiseen vain järjestelmän välityspalvelinta (oletus)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Salli käyttäjän välityspalvelimen käyttö varalla, jos tunnistus epäonnistuu järjestelmän välityspalvelimella</string>
       <string id="DetectionFrequency_Help">Määrittää, montako tuntia Windows odottaa ennen saatavina olevien päivitysten tarkistamista. Tarkka odotusaika on tietyn arvon sekä 0 ja 4 tunnin välisen satunnaisen muuttujan summa.
 
         Jos tila on Käytössä, Windows tarkistaa saatavina olevat päivitykset määritetyin aikavälein.
@@ -680,8 +690,9 @@ Tämä käytäntö korvaa seuraavat käytännöt:
         <textBox refId="CorpWUContentHost_Name">
           <label>Määritä vaihtoehtoinen latauspalvelin:</label>
         </textBox>
-        <text>(esimerkki: http://IntranetUpd01)</text>
+        <text>(esimerkki: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Lataa tiedostot ilman metatiedoissa annettua URL-osoitetta, jos vaihtoehtoinen latauspalvelin on määritetty.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Jos haluat tunnistaa päivitykset muulla kuin TLS (HTTPS) -pohjaisella palvelulla, valitse välityspalvelimen toiminta Windows Update -asiakkaalle.</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Tarkista päivitykset seuraavin</text>

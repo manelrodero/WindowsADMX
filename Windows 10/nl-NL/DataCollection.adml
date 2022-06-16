@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">Telemetrie toestaan</string>
       <string id="AllowTelemetry_0">0 - Beveiliging [Alleen Enterprise]</string>
-      <string id="AllowTelemetry_1">1 - Basis</string>
+      <string id="AllowTelemetry_1">1 - Vereist</string>
       <string id="AllowTelemetry_2">2 - Uitgebreid</string>
-      <string id="AllowTelemetry_3">3 - Volledig</string>
-      <string id="AllowTelemetry_Explain">Als deze instelling wordt geconfigureerd in Windows 10, kunnen eindgebruikers niet kiezen voor een hoger niveau van telemetrieverzameling dan het niveau dat u hebt ingesteld voor uw organisatie. Deze beperking geldt uitsluitend voor het Windows-besturingssysteem en de apps die worden meegeleverd met Windows en niet voor apps van derden die worden uitgevoerd op Windows 10.
+      <string id="AllowTelemetry_3">3 - Optioneel</string>
+      <string id="AllowTelemetry_Explain">Als deze instelling wordt geconfigureerd in Windows 10, kunnen eindgebruikers niet kiezen voor een hoger niveau van telemetrieverzameling dan het niveau dat u hebt ingesteld voor uw organisatie. Deze beperking geldt uitsluitend voor het Windows-besturingssysteem en de apps die worden meegeleverd met Windows en niet voor apps van derden die worden uitgevoerd op Windows 10
 
 Diagnosegegevens worden als volgt onderverdeeld in vier niveaus:
-  - 0 (Beveiliging). Informatie die is vereist om Windows, Windows Server en System Center veilig te houden, met inbegrip van gegevens over de instellingen voor het onderdeel Connected User Experiences and Telemetry, het hulpprogramma voor verwijderen van schadelijke software en Windows Defender.
-  - 1 (Basis). Basisapparaatgegevens, met inbegrip van: kwaliteitsgegevens, app-compatibiliteit en gegevens van het niveau Beveiliging.
-  - 2 (Uitgebreid). Aanvullende inzichten, met inbegrip van: de wijze van gebruik van Windows, Windows Server, System Center en apps, hun prestaties, geavanceerde betrouwbaarheidsgegevens en gegevens van het niveau Basis en het niveau Beveiliging.
-  - 3 (Volledig). Alle gegevens die nodig zijn voor het identificeren en helpen oplossen van problemen, plus gegevens van de niveaus Beveiliging, Basis en Uitgebreid.
+ - 0 (Beveiliging). Informatie die is vereist om Windows, Windows Server en System Center veilig te houden, met inbegrip van gegevens over de instellingen voor het onderdeel Connected User Experiences and Telemetry, het hulpprogramma voor verwijderen van schadelijke software en Windows Defender.
+  - 1 (Vereist). Basisapparaatgegevens, met inbegrip van: kwaliteitsgegevens, app-compatibiliteit en gegevens van het niveau Beveiliging.
+  - 2 (Uitgebreid). Aanvullende inzichten, met inbegrip van: de wijze van gebruik van Windows, Windows Server, System Center en apps, hun prestaties, geavanceerde betrouwbaarheidsgegevens en gegevens van het niveau Vereist en het niveau Beveiliging.
+  - 3 (Optioneel). Alle gegevens die nodig zijn voor het identificeren en helpen oplossen van problemen, plus gegevens van de niveaus Beveiliging, Vereist en Uitgebreid.
 
 Opties die beschikbaar zijn voor gebruikers in de app Instellingen worden gewijzigd door het configureren van deze instelling, en zelfs als zij niet zijn ingesteld, kunnen zij worden beïnvloed door andere instellingen voor groepsbeleid. Opmerking: als dit beleid zodanig is geconfigureerd dat een telemetrie-instelling van het niveau Beveiliging of Basis is toegestaan, zijn gebruikers niet in staat om een hoger niveau te selecteren.
       </string>
@@ -43,18 +43,18 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, kan deze id niet 
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Uitgebreide diagnostische gegevens beperken tot het door Windows Analytics vereiste minimum</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Verzameling door Windows Analytics inschakelen</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Verzameling door Windows Analytics uitschakelen</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Met deze beleidsinstelling kunnen organisaties, in combinatie met de beleidsinstelling Telemetrie toestaan, via Windows Analytics-services een specifieke set diagnostische gegevens voor IT-informatie naar Microsoft versturen. Door deze instelling te configureren, verhindert u niet dat gebruikers hun telemetrie-instellingen kunnen wijzigen. Zij kunnen echter geen hoger niveau kiezen dan het niveau dat u voor de organisatie hebt ingesteld.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Met deze beleidsinstelling kunnen organisaties, in combinatie met de beleidsinstelling Telemetrie toestaan, via Windows Analytics-services een specifieke set diagnostische gegevens voor IT-informatie naar Microsoft versturen.
 
 Om dit in te schakelen, moet u twee stappen uitvoeren:
 
     1. Deze beleidsinstelling inschakelen
-    2. Telemetrie toestaan instellen op niveau 2 (Uitgebreid)
+2. Telemetrie toestaan instellen op niveau 2 (Uitgebreid)
 
-Als u deze beleidsinstellingen samen configureert, wordt het basisniveau van diagnostische gegevens, plus aanvullende gebeurtenissen die vereist zijn voor Windows Analytics, naar Microsoft verzonden. De aanvullende gebeurtenissen worden hier beschreven: https://go.Microsoft.com/fwlink/?linked=847594.
+Deze instelling heeft geen effect op apparaten die zijn geconfigureerd om beveiligingsgegevens of vereiste diagnostische gegevens naar Microsoft te verzenden. 
 
-Als u uitgebreide diagnostische gegevens in de beleidsinstelling Telemetrie toestaan inschakelt terwijl u deze beleidsinstelling niet configureert, worden de voor Windows Analytics vereiste gebeurtenissen naar Microsoft verzonden, plus aanvullende telemetriegegevens van het uitgebreide niveau. Deze instelling heeft geen invloed op computers die zijn geconfigureerd voor het verzenden naar Microsoft van diagnostische gegevens op het niveau Volledig, Basis en Beveiliging.
+Wanneer dit beleid is geconfigureerd, is het verzamelen van diagnostische gegevens beperkt tot de vereiste diagnostische gegevens en de gebeurtenissen die vereist zijn voor Desktop Analytics. Deze evenementen kunnen worden bekeken op https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het niveau van de diagnostische gegevens die naar Microsoft worden verzonden, bepaald door de beleidsinstelling Telemetrie toestaan.
+Als u deze beleidsinstelling uitschakelt of niet configureert, wordt het niveau van naar Microsoft verzonden diagnostische gegevens bepaald door de instelling Telemetrie-beleid toestaan als deze is geconfigureerd (bijvoorbeeld als u verbeterde diagnostische gegevens inschakelt via de beleidsinstelling Telemetrie toestaan, maar als u deze beleidsinstelling niet configureert, stuurt u de vereiste gebeurtenissen voor Windows Analytics, plus eventuele aanvullende diagnostische gegevens voor Verbeterd niveau naar Microsoft).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Toestaan dat apparaatnaam wordt verzonden in diagnostische Windows-gegevens</string>
@@ -104,6 +104,33 @@ Als u een limiet wilt instellen voor het niveau van diagnostische gegevens dat n
           Met dit beleid stelt u het uploadeindpunt in voor de diagnostische gegevens van dit apparaat als onderdeel van het Desktop Analytics-programma.
           Als uw organisatie deelneemt aan het programma en de opdracht heeft gekregen om een aangepast uploadeindpunt te configureren, definieert u het eindpunt via deze instelling.
           De waarde voor deze instelling wordt door Microsoft verstrekt tijdens het onboardingsgedeelte van het programma. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Bijwerken van compatibiliteitsverwerking toestaan</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Hiermee kunnen IT-beheerders diagnostische gegevens van dit apparaat laten verwerken door Update Compliance. 
+De volgende lijst toont de ondersteunde waarden: 
+0 (standaard) - Diagnostische gegevens worden niet verwerkt door Update Compliance.
+ 16 - Diagnostische gegevens mogen worden verwerkt door Update Compliance. 
+Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostische gegevens van dit apparaat niet verwerkt door Update Compliance.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Verwerking van bureaubladanalyse toestaan</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Hiermee kunnen IT-beheerders diagnostische gegevens van dit apparaat laten verwerken door Desktop Analytics. 
+ De volgende lijst toont de ondersteunde waarden: 
+ 0 (standaard) - Diagnostische gegevens worden niet verwerkt door Desktop Analytics. 
+ 2 - Diagnostische gegevens mogen worden verwerkt door Desktop Analytics. 
+ Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostische gegevens van dit apparaat niet verwerkt door Desktop Analytics. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Verwerking met WUfB-cloud toestaan</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Hiermee kunnen IT-beheerders de diagnostische gegevens van dit apparaat inschakelen voor verwerking door Windows Update voor Business Cloud. 
+            In de volgende lijst worden de ondersteunde waarden weergegeven:  
+              0 (standaard) – de diagnostische gegevens worden niet verwerkt door Windows Update voor Business Cloud.. 
+              8 – de diagnostische gegevens mogen worden verwerkt door Windows Update voor Business Cloud.. 
+          Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostische gegevens van dit apparaat niet verwerkt door Windows Update voor Business Cloud. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Pijplijn voor commerciële gegevens toestaan</string>

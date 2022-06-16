@@ -132,19 +132,19 @@ Se o estado estiver definido como Não Configurado, a utilização das Atualiza�
       <string id="AutoUpdateSchTimeAuto">Automático</string>
       <string id="CorpWuURL">Especificar localização do serviço de atualizações da Microsoft na intranet</string>
       <string id="CorpWuURL_Help">
-        Especifica um servidor da intranet para alojar atualizações do Microsoft Update. Pode então utilizar este serviço de atualização para atualizar automaticamente os computadores na sua rede.
+        Especifica um servidor da intranet para alojar atualizações do Microsoft Update. Pode depois utilizar este serviço de atualização para atualizar automaticamente os computadores na sua rede.
 
-        Esta definição permite-lhe especificar um servidor na sua rede que funcione como serviço de atualização interno. O cliente de Atualizações Automáticas procura neste serviço as atualizações que se aplicam aos computadores na sua rede.
+        Esta definição permite-lhe especificar um servidor na sua rede que funcione como serviço de atualização interno. O cliente de Atualizações Automáticas procura neste serviço as atualizações que se aplicam aos computadores da sua rede.
 
-        Para utilizar esta definição, tem de definir dois valores de nomes de servidor: o servidor a partir do qual o cliente de Atualizações Automáticas deteta e transfere atualizações e o servidor para o qual as estações de trabalho atualizadas carregam estatísticas. Pode definir ambos os valores para corresponderem ao mesmo servidor. É possível especificar um valor de nome de servidor opcional para configurar o Windows Update Agent, para transferir atualizações a partir de um servidor de transferências alternativo em vez do serviço de atualização na intranet.
+        Para utilizar esta definição, tem de definir dois valores de nomes de servidor: o servidor a partir do qual o cliente de Atualizações Automáticas deteta e transfere atualizações e o servidor para o qual as estações de trabalho atualizadas carregam estatísticas. Pode definir ambos os valores para corresponderem ao mesmo servidor. É possível especificar um valor de nome de servidor opcional para configurar o Windows Update Agent para transferir atualizações a partir de um servidor de transferências alternativo em vez do serviço de atualização na intranet.
 
-        Se o estado estiver definido como Ativado, o cliente de Atualizações Automáticas liga-se ao serviço de atualização da Microsoft na intranet especificada (ou servidor de transferências alternativo), em vez de ao Windows Update, para procurar e transferir atualizações. Ao ativar esta definição faz com que os utilizadores finais na sua organização não tenham de passar por uma firewall para receber atualizações e dá-lhe a oportunidade de testar as atualizações antes de as implementar.
+        Se o estado estiver definido como Ativado, o cliente de Atualizações Automáticas liga-se ao serviço de atualização da Microsoft na intranet especificada (ou servidor de transferências alternativo), em vez de ao Windows Update, para procurar e transferir atualizações. Ao ativar esta definição faz com que os utilizadores finais na sua organização não tenham de passar por uma firewall para receber atualizações e também lhe dá a oportunidade de testar as atualizações antes de as implementar.
 
-        Se o estado estiver definido como Desativado ou Não Configurado e as Atualizações Automáticas não estiverem desativadas pela política ou pelas preferências do utilizador, o cliente de Atualizações Automáticas liga-se diretamente ao site do Windows Update na Internet.
+        Se o estado estiver definido como Desativado ou Não Configurado e se as Atualizações Automáticas não estiverem desativadas pela política ou pelas preferências do utilizador, o cliente de Atualizações Automáticas liga-se diretamente ao site do Windows Update na Internet.
 
         O servidor de transferências alternativo configura o Windows Update Agent para transferir ficheiros de um servidor de transferências alternativo em vez do serviço de atualização na intranet.
 
-        A opção para transferir ficheiros com Urls em falta permite que o conteúdo seja transferido do Servidor de Transferências Alternativo quando não existir quaisquer Urls de transferência de ficheiros nos metadados de atualização. Esta opção só deve ser utilizada quando o serviço de atualização na intranet não fornecer Urls de transferência nos metadados de atualização para os ficheiros que estão presentes no servidor de transferência alternativo.
+        A opção para transferir ficheiros com Urls em falta permite que o conteúdo seja transferido do Servidor de Transferências Alternativo quando não existir nenhum Url de transferência de ficheiros nos metadados de atualização. Esta opção só deve ser utilizada quando o serviço de atualização na intranet não fornecer Urls de transferência nos metadados de atualização para os ficheiros que estão presentes no servidor de transferência alternativo.
 
         Nota: Se a política "Configurar Atualizações Automáticas" estiver desativada, esta política não tem efeito.
 
@@ -152,7 +152,17 @@ Se o estado estiver definido como Não Configurado, a utilização das Atualiza�
 
         Nota: A opção "Transferir ficheiros sem Url..." é utilizada apenas se o "Servidor de Transferências Alternativo" estiver definido.
 
-        Nota: Esta política não é suportada no Windows RT. A definição desta política não afeta os PCs com Windows RT.</string>
+        Nota: Esta política não é suportada no Windows RT. A definição desta política não afeta os PCs com Windows RT.
+
+ Nota sobre proxies: Para garantir o mais elevado nível de segurança, a Microsoft recomenda proteger os WSUS com o protocolo TLS/SSL, usando assim servidores de intranet com base em HTTPS para manter os sistemas em segurança. Se for necessário um proxy, recomendamos a configuração de um proxy de sistema.
+
+        Selecionar um comportamento de proxy não terá qualquer efeito sobre os clientes que usarem os servidores de intranet com base em HTTPS para detetar atualizações. 
+
+        Para manter os clientes inerentemente em segurança, já não permitimos que servidores de intranet com base em HTTP tirem partido do proxy do utilizador por predefinição para detetar atualizações. Se precisar de aproveitar um proxy de utilizador para detetar atualizações ao mesmo tempo que usa um servidor de intranet com base em HTTP, apesar das vulnerabilidades que apresenta, deverá configurar o comportamento do proxy para "Permitir que o proxy de utilizador seja usado como recurso se a deteção através do proxy de sistema falhar".
+
+        A deteção de atualizações irá falhar quando os servidores de intranet com base em HTTP forem usados sem um proxy de sistema configurado se a política de usar um comportamento de proxy alternativo não estiver configurada.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Utilizar o proxy do sistema apenas para detetar atualizações (predefinição)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Permitir que o proxy do utilizador seja utilizado como contingência se a deteção de proxy do sistema falhar</string>
       <string id="DetectionFrequency_Help">Especifica as horas que o Windows vai utilizar para determinar quanto tempo deve aguardar antes de verificar a existência de atualizações disponíveis. O tempo de espera exato é a soma do valor específico e de uma variável aleatória de 0 a 4 horas.
 
         Se o estado for definido como Ativado, o Windows vai verificar a existência de atualizações disponíveis no intervalo especificado.
@@ -680,8 +690,9 @@ Esta política substituirá as seguintes políticas:
         <textBox refId="CorpWUContentHost_Name">
           <label>Defina o servidor de transferência alternativo:</label>
         </textBox>
-        <text>(exemplo: http://IntranetUpd01)</text>
+        <text>(exemplo: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Transferir ficheiros sem Url nos metadados, se o servidor de transferências alternativo estiver definido.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecione o comportamento do proxy para o cliente Windows Update para detetar atualizações com serviço não baseado em TLS (HTTP):</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Verificar se existem atualizações no próximo</text>

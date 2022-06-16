@@ -136,7 +136,7 @@ Hvis status er angivet til Ikke konfigureret, er brug af automatiske opdateringe
 
         Denne indstilling gør det muligt at angive en server på netværket, der skal fungere som en intern opdateringstjeneste. Klienten til automatiske opdateringer søger på denne tjeneste efter opdateringer, der gælder for computerne i netværket.
 
-        For at kunne bruge denne indstilling skal du angive to værdier for servernavn: den server, hvorfra klienten til automatiske opdateringer identificerer og downloader opdateringer, og den server, som opdaterede arbejdsstationer uploader statistikker til. Du kan angive begge værdier til at være den samme server. En valgfri værdi for servernavn kan angives for at konfigurere Windows Update-agenten til at downloade opdateringer fra en alternativ downloadserver i stedet for opdateringstjenesten på intranettet.
+        For at kunne bruge denne indstilling, skal du angive to værdier for servernavn: den server, hvorfra klienten til automatiske opdateringer identificerer og downloader opdateringer, og den server, som opdaterede arbejdsstationer uploader statistikker til. Du kan angive begge værdier til at være den samme server. En valgfri værdi for servernavn kan angives for at konfigurere Windows Update-agenten til at downloade opdateringer fra en alternativ downloadserver i stedet for opdateringstjenesten på intranettet.
 
         Hvis status er angivet til Aktiveret, vil klienten til automatiske opdateringer oprette forbindelse til den angivne intranetbaserede Microsoft-opdateringstjeneste (eller alternative downloadserver), i stedet for Windows Update, for at søge efter og downloade opdateringer. Hvis du aktiverer denne indstilling, betyder det, at slutbrugere i din organisation ikke behøver at gå gennem en firewall for at få opdateringer, og du får mulighed for at teste opdateringer, inden de udrulles.
 
@@ -152,7 +152,17 @@ Hvis status er angivet til Ikke konfigureret, er brug af automatiske opdateringe
 
         Bemærk! Indstillingen "Download filer uden URL-adresse..." bruges kun, hvis "Alternativ downloadserver" er angivet.
 
-        Bemærk! Denne politik understøttes ikke på Windows RT. Angivelse af politikken har ingen effekt på Windows RT-pc'er.</string>
+        Bemærk! Denne politik understøttes ikke på Windows RT. Angivelse af politikken har ingen effekt på Windows RT-pc'er.
+
+        Bemærk vedrørende proxyer: For at sørge for den bedst mulige sikkerhed, anbefaler Microsoft at bruge WSUS med TLS/SSL-protokollen, hvorved der bruges HTTPS-baserede intranetservere til at holde systemerne sikre.Hvis der kræves en proxy, anbefaler vi at konfigurer en systemproxy.
+
+        Valg a proxyadfærd har ingen virkning på klienter, der bruger HTTPS-baserede intranetservere til at registrere opdateringer. 
+
+        For at holde klienter sikre, tillader vi ikke længere HTTP-baserede intranetservere som standard at benytte brugerproxy til at registrere opdateringer. Hvis du har brug for at benytte brugerproxy til registrering af opdateringer, mens du bruger en HTTP-baseret intranetserver, trods de sårbarheder det medfører, skal du konfigurere proxyadfærd til "Tillad, at brugerproxy bruges som fallback, hvis registrering ved hjælp af systemproxy mislykkes".
+
+        Hvis du har brug for at benytte brugerproxy til registrering af opdateringer, mens du bruger en HTTP-baseret intranetserver, trods de sårbarheder det medfører, skal du konfigurere proxyadfærd til "Tillad, at brugerproxy bruges som fallback, hvis registrering ved hjælp af systemproxy mislykkes".</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Brug kun systemproxy til at registrere opdateringer (standard)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillad, at brugerproxy bruges som fallback, hvis registrering ved hjælp af systemproxy mislykkes</string>
       <string id="DetectionFrequency_Help">Angiver det antal timer, Windows bruger på at fastslå, hvor lang tid der skal ventes, før der kontrolleres for tilgængelige opdateringer. Den nøjagtige ventetid er summen af den angivne værdi og en tilfældig variant på 0-4 timer.
 
         Hvis status er angivet til Aktiveret, undersøger Windows, om der er tilgængelige opdateringer med det angivne interval.
@@ -680,8 +690,9 @@ Denne politik tilsidesætter følgende politikker:
         <textBox refId="CorpWUContentHost_Name">
           <label>Angiv alternativ downloadserver:</label>
         </textBox>
-        <text>(eksempel: http://IntranetUpd01)</text>
+        <text>(eksempel: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Download filer uden URL-adresse i metadataene, hvis den alternative downloadserver er angivet.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Vælg proxy-funktionsmåden for Windows Update-klienten til registrering af opdateringer med ikke-TLS (HTTP)-baseret tjeneste:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Kontroller, om der er opdateringer med følgende</text>

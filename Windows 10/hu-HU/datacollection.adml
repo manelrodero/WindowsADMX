@@ -7,16 +7,16 @@
     <stringTable>
       <string id="AllowTelemetry">Telemetria engedélyezése</string>
       <string id="AllowTelemetry_0">0 – Biztonság (csak vállalati módban)</string>
-      <string id="AllowTelemetry_1">1 – Alapszintű</string>
+      <string id="AllowTelemetry_1">1 - Szükséges</string>
       <string id="AllowTelemetry_2">2 – Közepes</string>
-      <string id="AllowTelemetry_3">3 – Teljes</string>
+      <string id="AllowTelemetry_3">3 - Opcionális</string>
       <string id="AllowTelemetry_Explain">Ha konfigurálja ezt a beállítást a Windows 10 rendszeren, a végfelhasználók nem tudnak a szervezethez beállítottnál magasabb szintű használatiadat-gyűjtést bekapcsolni.  Ez a korlátozás csak a Windows operációs rendszerre és a Windows rendszer részét képező alkalmazásokra vonatkozik, a Windows 10 rendszeren futó külső alkalmazásokra nem.
 
 A diagnosztikai adatok négy szintre vannak bontva:
   – 0 (biztonság). A Windows, a Windows Server és a System Center biztonságának megőrzéséhez szükséges információk, beleértve a Összekapcsolt felhasználói élmények és telemetria összetevő beállításait, a Kártevő-eltávolító eszközt és a Windows Defendert.
-  – 1 (Alap). Alapvető eszközadatok, többek között a minőséggel kapcsolatos adatok, az alkalmazások kompatibilitása és a Biztonsági szintről származó adatok.
-  – 2 (Bővített). További elemzések, többek között a következőkkel kapcsolatban: a Windows, a Windows Server, a System Center és az alkalmazások használatának módja, ezek teljesítménye, bővített megbízhatósági adatai, valamint az Alap és a Biztonsági szintről származó adatok.
-  – 3 (Teljes). A problémák azonosításához és megoldásához szükséges összes adat, valamint a Biztonsági, az Alap és a Bővített szintről származó adatok.
+  – 1 (Szükséges). Alapvető eszközadatok, többek között a minőséggel kapcsolatos adatok, az alkalmazások kompatibilitása és a Biztonsági szintről származó adatok.
+  – 2 (Bővített). További elemzések, többek között a következőkkel kapcsolatban: a Windows, a Windows Server, a System Center és az alkalmazások használatának módja, ezek teljesítménye, bővített megbízhatósági adatai, valamint a Szükséges és a Biztonsági szintről származó adatok.
+  – 3 (Opcionális). A problémák azonosításához és megoldásához szükséges összes adat, valamint a Biztonsági, a Szükséges és a Bővített szintről származó adatok.
 
 A Gépház alkalmazásban a felhasználók számára elérhető beállítások köre módosul ennek a beállításnak a konfigurálása esetén, és még akkor is hatással lehetnek rá más csoportházirend-beállítások, ha nincs beállítva. Ne feledje, hogy ha ez a házirend úgy van konfigurálva, hogy a Biztonság vagy az Alap szint telemetriai beállítást engedélyezze, akkor a végfelhasználók nem tudnak magasabb szintet választani.
       </string>
@@ -45,18 +45,18 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Microsoft ne
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Kibővített diagnosztikai adatok korlátozása a Windows Analytics által megkövetelt minimális szintre</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics-gyűjtemény engedélyezése</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Windows Analytics-gyűjtemény letiltása</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Ez a házirend-beállítás a Telemetria engedélyezése házirend-beállítással együtt lehetővé teszi, hogy a szervezetek meghatározott diagnosztikai adatkészletet küldjenek a Microsoftnak az informatikai adatok elemzéséhez a Windows Analytics-szolgáltatásokon keresztül. A beállítás konfigurálása nem akadályozza meg, hogy a felhasználók módosítsák saját telemetriabeállításaikat; viszont megakadályozza, hogy magasabb szintet válasszanak annál, mint amit Ön állít be a szervezet számára.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Ez a házirend-beállítás a Telemetria engedélyezése házirend-beállítással együtt lehetővé teszi, hogy a szervezetek meghatározott diagnosztikai adatkészletet küldjenek a Microsoftnak az informatikai adatok elemzéséhez a Windows Analytics-szolgáltatásokon keresztül.
 
-A viselkedés engedélyezéséhez két lépést kell végrehajtania:
+A viselkedés engedélyezéséhez két lépést kell végrehajtania: 
 
-    1. Engedélyeznie kell ezt a házirend-beállítást.
-    2. A Telemetria engedélyezése beállítást a 2. (Közepes) szintre kell állítania.
+ 1. Engedélyeznie kell ezt a házirend-beállítást.
+    2. A Telemetria engedélyezése beállítást a 2. szintre (Közepes) kell állítania.
 
-Az említett házirend-beállítások együttes konfigurálásakor a rendszer Alapszintű diagnosztikai adatokat és a Windows Analytics által esetleg megkövetelt további eseményeket küld a Microsoftnak. Ezekről a további eseményekről itt olvashat: https://go.Microsoft.com/fwlink/?linked=847594.
+Ez a beállítás nincs hatással azokra a számítógépekre, amelyeken be van állítva a Szükséges vagy Biztonság szintű diagnosztikai adatok küldése a Microsoftnak.
 
-Ha a Telemetria engedélyezése házirend-beállításban engedélyezi a Közepes szintű diagnosztikaiadat-küldést, azonban ezt a házirendet nem konfigurálja, a rendszer elküldi a Windows Analytics számára szükséges eseményeket és az esetleges egyéb Közepes szintű telemetriai adatokat a Microsoftnak. Ez a beállítás nincs hatással azokra a számítógépekre, amelyeken a diagnosztikai adatok Microsoftnak küldésének konfigurációja Teljes, Alapszintű vagy Biztonság szintű.
+ Az említett házirend-beállítások konfigurálásakor a diagnosztikai adatgyűjtés a szükséges diagnosztikai adatok és az Asztali elemzés által igényelt eseményekre korlátozódik. Ezekről az eseményekről itt olvashat: https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a Microsoftnak elküldött diagnosztikai adatok szintjét a Telemetria engedélyezése házirend-beállítás határozza meg.
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a Microsoftnak elküldött diagnosztikai adatok szintjét a Telemetria engedélyezése házirend határozza meg (pl. ha engedélyezi a bővített diagnosztikai adatokat a Telemetria engedélyezése házirend-beállításban, de nem konfigurálja ezt a házirend-beállítást, akkor elküldi a Windows Analytics számára szükséges eseményeket, valamint minden további Bővített szintű diagnosztikai adatot a Microsoftnak).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Eszköznév elküldésének engedélyezése a Windows diagnosztikai adatok között</string>
@@ -106,6 +106,33 @@ A szervezet által a Microsoft számára küldött diagnosztikai adatok szintjé
           Ezzel a házirenddel beállíthatja az eszköz diagnosztikai adatainak feltöltési végpontját az Asztali elemzés program részeként.
           Ha a szervezet részt vesz a programban, és utasítást kapott az egyéni feltöltési végpont konfigurálására, akkor ezzel a beállítással meghatározhatja ezt a végpontot.
           A beállítás értékét a Microsoft fogja biztosítani a program előkészítési folyamatában. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Az Update Compliance általi feldolgozás engedélyezése</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Lehetővé teszi a rendszergazdák számára annak engedélyezését, hogy az erről az eszközről származó diagnosztikai adatokat feldolgozza az Update Compliance. 
+            A választható értékek a következők:  
+              0 (alapértelmezett) – Az Update Compliance nem dolgozza fel a diagnosztikai adatokat. 
+              16 – Engedélyezett a diagnosztikai adatok Update Compliance általi feldolgozása. 
+            Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az erről az eszközről származó diagnosztikai adatokat nem fogja feldolgozni az Update Compliance.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">A Desktop Analytics általi feldolgozás engedélyezése</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Lehetővé teszi a rendszergazdák számára annak engedélyezését, hogy az erről az eszközről származó diagnosztikai adatokat feldolgozza a Desktop Analytics. 
+            A választható értékek a következők:  
+              0 (alapértelmezett) – A Desktop Analytics nem dolgozza fel a diagnosztikai adatokat. 
+              2 – Engedélyezett a diagnosztikai adatok Desktop Analytics általi feldolgozása. 
+          Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az erről az eszközről származó diagnosztikai adatokat nem fogja feldolgozni a Desktop Analytics. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">WUfB Felhőbeli feldolgozás engedélyezése</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Lehetővé teszi a rendszergazdák számára annak engedélyezését, hogy az erről az eszközről származó diagnosztikai adatokat feldolgozza a Windows Update Vállalatoknak felhőszolgáltatás. 
+            A választható értékek a következők:  
+              0 (alapértelmezett) – A Windows Update Vállalatoknak felhőszolgáltatás nem dolgozza fel a diagnosztikai adatokat. 
+              8 – Engedélyezett a diagnosztikai adatok Windows Update Vállalatoknak felhőszolgáltatás általi feldolgozása. 
+            Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az erről az eszközről származó diagnosztikai adatokat nem fogja feldolgozni a Windows Update Vállalatoknak felhőszolgáltatás. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Kereskedelmi adatfolyamat engedélyezése</string>

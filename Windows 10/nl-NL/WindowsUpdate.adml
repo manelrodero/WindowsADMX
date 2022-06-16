@@ -152,7 +152,17 @@ Als de waarde is ingesteld op Niet-geconfigureerd, wordt het gebruik van Automat
 
         Opmerking: de optie om bestanden zonder URL te downloaden wordt alleen gebruikt als er een alternatieve downloadserver is ingesteld.
 
-        Opmerking: deze beleidsinstelling wordt niet ondersteund in Windows RT en heeft dan ook geen effect op computers met Windows RT.</string>
+        Opmerking: deze beleidsinstelling wordt niet ondersteund in Windows RT en heeft dan ook geen effect op computers met Windows RT.
+
+        Opmerking over proxy’s: Microsoft wil het hoogste niveau van beveiliging garanderen en raadt daarom aan om WSUS te beveiligen met het TLS/SSL-protocol, waarbij gebruik wordt gemaakt van HTTPS- intranetservers om systemen veilig te houden. Als er een proxy nodig is, raden we aan om de systeemproxy te configureren.
+
+        Het selecteren van een proxygedrag heeft geen invloed op klanten die HTTPS-intranetservers gebruiken om updates te detecteren.
+
+        Om klanten inherent veilig te houden, staan we niet langer toe dat HTTP-intranetservers standaard gebruikmaken van een gebruikersproxy voor het detecteren van updates. Als u gebruik moet maken van een gebruikersproxy voor het detecteren van updates terwijl u een HTTP-intranetserver gebruikt, ondanks de kwetsbaarheden die deze bevat, moet u het proxygedrag instellen op ‘Toestaan om de gebruikersproxy te gebruiken als noodoplossing als detectie met de systeemproxy mislukt’.
+
+Detectie voor updates zal mislukken wanneer HTTP- intranetservers worden gebruikt zonder een geconfigureerde systeemproxy als het beleid om een alternatieve proxy te gebruiken niet is geconfigureerd.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Alleen systeemproxy gebruiken voor het detecteren van updates (standaard)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Toestaan dat gebruikers proxy als terugval gebruiken als detectie met systeemproxy mislukt</string>
       <string id="DetectionFrequency_Help">Hiermee geeft u het aantal uren op dat Windows wacht voordat wordt gezocht naar beschikbare updates. De exacte wachttijd is de som van de opgegeven waarde en een willekeurige periode van 0-4 uur.
 
         Als de status is ingesteld op Ingeschakeld, controleert Windows op beschikbare updates met het opgegeven interval.
@@ -680,8 +690,9 @@ Dit beleid overschrijft de volgende beleidsregels:
         <textBox refId="CorpWUContentHost_Name">
           <label>Stel de alternatieve downloadserver in:</label>
         </textBox>
-        <text>(voorbeeld: http://IntranetUpd01)</text>
+        <text>(voorbeeld: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Download bestanden zonder URL in de metadata als er een alternatieve downloadserver is ingesteld.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecteer het proxy gedrag voor Windows Update-client voor het detecteren van updates met een niet-TLS-service (HTTP):</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Zoek naar updates met het volgende</text>

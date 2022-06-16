@@ -136,7 +136,7 @@ Ha a Nincs konfigurálva állapot van megadva, az Automatikus frissítések szol
 
         Ezzel a beállítással adhat meg a hálózaton található, belső frissítési szolgáltatásként működő kiszolgálót. Az Automatikus frissítések ügyfele ebben a szolgáltatásban fog a hálózaton lévő számítógépekre vonatkozó frissítéseket keresni.
 
-        A beállítás használatához két kiszolgálónevet kell megadni: azt, amelyiken az Automatikus frissítések ügyfele megkeresi és letölti a frissítéseket, és azt, amelyekre a frissített munkaállomások feltöltik a statisztikáikat. Ugyanaz a kiszolgáló is megadható mindkét célra. Nem kötelező jelleggel megadható egy másik kiszolgáló is, amelyről a Windows Update-ügynök letölti a frissítéseket az intranetes frissítési szolgáltatás helyett.
+        A beállítás használatához két kiszolgálónevet kell megadni: azt, amelyiken az Automatikus frissítések ügyfele megkeresi és letölti a frissítéseket, és azt, amelyre a frissített munkaállomások feltöltik a statisztikáikat. Ugyanaz a kiszolgáló is megadható mindkét célra. Nem kötelező jelleggel megadható egy másik kiszolgáló is, amelyről a Windows Update-ügynök letölti a frissítéseket az intranetes frissítési szolgáltatás helyett.
 
         Ha engedélyezi ezt a beállítást, az Automatikus frissítések ügyfele a Windows Update webhely helyett a megadott intranetes frissítési szolgáltatáson (vagy a másik letöltési kiszolgálón) fogja megkeresni és onnan letölteni a frissítéseket. A beállítás engedélyezése révén a szervezet végfelhasználói a tűzfalon való áthaladás nélkül hozzájuthatnak a frissítésekhez, emellett lehetőség nyílik a frissítések telepítés előtti tesztelésére is.
 
@@ -152,7 +152,17 @@ Ha a Nincs konfigurálva állapot van megadva, az Automatikus frissítések szol
 
         Megjegyzés: A „Fájlok letöltése URL-cím nélkül...” csak akkor használható, ha a „Másik letöltési kiszolgáló” beállítás meg van adva.
 
-        Megjegyzés: Ez a házirend Windows RT rendszerben nem támogatott. A házirend beállítása Windows RT rendszerű gépeken nincs semmilyen hatással.</string>
+        Megjegyzés: Ez a házirend Windows RT rendszerben nem támogatott. A házirend beállítása Windows RT rendszerű gépeken nincs semmilyen hatással.
+
+        Proxykkal kapcsolatos megjegyzés: A legmagasabb szintű biztonság biztosítása érdekében a Microsoft javasolja a WSUS TLS/SSL protokollal történő biztosítását, és ezáltal a HTTPS-alapú intranetes kiszolgálók használatát a rendszer biztonságának megőrzéséhez. Ha proxy szükséges, akkor javasoljuk a rendszerproxy konfigurálását.
+
+        Egy proxyviselkedés kiválasztása nem fogja befolyásolni a HTTPS-alapú intranet kiszolgálókat a frissítések észlelésében. 
+
+        Az ügyfelek természetes biztonságának megőrzése érdekében többé nem engedélyezzük a HTTP-alapú intranetes kiszolgálók számára, hogy alapértelmezés szerint használják a felhasználói proxyt a frissítések észlelésére. Ha a felhasználói proxyt kell használnia a frissítések észlelésére egy HTTP-alapú intranetes kiszolgáló használata során, a kiszolgáló által jelentett sebezhetőségek ellenére, akkor a proxyviselkedést „A felhasználói proxy helyettesítőként való használatának engedélyezése, ha a rendszerproxyt használó észlelés nem működik“ értékre kell konfigurálnia.
+
+        A frissítések észlelése nem működik, ha a HTTP-alapú intranetes kiszolgálókat egy konfigurált rendszerproxy nélkül használják, ha nincs konfigurálva az alternatív proxyviselkedés használatára vonatkozó házirend.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Csak a rendszerproxy használata frissítések észlelésére (alapértelmezett)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">A felhasználói proxy helyettesítőként való használatának engedélyezése, ha a rendszerproxyt használó észlelés nem működik</string>
       <string id="DetectionFrequency_Help">Az az óraszám, amely alapján a Windows rendszer meghatározza, hogy meddig várjon a frissítések keresése előtt. A pontos várakozási idő a konkrét értékek összege és egy véletlenszerű, 0–4 óra közötti változó. 
 
         Ha az állapot Engedélyezett, a Windows a megadott időközönként keres frissítéseket.
@@ -680,8 +690,9 @@ Ez a házirend felülírja a következő házirendeket:
         <textBox refId="CorpWUContentHost_Name">
           <label>Másik letöltési kiszolgáló megadása:</label>
         </textBox>
-        <text>(például http://IntranetFriss01)</text>
+        <text>(példa: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Fájlok letöltése a metaadatokban megadott URL-cím nélkül, ha a másik letöltési kiszolgáló meg van adva.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Válassza ki a Windows Update-ügyfél proxyviselkedését a frissítéseket észlelésére nem TLS-alapú (HTTP) szolgáltatással:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Frissítések keresésének</text>

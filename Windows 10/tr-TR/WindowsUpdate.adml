@@ -126,27 +126,38 @@ Durum Yapılandırılmadı olarak ayarlanırsa Otomatik Güncelleştirmeler'in k
       <string id="AutoUpdateSchTimeAuto">Otomatik</string>
       <string id="CorpWuURL">İntranet Microsoft güncelleştirme hizmeti konumunu belirt</string>
       <string id="CorpWuURL_Help">
-        Microsoft Update güncelleştirmelerini barındırmak üzere bir intranet sunucusunu belirtir. Daha sonra bu güncelleştirme hizmetini ağınızdaki bilgisayarları otomatik olarak güncelleştirmek için kullanabilirsiniz.
+        Microsoft Update güncelleştirmelerini barındıracak intranet sunucusunu belirtir. Daha sonra bu güncelleştirme hizmetini ağınızdaki bilgisayarları otomatik olarak güncelleştirmek için kullanabilirsiniz.
 
-        Bu ayar, ağınızdaki bir sunucuyu, bir iç güncelleştirme hizmeti olarak çalışması üzere belirtmenizi sağlar. Otomatik Güncelleştirmeler istemcisi ağınızdaki bilgisayarlara uygun güncelleştirmeleri bu hizmette aranabilir.
+        Bu ayar ağınızdaki bir sunucuyu, iç güncelleştirme hizmeti işlevi görmek üzere belirtmenizi sağlar. Otomatik Güncelleştirmeler istemcisi, ağınızdaki bilgisayarlara uygun güncelleştirmeleri bu hizmette arayacaktır.
 
-        Bu ayarı kullanmak için iki sunucu adı değeri ayarlamalısınız: Otomatik Güncelleştirme istemcisinin güncelleştirmeleri bulup indireceği sunucu ve iş istasyonlarının güncelleştirilmiş istatistikleri vereceği sunucu. Her iki değeri de aynı sunucu olacak şekilde ayarlayabilirsiniz. Intranet güncelleştirme hizmeti yerine alternatif bir indirme sunucusundan güncelleştirmeleri indirmek için Windows Update Aracısı'nı güncelleştirmek üzere isteğe bağlı bir sunucu adı değeri belirlenebilir.
+        Bu ayarı kullanmak için iki sunucu adı değeri ayarlamalısınız: Otomatik Güncelleştirme istemcisinin güncelleştirmeleri algılayıp indireceği sunucu ve güncelleştirilmiş iş istasyonlarının istatistikleri yükleyeceği sunucu. Her iki değeri de aynı sunucuya ayarlayabilirsiniz. Windows Update Aracısı'nı güncelleştirmeleri intranet güncelleştirme hizmeti yerine alternatif bir indirme sunucusundan indirecek şekilde yapılandırmak için isteğe bağlı bir sunucu adı değeri belirlenebilir.
 
-        Durum Etkin olarak ayarlanırsa, Otomatik Güncelleştirmeler istemcisi, güncelleştirme aramak ve indirmek için Windows Update yerine, belirtilen Intranet Microsoft güncelleştirme hizmetine (veya alternatif bir indirme sunucusu) bağlanır. Bu ayarı etkinleştirmek, kuruluşunuzdaki son kullanıcıların, güncelleştirmeleri edinmek için güvenlik duvarından geçmeye ihtiyacı olmadığı anlamına gelir ve güncelleştirmeleri dağıtmadan önce denemenize olanak sağlar.
+        Durum Etkin olarak ayarlanırsa, Otomatik Güncelleştirmeler istemcisi güncelleştirmeleri aramak ve indirmek üzere Windows Update yerine belirtilen intranet Microsoft güncelleştirme hizmetine (veya alternatif bir indirme sunucusuna) bağlanır. Bu ayarı etkinleştirmek, kuruluşunuzdaki son kullanıcıların güncelleştirmeleri almak için güvenlik duvarından geçmelerine gerek kalmadığı anlamına gelir ve size güncelleştirmeleri dağıtmadan önce deneme fırsatı verir.
 
-        Durum Devre Dışı veya Yapılandırılmamış olarak ayarlandıysa ve Otomatik Güncelleştirmeler ilke veya kullanıcı tercihinde devre dışı bırakılmadıysa, Otomatik Güncelleştirme istemcisi doğrudan İnternetteki Windows Update sitesine bağlanır.
+        Durum Devre Dışı veya Yapılandırılmadı olarak ayarlanırsa ve Otomatik Güncelleştirmeler ilke tarafından veya kullanıcı tercihiyle devre dışı bırakılmazsa, Otomatik Güncelleştirmeler istemcisi doğrudan İnternet'teki Windows Update sitesine bağlanır.
 
-        Alternatif indirme sunucusu, Windows Update Aracısı'nı Intranet güncelleştirme hizmeti yerine alternatif bir indirme sunucusundan indirecek şekilde yapılandırır.
+        Alternatif indirme sunucusu, Windows Update Aracısı'nı intranet güncelleştirme hizmeti yerine alternatif bir indirme sunucusundan indirecek şekilde yapılandırır.
 
-        Güncelleştirme meta verilerinde dosyaları indirme URL'leri olduğunda alternatif karşıdan sunucudan yüklenecek içerik URL'leri eksik olan dosyaları karşıdan yükleme seçeneğine izin verir. Bu seçenek yalnızca Intranet güncelleştirme hizmeti alternatif indirme sunucusunda bulunan dosyalar için güncelleştirme meta verilerinde URL sağlamadığında kullanılmalıdır.
+        Url'leri eksik olan dosyaları indirme seçeneği, güncelleştirme meta verilerinde dosyalar için indirme Url'leri olmaması durumunda içeriğin Alternatif İndirme Sunucusu'ndan indirilmesine olanak tanır. Bu seçenek yalnızca intranet güncelleştirme hizmeti alternatif indirme sunucusunda bulunan dosyalar için güncelleştirme meta verilerinde Url sağlamadığında kullanılmalıdır.
 
-        Not: "Otomatik Güncelleştirmeleri Yapılandır" ilkesi devre dışıysa, bu ilkenin hiçbir etkisi olmaz.
+        Not: "Otomatik Güncelleştirmeleri Yapılandır" ilkesi devre dışı bırakıldıysa, bu ilkenin hiçbir etkisi olmaz.
 
-        Not: "Alternatif İndirme Sunucusu" belirlenmediyse güncelleştirmeleri indirmek için varsayılan olarak Intranet güncelleştirme hizmetini kullanır.
+        Not: "Alternatif İndirme Sunucusu" ayarlanmadıysa güncelleştirmeleri indirmek için varsayılan olarak intranet güncelleştirme hizmetini kullanır.
 
-        Not: "Url'si olmayan dosyaları indir..." seçeneği yalnızca "Alternatif İndirme Sunucusu" belirlendiğinde kullanılır.
+        Not: "Url'si olmayan dosyaları indir..." seçeneği yalnızca "Alternatif İndirme Sunucusu" ayarlandığında kullanılır.
 
-        Not: Bu ilke, Windows RT'de desteklenmemektedir. Bu ilkeyi ayarladığınızda Windows RT bilgisayarlarda bir etkisi olmaz.</string>
+        Not: Bu ilke, Windows RT'de desteklenmemektedir. Windows RT bilgisayarlarında bu ilkeyi ayarlamanızın hiçbir etkisi olmaz.
+
+        Ara sunucularla ilgili not: En yüksek güvenlik düzeyini elde etmek için Microsoft WSUS'nin güvenliğinin TLS/SSL protokolüyle sağlanmasını, dolayısıyla sistemi güvende tutmak için HTTPS tabanlı intranet sunucuları nın kullanılmasını önerir. Ara sunucu gerekirse sistem ara sunucusunun yapılandırılmasını öneririz.
+
+        Ara sunucu davranışının seçilmesinin, güncelleştirmeleri algılamak için HTTPS tabanlı intranet sunucuları kullanan istemciler üzerinde hiçbir etkisi olmaz.
+
+        
+İstemcileri yapısal olarak güvende tutmak için, artık HTTP tabanlı intranet sunucularının güncelleştirmeleri algılama işleminde varsayılan olarak kullanıcı ara sunucusundan yararlanmasına izin vermiyoruz. Getirdiği güvenlik açıklarına rağmen HTTP tabanlı intranet sunucusu kullanırken güncelleştirmeleri algılamak için kullanıcı ara sunucusundan yararlanmanız gerekiyorsa, ara sunucu davranışını "Sistem ara sunucusu kullanılarak algılama başarısız olursa geri dönüş olarak kullanıcı ara sunucusunun kullanılmasına izin ver" olarak yapılandırmalısınız.
+
+        Alternatif ara sunucu kullanma davranışı ilkesi yapılandırılmadıysa, yapılandırılmış sistem ara sunucusu olmadan HTTP tabanlı intranet sunucuları kullanıldığında güncelleştirmeleri algılama işlemi başarısız olur.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Güncelleştirmeleri algılamak için yalnızca sistem proxy 'sini kullan (varsayılan)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Sistem ara sunucusu kullanılarak algılama başarısız olursa geri dönüş olarak kullanıcı ara sunucusunun kullanılmasına izin ver</string>
       <string id="DetectionFrequency_Help">Windows'un kullanılabilir güncelleştirmeleri denetlemeden önce ne kadar süre bekleyeceğini belirlemek için kullanacağı saati belirtir. Tam bekleme süresi, belirli değerin ve 0-4 saatlik bir rastgele değişkenin toplamıdır.
 
         Durum Etkin olarak ayarlı ise, Windows belirlenen aralıkla kullanılabilir güncelleştirmeleri denetleyecektir.
@@ -674,8 +685,9 @@ Bu ilke, aşağıdaki ilkeleri geçersiz kılar:
         <textBox refId="CorpWUContentHost_Name">
           <label>Alternatif indirme sunucusunu ayarla:</label>
         </textBox>
-        <text>(örnek: http://IntranetGuncel01)</text>
+        <text>(örnek: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Alternatif indirme sunucusu ayarlandığında meta verilerinde Url olmayan dosyaları indir.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">TLS olmayan (HTTP) tabanlı güncelleştirmeleri algılamak için Windows Update istemcisi ara sunucu davranışını seçin:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Aşağıdaki aralıkta (saat)</text>

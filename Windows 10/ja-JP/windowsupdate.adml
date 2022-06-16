@@ -152,7 +152,17 @@ Windows 8 および Windows RT では、このポリシーが有効な場合、�
 
         注意: "URL のないファイルをダウンロードする" オプションは、"代替ダウンロード サーバー" が設定されている場合にのみ使用されます。
 
-        注意: このポリシーは、Windows RT ではサポートされていません。このポリシーを設定しても、Windows RT PC に影響はありません。</string>
+        注意: このポリシーは、Windows RT ではサポートされていません。このポリシーを設定しても、Windows RT PC に影響はありません。
+
+        プロキシに関する注意: 最高レベルのセキュリティを確保するために、Microsoft では TLS/SSL プロトコルを使用して WSUS をセキュリティで保護し、HTTPS ベースのイントラネット サーバーを使用してシステムの安全性を確保することを推奨しています。プロキシが必要な場合には、システム プロキシの構成をお勧めします。
+
+        プロキシの動作を選択しても、HTTPS ベースのイントラネット サーバーを使用して更新を検出するクライアントには影響しません。
+
+        クライアントの本質的な安全性を確保するために、Microsoft では HTTP ベースのイントラネット サーバーが更新を検出するためにユーザー プロキシを既定で利用することをもう許可していません。脆弱性が存在するにもかかわらず HTTP ベースのイントラネット サーバーの使用中に更新を検出するためにユーザーのプロキシを利用する必要がある場合には、プロキシの動作を "システム プロキシを使用した検出が失敗した場合に、ユーザーのプロキシをフォールバックとして使用できるようにする" ように構成する必要があります。
+
+        代替プロキシの動作を使用するポリシーが構成されていない場合、構成されたシステム プロキシなしで HTTP ベースのイントラネット サーバーが使用されているときに、更新の検出は失敗します。</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">更新プログラムを検出するためにのみシステムプロキシを使用する (既定)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">システム プロキシを使用した検出が失敗した場合に、ユーザーのプロキシをフォールバックとして使用できるようにする</string>
       <string id="DetectionFrequency_Help">利用可能な更新を確認する前の待機時間を決定するための時間を指定します。正確な待機時間は、特定の値とランダムな可変数値 (0 - 4 時間) を合計した時間になります。
 
         状態が有効に設定されている場合、指定した間隔で使用可能な更新が確認されます。
@@ -680,8 +690,9 @@ Windows リリース情報ページ (aka.ms/ReleaseInformationPage) に記載さ
         <textBox refId="CorpWUContentHost_Name">
           <label>代替ダウンロード サーバーの設定:</label>
         </textBox>
-        <text>(例: http://IntranetUpd01)</text>
+        <text>(例: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">代替ダウンロード サーバーが設定されている場合は、メタデータに URL が示されていないファイルをダウンロードします。</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">非 TLS (HTTP) ベースのサービスを使用して更新プログラムを検出するための Windows Update クライアントのプロキシ動作を選択してください:</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>更新を確認する時間</text>

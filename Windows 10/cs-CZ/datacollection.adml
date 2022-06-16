@@ -7,18 +7,18 @@
     <stringTable>
       <string id="AllowTelemetry">Povolit telemetrii</string>
       <string id="AllowTelemetry_0">0 – Zabezpečení [jenom zařízení Enterprise]</string>
-      <string id="AllowTelemetry_1">1 – Základní</string>
+      <string id="AllowTelemetry_1">1 – Povinné</string>
       <string id="AllowTelemetry_2">2 – Rozšířené</string>
-      <string id="AllowTelemetry_3">3 – Úplné</string>
+      <string id="AllowTelemetry_3">3 – Volitelné</string>
       <string id="AllowTelemetry_Explain">Konfigurací tohoto nastavení ve Windows 10 znemožníte koncovým uživatelům, aby vyjádřili výslovný souhlas se shromažďováním telemetrie na vyšší úrovni, než jakou jste nastavili pro organizaci. Toto omezení platí jen pro operační systém Windows a aplikace, které jsou jeho součástí – nevztahuje se na aplikace třetích stran běžící ve Windows 10.
 
 Diagnostická data se dělí do těchto čtyř úrovní:
   – 0 (Zabezpečení): Informace potřebné k zajištění zabezpečení systémů Windows, Windows Server a System Center, včetně dat o nastavení součásti Propojená uživatelská prostředí a telemetrie, Nástroje pro odstranění škodlivého softwaru a programu Windows Defender.
-  – 1 (Základní): Základní informace o zařízení včetně dat týkajících se kvality a kompatibility aplikací a dat z úrovně Zabezpečení.
-  – 2 (Rozšířené): Další analytické informace včetně dat o využití a výkonu systémů Windows, Windows Server a System Center, jakož i aplikací, pokročilých dat o spolehlivosti a dat z úrovně Základní a Zabezpečení.
-  – 3 (Úplná): Veškerá data potřebná k identifikaci a řešení problémů plus data z úrovně Zabezpečení, Základní a Rozšířené.
+  – 1 (Povinné): Základní informace o zařízení včetně dat týkajících se kvality a kompatibility aplikací a dat z úrovně Zabezpečení.
+  – 2 (Rozšířené): Další analytické informace včetně dat o využití a výkonu systémů Windows, Windows Server a System Center, jakož i aplikací, pokročilých dat o spolehlivosti a dat z úrovně Povinné a Zabezpečení.
+  – 3 (Volitelné): Veškerá data potřebná k identifikaci a řešení problémů plus data z úrovně Zabezpečení, Povinné a Rozšířené.
 
-Konfigurací tohoto nastavení se změní možnosti, které jsou uživatelům k dispozici v aplikaci Nastavení, a i v případě, že toto nastavení není zadané, může mít na dostupnost jednotlivých možností vliv nastavení jiných zásad skupiny. Mějte na paměti, že pokud je tato zásada nakonfigurovaná tak, aby povolovala nastavení telemetrie na úrovni Zabezpečení nebo Základní, koncoví uživatelé nebudou moct vybrat vyšší úroveň.
+Konfigurací tohoto nastavení se změní možnosti, které jsou uživatelům k dispozici v aplikaci Nastavení, a i v případě, že toto nastavení není zadané, může mít na dostupnost jednotlivých možností vliv nastavení jiných zásad skupiny. Mějte na paměti, že pokud je tato zásada nakonfigurovaná tak, aby povolovala nastavení telemetrie na úrovni Zabezpečení nebo Povinné, koncoví uživatelé nebudou moct vybrat vyšší úroveň.
       </string>
 
       <string id="TelemetryProxy">Konfigurovat službu Propojená uživatelská prostředí a telemetrie</string>
@@ -43,18 +43,18 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, Microsoft nebude
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Omezit rozšířená diagnostická data na minimum vyžadované službami Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Povolit kolekci Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Zakázat kolekci Windows Analytics</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Nastavení této zásady v kombinaci s nastavením zásady Povolit telemetrii umožňuje organizacím odesílat Microsoftu prostřednictvím služeb Windows Analytics specifickou sadu diagnostických dat pro statistiku IT. Konfigurací tohoto nastavení nezabráníte uživatelům ve změně jejich nastavení telemetrie, ale nebudou si moct zvolit vyšší úroveň, než jste nastavili pro organizaci.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Nastavení této zásady v kombinaci s nastavením zásady Povolit telemetrii umožňuje organizacím odesílat Microsoftu prostřednictvím služeb Windows Analytics specifickou sadu diagnostických dat pro statistiku IT.
 
 Pokud chcete toto chování povolit, musíte provést dva kroky:
 
     1. Povolit toto nastavení zásad
     2. Nastavit možnost Povolit telemetrii na úroveň 2 (Rozšířené)
 
-Když tato zásady nakonfigurujete společně, bude se do Microsoftu odesílat základní úroveň diagnostických dat a také všechny další události vyžadované pro Windows Analytics. Tyto události jsou popsané tady: https://go.microsoft.com/fwlink/?linked=847594.
+Toto nastavení nemá vliv na zařízení nakonfigurovaná tak, aby Microsoftu odesílala diagnostická data na úrovni Zabezpečení nebo Povinné. 
 
-Když v zásadě Povolit telemetrii povolíte rozšířená diagnostická data a zároveň tyto zásady nenakonfigurujete, budou se do Microsoftu odesílat požadované události pro Windows Analytics a zároveň další telemetrická data rozšířené úrovně. Toto nastavení nemá vliv na počítače nakonfigurované tak, aby Microsoftu odesílaly diagnostická data úrovně Úplné, Základní nebo Zabezpečení.
+Když tyto zásady nakonfigurujete, shromažďování diagnostických dat se omezí na povinná diagnostická data a na události vyžadované v Desktop Analytics. Seznam těchto událostí najdete tady: https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, úroveň diagnostických dat odesílaných do Microsoftu se určí na základě zásady Povolit telemetrii.
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, úroveň diagnostických dat odesílaných do Microsoftu se určí na základě zásady Povolit telemetrii v případě, že je nakonfigurovaná (pokud například v zásadě Povolit telemetrii povolíte rozšířená diagnostická data, ale nenakonfigurujete tuto zásadu, budete Microsoftu odesílat požadované události pro Windows Analytics plus veškerá další diagnostická data odpovídající rozšířené úrovni).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Povolit odesílání názvu zařízení v diagnostických datech Windows</string>
@@ -104,6 +104,33 @@ Pokud chcete omezit úroveň diagnostických dat, která bude vaše organizace o
           Tato zásada nastaví koncový bod pro nahrávání diagnostických dat tohoto zařízení v rámci Desktop Analytics.
           Pokud se vaše organizace tohoto programu účastní a obdržela pokyny, aby nakonfigurovala vlastní koncový bod nahrávání, použijte toto nastavení a definujte koncový bod.
           Hodnotu tohoto nastavení získáte od Microsoftu v rámci procesu registrace do programu. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Povolit zpracování službou Update Compliance</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Dává správcům IT možnost povolit zpracovávání diagnostických dat z tohoto zařízení službou Update Compliance. 
+            Následující seznam uvádí podporované hodnoty:  
+              0 (výchozí): Diagnostická data se nezpracovávají službou Update Compliance. 
+              16: Diagnostická data se smí službou Update Compliance zpracovávat. 
+            Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebudou se diagnostická data z tohoto zařízení službou Update Compliance zpracovávat.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Povolit zpracování službou Desktop Analytics</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Dává správcům IT možnost povolit zpracovávání diagnostických dat z tohoto zařízení službou Desktop Analytics. 
+            Následující seznam uvádí podporované hodnoty:  
+              0 (výchozí): Diagnostická data se nezpracovávají službou Desktop Analytics. 
+              2: Diagnostická data se smí službou Desktop Analytics zpracovávat. 
+          Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebudou se diagnostická data z tohoto zařízení službou Desktop Analytics zpracovávat. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Povolit zpracování WUfB cloudu</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Dává správcům IT možnost povolit zpracovávání diagnostických dat z tohoto zařízení službou cloud Windows Update pro firmy. 
+n            Následující seznam uvádí podporované hodnoty:  
+              0 (výchozí): Diagnostická data se nezpracovávají službou cloud Windows Update pro firmy. 
+              8: Diagnostická data se smí službou cloud Windows Update pro firmy zpracovávat. 
+          Pokud tuto zásadu zakážete nebo nenakonfigurujete, nebudou se diagnostická data z tohoto zařízení službou cloud Windows Update pro firmy zpracovávat. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Povolit kanál obchodních dat</string>
