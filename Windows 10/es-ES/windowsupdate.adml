@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Al menos Windows XP Professional Service Pack 1 o Windows 2000 Service Pack 3, excluido Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Al menos los sistemas operativos Windows Server 2003 o Windows XP Professional con SP1, excluido Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Se requiere al menos Windows XP Professional Service Pack 1 o al menos Windows 2000 Service Pack 3 a través de Windows 8.1 o Windows Server 2012 R2 con el Service Pack más reciente</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Se requiere al menos Windows Vista a través de Windows 8.1 o Windows Server 2012 R2 con el Service Pack más reciente</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Al menos Windows XP Professional Service Pack 1 o Al menos Windows 2000 Service Pack 3 hasta Windows 8.1 o Windows Server 2012 R2 con el Service Pack más reciente. No es compatible con Windows 10 y superiores.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Al menos Windows Vista a través de Windows 8.1 o Windows Server 2012 R2 con el Service Pack más actual. No se admite en Windows 10 y versiones posteriores.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 o, como mínimo, Windows 2000 Service Pack 3
 La opción 7 solo se admite en servidores que ejecuten Windows Server 2016 Edition como mínimo</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Al menos Windows Server 2022 o Windows 10 versión 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 hasta Windows Server 2022, o Windows 10​</string>
       <string id="AUDontShowUasHelp">Esta configuración de directiva permite controlar si la opción "Instalar actualizaciones y apagar" se muestra en el cuadro de diálogo Apagar de Windows.
 
 Si habilita esta configuración de directiva, "Instalar actualizaciones y apagar" no aparecerá como opción en el cuadro de diálogo Apagar de Windows, incluso si hay actualizaciones disponibles para instalarse cuando el usuario seleccione la opción Apagar en el menú Inicio.
@@ -161,6 +163,16 @@ Si el estado se establece en No configurado, el uso de la característica Actual
           La detección de actualizaciones fallará cuando los servidores de intranet basados en HTTP se usen sin un proxy del sistema configurado si la directiva para usar un comportamiento de proxy alternativo no está configurada.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Usar solo el proxy del sistema para detectar actualizaciones (predeterminado)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Permitir que el proxy del usuario se utilice como reserva si se produce un error en la detección con el proxy del sistema</string>
+      <string id="UpdateClassPolicySource_Title">Especificar el servicio de origen para clases específicas de actualizaciones de Windows</string>
+      <string id="UpdateClassPolicySource_Help">Cuando se habilita esta directiva, los dispositivos recibirán actualizaciones de Windows para las clases enumeradas desde el origen de actualización especificado: Windows Update o servicio Windows Server Update. 
+
+Nota: para recibir actualizaciones del servicio Windows Server Update, debe haber configurado correctamente una ubicación del servicio Microsoft Update de la intranet mediante la directiva "Especificar la ubicación del servicio Microsoft Update en la intranet".
+
+Si esta directiva no está configurada o está deshabilitada, el dispositivo seguirá detectando actualizaciones según las demás configuraciones de directiva. 
+
+Nota: Si usa "No permitir que las directivas de aplazamiento causen exámenes en Windows Update" actualmente para garantizar que los dispositivos solo se examinen en el servidor especificado, le recomendamos que configure esta directiva en su lugar o, además, dicha directiva.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Especifica las horas que Windows usará para determinar cuánto debe esperar antes de comprobar si existen actualizaciones disponibles. El tiempo de espera exacto se obtiene al sumar el valor específico y una variante aleatoria de entre 0 y 4 horas.
 
         Si el estado se establece en Habilitado, Windows buscará actualizaciones disponibles en el intervalo especificado.
@@ -372,9 +384,15 @@ Para reanudar la recepción de actualizaciones de calidad que están en pausa, b
 
 Si deshabilitas esta directiva o no la configuras, Windows Update no alterará su comportamiento.</string>
       <string id="TargetReleaseVersion_Title">Seleccionar la versión de actualización de características de destino</string>
-      <string id="TargetReleaseVersion_Help">Habilita esta directiva para especificar una versión de actualización de característica que se va a solicitar en exámenes posteriores.
+      <string id="TargetReleaseVersion_Help">Escribe el producto y la versión tal como aparecen en la página de la versión de destino de Windows Update:
 
-Escribe la versión tal como aparece en la página de información de la versión de Windows aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+El dispositivo solicitará el producto Windows Update y la versión en los exámenes posteriores.
+
+Si especifico un producto de destino y hago clic en Aceptar o Aplicar, automáticamente acepto los Términos de licencia del software de Microsoft que se encuentran en aka.ms/WindowsTargetVersioninfo. Si una organización ofrece una licencia del software, estoy autorizado para vincularme a la organización.
+
+Si escribes un valor no válido, permanecerás en la versión actual hasta que se corrijan los valores a un producto y versión admitidos.</string>
       <string id="DisableWUfBSafeguards">Deshabilitar la protección de las Actualizaciones de características</string>
       <string id="DisableWUfBSafeguards_Help">
           Habilite esta configuración cuando se deban implementar Actualizaciones de características en los dispositivos sin bloquear ninguna retención de seguridad. Las retenciones de seguridad son problemas de compatibilidad conocidos que impiden que se implemente la actualización en los dispositivos afectados hasta que se solucione el problema. Habilitar esta directiva puede permitir que una organización implemente la Actualización de características en los dispositivos para pruebas, o bien que implemente la Actualización de características sin bloquear las protecciones.
@@ -699,6 +717,13 @@ Esta directiva invalidará las siguientes directivas:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">No fuerces el anclaje de certificados TLS para que el cliente de Windows Update detecte las actualizaciones.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Seleccione el comportamiento del proxy para el cliente de Windows Update para detectar actualizaciones:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Especifique el servicio de origen para las siguientes clases de actualizaciones de Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Actualizaciones de características</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Actualizaciones de calidad</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Actualizaciones de controladores</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Otras actualizaciones</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Comprobar actualizaciones con el siguiente</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervalo (horas):  </decimalTextBox>
@@ -733,6 +758,9 @@ Esta directiva invalidará las siguientes directivas:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">trabajo (minutos):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>¿Para qué versión de producto de Windows quieres recibir actualizaciones de características? por ejemplo, Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Versión de destino de Actualizaciones de características</label>
         </textBox>

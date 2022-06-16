@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Undantag</string>
+    <string id="DeviceControl">Enhetskontroll</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Minskning av attackytan</string>
     <string id="ExploitGuard_ControlledFolderAccess">Reglerad mappåtkomst</string>
@@ -705,22 +706,22 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen får 
     <string id="SpynetReporting">Gå med i Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Med den här principinställningen kan du bli medlem i Microsoft MAPS. Microsoft MAPS är en community där du kan få hjälp med att hantera potentiella hot. Communityn hjälper även till med att stoppa spridningen av nya skadliga programvaror.
 
-    Du kan välja att skicka grundläggande eller ytterligare information om identifierade program. Ytterligare information hjälper Microsoft att skapa nya säkerhetsinsikter som bättre skyddar din dator. Informationen kan omfatta sådant som var de identifierade objekten fanns på datorn om någon skadlig programvara togs bort. Informationen samlas in och skickas automatiskt. I vissa fall kan personlig information oavsiktligt skickas till Microsoft. Microsoft använder dock inte den här informationen för att identifiera eller kontakta dig.
+ Du kan välja att skicka grundläggande eller ytterligare information om identifierade program. Ytterligare information hjälper Microsoft att skapa nya säkerhetsinsikter som bättre skyddar din dator. Informationen kan omfatta sådant som var de identifierade objekten fanns på datorn om någon skadlig programvara togs bort. Informationen samlas in och skickas automatiskt. I vissa fall kan personlig information oavsiktligt skickas till Microsoft. Microsoft använder dock inte den här informationen för att identifiera eller kontakta dig.
 
-    Möjliga alternativ är:
-    (0x0) Inaktiverad (standard)
-    (0x1) Grundläggande medlemskap
-    (0x2) Avancerat medlemskap
+ Möjliga alternativ är:
+ (0x0) Inaktiverad (standard)
+ (0x1) Grundläggande medlemskap
+ (0x2) Avancerat medlemskap
 
-    Grundläggande medlemskap skickar grundläggande information om programvaran som identifieras till Microsoft, bland annat om varifrån programvaran kom, de åtgärder du vidtar eller som vidtas automatiskt och huruvida åtgärderna lyckades.
+ Grundläggande medlemskap skickar grundläggande information om programvaran som identifieras till Microsoft, bland annat om varifrån programvaran kom, de åtgärder du vidtar eller som vidtas automatiskt och huruvida åtgärderna lyckades.
 
-    Avancerat medlemskap skickar utöver grundläggande information mer information om skadlig programvara, spionprogram och potentiellt oönskad programvara till Microsoft, bland annat var programvaran finns, filnamn, hur programvaran fungerar och hur den har påverkat din dator.
+ Avancerat medlemskap skickar utöver grundläggande information mer information om skadlig programvara, spionprogram och potentiellt oönskad programvara till Microsoft, bland annat var programvaran finns, filnamn, hur programvaran fungerar och hur den har påverkat din dator.
 
-    Om du aktiverar den här inställningen går du med i Microsoft MAPS med det angivna medlemskapet.
+ Om du aktiverar den här inställningen går du med i Microsoft MAPS med det angivna medlemskapet.
 
-    Om du inaktiverar eller låter bli att konfigurera den här inställningen går du inte med i Microsoft MAPS.
-  
-    I Windows 10 är Grundläggande medlemskap inte längre tillgängligt. Det innebär att om du anger värdet 1 eller 2 registreras enheten med Avancerat medlemskap.</string>
+ Om du inaktiverar eller låter bli att konfigurera den här inställningen går du inte med i Microsoft MAPS.
+ 
+ I Windows 10 är Grundläggande medlemskap inte längre tillgängligt. Det innebär att om du anger värdet 1 eller 2 registreras enheten med Avancerat medlemskap.</string>
     <string id="SpynetReporting_Disabled">Inaktiverad</string>
     <string id="SpynetReporting_Basic">Grundläggande MAPS</string>
     <string id="SpynetReporting_Advanced">Avancerat MAPS</string>
@@ -978,6 +979,14 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
 
     Microsoft Defender Antivirus fastställer automatiskt vilka program som är betrodda. Du kan lägga till ytterligare betrodda program i grupprincipinställningen Konfigurera tillåtna program.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definiera principgrupper för enhetskontroll</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Följ XML-schemat för principgrupper för enhetskontroll om du vill fylla i principgruppsdata.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definiera principregler för enhetskontroll</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Följ XML-schemat för regler för enhets kontroll om du vill fylla i princip regel data.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Om du inaktiverar eller låter bli att konfigurera den här inställningen visas
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definiera principgrupper här</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definiera principregler här</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

@@ -134,11 +134,26 @@
       </string>
 
       <string id="AllowCommercialDataPipeline">商用データ パイプラインを許可する</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline は、デバイスを Windows エンタープライズ データ パイプラインにオプトインできます。
-          この設定を有効にした場合、デバイスから収集したデータが Windows エンタープライズ データ パイプラインにオプトインされます。
-          この設定を無効にした場合または構成しなかった場合は、Windows 標準データ パイプラインのポリシーに従って、デバイスのすべてのデータが収集されて処理されます。
-          この設定を構成しても、利用統計情報の収集レベルや、ユーザーがレベルを変更できるかどうかは変わりません。この設定は、Windows オペレーティング システムおよび Windows に含まれているアプリのみに適用され、Windows 10 で実行されているサード パーティのアプリやサービスには適用されません。
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline は、Microsoft がこのデバイスから収集した Windows 診断データの処理者であるか管理者であるかを制御します。
+          このポリシーを有効にすると、Windows デバイスから収集した Windows 診断データの処理者は Microsoft になり、管理者は顧客になります。このポリシーを機能させるには、デバイスが Azure AD に登録されている必要があります。
+          このポリシーの設定を無効にしているか、構成していない場合、Microsoft はこのデバイスから収集した Windows 診断データの管理者となります。
+          このポリシーは、Microsoft がこのデバイスから収集した Windows 診断データの処理者であるかどうかのみを制御します。この設定を構成しても、診断データを収集するかどうかや、ユーザーがレベルを変更できるかどうかについては変わりません。収集レベルを構成するには、"診断データを許可する" ポリシーを使用し、このデバイスのユーザーによる診断データのレベルの変更を制限するには、"診断データのオプトイン設定のユーザー インターフェイスを構成する" ポリシーを使用します。
+      </string>
+
+      <string id="EnableOneSettingsAuditing">OneSettings 監査 を有効にする</string>
+      <string id="EnableOneSettingsAuditing_Explain">このポリシー設定は、Windows での OneSettings サービスによる EventLog への接続試行を記録するかどうかを制御します。
+
+このポリシーを有効にすると、Windows では OneSettings サービスによる Microsoft\Windows\Privacy-Auditing\Operational EventLog チャネルへの接続試行が記録されます。
+
+このポリシー設定を無効にするか、設定を構成しない場合は、Windows で OneSettings サービスによる EventLog への接続試行は記録されません。
+      </string>
+
+      <string id="DisableOneSettingsDownloads">OneSettings ダウンロード を無効にする</string>
+      <string id="DisableOneSettingsDownloads_Explain">このポリシー設定は、Windows が OneSettings サービスを使用して接続を試行するかどうかを制御します。
+
+このポリシーを有効にした場合、Windows は OneSettings サービスを使用して接続を試行しません。
+
+このポリシー設定を無効にした場合、または構成しなかった場合、構成設定をダウンロードするために、Windows は OneSettings サービスを定期的に接続しようとします。
       </string>
     </stringTable>
     <presentationTable>

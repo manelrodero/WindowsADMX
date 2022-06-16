@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Usa Windows Hello para empresas</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Uso de un certificado para la autenticación local</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Use la confianza de nube para la autenticación local</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello para empresas es un método alternativo para iniciar sesión en Windows con la cuenta de Active Directory o Azure Active Directory que puede reemplazar las contraseñas, las tarjetas inteligentes y las tarjetas inteligentes virtuales.
 
@@ -118,13 +120,24 @@ Si deshabilitas o no configuras esta directiva, Windows no creará ni almacenar�
 NOTA: Esta directiva solo es aplicable a dispositivos que están registrados con Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Usa esta configuración de directiva para configurar Windows Hello para empresas con el fin de inscribir un certificado de inicio de sesión empleado para la autenticación local.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Use esta configuración de directiva para configurar Windows Hello para empresas inscribir un certificado de inicio de sesión usado para la autenticación local.
 
-Si habilitas esta configuración de directiva, Windows Hello para empresas inscribe un certificado de inicio de sesión que se usa para la autenticación local.
+Si habilita esta configuración de directiva, Windows Hello para empresas inscribe un certificado de inicio de sesión que se usa para la autenticación local.
 
-Si deshabilitas o no estableces esta configuración de directiva, Windows Hello para empresas inscribe una clave que se usa para la autenticación local.
+Si deshabilita o no establece esta configuración de directiva, Windows Hello para empresas usará una clave o un vale Kerberos (en función de otras configuraciones de directiva) para la autenticación local.
 
-NOTA: Si se deshabilita o no se establece esta configuración de directiva y se habilita "Usa Windows Hello para empresas", el entorno debe tener uno o más controladores de dominio de Windows Server 2016 para evitar que se produzca un error en la autenticación de Windows Hello para empresas.
+NOTA: Para deshabilitar o no configurar esta configuración de directiva y habilitar la configuración de directiva "Usar Windows Hello para empresas", es necesario que el entorno tenga uno o varios controladores de dominio de Windows Server 2016 para evitar errores en la autenticación Windows Hello para empresas.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Use esta configuración de directiva para configurar Windows Hello para empresas usar Azure AD Kerberos para la autenticación local.
+
+Si habilita esta configuración de directiva, Windows Hello para empresas usará un vale Kerberos recuperado de la autenticación en Azure para la autenticación local.
+
+Si deshabilita o no establece esta configuración de directiva, Windows Hello para empresas usará una clave o un certificado (en función de otras configuraciones de directiva) para la autenticación local. 
+ 
+NOTA: un entorno que habilita esta configuración de directiva y la configuración de directiva "Usar Windows Hello para empresas" requiere uno o varios controladores de dominio de Windows Server 2016. De lo contrario, se producirá un error en Windows Hello para empresas autenticación.
+
+Esta directiva solo se admite en Windows 10, versión 21H2 y posteriores.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configurar factores de desbloqueo de dispositivo</string>

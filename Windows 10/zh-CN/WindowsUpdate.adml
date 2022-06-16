@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7、Windows Server 2008 R2、Windows Vista、Windows Server 2003、Windows XP SP2、Windows XP SP1、Windows 2000 SP4、Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Windows XP Professional Service Pack 1 或 Windows 2000 Service Pack 3 及以上版本，不包括 Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Windows Server 2003 操作系统或 Windows XP Professional SP1 及以上版本，不包括 Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Windows XP Professional Service Pack 1 及其更高版本，或者 Windows 2000 Service Pack 3 到 Windows 8.1 或 Windows Server 2012 R2(带最新 Service Pack)及其更高版本</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Windows Vista 到 Windows 8.1 或 Windows Server 2012 R2(带最新 Service Pack)及其更高版本</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Windows XP Professional Service Pack 1 或 Windows 2000 Service Pack 3 到 Windows 8.1 或具有最新 Service Pack 的 Windows Server 2012 R2 或更高版本。在Windows 10及更高版本上不受支持。</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Windows Vista 至 Windows 8.1 或 Windows Server 2012 R2 以及最新 Service Pack。在Windows 10及更高版本上不受支持。</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 或者 Windows 2000 Service Pack 3 及以上版本
 选项 7 仅在 Windows Server 2016 及以上版本的服务器上受支持</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Windows Server 2022 或 Windows 10 版本 2004 及以上版本</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 到 Windows Server 2022 或 Windows 10</string>
       <string id="AUDontShowUasHelp">此策略设置允许你管理“安装更新并关机”选项是否在“关闭 Windows”对话框中显示。
 
 如果启用此策略设置，即使用户在“开始”菜单中选择“关机”选项时有更新可以安装，“安装更新并关机”选项也不会在“关闭 Windows”对话框中作为一项选择显示。
@@ -161,6 +163,16 @@
         当需要用户代理作为回退并且未配置备用代理行为时，针对 Intranet 服务器的更新检测将失败。</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">仅使用系统代理检测 (默认的更新)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">当使用系统代理进行检测时，允许将用户代理用作回退</string>
+      <string id="UpdateClassPolicySource_Title">为特定的 Windows 更新类指定源服务</string>
+      <string id="UpdateClassPolicySource_Help">启用此策略后，设备将接收从指定的更新源中所列出类的 Windows 更新：Windows Update 或 Windows Server Update Service。
+
+注意：若要从 Windows Server 更新服务接收任何更新，必须通过 “指定 Intranet Microsoft 更新服务位置“ 策略正确配置 Intranet Microsoft 更新服务位置。
+
+ 如果未配置或禁用此策略，设备将继续按其他策略配置检测更新。
+
+注意：如果当前使用 “不允许延迟策略导致针对 Windows Update 的扫描” 以确保设备仅扫描所指定的服务器，我们建议改为配置此策略或补充此类策略。</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows 更新</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server 更新服务</string>
       <string id="DetectionFrequency_Help">指定 Windows 确定在检查可用更新前等待的时间(小时)。确切的等待时间是具体值和 0-4 小时之间的随机变量的总和。
 
         如果将状态设置为“启用”，Windows 将以指定的间隔检查可用更新。
@@ -372,9 +384,15 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
 
 如果禁用或不配置此策略，Windows 更新不会改变其行为。</string>
       <string id="TargetReleaseVersion_Title">选择目标功能更新版本</string>
-      <string id="TargetReleaseVersion_Help">启用此策略可指定要在后续扫描中请求的功能更新版本。
+      <string id="TargetReleaseVersion_Help">输入 Windows 更新目标版本页面上列出的产品和版本:
 
-输入 Windows 版本信息页面 aka.ms/ReleaseInformationPage 中列出的版本</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+设备将在后续扫描中请求 Windows 更新产品和版本。
+
+输入目标产品并单击“确定”或“应用”即表示我接受位于 aka.ms/WindowsTargetVersioninfo 的 Microsoft 软件许可条款。如果某组织正在授权使用该软件，则我有权绑定该组织。
+
+如果你输入的值无效，则你将继续使用当前版本，直到你将该值更正为受支持的产品和版本。</string>
       <string id="DisableWUfBSafeguards">禁用功能更新的安全措施</string>
       <string id="DisableWUfBSafeguards_Help">
           若要在不阻止任何安全措施的情况下将功能更新部署到设备，请启用此设置。 安全措施是已知的兼容性问题，阻止将升级部署到受影响的设备，直到问题解决。 启用此策略可以允许组织将功能更新部署到设备以进行测试，或在不阻止安全措施的情况下部署功能更新。
@@ -699,6 +717,13 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">不要对 Windows 更新客户端强制执行 TLS 证书固定以检测更新。</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">选择 Windows 更新客户端用于检测更新的代理行为：</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>为以下 Windows 更新类指定源服务：</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">功能更新</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">质量更新</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">驱动程序更新</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">其他更新</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>检查下列更新的</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">间隔（小时）：  </decimalTextBox>
@@ -733,6 +758,9 @@ Windows 更新还将唤醒系统并在安装最后期限安装更新。
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">工作（分钟）：  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>你希望接收哪个 Windows 产品版本的功能更新？例如，Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>功能更新的目标版本</label>
         </textBox>

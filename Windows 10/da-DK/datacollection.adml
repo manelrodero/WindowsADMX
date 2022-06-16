@@ -134,11 +134,26 @@ Hvis du vil angive en grænse for niveauet af diagnosticeringsdata, der sendes t
       </string>
 
       <string id="AllowCommercialDataPipeline">Tillad erhvervsmæssig datapipeline</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline vælger enheden til Windows Enterprise-data pipelinen.
-          Hvis du aktiverer denne indstilling, vil data, der er indsamlet fra enheden, blive valgt i datapipelinen i Windows Enterprise.
-          Hvis du deaktiverer eller undlader at konfigurere denne indstilling, indsamles og behandles alle data fra enheden i overensstemmelse med vores politikker for pipelinen til Windows-standarddata.
-          Hvis du konfigurerer indstillingen, ændres indsamlingsniveauet for telemetri eller brugerens mulighed for at ændre niveauet ikke. Denne indstilling gælder kun for Windows-operativsystemet og apps, der leveres sammen med Windows, og ikke tredjepartsprogrammer eller -tjenester, der kører på Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline styrer, om Microsoft er databehandler eller dataansvarlig for diagnostiske Windows-data, der indsamles fra denne enhed.
+           Hvis du aktiverer denne politik, vil Microsoft være databehandler for diagnostiske Windows-data, der indsamles fra Windows-enheden, og kunden bliver dataansvarlig. Enheden skal være registreret i Azure AD, for at denne politik kan gennemføres.
+          Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, bliver Microsoft den dataansvarlige for diagnostiske Windows-data, der indsamles fra denne enhed.
+          Denne politik styrer kun, om Microsoft er databehandler for diagnostiske Windows-data fra denne enhed. Konfigureringen af denne indstilling ændrer ikke på, om diagnostiske Windows-data indsamles, eller om brugeren kan ændre niveauet. For at konfigurere indsamlingsniveauet skal du bruge politikken "Tillad diagnostiske data". For at forhindre brugere på denne enhed i at ændre det diagnostiske dataniveau bedes du bruge politikken "Konfigurer brugergrænseflade til valgfrie indstillinger for diagnosticeringsdata".
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Aktivér OneSettings-overvågning</string>
+      <string id="EnableOneSettingsAuditing_Explain">Denne politikindstilling styrer, om Windows skal registrere forsøg på at oprette forbindelse mellem OneSettings-tjenesten og EventLog.
+
+Hvis du aktiverer denne politik, vil Windows registrere forsøg på at oprette forbindelse mellem OneSettings-tjenesten og kanalen Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows ikke registrere forsøg på at oprette forbindelse mellem OneSettings-tjenesten og EventLog.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Deaktiver OneSettings-downloads</string>
+      <string id="DisableOneSettingsDownloads_Explain">Denne politikindstilling styrer, om Windows forsøger at oprette forbindelse med tjenesten OneSettings.
+
+Hvis du aktiverer denne politik, vil Windows ikke forsøge at oprette forbindelse med tjenesten OneSettings.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows regelmæssigt forsøge at oprette forbindelse med OneSettings-tjenesten for at hente konfigurationsindstillinger.
       </string>
     </stringTable>
     <presentationTable>

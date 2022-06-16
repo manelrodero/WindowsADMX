@@ -134,11 +134,26 @@ para definir um limite para o nível de dados de diagnóstico que são enviados 
       </string>
 
       <string id="AllowCommercialDataPipeline">Permitir pipeline de dados comerciais</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline inclui o dispositivo no pipeline de dados corporativos do Windows.
-          Se você habilitar esta configuração, os dados coletados do dispositivo serão aceitos no pipeline de dados corporativos do Windows.
-          Se você desabilitar ou não definir esta configuração, todos os dados do dispositivo serão coletados e processados de acordo com as políticas do pipeline de dados padrão do Windows.
-          Definir esta configuração não altera o nível de coleta de telemetria nem a capacidade do usuário de alterar o nível. Esta configuração aplica-se apenas ao sistema operacional Windows e aos apps incluídos no Windows, a não a apps ou serviços de terceiros em execução no Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline controla se a Microsoft é um processador ou controlador dos dados de diagnóstico do Windows coletados desse dispositivo ou não.
+ Se você habilitar essa política, a Microsoft será a processadora dos dados de diagnóstico do Windows coletados no dispositivo do Windows e o cliente será o controlador. O dispositivo deve estar registrado no Azure AD para que essa política seja bem-sucedida.
+          Se você desabilitar ou não definir essa configuração de política, a Microsoft controlará os dados de diagnóstico do Windows coletados deste dispositivo.
+       Essa política só controla se a Microsoft for um processador dos dados de diagnóstico do Windows desse dispositivo ou não. A definição dessa configuração não muda se os dados de diagnóstico forem coletados ou se a capacidade do usuário alterar o nível. Para configurar o nível de coleta, use a política "Permitir dados de diagnóstico", e para impedir que os usuários desse dispositivo alterem o nível de dados do diagnóstico, use a política "Configurar a interface do usuário das configurações de inclusão dos dados de diagnóstico".
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Habilitar Auditoria OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">Esta configuração de política controla se os registros do Windows tentam se conectar com o serviço OneSettings ao EventLog.
+
+Se você habilitar essa política, o Windows gravará as tentativas de conexão com do serviço OneSettings ao canal de Log de Eventos Microsoft\Windows\Privacy-Auditing\Operational.
+
+Se você desativar ou não configurar essa configuração de política, o Windows não gravará as tentativas de conexão com do serviço OneSettings ao canal de Log de Eventos.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Desabilitar Downloads OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">Esta configuração de política controla se o Windows tenta se conectar com o serviço OneSettings.
+
+Se você habilitar essa política, o Windows não tentará se conectar com o serviço OneSettings.
+
+Se você desabilitar ou não definir essa configuração de política, o Windows tentará periodicamente se conectar com o serviço OneSettings para baixar as definições de configuração.
       </string>
     </stringTable>
     <presentationTable>

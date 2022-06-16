@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Τουλάχιστον Windows XP Professional Service Pack 1 ή Windows 2000 Service Pack 3, εκτός από Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Τουλάχιστον λειτουργικά συστήματα Windows Server 2003 ή Windows XP Professional με SP1, εκτός από Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Τουλάχιστον Windows XP Professional Service Pack 1 ή τουλάχιστον Windows 2000 Service Pack 3 έως Windows 8.1 ή Windows Server 2012 R2 με το πιο πρόσφατο service pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Τουλάχιστον Windows Vista έως Windows 8.1 ή Windows Server 2012 R2 με το πιο πρόσφατο service pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Τουλάχιστον Windows XP Professional Service Pack 1 ή τουλάχιστον Windows 2000 Service Pack 3 έως Windows 8.1 ή Windows Server 2012 R2 με την πιο πρόσφατη service pack. Δεν υποστηρίζεται σε Windows 10 και νεότερες εκδόσεις.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Τουλάχιστον Windows Vista έως Windows 8.1 ή Windows Server 2012 R2 με τον πιο πρόσφατο service pack. Δεν υποστηρίζεται σε Windows 10 και νεότερες εκδόσεις.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 ή τουλάχιστον Windows 2000 Service Pack 3
 Η επιλογή 7 υποστηρίζεται μόνο σε διακομιστές με τουλάχιστον Windows Server 2016</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Τουλάχιστον Windows Server 2022 ή Windows 10 έκδοση 2004</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 έως Windows Server 2022 ή Windows 10</string>
       <string id="AUDontShowUasHelp">Αυτή η ρύθμιση πολιτικής σας επιτρέπει να αποφασίσετε αν η επιλογή "Εγκατάσταση ενημερώσεων και τερματισμός λειτουργίας" θα εμφανίζεται στο παράθυρο διαλόγου "Τερματισμός λειτουργίας των Windows".
 
 Αν ενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, η "Εγκατάσταση ενημερώσεων και τερματισμός λειτουργίας" δεν θα εμφανίζεται ως επιλογή στο παράθυρο διαλόγου "Τερματισμός λειτουργίας των Windows", ακόμα και αν υπάρχουν διαθέσιμες ενημερώσεις προς εγκατάσταση όταν ο χρήστης επιλέγει τον "Τερματισμό λειτουργίας" στο μενού "Έναρξη".
@@ -161,6 +163,16 @@
         Ο εντοπισμός ενημερώσεων με κριτήριο τους διακομιστές intranet θα αποτυγχάνει, όταν απαιτείται διακομιστής μεσολάβησης χρήστη ως επιστροφή και η εναλλακτική συμπεριφορά διακομιστή μεσολάβησης δεν έχει ρυθμιστεί.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Χρήση διακομιστή μεσολάβησης συστήματος για τον εντοπισμό ενημερώσεων (προεπιλογή)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Να επιτρέπεται η χρήση του διακομιστή μεσολάβησης χρήστη ως εναλλακτικής λύσης εάν ο εντοπισμός μέσω διακομιστή μεσολάβησης συστήματος αποτύχει</string>
+      <string id="UpdateClassPolicySource_Title">Καθορίστε την υπηρεσία προέλευσης για τις συγκεκριμένες τάξεις ενημερώσεων των Windows:</string>
+      <string id="UpdateClassPolicySource_Help">Όταν αυτή η πολιτική είναι ενεργοποιημένη, οι συσκευές θα λαμβάνουν ενημερώσεις των Windows για τις τάξεις που αναφέρονται από την καθορισμένη προέλευση ενημερώσεων: το Windows Update ή την υπηρεσία Windows Server Update Service. 
+
+        Σημείωση: για να λαμβάνετε ενημερώσεις από την υπηρεσία Windows Server Update Service, πρέπει να ρυθμίσετε σωστά τις παραμέτρους μιας θέσης της υπηρεσίας ενημέρωσης της Microsoft στο intranet μέσω της πολιτικής "Καθορισμός θέσης της υπηρεσίας ενημέρωσης της Microsoft στο intranet".
+
+        Εάν αυτή η πολιτική δεν έχει ρυθμιστεί ή είναι απενεργοποιημένη, η συσκευή θα συνεχίσει να εντοπίζει ενημερώσεις σύμφωνα με τις άλλες ρυθμίσεις παραμέτρων πολιτικής. 
+
+        Σημείωση: Εάν χρησιμοποιείτε τη ρύθμιση "Να μην επιτρέπεται στις πολιτικές αναβολής να προκαλούν σαρώσεις με βάση το Windows Update" αυτήν τη στιγμή, ώστε οι συσκευές να κάνουν σάρωση μόνο στον καθορισμένο διακομιστή, συνιστούμε να ρυθμίσετε τις παραμέτρους αυτής της πολιτικής αντί για αυτό ή και επιπλέον αυτού.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Υπηρεσίες Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Καθορίζει τη συχνότητα με την οποία ελέγχουν τα Windows για διαθέσιμες ενημερώσεις. Το ακριβές χρονικό διάστημα αναμονής αποτελεί το άθροισμα της συγκεκριμένης τιμής και μιας τυχαίας μεταβλητής από 0-4 ώρες.
 
         Εάν αυτή η ρύθμιση ενεργοποιηθεί, τα Windows θα πραγματοποιούν έλεγχο για διαθέσιμες ενημερώσεις στο καθορισμένο διάστημα.
@@ -372,9 +384,15 @@
 
 Αν απενεργοποιήσετε αυτή την πολιτική ή δεν ρυθμίσετε τις παραμέτρους της, το Windows Update δεν θα τροποποιήσει τη συμπεριφορά του.</string>
       <string id="TargetReleaseVersion_Title">Επιλέξτε την έκδοση ενημέρωσης δυνατοτήτων προορισμού</string>
-      <string id="TargetReleaseVersion_Help">Ενεργοποιήστε αυτή την πολιτική, για να καθορίσετε μια έκδοση ενημέρωσης δυνατοτήτων που θα ζητηθεί στις επόμενες σαρώσεις.
+      <string id="TargetReleaseVersion_Help">Εισαγάγετε το προϊόν και την έκδοση όπως παρατίθεται στη σελίδα έκδοσης προορισμού του Windows Update:
 
-Πληκτρολογήστε την έκδοση όπως παρατίθεται στη σελίδα aka.ms/ReleaseInformationPage των πληροφοριών έκδοσης των Windows</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Η συσκευή θα ζητήσει να συμπεριληφθεί το προϊόν και η έκδοση του Windows Update στις επόμενες σαρώσεις.
+
+Η εισαγωγή ενός προϊόντος προορισμού και το κλικάρισμα του κουμπιού OK ή Εφαρμογή σημαίνει ότι αποδέχομαι τους όρους άδειας χρήσης για λογισμικό της Microsoft, τους οποίους εντόπισα στη διεύθυνση aka.ms/WindowsTargetVersioninfo. Αν ένας οργανισμός παρέχει άδεια χρήσης στο λογισμικό, είμαι εξουσιοδοτημένος για τη σύνδεση του οργανισμού.
+
+Εάν καταχωρήσετε μια μη έγκυρη τιμή, θα παραμείνετε στην τρέχουσα έκδοση, έως ότου διορθώσετε τις τιμές σε ένα υποστηριζόμενο προϊόν και έκδοση.</string>
       <string id="DisableWUfBSafeguards">Απενεργοποίηση διασφαλίσεων για ενημερώσεις δυνατοτήτων</string>
       <string id="DisableWUfBSafeguards_Help">
           Ενεργοποιήστε αυτή τη ρύθμιση όταν οι ενημερώσεις δυνατοτήτων θα πρέπει να αναπτύσσονται σε συσκευές χωρίς να αποκλείονται από τυχόν διατηρήσεις ασφαλείας. Η διατήρηση διασφαλίσεων είναι γνωστά θέματα συμβατότητας που αποκλείουν την ανάπτυξη της αναβάθμισης σε επηρεαζόμενες συσκευές μέχρι να επιλυθεί το πρόβλημα. Η ενεργοποίηση αυτής της πολιτικής μπορεί να επιτρέψει σε έναν οργανισμό να αναπτύξει την ενημέρωση δυνατοτήτων σε συσκευές για σκοπούς δοκιμής ή για να αναπτύξει την ενημέρωση δυνατοτήτων χωρίς να μπλοκάρει την προστασία από τη διατήρηση.
@@ -699,6 +717,13 @@
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Για τον εντοπισμό ενημερώσεων, να μην επιβάλλεται καρφίτσωμα πιστοποιητικού TLS για το πρόγραμμα-πελάτη του Windows Update.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Επιλέξτε τη συμπεριφορά διακομιστή μεσολάβησης για το πρόγραμμα-πελάτη του Windows Update για τον εντοπισμό ενημερώσεων:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Καθορίστε την υπηρεσία προέλευσης για τις ακόλουθες τάξεις ενημερώσεων των Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Ενημερώσεις δυνατοτήτων</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Ενημερώσεις ποιότητας</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Ενημερώσεις προγραμμάτων οδήγησης</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Άλλες ενημερώσεις</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Έλεγχος για ενημερώσεις στο ακόλουθο</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">διάστημα (ώρες):  </decimalTextBox>
@@ -733,6 +758,9 @@
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">την εργασία τους (σε λεπτά):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Για ποια έκδοση προϊόντος των Windows θέλετε να λαμβάνετε ενημερώσεις δυνατοτήτων; π.χ. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Έκδοση προορισμού για ενημερώσεις δυνατοτήτων</label>
         </textBox>

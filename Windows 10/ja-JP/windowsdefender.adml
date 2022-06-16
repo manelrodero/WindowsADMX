@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender ウイルス対策</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">除外</string>
+    <string id="DeviceControl">デバイス制御</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Attack Surface Reduction</string>
     <string id="ExploitGuard_ControlledFolderAccess">フォルダー アクセスの制御</string>
@@ -705,22 +706,22 @@
     <string id="SpynetReporting">Microsoft MAPS に参加する</string>
     <string id="SpynetReporting_Explain">このポリシー設定では、Microsoft MAPS に参加できます。Microsoft MAPS は、潜在的な脅威への対処方法を選択するのに役立つオンライン コミュニティです。このコミュニティは、新しい悪意のあるソフトウェアの感染拡大を防止するためにも役立ちます。
 
-    検出されたソフトウェアについての基本的な情報や追加情報を送信するかどうかを選択できます。追加情報は、Microsoft が新しいセキュリティ インテリジェンスを作成し、お使いのコンピューターを保護するために役立ちます。この情報には、検出された項目の場所 (問題を起こすソフトウェアが削除された場合) などの情報が含まれる可能性があります。情報は自動的に収集され、送信されます。場合によっては、個人情報が意図せず Microsoft に送信されることがあります。ただし、Microsoft はこの情報を使用してユーザーを識別したり、ユーザーに連絡したりしません。
+ 検出されたソフトウェアについての基本的な情報や追加情報を送信するかどうかを選択できます。追加情報は、Microsoft が新しいセキュリティ インテリジェンスを作成し、お使いのコンピューターを保護するために役立ちます。この情報には、検出された項目の場所 (問題を起こすソフトウェアが削除された場合) などの情報が含まれる可能性があります。情報は自動的に収集され、送信されます。場合によっては、個人情報が意図せず Microsoft に送信されることがあります。ただし、Microsoft はこの情報を使用してユーザーを識別したり、ユーザーに連絡したりしません。
 
-    次のオプションがあります。
-    (0x0) 無効 (既定)
-    (0x1) 基本メンバーシップ
-    (0x2) 上級メンバーシップ
+ 次のオプションがあります。
+ (0x0) 無効 (既定)
+ (0x1) 基本メンバーシップ
+ (0x2) 上級メンバーシップ
 
-    基本メンバーシップでは、検出されたソフトウェアに関する基本情報が Microsoft に送信されます。これは、ソフトウェアの入手元、ユーザーが実行した操作や、自動的に適用された処置、操作が成功したかどうかなどの情報です。
+ 基本メンバーシップでは、検出されたソフトウェアに関する基本情報が Microsoft に送信されます。これは、ソフトウェアの入手元、ユーザーが実行した操作や、自動的に適用された処置、操作が成功したかどうかなどの情報です。
 
-    上級メンバーシップでは、基本情報に加えて、悪意のあるソフトウェア、スパイウェア、および望ましくない可能性のあるソフトウェアに関する情報が Microsoft に送信されます。これには、ソフトウェアの場所、ファイル名、ソフトウェアの動作、その動作がコンピューターに与えた影響などが含まれます。
+ 上級メンバーシップでは、基本情報に加えて、悪意のあるソフトウェア、スパイウェア、および望ましくない可能性のあるソフトウェアに関する情報が Microsoft に送信されます。これには、ソフトウェアの場所、ファイル名、ソフトウェアの動作、その動作がコンピューターに与えた影響などが含まれます。
 
-    この設定を有効にした場合、指定したメンバーシップで Microsoft MAPS に参加します。
+ この設定を有効にした場合、指定したメンバーシップで Microsoft MAPS に参加します。
 
-    この設定を無効にした場合、または構成しなかった場合は、Microsoft MAPS に参加しません。
-  
-    Windows 10 では、基本メンバーシップは利用できなくなったため、値を 1 または 2 に設定すると、デバイスが上級メンバーシップに登録されます。</string>
+ この設定を無効にした場合、または構成しなかった場合は、Microsoft MAPS に参加しません。
+ 
+ Windows 10 では、基本メンバーシップは利用できなくなったため、値を 1 または 2 に設定すると、デバイスが上級メンバーシップに登録されます。</string>
     <string id="SpynetReporting_Disabled">無効</string>
     <string id="SpynetReporting_Basic">MAPS 基本メンバーシップ</string>
     <string id="SpynetReporting_Advanced">MAPS 上級メンバーシップ</string>
@@ -978,6 +979,14 @@
 
     Microsoft Defender ウイルス対策は、信頼できるアプリケーションを自動的に判断します。[許可されているアプリケーションを構成します] GP 設定で、信頼されるアプリケーションを追加できます。
     </string>
+    <string id="DeviceControl_PolicyGroups">デバイス制御ポリシー グループの定義</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        ポリシーグループのデータを入力するには、デバイス制御ポリシーグループの xml スキーマに従ってください。
+    </string>
+    <string id="DeviceControl_PolicyRules">デバイス制御ポリシー ルールの定義</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        デバイス制御ポリシー ルールの XML スキーマに従い、ポリシー ルール データを入力してください。
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>ここでポリシー グループを定義</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>ここでポリシー ルールを定義</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

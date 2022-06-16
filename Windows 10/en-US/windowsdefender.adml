@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusions</string>
+    <string id="DeviceControl">Device Control</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Attack Surface Reduction</string>
     <string id="ExploitGuard_ControlledFolderAccess">Controlled Folder Access</string>
@@ -978,6 +979,14 @@
 
     Microsoft Defender Antivirus automatically determines which applications can be trusted. You can add additional trusted applications in the Configure allowed applications GP setting.
     </string>
+    <string id="DeviceControl_PolicyGroups">Define device control policy groups</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Please follow the device control policy groups xml schema to fill out the policy groups data.
+    </string>
+    <string id="DeviceControl_PolicyRules">Define device control policy rules</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Please follow the device control policy rules xml schema to fill out the policy rules data.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Define the policy groups here</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Define the policy rules here</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

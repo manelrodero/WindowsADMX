@@ -136,11 +136,26 @@
       </string>
 
       <string id="AllowCommercialDataPipeline">允许商业数据管道</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline 选择将设备导入 Windows 企业数据管道中。
-          如果启用此设置，则会选择将从设备中收集的数据导入到 Windows 企业数据管道中。
-          如果禁用或未配置此设置，则将根据我们的 Windows 标准数据管道策略收集和处理设备中的所有数据。
-          如果配置此设置，则不会更改遥测集合级别或用户更改级别的能力。此设置仅适用于 Windows 操作系统及 Windows 附带的应用，不适用于 Windows 10 中运行的第三方应用或服务。
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline 控制 Microsoft 对于从此设备收集的 Windows 诊断数据是处理方还是控制方。
+          如果启用此策略，Microsoft 将成为从 Windows 设备收集的 Windows 诊断数据的处理方，而客户将成为控制方。该设备必须在 Azure AD 中注册才能成功执行此策略。
+          如果禁用或未配置此策略设置，则 Microsoft 将成为从此设备收集的 Windows 诊断数据的控制方。
+          此策略仅控制 Microsoft 是否为来自此设备的 Windows 诊断数据的处理方。配置此设置不会更改是否收集诊断数据或者用户是否能够更改级别。若要配置收集级别，请使用“允许诊断数据”策略；若要限制此设备上的用户更改诊断数据级别，请使用“配置诊断数据选择加入设置用户界面”策略。
+      </string>
+
+      <string id="EnableOneSettingsAuditing">启用 OneSettings 审核</string>
+      <string id="EnableOneSettingsAuditing_Explain">此策略设置控制 Windows 是否记录连接 OneSettings 服务到 EventLog 的尝试。
+
+如果启用此策略，则 Windows 将记录将从 OneSettings 服务连接到 Microsoft\Windows\Privacy-Auditing\Operational EventLog 通道的尝试。
+
+如果禁用或未配置此策略设置，则 Windows 不会记录将 OneSettings 服务连接到 EventLog 的尝试。
+      </string>
+
+      <string id="DisableOneSettingsDownloads">禁用 OneSettings 下载</string>
+      <string id="DisableOneSettingsDownloads_Explain">此策略设置控制 Windows 是否尝试使用 OneSettings 服务进行连接。
+
+如果启用此策略，则 Windows 不会尝试使用 OneSettings 服务进行连接。
+
+如果禁用或未配置此策略设置，Windows 将定期尝试连接到 OneSettings 服务以下载配置设置。
       </string>
     </stringTable>
     <presentationTable>

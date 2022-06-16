@@ -38,7 +38,7 @@ Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, o zaman Mi
       <string id="DisableEnterpriseAuthProxy">Kimliği doğrulanmış ara sunucu kullanımını Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmeti için yapılandır</string>
       <string id="DisableEnterpriseAuthProxy_1">Kimliği Doğrulanmış Ara sunucu kullanımını etkinleştir</string>
       <string id="DisableEnterpriseAuthProxy_2">Kimliği Doğrulanmış Ara sunucu kullanımını devre dışı bırak</string>
-      <string id="DisableEnterpriseAuthProxy_Explain">Bu ilke ayarı, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmetinin otomatik olarak kimliği doğrulanmış bir ara sunucuyu kullanarak Windows 10 üzerinden Microsoft'a veri göndermesini engeller. Eğer bu ilke ayarını devre dışı bırakı veya yapılandırmazsanız, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmeti kimliği doğrulanmış bir ara sunucuyu otomatik olarak kullanarak Microsoft'a veri gönderecektir. Bu ilkeyi etkinleştirmek, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmetinin otomatik olarak bir kimliği doğrulanmış ara sunucuyu kullanmasını engelleyecektir.</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">Bu ilke ayarı, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmetinin otomatik olarak kimliği doğrulanmış bir ara sunucuyu kullanarak Windows 10 üzerinden Microsoft'a veri göndermesini engeller. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmeti kimliği doğrulanmış bir ara sunucuyu otomatik olarak kullanarak Microsoft'a veri gönderecektir. Bu ilkeyi etkinleştirmek, Bağlı Kullanıcı Deneyimi ve Telemetrisi hizmetinin otomatik olarak bir kimliği doğrulanmış ara sunucuyu kullanmasını engelleyecektir.</string>
 
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Gelişmiş tanılama verilerini Windows Analytics'in gerektirdiği minimum seviyeye getirin</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Windows Analytics koleksiyonunu etkinleştir</string>
@@ -134,11 +134,26 @@ Kuruluşunuz tarafından Microsoft'a gönderilen tanılama verileri düzeyinde b
       </string>
 
       <string id="AllowCommercialDataPipeline">Ticari veri ardışık düzenine izin ver</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline, cihazı Windows kurumsal veri ardışık düzenine dahil eder.
-          Bu ayarı etkinleştirirseniz, cihazdan toplanan veriler Windows kurumsal veri ardışık düzenine dahil edilir.
-          Bu ayarı devre dışı bırakır veya yapılandırmazsanız, cihazdaki tüm veriler toplanıp Windows standart veri ardışık düzeni için ilkelerimizle uyumlu olarak işlenir.
-          Bu ayarın yapılandırılması, telemetri koleksiyonu düzeyini veya kullanıcının düzeyi değiştirme yeteneğini değiştirmez. Bu ayar yalnızca Windows işletim sistemi ve Windows'ta bulunan uygulamalar için geçerlidir, Windows 10 üzerinde çalışan üçüncü taraf uygulamalar veya hizmetler için geçerli değildir.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline, Microsoft’un bu cihazdan toplanan Windows tanılama verileri için işlemci mi yoksa denetleyici mi olduğunu denetler.
+          Bu ilkeyi etkinleştirirseniz, Microsoft, Windows cihazından toplanan Windows tanılama verilerinin işlemcisi, müşteri de denetleyicisi olur. Bu ilkenin başarılı olması için cihazın Microsoft Azure AD’ye kaydedilmesi gerekir.
+          Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, Microsoft bu cihazdan toplanan Windows tanılama verilerinin denetleyicisi olur.
+          Bu ilke, yalnızca Microsoft’un bu cihazdan toplanan Windows tanılama verileri için işlemci olup olmadığını denetler. Bu ayarın yapılandırılması, tanılama verilerinin toplanıp toplanamayacağını veya kullanıcının düzeyi değiştirme yeteneğini değiştirmez. Koleksiyon düzeyini yapılandırmak için "Tanılama Verilerine İzin Ver" ilkesini kullanın ve bu cihazdaki kullanıcıların tanılama verileri düzeyini değiştirmesini sınırlamak için de "Tanılama verileri kabul etme ayarları kullanıcı arabirimini yapılandır" ilkesini kullanın.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">OneSettings Denetimini Etkinleştir</string>
+      <string id="EnableOneSettingsAuditing_Explain">Bu ilke ayarı, Windows kayıtlarının, OneSettings hizmetiyle EventLog'a bağlanma girişiminde bulunup bulunmadığını denetler.
+
+Bu ilkeyi etkinleştirirseniz, Windows, OneSettings hizmetiyle Microsoft\Windows\Privacy-Auditing\Operational EventLog kanalına bağlanma girişimlerini kaydeder.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, Windows, yapılandırma ayarlarını OneSettings hizmetiyle EventLog'a bağlanma girişimlerini kaydetmez.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">OneSettings İndirmelerini Devre Dışı Bırak</string>
+      <string id="DisableOneSettingsDownloads_Explain">Bu ilke ayarı, Windows 'un OneSettings hizmetiyle bağlantı kurmayı ve denemeyeceğini denetler.
+
+Bu ilkeyi etkinleştirirseniz Windows, OneSettings hizmetiyle bağlantı kurmayı denemez.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, Windows yapılandırma ayarlarını indirmek için düzenli aralıklarla OneSettings hizmetiyle bağlantı kurmayı dener.
       </string>
     </stringTable>
     <presentationTable>

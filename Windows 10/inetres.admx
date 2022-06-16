@@ -35474,6 +35474,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="ResetZoomForDialogInIEMode" class="Both" displayName="$(string.ResetZoomForDialogInIEMode)" explainText="$(string.IE_ExplainResetZoomForDialogInIEMode)" key="Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" valueName="ResetZoomForDialogInIEMode">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="DisableInternetExplorerApp" class="Both" displayName="$(string.DisableInternetExplorerApp)" explainText="$(string.IE_ExplainDisableInternetExplorerApp)" presentation="$(presentation.NotifyDisableIEOptions)" key="Software\Policies\Microsoft\Internet Explorer\Main">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE11" />

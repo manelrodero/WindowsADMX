@@ -134,11 +134,26 @@ Använd principinställningen Tillåt telemetri om du vill begränsa nivån av d
       </string>
 
       <string id="AllowCommercialDataPipeline">Tillåt datapipeline för kommersiella enheter</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline registrerar enheten för Windows företagsdatapipeline.
-          Om du aktiverar den här inställningen registreras data som samlas in från enheten i Windows företagsdatapipeline.
-          Om du inaktiverar eller låter bli att konfigurera den här inställningen samlas alla data från enheten in och hanteras enligt våra principer för Windows standarddatapipeline.
-          Konfigurationen av den här inställningen förändrar inte telemetriinsamlingsnivån eller användarens möjligheter att ändra nivån. Den här inställningen gäller bara Windows-operativsystemet och apparna i Windows. Den gäller inte appar eller tjänster från tredje part som körs på Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline styr om Microsoft är personuppgiftsbiträde eller personuppgiftsansvarig för Windows-diagnostikdata som samlas in från den här enheten.
+          Om du aktiverar den här principen blir Microsoft personuppgiftsbiträde av Windows-diagnostikdata som samlas in från Windows-enheten och kunden blir personuppgiftsansvarig. Enheten måste vara registrerad i Azure AD för att den här principen ska lyckas.
+          Om du inaktiverar eller inte konfigurerar den här principinställningen blir Microsoft personuppgiftsansvarig för Windows-diagnostikdata som samlas in från den här enheten.
+          Den här principen styr endast om Microsoft är personuppgiftsbiträde för Windows-diagnostikdata från den här enheten. När du konfigurerar den här inställningen ändras inte huruvida diagnostikdata samlas in eller användarens möjlighet att ändra nivån. Om du vill konfigurera insamlingsnivå använder du principen "Tillåt diagnostikdata" och begränsar användare på den här enheten från att ändra nivån av diagnostikdata med hjälp av principen "Konfigurera användargränssnitt för inställning av diagnostikdata".
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Aktivera OneSettings-granskning</string>
+      <string id="EnableOneSettingsAuditing_Explain">Den här principinställningen styr om Windows-poster försöker ansluta till OneSettings-tjänsten till EventLog.
+
+Om du aktiverar den här principen registrerar Windows försök att ansluta med OneSettings-tjänsten till kanalen Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen så spelar Windows inte in försök att ansluta med OneSettings-tjänsten till EventLog.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Inaktivera OneSettings-nedladdningar</string>
+      <string id="DisableOneSettingsDownloads_Explain">Denna policyinställning styr om Windows försöker ansluta till OneSettings-tjänsten.
+
+Om du aktiverar den här policyn försöker Windows inte ansluta till OneSettings-tjänsten.
+
+Om du inaktiverar eller inte konfigurerar denna policyinställning försöker Windows regelbundet ansluta till OneSettings-tjänsten för att ladda ner konfigurationsinställningar.
       </string>
     </stringTable>
     <presentationTable>

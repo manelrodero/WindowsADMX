@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Legalább Windows XP Professional SP1 vagy Windows 2000 SP3, kivéve a Windows RT rendszert</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Legalább Windows Server 2003 operációs rendszerek vagy Windows XP Professional SP1, kivéve a Windows RT rendszert</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Legalább Windows XP Professional Service Pack 1, illetve legalább a Windows 2000 Service Pack 3 és a Windows 8.1 vagy a legújabb szervizcsomaggal frissített Windows Server 2012 R2 között megjelent rendszerek egyike</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Legalább a Windows Vista és a Windows 8.1 vagy a legújabb szervizcsomaggal frissített Windows Server 2012 R2 között megjelent rendszerek egyike</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Legalább Windows XP Professional Service Pack 1 vagy legalább Windows 2000 Service Pack 3-tól Windows 8.1-ig vagy Windows Server 2012 R2 a legfrissebb szervizcsomaggal. A Windows 10 és újabb verziók nem támogatottak.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Legalább Windows Vista és Windows 8.1 vagy Windows Server 2012 R2 a legfrissebb szervizcsomaggal. A Windows 10 és újabb verziók nem támogatottak.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 vagy legalább Windows 2000 Service Pack 3
 A 7-es változat csak a Windows Server 2016 Edition rendszerű kiszolgálókon támogatott</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Legalább Windows Server 2022 vagy Windows 10 2004-es verzió​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016-tól Windows Server 2022-ig, vagy Windows 10​ </string>
       <string id="AUDontShowUasHelp">Ezzel a házirend-beállítással kezelhető a „Frissítések telepítése és leállítás” beállítás megjelenése A Windows leállítása párbeszédpanelen.
 
 Ha engedélyezi ezt a beállítást, a „Frissítések telepítése és leállítás” beállítás akkor sem jelenik meg A Windows leállítása párbeszédpanelen, ha rendelkezésre állnak telepíthető frissítések, amikor a felhasználó a Start menü leállítás gombjára kattint.
@@ -161,6 +163,16 @@ Ha a Nincs konfigurálva állapot van megadva, az Automatikus frissítések szol
         A frissítések intranetes kiszolgálókon való észlelése nem működik, ha egy felhasználói proxy szükséges helyettesítőként, és nincs konfigurálva az alternatív proxyviselkedés.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Csak a rendszerproxy használata frissítések észlelésére (alapértelmezett)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">A felhasználói proxy helyettesítőként való használatának engedélyezése, ha a rendszerproxyt használó észlelés nem működik</string>
+      <string id="UpdateClassPolicySource_Title">Forrásszolgáltatás megadása a Windows-frissítések adott osztályaihoz</string>
+      <string id="UpdateClassPolicySource_Help">Ha ez a házirend engedélyezve van, az eszközök a megadott frissítési forrásból (vagy a Windows Update, vagy a Windows Server Update Service szolgáltatásból) megkapják a felsorolt osztályokkal kapcsolatos Windows-frissítéseket. 
+
+        Megjegyzés: Ha a Windows Server frissítési szolgáltatásból szeretne frissítéseket kapni, a Microsoft intranetes frissítési szolgáltatásának helyét megfelelően konfigurálnia kell „A Microsoft intranetes frissítési szolgáltatás helyének megadása“ házirenden keresztül.
+
+        Ha ez a házirend nincs konfigurálva vagy le van tiltva, az eszköz továbbra is a többi házirend-konfigurációban megadott frissítéseket észleli. 
+
+        Megjegyzés: Ha jelenleg a „Ne engedélyezze a halasztásos házirendeket a Windows Update-ben való kereséshez“ beállítást használja annak érdekében, hogy az eszközök csak a megadott kiszolgálóval végezzenek bizonyos vizsgálatot, javasoljuk, hogy konfigurálja ezt a házirendet a másik helyett, vagy azzal együtt.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Az az óraszám, amely alapján a Windows rendszer meghatározza, hogy meddig várjon a frissítések keresése előtt. A pontos várakozási idő a konkrét értékek összege és egy véletlenszerű, 0–4 óra közötti változó. 
 
         Ha az állapot Engedélyezett, a Windows a megadott időközönként keres frissítéseket.
@@ -372,9 +384,15 @@ Ha folytatni szeretné a felfüggesztett minőségi frissítések fogadását, t
 
 Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows Update működése nem módosul.</string>
       <string id="TargetReleaseVersion_Title">A funkciófrissítés célverziójának kiválasztása</string>
-      <string id="TargetReleaseVersion_Help">A házirend engedélyezésével meghatározhatja, hogy a rendszer a funkciófrissítés mely verzióját kérje a későbbi vizsgálatok során.
+      <string id="TargetReleaseVersion_Help">Adja meg a terméket és a verziót a Windows Update célverzió lapján felsoroltak szerint:
 
-Adja meg a verziót a Windows-kiadások információs lapján leírtak szerint: aka.ms/ReleaseInformationPage</string>
+aka.ms/WindowsTargetVersioninfo
+
+Az eszköz kérni fogja, hogy a Windows frissítse a terméket és a verziót a későbbi vizsgálatok során.
+
+Ha megad egy célterméket, és az OK vagy az Alkalmaz gombra kattint, az a következőt jelenti: Elfogadom az aka.ms/WindowsTargetVersioninfo webhelyen található Microsoft szoftverlicenc-szerződést. Ha egy szervezet licenceli a szoftvert, jogosult vagyok a szervezet kötésére.
+
+Ha érvénytelen értéket ad meg, a jelenlegi verzió marad, amíg ki nem javítja az értékeket egy támogatott termékre és verzióra.</string>
       <string id="DisableWUfBSafeguards">A funkciófrissítések védelmének letiltása</string>
       <string id="DisableWUfBSafeguards_Help">
           Akkor engedélyezze ezt a beállítást, ha a funkciófrissítéseket a védelmi visszatartások letiltása nélkül rendszerbe szeretné állítani az eszközökön.  A védelmi visszatartások ismert kompatibilitási problémákat okoznak, és megakadályozzák a frissítés rendszerbe állítását az érintett eszközökön, amíg el nem hárítják a problémát. Ennek a házirendnek az engedélyezése lehetővé teszi, hogy a szervezetek rendszerbe állítsák a funkciófrissítést az eszközökön tesztelési célból, illetve hogy a védelmi visszatartások letiltása nélkül állítsák rendszerbe a funkciófrissítést.
@@ -699,6 +717,13 @@ Ez a házirend felülbírálja a következő házirendeket:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Ne kényszerítse a TLS-tanúsítványok rögzítését a frissítések Windows Update-ügyfél általi észleléséhez.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Válassza ki a proxyviselkedést a frissítések Windows Update-ügyfél általi észleléséhez:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Adja meg a forrásszolgáltatást a Windows-frissítések következő osztályai számára:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Funkciófrissítések</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Minőségi frissítések</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Illesztőprogram-frissítések</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Más frissítések</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Frissítések keresésének</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">gyakorisága (óra):  </decimalTextBox>
@@ -733,6 +758,9 @@ Ez a házirend felülbírálja a következő házirendeket:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">(perc):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Melyik Windows-termékverzióhoz szeretne funkciófrissítéseket kapni? például Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Funkciófrissítések célverziója</label>
         </textBox>

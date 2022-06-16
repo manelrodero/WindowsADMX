@@ -13,6 +13,9 @@
         <category name="Exclusions" displayName="$(string.Exclusions)">
             <parentCategory ref="AntiSpywareDefender" />
         </category>
+        <category name="DeviceControl" displayName="$(string.DeviceControl)">
+            <parentCategory ref="AntiSpywareDefender" />
+        </category>
         <category name="ExploitGuard" displayName="$(string.ExploitGuard)">
             <parentCategory ref="AntiSpywareDefender" />
         </category>
@@ -63,6 +66,20 @@
       </category>
     </categories>
     <policies>
+        <policy name="DeviceControl_PolicyGroups" class="Machine" displayName="$(string.DeviceControl_PolicyGroups)" explainText="$(string.DeviceControl_PolicyGroups_Explain)" key="Software\Policies\Microsoft\Windows Defender\Device Control\Policy Groups" presentation="$(presentation.DeviceControl_PolicyGroups)">
+            <parentCategory ref="DeviceControl" />
+            <supportedOn ref="windows:SUPPORTED_Windows10" />
+            <elements>
+                <text id="DeviceControl_PolicyGroups" valueName="PolicyGroups" required="true" />
+            </elements>
+        </policy>
+        <policy name="DeviceControl_PolicyRules" class="Machine" displayName="$(string.DeviceControl_PolicyRules)" explainText="$(string.DeviceControl_PolicyRules_Explain)" key="Software\Policies\Microsoft\Windows Defender\Device Control\Policy Rules" presentation="$(presentation.DeviceControl_PolicyRules)">
+            <parentCategory ref="DeviceControl" />
+            <supportedOn ref="windows:SUPPORTED_Windows10" />
+            <elements>
+                <text id="DeviceControl_PolicyRules" valueName="PolicyRules" required="true" />
+            </elements>
+        </policy>
         <policy name="DisableAutoExclusions" class="Machine" displayName="$(string.DisableAutoExclusions)" explainText="$(string.DisableAutoExclusions_Explain)" key="Software\Policies\Microsoft\Windows Defender\Exclusions" valueName="DisableAutoExclusions">
             <parentCategory ref="Exclusions" />
             <supportedOn ref="windows:SUPPORTED_Windows_10_0_SERVER" />

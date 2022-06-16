@@ -38,7 +38,7 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, kan deze id niet 
       <string id="DisableEnterpriseAuthProxy">Geauthenticeerd proxygebruik voor de Connected User Experience and Telemetry-service configureren</string>
       <string id="DisableEnterpriseAuthProxy_1">Geauthenticeerd proxygebruik inschakelen</string>
       <string id="DisableEnterpriseAuthProxy_2">Geauthenticeerd proxygebruik inschakelen</string>
-      <string id="DisableEnterpriseAuthProxy_Explain">Met deze beleidsinstelling wordt verhinderd dat de Connected User Experience and Telemetry-service een geauthenticeerde proxy gebruikt om gegevens terug te sturen aan Microsoft op Windows 10. Als u deze beleidsinstelling uitschakelt of niet configureert, gebruikt de Connected User Experience and Telemetry-service automatisch een geauthenticeerde proxy om gegevens terug te sturen aan Microsoft. Als u dit beleid inschakelt, kan de Connected User Experience and Telemetry-service niet automatisch een geauthenticeerde proxy gebruiken.</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">Met deze beleidsinstelling wordt verhinderd dat de Connected User Experience and Telemetry-service een geverifieerde proxy gebruikt om gegevens terug te sturen naar Microsoft in Windows 10. Als u deze beleidsinstelling uitschakelt of niet configureert, gebruikt de Connected User Experience and Telemetry-service automatisch een geverifieerde proxy om gegevens terug te sturen naar Microsoft. Als u dit beleid inschakelt, kan de Connected User Experience and Telemetry-service niet automatisch een geverifieerde proxy gebruiken.</string>
 
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Uitgebreide diagnostische gegevens beperken tot het door Windows Analytics vereiste minimum</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Verzameling door Windows Analytics inschakelen</string>
@@ -134,11 +134,26 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, worden diagnostis
       </string>
 
       <string id="AllowCommercialDataPipeline">Pijplijn voor commerciële gegevens toestaan</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          Met AllowCommercialDataPipeline wordt het apparaat ingeschreven bij de Windows-pijplijn voor bedrijfsgegevens.
-          Als u deze instelling inschakelt, worden verzamelde gegevens van dit apparaat gekoppeld aan de Windows-pijplijn voor bedrijfsgegevens.
-          Als u deze instelling uitschakelt of niet configureert, worden de verzamelde gegevens op het apparaat verwerkt in overeenstemming met ons beleid voor de Windows-pijplijn voor standaardgegevens.
-          Het configureren van deze instelling is niet van invloed op het verzamelingsniveau voor telemetrie of de bevoegdheid van de gebruiker om het niveau te wijzigen. Deze instelling is alleen van toepassing op het Windows-besturingssysteem en apps die bij Windows zijn inbegrepen, maar niet op apps of services van derden in Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline bepaalt of Microsoft fungeert als processor of verwerkingsverantwoordelijke voor diagnostische Windows-gegevens die zijn verzameld vanaf dit apparaat.
+          Als u dit beleid inschakelt, wordt Microsoft de processor voor diagnostische Windows-gegevens die zijn verzameld vanaf het Windows-apparaat. De klant wordt dan de verwerkingsverantwoordelijke. Het apparaat moet zijn geregistreerd in Azure AD om dit beleid te laten slagen.
+          Als u deze beleidsinstelling uitschakelt of niet configureert, wordt Microsoft de verwerkingsverantwoordelijke voor diagnostische Windows-gegevens die zijn verzameld vanaf dit apparaat.
+          Met dit beleid wordt alleen bepaald of Microsoft fungeert als processor voor diagnostische Windows-gegevens die afkomstig zijn van dit apparaat. Als u deze instelling configureert, verandert dit niet of er diagnostische gegevens worden verzameld, en of de gebruiker het niveau kan wijzigen. Als u het verzamelingsniveau wilt wijzigen, gebruikt u het beleid 'Diagnostische gegevens toestaan'. Als u wilt voorkomen dat gebruikers van dit apparaat het niveau voor diagnostische gegevens wijzigen,gebruikt u het beleid 'Configureer gebruikersinterface voor opt-in-instelling voor diagnostische gegevens'.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">OneSettings-controle inschakelen</string>
+      <string id="EnableOneSettingsAuditing_Explain">Met deze beleidsinstelling regelt u of Windows pogingen om verbinding te maken met de OneSettings-service vastlegt in het EventLog.
+
+Als u deze beleidsinstelling inschakelt, worden pogingen tot het verbinden met de OneSettings-service in het Microsoft\Windows\Privacy-Auditing\Operational EventLog-kanaal vastgelegd.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, worden pogingen om verbinding te maken met de OneSettings-service niet vastgelegd in het EventLog.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">OneSettings-downloads uitschakelen</string>
+      <string id="DisableOneSettingsDownloads_Explain">Met deze beleidsinstelling regelt u of Windows verbinding probeert te maken met de OneSettings-service.
+
+Als u deze beleidsinstelling inschakelt, kan Windows geen verbinding proberen te maken met de OneSettings-service.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, kan Windows regelmatig verbinding proberen te maken met de OneSettings-service om configuratie-instellingen downloaden.
       </string>
     </stringTable>
     <presentationTable>

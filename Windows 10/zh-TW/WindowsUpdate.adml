@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7、Windows Server 2008 R2、Windows Vista、Windows Server 2003、Windows XP SP2、Windows XP SP1、Windows 2000 SP4、Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">至少需要 Windows XP Professional Service Pack 1 或 Windows 2000 Service Pack 3，但不包含 Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">至少需要 Windows Server 2003 作業系統或 Windows XP Professional 含 SP1，但不包含 Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">至少需要 Windows XP Professional Service Pack 1 或至少需要 Windows 2000 Service Pack 3 到 Windows 8.1 或 Windows Server 2012 R2 含最新的 Service Pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">至少需要 Windows Vista 到 Windows 8.1 或 Windows Server 2012 R2 的最新的 Service Pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">至少需要 Windows XP Professional Service Pack 1 或至少 Windows 2000 Service Pack 3 到 Windows 8.1 或 Windows Server 2012 R2 搭配最新的 Service Pack。Windows 10以上版本不支援。</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">至少需要 Windows Vista 到 Windows 8.1 或具有最新 Service Pack 的 Windows Server 2012 R2。Windows 10以上版本不支援。</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 或至少 Windows 2000 Service Pack 3
 選項 7 最低只支援 Windows Server 2016 版本的伺服器</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">至少需要 Windows Server 2022、Windows 10 版本 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 (經由 Windows Server 2022) 或 Windows 10​</string>
       <string id="AUDontShowUasHelp">這個原則設定允許您管理是否要在 [關閉 Windows] 對話方塊中顯示 [安裝更新並關機] 選項。
 
 如果您啟用這個原則設定，即使當使用者在 [開始] 功能表中選擇 [關機] 選項且有可用的更新可以安裝，也不會在 [關閉 Windows] 對話方塊中出現 [安裝更新並關機] 的選擇。
@@ -161,6 +163,16 @@ Windows 會尋找適用於您電腦的更新，並在背景下載這些內容 (�
         當需要使用者 Proxy 作為遞補且未設定替代 Proxy 行為時，對內部網路伺服器偵測更新將會失敗。</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">只使用系統 proxy 偵測更新 (預設)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">如果使用系統 proxy 的偵測失敗，則允許將使用者 proxy 做為遞補</string>
+      <string id="UpdateClassPolicySource_Title">指定特定 Windows Update 類別的來源服務</string>
+      <string id="UpdateClassPolicySource_Help">啟用此原則時，裝置會從指定的更新來源收到列出之類別的 Windows 更新: Windows Update 或 Windows Server Update Service。
+
+注意：若要從 Windows Server Update Service 接收任何更新，您必須透過 [指定內部網路 Microsoft 更新服務位置] 原則正確設定內部網路 Microsoft 更新服務位置。
+
+        如果未設定或停用這個原則，則裝置將會根據您其他的原則設定繼續偵測更新。
+
+        注意：如果您目前正使用「不允許延遲原則來掃描 Windows Update」，以確保裝置只針對您指定的伺服器進行掃描，我們建議您改為設定此原則，或加入這類原則。</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">指定 Windows 將用幾小時來判定等候時間，再檢查是否有可用的更新。確切的等候時間是特定值和隨機變數 0-4 小時的加總。
 
 如果狀態設為 [已啟用]，Windows 將以指定的間隔檢查是否有可用的更新。
@@ -372,9 +384,15 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
 
 若您停用或未設定此原則，則 Windows Update 不會改變其行為。</string>
       <string id="TargetReleaseVersion_Title">選擇 [目標功能更新] 版本</string>
-      <string id="TargetReleaseVersion_Help">啟用此原則以指定要在後續掃描中請求的 [功能更新] 版本。
+      <string id="TargetReleaseVersion_Help">請輸入 Windows Update 目標版本頁面上所列的產品和版本:
 
-請輸入 Windows 版本資訊頁面 aka.ms/ReleaseInformationPage 中列出的版本</string>
+aka.ms/WindowsTargetVersioninfo
+
+在後續的掃描中，裝置將會要求 Windows Update 產品和版本。
+
+輸入目標產品並按一下 [OK] 或 [套用] 即表示我接受在 aka.ms/WindowsTargetVersioninfo 找到的 Microsoft 軟體授權條款。若組織正在授權軟體，我會獲得繫結組織的授權。
+
+如果您輸入不正確的值，在您將值修正為支援的產品和版本之前，將會保留目前的版本。</string>
       <string id="DisableWUfBSafeguards">停用功能更新的保護措施</string>
       <string id="DisableWUfBSafeguards_Help">
           應該在功能更新部署到裝置上而不封鎖任何保護措施時，啟用此設定。 保護措施是已知的相容性問題，這些問題會封鎖升級而無法在受影響的裝置上部署，直到問題解決為止。 啟用此原則可讓組織將功能更新部署到裝置以進行測試，或在不封鎖保護措施的情況下部署功能更新。
@@ -699,6 +717,13 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">請不要為 Windows Update 用戶端強制執行 TLS 憑證釘選來偵測更新。</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">選取 Windows Update 用戶端的 Proxy 行為來偵測更新：</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>指定以下 Windows Update 類別的來源服務:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">功能更新</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">品質更新</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">驅動程式更新</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">其他更新</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>檢查更新的</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">間隔 (小時):  </decimalTextBox>
@@ -733,6 +758,9 @@ Windows Update 只會在設定為自動安裝更新時，才會自動喚醒系�
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">工作的時間 (分鐘):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>您要接收哪些 Windows 產品版本的功能更新？例如，Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>功能更新的目標版本</label>
         </textBox>

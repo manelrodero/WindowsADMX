@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Almeno Windows XP Professional Service Pack 1 o Windows 2000 Service Pack 3, escluso Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Almeno i sistemi operativi Windows Server 2003 o Windows XP Professional con SP1, escluso Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Almeno Windows XP Professional Service Pack 1 o almeno da Windows 2000 Service Pack 3 a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Almeno da Windows Vista a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Almeno Windows XP Professional Service Pack 1 o Almeno Windows 2000 Service Pack 3 fino a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente. Non supportato in Windows 10 e versioni successive.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Almeno Da Windows Vista a Windows 8.1 o Windows Server 2012 R2 con il Service Pack più recente. Non supportato in Windows 10 e versioni successive.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 o almeno Windows 2000 Service Pack 3
 L'opzione 7 è supportata solo su server con almeno Windows Server 2016 Edition</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Almeno Windows Server 2022 o Windows 10 versione 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">da Windows Server 2016 a Windows Server 2022 o Windows 10</string>
       <string id="AUDontShowUasHelp">Questa impostazione dei criteri consente di gestire la visualizzazione dell'opzione Installa aggiornamenti e spegni nella finestra di dialogo Fine della sessione di lavoro.
 
 Se si abilita questa impostazione dei criteri, l'opzione Installa aggiornamenti e spegni non verrà visualizzata nella finestra di dialogo Fine della sessione di lavoro, anche se sono disponibili aggiornamenti per l'installazione quando l'utente fa clic sul pulsante Start e quindi sceglie Chiudi sessione.
@@ -161,6 +163,16 @@ Se lo stato di questa impostazione dei criteri è impostato su Disabilitato, sar
         Il rilevamento degli aggiornamenti nei server intranet avrà esisto negativo quando è necessario un proxy utente come fallback e il comportamento proxy alternativo non è configurato.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Utilizza solo proxy di sistema per il rilevamento degli aggiornamenti (impostazione predefinita)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Consenti l’utilizzo del proxy utente come fallback se il rilevamento tramite proxy di sistema non è possibile</string>
+      <string id="UpdateClassPolicySource_Title">Specificare il servizio di origine per classi specifiche di aggiornamenti di Windows</string>
+      <string id="UpdateClassPolicySource_Help">Quando questo criterio è abilitato, i dispositivi riceveranno gli aggiornamenti di Windows per le classi elencate dall'origine di aggiornamento specificata: Windows Update o Windows Server Update Service. 
+
+Nota: per ricevere gli aggiornamenti dal servizio Windows Server Update, è necessario aver configurato correttamente un percorso del servizio di aggiornamento Microsoft nella rete Intranet tramite il criterio "Specificare il percorso del servizio di aggiornamento Microsoft nella rete Intranet".
+
+Se questo criterio non è configurato o è disabilitato, il dispositivo continuerà a rilevare gli aggiornamenti in base alle altre configurazioni dei criteri. 
+
+Nota: se si usa attualmente l'opzione "Non consentire ai criteri di differimento di causare analisi su Windows Update" per garantire che i dispositivi analizzerà solo con il server specificato, è consigliabile configurare questi criteri in alternativa o in aggiunta a tali criteri.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Specifica la frequenza di rilevamento di eventuali aggiornamenti disponibili. L'intervallo esatto è determinato dalla somma del valore specifico e una variante casuale di 0-4 ore.
 
         Se lo stato è impostato su Abilitato, Windows controllerà la disponibilità di aggiornamenti in base all'intervallo specificato.
@@ -372,9 +384,15 @@ Per riprendere la ricezione degli aggiornamenti qualitativi sospesi, deseleziona
 
 Se disabiliti o non configuri questo criterio, il funzionamento di Windows Update non verrà modificato.</string>
       <string id="TargetReleaseVersion_Title">Seleziona la versione di aggiornamento delle funzionalità di destinazione</string>
-      <string id="TargetReleaseVersion_Help">Abilita questo criterio per specificare una versione di aggiornamento delle funzionalità da richiedere nelle analisi successive.
+      <string id="TargetReleaseVersion_Help">Immettere il prodotto e la versione elencati nella pagina Windows Update versione di destinazione:
 
-Immetti la versione come riportata nella pagina delle informazioni sul rilascio di Windows aka.ms/ReleaseInformationPage</string>
+aka.ms/WindowsTargetVersioninfo
+
+Il dispositivo richiederà il prodotto Windows Update e la versione nelle analisi successive.
+
+Se si immette un prodotto di destinazione e si fa clic su OK o Applica, si accettano le Condizioni di licenza software Microsoft disponibili in aka.ms/WindowsTargetVersioninfo. Se un'organizzazione sta concedendo in licenza il software, sono autorizzato a vincolare l'organizzazione.
+
+Se si immette un valore non valido, si rimarrà nella versione corrente fino a quando i valori non verranno corretti per un prodotto e una versione supportati.</string>
       <string id="DisableWUfBSafeguards">Disabilita le misure di sicurezza per gli aggiornamenti delle funzionalità</string>
       <string id="DisableWUfBSafeguards_Help">
           Abilita questa opzione quando gli aggiornamenti delle funzionalità devono essere distribuiti nei dispositivi senza bloccare alcun blocco di sicurezza. I blocchi di sicurezza sono problemi di compatibilità noti che impediscono la distribuzione dell'aggiornamento ai dispositivi interessati fino alla risoluzione del problema. L'abilitazione di questo criterio può consentire a un'organizzazione di distribuire l'aggiornamento delle funzionalità ai dispositivi per i test o di distribuire l'aggiornamento delle funzionalità senza bloccare i blocchi di sicurezza.
@@ -699,6 +717,13 @@ Imposta un periodo di prova per gli aggiornamenti delle funzionalità e gli aggi
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Non applicare l'associazione del certificato TLS per il client di Windows Update per il rilevamento degli aggiornamenti.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selezionare il comportamento del proxy per il client Windows Update per il rilevamento degli aggiornamenti:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Specificare il servizio di origine per le seguenti classi di aggiornamenti di Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Aggiornamenti delle funzionalità</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Aggiornamenti qualitativi</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Aggiornamenti dei driver</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Altri aggiornamenti</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Verifica aggiornamenti a</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervalli di (ore):  </decimalTextBox>
@@ -733,6 +758,9 @@ Imposta un periodo di prova per gli aggiornamenti delle funzionalità e gli aggi
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">lavoro (minuti):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Per quale versione del prodotto Windows vuoi ricevere gli aggiornamenti delle funzionalità? Ad esempio, Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Versione di destinazione per gli aggiornamenti delle funzionalità</label>
         </textBox>

@@ -46,22 +46,22 @@ Note:
           Per impostare la visualizzazione Web, utilizzare le impostazioni "Passa a Shell classica" e "Non consentire l'apertura di Opzioni cartella dal pulsante Opzioni della scheda Visualizza della barra multifunzione" in Configurazione utente\Modelli amministrativi\Componenti di Windows\Esplora risorse e l'impostazione "Abilita Active Desktop" in Configurazione utente\Modelli amministrativi\Desktop\Active Desktop.</string>
       <string id="DomainDisplayPrinters_Help">Se si abilita questa impostazione dei criteri, verrà impostato il numero massimo di stampanti (per ogni tipo) visualizzate nell'Installazione guidata stampante di un computer in una rete gestita, ovvero quando il computer può raggiungere un controller di dominio, ad esempio un computer portatile aggiunto al dominio in una rete aziendale.
 
-          Se questa impostazione dei criteri è disabilitata, non verrà visualizzata la pagina di scansione di rete.
+ Se questa impostazione dei criteri è disabilitata, non verrà visualizzata la pagina di scansione di rete.
 
-           Se questa impostazione dei criteri non è configurata, nell'Installazione guidata stampante verrà visualizzato il numero predefinito di stampanti di ogni tipo:
-          Stampanti directory: 20
-          Stampanti TCP/IP: 0
-          Stampanti servizi Web: 0
-          Stampanti Bluetooth: 10
-          Stampanti condivise: 0
+ Se questa impostazione dei criteri non è configurata, nell'Installazione guidata stampante verrà visualizzato il numero predefinito di stampanti di ogni tipo:
+ Stampanti directory: 20
+ Stampanti TCP/IP: 0
+ Stampanti servizi Web: 0
+ Stampanti Bluetooth: 10
+ Stampanti condivise: 0
 
-          Per visualizzare le stampanti per servizi Web disponibili nella rete, assicurarsi che l'individuazione della rete sia attivata. Per attivarla, fare clic su "Start", quindi su "Pannello di controllo" e infine su "Rete e Internet". In "Rete e Internet" fare clic su "Centro connessioni di rete e condivisione". In "Centro connessioni di rete e condivisione" fare clic su "Modifica impostazioni di condivisione avanzate". In "Modifica impostazioni di condivisione avanzate" fare clic sulla freccia accanto a "Dominio", quindi su "Attiva individuazione rete" e infine su "Salva modifiche".
+ Per visualizzare le stampanti per servizi Web disponibili nella rete, assicurarsi che l'individuazione della rete sia attivata. Per attivarla, fare clic su "Start", quindi su "Pannello di controllo" e infine su "Rete e Internet". In "Rete e Internet" fare clic su "Centro connessioni di rete e condivisione". In "Centro connessioni di rete e condivisione" fare clic su "Modifica impostazioni di condivisione avanzate". In "Modifica impostazioni di condivisione avanzate" fare clic sulla freccia accanto a "Dominio", quindi su "Attiva individuazione rete" e infine su "Salva modifiche".
 
-          Se non si desidera visualizzare le stampanti di un determinato tipo, abilitare questa impostazione dei criteri e impostare 0 come numero di stampanti da visualizzare.
+ Se non si desidera visualizzare le stampanti di un determinato tipo, abilitare questa impostazione dei criteri e impostare 0 come numero di stampanti da visualizzare.
 
-          In Windows 10 e versioni successive, nella procedura guidata è possibile visualizzare solo le stampanti TCP/IP. Se si abilita questo criterio, sono applicabili sono i limiti per le stampanti TCP/IP. Solo in Windows 10, se questo criterio viene disabilitato o non viene configurato, viene applicato il limite predefinito.
-          
-          In Windows 8 e versioni successive le stampanti Bluetooth non vengono visualizzate, pertanto il relativo limite non si applica a queste versioni di Windows.
+ In Windows 10 e versioni successive, nella procedura guidata è possibile visualizzare solo le stampanti TCP/IP. Se si abilita questo criterio, sono applicabili sono i limiti per le stampanti TCP/IP. Solo in Windows 10, se questo criterio viene disabilitato o non viene configurato, viene applicato il limite predefinito.
+ 
+ In Windows 8 e versioni successive le stampanti Bluetooth non vengono visualizzate, pertanto il relativo limite non si applica a queste versioni di Windows.
       </string>
       <string id="DomainPrinters">Installazione guidata stampante - pagina di scansione di rete (rete gestita)</string>
       <string id="DownlevelBrowse">Sfoglia la rete per cercare le stampanti</string>
@@ -147,7 +147,7 @@ Stampanti condivise: 50
 Se non si desidera visualizzare un tipo di stampante, abilitare questo criterio e impostare 0 come numero di stampanti da visualizzare.
 
 In Windows 10 e versioni successive, nella procedura guidata è possibile visualizzare solo le stampanti TCP/IP. Se si abilita questo criterio, sono applicabili sono i limiti per le stampanti TCP/IP. Solo in Windows 10, se questo criterio viene disabilitato o non viene configurato, viene applicato il limite predefinito.
-          
+ 
 In Windows 8 e versioni successive le stampanti Bluetooth non vengono visualizzate, pertanto il relativo limite non si applica a queste versioni di Windows.</string>
       <string id="NonDomainPrinters">Installazione guidata stampante - pagina di scansione di rete (rete non gestita)</string>
       <string id="PackagePointAndPrintOnly">Utilizza solo pacchetto di selezione e stampa</string>
@@ -280,9 +280,9 @@ Per impostazione predefinita, nelle SKU Windows Ultimate, Professional e Home il
       <string id="MXDWUseLegacyOutputFormatMSXPS">Cambia formato di output predefinito MXDW (Microsoft XPS Document Writer) con il formato legacy Microsoft XPS (*.xps)</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS_Help">MXDW (Microsoft XPS Document Writer) genera file OpenXPS (*. oxps) per impostazione predefinita in Windows 10, Windows 10 e Windows Server 2019.
 
-          Se abiliti questa impostazione dei criteri di gruppo, il formato di output predefinito MXDW è Microsoft XPS (*.xps) legacy.
+ Se abiliti questa impostazione dei criteri di gruppo, il formato di output predefinito MXDW è Microsoft XPS (*.xps) legacy.
 
-          Se disabiliti o non configuri questa impostazione dei criteri, il formato di output predefinito di MXDW è OpenXPS (*.oxps).</string>
+ Se disabiliti o non configuri questa impostazione dei criteri, il formato di output predefinito di MXDW è OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Disattiva la gestione della stampante predefinita da parte di Windows</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Questa preferenza consente di modificare la gestione della stampante predefinita.
 
@@ -291,6 +291,34 @@ Se si abilita questa impostazione, la stampante predefinita non verrà gestita d
 Se si disabilita questa impostazione, la stampante predefinita verrà gestita da Windows.
 
 Se non si configura questa impostazione, non verranno apportate modifiche alla gestione della stampante predefinita. </string>
+      <string id="EnableDeviceControl">Abilita restrizioni stampa controllo dispositivo</string>
+      <string id="EnableDeviceControl_Help">
+          Determina se le restrizioni di stampa controllo dispositivo vengono applicate per la stampa su questo computer.
+
+Per impostazione predefinita, non ci sono restrizioni da stampare in base al tipo di connessione o a un modello di stampante.
+
+Se si abilita questa impostazione, il computer limiterà la stampa sulle connessioni alla stampante nella rete aziendale o le stampanti con connessione USB approvate.
+
+Se si disabilita o non si configura questa impostazione, non ci sono restrizioni da stampare in base al tipo di connessione o alla stampante.</string>
+        <string id="ApprovedUsbPrintDevices">Elenco di dispositivi di stampa connessi a USB approvati</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Questa impostazione è un componente di restrizioni di stampa controllo dispositivo. Per utilizzare questa impostazione, abilitare la stampa tramite controllo dispositivo abilitando l'impostazione "Abilita restrizioni stampa controllo dispositivo".
+
+Quando è abilitata la stampa controllo dispositivo, nel sistema viene utilizzato l'elenco di valori VID/PID specificato per determinare se la stampante connessa USB corrente è approvata per la stampa locale.
+
+Digitare tutte le combinazioni di VID/PID approvate (separate da virgole) corrispondenti ai modelli di stampanti USB approvati. Quando un utente tenta di stampare su una coda di stampa USB, l'VID/PID del dispositivo verrà confrontato nell'elenco approvato.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Limita l'installazione del driver di stampa agli amministratori</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Determina se gli utenti che non sono amministratori possono installare driver di stampa nel computer.
+
+Per impostazione predefinita, gli utenti che non sono amministratori non possono installare driver di stampa nel computer.
+
+Se si abilita o non si configura questa impostazione, il sistema limiterà l'installazione dei driver di stampa agli amministratori del computer.
+
+Se si disabilita questa impostazione, il sistema non limiterà l'installazione dei driver di stampa nel computer.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +378,13 @@ Se non si configura questa impostazione, non verranno apportate modifiche alla g
           <label>Percorso predefinito Active Directory</label>
         </textBox>
         <text>Esempio --&gt; LDAP://DC=Dominio1,DC=Società,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Specificare l'elenco di dispositivi di stampante connessa a USB approvati.</text>
+        <text>L'elenco è un elenco separato da virgole di valori VID/PID USB. Esempio: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

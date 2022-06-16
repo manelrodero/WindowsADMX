@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Ausschlüsse</string>
+    <string id="DeviceControl">Gerätesteuerung</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Verringerung der Angriffsfläche</string>
     <string id="ExploitGuard_ControlledFolderAccess">Überwachter Ordnerzugriff</string>
@@ -704,22 +705,22 @@ Wenn diese Einstellung deaktiviert oder nicht konfiguriert wird, besitzt die Gru
     <string id="SpynetReporting">Beitritt zu Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Diese Richtlinieneinstellung ermöglicht den Beitritt zu Microsoft MAPS. Microsoft MAPS ist die Onlinecommunity, die Ihnen bei der Entscheidung hilft, wie Sie auf mögliche Bedrohungen reagieren. Die Community hilft auch dabei, die Verbreitung neuer Infektionen durch Schadsoftware zu verhindern.
 
-    Sie können entscheiden, ob Sie allgemeine oder zusätzliche Informationen zu erkannter Software senden. Zusätzliche Informationen helfen Microsoft bei der Erstellung neuer Sicherheitsinformationen und beim Schutz Ihres Computers. Diese Informationen können z. B. angeben, wo schädliche Elemente auf dem Computer erkannt wurden, falls Schadsoftware entfernt wurde. Die Informationen werden automatisch erfasst und gesendet. In einigen Fällen können unbeabsichtigt personenbezogene Informationen an Microsoft gesendet werden. Microsoft wird diese Informationen jedoch nicht dazu verwenden, Sie zu identifizieren oder zu kontaktieren.
+ Sie können entscheiden, ob Sie allgemeine oder zusätzliche Informationen zu erkannter Software senden. Zusätzliche Informationen helfen Microsoft bei der Erstellung neuer Sicherheitsinformationen und beim Schutz Ihres Computers. Diese Informationen können z. B. angeben, wo schädliche Elemente auf dem Computer erkannt wurden, falls Schadsoftware entfernt wurde. Die Informationen werden automatisch erfasst und gesendet. In einigen Fällen können unbeabsichtigt personenbezogene Informationen an Microsoft gesendet werden. Microsoft wird diese Informationen jedoch nicht dazu verwenden, Sie zu identifizieren oder zu kontaktieren.
 
-    Optionen:
-    (0x0) Deaktiviert (Standard)
-    (0x1) Einfache Mitgliedschaft
-    (0x2) Erweiterte Mitgliedschaft
+ Optionen:
+ (0x0) Deaktiviert (Standard)
+ (0x1) Einfache Mitgliedschaft
+ (0x2) Erweiterte Mitgliedschaft
 
-    Bei der einfachen Mitgliedschaft werden grundlegende Informationen zu erkannter Software an Microsoft gesendet. Dazu zählen der Ursprungsort der Software, die vom Benutzer oder automatisch ausgeführten Aktionen und Angaben dazu, ob die Aktionen erfolgreich verlaufen sind.
+ Bei der einfachen Mitgliedschaft werden grundlegende Informationen zu erkannter Software an Microsoft gesendet. Dazu zählen der Ursprungsort der Software, die vom Benutzer oder automatisch ausgeführten Aktionen und Angaben dazu, ob die Aktionen erfolgreich verlaufen sind.
 
-    Bei der erweiterten Mitgliedschaft werden neben den grundlegenden Informationen weitere Informationen zu Schadsoftware, Spyware und potenziell unerwünschter Software an Microsoft gesendet. Dazu zählen der Speicherort der Software, Dateinamen, die Ausführungsweise der Software und deren Auswirkungen auf Ihren Computer.
+ Bei der erweiterten Mitgliedschaft werden neben den grundlegenden Informationen weitere Informationen zu Schadsoftware, Spyware und potenziell unerwünschter Software an Microsoft gesendet. Dazu zählen der Speicherort der Software, Dateinamen, die Ausführungsweise der Software und deren Auswirkungen auf Ihren Computer.
 
-    Wenn Sie diese Einstellung aktivieren, treten Sie Microsoft MAPS mit der angegebenen Mitgliedschaft bei.
+ Wenn Sie diese Einstellung aktivieren, treten Sie Microsoft MAPS mit der angegebenen Mitgliedschaft bei.
 
-    Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, erfolgt kein Beitritt zu Microsoft MAPS.
+ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, erfolgt kein Beitritt zu Microsoft MAPS.
 
-    Da in Windows 10 keine einfache Mitgliedschaft mehr angeboten wird, wird das Gerät als erweitertes Mitglied registriert, wenn Sie den Wert auf 1 oder 2 festlegen.</string>
+ Da in Windows 10 keine einfache Mitgliedschaft mehr angeboten wird, wird das Gerät als erweitertes Mitglied registriert, wenn Sie den Wert auf 1 oder 2 festlegen.</string>
     <string id="SpynetReporting_Disabled">Deaktiviert</string>
     <string id="SpynetReporting_Basic">MAPS (Basis)</string>
     <string id="SpynetReporting_Advanced">MAPS (erweitert)</string>
@@ -977,6 +978,14 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird kein zus�
 
     Microsoft Defender Antivirus ermittelt automatisch, welche Anwendungen vertrauenswürdig sind. Sie können zusätzliche vertrauenswürdige Anwendungen in der Gruppenrichtlinieneinstellung "Zulässige Anwendungen konfigurieren" hinzufügen.
     </string>
+    <string id="DeviceControl_PolicyGroups">Gerätesteuerungsrichtlinien-Gruppen definieren</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Befolgen Sie das XML-Schema für Gerätesteuerungsrichtlinien-Gruppen, um die Richtliniengruppendaten auszufüllen.
+    </string>
+    <string id="DeviceControl_PolicyRules">Gerätesteuerungsrichtlinien-Regeln definieren</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Befolgen Sie das XML-Schema für Gerätesteuerungsrichtlinien-Regeln, um die Richtlinienregeldaten auszufüllen.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1148,6 +1157,16 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird kein zus�
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Hier die Richtliniengruppen definieren</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Hier die Richtlinienregeln definieren</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

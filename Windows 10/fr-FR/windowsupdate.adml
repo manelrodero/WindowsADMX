@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Au minimum Windows XP Professionnel Service Pack 1 ou Windows 2000 Service Pack 3, à l’exclusion de Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Au minimum des systèmes d’exploitation Windows Server 2003 ou Windows XP Professionnel avec SP1, à l’exclusion de Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Au minimum Windows XP Professionnel Service Pack 1 ou au minimum Windows 2000 Service Pack 3 jusqu'à Windows 8.1 ou Windows Server 2012 R2 avec le service pack le plus récent</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Au minimum Windows Vista jusqu'à Windows 8.1 ou Windows Server 2012 R2 avec le service pack le plus récent</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Au minimum Windows XP Professionnel Service Pack 1 ou Au moins Windows 2000 Service Pack 3 à Windows 8.1 ou Windows Server 2012 R2 avec le Service Pack le plus récent. Non pris en charge sur Windows 10 et versions ultérieures.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Au moins Windows Vista via Windows 8.1 ou Windows Server 2012 R2 avec le Service Pack le plus récent. Non pris en charge sur Windows 10 et versions ultérieures.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professionnel Service Pack 1 ou au minimum Windows 2000 Service Pack 3 
 Option 7 uniquement prise en charge sur les serveurs ou au moins édition Windows Server 2016</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Au minimum Windows Server 2022 ou Windows 10 version 2004</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 à Windows Server 2022 ou Windows 10</string>
       <string id="AUDontShowUasHelp">Ce paramètre de stratégie permet d’indiquer si l’option « Installer les mises à jour et éteindre » doit s’afficher dans la boîte de dialogue Arrêt de Windows.
 
 Si vous activez ce paramètre de stratégie, l’option « Installer les mises à jour et éteindre » n’apparaîtra pas dans la boîte de dialogue Arrêt de Windows, même si des mises à jour à installer sont disponibles lorsque l’utilisateur sélectionne l’option Arrêter dans le menu Démarrer.
@@ -161,6 +163,16 @@ Si l’état est Non configurée, l’utilisation des Mises à jour automatiques
         La détection des mises à jour à l’égard des serveurs intranet va échouer lorsque le proxy utilisateur est nécessaire en tant qu’action de secours et que le comportement proxy alternatif n’est pas configuré.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Utiliser uniquement le proxy système pour détecter les mises à jour (par défaut)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Autoriser l’utilisation du proxy utilisateur comme secours si la détection utilisant un proxy système échoue</string>
+      <string id="UpdateClassPolicySource_Title">Spécifier le service source pour des classes spécifiques de mises à jour Windows</string>
+      <string id="UpdateClassPolicySource_Help">Lorsque cette stratégie est activée, les appareils reçoivent les mises à jour Windows pour les classes répertoriées à partir de la source de mise à jour spécifiée : Windows Update ou le service de mise à jour Windows Server. 
+
+       Remarque : pour recevoir des mises à jour à partir du service de mise à jour de Windows Server, vous devez avoir configuré correctement un emplacement intranet du service de mise à jour Microsoft à l’aide de la stratégie « Spécifier l’emplacement intranet du service de mise à jour Microsoft ».
+
+       Si cette stratégie n’est pas configurée ou si elle est désactivée, l’appareil continue de détecter les mises à jour par vos autres configurations de stratégie. 
+
+       Remarque : Si vous utilisez « Ne pas autoriser les stratégies de report pour créer des analyses sur Windows Update » pour vérifier que les appareils n’effectuent une analyse que sur votre serveur spécifié, nous vous recommandons de configurer cette stratégie à la place ou en supplément.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Services WSUS (Windows Server Update Services)</string>
       <string id="DetectionFrequency_Help">Spécifie la durée en heures pendant laquelle Windows attendra avant de vérifier la disponibilité de nouvelles mises à jour. La durée exacte correspond à la somme de la valeur spécifique et d'une variante aléatoire comprise entre 0 et 4 heures.
 
 Si l’état Activé est sélectionné, Windows vérifiera la disponibilité des mises à jour à l’intervalle spécifié.
@@ -372,9 +384,15 @@ Pour reprendre la réception des mises à jour qualité suspendues, désélectio
 
 Si vous désactivez ou ne configurez pas cette stratégie, le comportement de Windows Update reste inchangé.</string>
       <string id="TargetReleaseVersion_Title">Sélectionner la version de la mise à jour des fonctionnalités cible</string>
-      <string id="TargetReleaseVersion_Help">Activez cette stratégie pour spécifier une version de mise à jour des fonctionnalités à demander dans les analyses suivantes.
+      <string id="TargetReleaseVersion_Help">Entrez le produit et la version répertoriés sur la page de version cible Windows Update :
 
-Entrez la version, telle qu’elle apparaît sur la page Informations sur la version de Windows aka.ms/ReleaseInformationPage</string>
+aka.ms/WindowsTargetVersioninfo
+
+L’appareil demande que Windows Update indique le produit et la version dans les analyses suivantes.
+
+Entrer un produit cible et cliquer sur OK ou Appliquer signifie que j’accepte les termes du contrat de licence logiciel Microsoft associé disponible sur aka.ms/WindowsTargetVersioninfo. Si une organisation propose le logiciel sous licence, je suis autorisé à lier l’organisation.
+
+Si vous entrez une valeur non valide, vous restez sur votre version actuelle jusqu’à ce que vous corrigiez les valeurs en indiquant un produit et une version pris en charge.</string>
       <string id="DisableWUfBSafeguards">Désactiver les protections pour les mises à jour de fonctionnalités</string>
       <string id="DisableWUfBSafeguards_Help">
           Activez ce paramètre lorsque les mises à jour de fonctionnalités doivent être déployées sur des appareils sans blocage sur les conservations de sécurité. Les retenues de protection sont des problèmes de compatibilité connus qui empêchent la mise à niveau d'être déployée sur les appareils concernés jusqu'à ce que le problème soit résolu. L’activation de cette stratégie permet à une organisation de déployer la mise à jour de fonctionnalité sur les appareils à des fins de test, ou de déployer la mise à jour de fonctionnalité sans bloquer les conservations de sécurité.
@@ -699,6 +717,13 @@ Cette stratégie remplacera les stratégies suivantes :
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Ne pas appliquer l’épinglage de certificat TLS du client Windows Update pour la détection des mises à jour.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Sélectionnez le comportement du proxy pour le client Windows Update pour la détection des mises à jour :</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Spécifiez le service source pour les classes suivantes de mises à jour Windows :</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Mises à jour des fonctionnalités</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Mises à jour qualité</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Mises à jour du pilote</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Autres mises à jour</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Vérifier la présence de mises à jour à</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">l’intervalle suivant (heures) :  </decimalTextBox>
@@ -733,6 +758,9 @@ Cette stratégie remplacera les stratégies suivantes :
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">travail (minutes) :  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Pour quelle version du produit Windows voulez-vous recevoir les mises à jour des fonctionnalités ? par exemple, Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Version cible pour les mises à jour des fonctionnalités</label>
         </textBox>

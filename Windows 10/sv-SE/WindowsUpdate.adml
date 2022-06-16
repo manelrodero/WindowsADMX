@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Minst Windows XP Professional Service Pack 1 eller Windows 2000 Service Pack 3, med undantag för Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Minst Windows Server 2003-operativsystem eller Windows XP Professional med SP1, med undantag för Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minst Windows XP Professional Service Pack 1, eller minst Windows 2000 Service Pack 3 till Windows 8.1 eller Windows Server 2012 R2 med senaste Service Pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minst Windows Vista till Windows 8.1 eller Windows Server 2012 R2 med senaste Service Pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minst Windows XP Professional Service Pack 1 eller Minst Windows 2000 Service Pack 3 till Windows 8.1 eller Windows Server 2012 R2 med de senaste service pack. Stöds inte för Windows 10 och senare.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minst Windows Vista till Windows 8.1 eller Windows Server 2012 R2 med de senaste service pack. Stöds inte för Windows 10 och senare.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 eller minst Windows 2000 Service Pack 3
 Alternativ 7 stöds endast på servrar med minst Windows Server 2016</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Minst Windows Server 2022 eller Windows 10 version 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 till Windows Server 2022 eller Windows 10​</string>
       <string id="AUDontShowUasHelp">Du kan använda den här principinställningen för att ange om alternativet "Installera uppdateringar och stäng av" ska visas i dialogrutan "Avsluta Windows".
 
 Om du aktiverar inställningen visas inte alternativet "Installera uppdateringar och stäng av" i dialogrutan "Avsluta Windows" även om det finns uppdateringar som kan installeras när användaren klickar på "Stäng av" på Start-menyn.
@@ -161,6 +163,16 @@ Om statusen är Inte konfigurerad så används inte Automatiska uppdateringar p�
         Om principen för att använda ett alternativt proxybeteende inte har konfigurerats kommer upptäckter för uppdateringar mot internetservrar att misslyckas när användarproxy behövs som en reserv.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Använd endast systemets proxy för identifiering av uppdateringar (standard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillåt att proxyn används som reserv om identifieringen av systemproxyn misslyckas</string>
+      <string id="UpdateClassPolicySource_Title">Ange källtjänst för specifika klasser i Windows-uppdateringar</string>
+      <string id="UpdateClassPolicySource_Help">När den här principen är aktiverad får enheter Windows-uppdateringar för de klasser som listas från den angivna uppdateringskällan: antingen Windows Update eller Windows Server Update Service. 
+
+Obs! Om du vill ta emot uppdateringar från Windows Server Update-tjänsten måste du ha konfigurerat en Microsoft-uppdateringstjänst på intranätet via principen Ange sökväg till tjänsten Microsoft Update på intranätet.
+
+Om den här principen inte är konfigurerad eller inaktiverad fortsätter enheten att identifiera uppdateringar enligt dina andra principkonfigurationer. 
+
+Obs! Om du använder "Tillåt inte uppskjutningsprinciper för att orsaka genomsökningar mot Windows Update" för att säkerställa att enheter bara genomsöks mot den angivna servern rekommenderar vi att du konfigurerar den här principen i stället eller utöver den.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Anger antalet timmar Windows använder för att avgöra väntetiden innan en sökning görs efter tillgängliga uppdateringar. Den exakta väntetiden är summan av det angivna värdet och ett slumpmässigt värde mellan 0 och 4 timmar.
 
         Om status är Aktiverad söker Windows efter tillgängliga uppdateringar enligt specificerat intervall.
@@ -372,9 +384,15 @@ Rensa fältet för startdatum om du vill återuppta kvalitetsuppdateringar som p
 
 Om du inaktiverar eller låter bli att konfigurera den här principen kommer Windows Update inte att ändra sin uppdateringsprocess.</string>
       <string id="TargetReleaseVersion_Title">Välj målversion för funktionsuppdatering</string>
-      <string id="TargetReleaseVersion_Help">Aktivera den här principen om du vill ange den funktionsuppdateringsversion som ska begäras i efterföljande sökningar.
+      <string id="TargetReleaseVersion_Help">Ange den produkt och version som listas på sidan Windows Update målversion:
 
-Ange versionen enligt sidan med versionsinformation för Windows: aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Enheten begär Windows Update-produkten och versionen i efterföljande genomsökningar.
+
+Att ange en målprodukt och klicka på OK eller Använd innebär att jag godkänner Licensvillkor för Programvara från Microsoft som finns på den aka.ms/WindowsTargetVersioninfo. Om en organisation licensierar programvaran är jag behörig att binda organisationen.
+
+Om du anger ett ogiltigt värde fortsätter du att använda den aktuella versionen tills du korrigerar värdena till en produkt och version som stöds.</string>
       <string id="DisableWUfBSafeguards">Inaktivera skydd för funktionsuppdateringar</string>
       <string id="DisableWUfBSafeguards_Help">
           Aktiverar den här inställningen när funktionsuppdateringar ska distribueras till enheter som inte blockerar alla skyddsundantag. Skyddslösningar är kända kompatibilitetsproblem som hindrar uppgraderingen från att distribueras till berörda enheter tills problemet är löst. Aktivering av den här principen kan tillåta att en organisation distribuerar funktionsuppdateringen till enheter för testning, eller för att distribuera funktionsuppdateringen utan blockering vid säkerhetskontroll.
@@ -699,6 +717,13 @@ principen åsidosätter följande principer:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Tving inte TLS-certifikatfästning för Windows Update-klienten för identifiering av uppdateringar.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Välj proxyns beteende för Windows Update-klienten för att hitta uppdateringar:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Ange källtjänst för följande klasser i Windows-uppdateringar:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Funktionsuppdateringar</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Kvalitetsuppdateringar</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Drivrutinsuppdateringar</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Andra uppdateringar</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Sök efter uppdateringar enligt följande</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervall (timmar):  </decimalTextBox>
@@ -733,6 +758,9 @@ principen åsidosätter följande principer:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">arbete (minuter):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Vilken Windows-produktversion vill du ta emot funktionsuppdateringar för? t.ex. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Målversion för funktionsuppdateringar</label>
         </textBox>

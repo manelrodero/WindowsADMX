@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defenderin virustentorjunta</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Poikkeukset</string>
+    <string id="DeviceControl">Laitehallinta</string>
     <string id="ExploitGuard">Microsoft Defenderin hyökkäyssuoja</string>
     <string id="ExploitGuard_ASR">Hyökkäysalueen Pienentäminen</string>
     <string id="ExploitGuard_ControlledFolderAccess">Hallittu kansion käyttö</string>
@@ -705,22 +706,22 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, ry
     <string id="SpynetReporting">Liity Microsoft MAPSiin</string>
     <string id="SpynetReporting_Explain">Tämän käytäntöasetuksen avulla voit liittyä Microsoft MAPSiin. Microsoft MAPS on verkkoyhteisö, joka auttaa valitsemaan reagointitavan mahdollisiin uhkiin. Yhteisö auttaa myös estämään uusien haittaohjelmatartuntojen leviämistä.
 
-    Voit valita, haluatko lähettää havaitusta ohjelmasta perustiedot vai lisätiedot. Lisätietojen avulla Microsoft voi luoda uusia suojaustietoja ja suojata tietokonettasi. Tiedot voivat ilmaista esimerkiksi havaittujen kohteiden sijainnin tietokoneessasi, jos haittaohjelma on poistettu. Tiedot kerätään ja lähetetään automaattisesti. Joissakin tapauksissa Microsoftille saatetaan lähettää henkilötietoja tahattomasti. Microsoft ei kuitenkaan käytä näitä tietoja henkilöllisyytesi tunnistamiseen tai ottaakseen sinuun yhteyttä.
+ Voit valita, haluatko lähettää havaitusta ohjelmasta perustiedot vai lisätiedot. Lisätietojen avulla Microsoft voi luoda uusia suojaustietoja ja suojata tietokonettasi. Tiedot voivat ilmaista esimerkiksi havaittujen kohteiden sijainnin tietokoneessasi, jos haittaohjelma on poistettu. Tiedot kerätään ja lähetetään automaattisesti. Joissakin tapauksissa Microsoftille saatetaan lähettää henkilötietoja tahattomasti. Microsoft ei kuitenkaan käytä näitä tietoja henkilöllisyytesi tunnistamiseen tai ottaakseen sinuun yhteyttä.
 
 Mahdolliset asetukset ovat seuraavat:
-    (0x0) Poistettu käytöstä (oletus)
-    (0x1) Perusjäsenyys
-    (0x2) Erityisjäsenyys
+ (0x0) Poistettu käytöstä (oletus)
+ (0x1) Perusjäsenyys
+ (0x2) Erityisjäsenyys
 
-    Perusjäsenyys lähettää Microsoftille perustiedot havaitusta ohjelmasta, kuten ohjelman lähteen, tekemäsi toimet tai automaattisesti tehdyt toimet ja tiedon toimien onnistumisesta tai epäonnistumisesta.
+ Perusjäsenyys lähettää Microsoftille perustiedot havaitusta ohjelmasta, kuten ohjelman lähteen, tekemäsi toimet tai automaattisesti tehdyt toimet ja tiedon toimien onnistumisesta tai epäonnistumisesta.
 
-    Erityisjäsenyys lähettää perustietojen lisäksi Microsoftille lisätietoja haittaohjelmista, vakoiluohjelmista ja mahdollisista ei-toivotuista ohjelmista. Tällaisia tietoja ovat esimerkiksi ohjelman sijainti, tiedostonimet, ohjelman toimintatapa ja sen vaikutus tietokoneeseesi.
+ Erityisjäsenyys lähettää perustietojen lisäksi Microsoftille lisätietoja haittaohjelmista, vakoiluohjelmista ja mahdollisista ei-toivotuista ohjelmista. Tällaisia tietoja ovat esimerkiksi ohjelman sijainti, tiedostonimet, ohjelman toimintatapa ja sen vaikutus tietokoneeseesi.
 
-    Jos otat tämän käytäntöasetuksen käyttöön, liityt Microsoft MAPSiin määritetyllä jäsenyydellä.
+ Jos otat tämän käytäntöasetuksen käyttöön, liityt Microsoft MAPSiin määritetyllä jäsenyydellä.
 
-    Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, et liity Microsoft MAPSiin.
-  
-      Perusjäsenyys ei ole enää saatavilla Windows 10:ssä, joten jos arvoksi valitaan 1 tai 2, laite rekisteröidään erityisjäsenyyteen.</string>
+ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, et liity Microsoft MAPSiin.
+ 
+ Perusjäsenyys ei ole enää saatavilla Windows 10:ssä, joten jos arvoksi valitaan 1 tai 2, laite rekisteröidään erityisjäsenyyteen.</string>
     <string id="SpynetReporting_Disabled">Poistettu käytöstä</string>
     <string id="SpynetReporting_Basic">MAPS-perusjäsenyys</string>
     <string id="SpynetReporting_Advanced">MAPS-erityisjäsenyys</string>
@@ -978,6 +979,14 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
 
     Microsoft Defenderin viruksentorjunta määrittää automaattisesti, mihin sovelluksiin voidaan luottaa. Voit lisätä luotettuja sovelluksia GP-asetuksessa Määritä sallitut sovellukset.
     </string>
+    <string id="DeviceControl_PolicyGroups">Määritä laitehallintakäytännön ryhmät</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Seuraa laitteenhallintakäytäntöryhmien XML-rakennetta, jos haluat täyttää käytäntöryhmientiedot.
+    </string>
+    <string id="DeviceControl_PolicyRules">Määritä laitehallintakäytännön säännöt</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Seuraa laitteenhallintakäytäntösääntöjen XML-rakennetta, jos haluat täyttää käytäntösääntöjen tiedot.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Jos poistat tämän asetuksen käytöstä tai et määritä sitä, lisätekstiä
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Määritä käytäntöryhmät täällä</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Määritä käytännön säännöt tässä</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

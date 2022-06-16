@@ -266,11 +266,11 @@ Si vous activez ce paramètre de stratégie, la commande Visite guidée est supp
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent exécuter la Visite guidée à partir du menu ? (Aide).</string>
       <string id="ExplainPopupBlocker_AllowList">Ce paramètre de stratégie permet de spécifier la liste des sites Web qui sont autorisés à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres du bloqueur de fenêtres publicitaires du processus Internet Explorer.
 
-Si vous activez ce paramètre de stratégie, vous pouvez entrer la liste des sites Web qui sont autorisés à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres utilisateur. Seul le nom de domaine est autorisé : www.contoso.com est valide, mais http://www.contoso.com ne l’est pas. Les caractères génériques étant autorisés, *.contoso.com est également valide.
+Si vous activez ce paramètre de stratégie, vous pouvez entrer la liste des sites Web qui sont autorisés à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres utilisateur. Seul le nom de domaine est autorisé: www.contoso.com est valide, mais http://www.contoso.com ne l’est pas. Les caractères génériques étant autorisés, *.contoso.com est également valide.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, vous ne pouvez pas spécifier la liste des exceptions du bloqueur de fenêtres publicitaires par défaut.
 
-Remarque : vous pouvez désactiver des utilisateurs pour les empêcher d’ajouter des sites Web à la liste des exceptions ou d’en supprimer, en activant la stratégie « Désactiver la gestion de la liste des exceptions du bloqueur de fenêtres publicitaires ».</string>
+Remarque: vous pouvez désactiver des utilisateurs pour les empêcher d’ajouter des sites Web à la liste des exceptions ou d’en supprimer, en activant la stratégie «Désactiver la gestion de la liste verte du bloqueur de fenêtres publicitaires».</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">Ce paramètre de stratégie vous permet d’ignorer les invites lorsqu’un script qui s’exécute dans un processus de l’ordinateur tente d’effectuer une opération sur le Presse-papiers (supprimer, copier ou coller).
 
 Si vous activez ce paramètre de stratégie, l’utilisateur ne reçoit pas d’invite lorsqu’un script qui s’exécute dans un processus de l’ordinateur effectue une opération sur le Presse-papiers. Cela signifie que si le comportement de la zone est défini pour afficher les invites, il est ignoré et activé.
@@ -415,17 +415,17 @@ Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut inte
 
 Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre anti-hameçonnage. Vous devez spécifier le mode utilisé par le filtre anti-hameçonnage : manuel, automatique ou désactivé.
 
-Si vous sélectionnez le mode manuel, le filtre anti-hameçonnage effectue seulement une analyse locale et l’utilisateur est invité à confirmer l’envoi de données à Microsoft. Si la fonctionnalité est complètement activée, les adresses des sites Web qui ne figurent pas dans la liste autorisée du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
+Si vous sélectionnez le mode manuel, le filtre anti-hameçonnage effectue seulement une analyse locale et l’utilisateur est invité à confirmer l’envoi de données à Microsoft. Si la fonctionnalité est complètement activée, les adresses des sites Web qui ne figurent pas dans la liste verte du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur est invité à déterminer le mode de fonctionnement du filtre anti-hameçonnage.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">Ce paramètre de stratégie permet à l’utilisateur d’activer le filtre SmartScreen, qui l’avertit si le site Web visité est connu pour ses tentatives frauduleuses de collecte d’informations personnelles par « hameçonnage » ou pour son hébergement de programmes malveillants.
 
-Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Vous devez spécifier le mode utilisé par le filtre SmartScreen : activé ou désactivé. Toutes les adresses des sites Web qui ne figurent pas dans la liste autorisée du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
+Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Vous devez spécifier le mode utilisé par le filtre SmartScreen : activé ou désactivé. Toutes les adresses des sites Web qui ne figurent pas dans la liste verte du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur est invité à décider de l’activation ou non du filtre SmartScreen durant l’introduction de l’interface logicielle lors de la première utilisation.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">Ce paramètre de stratégie empêche l’utilisateur de gérer le filtre SmartScreen, qui l’avertit si le site Web visité est connu pour ses tentatives frauduleuses de collecte d’informations personnelles par « hameçonnage » ou pour son hébergement de programmes malveillants.
 
-Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Toutes les adresses des sites Web qui ne figurent pas dans la liste autorisée du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
+Si vous activez ce paramètre de stratégie, l’utilisateur n’est pas invité à activer le filtre SmartScreen. Toutes les adresses des sites Web qui ne figurent pas dans la liste verte du filtre sont automatiquement envoyées à Microsoft sans demande à l’utilisateur.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur est invité à décider de l’activation ou non du filtre SmartScreen durant l’introduction de l’interface logicielle lors de la première utilisation.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Ce paramètre de stratégie désactive la fonctionnalité de vérification des paramètres de sécurité, qui examine les paramètres de sécurité d’Internet Explorer pour déterminer s’ils font courir un risque à Internet Explorer.
@@ -1345,7 +1345,7 @@ Si vous activez ce paramètre de stratégie, l’utilisateur ne peut pas ajouter
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur peut ajouter ou supprimer des sites Web dans la liste des exceptions.
 
-Remarque : vous pouvez autoriser une liste de sites Web par défaut à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres du bloqueur de fenêtres publicitaires du processus Internet Explorer, en activant le paramètre de stratégie « Liste des fenêtres publicitaires autorisées ».</string>
+Remarque: vous pouvez autoriser une liste de sites Web par défaut à ouvrir des fenêtres publicitaires, quelle que soit la valeur des paramètres du bloqueur de fenêtres publicitaires du processus Internet Explorer, en activant le paramètre de stratégie «Liste verte des fenêtres publicitaires».</string>
       <string id="IE_ExplainRestrictPopupManagement">Ce paramètre de stratégie vous permet de gérer les fenêtres publicitaires dans Internet Explorer.
 
 Si vous activez ce paramètre de stratégie, les informations du Panneau de configuration concernant la gestion des fenêtres publicitaires sont non disponibles (grisées) et aucun autre contrôle, notification et boîte de dialogue du gestionnaire de fenêtres publicitaires n’apparaît. Les fenêtres publicitaires fonctionnent comme dans Windows XP Service Pack 1 ou versions antérieures, mais les fenêtres affichées hors de l’écran continuent à être repositionnées sur l’écran.
@@ -3014,7 +3014,7 @@ Cette fonctionnalité s’applique uniquement aux versions d’Internet Explorer
       <string id="Persistence_FileLimits4">Limites de taille de fichier pour la zone Sites sensibles</string>
       <string id="PhishingOff">Désactivé</string>
       <string id="PhishingOn">Activé</string>
-      <string id="PopupBlocker_AllowList">Liste des fenêtres publicitaires autorisées</string>
+      <string id="PopupBlocker_AllowList">Liste verte des fenêtres publicitaires</string>
       <string id="Printing">Impression en cours</string>
       <string id="Printing_Explain">Ce paramètre de stratégie spécifie si Internet Explorer imprime les couleurs et les images d’arrière-plan lorsque l’utilisateur imprime une page Web. L’inclusion des couleurs et des images d’arrière-plan peut réduire la vitesse et la qualité d’impression de la page, selon les capacités de votre imprimante.
 
@@ -3974,6 +3974,14 @@ si vous activez cette stratégie, les fonctionnalités de clé hotkey étendues 
 si vous désactivez ou ne configurez pas cette stratégie, les touches d’accès rapide étendues ne fonctionneront pas en mode Internet Explorer.
 
 pour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Rétablir le zoom par défaut pour les boîtes de dialogue HTML en mode Internet Explorer</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Ce paramètre de stratégie permet aux administrateurs de rétablir le zoom par défaut pour les boîtes de dialogue HTML en mode Internet Explorer.
+
+Si vous activez cette stratégie, le zoom d’une boîte de dialogue HTML en mode Internet Explorer n’est pas propagé à partir de sa page parente.
+
+Si vous désactivez ou ne configurez pas cette stratégie, le zoom d’une boîte de dialogue HTML en mode Internet Explorer est défini en fonction du zoom de sa page parente.
+
+Pour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Désactiver Internet Explorer 11 comme navigateur autonome</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Cette stratégie vous permet de limiter le lancement d’Internet Explorer en tant que navigateur autonome.
 

@@ -187,6 +187,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="DeviceInstall_Allow_Deny_Layered" class="Machine" displayName="$(string.DeviceInstall_Allow_Deny_Layered)" explainText="$(string.DeviceInstall_Allow_Deny_Layered_Help)" key="Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions" valueName="AllowDenyLayered">
+        <parentCategory ref="DeviceInstall_Restrictions_Category" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS5" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+    </policy>
     <policy name="DeviceInstall_Policy_RebootTime" class="Machine" displayName="$(string.DeviceInstall_Policy_RebootTime)" presentation="$(presentation.DeviceInstall_Policy_RebootTime)" explainText="$(string.DeviceInstall_Policy_RebootTime_Help)" key="Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions" valueName="ForceReboot">
       <parentCategory ref="DeviceInstall_Restrictions_Category" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />

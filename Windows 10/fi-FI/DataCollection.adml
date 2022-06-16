@@ -134,11 +134,26 @@ Käytä Salli telemetria -käytäntöasetusta, jos haluat määrittää organisa
       </string>
 
       <string id="AllowCommercialDataPipeline">Salli kaupallisten tietojen putki</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline ottaa Windowsin yritystietojen putken käyttöön tässä laitteessa.
-          Jos otat tämän asetuksen käyttöön, tästä laitteesta kerätyt tiedot sisällytetään Windowsin yritystietojen putkeen.
-          Jos poistat tämän asetuksen käytöstä tai et määritä sitä, kaikki laitteen tiedot kerätään ja käsitellään Windowsin vakiotietojen putken käytäntöjen mukaisesti.
-          Tämän asetuksen määrittäminen ei muuta telemetrian keräystasoa tai käyttäjän mahdollisuutta muuttaa tasoa. Tämä asetus koskee vain Windows-käyttöjärjestelmää ja Windowsiin sisältyvä sovelluksia, ei kolmannen osapuolen sovelluksia tai palveluita, jotka toimivat Windows 10:ssä.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline määrittää, onko Microsoft tästä laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä tai rekisterinpitäjä.
+          Jos otat tämän käytännön käyttöön, Microsoft on tästä Windows-laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä. Laite on rekisteröitävä Azure AD:hen, jotta tämä käytäntö onnistuu.
+          Jos poistat tämän käytännön käytöstä tai et määritä sitä, Microsoft on tästä laitteesta kerättyjen Windowsin diagnostiikkatietojen rekisterinpitäjä.
+          Tämä käytäntö määrittää vain sen, onko Microsoft tästä laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä. Tämän asetuksen määrittäminen ei muuta sitä kerätäänkö diagnostiikkatietoja tai käyttäjän mahdollisuutta muuttaa tasoa. Jos haluat määrittää tietojen keräämisen tason, käytä Salli diagnostiikkatiedot -käytäntöä. Jos haluat estää tämän laitteen käyttäjiä muuttamasta diagnostiikkatietojen tasoa, käytä Määritä diagnostiikkatietojen suostumusasetuksen käyttöliittymä -käytäntöä.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Ota OneSettings-valvonta käyttöön</string>
+      <string id="EnableOneSettingsAuditing_Explain">Tämä käytäntöasetus määrittää, tallentaako Windows yritykset yhdistää OneSettings-palvelua tapahtumalokiin.
+
+Jos tämä käytäntö otetaan käyttöön, Windows tallentaa yritykset yhdistää OneSettings-palvelua Microsoft\Windows\Privacy-Auditing\Operational -tapahtumalokikanavalle.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows ei tallenna yrityksiä yhdistää OneSettings-palvelua tapahtumalokiin.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Poista OneSettings-lataukset käytöstä</string>
+      <string id="DisableOneSettingsDownloads_Explain">Tämä käytäntöasetus määrittää, voiko Windows yhdistää OneSettings-palveluun.
+
+Jos tämä käytäntö otetaan käyttöön, Windows ei yritä yhdistää OneSettings-palveluun.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows yrittää ajoittain yhdistää OneSettings-palveluun, ladatakseen määritysasetukset.
       </string>
     </stringTable>
     <presentationTable>

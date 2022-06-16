@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Uitsluitingen</string>
+    <string id="DeviceControl">Apparaatbesturing</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Beveiligingsrisico voor aanvallen beperken</string>
     <string id="ExploitGuard_ControlledFolderAccess">Controlled Folder Access</string>
@@ -703,24 +704,24 @@ Let op: deze configuratie is alleen mogelijk bij NTFS-volumes. Bij andere bestan
     <string id="SubmitSamplesConsent_Send_All">Alle voorbeelden verzenden</string>
 
     <string id="SpynetReporting">Aan Microsoft MAPS toevoegen</string>
-    <string id="SpynetReporting_Explain">Met deze beleidsinstelling kunt u deelnemen aan Microsoft MAPS. Microsoft MAPS is de onlinecommunity die u helpt te bepalen hoe u moet reageren op mogelijke bedreigingen. De community helpt ook bij het tegengaan van de verspreiding van infecties door nieuwe schadelijke software.
+    <string id="SpynetReporting_Explain">Met deze beleidsinstelling kunt u deelnemen aan Microsoft MAPS. Microsoft MAPS is de onlinecommunity die u helpt te bepalen hoe u moet reageren op mogelijke bedreigingen. De community helpt ook bij het tegengaan van de verspreiding van infecties door nieuwe malware.
 
-    U kunt kiezen of u basisinformatie of uitgebreide informatie over gedetecteerde software wilt verzenden. Als u uitgebreide informatie verzendt, kan deze door Microsoft worden gebruikt om nieuwe Security Intelligence te maken, zodat uw computer beter kan worden beveiligd. Deze informatie kan bijvoorbeeld aspecten bevatten zoals de locatie van gedetecteerde items op uw computer als er schadelijke software is verwijderd. De informatie wordt automatisch verzameld en verzonden. In sommige gevallen kunnen onbedoeld persoonlijke gegevens naar Microsoft worden verzonden. Microsoft zal deze gegevens echter niet gebruiken om u te identificeren of contact met u op te nemen.
+ U kunt kiezen of u basisinformatie of uitgebreide informatie over gedetecteerde software wilt verzenden. Als u uitgebreide informatie verzendt, kan deze door Microsoft worden gebruikt om nieuwe Security Intelligence te maken, zodat uw computer beter kan worden beveiligd. Deze informatie kan bijvoorbeeld aspecten bevatten zoals de locatie van gedetecteerde items op uw computer als er schadelijke software is verwijderd. De informatie wordt automatisch verzameld en verzonden. In sommige gevallen kunnen onbedoeld persoonlijke gegevens naar Microsoft worden verzonden. Microsoft zal deze gegevens echter niet gebruiken om u te identificeren of contact met u op te nemen.
 
-    Mogelijke opties zijn:
-    (0x0) Uitgeschakeld (standaard)
-    (0x1) Basislidmaatschap
-    (0x2) Uitgebreid lidmaatschap
+ Mogelijke opties zijn:
+ (0x0) Uitgeschakeld (standaard)
+ (0x1) Basislidmaatschap
+ (0x2) Uitgebreid lidmaatschap
 
-    Met het basislidmaatschap worden er basisgegevens naar Microsoft verzonden over software die is gedetecteerd, zoals waar de software vandaan kwam, de acties die u toepast, of die automatisch worden toegepast en of die acties succesvol waren.
+ Met het basislidmaatschap worden er basisgegevens naar Microsoft verzonden over software die is gedetecteerd, zoals waar de software vandaan kwam, de acties die u toepast, of die automatisch worden toegepast en of die acties succesvol waren.
 
-    Met het uitgebreide lidmaatschap worden er naast basisgegevens meer gegevens naar Microsoft verzonden over schadelijke software, spyware en mogelijk ongewenste software, zoals de locatie van de software, bestandsnamen, hoe de software werkt, en hoe deze invloed heeft gehad op uw computer.
+ Met het uitgebreide lidmaatschap worden er naast basisgegevens meer gegevens naar Microsoft verzonden over malware, spyware en mogelijk ongewenste software, zoals de locatie van de software, bestandsnamen, hoe de software werkt, en hoe deze invloed heeft gehad op uw computer.
 
-    Als u deze instelling inschakelt, wordt u lid van Microsoft MAPS met het opgegeven lidmaatschap.
+ Als u deze instelling inschakelt, wordt u lid van Microsoft MAPS met het opgegeven lidmaatschap.
 
-    Als u deze instelling uitschakelt of niet configureert, wordt u geen lid van Microsoft MAPS.
-  
-    Het basislidmaatschap is niet meer beschikbaar in Windows 10. Dit betekent dat de waarde 1 of 2 automatisch betekent dat u kiest voor het uitgebreide lidmaatschap.</string>
+ Als u deze instelling uitschakelt of niet configureert, wordt u geen lid van Microsoft MAPS.
+ 
+ Het basislidmaatschap is niet meer beschikbaar in Windows 10. Dit betekent dat de waarde 1 of 2 automatisch betekent dat u kiest voor het uitgebreide lidmaatschap.</string>
     <string id="SpynetReporting_Disabled">Uitgeschakeld</string>
     <string id="SpynetReporting_Basic">Basislidmaatschap MAPS</string>
     <string id="SpynetReporting_Advanced">Geavanceerd lidmaatschap MAPS</string>
@@ -978,6 +979,14 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
 
     Met Microsoft Defender Antivirus wordt automatisch bepaald welke toepassingen kunnen worden vertrouwd. In de GP-instelling Toegestane toepassingen configureren kunt u aanvullende vertrouwde toepassingen toevoegen.
     </string>
+    <string id="DeviceControl_PolicyGroups">Beleidsgroepen voor apparaatbesturing definiëren</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Volg het XML-schema van de beleidsgroepen voor apparaatbesturing om de gegevens van de beleidsgroepen in te vullen.
+    </string>
+    <string id="DeviceControl_PolicyRules">Beleidsregels voor apparaatbesturing definiëren</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Volg het XML-schema van de beleidsregels voor apparaatbesturing om de gegevens van de beleidsregels in te vullen.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Als u deze instelling uitschakelt of niet configureert, wordt er geen extra teks
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definieer de beleidsgroepen hier</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definieer de beleidsregels hier</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

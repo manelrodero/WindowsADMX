@@ -223,5 +223,25 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="EnableOneSettingsAuditing" class="Machine" displayName="$(string.EnableOneSettingsAuditing)" explainText="$(string.EnableOneSettingsAuditing_Explain)" key="Software\Policies\Microsoft\Windows\DataCollection" valueName="EnableOneSettingsAuditing">
+      <parentCategory ref="windows:DataCollectionAndPreviewBuilds" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableOneSettingsDownloads" class="Machine" displayName="$(string.DisableOneSettingsDownloads)" explainText="$(string.DisableOneSettingsDownloads_Explain)" key="Software\Policies\Microsoft\Windows\DataCollection" valueName="DisableOneSettingsDownloads">
+      <parentCategory ref="windows:DataCollectionAndPreviewBuilds" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>

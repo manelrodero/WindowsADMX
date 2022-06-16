@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Minimálně Windows XP Professional Service Pack 1 nebo Windows 2000 Service Pack 3, kromě systému Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Minimálně operační systémy Windows Server 2003 nebo Windows XP Professional s aktualizací Service Pack 1, kromě systému Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minimálně Windows XP Professional Service Pack 1 nebo minimálně Windows 2000 Service Pack 3 až Windows 8.1 nebo Windows Server 2012 R2 s nejnovější aktualizací Service Pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minimálně Windows Vista až Windows 8.1 nebo Windows Server 2012 R2 s nejnovější aktualizací Service Pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minimálně Windows XP Professional Service Pack 1 nebo minimálně Windows 2000 Service Pack 3 až Windows 8.1 nebo Windows Server 2012 R2 s nejaktuálnější aktualizací Service Pack. Nepodporováno na Windows 10 a vyšších.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minimálně Windows Vista až Windows 8.1 nebo Windows Server 2012 R2 s nejaktuálnější aktualizací Service Pack Nepodporováno na Windows 10 a vyšších.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 nebo alespoň Windows 2000 Service Pack 3
 Možnost 7 je podporována na serverech minimálně s edicí Windows Server 2016.</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Minimálně Windows Server 2022 nebo Windows 10 verze 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 nebo Windows Server 2022 nebo Windows 10​</string>
       <string id="AUDontShowUasHelp">Nastavení této zásady umožňuje určit, zda bude v dialogu pro vypnutí počítače zobrazena možnost Nainstalovat aktualizace a vypnout.
 
 Pokud toto nastavení zásad povolíte, nebude volba Nainstalovat aktualizace a vypnout zobrazena v dialogovém okně pro vypnutí počítače, ani v případě, že jsou při vypínání připraveny aktualizace k instalaci.
@@ -160,6 +162,16 @@ Pokud bude nastavena na Nenakonfigurováno, používání automatických aktuali
         Zjišťování aktualizací v rámci intranetových serverů neuspěje,  když se bude jako náhradní akce vyžadovat proxy uživatele a zároveň nebude nakonfigurovaná zásada pro použití alternativního chování proxy.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Pro zjišťování aktualizací používat pouze systémový proxy server (výchozí)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Povolit použití uživatelského proxy serveru jako náhradního, pokud se nezdaří rozpoznávání pomocí systému proxy</string>
+      <string id="UpdateClassPolicySource_Title">Zadejte zdrojovou službu pro určité třídy aktualizací Windows</string>
+      <string id="UpdateClassPolicySource_Help">Pokud je tato zásada povolena, budou zařízení přijímat aktualizace systému Windows pro třídy uvedené na základě zadaného zdroje aktualizací: Windows Update nebo Windows Server Update Service. 
+
+Poznámka: Chcete-li dostávat aktualizace ze služby Windows Server Update Service, je nutné správně nakonfigurovat intranetové umístění služby pomocí zásady „Určit umístění intranetového serveru služby Microsoft Update“.
+
+Pokud toto nastavení zásad není nakonfigurováno nebo je zakázáno, zařízení bude i nadále zjišťovat aktualizace pro vaše další konfigurace zásad. 
+
+Poznámka: Pokud používáte možnost „Nepovolit, aby se na webu Windows Update vyhledaly zásady časově rozlišených položek“, měli byste aktuálně zajistit, aby se zařízení kontrolovala jenom na zadaném serveru. Doporučujeme raději tuto zásadu nakonfigurovat.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Určuje počet hodin, pomocí kterých systém Windows zjistí dobu čekání před vyhledáním dostupných aktualizací. Přesná doba čekání je součtem zadané hodnoty a náhodné odchylky v rozsahu 0–4 hodin.
 
         Pokud je nastavený stav Povoleno, vyhledá systém Windows dostupné aktualizace v zadaném intervalu.
@@ -371,9 +383,15 @@ Pokud chcete znovu přijímat aktualizace pro zvýšení kvality, které jsou po
 
 Pokud tuto zásadu zakážete nebo nenakonfigurujete, služba Windows Update své chování nezmění.</string>
       <string id="TargetReleaseVersion_Title">Vybrat cílovou verzi aktualizace funkcí</string>
-      <string id="TargetReleaseVersion_Help">Pokud povolíte tuto zásadu, můžete určit cílovou verzi aktualizace funkcí, která má být vyžadována při následných kontrolách.
+      <string id="TargetReleaseVersion_Help">Zadejte produkt a verzi uvedené na stránce cílové verze služby Windows Update:
 
-Zadejte verzi uvedenou na stránce s informacemi o verzích Windows: aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Zařízení požádá o produkt a verzi služby Windows Update při následných kontrolách.
+
+Když zadáte cílový produkt a kliknete na OK nebo Použít, znamená to, že přijímáte Licenční podmínky pro software společnosti Microsoft, jejichž znění najdete na aka.ms/WindowsTargetVersioninfo. Pokud organizace pro tento software poskytuje licenci, potvrzujete, že jste autorizovaní přijmout podmínky jménem organizace.
+
+Pokud zadáte neplatnou hodnotu, zůstanete ve své aktuální verzi, dokud hodnoty neopravíte na podporovaný produkt a verzi.</string>
       <string id="DisableWUfBSafeguards">Zakázat ochranu pro aktualizace funkcí</string>
       <string id="DisableWUfBSafeguards_Help">
           Toto nastavení povolte, pokud se mají aktualizace funkcí nasadit do zařízení bez blokování na jakýchkoli ochranných blokováních. Ochranná blokování jsou známé problémy s kompatibilitou, které blokují nasazení upgradů do ovlivněných zařízení, dokud se problém nevyřeší. Pokud tuto zásadu povolíte, může organizace nasazovat aktualizace funkcí do zařízení za účelem testování nebo nasazovat aktualizace funkcí bez blokování ze strany ochranných blokování.
@@ -698,6 +716,13 @@ Tato zásada přepíše následující zásady:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">U klienta služby Windows Update na zjišťování aktualizací nevynucujte připnutí certifikátu TLS.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Vyberte chování serveru proxy pro klienta služby Windows Update pro zjišťování aktualizací:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Zadejte zdrojovou službu pro následující třídy aktualizací Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Aktualizace funkcí</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Aktualizace pro zvýšení kvality</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Aktualizace ovladačů</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Ostatní aktualizace</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Zjišťovat aktualizace v</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervalu (hodiny):  </decimalTextBox>
@@ -732,6 +757,9 @@ Tato zásada přepíše následující zásady:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">práce (v minutách):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Pro kterou verzi produktu Windows chcete dostávat aktualizace funkcí? např. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Cílová verze pro aktualizace funkcí</label>
         </textBox>

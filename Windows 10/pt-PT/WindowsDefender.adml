@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivírus do Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusões</string>
+    <string id="DeviceControl">Controlo de Dispositivos</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Redução de Superfície de Ataque</string>
     <string id="ExploitGuard_ControlledFolderAccess">Acesso Controlado a Pastas</string>
@@ -705,22 +706,22 @@ Se desativar ou não configurar esta definição, a Política de Grupo terá pri
     <string id="SpynetReporting">Aderir ao Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Esta definição de política permite-lhe aderir ao Microsoft MAPS. O Microsoft MAPS é a comunidade online que o ajuda a escolher a forma de responder a possíveis ameaças. A comunidade também ajuda a travar a disseminação de novas infeções de software malicioso.
 
-    Pode optar por enviar informações básicas ou adicionais acerca de software detetado. As informações adicionais ajudam a Microsoft a criar novas informações de segurança e a ajudar a proteger o seu computador. Estas informações podem incluir, por exemplo, a localização dos itens detetados no seu computador, caso tenha sido removido software nocivo. As informações serão recolhidas e enviadas automaticamente. Em alguns casos, poderão ser inadvertidamente enviadas informações pessoais para a Microsoft. Contudo, a Microsoft não utilizará essas informações para o identificar ou contactar.
+ Pode optar por enviar informações básicas ou adicionais acerca de software detetado. As informações adicionais ajudam a Microsoft a criar novas informações de segurança e a ajudar a proteger o seu computador. Estas informações podem incluir, por exemplo, a localização dos itens detetados no seu computador, caso tenha sido removido software nocivo. As informações serão recolhidas e enviadas automaticamente. Em alguns casos, poderão ser inadvertidamente enviadas informações pessoais para a Microsoft. Contudo, a Microsoft não utilizará essas informações para o identificar ou contactar.
 
-    As opções possíveis são:
-    (0x0) Desativado (predefinição)
-    (0x1) Adesão básica
-    (0x2) Adesão avançada
+ As opções possíveis são:
+ (0x0) Desativado (predefinição)
+ (0x1) Adesão básica
+ (0x2) Adesão avançada
 
-    A adesão básica enviará informações básicas para a Microsoft sobre o software detetado, incluindo a respetiva proveniência, as ações que o utilizador aplicou ou que são aplicadas automaticamente e se tais ações tiveram êxito.
+ A adesão básica enviará informações básicas para a Microsoft sobre o software detetado, incluindo a respetiva proveniência, as ações que o utilizador aplicou ou que são aplicadas automaticamente e se tais ações tiveram êxito.
 
-    Para além de informações básicas, a adesão avançada envia mais informações para a Microsoft sobre software malicioso, spyware e software potencialmente indesejável, incluindo a localização do mesmo, os nomes dos ficheiros, o modo de funcionamento do software e o impacto que teve no computador.
+ Para além de informações básicas, a adesão avançada envia mais informações para a Microsoft sobre software malicioso, spyware e software potencialmente indesejável, incluindo a localização do mesmo, os nomes dos ficheiros, o modo de funcionamento do software e o impacto que teve no computador.
 
-    Se ativar esta definição, irá aderir ao Microsoft MAPS com o tipo de adesão especificado.
+ Se ativar esta definição, irá aderir ao Microsoft MAPS com o tipo de adesão especificado.
 
-    Se desativar ou não configurar esta definição, não irá aderir ao Microsoft MAPS.
-  
-    No Windows 10, a Adesão básica já não está disponível, pelo que definir o valor como 1 ou 2 inscreve o dispositivo na Adesão avançada.</string>
+ Se desativar ou não configurar esta definição, não irá aderir ao Microsoft MAPS.
+ 
+ No Windows 10, a Adesão básica já não está disponível, pelo que definir o valor como 1 ou 2 inscreve o dispositivo na Adesão avançada.</string>
     <string id="SpynetReporting_Disabled">Desativado</string>
     <string id="SpynetReporting_Basic">MAPS Básico</string>
     <string id="SpynetReporting_Advanced">MAPS Avançado</string>
@@ -978,6 +979,14 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
 
     O Antivírus do Microsoft Defender determina automaticamente que aplicações podem ser consideradas fidedignas. Pode adicionar aplicações fidedignas na definição de GP de configuração de aplicações permitidas.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definir grupos de políticas de controlo de dispositivos</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Siga o esquema XML dos grupos de políticas de controlo de dispositivos para preencher os dados dos grupos de políticas.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definir regras de política de controlo de dispositivos</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Siga o esquema XML das regras de política de controlo de dispositivos para preencher os dados das regras de política.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Se desativar ou não configurar esta definição, não será apresentado qualque
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definir os grupos de políticas aqui</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definir as regras de política aqui</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Utiliser Windows Hello Entreprise</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Utiliser le certificat pour l’authentification locale</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Utiliser l’approbation cloud pour l’authentification locale</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello Entreprise est une autre méthode permettant de se connecter à Windows à l’aide de votre compte Active Directory ou Azure Active Directory qui peut remplacer les mots de passe, les cartes à puce et les cartes à puce virtuelles.
 
@@ -118,13 +120,24 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Windows ne
 REMARQUE : cette stratégie ne s'applique qu'aux appareils enregistrés auprès d'Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Utilisez ce paramètre de stratégie pour configurer Windows Hello Entreprise et inscrire un certificat de connexion qui sera utilisé pour l'authentification locale.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Utilisez ce paramètre de stratégie pour configurer Windows Hello Entreprise pour inscrire un certificat de connexion utilisé pour l’authentification locale.
 
-Si vous activez ce paramètre de stratégie, Windows Hello Entreprise inscrit un certificat de connexion qui sera utilisé pour l'authentification locale.
+Si vous activez ce paramètre de stratégie, Windows Hello Entreprise inscrit un certificat de connexion utilisé pour l’authentification locale.
 
-Si vous désactivez ou que vous ne configurez pas ce paramètre de stratégie, Windows Hello Entreprise inscrit une clé qui sera utilisée pour l'authentification locale.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows Hello Entreprise utilisera une clé ou un ticket Kerberos (en fonction d’autres paramètres de stratégie) pour l’authentification locale.
 
-REMARQUE : la désactivation ou la non-configuration de ce paramètre de stratégie et l'activation du paramètre de stratégie « Utiliser Windows Hello Entreprise » exige que l'environnement dispose d'au moins un contrôleur de domaine Windows Server 2016 afin d'éviter que l'authentification Windows Hello Entreprise n'échoue.
+REMARQUE : la désactivation ou la non-configuration de ce paramètre de stratégie et l’activation du paramètre de stratégie « Utiliser Windows Hello Entreprise » nécessitent que l’environnement ait un ou plusieurs contrôleurs de domaine Windows Server 2016 pour empêcher Windows Hello Entreprise’échec de l’authentification.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Utilisez ce paramètre de stratégie pour configurer Windows Hello Entreprise afin d’utiliser Azure AD Kerberos pour l’authentification locale.
+
+Si vous activez ce paramètre de stratégie, Windows Hello Entreprise utilisera un ticket Kerberos récupéré lors de l’authentification sur Azure pour l’authentification locale.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Windows Hello Entreprise utilisera une clé ou un certificat (en fonction d’autres paramètres de stratégie) pour l’authentification locale. 
+ 
+REMARQUE : un environnement qui active ce paramètre de stratégie et le paramètre de stratégie « Utiliser Windows Hello Entreprise » nécessite un ou plusieurs contrôleurs de domaine Windows Server 2016. Sinon, l’authentification Windows Hello Entreprise échouera.
+
+Cette stratégie n’est prise en charge que sur Windows 10, version 21H2 et ultérieure.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configurer les facteurs de déverrouillage de l’appareil</string>

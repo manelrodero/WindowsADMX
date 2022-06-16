@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">비즈니스용 Windows Hello 사용</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">온-프레미스 인증에 인증서 사용</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">온-프레미스 인증에 대한 클라우드 트러스트 사용</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">비즈니스용 Windows Hello는 암호, 스마트 카드 및 가상 스마트 카드를 대체할 수 있는 Active Directory 또는 Azure Active Directory 계정을 사용하여 Windows에 로그인하는 대체 방법입니다.
 
@@ -118,13 +120,24 @@
 참고: 이 정책은 Azure Active Directory에 등록된 디바이스에 국한하여 적용됩니다.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">이 정책 설정을 사용하면 온-프레미스 인증에 사용되는 로그인 인증서를 등록하도록 비즈니스용 Windows Hello를 구성할 수 있습니다.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">이 정책 설정을 사용하여 온-프레미스 인증에 사용되는 로그인 인증서를 등록할 비즈니스용 Windows Hello 구성합니다.
 
-이 정책 설정을 사용하면 비즈니스용 Windows Hello가 온-프레미스 인증에 사용되는 로그인 인증서를 등록합니다.
-		
-이 정책 설정을 사용하지 않거나 구성하지 않으면 비즈니스용 Windows Hello가 온-프레미스 인증에 사용되는 키를 등록합니다.
+이 정책 설정을 사용하면 비즈니스용 Windows Hello 온-프레미스 인증에 사용되는 로그인 인증서를 등록합니다.
 
-참고: 이 정책 설정을 사용하지 않거나 구성하지 않고 "비즈니스용 Windows Hello 사용" 정책 설정을 사용하려면 비즈니스용 Windows Hello 인증이 실패하지 않도록 환경에 Windows Server 2016 도메인 컨트롤러가 하나 이상 있어야 합니다.
+이 정책 설정을 사용하지 않거나 구성하지 않으면 비즈니스용 Windows Hello 온-프레미스 인증에 키 또는 Kerberos 티켓(다른 정책 설정에 따라 다름)을 사용합니다.
+
+참고: 이 정책 설정을 사용하지 않거나 구성하지 않고 "비즈니스용 Windows Hello 사용" 정책 설정을 사용하려면 환경에 하나 이상의 Windows Server 2016 도메인 컨트롤러가 있어야 비즈니스용 Windows Hello 인증 실패를 방지할 수 있습니다.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">이 정책 설정을 사용하여 온-프레미스 인증에 Azure AD Kerberos를 사용하도록 비즈니스용 Windows Hello 구성합니다.
+
+이 정책 설정을 사용하면 비즈니스용 Windows Hello 온-프레미스 인증을 위해 Azure 인증에서 검색된 Kerberos 티켓을 사용합니다.
+
+이 정책 설정을 사용하지 않거나 구성하지 않으면 비즈니스용 Windows Hello 온-프레미스 인증에 키 또는 인증서(다른 정책 설정에 따라 다름)를 사용합니다. 
+ 
+참고: 이 정책 설정과 "비즈니스용 Windows Hello 사용" 정책 설정을 모두 사용하는 환경에는 하나 이상의 Windows Server 2016 도메인 컨트롤러가 필요합니다. 그렇지 않으면 비즈니스용 Windows Hello 인증이 실패합니다.
+
+이 정책은 Windows 10 버전 21H2 이상에서만 지원됩니다.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">장치 잠금 해제 요인 구성</string>

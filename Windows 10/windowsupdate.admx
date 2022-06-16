@@ -76,6 +76,20 @@
         </or>
       </definition>
 
+      <!--Windows Server 2016 through Windows Server 2022, or Windows 10-->
+      <definition name="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" displayName="$(string.WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="13" maxVersionIndex="14"/>
+        </or>
+      </definition>
+
+      <!--At least Windows 10 2004-->
+      <definition name="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004" displayName="$(string.WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+        </or>
+      </definition>
+
     </definitions>
   </supportedOn>
 
@@ -391,17 +405,85 @@
         <boolean id="CorpWUFillEmptyContentUrls" valueName="FillEmptyContentUrls" required="false" />
         <boolean id="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" valueName="DoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" required="false" />
         <enum id="SetProxyBehaviorForUpdateDetection" valueName="SetProxyBehaviorForUpdateDetection" required="true">
-            <item displayName="$(string.OnlyUseSystemProxyForUpdateDetection)">
-              <value>
-                <decimal value="0" />
-              </value>
-            </item>
-            <item displayName="$(string.AllowUserProxyAsFallbackForUpdateDetection)">
-              <value>
-                <decimal value="1" />
-              </value>
-            </item>
-          </enum>
+          <item displayName="$(string.OnlyUseSystemProxyForUpdateDetection)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.AllowUserProxyAsFallbackForUpdateDetection)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="UpdateClassPolicySource_Title" class="Machine" displayName="$(string.UpdateClassPolicySource_Title)" explainText="$(string.UpdateClassPolicySource_Help)" presentation="$(presentation.UpdateClassPolicySource_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate">
+      <parentCategory ref="WindowsUpdateCat" />
+      <supportedOn ref="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004" />
+      <enabledList>
+        <item key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="UseUpdateClassPolicySource">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="UseUpdateClassPolicySource">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+      </disabledList>
+      <elements>
+        <enum id="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" valueName="SetPolicyDrivenUpdateSourceForFeatureUpdates" required="true" >
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWSUS)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWU)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" valueName="SetPolicyDrivenUpdateSourceForQualityUpdates" required="true" >
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWSUS)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWU)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" valueName="SetPolicyDrivenUpdateSourceForDriverUpdates" required="true" >
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWSUS)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWU)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" valueName="SetPolicyDrivenUpdateSourceForOtherUpdates" required="true" >
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWSUS)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.UpdateClassPolicySourceSelectionWU)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
       </elements>
     </policy>
     <policy name="DetectionFrequency_Title" class="Machine" displayName="$(string.DetectionFrequency_Title)" explainText="$(string.DetectionFrequency_Help)" presentation="$(presentation.DetectionFrequency_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="DetectionFrequencyEnabled">
@@ -594,6 +676,7 @@
             <decimal value="0" />
         </disabledValue>
         <elements>
+          <text id="ProductVersionId" valueName="ProductVersion" maxLength="25" />
           <text id="TargetReleaseVersionId" valueName="TargetReleaseVersionInfo" maxLength="4" />
         </elements>
     </policy>
@@ -999,7 +1082,7 @@
       presentation="$(presentation.AutoRestartDeadline_Title)"
       valueName="SetAutoRestartDeadline">
       <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1416,7 +1499,7 @@
       presentation="$(presentation.AutoRestartRequiredNotificationDismissal_Title)"
       valueName="SetAutoRestartRequiredNotificationDismissal">
       <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1446,7 +1529,7 @@
       presentation="$(presentation.AutoRestartNotificationConfig_Title)"
       valueName="SetAutoRestartNotificationConfig">
       <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1490,7 +1573,7 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       valueName="SetAutoRestartNotificationDisable">
       <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1506,7 +1589,7 @@
       presentation="$(presentation.RestartWarningSchd_Title)"
       valueName="SetRestartWarningSchd">
       <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1568,7 +1651,7 @@
       presentation="$(presentation.EngagedRestartTransitionSchedule_Title)"
       valueName="SetEngagedRestartTransitionSchedule">
       <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

@@ -134,11 +134,26 @@ Para establecer un límite en el nivel de datos de diagnóstico que tu organizac
       </string>
 
       <string id="AllowCommercialDataPipeline">Permitir canalización de datos comerciales</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline permite que el dispositivo participe en la canalización de datos empresariales de Windows.
-          Si habilita esta opción, los datos recopilados del dispositivo participarán en la canalización de datos empresariales de Windows.
-          Si deshabilitas o no estableces esta configuración, todos los datos del dispositivo se recopilarán y procesarán de acuerdo con nuestras directivas para la canalización de datos estándar de Windows.
-          Si estableces esta configuración, no se cambiará el nivel de re colección de datos de telemetría ni la capacidad del usuario de cambiar el nivel. Esta configuración solo se aplica al sistema operativo Windows y a las aplicaciones incluidas con Windows, no a las aplicaciones o servicios de terceros que se ejecutan en Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline controla que Microsoft sea un procesador o un controlador de los datos de diagnóstico de Windows que se recopilen desde este dispositivo.
+          Si se habilita esta directiva, Microsoft será el procesador de datos de diagnóstico de Windows que se recopilen desde el dispositivo Windows, y el cliente será el controlador. El dispositivo debe registrarse en Azure AD para que esta directiva se pueda usar correctamente.
+          Si se deshabilita o no se configura esta opción de directiva, Microsoft será el controlador de los datos de diagnóstico de Windows que se recopilen desde este dispositivo.
+          Esta directiva solo controla si Microsoft es un procesador de datos de diagnóstico de Windows desde este dispositivo. Su configuración no cambia el que los datos de diagnóstico se recopilen ni la capacidad del usuario para cambiar el nivel. Para configurar el nivel de colección, usa la directiva "Permitir datos de diagnóstico", y para impedir que los usuarios de este dispositivo cambien el nivel de datos de diagnóstico, usa la directiva de interfaz de usuario "Configurar la interfaz de usuario para la participación en los datos de diagnóstico".
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Habilitar auditoría de OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">Esta configuración de directiva controla si Windows registra los intentos de conexión con el servicio OneSettings en el registro de eventos.
+
+Si habilita esta directiva, Windows registrará los intentos de conexión con el servicio OneSettings en el canal de registro de eventos de Microsoft\Windows\Privacy-Auditing\Operational.
+
+Si deshabilita o no establece esta configuración de directiva, Windows no registrará los intentos de conexión con el servicio OneSettings en el registro de eventos.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Deshabilitar descargas de OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">Esta configuración de directiva controla si Windows intenta conectarse con el servicio OneSettings.
+
+Si habilita esta Directiva, Windows no intentará conectarse con el servicio OneSettings.
+
+Si deshabilitas o no estableces esta configuración de Directiva, Windows intentará conectarse de forma periódica con el servicio OneSettings para descargar la configuración.
       </string>
     </stringTable>
     <presentationTable>

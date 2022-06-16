@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Minimaal Windows XP Professional Service Pack 1 of Windows 2000 Service Pack 3, uitgezonderd Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Minimaal een besturingssysteem van Windows Server 2003 of Windows XP Professional met SP1, uitgezonderd Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minimaal Windows XP Professional Service Pack 1 of minimaal Windows 2000 Service Pack 3 via Windows 8.1 of Windows Server 2012 R2 met de meest recente servicepack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minimaal Windows Vista tot en met Windows 8.1 of Windows Server 2012 R2 met de meest recente servicepack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minimaal Windows XP Professional Service Pack 1 of Minimaal Windows 2000 Service Pack 3 tot en met Windows 8.1 of Windows Server 2012 R2 met het meest recente servicepack. Niet ondersteund op Windows 10 en hoger.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minimaal Windows Vista via Windows 8.1 of Windows Server 2012 R2 met het meest recente servicepack. Niet ondersteund op Windows 10 en hoger.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 of minstens Windows 2000 Service Pack 3
 Optie 7 alleen ondersteund op servers met minimaal Windows Server 2016 Edition</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Minimaal Windows Server 2022 of Windows 10 versie 2004</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 tot en met Windows Server 2022 of Windows 10</string>
       <string id="AUDontShowUasHelp">Met deze beleidsinstelling kunt u aangeven of de optie Updates installeren en computer afsluiten moet worden weergegeven in het dialoogvenster Windows afsluiten.
 
 Als u deze beleidsinstelling inschakelt, wordt de optie Updates installeren en computer afsluiten niet weergegeven in het dialoogvenster Windows afsluiten, zelfs als er updates beschikbaar zijn voor installatie wanneer de gebruiker de optie Afsluiten in het Startmenu kiest.
@@ -161,6 +163,16 @@ Als de waarde is ingesteld op Niet-geconfigureerd, wordt het gebruik van Automat
         Detectie van updates tegen intranetservers mislukt wanneer een gebruikersproxy nodig is als een fallback en het alternatieve proxygedrag niet is geconfigureerd.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Alleen systeemproxy gebruiken voor het detecteren van updates (standaard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Toestaan dat gebruikers proxy als terugval gebruiken als detectie met systeemproxy mislukt</string>
+      <string id="UpdateClassPolicySource_Title">Bronservice opgeven voor specifieke klassen van Windows-updates</string>
+      <string id="UpdateClassPolicySource_Help">Als dit beleid is ingeschakeld, ontvangen apparaten Windows-updates voor de klassen die worden vermeld uit de opgegeven updatebron: Windows Update of Windows Server Update Service. 
+
+Opmerking: als u updates wilt ontvangen van de Windows Server Update-service, moet u de locatie van een Microsoft-updateservice op het intranet correct hebben geconfigureerd via het beleid Locatie van Microsoft-updateservice voor intranet.
+
+Als dit beleid niet is geconfigureerd of is uitgeschakeld, blijft het apparaat updates detecteren volgens uw andere beleidsconfiguraties. 
+
+Opmerking: als u momenteel 'Uitstelbeleid niet toestaan om scans op Windows Update te veroorzaken' gebruikt om ervoor te zorgen dat apparaten alleen worden gescand op de opgegeven server, raden we u aan dit beleid te configureren of naast dit beleid te configureren.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Hiermee geeft u het aantal uren op dat Windows wacht voordat wordt gezocht naar beschikbare updates. De exacte wachttijd is de som van de opgegeven waarde en een willekeurige periode van 0-4 uur.
 
         Als de status is ingesteld op Ingeschakeld, controleert Windows op beschikbare updates met het opgegeven interval.
@@ -372,9 +384,15 @@ Als u de ontvangst van kwaliteitsupdates die zijn onderbroken wilt hervatten, wi
 
 Als u dit beleid uitschakelt of niet configureert, wordt het gedrag van Windows Update niet gewijzigd.</string>
       <string id="TargetReleaseVersion_Title">De doelversie van de onderdelenupdate selecteren</string>
-      <string id="TargetReleaseVersion_Help">Schakel dit beleid in om de versie van de onderdelenupdate op te geven die bij volgende scans moet worden opgevraagd.
+      <string id="TargetReleaseVersion_Help">Voer het product en de versie in zoals vermeld op de doelversiepagina van Windows Update:
 
-Voer de versie in zoals deze wordt weergegeven op de pagina met informatie over Windows-versies aka.ms/ReleaseInformationPage</string>
+ aka.ms/WindowsTargetVersioninfo
+
+Het apparaat zal vragen om dat Windows Update-product en de versie in volgende scans.
+
+Het invoeren van een doelproduct en het klikken op OK of Toepassen betekent dat ik de licentievoorwaarden voor Microsoft-software accepteer die zijn gevonden op aka.ms/WindowsTargetVersioninfo. Als een organisatie de software in licentie geeft, ben ik geautoriseerd om de organisatie te binden.
+
+Als u een ongeldige waarde invoert, blijft uw huidige versie behouden totdat u de waarden naar een ondersteund product en versie corrigeert.</string>
       <string id="DisableWUfBSafeguards">Schakel beveiligingen voor functie-updates uit</string>
       <string id="DisableWUfBSafeguards_Help">
           Schakel deze instelling in wanneer functie-updates moeten worden geïmplementeerd op apparaten zonder blokkering van enige bewaring. Beveiligingsbewaring zijn bekende compatibiliteitsproblemen die verhinderen dat de upgrade wordt geïmplementeerd op getroffen apparaten totdat het probleem is opgelost. Als u dit beleid inschakelt, kan dit een organisatie de mogelijkheid geven om de functie-update te implementeren op apparaten om te testen, of om de functie-update te implementeren zonder de bewaring te blokkeren.
@@ -699,6 +717,13 @@ Dit beleid heeft voorrang op de volgende beleidsregels:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Geen TLS-certificaat afdwingen voor Windows Update-client voor het detecteren van updates.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecteer het proxy gedrag voor Windows Update-client voor het detecteren van updates:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Geef de bronservice op voor de volgende klassen Windows-updates:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Functie-updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Kwaliteitsupdates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Stuurprogramma-updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Overige updates</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Zoek naar updates met het volgende</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">interval (uren):  </decimalTextBox>
@@ -733,6 +758,9 @@ Dit beleid heeft voorrang op de volgende beleidsregels:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">op te slaan (minuten):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Voor welke Windows-productversie wilt u onderdelenupdates ontvangen? Bijvoorbeeld Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Doelversie voor onderdelenupdates</label>
         </textBox>

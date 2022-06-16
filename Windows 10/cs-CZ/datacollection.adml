@@ -134,11 +134,26 @@ n            Následující seznam uvádí podporované hodnoty:
       </string>
 
       <string id="AllowCommercialDataPipeline">Povolit kanál obchodních dat</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          Nastavení AllowCommercialDataPipeline výslovně přihlásí zařízení do kanálu firemních dat ve Windows.
-          Pokud toto nastavení povolíte, budou se data shromážděná ze zařízení předávat do kanálu firemních dat ve Windows.
-          Pokud toto nastavení zakážete nebo nenakonfigurujete, budou se všechna data ze zařízení shromažďovat a zpracovávat v souladu s našimi zásadami pro kanál standardních dat ve Windows.
-          Konfigurací tohoto nastavení nezměníte úroveň shromažďování telemetrie ani schopnost uživatele změnit tuto úroveň. Toto nastavení se vztahuje jenom na operační systém Windows a aplikace, které jsou součástí Windows, ne na aplikace nebo služby jiných výrobců běžící ve Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">Zásada AllowCommercialDataPipeline určuje, jestli je Microsoft zpracovatel nebo správce diagnostických dat Windows shromážděných z tohoto zařízení.
+          Pokud tuto zásadu povolíte, Microsoft bude zpracovatel diagnostických dat Windows shromážděných ze zařízení s Windows a zákazník bude správce. Aby byla tato zásada úspěšná, musí být zařízení zaregistrované v Azure AD.
+          Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude Microsoft správce diagnostických dat Windows shromážděných z tohoto zařízení.
+          Tato zásada určuje pouze to, jestli je Microsoft zpracovatel diagnostických dat Windows z tohoto zařízení. Konfigurace tohoto nastavení nezmění to, jestli se diagnostická data shromažďují, ani to, jestli uživatel může změnit úroveň. Pokud chcete nakonfigurovat úroveň shromažďování, použijte zásadu „Povolit diagnostická data“. Pokud chcete omezit přístup uživatelů tohoto zařízení ke změně úrovně diagnostických dat, použijte zásadu „Nakonfigurovat uživatelské rozhraní pro nastavení výslovného souhlasu s diagnostickými daty“.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Povolit auditování služby OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">Toto nastavení zásady určuje, jestli bude systém Windows zaznamenávat pokusy o připojení ke službě OneSettings do protokolu událostí.
+
+Pokud tuto zásadu povolíte, bude systém Windows zaznamenávat pokusy o připojení ke službě OneSettings do kanálu Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Pokud toto nastavení zásady zakážete nebo nenakonfigurujete, nebude systém Windows zaznamenávat pokusy o připojení ke službě OneSettings do protokolu událostí.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Zakázat stahování ze služby OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">Toto nastavení zásad určuje, jestli se systém Windows může pokusit o připojení k službě OneSettings.
+
+Pokud tuto zásadu povolíte, systém Windows se nebude pokoušet o připojení k službě OneSettings.
+
+Pokud nastavení této zásady zakážete nebo nenakonfigurujete, systém Windows se bude pravidelně pokoušet o připojení k službě OneSettings, aby mohl stáhnout nastavení konfigurace.
       </string>
     </stringTable>
     <presentationTable>

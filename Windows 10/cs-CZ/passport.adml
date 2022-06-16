@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Používat Windows Hello pro firmy</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Používat certifikát k místnímu ověřování</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Použití důvěryhodnosti cloudu pro místní ověřování</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello pro firmy je alternativní metoda pro přihlašování do Windows s použitím účtu Active Directory nebo Azure Active Directory, kterou můžete nahradit hesla, čipové karty a virtuální čipové karty.
 
@@ -118,13 +120,24 @@ Pokud tuto zásadu zakážete nebo nenakonfigurujete, systém Windows nevytvoř�
 POZNÁMKA: Tuto zásadu je možné použít jen u zařízení zaregistrovaných v Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Nastavením této zásady můžete nakonfigurovat, aby Windows Hello pro firmy zaregistrovalo přihlašovací certifikát sloužící k místnímu ověřování.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Nastavení této zásady slouží ke konfiguraci Windows Hello pro firmy, aby se zaregistroval přihlašovací certifikát používaný pro místní ověřování.
 
-Když nastavení této zásady povolíte, zaregistruje Windows Hello pro firmy přihlašovací certifikát, který se používá k místnímu ověřování.
+Pokud toto nastavení zásad povolíte, zaregistruje Windows Hello pro firmy přihlašovací certifikát, který se používá k místnímu ověřování.
 
-Když nastavení této zásady zakážete nebo nenakonfigurujete, zaregistruje Windows Hello pro firmy klíč, který slouží k místnímu ověřování.
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude Windows Hello pro firmy používat klíč nebo lístek protokolu Kerberos (v závislosti na nastavení jiných zásad) pro místní ověřování.
 
-POZNÁMKA: Když nastavení této zásady zakážete nebo nenakonfigurujete a povolíte nastavení zásady Používat Windows Hello pro firmy, musí prostředí obsahovat aspoň jeden řadič domény s Windows Serverem 2016, aby ověřování přes Windows Hello pro firmy neselhalo.
+Poznámka: Pokud toto nastavení zásad zakážete nebo nenakonfigurujete a povolíte nastavení použít zásady používat Windows Hello pro firmy, musí mít prostředí pro jeden nebo více řadičů domény se systémem Windows Server 2016, aby se zabránilo ověřování Windows Hello pro firmy.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Nastavením této zásady můžete nakonfigurovat, aby Windows Hello pro firmy používal k místnímu ověřování Kerberos Azure AD. 
+
+Když nastavení této zásady povolíte, použije Windows Hello pro firmy k místnímu ověřování lístek Kerberos získaný z ověření pro Azure. 
+
+Když nastavení této zásady zakážete nebo nenakonfigurujete, použije Windows Hello pro firmy k místnímu ověřování klíč nebo certifikát (v závislosti na nastavení dalších zásad). 
+
+POZNÁMKA: Prostředí, které povoluje jak tohle nastavení zásady, tak nastavení zásady Používat Windows Hello pro firmy, vyžaduje, aby mělo prostředí aspoň jeden řadič domény s Windows Serverem 2016, jinak Windows Hello pro firmy selže.
+
+Tyto zásady podporuje pouze Windows 10, verze 21H2 a novější.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Nakonfigurovat faktory pro odemknutí zařízení</string>

@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Не ниже Windows XP Professional с пакетом обновления 1 (SP1) или Windows 2000 с пакетом обновления 3 (SP3), за исключением Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Не ниже операционных систем Windows Server 2003 или Windows XP Professional с пакетом обновления 1 (SP1), за исключением Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Не ниже Windows XP Professional с пакетом обновления 1 (SP 1), или не ниже Windows 2000 с пакетом обновления 3 (SP 3) до Windows 8.1, или Windows Server 2012 R2 с наиболее актуальным пакетом обновлений</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Не ниже Windows Vista до Windows 8.1 или Windows Server 2012 R2 с наиболее актуальным пакетом обновлений</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Не ниже Windows XP Professional с пакетом обновления 1 (SP1) или Windows 2000 с пакетом обновления 3 (SP3) до Windows 8.1 или Windows Server 2012 R2 с самым текущим пакетом обновления. Не поддерживается в Windows 10 и более поздних версиях.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Не ниже Windows Vista до Windows 8.1 Windows Server 2012 R2 с самым текущим пакетом обновления. Не поддерживается в Windows 10 и более поздних версиях.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional с пакетом обновления 1 (SP1) или по меньшей мере Windows 2000 с пакетом обновления 3 (SP3)
 Вариант 7 поддерживается только на серверах под управлением Windows Server 2016 или более поздней версии</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Не ниже Windows Server 2022 или Windows 10 версии 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 – Windows Server 2022 или Windows 10​</string>
       <string id="AUDontShowUasHelp">Этот параметр позволяет указать, отображается ли параметр «Установить обновления и завершить работу» в диалоговом окне «Завершение работы Windows».
 
 Если этот параметр включен, параметр «Установить обновления и завершить работу» не появляется в диалоговом окне «Завершение работы Windows» при выборе в меню «Пуск» команды «Завершение работы», даже если имеются обновления, доступные для установки.
@@ -161,6 +163,16 @@
         Обнаружение обновлений на серверах интрасети завершится ошибкой, когда требуется резервный прокси-сервер пользователя и политика использования другого поведения прокси-сервера не настроена.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Использовать только системный прокси-сервер для обнаружения обновлений (по умолчанию)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Разрешить использовать прокси-сервер пользователя в качестве резерва, если не удается выполнить обнаружение с использованием системного прокси-сервера</string>
+      <string id="UpdateClassPolicySource_Title">Укажите исходную службу для конкретных классов обновлений Windows</string>
+      <string id="UpdateClassPolicySource_Help">Если эта политика включена, устройства будут получать обновления Windows для перечисленных классов из указанного источника обновлений — Центра обновления Windows или службы Windows Server Update Service. 
+
+        Примечание. Чтобы получать обновления из службы Windows Server Update Service, необходимо правильно настроить расположение службы обновлений Майкрософт в интрасети с помощью политики "Указать расположение службы обновлений Майкрософт в интрасети".
+
+        Если эта политика не настроена или отключена, устройство продолжит обнаружение обновлений в соответствии с другими конфигурациями политики. 
+
+        Примечание. Если в настоящее время используется политика "Не разрешать политикам задержки инициировать сканирование в Центре обновления Windows", чтобы обеспечить сканирование устройств только на указанном сервере, рекомендуем настроить эту политику вместо или в дополнение к этой.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Центр обновления Windows</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Службы Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Указывает промежуток времени в часах для Windows между проверками доступных обновлений. Точное время ожидания определяется путем суммирования конкретного значения и произвольного варианта в пределах от 0 до 4 часов.
 
         Если этот параметр политики включен, Windows будет проверять наличие доступных обновлений с указанным интервалом.
@@ -372,9 +384,15 @@ Windows Update будет также пробуждение системы и у
 
 Если отключить или не настроить эту политику, сценарий поведения Центра обновления Windows не изменится.</string>
       <string id="TargetReleaseVersion_Title">Выбор версии для обновления целевого компонента</string>
-      <string id="TargetReleaseVersion_Help">Включите эту политику, чтобы указать версию для обновления целевого компонента, которая должна быть запрошена в последующих проверках.
+      <string id="TargetReleaseVersion_Help">Введите продукт и версию, указанные на странице целевой версии Центра обновления Windows:
 
-Введите версию, указанную на странице "Сведения о выпуске Windows" (aka.ms/ReleaseInformationPage)</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Устройство запросит продукт и версию Центра обновления Windows при последующих сканированиях.
+
+Ввод целевого продукта и нажатие кнопки "ОК" или "Применить" означают, что я принимаю условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт, расположенные по адресу aka.ms/WindowsTargetVersioninfo. Если программное обеспечение лицензируется организацией, я имею полномочия юридически обязать организацию.
+
+При вводе недопустимого значения ваша версия останется прежней, пока вы не исправите значения на поддерживаемый продукт и версию.</string>
       <string id="DisableWUfBSafeguards">Отключение защиты для обновления компонентов</string>
       <string id="DisableWUfBSafeguards_Help">
           Включите этот параметр, если необходимо развернуть обновления компонентов на устройствах, избежав защитной блокировки. Защитные блокировки представляют собой известную проблему совместимости, приостанавливая развертывание обновлений на устройствах до устранения проблемы. Включение этой политики может позволить организации развертывать обновление компонентов на устройствах для тестирования или развертывать его без защитной блокировки.
@@ -699,6 +717,13 @@ Windows Update будет также пробуждение системы и у
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Не применять привязку сертификата протокола TLS для клиента Центра обновления Windows для обнаружения обновлений.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Выберите поведение прокси-сервера для обнаружения обновлений клиентом Центра обновления Windows:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Укажите исходную службу для следующих классов обновлений Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Обновления компонентов</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Исправления</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Обновления драйверов</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Другие обновления</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Проверять на наличие обновлений</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">через следующие промежутки времени (в часах):  </decimalTextBox>
@@ -733,6 +758,9 @@ Windows Update будет также пробуждение системы и у
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">работы (в минутах):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Для какой версии продукта Windows вы хотите получать обновления компонентов? например, Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Целевая версия обновлений компонентов</label>
         </textBox>

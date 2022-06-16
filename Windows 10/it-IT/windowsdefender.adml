@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Esclusioni</string>
+    <string id="DeviceControl">Controllo dispositivo</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Riduzione superficie di attacco</string>
     <string id="ExploitGuard_ControlledFolderAccess">Accesso alle cartelle controllato</string>
@@ -705,22 +706,22 @@ Se si disabilita o non si configura questa impostazione dei criteri, Criteri di 
     <string id="SpynetReporting">Partecipa a Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Questa impostazione di criteri consente di partecipare a Microsoft MAPS. Microsoft MAPS è la community online che consente di scegliere come rispondere a potenziali minacce. La community contribuisce anche ad arrestare la diffusione di nuove infezioni da malware.
 
-    Puoi scegliere di inviare informazioni di base o aggiuntive sul software rilevato. Informazioni aggiuntive consentono a Microsoft di creare nuova intelligence sulla sicurezza e aiutarti a proteggere il computer. Queste informazioni possono ad esempio indicare la posizione degli elementi rilevati nel computer in caso di rimozione di software dannoso. Le informazioni verranno raccolte e inviate automaticamente. In alcuni casi, informazioni personali potrebbero essere inviate a Microsoft in modo non intenzionale. Le informazioni, tuttavia, non verranno utilizzate per identificarti o contattarti.
+ Puoi scegliere di inviare informazioni di base o aggiuntive sul software rilevato. Informazioni aggiuntive consentono a Microsoft di creare nuova intelligence sulla sicurezza e aiutarti a proteggere il computer. Queste informazioni possono ad esempio indicare la posizione degli elementi rilevati nel computer in caso di rimozione di software dannoso. Le informazioni verranno raccolte e inviate automaticamente. In alcuni casi, informazioni personali potrebbero essere inviate a Microsoft in modo non intenzionale. Le informazioni, tuttavia, non verranno utilizzate per identificarti o contattarti.
 
-    Le opzioni possibili sono:
-    (0x0) disabilitato (impostazione predefinita)
-    (0x1) abbonamento di base
-    (0x2) abbonamento avanzato
+ Le opzioni possibili sono:
+ (0x0) disabilitato (impostazione predefinita)
+ (0x1) abbonamento di base
+ (0x2) abbonamento avanzato
 
-    L'abbonamento di base invierà a Microsoft informazioni di base relative al software rilevato, tra cui la provenienza del software, le azioni applicate da te o automaticamente e il loro esito.
+ L'abbonamento di base invierà a Microsoft informazioni di base relative al software rilevato, tra cui la provenienza del software, le azioni applicate da te o automaticamente e il loro esito.
 
-    L'abbonamento avanzato, oltre alle informazioni di base, invierà a Microsoft altre informazioni relative a software dannoso, spyware e software potenzialmente indesiderato, tra cui la posizione del software, i nomi dei file, il modo in cui opera il software e il suo impatto sul computer.
+ L'abbonamento avanzato, oltre alle informazioni di base, invierà a Microsoft altre informazioni relative a software dannoso, spyware e software potenzialmente indesiderato, tra cui la posizione del software, i nomi dei file, il modo in cui opera il software e il suo impatto sul computer.
 
-    Se abiliti questa impostazione, partecipi a Microsoft MAPS con l'abbonamento specificato.
+ Se abiliti questa impostazione, partecipi a Microsoft MAPS con l'abbonamento specificato.
 
-    Se disabiliti o non configuri questa impostazione, non partecipi a Microsoft MAPS.
-  
-    In Windows 10 l'abbonamento di base non è più disponibile, per cui l'impostazione del valore su 1 o 2 determinerà la registrazione del dispositivo all'abbonamento avanzato.</string>
+ Se disabiliti o non configuri questa impostazione, non partecipi a Microsoft MAPS.
+ 
+ In Windows 10 l'abbonamento di base non è più disponibile, per cui l'impostazione del valore su 1 o 2 determinerà la registrazione del dispositivo all'abbonamento avanzato.</string>
     <string id="SpynetReporting_Disabled">Disabilitata</string>
     <string id="SpynetReporting_Basic">MAPS di base</string>
     <string id="SpynetReporting_Advanced">MAPS avanzata</string>
@@ -978,6 +979,14 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
 
     Microsoft Defender Antivirus determina automaticamente quali applicazioni possono essere considerate attendibili. Puoi aggiungere altre applicazioni attendibili nell'impostazione di Criteri di gruppo Configura applicazioni consentite.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definisci gruppi dei criteri di controllo dispositivo</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Seguire lo schema XML dei criteri di controllo del dispositivo per compilare i dati dei gruppi di criteri.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definisci regole dei criteri di controllo dispositivo</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Seguire lo schema XML delle regole dei criteri di controllo del dispositivo per compilare i dati delle regole dei criteri.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Se si disabilita o non si configura questa impostazione dei criteri, non verrà 
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definisci qui i gruppi dei criteri</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definisci qui le regole dei criteri</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

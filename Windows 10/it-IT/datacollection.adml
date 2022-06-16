@@ -134,11 +134,26 @@ Se disabiliti o non configuri questa impostazione di criteri, i dati di diagnost
       </string>
 
       <string id="AllowCommercialDataPipeline">Consenti pipeline dati commerciali</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline sceglie il dispositivo nella pipeline dei dati aziendali di Windows.
-          Se questa impostazione è abilitata, i dati raccolti dal dispositivo vengono scelti per essere inclusi nella pipeline dei dati aziendali di Windows.
-          Se questa impostazione è disabilitata o non è configurata, tutti i dati del dispositivo verranno raccolti ed elaborati in base ai criteri relativi alla pipeline dei dati standard di Windows.
-          La configurazione di questa impostazione non ha impatto sul livello di raccolta di telemetria o sulla capacità dell'utente di modificare il livello. Questa impostazione si applica solo al sistema operativo Windows e alle app incluse in Windows. Non si applica alle app di terzi o ai servizi eseguiti in Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline controlla se Microsoft è un processore o un controller per i dati di diagnostica Windows raccolti da questo dispositivo.
+          Se abiliti questo criterio Microsoft sarà il processore dei dati di diagnostica Windows raccolti dal dispositivo Windows e il cliente sarà il controller. Per completare questo criterio, il dispositivo deve essere registrato in Azure AD.
+          Se si disabilita o non si configura questa impostazione di criteri, Microsoft userà il controller di dati di diagnostica Windows raccolti da questo dispositivo.
+          Questo criterio controlla solo se Microsoft è un processore per i dati di diagnostica Windows provenienti da questo dispositivo. La configurazione di questa impostazione non modifica i dati di diagnostica che vengono raccolti o la capacità dell'utente di cambiare il livello. Per configurare il livello di raccolta, usare il criterio "Consenti dati di diagnostica", e per limitare gli utenti su questo dispositivo modificando il livello di dati di diagnostica, utilizzare il criterio "Configura l'interfaccia utente per le impostazioni di consenso esplicito dei dati di diagnostica".
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Abilita controllo di OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">Questa impostazione dei criteri controlla se Windows registra i tentativi di connettersi con il servizio OneSettings al registro eventi.
+
+Se questo criterio è abilitato, Windows registrerà i tentativi di connettersi con il servizio OneSettings al canale del registro eventi Microsoft\Windows\Privacy-Auditing\Operational.
+
+Se questa impostazione dei criteri è disabilitata o non è configurata, Windows non registrerà i tentativi di connettersi con il servizio OneSettings al registro eventi.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Disabilita download in OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">Questa impostazione dei criteri controlla se Windows tenta di connettersi al servizio OneSettings.
+
+Se abiliti questo criterio, Windows non tenterà di connettersi con il servizio OneSettings.
+
+Se si disabilita o non si configura questa impostazione dei criteri, Windows tenterà periodicamente di connettersi al servizio OneSettings per scaricare le impostazioni di configurazione.
       </string>
     </stringTable>
     <presentationTable>

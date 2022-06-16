@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Minst Windows XP Professional Service Pack 1 eller Windows 2000 Service Pack 3, unntatt Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Minst Windows Server 2003-operativsystemer eller Windows XP Professional med SP1, unntatt Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minst Windows XP Professional Service Pack 1, minst Windows 2000 Service Pack 3 til og med Windows 8.1, eller Windows Server 2012 R2 med den nyeste oppdateringspakken</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minst Windows Vista til og med Windows 8.1, eller Windows Server 2012 R2 med den nyeste oppdateringspakken</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Minst Windows XP Professional Service Pack 1 eller minst Windows 2000 Service Pack 3 til og med Windows 8.1 eller Windows Server 2012 R2 med den nyeste oppdateringspakken. Støttes ikke på Windows 10 og senere.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Minst Windows Vista via Windows 8.1 eller Windows Server 2012 R2 med den nyeste oppdateringspakken. Støttes ikke på Windows 10 og senere.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 eller minst Windows 2000 Service Pack 3
 Alternativ 7 støttes bare på servere med minst Windows Server 2016-utgaven</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Minst Windows Server 2022 eller Windows 10 versjon 2004</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 til Windows Server 2022 eller Windows 10</string>
       <string id="AUDontShowUasHelp">Denne policyen tillater at du kan velge om alternativet Installer oppdateringer og avslutt skal vises i dialogboksen Avslutt Windows.
 
 Hvis du aktiverer denne policyinnstillingen, vil ikke Installer oppdateringer og avslutt vises som et valg i dialogboksen Avslutt Windows, selv om oppdateringer er tilgjengelige for installasjon når brukeren velger alternativet Avslutt i Start-menyen.
@@ -161,6 +163,16 @@ Hvis statusen er satt til Ikke konfigurert, er ikke bruk av Automatiske oppdater
         Oppdaging for oppdateringer mot intranettservere feiler når brukerproxy kreves som en fallback og alternativ proxy-virkemåte ikke er konfigurert.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Bruk bare system-proxy for å oppdage oppdateringer (standard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillat at bruker-proxy brukes som reserve hvis gjenkjenning av system-proxy mislykkes</string>
+      <string id="UpdateClassPolicySource_Title">Angi kildetjeneste for bestemte klasser av Windows Updates</string>
+      <string id="UpdateClassPolicySource_Help">Når denne policyen er aktivert, vil enheter motta Windows-oppdateringer for klassene som er oppført fra den angitte oppdateringskilden: enten Windows Update eller Windows Server Update Service. 
+
+Obs! Hvis du vil motta oppdateringer fra Windows Server Update Service, må du ha riktig konfigurert en Microsoft-oppdateringstjenesteplassering på intranettet via policyinnstillingen Angi plassering av Microsoft-oppdateringstjeneste på intranettet.
+
+Hvis denne policyen ikke er konfigurert eller er deaktivert, fortsetter enheten å oppdage oppdateringer i henhold til andre policykonfigurasjoner. 
+
+Obs! Hvis du bruker Ikke tillat at utsettelsespolicyer forårsaker skanninger mot Windows Update for øyeblikket for å sikre at enheter bare skannes mot den angitte serveren, anbefaler vi at du konfigurerer denne policyen i stedet eller i tillegg til slike.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Angir antallet timer det tar å avgjøre hvor lenge det skal ventes før det søkes etter tilgjengelige oppdateringer. Den nøyaktige ventetiden er en sum av den bestemte verdien og en tilfeldig variant av 0-4 timer.
 
         Hvis statusen er satt til Aktivert, søker Windows etter tilgjengelige oppdateringer ved angitt intervall.
@@ -372,9 +384,15 @@ Hvis du vil fortsette å motta kvalitetsoppdateringer på pause, tømmer du felt
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil ikke Windows Update endre virkemåte.</string>
       <string id="TargetReleaseVersion_Title">Velg oppdateringsversjonen for målfunksjonen</string>
-      <string id="TargetReleaseVersion_Help">Aktiver denne policyen for å angi en funksjonsoppdateringsversjon som skal forespørres i senere søk.
+      <string id="TargetReleaseVersion_Help">Skriv inn produktet og versjonen som oppført på siden for Windows Update-målversjon:
 
-Angi versjon som oppført på informasjonssiden for Windows aka.ms/ReleaseInformationPage</string>
+ aka.ms/WindowsTargetVersioninfo
+
+Enheten vil be om Windows Update-produktet og -versjonen i etterfølgende skanninger.
+
+Hvis jeg angir et målprodukt og klikker på OK eller Bruk, betyr det at jeg godtar lisensvilkårene for Microsoft-programvare som ligger på aka.ms/WindowsTargetVersioninfo. Hvis en organisasjon lisensierer programvaren, er jeg autorisert til å binde organisasjonen.
+
+Hvis du skriver inn en ugyldig verdi, forblir du på den gjeldende versjonen inntil du retter verdiene til et støttet produkt og en versjon.</string>
       <string id="DisableWUfBSafeguards">Deaktivere beskyttelse for funksjonsoppdateringer</string>
       <string id="DisableWUfBSafeguards_Help">
           Aktiver denne innstillingen når funksjonsoppdateringer skal distribueres til enheter uten å blokkere for noen beskyttelses sperringer. Beskyttelses sperringer er kjente kompatibilitetsproblemer som blokkerer oppgraderingen fra å bli distribuert til berørte enheter frem til problemet er løst. Hvis du aktiverer denne policyen, kan en organisasjon distribuere funksjonsoppdateringen til enheter for testing, eller for å distribuere funksjonsoppdateringen uten å blokkere for beskyttelses sperringer.
@@ -699,6 +717,13 @@ denne policyen overstyrer følgende policyer:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Ikke håndhev TLS-sertifikatfesting for Windows Update-klient for oppdaging av oppdateringer.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Velg proxy-virke måten for Windows Update-klienten for å oppdage oppdateringer:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Angi kildetjeneste for følgende klasser av Windows-oppdateringer:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Funksjonsoppdateringer</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Kvalitetsoppdateringer</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Driveroppdateringer</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Andre oppdateringer</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Søk etter oppdateringer ved følgende</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervall (timer):  </decimalTextBox>
@@ -733,6 +758,9 @@ denne policyen overstyrer følgende policyer:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">lagre arbeidet:  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Hvilken Windows-produktversjon vil du motta funksjonsoppdateringer for? f.eks. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Målversjon for funksjonsoppdateringer</label>
         </textBox>

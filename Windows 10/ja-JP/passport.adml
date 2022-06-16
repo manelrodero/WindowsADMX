@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Windows Hello for Business の使用</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">オンプレミスの認証に証明書を使用する</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">オンプレミス認証にクラウド トラストを使用する</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello for Business は、Active Directory や Azure Active Directory アカウントを使った Windows へのサインイン方法として、パスワード、スマート カード、仮想スマート カードに代わる手段です。
 
@@ -118,13 +120,24 @@
 注意: このポリシーを適用できるのは Azure Active Directory に登録されたデバイスに限られます。
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">このポリシー設定を使用して Windows Hello for Business を構成すると、オンプレミスの認証に使用されるサインイン証明書が登録されます。
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">このポリシー設定を使用して、オンプレミスの認証に使用するサインイン証明書を登録するWindows Hello for Businessを構成します。
 
-このポリシー設定を有効にすると、Windows Hello for Business はオンプレミスの認証に使用されるサインイン証明書を登録します。
+このポリシー設定を有効にした場合、オンプレミスの認証に使用されるサインイン証明書を登録Windows Hello for Business。
 
-このポリシー設定を無効にするか、または構成しなかった場合、Windows Hello for Business はオンプレミスの認証に使用されるキーを登録します。
+このポリシー設定を無効にするか、未構成にした場合、Windows Hello for Businessはオンプレミス認証にキーまたは Kerberos チケット (他のポリシー設定に応じて) を使用します。
 
-注意: このポリシー設定を無効にするか、または構成しない場合、[Windows Hello for Business の使用] ポリシー設定を有効にするには、環境内に Windows Server 2016 ドメイン コント ローラーを 1 つ以上配置する必要があります。そうしないと、Windows Hello for Business の認証が失敗します。
+注: このポリシー設定を無効にするか、未構成にし、[Windows Hello for Businessを使用する] ポリシー設定を有効にするには、Windows Hello for Business認証が失敗しないようにするために、環境に 1 つ以上の Windows Server 2016 ドメイン コントローラーが必要です。
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">このポリシー設定を使用して、オンプレミス認証に Azure AD Kerberos を使用するようにWindows Hello for Businessを構成します。
+
+このポリシー設定を有効にした場合、Windows Hello for Businessは、オンプレミス認証のために認証から Azure に取得された Kerberos チケットを使用します。
+
+このポリシー設定を無効にするか、未構成にした場合、Windows Hello for Businessはオンプレミス認証にキーまたは証明書 (他のポリシー設定に応じて) を使用します。
+ 
+注: このポリシー設定と [Windows Hello for Businessを使用する] ポリシー設定の両方を有効にする環境には、1 つ以上の Windows Server 2016 ドメイン コントローラーが必要です。それ以外の場合、Windows Hello for Business認証は失敗します。
+
+このポリシーは、Windows 10 バージョン 21H2 以降でのみサポートされています。
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">デバイスのロック解除要素を構成する</string>

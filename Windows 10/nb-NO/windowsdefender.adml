@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Utelatelser</string>
+    <string id="DeviceControl">Enhetskontroll</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Redusert angrepsoverflate</string>
     <string id="ExploitGuard_ControlledFolderAccess">Kontrollert mappetilgang</string>
@@ -705,22 +706,22 @@ Hvis du deaktiverer denne innstillingen, brukes bare elementer som er definert a
     <string id="SpynetReporting">Bli med i Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Med denne policyinnstillingen kan du bli med i Microsoft MAPS. Microsoft MAPS er et Internett-basert fellesskap som hjelper deg å velge hvordan du skal svare på potensielle trusler. Fellesskapet hjelper også til med å stanse spredning av nye infeksjoner fra skadelig programvare.
 
-    Du kan velge å sende grunnleggende informasjon eller tilleggsinformasjon om identifisert programvare. Mer informasjon hjelper Microsoft med å opprette ny sikkerhetsintelligens og bidrar til å beskytte datamaskinen. Denne informasjonen kan inneholde opplysninger om for eksempel hvor identifiserte elementer befinner seg på datamaskinen hvis skadelig programvare ble fjernet. Informasjonen samles inn og sendes automatisk. I noen tilfeller kan det hende at personlige opplysninger sendes til Microsoft utilsiktet. Microsoft vil imidlertid ikke bruke denne informasjonen til å identifisere deg eller kontakte deg.
+ Du kan velge å sende grunnleggende informasjon eller tilleggsinformasjon om identifisert programvare. Mer informasjon hjelper Microsoft med å opprette ny sikkerhetsinnsikt og bidrar til å beskytte datamaskinen. Denne informasjonen kan inneholde opplysninger om for eksempel hvor identifiserte elementer ble funnet på datamaskinen hvis skadelig programvare ble fjernet. Informasjonen samles inn og sendes automatisk. I noen tilfeller kan det hende at personlige opplysninger sendes til Microsoft utilsiktet. Microsoft vil imidlertid ikke bruke denne informasjonen til å identifisere deg eller kontakte deg.
 
-    Følgende alternativer finnes:
-    (0x0) Deaktivert (standard)
-    (0x1) Grunnleggende medlemskap
-    (0x2) Avansert medlemskap
+ Følgende alternativer finnes:
+ (0x0) Deaktivert (standard)
+ (0x1) Grunnleggende medlemskap
+ (0x2) Avansert medlemskap
 
-    Grunnleggende medlemskap sender grunnleggende informasjon til Microsoft om programvare som har blitt oppdaget, inkludert hvor programvaren kom fra, handlingene du bruker eller som trer i kraft automatisk, og om handlingene var vellykkede.
+ Grunnleggende medlemskap sender grunnleggende informasjon til Microsoft om programvare som har blitt oppdaget, inkludert hvor programvaren kom fra, handlingene du bruker eller som trer i kraft automatisk, og om handlingene var vellykket.
 
-    I tillegg til grunnleggende informasjon sender Avansert medlemskap mer informasjon til Microsoft om skadelig programvare, spionprogram og potensielt uønsket programvare, inkludert plasseringen av programvaren, filnavn, hvordan programvaren fungerer, og hvordan den har påvirket datamaskinen.
+ I tillegg til grunnleggende informasjon sender Avansert medlemskap mer informasjon til Microsoft om skadelig programvare, spionprogrammer og potensielt uønsket programvare, inkludert plasseringen til programvaren, filnavn, hvordan programvaren fungerer, og hvordan den har påvirket datamaskinen.
 
-    Hvis du aktiverer denne innstillingen, blir du med i Microsoft MAPS med det angitte medlemskapet.
+ Hvis du aktiverer denne innstillingen, blir du med i Microsoft MAPS med det angitte medlemskapet.
 
-    Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, blir du ikke med i Microsoft MAPS.
-  
-    I Windows 10 er ikke grunnleggende medlemskap lenger tilgjengelig, og enheten registreres derfor med avansert medlemskap hvis verdien settes til 1 eller 2.</string>
+ Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, blir du ikke med i Microsoft MAPS.
+ 
+ I Windows 10 er ikke grunnleggende medlemskap lenger tilgjengelig, og enheten registreres derfor med avansert medlemskap hvis verdien settes til 1 eller 2.</string>
     <string id="SpynetReporting_Disabled">Deaktivert</string>
     <string id="SpynetReporting_Basic">Grunnleggende MAPS</string>
     <string id="SpynetReporting_Advanced">Avansert MAPS</string>
@@ -978,6 +979,14 @@ Hvis du deaktiverer denne innstillingen, brukes bare elementer som er definert a
 
     Microsoft Defender Antivirus bestemmer automatisk hvilke apper du kan stole på. Du kan legge til flere klarerte apper i GP-innstillingen Konfigurer tillatte apper.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definer policygrupper for enhetskontroll</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Følg XML-skjemaet for policy grupper for enhets kontroll for å fylle ut policy gruppe dataene.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definer policyregler for enhetskontroll</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Følg XML-skjemaet for policy regler for enhets kontroll for å fylle ut policy regel dataene.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Hvis du deaktiverer denne innstillingen, brukes bare elementer som er definert a
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definer policygruppene her</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definer policyreglene her</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

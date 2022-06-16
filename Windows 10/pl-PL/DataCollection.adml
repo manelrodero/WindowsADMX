@@ -134,11 +134,26 @@ Aby ustawić limit poziomu danych diagnostycznych wysyłanych do firmy Microsoft
       </string>
 
       <string id="AllowCommercialDataPipeline">Zezwalaj na komercyjny potok danych</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          Ustawienie AllowCommercialDataPipeline powoduje włączenie urządzenia do potoku danych przedsiębiorstwa systemu Windows.
-          Jeśli włączysz to ustawienie, dane zbierane z urządzenia będą włączane do potoku danych przedsiębiorstwa systemu Windows.
-          Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, wszystkie dane z urządzenia będą zbierane i przetwarzane zgodnie z naszymi zasadami dotyczącymi standardowego potoku danych systemu Windows.
-          Skonfigurowanie tego ustawienia nie powoduje zmiany poziomu zbierania telemetrii ani możliwości użytkownika w zakresie zmiany tego poziomu. To ustawienie jest stosowane tylko do systemu operacyjnego Windows oraz aplikacji wchodzących w skład systemu Windows i nie jest stosowane do aplikacji i usług innych firm, które są uruchamiane w systemie Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline kontroluje, czy firma Microsoft przetwarza, czy też kontroluje dane diagnostyczne systemu Windows zebrane z tego urządzenia.
+        Jeśli włączysz tę zasadę, firma Microsoft będzie przetwarzać dane diagnostyczne systemu Windows zebrane z urządzenia z systemem Windows, a klient będzie kontrolerem. Urządzenie musi być zarejestrowane w usłudze Azure AD, aby można było pomyślnie zastosować tę zasadę.
+          Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, firma Microsoft będzie kontrolerem danych diagnostycznych systemu Windows zebranych z tego urządzenia.
+          Ta zasada kontroluje tylko to, czy firma Microsoft przetwarza dane diagnostyczne systemu Windows z tego urządzenia. Skonfigurowanie tego ustawienia nie zmieni tego, czy dane diagnostyczne są zbierane ani też możliwości zmiany tego poziomu przez użytkownika. Aby skonfigurować poziom zbierania, użyj zasady „Zezwalaj na dane diagnostyczne”, a żeby ograniczyć użytkownikom tego urządzenia możliwość zmiany poziomu danych diagnostycznych użyj zasady „Konfigurowanie interfejsu użytkownika dla ustawień zgody na dane diagnostyczne”.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Włącz inspekcję usługi OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">To ustawienie zasad określa, czy system Windows zapisuje próby połączenia się z usługą OneSettings w dzienniku zdarzeń.
+
+Jeśli te zasady zostaną włączone, system Windows będzie rejestrował próby połączenia z usługą OneSettings w kanale dziennika zdarzeń Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, system Windows nie będzie rejestrował prób połączenia z usługą OneSettings w dzienniku zdarzeń.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Wyłącz pobieranie usługi OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">To ustawienie zasad określa, czy system Windows ma podejmować próby nawiązania połączenia z usługą usługi onesettings.
+
+Jeśli ta zasada zostanie włączona, system Windows nie będzie podejmować prób nawiązania połączenia z usługą usługi onesettings.
+
+Jeśli wyłączysz to ustawienie zasad albo go nie skonfigurujesz, system Windows będzie okresowo podejmować próbą nawiązania połączenia z usługą usługi onesettings w celu pobrania ustawień konfiguracyjnych.
       </string>
     </stringTable>
     <presentationTable>

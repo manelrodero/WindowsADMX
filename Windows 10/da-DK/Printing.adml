@@ -44,34 +44,34 @@ Bemærk!
           Se også indstillingen "Aktivér internetudskrivning" i denne indstillingsmappe og indstillingen "Gennemse et fælles websted for at søge efter printere" i Brugerkonfiguration\Administrative skabeloner\Kontrolpanel\Printere.
 
           Webvisning påvirkes af indstillingerne "Slå klassisk brugergrænseflade til" og "Tillad ikke, at Mappeindstillinger åbnes fra knappen Indstillinger under fanen Vis på båndet" i Brugerkonfiguration\Administrative skabeloner\Windows-komponenter\Windows Stifinder og af indstillingen "Aktivér Active Desktop" i Brugerkonfiguration\Administrative skabeloner\Skrivebord\Active Desktop.</string>
-      <string id="DomainDisplayPrinters_Help">Hvis du aktiverer denne politikindstilling, angiver politikken det maksimale antal printere (af hver type), som guiden Tilføj printer viser på en computer i et administreret netværk (når computeren kan oprette forbindelse til en domænecontroller, f.eks. en domænebaseret bærbar computer i et firmanetværk.)
+      <string id="DomainDisplayPrinters_Help">Hvis du aktiverer denne politikindstilling, angiver politikken det maksimale antal printere (af hver type), som guiden Tilføj printer viser på en computer i et administreret netværk (når computeren kan oprette forbindelse til en domænecontroller, f.eks. en domænebaseret bærbar computer i et firmanetværk).
 
-          Hvis denne politikindstilling er deaktiveret, vises siden til gennemsøgning af netværk ikke.
+ Hvis denne politikindstilling er deaktiveret, vises siden til scanning efter netværk ikke.
 
-          Hvis politikindstillingen ikke er konfigureret, viser guiden Tilføj printer standardantallet af printere for hver type:
-          Katalogprintere: 20
-          TCP/IP-printere: 0
-          Webtjenesteprintere: 0
-          Bluetooth-printere: 10
-          Delte printere: 0
+ Hvis politikindstillingen ikke er konfigureret, viser guiden Tilføj printer standardantallet af printere for hver type:
+ Katalogprintere: 20
+ TCP/IP-printere: 0
+ Webtjenesteprintere: 0
+ Bluetooth-printere: 10
+ Delte printere: 0
 
-          Når du vil se de tilgængelige webtjenesteprintere på netværket, skal du sørge for, at netværksregistrering er slået til. Det gør du ved at klikke på "Start", klikke på "Kontrolpanel" og derefter klikke på "Netværk og internet". Klik på "Netværk og delingscenter" på siden "Netværk og internet". Klik på "Rediger avancerede delingsindstillinger" på siden Netværks- og delingscenter. Klik på pilen ud for "Domæne" på siden Avancerede delingsindstillinger, klik på "Slå netværksregistrering til", og klik derefter på "Gem ændringer".
+ Hvis du vil se de tilgængelige webtjenesteprintere på netværket, skal du sørge for, at netværksregistrering er slået til. Det gør du ved at klikke på "Start", klikke på "Kontrolpanel" og derefter klikke på "Netværk og internet". Klik på "Netværk og delingscenter" på siden "Netværk og internet". Klik på "Rediger avancerede delingsindstillinger" på siden Netværks- og delingscenter. Klik på pilen ud for "Domæne" på siden Avancerede delingsindstillinger, klik på "Slå netværksregistrering til", og klik derefter på "Gem ændringer".
 
-          Hvis du vil ikke vise printere af en bestemt type, skal du aktivere denne politik og indstille antallet af printere, der skal vises, til 0.
+ Hvis du ikke vil vise printere af en bestemt type, skal du aktivere denne politik og angive antallet af printere, der skal vises, til 0.
 
-          I Windows 10 og nyere er det kun TCP/IP-printere, som kan vises i guiden. Hvis du aktiverer denne politikindstilling, gælder kun TCP/IP-printerbegrænsninger. Hvis du i Windows 10 deaktiverer eller undlader at konfigurere denne politikindstilling, anvendes standardgrænsen.
-          
-          I Windows 8 eller senere vises Bluetooth-printere ikke, så grænsen gælder ikke for disse versioner af Windows.
+ I Windows 10 og nyere er det kun TCP/IP-printere, som kan vises i guiden. Hvis du aktiverer denne politikindstilling, gælder kun TCP/IP-printerbegrænsninger. Hvis du i Windows 10 deaktiverer eller undlader at konfigurere denne politikindstilling, anvendes standardgrænsen.
+ 
+ I Windows 8 eller nyere vises Bluetooth-printere ikke, så grænsen gælder ikke for disse versioner af Windows.
       </string>
       <string id="DomainPrinters">Guiden Tilføj printere – side for scanning af netværk (administreret netværk)</string>
       <string id="DownlevelBrowse">Gennemse netværket for at søge efter printere</string>
       <string id="DownlevelBrowse_Help">Giver brugerne mulighed for at bruge guiden Tilføj printer til at søge efter delte printere på netværket.
 
-Hvis du aktiverer denne indstilling eller undlader at konfigurere den, viser guiden Tilføj printer en liste over delte printere på netværket og beder brugerne om at vælge en printer på den viste liste, når de vælger at tilføje en netværksprinter ved at markere alternativknappen "En netværksprinter eller en printer, der er tilsluttet en anden computer" på side to i guiden Tilføj printer og desuden markerer alternativknappen "Opret forbindelse til denne printer (eller vælg denne indstilling, og klik på Næste, hvis du vil søge efter en printer)" på side tre i guiden Tilføj printer uden at angive et navn på printeren i feltet "Navn".
+Hvis du aktiverer denne indstilling eller undlader at konfigurere den, når brugerne vælger at tilføje en netværksprinter ved hjælp af alternativknappen "En netværksprinter eller en printer, der er knyttet til en anden computer" på side 2 i guiden Tilføj printer, og desuden markerer alternativknappen "Opret forbindelse til denne printer (eller vælg denne indstilling, og klik på Næste, hvis du vil søge efter en printer)" på side 3 i guiden Tilføj printer uden at angive et navn på printeren i feltet "Navn", så viser guiden Tilføj printer listen over delte printere på netværket og inviterer til valg af en printer på den viste liste.
 
-Hvis du deaktiverer denne indstilling, fjernes siden til søgning efter netværksprintere i guiden Tilføj printer. Brugerne kan derfor ikke søge på netværket, men skal i stedet skrive navnet på en printer.
+Hvis du deaktiverer denne indstilling, fjernes siden til søgning efter netværksprintere i guiden Tilføj printer, og brugerne kan ikke søge på netværket, men skal i stedet skrive navnet på en printer.
 
-Bemærk! Indstillingen påvirker kun guiden Tilføj printer. Den forhindrer ikke brugerne i at anvende andre programmer til at søge efter delte printere eller oprette forbindelse til netværksprintere.</string>
+Bemærk! Denne indstilling påvirker kun guiden Tilføj printer. Den forhindrer ikke brugerne i at anvende andre programmer til at søge efter delte printere eller oprette forbindelse til netværksprintere.</string>
       <string id="EMFDespooling">Gengiv altid udskriftsjob på serveren</string>
       <string id="EMFDespooling_Help">Når der udskrives via en printerserver, fastslår denne indstilling, om printspooleren på klienten selv behandler udskriftsjob eller sender dem videre til serveren.
 
@@ -134,9 +134,9 @@ Bemærk! Når du anvender denne politik, deaktiveres eksisterende kernetilstands
           Indstillingen forhindrer ikke brugerne i at køre andre programmer for at slette en printer.
 
           Hvis denne politik er deaktiveret eller ikke er konfigureret, kan brugere slette printere vha. de metoder, der er beskrevet ovenfor.</string>
-      <string id="NonDomainDisplayPrinters_Help">Denne politik angiver det maksimale antal printere (af hver type), som guiden Tilføj printer viser på en computer i et ikke-administreret netværk (når computeren ikke kan oprette forbindelse til en domænecontroller, f.eks. en domænebaseret bærbar computer i et hjemmenetværk.)
+      <string id="NonDomainDisplayPrinters_Help">Denne politik angiver det maksimale antal printere (af hver type), som guiden Tilføj printer viser på en computer i et ikke-administreret netværk (når computeren ikke kan oprette forbindelse til en domænecontroller, f.eks. en domænebaseret bærbar computer i et hjemmenetværk).
 
-Hvis denne indstilling er deaktiveret, vises siden for gennemsøgning af netværk ikke.
+Hvis denne indstilling er deaktiveret, vises siden for scanning efter netværk ikke.
 
 Hvis indstillingen ikke er konfigureret, viser guiden Tilføj printer standardantallet af printere for hver type:
 TCP/IP-printere: 50
@@ -144,11 +144,11 @@ Webtjenesteprintere: 50
 Bluetooth-printere: 10
 Delte printere: 50
 
-Hvis du ikke vil vise printere af en bestemt type, kan du aktivere denne politik og indstille antallet af printere, der skal vises, til 0.
+Hvis du ikke vil vise printere af en bestemt type, kan du aktivere denne politik og angive antallet af printere, der skal vises, til 0.
 
-I Windows 10 og nyere er det kun TCP/IP-printere, der kan vises i guiden. Hvis du aktiverer denne politikindstilling, gælder kun TCP/IP-printerbegrænsninger. Hvis du på Windows 10 deaktiverer eller undlader at konfigurere denne politikindstilling, anvendes standardgrænsen.
-          
-I Windows 8 eller senere vises Bluetooth-printere ikke, så grænsen gælder ikke for disse versioner af Windows.</string>
+I Windows 10 og nyere er det kun TCP/IP-printere, der kan vises i guiden. Hvis du aktiverer denne politikindstilling, gælder kun TCP/IP-printerbegrænsninger. Hvis du på deaktiverer eller undlader at konfigurere denne politikindstilling på Windows 10, anvendes standardgrænsen.
+ 
+I Windows 8 eller nyere vises Bluetooth-printere ikke, så grænsen gælder ikke for disse versioner af Windows.</string>
       <string id="NonDomainPrinters">Guiden Tilføj printere – side for scanning af netværk (ikke-administreret netværk)</string>
       <string id="PackagePointAndPrintOnly">Brug kun pakning af pegning og udskrivning</string>
       <string id="PackagePointAndPrintOnly_Help">Denne politik begrænser klientcomputere til at kun at bruge pakning af pegning og udskrivning.
@@ -280,9 +280,9 @@ Som standard fortsætter SKU'er til Windows Ultimate, Professional og Home med a
       <string id="MXDWUseLegacyOutputFormatMSXPS">Skift fra standardformatet Microsoft XPS Document Writer (MXDW) til det ældre Microsoft XPS-format (*.xps)</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) opretter OpenXPS-filer (*.oxps) som standard i Windows 10, Windows RT 10 og Windows Server 2019.
 
-          Hvis du aktiverer denne gruppepolitikindstilling, er standardformatet for MXDW-output det ældre Microsoft XPS (*.xps).
+ Hvis du aktiverer denne gruppepolitikindstilling, er standardformatet for MXDW-output det ældre Microsoft XPS (*.xps).
 
-          Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er standardformatet for MXDW-output OpenXPS (*.oxps).</string>
+ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, er standardformatet for MXDW-output OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Slå standardprinterstyring i Windows fra</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Denne præference giver dig mulighed for at ændre standardprinterstyring.
 
@@ -291,6 +291,34 @@ Hvis du aktiverer denne indstilling styrer Windows ikke standardprinteren.
 Hvis du deaktiverer denne indstilling, styrer Windows standardprinteren.
 
 Hvis du ikke konfigurerer denne indstilling, ændres standardprinterstyring ikke. </string>
+      <string id="EnableDeviceControl">Aktivér udskrivningsbegrænsninger for enhedskontrol</string>
+      <string id="EnableDeviceControl_Help">
+          Fastslår, om udskrivningsbegrænsninger for enhedskontrol skal håndhæves for udskrivning på denne computer.
+
+          Der er som standard ingen begrænsninger for udskrivning baseret på forbindelsestype eller printerens fabrikat/model.
+
+          Hvis du aktiverer denne indstilling, begrænser computeren udskrivning til printerforbindelser på virksomhedens netværk eller godkendte USB-tilsluttede printere.
+
+          Hvis du deaktiverer denne indstilling eller undlader at konfigurere den, er der ingen begrænsninger for udskrivning baseret på forbindelsestype eller printerens fabrikat/model.</string>
+        <string id="ApprovedUsbPrintDevices">Liste over godkendte USB-tilsluttede udskriftsenheder</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Denne indstilling er en komponent i udskrivningsbegrænsninger for enhedskontrol. Hvis du vil bruge denne indstilling, skal du aktivere udskrivning for enhedskontrol ved at aktivere indstillingen "Aktivér udskrivningsbegrænsninger for enhedskontrol".
+
+            Når udskrivning for enhedskontrol er aktiveret, bruger systemet den angivne liste over vid/pid-værdier til at fastslå, om den aktuelle USB-tilsluttede printer er godkendt til lokal udskrivning.
+
+            Skriv alle godkendte vid/pid-kombinationer (adskilt af kommaer), der svarer til godkendte USB-printermodeller. Når en bruger forsøger at udskrive til en USB-printerkø, sammenlignes enhedens vid/pid med den godkendte liste.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Begrænser installation af printerdriver til administratorer</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Fastslår, om brugere, der ikke er administratorer, kan installere printerdrivere på denne computer.
+
+Brugere, der ikke er administratorer, kan som standard ikke installere printerdrivere på denne computer.
+
+Hvis du aktiverer denne indstilling eller undlader at konfigurere den, begrænser systemet installationen af printerdrivere til administratorer af denne computer.
+
+Hvis du deaktiverer denne indstilling, begrænser systemet ikke installationen af printerdrivere til denne computer.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +378,13 @@ Hvis du ikke konfigurerer denne indstilling, ændres standardprinterstyring ikke
           <label>Standardsti i Active Directory</label>
         </textBox>
         <text>eksempel --&gt; LDAP://DC=Domæne1,DC=Firma,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Angiv listen over godkendte USB-tilsluttede printerenheder.</text>
+        <text>Listen er en kommasepareret liste over USB vid/PID-værdier. Eksempel: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

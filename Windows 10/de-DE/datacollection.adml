@@ -134,11 +134,26 @@ Verwenden Sie die Einstellung "Telemetrie-Richtlinie zulassen", um die Ebene der
       </string>
 
       <string id="AllowCommercialDataPipeline">Kommerzielle Datenpipeline zulassen</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          Durch "AllowCommercialDataPipeline" wird die kommerzielle Windows-Datenpipeline für das Gerät abonniert.
-          Wenn Sie die Einstellung aktivieren, wird für die vom Gerät erfassten Daten die kommerzielle Windows-Datenpipeline aktiviert.
-          Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, werden alle Daten gemäß unseren Richtlinien für die standardmäßige Windows-Datenpipeline vom Gerät erfasst und verarbeitet.
-          Wenn Sie die Einstellung konfigurieren, ändert sich weder die Ebene der Telemetriedatensammlung, noch die Fähigkeit des Benutzers, die Ebene zu ändern. Diese Einstellung gilt nur für das Windows-Betriebssystem und für Apps im Lieferumfang von Windows, nicht aber für Drittanbieter-Apps oder -Dienste, die unter Windows 10 ausgeführt werden.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline steuert, ob Microsoft der Auftragsverarbeiter oder der Verantwortliche für Windows-Diagnosedaten ist, die von diesem Gerät erfasst wurden.
+          Wenn Sie diese Richtlinie aktivieren, ist Microsoft der Auftragsverarbeiter von Windows-Diagnosedaten, die von dem Windows-Gerät gesammelt wurden, und der Kunde ist der Verantwortliche. Das Gerät muss in Azure AD registriert sein, damit diese Richtlinie erfolgreich ausgeführt werden kann.
+          Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird Microsoft der Verantwortliche für Windows-Diagnosedaten sein, die von diesem Gerät gesammelt wurden.
+          Diese Richtlinie kontrolliert nur, ob Microsoft Auftragsverarbeiter für Windows-Diagnosedaten aus diesem Gerät ist. Wenn Sie diese Einstellung konfigurieren, wird nicht geändert, ob Diagnosedaten gesammelt werden oder ob der Benutzers die Ebene ändern kann. Verwenden Sie zum Konfigurieren der Sammlungsebene bitte die Richtlinie „Diagnosedaten zulassen“. Um die Fähigkeit der Benutzer einzuschränken, die Diagnosedatenebene zu ändern, verwenden Sie die Richtlinie „Die Benutzeroberfläche für die Einstellungen zum Abonnieren der Diagnosedaten konfigurieren“.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">OneSettings Überwachung aktivieren</string>
+      <string id="EnableOneSettingsAuditing_Explain">Diese Richtlinieneinstellung steuert, ob Windows Versuche aufzeichnet, eine Verbindung mit dem OneSettings-Dienst in das Ereignisprotokoll herzustellen.
+
+Wenn Sie diese Richtlinie aktivieren, zeichnet Windows die Versuche auf, eine Verbindung mit dem OneSettings-Dienst mit den Microsoft\Windows\Privacy-Auditing\Operational EventLog-Channel herzustellen.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, zeichnet Windows keine Versuche auf, eine Verbindung mit dem OneSettings-Dienst in das Ereignisprotokoll herzustellen.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">OneSettings Downloads deaktivieren</string>
+      <string id="DisableOneSettingsDownloads_Explain">Diese Richtlinieneinstellung steuert, ob Windows versucht, eine Verbindung mit dem OneSettings-Dienst herzustellen.
+
+Wenn Sie diese Richtlinie aktivieren, stellt Windows keine Verbindung mit dem OneSettings-Dienst her.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, stellt Windows in regelmäßigen Abständen eine Verbindung mit dem OneSettings-Dienst her.
       </string>
     </stringTable>
     <presentationTable>

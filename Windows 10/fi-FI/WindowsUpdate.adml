@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1, Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Vähintään Windows XP Professional Service Pack 1 tai Windows 2000 Service Pack 3, pois lukien Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Vähintään Windows Server 2003 -käyttöjärjestelmät tai Windows XP Professional SP1, pois lukien Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Vähintään Windows XP Professional Service Pack 1 tai vähintään Windows 2000 Service Pack 3 – Windows 8.1 tai Windows Server 2012 R2, jossa on uusin Service Pack -paketti</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Vähintään Windows Vista – Windows 8.1 tai Windows Server 2012 R2, jossa on uusin Service Pack -paketti</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Vähintään Windows XP Professional Service Pack 1 tai vähintään Windows 2000 Service Pack 3 - Windows 8.1 tai Windows Server 2012 R2, jossa on uusin Service Pack. Ei tueta Windows 10 ja uudemmissa versioissa.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Vähintään Windows Vista - Windows 8.1 tai Windows Server 2012 R2, jossa on uusin Service Pack. Ei tueta Windows 10 ja uudemmissa versioissa.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 tai vähintään Windows 2000 Service Pack 3
 Asetusta 7 tuetaan vain palvelimissa, joissa on vähintään versio Windows Server 2016</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Vähintään Windows Server 2022 tai Windows 10 versio 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016–Windows Server 2022 tai Windows 10​</string>
       <string id="AUDontShowUasHelp">Tällä käytäntöasetuksella määritetään, näytetäänkö Asenna päivitykset ja sammuta -vaihtoehto Sammuta Windows -valintaikkunassa.
 
 Jos tämä käytäntöasetus otetaan käyttöön, Asenna päivitykset ja sammuta ei näy vaihtoehtona Sammuta Windows -valintaikkunassa, vaikka asennettavia päivityksiä olisi käytettävissä, kun käyttäjä valitsee Sammuta-vaihtoehdon Käynnistä-valikossa.
@@ -161,6 +163,16 @@ Jos tilana on Ei määritetty, automaattisten päivitysten käyttöä ei ole mä
          Päivitysten havaitseminen intranet-palvelimilta epäonnistuu, kun käyttäjän asetuspalvelinta tarvitaan varalta ja vaihtoehtoista välityspalvelinta ei ole määritelty.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Käytä päivitysten tunnistamiseen vain järjestelmän välityspalvelinta (oletus)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Salli käyttäjän välityspalvelimen käyttö varalla, jos tunnistus epäonnistuu järjestelmän välityspalvelimella</string>
+      <string id="UpdateClassPolicySource_Title">Määritä lähdepalvelu tiettyjen Windows-päivitysten luokille</string>
+      <string id="UpdateClassPolicySource_Help">Kun tämä käytäntö on käytössä, laitteet saavat Windows-päivitykset määritetystä päivityslähteestä lueteltuihin luokkiin joko Windows Update tai Windows Server Update -palveluun. 
+
+Huomautus: Jos haluat vastaanottaa päivityksiä Windows Server Update -palvelusta, sinun on määritettävä intranetin Microsoft Update -palvelun sijainti Määritä Microsoft Update -palvelun sijainti intranetissä -käytännön avulla.
+
+Jos tätä käytäntöasetusta ei määritetä tai se poistetaan käytöstä, laite havaitsee edelleen muiden käytäntömääritystesi päivitykset. 
+
+Huomautus: Jos käytät Älä salli lykkäyskäytäntöjen aiheuttaa tällä hetkellä Windows Update vasten skannauksia varmistaaksesi, että laitteet skannaavat vain määritettyä palvelinta vasten, suosittelemme määrittämään tämän käytännön sen sijaan tai sen lisäksi.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Määrittää, montako tuntia Windows odottaa ennen saatavina olevien päivitysten tarkistamista. Tarkka odotusaika on tietyn arvon sekä 0 ja 4 tunnin välisen satunnaisen muuttujan summa.
 
         Jos tila on Käytössä, Windows tarkistaa saatavina olevat päivitykset määritetyin aikavälein.
@@ -372,9 +384,15 @@ Voit jatkaa keskeytettyjen laatupäivitysten vastaanottamista tyhjentämällä a
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows Update ei muuta toimintaansa.</string>
       <string id="TargetReleaseVersion_Title">Valitse ominaisuuspäivityksen kohdeversio</string>
-      <string id="TargetReleaseVersion_Help">Ota tämä käytäntöasetus käyttöön, jos haluat määrittää seuraavissa tarkistuksissa pyydettävän ominaisuuspäivityksen version.
+      <string id="TargetReleaseVersion_Help">Anna tuote ja versio Windows Update -kohdeversiosivulla luetellulla tavalla:
 
-Anna versio, joka on lueteltu Windowsin julkaisutiedot -sivulla aka.ms/ReleaseInformationPage</string>
+aka.ms/WindowsTargetVersioninfo
+
+Laite pyytää sitä Windows Update -tuotetta ja -versiota myöhemmissä tarkistuksissa.
+
+Kun syötät kohdetuotteen ja valitset OK tai Käytä, hyväksyt Microsoft-ohjelmiston käyttöoikeussopimuksen ehdot, jotka löytyvät osoitteesta aka.ms/WindowsTargetVersioninfo. Jos organisaatio myöntää ohjelmistolle käyttöoikeuden, sinulla on valtuudet sitoa organisaatio.
+
+Jos annat virheellisen arvon, pysyt nykyisessä versiossasi, kunnes korjaat arvot tuettuun tuotteeseen ja versioon.</string>
       <string id="DisableWUfBSafeguards">Ominaisuuspäivitysten suojaustoimien poistaminen käytöstä</string>
       <string id="DisableWUfBSafeguards_Help">
           Ota tämä asetus käyttöön, kun ominaisuuspäivitykset tulee ottaa käyttöön laitteissa estämättä suojausmääräyksiä. Suojausmääräykset ovat tunnettuja yhteensopivuusongelmia, jotka estävät päivityksen asentamisen laitteisiin, ennen kuin ongelma ratkaistaan. Jos tämä käytäntö otetaan käyttöön, organisaatio voi ottaa ominaisuuspäivityksen käyttöön laitteissa testausta varten tai estämättä suojausmääräyksiä.
@@ -699,6 +717,13 @@ Tämä käytäntö korvaa seuraavat käytännöt:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Älä pakota TLS-varmenteen kiinnittämistä Windows Update-asiakasohjelmille päivitysten tunnistamiseen.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Valitse välityspalvelimen toiminta Windows Update -asiakkaalle, jos haluat tunnistaa päivitykset:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Määritä lähdepalvelu seuraaville Windows-päivitysten luokille:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Ominaisuuspäivitykset</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Laatupäivitykset</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Ohjainpäivitykset</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Muut päivitykset</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Tarkista päivitykset seuraavin</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">aikavälein (tuntia):  </decimalTextBox>
@@ -733,6 +758,9 @@ Tämä käytäntö korvaa seuraavat käytännöt:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">työnsä (minuuttia): </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Mihin Windows-tuoteversioon haluat saada ominaisuuspäivityksiä? Esimerkiksi Windows 10:een.</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Ominaisuuspäivitysten kohdeversio</label>
         </textBox>

@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Mindst Windows XP Professional Service Pack 1 eller Windows 2000 Service Pack 3, eksklusive Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Mindst Windows Server 2003-operativsystemer eller Windows XP Professional med SP1, eksklusive Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Mindst Windows XP Professional Service Pack 1 eller mindst Windows 2000 Service Pack 3 til og med Windows 8.1 eller Windows Server 2012 R2 med den mest aktuelle servicepakke</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Mindst Windows Vista til og med Windows 8.1 eller Windows Server 2012 R2 med den mest aktuelle servicepakke</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Mindst Windows XP Professional Service Pack 1 eller mindst Windows 2000 Service Pack 3 til og med Windows 8.1 eller Windows Server 2012 R2 med den nyeste servicepakke. Understøttes ikke på Windows 10 og derover.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Mindst Windows Vista til og med Windows 8.1 eller Windows Server 2012 R2 med den nyeste servicepakke. Understøttes ikke på Windows 10 og derover.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Mindst Windows XP Professional Service Pack 1 eller mindst Windows 2000 Service Pack 3
 Indstilling 7 understøttes kun på servere med mindst Windows Server 2016 Edition​</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Mindst Windows Server 2022 eller Windows 10 Version 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 til og med Windows Server 2022 eller Windows 10</string>
       <string id="AUDontShowUasHelp">Denne politik giver dig mulighed for at administrere, om indstillingen Installer opdateringer og luk computeren skal vises i dialogboksen Luk Windows.
 
 Hvis du aktiverer denne politikindstilling, vises Installer opdateringer og luk computeren ikke vises som en indstilling i dialogboksen Luk Windows, heller ikke selvom der er opdateringer klar til installation, når brugeren vælger indstillingen Luk computeren i menuen Start.
@@ -161,6 +163,16 @@ Hvis status er angivet til Ikke konfigureret, er brug af automatiske opdateringe
        Registrering af opdateringer imod intranetservere vil mislykkes, hvis en brugerproxy er nødvendig som fallback, og den alternative proxyadfærd ikke er konfigureret.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Brug kun systemproxy til at registrere opdateringer (standard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Tillad, at brugerproxy bruges som fallback, hvis registrering ved hjælp af systemproxy mislykkes</string>
+      <string id="UpdateClassPolicySource_Title">Angiv kildetjeneste for bestemte klasser af Windows Updates</string>
+      <string id="UpdateClassPolicySource_Help">Når denne politik er aktiveret, modtager enheder Windows-opdateringer for de klasser, der er angivet fra den angivne opdateringskilde: enten Windows Update eller Windows Server Update-tjenesten. 
+
+        Bemærk! Hvis du vil modtage opdateringer fra tjenesten Windows Server Update, skal du have konfigureret en Microsoft-opdateringstjeneste på intranettet via politikken "Angiv placeringen af Microsoft-opdateringstjenesten på intranettet".
+
+        Hvis denne politik ikke er konfigureret eller er deaktiveret, vil enheden fortsætte med at registrere opdateringer i henhold til andre politikkonfigurationer. 
+
+        Bemærk! Hvis du bruger "Tillad ikke udelukkelsespolitikker for at få scanninger til at finde Windows Update" for at sikre, at enhederne kun scannes mod den angivne server, anbefaler vi, at du konfigurerer denne politik i stedet for eller som en ekstra.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Angiver det antal timer, Windows bruger på at fastslå, hvor lang tid der skal ventes, før der kontrolleres for tilgængelige opdateringer. Den nøjagtige ventetid er summen af den angivne værdi og en tilfældig variant på 0-4 timer.
 
         Hvis status er angivet til Aktiveret, undersøger Windows, om der er tilgængelige opdateringer med det angivne interval.
@@ -372,9 +384,15 @@ Hvis du vil genoptage modtagelsen af kvalitetsopdateringer, der er midlertidigt 
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vil Windows Update ikke ændre funktionsmåden.</string>
       <string id="TargetReleaseVersion_Title">Vælg opdateringsversion for målfunktion</string>
-      <string id="TargetReleaseVersion_Help">Aktivér denne politik for at angive en version af Funktionsopdatering, der skal anmodes om i efterfølgende scanninger.
+      <string id="TargetReleaseVersion_Help">Angiv produktet og versionen som angivet på siden for Windows Update målversion:
 
-Angiv version, som den er angivet på siden med oplysninger om Windows Release - aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Enheden vil anmode om at Windows opdaterer produkt og version i efterfølgende scanninger.
+
+Når jeg angiver et målprodukt og klikker på OK eller Anvend, accepterer jeg produktets Licensvilkår for Microsoft-software, fundet på aka.ms/WindowsTargetVersioninfo. Hvis en organisation licenserer softwaren, er jeg autoriseret til at binde organisationen.
+
+Hvis du angiver en ugyldig værdi, forbliver du på din nuværende version, indtil du retter værdierne til et understøttet produkt og en understøttet version.</string>
       <string id="DisableWUfBSafeguards">Deaktiver sikkerhedsforanstaltninger for funktionsopdateringer</string>
       <string id="DisableWUfBSafeguards_Help">
           Aktivér denne indstilling, når funktionsopdateringer skal installeres p enheder uden at blokere sikkerhedsforanstaltninger. Sikkerhedsforanstaltninger er kendte kompatibilitetsproblemer, der blokerer opgraderingen, så de ikke kan installeres på de berørte enheder, før problemet er løst. Hvis denne politik aktiveres, har en organisation mulighed for at installere funktionsopdateringen på enheder med henblik på test eller at installere funktionsopdateringen uden at blokere for sikkerhedsforanstaltninger.
@@ -699,6 +717,13 @@ Denne politik vil tilsidesætte følgende politikker:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Gennemtving ikke fastgørelse af TLS-certifikat for Windows Update-klienten til registrering af opdateringer.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Vælg proxy funktionen for Windows Update-klienten til registrering af opdateringer:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Angiv kildetjeneste for følgende klasser af Windows Updates:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Funktionsopdateringer</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Kvalitetsopdateringer</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Driveropdateringer</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Andre opdateringer</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Kontroller, om der er opdateringer med følgende</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">interval (timer):  </decimalTextBox>
@@ -733,6 +758,9 @@ Denne politik vil tilsidesætte følgende politikker:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">arbejde (minutter):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Hvilken Windows-produktversion vil du modtage funktionsopdateringer for? f.eks. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Målversion for funktionsopdateringer</label>
         </textBox>

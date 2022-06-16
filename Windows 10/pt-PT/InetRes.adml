@@ -270,7 +270,7 @@ Se ativar esta definição de política, poderá especificar uma lista de sites 
 
 Se desativar ou não configurar esta definição de política, não poderá fornecer uma lista de exceções predefinida do Bloqueador de Janelas de Pop-up.
 
-Notas: poderá impedir que os utilizadores adicionem ou removam Web sites da lista de exceções se ativar a política "Desativar Gestão da Lista de Autorizados de Pop-up".</string>
+Notas: poderá impedir que os utilizadores adicionem ou removam Web sites da lista de exceções se ativar a política "Desativar Gestão da lista de permissões de janelas de pop-up".</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">Esta definição de política permite ignorar pedidos quando um script em execução em qualquer processo do computador tenta efetuar uma operação da Área de Transferência (eliminar, copiar ou colar).
 
 Se ativar esta definição de política, não será feito qualquer pedido ao utilizador quando um script em execução em qualquer processo do computador efetuar uma operação da Área de Transferência. Isto significa que se o comportamento da zona estiver definido atualmente para fazer o pedido, o mesmo será ignorado e ativado.
@@ -3015,7 +3015,7 @@ Esta funcionalidade só é aplicável às versões do Internet Explorer que vão
       <string id="Persistence_FileLimits4">Limites de tamanho de ficheiro para a zona Sites Restritos</string>
       <string id="PhishingOff">Desativar</string>
       <string id="PhishingOn">Ativar</string>
-      <string id="PopupBlocker_AllowList">Lista de autorizados de pop-up</string>
+      <string id="PopupBlocker_AllowList">Lista de permissões de janelas de pop-up</string>
       <string id="Printing">A imprimir</string>
       <string id="Printing_Explain">Esta definição de política especifica se o Internet Explorer imprime as imagens e cores de fundo quando o utilizador imprime uma página Web. A inclusão de imagens e cores de fundo poderá reduzir a velocidade com que uma página é impressa e a qualidade da impressão, consoante as capacidades da impressora.
 
@@ -3975,6 +3975,14 @@ Se ativar esta política, a funcionalidade estendida da tecla de atalho é ativa
 Se desativar, ou não configurar esta política, as teclas de atalho alargadas não funcionarão no modo Internet Explorer.
 
 Para mais informações, veja https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Repor zoom para predefinição para caixas de diálogo HTML no modo Internet Explorer</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Esta definição de política permite aos administradores repor o zoom para caixas de diálogo HTML no modo de Internet Explorer.
+
+Se ativar esta política, a pré-visualização de uma caixa de diálogo HTML no modo do Internet Explorer não será propagada a partir da respetiva página principal.
+
+Se desativar ou não configurar esta política, a pré-visualização de uma caixa de diálogo HTML no modo do Internet Explorer será definida com base na pré-visualização da página principal do mesmo.
+
+Para mais informações, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Desativar o Internet Explorer 11 como um browser autónomo</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Esta política permite-lhe restringir o início do Internet Explorer como browser autónomo.
 
@@ -4192,7 +4200,7 @@ Para obter mais informações, consulte "Bloqueio de controlo do ActiveX desatua
     </stringTable>
     <presentationTable>
       <presentation id="VerMgmtDomainAllowlist_1">
-        <listBox refId="DomainList">Lista de domínios autorizados</listBox>
+        <listBox refId="DomainList">Lista de permissões de domínios</listBox>
       </presentation>
       <presentation id="AddonManagement_AddOnList_1">
         <listBox refId="AddOnList">Lista de Suplementos</listBox>

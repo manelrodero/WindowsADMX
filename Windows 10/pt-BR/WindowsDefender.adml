@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivírus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusões</string>
+    <string id="DeviceControl">Controle de Dispositivos</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Redução da Superfície de Ataque</string>
     <string id="ExploitGuard_ControlledFolderAccess">Acesso a Pastas Controladas</string>
@@ -705,22 +706,22 @@ Se você desabilitar ou não definir essa configuração, a Política de Grupo t
     <string id="SpynetReporting">Ingressar no Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Esta configuração de política permite ingressar no Microsoft MAPS. O Microsoft MAPS é a comunidade online que ajuda a escolher como responder a possíveis ameaças. A comunidade também ajuda a interromper a disseminação de novas infecções de software mal-intencionado.
 
-    Você pode preferir enviar informações básicas ou adicionais sobre qualquer software detectado. Informações adicionais ajudam a Microsoft a criar uma nova inteligência de segurança e a ajuda a proteger seu computador. Essas informações podem incluir detalhes como o local dos itens detectados no computador caso algum software prejudicial tenha sido removido. As informações serão coletadas e enviadas automaticamente. Em algumas casos, informações pessoais podem ser enviadas de forma acidental para a Microsoft. Entretanto, a Microsoft não usará essas informações para identificá-lo nem para entrar em contato com você.
+ Você pode preferir enviar informações básicas ou adicionais sobre qualquer software detectado. Informações adicionais ajudam a Microsoft a criar uma nova inteligência de segurança e a ajuda a proteger seu computador. Essas informações podem incluir detalhes como o local dos itens detectados no computador caso algum software prejudicial tenha sido removido. As informações serão coletadas e enviadas automaticamente. Em algumas casos, informações pessoais podem ser enviadas de forma acidental para a Microsoft. Entretanto, a Microsoft não usará essas informações para identificá-lo nem para entrar em contato com você.
 
-    Opções possíveis:
-    (0x0) Desabilitado (padrão)
-    (0x1) Associação básica
-    (0x2) Associação avançada
+ Opções possíveis:
+ (0x0) Desabilitado (padrão)
+ (0x1) Associação básica
+ (0x2) Associação avançada
 
-    A associação básica envia informações básicas para a Microsoft sobre software detectado, incluindo a origem do software, as ações que você aplicou (ou as ações que são aplicadas automaticamente) e se as ações foram bem-sucedidas.
+ A associação básica envia informações básicas para a Microsoft sobre software detectado, incluindo a origem do software, as ações que você aplicou (ou as ações que são aplicadas automaticamente) e se as ações foram bem-sucedidas.
 
-    A associação avançada, além de informações básicas, envia mais informações para a Microsoft sobre software mal-intencionado, spyware e software potencialmente indesejado, incluindo o local do software, nomes de arquivo, como o software atua e como ele afetou o computador.
+ A associação avançada, além de informações básicas, envia mais informações para a Microsoft sobre software mal-intencionado, spyware e software potencialmente indesejado, incluindo o local do software, nomes de arquivo, como o software atua e como ele afetou o computador.
 
-    Se você habilitar esta configuração, ingressará no Microsoft MAPS com a associação especificada.
+ Se você habilitar esta configuração, ingressará no Microsoft MAPS com a associação especificada.
 
-    Se você desabilitar ou não definir esta configuração, não ingressará no Microsoft MAPS.
-  
-    No Windows 10, a associação Básica não está mais disponível. Portanto, definir o valor como 1 ou 2 inscreve o dispositivo na associação Avançada.</string>
+ Se você desabilitar ou não definir esta configuração, não ingressará no Microsoft MAPS.
+ 
+ No Windows 10, a associação Básica não está mais disponível. Portanto, definir o valor como 1 ou 2 inscreve o dispositivo na associação Avançada.</string>
     <string id="SpynetReporting_Disabled">Desabilitado</string>
     <string id="SpynetReporting_Basic">MAPS básico</string>
     <string id="SpynetReporting_Advanced">MAPS avançado</string>
@@ -978,6 +979,14 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
 
     O Microsoft Defender Antivírus determina automaticamente quais aplicativos são confiáveis. Você pode adicionar mais aplicativos confiáveis na configuração de política de grupo Configurar aplicativos permitidos.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definir grupos de políticas de controle de dispositivos</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Siga o esquema XML dos grupos de políticas de controle de dispositivos para preencher os dados de grupos de políticas.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definir regras de políticas de controle de dispositivos</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Siga o esquema XML das regras de política de controle de dispositivo para preencher os dados de regras de política.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Se você desabilitar ou não definir essa configuração, nenhum texto adicional
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Defina os grupos de políticas aqui</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Defina as regras de políticas aqui</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

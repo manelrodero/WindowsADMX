@@ -38,7 +38,7 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan ikke 
       <string id="DisableEnterpriseAuthProxy">Konfigurer bruk av Godkjent proxy for tjenesten Tilkoblet brukeropplevelse og telemetri</string>
       <string id="DisableEnterpriseAuthProxy_1">Aktiver bruk av Godkjent proxy</string>
       <string id="DisableEnterpriseAuthProxy_2">Deaktiver bruk av Godkjent proxy</string>
-      <string id="DisableEnterpriseAuthProxy_Explain">Denne policyinnstillingen hindrer at tjenesten Tilkoblet brukeropplevelse og telemetri bruker en godkjent proxy automatisk til å sende data tilbake til Microsoft på Windows 10. Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, bruker tjenesten Tilkoblet brukeropplevelse og telemetri automatisk en godkjent proxy til å sende data tilbake til Microsoft. Hvis du aktiverer denne policyen, hindres tjenesten Tilkoblet brukeropplevelse og telemetri i å bruke en godkjent proxy automatisk.</string>
+      <string id="DisableEnterpriseAuthProxy_Explain">Denne policyinnstillingen hindrer at tjenesten Tilkoblet brukeropplevelse og telemetri bruker en godkjent proxy automatisk til å sende data tilbake til Microsoft i Windows 10. Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, bruker tjenesten Tilkoblet brukeropplevelse og telemetri automatisk en godkjent proxy til å sende data tilbake til Microsoft. Hvis du aktiverer denne policyen, hindres tjenesten Tilkoblet brukeropplevelse og telemetri i å bruke en godkjent proxy automatisk.</string>
 
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Begrens utvidede diagnosedata til det som minimum kreves av Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Aktiver Windows Analytics-innsamling</string>
@@ -134,11 +134,26 @@ Hvis du vil angi en grense på nivået av diagnosedata som sendes til Microsoft 
       </string>
 
       <string id="AllowCommercialDataPipeline">Tillat kommersiell datapipeline</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline velger enheten til Windows Enterprise-datapipeline.
-          Hvis du aktiverer denne innstillingen, blir data som er innhentet fra enheten, tilordnet til Windows Enterprise-datapipeline.
-          Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, samles alle data fra enheten sammen og behandles i henhold til policyene for Windows-standarddatapipeline.
-          Hvis du konfigurerer denne innstillingen, endres ikke samlingsnivået for telemetri eller muligheten til brukeren å endre nivået. Denne innstillingen gjelder bare for Windows-operativsystemet og -appene som følger med Windows, ikke tredjepartsapper eller -tjenester som kjører på Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline kontrollerer om Microsoft er en behandler eller en kontrollør for Windows-diagnosedata samlet inn fra denne enheten.
+          Hvis du aktiverer denne policyen, vil Microsoft være behandleren av Windows-diagnosedata samlet inn fra Windows-enheten, og kunden vil være kontrolløren. Enheten må være registrert i Azure AD for at denne policyen skal lykkes.
+          Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, vil Microsoft være kontrolløren av Windows-diagnosedata samlet inn fra denne enheten.
+          Denne policyen kontrollerer bare hvorvidt Microsoft er en behandler for Windows-diagnosedata fra denne enheten. Konfigurasjon av denne innstillingen endrer ikke hvorvidt diagnosedata samles inn, eller muligheten for brukeren til å endre nivået. Hvis du vil konfigurere innsamlingsnivået, må du bruke policyen «Tillat diagnosedata», og for å begrense brukere på denne enheten fra å endre diagnosedatanivået må du bruke policyen «Konfigurer brukergrensesnitt for valgfrie innstillinger for diagnosedata».
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Aktiver OneSettings-revisjon</string>
+      <string id="EnableOneSettingsAuditing_Explain">Denne policyinnstillingen kontrollerer om Windows-poster forsøker å koble til med OneSettings-tjenesten til EventLog.
+
+Hvis du aktiverer denne policyen, registrerer Windows forsøk på å koble til med OneSettings-tjenesten til Microsoft\Windows\Privacy-Auditing\Operational EventLog-kanalen.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, registrerer ikke Windows forsøk på å koble til med OneSettings-tjenesten til EventLog.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Deaktiver OneSettings-nedlastinger</string>
+      <string id="DisableOneSettingsDownloads_Explain">Denne policy innstillingen angir om Windows skal forsøke å koble til OneSettings-tjenesten.
+
+Hvis du aktiverer denne policyen, vil ikke Windows prøve å koble til OneSettings-tjenesten.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policy innstillingen, vil Windows regelmessig prøve å koble til OneSettings-tjenesten for å laste ned konfigurasjons innstillinger.
       </string>
     </stringTable>
     <presentationTable>

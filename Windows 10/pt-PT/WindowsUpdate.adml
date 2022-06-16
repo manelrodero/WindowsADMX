@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Pelo menos o Windows XP Professional Service Pack 1 ou o Windows 2000 Service Pack 3, excluindo o Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Pelo menos o sistema operativo Windows Server 2003 ou Windows XP Professional com SP1, excluindo o Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Pelo menos, Windows XP Professional Service Pack 1 ou, pelo menos, Windows 2000 Service Pack 3 a Windows 8.1 ou Windows Server 2012 R2 com o service pack mais recente</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Pelo menos, Windows Vista a Windows 8.1 ou Windows Server 2012 R2 com o service pack mais recente</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Pelo menos, Windows XP Professional Service Pack 1 ou, pelo menos, Windows 2000 Service Pack 3 a Windows 8,1 ou Windows Server 2012 R2 com o Service Pack mais atual. Não suportado no Windows 10 e superior.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Pelo menos, Windows Vista através do Windows 8,1 ou Windows Server 2012 R2 com o Service Pack mais atual. Não suportado no Windows 10 e superior.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 ou, Pelo menos, Windows 2000 Service Pack 3
 A opção 7 é apenas suportada por servidores com edição do Windows Server 2016, no mínimo</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Pelo menos, Windows Server 2022, ou Windows 10 versão 2004</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 através do Windows Server 2022 ou Windows 10</string>
       <string id="AUDontShowUasHelp">Esta definição de política permite-lhe gerir se a opção 'Instalar Atualizações e Encerrar' é apresentada na caixa de diálogo Encerrar o Windows.
 
 Se ativar esta definição de política, 'Instalar Atualizações e Encerrar' não irá aparecer como uma opção na caixa de diálogo Encerrar o Windows, mesmo que estejam disponíveis atualizações para instalação quando o utilizador selecionar a opção Encerrar no menu Iniciar.
@@ -161,6 +163,16 @@ Se o estado estiver definido como Não Configurado, a utilização das Atualiza�
         A deteção de atualizações contra servidores intranet falhará quando o proxy do utilizador for necessário como reversão e o comportamento do proxy alternativo não for configurado.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Utilizar o proxy do sistema apenas para detetar atualizações (predefinição)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Permitir que o proxy do utilizador seja utilizado como contingência se a deteção de proxy do sistema falhar</string>
+      <string id="UpdateClassPolicySource_Title">Especificar o serviço de origem para classes específicas de atualizações do Windows Update</string>
+      <string id="UpdateClassPolicySource_Help">Quando esta política está ativada, os dispositivos receberão atualizações do Windows para as classes listadas a partir da origem de atualização especificada: o Windows Update ou o serviço de atualização do Windows Server. 
+
+Nota: para receber quaisquer atualizações do serviço de atualização do Windows Server, tem de ter configurado corretamente uma localização do serviço de atualização da Microsoft na intranet através da política "especificar localização do serviço de atualização da Microsoft na intranet".
+
+Se esta política não for configurada ou estiver desativada, o dispositivo continuará a detetar atualizações por outras configurações de política. 
+
+Nota: se estiver a utilizar "não permitir que as políticas de adiamento peçam análises face ao Windows Update" para garantir que apenas os dispositivos sejam verificados apenas no servidor especificado, recomendamos a configuração desta política ou, além disso, para tal.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Especifica as horas que o Windows vai utilizar para determinar quanto tempo deve aguardar antes de verificar a existência de atualizações disponíveis. O tempo de espera exato é a soma do valor específico e de uma variável aleatória de 0 a 4 horas.
 
         Se o estado for definido como Ativado, o Windows vai verificar a existência de atualizações disponíveis no intervalo especificado.
@@ -372,9 +384,15 @@ Para retomar a receção de Atualizações de Qualidade que estejam colocadas em
 
 Se desativar ou não configurar esta política, o Windows Update não altera o respetivo comportamento.</string>
       <string id="TargetReleaseVersion_Title">Selecione a versão de destina da Atualização de Funcionalidades</string>
-      <string id="TargetReleaseVersion_Help">Ative esta política para especificar uma versão de Atualização de Funcionalidades a ser solicitada em análises subsequentes.
+      <string id="TargetReleaseVersion_Help">Insira o produto e a versão conforme listado na página da versão de destino do Windows Update:
 
-Introduza a versão listada na página de Informações de Versão do Windows aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+O dispositivo irá pedir o produto e a versão do Windows Update nas análises subsequentes.
+
+Entrar num produto de destino e clicar em OK ou Aplicar significa que aceito os Termos de Licenciamento para Software Microsoft para o mesmo encontrados em aka.ms/WindowsTargetVersioninfo. Se uma organização estiver a licenciar o software, estou autorizado a vincular a organização.
+
+Se introduzir um valor inválido, permanecerá na sua versão atual até corrigir os valores para um produto e versão suportados.</string>
       <string id="DisableWUfBSafeguards">Desativar salvaguardas para Atualizações de Funcionalidades</string>
       <string id="DisableWUfBSafeguards_Help">
           Ative esta definição quando as Atualizações de Funcionalidades devem ser implementadas em dispositivos sem o bloqueio em suspensões de salvaguarda. As suspensões de salvaguarda são problemas de compatibilidade conhecidos que bloqueiam a implementação de atualizações nos dispositivos afetados até o problema ser resolvido. A ativação desta política pode permitir que uma organização implemente a Atualização da Funcionalidade em dispositivos para efeitos de teste ou sem o bloqueio em suspensões de salvaguarda.
@@ -699,6 +717,13 @@ Esta política anulará as seguintes políticas:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Não aplicar a afixação do certificado TLS para o cliente Windows Update para detetar atualizações.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Selecione o comportamento do proxy para o cliente Windows Update para detetar atualizações:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Especificar serviço de origem para as seguintes classes de atualizações do Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Atualizações de Funcionalidades</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Atualizações de Qualidade</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Atualizações de Controlador</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Outras Atualizações</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Verificar se existem atualizações no próximo</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">intervalo (horas):  </decimalTextBox>
@@ -733,6 +758,9 @@ Esta política anulará as seguintes políticas:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">trabalho (minutos):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Para que versão de produto do Windows pretende receber atualizações de funcionalidades? por exemplo, Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Versão de Destino das Atualizações de Funcionalidades</label>
         </textBox>

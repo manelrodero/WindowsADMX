@@ -46,22 +46,22 @@ Observações:
           A exibição na Web é afetada pelas configurações "Habilitar Shell Clássico" e "Não permitir que a pasta Opções seja aberta a partir do botão Opções na guia Exibir da fita" em Configuração do Usuário\Modelos Administrativos\Componentes do Windows\Windows Explorer, e pela configuração "Habilitar o Active Desktop" em Configuração do Usuário\Modelos Administrativos\Área de Trabalho\Active Desktop.</string>
       <string id="DomainDisplayPrinters_Help">Se você habilitar esta configuração de política, isso definirá o número máximo de impressoras (de cada tipo) que o assistente Adicionar Impressora exibirá em um computador em uma rede não gerenciada (quando o computador não pode acessar um controlador de domínio, por exemplo, um notebook associado a um domínio em uma rede corporativa).
 
-          Se esta configuração de política for desabilitada, a página de verificação de rede não será exibida.
+ Se esta configuração de política for desabilitada, a página de verificação de rede não será exibida.
 
-          Se esta configuração de política não for definida, o assistente Adicionar Impressora exibirá o número padrão de impressoras de cada tipo:
-           Impressoras de diretório: 20
-          Impressoras TCP/IP: 0
-          Impressoras de Serviços Web: 0
-          Impressoras Bluetooth: 10
+ Se esta configuração de política não for definida, o assistente Adicionar Impressora exibirá o número padrão de impressoras de cada tipo:
+ Impressoras de diretório: 20
+ Impressoras TCP/IP: 0
+ Impressoras de Serviços Web: 0
+ Impressoras Bluetooth: 10
  Impressoras compartilhadas: 0
 
-          Para exibir as impressoras de Serviços Web disponíveis na rede, certifique-se de que a descoberta de rede está ativada. Para ativar a descoberta de rede, clique em "Iniciar", em "Painel de Controle" e em "Rede e Internet". Na página "Rede e Internet", clique em "Central de Rede e Compartilhamento". Na página Central de Rede e Compartilhamento, clique em "Alterar as configurações de compartilhamento avançadas". Na página Configurações compartilhamento avançadas, clique na seta ao lado da seta "Domínio", clique em "Ativar descoberta de rede" e, em seguida, clique em "Salvar alterações".
+ Para exibir as impressoras de Serviços Web disponíveis na rede, certifique-se de que a descoberta de rede está ativada. Para ativar a descoberta de rede, clique em "Iniciar", em "Painel de Controle" e em "Rede e Internet". Na página "Rede e Internet", clique em "Central de Rede e Compartilhamento". Na página Central de Rede e Compartilhamento, clique em "Alterar as configurações de compartilhamento avançadas". Na página Configurações compartilhamento avançadas, clique na seta ao lado da seta "Domínio", clique em "Ativar descoberta de rede" e, em seguida, clique em "Salvar alterações".
 
-          Se você não quiser exibir impressoras de determinado tipo, habilite esta política e defina o número de impressoras a serem exibidas como 0.
+ Se você não quiser exibir impressoras de determinado tipo, habilite esta política e defina o número de impressoras a serem exibidas como 0.
 
-          No Windows 10 e posterior, apenas as impressoras TCP/IP podem ser mostradas no assistente. Se você habilitar esta configuração de política, somente os limites de impressora TCP/IP serão aplicáveis. Somente no Windows 10, se você desabilitar ou não definir esta configuração de política, o limite padrão será aplicado.
-          
-          No Windows 8 e posterior, impressoras Bluetooth não são mostradas e, portanto, o limite não é válido para essas versões do Windows.
+ No Windows 10 e posterior, apenas as impressoras TCP/IP podem ser mostradas no assistente. Se você habilitar esta configuração de política, somente os limites de impressora TCP/IP serão aplicáveis. Somente no Windows 10, se você desabilitar ou não definir esta configuração de política, o limite padrão será aplicado.
+ 
+ No Windows 8 e posterior, impressoras Bluetooth não são mostradas e, portanto, o limite não é válido para essas versões do Windows.
       </string>
       <string id="DomainPrinters">Assistente para Adicionar Impressora - Página de verificação da rede (rede gerenciada)</string>
       <string id="DownlevelBrowse">Procurar impressoras na rede</string>
@@ -147,7 +147,7 @@ Impressoras compartilhadas: 50
 Se você não quiser exibir impressoras de determinado tipo, habilite esta política e defina o número de impressoras a serem exibidas como 0.
 
 No Windows 10 e posterior, apenas as impressoras TCP/IP podem ser mostradas no assistente. Se você habilitar esta configuração de política, somente os limites de impressora TCP/IP serão aplicáveis. Somente no Windows 10, se você desabilitar ou não definir esta configuração de política, o limite padrão será aplicado.
-          
+ 
 No Windows 8 e posterior, impressoras Bluetooth não são mostradas e, portanto, o limite não é válido para essas versões do Windows.</string>
       <string id="NonDomainPrinters">Assistente para Adicionar Impressora - Página de verificação da rede (rede não gerenciada)</string>
       <string id="PackagePointAndPrintOnly">Usar somente Apontar e Imprimir Pacote</string>
@@ -280,9 +280,9 @@ Por padrão, SKUs do Windows Ultimate, Professional e Home continuarão pesquisa
       <string id="MXDWUseLegacyOutputFormatMSXPS">Alterar o formato de saída padrão do MXDW (Microsoft XPS Document Writer) para o formato herdado do Microsoft XPS (*.xps)</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS_Help">O MXDW (Microsoft XPS Document Writer) gera arquivos OpenXPS (*.oxps) por padrão no Windows 10 e no Windows Server 2019.
 
-          Se você habilitar essa configuração de política de grupo, o formato padrão de saída do MXDW será o formato herdado Microsoft XPS (*.xps).
+ Se você habilitar essa configuração de política de grupo, o formato padrão de saída do MXDW será o formato herdado Microsoft XPS (*.xps).
 
-          Se você desabilitar ou não definir essa configuração de política, o formato padrão de saída do MXDW será o OpenXPS (*.oxps).</string>
+ Se você desabilitar ou não definir essa configuração de política, o formato padrão de saída do MXDW será o OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Desativar gerenciamento de impressora padrão do Windows</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Esta preferência permite alterar o gerenciamento da impressora padrão.
 
@@ -291,6 +291,34 @@ Se você habilitar essa configuração, o Windows não gerenciará a impressora 
 Se você desabilitar essa configuração, o Windows gerenciará a impressora padrão.
 
 Se você não definir essa configuração, o gerenciamento da impressora padrão não será alterado. </string>
+      <string id="EnableDeviceControl">Habilitar Restrições de Impressão do Controle de Dispositivo</string>
+      <string id="EnableDeviceControl_Help">
+          Determina se as restrições de impressão do controle de dispositivo são impostas para impressão neste computador.
+
+Por padrão, não há restrições para a impressão com base no tipo de conexão ou na marca/modelo da impressora.
+
+Se você habilitar essa configuração, o computador restringirá a impressão em conexões de impressora na rede corporativa ou em impressoras conectadas por USB aprovadas.
+
+Se você desabilitar esta configuração ou não configurá-la, não haverá restrições para a impressão com base no tipo de conexão ou na marca/modelo da impressora.</string>
+        <string id="ApprovedUsbPrintDevices">Lista de dispositivos de impressão conectados por USB Aprovados</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Esta configuração é um componente das restrições de impressão de controle de dispositivo. Para usar esta configuração, habilite a impressão de controle de dispositivo habilitando a configuração "Habilitar restrições de impressão de controle de dispositivo".
+
+Quando a impressão de controle de dispositivo está habilitada, o sistema usa a lista especificada de valores vid/pid para determinar se a impressora atual conectada para USB está aprovada para impressão local.
+
+Digite todas as combinações de vid/pid aprovadas (separadas por vírgulas) que correspondam aos modelos de impressora USB aprovados. Quando um usuário tentar imprimir em uma fila de impressora USB, a vid/pid do dispositivo será comparada à lista aprovada.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Limita a instalação do driver de impressão aos administradores</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Determina se os usuários que não são Administradores podem instalar drivers de impressão neste computador.
+
+Por padrão, os usuários que não são Administradores não podem instalar drivers de impressão neste computador.
+
+Se você habilitar essa configuração ou não a definir, o sistema limitará a instalação de drivers de impressão aos Administradores deste computador.
+
+Se você desabilitar essa configuração, o sistema não limitará a instalação de drivers de impressão neste computador.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +378,13 @@ Se você não definir essa configuração, o gerenciamento da impressora padrão
           <label>Caminho padrão do Active Directory</label>
         </textBox>
         <text>exemplo --&gt; LDAP://DC=Domínio1,DC=MinhaEmpresa,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Especifique a lista de dispositivos de impressora conectados por USB aprovados.</text>
+        <text>A lista é uma lista separada por vírgulas de valores vid/pid USB. Exemplo: 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>VID/PID</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

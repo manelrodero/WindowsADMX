@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Virüsten Koruma</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Dışlamalar</string>
+    <string id="DeviceControl">Aygıt Denetimi</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Attack Surface Azaltma</string>
     <string id="ExploitGuard_ControlledFolderAccess">Denetlenen Klasör Erişimi</string>
@@ -703,24 +704,24 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Grup İlkesi yerel
     <string id="SubmitSamplesConsent_Send_All">Tüm örnekleri gönder</string>
 
     <string id="SpynetReporting">Microsoft MAPS'a katıl</string>
-    <string id="SpynetReporting_Explain">Bu ilke ayarı, Microsoft MAPS'a katılmanızı sağlar. Microsoft MAPS, olası tehditlere nasıl yanıt verileceğini seçmenize yardımcı olan çevrimiçi topluluktur. Topluluk ayrıca yeni kötü amaçlı yazılımların yayılmasını durdurmaya da yardımcı olur.
+    <string id="SpynetReporting_Explain">Bu ilke ayarı, Microsoft MAPS'a katılmanızı sağlar. Microsoft MAPS, olası tehditlere nasıl yanıt verileceğini seçmenize yardımcı olan çevrimiçi bir topluluktur. Topluluk ayrıca yeni kötü amaçlı yazılımların yayılmasını durdurmaya da yardımcı olur.
 
-    Algılanan yazılımlarla ilgili temel veya ek bilgileri göndermeyi seçebilirsiniz. Ek bilgiler, Microsoft'un yeni güvenlik bilgileri oluşturmasına ve bunların bilgisayarınızı korumasına yardımcı olur. Bu bilgiler, zararlı bir yazılım kaldırıldığında bilgisayarınızdaki algılanan öğelerin konumu gibi bilgileri içerebilir. Bilgiler otomatik olarak toplanıp gönderilir. Bazı durumlarda, kişisel bilgiler istemeden Microsoft'a gönderilebilir. Ancak Microsoft, bu bilgileri kimliğinizi tespit etmek veya sizinle iletişim kurmak için kullanmaz.
+ Algılanan yazılımlarla ilgili temel veya ek bilgileri göndermeyi seçebilirsiniz. Ek bilgiler, Microsoft'un yeni güvenlik zekası oluşturmasına ve bilgisayarınızı korumasına yardımcı olur. Bu bilgiler, zararlı bir yazılım kaldırıldığında bilgisayarınızdaki algılanan öğelerin konumu gibi bilgileri içerebilir. Bilgiler otomatik olarak toplanıp gönderilir. Bazı durumlarda, kişisel bilgiler istenmeden Microsoft'a gönderilebilir. Ancak Microsoft, bu bilgileri kimliğinizi tespit etmek veya sizinle iletişim kurmak için kullanmaz.
 
-    Olası seçenekler şunlardır:
-    (0x0) Devre Dışı (varsayılan)
-    (0x1) Temel üyelik
-    (0x2) Gelişmiş üyelik
+ Olası seçenekler şunlardır:
+ (0x0) Devre Dışı (varsayılan)
+ (0x1) Temel üyelik
+ (0x2) Gelişmiş üyelik
 
-    Temel üyelik, Microsoft'a, yazılımın nereden geldiği, sizin uyguladığınız veya otomatik olarak uygulanan eylemler ve bu eylemlerin başarılı olup olmadığı dahil, algılanan yazılımlarla ilgili temel bilgileri gönderir.
+ Temel üyelik, Microsoft'a, yazılımın nereden geldiği, sizin uyguladığınız veya otomatik olarak uygulanan eylemler ve bu eylemlerin başarılı olup olmadığı dahil, algılanan yazılımlarla ilgili temel bilgileri gönderir.
 
-    Gelişmiş üyelik, temel bilgilere ek olarak, yazılımın konumu, dosya adları, yazılımın nasıl çalıştığı ve bilgisayarınızı nasıl etkilediği gibi bilgiler de dahil olmak üzere, kötü amaçlı yazılımlar, casus yazılımlar ve olası istenmeyen yazılımlar hakkında Microsoft'a daha fazla bilgi gönderir.
+ Gelişmiş üyelik, temel bilgilere ek olarak, yazılımın konumu, dosya adları, yazılımın nasıl çalıştığı ve bilgisayarınızı nasıl etkilediği gibi bilgiler de dahil olmak üzere, kötü amaçlı yazılımlar, casus yazılımlar ve olası istenmeyen yazılımlar hakkında Microsoft'a daha fazla bilgi gönderir.
 
-    Bu ayarı etkinleştirirseniz, belirtilen üyelikle Microsoft MAPS'a katılırsınız.
+ Bu ayarı etkinleştirirseniz, belirtilen üyelikle Microsoft MAPS'a katılırsınız.
 
-    Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Microsoft MAPS'a katılmazsınız.
-  
-    Windows 10' da Temel üyelik artık kullanılmamaktadır, bu nedenle değeri 1 veya 2 olarak belirlediğinizde cihaz Gelişmiş üyelik seçeneğine kaydedilir.</string>
+ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Microsoft MAPS'a katılmazsınız.
+ 
+ Windows 10'da Temel üyelik artık kullanılmamaktadır, bu nedenle değeri 1 veya 2 olarak belirlediğinizde cihaz Gelişmiş üyelik seçeneğine kaydedilir.</string>
     <string id="SpynetReporting_Disabled">Devre Dışı</string>
     <string id="SpynetReporting_Basic">Temel MAPS</string>
     <string id="SpynetReporting_Advanced">Gelişmiş MAPS</string>
@@ -979,6 +980,14 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
 
     Microsoft Defender Virüsten Koruma, hangi uygulamalara güvenilebileceğini otomatik olarak belirler. İzin verilen uygulamaları yapılandır GP ayarında ek güvenilir uygulamalar ekleyebilirsiniz.
     </string>
+    <string id="DeviceControl_PolicyGroups">Aygıt denetim ilkesi grupları tanımlama</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        İlke grubu verilerini doldurmak için lütfen aygıt denetim ilkesi grupları xml şemasını izleyin.
+    </string>
+    <string id="DeviceControl_PolicyRules">Aygıt denetim ilkesi kuralları tanımlama</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        İlke kuralları verilerini doldurmak için lütfen aygıt denetim ilkesi kuralları xml şemasını izleyin.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1150,6 +1159,16 @@ Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız hiçbir ek me
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>İlke gruplarını buradan tanımlayın</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>İlke kurallarını buradan tanımlayın</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

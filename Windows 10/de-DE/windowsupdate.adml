@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Mindestens Windows XP Professional Service Pack 1 oder Windows 2000 Service Pack 3, Windows RT ausgenommen</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Mindestens Windows Server 2003-Betriebssysteme oder Windows XP Professional mit SP1, Windows RT ausgenommen</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Mindestens Windows XP Professional Service Pack 1 oder mindestens Windows 2000 Service Pack 3 bis Windows 8.1 oder Windows Server 2012 R2 mit dem aktuellen Service Pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Mindestens Windows Vista bis Windows 8.1 oder Windows Server 2012 R2 mit dem aktuellen Service Pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Mindestens Windows XP Professional Service Pack 1 oder Mindestens Windows 2000 Service Pack 3 bis Windows 8.1 oder Windows Server 2012 R2 mit dem aktuellen Service Pack. Wird für Windows 10 und höher nicht unterstützt.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Mindestens Windows Vista bis Windows 8.1 oder Windows Server 2012 R2 mit dem aktuellen Service Pack. Wird für Windows 10 und höher nicht unterstützt.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 oder mindestens Windows 2000 Service Pack 3
 Option 7 wird nur auf Servern unterstützt, auf denen mindestens Windows Server 2016-Edition installiert ist​</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Mindestens Windows Server 2022 oder Windows 10 Version 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 bis Windows Server 2022 oder Windows 10​</string>
       <string id="AUDontShowUasHelp">Mit dieser Richtlinieneinstellung können Sie festlegen, ob die Option "Updates installieren und herunterfahren" im Dialogfeld "Windows herunterfahren" angezeigt wird.
 
 Durch Aktivieren dieser Richtlinieneinstellung wird die Option "Updates installieren und herunterfahren" im Dialogfeld "Windows herunterfahren" nicht angezeigt, auch wenn Updates zum Installieren verfügbar sind und der Benutzer die Option "Herunterfahren" im Startmenü auswählt.
@@ -161,6 +163,16 @@ Falls der Status auf "Nicht konfiguriert" festgelegt ist, ist die Verwendung von
         Die Erkennung von Updates für Intranetserver schlägt fehl, wenn ein Benutzerproxy als Fallback benötigt wird und das alternative Proxyverhalten nicht konfiguriert ist.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Nur System-Proxy für die Erkennung von Aktualisierungen verwenden (Standard)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Verwendung eines Benutzer-Proxys als Fallback, falls die Erkennung mittels System-Proxy fehlschlägt, erlauben</string>
+      <string id="UpdateClassPolicySource_Title">Quelldienst für bestimmte Klassen von Windows-Updates angeben</string>
+      <string id="UpdateClassPolicySource_Help">Wenn diese Richtlinie aktiviert ist, erhalten Geräte Windows-Updates für die Klassen, die von der angegebenen Update-Quelle aufgelistet wurden: entweder Windows Update oder Windows Server Update Service. 
+
+        Hinweis: Um Updates vom Windows Server Update Services zu erhalten, müssen Sie einen internen Pfad für den Microsoft Updatedienst über die Richtlinie „Internen Pfad für den Microsoft Updatedienst angeben“ ordnungsgemäß konfiguriert haben.
+
+        Wenn diese Richtlinie nicht konfiguriert oder deaktiviert ist, erkennt das Gerät weiterhin Aktualisierungen gemäß Ihren anderen Richtlinienkonfigurationen. 
+
+        Hinweis: Wenn Sie derzeit die Option „Nicht zulassen, dass Verzögerungsrichtlinien Scans gegen Windows Update verursachen“ verwenden, um sicherzustellen, dass Geräte nur gegen Ihren angegebenen Server scannen, empfehlen wir, stattdessen diese Richtlinie zu konfigurieren, oder zusätzlich zu der Option.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Gibt die Anzahl der Stunden an, mit deren Hilfe Windows bestimmt, wie lange gewartet wird, bevor verfügbare Updates gesucht werden. Die genaue Wartezeit entspricht der Summe aus dem spezifischen Wert und einer Zufallsvariablen zwischen 0 und 4 Stunden.
 
         Wenn der Status auf "Aktiviert" festgelegt ist, sucht Windows im angegebenen Intervall nach verfügbaren Updates.
@@ -372,9 +384,15 @@ Um ausgesetzte Qualitätsupdates wieder zu empfangen, löschen Sie das Datum aus
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird das Verhalten von Windows Update nicht geändert.</string>
       <string id="TargetReleaseVersion_Title">Zielversion des Funktionsupdates auswählen</string>
-      <string id="TargetReleaseVersion_Help">Aktivieren Sie diese Richtlinie, um eine Funktionsupdate-Version anzugeben, die bei nachfolgenden Scans angefordert werden soll.
+      <string id="TargetReleaseVersion_Help">Geben Sie das Produkt und die Version ein, wie auf der Seite der Zielversion von Windows Update aufgeführt:
 
-Geben Sie die Version an wie auf der Seite „Windows-Versionsinformationen“ unter aka.ms/ReleaseInformationPage.</string>
+ aka.ms/WindowsTargetVersioninfo
+
+Das Gerät fordert bei nachfolgenden Scans das Windows Update-Produkt und die Windows Update-Version an.
+
+Wenn ich ein Zielprodukt eingebe und auf "OK" oder "Übernehmen" klicke, akzeptiere ich die Microsoft Software-Lizenzbedingungen für dieses Produkt, die unter aka.ms/WindowsTargetVersioninfo zu finden sind. Wenn eine Organisation die Software lizenziert, bin ich berechtigt, die Organisation zu verpflichten.
+
+Wenn Sie einen ungültigen Wert eingeben, verbleiben Sie in Ihrer aktuellen Version, bis Sie die Werte auf ein unterstütztes Produkt und eine unterstützte Version korrigiert haben.</string>
       <string id="DisableWUfBSafeguards">Deaktivieren von Sicherheitsvorkehrungen für Feature-Updates</string>
       <string id="DisableWUfBSafeguards_Help">
           Aktivieren Sie diese Einstellung, wenn Feature-Updates auf Geräten bereitgestellt werden sollen, ohne dass sie von Schutzmaßnahmen blockiert werden. Sicherheitsvorkehrungen verursachen bekanntermaßen Kompatibilitätsprobleme, die verhindern, dass das Upgrade für betroffene Geräte bereitgestellt wird, bis das Problem behoben ist. Durch das Aktivieren dieser Richtlinie kann eine Organisation das Feature-Update für Geräte bereitstellen, die getestet werden sollen, oder das Feature-Update bereitstellen, ohne dass es von Schutzmaßnahmen blockiert wird.
@@ -699,6 +717,13 @@ Diese Richtlinie setzt die folgenden Richtlinien außer Kraft:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Erzwingen Sie nicht das Anheften von TLS-Zertifikaten für den Windows Update-Client, um Updates zu erkennen.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Wählen Sie das Proxy Verhalten für den Windows Update-Client zum Ermitteln von Updates aus:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Quelldienst für die folgenden Klassen von Windows-Updates angeben:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Featureupdates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Qualitätsupdates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Treiberupdates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Andere Updates</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>In folgenden Abständen (Stunden)</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">nach Updates suchen:  </decimalTextBox>
@@ -733,6 +758,9 @@ Diese Richtlinie setzt die folgenden Richtlinien außer Kraft:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">ihrer Arbeit (Minuten):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Für welche Windows-Produktversion möchten Sie Funktionsupdates erhalten? Beispiel: Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Zielversion für Funktionsupdates</label>
         </textBox>

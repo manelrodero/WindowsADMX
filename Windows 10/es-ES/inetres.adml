@@ -415,17 +415,17 @@ Si no establece esta directiva de configuración, el usuario puede intercambiar 
 
 Si habilita esta configuración de directiva, no se solicitará al usuario que habilite el filtro de suplantación de identidad. Debe especificar qué modo usa el filtro de suplantación de identidad: manual, automático o desactivado.
 
-Si selecciona el modo manual, el filtro de suplantación de identidad realiza solo análisis locales, y se pide al usuario que permita que se envíen datos a Microsoft. Si la función está totalmente habilitada, todas las direcciones de los sitios web que no se encuentren en la lista de sitios web permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
+Si selecciona el modo manual, el filtro de suplantación de identidad realiza solo análisis locales, y se pide al usuario que permita que se envíen datos a Microsoft. Si la función está totalmente habilitada, todas las direcciones de los sitios web que no se encuentren en la lista de permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
 
 Si deshabilita o no establece esta configuración de directiva, se pide al usuario que decida el modo de funcionamiento del filtro de suplantación de identidad.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">Esta configuración de directiva permite al usuario habilitar el filtro SmartScreen, que le advierte de si el sitio web que está visitando es conocido por haber realizado intentos fraudulentos de reunir información personal a través de suplantación de identidad, o si se sabe que contiene malware.
 
-Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Debe especificar qué modo usa el filtro SmartScreen: activado o desactivado. Todas las direcciones de los sitios web que no se encuentren en la lista de sitios web permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
+Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Debe especificar qué modo usa el filtro SmartScreen: activado o desactivado. Todas las direcciones de los sitios web que no se encuentren en la lista de permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
 
 Si deshabilita o no establece esta configuración de directiva, se pide al usuario que decida si desea activar el filtro SmartScreen durante la primera ejecución.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">Esta configuración de directiva impide que el usuario administre el filtro SmartScreen, que le advierte de si el sitio web que está visitando es conocido por haber realizado intentos fraudulentos de reunir información personal a través de suplantación de identidad, o si se sabe que contiene malware.
 
-Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Todas las direcciones de los sitios web que no se encuentren en la lista de sitios web permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
+Si habilita esta configuración de directiva, no se le pide al usuario que active el filtro SmartScreen. Todas las direcciones de los sitios web que no se encuentren en la lista de permitidos del filtro se envían de forma automática a Microsoft sin solicitar la confirmación del usuario.
 
 Si deshabilita o no establece esta configuración de directiva, se pide al usuario que decida si desea activar el filtro SmartScreen durante la primera ejecución.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Esta configuración de directiva desactiva la característica de comprobación de la configuración de seguridad, que comprueba la configuración de seguridad de Internet Explorer para determinar cuándo la configuración pone en peligro a Internet Explorer.
@@ -3966,6 +3966,14 @@ Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid
 Si habilita esta directiva, la funcionalidad de teclas de acceso rápido extendidas se habilitará en el modo de Internet Explorer y funcionará del mismo modo que Internet Explorer.
 
 Si deshabilita o no configura esta directiva, las teclas de acceso rápido extendidas no funcionarán en el modo de Internet Explorer.
+
+Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Restablecer zoom predeterminado para cuadros de diálogo HTML en modo Internet Explorer</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Esta configuración de directiva permite a los administradores restablecer el zoom a los valores predeterminados para los cuadros de diálogo HTML en modo Internet Explorer.
+
+Si habilita esta directiva, el zoom de un cuadro de diálogo HTML en Internet Explorer modo no se propagará desde su página principal.
+
+Si deshabilita o no configura esta directiva, el zoom de un cuadro de diálogo HTML en Internet Explorer modo se establecerá en función del zoom de su página principal.
 
 Para obtener más información, consulte https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Deshabilitar Internet Explorer 11 como un explorador independiente</string>

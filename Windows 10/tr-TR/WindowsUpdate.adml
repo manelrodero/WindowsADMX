@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">En azından Windows XP Professional Service Pack 1 veya Windows 2000 Service Pack 3, Windows RT hariç</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">En azından Windows Server 2003 işletim sistemleri veya SP1'li Windows XP Professional, Windows RT hariç</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">En az Windows XP Professional Hizmet Paketi 1 veya en az Windows 2000 Hizmet Paketi 3'ten Windows 8.1'e kadar veya en güncel hizmet paketiyle Windows Server 2012 R2</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">En az Windows Vista'dan Windows 8.1'e kadar veya en güncel hizmet paketiyle Windows Server 2012 R2</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">En az Windows XP Professional Service Pack 1 veya En az Windows 2000 Service Pack 3 ile Windows 8.1 veya en güncel hizmet paketine sahip Windows Server 2012 R2. Üst ve Windows 10 desteklenmiyor.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">En az Windows Vista Windows 8.1 veya en güncel hizmet paketine sahip Windows Server 2012 R2. Üst ve Windows 10 desteklenmiyor.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 veya En az Windows 2000 Service Pack 3
 Seçenek 7 yalnızca en az Windows Server 2016 sürümünü çalıştıran sunucularda desteklenir​</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">En az Windows Server 2022 veya Windows 10 Sürüm 2004</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 ile Windows Server 2022 arasında veya Windows 10</string>
       <string id="AUDontShowUasHelp">Bu ilke ayarı sizin Windows Kapatma iletişim kutusunda "Güncelleştirmeleri Yükle ve Kapat" seçeneğinin gösterilip gösterilmemesini yönetmenizi sağlar.
 
 Bu ilke ayarını etkinleştirdiğiniz takdirde, kullanıcı Başlat menüsünden Kapat'ı seçtiğinde kurulum için güncelleştirmeler hazır olsa bile "Güncelleştirmeleri Yükle ve Kapat" Windows Kapatma iletişim kutusunda bir seçenek olarak görülmeyecektir.
@@ -156,6 +158,16 @@ Durum Yapılandırılmadı olarak ayarlanırsa Otomatik Güncelleştirmeler'in k
 </string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Güncelleştirmeleri algılamak için yalnızca sistem proxy 'sini kullan (varsayılan)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Sistem ara sunucusu kullanılarak algılama başarısız olursa geri dönüş olarak kullanıcı ara sunucusunun kullanılmasına izin ver</string>
+      <string id="UpdateClassPolicySource_Title">Windows Güncellemelerinin belirli sınıfları için kaynak hizmeti belirtin</string>
+      <string id="UpdateClassPolicySource_Help">Bu ilke etkinleştirildiğinde, aygıtlar belirtilen güncelleştirme kaynağından listelenen sınıflar için Windows güncelleştirmelerini alır: Windows Update veya Windows Server Update Service. 
+
+Not: Windows Server Update hizmetinden güncelleştirme almak Için "intranet Microsoft güncelleştirme hizmeti konumunu belirt" ilkesini kullanarak intranet Microsoft güncelleştirme hizmeti konumunu düzgün olarak yapılandırmış olmanız gerekir.
+
+Bu ilke yapılandırılmazsa veya devre dışı bırakılırsa, aygıt diğer ilke yapılandırmalarınız başına güncelleştirmeleri algılamaya devam edecektir. 
+
+Not: "Erteleme ilkelerinin Windows Update karşısında tarama yapmasına izin verme" yi kullanıyorsanız, şu anda yalnızca cihazların belirtilen sunucunuza taranmasını sağlamak için bu ilkeyi yapılandırmanız önerilir.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Windows'un kullanılabilir güncelleştirmeleri denetlemeden önce ne kadar süre bekleyeceğini belirlemek için kullanacağı saati belirtir. Tam bekleme süresi, belirli değerin ve 0-4 saatlik bir rastgele değişkenin toplamıdır.
 
         Durum Etkin olarak ayarlı ise, Windows belirlenen aralıkla kullanılabilir güncelleştirmeleri denetleyecektir.
@@ -367,9 +379,15 @@ Duraklatılan Kalite Güncelleştirmelerini almaya devam etmek için başlangı�
 
 Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, Windows Update davranışını değiştirmez.</string>
       <string id="TargetReleaseVersion_Title">Hedef Özellik Güncelleştirmesi sürümünü seç</string>
-      <string id="TargetReleaseVersion_Help">Sonraki taramalarda istenecek bir Özellik Güncelleştirmesi sürümü belirtmek için bu ilkeyi etkinleştirin.
+      <string id="TargetReleaseVersion_Help">Windows Update hedef sürüm sayfasında listelendiği şekilde ürünü ve sürümü girin:
 
-Sürümü aka.ms/ReleaseInformationPage adresindeki Windows Sürüm Bilgileri sayfasında listelendiği şekliyle girin</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Cihaz, daha sonraki taramalarda o Windows Update ürününü ve sürümünü isteyecektir.
+
+Bir hedef ürün girip Tamam veya Uygula’ya tıklamak, aka.ms/WindowsTargetVersioninfo adresinde bulunan Microsoft Yazılımı Lisans Koşulları’nı kabul ettiğim anlamına gelir. Yazılımın lisansı bir kuruluş tarafından sağlanıyorsa o kuruluş için hareket etmeye yetkiliyim.
+
+Geçersiz bir değer girerseniz desteklenen bir ürün ve sürümle bu değerleri düzeltene kadar geçerli sürümünüzde kalırsınız.</string>
       <string id="DisableWUfBSafeguards">Özellik Güncelleştirmeleri için korumayı devre dışı bırakın</string>
       <string id="DisableWUfBSafeguards_Help">
           Özellik Güncelleştirmelerinin herhangi bir koruma askıya alma işlemiyle engellenmeden cihazlara dağıtılması gerektiğinde bu ayarı etkinleştirin. Koruma askıya alma işlemleri, yükseltmenin sorun çözülene kadar etkilenen cihazlara dağıtılmasını engelleyen, bilinen uyumluluk sorunlarıdır. Bu ilkenin etkinleştirilmesi kuruluşun Özellik Güncelleştirmesini cihazlara test amacıyla dağıtmasına veya koruma askıya alma işlemleriyle engellenmeden dağıtmasına olanak tanır.
@@ -693,6 +711,13 @@ Bu ilkeyi devre dışı bırakır veya ayarlamazsanız, cihazlar varsayılan zam
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Güncelleştirmeleri algılaması için Windows Update istemcisi için TLS sertifika sabitlemeyi zorunlu tutmayın.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Güncelleştirmeleri algılamak için Windows Update istemcisi proxy davranışını seçin:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Aşağıdaki Windows güncelleme sınıfları için kaynak hizmeti belirtin:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Özellik Güncelleştirmeleri</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Kalite Güncelleştirmeleri</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Sürücü Güncelleştirmeleri</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Diğer Güncelleştirmeler</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Aşağıdaki aralıkta (saat)</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">güncelleştirmeleri denetle:  </decimalTextBox>
@@ -727,6 +752,9 @@ Bu ilkeyi devre dışı bırakır veya ayarlamazsanız, cihazlar varsayılan zam
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">zaman verir (dakika):  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Özellik güncelleştirmelerini hangi Windows ürün sürümü için almak istiyorsunuz? ör. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Özellik Güncelleştirmeleri için Hedef Sürüm</label>
         </textBox>

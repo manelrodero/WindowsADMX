@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender 防病毒</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">排除项</string>
+    <string id="DeviceControl">设备控制</string>
     <string id="ExploitGuard">Microsoft Defender 攻击防护</string>
     <string id="ExploitGuard_ASR">攻击面减少</string>
     <string id="ExploitGuard_ControlledFolderAccess">受控制文件夹的访问</string>
@@ -705,22 +706,22 @@
     <string id="SpynetReporting">加入 Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">此策略设置允许你加入 Microsoft MAPS。Microsoft MAPS 是帮助你选择如何响应潜在威胁的在线社区。该社区还有助于停止新恶意软件感染的传播。
 
-    你可以选择发送有关检测到的软件的基本信息或附加信息。附加信息帮助 Microsoft 创建新的安全智能，并帮助其保护你的计算机。这些信息中可能包括以下内容: 计算机上已检测到的项的位置、有害软件是否已删除。该信息将会自动进行收集和发送。在某些情况下，可能会无意中将个人信息发送到 Microsoft。但是，Microsoft 不会将这些信息用于识别你的身份或与你联系。
+ 你可以选择发送有关检测到的软件的基本信息或附加信息。附加信息帮助 Microsoft 创建新的安全智能，并帮助其保护你的计算机。这些信息中可能包括以下内容: 计算机上已检测到的项的位置、有害软件是否已删除。该信息将会自动进行收集和发送。在某些情况下，可能会无意中将个人信息发送到 Microsoft。但是，Microsoft 不会将这些信息用于识别你的身份或与你联系。
 
-    可能的选项如下:
-    (0x0) 已禁用(默认值)
-    (0x1) 基本成员身份
-    (0x2) 高级成员身份
+ 可能的选项如下:
+ (0x0) 已禁用(默认值)
+ (0x1) 基本成员身份
+ (0x2) 高级成员身份
 
-    基本成员身份会将有关已检测到的软件的基本信息发送到 Microsoft，包括软件来源、用户应用或系统自动应用的操作以及操作是否成功。
+ 基本成员身份会将有关已检测到的软件的基本信息发送到 Microsoft，包括软件来源、用户应用或系统自动应用的操作以及操作是否成功。
 
-    高级成员身份除了基本信息以外，还会向 Microsoft 发送有关恶意软件、间谍软件和可能不需要的软件的详细信息(包括软件位置、文件名、软件运行方式以及对你的计算机产生的影响)。
+ 高级成员身份除了基本信息以外，还会向 Microsoft 发送有关恶意软件、间谍软件和可能不需要的软件的详细信息(包括软件位置、文件名、软件运行方式以及对你的计算机产生的影响)。
 
-    如果启用此设置，将使用指定的成员身份加入 Microsoft MAPS。
+ 如果启用此设置，将使用指定的成员身份加入 Microsoft MAPS。
 
-    如果禁用或未配置此设置，将不会加入 Microsoft MAPS。
-  
-    在 Windows 10 中，基本成员身份不再可用，因此将此值设置为 1 或 2 可将设备注册为高级成员身份。</string>
+ 如果禁用或未配置此设置，将不会加入 Microsoft MAPS。
+ 
+ 在 Windows 10 中，基本成员身份不再可用，因此将此值设置为 1 或 2 可将设备注册为高级成员身份。</string>
     <string id="SpynetReporting_Disabled">禁用</string>
     <string id="SpynetReporting_Basic">基本 MAPS</string>
     <string id="SpynetReporting_Advanced">高级 MAPS</string>
@@ -978,6 +979,14 @@
 
     Microsoft Defender 防病毒会自动确定可以信任哪些应用程序。你可以在“配置允许的应用程序”GP 设置中添加其他受信任的应用程序。
     </string>
+    <string id="DeviceControl_PolicyGroups">定义设备控制策略组</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        请按照设备控制策略组 xml 架构来填写策略组数据。
+    </string>
+    <string id="DeviceControl_PolicyRules">定义设备控制策略规则</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        请按照设备控制策略规则 xml 架构填写策略规则数据。
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>在此处定义策略组</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>在此处定义策略规则</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

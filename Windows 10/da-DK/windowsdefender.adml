@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Udeladelser</string>
+    <string id="DeviceControl">Enhedskontrol</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Mindskelse af angrebsoverfladen</string>
     <string id="ExploitGuard_ControlledFolderAccess">Kontrolleret mappeadgang</string>
@@ -703,24 +704,24 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, tils
     <string id="SubmitSamplesConsent_Send_All">Send alle eksempler</string>
 
     <string id="SpynetReporting">Deltag i Microsoft MAPS</string>
-    <string id="SpynetReporting_Explain">Med denne politikindstilling kan du deltage i Microsoft MAPS. Microsoft MAPS er det online-community, som hjælper dig med at vælge, hvordan der skal reageres på potentielle trusler. Community'et hjælper også med at stoppe spredningen af nye skadelige softwareinfektioner.
+    <string id="SpynetReporting_Explain">Med denne politikindstilling kan du deltage i Microsoft MAPS. Microsoft MAPS er et onlinecommunity, som hjælper dig med at vælge, hvordan der skal reageres på potentielle trusler. Community'et hjælper også med at stoppe spredningen af nye skadelige softwareinfektioner.
 
-    Du kan vælge at sende grundlæggende eller yderligere oplysninger om registreret software. Flere oplysninger hjælper Microsoft med at skabe ny sikkerhedsintelligens og hjælper med at beskytte din computer. Disse oplysninger kan omfatte elementer som placering af registrerede elementer på computeren, hvis skadelig software er blevet fjernet. Oplysningerne indsamles og sendes automatisk. I nogle tilfælde sendes personlige oplysninger utilsigtet til Microsoft. Microsoft vil imidlertid ikke bruge disse oplysninger til at identificere dig eller kontakte dig.
+ Du kan vælge at sende grundlæggende eller yderligere oplysninger om registreret software. Flere oplysninger hjælper Microsoft med at skabe ny sikkerhedsintelligens og hjælper med at beskytte din computer. Disse oplysninger kan omfatte ting som placering af registrerede elementer på computeren, hvis skadelig software er blevet fjernet. Oplysningerne indsamles og sendes automatisk. I nogle tilfælde sendes personlige oplysninger utilsigtet til Microsoft. Microsoft vil imidlertid ikke bruge disse oplysninger til at identificere dig eller kontakte dig.
 
-    Mulige indstillinger er:
-    (0x0) Deaktiveret (standard)
-    (0x1) Basismedlemskab
-    (0x2) Avanceret medlemskab
+ Mulige indstillinger er:
+ (0x0) Deaktiveret (standard)
+ (0x1) Basismedlemskab
+ (0x2) Avanceret medlemskab
 
-    Basismedlemskab sender grundlæggende oplysninger til Microsoft om software, der er fundet, herunder hvor softwaren kom fra, de handlinger, du skal anvende, eller som anvendes automatisk, og om handlingerne er udført.
+ Basismedlemskab sender grundlæggende oplysninger til Microsoft om software, der er fundet, herunder hvor softwaren kom fra, de handlinger, du skal anvende, eller som anvendes automatisk, og om handlingerne er udført.
 
-    Avanceret medlemskab sender, ud over de grundlæggende oplysninger, flere oplysninger til Microsoft om skadelig software, spyware og potentielt uønsket software, herunder placeringen af softwaren, filnavne, hvordan softwaren fungerer, og hvordan det har påvirket computeren.
+ Foruden de grundlæggende oplysninger sendes der med Avanceret medlemskab flere oplysninger til Microsoft om skadelig software, spyware og potentielt uønsket software, herunder placeringen af softwaren, filnavne, hvordan softwaren fungerer, og hvordan det har påvirket computeren.
 
-    Hvis du aktiverer denne indstilling, deltager du i Microsoft MAPS med det angivne medlemskab.
+ Hvis du aktiverer denne indstilling, deltager du i Microsoft MAPS med det angivne medlemskab.
 
-    Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, deltager du ikke i Microsoft MAPS.
-  
-    I Windows 10 er basismedlemskabet ikke længere tilgængeligt, så hvis du angiver værdien til 1 eller 2, meldes enheden til det avancerede medlemskab.</string>
+ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, deltager du ikke i Microsoft MAPS.
+ 
+ I Windows 10 er basismedlemskabet ikke længere tilgængeligt, så hvis du angiver værdien til 1 eller 2, meldes enheden til Avanceret medlemskab.</string>
     <string id="SpynetReporting_Disabled">Deaktiveret</string>
     <string id="SpynetReporting_Basic">Grundlæggende MAPS</string>
     <string id="SpynetReporting_Advanced">Avanceret MAPS</string>
@@ -978,6 +979,14 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
 
     Microsoft Defender Antivirus fastslår automatisk, hvilke programmer der er tillid til. Du kan tilføje yderligere programmer, der er tillid til, i gruppepolitikindstillingen Konfigurer tilladte programmer.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definer politikgrupper for enhedsstyring</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Følg xml-skemaet for politikgrupper for enhedskontrol for at udfylde politikgruppers data.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definer retningslinjerne for enhedskontrol</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Følg xml-skemaet for retningslinjerne for enhedskontrol for at udfylde data for retningslinjerne.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, vise
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definer politikgrupperne her</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definer retningslinjerne her</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

@@ -303,7 +303,7 @@ Hvis du undlader at konfigurere denne politikindstilling, vil de aktuelle værdi
       <string id="File_NoBrowserSaveAs">Menuen Filer: Deaktiver menupunktet Gem som...</string>
       <string id="File_NoBrowserSaveWebComplete">Menuen Filer: Deaktiver Gem som fuldstændig webside</string>
       <string id="File_NoFileNew">Menuen Filer: Deaktiver menupunktet Ny</string>
-      <string id="File_NoFileOpen">Menuen Filer: Deaktiver menupunktet Åbn</string>
+      <string id="File_NoFileOpen">Filmenu: Deaktiver menupunktet Åbn</string>
       <string id="Flash">Shockwave Flash</string>
       <string id="Font0">Mindst</string>
       <string id="Font1">Mindre</string>
@@ -415,17 +415,17 @@ Hvis du undlader at konfigurere denne politikindstilling, kan brugeren bytte om 
 
 Hvis du aktiverer denne politikindstilling, bliver brugeren ikke spurgt, om phishing-filteret skal aktiveres. Du skal angive, hvordan phishing-filteret skal bruges: manuelt, automatisk eller slået fra.
 
-Hvis du vælger manuel brug, foretager phishing-filteret kun lokal analyse, og brugeren anmodes om tilladelse til at sende data til Microsoft. Hvis funktionen er fuldt aktiveret, sendes alle webadresser, som ikke er med på filterets tilladelsesliste, automatisk til Microsoft, uden at brugeren bliver spurgt.
+Hvis du vælger manuel brug, foretager phishing-filteret kun lokal analyse, og brugeren anmodes om tilladelse til at sende data til Microsoft. Hvis funktionen er fuldt aktiveret, sendes alle webadresser, som ikke er med på filterets tilladt-liste, automatisk til Microsoft, uden at brugeren bliver spurgt.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anmodes brugeren om at vælge phishing-filterets funktionsmåde.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter">Denne politikindstilling giver brugeren mulighed for at aktivere SmartScreen-filteret, der advarer brugeren, hvis det besøgte websted er kendt for svindelnumre, der skal lokke personlige oplysninger ud af folk vha. phishing, eller vides at være vært for malware.
 
-Hvis du aktiverer denne politikindstilling, bliver brugeren ikke spurgt, om SmartScreen-filteret skal slås til. Du skal angive, hvordan SmartScreen-filteret skal bruges: slået til eller fra. Alle webadresser, som ikke er med på filterets tilladelsesliste, sendes automatisk til Microsoft, uden at brugeren bliver spurgt.
+Hvis du aktiverer denne politikindstilling, bliver brugeren ikke spurgt, om SmartScreen-filteret skal slås til. Du skal angive, hvordan SmartScreen-filteret skal bruges: slået til eller fra. Alle webadresser, som ikke er med på filterets tilladt-liste, sendes automatisk til Microsoft, uden at brugeren bliver spurgt.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anmodes brugeren om at vælge, om SmartScreen-filteret skal slås til, første gang det køres.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">Denne politikindstilling forhindrer brugeren i at styre SmartScreen-filteret, der advarer brugeren, hvis det besøgte websted er kendt for svindelnumre, der skal lokke personlige oplysninger ud af folk vha. phishing, eller vides at være vært for malware.
 
-Hvis du aktiverer denne politikindstilling, bliver brugeren ikke spurgt, om SmartScreen-filteret skal slås til. Alle webadresser, som ikke er med på filterets tilladelsesliste, sendes automatisk til Microsoft, uden at brugeren bliver spurgt.
+Hvis du aktiverer denne politikindstilling, bliver brugeren ikke spurgt, om SmartScreen-filteret skal slås til. Alle webadresser, som ikke er med på filterets tilladt-liste, sendes automatisk til Microsoft, uden at brugeren bliver spurgt.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, anmodes brugeren om at vælge, om SmartScreen-filteret skal slås til, første gang det køres.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Denne politikindstilling deaktiverer den funktion, der kontrollerer Internet Explorer-sikkerhedsindstillinger for at fastslå, hvornår indstillingerne udsætter Internet Explorer for risici.
@@ -1426,7 +1426,7 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan 
 
 Denne politik er beregnet til situationer, hvor administratorer ikke ønsker, at brugerne kan søge på internettet eller harddisken.
 
-Denne politik kan bruges sammen med politikken Menuen Filer: Deaktiver menupunktet Åbn (findes i \Brugerkonfiguration\Administrative skabeloner\Windows-komponenter\Internet Explorer\Webbrowsermenuer), som forhindrer brugerne i at åbne filer ved hjælp af webbrowseren.</string>
+Denne politik kan bruges sammen med Filmenuen: Deaktiver menupunktet Åbn (findes i \Brugerkonfiguration\Administrative skabeloner\Windows-komponenter\Internet Explorer\Webbrowsermenuer), som forhindrer brugerne i at åbne filer ved hjælp af webbrowseren.</string>
       <string id="IE_ExplainSecurity_HKLM_only">Anvender oplysninger om sikkerhedszoner for alle brugere af den samme computer. En sikkerhedszone er en gruppe af websteder med samme sikkerhedsniveau.
 
 Hvis du aktiverer denne politik, anvendes de ændringer af en sikkerhedszone, der foretages af en bruger, for alle brugerne af computeren.
@@ -3014,7 +3014,7 @@ Denne funktion gælder kun for versioner af Internet Explorer til og med Interne
       <string id="Persistence_FileLimits4">Begrænsninger af filstørrelsen for zonen Usikre websteder</string>
       <string id="PhishingOff">Slået fra</string>
       <string id="PhishingOn">Slået til</string>
-      <string id="PopupBlocker_AllowList">Tilladelsesliste for pop op-vinduer</string>
+      <string id="PopupBlocker_AllowList">Tilladt-liste for pop op-vinduer</string>
       <string id="Printing">Udskrivning</string>
       <string id="Printing_Explain">Du kan bruge denne politikindstilling til at angive, om Internet Explorer skal udskrive baggrundsfarver og -billeder, når brugeren udskriver en webside. Hvis baggrundsfarver og -billeder medtages, kan det nedsætte hastigheden og kvaliteten, når siden udskrives, afhængig af printerens ydeevne.
 
@@ -3974,6 +3974,14 @@ Hvis du aktiverer denne politik, aktiveres udvidet genvejstastfunktion i Interne
 Hvis du deaktiverer eller ikke konfigurerer denne politik, vil udvidede genvejstaster ikke fungere i Internet Explorer-tilstand.
 
 Du kan finde flere oplysninger under https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Nulstil zoom til standard for HTML-dialogbokse i Internet Explorer-tilstand</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Med denne politikindstilling kan administratorer nulstille zoom til standardindstillingen for HTML-dialogbokse i Internet Explorer-tilstand.
+
+Hvis du aktiverer denne politik, overføres zoomet i en HTML-dialogboks i Internet Explorer-tilstand ikke fra den overordnede side.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politik, indstilles zoomet på en HTML-dialogboks i Internet Explorer tilstand baseret på zoomet på den overordnede side.
+
+Du kan få flere oplysninger under https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Deaktiver Internet Explorer 11 som en separat browser</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Denne politik gør det muligt at begrænse start af Internet Explorer som en separat browser.
 
@@ -4191,7 +4199,7 @@ Der er flere oplysninger under "Out-of-date ActiveX control blocking" i TechNet-
     </stringTable>
     <presentationTable>
       <presentation id="VerMgmtDomainAllowlist_1">
-        <listBox refId="DomainList">Liste over domænetilladelser</listBox>
+        <listBox refId="DomainList">Tilladt-liste over domæner</listBox>
       </presentation>
       <presentation id="AddonManagement_AddOnList_1">
         <listBox refId="AddOnList">Liste over tilføjelsesprogrammer</listBox>

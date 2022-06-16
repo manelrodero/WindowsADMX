@@ -134,11 +134,26 @@
       </string>
 
       <string id="AllowCommercialDataPipeline">允許商用資料管線</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline 會將裝置加入 Windows 企業資料管線。
-          若您啟用此設定，便會將從裝置收集到的資料加入 Windows 企業資料管線。
-          若您停用或未設定此設定，便會依據 Windows 標準資料管線，收集並處理來自裝置的所有資料。
-          設定此設定不會變更遙測收集層級或使用者變更層級的能力。此設定只會套用到 Windows 作業系統和隨附於 Windows 的應用程式，不包含在 Windows 10 上執行的協力廠商應用程式或服務。
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline 控制 Microsoft 會是從此裝置收集之 Windows 診斷資料的處理者還是控制者。
+          如果您啟用這個原則，Microsoft 將會是從 Windows 裝置收集的 Windows 診斷資料的處理者，而客戶將會是控制者。裝置必須在 Azure AD 中註冊，此原則才能成功。
+          如果您停用或未設定此原則設定，Microsoft 將會是從此裝置收集的 Windows 診斷資料的控制者。
+          此原則只會控制 Microsoft 是否為來自此裝置之 Windows 診斷資料的處理者。設定此設定不會變更是否收集診斷資料，或使用者變更等級的能力。若要設定集合等級，請使用 [允許診斷資料] 原則，若要限制此裝置上的使用者變更診斷資料等級，請使用 [設定診斷資料加入設定使用者介面] 原則。
+      </string>
+
+      <string id="EnableOneSettingsAuditing">啟用 OneSettings 稽核</string>
+      <string id="EnableOneSettingsAuditing_Explain">此原則設定控制 Windows 是否會記錄 OneSettings 服務與事件記錄檔連線的嘗試。
+
+如果您啟用此原則，Windows 會記錄 OneSettings 服務與 Microsoft\Windows\隱私權稽核\營運事件記錄檔通道連線的嘗試。
+
+如果您停用或未設定此原則，Windows 不會記錄 OneSettings 服務與事件記錄連線的嘗試。
+      </string>
+
+      <string id="DisableOneSettingsDownloads">停用 OneSettings 下載</string>
+      <string id="DisableOneSettingsDownloads_Explain">此原則設定可控制 Windows 是否嘗試與 OneSettings 服務連線。
+
+如果您啟用這個原則，Windows 將不會嘗試與 OneSettings 服務連線。
+
+若停用或未設定此原則設定，Windows 將會定期嘗試連線到 OneSettings 服務以下載設定。
       </string>
     </stringTable>
     <presentationTable>

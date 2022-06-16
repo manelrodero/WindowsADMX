@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender víruskereső</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Kizárások</string>
+    <string id="DeviceControl">Eszközvezérlés</string>
     <string id="ExploitGuard">Microsoft Defender – biztonsági rés kiaknázása elleni védelem</string>
     <string id="ExploitGuard_ASR">Támadási felület csökkentése</string>
     <string id="ExploitGuard_ControlledFolderAccess">Mappákhoz való hozzáférés szabályozása</string>
@@ -705,22 +706,22 @@ Ha letiltja vagy nem konfigurálja a beállítást, a csoportházirend felülbí
     <string id="SpynetReporting">Csatlakozás a Microsoft MAPS közösséghez</string>
     <string id="SpynetReporting_Explain">Ez a házirend-beállítás lehetővé teszi a Microsoft MAPS közösséghez való csatlakozást. A Microsoft MAPS egy online közösség, amely segítséget nyújt annak eldöntésében, hogy miként reagáljon egy adott fenyegetésre. A közösség emellett az új kártevő szoftverek terjedését is segít meggátolni.
 
-    Megadhatja, hogy az észlelt szoftverekről alapszintű vagy kiegészítő információkat kíván-e küldeni. A kiegészítő információk segítséget nyújtanak a Microsoftnak abban, hogy új biztonsági intelligencia létrehozásával fokozza a számítógépek védelmét. Ezek az információk tartalmazhatják például az észlelt elemek helyét a számítógépen, ha kártékony szoftvert távolított el a gépről. Ezeket az információkat a rendszer automatikusan gyűjti össze és küldi el. Bizonyos esetekben a rendszer véletlenül személyes információkat is küldhet a Microsoftnak. A Microsoft azonban ezeket nem használja fel azonosításra és kapcsolatfelvételre.
+ Megadhatja, hogy az észlelt szoftverekről alapszintű vagy kiegészítő információkat kíván-e küldeni. A kiegészítő információk segítséget nyújtanak a Microsoftnak abban, hogy új biztonsági intelligencia létrehozásával fokozza a számítógépek védelmét. Ezek az információk tartalmazhatják például az észlelt elemek helyét a számítógépen, ha kártékony szoftvert távolított el a gépről. Ezeket az információkat a rendszer automatikusan gyűjti össze és küldi el. Bizonyos esetekben a rendszer véletlenül személyes információkat is küldhet a Microsoftnak. A Microsoft azonban ezeket nem használja fel azonosításra és kapcsolatfelvételre.
 
-    Az alábbi értékeket adhatja meg:
-    (0x0) Letiltva (alapértelmezett)
-    (0x1) Alapszintű tagság
-    (0x2) Kiemelt tagság
+ Az alábbi értékeket adhatja meg:
+ (0x0) Letiltva (alapértelmezett)
+ (0x1) Alapszintű tagság
+ (0x2) Kiemelt tagság
 
-    Alapszintű tagság esetén a rendszer alapvető adatokat küld a Microsoftnak az észlelt szoftverről, például arról, hogy honnan származik a szoftver, milyen műveleteket hajtott végre a felhasználó vagy a rendszer, és sikeresek voltak-e a műveletek.
+ Alapszintű tagság esetén a rendszer alapvető adatokat küld a Microsoftnak az észlelt szoftverről, például arról, hogy honnan származik a szoftver, milyen műveleteket hajtott végre a felhasználó vagy a rendszer, és sikeresek voltak-e a műveletek.
 
-    Kiemelt tagság esetén a rendszer az alapvető adatok mellett további információkat is küld a Microsoftnak a kártevő szoftverekről, a kémprogramokról és a potenciálisan nemkívánatos szoftverekről, beleértve a szoftverek helyét és működési módját, a számítógépre gyakorolt hatásukat, valamint a fájlneveket.
+ Kiemelt tagság esetén a rendszer az alapvető adatok mellett további információkat is küld a Microsoftnak a kártevő szoftverekről, a kémprogramokról és a potenciálisan nemkívánatos szoftverekről, beleértve a szoftverek helyét és működési módját, a számítógépre gyakorolt hatásukat, valamint a fájlneveket.
 
-    Ha engedélyezi a beállítást, a megadott tagsági szinten csatlakozni fog a Microsoft MAPS közösséghez.
+ Ha engedélyezi a beállítást, a megadott tagsági szinten csatlakozni fog a Microsoft MAPS közösséghez.
 
-    Ha letiltja vagy nem konfigurálja a beállítást, nem fog csatlakozni a Microsoft MAPS közösséghez.
-  
-    A Windows 10-ben már nem érhető el az alapszintű tagság, ezért az 1 vagy a 2 érték megadásakor is a kiemelt tagság lép érvénybe az eszközön.</string>
+ Ha letiltja vagy nem konfigurálja a beállítást, nem fog csatlakozni a Microsoft MAPS közösséghez.
+ 
+ A Windows 10-ben már nem érhető el az alapszintű tagság, ezért az 1 vagy a 2 érték megadásakor is a kiemelt tagság lép érvénybe az eszközön.</string>
     <string id="SpynetReporting_Disabled">Letiltva</string>
     <string id="SpynetReporting_Basic">Basic MAPS-tagság</string>
     <string id="SpynetReporting_Advanced">Kiemelt MAPS-tagság</string>
@@ -977,6 +978,14 @@ Nincs konfigurálva:
 
     A Microsoft Defender víruskereső automatikusan meghatározza, hogy mely alkalmazások tekinthetők megbízhatónak. További megbízható alkalmazásokat az Engedélyezett alkalmazások konfigurálása csoportházirend-beállításban vehet fel.
     </string>
+    <string id="DeviceControl_PolicyGroups">Eszközvezérlési házirendcsoportok meghatározása</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Kérjük, a házirendcsoportok adatainak kitöltéséhez kövesse az eszközvezérlési házirendcsoportok XML-sémáját.
+    </string>
+    <string id="DeviceControl_PolicyRules">Eszközvezérlési házirendszabályok meghatározása</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Kérjük, a házirendszabályok adatainak kitöltéséhez kövesse az eszközvezérlési házirendszabályok XML-sémáját.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1148,6 +1157,16 @@ Nincs konfigurálva:
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Itt határozhatja meg a házirendcsoportokat</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Itt határozhatja meg a házirendszabályokat</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

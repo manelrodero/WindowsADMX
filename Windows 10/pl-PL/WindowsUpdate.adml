@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP z dodatkiem SP2, Windows XP z dodatkiem SP1 , Windows 2000 z dodatkiem SP4, Windows 2000 z dodatkiem SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">Przynajmniej system Windows XP Professional z dodatkiem Service Pack 1 lub Windows 2000 z dodatkiem Service Pack 3, oprócz systemu Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Przynajmniej system Windows Server 2003 lub Windows XP Professional z dodatkiem SP1, oprócz systemu Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Co najmniej system Windows XP Professional z dodatkiem Service Pack 1 lub co najmniej system Windows 2000 z dodatkiem Service Pack 3 do systemu Windows 8.1 lub Windows Server 2012 R2 z najnowszym dodatkiem Service Pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Co najmniej system Windows Vista do systemu Windows 8.1 lub Windows Server 2012 R2 z najnowszym dodatkiem Service Pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Co najmniej system Windows XP Professional z dodatkiem Service Pack 1 lub co najmniej system Windows 2000 z dodatkiem Service Pack 3 do Windows 8.1 lub Windows Server 2012 R2 z najnowszym dodatkiem Service Pack. Nieobsługiwane w Windows 10 i nowszych.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Co najmniej system Windows Vista do Windows 8.1 lub Windows Server 2012 R2 z najnowszym dodatkiem Service Pack. Nieobsługiwane w Windows 10 i nowszych.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">System Windows XP Professional z dodatkiem Service Pack 1 albo system Windows 2000 z dodatkiem Service Pack 3 lub nowszy
 Opcja 7 jest obsługiwana tylko na serwerach z systemem nie starszym niż Windows Server 2016</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Co najmniej Windows Server 2022, Windows 10 wersja 2004 ​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Systemy od Windows Server 2016 do Windows Server 2022 lub Windows 10​</string>
       <string id="AUDontShowUasHelp">To ustawienie zasad umożliwia określenie, czy opcja „Zainstaluj aktualizacje i zamknij system” ma być wyświetlana w oknie dialogowym Zamykanie systemu Windows.
 
 Jeśli to ustawienie zasad zostanie włączone, opcja „Zainstaluj aktualizacje i zamknij system” nie będzie dostępna do wybrania w oknie dialogowym Zamykanie systemu Windows po wybraniu przez użytkownika opcji Zamknij w menu Start, nawet jeśli aktualizacje będą gotowe do instalacji.
@@ -161,6 +163,16 @@ Jeśli ta zasada będzie mieć stan Nieskonfigurowane, użycie funkcji Aktualiza
         Wykrywanie aktualizacji dla serwerów intranetowych zakończy się niepowodzeniem, gdy serwer proxy użytkownika jest niezbędny jako rezerwa i alternatywne zachowanie serwera proxy nie jest skonfigurowane.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Używaj tylko systemowego serwera proxy do wykrywania aktualizacji (domyślnie)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Zezwalaj na używanie serwera proxy użytkownika jako rezerwy, jeśli wykrywanie za pomocą systemowego serwera proxy zakończy się niepowodzeniem</string>
+      <string id="UpdateClassPolicySource_Title">Określ usługę źródłową dla określonych klas aktualizacji systemu Windows</string>
+      <string id="UpdateClassPolicySource_Help">Gdy ta zasada jest włączona, urządzenia będą otrzymywać aktualizacje systemu Windows dla klas wymienionych z określonego źródła aktualizacji: usługi Windows Update lub Windows Server Update Service. 
+
+        Uwaga: aby otrzymywać aktualizacje z usługi Windows Server Update Service, musisz odpowiednio skonfigurować lokalizację intranetową usługi aktualizującej firmy Microsoft za pomocą zasad.
+
+        Jeśli te zasady nie są skonfigurowane lub są wyłączone, urządzenie będzie nadal wykrywać aktualizacje zgodnie z konfiguracjami innych zasad. 
+
+        Uwaga: jeśli jest używana opcja „Nie zezwalaj na uruchamianie przez zasady odroczenia operacji skanowania po usłudze Windows Update” w celu zapewnienia, że tylko urządzenia są skanowane tylko na określonym serwerze, zamiast tego zalecamy skonfigurowanie tych zasad lub jako ich uzupełnienie.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Usługa Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Określa liczbę godzin używaną przez system Windows do ustalenia okresu oczekiwania przed sprawdzaniem, czy są dostępne aktualizacje. Dokładny czas stanowi sumę określonej wartości oraz losowej wartości z zakresu od 0 do 4 godzin.
 
         Jeśli ustawienie Stan ma wartość Włączone, system Windows będzie sprawdzać dostępność aktualizacji, korzystając z określonego interwału.
@@ -372,9 +384,15 @@ Aby wznowić odbieranie wstrzymanych aktualizacji dotyczących jakości, wyczyś
 
 Jeśli wyłączysz tę zasadę albo jej nie skonfigurujesz, zachowanie usługi Windows Update nie ulegnie zmianie.</string>
       <string id="TargetReleaseVersion_Title">Wybierz docelową wersję aktualizacji funkcji</string>
-      <string id="TargetReleaseVersion_Help">Włącz tę zasadę, aby określić wersję aktualizacji funkcji, która ma być żądana podczas kolejnych skanowań.
+      <string id="TargetReleaseVersion_Help">Wprowadź produkt i wersję wymienioną na stronie wersji docelowej usługi Windows Update:
 
-Wprowadź wersję wymienioną na stronie z informacjami o wydaniach systemu Windows (aka.ms/ReleaseInformationPage).</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+Podczas kolejnych skanowań urządzenie zażąda podania produktu i wersji usługi Windows Update.
+
+Wprowadzenie produktu docelowego i kliknięcie przycisku OK lub Zastosuj oznacza, że akceptuję Postanowienia licencyjne dotyczące oprogramowania firmy Microsoft dla niego znajdujące na stronie aka.ms/WindowsTargetVersioninfo. W przypadku licencjonowania oprogramowania przez organizację mam autoryzację do powiązania tej organizacji.
+
+Jeśli wprowadzisz nieprawidłową wartość, pozostaniesz przy bieżącej wersji, dopóki nie poprawisz wartości obsługiwanego produktu i wersji.</string>
       <string id="DisableWUfBSafeguards">Wyłączanie zabezpieczeń na potrzeby aktualizacji funkcji</string>
       <string id="DisableWUfBSafeguards_Help">
           Włącz to ustawienie, gdy aktualizacje funkcji powinny zostać wdrożone na urządzeniach bez blokowania jakichkolwiek zawieszeń zabezpieczających. Zawieszenia zabezpieczające są to znane problemy ze zgodnością, które blokują wdrażanie uaktualnienie na objętych urządzeniach, dopóki problem nie zostanie rozwiązany. Włączenie tych zasad może pozwolić organizacji na wdrożenie aktualizacji funkcji na urządzeniach na potrzeby testowania lub wdrożenie aktualizacji funkcji bez blokowania zawieszeń zabezpieczających.
@@ -699,6 +717,13 @@ Te zasady zastąpią następujące zasady:
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Nie wymuszaj funkcji przypinania certyfikatów TLS dla klienta usługi Windows Update w celu wykrywania aktualizacji.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Wybierz zachowanie serwera proxy dla klienta usługi Windows Update w celu wykrycia aktualizacji:</dropdownList>
       </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Określ usługę źródłową dla następujących klas aktualizacji systemu Windows:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Aktualizacje funkcji</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Aktualizacje dotyczące jakości</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Aktualizacje sterowników</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Inne aktualizacje</dropdownList>
+      </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Sprawdzaj, czy są aktualizacje przy użyciu następującego</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">interwału (godziny):  </decimalTextBox>
@@ -733,6 +758,9 @@ Te zasady zastąpią następujące zasady:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">liczbę minut:  </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Dla której wersji produktu systemu Windows chcesz otrzymywać aktualizacje funkcji? np. Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Docelowa wersja aktualizacji funkcji</label>
         </textBox>

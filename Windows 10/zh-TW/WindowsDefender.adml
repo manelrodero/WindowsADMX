@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Microsoft Defender 防毒軟體</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">排除範圍</string>
+    <string id="DeviceControl">裝置控制項</string>
     <string id="ExploitGuard">Microsoft Defender 惡意探索防護</string>
     <string id="ExploitGuard_ASR">攻擊面減少</string>
     <string id="ExploitGuard_ControlledFolderAccess">受控資料夾存取權</string>
@@ -705,22 +706,22 @@
     <string id="SpynetReporting">加入 Microsoft 地圖</string>
     <string id="SpynetReporting_Explain">此原則設定可讓您加入 Microsoft MAPS。Microsoft MAPS 是可協助您選擇如何回應潛在威脅的線上社群。此社群也可以協助停止散佈新惡意軟體的感染。
 
-    您可以選擇傳送偵測到之軟體的基本或其他資訊。額外的資訊可協助 Microsoft 建立新的安全性情報，並協助它保護您的電腦。此資訊可能包含移除有害軟體後，偵測到的項目在您電腦上的位置。系統會自動收集並傳送此資訊。在某些情況下，可能會意外將個人資訊傳送給 Microsoft。不過，Microsoft 將不會使用此資訊來識別您的身分或與您聯繫。
+ 您可以選擇傳送偵測到之軟體的基本或其他資訊。額外的資訊可協助 Microsoft 建立新的安全性情報，並協助它保護您的電腦。此資訊可能包含移除有害軟體後，偵測到的項目在您電腦上的位置。系統會自動收集並傳送此資訊。在某些情況下，可能會意外將個人資訊傳送給 Microsoft。不過，Microsoft 將不會使用此資訊來識別您的身分或與您聯繫。
 
-    可能的選項為:
-    (0x0) 已停用 (預設)
-    (0x1) 基本成員資格
-    (0x2) 進階成員資格
+ 可能的選項為:
+ (0x0) 已停用 (預設)
+ (0x1) 基本成員資格
+ (0x2) 進階成員資格
 
-    基本成員資格將會傳送有關偵測到之軟體的基本資訊給 Microsoft，包括軟體來源、您採取的動作或自動採取的動作，以及這些動作是否成功。
+ 基本成員資格將會傳送有關偵測到之軟體的基本資訊給 Microsoft，包括軟體來源、您採取的動作或自動採取的動作，以及這些動作是否成功。
 
-    除了基本資訊之外，進階成員資格還會將更多有關惡意軟體、間諜軟體與潛在的垃圾軟體的資訊傳送給 Microsoft，包括軟體位置、檔案名稱、軟體運作方式，以及對您電腦的影響。
+ 除了基本資訊之外，進階成員資格還會將更多有關惡意軟體、間諜軟體與潛在的垃圾軟體的資訊傳送給 Microsoft，包括軟體位置、檔案名稱、軟體運作方式，以及對您電腦的影響。
 
-    若啟用此設定，您將以指定的成員資格加入 Microsoft MAPS。
+ 若啟用此設定，您將以指定的成員資格加入 Microsoft MAPS。
 
-    若停用或未設定此設定，您將不會加入 Microsoft MAPS。
-  
-    在 Windows 10 中，基本成員資格已無法使用，因此將值設定為 1 或 2 會將裝置註冊到進階成員資格。</string>
+ 若停用或未設定此設定，您將不會加入 Microsoft MAPS。
+ 
+ 在 Windows 10 中，基本成員資格已無法使用，因此將值設定為 1 或 2 會將裝置註冊到進階成員資格。</string>
     <string id="SpynetReporting_Disabled">已停用</string>
     <string id="SpynetReporting_Basic">基本 MAPS</string>
     <string id="SpynetReporting_Advanced">進階 MAPS</string>
@@ -978,6 +979,14 @@
 
     Microsoft Defender 防毒軟體會自動判斷可受信任的應用程式。您可在 Configure allowed applications GP (設定允許的應用程式 GP) 設定中新增其他受信任應用程式。
     </string>
+    <string id="DeviceControl_PolicyGroups">定義裝置控制項原則群組</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        請依照裝置控制項原則群組 xml 結構描述來填寫原則群組資料。
+    </string>
+    <string id="DeviceControl_PolicyRules">定義裝置控制項原則規則</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        請依照裝置控制項原則規則 xml 結構描述來填寫原則規則資料。
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>在此處定義原則群組</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>在此處定義原則規則</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

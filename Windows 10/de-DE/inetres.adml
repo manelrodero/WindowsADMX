@@ -425,7 +425,7 @@ Wenn Sie diese Richtlinieneinstellung aktivieren, wird der Benutzer nicht zur Ak
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Benutzer aufgefordert, zu entscheiden, ob der SmartScreen-Filter während der ersten Ausführung aktiviert werden soll.</string>
       <string id="IE_Explain_DisableManagingSafetyFilter_IE9">Diese Richtlinieneinstellung verhindert, dass Benutzer einen SmartScreen-Filter verwalten, der beim Besuch von Websites, die bekanntermaßen versuchen, durch arglistige Täuschung persönliche Informationen zu erschleichen oder Malware enthalten, eine Warnung ausgibt.
 
-Wenn Sie diese Richtlinieneinstellung aktivieren, wird der Benutzer nicht zur Aktivierung von SmartScreen-Filter aufgefordert. Alle Websiteadressen, die nicht in der Zulassungsliste des Filters enthalten sind, automatisch an Microsoft gesendet, ohne dass die Benutzer dazu aufgefordert werden.
+Wenn Sie diese Richtlinieneinstellung aktivieren, wird der Benutzer nicht zur Aktivierung von SmartScreen-Filter aufgefordert. Alle Websiteadressen, die nicht in der Zulassungsliste des Filters enthalten sind, werden automatisch an Microsoft gesendet, ohne dass die Benutzer dazu aufgefordert werden.
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Benutzer aufgefordert, zu entscheiden, ob der SmartScreen-Filter während der ersten Ausführung aktiviert werden soll.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Diese Richtlinieneinstellung schaltet die Funktion aus, die die Sicherheitseinstellungen von Internet Explorer überprüft, um zu bestimmen, ob sie gefährlich sind.
@@ -3014,7 +3014,7 @@ Diese Funktion ist nur in Internet Explorer 8 und höher verfügbar.</string>
       <string id="Persistence_FileLimits4">Dateigrößenbeschränkungen für Zone der eingeschränkten Sites</string>
       <string id="PhishingOff">Aus</string>
       <string id="PhishingOn">Ein</string>
-      <string id="PopupBlocker_AllowList">Liste zugelassener Popups</string>
+      <string id="PopupBlocker_AllowList">Zulassungsliste für Popups</string>
       <string id="Printing">Drucken</string>
       <string id="Printing_Explain">Mit dieser Richtlinieneinstellung geben Sie an, ob Internet Explorer beim Drucken einer Webseite auch Hintergrundfarben und -bilder drucken soll. Das Miteinbeziehen von Hintergrundfarben und -bildern kann je nach den Fähigkeiten Ihres Druckers die Geschwindigkeit verringern, mit der die Seite gedruckt wird, und die Qualität des Ausdrucks einschränken.
 
@@ -3984,6 +3984,14 @@ Wenn Sie diese Richtlinie aktivieren, wird die erweiterte Abkürzungstasten-Funk
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, funktionieren erweiterte Abkürzungstasten im Internet Explorer-Modus nicht.
 
 Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Zoom für HTML-Dialogfelder im Internet Explorer-Modus auf Standard zurücksetzen</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">Mit dieser Richtlinieneinstellung können Administratoren den Zoom für HTML-Dialogfelder im Internet Explorer Modus auf die Standardeinstellung zurücksetzen.
+
+Wenn Sie diese Richtlinie aktivieren, wird der Zoomfaktor eines HTML-Dialogfelds im Internet Explorer Modus nicht von der übergeordneten Seite verteilt.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Zoom eines HTML-Dialogfelds im Internet Explorer Modus basierend auf dem Zoom der übergeordneten Seite festgelegt.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Internet Explorer 11 als eigenständigen Browser deaktivieren</string>
       <string id="IE_ExplainDisableInternetExplorerApp">Mit dieser Richtlinie können Sie das Starten von Internet Explorer als eigenständigen Browser einschränken.
 
@@ -4201,7 +4209,7 @@ Weitere Informationen finden Sie in der Internet Explorer TechNet-Bibliothek unt
     </stringTable>
     <presentationTable>
       <presentation id="VerMgmtDomainAllowlist_1">
-        <listBox refId="DomainList">Liste zugelassener Domänen</listBox>
+        <listBox refId="DomainList">Zulassungsliste für Domänen </listBox>
       </presentation>
       <presentation id="AddonManagement_AddOnList_1">
         <listBox refId="AddOnList">Add-On-Liste</listBox>

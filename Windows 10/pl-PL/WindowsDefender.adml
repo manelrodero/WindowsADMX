@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Program antywirusowy Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Wykluczenia</string>
+    <string id="DeviceControl">Sterowanie urządzeniami</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Zmniejszanie obszaru ataków</string>
     <string id="ExploitGuard_ControlledFolderAccess">Kontrolowany dostęp do folderu</string>
@@ -705,22 +706,22 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, zasady grupy będą 
     <string id="SpynetReporting">Dołącz do społeczności Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">To ustawienie zasad umożliwia dołączenie do społeczności Microsoft MAPS. Microsoft MAPS to społeczność online pomagająca wybierać odpowiednie reakcje na potencjalne zagrożenia. Ta społeczność pomaga też w powstrzymywaniu rozprzestrzeniania się nowych infekcji złośliwym oprogramowaniem.
 
-    Możesz określić, czy chcesz wysyłać informacje podstawowe, czy informacje dodatkowe o wykrytym oprogramowaniu. Informacje dodatkowe umożliwiają firmie Microsoft tworzenie nowych analiz zabezpieczeń i pomagają chronić Twój komputer. Te informacje mogą zawierać na przykład lokalizację wykrytych elementów na komputerze, jeśli szkodliwe oprogramowanie zostało usunięte. Ta informacje będą automatycznie zbierane i wysyłane. Czasami do firmy Microsoft mogą zostać przypadkowo wysłane dane osobowe. Firma Microsoft nie będzie ich jednak używać w celu zidentyfikowania Cię lub skontaktowania się z Tobą.
+ Możesz określić, czy chcesz wysyłać informacje podstawowe, czy informacje dodatkowe o wykrytym oprogramowaniu. Informacje dodatkowe umożliwiają firmie Microsoft tworzenie nowych analiz zabezpieczeń i pomagają chronić Twój komputer. Te informacje mogą zawierać na przykład lokalizację wykrytych elementów na komputerze, jeśli szkodliwe oprogramowanie zostało usunięte. Ta informacje będą automatycznie zbierane i wysyłane. Czasami do firmy Microsoft mogą zostać przypadkowo wysłane dane osobowe. Firma Microsoft nie będzie ich jednak używać w celu zidentyfikowania Cię lub skontaktowania się z Tobą.
 
-    Możliwe opcje:
-    (0x0) Wyłączone (wartość domyślna)
-    (0x1) Członkostwo podstawowe
-    (0x2) Członkostwo zaawansowane
+ Możliwe opcje:
+ (0x0) Wyłączone (wartość domyślna)
+ (0x1) Członkostwo podstawowe
+ (0x2) Członkostwo zaawansowane
 
-    W ramach członkostwa podstawowego do firmy Microsoft są wysyłane podstawowe informacje dotyczące wykrytego oprogramowania, łącznie z pochodzeniem oprogramowania, akcjami stosowanymi przez Ciebie lub stosowanymi automatycznie oraz informacjami o powodzeniu akcji.
+ W ramach członkostwa podstawowego do firmy Microsoft są wysyłane podstawowe informacje dotyczące wykrytego oprogramowania, łącznie z pochodzeniem oprogramowania, akcjami stosowanymi przez Ciebie lub stosowanymi automatycznie oraz informacjami o powodzeniu akcji.
 
-    W ramach członkostwa zaawansowanego oprócz informacji podstawowych do firmy Microsoft są wysyłane dodatkowe informacje na temat złośliwego oprogramowania, programów szpiegujących i innego potencjalnie niechcianego oprogramowania, takie jak lokalizacja oprogramowania, nazwy plików, sposób działania oprogramowania oraz jego wpływ na pracę komputera.
+ W ramach członkostwa zaawansowanego oprócz informacji podstawowych do firmy Microsoft są wysyłane dodatkowe informacje na temat złośliwego oprogramowania, programów szpiegujących i innego potencjalnie niechcianego oprogramowania, takie jak lokalizacja oprogramowania, nazwy plików, sposób działania oprogramowania oraz jego wpływ na pracę komputera.
 
-    Jeśli włączysz to ustawienie, dołączysz do społeczności Microsoft MAPS w ramach określonego członkostwa.
+ Jeśli włączysz to ustawienie, dołączysz do społeczności Microsoft MAPS w ramach określonego członkostwa.
 
-    Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, nie dołączysz do społeczności Microsoft MAPS.
-  
-    W systemie Windows 10 członkostwo podstawowe nie jest już dostępne, więc ustawienie wartości 1 lub 2 powoduje zarejestrowanie urządzenia z zastosowaniem członkostwa zaawansowanego.</string>
+ Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, nie dołączysz do społeczności Microsoft MAPS.
+ 
+ W systemie Windows 10 członkostwo podstawowe nie jest już dostępne, więc ustawienie wartości 1 lub 2 powoduje zarejestrowanie urządzenia z zastosowaniem członkostwa zaawansowanego.</string>
     <string id="SpynetReporting_Disabled">Wyłączone</string>
     <string id="SpynetReporting_Basic">MAPS — członkostwo podstawowe</string>
     <string id="SpynetReporting_Advanced">MAPS — członkostwo zaawansowane</string>
@@ -973,6 +974,14 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, dodatkowy tekst nie 
 
     Program antywirusowy Microsoft Defender automatycznie ustala, które aplikacje można traktować jako zaufane. Możesz dodać kolejne zaufane aplikacje, używając ustawienia zasad grupy Konfiguruj dozwolone aplikacje.
     </string>
+    <string id="DeviceControl_PolicyGroups">Zdefiniuj grupy zasad sterowania urządzeniami</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Aby wypełnić dane grup zasad, przejdź do schematu XML grup zasad sterowania urządzeniami.
+    </string>
+    <string id="DeviceControl_PolicyRules">Zdefiniuj reguły zasad sterowania urządzeniami</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Aby wypełnić dane reguł zasad, przejdź do schematu XML reguł zasad sterowania urządzeniami.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1144,6 +1153,16 @@ Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, dodatkowy tekst nie 
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Tutaj zdefiniuj grupy zasad</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Tutaj zdefiniuj reguły zasad</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

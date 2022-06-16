@@ -14,10 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">At least Windows XP Professional Service Pack 1 or Windows 2000 Service Pack 3, excluding Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">At least Windows Server 2003 operating systems or Windows XP Professional with SP1, excluding Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">At least Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3 through Windows 8.1 or Windows Server 2012 R2 with most current service pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">At least Windows Vista through Windows 8.1 or Windows Server 2012 R2 with most current service pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">At least Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3 through Windows 8.1 or Windows Server 2012 R2 with most current service pack. Not supported on Windows 10 and above.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">At least Windows Vista through Windows 8.1 or Windows Server 2012 R2 with most current service pack. Not supported on Windows 10 and above.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3
 Option 7 only supported on servers of at least Windows Server 2016 edition​</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">At least Windows Server 2022, or Windows 10 Version 2004​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 through Windows Server 2022, or Windows 10​</string>
       <string id="AUDontShowUasHelp">This policy setting allows you to manage whether the 'Install Updates and Shut Down' option is displayed in the Shut Down Windows dialog box.
 
 If you enable this policy setting, 'Install Updates and Shut Down' will not appear as a choice in the Shut Down Windows dialog box, even if updates are available for installation when the user selects the Shut Down option in the Start menu.
@@ -161,6 +163,16 @@ If the status is set to Not Configured, use of Automatic Updates is not specifie
         Detection for updates against intranet servers will fail when user proxy is needed as a fallback and the alternate proxy behavior is not configured.</string>
       <string id="OnlyUseSystemProxyForUpdateDetection">Only use system proxy for detecting updates (default)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">Allow user proxy to be used as a fallback if detection using system proxy fails</string>
+      <string id="UpdateClassPolicySource_Title">Specify source service for specific classes of Windows Updates</string>
+      <string id="UpdateClassPolicySource_Help">When this policy is enabled, devices will receive Windows updates for the classes listed from the specified update source: either Windows Update or Windows Server Update Service. 
+
+        Note: To receive any updates from the Windows Server Update Service you must have properly configured an intranet Microsoft update service location via the "Specify intranet Microsoft update service location" policy.
+
+        If this policy is not configured or is disabled, the device will continue to detect updates per your other policy configurations. 
+
+        Note: If you are using "Do not allow deferral policies to cause scans against Windows Update" currently to ensure devices only scan against your specified server, we recommend configuring this policy instead or in addition to such.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Specifies the hours that Windows will use to determine how long to wait before checking for available updates. The exact wait time is a sum of the specific value and a random variant of 0-4 hours.
 
         If the status is set to Enabled, Windows will check for available updates at the specified interval.
@@ -370,9 +382,15 @@ To resume receiving Quality Updates which are paused, clear the start date field
 
 If you disable or do not configure this policy, Windows Update will not alter its behavior.</string>
       <string id="TargetReleaseVersion_Title">Select the target Feature Update version</string>
-      <string id="TargetReleaseVersion_Help">Enable this policy to specify a Feature Update version to be requested in subsequent scans.
+      <string id="TargetReleaseVersion_Help">Enter the product and version as listed on the Windows Update target version page:
 
-Enter version as listed in the Windows Release Information page aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+The device will request that Windows Update product and version in subsequent scans.
+
+Entering a target product and clicking OK or Apply means I accept the Microsoft Software License Terms for it found at aka.ms/WindowsTargetVersioninfo. If an organization is licensing the software, I am authorized to bind the organization.
+
+If you enter an invalid value, you will remain on your current version until you correct the values to a supported product and version.</string>
       <string id="DisableWUfBSafeguards">Disable safeguards for Feature Updates</string>
       <string id="DisableWUfBSafeguards_Help">
           Enable this setting when Feature Updates should be deployed to devices without blocking on any safeguard holds. Safeguard holds are known compatibility issues that block the upgrade from being deployed to affected devices until the issue is resolved. Enabling this policy can allow an organization to deploy the Feature Update to devices for testing, or to deploy the Feature Update without blocking on safeguard holds.
@@ -673,7 +691,7 @@ This policy will override the following policies:
         <checkBox refId="AutoUpdateAutomaticMaintenanceEnabled" defaultChecked="false">Install during automatic maintenance</checkBox>
         <dropdownList refId="AutoUpdateSchDay" defaultItem="0">Scheduled install day: </dropdownList>
         <dropdownList refId="AutoUpdateSchTime" defaultItem="3">Scheduled install time:</dropdownList>
-        <text>If you have selected “4 – Auto download and schedule the install” for your scheduled install day and specified a schedule, you also have the option to limit updating to a weekly, bi-weekly or monthly occurrence, using the options below:</text>
+        <text>If you have selected "4 – Auto download and schedule the install" for your scheduled install day and specified a schedule, you also have the option to limit updating to a weekly, bi-weekly or monthly occurrence, using the options below:</text>
         <checkBox refId="AutoUpdateSchEveryWeek" defaultChecked="true">Every week</checkBox>
         <checkBox refId="AutoUpdateSchFirstWeek" defaultChecked="false">First week of the month</checkBox>
         <checkBox refId="AutoUpdateSchSecondWeek" defaultChecked="false">Second week of the month</checkBox>
@@ -696,6 +714,13 @@ This policy will override the following policies:
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Download files with no Url in the metadata if alternate download server is set.</checkBox>
         <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Do not enforce TLS certificate pinning for Windows Update client for detecting updates.</checkBox>
         <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Select the proxy behavior for Windows Update client for detecting updates:</dropdownList>
+      </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Specify source service for the following classes of Windows updates:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Feature Updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Quality Updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Driver Updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Other Updates</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Check for updates at the following</text>
@@ -731,6 +756,9 @@ This policy will override the following policies:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">work (minutes): </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Which Windows product version would you like to receive feature updates for? e.g., Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Target Version for Feature Updates</label>
         </textBox>

@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivirus Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusions</string>
+    <string id="DeviceControl">Contrôle de périphérique</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Réduction de la vulnérabilité aux attaques</string>
     <string id="ExploitGuard_ControlledFolderAccess">Dispositif d’accès contrôlé aux dossiers</string>
@@ -707,7 +708,7 @@ Si vous désactivez ou ne configurez pas ce paramètre, la stratégie de groupe 
 
     Vous avez le choix d’envoyer des informations de base ou des informations complémentaires sur les logiciels détectés. Grâce aux informations complémentaires, Microsoft peut créer une nouvelle la veille de sécurité et ainsi mieux protéger votre ordinateur. Ces informations peuvent par exemple contenir l’emplacement des éléments détectés sur votre ordinateur si un logiciel dangereux a été supprimé. Ces informations sont automatiquement recueillies et envoyées. Dans certains cas, des informations personnelles peuvent être accidentellement envoyées à Microsoft. Cependant, Microsoft n’utilise pas ces informations pour vous identifier ni vous contacter.
 
-    Les options possibles sont les suivantes :
+    Les options possibles sont les suivantes :
     (0x0) Désactivé (valeur par défaut)
     (0x1) Abonnement de base
     (0x2) Abonnement avancé
@@ -720,7 +721,7 @@ Si vous désactivez ou ne configurez pas ce paramètre, la stratégie de groupe 
 
     Si vous désactivez pas ce paramètre ou que vous ne le configurez pas, vous ne rejoignez pas Microsoft MAPS.
   
-    Avec Windows 10, l’option Abonnement de base n’est plus disponible, la valeur 1 ou 2 inscrit donc l’appareil pour l’option Abonnement avancé.</string>
+    Avec Windows 10, l’option Abonnement de base n’est plus disponible, la valeur 1 ou 2 inscrit donc l’appareil pour l’option Abonnement avancé.</string>
     <string id="SpynetReporting_Disabled">Désactivé</string>
     <string id="SpynetReporting_Basic">MAPS de base</string>
     <string id="SpynetReporting_Advanced">MAPS avancé</string>
@@ -978,6 +979,14 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
 
     L'antivirus Microsoft Defender détermine automatiquement les applications qui peuvent être approuvées. Vous pouvez ajouter des applications approuvées dans le paramètre de stratégie de groupe Configurer les applications autorisées.
     </string>
+    <string id="DeviceControl_PolicyGroups">Définir les groupes de stratégie de contrôle des appareils</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Veuillez suivre le schéma XML des groupes de stratégie de contrôle des appareils pour renseigner les données des groupes de stratégies.
+    </string>
+    <string id="DeviceControl_PolicyRules">Définir les règles de stratégie de contrôle des appareils</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Veuillez suivre le schéma XML des règles de stratégie de contrôle de l’appareil pour renseigner les données de règles de stratégie.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Définir les groupes de stratégie ici</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Définir les règles de stratégie ici</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

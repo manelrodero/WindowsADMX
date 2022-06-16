@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivirová ochrana v programu Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Vyloučení</string>
+    <string id="DeviceControl">Ovládání zařízení</string>
     <string id="ExploitGuard">Ochrana Exploit Guard v programu Microsoft Defender</string>
     <string id="ExploitGuard_ASR">Omezení prostoru pro útok</string>
     <string id="ExploitGuard_ControlledFolderAccess">Řízený přístup ke složkám</string>
@@ -705,22 +706,22 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, budou mít zásady skup
     <string id="SpynetReporting">Připojit se ke komunitě Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Nastavení této zásady umožňuje připojení ke komunitě Microsoft MAPS. Microsoft MAPS je online komunita, která poskytuje pomoc při výběru reakce na potenciální hrozby. Tato komunita rovněž pomáhá zastavit šíření nových infekcí škodlivým softwarem.
 
-    Můžete si vybrat, jestli o zjištěném softwaru zašlete základní, nebo i dodatečné informace. Na základě dodatečných informací může Microsoft vytvářet nové bezpečnostní informace umožňující lépe chránit váš počítač. Tyto informace můžou zahrnovat například umístění zjištěných položek ve vašem počítači, pokud byl odebrán škodlivý software. Informace se budou shromažďovat a odesílat automaticky. V některých případech se můžou do Microsoftu neúmyslně odeslat osobní údaje. Microsoft ale tyto informace nebude používat k tomu, aby vás identifikoval nebo kontaktoval.
+ Můžete si vybrat, jestli o zjištěném softwaru zašlete základní, nebo i dodatečné informace. Na základě dodatečných informací může Microsoft vytvářet nové bezpečnostní informace umožňující lépe chránit váš počítač. Tyto informace můžou zahrnovat například umístění zjištěných položek ve vašem počítači, pokud byl odebrán škodlivý software. Informace se budou shromažďovat a odesílat automaticky. V některých případech se můžou do Microsoftu neúmyslně odeslat osobní údaje. Microsoft ale tyto informace nebude používat k tomu, aby vás identifikoval nebo kontaktoval.
 
-    Mezi možné volby patří:
-    (0x0) Zakázáno (výchozí)
-    (0x1) Základní členství
-    (0x2) Pokročilé členství
+ Mezi možné volby patří:
+ (0x0) Zakázáno (výchozí)
+ (0x1) Základní členství
+ (0x2) Pokročilé členství
 
-    V případě základního členství se budou do Microsoftu odesílat základní informace o nalezeném softwaru včetně původu tohoto softwaru, akcí, které provedete nebo které se provedou automaticky, a úspěšnosti těchto akcí.
+ V případě základního členství se budou do Microsoftu odesílat základní informace o nalezeném softwaru včetně původu tohoto softwaru, akcí, které provedete nebo které se provedou automaticky, a úspěšnosti těchto akcí.
 
-    V rámci pokročilého členství se budou do Microsoftu odesílat taky další informace o škodlivém softwaru, spywaru a potenciálně nežádoucím softwaru včetně umístění softwaru, názvů souborů, způsobu fungování softwaru a vlivu softwaru na váš počítač.
+ V rámci pokročilého členství se budou do Microsoftu odesílat taky další informace o škodlivém softwaru, spywaru a potenciálně nežádoucím softwaru včetně umístění softwaru, názvů souborů, způsobu fungování softwaru a vlivu softwaru na váš počítač.
 
-    Pokud toto nastavení povolíte, připojíte se ke komunitě Microsoft MAPS na základě určeného členství.
+ Pokud toto nastavení povolíte, připojíte se ke komunitě Microsoft MAPS na základě určeného členství.
 
-    Pokud toto nastavení zakážete nebo nenakonfigurujete, ke komunitě Microsoft MAPS se nepřipojíte.
-  
-    Ve Windows 10 už základní členství není k dispozici, takže při nastavení hodnoty 1 nebo 2 se zařízení zaregistruje do pokročilého členství.</string>
+ Pokud toto nastavení zakážete nebo nenakonfigurujete, ke komunitě Microsoft MAPS se nepřipojíte.
+ 
+ Ve Windows 10 už základní členství není k dispozici, takže při nastavení hodnoty 1 nebo 2 se zařízení zaregistruje do pokročilého členství.</string>
     <string id="SpynetReporting_Disabled">Zakázáno</string>
     <string id="SpynetReporting_Basic">Základní členství v komunitě MAPS</string>
     <string id="SpynetReporting_Advanced">Pokročilé členství v komunitě  MAPS</string>
@@ -978,6 +979,14 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
 
         Antivirová ochrana v programu Microsoft Defender automaticky určuje, které aplikace jsou důvěryhodné. Další důvěryhodné aplikace můžete přidat v zásadách skupiny v nastavení Konfigurovat povolené aplikace.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definujte skupiny zásad ovládání zařízení</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Postupujte prosím podle xml schématu skupin zásad ovládání zařízení a vyplňte data skupin zásad.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definujte pravidla zásad ovládání zařízení</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Postupujte prosím podle xml schématu pravidel zásad ovládání zařízení a vyplňte data pravidel zásad.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1149,6 +1158,16 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, žádný další text z
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Tady můžete definovat skupiny zásad.</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Tady můžete definovat pravidla zásad.</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

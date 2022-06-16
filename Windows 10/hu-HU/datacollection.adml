@@ -136,11 +136,26 @@ A szervezet által a Microsoft számára küldött diagnosztikai adatok szintjé
       </string>
 
       <string id="AllowCommercialDataPipeline">Kereskedelmi adatfolyamat engedélyezése</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          Az AllowCommercialDataPipeline engedélyezi az eszközt a Windows nagyvállalati adatfolyamatában.
-          Ha engedélyezi ezt a beállítást, az eszközről gyűjtött adatok megjelennek a Windows nagyvállalati adatfolyamatában.
-          Ha letiltja vagy nem konfigurálja ezt a beállítást, az eszközről származó összes adatot a Windows szabványos adatfolyamatára vonatkozó házirendjeinkkel összhangban gyűjtjük össze és dolgozzuk fel.
-          A beállítás konfigurálása nem módosítja a telemetriai adatok gyűjtési szintjét, vagy a felhasználónak a szint módosítására vonatkozó képességét. Ez a beállítás csak a Windows operációs rendszerre és a Windowshoz tartozó alkalmazásokra vonatkozik, a Windows 10-en futó, harmadik féltől származó alkalmazásokra és szolgáltatásokra nem.
+       <string id="AllowCommercialDataPipeline_Explain">Az AllowCommercialDataPipeline szabályozza, hogy a Microsoft az eszközről gyűjtött Windows diagnosztikai adatoknak feldolgozója vagy kezelője lesz-e.
+          Ha engedélyezi ezt a házirend-beállítást, a Microsoft a Windows eszköztől gyűjtött Windows diagnosztikai adatok feldolgozója lesz, az ügyfél pedig a kezelője. Az eszközt a házirend sikeres használatához regisztrálni kell a Azure AD-ben.
+          Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Microsoft lesz az eszközről gyűjtött Windows diagnosztikai adatok kezelője.
+          Ez a házirend csak azt szabályozza, hogy a Microsoft az eszközről gyűjtött Windows diagnosztikai adatok feldolgozója lesz-e. A beállítás konfigurálása nem módosítja a diagnosztikai adatok gyűjtését, sem a felhasználó lehetőségét a szint módosítására. A gyűjtés szintjének beállításához használja a „Diagnosztikai adatok engedélyezése“ házirendet; annak megakadályozásához, hogy a felhasználók a diagnosztikai adatszintet módosítsák, használja „A diagnosztikai adatok jóváhagyási beállításai felhasználói felületének konfigurálása“ házirendet.
+      </string>
+
+      <string id="EnableOneSettingsAuditing">A Onesettings naplózásának engedélyezése</string>
+      <string id="EnableOneSettingsAuditing_Explain">Ez a házirend-beállítás azt szabályozza, hogy a Windows rögzítse-e a OneSettings szolgáltatáshoz való kapcsolódási kísérleteket az eseménynaplóban.
+
+Ha engedélyezi a házirend-beállítást, a Windows rögzíteni fogja a OneSettings szolgáltatáshoz való kapcsolódási kísérleteket a Microsoft\Windows\Privacy-Auditing\Operational EventLog csatornában.
+
+Ha letiltja vagy nem konfigurálja a házirend-beállítást, akkor a Windows nem fogja rögzíteni a OneSettings szolgáltatáshoz való kapcsolódási kísérleteket az eseménynaplóban.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">A Onesettings-letöltések letiltása</string>
+      <string id="DisableOneSettingsDownloads_Explain">Ez a házirend-beállítás határozza meg, hogy a Windows megkísérel-e csatlakozni a OneSettings szolgáltatáshoz.
+
+Ha engedélyezi a házirend-beállítást, a Windows nem próbál meg csatlakozni a OneSettings szolgáltatáshoz.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Windows időnként megpróbál csatlakozni a OneSettings szolgáltatáshoz a konfigurációs beállítások letöltéséhez.
       </string>
     </stringTable>
     <presentationTable>

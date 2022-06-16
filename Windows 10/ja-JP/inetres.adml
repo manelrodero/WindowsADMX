@@ -413,7 +413,7 @@ Windows Vista、Windows 7、Internet Explorer 7、および Internet Explorer 8 
 このポリシー設定を構成しない場合、ユーザーは、メニュー バーとナビゲーション バーの位置を入れ替えることができます。</string>
       <string id="IE_Explain_DisableManagingPhishingFilter">このポリシー設定は、"フィッシング" を通じて個人情報を不正に収集することがわかっている Web サイトにユーザーがアクセスしようとしたときに警告するフィルターを管理できないようにします。
 
-このポリシー設定を有効にすると、ユーザーには、フィッシング フィルターを有効にするためのダイアログは表示されません。このポリシー設定を有効にすると、ユーザーには、フィッシング フィルターを有効にするためのダイアログは表示されません。
+このポリシー設定を有効にすると、ユーザーには、フィッシング フィルターを有効にするためのダイアログは表示されません。フィッシング フィルターで使用するモード (手動、自動、またはオフ) を指定する必要があります。
 
 手動モードを選択すると、フィッシング フィルターはローカル解析のみを実行して、ユーザーには、Microsoft にデータを送信することを許可するかどうかたずねるダイアログが表示されます。この機能を完全に有効にすると、フィルターの許可リストに含まれない Web サイトのアドレスはすべて Microsoft に自動的に送信され、ユーザーにはダイアログは表示されません。
 
@@ -3976,6 +3976,14 @@ Microsoft Edge* の次期バージョンの Windows Update がインストール
 このポリシーを無効にした場合、または構成しなかった場合は、Internet Explorer モードでは拡張ホットキーは動作しません。
 
 詳細については、「https://go.microsoft.com/fwlink/?linkid=2102115」を参照してください。</string>
+      <string id="ResetZoomForDialogInIEMode">Internet Explorer モードの HTML ダイアログのズームを既定値にリセットする</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">このポリシー設定を使用すると、管理者は、Internet Explorer モードの HTML ダイアログのズームを既定値にリセットできます。
+
+このポリシーを有効にした場合、Internet Explorer モードの HTML ダイアログのズームは親ページから反映されません。
+
+このポリシーを無効にした場合、または構成しなかった場合、Internet Explorer モードの HTML ダイアログのズームは、親ページのズームに基づいて設定されます。
+
+詳細については、https://go.microsoft.com/fwlink/?linkid=2102115を参照してください</string>
       <string id="DisableInternetExplorerApp">Internet Explorer 11 をスタンドアロンブラウザーとして無効にする</string>
       <string id="IE_ExplainDisableInternetExplorerApp">このポリシーを使用すると、Internet Explorer をスタンドアロン ブラウザーとして起動することを制限できます。
 

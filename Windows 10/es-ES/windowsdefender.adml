@@ -6,6 +6,7 @@
     <string id="AntiSpywareDefender">Antivirus de Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusiones</string>
+    <string id="DeviceControl">Control de dispositivo</string>
     <string id="ExploitGuard">Protección contra vulnerabilidades de seguridad de Microsoft Defender</string>
     <string id="ExploitGuard_ASR">Reducir la superficie de ataque</string>
     <string id="ExploitGuard_ControlledFolderAccess">Acceso a la carpeta controlado</string>
@@ -707,22 +708,22 @@ Si deshabilita o no establece esta configuración, la directiva de grupo tendrá
     <string id="SpynetReporting">Únase a Microsoft MAPS</string>
     <string id="SpynetReporting_Explain">Esta configuración de directiva te permite unirte a Microsoft MAPS. Microsoft MAPS es la comunidad en línea que te ayuda a elegir cómo responder frente a amenazas potenciales. La comunidad también ayuda a detener la propagación de nuevas infecciones de software malintencionado.
 
-    Puedes optar por enviar información básica o adicional sobre el software detectado. La información adicional le permite a Microsoft a crear una nueva inteligencia de seguridad y le ayuda a proteger tu equipo. Esta información puede incluir aspectos como la ubicación de los elementos detectados en el equipo si se quitó software perjudicial. La información se recopila y envía automáticamente. En algunos casos, es posible que se envíe involuntariamente información personal a Microsoft. Sin embargo, Microsoft no usará dicha información para identificarte ni para ponerse en contacto contigo.
+ Puedes optar por enviar información básica o adicional sobre el software detectado. La información adicional le permite a Microsoft a crear una nueva inteligencia de seguridad y le ayuda a proteger tu equipo. Esta información puede incluir aspectos como la ubicación de los elementos detectados en el equipo si se quitó software perjudicial. La información se recopila y envía automáticamente. En algunos casos, es posible que se envíe involuntariamente información personal a Microsoft. Sin embargo, Microsoft no usará dicha información para identificarte ni para ponerse en contacto contigo.
 
-    Las opciones posibles son:
-    (0x0) Deshabilitado (valor predeterminado)
-    (0x1) Suscripción básica
-    (0x2) Suscripción avanzada
+ Las opciones posibles son:
+ (0x0) Deshabilitado (valor predeterminado)
+ (0x1) Suscripción básica
+ (0x2) Suscripción avanzada
 
-    Con la Suscripción básica, se envía a Microsoft información básica sobre el software detectado, como el origen del software, las acciones que realizas o que se realizan de forma automática, y si dichas acciones se realizaron correctamente.
+ Con la Suscripción básica, se envía a Microsoft información básica sobre el software detectado, como el origen del software, las acciones que realizas o que se realizan de forma automática, y si dichas acciones se realizaron correctamente.
 
-    Con la Suscripción avanzada, además de la información básica, se envía más información a Microsoft sobre software malintencionado, spyware y software potencialmente no deseado, incluida la ubicación del software, los nombres de archivo, cómo funciona el software y cómo se vio afectado el equipo.
+ Con la Suscripción avanzada, además de la información básica, se envía más información a Microsoft sobre software malintencionado, spyware y software potencialmente no deseado, incluida la ubicación del software, los nombres de archivo, cómo funciona el software y cómo se vio afectado el equipo.
 
-    Si habilitas esta configuración, te unirás a Microsoft MAPS con la suscripción especificada.
+ Si habilitas esta configuración, te unirás a Microsoft MAPS con la suscripción especificada.
 
-    Si deshabilitas o no estableces esta configuración, no te unirás a Microsoft MAPS.
-  
-    En Windows 10, la Suscripción básica ya no está disponible, por lo que si estableces el valor en 1 o 2, el dispositivo se inscribirá en la Suscripción avanzada.</string>
+ Si deshabilitas o no estableces esta configuración, no te unirás a Microsoft MAPS.
+ 
+ En Windows 10, la Suscripción básica ya no está disponible, por lo que si estableces el valor en 1 o 2, el dispositivo se inscribirá en la Suscripción avanzada.</string>
     <string id="SpynetReporting_Disabled">Deshabilitado</string>
     <string id="SpynetReporting_Basic">MAPS básico</string>
     <string id="SpynetReporting_Advanced">MAPS avanzado</string>
@@ -982,6 +983,14 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
 
     Antivirus de Microsoft Defender determina automáticamente las aplicaciones que pueden ser de confianza. Puedes agregar aplicaciones de confianza adicionales en la opción de GP Configurar aplicaciones permitidas.
     </string>
+    <string id="DeviceControl_PolicyGroups">Definir grupos de directivas para el control de dispositivos</string>
+    <string id="DeviceControl_PolicyGroups_Explain">
+        Siga el esquema XML de grupos de directivas de control de dispositivos para rellenar los datos de grupos de directivas.
+    </string>
+    <string id="DeviceControl_PolicyRules">Definir reglas para las directivas para el control de dispositivos</string>
+    <string id="DeviceControl_PolicyRules_Explain">
+        Siga el esquema XML de reglas de directiva de control de dispositivos para rellenar los datos de reglas de directivas.
+    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1153,6 +1162,16 @@ Si deshabilita o no establece esta configuración, no se mostrará ningún texto
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
+    </presentation>
+    <presentation id="DeviceControl_PolicyGroups">
+    <textBox refId="DeviceControl_PolicyGroups">
+        <label>Definir los grupos de directivas aquí</label>
+    </textBox>
+    </presentation>
+    <presentation id="DeviceControl_PolicyRules">
+    <textBox refId="DeviceControl_PolicyRules">
+        <label>Definir las reglas de directivas aquí</label>
+    </textBox>
     </presentation>
    </presentationTable>
 </resources>

@@ -134,11 +134,26 @@ Pour définir une limite du niveau de données de diagnostic envoyées à Micros
       </string>
 
       <string id="AllowCommercialDataPipeline">Autoriser le pipeline de données commerciales</string>
-      <string id="AllowCommercialDataPipeline_Explain">
-          AllowCommercialDataPipeline choisit l'appareil dans le pipeline de données d'entreprise Windows.
-          Si vous activez ce paramètre, les données collectées à partir de l'appareil seront choisies dans le pipeline de données d'entreprise Windows.
-          Si vous désactivez ce paramètre ou ne le configurez pas, toutes les données de l'appareil seront collectées et traitées conformément à nos stratégies pour le pipeline de données standard Windows.
-          La configuration de ce paramètre ne modifie pas le niveau de la collection de télémétrie ni la capacité de l'utilisateur à modifier le niveau. Ce paramètre s'applique uniquement au système d'exploitation Windows et aux applications incluses dans Windows, et non à des applications ou des services tiers exécutés sous Windows 10.
+       <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline contrôle si Microsoft est un processeur ou un contrôleur pour les données de diagnostic Windows collectées depuis cet appareil.
+          Si vous activez cette stratégie, Microsoft sera le processeur des données de diagnostic Windows collectées depuis l’appareil Windows et le client sera le contrôleur. Vous devez avoir inscrit l’appareil dans Azure Active Directory pour que cette stratégie réussisse.
+          Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Microsoft sera le contrôleur des données de diagnostic Windows collectées depuis cet appareil.
+          Cette stratégie contrôle uniquement si Microsoft est un processeur pour la collecte des données de diagnostic Windows depuis cet appareil. La configuration de ce paramètre n’affecte pas les données de diagnostic ou la possibilité pour l’utilisateur de modifier le niveau. Pour configurer le niveau de la collection, utilisez la stratégie « Autoriser les données de diagnostic » et pour empêcher les utilisateurs de cet appareil de modifier le niveau des données de diagnostic, veuillez utiliser la stratégie d’interface utilisateur « Configurer les paramètres d’activation des données de diagnostic ».
+      </string>
+
+      <string id="EnableOneSettingsAuditing">Activer l’audit OneSettings</string>
+      <string id="EnableOneSettingsAuditing_Explain">Ce paramètre de stratégie contrôle l’enregistrement par Windows des tentatives de connexion au service OneSettings vers le journal des événements.
+
+Si vous activez cette stratégie, Windows enregistre les tentatives de connexion au service OneSettings vers le canal Microsoft\Windows\Privacy-Auditing\Operational EventLog.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows n’enregistre pas les tentatives de connexion au service OneSettings vers le journal des événements.
+      </string>
+
+      <string id="DisableOneSettingsDownloads">Désactiver les téléchargements OneSettings</string>
+      <string id="DisableOneSettingsDownloads_Explain">Ce paramètre de stratégie contrôle si Windows tente de se connecter au service OneSettings.
+
+Si vous activez ce paramètre de stratégie, Windows ne tentera pas de se connecter au service OneSettings.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows tente périodiquement de se connecter au service OneSettings pour télécharger les paramètres de configuration.
       </string>
     </stringTable>
     <presentationTable>

@@ -264,13 +264,13 @@ Windows Vista, Windows 7, Internet Explorer 7 및 Internet Explorer 8에서는 �
 이 정책을 사용하면 도움말 메뉴에서 둘러보기 명령이 제거됩니다.
 
 이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자가 도움말 메뉴에서 둘러보기를 실행할 수 있습니다.</string>
-      <string id="ExplainPopupBlocker_AllowList">Internet Explorer 프로세스의 팝업 차단 설정과 관계없이 팝업 창 열기가 허용되는 웹 사이트 목록을 지정할 수 있습니다.
+      <string id="ExplainPopupBlocker_AllowList">이 정책 설정은 Internet Explorer 프로세스의 팝업 차단 설정과 관계없이 팝업 창 열기가 허용되는 웹 사이트 목록을 지정할 수 있도록 합니다.
 
-이 정책 설정을 사용하면 사용자 설정과 관계없이 팝업 창 열기가 허용되는 사이트 목록을 입력할 수 있습니다. 도메인 이름만 허용되므로 www.contoso.com은 올바르지만 http://www.contoso.com은 올바르지 않습니다. 와일드카드가 허용되므로 *.contoso.com도 올바릅니다.
+이 정책 설정을 사용하면 사용자 설정과 관계없이 팝업 창 열기가 허용되는 사이트 목록을 입력할 수 있습니다. 도메인 이름만 허용되므로 www.contoso.com은 유효하지만 http://www.contoso.com은 유효하지 않습니다. 와일드카드가 허용되므로 *.contoso.com도 유효합니다.
 
 이 정책 설정을 사용하지 않거나 구성하지 않으면 기본 팝업 차단 예외 목록을 제공할 수 없습니다.
 
-참고: "팝업 허용 목록 관리 사용 안 함" 정책을 사용하여 사용자가 예외 목록에 웹 사이트를 추가하거나 제거하지 못하도록 할 수 있습니다.</string>
+참고: "팝업 허용 목록 관리 사용 안 함" 정책을 사용하여 사용자가 예외 목록에서 웹 사이트를 추가 또는 제거하지 못하도록 할 수 있습니다.</string>
       <string id="ExplainScriptPaste_AllProcs_Explain">컴퓨터로 실행 중인 프로세스에서 스크립트가 삭제, 복사 및 붙여넣기 등의 클립보드 작업을 수행하려고 할 때 프롬프트를 무시할 수 있습니다.
 
 이 정책 설정을 사용하면 컴퓨터로 실행 중인 프로세스에서 스크립트가 클립보드 작업을 수행하려고 할 때 사용자에게 프롬프트가 표시되지 않습니다. 즉, 영역 동작이 현재 프롬프트로 설정되어 있는 경우 영역 동작은 확인을 무시하고 사용하도록 설정됩니다.
@@ -411,23 +411,23 @@ Windows Vista, Windows 7, Internet Explorer 7 및 Internet Explorer 8에서는 �
 이 정책 설정을 사용하지 않으면 메뉴 모음이 탐색 모음 아래에 위치합니다. 사용자는 메뉴 모음과 탐색 모음의 위치를 바꿀 수 없습니다.
 
 이 정책 설정을 구성하지 않으면 사용자가 메뉴 모음과 탐색 모음의 위치를 바꿀 수 있습니다.</string>
-      <string id="IE_Explain_DisableManagingPhishingFilter">방문하는 웹 사이트가 "피싱"을 통해 개인 정보 수집을 부정하게 시도하는 것으로 알려진 경우 사용자에게 경고하는 필터를 사용자가 관리할 수 없도록 합니다.
+      <string id="IE_Explain_DisableManagingPhishingFilter">이 정책 설정은 방문 중인 웹 사이트가 "피싱"을 통해 개인 정보를 수집하는 사기성 웹 사이트로 알려져 있을 경우 사용자에게 경고하는 필터를 사용자가 관리할 수 없도록 합니다.
 
-이 정책 설정을 사용하면 사용자에게 피싱 필터를 사용하라는 프롬프트가 표시되지 않습니다. 피싱 필터를 사용할 모드를 관리자가 수동, 자동, 끄기 중 하나로 지정해야 합니다.
+이 정책 설정을 사용하면 피싱 필터를 사용하라는 메시지가 사용자에게 표시되지 않습니다. 피싱 필터를 사용하는 모드를 수동, 자동, 끄기 중 하나로 지정해야 합니다.
 
-수동 모드를 선택하면 피싱 필터는 로컬 분석만 수행하고 Microsoft로 데이터 보내기를 허용할 것인지 묻는 메시지가 사용자에게 표시됩니다. 이 기능을 완전히 사용하면 사용자에게 프롬프트를 표시하지 않고 필터의 허용 목록에 포함되지 않은 모든 웹 사이트 주소를 자동으로 Microsoft에 보냅니다.
+수동 모드를 선택하면 피싱 필터는 로컬 분석만 수행하고 Microsoft로 데이터 보내기를 허용할 것인지 묻는 메시지가 사용자에게 표시됩니다. 이 기능을 완전히 사용하도록 설정하면 사용자에게 메시지를 표시하지 않고 필터의 허용 목록에 포함되지 않은 모든 웹 사이트 주소를 자동으로 Microsoft에 보냅니다.
 
-이 정책 설정을 사용하지 않거나 구성하지 않으면 피싱 필터에 대한 작업 모드를 선택하라는 메시지가 사용자에게 표시됩니다.</string>
-      <string id="IE_Explain_DisableManagingSafetyFilter">사용자가 방문하는 웹 사이트가 "피싱"을 통해 개인 정보 수집을 부정하게 시도하는 것으로 알려져 있거나 맬웨어를 호스트하는 것으로 알려져 있을 경우 경고를 하는 SmartScreen 필터를 사용할 수 있도록 합니다.
+이 정책 설정을 사용하지 않거나 구성하지 않으면 피싱 필터에 대한 작업 모드를 결정하라는 메시지가 사용자에게 표시됩니다.</string>
+      <string id="IE_Explain_DisableManagingSafetyFilter">이 정책 설정은 사용자가 방문 중인 웹 사이트가 "피싱"을 통해 개인 정보를 수집하는 사기성 웹 사이트로 알려져 있거나 맬웨어를 호스트하는 것으로 알려져 있을 경우 사용자에게 경고를 하는 SmartScreen 필터를 사용할 수 있도록 합니다.
 
-이 정책 설정을 사용하면 사용자에게 SmartScreen 필터를 켜라는 프롬프트가 표시되지 않습니다. SmartScreen 필터에서 사용하는 모드를 켜기와 끄기 중에서 선택해야 합니다. 필터의 허용 목록에 포함되지 않은 모든 웹 사이트 주소는 사용자에게 프롬프트를 표시하지 않고 자동으로 Microsoft에 보냅니다.
+이 정책 설정을 사용하면 SmartScreen 필터를 켜라는 메시지가 사용자에게 표시되지 않습니다. SmartScreen 필터에서 사용하는 모드를 켜기 또는 끄기 중 하나로 지정해야 합니다. 필터의 허용 목록에 포함되지 않은 모든 웹 사이트 주소는 사용자에게 메시지를 표시하지 않고 자동으로 Microsoft에 보냅니다.
 
-이 정책 설정을 사용하지 않거나 구성하지 않으면 첫 실행 경험 중에 SmartScreen 필터를 켤지 여부를 결정하라는 내용의 프롬프트가 사용자에게 표시됩니다.</string>
-      <string id="IE_Explain_DisableManagingSafetyFilter_IE9">사용자가 방문하는 웹 사이트가 "피싱"을 통해 개인 정보 수집을 부정하게 시도하는 것으로 알려져 있거나 맬웨어를 호스트하는 것으로 알려져 있을 경우 경고를 하는 SmartScreen 필터를 사용하지 못하도록 합니다.
+이 정책 설정을 사용하지 않거나 구성하지 않으면 첫 실행 경험 중에 SmartScreen 필터 사용 여부를 결정하라는 메시지가 사용자에게 표시됩니다.</string>
+      <string id="IE_Explain_DisableManagingSafetyFilter_IE9">이 정책 설정은 사용자가 방문 중인 웹 사이트가 "피싱"을 통해 개인 정보를 수집하는 사기성 웹 사이트로 알려져 있거나 맬웨어를 호스트하는 것으로 알려져 있을 경우 사용자에게 경고를 하는 SmartScreen 필터를 사용하지 못하도록 합니다.
 
-이 정책 설정을 사용하면 사용자에게 SmartScreen 필터를 켜라는 프롬프트가 표시되지 않습니다. 필터의 허용 목록에 있지 않은 모든 웹 사이트 주소는 사용자에게 프롬프트를 표시하지 않고 자동으로 Microsoft에 보냅니다.
+이 정책 설정을 사용하면 SmartScreen 필터를 켜라는 메시지가 사용자에게 표시되지 않습니다. 필터의 허용 목록에 포함되지 않은 모든 웹 사이트 주소는 사용자에게 메시지를 표시하지 않고 자동으로 Microsoft에 보냅니다.
 
-이 정책 설정을 사용하지 않거나 구성하지 않으면 첫 실행 경험 중에 SmartScreen 필터 사용 여부를 결정하라는 내용의 프롬프트가 사용자에게 표시됩니다.</string>
+이 정책 설정을 사용하지 않거나 구성하지 않으면 첫 실행 경험 중에 SmartScreen 필터 사용 여부를 결정하라는 메시지가 사용자에게 표시됩니다.</string>
       <string id="IE_Explain_DisableSecuritySettingsCheck">Internet Explorer 보안 설정을 검사하여 설정으로 인해 Internet Explorer가 위험에 처하는 경우를 확인하는 보안 설정 검사 기능을 사용하지 않습니다.
 
 이 정책 설정을 사용하면 기능이 꺼집니다.
@@ -3974,6 +3974,14 @@ InPrivate 필터링은 사용자가 방문한 사이트에 기초하여 사용�
 이 정책을 사용하지 않거나 구성하지 않으면 Internet Explorer 모드에서 확장된 핫키가 작동하지 않습니다.
 
 자세한 내용은 https://go.microsoft.com/fwlink/?linkid=2102115를 참조하세요.</string>
+      <string id="ResetZoomForDialogInIEMode">Internet Explorer 모드에서 HTML 대화 상자의 확대/축소를 기본값으로 재설정</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">이 정책 설정을 사용하면 관리자가 Internet Explorer 모드에서 HTML 대화 상자의 확대/축소를 기본값으로 다시 설정할 수 있습니다.
+
+이 정책을 사용하면 Internet Explorer 모드에서 HTML 대화 상자의 확대/축소가 부모 페이지에서 전파되지 않습니다.
+
+이 정책을 사용하지 않거나 구성하지 않으면 부모 페이지의 확대/축소에 따라 Internet Explorer 모드에서 HTML 대화 상자의 확대/축소가 설정됩니다.
+
+자세한 내용은 https://go.microsoft.com/fwlink/?linkid=2102115 참조하세요.</string>
       <string id="DisableInternetExplorerApp">Internet Explorer 11을 독립 실행형 브라우저로 사용 안 함</string>
       <string id="IE_ExplainDisableInternetExplorerApp">이 정책을 사용하면 Internet Explorer를 독립 실행형 브라우저로 실행하는 것을 제한할 수 있습니다.
 
