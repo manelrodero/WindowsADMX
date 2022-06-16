@@ -13,8 +13,8 @@
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10V1703_DisplayName">Microsoft Edge ve Windows 10, verze 1703 nebo novější</string>
       <string id="SUPPORTED_INTERNET_BROWSER_WIN10RS3RELEASE_DisplayName">Microsoft Edge ve Windows 10, verze 1709 nebo novější</string>
       <string id="SUPPORTED_INTERNET_BROWSER_RS3_DisplayName">Microsoft Edge ve Windows 10, verze 1708 nebo novější</string>
-      <!-- Bug 13574024 is tracking the proper string for the RS4 version -->
-      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge ve Windows 10, verze 1802 nebo novější</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS4_DisplayName">Microsoft Edge ve Windows 10, verze 1803 nebo novější</string>
+      <string id="SUPPORTED_INTERNET_BROWSER_RS5_DisplayName">Microsoft Edge ve Windows 10, verze 1809 nebo novější</string>
       <string id="InternetBrowser_DisplayName">Microsoft Edge</string>
       <string id="InternetBrowser_ExplainCat">Kategorie prohlížeče Microsoft Edge</string>
 
@@ -23,28 +23,33 @@
       <!-- NOTE: Please try to keep this list sorted by the string id="" field -->
       <!-- Policies -->
       <string id="HomePages">Konfigurovat úvodní stránky</string>
-      <string id="HomePages_Explain">Toto nastavení zásad vám umožňuje nakonfigurovat jednu nebo více úvodních stránek pro zařízení připojená k doméně. Po jeho nastavení ho vaši zaměstnanci nebudou moci změnit.
+      <string id="HomePages_Explain">Když povolíte zásadu Konfigurovat stránku při spuštění Microsoft Edge, můžete nakonfigurovat jednu nebo více úvodních stránek. Když tuto zásadu povolíte, uživatelé nebudou moct změnit svoje úvodní stránky.
 
-Pokud toto nastavení povolíte, můžete nakonfigurovat jednu nebo více úvodních stránek. Pokud je nastavení povoleno, musíte také zadat URL těchto stránek a jednotlivé stránky oddělit ostrými závorkami v tomto formátu:
-     &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
+Pokud zásadu povolíte, musíte uvést adresy URL na stránky a jednotlivé stránky oddělit pomocí ostrých závorek v následujícím formátu:
 
-Verze 1703 nebo novější: Pokud nechcete Microsoftu odesílat data, můžete použít hodnotu &lt;about:blank&gt;, která, pokud se jedná o jedinou nakonfigurovanou URL, platí pro zařízení připojená i nepřipojená k doméně.
+      &lt;support.contoso.com&gt;&lt;support.microsoft.com&gt;
 
-Pokud toto nastavení zakážete nebo nenakonfigurujete, vaše výchozí úvodní stránky budou webové stránky nastavené v Nastavení aplikací.
-</string>
+Pokud zásadu zakážete nebo nenakonfigurujete, webové stránky zadané v nastavení aplikace se budou načítat jako úvodní stránky.
 
+Verze 1703 a novější:
+Pokud nechcete posílat provoz do Microsoftu, povolte tuto zásadu a použijte hodnotu &lt;about:blank&gt;, která respektuje zařízení připojená i nepřipojená k doméně, pokud se jedná o jedinou nakonfigurovanou adresu URL.
+
+Verze 1809:
+Pokud zásadu povolíte a v zásadě Konfigurovat stránku při spuštění Microsoft Edge vyberete úvodní stránku, stránku Nová karta nebo předchozí stránku, Microsoft Edge bude ignorovat zásadu Konfigurovat úvodní stránky. Pokud zásadu nenakonfigurujete nebo zásadu Konfigurovat stránku při spuštění Microsoft Edge nastavíte na konkrétní stránku nebo stránky, Microsoft Edge použije zásadu Konfigurovat úvodní stránky.
+
+Podporovaná zařízení: Zařízení připojená k doméně nebo zaregistrovaná v MDM
+Související zásady:
+– Konfigurovat stránku při spuštění Microsoft Edge
+– Zakázat uzamčení úvodních stránek</string>
       <string id="DisableLockdownOfStartPages">Zakázat uzamčení úvodních stránek</string>
-      <string id="DisableLockdownOfStartPages_Explain">Toto nastavení zásad vám umožňuje zakázat uzamčení úvodních stránek a povolit uživatelům upravovat úvodní stránky, když je povoleno nastavení „Konfigurovat úvodní stránky“.
+      <string id="DisableLockdownOfStartPages_Explain">Microsoft Edge můžete nakonfigurovat tak, že zakážete uzamčení úvodních stránek. Tím uživatelům umožníte měnit nebo přizpůsobovat úvodní stránky. Pokud to chcete udělat, musíte také povolit zásadu Konfigurovat úvodní stránky nebo Konfigurovat stránku při spuštění Microsoft Edge. Pokud zásadu povolíte, je možné upravovat všechny nakonfigurované úvodní stránky. Žádná úvodní stránka nakonfigurovaná pomocí zásady Konfigurovat úvodní stránky nebude uzamčena a uživatelé budou moct svoje úvodní stránky upravovat.
 
-        Poznámka
-        Toto nastavení platí, pouze když používáte nastavení „Konfigurovat úvodní stránky“
+Pokud zásadu zakážete nebo nenakonfigurujete, nebude možné úvodní stránky nakonfigurované v zásadě Konfigurovat úvodní stránky měnit a stránky zůstanou uzamčené.
 
-        Důležité
-        Toto nastavení lze použít pouze u zařízení připojených k doméně nebo zaregistrovaných do MDM. Více informací naleznete v zásadách rozšíření prohlížeče Microsoft (aka.ms/browserpolicy). 
-
-Pokud toto nastavení povolíte, nebudete moci uzamknout žádné úvodní stránky nakonfigurované v nastavení „Konfigurovat úvodní stránky“, což znamená, že je uživatelé budou moci upravovat.
-
-Pokud toto nastavení zakážete nebo nenakonfigurujete, uživatelé nebudou moci měnit úvodní stránky nakonfigurované v rámci nastavení „Konfigurovat úvodní stránky“. Úvodní stránky zůstanou uzamčené.</string>
+Podporovaná zařízení: Zařízení připojená k doméně nebo zaregistrovaná v MDM
+Související zásady:
+– Konfigurovat úvodní stránky
+– Konfigurovat stránku při spuštění Microsoft Edge</string>
       <string id="LockdownFavorites">Zabránit změnám v oblíbených položkách v Microsoft Edgi</string>
       <string id="LockdownFavorites_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli zaměstnanci můžou přidávat, importovat, řadit nebo upravovat seznam oblíbených položek v Microsoft Edgi.
 
@@ -54,7 +59,12 @@ Důležité
 Nepovolujte zároveň toto nastavení i nastavení Synchronizovat oblíbené položky mezi Internet Explorerem a Microsoft Edgem. Pokud je obě povolíte, nebudou zaměstnanci moct synchronizovat svoje oblíbené položky mezi Internet Explorerem a Microsoft Edgem.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete (výchozí), zaměstnanci můžou přidávat, importovat a provádět změny v seznamu oblíbených položek.</string>
+      <string id="PreventCertErrorOverrides">Zabránit přepisování chyb certifikátu</string>
+      <string id="PreventCertErrorOverrides_Explain">Certifikáty zabezpečení webu zajišťují oprávněnost webu, na který uživatelé přecházejí, a za určitých okolností šifrují data. Pomocí této zásady můžete zadat, zda se má uživatelům zabránit v obcházení upozornění zabezpečení u webů, které mají chyby protokolu SSL.
 
+Pokud je zásada povolena, není povoleno přepisování chyb certifikátů.
+
+Pokud je zásada zakázána nebo není nakonfigurována, je přepisování chyb certifikátů povoleno.</string>
       <string id="AllowAddressBarDropdown">Povolit rozbalovací seznam návrhů panelu Adresa</string>
       <string id="AllowAddressBarDropdown_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda je v Microsoft Edgi k dispozici rozbalovací funkce panelu Adresa. Doporučujeme toto nastavení zakázat, pokud chcete minimalizovat síťová připojení z Microsoft Edge ke službám Microsoft.
 
@@ -77,14 +87,20 @@ Pokud toto nastavení nenakonfigurujete, zaměstnanci se můžou rozhodnout sami
 Pokud toto nastavení zapnete nebo nenakonfigurujete, umožní zaměstnancům používání Vývojářských nástrojů F12.
 
 Pokud toto nastavení vypnete, nebudou zaměstnanci moct Vývojářské nástroje F12 v Microsoft Edgi používat.</string>
-      <string id="AllowDoNotTrack">Konfigurovat Do Not Track</string>
-      <string id="AllowDoNotTrack_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda budou zaměstnanci moci posílat žádosti DNT (Do Not Track) na weby, které vyžadují sledovací informace. Ve výchozím nastavení se žádosti DNT neposílají, zaměstnanci se ale mohou rozhodnout nastavení zapnout a žádosti posílat.
+      <string id="AllowDoNotTrack">Konfigurovat funkci Nesledovat</string>
+      <string id="AllowDoNotTrack_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda budou zaměstnanci moci posílat žádosti Nesledovat na weby, které vyžadují sledovací informace. Ve výchozím nastavení se žádosti Nesledovat neposílají, zaměstnanci se ale mohou rozhodnout nastavení zapnout a žádosti posílat.
 
-Pokud toto nastavení povolíte, budou se žádosti DNT webům vyžadujícím sledovací informace posílat vždy.
+Pokud toto nastavení povolíte, budou se žádosti Nesledovat webům vyžadujícím sledovací informace posílat vždy.
 
-Pokud toto nastavení zakážete, nebudou se žádosti DNT webům vyžadujícím sledovací informace posílat nikdy.
+Pokud toto nastavení zakážete, nebudou se žádosti Nesledovat webům vyžadujícím sledovací informace posílat nikdy.
 
-Pokud toto nastavení nenakonfigurujete, zaměstnanci se mohou rozhodnout, zda chtějí webům vyžadujícím informace žádosti DNT posílat.</string>
+Pokud toto nastavení nenakonfigurujete, zaměstnanci se mohou rozhodnout, zda chtějí webům vyžadujícím informace žádosti Nesledovat posílat.</string>
+      <string id="AllowFullScreenMode">Povolit režim celé obrazovky</string>
+      <string id="AllowFullScreenMode_Explain">Pomocí této zásady můžete určit, jestli chcete povolit režim celé obrazovky, ve kterém se zobrazuje jen webový obsah a skryje se uživatelské rozhraní Microsoft Edge.
+
+Pokud je tato zásada povolená nebo není nakonfigurovaná, režim celé obrazovky bude možné v aplikaci Microsoft Edge použít. Uživatelé a rozšíření musí mít příslušná oprávnění.
+
+Pokud je zakázaná, režim celé obrazovky nebude možné v aplikaci Microsoft Edge použít.</string>
       <string id="AllowInPrivate">Povolit funkci Procházení InPrivate</string>
       <string id="AllowInPrivate_Explain">Toto nastavení zásad umožňuje rozhodnout, jestli zaměstnanci můžou procházet weby v režimu InPrivate.
 
@@ -107,6 +123,18 @@ Pokud toto nastavení zapnete, blokování automaticky otevíraných oken se zap
 Pokud toto nastavení vypnete, blokování automaticky otevíraných oken se vypne a automaticky otevíraná okna se začnou zobrazovat.
 
 Pokud toto nastavení nenakonfigurujete, zaměstnanci se můžou rozhodnout, jestli chtějí blokování automaticky otevíraných oken používat.</string>
+      <string id="AllowPrinting">Povolit tisk</string>
+      <string id="AllowPrinting_Explain">Pomocí této zásady můžete určit, jestli bude v aplikaci Microsoft Edge povolený tisk webového obsahu.
+
+Pokud je tato zásada povolená, je tisk povolený.
+
+Pokud je zakázaná, není tisk povolený.</string>
+      <string id="AllowSavingHistory">Povolit ukládání historie</string>
+      <string id="AllowSavingHistory_Explain">Microsoft Edge ukládá na zařízení uživatelů jejich historii procházení, která se skládá z informací o jimi navštívených webech.
+
+Pokud je tato zásada povolená nebo není nakonfigurovaná, bude se historie procházení ukládat a bude viditelná v podokně Historie.
+
+Pokud je zakázaná, historie procházení se přestane ukládat a nebude viditelná v podokně Historie. Pokud nějaká historie procházení existuje už před zakázáním této zásady, zůstane v podokně Historie viditelná. Tato zásada, pokud je zakázaná, nezastaví synchronizaci existující historie ani historie pocházející z jiných synchronizovaných zařízení.</string>
       <string id="AllowSearchEngineCustomization">Povolit přizpůsobení vyhledávacího webu</string>
       <string id="AllowSearchEngineCustomization_Explain">Toto nastavení zásad vám umožňuje rozhodnout, zda uživatelé mohou změnit svůj vyhledávací web. Pokud toto nastavení zakážete, uživatelé nebudou moci přidávat nové vyhledávací weby nebo měnit výchozí web použitý v panelu Adresa.
 
@@ -124,6 +152,20 @@ Pokud toto nastavení zapnete, budou se zaměstnancům na panelu Adresa v Micros
 Pokud toto nastavení vypnete, návrhy hledání se jim na panelu Adresa v Microsoft Edgi zobrazovat nebudou.
 
 Pokud toto nastavení nenakonfigurujete, můžou se zaměstnanci sami rozhodnout, jestli se mají návrhy hledání na panelu Adresa v Microsoft Edgi zobrazovat.</string>
+      <string id="AllowSideloadingOfExtensions">Povolit zkušební načtení rozšíření před prodejem</string>
+      <string id="AllowSideloadingOfExtensions_Explain">Zkušební načtení před prodejem umožňuje nainstalovat a spustit neověřených rozšíření v prohlížeči Microsoft Edge. Pomocí této zásady můžete povolit zkušební načtení před prodejem v prohlížeči Microsoft Edge.
+
+Pokud tuto zásadu povolíte nebo nenastavíte, zkušební načítání před prodejem v prohlížeči Microsoft Edge bude povoleno.
+
+Pokud tuto zásadu zakážete, zkušební načítání před prodejem v prohlížeči Microsoft Edge nebude povoleno. Rozšíření bude možné instalovat pouze přes Microsoft Store (včetně služby Store pro firmy), podnikový obchod (jako je Portál společnosti) nebo PowerShell (pomocí příkazu Add-AppxPackage). I když tuto zásadu zakážete, nezabráníte uživatelům v načítání neověřených rozšíření pomocí příkazu Add-AppxPackage přes PowerShell. Pokud tomu chcete zabránit, povolte v editoru zásad skupiny možnost „Povolí vývoj aplikací pro Windows Store a jejich instalaci z integrovaného vývojového prostředí (IDE)“ v následujícím umístění:
+
+Konfigurace počítače &gt; Šablony pro správu &gt; Součásti systému Windows &gt; Nasazení balíčku aplikace
+
+Podporované verze: Microsoft Edge ve Windows 10, verze 1809
+Výchozí nastavení: Zakázáno nebo Nenakonfigurováno
+Související zásady:
+– Povolí vývoj aplikací pro Microsoft Store a jejich instalaci z integrovaného vývojového prostředí (IDE)
+– Povolit instalaci všech důvěryhodných aplikací</string>
       <string id="AllowSmartScreen">Konfigurovat filtr SmartScreen v programu Windows Defender</string>
       <string id="AllowSmartScreen_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli se má zapnout filtr SmartScreen v programu Windows Defender. Ten zobrazuje upozornění, která zvyšují ochranu zaměstnanců před potenciálními phishingovými podvody a škodlivým softwarem. Filtr SmartScreen v programu Windows Defender je ve výchozím nastavení zapnutý.
 
@@ -149,11 +191,61 @@ Důležité
 Nepovolujte zároveň toto nastavení i nastavení Synchronizovat oblíbené položky mezi Internet Explorerem a Microsoft Edgem. Pokud je obě povolíte, nebudou zaměstnanci moct synchronizovat svoje oblíbené položky mezi Internet Explorerem a Microsoft Edgem.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, zaměstnanci v Centru a na panelu oblíbených položek uvidí oblíbené položky, které si nastaví.</string>
+      <string id="ConfigureFavoritesBar">Konfigurovat panel Oblíbené</string>
+      <string id="ConfigureFavoritesBar_Explain">Panel Oblíbené zobrazuje odkazy na weby, které si do něho přidali uživatelé. Pomocí této zásady můžete určit, jestli má být panel Oblíbené na libovolné stránce vždy viditelný, nebo skrytý.
+
+Pokud je tato zásada povolená, bude panel Oblíbené na libovolné stránce vždy zobrazený a jeho přepínač v Nastavení bude v poloze Zapnuto, ale nebude aktivní, což uživatelům znemožní jeho změnu. V horní části podokna Nastavení se navíc zobrazí chybová zpráva, že některá nastavení určuje organizace. Možnost Zobrazit panel/Skrýt panel v místní nabídce bude skrytá.
+
+Pokud je tato zásada zakázaná, bude panel skrytý a jeho přepínač se nastaví do polohy Vypnuto, ale nebude aktivní, což uživatelům znemožní jeho změnu. V horní části podokna Nastavení se navíc zobrazí chybová zpráva, že některá nastavení určuje organizace.
+
+Pokud tato zásada není nakonfigurovaná, panel Oblíbené bude skrytý, ale bude viditelný na úvodních stránkách a na stránkách Nová karta. Jeho přepínač v Nastavení se nastaví do polohy Vypnuto, ale bude aktivní, což uživatelům umožní jeho změnu.</string>
+      <string id="ConfigureHomeButton">Konfigurovat tlačítko Domů</string>
+      <string id="ConfigureHomeButton_Explain">Tlačítko Domů načte výchozí úvodní stránku, stránku Nová karta nebo adresu URL definovanou v zásadě Nastavit adresu URL tlačítka Domů.
+
+Ve výchozím nastavení je tato zásada zakázána nebo není nakonfigurována a po kliknutí na tlačítko Domů se načte výchozí úvodní stránka.
+
+Když tuto zásadu povolíte, tlačítko Domů se zamkne, aby uživatelé nemohli provádět změny v nastavení uživatelského rozhraní Microsoft Edge. Pokud chcete uživatelům umožnit měnit nastavení uživatelského rozhraní Microsoft Edge, povolte zásadu Odemknout tlačítko Domů.
+
+Pokud zásadu povolíte a uděláte toto:
+–  Vyberete možnost Zobrazit tlačítko Domů a nastavit na úvodní stránku, po kliknutí na tlačítko Domů se načte úvodní stránka.
+– Vyberete možnost Zobrazit tlačítko Domů a nastavit na stránku Nová karta, po kliknutí na tlačítko Domů se načte stránka Nová karta.
+– Vyberete možnost Zobrazit tlačítko Domů a nastavit konkrétní stránku, po kliknutí na tlačítko Domů se načte adresa URL zadaná v zásadě Nastavit adresu URL tlačítka Domů.
+– Vyberete možnost Skrýt tlačítko Domů, tlačítko Domů bude v Microsoft Edge skryto.
+
+Výchozí nastavení: Zakázáno nebo nenakonfigurováno
+Související zásady:
+– Nastavit adresu URL tlačítka Domů
+– Odemknout tlačítko Domů</string>
+      <string id="ConfigureHomeButton_StartPage">Zobrazit tlačítko Domů a nastavit na úvodní stránku</string>
+      <string id="ConfigureHomeButton_NewTabPage">Zobrazit tlačítko Domů a nastavit na stránku Nová karta</string>
+      <string id="ConfigureHomeButton_SpecificPage">Zobrazit tlačítko Domů a nastavit konkrétní stránku</string>
+      <string id="ConfigureHomeButton_HideHomeButton">Skrýt tlačítko Domů</string>
+      <string id="ConfigureOpenEdgeWith">Konfigurovat stránku při spuštění Microsoft Edge</string>
+      <string id="ConfigureOpenEdgeWith_Explain">Microsoft Edge můžete nakonfigurovat tak, aby uzamkl úvodní stránku a zabránil tak uživatelům v její změně nebo přizpůsobení.
+
+Pokud tuto zásadu povolíte, můžete vybrat některou z následujících možností:
+– Úvodní stránka: Načte se úvodní stránka a zásada Konfigurovat úvodní stránky se bude ignorovat.
+– Stránka Nová karta: Načte se stránka Nová karta a zásada Konfigurovat úvodní stránky se bude ignorovat.
+– Předchozí stránky: Načtou se všechny karty, které uživatel otevřel před posledním zavření Microsoft Edge, a zásada Konfigurovat úvodní stránky se bude ignorovat.
+– Konkrétní stránka nebo stránky: Načtou se adresy URL zadané v zásadě Konfigurovat úvodní stránky. Pokud vyberete tuto možnost, musíte zadat alespoň jednu adresu URL v zásadě Konfigurovat úvodní stránky. V opačném případě se bude tato zásada ignorovat.
+
+Pokud zásadu povolíte a chcete provádět změny, musíte nejprve nastavit zásadu Zakázat uzamčení úvodních stránek na Nenakonfigurováno, provést změny v zásadě Konfigurovat stránku při spuštění Microsoft Edge a potom povolit zásadu Zakázat uzamčení úvodních stránek.
+
+Pokud zásadu zakážete nebo nenakonfigurujete a povolíte zásadu Zakázat uzamčení úvodních stránek, budou uživatelé moci změnit nebo přizpůsobit úvodní stránku.
+
+Výchozí nastavení: Konkrétní stránka nebo stránky (výchozí)
+Související zásady:
+– Zakázat uzamčení úvodních stránek
+– Konfigurovat úvodní stránky</string>
+      <string id="ConfigureOpenEdgeWithList_EdgeStartPage">Úvodní stránka</string>
+      <string id="ConfigureOpenEdgeWithList_NewTabPage">Stránka Nová karta</string>
+      <string id="ConfigureOpenEdgeWithList_PreviousPages">Předchozí stránky</string>
+      <string id="ConfigureOpenEdgeWithList_ProvisionedHomePages">Konkrétní stránka nebo stránky (výchozí)</string>
       <string id="AlwaysEnableBooksLibrary">Vždycky zobrazovat funkci Knihy v Microsoft Edgi</string>
       <string id="AlwaysEnableBooksLibrary_Explain">Toto nastavení zásad vám pomůže rozhodnout, jestli se má zobrazovat karta Knihy, bez ohledu na nastavení země nebo oblasti zařízení v části Země nebo oblast v nastavení Windows.
  
 Pokud toto nastavení povolíte, bude Microsoft Edge zobrazovat funkci Knihy, bez ohledu na zemi nebo oblast zařízení.
- 
+
 Pokud toto nastavení zakážete nebo nenakonfigurujete, bude Microsoft Edge zobrazovat funkci Knihy jenom v zemích nebo oblastech, kde se podporuje.</string>
       <string id="EnableExtendedBooksTelemetry">Povolit rozšířenou telemetrii pro kartu Knihy</string>
       <string id="EnableExtendedBooksTelemetry_Explain">Nastavením této zásady můžete rozhodnout, jaký objem dat týkajících se knihy, kterou si čtete z karty Knihy v Microsoft Edgi, se odešle do Microsoftu.
@@ -194,9 +286,28 @@ Pokud toto nastavení vypnete nebo nenakonfigurujete, zabráníte Microsoft Edgi
       <string id="AllowExtensions">Povolit rozšíření</string>
       <string id="AllowExtensions_Explain">Toto nastavení vám umožňuje rozhodnout, jestli budou zaměstnanci moct načítat rozšíření v Microsoft Edgi.
 
-Pokud toto nastavení zapnete nebo nenakonfigurujete, můžou zaměstnanci Rozšíření Edge používat.
+Pokud toto nastavení zapnete nebo nenakonfigurujete, můžou zaměstnanci Rozšíření Microsoft Edge používat.
 
-Pokud toto nastavení vypnete, zaměstnanci Rozšíření Edge používat nemůžou.</string>
+Pokud toto nastavení vypnete, zaměstnanci Rozšíření Microsoft Edge používat nemůžou.</string>
+        <string id="PreventTurningOffRequiredExtensions">Zabránit vypínání požadovaných rozšíření</string>
+        <string id="PreventTurningOffRequiredExtensions_Explain">V aplikaci Microsoft Edge můžete definovat seznam rozšíření, která uživatelé nemůžou vypnout. Rozšíření je nutné nasadit prostřednictvím jakéhokoli dostupného kanálu pro firemní nasazení, například Microsoft Intune. Pokud tuto zásadu povolíte, uživatelé nebudou moct rozšíření odinstalovat ze svých počítačů, ale budou mít možnost nakonfigurovat možnosti rozšíření definované v této zásadě, například povolit procházení InPrivate. Všechna další oprávnění požadovaná budoucími aktualizacemi rozšíření budou automaticky udělena.
+
+Pokud tuto zásadu povolíte, bude nutné zadat seznam sad balíčků rozšíření (identit aplikací (PFN)) oddělených středníkem. Například přidáním položky Microsoft.OneNoteWebClipper_8wekyb3d8bbwe;Microsoft.OfficeOnline_8wekyb3d8bbwe zabráníte uživateli ve vypnutí aplikace OneNote Web Clipper a rozšíření Office Online.
+
+Pokud je tato zásada povolená, nedojde při odebrání rozšíření ze seznamu k jeho automatické odinstalaci z počítače uživatele. Pokud chcete rozšíření odinstalovat, použijte libovolný dostupný kanál pro firemní nasazení.
+
+Pokud povolíte zásadu Povolit Vývojářské nástroje, nebude tato zásada uživatelům bránit v ladění a změně logiky rozšíření.
+
+Pokud je tato zásada zakázaná nebo není nakonfigurovaná, rozšíření definovaná jako součást této zásady se budou ignorovat.
+
+Výchozí nastavení: Zakázáno nebo Nenakonfigurováno
+Související zásady: Povolit Vývojářské nástroje
+Související dokumenty:
+– Zjištění identity aplikace (PFN) pro síť VPN jednotlivé aplikace (https://docs.microsoft.com/cs-cz/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn)
+– Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune (https://docs.microsoft.com/cs-cz/intune/windows-store-for-business)
+- Přiřazení aplikací do skupin pomocí Microsoft Intune (https://docs.microsoft.com/cs-cz/intune/apps-deploy)
+– Správa aplikací z Microsoft Storu pro firmy pomocí nástroje System Center Configuration Manager (https://docs.microsoft.com/cs-cz/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+– Přidání obchodní aplikace pro Windows do Microsoft Intune (https://docs.microsoft.com/cs-cz/intune/lob-apps-windows)</string>
       <string id="HideLocalHostIPAddress">Zabránit používání IP adresy LocalHost pro WebRTC</string>
       <string id="HideLocalHostIPAddress_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli se během telefonních hovorů pomocí protokolu WebRTC zobrazuje IP adresa LocalHost daného zaměstnance.
 
@@ -250,18 +361,41 @@ Pokud toto nastavení nenakonfigurujete, seznam vyhledávacích webů se nastav�
 Při zapnutí tohoto nastavení získáte možnost nakonfigurovat výchozí oblíbené položky, které se zobrazí vašim zaměstnancům. Pokud je toto nastavení zapnuté, musíte zadat seznam oblíbených položek v části Možnosti. Seznam se naimportuje po nasazení zásady.
 
 Pokud je toto nastavení vypnuté nebo nenakonfigurované, zobrazí se zaměstnancům oblíbené položky, které si nastaví v centru Oblíbené.</string>
+      <string id="SetHomeButtonURL">Nastavit adresu URL tlačítka Domů</string>
+      <string id="SetHomeButtonURL_Explain">Tlačítko Domů je možné nakonfigurovat tak, aby načítalo vlastní adresu URL, když na něj uživatel klikne.
+
+Pokud je funkce povolena nebo nakonfigurována, je povolena zásada Konfigurovat tlačítko Domů a je vybrána možnost Zobrazit tlačítko Domů a nastavit konkrétní stránku, po kliknutí na tlačítko Domů se načte vlastní adresa URL.
+
+Výchozí nastavení: Prázdné nebo nenakonfigurováno
+Související zásady: Konfigurovat tlačítko Domů</string>
       <string id="SendIntranetTraffictoInternetExplorer">Posílat všechny intranetové weby do Internet Exploreru 11</string>
       <string id="SendIntranetTraffictoInternetExplorer_Explain">Toto nastavení zásad vám umožňuje rozhodnout, jestli se mají všechny intranetové weby otevírat pomocí Internet Exploreru 11. Toto nastavení by se mělo používat jenom v případě, že víte o konkrétních problémech s kompatibilitou s Microsoft Edgem.
 
 Pokud toto nastavení zapnete, všechny intranetové weby se budou automaticky otevírat v Internet Exploreru 11.
 
 Pokud toto nastavení vypnete nebo nenakonfigurujete, budou se všechny intranetové weby automaticky otevírat v Microsoft Edgi.</string>
+      <string id="SetNewTabPageURL">Nastavit adresu URL stránky Nová karta</string>
+      <string id="SetNewTabPageURL_Explain">V prohlížeči Microsoft Edge můžete nastavit výchozí adresu URL stránky Nová karta. Povolením této zásady zabráníte uživatelům ve změně nastavení stránky Nová karta. Pokud je tato zásada povolena a zásada Povolit webový obsah na stránce Nová záložka je zakázána, Microsoft Edge ignoruje adresu URL zadanou v této zásadě a otevře stránku about:blank.
+
+Pokud je zásada povolena, můžete nastavit výchozí adresu URL stránky nové karty.
+
+Pokud zásadu zakážete nebo nenakonfigurujete, použije se výchozí stránka nové karty Microsoft Edge.
+
+Výchozí nastavení: Zakázáno nebo nenakonfigurováno
+Související zásada: Povolit webový obsah na stránce Nová záložka</string>
+      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Show_ContinueInEdge">Zobrazit odkaz Dál používat Microsoft Edge</string>
+      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Hide_ContinueInEdge">Skrýt odkaz Dál používat Microsoft Edge</string>
       <string id="ShowMessageWhenOpeningSitesInInternetExplorer">Zobrazit zprávu při otevírání webů v Internet Exploreru</string>
-      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Explain">Nastavením této zásady můžete rozhodnout, jestli se zaměstnancům zobrazí dodatečná stránka v Microsoft Edgi s informací, že se web otevřel v Internet Exploreru 11.
+      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Explain">Microsoft Edge můžete nakonfigurovat tak, aby otevřel web automaticky v Internet Exploreru 11 a před jeho spuštěním zobrazil oznámení. Pokud chcete zobrazit oznámení, musíte povolit možnost Nakonfigurovat seznam webů podnikového režimu nebo Posílat všechny intranetové weby do Internet Exploreru 11, případně obě.
 
-Pokud toto nastavení povolíte, zaměstnancům se zobrazí dodatečná stránka v Microsoft Edgi s informací, že se web otevřel v Internet Exploreru 11.
+Pokud funkci povolíte, oznámení se zobrazí na nové stránce. Pokud chcete, aby uživatelé mohli nadále používat Microsoft Edge, vyberte v části Možnosti v rozevíracím seznamu možnost Zobrazit odkaz Dál používat Microsoft Edge.
 
-Pokud toto nastavení zakážete nebo nenakonfigurujete, bude se aplikace chovat výchozím způsobem a dodatečná stránka se neotevře.</string>
+Pokud funkci zakážete nebo nenakonfigurujete, bude se aplikace chovat podle výchozího nastavení a nezobrazí se žádná další stránka.
+
+Výchozí nastavení: Zakázáno nebo nenakonfigurováno
+Související zásady:
+– Nakonfigurovat seznam webů podnikového režimu
+– Posílat všechny intranetové weby do Internet Exploreru 11</string>
       <string id="PreventAccessToAboutFlagsInMicrosoftEdge">Znemožnit přístup ke stránce about:flags v Microsoft Edgi</string>
       <string id="PreventAccessToAboutFlagsInMicrosoftEdge_Explain">Nastavení této zásady umožňuje rozhodnout, jestli zaměstnanci budou mít přístup ke stránce about:flags, která slouží ke změně vývojářských nastavení a povolení experimentálních funkcí.
 
@@ -288,7 +422,17 @@ Pokud toto nastavení povolíte, zaměstnanci budou moci své oblíbené položk
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, zaměstnanci nebudou moci své oblíbené položky aplikacemi Internet Explorer a Microsoft Edge synchronizovat.
       </string>
+      <string id="UnlockHomeButton">Odemknout tlačítko Domů</string>
+      <string id="UnlockHomeButton_Explain">Pokud je povolena zásada Konfigurovat tlačítko Domů nebo Nastavit adresu URL tlačítka Domů, ve výchozím nastavení je tlačítko Domů uzamčeno, aby uživatelé nemohli po kliknutí na něj měnit stránku, která se načte. Tuto zásadu použijte, pokud chcete uživatelům umožnit měnit tlačítko Domů, i když je povolena zásada Konfigurovat tlačítko Domů nebo Nastavit adresu URL tlačítka Domů.
 
+Pokud je zásada povolena, nastavení uživatelského rozhraní pro tlačítko Domů je povoleno a uživatelé můžou provádět změny, včetně skrytí a zobrazení tlačítka Domů nebo konfigurace vlastní adresy URL.
+
+Pokud je zásada zakázána nebo nenakonfigurována, nastavení uživatelského rozhraní pro tlačítko Domů je zakázáno a uživatelé nemůžou provádět žádné změny.
+
+Výchozí nastavení: Zakázáno nebo nenakonfigurováno
+Související zásady:
+– Konfigurovat tlačítko Domů
+– Nastavit adresu URL tlačítka Domů</string>
       <string id="AllowFlashClickToRun">Nakonfigurovat nastavení spuštění kliknutím Adobe Flash</string>
       <string id="AllowFlashClickToRun_Explain">
         Pokud povolíte nebo nenakonfigurujete nastavení spuštění kliknutím Adobe Flash, bude Microsoft Edge před načtením a spuštěním obsahu vyžadovat, aby uživatel kliknul na spouštěcí tlačítko nebo na obsah nebo aby se web objevil na seznamu automaticky povolených webů.
@@ -320,21 +464,61 @@ Pokud toto nastavení povolíte nebo nenakonfigurujete, Microsoft Edge bude prav
 
 Pokud toto nastavení zakážete, seznam kompatibility od Microsoftu nebude při používání prohlížeče použit.</string>
 
-      <string id="PreventTabPreloading">Zabránit prohlížeči Microsoft Edge ve spuštění a načtení úvodní stránky a stránky Nová karta při spuštění Windows a při každém zavření Microsoft Edge</string>
-      <string id="PreventTabPreloading_Explain">Nastavení této zásady umožňuje rozhodnout, jestli Microsoft Edge může načíst úvodní stránku a stránku Nová karta při přihlašování k Windows a při každém zavření Microsoft Edge. Ve výchozím nastavení je předběžné načtení povoleno.
+      <string id="AllowTabPreloading">Povolit pro Microsoft Edge spuštění a načtení úvodní stránky a stránky Nová karta při spuštění Windows a při každém zavření Microsoft Edge</string>
+      <string id="AllowTabPreloading_Explain">Nastavení této zásady umožňuje rozhodnout, jestli Microsoft Edge může načíst úvodní stránku a stránku Nová karta při přihlašování k Windows a při každém zavření Microsoft Edge. Ve výchozím nastavení je předběžné načtení povoleno.
 
-Pokud předběžné načtení znemožníte, Microsoft Edge nebude moct načíst úvodní stránku a stránku Nová karta při přihlašování k Windows a při každém zavření Microsoft Edge.
+Pokud předběžné načtení povolíte a tuto zásadu zakážete nebo nenakonfigurujete, načte Microsoft Edge úvodní stránku a stránku Nová karta při přihlašování k Windows a při každém zavření Microsoft Edge, čímž se minimalizuje doba potřebná ke spuštění Microsoft Edge a spuštění nové karty.
 
-Pokud předběžné načtení povolíte a tuto zásadu zakážete nebo nenakonfigurujete, načte Microsoft Edge úvodní stránku a stránku Nová karta při přihlašování k Windows a při každém zavření Microsoft Edge, čímž se minimalizuje doba potřebná ke spuštění Microsoft Edge a spuštění nové karty.</string>
-      <string id="PreventTabPreloadingDropdown_PreventTabPreloading">Zabránit předběžnému načítání karet</string>
-      <string id="PreventTabPreloadingDropdown_AllowTabPreloading">Povolit předběžné načítání karet</string>
+Pokud předběžné načtení znemožníte, Microsoft Edge nebude moct načíst úvodní stránku a stránku Nová karta při přihlašování k Windows a při každém zavření Microsoft Edge.</string>
+      <string id="AllowTabPreloadingDropdown_AllowTabPreloading">Povolit předběžné načítání karet</string>
+      <string id="AllowTabPreloadingDropdown_PreventTabPreloading">Zabránit předběžnému načítání karet</string>
+      <string id="ConfigureTelemetryForMicrosoft365Analytics">Konfigurace shromažďování dat procházení pro Microsoft 365 Analytics</string>
+      <string id="ConfigureTelemetryForMicrosoft365Analytics_Explain">Microsoft Edge můžete nakonfigurovat tak, aby se u podnikových zařízení s nakonfigurovaným komerčním ID odesílala do Microsoft 365 Analytics jen historie intranetu, jen historie internetu nebo obojí. Pokud je tato možnost zakázaná nebo není nakonfigurovaná, neodesílá Microsoft Edge data historie procházení do Microsoft 365 Analytics.
+
+Podporované verze: Microsoft Edge ve Windows 10, verze 1809
+Výchozí nastavení: Zakázáno nebo nenakonfigurováno (data se neshromažďují ani neodesílají)</string>
+      <string id="ZonesList_IntranetOnly">Povolit jen odesílání historie intranetu</string>
+      <string id="ZonesList_InternetOnly">Povolit jen odesílání historie internetu</string>
+      <string id="ZonesList_Both">Povolit odesílání historie intranetu i internetu</string>
+      <string id="ZonesList_None">Nepovolit odesílání historie intranetu ani Internetu</string>
+
+      <string id="AllowPrelaunch">Povolit předběžné spouštění Microsoft Edge při spuštění Windows, v případě, že je systém nečinný, a při každém zavření Microsoft Edge</string>
+      <string id="AllowPrelaunch_Explain">Nastavení této zásady umožňuje rozhodnout, jestli se Microsoft Edge může předběžně spustit při přihlašování k Windows, v případě, že je systém nečinný, a při každém zavření Microsoft Edge. Ve výchozím nastavení je předběžné spouštění povolené.
+
+Pokud předběžné spouštění povolíte a tuto zásadu zakážete nebo nenakonfigurujete, Microsoft Edge se předběžně spustí při přihlašování k Windows, v případě, že je systém nečinný, a při každém zavření Microsoft Edge, čímž se minimalizuje doba potřebná ke spuštění Microsoft Edge.
+
+Pokud předběžné spouštění znemožníte, Microsoft Edge se nebude moct předběžně spustit při přihlašování k Windows a při každém zavření Microsoft Edge.</string>
+      <string id="AllowPrelaunchDropdown_AllowPrelaunch">Povolit předběžné spouštění</string>
+      <string id="AllowPrelaunchDropdown_PreventPrelaunch">Zakázat předběžné spouštění</string>
+
+      <string id="ConfigureKioskMode">Konfigurovat beznabídkový režim</string>
+      <string id="ConfigureKioskMode_Explain">Nakonfigurujte, jak se Microsoft Edge bude chovat v beznabídkovém režimu s přiřazeným přístupem, ať už jako jediná aplikace, nebo jedna z více aplikací běžících na zařízení, které slouží jako veřejný terminál. Můžete nastavit, zda se bude Microsoft Edge spouštět na celou obrazovku v režimu InPrivate, v režimu InPrivate s více kartami a omezenou funkčností, nebo jako normální Microsoft Edge.
+
+Aby se tato zásada mohla uplatnit, musíte nakonfigurovat Microsoft Edge v přiřazeném přístupu; v opačném případě se toto nastavení bude ignorovat. Další informace o konfiguraci přiřazeného přístupu a beznabídkového režimu najdete v článku, který se věnuje konfiguraci veřejných terminálů a sdílených zařízení používajících desktopové verze Windows (https://aka.ms/E489vw).
+
+Pokud tuto funkci povolíte a nastavíte na 0 (výchozí nebo nenakonfigurováno), bude platit toto:
+– Pokud budete Microsoft Edge používat jako jedinou aplikaci, spustí se pro digitální informační panely nebo interaktivní obrazovky na celou obrazovku v režimu InPrivate.
+– Pokud ho budete používat jako jednu z mnoha aplikací, spustí se Microsoft Edge normálně.
+Pokud tuto funkci povolíte a nastavíte na 1, bude platit toto:
+– Pokud budete Microsoft Edge používat jako jedinou aplikaci, spustí se v omezené verzi InPrivate s více kartami a bude sloužit jako jediná aplikace dostupná pro veřejné procházení. Uživatelé nebudou moct minimalizovat, zavírat ani otevírat okna ani přizpůsobit Microsoft Edge, ale kliknutím na Ukončit relaci budou moct vymazat údaje o procházení a stažené položky. Pomocí zásady Nakonfigurovat resetování veřejného terminálu po uplynutí doby nečinnosti můžete Microsoft Edge nakonfigurovat tak, aby se po uplynutí určité doby nečinnosti restartoval.
+– Pokud ho budete používat jako jednu z mnoha aplikací, spustí se v omezené verzi InPrivate s více kartami pro veřejné procházení s ostatními aplikacemi. Uživatelé budou moct minimalizovat, zavírat a otevírat více oken v režimu InPrivate, ale nebudou moct Microsoft Edge přizpůsobit.</string>
+      <string id="ConfigureKioskResetAfterIdleTimeout">Nakonfigurovat resetování veřejného terminálu po uplynutí doby nečinnosti</string>
+      <string id="ConfigureKioskResetAfterIdleTimeout_Explain">Microsoft Edge můžete nakonfigurovat tak, aby se po uplynutí určité doby nečinnosti resetoval do nakonfigurovaného úvodního stavu. Odpočítávání doby pro resetování se spustí po poslední interakci uživatele. Při resetování do nakonfigurovaného úvodního stavu se odstraní údaje o procházení aktuálního uživatele.
+
+Pokud tuto funkci povolíte, můžete nastavit dobu nečinnosti v minutách (0 až 1 440). Aby se tato zásada uplatnila, musíte zásadu konfigurace beznabídkového režimu nastavit na 1 a musíte nakonfigurovat Microsoft Edge v přiřazeném přístupu jako jedinou aplikaci. Jakmile uplyne nastavená doba nečinnosti, potvrzovací zpráva vyzve uživatele, aby pokračoval. Pokud uživatel neprovede žádnou akci, Microsoft Edge se po 30 sekundách resetuje.
+
+Pokud tuto zásadu nastavíte na 0, Microsoft Edge nepoužije odpočet doby nečinnosti.
+
+Pokud tuto zásadu zakážete nebo nenakonfigurujete, je výchozí hodnotou 5 minut.
+
+Pokud nenakonfigurujete Microsoft Edge v přiřazeném přístupu, tato zásada se nijak neprojeví.</string>
     </stringTable>
 
     <!-- Presentation -->
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">
-          <label>Zadejte adresu URL, která ukazuje na soubor, který obsahuje veškerá data ke zřizování oblíbených položek (ve formátu html). Můžete exportovat sadu oblíbených položek z Edge a používat tento soubor html ke zřizování uživatelských počítačů.
+          <label>Zadejte adresu URL, která ukazuje na soubor, který obsahuje veškerá data ke zřizování oblíbených položek (ve formátu html). Můžete exportovat sadu oblíbených položek z Microsoft Edge a používat tento soubor html ke zřizování uživatelských počítačů.
 
 URL se dá zadat jako
 1. Umístění HTTP: http://localhost:8080/URL.html
@@ -342,6 +526,12 @@ URL se dá zadat jako
 3. Místní soubor: file:///c:\\Users\\&lt;uživatel&gt;\\Dokumenty\\URL.html nebo C:\\Users\\&lt;uživatel&gt;\\Dokumenty\\URL.html
           </label>
         </textBox>
+      </presentation>
+      <presentation id="ConfigureOpenEdgeWith_Presentation">
+        <dropdownList refId="ConfigureOpenEdgeWithListBox" noSort="true" defaultItem="3">Konfigurovat stránku při spuštění Microsoft Edge</dropdownList>
+      </presentation>
+      <presentation id="ConfigureHomeButton_Presentation">
+        <dropdownList refId="ConfigureHomeButtonDropdown" noSort="true" defaultItem="0">Konfigurovat tlačítko Domů</dropdownList>
       </presentation>
       <presentation id="EnterpriseModeSiteList_Presentation">
         <textBox refId="EnterSiteListPrompt">
@@ -363,6 +553,16 @@ URL se dá zadat jako
           <label>Pro zadání odkazu, který chcete přidat, použijte tento formát: &lt;https://fabrikam.com/opensearch.xml&gt;</label>
         </textBox>
       </presentation>
+      <presentation id="SetHomeButtonURL_Presentation">
+        <textBox refId="SetHomeButtonURLPrompt">
+          <label>Zadejte adresu URL ve formátu řetězce. Například: https://www.bing.com</label>
+        </textBox>
+      </presentation>
+      <presentation id="SetNewTabPageURL_Presentation">
+        <textBox refId="SetNewTabPageURLPrompt">
+          <label>Zadejte adresu URL ve formátu řetězce. Příklad: https://www.bing.com</label>
+        </textBox>
+      </presentation>
       <presentation id="ConfigureAdditionalSearchEngines_Presentation">
         <textBox refId="ConfigureAdditionalSearchEngines_Prompt">
           <label>Pro zadání odkazů, které chcete přidat, použijte tento formát: &lt;https://fabrikam.com/opensearch.xml&gt;&lt;https://www.contoso.com/opensearch.xml&gt;</label>
@@ -371,11 +571,45 @@ URL se dá zadat jako
       <presentation id="ProvisionedFavorites_Presentation">
         <listBox refId="ProvisionedFavorites_List">Zadejte název oblíbené položky v prvním sloupci a její adresu URL do druhého sloupce, například: Contoso http://www.contoso.com/</listBox>
       </presentation>
+      <presentation id="PreventTurningOffRequiredExtensions_Presentation">
+          <textBox refId="PreventTurningOffRequiredExtensions_Prompt">
+              <label>Do následujícího pole zadejte názvy sad balíčků rozšíření (identity aplikací (PFN)) oddělené středníkem.</label>
+          </textBox>
+      </presentation>
       <presentation id="Cookies">
         <dropdownList refId="CookiesListBox" noSort="true" defaultItem="2">Nakonfigurovat soubory cookie </dropdownList>
       </presentation>
-      <presentation id="PreventTabPreloading">
-        <dropdownList refId="PreventTabPreloadingDropdown" defaultItem="0">Konfigurovat předběžné načítání karet</dropdownList>
+      <presentation id="AllowTabPreloading">
+        <dropdownList refId="AllowTabPreloadingDropdown" defaultItem="0">Konfigurovat předběžné načítání karet</dropdownList>
+      </presentation>
+      <presentation id="AllowPrelaunch">
+        <dropdownList refId="AllowPrelaunchDropdown" defaultItem="0">Konfigurovat předběžné spouštění</dropdownList>
+      </presentation>
+      <presentation id="ConfigureTelemetryForMicrosoft365Analytics_Presentation">
+        <dropdownList refId="ZonesListBox" noSort="true" defaultItem="0">Konfigurace shromažďování telemetrických dat</dropdownList>
+      </presentation>
+      <presentation id="ConfigureKioskMode_Presentation">
+        <text>Nakonfigurujte, jak se bude Microsoft Edge chovat v beznabídkovém režimu.
+
+Přiřazený přístup jedné aplikace:
+   – 0 = celoobrazovkové digitální informační panely a interaktivní obrazovky
+   – 1 = veřejné procházení InPrivate (omezené funkce)
+
+Přiřazený přístup více aplikací:
+   – 0 = normální funkce Microsoft Edge v přiřazeném přístupu
+   – 1 = veřejné procházení InPrivate
+        </text>
+        <decimalTextBox refId="ConfigureKioskMode_TextBox" defaultValue="0"></decimalTextBox>
+      </presentation>
+      <presentation id="ConfigureKioskResetAfterIdleTimeout_Presentation">
+        <text>Zadejte čas v minutách od poslední aktivity uživatele před resetováním veřejného terminálu Microsoft Edge. Můžete zvolit:
+   – 0 pro zakázání doby nečinnosti
+   – 1 až 1 440 minut nečinnosti od poslední uživatelské interakce
+        </text>
+        <decimalTextBox refId="ConfigureKioskResetAfterIdleTimeout_TextBox" defaultValue="5"></decimalTextBox>
+      </presentation>
+      <presentation id="ShowMessageWhenOpeningSitesInInternetExplorer_Presentation">
+        <dropdownList refId="ShowMessageWhenOpeningSitesInInternetExplorer_Dropdown" noSort="true" defaultItem="0">Zobrazit odkaz Dál používat Microsoft Edge</dropdownList>
       </presentation>
     </presentationTable>
   </resources>
